@@ -1,4 +1,0 @@
-Integrating with MapReduce2 get NPE throwed when executing a query with a "TABLESAMPLE(x percent)" clause
-the following TestCliDriver testcases fail:
-
-There are other qfiles which pass which use TABLESAMPLE without specifying a percent

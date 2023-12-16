@@ -1,2 +1,0 @@
-Creating named datagram socket throws ISE
-The DatagramSocket createDatagramSocket(String name, SocketAddress address) method of org.jboss.as.network.SocketBindingManagerImpl creates a ManagedDatagramSocketBinding with a null name, yet registers the socket using the NamedManagedBindingRegistry.

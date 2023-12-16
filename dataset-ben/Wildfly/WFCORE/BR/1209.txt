@@ -1,2 +1,0 @@
-jboss-cli.sh ignoring invalid attribute when used in batch mode
-CLI did not throw any error message and just ignored the invalid attribute while using in batch mode.If we use same CLI command in non-batch mode it throws exception.

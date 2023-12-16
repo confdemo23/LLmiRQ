@@ -1,2 +1,0 @@
-Support select distinct *
-As per Laljo John Pullokkaran's review comments, implement select distinct *

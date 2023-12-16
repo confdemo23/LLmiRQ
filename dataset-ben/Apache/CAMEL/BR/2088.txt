@@ -1,3 +1,0 @@
-camel-bean - Null String bodies is converted to a logging message instead of being null
-See nabble
-http://www.nabble.com/ToStringTypeConverter-and-null-message-bodies-td25978515.html

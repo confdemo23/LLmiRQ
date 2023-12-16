@@ -1,3 +1,0 @@
-Simple backwards parser bug if using file
-See nabble
-http://camel.465427.n5.nabble.com/Unknown-File-Language-Syntax-tp5778208.html

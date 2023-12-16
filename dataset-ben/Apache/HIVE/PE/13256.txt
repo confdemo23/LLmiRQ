@@ -1,2 +1,0 @@
-LLAP: RowGroup counter is wrong
-Log line from LlapIOCounterROWS_EMITTED=23528469, SELECTED_ROWGROUPS=87If rowgroups contain 10K rows by default then expected count is 235 for the above case.

@@ -1,3 +1,0 @@
-Support for custom AuthenticationDetailsSource in form-login tag.
-When using the &lt;form-login /&gt; tag, theres no way to configure a custom AuthenticationDetailsSource.
-The workaround is to reconfigure UsernamePasswordAuthenticationFilter as a custom filter and reconfigure LoginUrlAuthenticationEntryPoint with its loginFormUrl property. Spring XML becomes more polluted and some minor functionality like the &lt;http&gt; auto-config and the built-in form login page are lost.

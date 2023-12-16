@@ -1,3 +1,0 @@
-formatting of JSPX files
-When JSPX files are managed by ROO, they get to have arbitrary blank spaces , new lines etc. 
-It would be good to have formatting of JSPX without any such artifacts

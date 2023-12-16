@@ -1,4 +1,0 @@
-Remove InterfaceStability.Stable from HTable
-HTable is InterfaceAudience.Private, but the InterfaceStability.Stable annotation was not removed when that was changed. Based on our compatibility guidelines, IS.Stable only applies to IA.Public classes. This annotation is confusing to new developers who might work on modifying HTable
-
-Reference: https://hbase.apache.org/book.html#_interface_classifications

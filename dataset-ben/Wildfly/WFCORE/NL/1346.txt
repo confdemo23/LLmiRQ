@@ -1,4 +1,0 @@
-extension remove reports sucess even if the extension does not exist
-e.g.:
-[standalone@localhost:9999 /] /extension=garbage:remove
-{"outcome" =&gt; "success"}

@@ -1,2 +1,0 @@
-Redirect after POST causes UI to be inconsistent with model
-See forum thread: http://forum.springframework.org/showthread.php?t=63597

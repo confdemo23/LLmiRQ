@@ -1,1 +1,0 @@
-Auth code grant does not copy all properties from pending request to final authentication

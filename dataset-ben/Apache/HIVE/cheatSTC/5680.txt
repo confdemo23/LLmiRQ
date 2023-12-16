@@ -1,2 +1,0 @@
-Hive writes to HBase table throws NullPointerException
-When I create hive external table for hbase, and insert data into it under hive shell environment. It can run successfully. but after I quit it and reconnect with bin/hive command, the insert operation throws NullPointerException.

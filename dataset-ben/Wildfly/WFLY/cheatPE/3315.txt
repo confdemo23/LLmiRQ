@@ -1,8 +1,0 @@
-CalendarBasedTimeoutTestCase failure when using French locale
-CalendarBasedTimeoutTestCase fails when running on my laptop using the French locale.
-French and English locales differs in the value of the 1st day of week:
-cal = new GregorianCalendar(Locale.ENGLISH);
-System.out.println("cal = " + cal.getFirstDayOfWeek()); =&gt; 1 // SUNDAY
-cal = new GregorianCalendar(Locale.FRANCE);
-System.out.println("cal = " + cal.getFirstDayOfWeek()); =&gt; 2 // MONDAY
-The code in CalendarBasedTimeout set the 1st day of week to SUNDAY for the 1st timeout but does not set it in the truncate() method which makes comparing the date and its truncated copy bogus.

@@ -1,6 +1,0 @@
-[16] Provide option in New Record Creation Wizard to create stubs for the main function.
-Currently there is no option provided in New Record Creation Wizard to create stubs for 
-
-public static void main(String []args) at the time of record creation.
-
-This support is there in New Class Creation Wizard. Similar support needs to be added to New Record Creation Wizard.

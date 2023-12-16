@@ -1,2 +1,0 @@
-Core hive changes for HiveServer2 implementation
-The subtask to track changes in the core hive components for HiveServer2 implementation

@@ -1,4 +1,0 @@
-StaxEventWriter.startDocument() needs to be protected
-The method startDocument() in org.springframework.batch.item.xml.StaxEventWriter is private, whereas its javadoc mentions "[...]If this is not sufficient for you, simply override this method."
-This prevents one to cleanly override the creation of the root tag.
-The simple fix is to make the method protected, as is endDocument().

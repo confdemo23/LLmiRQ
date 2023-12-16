@@ -1,2 +1,0 @@
-AclEntryVoter and BasicAclEntryVoter use startsWith for configuration attribute matching
-AclEntryVoter and BasicAclEntryVoter both use String.startsWith(String) for determining whether they apply to a given secure object invocation. Instead equals(String) should be used.

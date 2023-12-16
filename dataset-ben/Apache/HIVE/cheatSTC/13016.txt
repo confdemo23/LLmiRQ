@@ -1,3 +1,0 @@
-ORC FileDump recovery utility fails in Windows
-
-Note that FileDump appends the full source path to the backup path when trying to recover files (see "E:" in the middle of the destination path).

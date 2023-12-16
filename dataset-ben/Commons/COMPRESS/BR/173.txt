@@ -1,4 +1,0 @@
-ArchiveStreamFactory.createArchiveInputStream(in) returns a TarArchiveInputStream object if in is a simple text file 
-After COMPRESS-117 fix, ArchiveStreamFactory.createArchiveInputStream(in) returns a TarArchiveInputStream object if input is a simple text file.  In my test case, the file has two lines:
-BagIt-Version: 0.96
-Tag-File-Character-Encoding: UTF-8

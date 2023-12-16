@@ -1,3 +1,0 @@
-ProtocolLogger is used outside org.jboss.as.protocol module but isn't available
-The ProtocolLogger class is used in a few places in host-controller and server, but the module.xml for the org.jboss.as.protocol module specifically excludes it from being exported.
-The uses aren't complex enough to justify exporting the class, so I'll just change them.

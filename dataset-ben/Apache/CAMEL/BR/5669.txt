@@ -1,4 +1,0 @@
-spring-ws - Adding custom soap headers
-Look into how it can be possible to add custom soap headers to using spring-ws.
-See nabble
-http://camel.465427.n5.nabble.com/Adding-custom-soap-header-in-camel-spring-ws-tp5719609.html

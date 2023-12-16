@@ -1,2 +1,0 @@
-camel-joor - Make the code more flexible for native mode
-With the current code base, it is hard to change the behavior of the jOOR language in order to move most of the logic at build time and/or at static initialization time, without having to use ugly hacks like reflection. The goal of this task is to make the code more flexible to avoid using hacks. 

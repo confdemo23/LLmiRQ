@@ -1,2 +1,0 @@
-Make auditlog syslog appName configurable
-Some initial code in my https://github.com/kabir/wildfly/tree/audit-log-facility-mgmt-api branch. Once done the workaround in WFLY-2753 should be removed

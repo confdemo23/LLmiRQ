@@ -1,2 +1,0 @@
-ObjectStore.initialize() needs retry mechanisms in case of connection failures
-RetryingHMSHandler handles retries to most HMSHandler calls. However, one area where we do not have retries is in the very instantiation of ObjectStore. The lack of retries here sometimes means that a flaky db connect around the time the metastore is started yields an unresponsive metastore.

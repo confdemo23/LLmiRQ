@@ -1,2 +1,0 @@
-bucketmap inner join query fails due to NullPointerException in some cases
-Bucketmap inner join query between bucketed tables throws following exception when one table contains all the empty buckets while other has all the non-empty buckets.Vertex failed, 

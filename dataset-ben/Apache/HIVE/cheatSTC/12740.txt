@@ -1,2 +1,0 @@
-NPE with HS2 when using null input format
-When we have a query that returns empty rows and when using tez with hs2, we hit NPE:

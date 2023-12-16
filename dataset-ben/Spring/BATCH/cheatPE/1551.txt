@@ -1,2 +1,0 @@
-Db2PagingQueryProvider needs an alias in the jump to subquery 
-same Problem as in BATCH-1499 but for DB2

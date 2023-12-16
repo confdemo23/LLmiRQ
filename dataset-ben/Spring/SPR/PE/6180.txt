@@ -1,5 +1,0 @@
-Upgrade Apache HttpClient to version 4.0
-Folks,
-Please consider upgrading HttpClient to version 4.0 which is the latest stable (GA) version of the library. Commons HttpClient 3.1 is very likely to be deprecated / officially declared end of life very soon (3 - 6 months). There have been no bug fixes in the 3.x branch for over a year. 
-Patch attached. Unfortunately I was unable to fix the Ivy build which I am not very familiar with.
-Oleg 

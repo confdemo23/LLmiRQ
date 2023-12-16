@@ -1,7 +1,0 @@
-[completions] no completions on method arguments if the invocation inside a lambda
-Runnable run = () -> {
-   Stream.of("1").map(|)
-}
-
-
-No argument completions like the lambda expression suggestions.

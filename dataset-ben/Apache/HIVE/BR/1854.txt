@@ -1,2 +1,0 @@
-Temporarily disable metastore tests for listPartitionsByFilter()
-After the JDO downgrade in HIVE-1853, the tests for the disabled function listPartitionByFilter() should be disabled as well.

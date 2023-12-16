@@ -1,2 +1,0 @@
-LineIterator could easily support Iterable
-It could be useful to make LineIterator support Iterable&lt;String&gt;, which is very easy to add.

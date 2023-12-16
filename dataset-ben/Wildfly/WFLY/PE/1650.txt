@@ -1,4 +1,0 @@
-Legacy subsystem testing needs some classloading exclusion mecanism
-When translation messages are used (which is the case of EAP) we have conflicts between generated $logger classes when testing submodules.
-Some $logger classes exis thus they are loaded by the parent classloader before the childfirstclassloader tries to load them, thus we have a potential ClassCastException brewing. 
-For exemple this breaks the EAP build on a French OS.

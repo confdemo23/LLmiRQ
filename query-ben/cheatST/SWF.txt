@@ -1,2 +1,0 @@
-265	 MethodKey, InvalidMethodKeyException, BeanInvokingActionFactory, XmlFlowBuilder, RefreshableFlowDefinitionHolder, FlowExecutorImpl, AbstractBeanInvokingAction, AnnotatedAction, ViewState, FlowExecutionImpl
-1243	 ProgressiveUICommand, UICommand, ButtonRenderer, UIComponentBase, UIForm, UIViewRoot, AjaxViewRoot

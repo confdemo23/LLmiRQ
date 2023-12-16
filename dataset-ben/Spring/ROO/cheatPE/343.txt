@@ -1,2 +1,0 @@
-ClassCastException in file monitoring
-I tried to use file monitoring service from another Spring project. If I add monitoring request for a file followed by a directory, I get ClassCastException in PollingFileMonitorService.add(MonitoringRequest). The fix is simple (patch attached)

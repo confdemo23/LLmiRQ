@@ -1,9 +1,0 @@
-[osgi] ServiceTracker best practices
-We need to clearly understand what the best practices using ServiceTrackers are
-and ensure our code is compliant with those practices.
-
-For instance, it seems opening/closing the service tracker every time we want to
-acquire a service is costly (even more costly than manually acquiring and
-releasing the service), so in general we should just open the tracker once. One
-place we do the multiple open/close is in the PluginParser used by the plugin
-converter. I haven't done a search for other scenarios.

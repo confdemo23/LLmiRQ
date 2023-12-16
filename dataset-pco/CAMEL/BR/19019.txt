@@ -1,2 +1,0 @@
-camel-kafka - Upgrade to Kafka 3.4.x
-https://downloads.apache.org/kafka/3.4.0/RELEASE_NOTES.html

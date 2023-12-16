@@ -1,6 +1,0 @@
-Add programatically added DAG scoped properties to DAG Configuration
-Currently, when a user does something like this from beeline:
-{code}
-set tez.generate.debug.artifacts=true;
-{code}
-the option doesn't make its way to [dagConf|https://github.com/apache/hive/blob/8ea1d78d0dc18fec4305dd0d0a9e341ecdcaef1e/ql/src/java/org/apache/hadoop/hive/ql/exec/tez/TezTask.java#L490], so it makes extremely painful to simply turn on/off options that would really supposed to work on DAG level

@@ -1,2 +1,0 @@
-BucketCacheWriter should log only the BucketAllocatorException message, not the full stack trace
-We have recently improved the logging of BucketAllocatorException to not overwhelm the log if there are a lot of blocks that are too large, but when we do log it, we still log the full stack trace. That is wasteful. The messages always come from the same location in source code. The stack trace provides no value.

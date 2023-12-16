@@ -1,2 +1,0 @@
-ZipEncodingHelper.isUTF8(String) does not check all UTF-8 aliases
-ZipEncodingHelper.isUTF8(String) does not check all UTF-8 aliases.

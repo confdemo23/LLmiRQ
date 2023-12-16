@@ -1,1 +1,0 @@
-Raise log level of repositories that get dropped in strict configuration mode to INFO

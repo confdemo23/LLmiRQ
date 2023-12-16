@@ -1,3 +1,0 @@
-"insert overwrite directory" Not able to insert data with multi level directory path
-Below query execution is failed
-Ex:   insert overwrite directory '/HIVEFT25686/chinna/' select * from dept_j;

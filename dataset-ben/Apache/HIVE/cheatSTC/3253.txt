@@ -1,2 +1,0 @@
-ArrayIndexOutOfBounds exception for deeply nested structs
-It was observed that while creating table with deeply nested structs might throw this exception:

@@ -1,5 +1,0 @@
-Split Cleaner into separate manageable modular entities
-As described by the parent task - 
-Cleaner can be divided into separate entities like -
-*1) Handler* - This entity fetches the data from the metastore DB from relevant tables and converts it into a request entity called CleaningRequest. It would also do SQL operations post cleanup (postprocess). Every type of cleaning request is provided by a separate handler.
-*2) Filesystem remover* - This entity fetches the cleaning requests from various handlers and deletes them according to the cleaning request.

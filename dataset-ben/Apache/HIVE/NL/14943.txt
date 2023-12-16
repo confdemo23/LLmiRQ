@@ -1,3 +1,0 @@
-Base Implementation
-Create the 1st pass functional implementation of MERGE
-This should run e2e and produce correct results.  

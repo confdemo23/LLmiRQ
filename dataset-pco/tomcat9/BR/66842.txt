@@ -1,2 +1,0 @@
-Wrong font in Java Preferences
-All Java pages in Preferences use system font instead of dialog font.

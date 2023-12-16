@@ -1,5 +1,0 @@
-Index names are case sensitive
-The following script:
-
-When you execute: "SHOW INDEXES ON TestTable;", you get:
-so it looks like things don't get lower cased when they go into the metastore, but they do when the rebuild op is trying to execute.

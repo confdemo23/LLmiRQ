@@ -1,2 +1,0 @@
-camel-zipfile - Using zip iterator with dataformat may fail
-The zip entry may say the current size of the entry is -1 while there is still data.

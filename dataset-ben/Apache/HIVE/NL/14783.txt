@@ -1,1 +1,0 @@
-bucketing column should be part of sorting for delete/update operation when spdo is on

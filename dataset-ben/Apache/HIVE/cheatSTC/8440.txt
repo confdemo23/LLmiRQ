@@ -1,2 +1,0 @@
-Hiveserver block query
-In our  environment Hiveserver handle approximately 15000 jobs per daySometimes we found a large number of  ETL tasks wait in our ETL schedule  queue to runIn this situation only few Hadoop Job running in Hadoop cluster,many maps and reduces slots free.We view Hiveserver heap found Hiveserver block a large number of query:

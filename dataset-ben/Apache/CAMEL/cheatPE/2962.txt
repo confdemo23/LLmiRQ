@@ -1,2 +1,0 @@
-camel-jms - disableReplyTo is not used in JmsProducer
-The JmsProducer does not check the disableReplyTo option when sending the message.

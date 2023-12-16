@@ -1,2 +1,0 @@
-checking VOID type for NULL in LazyBinarySerde
-NULL was not handled correctly in LazyBinarySerDe. One example is insert overwrite table T select '1', NULL from src limit 1;

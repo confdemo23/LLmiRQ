@@ -1,1 +1,0 @@
-fatal error check omitted for reducer-side operators

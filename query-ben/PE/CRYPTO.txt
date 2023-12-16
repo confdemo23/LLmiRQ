@@ -1,2 +1,0 @@
-3	 OpensslCipher JceCipher
-26	 The bug report does not provide specific class names.

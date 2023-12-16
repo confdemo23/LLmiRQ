@@ -1,2 +1,0 @@
-camel-ssh should close the session when execution is finished.
-Here is the complain from the stackoverfow 

@@ -1,5 +1,0 @@
-Team > Share can't switch to first wizard if others are hidden by a capability
-3.0 RC1
-The team > share wizard has logic to switch to the first page of a wizard if
-there is only one available. We have to change this so that it only does this if
-there are no hidden wizards.

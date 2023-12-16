@@ -1,5 +1,0 @@
-Dynamic partitioning doesnt work when remote metastore is used
-Steps to reproduce:Configure remote metastore (hive.metastore.uris)
-Create table t1 (a string);
-Create table t2 (a string) partitioned by (b string);
-set hive.exec.dynamic.partition.mode=nonstrict;

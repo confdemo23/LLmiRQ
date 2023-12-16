@@ -1,2 +1,0 @@
-14	 Wildfly Maven Plugin, Hawkular Metrics, port offset property, REST interface, management port
-58	 shutdown, deploy-artifact, execute-commands, start

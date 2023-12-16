@@ -1,4 +1,0 @@
-Distributed SFSB cache entries may rehash to different nodes following topology change
-A distributed SFSB is stored in 2 cache entries, one mapping the bean ID to a serialization group ID, and another mapping the group ID to a map of bean instances.
-We ensure that both cache entries will hash to the local node, but following a topology change, these entries could get re-mapped to different nodes.
-If we made the group ID = the bean Id of the first bean in the group, this solves the problem for 90% of use cases.

@@ -1,2 +1,0 @@
-ACID table creation fails on mysql with MySQLIntegrityConstraintViolationException
-While creating a ACID table ran into the following error:&gt;&gt;&gt;  

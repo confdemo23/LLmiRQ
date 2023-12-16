@@ -1,2 +1,0 @@
-org.apache.hadoop.hive.metastore.api.DataOperation
-Type class not found error when a job is submitted by hive0: 

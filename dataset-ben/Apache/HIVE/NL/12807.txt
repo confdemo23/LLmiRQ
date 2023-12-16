@@ -1,2 +1,0 @@
-Thrift and DB Changes for HIVE-12352
-This ticket just covers the thrift and DB changes necessary for HIVE-12352

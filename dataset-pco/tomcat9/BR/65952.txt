@@ -1,4 +1,0 @@
-[Commit Sets] are useless for outgoing changes
-Commit Sets are very good when I look at incoming changes, but for outgoing
-changes it displays files plain list, instead of folders. Would be good to fix
-this and be able to configure separately incoming and outgoing layouts.

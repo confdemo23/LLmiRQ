@@ -1,5 +1,0 @@
-Cannot create lambda entry breakpoints on same method on 2 different lines
-Arrays.asList("a", "b", "c").stream().filter(s -> s.length() > 0);
-Arrays.asList("a", "b", "c").stream().filter(s -> s.length() > 0);
-
-Adding Lambda Entry Method breakpoint on both the lines does not work as it finds already a method breakpoint on same method.

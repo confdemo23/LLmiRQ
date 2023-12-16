@@ -1,1 +1,0 @@
-[Hyperledger-Aries] Add support for service=present-proof/send-proposal

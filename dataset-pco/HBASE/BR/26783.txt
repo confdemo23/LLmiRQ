@@ -1,6 +1,0 @@
-ScannerCallable doubly clears meta cache on retries
-Way back in HBASE-15658 [~ghelmling] fixed RegionServerCallable to not clear meta in {{{}prepare(boolean reload){}}}. because it already would have cleared it in the try/catch when {{{}throwable(Throwable t, boolean retrying){}}}.
-
-I have recently been doing some load tests where I am causing HBase RegionServers to throw many CallDroppedExceptions because they are overloaded by the test. While this is an extreme example, it does sometimes crop up in production when a bad actor executes a job without rate limiting, etc. What I noticed was that the RegionServer hosting meta was most affected by the load, way more than any other server in the cluster. Digging into the issue I realized that the extra meta load was coming mostly from the scans, originating from {{{}ScannerCallable.prepare(boolean reload){}}}.
-
-I'm not sure why ScannerCallable was excluded from the original jira, maybe an oversight. But ScannerCallable is called in the same context of RetryingRpcCaller, which will handle clearing meta in the try/catch like other callables. We should similarly update ScannerCallable's prepare method not always pass useCache=true when getting region locations.

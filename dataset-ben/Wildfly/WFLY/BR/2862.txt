@@ -1,3 +1,0 @@
-Liferay too many open files during deployment
-Liferay 6.2 deploys as an exploded war. Normally after deployment it builds a theme (css/js boundles). Even if only Liferay is deployed a Too many open files exception is thrown. When /proc/sys/fs/file-max is 6815744. While trying to configure it or deploy other portlets (exploded wars too) the too many open files exception is encountered even at the deployment time (server start up). 
-13:57:48,110 ERROR [MSC service thread 1-12][MainServlet:262] java.io.FileNotFoundException: /home/munih/development/tools/wildfly-8.0.0.Final-SNAPSHOT/standalone/deployments/ROOT.war/WEB-INF/liferay-layout-templates.xml (Too many open files)

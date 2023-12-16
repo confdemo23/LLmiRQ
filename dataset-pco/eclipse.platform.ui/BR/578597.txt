@@ -1,3 +1,0 @@
-report progress for "System: Decoration Calculation"
-bug 533970 added a progress bar for Decoration Calculation but did not report any progress. 
-to reproduce see https://bugs.eclipse.org/bugs/show_bug.cgi?id=533970#c3

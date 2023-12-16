@@ -1,2 +1,0 @@
-Vectorization: Fix cross-product reduce sink serialization
-TPC-DS Q13 produces a cross-product without CBO simplifying the queryCaused by: java.lang.RuntimeException:

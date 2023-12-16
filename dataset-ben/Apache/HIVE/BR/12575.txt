@@ -1,2 +1,0 @@
-Similar to HIVE-12574, collect_set and count() give incorrect result when partition size is smaller than window size
-Will  fix these two functions separately since seems the issue and fix would be different from the other functions like max() and last_value(), etc.

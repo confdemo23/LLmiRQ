@@ -1,3 +1,0 @@
-ClassCastException in AbstractParquetMapInspector
-AbstractParquetMapInspector uses wrong class cast https://github.com/apache/hive/blob/trunk/ql/src/java/org/apache/hadoop/hive/ql/io/parquet/serde/AbstractParquetMapInspector.java#L144
-It should be AbstractParquetMapInspectorfinal StandardParquetHiveMapInspector other = (StandardParquetHiveMapInspector) obj;Such conversion leads to class cast exception in case of DeepParquetHiveMapInspector.Caused by:

@@ -1,3 +1,0 @@
-JGroups subsystem should REJECT relay configuration instead of DISCARD
-https://github.com/wildfly/wildfly/blob/master/clustering/jgroups/src/main/java/org/jboss/as/clustering/jgroups/subsystem/JGroupsExtension.java#L181
-Richard is taking this on along new transformer API shift.

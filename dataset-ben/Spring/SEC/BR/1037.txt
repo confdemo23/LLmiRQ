@@ -1,4 +1,0 @@
-LdapAuthenticationProvider doesn't support messageSource updates/modifications
-In order to allow localisation and personnal messages' definition org.springframework.security.providers.ldap.LdapAuthenticationProvider should implement org.springframework.context.MessageSourceAware.
-At this time it's not the case, so it is impossible to modify messages and use messages' localisation for this object (see 6.1 in spring security documentation http://static.springsource.org/spring-security/site/reference/html/supporting-infrastructure.html#localization).
-By the way this object also doesn't implement org.springframework.beans.factory.InitializingBean.

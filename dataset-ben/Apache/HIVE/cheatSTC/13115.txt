@@ -1,6 +1,0 @@
-MetaStore Direct SQL getPartitions call fail when the columns schemas for a partition are null
-We are seeing the following exception in our MetaStore logs
-I see two ways to solve the issue.
-1. Make the MetaStoreClient API more strict and not allow creating partition without having column level schemas set. (This could break clients which use the MetaStoreclient API)
-2. Make the Direct SQL code path and the ORM code path more consistent, where the Direct SQL does not fail on null column descriptor ID.
-I feel 2 is more safer and easier to fix.

@@ -1,6 +1,0 @@
-Typo in RegexRequestMatcher class javadoc
-In RegexRequestMatcher class javadoc instead of "
-{@code caseInsentitive}
-" it should be "
-{@code caseInsensitive}
-"

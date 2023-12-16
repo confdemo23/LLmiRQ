@@ -1,4 +1,0 @@
-Problems reading back PARQUET timestamps above 10000 years
-Timestamp values above year 10000 are not supported, but during the migration from Hive2 to Hive3 some might appear because of TZ issues. We should be able to at least read these tables before rewriting the data.
-
-For this we need to change the Timestamp.PRINT_FORMATTER, so no {{+}} sign is appended to the timestamp if the year exceeds 4 digits.

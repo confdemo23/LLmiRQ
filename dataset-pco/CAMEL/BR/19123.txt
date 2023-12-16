@@ -1,2 +1,0 @@
-camel-jbang - upgrade maven-resolver to 1.9.7
-No API changes between 1.9.4 and 1.9.5.

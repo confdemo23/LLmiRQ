@@ -1,7 +1,0 @@
-Test failure TestMetaStoreMetrics.testConnections
-Looks like this test has been failing for the past 84 builds prior to
-https://builds.apache.org/job/PreCommit-HIVE-MASTER-Build/597/testReport/org.apache.hadoop.hive.metastore/TestMetaStoreMetrics/testConnections/
-org.apache.hadoop.hive.metastore.TestMetaStoreMetrics.testConnections
-Failing for the past 84 builds (Since #514 )
-Took 28 ms.
-Error Message

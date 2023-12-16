@@ -1,9 +1,0 @@
-204	 BrentSolver
-280	 NormalDistributionImpl
-293	 SimplexSolver
-294	 RandomDataImpl
-519	 Gaussian
-588	 UnivariateStatisticAbstractTest
-645	 OpenMapRealVector
-1148	 MonotoneChain
-1295	 NonLinearConjugateGradientOptimizer BracketFinder

@@ -1,2 +1,0 @@
-beeline throws exceptions with parsing hive config when using !sh statement
-When beeline has a connection to a server, in some env it has following problem:0:

@@ -1,2 +1,0 @@
-DigestUtils.getDigest(String) should throw IllegalArgumentException instead of RuntimeException
-DigestUtils.getDigest(String) should throw IllegalArgumentException instead of RuntimeException

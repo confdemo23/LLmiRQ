@@ -1,4 +1,0 @@
-Add org.assertj.core.api.Assertions to JDT favorites
-AssertJ is (one of) the most popular Assert frameworks. I suggest we add org.assertj.core.api.Assertions as favorite to the JDT preferences. AFAIK this is almost no negative side-effects and will help developer using this framework.
-
-Similar to BUg 562639 in which we did this for Mockito.

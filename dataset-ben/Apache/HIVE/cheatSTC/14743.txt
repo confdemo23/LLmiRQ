@@ -1,1 +1,0 @@
-ArrayIndexOutOfBoundsException - HBASE-backed views' query with JOINs

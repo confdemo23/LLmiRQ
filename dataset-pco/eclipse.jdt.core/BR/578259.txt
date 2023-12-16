@@ -1,2 +1,0 @@
-[18] DOM AST support for JEP 420
-To handle the DOM AST support for JEP 420

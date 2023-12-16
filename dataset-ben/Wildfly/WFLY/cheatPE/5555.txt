@@ -1,9 +1,0 @@
-JMS Bridge ambiguous error reporting on module load failure 
-If JMS bridge depends on module that for some reason cant be loaded, log will show cryptic message:
-10:21:26,173 ERROR [org.jboss.as.controller.management-operation] (ServerService Thread Pool  51) WFLYCTL0013: Operation ("add") failed - address: ([
-    ("subsystem" =&gt; "messaging-activemq"),
-    ("jms-bridge" =&gt; "a-to-c-bridge")
-]) - failure description: "org.hornetq:main"
-1. Failure description does not describe a thing
-2. it points to HQ module, rather than custom module used in bridge conf.
-Exception is thrown at JMSBridgeAdd:155

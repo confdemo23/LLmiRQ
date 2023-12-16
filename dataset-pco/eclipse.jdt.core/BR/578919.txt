@@ -1,2 +1,0 @@
-[18][javadoc] provide support for reporting invalid snippets in javadoc
-Currently, if the snippet is invalid, this is not reported in the javadoc. This bug is to provide both the JDT Core and UI support for the same

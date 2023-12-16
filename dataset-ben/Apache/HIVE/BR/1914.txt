@@ -1,2 +1,0 @@
-failures in testhbaseclidriver
-i didnt debug it

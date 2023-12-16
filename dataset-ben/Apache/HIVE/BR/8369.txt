@@ -1,3 +1,0 @@
-SimpleFetchOptimizer needs to re-enable FS caching before scanning dirs
-SimpleFetchOptimizer spends a lot of CPU within itself because hive disables HDFS fs caching (fs.hdfs.impl.disable.cache).
-SimpleFetchOptimizer needs a revisit for its optimization rules, along with a fix for this case.

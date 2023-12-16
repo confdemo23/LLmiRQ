@@ -1,9 +1,0 @@
-Too Many Dependencies
-Large app ~ 1000 SLSB gets
-Caused by: java.lang.IllegalArgumentException: Too many dependencies specified (max is 16383)
-          at org.jboss.msc.service.ServiceBuilderImpl.doAddDependency(ServiceBuilderImpl.java:216) [jboss-msc-1.1.2.Final.jar:1.1.2.Final]
-          at org.jboss.msc.service.ServiceBuilderImpl.addDependenciesNoCheck(ServiceBuilderImpl.java:158) [jboss-msc-1.1.2.Final.jar:1.1.2.Final]
-          at org.jboss.msc.service.ServiceBuilderImpl.addDependencies(ServiceBuilderImpl.java:152) [jboss-msc-1.1.2.Final.jar:1.1.2.Final]
-          at org.jboss.msc.service.ServiceBuilderImpl.addDependencies(ServiceBuilderImpl.java:142) [jboss-msc-1.1.2.Final.jar:1.1.2.Final]
-          at org.jboss.as.naming.deployment.JndiNamingDependencyProcessor.deploy(JndiNamingDependencyProcessor.java:59)
-          at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:159) [wildfly-server-8.0.0.Alpha1.jar:8.0.0.Alpha1]

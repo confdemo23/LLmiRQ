@@ -1,2 +1,0 @@
-[refactoring] Refactor TypeAnnotationRewrite to jdt.core.manipulation
-Move TypeAnnotationRewrite to jdt.core.manipulation for use by jdt.ls.

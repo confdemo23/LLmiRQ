@@ -1,3 +1,0 @@
-Cost to choose side table in MapJoin conversion based on cumulative cardinality
-HIVE-11954 changed the logic to choose the side table in the MapJoin conversion algorithm. Initial heuristic for the cost was based on number of heavyweight operators.
-This extends that work so the heuristic is based on accumulate cardinality. In the future, we should choose the side based on total latency for the input.

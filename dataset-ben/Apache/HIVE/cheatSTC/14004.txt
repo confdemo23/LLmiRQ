@@ -1,6 +1,0 @@
-Minor compaction produces ArrayIndexOutOfBoundsException: 7 in SchemaEvolution.getFileType
-Easiest way to repro is to add TestTxnCommands2 
-Test won't fail but if you look 
-Based on my observations, running Major compaction instead of minor, works fine.
-Replacing the DELETE operation with update, makes both Major/Minor run fine.
-The issue itself should be addressed by HIVE-13974 but need to make sure to add the test.

@@ -1,2 +1,0 @@
-Memory leak when adding/removing a lot of routes
-Dynamically adding/removing routes to camel causes registrations in org.apache.camel.builder.ErrorHandlerBuilderRef.handlers (Map&lt;RouteContext, ErrorHandlerBuilder&gt;) for RouteContext instances. Those never get removed and can cause leaks if memory consuming objects are attached in the RouteContext for example constant definitions.

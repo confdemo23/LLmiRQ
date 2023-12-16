@@ -1,4 +1,0 @@
-camel-coap: support for coap observe (RFC-7641)
-This proposed feature implements support for CoAP observe (rfc-7641) in the camel-coap component. 
-
-rfc-7641: [https://datatracker.ietf.org/doc/rfc7641/]

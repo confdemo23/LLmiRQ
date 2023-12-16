@@ -1,3 +1,0 @@
-Highlight labelled objects in the "Expressions" view too
-Currently JDIModelPresentation doesnt return foreground color for IWatchExpression and JavaInspectExpression, so if the user labels an object, they wont get highlighted.
-Unfortunately, the 'Variables' and the 'Expressions' view use different logic to return the 'Value' of a variable, so we can't easily add the label there.

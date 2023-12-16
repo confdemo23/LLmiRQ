@@ -1,2 +1,0 @@
-[18][javadoc] provide content assist support for annotations within snippet
-Content assist support needs to be provided within snippets for @highlight, @replace , @link.

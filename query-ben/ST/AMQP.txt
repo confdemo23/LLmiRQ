@@ -1,2 +1,0 @@
-164	 RabbitAdmin, ServletConfigurationTests, AbstractAutowireCapableBeanFactory, DefaultSingletonBeanRegistry, AbstractApplicationContext, ClassPathXmlApplicationContext
-502	 RabbitAdmin, RabbitTemplate, BlockingQueueConsumer, SimpleMessageListenerContainer

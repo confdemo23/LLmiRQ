@@ -1,4 +1,0 @@
-debugger - Allow to suspend messages
-Up to now when using the \{{BacklogDebugger}} there is no easy way to suspend all messages before ensuring that all breakpoints have been defined. This can particularly be a problem when debugging an application with a very short lifetime like a test.
-
-The goal of this improvement is to provide a way to suspend all messages as long as needed to define all the breakpoints to ensure no message has been missed by the debugger.

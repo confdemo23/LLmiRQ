@@ -1,5 +1,0 @@
-576703	 TrimBarRenderer, SWTPartRenderer, PartRenderingEngine, AbstractEList
-577126	 LazyResourceManager, Wizard, WizardDialog, Dialog
-578885	 ViewLabelProvider, URLImageDescriptor, DeferredImageDescriptor, ImageDescriptor, ColumnLabelProvider, ViewerColumn, AbstractTreeViewer, StructuredViewer, FilteredTree, ShowViewDialog, ShowViewHandler, HandlerProxy, E4HandlerProxy, HandlerServiceHandler, LegacyHandlerService, ShowViewMenu, ActionContributionItem, PartRenderingEngine, E4Workbench, Workbench, IDEApplication, EclipseAppHandle, EclipseAppLauncher, EclipseStarter, Main
-578964	 MenuManagerHideProcessor IDEWorkbenchAdvisor Workbench WorkbenchWindow
-579048	 SWTPartRenderer, ToolBarManagerRenderer, PartRenderingEngine, WidgetElement

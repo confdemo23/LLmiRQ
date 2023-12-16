@@ -1,2 +1,0 @@
-TestHiveMetaStorePartitionSpecs does not drop database created in this test causes other test failure
-TestHiveMetaStorePartitionSpecs creates a database named testpartitionspecs_db, but never drop it, sometimes causes TestObjectStore#testDatabaseOps failed:

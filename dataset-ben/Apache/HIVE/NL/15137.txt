@@ -1,2 +1,0 @@
-metastore add partitions background thread should use current username
-The background thread used in HIVE-13901 for adding partitions needs to be reinitialized with current UGI for each invocation. Otherwise the user in context while thread was created would be the current UGI during the actions in the thread.

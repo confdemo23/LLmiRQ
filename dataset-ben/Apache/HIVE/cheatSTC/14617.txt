@@ -1,2 +1,0 @@
-NPE in UDF MapValues() if input is null
-For queryselect exploded_traits from hdrone.vehiclestore_udr_vehicle lateral view explode(map_values(vehicle_traits.vehicle_traits)) traits as exploded_traits where datestr &gt; 

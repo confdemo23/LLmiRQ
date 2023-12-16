@@ -1,2 +1,0 @@
-While using column stats estimated data size may become 0
-Found during a run of HIVE-12181

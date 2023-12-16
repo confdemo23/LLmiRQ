@@ -1,2 +1,0 @@
-Iceberg:  Upgrade iceberg to 1.2.1
-[https://iceberg.apache.org/releases/#121-release] Iceberg1.2.1(include 1.2.0) has lots of improvement, e.g. _branch commit_  and _{{position_deletes}} metadata table._

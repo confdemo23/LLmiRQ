@@ -1,7 +1,0 @@
-Tab completion doesn't offer more options once prefix match some value
-Tab completion for CLI variables doesn't offer more values once the variable to be completed match some value.
-reproduceset foo=/subsystem=logging
-set foobar=/subsystem=logging/console-handler=CONSOLEactual$foo&lt;TAB&gt;
-/  :
-expected$foo&lt;TAB&gt;
-/  :  foo  foobar

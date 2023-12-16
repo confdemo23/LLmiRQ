@@ -1,2 +1,0 @@
-camel-swift - Restore the component
-The component has been removed because the underlying library from {{prowide}} did not support the Jakarta namespace at the time but the latest version supports it such that the component can be restored

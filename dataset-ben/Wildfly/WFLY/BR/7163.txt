@@ -1,5 +1,0 @@
-Relative ordering of webfragments causes an IllegalStateException
-Caused by: java.lang.IllegalStateException: WFLYUT0047: Relative ordering conflict with JAR: &lt;jarname&gt;.jar
-       at org.wildfly.extension.undertow.deployment.WarMetaDataProcessor.resolveOrder(WarMetaDataProcessor.java:717)
-       at org.wildfly.extension.undertow.deployment.WarMetaDataProcessor.deploy(WarMetaDataProcessor.java:212)
-       ... 6 more

@@ -1,3 +1,0 @@
-Incorrect group-by aggregation in 0.11.0group by with sub queries does not correctly aggregate results in Hive 0.11.0.
-To reproduce:
-Put the file1,b2,c2,b3,a3,c4,ain HDFS, and runcreate external table abc (x int, y string) row format delimited fields terminated by ',' location '/data/';The queryselect        x,        count(*)from(select        x,        yfrom        abcgroup by      x,      y) agroup by        x;will then give the result2	13	12	14	13	11	1instead of the correct1	12	23	24	1In 0.9.0 and 0.10.0 this is all working correctly.

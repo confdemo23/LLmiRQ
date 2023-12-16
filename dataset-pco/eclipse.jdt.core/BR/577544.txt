@@ -1,2 +1,0 @@
-[18] Merge from master to BETA_JAVA18 Periodically
-Merge periodically from master to BETA_JAVA18

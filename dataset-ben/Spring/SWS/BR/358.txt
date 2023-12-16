@@ -1,3 +1,0 @@
-NPE in JmsSenderConnection.onReceiveBeforeRead() when the received Message is null
-We should test whether the Message returned by messageConsumer.receive is null (case of time out for instance) or else a NPE is thrown:
-Message message = receiveTimeout &gt;= 0 ? messageConsumer.receive(receiveTimeout) : messageConsumer.receive();

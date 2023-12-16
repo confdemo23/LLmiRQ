@@ -1,6 +1,0 @@
-Quotas causes too much load on meta for large clusters
-We've been upgrading larger clusters to hbase 2, and ran into this issue where two equivalent clusters (one on 1.2 and the other on 2.4.x) running almost identical workloads, but the hbase2 cluster was doing way more meta requests.
-
-One of the reasons seems to be from https://issues.apache.org/jira/browse/HBASE-21820, which added an updateQuotaFactors method to the QuotaCache QuotaRefreshChore. This new method  calls MetaTableAcessor.scanMeta for every table in the cluster. This is happening on every regionserver, so if you have many tables and/or many regionservers you can easily start sending lots of traffic to meta. One way to offset this is to reduce frequency of hbase.quota.refresh.period, but this means you are less able to quickly respond to changes in load.
-
-We should figure out a caching or notification mechanism that can reduce the need scan meta so much. It seems like we're mainly scanning meta to get a count of total regions per table, which should not be changing so often.

@@ -1,2 +1,0 @@
-JDBC2 HiveConnection does not use the specified database
-HiveConnection ignores the database specified in the connection string when configuring the connection.

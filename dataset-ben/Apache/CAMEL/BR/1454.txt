@@ -1,2 +1,0 @@
-CXF component running in Payload mode does not work with Holders
-If you convert the CxfWsdlFirstTest to run in PAYLOAD mode (by simply changing the endpoint URI in Spring xml), the client.getPerson() invocation will fail.

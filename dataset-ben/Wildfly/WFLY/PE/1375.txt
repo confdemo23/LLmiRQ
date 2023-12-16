@@ -1,2 +1,0 @@
-ClassLoader memory leak with EJB Asynchronous
-Using asynchronous EJB call via @Asynchronous annotation leads to class loader leak.

@@ -1,2 +1,0 @@
-Wrong, interchanged parameters in Dokumentation of StringUtils.startsWith[IgnoreCase](String, String)
-The parameters in the examples of the JavaDoc of StringUtils.startsWithIgnoreCase(String, String) and StringUtils.startsWith(String, String) are interchanged.

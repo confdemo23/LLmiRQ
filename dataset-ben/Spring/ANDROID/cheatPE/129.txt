@@ -1,1 +1,0 @@
-Merge in changes from SPR-9273 - HttpStatusCodeException cannot be serialized

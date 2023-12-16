@@ -1,7 +1,0 @@
-ExecDriver should call jobclient.close() to trigger cleanup
-We found an issue in a customer environment where the HS2 crashed after a few days and the Java core dump contained several thousands of truststore reloader threads:
-
-We found the issue to be caused by a bug in Hadoop where the TimelineClientImpl is not destroying the SSLFactory if SSL is enabled in Hadoop and the timeline server is running. I opened YARN-5309 which has more details on the problem, and a patch was submitted a few days back.
-In addition to the changes in Hadoop, there are a couple of Hive changes required:ExecDriver needs to call jobclient.close() to trigger the clean-up of the resources after the submitted job is done/failed
-Hive needs to pick up a newer release of Hadoop to pick up MAPREDUCE-6618 and MAPREDUCE-6621 that fixed issues with calling jobclient.close(). Both fixes are included in Hadoop 2.6.4.
-However, since we also need to pick up YARN-5309, we need to wait for a new release of Hadoop.

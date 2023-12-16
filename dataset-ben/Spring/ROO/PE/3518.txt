@@ -1,5 +1,0 @@
-Java 8 syntax cause roo to stop working
-Please check at the attached file. Syntax from exchangeMultipleRates cause roo to fail with following error code:
-line 50:46 mismatched input ':' expecting {'.', '*', ',', '[', '(', ')', '=', '?', '++', '--', '/', '%', '+', '-', '==', '!=', '&amp;', '^', '|', '&amp;&amp;', '||', '^=', '+=', '-=', '*=', '/=', '&amp;=', '|=', '%=', '&gt;', '&lt;', 'instanceof'}
-Unknown or unhandled primary context
-TODOI will check if newer roo versions are affected. 1.2.5.RELEASE is affected

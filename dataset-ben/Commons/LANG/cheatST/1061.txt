@@ -1,9 +1,0 @@
-FastDateParser error - timezones not handled correctly
-The following code throws an exception:
-DateParser dp = FastDateFormat.getInstance("z yyyy", Locale.US);
-dp.parse("GMT+00:00 2010");
-The format works correctly with SimpleDateFormat.
-Stack:
-java.text.ParseException: Unparseable date: "GMT+00:00 2010" does not match (GMT[+\-]\d
-	at org.apache.commons.lang3.time.FastDateParser.parse(FastDateParser.java:289)
-	at org.apache.commons.lang3.time.FastDateFormat.parse(FastDateFormat.java:487)

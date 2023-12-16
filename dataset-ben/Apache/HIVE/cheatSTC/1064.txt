@@ -1,1 +1,0 @@
-NPE when operating HiveCLI in distributed modehive&gt; select id, name from tab_a;select id, name from tab_a;

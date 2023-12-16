@@ -1,1 +1,0 @@
-TransactionBatchImpl.getCurrentTxnId() ArrayIndexOutOfBounds

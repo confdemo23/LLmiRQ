@@ -1,2 +1,0 @@
-Create parallel to simple-cli for pure Java configuration
-Coding a pure Java configuration for Spring Batch. Thought it would fit next to spring-cli in the archetypes.

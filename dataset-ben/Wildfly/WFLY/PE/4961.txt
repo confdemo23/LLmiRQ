@@ -1,1 +1,0 @@
-CommandDispatcherFactory.getGroup().getNodes() returns empty list until 1st view change

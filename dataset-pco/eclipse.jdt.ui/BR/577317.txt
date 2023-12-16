@@ -1,4 +1,0 @@
-[17] Provide quick fixes to add permitted class/interface for sealed class/interface
-I create a "sealed" class C1 without any permits.
-This shows compilation error "Sealed class or interface lacks the permits clause and no class or interface from the same compilation unit declares test1 as its direct superclass or superinterface"
-But I don't see any corresponding quick fix, it will be good to see 2 quickfixes. One to create class in the same compilation unit and other one to create a child class in the same package.

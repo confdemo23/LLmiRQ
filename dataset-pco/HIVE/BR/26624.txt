@@ -1,2 +1,0 @@
-Set repl.background.enable on target after failover completion
-repl.target.for doesn't allow background threads. We need to set {*}repl.background.thread{*}=enable explicitly at db level on DR Cluster once failover is completed and before DR is going to take over. Currently there are no code references present to set it explicitly.

@@ -1,6 +1,0 @@
-Mapping of numeric values to other numeric types
-If a node contains numeric data but the class field is of a different type,
-eg. long -&gt; int,byte
-or double -&gt; float
-It fails with a mapping exception while it should coerce the value if it fits and only fail on an overflow.
-JSON by default only knows long(ish) and double so all other numeric types will probably pose problems.

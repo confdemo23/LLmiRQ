@@ -1,4 +1,0 @@
-Starting CamelContext with autoStartup=false should startup JMX connector
-I recall some user saying something about JMX appears to not be loaded if he has autoStartup=false on the CamelContext.
-It should only be the routes which are not started. The other stuff should start.
-You may need to use JMX to start the routes there after 

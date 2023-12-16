@@ -1,4 +1,0 @@
-README - Japanese message is displayed as ?????? at console (59385)
-Document the workaround for this problem (59385) which is to add a JVM 
-argument "-Dconsole.encoding=UTF8" when launching a java program. This appears 
-to apply to all OS'es except zOS and iseries. See 59385 for detail.

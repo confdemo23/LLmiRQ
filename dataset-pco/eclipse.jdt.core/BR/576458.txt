@@ -1,7 +1,0 @@
-[memory] deduplicate ClasspathAccessRule.pattern
-Created attachment 287263
-ClasspathAccessRule.pattern Screenshot.png
-
-In our workspaces with ~ 500 connected plugin projects almost all of eclipses memory is used by org.eclipse.jdt.internal.compiler.env.AccessRule[](Totaly 2.5 GB retained memory).
-It should be possible to either reuse equal AccesRules between different projects or at least to deduplicate the char[] pattern in ClasspathAccessRule. Which for us  should reduce the memory usage by almost the number of projects which uses the same dependencies.
-As far as i understand PDE does automatically create the access rules based on manifest.

@@ -1,2 +1,0 @@
-Timers are scheduled before being added to the timers map
-This can result in the timeout being executed before the timer is properly installed.

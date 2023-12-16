@@ -1,2 +1,0 @@
-Calls to lifecycleMonitor.notifyAll() in AbstractStandaloneMessageReceiver are superfluous
-Calls to lifecycleMonitor.notifyAll() in AbstractStandaloneMessageReceiver are superfluous because no threads call wait on that object.

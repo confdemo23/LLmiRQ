@@ -1,2 +1,0 @@
-MetastoreDirectSql fails for zero item queries
-Metastore Direct SQL throws a SQL Exception 

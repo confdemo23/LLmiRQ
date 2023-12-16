@@ -1,2 +1,0 @@
-NullPointerException could be thrown on  synchronized (pvs) in InjectionMetadata.checkPropertySkipping
-IBM JVM does not allow synchronized on "null"

@@ -1,2 +1,0 @@
-NullPointerException in ExecDriver
-We saw a job failed with the following message in hive.log.

@@ -1,2 +1,0 @@
-UnmodifiableBoundedCollection does not implement Unmodifiable marker interface
-The UnmodifiableBoundedCollection does not implement the Unmodifiable interface.

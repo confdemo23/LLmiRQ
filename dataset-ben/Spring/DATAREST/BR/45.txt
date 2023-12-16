@@ -1,2 +1,0 @@
-No IDs in href of objects displayed
-Browsing to: http://localhost:8080/rest/sla results in the gist.

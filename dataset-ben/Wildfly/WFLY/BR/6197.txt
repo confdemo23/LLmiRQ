@@ -1,2 +1,0 @@
-@ClusteredSingleton is hardcoded to use a specific singleton policy name
-The default singleton policy happens to be named "default" in our default configuration.  However, the EJB subsystem should not rely on this - as a user can change this.  Part of the problem is, there is no registered capability that specifically refers to the default singleton policy.

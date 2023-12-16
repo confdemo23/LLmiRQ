@@ -1,2 +1,0 @@
-RegexpRowFilter does not work when there are columns from multiple families
-If there are multiple column families, then creating a scanner with a RegexpRowFilter to match column values will mistakenly filter other columns.

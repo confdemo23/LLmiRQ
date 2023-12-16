@@ -1,2 +1,0 @@
-Use toStringBinary for rowkey in RegionServerCallable error string
-Bytes.toString does not work well with most row keys, since the row key is very unlikely to actually be a simple UTF-8 string. Bytes.toStringBinary is better

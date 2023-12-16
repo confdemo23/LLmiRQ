@@ -1,2 +1,0 @@
-Parsing logic in EJB3Subsystem30Parser#parseRemotingReceiver ignores unparseable attributes instead of exception
-We do throw exception when unparseable data is found.

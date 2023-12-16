@@ -1,3 +1,0 @@
-camel-docker - Bind mount support
-That would be very usefull if camel-docker would support DOCKER_BINDS message headers. 
-It's not working so far. Setting headers like Docker_bind is ignored.

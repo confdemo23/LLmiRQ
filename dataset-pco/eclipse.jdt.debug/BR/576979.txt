@@ -1,6 +1,0 @@
-[releng] AbstractReader in the JDI tests uses CR as line endings
-org.eclipse.jdt.debug.jdi.tests/tests/org/eclipse/debug/jdi/tests/AbstractReader.java uses single CRs as line endings. (Not CR-LF!)
-
-For git, this is a binary file.
-
-I suggest to normalize this to use LF as line endings.

@@ -1,3 +1,0 @@
-FlatFileItemReader calls mark??
-Line 151: 		mark();
-Seems like this is a bug  it would break the mark/reset logic of the enclosing Step.

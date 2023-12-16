@@ -1,3 +1,0 @@
-camel-jetty - Add option to set jetty continuation timeout
-By default Jetty uses 30 sec timeout for continuations.
-We should allow end users to configure a value of choice, in case their system may take longer time to process an exchange.

@@ -1,2 +1,0 @@
-ExpressionUrlAuthorizationConfigurer.interceptUrl Javadoc incorrect
-Looks like refactoring garbage. As stated in javadoc comment method could be chained, but now it is private.

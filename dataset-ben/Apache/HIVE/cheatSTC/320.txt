@@ -1,5 +1,0 @@
-Issuing queries with COUNT(DISTINCT) on a column that may contain null values hits a NPE
-When issuing a query that may contain a null value, I get a NPE. 
-E.g. if 'middle_name' potentially holds null values,
-select count(distinct middle_name) from people; will fail with the below exception.
-Other queries that work with the same input set:

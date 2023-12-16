@@ -1,2 +1,0 @@
-ItemStreamAdapter isn't an Adapter
-Perhaps this should be called ItemStreamSupport? Thanks.

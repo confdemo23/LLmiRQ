@@ -1,3 +1,0 @@
-Retrieving User after AuthenticationException
-In AbstractUserDetailsAuthenticationProvider the authenticate() method calls the additionalAuthenticationChecks() method in a try block and can catch an AuthenticationException.  The code in the catch block (line 147 for rel 1.0.1) calls the retrieveUser() and additionalAuthenticationChecks() methods.  If the user details used for the call in the try block came from the cache, I understand why this makes sense.  However, if cacheWasUsed is false, the call to retrieve the user details obtains the exact same user details.
-Perhaps the catch block should only repeat those method calls if cacheWasUsed is true, and throws the caught AuthenticationException if cacheWasUsed is false.

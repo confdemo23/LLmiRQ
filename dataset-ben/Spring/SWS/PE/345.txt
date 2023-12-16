@@ -1,2 +1,0 @@
-WSS4J interceptor creates creates invalid digest for SAAJ messages
-When using SAAJ and WSS4J on for outgoing messages, the digest created is incorrect, which results in signature verification failures. This is due to the fact that  the Document exposed via SOAPMessage.getSOAPPart() is out of sync. Calling SOAPMessage.saveChanges() fixes this.

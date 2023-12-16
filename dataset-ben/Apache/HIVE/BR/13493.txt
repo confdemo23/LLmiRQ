@@ -1,7 +1,0 @@
-Fix TransactionBatchImpl.getCurrentTxnId() and mis logging fixes
-sort list of transaction IDs deleted by performTimeouts
-sort list of "empty aborted"
-log the list of lock id removed due to timeout
-fix TransactionBatchImpl.getCurrentTxnId() not to look past end of array (see HIVE-13489)
-beginNextTransactionImpl()
-if ( currentTxnIndex &gt;= txnIds.size() )//todo: this condition is bogus should check currentTxnIndex + 1

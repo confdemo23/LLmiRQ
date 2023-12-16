@@ -1,2 +1,0 @@
-camel-twilio - Upgrade twilio-java to a version Jakarta compatible
-The version currently used (7) is not Jakarta-compatible, we need to upgrade it to a version >= 9.1 according to https://github.com/twilio/twilio-java/issues/713.

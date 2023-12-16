@@ -1,4 +1,0 @@
-camel-cxf should let users to set out SOAP headers
-User reported trouble setting out SOAP headers in 1.x 
-http://www.nabble.com/setting-soap-headers-in-camel-cxf-router-td25068148.html#a25068148
-We should also test/fix it in 2.x as well as adding documentation on how to set/get SOAP headers in POJO and PAYLOAD modes.

@@ -1,6 +1,0 @@
-BoundedInputStream
-Apache Jackrabbit has an interesting InputStream implementation that reads up to a specified amount of bytes from an underlying stream, and then acts as if the end of the stream was reached:
-http://svn.apache.org/repos/asf/jackrabbit/trunk/jackrabbit-jcr-server/src/main/java/org/apache/jackrabbit/server/io/BoundedInputStream.java
-Similar classes are also found in other projects:
-http://svn.mucommander.com/cgi-bin/viewvc.cgi/trunk/source/com/mucommander/io/BoundedInputStream.java?content-type=text%2Fplain&amp;view=co
-https://www.sunspotworld.com/docs/Purple/javadoc/com/sun/spot/peripheral/BoundedInputStream.html

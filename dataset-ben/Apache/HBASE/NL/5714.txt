@@ -1,3 +1,0 @@
-Add write permissions check before any hbck run that modifies hdfs.
-We encoutered a situation where hbck was run by an under-privileged user that was unable to write/modify/merge regions due to hdfs perms.  Unfortunately, this user was alerted of this  after several minutes of read-only operations.  hbck should fail early by having a write perm check and providing actionable advice to the hbase admin.
-Maybe something like: "Current user yy does not have write perms to &lt;hbase home&gt;. Please run hbck as hdfs user xxx"

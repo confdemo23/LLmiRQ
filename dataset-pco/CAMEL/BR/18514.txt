@@ -1,4 +1,0 @@
-camel-health - health check for not automatically started routes should always be up
-Routes that are not automatically started should always be up as they are externally managed. Negation is missing in the following condition, which currently leads to dead code:
-
-[https://github.com/apache/camel/blob/main/core/camel-health/src/main/java/org/apache/camel/impl/health/RouteHealthCheck.java#L66]

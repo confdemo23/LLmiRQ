@@ -1,2 +1,0 @@
-Routing cache should always use REPL
-Currently, the cache used for routing information uses the same cache mode as the cache used for web sessions.  On a 4 node cluster, this results in an extra RPC for half of the requests.  The routing cache should always use REPL, if the web session cache is clustered, and should never use a persistent store.

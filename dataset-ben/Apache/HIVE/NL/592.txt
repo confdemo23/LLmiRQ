@@ -1,2 +1,0 @@
-renaming internal table should rename HDFS and also change path of the table and partitions accordingly.
-rename table changes just the name of the table in metastore but not hdfs. so if a table with old name is created, it uses the hdfs directory pointing to the renamed table.

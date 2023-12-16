@@ -1,1 +1,0 @@
-Date command should assume user localization.

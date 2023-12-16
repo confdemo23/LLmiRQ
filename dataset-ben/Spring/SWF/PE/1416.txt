@@ -1,2 +1,0 @@
-Turn off snapshot creation when max-snapshots="0"
-Creating snapshots involves serializing and compressing the flow execution object, which can lead to issues with some PersistenceContext providers. Having the ability to turn off snapshot creation will provide an option when such issues occur at the cost of losing back button support.

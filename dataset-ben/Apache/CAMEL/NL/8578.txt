@@ -1,3 +1,0 @@
-camel-http - May double encode uri when using HTTP_URI or HTTP_QUERY headers
-See nabble
-http://camel.465427.n5.nabble.com/Apache-Camel-decodes-HTTP-query-params-and-httpclient-fails-with-Invalid-query-exception-tp5764794p5764843.html

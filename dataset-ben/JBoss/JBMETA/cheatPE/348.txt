@@ -1,2 +1,0 @@
-WebApp24ValidationUnitTestCase tries to connect to java.sun.com
-The tests must never connect to the outside world.

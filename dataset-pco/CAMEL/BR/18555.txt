@@ -1,5 +1,0 @@
-camel-jbang - Use standard Maven for download instead of ShrinkWrap
-ShrinkWrap is not very active maintained but is a great library for making it easier to download via Maven
-
-However we can switch to standard Maven APIs like JBang recently did
-https://github.com/jbangdev/jbang/commit/b9a339c71492509b84fecc0fac3f9fa617ecd499

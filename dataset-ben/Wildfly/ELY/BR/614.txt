@@ -1,2 +1,0 @@
-Missing null check in equals() method of AbstractPermission
-There is missing null check in org.wildfly.security.permission.AbstractPermission.equals(Object obj) method. NPE is thrown for null obj parameter.

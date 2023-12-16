@@ -1,5 +1,0 @@
-Spring 1.5.x should depend on Spring 2.0.x as a minimum requirement
-Spring 1.5.x should depend on Spring 2.0.x as a minimum requirement and not Spring 2.5.x. 
-Log4J trace logging causes problems when using Spring 2.0.x because the toURI() method in org.springframework.util.ResourceUtils is not available in Spring core 2.0.x. 
-As a workaround, changing the log level to INFO should resolve the issue. 
-We should run the test suite against Spring 2.0.x to see if other problems arise.

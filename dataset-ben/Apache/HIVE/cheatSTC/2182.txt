@@ -1,2 +1,0 @@
-Avoid null pointer exception when executing UDF
-For using UDF's executed following stepsadd jar /home/udf/udf.jar;create temporary function grade as 'udf.Grade';select m.userid,m.name,grade(m.maths,m.physics,m.chemistry) from marks m;But from the above steps if we miss the first step (add jar) and execute remaining stepscreate temporary function grade as 'udf.Grade';select m.userid,m.name,grade(m.maths,m.physics,m.chemistry) from marks m;In tasktracker it is throwing this exceptionCaused by:

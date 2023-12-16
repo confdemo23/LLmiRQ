@@ -1,2 +1,0 @@
-[18] DOM AST support for JEP 413
-All the DOM AST support for JEP 413 will be handled via this bug.

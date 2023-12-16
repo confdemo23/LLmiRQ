@@ -1,2 +1,0 @@
-Make slow log configs updatable with configuration observer
-It would be very useful to be able to turn slow log on or off, change thresholds, etc on demand as needed when diagnosing a traffic issue. Should be a simple matter of moving the configs into RpcServer#onConfigurationChange

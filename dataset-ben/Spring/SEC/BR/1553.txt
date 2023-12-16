@@ -1,1 +1,0 @@
-WebAuthenticationDetails should be Serializable

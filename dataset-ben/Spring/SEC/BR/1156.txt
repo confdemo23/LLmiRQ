@@ -1,2 +1,0 @@
-JdbcUserDetailsManager ignores setEnableAuthorities(false)
-The methods createUser and updateUser access the authorities table, even when configured not to on the super class using setEnableAuthorities.

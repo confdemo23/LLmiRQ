@@ -1,3 +1,0 @@
-Visual Editor Not working
-I tried using VE on eclipse-SDK-31.0M8-win32 , but it is not giving me option 
-of open with. so how can I use it.

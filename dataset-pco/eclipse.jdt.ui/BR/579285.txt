@@ -1,2 +1,0 @@
-Fix typos seen in Holger video
-Some typos were discovered by Mike Keppler and should be fixed.

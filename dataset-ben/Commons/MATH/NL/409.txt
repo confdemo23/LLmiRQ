@@ -1,2 +1,0 @@
-Multiple Regression API should allow specification of whether or not to estimate intercept term
-The OLS and GLS regression APIs should support estimating models including intercepts using design matrices including only variable data.

@@ -1,9 +1,0 @@
-[code completion] skip the ignored types before creating CompletionProposals in CompletionEngine
-Here are the steps on how the JDT responds to the completion request when typing 'List list = new A|'.
-
-1. query indexes to find all possible constructor names with the typed chars 'A'.
-2. CompletionEngine accepts the index query results. If the proposal kind is not ignored by the CompletionRequestor, then create CompletionProposal (with relevance calculated).
-3. CompletionRequestor accepts the CompletionProposals and applies type filters to discard the CompletionProposals from ignored types.
-4. present completion proposals to users.
-
-If we can ignore the filtered types earlier, for example, by doing it in step 2, as we did for ignored kind, it avoids computing the unused CompletionProposals. This is meaningful for constructor method completion performance. When the CompletionEngine creates constructor proposals, it relies on TypeBinding to compute the relevance of the proposed type. Resolving TypeBindings are a little expensive when they are not loaded before. Applying type filters earlier can help load fewer TypeBindings and improve performance.

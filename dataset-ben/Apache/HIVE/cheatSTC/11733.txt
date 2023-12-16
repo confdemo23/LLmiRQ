@@ -1,2 +1,0 @@
-UDF GenericUDFReflect cannot find classes added by "ADD JAR"
-When run below command:hive -e "add jar /root/hive/TestReflect.jar; \

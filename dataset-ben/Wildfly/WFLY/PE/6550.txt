@@ -1,3 +1,0 @@
-Invalid use of ModuleIdentifier.create(String) for dynamic names prevents use of slots
-The ModuleIdentifier.create(String) method is a convenience method for creating an id with a slot of "main". Using this method for user-provided module names prevents the user from encoding a slot into their string. Better is to use ModuleIdentifier.fromString(String) which will parse out a slot if present.
-WFCORE-1499 is due to this problem; reviewing the PR for it led me to investigate core and full for other occurrences. Found a few.

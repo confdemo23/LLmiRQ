@@ -1,5 +1,0 @@
-Optimize debug output log of ConstantSizeRegionSplitPolicy class. 
-https://github.com/apache/hbase/blob/master/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.java#L103
-https://github.com/apache/hbase/blob/master/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.java#L111
-
-The debug log should be changed to "Should split because {} size={}, sizeToCheck={}{}".

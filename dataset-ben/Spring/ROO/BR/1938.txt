@@ -1,2 +1,0 @@
-Roo "quit" commands given random shutdown exceptions
-Sometimes Roo commands are ignored by the shell.

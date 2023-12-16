@@ -1,4 +1,0 @@
-OrcFile table property values are case sensitive
-In Hive v1.2.1.2.3, with Tez , create an external table with compression SNAPPY value marked as lower case.  Table is created successfully.  Insert data into table fails with no enum constant error.
-
-Constant SNAPPY needs to be uppercase in definition to fix.  Case should be agnostic or throw error on creation of table.

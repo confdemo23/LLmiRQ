@@ -1,1 +1,0 @@
-Master WALProcs still never clean upbin/hdfs dfs -ls /hbase/MasterProcWALs | wc -l218631

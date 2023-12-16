@@ -1,2 +1,0 @@
-Clustering Extended testsuite is broken
-What we did a while back, we made the sync-tcp the default configuration for running the clustering tests. However, we kept a extended testsuite with other combinations and other unimportant clustering tests.

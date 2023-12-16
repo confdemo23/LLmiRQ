@@ -1,4 +1,0 @@
-camel-jbang - upgrade maven-resolver-api to 1.9.4
-We use 1.8.2 and there is a 1.9.2. It has some changed internals so the code should be changed a bit.
-
-It may be easier to do this on camel-3.x branch as main is for v4 and its more unstable at the moment

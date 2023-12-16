@@ -1,2 +1,0 @@
-Wrong weight handling in Levenberg-Marquardt
-A comparison with a Fortran version of Levenberg-Marquardt reveals that when observations have different weights, the 2.1 version reaches a value of the function which does not necessary correspond to the minimum

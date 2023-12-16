@@ -1,2 +1,0 @@
-[quickfix] Surround with try-with-resources duplicated
-The new quickfix for resource leaks to surround with try-with-resources is also offered as a quick assist so is duplicated when using CTRL-1.

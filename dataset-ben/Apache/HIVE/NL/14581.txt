@@ -1,2 +1,0 @@
-Add chr udf
-http://docs.aws.amazon.com/redshift/latest/dg/r_CHR.html

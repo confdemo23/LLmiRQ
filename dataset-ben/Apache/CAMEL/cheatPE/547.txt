@@ -1,7 +1,0 @@
-remove cycle between builder and spi
-Currently the spi package references builder.RouteBuilder. This creates a bad cycle in Camel as builder is one of the top level packages and spi is one of the lowest level packages. The method where RouteBuilder is used is in CamelContext.addRoutes(RouteBuilder builder). I think this reference is not necessary. CamelContext already has a method addRoutes(Collection&lt;Route&gt; routes). 
-So instead of calling camelContext.addRoutes(builder) I think the better way would to call:
-builder.setContext(camelContext);
-builder.addRoutesToContext(); // This is a new method that replaces the functionality of CamelContext.addRoutes(RouteBuilder builder)
-This way we will also cut some part of the cycle between impl and builder. impl.DefaultCamelContext references both RouteBuilder and BuilderSupport from the builder package. Both will not be necessary anymore as as soon as we get rid of the addRoutes method.
-This way CamelContext does not have to know anything about its builder. What do you think about this change?

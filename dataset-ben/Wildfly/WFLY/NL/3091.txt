@@ -1,2 +1,0 @@
-Cancellation of management ops does not properly propagate to server update tasks
-When an op is cancelled on a managed domain after the domain rollout has begun, the server update tasks are not properly cancelled / cleaned up.

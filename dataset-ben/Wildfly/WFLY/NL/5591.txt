@@ -1,2 +1,0 @@
-Client mappings cache should always use REPL
-Currently, the cache used for ejb client mappings uses the same cache mode as the cache used for SFSBs.  On a 4 node cluster, this results in an extra RPC for half of the requests.  The client mappings cache should always use REPL, if the SFSB cache is clustered, and should never use a persistent store.

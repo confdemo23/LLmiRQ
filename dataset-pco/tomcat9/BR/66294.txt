@@ -1,3 +1,0 @@
-Log file exceptions opening Eclipse
-After clearing the .log file and opening Eclipse numerous exceptions appeared in
-the log file.  See attached.

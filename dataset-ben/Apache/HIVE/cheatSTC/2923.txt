@@ -1,7 +1,0 @@
-testAclPositive in TestZooKeeperTokenStore failing in clean checkout when run on Mac
-When running testAclPositive in TestZooKeeperTokenStore in a clean checkout, it fails with the error:
-Failed to validate token path. 
-
-This message is also printed to standard out:
-Unable to load realm mapping info from SCDynamicStore
-The test seems to run fine in Linux, but more than one developer has reported this on a Mac.

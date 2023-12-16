@@ -1,8 +1,0 @@
-[18] Create Java 18 version and supporting code in tests
-Requirement as follows:
-
-1) Profile configuration in JDT core source for running in level 18
-2) Supporting code in tests
-3) Required command line options
-
-See bug 572864

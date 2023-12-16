@@ -1,2 +1,0 @@
-Backport HIVE-25243 to 3.2.0: Handle nested values in null struct.
-On branch-3, we've seen a failure in {{TestArrowColumnarBatchSerDe}} while trying to serialize a row of null values. It fails while trying to serialize the fields of a null struct. This was fixed in 4.0 by HIVE-25243. This issue tracks a backport to branch-3.

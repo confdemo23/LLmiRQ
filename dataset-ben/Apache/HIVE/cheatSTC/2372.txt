@@ -1,5 +1,0 @@
-java.io.IOException: error=7, Argument list too long
-I execute a huge query on a table with a lot of 2-level partitions. There is a perl reducer in my query. Maps worked ok, but every reducer fails with the following exception:
-
-It seems to me, I found the cause. ScriptOperator.java puts a lot of configs as environment variables to the child reduce process. One of variables is mapred.input.dir, which in my case more than 150KB. There are a huge amount of input directories in this variable. In short, the problem is that Linux (up to 2.6.23 kernel version) limits summary size of environment variables for child processes to 132KB. This problem could be solved by upgrading the kernel. But strings limitations still be 132KB per string in environment variable. So such huge variable doesn't work even on my home computer (2.6.32). You can read more information on (http://www.kernel.org/doc/man-pages/online/pages/man2/execve.2.html).
-For now all our work has been stopped because of this problem and I can't find the solution. The only solution, which seems to me more reasonable is to get rid of this variable in reducers.

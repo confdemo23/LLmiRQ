@@ -1,3 +1,0 @@
-In error scenario some opened streams may not closed in ScriptOperator.java, Utilities.java 
-1)In error scenario StreamProcessor may not be closed in ScriptOperator.java
-2)In error scenario XMLEncoder may not be closed in Utilities.java

@@ -1,1 +1,0 @@
-add logging for HIVE-15024Caused by: 

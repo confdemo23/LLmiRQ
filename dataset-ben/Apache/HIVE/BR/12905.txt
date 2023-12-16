@@ -1,2 +1,0 @@
-Issue with mapjoin in tez under certain conditions
-In a specific case where we have an outer join followed by another join on the same key and the non-outer side of the outer join is empty, hive-on-tez produces incorrect results.

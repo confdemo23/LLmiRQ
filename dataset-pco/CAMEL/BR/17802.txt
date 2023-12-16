@@ -1,2 +1,0 @@
-Check whether we need to manually commit offset upon stop when auto commit is enabled
-As requested by [~orpiske] in CAMEL-17798.

@@ -1,2 +1,0 @@
-findBugs Warning: Flat3Map - 3 iterators which are "both an Iterator and a Map.Entry"
-The iterators should be rewritten as suggested by findbugs.

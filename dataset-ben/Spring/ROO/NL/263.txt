@@ -1,2 +1,0 @@
-"process clean" command removes Eclipse metadata, causing poor user experience within Eclipse and STS
-When running "process clean" the Eclipse project meta data will get  deleted. This is not very nice if running inside STS or Eclipse. It should really only do a "clean".

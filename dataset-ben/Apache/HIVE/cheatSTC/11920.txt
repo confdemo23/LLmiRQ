@@ -1,2 +1,0 @@
-ADD JAR failing with URL schemes other than file/ivy/hdfs
-Example stack trace below. It looks like this was introduced by HIVE-9664.

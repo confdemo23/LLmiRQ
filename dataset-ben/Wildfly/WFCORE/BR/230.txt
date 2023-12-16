@@ -1,9 +1,0 @@
-Failure by ProcessController to launch a server vm is not logged
-In a domain configuration, if a server is associated with an incorrectly configurated jvm java-home (e.g. domain.xml -&gt; server-groups -&gt; jvm), it will fail silently (no error shown in logs). For example:
-```
-&lt;server-group name="mySrvrGrp" profile="full"&gt;
-  &lt;jvm name="my-default" java-home="/usr/java/wrongPath"&gt;
-    &lt;heap size="1024m" max-size="4096m"/&gt;
-    &lt;permgen size="256m" max-size="256m"/&gt;
-    &lt;stack size="256k"/&gt;
-```

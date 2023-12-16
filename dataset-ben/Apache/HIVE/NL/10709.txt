@@ -1,2 +1,0 @@
-Update Avro version to 1.7.7
-We should update the avro version to 1.7.7 to consumer some of the nicer compatibility features.

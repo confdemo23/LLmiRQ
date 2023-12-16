@@ -1,2 +1,0 @@
-Add redpanda container to test-infra
-Add a new mapping in the KafkaServiceFactory with a Redpanda service

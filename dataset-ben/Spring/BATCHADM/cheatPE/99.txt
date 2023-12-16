@@ -1,2 +1,0 @@
-Ensure that all partitions in a step are represented in the job execution view
-Partition step executions are missing because of the way that the JobExecutionController tries to account for steps that have not yet started.

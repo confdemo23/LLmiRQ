@@ -1,6 +1,0 @@
-279	 LRUMap Assert
-363	 TransformedMap HashMap NOPTransformer ByteArrayOutputStream ObjectOutputStream
-413	 DualHashBidiMap DualHashBidiMap.EntrySet DualHashBidiMap.View
-525	 PatriciaTrie
-570	 decorators
-577	 AbstractPatriciaTrie

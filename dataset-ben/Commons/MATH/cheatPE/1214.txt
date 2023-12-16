@@ -1,2 +1,0 @@
-SolutionCallback has incorrect class javadoc
-The class javadoc for o.a.c.m.optim.linear.SolutionCallback does not describe the class.

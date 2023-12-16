@@ -1,3 +1,0 @@
-MockEndpoint - sleep for empty test doesnt work
-See nabble:
-http://www.nabble.com/MockEndpoint---sleep-for-empty-tests-is-flawed--td21067367s22882.html

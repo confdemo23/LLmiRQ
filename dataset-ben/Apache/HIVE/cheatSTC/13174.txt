@@ -1,3 +1,0 @@
-Remove Vectorizer noise in logs
-If you have a table with a bin column you're hs2/client logs are full of the stack traces below. 
-These should either be made debug or we just log the message not the trace.

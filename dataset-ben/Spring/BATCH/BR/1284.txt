@@ -1,2 +1,0 @@
-Partition Step Stop is incorrectly setting the BatchStatus to COMPLETED.
-Please refer to the forum reference.

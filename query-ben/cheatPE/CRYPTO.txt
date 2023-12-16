@@ -1,4 +1,0 @@
-30	 StreamOutput CTRCipherInputStream CTRCipherOutputStream CipherInputStream CipherOutputStream
-33	 SecureRandom JavaSecureRandom
-34	 JavaSecureRandom SecureRandom
-125	 CryptoOutputStream SocketChannel

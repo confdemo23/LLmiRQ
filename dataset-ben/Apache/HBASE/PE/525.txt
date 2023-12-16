@@ -1,2 +1,0 @@
-HTable.getRow(Text) does not work
-Updated from SVN to find that Hbase.getRow(Text) always return empty map.

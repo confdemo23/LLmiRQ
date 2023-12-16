@@ -1,2 +1,0 @@
-LogStoreProbeHandler overwrites the LogStoreResource root model
-LogStoreProbeHandler replaces the 'delegate' held by LogStoreResource. Doing this removes any data from the existing delegate's 'model' field, i.e. the "type" attribute.

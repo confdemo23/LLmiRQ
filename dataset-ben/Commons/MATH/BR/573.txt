@@ -1,4 +1,0 @@
-in ArrayFielVector i.e. subtract calls wrong constructor
-I.E. subtract calls
-"return new ArrayFieldVector&lt;T&gt;(out)" this constructor clones the array...
-"return new ArrayFieldVector&lt;T&gt;(field, out, false)" would be better (preserving field as well)

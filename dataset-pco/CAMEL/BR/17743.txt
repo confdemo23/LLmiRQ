@@ -1,4 +1,0 @@
-camel-spring-boot - Schema generation fails for Resilience4jConfigurationCommon
-SB2 schema generation fails for Resilience4jConfigurationDefinition because the javaType is set to [*io.github.resilience4j.circuitbreaker.CircuitBreaker*|https://github.com/apache/camel/blob/6da63c1f884faa0b7981f78c8de0c818f994804e/core/camel-core-model/src/main/java/org/apache/camel/model/Resilience4jConfigurationCommon.java#L31] when [generating|https://github.com/apache/camel/blob/main/tooling/maven/camel-package-maven-plugin/src/main/java/org/apache/camel/maven/packaging/SchemaGeneratorMojo.java#L395] the schema while a String is expected. This also gives a ClassNotFoundException as the type isn't present on the classpath in SB2 starters. Removing the problematic javaTypes for now. Thanks !
-
- 

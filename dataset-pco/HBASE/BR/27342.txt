@@ -1,8 +1,0 @@
-Use Hadoop Credentials API to retrieve passwords of TLS key/trust stores
-Based on a discussion in the TLS Jira and mailing list, it would be beneficial to protect the password of trust and key stores for TLS encryption support in Netty RPC.
-
-Hadoop Credentials API is built for the same purpose, extensible and simple to use:
-
-[https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/CredentialProviderAPI.html]
-
- 

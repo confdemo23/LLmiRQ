@@ -1,8 +1,0 @@
-Reduce task timed out because CommonJoinOperator.genUniqueJoinObject took too long to finish without reporting progress
-Reduce task timed out because CommonJoinOperator.genUniqueJoinObject took too long to finish without reporting progress.
-This timeout happened when reducer.close() is called in ReduceTask.java.
-CommonJoinOperator.genUniqueJoinObject() called by reducer.close() will loop over every row in the AbstractRowContainer. 
-This can take a long time if there are a large number or rows, and during this time, it does not report progress. 
-If this runs for long enough more than "mapreduce.task.timeout", ApplicationMaster will kill the task for failing to report progress.
-we configured "mapreduce.task.timeout" as 10 minutes. I captured the stack trace in the 10 minutes before AM killed the reduce task at 2016-07-15 07:19:11.
-The following three stack traces can prove it:

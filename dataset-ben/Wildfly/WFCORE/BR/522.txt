@@ -1,3 +1,0 @@
-BlockingNotificationMBeanServer will NPE if resolvedDomain or expressionsDomain are not configured
-If the jmx subsystem &lt;expose-resolved-model/&gt; and/or  &lt;expose-expression-model/&gt; settings are not configured, but &lt;remoting-connector/&gt; is BlockingNotificationMBeanServer will throw NPEs in isInExposedModelControllerDomains due to passing null into java.util.regex.Pattern.matcher(...).
-Simply null checks will fix the problem.

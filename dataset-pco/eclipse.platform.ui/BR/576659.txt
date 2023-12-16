@@ -1,2 +1,0 @@
-Checkbox labels on MenuContributionEditor not externalized
-"To Be Rendered" and "Visible" checkbox labels on MenuContributionEditor not externalized for translation.

@@ -1,4 +1,0 @@
-EndianUtils.readSwappedUnsignedInteger() may return a negative number
-Methods about reading unsigned-integer in class EndianUtils may return a negative number, due to casting int to long.
-Calculations with operator &amp; etc. are under integer in these methods so its results are integer,
-then implicit casting the results to long keeps its positive/negative sign.

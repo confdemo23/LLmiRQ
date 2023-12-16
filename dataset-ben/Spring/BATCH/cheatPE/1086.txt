@@ -1,2 +1,0 @@
-JdbcJobExecutionDao.getRunningJobExecutions() ignores jobName
-JdbcJobExecutionDao.getRunningJobExecutions() ignores jobName

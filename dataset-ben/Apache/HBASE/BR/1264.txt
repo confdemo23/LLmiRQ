@@ -1,2 +1,0 @@
-Wrong return values of comparators for ColumnValueFilter
-The return values of the compareTo() method have to be changed against each other. The method has to return 0 if the regex matches and 1 if it does not.

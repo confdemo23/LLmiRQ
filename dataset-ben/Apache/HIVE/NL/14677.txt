@@ -1,1 +1,0 @@
-Beeline should support executing an initial SQL script

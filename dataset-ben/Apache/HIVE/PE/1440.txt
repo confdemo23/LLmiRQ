@@ -1,2 +1,0 @@
-FetchOperator(mapjoin) does not work with RCFile
-RCFile needs column prunning's results. But when initializing the mapjoin's fetch operator, the cp's result is not passed to record reader.

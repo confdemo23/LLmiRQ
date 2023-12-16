@@ -1,2 +1,0 @@
-Integration test does not support entities which have timestamps as version
-If an entity has a timestamp field specified as the versioning field (the field is annotated with @Version) then the generated integration test has a compile error as it compares obj.getVersionTimestamp() &gt; currentVersion (assuming the annotated timestamp field is called versionTimestamp). Instead if the version field is a timestamp the comparison should presumably be made using obj.getVersionTimestamp().after(currentVersion).

@@ -1,3 +1,0 @@
-TestHBaseCliDriver hangs
-TestHBaseCliDriver hangs after running hbase_joins.q
-This can be reproduced by runningant test -Dtestcase=TestHBaseCliDriver

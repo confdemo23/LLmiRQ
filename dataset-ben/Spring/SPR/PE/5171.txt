@@ -1,2 +1,0 @@
-Incompatible with JUnit 4.5
-Spring relies on org.junit.Assume$AssumptionViolatedException which no longer exists in JUnit 4.5

@@ -1,2 +1,0 @@
-test-infra - Reduce the boilerplate code needed
-While working on CAMEL-19400, I realized that there is some duplicated code in {{test-infra}}. The goal of this task is to propose a way to reduce the boilerplate code needed to add a new service.

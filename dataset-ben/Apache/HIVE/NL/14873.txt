@@ -1,1 +1,0 @@
-Add UDF for extraction of 'day of week'

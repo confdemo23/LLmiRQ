@@ -1,1 +1,0 @@
-[hive] 1 reducer should be used if no grouping key is present in all scenarios

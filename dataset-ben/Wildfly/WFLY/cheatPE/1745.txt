@@ -1,7 +1,0 @@
-WeldServices may get into inconsistent state
-WeldBootstrapService performs an initial bootstrap of the Weld container and also performs Weld shutdown when the service is stopping.
-WeldStartService finishes initialization of Weld container and performs nothing on stop() (WeldBootstrapService is expected to shut down Weld).
-WeldStartService has a dependency on WeldBootstrapService.
-This works fine 99% of the time. However, if a dependency of WeldStartService is restarted (e.g. due to management operation), WeldStartService as its parent is also restarted but WeldBootstrapService is not. 
-As a result, WeldStartService expects to find Weld container in an early initialization phase and wants to finish initialization. However, since WeldBootstrapService was not restarted, the Weld container is still in the initialized state and deployment fails when WSS tries to finish initialization again.
-To reproduce modify EjbRemoveUnitTestCase for test-session-remove.jar to contain empty beans.xml file.

@@ -1,2 +1,0 @@
-Hive 0.11.0 is not working with pre-cdh3u6 and hadoop-0.23
-path uris in input split are missing scheme (it's fixed on cdh3u6 and hadoop 1.0)

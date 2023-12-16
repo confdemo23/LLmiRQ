@@ -1,2 +1,0 @@
-ItemOrientedStep might not either commit or rollback transaction
-ItemOrientedStep might not either commit or rollback transaction.  There is a catch (CommitFailedException) that leads to a simple rethrow and no attempt to rollback.

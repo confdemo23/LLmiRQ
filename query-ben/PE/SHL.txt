@@ -1,3 +1,0 @@
-48	 ObjectUtils, CollectionUtils
-113	 FoobarCommand, CommandMarker, CliCommand
-187	 BorderStyle, BorderFactoryTest

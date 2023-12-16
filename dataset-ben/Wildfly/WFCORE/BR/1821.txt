@@ -1,4 +1,0 @@
-Failures in ModuleOpsCompletionTestCase
-Failed tests: 
-  ModuleOpsCompletionTestCase.testModuleAddCompletionSuggestions:56-&gt;testSuggestion:146-&gt;testSuggestion:153 expected:&lt;[org, ibm, io, javax, org, sun]&gt; but was:&lt;[ibm, io, javax, org, sun]&gt;
-There's already a PR that's probably meant to fix this but it isn't passing CI. I'm going to @Ignore this test.

@@ -1,2 +1,0 @@
-TestConverters fails on master
-Can be reproduced locally also.

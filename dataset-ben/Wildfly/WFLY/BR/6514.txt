@@ -1,7 +1,0 @@
-DistributableSingleSignOn register an SessionIdChangeListener for each SSO session
-During performance testing on our app we noticed an continuous increase of CPU utilization while the load was constant. 
-In turns out that for each session an undertow SessionListener was registered at login and was never unregistered (request.logout or session.invalidate).
-As a result all the operations on undertow SessionListeners are taking more CPU every time a listener is added as we loop over those listeners.
-First of all we should register only one (if needed) such SessionListener per webapp.
-But even in the current implementation, the listener was not unregistered when request.logout was called.
-It is unregistered when session.invalidate is called but then this is not the same listener that is provided and thus nothing is done.

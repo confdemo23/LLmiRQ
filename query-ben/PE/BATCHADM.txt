@@ -1,6 +1,0 @@
-38	 JobLoader, Resource
-71	 CannotResolveClassException, XStream
-77	 CommandLineJobRunner, JobRegistryBeanPostProcessor, Step, Job
-115	 SimpleJobMetrics, getLatestStepExitDescription()
-121	 jobExecutionId, steps.json
-129	 JdbcSearchableJobExecutionDao, jobExecution

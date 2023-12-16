@@ -1,2 +1,0 @@
-JNDIPermission is based in a private module
-At the moment JndiPermission is based in org.jboss.as.naming module which is private. Because of this it effectively cannot be used by deployments.

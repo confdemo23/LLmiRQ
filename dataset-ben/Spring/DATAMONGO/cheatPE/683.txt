@@ -1,1 +1,0 @@
-QueryMapper does not handle default _id when no MappingMetadata is present

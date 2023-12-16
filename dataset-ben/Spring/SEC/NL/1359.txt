@@ -1,4 +1,0 @@
-Typo in the Reference doc appendix B
-http://static.springsource.org/spring-security/site/docs/3.0.x/reference/appendix-namespace.html
-In B.1.1 &gt; realm
-proerty should read property 

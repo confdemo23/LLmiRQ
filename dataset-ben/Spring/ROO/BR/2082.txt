@@ -1,2 +1,0 @@
-Composite primary support by MVC scaffolding
-Add composite primary keys support for MVC scaffolding and integration tests.

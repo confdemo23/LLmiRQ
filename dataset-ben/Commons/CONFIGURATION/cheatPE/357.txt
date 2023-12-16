@@ -1,2 +1,0 @@
-ConversionException message is incorrect for AbstractConfiguration.getBigInteger(String,BigInteger)
-The message in the ConfigurationException thrown from AbstractConfiguration.getBigInteger(String,BigInteger) reads "BigDecimal" but should read "BigInteger".

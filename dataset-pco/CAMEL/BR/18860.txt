@@ -1,4 +1,0 @@
-java-joor-dsl - Adapt the code for native compilation
-To ease the native compilation of routes written using the Java DSL, we need to adapt the code to be able to reuse some parts of the existing code.
-
-See https://github.com/apache/camel-quarkus/issues/4358

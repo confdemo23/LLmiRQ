@@ -1,3 +1,0 @@
-camel-test - Enable JMX when camel-debug is detected
-When {{camel-debug}} is on the classpath, the intent is to use the *Camel Backlog Debugger* which is based on JMX.
-It would be nice in tests that we do not need to override the method `useJmx` as it is implicitely implicitly by {{{}camel-debug{}}}.

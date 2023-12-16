@@ -1,6 +1,0 @@
-187	 BatchPartitionTests, MiniYarnCluster
-278	 JavaConfig, boot properties, container allocator
-279	 YarnAppmaster, YarnContainer
-356	 SplittableCompressionCodec, MR record reader
-385	 StaticEventingAppmaster, onContainerCompleted(), notifyCompleted()
-409	 org.apache.hadoop.ipc.RemoteException, org.apache.hadoop.hdfs.protocol.AlreadyBeingCreatedException

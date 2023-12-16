@@ -1,8 +1,0 @@
-WizardProjectsImportPage does not correctly set fields when switching to import archieve
-When switching the WizardProjectsImportPage to the import from archive mode the first two checkboxes in the Options area (i.e., Search for nested projects and Copy projects into workspace) are selected and deactivated. However the functionality behind these two checkboxes is not activated correctly. Therefore when importing a project from the archive where in the archive is a project with the same name as you already have in workspace the content of the two projects gets merged. However if you first manually turn on the options in the select root directory mode and then switch to import from archive mode the correct checks are performed and any projects in the archive with the same name as a project are greyed out and marked as they can not be imported. 
-
-I would expect the latter behavior on both cases. 
-
-I looked into the code and when activating the import from archive mode only the check boxes are selected but not the according fields of the import wizard set. I debugged that and it seems that the selection listener for the two checkboxes is not called when invoking setSelection on the checbox. 
-
-For me the solution would be to in addition set the fields to have the correct behavior. Will submit a page right afterwards.

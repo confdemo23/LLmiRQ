@@ -1,6 +1,0 @@
-camel-cxf - Prevent storing invalid entry in Converter cache on error
-If an error occurs while converting a value thanks to the {{CxfPayloadConverter}}, the value {{null}} is returned to let other fallback converters to try but if there are no such fallback converters, the cache of converters will keep the information that no converter exists which is not incorrect.
-
-The behavior described above occurs when the unit test {{CxfPayloadConverterTest#testInvalidByteArrayToCxfPayload}} is called before {{CxfPayloadConverterTest#testByteArrayToCxfPayload}}, in that case, Camel believes that there is no converter for a byte array so it returns {{null}}. 
-
-The corresponding failing test report https://ci-builds.apache.org/job/Camel/job/Camel%20JDK17/job/main/876/testReport/org.apache.camel.component.cxf.converter/CxfPayloadConverterTest/testByteArrayToCxfPayload/

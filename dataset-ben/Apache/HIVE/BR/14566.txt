@@ -1,6 +1,0 @@
-LLAP IO reads timestamp wrongly
-HIVE-10127 is causing incorrect results when orc_merge12.q is run in llap.
-It reads timestamp wrongly.
-LLAP IO Enabled
-hive&gt; select atimestamp1 from alltypesorc3xcols limit 10;OK1969-12-31 15:59:46.674NULL1969-12-31 15:59:55.7871969-12-31 15:59:44.1871969-12-31 15:59:50.4341969-12-31 16:00:15.0071969-12-31 16:00:07.0211969-12-31 16:00:04.9631969-12-31 15:59:52.1761969-12-31 15:59:44.569LLAP IO Disabled
-hive&gt; select atimestamp1 from alltypesorc3xcols limit 10;OK1969-12-31 15:59:46.674NULL1969-12-31 15:59:55.7871969-12-31 15:59:44.1871969-12-31 15:59:50.4341969-12-31 16:00:14.0071969-12-31 16:00:06.0211969-12-31 16:00:03.9631969-12-31 15:59:52.1761969-12-31 15:59:44.569

@@ -1,3 +1,0 @@
-Threads - Should allow using 0 in core pool size
-See nabble
-http://camel.465427.n5.nabble.com/ThreadPoolExecutor-configuration-tp3207845p3207845.html

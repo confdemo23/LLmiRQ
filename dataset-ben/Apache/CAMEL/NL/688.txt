@@ -1,1 +1,0 @@
-process method of should check ExchnagePAttern before setting out

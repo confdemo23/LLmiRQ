@@ -1,4 +1,0 @@
-ftp - exception thrown from begin should remove the file from in progress so the file can be polled on subsequent calls
-The SFTP component can throw an exception in its begin logic, which causes Camel to not remove the file from its internal in progress cache.
-See nabble
-http://old.nabble.com/SFTP-rename-problems-ts28254146.html

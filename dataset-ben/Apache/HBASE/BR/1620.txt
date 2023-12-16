@@ -1,3 +1,0 @@
-Need to use special StoreScanner constructor for major compactions (passed sf, no caching, etc)
-Should not cache blocks during major compactions like with minor compactions.
-Also, need to only work on passed StoreFiles.

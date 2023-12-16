@@ -1,2 +1,0 @@
-cli tab completion gets confused by double slash
-Using two slashes in a CLI path and hitting TAB confuses the auto-completion

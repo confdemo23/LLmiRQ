@@ -1,4 +1,0 @@
-BucketCache statistics should not count evictions by hfile
-The eviction metrics are helpful for determining how much access-related churn there is in your block cache. The LruBlockCache properly ignores evictions by invalidation of HFile, but the BucketCache tracks them. 
-
-We should make the BucketCache work similarly so that one can get an accurate view of the evictions occurring through too much random access or too large working set.

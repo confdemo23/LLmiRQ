@@ -1,3 +1,0 @@
-Lifecycle callback methods not invoked on interceptors intercepting servlet component classes
-Even after fix for https://issues.jboss.org/browse/WFLY-2375, the @PostConstruct and @PreDestroy methods on interceptors (bound using interceptor bindings) intercepting servlet component classes are not invoked.
-Tests available here: https://github.com/bafco/wildfly/commits/WFLY-2375-tests (only for servlets at the moment).

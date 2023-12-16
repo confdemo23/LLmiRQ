@@ -1,2 +1,0 @@
-CVE-2014-7849 WildFly Domain Management: Limited RBAC authorization bypass
-It was discovered that the Role Based Access Control (RBAC) implementation did not sufficiently verify all authorization conditions that are required by the Maintainer role to perform certain administrative actions. An authenticated user with the Maintainer role could use this flaw to add, modify, or undefine a limited set of attributes and their values, which otherwise cannot be written to.

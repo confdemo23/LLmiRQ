@@ -1,2 +1,0 @@
-Preference > Editor > Content-Assist  auto-activation triggers text is too narrow
-Preference > Editor > Content-Assist  auto-activation triggers text is too narrow and hides most of the chars in some cases.

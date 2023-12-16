@@ -1,3 +1,0 @@
-[18][switch pattern][test] enhanced switch statement cannot have an empty switch block
-JEP 420 Section 14.11.2 has an addition compared to that in JEP 406
-"One consequence of requiring exhaustiveness is that an enhanced switch statement, unlike a normal switch statement, can not have an empty switch block." There should be a test case already testing this but since there is an explicit statement in spec, bug create for checking and if not adding a test case

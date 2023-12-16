@@ -1,2 +1,0 @@
-NullPointerException while adding CacheFactory through EJB3 subsystem
-A user has reported a NPE while adding the cache through the management operation in EJB3 subsystem. Please see the referenced forum thread for details

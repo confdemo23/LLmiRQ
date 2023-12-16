@@ -1,1 +1,0 @@
-camel-azure-eventhubs: Add support for Azure-AD authentication

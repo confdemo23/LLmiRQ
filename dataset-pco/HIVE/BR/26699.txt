@@ -1,6 +1,0 @@
-Iceberg: S3 fadvise can hurt JSON parsing significantly
-Hive reads JSON metadata information (TableMetadataParser::read()) multiple times; E.g during query compilation, AM split computation, stats computation, during commits  etc.
-
- 
-
-With large JSON files (due to multiple inserts), it takes a lot longer time with S3 FS with "fs.s3a.experimental.input.fadvise" set to "random". (e.g in the order of 10x).To be on safer side, it will be good to set this to "normal" mode in configs, when reading iceberg tables.

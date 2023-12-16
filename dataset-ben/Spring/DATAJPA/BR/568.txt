@@ -1,4 +1,0 @@
-Cannot update the new inserted entity which has @Version
-I have a record in database with ID=1 and version is 0(which is the initial value). When I save an entity from DTO W/ ID=1 and version is 0. I got the typical detached entity related exception.
-Because in the class org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation,  the line 206 is return versionAttribute.getJavaType().isPrimitive() &amp;&amp; ((Number) versionValue).longValue() == 0 
-which regards the version value = 0 as a NEW entity. Then the persist method will be mis-invoked.

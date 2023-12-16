@@ -1,2 +1,0 @@
-TransactionErrorHandler and DefaultErrorHandler - support onException
-The onException is a great feature and we should try to see if we can get it supported in the TransactionErrorHandler and DefaultErrorHandler as well.

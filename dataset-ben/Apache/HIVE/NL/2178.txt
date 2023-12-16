@@ -1,2 +1,0 @@
-Log related Check style Comments fixes
-Fix Log related Check style Comments

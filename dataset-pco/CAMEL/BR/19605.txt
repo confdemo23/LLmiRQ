@@ -1,2 +1,0 @@
-camel-xchange - Upgrade to xchange 5.1.0
-Thomas do you mind upgrading camel-xchange to 5.1.x as it has some API changes

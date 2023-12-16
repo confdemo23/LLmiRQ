@@ -1,2 +1,0 @@
-TwitterErrorHandler doesn't detect 401 from streaming API
-Using TwitterTemplate to invoke the streaming API, if I deliberately get a 401, it isn't handled by TwitterErrorHandler. The extractErrorDetailsFromResponse method returns null, so the handleClientErrors method returns immediately. The result is a UncategorizedApiException, whereas a NotAuthorizedException would be preferable.

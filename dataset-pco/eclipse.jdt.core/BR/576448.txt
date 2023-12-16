@@ -1,9 +1,0 @@
-Compile error shown when working with records though everything runs fine
-Created attachment 287261
-Example source
-
-In our code we have a record, with 3 arguments, that implements an Interface. This interface provides static helper methods to create record instances with varying arguments.
-And as far as I could not track down these static helper methods cause eclipse to show an error in the record file for 3 of the 6 constructors:
-"The body of a canonical constructor must not contain an explicit constructor call"
-
-I attached an example. I tried to simply it more, but couldn't figure out the core issue.

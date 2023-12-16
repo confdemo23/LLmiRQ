@@ -1,2 +1,0 @@
-AuthenticationServiceException logged on DEBUG level
-When LDAP server is not available AuthenticationServiceException should be logged on the ERROR level not on DEBUG.

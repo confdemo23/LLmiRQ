@@ -1,2 +1,0 @@
-MultidimensionalCounter does not throw "NoSuchElementException"
-The iterator should throw when "next()" is called even though "hasNext()" would return false.

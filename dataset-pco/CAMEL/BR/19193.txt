@@ -1,4 +1,0 @@
-Change default Micrometer meter names to follow Micrometer naming conventions
-Change Micrometer component's default naming strategy to use Micrometer meter names that follow the Micrometer meter naming convention: [https://micrometer.io/docs/concepts#_naming_meters]
-
-At present, the metrics are being published with names following the JavaClassNamingConvention.

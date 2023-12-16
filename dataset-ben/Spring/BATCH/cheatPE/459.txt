@@ -1,2 +1,0 @@
-unused StepExecution methods
-item count and commit count have setters and incrementer methods that are unused (the values are adjusted using apply(StepContribution).

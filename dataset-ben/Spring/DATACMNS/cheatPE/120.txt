@@ -1,2 +1,0 @@
-PreferredConstructor.Parameter does not have equals(...) and hashCode() methods
-If this is fixed MappedConstructor.getFor(...) in Spring Data Mongo could rather hold a Map of Parameter to MappedParameter to avoid iterating over all MappedParameter instances on each call.

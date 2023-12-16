@@ -1,2 +1,0 @@
-Reduce number of renames during bulkload
-Make sure we only do a single rename operation during bulkload when StoreEngine does not require the the use of tmp directories.

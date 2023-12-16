@@ -1,5 +1,0 @@
-Vectorized execution causes ClassCastException
-In some hive versions, when
-set hive.auto.convert.join=false;
-set hive.vectorized.execution.enabled = true;
-Some join queries fail with ClassCastException:

@@ -1,4 +1,0 @@
-813	 SingleColumnJdbcKeyGeneratorIntegrationTests, TransactionSynchronizationManager, DataSourceTransactionManager, AbstractPlatformTransactionManager, TransactionalTestExecutionListener, TestContextManager
-950	 ItemOrientedStep, AbstractStep, SimpleJob, SimpleJobLauncher, JobLauncherDetails, DataSourceTransactionManager, AbstractPlatformTransactionManager
-1240	 FlatFileItemReader, SimpleChunkProvider, ChunkOrientedTasklet, TaskletStep
-1774	 RepeatTemplate TaskletStep AbstractStep SimpleStepHandler JobFlowExecutor StepState SimpleFlow FlowJob AbstractJob SimpleJobLauncher CommandLineJobRunner

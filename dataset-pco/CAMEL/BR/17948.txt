@@ -1,2 +1,0 @@
-Race condition in MockEndpoint with PER_CLASS tests
-While working on CAMEL-17945, I realized that the tests with the scope {{PER_CLASS}} leveraging the {{MockEndpoint}} to define their assertions can fail randomly because of a race condition issue. Indeed, with the current code, a message of a previous test method can potentially call the method {{countDown}} on the latch of the following test method causing unexpected behavior.

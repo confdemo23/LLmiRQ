@@ -1,3 +1,0 @@
-CTAS failed on vectorized code path
-Following query fails:
- create table store_sales_2 stored as orc as select * from alltypesorc;

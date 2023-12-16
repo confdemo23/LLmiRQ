@@ -1,7 +1,0 @@
-[Multiple carets] Commands for multi selection not available in pom.xml editor
-When opening a pom.xml file in the source code view of the pom-editor the multi-selection commands are not accessible/actionable.
-This is true for
-- "To Multi-selection"
-- The new multi selection commands currently under development like "Add next match to multi selection"
-
-I guess the pom-editor is part of m2e, but I'd need a little help where to look further. Doesn't the pom-editor use StyledText and thus inherit it's capabilities? I couldn't easily orient in the multitude of m2e-packages -- can anyone help me out where to start?

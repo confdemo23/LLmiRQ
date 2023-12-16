@@ -1,2 +1,0 @@
-PreInvocationAuthorizationAdviceVoter checks in support(Class<?>) for super and not for child class
-The method PreInvocationAuthorizationAdviceVoter.support(Class&lt;?&gt; clazz) checks if clazz is a super class of MethodInvocation and not if its a subclass.

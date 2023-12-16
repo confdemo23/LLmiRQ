@@ -1,4 +1,0 @@
-NPE on a join query with authorization enabled
-when performing a join query which filters by a non-existent partition in the where clause (ie):
-select t1.a as a1, t2.a as a2 from t1 join t2 on t1.a=t2.a where t2.part="non-existent";
-It returns an NPE. It seems that the partition since non-existent is not part of the list of inputs (or maybe optimized out?). But the TableScanOperator still has a reference to it which causes an NPE after tableUsePartLevelAuth.get() returns null.

@@ -1,2 +1,0 @@
-CompareFilters are broken from client-side
-Some filters pass region-level tests but seem to freeze client-side.

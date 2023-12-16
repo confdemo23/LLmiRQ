@@ -1,2 +1,0 @@
-Thread visibility issues in repeat template
-ResultHolder implementation in TaskExecutorRepeatTemplate probably needs some volatile keywords (http://forum.springframework.org/showthread.php?t=61715).

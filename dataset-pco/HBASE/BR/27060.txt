@@ -1,6 +1,0 @@
-Allow sharing connections between AggregationClient instances
-AggregationClient only has a single constructor which takes a Configuration. The constructor uses the Configuration to create a Connection.
-
-However, some of the AggregationClient methods take a Table argument. In those cases it doesn't use the created Connection at all.
-
-We should add another constructor which does not create a Connection so that people can use AggregationClient with externally managed Connection.

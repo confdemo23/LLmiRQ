@@ -1,2 +1,0 @@
-groupby_bigdata.q sometimes throws out of memory exception
-I would get out of memory errors like the following when running groupby_bigdata.q.      

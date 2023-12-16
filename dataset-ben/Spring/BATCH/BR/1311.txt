@@ -1,2 +1,0 @@
-SimpleJobExplorer should return null when a StepExecution cannot be found
-SimpleJobExplorer should return null when a StepExecution cannot be found - it needs to check the JobExecution first before sending it to the repository.

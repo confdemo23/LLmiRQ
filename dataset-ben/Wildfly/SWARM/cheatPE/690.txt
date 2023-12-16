@@ -1,3 +1,0 @@
-FractionList brings wrong fraction information when a fraction is declared as a dependency of other fraction
-The internal, name and other properties have incorrect (default) values if the fraction is declared as a dependency of another fraction. 
-Eg. archaius 

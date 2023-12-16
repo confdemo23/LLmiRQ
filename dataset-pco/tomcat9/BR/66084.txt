@@ -1,4 +1,0 @@
-Launch Configuration: new Execution results tab extension point request
-Currently, any location withtin the workspace can be selected for receiving the
-execution history file. A filtering system should be provided for excluding some
-destinations, e.g. temporary or hidden projects, binary output folders, and so on...

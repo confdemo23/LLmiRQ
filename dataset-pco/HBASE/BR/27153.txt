@@ -1,2 +1,0 @@
-Improvements to read-path tracing
-Take another pass through tracing of the read path, make adjustments accordingly. One of the major concerns raised previously is that we create a span for every block access. Start by simplifying this to trace events and see what else comes up.

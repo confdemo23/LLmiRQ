@@ -1,7 +1,0 @@
-Add containsAny(CharSequence cs, CharSequence... searchChars) to StringUtils
-This method is missing from StringUtils. The corresponding method: 
-public static boolean containsAny(CharSequence cs, char... searchChars) {
-does exist, so this was probably just forgotten. 
-Also
-public static boolean containsIgnoreCase(CharSequence str, CharSequence... searchStr) {
-needs to be added as well.

@@ -1,3 +1,0 @@
-The server requires JASPI authentication even if no security-constraint is defined
-If JASPI authentication is configured in security domain, then the server requires authentication even if no security-constraint is defined for web application which uses the security domain.
-With the classic authentication is the behavior correct.

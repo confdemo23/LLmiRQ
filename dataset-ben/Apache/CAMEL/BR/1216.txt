@@ -1,3 +1,0 @@
-DeadLetterChannel - allow it to be enabled for transacted exchanges as well
-See nabble:
-http://www.nabble.com/Please-keep-this-unintended-feature-in-camel-and-other-requests-td21025627s22882.html

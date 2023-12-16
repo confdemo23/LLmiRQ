@@ -1,3 +1,0 @@
-Introduce a message header to let SqlProducer update the query string in the runtime
-Current we can only define a sql query in the SqlEndpoint URI, we need to a way to change the query per exchange.
-An new camel header for this query could help use to do that.

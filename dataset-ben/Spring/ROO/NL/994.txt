@@ -1,2 +1,0 @@
-Add an --implements keyword to the class command
-Currently the class command supports --extends which can extend a class.  To add to developer productivity, can you add an --implements parameter, so if you are creating interface-driven Spring Beans, you can automate the creation of both the interface and the implementing class?

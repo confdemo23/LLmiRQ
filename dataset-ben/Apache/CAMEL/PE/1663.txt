@@ -1,2 +1,0 @@
-Spring BeanPostProcessors do not work on beans which are used in Camel route builders 
-Spring PostProcessors stop working for beans which are injected into Camel route builders.  See attached test cases showing processor breaks as soon as injected into a route builder.

@@ -1,2 +1,0 @@
-'create if not exists' fails for a table name with 'select' in it
-hive&gt; create table if not exists tmp_select(s string, c string, n int);

@@ -1,4 +1,0 @@
-camel-core - XML DSL <beans> for custom beans and to embed Camel routes in same file
-We may consider a root tag such as <beans> that are Camel specific and therefore works on all runtimes, where we can have basic support for dependency injection with <bean> and also embed Camel <routes> and <rests> and <routeConfigurations> and <routeTemplates> etc all in the same file.
-
-This can be handy for low-code projects with Camel K / Camel JBang.

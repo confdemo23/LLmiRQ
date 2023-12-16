@@ -1,2 +1,0 @@
-metastore get_delegation_token fails with null ip address
-After changes in HIVE-13169, metastore get_delegation_token fails with null ip address.

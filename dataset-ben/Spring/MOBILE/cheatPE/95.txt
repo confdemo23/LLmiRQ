@@ -1,2 +1,0 @@
-Device resolver possibly returning MOBILE_INSTANCE when the device is a tablet
-LiteDeviceResolver will return that a tablet is a phone if it has UAProf headers (e.g. Galaxy Tab 8.9)

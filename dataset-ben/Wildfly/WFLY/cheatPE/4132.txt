@@ -1,3 +1,0 @@
-Transaction subsystem does not initialise the recovery store correctly
-The initialisation code in the transaction subsystem sets the transaction log directory on the wrong instance (https://github.com/wildfly/wildfly/blob/master/transactions/src/main/java/org/jboss/as/txn/service/ArjunaObjectStoreEnvironmentService.java#L78). The code should pass in the null string for the instance name to get the default instance.
-The bug arises because we recently fixed JBTM-2207 in order to avoid string comparison with the default name and the reason this is not a backwards compatibility issue is that com.arjuna.common.internal.util.propertyservice.BeanPopulator is internal code that the app server is using.

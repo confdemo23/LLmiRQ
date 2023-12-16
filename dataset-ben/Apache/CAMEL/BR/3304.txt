@@ -1,3 +1,0 @@
-camel-web-console feature for Apache Karaf
-We need a feature for installing camel-web into Apache Karaf. It can be a bit of pain doing this the osgi way so we should provide such a feature.
-Look at the AMQ web console feature how it may be done.

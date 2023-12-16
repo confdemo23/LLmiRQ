@@ -1,4 +1,0 @@
-Using custom expression in Splitter EIP which throws exception, is not triggering onException
-See nabble
-http://camel.465427.n5.nabble.com/Global-exception-not-invoked-in-case-of-Exception-fired-while-iterating-through-File-Splitter-td4826097.html
-We should detect exceptions occurred during evaluation of the expression, and then cause the splitter EIP to fail asap.

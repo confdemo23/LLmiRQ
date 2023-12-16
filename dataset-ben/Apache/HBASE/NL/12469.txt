@@ -1,2 +1,0 @@
-Way to view current labels
-There is currently no way to get the available labels for a system even if you are the super user.  You have to run a scan of hbase:labels and then interpret the output.

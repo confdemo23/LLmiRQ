@@ -1,2 +1,0 @@
-Data-on-demand and integration tests to support composite primary keys
-This ticket is to combine existing related tickets into one.

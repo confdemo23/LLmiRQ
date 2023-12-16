@@ -1,7 +1,0 @@
-Features for Camel-Micrometer
-Features for MicrometerRoutePolicy
- # Repair test
- # Allow users to use one MicrometerRoutePolicy instance for multiple routes. This is especially useful when using OSGI XML
- # Allow users to disable additional counters
- # Allow users to set up timers with advanced micrometer API settings
- # Written for all this tests

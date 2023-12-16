@@ -1,2 +1,0 @@
-HiveServer2: Make ZK config publishing configurable
-We should revert to older behaviour when config publishing is disabled.

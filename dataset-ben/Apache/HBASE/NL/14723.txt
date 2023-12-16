@@ -1,2 +1,0 @@
-Fix IT tests split too many times
-Splitting the whole table is happening too often. Lets make this happen less frequently as there are more regions.

@@ -1,3 +1,0 @@
-[camel-barcode] Writer/Reader hints should be re-optimized when setBarcodeFormat method called.
-BarcodeDataFormat#setBarcodeDataFormat() should optimize writer/reader hints such like setBarcodeImageType().
-see https://github.com/apache/camel/pull/284

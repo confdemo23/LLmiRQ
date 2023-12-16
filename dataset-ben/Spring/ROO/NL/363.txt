@@ -1,8 +1,0 @@
-Perform commands do not work in RC3
-Just dowloaded RC3. 
-Perform commands seem not to work at all. Same behavior in sts and in standalone roo shell.
-Just looks like this:
-roo&gt; perform package
-roo&gt;
-I have Maven 2.10 in my path. 
-In previous version (RC2) it did work  (besides the known issue in STS ...)

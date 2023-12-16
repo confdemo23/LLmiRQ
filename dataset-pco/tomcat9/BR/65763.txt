@@ -1,5 +1,0 @@
-[Intro] "standby" page always saved to Memento as the current page
-Changes made to BrowserIntroPartImplementation.dynamicStandbyStateChanged()
-after M9 have caused the standby page to always be stored as the currentPage on
-the memento.  as a result, the standby page is always activated when you restart
-eclipse with a non-fresh workspace.

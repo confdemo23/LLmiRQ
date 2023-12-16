@@ -1,4 +1,0 @@
-JDBC persistence-store for Artemis
-Apache ActiveMQ had the capability to store messages into a database via JDBC. In Apache ActiveMQ Artemis this has gone.
-For a consistent backup data of various (co-located) systems participating in transactions should reside at the same datastore as otherwise this needs to be achieved through application software design (i.e. idempotent consumers etc.).
-As in Apache ActiveMQ Artemis a JDBC Persistence-Store is about to be introduced we should also offer this capability on WildFly / EAP.

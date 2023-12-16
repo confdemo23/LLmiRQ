@@ -1,2 +1,0 @@
-Rename HDFS directories when a table is renamed.
-As the title says. Applies only to internal (or native) tables.

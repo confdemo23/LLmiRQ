@@ -1,5 +1,0 @@
-Validate Artemis parameters 
-Artemis changed the naming convention to use CamelCase for its acceptor and connector parameters keys.
-Validation of the parameters was discarded when the messaging-activemq subsystem was created.
-This means that the current template for the messaging-activemq subsystem is not correct (the parameters will not be taken into account by Artemis).
-The server-id parameter for in-vm connector has also be renamed to serverId. 

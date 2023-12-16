@@ -1,3 +1,0 @@
-UDF: Concat should accept multiple arguments
-According to mysql, concat should accept multiple arguments.
-http://dev.mysql.com/doc/refman/5.0/en/string-functions.html#function_concat

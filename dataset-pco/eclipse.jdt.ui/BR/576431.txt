@@ -1,2 +1,0 @@
-[refactoring] Refactor SurroundWithTryWithResouresRefacatoring to jdt.core.manipulation
-jdt.ls requires SurroundWithTryWithResourcesRefactoring

@@ -1,2 +1,0 @@
-Add Spring 4.0 as an option for compile & test
-Add a build option -Dspring4 to allow compile and test against latest Spring 4.0 release

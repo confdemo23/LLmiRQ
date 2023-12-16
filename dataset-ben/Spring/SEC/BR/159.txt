@@ -1,3 +1,0 @@
-SecurityContextHolder may cause a memory leak on app re-deployment
-The context thread local reference may prevent an application classloader from being garbage collected
-http://forum.springframework.org/showthread.php?t=21144

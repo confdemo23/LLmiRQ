@@ -1,2 +1,0 @@
-Finish time is wrong when perflog is missing SUBMIT_TO_RUNNING
-Sometimes PerfLog misses SUBMIT_TO_RUNNING end time which makes finish time to be wrong. Like belowCompile Query                           0.60sPrepare Plan                            0.44sSubmit Plan                             0.83sStart                                   0.00sFinish                              1460423234.44sNO PRECOMMIT TESTS

@@ -1,8 +1,0 @@
-CVS Update: (filename) must not end in a period
-I try to update a shared project from a cvs repository.
-Somebody created a folder "22.05." in the repository. Now I'm performing a CVS
-update but I'm only getting an error message:
-"ERROR: Performing a CVS Update on 7 resources: Problem creating folder:
-/Grid/Protokolle/22.05.. 22.05. must not end in a period."
-
-But I can create this folder manually so why can't Eclipse (3.0 M8) do it?

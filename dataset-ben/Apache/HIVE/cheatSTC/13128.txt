@@ -1,2 +1,0 @@
-NullScan fails on a secure setup
-Nullscan provides uris of the form nullscan://null/ - which are added to the list of FileSystems for which Tez should obtain tokens.

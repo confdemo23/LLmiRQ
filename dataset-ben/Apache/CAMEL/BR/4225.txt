@@ -1,2 +1,0 @@
-camel-mail: add disconnect option
-A perpetually open connection to an email server can cause problems under various circumstances.  There should therefore be a "disconnect" option (default: false) that causes the connection to be closed after each action taken  mail read from a folder, a message flagged for deletion, a message sent, etc.

@@ -1,2 +1,0 @@
-Writing to an HBase table throws IllegalArgumentException, failing job submission
-Inserting data into HBase table via hive query fails with the following message:$

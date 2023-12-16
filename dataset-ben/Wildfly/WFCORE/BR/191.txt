@@ -1,1 +1,0 @@
-Syslog reconnect timeout does not take effect at runtime

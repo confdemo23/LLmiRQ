@@ -1,2 +1,0 @@
-Update camel-rabbitmq URI for consumers
-The camel-rabbitmq requires a mandatory amqp exchange as the first parameter in the URI.  Other options are specfied after the "?.  This is appropriate for producers, but not for consumers.  Subscribers should specify the queue name as the first parameter.

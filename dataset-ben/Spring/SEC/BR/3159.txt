@@ -1,1 +1,0 @@
-Java doc inaccurate on HttpSecurity#headers

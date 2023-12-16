@@ -1,1 +1,0 @@
-validator component should be configurable for either Sax or Dom as MSV component requires Dom

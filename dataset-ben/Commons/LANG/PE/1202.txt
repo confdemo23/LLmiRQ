@@ -1,2 +1,0 @@
-parseDateStrictly does't pass specified locale
-LANG-799 added support for specifying a locale, but parseDateStrictly() doesn't pass it to the final parseDateWithLeniency() method.

@@ -1,2 +1,0 @@
-Unreliable lock algorithm in SimpleMessageListenerContainer
-Unreliable lock algorithm in SimpleMessageListenerContainer leads to container not waiting for stop() if some listeners have failed.

@@ -1,2 +1,0 @@
-ISPN-6007 workaround fails for caches using optimistic locking
-Ultimately, this workaround should be removed following the upgrade to Infinispan 8.1.1.Final - which incorporates a fix for ISPN-6007.

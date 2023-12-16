@@ -1,2 +1,0 @@
- ResponseMatcher.payload(Resource payload) should be static
-ResponseMatchers  public ResponseMatcher payload(Resource payload) should be declared static

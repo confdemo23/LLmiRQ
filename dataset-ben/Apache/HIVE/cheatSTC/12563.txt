@@ -1,3 +1,0 @@
-NullPointerException with 3-way Tez merge join
-Issue occurs in Tez merge joins with 3 way join (A join B join C), where A is the big table, and A and C end up having 0 rows after table filters.
-Was able to repro this issue with using the sample tables in the Hive unit tests:select  a.key, b.value, c.valuefrom  src a,  src1 b,  src cwhere  a.key = b.key and a.key = c.key  and a.value &gt; 'wal_6789'  and c.value &gt; 'wal_6789'

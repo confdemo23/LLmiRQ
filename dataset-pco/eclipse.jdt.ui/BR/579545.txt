@@ -1,2 +1,0 @@
-fix minor typo in StringButtonStatusDialogField Javadoc
-The Javadoc for StringButtonStatusDialogField has some minor typo errors

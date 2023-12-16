@@ -1,2 +1,0 @@
-SshPublisher will skip uploading artifacts if the build is failure
-This is not what we expect, need to force it always try to upload the artifacts.

@@ -1,2 +1,0 @@
-Message.toString() ClasscastException
-Message.toString() ClasscastException when body is Serializable and not a String!

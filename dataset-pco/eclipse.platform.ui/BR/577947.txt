@@ -1,9 +1,0 @@
-[Mac] Views like Quick search, Git Pull and History view is not aligned at top and left
-Git Version : 	Eclipse EGit	Git integration for Eclipse	6.0.0.202111291000-r	org.eclipse.egit 
-Eclipse Version - 4.23.0.v20211222-1800
-
-The Tables are not aligned in the top and left for Git History and Git pull view.
-
-Attaching the image for History view.
-
-Same issue with Egit 5.12 version and Eclipse Version - 4.23.0.v20211222-1800

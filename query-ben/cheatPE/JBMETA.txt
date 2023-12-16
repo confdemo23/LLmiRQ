@@ -1,7 +1,0 @@
-291	 JBoss50MessageDrivenBeanMetaData, JBossMessageDrivenBean31MetaData
-301	 MessageDrivenBean31MetaData, JBossMessageDrivenBean31MetaData, JBossSessionBean31MetaData, SessionBean31MetaData
-302	 SetDefaultLocalBusinessInterfaceProcessor
-315	 JBossMetaData, getInterceptors
-317	 JBossMetaData, getInterceptors, mybean, org.myapp.MyInterceptor
-348	 WebApp24ValidationUnitTestCase
-371	 DefaultPropertyReplacer, PropertyResolver

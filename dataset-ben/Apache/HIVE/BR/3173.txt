@@ -1,2 +1,0 @@
-implement getTypeInfo database metadata method 
-The JDBC driver does not implement the database metadata method getTypeInfo. Hence, an application cannot dynamically determine the available type information and associated properties. 

@@ -1,2 +1,0 @@
-camel-azure - BlobConsumer does not use prefix
-When using prefix on azure endpoints the correct returned results should be all blobs starting with provided prefix, instead all blobs are retrieved. The issue is described in [Zulip chat thread|https://camel.zulipchat.com/#narrow/stream/257298-camel/topic/CamelAzureBlob.20endpoint.20prefix ]

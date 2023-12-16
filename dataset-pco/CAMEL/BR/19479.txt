@@ -1,2 +1,0 @@
-camel-core - Add threadId as function to simple language
-We have ${threadName} but we also need ${threadId} to only get the id (number)

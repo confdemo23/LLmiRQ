@@ -1,3 +1,0 @@
-camel-sql - May not propagate headers for operations with no resultset
-See nabble
-http://camel.465427.n5.nabble.com/Camel-SQL-CamelSqlRetrieveGeneratedKeys-attribute-delete-all-headers-tp5762512.html

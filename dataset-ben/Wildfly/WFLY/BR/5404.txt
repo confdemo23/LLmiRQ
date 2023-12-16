@@ -1,3 +1,0 @@
-WF 10.0.0.CR2 with standalone.xml from WF 9 crashes on war deploy
-As I understand it Wildfly 10 wants to maintain configuration compatibility with Wildfly 9.
-It looks lake some of the compatibility was broken with CR1 (worked with Betas). 

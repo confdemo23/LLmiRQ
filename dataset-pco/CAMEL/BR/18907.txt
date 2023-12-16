@@ -1,5 +1,0 @@
-camel-datasonnet - Datasonnet is not JakartaEE compatible for v4
-Reported this to datasonnet at
-https://github.com/datasonnet/datasonnet-mapper/issues/112
-
-Until there is a Jakarta compatible release, then we would need to disable/remove camel-datasonnet.

@@ -1,4 +1,0 @@
-22	 SimpleXmlHttpMessageConverter, canRead, canWrite
-85	 HttpBasicAuthentication, org.apache.commons.codec.binary.Base64, android.util.Base64
-110	 HttpURLConnection, SimpleStreamingHttpRequestFactoryTests#testGetAcceptEncodingNone, SimpleBufferingHttpRequestFactoryTests#testGetAcceptEncodingNone, BufferingSimpleClientHttpRequestFactoryTests#testGetAcceptEncodingNone
-129	 HttpStatusCodeException, SPR-9273, Merge

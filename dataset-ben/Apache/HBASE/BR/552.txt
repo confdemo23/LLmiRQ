@@ -1,2 +1,0 @@
-Bloom filter bugs
-There are some bugs in Bloom filters in the code that deals with initialization and (de)serialization.

@@ -1,3 +1,0 @@
-IndexManager checks awaitingJobs size not in synchronized block
-IndexManager extends JobManager and while the later always accesses "awaitingJobs" in synchronized blocks, former doesn't do that. This is not correct, the access should be synchronized for MT data consistency.
-Beside that, there is already synchronized awaitingJobsCount() method that is used elsewhere and probably should be used here too. I will push a patch.

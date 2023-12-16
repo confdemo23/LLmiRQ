@@ -1,5 +1,0 @@
-Correction of Javadoc for org.apache.commons.collections4.functors.CatchAndRethrowClosure
-Correct the javadoc for org.apache.commons.collections4.functors.CatchAndRethrowClosure, replacing:
-CollctionUtils.forAllDo(strList, writer);
-by:
-CollectionUtils.forAllDo(strList, writer);

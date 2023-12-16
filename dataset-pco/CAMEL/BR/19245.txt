@@ -1,2 +1,0 @@
-camel-java-joor-dsl - Ease the way to get all the compiled classes
-Up to now, the only way to get the inner and anonymous classes that have been compiled is by using reflection/introspection while it could be simplified by adding new methods

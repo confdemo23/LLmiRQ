@@ -1,2 +1,0 @@
-Allow 'id' and 'ref' to exist together on <*-listener/>
-Allow 'id' and 'ref' to exist together on &lt;*-listener/&gt;

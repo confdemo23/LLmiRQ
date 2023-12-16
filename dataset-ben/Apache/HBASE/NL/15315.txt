@@ -1,2 +1,0 @@
-Remove always set super user call as high priority
-Current implementation set superuser call as ADMIN_QOS, but we have many customers use superuser to do normal table operation such as put/get data and so on. If client put much data during region assignment, RPC from HMaster may timeout because of no handle. so it is better to remove always set super user call as high priority. 

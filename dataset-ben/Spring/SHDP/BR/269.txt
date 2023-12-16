@@ -1,2 +1,0 @@
-Update to Boot RC2
-There are some breaking changes which are causing compile errors. Nothing major, some boot classes has been moved/renamed, etc.

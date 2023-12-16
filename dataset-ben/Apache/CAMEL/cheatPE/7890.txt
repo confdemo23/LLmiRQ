@@ -1,2 +1,0 @@
-XmlConverter.toSAXSourceFromStream does not set setNamespaceAware
-XmlConverter.toSAXSourceFromStream does not setsfactory.setNamespaceAware(true);

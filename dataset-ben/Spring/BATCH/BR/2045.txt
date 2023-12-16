@@ -1,5 +1,0 @@
-Spring Batch version not incremented in XSD schema check warning message
-When Spring Batch 2.1 schema is used to define job context, the following message is shown:
-You cannot use spring-batch-2.0.xsd with Spring Batch 2.1.  Please upgrade your schema declarations (or use the spring-batch.xsd alias if you are feeling lucky).
-The numbers seem to be incremented accordingly to 2.1.xsd and Spring Batch 2.2
-(line 72 of the JobParser class)

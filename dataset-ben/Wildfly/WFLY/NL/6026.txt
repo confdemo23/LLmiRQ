@@ -1,4 +1,0 @@
-Add ability to specify max packet size of ajp-listener
-Currently there is not possible to specify maximum packet size for AJP listener in Undertow. In EAP6 there was possible to use org.apache.coyote.ajp.MAX_PACKET_SIZE system property for this purpose, see also this jira.
-This is missing feature compared to EAP6 therefore we should add this otherwise some customers might miss it.
-Proposed solution: add a new attribute into AJP listener that would specify max packet size.

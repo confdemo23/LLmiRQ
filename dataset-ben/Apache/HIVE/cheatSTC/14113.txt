@@ -1,3 +1,0 @@
-Create function failed but function in show function list
-1. create function with invalid hdfs path, /udf/udf-test.jar does not existscreate function my_lower as 'com.tang.UDFLower' using jar 'hdfs:///udf/udf-test.jar';
-Failed with following exception:0: jdbc:hive2://189.39.151.44:10000/&gt; create function my_lower as 'com.tang.UDFLower' using jar 'hdfs:///udf/udf-test.jar';

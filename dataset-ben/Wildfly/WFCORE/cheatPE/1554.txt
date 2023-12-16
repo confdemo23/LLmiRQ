@@ -1,2 +1,0 @@
-Building an attribute builder based on another attribute builder does not copy CapabilityReferenceRecorder
-AbstractAttributeDefinitionBuilder(final AttributeDefinition basis) seems to copy every field from the basis attribute, except the CapabilityReferenceRecorder.  Looks like an oversight.

@@ -1,4 +1,0 @@
-Methods on Swarm should return Swarm instead of Container
-Currently if you do
-    Swarm swarm = new Swarm();
-then swarm.start() should return a Swarm but instead returns a Container (its superclass).

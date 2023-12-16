@@ -1,8 +1,0 @@
-[18][javadoc] provide support for property values to be wrapped in single quotes for @highlight in snippets
-Currently there is support to have property values to be string literals for @highlight in snippets, but as per https://openjdk.java.net/jeps/413
-
-the property values of substring, regex and type can be specified in single quotes
-
-substring="abc" is supported
- but 
-substring='abc' also needs to be supported

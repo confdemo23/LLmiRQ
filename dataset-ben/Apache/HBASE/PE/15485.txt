@@ -1,2 +1,0 @@
-Filter.reset() should not be called between batches
-As discussed in HBASE-15325, now we will resetFilters if partial result not formed, but we should not reset filters when batch limit reached

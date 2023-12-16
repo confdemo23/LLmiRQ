@@ -1,2 +1,0 @@
-Fix truncate problem with Iceberg CTAS tables
-Currently Iceberg CTAS tables cannot be truncated in a subsequent operation. This is because we populate the table properties differently on the CTAS codepath, and the external.table.purge=true is not populated in this case.

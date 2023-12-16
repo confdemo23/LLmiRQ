@@ -1,2 +1,0 @@
-JBAS015893: Encountered invalid class name message when class name is perfectly valid
-The JVM is much more lenient than java as far as class names are concerned, we should probably just get rid of this message altogether. 

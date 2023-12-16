@@ -1,2 +1,0 @@
-Mark RpcExecutor as IA.LimitedPrivate COPROC and PHOENIX
-{{RpcExecutor}}, an abstract base class, is marked as {{IA.Private}}. However, it has several subclasses that are marked as {{IA.LimitedPrivate(COPROC, PHOENIX)}}. I think that the base class needs to match the highest exposure level of any of its subclasses.

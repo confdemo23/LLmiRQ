@@ -1,2 +1,0 @@
-Turn hive.compute.query.using.stats on by default
-We now have hive.compute.query.using.stats=false by default. We plan to turn it on by default so that we can have better performance. We can also set it to false in some test cases to maintain the original purpose of those tests..

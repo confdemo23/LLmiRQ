@@ -1,2 +1,0 @@
-session-max-alive-time statistics for deployment are counted incorrectly
-The value of session-max-alive-time is incorrectly counted. It looks as it is counted in miliseconds instead of seconds + the value is double of expected one.

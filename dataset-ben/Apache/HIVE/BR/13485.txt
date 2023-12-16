@@ -1,2 +1,0 @@
-Session id appended to thread name multiple times.
-HIVE-13153 addressed a portion of this issue. Follow up from there.

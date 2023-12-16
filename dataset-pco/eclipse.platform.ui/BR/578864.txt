@@ -1,8 +1,0 @@
-remove fake job "The user is waiting for background work to complete" while waiting
-When the "User Operation is waiting" Dialog pops up to allow canceling of Jobs then there is a Job called "The user is waiting for background work to complete".
-
-It's purely fake and does not add any value. The text is even sometimes wrong. (see example screenshot: Should be the same as the Info item - 'is waiting for "Building"').
-Using the cancel button on that entry is the same as pressing the dedicated "Cancel user Operation" Button.
-It's confusing to have two ways to cancel the waiting job. I prefer to only have the cancel button and the correct text is in the headline anyway.
-
-The only value it might ever had that in principle it could had displayed a progressbar how many jobs we are waiting for. But that does not work either, as it only would try to count down while additional jobs can and do still start as long as they do not conflicting.

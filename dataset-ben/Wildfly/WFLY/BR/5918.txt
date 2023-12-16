@@ -1,4 +1,0 @@
-ServletContext.getResourceAsStream fails on windows
-Struts 1 ActionServlet fails to initialize with latest Wildfly 10.0.0 CR5 though it was working fine on the previous CR4 release. The failure occurs when Servlet tries to read the /WEB-INF/web.xml inside my web application.
-Looking at the struts source code, getServletContext().getResourceAsStream("/WEB-INF/web.xml") returns null during the Servlet initialization. 
-problem only occurs when server is started from path that is not case equal to real path on file system.

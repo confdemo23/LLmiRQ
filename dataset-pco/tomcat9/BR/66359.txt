@@ -1,5 +1,0 @@
-"Team->Share Project..." "Select a repository type:" page is skipped.
-"Team->Share Project..." skips the "Select a repository type:" when only one 
-team provider is active. Since this is one of the few/only activation points 
-for team providers that filter themselves through activities, this page always 
-needs to be shown to the user.

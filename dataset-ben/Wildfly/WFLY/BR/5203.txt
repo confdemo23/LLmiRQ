@@ -1,1 +1,0 @@
-mod_cluster read-resource can result in NPE if service is not started yet

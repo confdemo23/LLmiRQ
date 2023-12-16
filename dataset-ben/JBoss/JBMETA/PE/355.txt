@@ -1,2 +1,0 @@
-Application Exception Class is not trimmed
-All parsers use super.getElementText(XML...), the Application Exception parser does not.

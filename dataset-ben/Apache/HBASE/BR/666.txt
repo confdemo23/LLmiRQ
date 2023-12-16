@@ -1,2 +1,0 @@
-UnmodifyableHRegionInfo gives the wrong encoded name
-UnmodifyableHRegionInfo never has the same encoded name for a HRegionInfo. To see it, look at a table regions and hit refresh in UI.

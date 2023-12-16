@@ -1,2 +1,0 @@
-Move Avro dependency to 1.7.7
-Move Avro dependency from 1.7.5 to current release 1.7.7.

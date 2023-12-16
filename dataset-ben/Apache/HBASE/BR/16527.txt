@@ -1,2 +1,0 @@
-IOExceptions from DFS client still can cause CatalogJanitor to delete referenced files
-that was fixed partially in HBASE-13331, but issue still exists , now a little bit deeper in the code.

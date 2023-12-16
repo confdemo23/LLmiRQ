@@ -1,2 +1,0 @@
-Improve security subsystem test coverage
-We should at least be testing expressions allowed

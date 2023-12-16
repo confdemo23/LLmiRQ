@@ -1,4 +1,0 @@
-OrcFileMergeOperator does not use correct compression buffer size
-OrcFileMergeOperator checks for compatibility before merging orc files. This compatibility check include checking compression buffer size. But the output file that is created does not honor the compression buffer size and always defaults to 256KB. This will not be a problem when reading the orc file but can create unwanted memory pressure because of wasted space within compression buffer.
-This issue also can make the merged file unreadable under certain cases. For example, if the original compression buffer size is 8KB and if  hive.exec.orc.default.buffer.size is set to 4KB. The merge file operator will use 4KB instead of actual 8KB which can result in hanging of ORC reader (more specifically ZlibCodec will wait for more compression buffers). 
-jstack output for hanging issue

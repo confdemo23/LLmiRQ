@@ -1,2 +1,0 @@
-Fix broken MiniLlap tests
-Currently MiniLlap tests fail with the following error:TestMiniLlapCliDriver - did not produce a TEST-*.xml fileSupposedly, it started happening after HIVE-12319.

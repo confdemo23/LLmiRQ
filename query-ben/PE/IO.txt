@@ -1,4 +1,0 @@
-66	 RegexFileFilter RegexFileFilterTest
-150	 RegexpFileFilter WildcardFilter
-207	 File Directory Thread Process
-339	 MaxBytesInputStream CountingInputStream

@@ -1,2 +1,0 @@
-HIVE-3128 introduced bug causing dynamic partitioning to fail
-HIVE-3128 introduced a new commons-compress jar and imports classes from it in FileUtils.java  The FileUtils class is accessed by dynamic partitioning in the map reduce cluster where the jar is not available, causing the query to fail.

@@ -1,3 +1,0 @@
-Query criteria is not considered in the query
-When I perform a query that includes more than one criteria, only the first criteria is being considered, others are discarded.
-An example is attached; When the query is performed by MongoDB driver it works fine, but with Spring, the problem occurs.

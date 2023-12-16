@@ -1,6 +1,0 @@
-camel-ftp - Move-File Post Processing in (S)FTP not working if OutMessage is set
-When the last processor of a route sets a outMessage, the move-file post processing in (s)ftp adapter is not working.
-
- 
-
-I created following reproducer: [https://github.com/mash-sap/camelFTP] The evaluation of the expressions (i.e. file:onlyname) is looking in the inMessage of the exchange to evaluate the filename (link<[https://github.com/apache/camel/blob/main/core/camel-core-languages/src/main/java/org/apache/camel/language/simple/SimpleExpressionBuilder.java#L259]>). However, the properties of the files may get bound to the outMessage if there is one (link<[https://github.com/apache/camel/blob/camel-2.24.x/camel-core/src/main/java/org/apache/camel/component/file/GenericFile.java#L134]>). Therefore the evaluation is not working as expected. I'm not too familiar with the code, but one possible solution (for post-processing) could be, to always bind the file-properties to the in message. But maybe this is not valid for other use-cases and therefore parameterization is required: Link<[https://github.com/apache/camel/blob/camel-2.24.x/camel-core/src/main/java/org/apache/camel/component/file/GenericFile.java#L134]>

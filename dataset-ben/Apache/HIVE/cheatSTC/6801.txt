@@ -1,3 +1,0 @@
-beeline kerberos authentication fails if the client principal name has hostname part
-Kinited as guest@EXAMPLE.COM
-Connected successfully with beeline using command

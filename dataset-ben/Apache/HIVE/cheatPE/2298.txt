@@ -1,3 +1,0 @@
-Fix UDAFPercentile to tolerate null percentiles
-UDAFPercentile when passed null percentile list will throw a null pointer exception.
-Submitting a small fix for that.

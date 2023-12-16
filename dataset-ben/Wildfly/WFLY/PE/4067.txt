@@ -1,5 +1,0 @@
-DummyTransaction exception during session.invalidate with started conversation
-A DummyTransaction-IllegalStateException is thrown while invalidating a httpSession wit a started javax.enterprise.context.Converation.
-We are working in "full-ha" with session distribution enabled (&lt;distributable/&gt; in web.xml)
-Under https://ci.jboss.org/hudson/job/WildFly-latest-master/1334/ everything is working fine. No exception is thrown
-The exception is thrown starting with version https://ci.jboss.org/hudson/job/WildFly-latest-master/1340 to the latest now (#1475)

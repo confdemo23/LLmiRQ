@@ -1,2 +1,0 @@
-HiveProtoLoggingHook EventLogger should always close old writer
-If {{hive.hook.proto.file.per.event=true}} (recommended for S3A filesystem), the Hive proto {{EventLogger}} will create a new file for each proto event. However, if we already had an appropriate writer (i.e. maybeRolloverWriterForDay() returns false) from some previous operation - we don't close the previous writer instance before creating a new one.

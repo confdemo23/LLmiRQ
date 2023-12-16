@@ -1,3 +1,0 @@
-CBO: Use CBO, even for the 1 JOIN + GROUP BY case
-Hive CBO kicks in for a query only if a query has &gt;1 joins, which is an archaic result of only re-ordering joins in the original impl.
-As more group-by &amp; filter optimizers have been added, modify the CBO impl to kick in even if the query has a single JOIN.

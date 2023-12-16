@@ -1,1 +1,0 @@
-Thrift and RDBMS schema changes for HIVE-11965

@@ -1,2 +1,0 @@
-Replicate AuthenticatedSession when using custom authentication mechanisms
-Not replicating the authenticated session is just an optimization or BASIC, DIGEST, and CERT mechanisms.  We should treat custom authentication mechanisms the same way we treat FORM mechanisms.

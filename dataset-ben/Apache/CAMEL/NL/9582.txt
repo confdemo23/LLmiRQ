@@ -1,3 +1,0 @@
-swagger-api docs not working in only using xml without any java route
-See nabble
-http://camel.465427.n5.nabble.com/Swagger-not-working-tp5777255.html

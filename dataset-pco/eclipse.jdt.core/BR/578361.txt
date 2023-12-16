@@ -1,2 +1,0 @@
-[formatter] Keep braced code on one line: settings for new switch constructs
-Switch cases/expression with arrow operator are a good candidate to implement the "Keep braced code on one line" formatter settings for.

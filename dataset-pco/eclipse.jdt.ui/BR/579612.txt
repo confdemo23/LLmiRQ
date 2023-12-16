@@ -1,2 +1,0 @@
-Regression: Fix for 578788 causes regression in NLS hover
-The fix for Bug 578788 causes a regression in hovering on message constants from a Class that extends NLS.  Problem found in I20220406 build.

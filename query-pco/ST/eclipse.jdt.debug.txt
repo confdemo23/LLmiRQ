@@ -1,4 +1,0 @@
-576805	 DebugTypeSelectionDialog, ImageDescriptor, FilteredItemsSelectionDialog, SWT Resource
-577171	 EvaluationSourceGenerator, ASTEvaluationEngine, JavaWatchExpressionDelegate, JDIThread
-578899	 ClassLoader, JDIStackFrame, StackFrameContentProvider, JavaStackFrameContentProvider, ElementContentProvider, Worker
-579439	 LineTrackerTests testFlood

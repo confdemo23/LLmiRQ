@@ -1,6 +1,0 @@
-[launching] ILaunchConfigurationWorkingCopy.doSave needs to take progress monitor
-Post 3.0 API addition
-
-For better/correct progress reporting for callers of this method we need to be 
-able to support supplying a progress monitor that can be used for the 
-underlying workspace runnable that is used.

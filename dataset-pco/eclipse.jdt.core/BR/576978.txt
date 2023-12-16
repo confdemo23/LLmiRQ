@@ -1,2 +1,0 @@
-[releng] Files with CR-LF as line endings
-Four Java source files in JDT core use CR-LF as line endings. I suggest to normalize them to LF.

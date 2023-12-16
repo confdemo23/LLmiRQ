@@ -1,2 +1,0 @@
-ProducerTemplate - Sending manually created Exchange causes 2x sent event notification
-Only when you manually create  the exchange and pass it to the producer template send method there will be 2x sent event in the notifier.

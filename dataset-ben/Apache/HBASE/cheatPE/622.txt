@@ -1,3 +1,0 @@
-Remove StaticTestEnvironment and put a log4j.properties in src/test
-StaticTestEnvironment messes around with log4j properties, overriding what is in log4j.properties
-put a log4j.properties in src/test to tweak test case logging.

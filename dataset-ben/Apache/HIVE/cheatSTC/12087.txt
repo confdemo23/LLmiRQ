@@ -1,2 +1,0 @@
-IMPORT TABLE fails
-IMPORT TABLE fails for larger tables with:

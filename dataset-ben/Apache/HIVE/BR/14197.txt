@@ -1,3 +1,0 @@
-LLAP service driver precondition failure should include the values
-LLAP service driver's precondition failure message are like belowWorking memory + cache has to be smaller than the container sizingIt will be better to include the actual values for the sizes in the precondition failure message.
-NO PRECOMMIT TESTS

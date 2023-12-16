@@ -1,2 +1,0 @@
-Vectorization: Fix Mapjoin overflow deserialization 
-This is in a codepath currently disabled in master, however enabling it triggers OOB.Caused by: 

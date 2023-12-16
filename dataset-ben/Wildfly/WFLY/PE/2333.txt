@@ -1,1 +1,0 @@
-Web deployment code assumes only a single ServletContainerInitializer is present in each jar

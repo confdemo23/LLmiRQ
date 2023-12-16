@@ -1,2 +1,0 @@
-Analyzing @Query annotated bridge methods lead to NPEs during QueryMethod processing in Java 8
-We should skip bridge methods instead considering them for @Query annotation inspection, since we cannot extract the generic type parameter from bridge  methods.

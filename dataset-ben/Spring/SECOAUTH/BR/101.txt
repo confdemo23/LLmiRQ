@@ -1,2 +1,0 @@
-Change parameter name for incoming access token to "bearer_token" in OAuth2ProtectedResourceFilter
-Change parameter name for incoming access token to "bearer_token" in OAuth2ProtectedResourceFilter per the latest spec.

@@ -1,3 +1,0 @@
-GROUP BY causing ClassCastException [LazyDioInteger cannot be cast LazyInteger]
-This relates to https://issues.apache.org/jira/browse/HIVE-1634.
-The following work fine:CREATE EXTERNAL TABLE tim_hbase_occurrence 

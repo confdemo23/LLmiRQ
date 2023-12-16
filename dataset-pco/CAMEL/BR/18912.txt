@@ -1,6 +1,0 @@
-Sqs2ConsumerHealthCheck is broken when using injected client
-Cased by CAMEL-18466 where a new health check is introduced for the SQS component.
-
-The component creates it own client, but does so incorrectly as it fails to detect if a client is injected.
-
-Also, the client is created for every invocation of the health check which is not very efficient, a better solution would be to pass in the SqsClient to the health check itself.

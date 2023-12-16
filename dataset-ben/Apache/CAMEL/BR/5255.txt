@@ -1,2 +1,0 @@
-Add all SNMPv1 TRAP PDU information to message body for camel-snmp component
-The attached patch captures additional information available in an SNMPv1 TRAP PDU (enterprise trap ID, agent-addr, generic trap ID, specific trap ID, and system uptime) to the camel-snmp message body.

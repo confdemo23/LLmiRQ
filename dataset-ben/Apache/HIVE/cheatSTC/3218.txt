@@ -1,1 +1,0 @@
-Stream table of SMBJoin/BucketMapJoin with two or more partitions is not handled properly

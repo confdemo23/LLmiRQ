@@ -1,1 +1,0 @@
-camel-elasticsearch - Upgrade to 8.8.x

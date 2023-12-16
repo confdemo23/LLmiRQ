@@ -1,2 +1,0 @@
-AbstractSecurityInterceptor should replace the SecurityContext when doing RunAs replacement, rather than just the Authentication within the context
-Since the SecurityContext may be shared between different threads, there is a limited possibility of escalating permissions when a RunAsManager is used to modify the context.

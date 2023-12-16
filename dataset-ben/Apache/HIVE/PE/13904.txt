@@ -1,2 +1,0 @@
-Ignore case when retrieving ColumnInfo from RowResolver
-To reproduce:-- upper case in subqexplainselect * from src bwhere exists  (select a.key from src a  where b.VALUE = a.VALUE  );

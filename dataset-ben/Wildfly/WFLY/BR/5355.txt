@@ -1,2 +1,0 @@
-CacheServiceProviderRegistry close() not entirely thread-safe
-CacheServiceProviderRegistry.close() first does a cache lookup of the nodes providing a service, then attempts to modify the resulting set.  However, if another node either creates or removes a new service provider registration for the same service, the resulting set of nodes can be inconsistent.

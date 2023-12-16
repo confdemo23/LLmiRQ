@@ -1,3 +1,0 @@
-Add toString() to MethodCall and MethodWrapper
-Useful while debugging Call Hierarchy & Co, like bug 533524 changes.
-I will push a trivial patch.

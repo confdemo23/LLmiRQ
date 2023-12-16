@@ -1,8 +1,0 @@
-[VisibilityController] Integration test for labeled data set mixing and filtered excise
-Create an integration test for the VisibilityController that:
-1. Create several tables of test data
-2. Assign a set of auths to each table. Label all entries in the table with appropriate visibility expressions. Insure that some data in every table overlaps with data in other tables at common row/family/qualifier coordinates. Generate data like ITBLL so we can verify all data present later.
-3. Mix the data from the different tables into a new common table
-4. Verify for each set of auths defined in step #2 that all entries found in the source table can be found in the common table. Like the ITBLL verification step but done N times for each set of auths defined in step #2.
-5. Choose one of the source tables. Get its set of auths. Perform a deletion with visibility expression from the common table using those auths.
-6. Verify that no data in the common table with the auth set chosen in #5 remains. A simple row count with the set of auths chosen in #5 that should return 0.

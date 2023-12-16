@@ -1,2 +1,0 @@
-make TestHBaseCliDriver use dynamic ports to avoid conflicts with already-running services
-ant test -Dhadoop.version=0.20.0 -Dtestcase=TestHBaseCliDriver:

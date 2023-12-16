@@ -1,2 +1,0 @@
-Grouping by a struct throws an exception
-Queries that require a shuffle with a struct as the key result in an exception: Caused by: 

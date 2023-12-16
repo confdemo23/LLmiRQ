@@ -1,3 +1,0 @@
-Implement DROP VIEW IF EXISTS
-Implement the IF EXISTS clause for the DROP VIEW statement.
-See http://dev.mysql.com/doc/refman/5.0/en/drop-view.html

@@ -1,2 +1,0 @@
-Migrating metadata from derby to mysql thrown NullPointerException
-Exported derby data to csv, loaded data into mysql and ran hive query which worked in derby and got the following exception

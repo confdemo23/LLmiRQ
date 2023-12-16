@@ -1,2 +1,0 @@
-153	 FeedTemplate, Post, Privacy, JsonMappingException, UncategorizedApiException
-163	 FeedOperations, Post, JsonMappingException, StdValueInstantiator, BeanDeserializer, SettableBeanProperty, FieldProperty, ObjectReader, FeedTemplate

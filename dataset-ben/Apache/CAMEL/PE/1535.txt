@@ -1,3 +1,0 @@
-java.lang.Error thrown in mock/dataset assertions causes the async processing to not complete as just catches Exception
-java.lang.AssertionException extends java.lang.Error
-So the mock endpoint should deal with this and catch Throwable instead of Exception when it handles failures.

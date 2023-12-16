@@ -1,2 +1,0 @@
-Group by SemanticException: Invalid column reference
-Some queries work fine in older versions throws SemanticException, the stack trace:

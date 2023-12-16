@@ -1,4 +1,0 @@
-Integration tests fail when executed against OpenJPA due to flush timing and result list mutability
-script clinic.roo when persistence is OPENJPA will fail due to two errors:
-1. Flushing is required so that the identifier is assigned to newly-persisted entities (integration test add-on).
-2. The List&lt;EntityClass&gt; returned from the finder is immutable, so subsequent attempts to add newly-created transient entities to that list will fail (data on demand add-on).

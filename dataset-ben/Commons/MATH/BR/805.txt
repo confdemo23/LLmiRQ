@@ -1,2 +1,0 @@
-Percentile calculation is very slow when input data are constants
-I use the Percentile class to calculate quantile on a big array (10^6 entries). When I have to test the performance of my code, I notice that the calculation of quantile is at least 100x slower when my data are constants (10^6 of the same nomber). Maybe the Percentile calculation can be improved for this special case.

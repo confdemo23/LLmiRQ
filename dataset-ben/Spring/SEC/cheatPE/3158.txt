@@ -1,4 +1,0 @@
-findRequiredWebApplicationContext requires Spring 4.2.x
-Inside AbstractAuthorizeTag the static method SecurityWebApplicationContextUtils.findRequiredWebApplicationContext(...) is called, which in turn calls
-WebApplicationContextUtils.findWebApplicationContext(...)
-which does not exist in spring-framework 4.1.x (it can be found in the master branch only).

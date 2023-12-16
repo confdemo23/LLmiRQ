@@ -1,2 +1,0 @@
-startLimit and allowStartIfComplete cannot be set in the namespace
-startLimit and allowStartIfComplete are properties on AbstractStep and SimpleStepFactoryBean.  However, there is currently no way to set them using the batch namespace.

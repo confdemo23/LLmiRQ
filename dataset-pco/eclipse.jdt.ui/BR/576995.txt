@@ -1,2 +1,0 @@
-[junit 5] Add @Suite support from JUnit 5.8.1
-JUnit 5.8.1 now supports the @Suite annotation for a class with additional annotations such as @SelectClasses, @SelectPackages, @SuiteDisplayName.

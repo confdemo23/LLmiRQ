@@ -1,2 +1,0 @@
-NPE with lineage in a query of union alls on joins.
-The following query generates a NPE in the lineage ctx code

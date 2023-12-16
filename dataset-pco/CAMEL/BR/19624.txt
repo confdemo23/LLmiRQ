@@ -1,4 +1,0 @@
-Upgrade Derby used for testing
-org.apache.derby:derby ( from 10.14.2.0 to 10.16.1.1 )
-
-It may be that embedded derby is changed a bit so the upgrade may require some changes in affected components

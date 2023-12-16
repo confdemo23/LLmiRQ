@@ -1,2 +1,0 @@
-ZipArchiveInputStream cannot handle some valid files
-See COMPRESS-62

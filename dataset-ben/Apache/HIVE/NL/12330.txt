@@ -1,2 +1,0 @@
-Fix precommit Spark test part2
-Regression because of HIVE-11489

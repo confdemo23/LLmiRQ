@@ -1,2 +1,0 @@
-Query fail when hive.exec.parallel=true, with conflicting session dir
-This happens when hive.scratchdir.lock=true. 

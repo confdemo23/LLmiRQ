@@ -1,3 +1,0 @@
-Setting label on nulls and primitive types does not work/make sense
-The "Set Object &Label..." action is visible even for nulls and for primitive types.
-For primitive values, the dialog wont come up - as there is an explicit check, that 'value instanceof IJavaObject', however it shows up for nulls. But in the end, labeling nulls wont make any sense. It would be better, if this action is visible only for non-null objects.

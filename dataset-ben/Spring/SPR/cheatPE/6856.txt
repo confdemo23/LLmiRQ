@@ -1,3 +1,0 @@
-Could SimpleJdbcTemplate/Operations/DaoSupport be deprecated now?
-The types SimpleJdbcDaoSupport (which extends JdbcDaoSupport), SimpleJdbcTemplate and SimpleJdbcOperations were introduced in Spring 2.0 to make life easier for Java 5 users.
-Now that Spring 3.0 is Java5+ only, would it be worthwhile moving the methods and code from the SimpleJdbcXYZ types into the corresponding JbcXYZ types, and then deprecating the SimpleJdbcXYZ versions? Assuming that this can done in a backwards-compatible way, then the reasons for the separation are now purely historical.

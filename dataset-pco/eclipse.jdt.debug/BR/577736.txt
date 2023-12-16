@@ -1,2 +1,0 @@
-[18] Remove JCP disclaimers and BETA from code in Debug
-Remove JCP disclaimers from code in Debug.

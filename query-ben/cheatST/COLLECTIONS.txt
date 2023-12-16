@@ -1,3 +1,0 @@
-265	 TreeBag
-474	 ListOrderedMap
-586	 AbstractPatriciaTrie

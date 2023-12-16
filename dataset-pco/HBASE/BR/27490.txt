@@ -1,6 +1,0 @@
-Locating regions for all actions of batch requests can exceed operation timeout
-This affects both AsyncTable and branch-2's Table. It's a follow-on from HBASE-27487.
-
-In both cases, for a batch request, the first thing that must be done is resolve region locations for all actions in a batch. This is done in sequence for all actions, and the timeout is not checked after each action. If meta is slow or a sufficiently large batch is sent, the time to sequentially resolve all actions may exceed the operation timeout.
-
-Currently, the code will eventually check the operation timeout after all locations have been resolved and before submitting the MultiRequests. We should check the timeout before each call to locate a region, and abort early if it's exceeded.

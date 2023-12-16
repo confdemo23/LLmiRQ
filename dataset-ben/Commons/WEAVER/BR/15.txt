@@ -1,2 +1,0 @@
-m2e build encounters missing class
-Various classes are wanted but not found during plugin execution via eclipse, apparently due to differences/inconsistencies in Maven lifecycle artifact resolution scopes.

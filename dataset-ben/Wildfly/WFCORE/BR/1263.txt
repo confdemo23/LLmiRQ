@@ -1,2 +1,0 @@
-MBeanServer.queryMBeans will include the ObjectInstance for the root mbean for the jboss.as[.expr] JMX domains
-ModelControllerMBeanHelper.queryMBeans is incorrectly checking for the presence of the root mbean by seeing if a Set&lt;ObjectInstance&gt; contains an ObjectName. Wrong type.

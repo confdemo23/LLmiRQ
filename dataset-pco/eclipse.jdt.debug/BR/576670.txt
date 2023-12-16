@@ -1,3 +1,0 @@
-Add ability to label objects during debugging
-It is pretty hard to quickly identify objects and track them during the debugging session, because there could be hundred similar instances, and trying to remember the unique id, is not a too pleasant experience - and the human brain - at least mine - is pretty limited in this area.
- It would be much better, if we could attach label to various objects, and if that object instances show up in the Variables/Expressions view, these labels could be displayed so it will stand out.

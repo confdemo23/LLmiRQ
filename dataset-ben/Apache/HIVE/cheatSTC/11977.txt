@@ -1,4 +1,0 @@
-Hive should handle an external avro table with zero length files present
-If a zero length file is in the top level directory housing an external avro table,  all hive queries on the table fail.
-This issue is that org.apache.hadoop.hive.ql.io.avro.AvroGenericRecordReader creates a new org.apache.avro.file.DataFileReader and DataFileReader throws an exception when trying to read an empty file (because the empty file lacks the magic number marking it as avro).  
-AvroGenericRecordReader should detect an empty file and then behave reasonably.

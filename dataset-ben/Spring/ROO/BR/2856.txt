@@ -1,2 +1,0 @@
-Vote application broken since multi-module maven changes
-Since the ROO-120 code was added, the Roo vote application has stopped workking

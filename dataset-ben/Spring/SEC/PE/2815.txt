@@ -1,3 +1,0 @@
-@EnableGlobalMethodSecurity prevents postprocessing of DataSource bean
-Adding `@EnableGlobalMethodSecurity` annotation to my extension of `WebSecurityConfigurerAdapter` prevents embedded database initialization in integration testing.
-The problem is very nicely summarized here -&gt; https://gist.github.com/dsyer/ebeb25d5afbdd9242cd5

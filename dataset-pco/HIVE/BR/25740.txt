@@ -1,2 +1,0 @@
-Handle race condition between compaction txn abort/commit and heartbeater
-This issue is the following: once the compaction worker finishes, commitTxn/abortTxn is invoked first, and the heartbeater thread is only interrupted after that. This can lead to race conditions where the txn has already been deleted from the backend DB via commit/abort, but the concurrently running heartbeater thread still attempts to send a last heartbeat after that, but the txn id won't be found in the DB, leading to {{{}NoSuchTxnException{}}}.

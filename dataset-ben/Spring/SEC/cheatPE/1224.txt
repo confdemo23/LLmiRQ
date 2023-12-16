@@ -1,3 +1,0 @@
-BasicLookupStrategy, JdbcAclService, and JdbcMutableAclService should support Catalog and Schema
-Some systems may have security objects and normal application objects seperated in to different domains, and those domains may be defined in different database catalogs and/or schemas.
-The BasicLookupStrategy, JdbcAclService, and JdbcMutableAclService classes should account for a database catalog and schema.  A developer and/or integrator should be able to specify the catalog and schema for said classes when defining the beans in their context configurations.

@@ -1,5 +1,0 @@
-RabbitMQ Component: Consumer with many channels per connection.
-Consumer RabbitMQ Component 
-To minimize number of connections (TCP/IP) in production servers and have more consumer threads, we need a list of channels per connection instead just one.
-Like: 
-Collection&lt;Channel&gt; channels;

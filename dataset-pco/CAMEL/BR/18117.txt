@@ -1,2 +1,0 @@
-camel-jbang - Package uber-jar should include application.properties if present
-So you can automatic include application.properties when doing a package uber-jar

@@ -1,8 +1,0 @@
-BlockingRpcClient will hang for 20 seconds when SASL is enabled after finishing negotiation
-Found this when implementing HBASE-27185. When running TestSecureIPC, if BlockingRpcClient is used, the tests will spend much more time comparing to NettyRpcClient.
-
-The problem is that, for the normal kerberos authentication, the last step is client send a reply to server, so after server receives the last token, it will not write anything back but expect client to send connection header.
-
-In HBASE-24579, for reading the error message, we added a readReply after the SaslClient indicates that the negotiation is completed. But as said above, for normal cases, we will not write anything back from server side, so the client will hang there and only throw an exception when timeout is reached, which is 20 seconds.
-
-This nearly makes the BlockingRpcClient unusable when sasl is enabled, as it will hang 20 seconds when connecting...

@@ -1,4 +1,0 @@
-camel-caffeine: cleanup assertions
-Some tests on camel-caffeine have assertions that can be simplified:
- * CaffeineLoadCacheProducerTest
- * CaffeineIdempotentRepositoryTest

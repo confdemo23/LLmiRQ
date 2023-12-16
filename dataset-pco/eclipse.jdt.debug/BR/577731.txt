@@ -1,2 +1,0 @@
-[18] Keep merging from master to BETA branch
-Beta needs a periodic update

@@ -1,2 +1,0 @@
-@TypeAlias annotation not used with AbstractMongoConfiguration 
-When using the AbstractMongoConfiguration without any further modifications regarding the converter (afterMappingMongoConverterCreation) the @TypeAlias annotation is not used when writing the _class property. Seems like it always uses the SimpleTypeInformationMapper. The documentation suggests that you just annotate your @Document classes with the @TypeAlias annotations and everything should be fine. 

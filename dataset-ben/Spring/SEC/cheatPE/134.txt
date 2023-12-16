@@ -1,3 +1,0 @@
-Authentication.getAuthorities should return a collection rather than an array.
-Currently Authentication.getAuthorities returns a GrantedAuthority[]. This is dangerous because calling code can accidentaly or deliberatly modify elements of the array to anything.
-This method should really return an unmodifiable collection. Alternatly class instances could return a clone of the array.

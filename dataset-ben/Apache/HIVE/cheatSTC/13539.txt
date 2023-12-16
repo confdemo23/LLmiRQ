@@ -1,2 +1,0 @@
-HiveHFileOutputFormat searching the wrong directory for HFiles
-When creating HFiles for a bulkload in HBase I believe it is looking in the wrong directory to find the HFiles, resulting in the following exception:Error: 

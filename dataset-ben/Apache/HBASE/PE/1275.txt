@@ -1,2 +1,0 @@
-TestTable.testCreateTable broken
-Test is broken, we seem to be able to create the same table 10x over.  ouch!

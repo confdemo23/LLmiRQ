@@ -1,8 +1,0 @@
-inner Type not found in .class file.
-Inner types have binary names containing a "$" while the search looks for "." separated qualified names.
-
- java/util.Map$Entry 
-vs
- java/util.Map.Entry
-
-The "$"can not be simply textual replaced by "." since "$" is a valid Classname itself i.e. not necessary a separator.

@@ -1,5 +1,0 @@
-disable speculative execution for ACID Compactor
-https://developer.yahoo.com/hadoop/tutorial/module4.html
-Speculative execution is enabled by default. You can disable speculative execution for the mappers and reducers by setting the mapred.map.tasks.speculative.execution and mapred.reduce.tasks.speculative.execution JobConf options to false, respectively.
-CompactorMR is currently not set up to handle speculative execution and may lead to something like
-Longer term perhaps make each task write to dir with UUID...

@@ -1,2 +1,0 @@
- "\u2284":"&nsub;" mapping missing from EntityArrays#HTML40_EXTENDED_ESCAPE
-see: https://github.com/apache/commons-lang/pull/159

@@ -1,2 +1,0 @@
-Manualmode test suite copies the modules directory multiple times
-This uses lots of disk space for no good reason

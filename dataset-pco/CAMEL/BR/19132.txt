@@ -1,1 +1,0 @@
-camel-core - Deprecate vm and direct-vm and remove in v4

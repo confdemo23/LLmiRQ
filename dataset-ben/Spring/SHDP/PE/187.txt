@@ -1,8 +1,0 @@
-MiniYarnCluster tests fails on Mac OS X
-Have seen this with spring-hadoop build as well as spring-hadoop-samples/yarn/yarn/batch-partition
-Here is the error:
-org.springframework.yarn.examples.BatchPartitionTests &gt; testAppSubmission FAILED
-    java.lang.AssertionError at BatchPartitionTests.java:53
-1 test completed, 1 failed
-:yarn-examples-common:yarn-examples-batch-partition:test FAILED
-Attached logs have more info

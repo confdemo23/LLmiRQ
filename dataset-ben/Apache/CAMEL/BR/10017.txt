@@ -1,2 +1,0 @@
-Fix syntax for ironmq component
-replace ironmq:queue by ironmq:queueName

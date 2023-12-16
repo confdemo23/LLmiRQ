@@ -1,5 +1,0 @@
-JBAS014356 exception not thrown for @Asyncronous EJB methods
-If you call an ejb method with default visibility (e.g. from a servlet in the same package), an EJBException with code JBAS014356 is thrown because the method is not public.
-If the method is annotated with @Asynchronous and returns void, the exception is not seen because the interceptor from AsyncFutureInterceptorFactory is used before NotBusinessMethodInterceptor, the exception is thrown in the worker thread instead.
-With a void return, the exception is silently dropped. With a Future&lt;?&gt; return, it will be set as the failure exception on the future rather than being thrown from the call.
-As per the forum reference we need to check the spec, but the validity of the business method should probably be checked before the handoff to the worker thread.

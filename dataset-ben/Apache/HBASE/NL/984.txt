@@ -1,2 +1,0 @@
-Fix javadoc warnings
-There are a number of javadoc warnings: @see pointing to the wrong place, etc. These need to be fixed before 0.19 is released.

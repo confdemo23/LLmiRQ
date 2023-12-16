@@ -1,4 +1,0 @@
-camel-core - Add functions to simple language to create empty map/list/string/json
-You sometimes need an empty object that you can then use to manipulate your camel routes. And this may require the body is not null, but an empty list / map / string / json.
-
-So let's add some functions to simple to do that so it can be used everywhere and in low-code situations too.

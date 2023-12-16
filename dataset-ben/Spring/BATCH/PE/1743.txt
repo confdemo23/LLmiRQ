@@ -1,3 +1,0 @@
-Use step scope for PartitionHandler (so gridSize can be a job parameter) - broken in 2.1.7.
-Cloned from: BATCH-1612: Pull gridSize from job parameters
-https://jira.springsource.org/browse/BATCH-1612

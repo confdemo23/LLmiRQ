@@ -1,4 +1,0 @@
-Font problem in LocalizedFormatsTest.java header
-Non-standard charecters in the comment header of the file prevents compiling of the class with error
-[javac] /Users/kberlin/Dropbox/Projects/math/src/test/java/org/apache/commons/math3/exception/util/LocalizedFormatsTest.java:21: error: unmappable character for encoding ASCII
-[javac]  * Copyright 2010 CS Communication &amp; Syst??mes

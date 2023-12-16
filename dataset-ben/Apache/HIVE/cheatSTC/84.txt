@@ -1,3 +1,0 @@
-MetaStore Client is not thread safe
-when running DDL Tasks in concurrent threads - the following exception trace is observed:
-java.sql.SQLIntegrityConstraintViolationException: The statement was aborted because it would have caused a duplicate ke\ y value in a unique or primary key constraint or unique index identified by 'UNIQUETABLE' defined on 'TBLS'.

@@ -1,1 +1,0 @@
-camel-groovy - Upgrade to Groovy 4.x

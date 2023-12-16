@@ -1,2 +1,0 @@
-Add more properties to <context:property-placeholder/>
-&lt;context:property-placeholder/&gt; only has an attribute (location). This is not enough for advance usage. Please add others like ignoreUnresolvablePlaceholders.

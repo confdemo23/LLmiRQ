@@ -1,6 +1,0 @@
-ExportSnapshot should validate the source snapshot before copying files
-Running {{ExportSnapshot}} with default parameters will copy the snapshot to a target location, and then use {{verifySnapshot}} to validate the integrity of the written snapshot. However, it is possible for the source snapshot to be invalid which leads to an invalid exported snapshot.
-
-We can validate the source snapshot before export.
-
-By default, we can validate the source snapshot unless the {{-no-target-verify}} parameter is set. We could also introduce a separate parameter for {{-no-source-verify}} if an operator wanted to validate the target but not validate the source for some reason, to provide some amount of backwards compatibility if that scenario is important.

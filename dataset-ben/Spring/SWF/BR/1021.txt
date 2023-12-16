@@ -1,4 +1,0 @@
-AbstractFlowExecutionTests.assertFlowExecutionOutcomeEquals() has jUnit arguments reversed
-junit.framework.ComparisonFailure: The flow execution outcome is wrong expected:&lt;[actual]&gt; but was:&lt;[expected]&gt;
-The error message for a unit test failure has its arguments reversed - the "expected" value is being shown as the "actual" value.
-The other assert helper methods appear to be correct.

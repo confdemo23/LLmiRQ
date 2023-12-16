@@ -1,2 +1,0 @@
-Unnecessary rewriting of DoD ITD on member push in
-When pushing in a member of a watched entity the corresponding DoD ITD is rewritten despite there being no material change.

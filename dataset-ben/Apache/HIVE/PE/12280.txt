@@ -1,2 +1,0 @@
-HiveConnection does not try other HS2 after failure for service discovery
-Found this while mocking some bad connection data in znode.. will try to add a test for this.

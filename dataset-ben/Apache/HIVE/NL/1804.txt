@@ -1,2 +1,0 @@
-Mapjoin will fail if there are no files associating with the join tables
-If there are some empty tables without any file associated, the map join will fail.

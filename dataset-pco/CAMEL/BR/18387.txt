@@ -1,4 +1,0 @@
-camel-tarfile: TarAggregationStrategy throws error when first message is empty
-TarAggregationStrategy will skip empty messages, but if the _first_ message is empty it will throw an error "java.io.IOException: Cannot create temp file: " on the next non-empty message.
-
-I added a test case to reproduce this.

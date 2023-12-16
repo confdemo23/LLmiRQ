@@ -1,2 +1,0 @@
-Unit tests fail when DoD-generated values for String fields annotated with @Size are outside the range of the specified min and/or max attribute values
-When generated data on demand values for fields are not within the length range specified in the @Size annotation, unit tests fail during a persist(). 

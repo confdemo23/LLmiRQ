@@ -1,1 +1,0 @@
-Handle null value in WindowingTableFunction.WindowingIterator.next()

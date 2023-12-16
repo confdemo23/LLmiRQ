@@ -1,3 +1,0 @@
-Font in preference dialogs is system font
-All Workbench pages except Colors and Fonts use system font instead of dialog 
-font.

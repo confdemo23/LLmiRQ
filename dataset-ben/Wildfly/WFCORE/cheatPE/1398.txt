@@ -1,3 +1,0 @@
-RemotingHttpUpgradeService.SERVICE_NAME has a superfluous space
-public static final ServiceName UPGRADE_SERVICE_NAME = ServiceName.JBOSS.append("remoting ", "remoting-http-upgrade-service");
-Note the space in "remoting "

@@ -1,2 +1,0 @@
-"Visible" checkbox label on WindowEditor not externalized
-"Visible" checkbox label on WindowEditor not externalized for translation.

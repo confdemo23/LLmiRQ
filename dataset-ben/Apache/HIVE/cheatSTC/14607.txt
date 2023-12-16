@@ -1,6 +1,0 @@
- ORC split generation failed with exception: java.lang.ArrayIndexOutOfBoundsException: 1
-Steps to repro: 
-in TestTxnCommands2WithSplitUpdate remove the overridden method testOrcPPD().
-Then run:
-mvn test -Dtest=TestTxnCommands2WithSplitUpdate#testOrcPPD
-it will fail with ArrayIndexOutOfBounds.  

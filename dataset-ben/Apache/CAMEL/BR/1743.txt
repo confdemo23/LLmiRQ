@@ -1,5 +1,0 @@
-Validator component lacks a DOMSource converter from an InputStream
-The Validator component requires the payload to be of type DOMSource so it converters it to this type.
-But we lack a XmlConverter from an InputStream to this type.
-See nabble:
-http://www.nabble.com/XML-Validation-throws-NoXmlBodyValidationException-td24147734.html

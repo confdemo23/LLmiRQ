@@ -1,2 +1,0 @@
-Insert into table overwrites existing table if table name contains uppercase character
-"Insert into table &lt;table-name&gt; ~~" is expected to append query result into the table. But when the table name contains uppercase character, it overwrite existing table.

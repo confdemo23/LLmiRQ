@@ -1,3 +1,0 @@
-Insert with custom separator not supported for non-local directory
-https://issues.apache.org/jira/browse/HIVE-3682 is great but non local directory don't seem to be supported:insert overwrite directory '/tmp/test-02'row format delimitedFIELDS TERMINATED BY ':'select description FROM sample_07
-Error while compiling statement: FAILED: ParseException line 2:0 cannot recognize input near 'row' 'format' 'delimited' in select clauseThis works (with 'local'):insert overwrite local directory '/tmp/test-02'row format delimitedFIELDS TERMINATED BY ':'select code, description FROM sample_07

@@ -1,2 +1,0 @@
-Upgrade to atmosphere 3.0.2 - Add JSR356_MAPPING_PATH configuration
- Atmosphere builds an in-memory map for each consumer but, if the path is not specified, the logic in Atmosphere is not enough, and messages are redirected to the first entry of the map.

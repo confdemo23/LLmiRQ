@@ -1,9 +1,0 @@
-[18][javadoc] provide proper error reporting support for snippets
-for the below snippet
-
-{@snippet : classA() 
-}
-
-The error after javadoc generation is - invalid snippet
-
-Similar error needs to be reported  with proper error message.

@@ -1,2 +1,0 @@
-skip counter update when RunningJob.getCounters() returns null
-Under heavy load circumstances on some Hadoop versions, we may get a NPE from trying to dereference a null Counters object.  I don't have a unit test which can reproduce it, but here's an example stack from a production cluster we saw today:

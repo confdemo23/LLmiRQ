@@ -1,2 +1,0 @@
-ConnectController should consider servlet path (if available) when performing redirect.
-So that an application can change the DispatcherServlet path, connectionStatusRedirect() should use the servlet path (if available) when performing the redirect.

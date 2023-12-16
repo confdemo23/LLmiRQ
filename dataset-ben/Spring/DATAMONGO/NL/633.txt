@@ -1,1 +1,0 @@
-Upgrade to Querydsl 3.0.0

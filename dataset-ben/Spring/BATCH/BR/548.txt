@@ -1,2 +1,0 @@
-skipping items can lead to an invalidated mark in the ResourceItemReader
-since spring batch does not apply skipped items to the commit interval so a large chunk of skippable items can cause the underlying BufferedItemReader to invalidate its mark.  Then, if reset is invoked, the reader will throw an IOException.

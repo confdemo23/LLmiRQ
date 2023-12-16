@@ -1,1 +1,0 @@
-LLAP: ORC cache NPE without FileID support   OrcBatchKey stripeKey = hasFileId ? new OrcBatchKey(fileId, -1, 0) : null;   

@@ -1,6 +1,0 @@
-[Accessibility] Model Spy Form tab has text labels which JAWS doesn't read
-Created attachment 288008
-JAWS recording, the issue can be shown around at 50 secs
-
-On Form tab of Model Spy, Application default tab has text label with check box, "To Be Rendered" and "Visible".
-JAWS doesn't read these labels.

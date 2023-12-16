@@ -1,1 +1,0 @@
-Bucketed mapjoin on partitioned table which has no partition throws NPEcreate

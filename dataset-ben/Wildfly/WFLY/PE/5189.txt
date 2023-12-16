@@ -1,4 +1,0 @@
-Eliminate "discarding discovery request for cluster=X from Y; our cluster name is Z" WARN messages
-These WARN messages are due to the fact that WF no longer uses a shared transport for its jgroups channels (JGroups recently deprecated shared transport in favor of fork channels).  While these messages are harmless - they are quite annoying - and are the subject of several forum posts.
-Currently, the messaging-activemq subsystem uses JChannels configured from a specific protocol stack.  We should modify the default configuration to use a ChannelFactory from the default channel, which will use a new fork of the default "ee" channel.  In xml/dmr terms, this corresponds not providing a value for jgroups-stack.
-N.B. At the moment, this change will introduce new annoying WARN log messages until JGroups is upgraded to 3.6.5.Final, hence the jira dependency.

@@ -1,2 +1,0 @@
-Native Vector MapJoin can encounter  "Null key not expected in MapJoin" and "Unexpected NULL in map join small table" exceptions
-Instead of throw exception, just filter out NULLs in the Native Vector MapJoin operators.

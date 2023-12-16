@@ -1,1 +1,0 @@
-Fix the broken log file size accountinglong oldFileLen = 0L;      doReplaceWriter(oldPath, newPath, nextWriter);Should belong oldFileLen =  doReplaceWriter(oldPath, newPath, nextWriter);

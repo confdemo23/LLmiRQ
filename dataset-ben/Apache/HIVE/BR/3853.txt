@@ -1,2 +1,0 @@
-UDF unix_timestamp is deterministic if an argument is given, but it treated as non-deterministic preventing PPD
-unix_timestamp is declared as a non-deterministic function. But if user provides an argument, it makes deterministic result and eligible to PPD.

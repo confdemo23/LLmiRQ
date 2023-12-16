@@ -1,2 +1,0 @@
-Spring 3 Compatibility Tests Failing
-Compile errors in 2 tests.

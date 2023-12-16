@@ -1,2 +1,0 @@
-Make single quote character optional and configurable in BeeLine CSV/TSV output
-Currently when either the CSV or TSV output formats are used in beeline each column is wrapped in single quotes. Quote wrapping of columns should be optional and the user should be able to choose the character used to wrap the columns.

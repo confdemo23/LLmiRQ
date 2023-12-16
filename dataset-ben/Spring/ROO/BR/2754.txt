@@ -1,2 +1,0 @@
-Unable to download add-ons with the addon install command
-Due to change which closes an input stream prematurely in org.springframework.roo.felix.HttpPgpUrlStreamHandlerServiceImpl, add-ons including jdbc drivers for DBRE, are prevented from being downloaded when the addon install command is run

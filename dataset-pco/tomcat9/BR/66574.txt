@@ -1,4 +1,0 @@
-Activity checkbox string should not have a '.'
-RC1
-
-See https://bugs.eclipse.org/bugs/attachment.cgi?id=11902&action=view for details.

@@ -1,2 +1,0 @@
-Spring Gemfire does not allow persistence for a local region even though this is supported in Gemfire
-The LocalRegionFactoryBean.setPersistent method throws an UnsupportedOperationException.  However, persistence is supported for local regions in Gemfire, so Spring Gemfire should allow persistence.

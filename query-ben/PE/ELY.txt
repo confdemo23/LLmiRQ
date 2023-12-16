@@ -1,5 +1,0 @@
-627	 Elytron, protocols, SSLv2, SSLv3, TLSv1, TLSv1_1, TLSv1_2, TLSv1_3
-654	 SSLSessionContext, sessionCacheSize, sessionTimeout
-692	 LegacyPropertiesSecurityRealm
-757	 String.toUpperCase(), String.toLowerCase(), Locale
-808	 ClearPassword, PasswordCredential, IdentityCredentials, parseClearPassword

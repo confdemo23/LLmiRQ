@@ -1,8 +1,0 @@
-AsyncRequestFutureImpl unnecessarily clears meta cache for full server
-In AsyncRequestFutureImpl.receiveGlobalFailure, the meta cache is cleared twice. First the entire cache is cleared for the serverName, then each individual region's cache is further cleared. See [here.|https://github.com/apache/hbase/blob/branch-2/hbase-client/src/main/java/org/apache/hadoop/hbase/client/AsyncRequestFutureImpl.java#L766-L780]
-
-This behavior was introduced in HBASE-19900, which was a Jira more related to return value corruption rather than meta cache. I believe the change was an accident in the refactoring. Take a look at the commit [here.|https://github.com/apache/hbase/commit/e2636c81f7700a34368d73079375dbce6e180547#diff-7c58ffd83c150488599591ed5a3a068599646ebdbbbfdcd2233386e5472cca35L709]
-
-In the commit, the cleanServerCache call should have been wrapped in tableName == null. Then the updateCachedLocations call should have been wrapped in tableName != null. So we should only go down one path or another based on the existence of a tableName.
-
-Full server cache clears are extremely expensive in a high concurrency client. This is especially true in AsyncProcess, where a single request might hit many servers. We should reinstate the tableName checks so that we only do one or the other.

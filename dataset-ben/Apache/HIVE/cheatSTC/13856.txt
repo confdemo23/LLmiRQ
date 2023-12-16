@@ -1,2 +1,0 @@
-Fetching transaction batches during ACID streaming against Hive Metastore using Oracle DB
- metastore/src/java/org/apache/hadoop/hive/metastore/txn/TxnHandler.java

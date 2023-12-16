@@ -1,2 +1,0 @@
-Fix Hive tests
-The Hive and Cascading tests are not working properly - they need some attention

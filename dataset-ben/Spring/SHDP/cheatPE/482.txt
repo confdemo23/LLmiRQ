@@ -1,2 +1,0 @@
-TextFileWriter unable to continue after close errors
-If we have a TextFileWriter with naming rollover and other normal settings we get into trouble if datanode dies or is restarted. 

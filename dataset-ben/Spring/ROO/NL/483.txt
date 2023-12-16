@@ -1,6 +1,0 @@
-Comment handling in scripts
-When running scripts, Roo does not recognise a comment without a space after it, e.g.
-// Comment
-works, but
-//Comment
-does not.

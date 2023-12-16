@@ -1,2 +1,0 @@
-interceptSendToEndpoint does not trigger endpoints defined in onException
-The reason is that onException is initialized before interceptors

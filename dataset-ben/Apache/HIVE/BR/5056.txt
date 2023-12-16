@@ -1,2 +1,0 @@
-MapJoinProcessor ignores order of values in removing RS
-http://www.mail-archive.com/user@hive.apache.org/msg09073.html

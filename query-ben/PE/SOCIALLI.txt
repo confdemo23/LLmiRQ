@@ -1,3 +1,0 @@
-14	 HTTP GET request, URI, LinkedIn REST API
-21	 NetworkUpdateTemplate, NetworkUpdateOperations, createNetworkUpdate
-33	 commentOnNetworkUpdate

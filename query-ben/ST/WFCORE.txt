@@ -1,9 +1,0 @@
-229	 ManagedServerBootCmdFactory, ServerInventoryImpl, ServerStartHandler, ModelControllerClientOperationHandler, AbstractMessageHandler
-716	 ModelControllerImpl CapabilityRegistryImpl
-754	 ServerBootOperationsService, ProtocolConnectionUtils, ProtocolConnectionManager, HostControllerConnection, HostControllerClient
-892	 VaultPasswordsInCLITestCase, HTTPSConnectionWithCLITestCase, CustomVaultInCLITestCase
-931	 DomainModelControllerService, HostShutdownHandler, AbstractOperationContext, ModelControllerImpl, DelegatingModelControllerClient, ThreadContextsModelControllerClient, OperationRequestHandler, CommandContextImpl, AeshProcess, EmbeddedHostControllerFactory, StopEmbeddedHostControllerHandler
-948	 ReadResourceDescriptionHandler AbstractOperationContext
-1578	 StandaloneXml ServerService AbstractControllerService XmlConfigurationPersister
-1708	 ReconnectSyslogServerTestCase, UDPSyslogServer, TCPSyslogServer, TCPSyslogSocketHandler, Server
-1846	 DeploymentUnitPhaseService, DeploymentRootMountProcessor, ServiceControllerImpl, ThreadPoolExecutor, RootFileSystem, VirtualFile, VFS, DeploymentMountProvider

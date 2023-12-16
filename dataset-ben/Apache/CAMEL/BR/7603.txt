@@ -1,2 +1,0 @@
-camel-cxfrs need to store the security context information into the message header
-We need to store the security context information when generate the camel exchange from CXF request message as camel-cxf does.

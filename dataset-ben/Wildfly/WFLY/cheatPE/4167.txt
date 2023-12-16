@@ -1,2 +1,0 @@
-AS7Plugin dump-services command is failing
-Run JDR, the dump-services.json is always empty.  This is because the operation is not being set when JDR tries to invoke the operation.

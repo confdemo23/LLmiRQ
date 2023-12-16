@@ -1,2 +1,0 @@
-Incorrectly implemented applyFilter method of ProtocolSelector.RemovingProtocolSelector
-Method applyFilter from org.wildfly.security.ssl.ProtocolSelector.RemovingProtocolSelector is incorrectly implemented. Set&lt;Protocol&gt; enabled cannot contain (and therefore cannot remove) EnumSet&lt;Protocol&gt; protocols.

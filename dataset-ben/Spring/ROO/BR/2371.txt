@@ -1,2 +1,0 @@
-Removing a RooDbManaged annotation from a type whilst Roo isn't running and then loading the Roo causes an exception
-The message raised is "Type for table 'employed' could not be found" for the attached project.

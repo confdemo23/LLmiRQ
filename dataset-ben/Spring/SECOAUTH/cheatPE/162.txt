@@ -1,2 +1,0 @@
-AccessTokenProviderChain allows anonymous user to create an access token
-AccessTokenProviderChain allows anonoymous user to create an access token

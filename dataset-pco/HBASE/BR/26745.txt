@@ -1,4 +1,0 @@
-MetricsStochasticBalancerSource metrics don't render in /jmx endpoint
-The check in JSONBean [here|https://github.com/apache/hbase/blob/master/hbase-http/src/main/java/org/apache/hadoop/hbase/util/JSONBean.java#L266] causes the balancer cost metrics to be excluded from the {{/jmx}} endpoint. I think we should just remove the check for ":". I don't think including metrics with a colon in them poses any problem, since the strings are quoted. We removed this check in our cdh5 fork almost a year ago and have not seen any issues.
-
-Alternatively we can fix the MetricsStochasticBalancerSource metrics to emit metrics that adhere to these filters, but I think that would be a backwards incompatible change since this is only a json rendering issue and people might be consuming JMX directly.

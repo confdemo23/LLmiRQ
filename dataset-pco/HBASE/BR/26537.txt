@@ -1,4 +1,0 @@
-FuzzyRowFilter backwards compatibility
-HBASE-15676 introduced a backwards incompatible change which makes it impossible to upgrade in our designated upgraded order (server first, then client) without potential bad results. Worse, the failure mode is silent – a pre-HBASE-15676 client would incorrectly receive 0 results from a post-HBASE-15676 server.
-
-I solved this internally as part of our upgrade from 1.2.0 to 2.4.6 by adding a new proto field to switch between the two implementations. I'm submitting this Jira to capture and potentially backport that fix for anyone else who encounters it. 
