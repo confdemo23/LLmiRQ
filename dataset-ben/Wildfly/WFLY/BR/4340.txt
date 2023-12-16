@@ -1,0 +1,3 @@
+use-try-lock exposed for <connection-definition>
+&lt;connection-definition&gt; DMR:use-try-lock                    undefined                                               LONG
+which should be removed

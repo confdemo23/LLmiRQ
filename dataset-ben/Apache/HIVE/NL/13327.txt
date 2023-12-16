@@ -1,0 +1,3 @@
+SessionID added to HS2 threadname does not trim spaces
+HIVE-13153 introduced off-by-one in appending spaces to thread names. 
+NO PRECOMMIT TESTS

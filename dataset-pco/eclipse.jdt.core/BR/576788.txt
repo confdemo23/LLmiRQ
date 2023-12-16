@@ -1,0 +1,36 @@
+[18][switch pattern] Resolving A Switch Block
+Sec 14.11.1 - Delta pertaining to resolving switch block
+
+This paragraph has been expanded in JEP 420.
+
+JEP 420 says,
+Resolving a switch block at type T results in an identical switch block except where every switch label L is replaced with the result of resolving L at type T.
+
+Resolving a switch label L at type T proceeds by resolving all the default and case labels it uses as follows:
+
+If L uses a default label then the resolved switch label uses a default label.
+
+If L uses a case label then the resolved switch label uses a case label with the case label elements determined as follows:
+
+All constant case label elements appearing in L appear in the resolved switch label.
+
+All default case label elements appearing in L appear in the resolved switch label.
+
+If a null case label element and no pattern case element labels appear in L then a null case label element appears in the resolved switch label.
+
+If no null case label element appears in L then for every pattern case label element p appearing in L, a pattern case element label q appears in the resolved switch label, where q is the result of resolving pattern p at type T.
+
+The definition of resolving a pattern at a type is given in 14.30.2.
+
+If a null case label element appears in L then for every pattern case label element appearing in L that is a type pattern declaring a pattern variable x of type U, a pattern case element q appears in the resolved switch label, where q is an any pattern that declares x of type U.
+
+All pattern case element labels appearing in a switch label that also contains a null case element label are required to be type patterns (14.11.1).
+
+This final rule covers an important aspect of resolving a switch label. If a switch label has both null and type pattern case label elements, then these are resolved to a single pattern case label element that is an any pattern. This ensures that the initialization of the pattern variable declared by the type pattern is always handled by the semantics of pattern matching, even when the value being matched is null.
+
+
+while JEP 406 says:
+A switch block is resolved at type U resulting in a identical switch block except where every pattern case label element p is replaced with a pattern case label element whose pattern is the result of resolving pattern p at type U.
+
+
+Feel free to create child bugs as deemed necessary

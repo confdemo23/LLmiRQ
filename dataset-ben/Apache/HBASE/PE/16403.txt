@@ -1,0 +1,4 @@
+Upgrade guava version to the lastest one(19.0)
+HBase client use the guava version 12.0.1, while elasticsearch sdk use the version 18+. It makes conflict, cause the constructor of StopWatch class is not public now.
+We have to choose the es rest api to resolve the conflict.  Why not try to upgrade our dependency versions?
+thx.

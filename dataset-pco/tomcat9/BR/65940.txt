@@ -1,0 +1,18 @@
+[navigation] 'Last Edit Position' comes back with different scroll
+3m9.
+
+Fully clear navigation back & forward might be assisted by restoring or using a 
+close-by 'Scroll Location', as well as the 'Cursor Location'.
+
+The 'Last Edit Position' button is correct as to cursor position, but esp when 
+editing within the same file is noticeable to return with different scroll-
+positions of the view. 
+
+It appears the row may tend to locate slightly above mid-height. However if the 
+edit had been performed with a substantially different scroll locn, 
+particularly near structural (method or inner cl) boundaries, the returned-to 
+view may be structurally quite different.
+
+'Normalizing' scroll posns, towards the 40% line or so, is valid and would not 
+impact site recognition for 5-6 lines worth; but ideally or optionally large 
+view changes should *not* be introduced while users are navigating in the space.

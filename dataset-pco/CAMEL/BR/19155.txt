@@ -1,0 +1,5 @@
+Azure Service Bus component completes messages instead of abandoning on error
+The Azure Service Bus component currently invokes the \{{ServiceBusReceiverAsyncClient#complete}} method even if an error occurs during route processing, which can result in message loss. It should invoke 
+{\{ServiceBusReceiverAsyncClient#abandon}} method on error to enable Service Bus to attempt redelivery and/or dead-letter the message as per its configuration.
+ 
+We are currently using a dead letter error channel to work around this issue, but this solution is still not ideal, since the message could still be marked as completed if the publication to the dead letter channel fails.

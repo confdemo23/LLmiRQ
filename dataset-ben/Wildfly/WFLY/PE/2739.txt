@@ -1,0 +1,2 @@
+BeanDeploymentArchive for external (WFLY) modules added twice
+The Weld-WFLY integration adds a dependency on WFLY module twice if the application deployment unit is an EAR containg libs, ejbs, war, etc. It prevents an application having dependencies on a new Picketlink (PL) extension to be deployed since PL contains a portable extension which has to be injected within PL module. The Weld-validation of the second time injection  fails.

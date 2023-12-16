@@ -1,0 +1,3 @@
+[Test] testBug573547_insideLambda_onOuterScopeVariable_whileOnPreviousFrame failing on windows
+Follow up from 
+https://bugs.eclipse.org/bugs/show_bug.cgi?id=573547#c5

@@ -1,0 +1,2 @@
+HttpHeaderFilterStrategy should filter the HTTP 'Date' header when applyFilterToCamelHeaders is called
+See rfc2616.

@@ -1,0 +1,2 @@
+camel-tracing - Upgrade to 1.11.0
+There are some test errors when upgrading in camel-observation. Also when upgrading to a newer 1.0.x release.

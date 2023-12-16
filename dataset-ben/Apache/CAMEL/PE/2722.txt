@@ -1,0 +1,3 @@
+ManagedRoute should be unregister when the RouteDefinition is removed
+Here is the mailing thread which discusses about it.
+http://old.nabble.com/Dynamically-removing-routes-tp28548051p28548051.html

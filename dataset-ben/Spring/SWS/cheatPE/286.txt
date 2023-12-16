@@ -1,0 +1,2 @@
+WSS4J AcegiDigestPasswordValidationCallbackHandler does not set Acegi SecurityContext
+The AcegiDigestPasswordValidationCallbackHandler does not set any Authentication in the Acegi SecurityContext, which it should.

@@ -1,0 +1,2 @@
+@JsonIgnored properties must not be updated in PUT requests
+When issuing PUT requests for existing entities properties that are not mapped (e.g. using @JsonIgnore) must not be nulled out.

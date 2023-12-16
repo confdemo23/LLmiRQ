@@ -1,0 +1,67 @@
+Intermittent failures in CopyMoveElementsTests
+Random test failure seen in both regular & jenkins builds.
+
+https://download.eclipse.org/eclipse/downloads/drops4/I20220222-1800/testresults/html/org.eclipse.jdt.core.tests.model_ep423I-unit-cen64-gtk3-java11_linux.gtk.x86_64_11.html
+
+https://download.eclipse.org/eclipse/downloads/drops4/I20220222-1350/testresults/html/org.eclipse.jdt.core.tests.model_ep423I-unit-mac64-java17_macosx.cocoa.x86_64_17.html
+
+https://ci.eclipse.org/jdt/job/eclipse.jdt.core-Gerrit/5924/testReport/org.eclipse.jdt.core.tests.model/AllJavaModelTestsTracing/testCopyFieldInDifferentProject/
+
+
+SDK tests fail with this stack:
+
+No delta found for Y (not open) [in Y.java [in <default> [in src [in P2]]]], all deltas: [Java Model[*]: {CHILDREN} P2[*]: {CHILDREN} src[*]: {CHILDREN} <default>[*]: {CHILDREN} Y.java[*]: {CONTENT | PRIMARY RESOURCE}]
+
+junit.framework.AssertionFailedError: No delta found for Y (not open) [in Y.java [in <default> [in src [in P2]]]], all deltas: [Java Model[*]: {CHILDREN}
+P2[*]: {CHILDREN}
+src[*]: {CHILDREN}
+<default>[*]: {CHILDREN}
+Y.java[*]: {CONTENT | PRIMARY RESOURCE}]
+at junit.framework.Assert.fail(Assert.java:57)
+at junit.framework.TestCase.fail(TestCase.java:223)
+at org.eclipse.jdt.core.tests.model.CopyMoveTests.copyPositive(CopyMoveTests.java:120)
+at org.eclipse.jdt.core.tests.model.CopyMoveElementsTests.testCopyFieldInDifferentProject(CopyMoveElementsTests.java:251)
+
+
+
+Here the output from jenkins
+
+Error Message
+No delta found for Y (not open) [in Y.java [in <default> [in src [in P2]]]], all deltas: [Java Model[*]: {CHILDREN}
+ P2[*]: {CHILDREN}
+  src[*]: {CHILDREN}
+   <default>[*]: {CHILDREN}
+    Y.java[*]: {CONTENT | PRIMARY RESOURCE}]
+Stacktrace
+junit.framework.AssertionFailedError: 
+No delta found for Y (not open) [in Y.java [in <default> [in src [in P2]]]], all deltas: [Java Model[*]: {CHILDREN}
+	P2[*]: {CHILDREN}
+		src[*]: {CHILDREN}
+			<default>[*]: {CHILDREN}
+				Y.java[*]: {CONTENT | PRIMARY RESOURCE}]
+	at org.eclipse.jdt.core.tests.model.CopyMoveElementsTests.testCopyFieldInDifferentProject(CopyMoveElementsTests.java:251)
+Standard Output
+[2022-02-23 08:20:37 +0000] org.eclipse.jdt.core.tests.model.CopyMoveElementsTests#testCopyFieldInDifferentProject()
+Standard Error
+java.lang.Throwable: Caller of IElementChangedListener#elementChanged with delta Java Model[*]: {CHILDREN}
+	P2[*]: {CHILDREN}
+		src[*]: {CHILDREN}
+			<default>[*]: {CHILDREN}
+				Y.java[*]: {CONTENT | PRIMARY RESOURCE}
+	at org.eclipse.jdt.core.tests.model.AbstractJavaModelTests$DeltaListener.elementChanged(AbstractJavaModelTests.java:340)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1755)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1743)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.firePostChangeDelta(DeltaProcessor.java:1576)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1552)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyAndFire(DeltaProcessor.java:2273)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2163)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:501)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:381)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1505)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

@@ -1,0 +1,2 @@
+Fix Javadoc to say CSVFormat with() methods return a new CSVFormat
+The quoting mode depends on the order of format declaration.

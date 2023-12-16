@@ -1,0 +1,4 @@
+Allow Backlog Debugger and test debugger to work at the same time
+When enabling the [test debugger|https://camel.apache.org/manual/debugger.html#_debugging_camel_routes] by using the {{isUseDebugger}} in test, the [BacklogDebugger|https://camel.apache.org/manual/backlog-debugger.html] is no more available. it would be nice to have both that can work at the same time.
+
+see [https://github.com/apache/camel-website/pull/860] and [https://camel.zulipchat.com/#narrow/stream/258729-camel-tooling/topic/.E2.9C.94.20camel.20debug.20with.20unit.20tests] for more context

@@ -1,0 +1,10 @@
+CellComparator should extend Serializable
+Prior to HBASE-18945, CellComparator was a class which implemented Serializable. In that jira, an interface was extracted with the intent of making the implementation IA.Private. This broke some downstream consumers, so the new CellComparator interface was made IA.Public in HBASE-19160.
+
+One remaining breakage from that change is that if someone is using CellComparator in spark it will fails because it's not serializable. Everything in spark needs to be serializable, and the old CellComprator class used to extend Serializable. There was some small discussion in HBASE-18945 about removing Serializable, but I don't think anyone thought of this use-case.
+
+The failure is:
+
+Job aborted due to stage failure: Task not serializable: java.io.NotSerializableException: org.apache.hadoop.hbase.CellComparatorImpl
+
+We should make CellComparator extend Serializable, or have CellComparatorImpl implement it.

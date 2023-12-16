@@ -1,0 +1,5 @@
+ItemType labels in ToolItemEditor not externalized
+ItemType labels "Push", "Check", "Radio" in ToolItemEditor not externalized for translation.
+
+Labels hard-coded in:
+eclipse.platform.ui/bundles/org.eclipse.e4.ui.model.workbench/src/org/eclipse/e4/ui/model/application/ui/menu/ItemType.java

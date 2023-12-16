@@ -1,0 +1,2 @@
+httpClientConfigurer component settings doesn't work
+httpClientConfigurer property is not propagated to the endpoint on endpoint creation.

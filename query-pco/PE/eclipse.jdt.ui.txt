@@ -1,0 +1,47 @@
+576431	 SurroundWithTryWithResourcesRefactoring, jdt.core.manipulation
+576502	 TestMissingTryWithResources, foo, BufferedReader, markSupported
+576517	 NewClassWizard, Record
+576518	 NewClassWizard
+576535	 foo2, foo3, FileReader, read, close, run, File
+576549	 javax.swing.JFrame, java.awt.Frame, javax.swing.JComponent, java.awt.Component, getBounds(), java.awt.Rectangle, java.awt.Robot, setSize()
+576615	 JUnitPreferencePage, TypeFilterPreferencePage, JavaStepFilterPreferencePage, SelectImportsDialog, ExceptionFilterEditor, IPreferenceStorage
+576619	 MethodCall, MethodWrapper, toString()
+576632	 StringBuilder, append, String.join
+576733	 IndexChangedEvent, ProblemMarkerManager.runPendingUpdates()
+576826	 TypeAnnotationRewrite, jdt.core.manipulation
+576995	 @Suite, @SelectClasses, @SelectPackages, @SuiteDisplayName
+577040	 assertThrows, IllegalArgumentException.class
+577286	 DebugPlugin$EventDispatchJob, org.eclipse.debug.core.DebugPlugin.EventDispatchJob
+577540	 SwitchExpressionsFix.createConvertToSwitchExpressionFix, QuickAssistProcessor, SwitchExpressionsFixCore, QuickAssistProcessorUtil.getIndex
+577699	 foo, addDisposeListener, add
+577840	 ClassPathContainer$RequiredProjectWrapper, equals method
+577919	 A, foo(), AImpl, B, callFoo()
+578081	 Test, main
+578124	 Test, main
+578126	 Test, Inner
+578128	 Test, main, addNewEntry
+578129	 Test, log, SEVERITY_ERROR, SEVERITY_WARNING
+578130	 Test, main
+578168	 TestCleanUp, test
+578169	 TestCleanUp, Point, Rect, getRect, test
+578170	 TestCleanUp, check
+578527	 SubstringCleanup, jdt.core.manipulation
+578547	 TypeInfoFilter, Test.TestInner1.TestInner2, TestInner1, TestInner2
+578693	 BreakContinueTargetFinder, ExceptionOccurrencesFinder, ImplementOccurrencesFinder, MethodExitsFinder
+578788	 Messages, getString
+578906	 Test2, foo, Iterator, hasNext, size
+578909	 Test3, foo, List.get, Integer.intValue
+578910	 Test4, foo, Map, Expression, keySet, iterator, hasNext, next, System.out.println
+578917	 Test6, getResolution, foo, valueOf
+578948	 System.out.println, @highlight, @replace
+578997	 QuickFixTest17, HierarchicalASTVisitorTest.test, QuickFixTest17.testAddSealedAsDirectSuperTypeProposal1, QuickFixTest17.testAddSealedAsDirectSuperTypeProposal2, QuickFixTest17.testAddSealedAsDirectSuperTypeProposal3, QuickFixTest17.testAddSealedAsDirectSuperTypeProposal4, QuickFixTest17.testAddSealedAsDirectSuperInterface1, QuickFixTest17.testAddSealedAsDirectSuperInterface2, QuickFixTest17.testAddSealedAsDirectSuperInterface3, QuickFixTest17.testAddSealedAsDirectSuperInterface4, QuickFixTest17.testDoNotAddRecordAsSubType, QuickFixTest17.testAddSealedAsDirectSuperClass1, QuickFixTest17.testAddRecordAsSubType
+579044	 TestClass, SuperClass, setValue, getPackageClass, foo
+579183	 CompletionRequestor, isIgnored, CompletionProposalCollector, TypeFilter.isFiltered
+579315	 Bindings.visitHierarchy, Test1, Test2, I1, I2
+579331	 BuildPathsBlock
+579374	 Charset.defaultCharset(), System.getProperty()
+579393	 WeirdCleanupAndCallSiteInitializationException, get, B, getT, A, exists_testOpen
+579473	 RefactoringWizard, DIALOG_BASED_UESR_INTERFACE, DIALOG_BASED_USER_INTERFACE
+579526	 ConvertLoopFix, ConvertLoopFixCore
+579545	 StringButtonStatusDialogField
+579588	 JavaTypeCompletionProposalComputer.computeCompletionProposals(), getRelevance(), LazyGenericTypeProposal, LazyJavaTypeCompletionProposal, CompletionSubClass1, CompletionSubClass2, CompletionClass, foo()

@@ -1,0 +1,2 @@
+[18] Java 18 API doc to be added for JRE library
+Java doc location should be added for new Java 18 release. This will be available only after Java 18 GA.

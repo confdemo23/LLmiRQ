@@ -1,0 +1,5 @@
+MarkerSupportView should allow custom open method for markers.
+Like most of the methods in ExtendedMarkersView the openSelectedMarkers is package private.
+This means it is not possible to have a custom method of opening the editor. 
+This could be easily fixed by making that method protected.
+This would allow any views implementing MarkerSupportView to implement their own method of opening the correct editor.

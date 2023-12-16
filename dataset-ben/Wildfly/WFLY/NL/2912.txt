@@ -1,0 +1,2 @@
+Generic JMS adapter does not deploy correctly in domain mode.
+When trying to use generic resource adapter with third part JMS providers like TIBCO it is necessary to use generic RA provided in JBoss EAP 6.2. Unfortunately it would appear that when trying to use in domain mode the RA does not get deployed full, though it works perfectly in standalone mode.

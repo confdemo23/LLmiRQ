@@ -1,0 +1,4 @@
+camel-http - Prevent duplicating slashes in generated URI
+After upgrading to HttpComponents v5, [Jenkins raised 2 regressions|https://ci-builds.apache.org/job/Camel/job/Camel%20JDK17/job/main/688/testReport/] which are {{VertxPlatformHttpProxyTest.testProxy}} and {{PlatformHttpProxyTest.testProxy}}. 
+
+After a deeper investigation, it seems to be due to the fact that when the endpoint URI has a trailing slash and the path starts with a slash, the generated URI contains 2 slashes instead of only one which was accepted by HttpComponents v4 but it is rejected by HttpComponents v5.

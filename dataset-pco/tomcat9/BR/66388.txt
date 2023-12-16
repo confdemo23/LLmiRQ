@@ -1,0 +1,9 @@
+[Progress] 3.0 RC1 UI blocked
+This thing happened to me more than once. The UI for "User Operation is Waiting"
+cames up, and it just sits. What I seen is that whenever I save files, this
+dialog is coming up.
+
+I try to interrupt hopping that my work is not lost, but no avail.
+I tried to interrupt by pressing the red rectangle, but nothing. 
+The log shows no information.
+In both cases the I used the XMLBuddy plugin, and I was editing an HTML/XML file.

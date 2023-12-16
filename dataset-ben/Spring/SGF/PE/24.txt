@@ -1,0 +1,2 @@
+CqInvalidException removed in 6.5
+CqInvalidException has been removed in GemFire 6.5 GA - the exception is still referred to by SGF for exception translation.

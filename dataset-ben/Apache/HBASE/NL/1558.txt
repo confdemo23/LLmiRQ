@@ -1,0 +1,2 @@
+deletes use 'HConstants.LATEST_TIMESTAMP' but no one translates that into 'now'
+Deletes don't update MAX_TIMESTAMP -&gt; now like puts do.

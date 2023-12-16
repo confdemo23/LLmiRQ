@@ -1,0 +1,4 @@
+ModularClassFile#exists is time consuming for Jar without module-info.class
+ModularClassFile#exists is time consuming for Jar without module-info.class.
+
+There is a cache in JavaModelManager#getInfo but it's not caching not existing module-info.class.

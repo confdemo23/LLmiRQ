@@ -1,0 +1,2 @@
+Possibility to navigate to field declaration
+During debugging, for a variable, currently it is possible to navigate to the actual or to the declared type - with the "Open Actual Type" and "Open Declared Type" context menu item - but it's not possible to navigate to the declaration of the field - and if the class hierarchy is deep, finding the actual declaring class is not always trivial. It would be nice, if there were an action to navigate there.

@@ -1,0 +1,4 @@
+Add protobuf to NOTICE file
+The spotless formatting removed the protobuf credit from the AbstractByteRange. It is currently not included in the NOTICE file.
+
+https://github.com/apache/hbase/commit/9c8c9e7fbf8005ea89fa9b13d6d063b9f0240443#diff-f5806f14849a23b9265b022f3f330b80d08bcc10fcf69d8ee2e1b0d5af266d52

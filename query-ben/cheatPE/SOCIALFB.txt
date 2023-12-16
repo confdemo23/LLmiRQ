@@ -1,0 +1,8 @@
+33	 PostMixin
+42	 FacebookErrorHandler, DefaultResponseErrorHandler, HttpClientErrorException, UncategorizedApiException, SocialException, ResourceNotFoundException
+80	 FacebookErrorHandler, InsufficientPermissionException, OperationNotPermittedException
+97	 FacebookTemplate
+128	 CanvasSignInController
+138	 Location, JsonParser, DeserializationContext, JsonProcessingException
+168	 PagingParameters, feedOperations, getPosts
+169	 UserOperations.PROFILE_FIELDS

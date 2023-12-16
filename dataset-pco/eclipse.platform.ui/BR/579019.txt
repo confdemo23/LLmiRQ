@@ -1,0 +1,74 @@
+[JFace] Clicking on NotificationPopup should reveal parent window
+Clicking on NotificationPopup doesn't reveal the parent window.
+
+NotificationPopup has absolute positioning and is always shown on the top of desktop environments windows stack. If there are any 3rd windows on the top of the parent window, it is not clear to what window/app the popped-up notification belongs to. On clicking on the header of notification nothing happens. This is confusing.
+
+In order to reproduce this one can use the following handler (to trigger notification on user action, e.g. icon click):
+
+import org.eclipse.core.commands.AbstractHandler;
+import org.eclipse.core.commands.ExecutionEvent;
+import org.eclipse.core.commands.ExecutionException;
+import org.eclipse.jface.layout.GridDataFactory;
+import org.eclipse.jface.notifications.AbstractNotificationPopup;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Label;
+
+public class SampleHandler extends AbstractHandler {
+
+	@Override
+	public Object execute(ExecutionEvent event) throws ExecutionException {
+		showNotification();
+		return null;
+	}
+	
+	private void showNotification() {
+        if (Display.getCurrent() == null) {
+            Display.getDefault().asyncExec(new Runnable() {
+                @Override
+                public void run() {
+                	showNotification();
+                }
+            });
+            return;
+		}
+        try {
+        	Thread.sleep(10000); // time to open 3rd app. windows
+        } catch (InterruptedException e) {
+        	e.printStackTrace();
+        }
+		NotificationPopup notificationPopup = new NotificationPopup(Display.getCurrent(), "header text",
+				"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
+		notificationPopup.open();
+	}
+	
+	public class NotificationPopup extends AbstractNotificationPopup {
+
+		private String fText;
+		private String fTitle;
+
+		public NotificationPopup(Display display, String title, String text) {
+			super(display);
+			this.fTitle = title;
+			this.fText = text;
+		}
+
+		@Override
+		protected void createContentArea(Composite parent) {
+			Label contentLabel = new Label(parent, SWT.WRAP);
+	        contentLabel.setText(fText);
+	        GridDataFactory.fillDefaults().grab(true, false).align(SWT.FILL,
+	                SWT.BEGINNING).applyTo(contentLabel);
+		}
+
+		@Override
+		protected String getPopupShellTitle() {
+			return fTitle;
+		}
+
+	}
+}
+
+Expected behavior:
+Popup parent window should be shown (brought upfront) on clicking on NotificationPopup.

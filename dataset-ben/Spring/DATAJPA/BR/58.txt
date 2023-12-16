@@ -1,0 +1,3 @@
+Persistable.isNew is not used by JpaPersistableEntityInformation
+The isNew()  method is not used by JpaPersistableEntityInformation , which causes unwanted behavior in Repository.save() 
+JpaPersistableEntityInformation  should extend PersistableEntityInformation instead of AbstractEntityInformation

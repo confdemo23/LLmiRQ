@@ -1,0 +1,3 @@
+Satisfies CollectionUtils Method
+Recently I needed a method to verify that a predicate held true for all members of a collection.  I saw where CollectionUtils had the exists method that checked for a single list element that satisfied a predicate, but not a method for all elements.
+Hoping to get more involved with the project!

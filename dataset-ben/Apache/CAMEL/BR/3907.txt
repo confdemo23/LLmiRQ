@@ -1,0 +1,2 @@
+Component camel-sql needs the abiliity to process sql from the body of the exchange
+camel sql should also support the ability to add the sql statements in the exchange body for processing.  This is linked via 3803.  

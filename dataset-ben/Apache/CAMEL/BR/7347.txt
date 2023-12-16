@@ -1,0 +1,2 @@
+camel-netty - Should return 404 instead of 503 if context-path did not match a route
+We should return 404 instead as the service is there but the resource requested was not found.

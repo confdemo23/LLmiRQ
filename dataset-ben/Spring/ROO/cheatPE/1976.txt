@@ -1,0 +1,2 @@
+toString() method of Column class in DBRE causes stack overflow if called 
+A circular reference to the table object in the toString() method causes a stack overflow exception when called.

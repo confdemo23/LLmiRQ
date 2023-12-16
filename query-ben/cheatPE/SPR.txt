@@ -1,0 +1,42 @@
+1461	 WebApplicationContext, ClassLoader, ClassEditor, ClassUtils
+4702	 DirtiesContext, TestExecutionListener, close()
+5275	 JmsUtils, JMSException
+5332	 JmsException, JMSException
+5958	 JmsUtils, DefaultMessageListenerContainer
+6053	 SimpleJdbcCall, CallMetaDataProviderFactory, JdbcUtils
+6184	 TestContext, ContextLoader, JavaConfigContextLoader, TransferServiceTests, @ContextConfiguration, @JavaConfigContextConfiguration
+6250	 ExecutorBeanDefinitionParser, ThreadPoolExecutor$AbortPolicy
+6269	 JdbcUtils, JtdsDatabaseMetadata, CallMetaDataProviderFactory, SybaseCallMetaDataProvider
+6379	 DefaultBeanDefinitionDocumentReader, ResourcePatternUtils
+6440	 JdbcTemplate, SimpleJdbcTemplate, RowMapper
+6475	 ControllerClassNameHandlerMapping, @RequestMapping, ArticlesController
+6525	 EvaluationTests, SpEL context
+6567	 SpringAnnotationConfigTestAppConfig, SpringJUnit4ClassRunner, AnnotationContextLoader, ApplicationContext, SpringAnnotationConfigTest, AnnotationConfigurationApplicationContext
+6656	 ScheduledAnnotationBeanPostProcessor, onApplicationEvent
+6663	 ScheduledTaskRegistrar, ScheduledAnnotationBeanPostProcessor, SimpleApplicationEventMulticaster, XmlWebApplicationContext, ContextLoaderPlugIn, ActionServlet
+6719	 CommonsClientHttpRequestFactory, getHttpClient(), RestTemplate, HttpClient
+6752	 RestTemplate, HttpStatus, ResponseErrorHandler, HttpHeaders
+6856	 SimpleJdbcDaoSupport, JdbcDaoSupport, SimpleJdbcTemplate, SimpleJdbcOperations
+6858	 SimpleJdbcTemplate, JdbcTemplate
+6922	 SimpleJdbcTemplate, JdbcTemplate
+6955	 TaskExecutorFactoryBean, DisposableBean
+7004	 CronTrigger, ThreadPoolTaskScheduler
+7190	 AnnotationMethodHandlerAdapter, AnnotationMethodHandlerExceptionResolver, MappingJacksonHttpMessageConverter, Jaxb2RootElementHttpMessageConverter, AnnotationDrivenBeanDefinitionParser
+7191	 AnnotationDrivenBeanDefinitionParser, HttpMessageConverter
+7289	 ConversionService, ConversionServiceFactory, TypeDescriptor
+7562	 TypeDescriptor
+7603	 AbstractPollingMessageListenerContainer, commitIfNecessary
+7650	 AbstractPollingMessageListenerContainer, DefaultMessageListenerContainer
+7688	 InjectionMetadata
+7795	 ServletRequestDataBinder, MultipartFile, HiddenHttpMethodFilter, MultipartRequest, HttpMethodRequestWrapper, ModelAndView
+7842	 DataBinder, BeanWrapperImpl, WebRequestDataBinder, ServletRequestDataBinder
+7931	 Jaxb2Marshaller, @XmlRootElement, @XmlType, ObjectFactory
+8013	 ResourceHttpRequestHandler, ProxyServlet
+8040	 ServletRequestDataBinder, HiddenHttpMethodFilter, HttpMethodRequestWrapper, MultipartRequest, ServletRequestParameterPropertyValues, MultipartFilter
+8375	 ModelAttribute, DataBinder, WebDataBinder, WebBindingInitializer
+8766	 SimpleMappingExceptionResolver, setStatusCodes, getStatusCodes
+8986	 Jaxb2Marshaller, AnnotationJaxb2Marshaller, AnnotationSessionFactoryBean
+9068	 HttpStatus
+9197	 RestTemplate, HttpStatus
+9206	 ClasspathScanningJaxb2Marshaller, Class-to-be-bound
+9742	 Jaxb2Marshaller, JaxbElement, XmlRootElement

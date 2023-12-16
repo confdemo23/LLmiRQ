@@ -1,0 +1,2 @@
+Use try-with-resource if possible and StringWriter instead of ByteArrayOutputStream
+In JDT core, there are a couple of places, where the code could be simplified with try-with-resources pattern, and with using StringWriter instead of writing into a ByteArrayOutputStream and convert the result byte array into a String.

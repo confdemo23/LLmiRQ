@@ -1,0 +1,14 @@
+[18][switch pattern] Wrong output printed with guarded pattern
+public class X {
+	@SuppressWarnings("preview")
+	static  int foo(Object o) {
+		return switch (o) { 
+		   case X x && true -> 0;
+		   default -> 1;
+		}; 
+	} 
+	public static void main(String[] args) {
+		System.out.println(X.foo(new X()));
+		System.out.println(X.foo(new Object()));
+	}
+}

@@ -1,0 +1,14 @@
+Outline selection invalidates enclosing project for search
+Version: 2021-12 (4.22)
+Build id: I20211124-1800
+
+While editing a Java file, use of Search->File offers Enclosing Project as a search context.
+
+However after selecting an outline entry, this option is lost. Surely the enclosing project should still be available?
+
+repro:
+
+Edit a Java file.
+Left click an outline entry.
+Search->File
+-- Enclosing Project radio box is greyed out

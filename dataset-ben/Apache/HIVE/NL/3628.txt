@@ -1,0 +1,3 @@
+Provide a way to use counters in Hive through UDF
+Currently it is not possible to generate counters through UDF. We should support this. 
+Pig currently allows this.

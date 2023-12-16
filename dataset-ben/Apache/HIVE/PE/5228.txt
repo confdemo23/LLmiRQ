@@ -1,0 +1,2 @@
+exceptions regarding NonExistentDatabaseUsedForHealthCheck are extremely annoying
+There are bunch of exceptions in the logs of many tests, with long call stacks, regarding NonExistentDatabaseUsedForHealthCheck. This is coming from CacheableHiveMetaStoreClient. Perhaps it could do something better for health check, like remember last database that was used and use that instead. I am not familiar with the code so I would assume this health check is actually useful.

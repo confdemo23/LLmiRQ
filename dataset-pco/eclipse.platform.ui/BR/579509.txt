@@ -1,0 +1,16 @@
+IES423:(ICT) Missing space between two strings
+Created attachment 288336
+missing_space_CSY
+
+Build: I20220323-1001
+
+Problem:
+CSY Testers requested to have spaces between two strings.
+
+Steps to reproduce:
+Double click in desktop to open Eclipse client.
+Click Launch with default workspace
+Click Windows -> Preference in the top menu
+Click 'Model Editor' in the left
+
+Please see attachment for details

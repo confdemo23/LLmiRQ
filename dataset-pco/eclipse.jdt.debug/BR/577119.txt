@@ -1,0 +1,18 @@
+Expressions does not work when records defined as inner classes are used
+1, Create a class:
+
+   public class ExpTest {
+	record Record(String name, int age) {
+	}
+
+	void run() {
+	    var r = new Record("xxx", 5);
+	    System.out.println("r:" + r);
+	}
+   }
+
+2, Put a breakpoint into the run method, on the println-line
+3, Run the code
+4, Try to use the 'Expressions' view, but it fails, neither 'r.name' nor 'r.name()' works, and even 'r' or 'this' fails 
+
+It seems, that Eclipse tries to parse the source file and construct a new 'skeleton' which contains all the relevant types for evaluating the user entered expression. However, this parsing and source-generating code is not compatible with Java 17 syntax, and it doesn't generate anything for records.

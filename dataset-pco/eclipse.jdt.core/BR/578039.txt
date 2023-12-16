@@ -1,0 +1,4 @@
+[18][javadoc] provide support for @replace markup in @snippet
+@replace markup can be used to modify the display text in a snippet in javadoc
+
+https://openjdk.java.net/jeps/413 has examples

@@ -1,0 +1,2 @@
+Reenable TestMultiParallel#testActiveThreadsCount
+It was disabled in HBASE-14642,  this issue should reenable it.

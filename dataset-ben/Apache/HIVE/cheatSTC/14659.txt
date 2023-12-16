@@ -1,0 +1,4 @@
+OutputStream won't close if caught exception in funtion unparseExprForValuesClause in SemanticAnalyzer.java
+I hava met the problem that Hive process cannot create new threads because of lots of OutputStream not closed.
+Here is the part of jstack info:
+It shows the output stream won't close if caught exception in funtion unparseExprForValuesClause in SemanticAnalyzer.java

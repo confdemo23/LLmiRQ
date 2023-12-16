@@ -1,0 +1,20 @@
+[formatter] Switch expression formatting broken in a method chain with lambdas
+Created attachment 287394
+The source with manually adjusted layout as it should probably look like
+
+Switch expression formatting is broken when the switch expression appears in a lambda in a method chain:
+
+Stream.of(1, 2).map(it -> switch (it) {
+case 1 -> "one";
+case 2 -> "two";
+default -> {
+	if (it < 0) {
+		throw new IllegalArgumentException("A negative value.");
+	}
+
+	yield it.toString();
+}
+}).forEach(System.out::println);
+
+
+This layout was produced by the Eclipse built-in formatter, but I tried it with other formatters and the results were similar: the whole switch was aligned according to the current left indentation.

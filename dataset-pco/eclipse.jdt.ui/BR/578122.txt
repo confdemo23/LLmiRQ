@@ -1,0 +1,2 @@
+[formatter] Case statement in switch expression is not line wrapped - UI
+UI part for bug 578044

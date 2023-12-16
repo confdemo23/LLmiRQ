@@ -1,0 +1,4 @@
+[performance] wake up sleeping indexer when needed
+For example JavaSearchBugs9Tests spends most of its time in JobManager's sleep(500).
+
+Patch performance can be testet with JavaSearchBugs9Tests. From 185sec down to 30sec on my computer.

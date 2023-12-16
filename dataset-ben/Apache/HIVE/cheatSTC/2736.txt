@@ -1,0 +1,4 @@
+Hive UDFs cannot emit binary constants
+I recently wrote a UDF which emits BINARY values (as implemented in HIVE-2380). When testing this, I encountered the following exception (because I was evaluating f(g(constant string))) and g() was emitting a BytesWritable type.
+
+It looks like a pretty simple fix - add a case for BINARY in PrimitiveObjectInspectorFactory.getPrimitiveWritableConstantObjectInspector() and implement a WritableConstantByteArrayObjectInspector class (almost identical to the others). I'm happy to do this, although this is my first foray into the world of contributing to FOSS so I might end up asking a few stupid questions.

@@ -1,0 +1,4 @@
+Fix describe [extended] column formatting
+When displaying the column schema, the formatting should follow should be 
+name&lt;TAB&gt;type&lt;TAB&gt;comment&lt;NEWLINE&gt;
+to be inline with the previous formatting style for backward compatibility.

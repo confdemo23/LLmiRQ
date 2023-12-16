@@ -1,0 +1,241 @@
+264	 TBinarySortable Protocol
+285	 INSERT, UNION ALL, UDFToString, SerDe
+307	 MoveTask, LOAD DATA LOCAL INPATH
+405	 ObjectInspector, init, forward
+511	 DoubleWritable, hashCode
+544	 exprFieldNodeDesc, ClassCastException
+545	 ArrayList, Vector
+574	 Configuration, getClassByName
+612	 FileSinkOperator.jobClose
+634	 INSERT OVERWRITE LOCAL DIRECTORY, CREATE TABLE
+763	 getSchema, getThriftSchema
+802	 DataNucleus
+893	 ThriftSerDe, __isset, __isset_bit_vector
+1045	 FunctionRegistry.getMethodInternal, CREATE TABLE, SELECT
+1072	 show table extended like, partition
+1089	 TestCliDriver, groupby_bigdata.q, map-side aggregation
+1112	 StringBuffer, Vector, StringBuilder, ArrayList
+1167	 TreeMap, Properties, Hashtable, explain extended
+1257	 HBase tables, hadoop-hive
+1273	 UDF_Percentile
+1275	 TestHBaseCliDriver, hbase_joins.q, test
+1312	 HiveNullValueSequenceFileOutputFormat, getBytes(), getLength(), BytesWritable
+1321	 HBase, ArrayIndexOutOfBoundsException
+1340	 LazyBinarySerDe
+1363	 SHOW TABLE EXTENDED LIKE, org.apache.hadoop.hive.ql.exec.DDLTask
+1440	 FetchOperator, mapjoin, RCFile, record reader
+1470	 percentile_approx(), Evaluator, NullPointerException
+1489	 TestCliDriver, -Doverwrite=true
+1753	 CombineHiveInputFormat, Stage-2
+1760	 create_table_core, RawStore, Table, openTransaction, is_table_exists, getDbName, getTableName, createTable, commitTransaction, rollbackTransaction, deleteDir, create_type_core
+1841	 hive-default.xml, datanucleus.autoCreateSchema, datanucleus.fixedDatastore
+1854	 listPartitionsByFilter(), HIVE-1853
+1857	 org.apache.hadoop.hive.ql.parse.SemanticException, explode
+1862	 Hive MetaStore, JDO
+1863	 Hive JDBC driver, DynamicSerDe, dt4_boolean table
+1897	 Alter, InvalidOperationException, NoSuchObjectException, MetaStore, DFS
+1908	 createStatement.executeQuery, resultSet.next, resultSet.getString
+1973	 join, create table, select
+1976	 HiveStatement, add command
+1986	 kv_part, kv2, rand(), unix_timestamp(), sin()
+1988	 MetaStore, ProxyUser authorization, create_table
+2077	 HBaseStorageHandler
+2181	 scratch.dir, Hive server
+2253	 SemanticAnayzer, merge join tree
+2497	 src3, TableScan, Filter Operator, Select Operator, File Output Operator, hive.optimize.ppd
+2540	 EXPLODE, ConcurrentModificationException
+2544	 Function registry, put()
+2615	 MapRedTask, LazyObject
+2631	 Hive, Hadoop
+2721	 HIVE-1517
+2735	 PlanUtils.configureTableJobPropertiesForStorageHandler()
+2746	 Metastore client, LOG.error, getStackTrace
+3000	 ZookeeperHiveLockManager, lock(), lockPrimitive(), org.apache.zookeeper.KeeperException$SessionExpiredException
+3098	 FileSystem.CACHE, UserGroupInformation::equals()
+3125	 sort_array, LazyPrimitive, ClassCastException
+3159	 AvroSerde, TypeInfo, AvroSchema
+3171	 BucketizedHiveInputFormat, bucketmapjoin, bucketmapjoin.sortedmerge
+3173	 getTypeInfo, database metadata method, JDBC driver
+3191	 NullPointerException
+3246	 PrimitiveObjectInspector.getPrimitiveJavaObject, ByteArrayRef
+3308	 LazySimpleSerDe, hive.output.file.extension
+3428	 log4j, NullAppender, HiveConf
+3709	 Configuration, addResource, InputStream
+3739	 hive.auto.convert.join, org.antlr.runtime.CommonToken
+3746	 HS2, ResultSet, Serialization
+4000	 HashMap, MapReduce jobs
+4049	 org.apache.hadoop.metrics.jvm.EventCounter, org.apache.hadoop.log.metrics.EventCounter
+4225	 HiveServer2, SASL, Kerberos authentication
+4496	 HiveServer2, JDBC2, JDK7
+4501	 FileSystem, FileSystem.CACHE, fs.hdfs.impl.disable.cache, fs.file.impl.disable.cache, hive.server2.enable.doAs
+4561	 src_test, TAB_COL_STATS, DOUBLE_LOW_VALUE, DOUBLE_HIGH_VALUE
+4571	 LazySerDe, HIVE-337
+4978	 PrintWriter
+4996	 openTransaction, commitTransaction, DDLTask
+5102	 getSplits, FileFormat, ORC
+5228	 NonExistentDatabaseUsedForHealthCheck, CacheableHiveMetaStoreClient
+5277	 HBaseStorageHandler, HiveHBaseTableInputFormat.getRecordReader
+5447	 HiveServer2, impersonation, LDAP, kerberos connection
+5511	 LaunchMapper, percentComplete
+5563	 ColumnProjectionUtils.getReadColumnIds, ColumnProjectionUtils.isReadAllColumns, ORC reader
+5672	 Insert, Overwrite, Directory, Row Format Delimited, Fields Terminated By
+5871	 MultiDelimitSerDe, RegexSerDe
+5904	 HiveServer2, JDBC, connect
+5986	 ORC SARG, evaluate(TruthValue[] leaves)
+6198	 ORC, HiveQL, CREATE TABLE, LOAD DATA LOCAL INPATH, INSERT OVERWRITE TABLE, SELECT
+6484	 HiveServer2, TProcessor.process, clientUgi
+6575	 DeepParquetHiveMapInspector, StandardParquetHiveMapInspector
+6687	 ResultSet, executeQuery, getInt, resultsetschema, semantic analyzer
+6712	 setAutoCommit, getAutoCommit
+6747	 TestEmbeddedThriftBinaryCLIService, testExecuteStatementAsync
+6806	 CREATE TABLE, STORED AS AVRO, SerDe, InputFormat, OutputFormat
+6824	 Hive, HBase, Tez, relocalize APIs
+7060	 count, min, UserVisits_web_text_none, avgTimeOnSite
+7198	 HiveServer2, CancelOperation(), MapReduce
+7238	 show partitions, ParseException
+7261	 hive.groupby.skewindata, count(), count(distinct)
+7483	 DbTxnManager, HiveInputFormat, acquireReadWriteLocks
+7714	 HDFS ACL, Storage-System Based Authorization Model
+7764	 hive.server2.authentication, JDBC-HiveServer2, LDAP, KERBEROS
+7927	 FsPermission, HIVE-7895
+8171	 Tez, Vectorized Reduce, create table, insert into table
+8246	 HiveServer2
+8290	 DbTxnManager, ORC tables
+8297	 JDBC, TIMESTAMP, RCFile, ORC, SELECT, HiveDriver, TIMESTAMP_TEXT, TIMESTAMP_RCFILE
+8369	 SimpleFetchOptimizer, fs.hdfs.impl.disable.cache
+8485	 DataNucleus, TBLPROPERTIES, ql.Driver, hive metastore
+8712	 InvalidTableException, create index, select
+8752	 HiveProjectRel, HiveFilterRel, HiveTableScanRel
+8856	 Map Join Operator, UDFToDouble, query optimizer
+9107	 ExprNodeFieldEvaluator
+9647	 HiveRelMdSelectivity.computeInnerJoinSelectivity, get_aggr_stats_for
+9717	 AggrStats, MAX, MIN, CAST
+10071	 Calcite Return Path, Join, MultiJoin rule, auto_join3.q
+10444	 FileStatus, isFile(), isDirectory()
+10483	 DbTxnManager, insert overwrite, partition
+10625	 HiveAuthzPluginException, SQL Standard Authorization, select, _dummy_database._dummy_table
+10841	 SELECT, JOIN, WHERE, DROP TABLE, CREATE TABLE, INSERT INTO
+10879	 buckettestinput, buckettestoutput1, buckettestoutput2, insert overwrite, hive.enforce.bucketing, hive.enforce.sorting, hive.auto.convert.sortmerge.join, hive.optimize.bucketmapjoin, hive.optimize.bucketmapjoin.sortedmerge, hive.exec.reducers.bytes.per.reducer, hive.exec.reducers.max, mapred.reduce.tasks
+10880	 hive.enforce.bucketing, insert overwrite, buckettestoutput1, buckettestinput, hive.enforce.sorting, hive.auto.convert.sortmerge.join, hive.optimize.bucketmapjoin, hive.optimize.bucketmapjoin.sortedmerge, hive.exec.reducers.bytes.per.reducer, hive.exec.reducers.max, mapred.reduce.tasks
+10881	 CREATE TABLE, insert overwrite table, select
+10971	 hive.groupby.skewindata, count(*), count(distinct l_linestatus)
+11036	 DataNucleus, Metastore
+11112	 LazySimpleSerDe, CREATE TABLE, SELECT
+11208	 SemanticException, hive.exec.dynamic.partition, hive.exec.max.dynamic.partitions.pernode, ALTER TABLE, DROP partition
+11237	 CREATE TABLE, INSERT OVERWRITE TABLE, SHOW PARTITIONS, ALTER TABLE, DROP partition
+11498	 WriteEntity, ReadEntity, isDummy(), isPathType()
+11504	 PrimitiveTypeName, PredicateLeaf, Predicate builder
+11587	 mapjoin hashtable, initialCapacity, memUsage
+11850	 org.apache.hive.udf.generic.GenericUDFGenCounter, org.apache.hadoop.hive.ql.exec.FunctionTask
+11859	 Hive, SQL Server, MetaStore
+12093	 launch local task, process map join
+12204	 ApplicationNotRunningException, submit DAGs, hive
+12207	 CalcitePlanner, genOPTree, CalciteException
+12223	 SemanticAnalyzer, GROUPING__ID, Hive optimizer, PPD, GroupBy operator
+12232	 StorageBasedAuthorization, HiveException, AccessControlException
+12250	 HBaseHandler, HiveServer2, ZooKeeper
+12280	 HiveConnection
+12281	 Operator::isLogDebugEnabled, Vectorized MapJoin
+12302	 KryoPool, KryoPool.Builder, softReferences, build
+12311	 SemanticException, create table, select
+12315	 setNullAndDivBy0DataEntriesDouble, DoubleColumnVector
+12399	 Native Vector MapJoin
+12456	 SessionState, QueryId
+12465	 Join Operator, Reduce Operator Tree, Map Operator Tree
+12466	 SparkCounters
+12477	 store_sales, date_dim, TableScan, Filter Operator, Select Operator, Reduce Output Operator, Join Operator, Group By Operator
+12487	 MiniLlap, TestMiniLlapCliDriver, HIVE-12319
+12491	 getEasedOutDenominator
+12502	 to_date, SemanticException
+12537	 ObjectInspector, ObjectInspectorFactory.getReflectionObjectInspector, Writer, OrcFile.createWriter, addRow, close
+12538	 SparkSession, set, spark.yarn.queue, select, count, run
+12542	 HiveRelFactories, RelFactories
+12578	 ExprNodeConstantDesc, ExprNodeColumnDesc, Select clause, semijoin subquery
+12590	 UDAF, max, select
+12612	 beeline, -u, -e, -f, /dev/stdin, beeline_workaround_exit_status
+12619	 HiveException, ClassCastException, java.io.IOException, org.apache.hadoop.io.Text, org.apache.hadoop.io.IntWritable
+12632	 IO elevator, ACID tables, HIVE-12631, FileNotFound error
+12643	 InputFormat
+12657	 selectDistinctStar.q, HIVE-12609
+12664	 reduce, deduplication, ArrayOutOfBoundException, SELECT, COUNT, MAX, MIN, GROUP BY, JOIN
+12685	 javax.jdo.option.ConnectionDriverName, HiveConf
+12717	 json_tuple, ALLOW_BACKSLASH_ESCAPING_ANY_CHARACTER
+12724	 ACID, Major compaction, non-ACID to ACID table conversion, hive.compactor.initiator.on, hive.compactor.worker.threads, hive.exec.dynamic.partition.mode, ALTER TABLE, COMPACT 'MAJOR', show compactions, select count(*)
+12744	 GROUPING__ID, testtable1, testtable2, testtable3, insert into table, group by, with cube, grouping sets
+12762	 TableScan, hive.optimize.index.filter, SELECT, CREATE TABLE, INSERT INTO, JOIN
+12885	 LDAP Atn provider, getNameInNamespace()
+12945	 hashCode, Integer.MAX_VALUE, numberOfBuckets, Math.abs
+12954	 str_to_map, NullPointerException, coalesce
+13020	 HiveServer2, Hive Metastore, Zookeeper, IBM JDK, Oracle/Open JDK, Hadoop
+13036	 hive.root.logger, log4j1.x, HIVE-12402, HS2, metastore
+13039	 ParquetHiveSerDe, MapredParquetInputFormat, MapredParquetOutputFormat
+13056	 HiveSQLException
+13077	 llapMode, addResource
+13096	 MapJoin conversion algorithm, HIVE-11954
+13105	 LLAP token, hashCode, equals
+13135	 HttpServer, hive-common
+13151	 FileSystem.CACHE, UGI objects
+13169	 HiveServer2, delegation token based connection, http transport
+13191	 DummyTable, map-joins, shuffle-joins
+13213	 DbLockManager, insert into T values(...)
+13255	 FloatTreeReader, nextVector()
+13256	 LlapIOCounterROWS_EMITTED, SELECTED_ROWGROUPS
+13264	 TCLIService.Iface, TCLIService.Client, TOpenSessionResp, client.OpenSession, TOpenSessionReq, client.CloseSession, TCloseSessionReq
+13267	 SelectLikeStringColScalar, FilterStringColLikeStringScalar, Checker
+13285	 combine hive input format, closeOp()
+13299	 Hive Language DDL
+13395	 Driver.recordValidTxns(), Driver.compile(), acquireLocksAndOpenTxn(), ReaderKey.currentTransactionId
+13410	 PerfLog, HS2, api_parse
+13493	 TransactionBatchImpl, getCurrentTxnId(), performTimeouts, beginNextTransactionImpl
+13502	 Beeline, JDBC URL, HiveServer2 Clients
+13561	 HiveServer2, add jar, temporary functions
+13563	 Hive Streaming, orc.compress.size, orc.stripe.size
+13645	 Beeline, hiveVars, hiveConfVars
+13646	 hive.optimize.sort.dynamic.partition, ACID tables, OutOfMemory errors, ROW__ID
+13693	 TableScan, Reduce Output Operator, Merge Join Operator, Select Operator, File Output Operator, Filter Operator, Move Operator, Stats-Aggr Operator
+13704	 DistCp.execute(), DistCp.run(), SimpleCopyListing, CopyCommitter, setTargetPathExists
+13818	 Fast Vector MapJoin Long, HIVE-13682, Fast Hash Tables
+13821	 OrcSplit, HIVE-7428, HIVE-10397
+13837	 current_timestamp()
+13849	 DbTxnManager, non_acid, srcpart
+13858	 HiveProcessor.abort, completeInitialization
+13861	 Union, Sort, org.apache.hive.service.cli.HiveSQLException
+13863	 AnnotateWithStatistics, cartesian product
+13871	 exec.Task, TaskCounter_Map_1_INPUT_Map_4
+13878	 TextFile, Vector SerDe, LazySimple
+13882	 stmt.execute, stmt.executeQuery, ResultSet.next
+13887	 LazySimpleSerDe
+13904	 ColumnInfo, RowResolver
+13911	 org.apache.hadoop.security.AccessControlException, load inpath
+13932	 LeftmostBigTableSelectorForAutoSMJ
+13946	 jdbc, hive2, create table, insert into table, select, explain
+13973	 SemanticException, Windowing invocations, Value Boundary expression
+13977	 nvl, left outer join
+13987	 TTransportException
+13991	 create view, select, union all
+14019	 HiveServer2, Kerberos, SSL, TCP transport, auth-conf SASL qop value
+14089	 TestMiniLlapCliDriver.testCliDriver_vector_complex_all, TestMiniLlapCliDriver.testCliDriver_vector_complex_join
+14115	 FetchFormatter, ThriftFormatter, DefaultFetchFormatter, SessionState.get().isHiveServerQuery(), conf.set()
+14116	 TBLPROPERTIES, Metastore, ALTER TABLE, DESCRIBE FORMATTED, TBL_PARAMS
+14155	 VectorizedExpressions, VectorStringRot13, custom UDF, annotation lookups, validation of SEL, expression creation
+14215	 MR execution engine, Cumulative CPU time, MapReduce CPU Time Spent
+14229	 hive.aux.jar.paths, hive.reloadable.aux.jar.paths, HiveServer2, udf
+14322	 Datanucleus, HIVE-6113, create table, create view, select
+14327	 RPC server, ChannelOption.SO_BACKLOG, ChannelOption.SO_REUSEADDR, ChannelOption.SO_KEEPALIVE, bind(), sync(), channel()
+14338	 HiveAccessControlException
+14400	 Insert, AlreadyExistsException
+14411	 HBaseStorageHandler, FileNotFoundException
+14433	 LlapProxy.isDaemon(), org.apache.hadoop.hive.ql.exec.mr.ObjectCache()
+14446	 BloomFilter, Hybrid grace hash join
+14447	 HIVE_TRANSACTIONAL_TABLE_SCAN, FetchOperator
+14513	 LDAP Authenticator, LDAP query
+14530	 dw_tmp.l_test1, dw_tmp.l_test2
+14570	 create table, select
+14591	 HS2, Zookeeper, CloseSession, Ambari
+14658	 UDF abs, select abs
+14966	 HiveServer2, JDBC session, HTTP-Cookie auth
+14989	 FIELDS TERMINATED BY, CREATE EXTERNAL TABLE, org.apache.hadoop.mapred.TextInputFormat, org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+15004	 IllegalArgumentException, FilterPredicate
+15046	 Druid handler, GroupBy queries, Select query
+15096	 registerUDF, pom.xml, hplsql.jar, antlr-runtime-4.5.jar, Conf.SITE_XML
+15231	 SemanticException, create table, create view, select

@@ -1,0 +1,14 @@
+[18] JSR 269 API Changes for Java 18
+The following changes have been made/proposed to the JSR 269 APIs. We need to investigate whether or not JDT needs to do something to adopt.
+
+JDK-8267631: Add SourceVersion.RELEASE_18
+JDK-8273157: Add convenience methods to Messager
+JDK-8275368: Correct statement of kinds of elements Processor.process 
+operates over
+JDK-8140442: Add getOutermostTypeElement to javax.lang.model utility class
+JDK-8275308: Add valueOf(Runtime.Version) factory to SourceVersion
+JDK-8276772: Refine javax.lang.model docs
+JDK-8224922: Access JavaFileObject from Element(s)
+JDK-8277303: Terminology mismatch between JLS17-3.9 and SE17's 
+javax.lang.model.SourceVersion method specs
+JDK-8277522: Make formatting of null consistent in Elements

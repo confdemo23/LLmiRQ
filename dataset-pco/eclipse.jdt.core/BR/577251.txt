@@ -1,0 +1,11 @@
+[16] NPE in record for an raw Constructor - compiler bails out with internal error
+Raised by Remi Forax
+
+public class EclipseRecordBug {
+  record Entry<T>(int value, Entry<T> entry) {
+ 
+Entry(int value, Entry entry) {   // Entry is a raw type here
+
+}
+  }
+}

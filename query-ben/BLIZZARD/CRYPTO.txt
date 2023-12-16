@@ -1,0 +1,6 @@
+30	amp ctrcipher apos change field implementation input offset setters cipher mutable fields private
+33	class secure java random java securerandom secure random interface javasecurerandom java secure random jvm shadows
+34	instance method apos bytes amp javasecurerandom java secure random secure exception java throw random create
+125	loop channel block crypto socket socketchannel socket channel mode channel hasremaining remaining cryptooutputstream crypto output stream output stream call write underlying works
+3	default openssl cipher jcecipher jce cipher opensslcipher openssl cipher cipher change jce change hang
+26	constructors utility classes public

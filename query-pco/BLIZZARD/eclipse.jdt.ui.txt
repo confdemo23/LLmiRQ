@@ -1,0 +1,79 @@
+576389	library bundle unit test source list info platform JUnit Update JUnit JUnit released September https junit org junit docs release notes JDT update JUnit
+576431	jdt resources resoures refactor refactoring surround manipulation refacatoring surroundwithtrywithresourcesrefactoring surround resources refactoring refactoring surroundwithtrywithresouresrefacatoring surround resoures refacatoring core
+576432	hierarchy create proposal content type correction menu rewrite quickfix Provide quick create Record suggesting types Java Records standard feature suggesting type creation quick fixes missing types Record add support provide quickfix Record
+576482	type method comment version descriptor proposal refactoring set Add serial version generates empty comment version commit https git eclipse org jdt eclipse jdt git commit dcfc issue https github eclipse eclipse jdt issues Steps reproduce open java Serializable Test Serializable call Quick Add serial version java Serializable Test Serializable serialVersionUID
+576502	resource testmissingtrywithresources test missing resources error close reader quickfix void leak bufferedreader buffered reader add resources quick unclosed
+576517	error record class class wizard newclasswizard class wizard super record throw final selected
+576518	class class error newclasswizard class wizard wizard final throw selecting super selected
+576535	reader file filereader file reader filereader file reader foo file declarations ioexception void boolean quick assist surroundwithtrywithresources surround resources surround resources fails blocks anonymous classes
+576549	awt java type jframe swing bounds void robot awt default filters missing proposals win filter enabled
+576566	content java text selection proposal set compute completion Preference Editor Content Assist auto activation triggers text narrow Preference Editor Content Assist auto activation triggers text narrow hides chars cases
+576615	filters type preference inline java component filter table user experience create java member editing
+576619	method string methodwrapper method wrapper hierarchy tostring string wrapper call push methodcall method call patch add
+576632	string concatenation cleanup delimiter char text join isfirst coded hard convert code string applying app lying
+576701	create root test folder resources java resource proposal quickfix Surround resources duplicated quickfix resource leaks surround resources offered quick assist duplicated CTRL
+576733	view freeze rebase windows visual png visualvm visual thread eclipse screenshot problems git
+576826	type jdt annotation typeannotationrewrite type annotation rewrite refactor manipulation rewrite core move refactoring
+576949	set test image launch context proposal path unit Add org assertj core api Assertions JDT favorites AssertJ popular frameworks add org assertj core api Assertions favorite JDT preferences AFAIK negative side effects developer framework BUg Mockito
+576980	move set qualified files change fragment file merge releng Files endings source files JDT endings mixed endings majority lines terminated normalize files
+576995	suite select annotations packages junit selectclasses select classes selectpackages select packages annotation class suitedisplayname suite display junit add support nit
+577040	position tab class jump test numberfieldsetwrongvaluetype number fieldset wrong type illegalargumentexception illegal argument exception fieldset string lambda cursor positioning pos itioning completion
+577180	set create project internal wizard preview change path Java Record creation wizard creating stubs inherited methods request Java Record creation Wizard option method stubs create create inherited methods stubs Selecting creating record create method stubs equals Object obj hashCode String toString methods sin java lang Record method stubs created behaviour option create method stubs selected method stubs created Record
+577182	create set project path creation selection rogress perform Provide option Record Creation Wizard create stubs main function option Record Creation Wizard create stubs main String args time record creation support Creation Wizard support Record Creation Wizard
+577217	bug clause whitespace formatting setting permits add matting mits
+577232	assist context java completion content proposal set selection content assist Quick add list content assist favorites Created attachment content assist imports nice easily add statically imported list favorites propose quick java editor user add content assist favorites effortlessly quick
+577286	job core plugin eventdispatchjob event dispatch job debug org names dispatch class search partially ially qualified asterisk ast erisk wildcard open type dialog
+577317	add proposal create correction problem type modular record Provide quick fixes add permitted sealed create sealed permits compilation error Sealed lacks permits clause compilation unit declares test direct superclass superinterface don quick good quickfixes create compilation unit create child
+577540	jdt manipulation quick quickassistprocessor quick assist processor processor switchexpressionsfix switch expressions method expressions convert expression refactor switch createconverttoswitchexpressionfix create convert switch expression create core
+577699	body method refactoring paren composite extract code arraylist array list work alt entire lambda extracted
+577766	set create completion java matching mode offset string Source Clean rule Remove unnecessary parentheses Java pattern matching rule remove parenthesis negation expression expression expression Java pattern matching removing parenthesis compilation errror undefined argument type variable statement Employee parenthesis pattern matched
+577840	obj project class code eclipse requiredprojectwrapper required project wrapper method fclasspathentry classpath entry return wrapper dead equals required
+577919	foo hierarchy subtype implementation aimpl handler hierarchy demand void foo call type hierarchies call callee
+578081	system class void test code style args string actions rule source clean save swallow comment adding brackets
+578115	indent type create java method lines declaration check formatter Wrong indentation method invocation multi expression bug
+578122	type statement expression declaration create actual method block formatter statement expression wrapped bug
+578124	return rules system clean indentation void merge error class expression code reduce missing
+578126	class syntax rule test prefixes module user moduleinfo module info prefix support code clean classes static compilation failure
+578127	Code Clean Up   Reduce indentation  fails MalformedTreeException IllegalArgumentException InvocationTargetException ModalContext run WizardDialog CleanUpRefactoringWizard CleanUpConfigurationPage computeUserInputSuccessorPage UserInputWizardPage RefactoringWizard createChange buttonPressed computeSuccessorPage
+578128	string rulesok rules rules args impossiblity switch system source eclipse jdt code clean convert expression discards assignments assign ments
+578129	case int msg switch statusmsg status msg log string severity expression default code clean convert result missing
+578130	case iswhitespace white space space switch class white test menu clean charat char code convert expression swallows comments
+578146	block sequence text string cleanup escape backslash string doesn case text fails slash
+578168	cases break int math switch variables clean compilation code convert chain failure
+578169	rect int println clean class field point compilation access failure code remove unused local variables
+578170	string testcleanup test clean class clean failure check operand code test source booleans compilation
+578200	compliance source path release add preference project enable JDT target Java compiler preferences Add BETA Compiler preferences disclaimer selected
+578388	java project scope search references find selection orkbench Outline selection invalidates enclosing project search Version Build editing Java file Search File offers Enclosing Project search context selecting outline entry option lost Surely enclosing project repro Edit Java file Left click outline entry Search File Enclosing Project radio box greyed
+578446	profile indent set settings test java space indentation formatter braced code settings constructs bug
+578490	NPE in CPListElement toString  when changing project classpath JRE to another JRE installation NullPointerException toString StringBuilder moveCPElementAcrossNode CPListElement BuildPathBasePage ThreadPrintStream String editElementEntry PrintStream println AbstractCollection
+578491	project path test create set entry existing files Changing classpath installed JRE classpath ordering Created attachment Screenshot changing JRE reproduce Define separate JRE installation Create Java project classpath JRE Change JRE JRE Observe order elements classpath changed
+578527	cleanup package substringcleanup substring cleanup jdt refactor substring manipulation core version cleanup
+578535	Spock JUnit   m e  Run as JUnit Test broken JUnitException ClassNotFoundException EngineDiscoveryOrchestrator discover discoverEngineRoot JUnit5TestLoader DefaultLauncher JUnit5TestReference RemoteTestRunner createTest loadTests Engine runTests
+578547	type filter package names test type typeinfofilter type info filter info case class open robust open dialog
+578624	clean options compilation core onfiguration rogress ava create Refactor clean core clean bit code clean implementation core clean idea share code common superclass clean
+578693	finder breakcontinuetargetfinder break continue target finder target methodexitsfinder method exits finder continue manipulation exits eclipse move occurrence finders find ers jdt core
+578747	test suite unit selection set library create button JUnit enable button failed JUnit https bugs eclipse org bugs bug cgi functioning button Rerun Test Failures JUnit fixed disabling button JUnit Issue https github junit team junit issues opening https github junit team junit issues attention closed JUnit ability tests order versions years request enable option eclipse making JUnit API
+578788	string messages messages bundle class resource constants key getstring string ctrl localization popup complains missing
+578794	add preference merge create context text variable type Merge master BETA JAVA Periodically Merge periodically master BETA JAVA
+578905	visibility set add type linked variable existing rewrite cleanup convert fields local locally error modifier Test iRows iColumns iSeries foo String sea iSeries sea length issue cleanup Convert fields local variables locally applied Test iRows iColumns foo String sea iSeries sea length modifier moved local variable error
+578906	hints cleanup error resulthints result hints string void loop colon class semi remove unused local compile
+578909	list blob byte bytelist byte list cleanup content int error unboxing length compile
+578910	expression expression extensionmap extension map class cleanup exception map convert iterator catch enhanced loop isn correctly removing element declaration
+578911	clean type constraints profile create core compute change cleanup Remove unnecessary casts compile error assigning code assignment Integer Integer Remove unnecessary casts cleanup warning error
+578917	valueof class foo test int resolution attribs map void parentheses cleanup instantiation ins tantiation
+578948	handling substring replacement system println behavior string regex scenario snippet javadoc incorrect overlapping lapping multiple annotations
+578997	test java org test quickfixtest quick test hierarchicalastvisitortest hierarchical astvisitor test super record testaddsealedasdirectsuperinterface test add sealed direct super interface jdt quick tests fail beta gerrit builds
+579044	class package test class superclass super class setvalue set testclass test class void tests super cleanup declaring qualifier reference private
+579169	Hover UI Freeze waiting for indexer performConcurrentJob JobManager FindClassResolutionsOperation findValidPackagesContainingSimpleType BasicSearchEngine JavaCorrectionProcessor SafeCorrectionCollector QuickFixProcessor Job getValidPackages findMatches
+579183	completion api fulltypename full type type isignored types proposal proposals jdt bug content assist adopt completionproposal completion proposal filtering creating
+579285	string replacement core rewrite edit blank argument model typos Holger video typos discovered Mike Keppler fixed
+579315	visit interfaces type algorithm hierarchy superclasses types bindings class ast visithierarchy visit hierarchy misses
+579331	buildpathsblock build paths block java build block code unused paths remove lock
+579374	system getproperty property system file property charset usage cleanup defaultcharset default charset properties dogfooding default encoding
+579393	gett specification interface statement test expression void default string cleanup cleanup simplify lambda creates invalid
+579473	interface based dialog documentation refactoringwizard refactoring wizard refactoring user deprecated reference  refactoringwizard  refactoring wizard javadoc efactoring wizard resolve constant  refactoring
+579526	core locations duplication sync convert convertloopfix convert loop fixcore core loop code convertloopfixcore convert loop core remove
+579545	status field string javadoc stringbuttonstatusdialogfield string button status dialog field button typo dialog errors minor
+579588	relevance completion proposal type class type type proposal completion relevance wrong setting created
+579612	test text hover type string control helper temp Regression regression NLS hover Bug regression hovering message constants NLS Problem build
+579635	NPE in MatchLocator findIndexMatches MatchLocator java NullPointerException NPE MatchLocator findIndexMatches findValidPackagesContainingSimpleType PatternSearchJob BasicSearchEngine performConcurrentJob search FindClassResolutionsOperation JobManager findMatches

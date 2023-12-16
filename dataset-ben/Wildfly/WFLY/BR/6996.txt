@@ -1,0 +1,7 @@
+High CPU Usage By Infinispan when using ATTRIBUTE granularity
+Customer is deploying clustered application to EAP 7.0.1 and notices high CPU utilization by Infinispan (default configuration). Customer took thread dumps (attachment high-cpu1.zip and high-cpu1.zip) during the occurrence of the issue in question. Reports [1] show high CPU utilization with Infinispan. 
+Customer then gave us an app to reproduce the issue in question (attachment webapp3.zip). The attachment includes the app, which consist of JSP pages and code that can be used to test the app. During the test, we notice CPU utilization increases upwards to 80% -90% and remains there until the test is finished. If I deploy the same app to clustered EAP 6.4/Java 8 (with dist mode like default EAP 7), CPU utilization remains low (~2%) during the running of the test.
+Customer is under the assumption that the high CPU is due to the number of entries in the cache (web cache). As the number of entries increases, so does the likelihood of the high CPU utilization by Infinispan. Inside the test code (SessionReplicationTest.java) provided by the customer, they included (commented out) a call to a JSP file (index3.jsp) that invalidates the session (thus removing it from cache). High CPU is not experienced when they invalidate the session.    
+[1]
+https://access.redhat.com/labs/jvmpeg/results/8712a840-5da6-11e6-8f83-277d70f61057
+https://access.redhat.com/labs/jvmpeg/results/56bc07a0-6322-11e6-b64b-2ddd7b4e30bc

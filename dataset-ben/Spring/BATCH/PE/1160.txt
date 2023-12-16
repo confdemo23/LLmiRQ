@@ -1,0 +1,2 @@
+In Batch xsd, stepType and flowStepType should be unordered
+In Batch xsd, stepType and flwoStepType should be unordered.

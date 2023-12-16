@@ -1,0 +1,32 @@
+Wrong null analysis detection when accessing a field without `this.` prefix
+Created attachment 287862
+Java project that highlights the issue
+
+Hi
+
+I'm getting an unexpected difference of behavior regarding Null Analysis detection, whether an instance field is loaded using `this.` prefix or not:
+
+```
+public class A {
+
+	@Nullable
+	public A next;
+
+	@Nullable
+	public A previous;
+
+	public void disconnectOK() {
+		this.next.previous = null; // Potential null pointer access: this expression has a '@Nullable' type
+		this.next = null;
+	}
+
+	public void disconnectKO() {
+		next.previous = null; // <-- Expected the same error here since we are accessing the same field
+		next = null;
+	}
+}
+
+```
+
+Thanks for your help,
+--Frédéric

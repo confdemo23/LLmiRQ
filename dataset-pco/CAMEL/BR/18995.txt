@@ -1,0 +1,1 @@
+Upgrade to HttpComponents 5.x

@@ -1,0 +1,20 @@
+Bindings.visitHierarchy misses some interfaces
+Consider the following code:
+
+interface I1 {
+}
+
+interface I2 {
+}
+
+class Test1 implements I1 {
+}
+
+class Test2 extends Test1 implements I2 {
+}
+
+When I compute an AST over this code and invoke Bindings.visitHierarchy(<type binding of Test2>), I would expect the following types to be visited: Test1, Object, I1, I2. However, the interface I1 is never seen.
+
+The problem seems to be that the algorithm misses all interfaces not implemented directly, but by superclasses of "Test1".
+
+This is very old code, so I'm not sure it's meant to work that way. However, the doc for the method says "Method to visit a type hierarchy defined by a given type". That for me would include interfaces implemented by superclasses.

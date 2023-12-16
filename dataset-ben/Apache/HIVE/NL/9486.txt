@@ -1,0 +1,3 @@
+Use session classloader instead of application loader
+From http://www.mail-archive.com/dev@hive.apache.org/msg107615.html
+Looks reasonable

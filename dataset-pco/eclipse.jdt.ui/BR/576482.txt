@@ -1,0 +1,24 @@
+Add serial version ID generates empty comment
+version: 4.22, commit https://git.eclipse.org/c/jdt/eclipse.jdt.ui.git/commit/?id=a8e3244e6579dcfc19dc4db727589e9ce9b67ee5
+A related issue - https://github.com/eclipse/eclipse.jdt.ls/issues/1899
+
+Steps to reproduce:
+
+- open the following class
+import java.io.Serializable;
+
+public class Test3 implements Serializable {
+
+}
+- call Quick Fix>Add default serial version ID
+- you will get
+import java.io.Serializable;
+
+public class Test3 implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+}

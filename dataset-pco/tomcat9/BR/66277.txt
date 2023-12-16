@@ -1,0 +1,3 @@
+No CVS views in build I20040608_2000
+- start build with a fresh workspace
+- Window->Show View. Observe: no CVS categroy.

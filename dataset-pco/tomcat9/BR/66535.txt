@@ -1,0 +1,65 @@
+Default "Ignored Resources" pattern list has inconsistencies
+build 200406091200
+
+This refers to the default list of "Ignore patterns:" in Window->Preferences...
+->Team--Ignored Resources.
+
+I believe that the following patterns should be added to the default list:
+*.jnilib
+*.sl
+*.dll
+*.bat
+*.com
+*.log
+*.zip
+*.gz
+
+Also, I believe that the following patterns should be UNCHECKED by default:
+*.jnilib
+*.sl
+*.dll
+*.so
+*.a
+*.bat
+*.exe
+*.com
+
+Also, I believe that the following pattern should be CHECKED by default:
+core
+
+Here are my arguments:
+1) .jnilib, .sl, and .dll are the functional equivalent of .so and .a files.
+   They are all native "shared object libraries" for various platforms.
+   Since .so and .a are in the pattern list, the missing 3 should be added.
+   Now that we have 5 library extensions in the list, I believe that more
+   people will want them IN version control than OUT (ignored). This is
+   because people go to a great deal of work to create them. They are the
+   final output of many a long software process, and they are typically
+   "the thing that is shipped". So I think they should be unchecked by
+   default, but they can remain in the list for convenience.
+
+2) .bat and .com are the functional equivalent of .exe files. They are (or
+   they launch) programs. Since .exe is in the ignore pattern list, the other
+   2 should be also. The same argument as above can be made to have them
+   unchecked by default - they are typically a part of the end product. In the
+   case of .bat, this particularly needs to be kept in version control by 
+   default because it is typically written by hand, i.e. it is typically not
+   the output of a process.
+
+3) .zip and .gz are the functional equivalent of .Z files. If you have .Z files
+   in the ignore list, you need to add the other 2 extensions. I guess it is
+   probably more useful to ignore these by default.
+
+4) .log and core are crash output files. I believe these should be ignored by
+   default. When I looked at the ignore pattern list for the first time, I
+   noticed that core was unchecked. I can't imagine why anyone might want to
+   version control a core file. <grin>
+
+
+The final argument for having a bunch of unchecked items in the ignore list:
+
+It is far better to have a dialog come up once (and yes, you should have a 
+checkbox on the dialog for "Ignore these type(s) of resource in future") than 
+to have multiple failed builds, and to have people assume that there is a bug 
+in version control, giving them the feeling that they should not trust the 
+tool.

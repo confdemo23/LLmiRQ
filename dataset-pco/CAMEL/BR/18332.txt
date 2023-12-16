@@ -1,0 +1,1 @@
+[camel-hyperledger-aries] Upgrade to nessus-aries-0.2.0

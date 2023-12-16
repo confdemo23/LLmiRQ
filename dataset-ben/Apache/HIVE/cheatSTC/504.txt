@@ -1,0 +1,2 @@
+script operator fails when there is an empty input file
+Get the following error:

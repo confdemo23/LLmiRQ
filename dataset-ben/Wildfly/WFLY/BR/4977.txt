@@ -1,0 +1,2 @@
+excluded-connectors attribute in replicated colocated topology is mandatory
+excluded-connectors attribute is mandatory when replicated colocated topology is defined. Attribute should be optional.

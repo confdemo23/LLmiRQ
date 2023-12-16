@@ -1,0 +1,41 @@
+187	equal test length set bytes negative silent hash Beider Morse Phonetic Matching producing incorrect tokens Beider Morse Phonetic Matching algorithm Commons Codec BMPM algorithm EVOLVING algorithm version version dated Dec opensource version Commons Codec Docs version BMPM implemented problem algorithm coded Codec simply version basic problems implementation determine version algorithm implemented Commons Codec ensure algorithm updated BMPM algorithm ensure algorithm coded Commons Codec accurate working expected
+58	javadoc bytes base character characters document character class decode set documented
+61	base length data trunk lengthdatabits length data bits code int encodebase encode base bits commons encode throws negativearraysizeexception negative array size exception negative array size exception large files
+73	jvm string byte surefire plugin bytes digests argline arg default conversions indepedent platform encoding
+80	chunk length bug base array bytes multiple encode regression extra true input
+89	string base utf commons ywfh apos instance character java amp encode appends app ends crlf chunks lines
+97	test amp base behaviour trunk constructor apos returns commons default changed enable chunking
+98	base stream buffer input byte inputstream input stream guess nullpointerexception null pointer exception null pointer exception input
+99	base encodebase encode base data string binarydata binary data byte utf vyg encode shouldn apos chunk
+101	stream input stream bytes byte inputstream input stream base input reader read incorrectly returns multiple long
+111	isn commons org escape urlcodec apos amp char apache codec code net urlc odec final
+112	base case size encodebase encode base safe test byte ischunked chunked chunked urlsafe url safe encode binarydata binary data binary data boolean url int maxresultsize max result size max result
+113	commons apache language code org malicious refinedsoundex refined soundex package soundex codec code lang uage refined english mapping protected
+114	commons apache language org code malicious package bugdescriptions bug descriptions findbugs codec code lang uage soundex english mapping protected
+115	code setter metaphone doublemetaphone double metaphone getter max len private maxcodelen max code len public double
+117	caverphone names ends starts spec starting encode encodes coded enc odes incorrectly
+121	test wikipedia wikipedia apos org unit codec branch printable http quotedprintablecodec quoted printable codec quoted support soft break quoted printable print
+123	characters javadoc html cologne colognephonetic cologne phonetic pom phonetic settings umlauts utf entities special
+127	java test characters amp language apos unicode soundex ascii cases source files
+130	base stream instance inputstream input stream code issue bytesread bytes read input assertequals assert equals stream skip skips underlying output
+132	amp oom strings length apos encoder punctuation generation bug morse beidermorseencoder beider morse encoder beider encoder issues
+152	exception digest utils string constructor getdigest digest checked looses unchecked catches digestutils digest utils orginal org inal
+155	illegalargumentexception illegal argument exception runtimeexception runtime exception digest argument string digestutils digest utils illegal utils exception getdigest digest throw runtime
+156	sha apis docs list utils technotes digestutils digest utils standardnames standard names javase standard digest add api named standard alg
+170	metaphone org link commons apr text metacpan action link broken javadoc
+183	base eof function output stream stream descendant functions ncodec outputstream output stream basencodecoutputstream base ncodec output stream codec supports writing close
+184	metaphone null var test nullpointerexception null pointer exception isdoublemetaphoneequal double metaphone equal pointer equal throwable phone exception doublemetaphone double meta phone double meta empty strings
+185	urlsafe methods javadoc safe decode decoding user member docs url base facing handle encoding
+191	base amp character apos error outputstream output stream kibertoad strings problem input encoding data output stream omits cases
+199	soundex rule bug implementation mapping wiki characters code wikipedia
+200	hex amp hex apos decode padding table table disallows base wrong
+201	hex amp hex apos decode padding table table disallows base wrong
+207	error info charsets apache org java standard trunks svn vcs javadoc breaks build
+209	java utils sha methods digest javadoc restriction mention digestutils digest utils
+219	charsets java nio amp java don apos standard constants comments deprecate charset favor charset standardcharsets standard charsets
+221	calls methods final updatehmac update hmac dofinal final apos mac hmac utils call hmacutils hmac utils update reset unnecessarily
+225	initializer input leaks stream request application analysis streams descriptors inputstream input stream closed
+68	byte base octect base exception base return code array octet isbase base throws arrayindexoutofboundsexception array bounds exception bounds bytes
+84	amp method append apos alternative position conditionl condition problem charat char metaphone double bugs encoding
+96	Base  encode  method is no longer thread safe  breaking clients using it as a shared BinaryEncoder EncoderException RuntimeException NullPointerException encode Base64
+105	ArrayIndexOutOfBoundsException when doing multiple reads  on encoding Base InputStream ArrayIndexOutOfBoundsException Base64 encode Base64InputStream read Base64Input Stream

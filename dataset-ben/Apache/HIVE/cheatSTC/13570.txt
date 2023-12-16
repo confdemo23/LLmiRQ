@@ -1,0 +1,3 @@
+Some queries with Union all fail when CBO is off
+Some queries with union all throws IndexOutOfBoundsException
+when:

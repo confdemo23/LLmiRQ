@@ -1,0 +1,2 @@
+SimpleJpaQuery validates count queries to aggressively
+The fix for DATAJPA-350 introduced query validation for count queries as well which causes issues if the original query is not defined to be projected into a count query (e.g. including joins that will break the count() clause).

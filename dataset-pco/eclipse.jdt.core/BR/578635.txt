@@ -1,0 +1,31 @@
+[18] Super interface of the switch expression type is not considered to be total pattern
+A super interface in a case pattern should be considered to be total but ECJ doesn't treat it as one. The following case reports an error that "A switch expression should have a default case".
+
+public static boolean foo(Integer n) {
+    	return switch (n) {
+	    	case Integer x && x.equals(10) -> {
+	    		yield true;
+	    	}
+	    	case Comparable y -> {
+	    		yield false;
+	    	}
+    	};
+    }
+
+Also the following code is accepted but should be rejected as a switch can't have both total pattern and default case.
+
+	public static boolean foo(Integer n) {
+    	return switch (n) {
+	    	case Integer x && x.equals(10) -> {
+	    		yield true;
+	    	}
+	    	case Comparable y -> {
+	    		yield false;
+	    	}
+	    	default -> {
+	    		yield false;
+	    	}
+    	};
+    }
+
+I am assuming both happen because the pattern "Comparable y" is not flagged as total.

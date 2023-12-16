@@ -1,0 +1,4 @@
+mod-cluster configure via CLI may end with msg: Failed to start service Caused by: java.lang.NullPointerException"
+When setting up mod-cluster via CLI then msg Failed to start service Caused by: java.lang.NullPointerException" may appear.
+Particular file where exception is thrown is: ModClusterService.java, line 90 . Reason for exception is that advertise socket binding has to have set multicast address also (mod cluster just expect it is set it does not check it). In case multicat address is set then adding mod-cluster filter is successful.
+I would expect that more reasonable message is print to user instead of generic NPE.

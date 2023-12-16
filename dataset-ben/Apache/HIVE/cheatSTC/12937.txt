@@ -1,0 +1,3 @@
+DbNotificationListener unable to clean up old notification events
+There is a bug in ObjectStore, where we use pm.deletePersistent instead of pm.deletePersistentAll, which causes the persistenceManager to try and drop a org.datanucleus.store.rdbms.query.ForwardQueryResult instead of the appropriate associated org.apache.hadoop.hive.metastore.model.MNotificationLog.
+This results in an error that looks like this:Exception in thread "CleanerThread" org.datanucleus.api.jdo.exceptions.ClassNotPersistenceCapableException:

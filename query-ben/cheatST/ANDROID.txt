@@ -1,0 +1,2 @@
+76	 DefaultResponseErrorHandler, RestTemplate, UriUtils
+102	 SimpleClientHttpResponse DefaultResponseErrorHandler RestTemplate

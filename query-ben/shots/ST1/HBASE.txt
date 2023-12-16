@@ -1,0 +1,120 @@
+12	 Leases, HMaster, HRegionServer
+251	 HLog, HMaster, DataInputStream, DataOutputBuffer, SequenceFile, ProcessServerShutdown
+501	 HbaseRPC, Server, HRegion, HRegionServer, HMaster
+507	 HMaster, HRegionServer
+534	 HStore, HRegion, HRegionServer, HTable, SelectCommand, Shell
+537	 HMaster, FSNamesystem, NameNode
+550	 HRegionServer, HRegion, HStore, SequenceFile$Reader, DataInputStream
+575	 HMaster
+659	 HLog, HRegion, HRegionServer
+681	 Memcache, HStore, HRegion, HRegionServer
+750	 StoreFileScanner, HStore, HRegion, Flusher
+751	 HStore, HRegion, HRegionServer, HbaseRPC, Server, DFSClient, FSInputChecker, SequenceFile, MapFile, HConnectionManager, HTable
+758	 HRegion, HRegionServer, HbaseRPC, Server
+790	 HRegion, HRegionServer, CompactSplitThread, HConnectionManager$TableServers, Server, HbaseRPC$Server, LogRoller, HLog
+818	 Flusher, HRegionServer, HRegion
+833	 HConnectionManager, HRegionServer, HbaseRPC, Server
+868	 HRegion, HRegionServer, HStore
+1052	 HRegionServer, HRegion, HStore, HStoreFile, DFSClient, DistributedFileSystem
+1087	 DFSClient, HRegionServer, DFSOutputStream, DataStreamer, SocketChannelImpl
+1169	 HMaster, ServerManager, RegionManager, BaseScanner, RegionServerOperation, HLog
+1175	 HBaseAdmin, HMaster, HRegionServer
+1243	 DFSClient, HStore, HRegionServer, RegionManager, ServerManager
+1309	 HRegion, MemcacheFlusher, HFile, Store
+1334	 Buffer HFile
+1500	 KeyValue, KeyComparator, Bytes, HConnectionManager, HTable, TableInputFormatBase, JobClient
+1560	 HConnectionManager, HTable, TableInputFormatBase, MapTask, Child
+1569	 StoreFile, Store, HRegionServer
+1591	 TestLruBlockCache, LruBlockCache
+1686	 HFile, StoreFileGetScan, Store, HRegion, HRegionServer
+1777	 HFile, MemStoreFlusher, HRegion, Store
+1779	 ThriftServer, HBaseHandler, TThreadPoolServer, Hbase$Processor$getVer
+1946	 HRegionServer
+2022	 HRegionServer
+2026	 StoreScanner, CompactSplitThread, Store, HRegion
+6263	 ThriftServerRunner, ThriftServer
+7122	 ReplicationSource, SequenceFileLogReader, HLog
+7580	 TestAccessController, ServerCallable, HTable
+8991	 TestMasterFailover
+8992	 TestMasterFailover
+9913	 TableMapReduceUtil HBaseMapMerge EzMapToHbaseService
+10831	 IntegrationTestIngestWithACL, IntegrationTestIngest, IntegrationTestBase, LoadTestTool
+11089	 IntegrationTestsDriver, AuthenticationTokenSelector, HBaseSaslRpcClient, UserGroupInformation, RpcClient, GssKrb5Client
+12006	 KeyStoreTestUtil TestSSLHttpServer
+12717	 HBaseAdmin, JavaTest, createTable
+13317	 HRegionServer, RpcClient, RegionServerStatusProtos
+13574	 TestHBaseFsck, HBaseFsck, HbckTestingUtil, FutureTask, ThreadPoolExecutor
+13607	 TestSplitLogManager Assert
+13623	 TestSplitLogManager
+13625	 HFileOutputFormat2, DistributedFileSystem, ImportTsv, TestImportTsv
+13711	 HColumnDescriptor, ChangeVersionsAction
+13732	 TestHBaseFsck, HBaseFsck, HbckTestingUtil
+13741	 TestRegionObserverInterface SimpleRegionObserver
+13802	 HMaster, TableNamespaceManager, CreateTableProcedure, DeleteTableProcedure, ProcedureSyncWait, ProcedureExecutor
+13809	 TestRowTooBig, HBaseTestingUtility, HRegion, HRegionFileSystem, DistributedFileSystem, FileSystem
+13820	 ZKServerTool
+13824	 TestGenerateDelegationToken, JVMClusterUtil, LocalHBaseCluster, MasterFileSystem, DistributedFileSystem, HMaster
+13825	 RpcClient, ClientProtos$ClientService$BlockingStub, ProtobufUtil, HTable, HTablePool$PooledHTable
+13873	 LoadTestTool, IntegrationTestIngest, IntegrationTestIngestWithACL, AbstractHBaseTool
+13878	 HBaseTestingUtility, CsvBulkLoadTool, IndexToolIT, HFileOutputFormat2
+13892	 ClientScanner region_mover.rb
+13905	 TestRecoveredEdits HRegion HRegionFileSystem
+13970	 PressureAwareCompactionThroughputController, CompactSplitThread, Compactor, DefaultCompactor, DefaultStoreEngine, HStore, HRegion
+13971	 HRegion, MemStoreFlusher, WALKey
+13974	 TestRateLimiter, FixedIntervalRateLimiter, RateLimiter
+14024	 Path, HFileOutputFormat2, ImportTsv, ToolRunner
+14050	 RpcServer Connection readAndProcess
+14078	 HMaster, RSRpcServices, MasterRpcServices, HRegionServer
+14079	 HMaster, HMasterCommandLine, Krb5LoginModule, LoginContext, UserGroupInformation, SecurityUtil, User, UserProvider
+14106	 TestProcedureRecovery, ProcedureExecutor, ProcedureTestingUtility
+14291	 StochasticLoadBalancer, BaseLoadBalancer$Cluster, MasterRpcServices, HMaster
+14366	 DefaultVisibilityExpressionResolver, VisibilityUtils, TsvImporterMapper, MapTask
+14370	 ZKPermissionWatcher, ZooKeeperWatcher, ClientCnxn
+14384	 Canary, StdOutSink, ExtendedSink, newMonitor, run, main
+14525	 HRegion, RSRpcServices, RpcServer
+14555	 MultiVersionConcurrencyControl, HRegion, RSRpcServices, RpcServer, RpcExecutor
+14578	 ModifyRegionUtils, RestoreSnapshotHelper, CloneSnapshotHandler, CreateTableHandler, EventHandler, Path, StoreFileInfo
+14625	 PolicyBasedChaosMonkey, IntegrationTestBase, AbstractHBaseTool, IntegrationTestBigLinkedList
+14653	 BaseLoadBalancer, StochasticLoadBalancer, HMaster, MasterRpcServices, MasterProtos, RpcServer
+14660	 OffheapKeyValue, HFileReaderImpl, StoreFileScanner, KeyValueHeap, HRegion, RSRpcServices
+14699	 ZooKeeper, RecoverableZooKeeper, ZKUtil, ReplicationQueuesZKImpl, ReplicationSourceManager, ReplicationSource
+14777	 HBaseInterClusterReplicationEndpoint ReplicationSource$ReplicationSourceWorkerThread
+14885	 HMaster, RegionNormalizerChore, TableDescriptor
+14926	 SocketInputStream, BufferedInputStream, TIOStreamTransport, TFramedTransport, TCompactProtocol, TBaseProcessor, TBoundedThreadPoolServer, CallQueue, ThreadPoolExecutor
+15014	 WALSplitter, KeyValue, ArrayList, LogRecoveredEditsOutputSink, WriterThread, EntryBuffers, SplitLogWorker, WALSplitterHandler, EventHandler
+15018	 RpcClientImpl, AsyncRpcClient, CallTimeoutException, HBaseInterClusterReplicationEndpoint, ReplicationProtbufUtil
+15019	 ProtobufLogWriter, DFSOutputStream, FSHLog, HLogFactory, DFSInputStream, ReplicationHLogReaderManager, ReplicationSource
+15030	 TableNamespaceManager, CreateNamespaceProcedure, ProcedureExecutor
+15064	 Buffer, DirectByteBuffer, MultiByteBuff, FastDiffDeltaEncoder, BufferedDataBlockEncoder, StoreFileScanner
+15079	 TestMultiParallel Assert
+15085	 HFileReaderV2, StoreFileScanner, StoreScanner, HStore, HRegion, LoadIncrementalHFiles, HalfStoreFileReader, StoreFile.Writer, HFileScanner, KeyValueUtil
+15109	 HMaster, ShutdownHook, HRegionServer, ZooKeeperNodeTracker
+15152	 PrefixTreeCodec TableMapReduceUtil URLClassLoader
+15216	 Canary, AuthUtil, User, UserProvider, SecurityUtil
+15322	 HMaster, HMasterCommandLine, ToolRunner, ServerCommandLine, Bytes, KeyValue, HConstants, HTableDescriptor, FSTableDescriptors, HRegionServer
+15379	 CellUtil, StoreFileScanner, StoreScanner, HStore, HRegion, TestWithSingleHRegion
+15430	 SnapshotProtos, SnapshotManifest, MasterSnapshotVerifier, CodedInputStream, InvalidProtocolBufferException
+15621	 SnapshotHFileCleaner, SnapshotProtos, SnapshotManifest, SnapshotReferenceUtil, SnapshotFileCache, BaseFileCleanerDelegate
+15634	 TestDateTieredCompactionPolicy, Assert
+15741	 HRegion, RSRpcServices, ClientProtos, RpcServer, RpcExecutor, RegionCoprocessorRpcChannel, AuthenticationProtos, TokenUtil, TableMapReduceUtil, CellCounter
+15908	 HFile, StoreFile, DataChecksum, ChecksumUtil, HFileBlock
+16012	 HRegionServer, StoreFileScanner, StoreScanner, HRegion, HFileBlock
+16103	 TestCloneSnapshotProcedure, SnapshotTestingUtils
+16160	 ByteBuffer, BufferChain, RpcServer, CallRunner, RpcExecutor
+16244	 LocalHBaseCluster, JVMClusterUtil, HMasterCommandLine
+16281	 TestMasterReplication HBaseInterClusterReplicationEndpoint RpcServer CallRunner RpcExecutor RSRpcServices AdminProtos$AdminService
+16293	 TestSnapshotFromMaster, AsyncProcess, BufferedMutatorImpl, HTable, HBaseTestingUtility
+16304	 HRegion, RegionScannerImpl, handleFileNotFoundException
+16359	 RSRpcServices, RpcServer, CallRunner, RpcExecutor, OpenMetaHandler
+16368	 TestPartialResultsFromClientSide, RpcRetryingCallerWithReadReplicas, ScannerCallableWithReplicas, ClientScanner, HTable, RSRpcServices, HRegion
+16429	 FSHLog, RingBuffer, SafePointZigZagLatch, LogRoller
+16464	 SnapshotHFileCleaner, SnapshotDescriptionUtils, SnapshotReferenceUtil, SnapshotFileCache, CleanerChore, ScheduledChore
+16609	 CellUtil, StoreFileScanner, KeyValueHeap, StoreScanner, HRegion, RSRpcServices, ClientProtos, RpcServer, CallRunner, RpcExecutor
+16644	 HFile, HFileBlock, HFileReaderV2, StoreFile, StoreFileInfo, HStore
+16660	 DateTieredCompactionPolicy, HRegionServer, HStore, Chore
+16669	 TestAdmin1 testMergeRegions
+16739	 HRegion, RSRpcServices
+16810	 BaseLoadBalancer, StochasticLoadBalancer, HMaster, MasterRpcServices, MasterProtos, RpcServer, RpcExecutor
+16815	 RpcExecutor, RWQueueRpcExecutor, SimpleRpcScheduler, RSRpcServices, HRegionServer, HMaster, HMasterCommandLine, JVMClusterUtil
+17020	 HFileBlockIndex, CellBasedKeyBlockIndexReader, ByteBufferUtils, SingleByteBuff, HFileReaderImpl, StoreFile, DefaultStoreFileManager, HStore, ConstantFamilySizeRegionSplitPolicy, HRegion, MemStoreFlusher
+17113	 HFileBlockIndex, ByteBufferUtils, HFileReaderV2, StoreFile, DefaultStoreFileManager, HStore, RegionSplitPolicy, HRegion, MemStoreFlusher

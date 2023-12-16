@@ -1,0 +1,9 @@
+camel-endpoint-dsl - Generate fluent builders for endpoint headers
+Now that every component has marked up the headers it supports, we can use that to generate fluent builders in camel-endpointdsl.
+
+This makes it easier to use from this, as you do not need to have the camel-xxx JAR on the classpath and setup in your editor. And you dont need to remember the class name of the class having the headers etc.
+
+from xxx
+   setHeader(file().fileName(), constant("foo.txt"))
+   setHeader(karaf().patititionKey(), constant("3"))
+

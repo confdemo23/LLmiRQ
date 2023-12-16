@@ -1,0 +1,7 @@
+25716	 TestCompactionMetrics
+25857	 JsonParseException, ReaderBasedJsonParser, StringDeserializer, FieldProperty, BeanDeserializer, ObjectMapper, JSONMessageDeserializer, TableHandler, IncrementalLoadTasksBuilder
+25958	 Invoker, S3AInputStream, FSDataInputStream, RecordReaderUtils, RecordReaderImpl, OrcInputFormat, BasicStatsNoJobTask, ThreadPoolExecutor, StatsTask, Executor
+26628	 SemanticAnalyzer, CalcitePlanner, Compiler, Driver, ReExecDriver, CliDriver, QTestUtil, TestIcebergLlapLocalCliDriver
+26633	 TConfiguration, TEndpointTransport, TMemoryInputTransport, TSaslTransport, TFilterTransport, TBinaryProtocol, FieldSchema, StorageDescriptor, Partition, PartitionsByExprResult, ThriftHiveMetastore
+26865	 TestSQL11ReservedKeyWordsNegative, JUnit4Provider, ForkedBooter
+27087	 NettyUtils, TransportServer, NettyRpcEnv, NettyRpcEnvFactory, Utils, RpcEnv, SparkEnv, SparkContext, JavaSparkContext, RemoteDriver

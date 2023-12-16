@@ -1,0 +1,9 @@
+222	 ProviderSignInController, ConnectionData
+224	 ConnectController
+258	 ConnectController, DispatcherServlet, connectionStatusRedirect
+282	 AbstractConnection
+283	 JdbcConnectionRepository
+318	 JdbcMultiUserConnectionRepository, JdbcUsersConnectionRepository
+356	 AccessGrant
+426	 ApiException
+432	 ProviderSignInController, ConnectSupport

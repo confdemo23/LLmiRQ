@@ -1,0 +1,16 @@
+Unable to inject EJB Context into CDI Interceptor
+CDI Interceptor cannot inject EJB session context.
+If the Interceptor is changed to EJB interceptor by removing the @Interceptor on the interceptor and removing it from the beans.xml, and adding @Interceptors(...) to the EJB, then it is able to inject.
+See attached reproducer with source and log file.
+private @Resource SessionContext sessionContext;
+Caused by: javax.naming.NameNotFoundException: env/test.ServiceLoggedInterceptor/sessionContext  service jboss.naming.context.java.comp.inject-ejb-context-into-cdi-interceptor.inject-ejb-context-into-cdi-interceptor.HelloEJB.env."test.ServiceLoggedInterceptor".sessionContext
+	at org.jboss.as.naming.ServiceBasedNamingStore.lookup(ServiceBasedNamingStore.java:106) [wildfly-naming-9.0.0.Alpha1.jar:9.0.0.Alpha1]
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:202) [wildfly-naming-9.0.0.Alpha1.jar:9.0.0.Alpha1]
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:179) [wildfly-naming-9.0.0.Alpha1.jar:9.0.0.Alpha1]
+	at org.jboss.as.naming.InitialContext$DefaultInitialContext.lookup(InitialContext.java:235) [wildfly-naming-9.0.0.Alpha1.jar:9.0.0.Alpha1]
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:188) [wildfly-naming-9.0.0.Alpha1.jar:9.0.0.Alpha1]
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:184) [wildfly-naming-9.0.0.Alpha1.jar:9.0.0.Alpha1]
+	at javax.naming.InitialContext.lookup(InitialContext.java:411) [rt.jar:1.7.0_51]
+	at javax.naming.InitialContext.lookup(InitialContext.java:411) [rt.jar:1.7.0_51]
+	at org.jboss.as.weld.services.bootstrap.WeldResourceInjectionServices.resolveResource(WeldResourceInjectionServices.java:185)
+	... 127 more

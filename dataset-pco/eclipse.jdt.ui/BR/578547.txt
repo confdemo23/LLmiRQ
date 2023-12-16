@@ -1,0 +1,9 @@
+[open type] Make TypeInfoFilter more robust when a class is specified without a package in Open Type Dialog
+Currently if there is the following innerclass:
+
+Test.TestInner1.TestInner2
+
+Specifying Test.TestInner1.TestInner2 in the Open Type dialog works and
+so does TestInner1 or TestInner2 by themselves
+
+Specifying TestInner1.TestInner2 does not.  Currently, TestInner1 is treated as a package name since it has a dot after it.  If the TypeInfoFilter assumes that upper-case names are not packages, this scenario plus others will work.

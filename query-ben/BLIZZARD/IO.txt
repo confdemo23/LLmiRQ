@@ -1,0 +1,84 @@
+83	test file response symlink dir string resource writer Bug apos apos command AIX Reported commons owner James Urie Tuesday July amp apos commons dev subscribe jakarta apache org amp apos Subject AIX change commons code usage AIX Attached file change command File System Utils classes requires enable POSIX capability James Urie
+502	file test directory read delete path option string Exceptions suppressed incorrectly copying files copying files directories exceptions thrown closing streams suppressed incorrectly propagated caller
+74	amp apos expression file jdk branch filter regexfilter regex filter regex hope regular filter implementation
+84	classes streams int copy java commons jakarta input ioutils limited length stream behave incorrectly larger
+90	amp string apos space bytes return int path ioexception lines infinite loop filesystemutils file system utils file system utils freespacewindows free space windows free space windows share directory empty
+93	exec system error code ioexception times text utils sample files filesystemutils file system utils file call process destroy apos processes
+99	thread class user leak commons file filecleaner file cleaner server web apos cleaner ends memory
+100	ioexception touch time millis fileutils file utils currenttimemillis current time millis modified file file shell utils raise ioe xception modify
+101	endianutils endian utils values buffer utils tests opinion println endian swapped writeswappeddouble write swapped double method write double readswappeddouble read swapped double read match
+112	file file parent exception null fileutils file utils output check gmail utils npe openoutputstream open output stream open stream path
+113	fileutils file utils utils readfiletostring read file string amp file string tostring string array programming constructor read static
+117	casting integer swapped utils endianutils endian utils readswappedunsignedinteger read swapped unsigned integer unsigned return integer operator endian read negative number
+136	string method dump stringbuffer string buffer apos data cbuffer stream buffer outputstream output stream hexdump hex dump hex dump static stringbuffers string buffers buffers isn thread safe
+141	file copy copydirectory copy directory test loop folder utils directory infinite fileutils file utils directory destination source
+147	file target file deletedirectory delete directory fileutils file utils check utils filenotfoundexception file exception force deletion orphaned softlinks work
+160	string apos amp path space return patch filesystemutils file system utils file system utils freespace free space free fails solaris
+161	code byte theory system case void count testing file objects filecleaningtrackertestcase file cleaning tracker test case cleaning tracker test hangs
+163	url uri method conversion tourl url versions touri uri jdk warnings code fileutils file utils file utils tourls urls deprecated bad urls
+166	tofile file utils decode fileutils file utils url sequence file decoding dec oding
+168	amp directory apos links forcedelete force delete link force fileutils file utils utils behavior symbolic symlinks deleting
+180	iterator lineiterator iterator code iterator apache nextline utf javadoc documentation
+181	style org lineiterator iterator finalizer iterator descriptor file ways commons apache implement iterable
+187	path file utils apos freespacekb free space amp paths space filesystemutils file system utils system free doesn work relative linux
+190	source subdirectories file copy amp set file files directory utils fileutils file utils copydirectory copy directory preserves destination directories overwriting writing
+197	stream java boundedinputstream bounded input stream input trunk svn stream cgi apache bounded
+201	count stream thread synchronization functionality threads input countinginputstream counting input stream countingoutputstream counting output stream stream counting output partially ially synchronized
+202	amp arguments org patch file filters filter documentation returns notfilefilter file filter incorrect
+206	parameter int stream void byte names proxyinputstream proxy input stream mark input proxy misleading
+209	return partition path result ntfs filesystemutils file system utils data dir space file system utils freespacekb free space free space fails correct size windows mount point
+212	number method bytes stream proxyinputstream proxy input stream documents proxy input stream inputstream input stream incorrect skip javadoc
+216	file failure lockfile lock file lock deletion initialization report code times check delete files quietly exception thrown
+217	src copydirectorytodirectory copy directory directory fileutils file utils copy directory dir srcdir src dir list guess utils file infinite inf init loops
+220	trackers vector tracker entries load apache reaper hash processing finish filecleaningtracker file cleaning tracker file cleaning performs badly
+223	inconsistency arithmeticexception arithmetic exception return exception count bytes arithmetic ioutils byte copy iou tils javadoc onsistency throw
+231	file isfilenewer file newer message apos newer exception illegalargumentexception illegal argument exception exception file argument fileutils file utils utils generate wrong method
+243	input readboolean read boolean byte stream data swapped boolean formats swappeddatainputstream swapped data input stream read inverted
+246	match wildcard filenameutils filename utils filename bit character matches wildcardmatch wildcard match prints utils match incorrect
+248	return filename getfullpathnoendseparator full path separator int separator abc level directory method full path empty path
+258	stream stream inputstream input stream bytes reader input xmlstreamreader xml stream reader reader underlying xml consumes encoding detection
+260	class proxy methods input interfaces object case stream resolveproxyclass resolve proxy class class classloaderobjectinputstream class loader object input stream loader handle classes
+263	system exception files file freespacekb free space code cmd file filesystemutils file system utils utils free space throws windows volumes visible
+264	file javadoc java doc case java doc behaviour utils fileutils file utils movefile move file method move fileexistsexception file exists exception exists exception thrown
+272	iterator lineiterator iterator string support iterable easy easily add
+274	eof mail archives kgag tailer mbox gjn returning partial lines reaching eol
+277	stream reader encoder character encoder behavior charset charsetencoder charset encoder apos readerinputstream reader input stream input enters infinite inf init loop encounters unmappable
+298	class org utils apos fileutils file utils apache commons methods suppress file incorrectly java ioexception ioe xception
+299	amp string returns unix utils poswin pos win root filename prefix length getprefixlength prefix length null file leading slashes
+302	test file apos length bom arrayindexoutofboundsexception array bounds exception exception case array bounds bominputstream bominput stream nput stream reading multiple times bominput
+303	output stream ioexception close branch teeoutputstream tee output stream override tee exception proxy call main throws
+304	tailer class listener file constructor pass listener contructor delay file apos
+306	method reader input len inputstream input stream length return stream int readerinputstream reader input stream stream read byte
+307	reader stream input len length int byte method details check readerinputstream reader input stream read valid parameters
+323	directory fileutils file utils size file utils sizeof size overflow takes adds place happen
+329	writelines write lines file lines fileutils file utils output syscalls lines separator ioutils stream utils write unbuffered
+331	utf bom byte bytes mark mark max byteordermark byte order mark problem bominputstream bominput stream nput stream wrongly detects files method getbom bom bominput
+336	integer fileutils file utils valueof utils yottabyte big biginteger big integer yottabyte incorrectly defined file
+343	comparator sort org file comparator namefilecomparator file comparator apache class commons javadoc inconsistent real code
+354	reader file implementation string listener defect commons tailer respect utf charset
+355	ioutils performance copylarge copy large stream disk inputstream input stream java copy input degradation iou tils arg skip methods hogs large
+356	case charsequenceinputstream char sequence input stream sequence input data size size datasize data size method bbuf char stream reset behaves incorrectly buffer dividable
+362	ioutils content methods contentequals content equals return apache org identity reader check iou tils equals returns false input true
+374	ctors calls sensitive wildcard file filter harder wildcardfilefilter wildcard file filter case null iocase ioc ase delegating
+383	file size fileutils file utils docopyfile copy file file utils copy message exception input copy caches documented
+390	size utils fileutils file utils versions processing level big integer sizeofdirectory size directory method file sizeofdirectoryasbiginteger size directory big integer directory overflow
+428	stream byte byte bom bominputstream bominput stream input return bominput lead nput skip returns wrong count stream
+436	javadoc java doc separator utils character filenameutils filename utils filename indexofextension extension filename extension doc improper java comment
+453	length fileutils file utils pid process return file edc steps tobytearray byte array ioutils regression file utils readfiletostring read file string read string
+462	ioexception class java constructor throwable needed ioexceptionwithcause ioexception takes usage includes ioe xception longer
+481	file system error apache time currenttimemillis current time millis fileutils file utils millis thread code org commons utils waitfor wait wait waits long
+484	injection utils nulls filename bytes functions vectors data filenameutils file utils application filenameutils filename utils handle embedded null
+492	ioutils trunk comment java https org apache focussed commons typo iou tils focus sed focused
+494	return class directorywalker directory walker code walker type returns directory method void mismatch api docs
+66	file filter exception license test dir case expression regexfilefilter regex file filter filenamefilter filename filter filename regular expressions upload
+150	filter regexp regexpfilenamefilter regexp filename filter amp wildcard filename apos nice file regexpfilefilter regexp file filter add
+207	forcemkdir force mkdir mkdir process processes directory chance thread condition race threads force
+339	bytes stream maxbytes max bytes class size max input getbytecount byte count stream maxbytesinputstream max bytes input stream max input limit bytes read
+91	FileSystemUtils freeSpace does not work on Sun Solaris IOException FileSystemUtils freeSpaceUnix freeSpaceOS testGetFreeSpace String FileSystemUtilsTestCase Space freeSpace free System Utils
+179	StringIndexOutOfBounds exception on FilenameUtils getPathNoEndSeparator StringIndexOutOfBoundsException substring String FilenameUtils getPathNoEndSeparator doGetPath Path Utils Filename Separator
+185	FileSystemUtils freeSpaceWindows blocks read FileInputStream StreamDecoder readBytes BufferedInputStream implRead InputStreamReader Stream BufferedReader Input read1
+257	BOMInputStream read byte  can return   which it should not IOException StreamDecoder readBytes Bytes read Stream Decoder
+266	FileUtils copyFile  throws IOException when copying large files to a shared directory  on Windows IOException FileDispatcher File FileChannelImpl transferFromFileChannel write FileUtils doCopyFile copyFile pwrite0 TestFileUtils writeFromNativeBuffer
+319	FileUtils sizeOfDirectory follows symbolic links IllegalArgumentException FileUtils sizeOfDirectory sizeOf size Utils File Directory
+368	ClassLoaderObjectInputStream does not handle primitive typed members IOException ClassNotFoundException URLClassLoader AccessController Loader ClassLoaderObjectInputStream loadClass doPrivileged findClass ObjectInputStream readNonProxyDesc run URLClass
+512	ThresholdingOutputStream thresholdReached  results in FileNotFoundException FileNotFoundException FileOutputStream init DeferredFileOutputStream thresholdReached open Output Stream File Deferred threshold Reached

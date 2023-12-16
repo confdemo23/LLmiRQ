@@ -1,0 +1,2 @@
+Tez queries stopped running with ApplicationNotRunningException
+In some error cases, if hive can no longer submit DAGs to tez, there is no use retrying to submit. We need to exit by throwing exception in this case.

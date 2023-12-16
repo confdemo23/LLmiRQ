@@ -1,0 +1,40 @@
+org.elasticsearch.client.sniff.Sniffer : error while sniffing nodes
+I have a Spring Boot 2.5.8 application that run Camel. When I add the following dependency
+ {{<dependency><groupId>org.apache.camel</groupId><artifactId>camel-elasticsearch-rest</artifactId><version>3.14.0</version></dependency>}}
+Then on startup of the application I get the following error:
+
+2021-12-24 16:09:34.018 ERROR 3532 --- [nt_sniffer[T#1]] org.elasticsearch.client.sniff.Sniffer   : error while sniffing
+ nodes
+
+java.net.ConnectException: Timeout connecting to [localhost/127.0.0.1:9200]
+        at org.elasticsearch.client.RestClient.extractAndWrapCause(RestClient.java:880)
+        at org.elasticsearch.client.RestClient.performRequest(RestClient.java:283)
+        at org.elasticsearch.client.RestClient.performRequest(RestClient.java:270)
+        at org.elasticsearch.client.sniff.ElasticsearchNodesSniffer.sniff(ElasticsearchNodesSniffer.java:105)
+        at org.elasticsearch.client.sniff.Sniffer.sniff(Sniffer.java:208)
+        at org.elasticsearch.client.sniff.Sniffer$Task.run(Sniffer.java:138)
+        at org.elasticsearch.client.sniff.Sniffer$1.run(Sniffer.java:81)
+        at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+        at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecuto
+r.java:304)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.ConnectException: Timeout connecting to [localhost/127.0.0.1:9200]
+        at org.apache.http.nio.pool.RouteSpecificPool.timeout(RouteSpecificPool.java:169)
+        at org.apache.http.nio.pool.AbstractNIOConnPool.requestTimeout(AbstractNIOConnPool.java:632)
+        at org.apache.http.nio.pool.AbstractNIOConnPool$InternalSessionRequestCallback.timeout(AbstractNIOConnPool.java:
+898)
+        at org.apache.http.impl.nio.reactor.SessionRequestImpl.timeout(SessionRequestImpl.java:198)
+        at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processTimeouts(DefaultConnectingIOReactor.java:2
+13)
+        at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvents(DefaultConnectingIOReactor.java:158
+)
+        at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor.execute(AbstractMultiworkerIOReactor.java:351)
+        at org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager.execute(PoolingNHttpClientConnectionManager
+.java:221)
+        at org.apache.http.impl.nio.client.CloseableHttpAsyncClientBase$1.run(CloseableHttpAsyncClientBase.java:64)
+        ... 1 common frames omitted
+
+After removing the error I not there anymore. In the documentation the component option "{*}enableSniffer{*}" is false by default. It seems that somehow it is set to true. (But seems not by my code).

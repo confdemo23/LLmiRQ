@@ -1,0 +1,2 @@
+Remove unused code in BuildPathsBlock
+There is unused code in BuildPathsBlock.java

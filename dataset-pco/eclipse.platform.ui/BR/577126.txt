@@ -1,0 +1,29 @@
+NPE in LazyResourceManager.shouldBeCached
+We see few NPE's coming after opening/closing various wizards in our application tests.
+
+All NPE's are looking very similar:
+
+!ENTRY org.eclipse.jface 4 4 2021-11-06 02:36:56.471
+!MESSAGE NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jface.resource.LazyResourceManager.shouldBeCached(LazyResourceManager.java:78)
+	at org.eclipse.jface.resource.LazyResourceManager.destroy(LazyResourceManager.java:114)
+	at org.eclipse.jface.resource.ResourceManager.destroyImage(ResourceManager.java:224)
+	at org.eclipse.jface.wizard.Wizard.dispose(Wizard.java:208)
+	at org.eclipse.jface.wizard.WizardDialog.hardClose(WizardDialog.java:878)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:840)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:472)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5889)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1515)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1541)
+
+The problem is that some wizards were initialized with null descriptor (which is allowed), but on dispose that fails to release image for null descriptor in the new LazyResourceManager.destroy() code. 
+
+Note: JFaceResources.getResources().createImageWithDefault(defaultImageDescriptor) which is called in org.eclipse.jface.wizard.Wizard.getDefaultPageImage() allows to create an image for null descriptor.
+
+I have a patch.

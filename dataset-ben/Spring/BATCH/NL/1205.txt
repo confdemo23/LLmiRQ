@@ -1,0 +1,2 @@
+When readCount % commitInterval == 0, commitCount is one more than it should be
+When readCount % commitInterval == 0, commitCount is one more than it should be.

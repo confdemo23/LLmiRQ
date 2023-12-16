@@ -1,0 +1,4 @@
+[releng] Files with CR-LF as line endings
+There are three source files in JDT UI that use CR-LF line endings. Two of these even use mixed line endings (the majority of lines terminated by LF, a few by CR-LF).
+
+I suggest to normalize these files to use LF as line ending.

@@ -1,0 +1,2 @@
+No checks in SimpleXmlHttpMessageConverter for canRead or canWrite
+SimpleXmlHttpMessageConverter is not verifying that it can read or write an object.

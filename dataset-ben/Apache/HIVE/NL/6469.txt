@@ -1,0 +1,5 @@
+skipTrash option in hive command line
+Th current behavior of hive metastore during a "drop table &lt;table_name&gt;" command is to delete the data from HDFS warehouse and put it into Trash.
+Currently there is no way to provide a flag to tell the warehouse to skip trash while deleting table data.
+This ticket is to add skipTrash configuration "hive.warehouse.data.skipTrash" , which when set to true, will skipTrash while dropping table data from hdfs warehouse. This will be set to false by default to keep current behavior.
+This would be good feature to add, so that an admin of the cluster can specify when not to put data into the trash directory (eg. in a dev environment) and thus not to fill hdfs space instead of relying on trash interval and policy configuration to take care of disk filling issue.

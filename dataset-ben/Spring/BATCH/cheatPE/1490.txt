@@ -1,0 +1,2 @@
+StaxEventItemWriter outputs invalid xml if step handling is failed and retried when handling the first chunk of data
+When reader fails handling the data of the first chunk defined by step commitInterval and the step is retried the writer starts the writing from wrong place in xml output file. The JUnit testcase to repeat the problem can be found from the Spring Batch forum post (http://forum.springsource.org/showthread.php?t=71239).

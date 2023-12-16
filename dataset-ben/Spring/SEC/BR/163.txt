@@ -1,0 +1,3 @@
+MethodInvocationUtils.create(Object, String, Object[]) causes ClassCastException
+In RC1, the MethodInvocationUtils.create(Object, String, Object[]) caused a ClassCastException at line 84.
+In addition, there was no unit test to pick up this issue.

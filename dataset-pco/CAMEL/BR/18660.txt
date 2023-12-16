@@ -1,0 +1,51 @@
+Kinesis tests fail due to an API rate limit exceeded 
+The test Kinesis2ConsumerHealthCustomClientTest systematically fails on Jenkins. After a deeper investigation, it is actually due to an API rate limit exceeded
+
+The corresponding stack trace:
+
+{noformat}
+Error starting infrastructure: Could not get list of releases from https://api.github.com/repos/etspaceman/kinesis-mock/releases/tags/0.2.5: {"message":"API rate limit exceeded for 67.195.81.161. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+ Traceback (most recent call last):
+  File "/opt/code/localstack/localstack/services/infra.py", line 420, in start_infra
+    thread = do_start_infra(asynchronous, apis, is_in_docker)
+  File "/opt/code/localstack/localstack/services/infra.py", line 516, in do_start_infra
+    prepare_installation()
+  File "/opt/code/localstack/localstack/utils/bootstrap.py", line 77, in wrapped
+    return f(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/infra.py", line 470, in prepare_installation
+    install.install_components(apis)
+  File "/opt/code/localstack/localstack/services/install.py", line 411, in install_components
+    parallelize(install_component, names)
+  File "/opt/code/localstack/localstack/utils/threads.py", line 135, in parallelize
+    return pool.map(func, arr)
+  File "/usr/local/lib/python3.10/multiprocessing/pool.py", line 367, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/usr/local/lib/python3.10/multiprocessing/pool.py", line 774, in get
+    raise self._value
+  File "/usr/local/lib/python3.10/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/usr/local/lib/python3.10/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/opt/code/localstack/localstack/services/install.py", line 407, in install_component
+    installer()
+  File "/opt/code/localstack/localstack/packages/api.py", line 182, in install
+    self.get_installer(version).install(target)
+  File "/opt/code/localstack/localstack/packages/api.py", line 83, in install
+    raise e
+  File "/opt/code/localstack/localstack/packages/api.py", line 74, in install
+    if not self.is_installed():
+  File "/opt/code/localstack/localstack/packages/api.py", line 93, in is_installed
+    return self.get_installed_dir() is not None
+  File "/opt/code/localstack/localstack/packages/api.py", line 103, in get_installed_dir
+    if directory and os.path.exists(self._get_install_marker_path(directory)):
+  File "/opt/code/localstack/localstack/packages/core.py", line 172, in _get_install_marker_path
+    url = self._get_download_url()
+  File "/opt/code/localstack/localstack/packages/core.py", line 208, in _get_download_url
+    raise PackageException(
+localstack.packages.api.PackageException: Could not get list of releases from https://api.github.com/repos/etspaceman/kinesis-mock/releases/tags/0.2.5: {"message":"API rate limit exceeded for 67.195.81.161. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+{noformat}
+
+It appears that it is [a known issue|https://github.com/localstack/localstack/issues/7103] and it is due to the fact that the docker image localstack 1.2.0 doesn't contain kinesis-mock thus anytime it uses the localstack image, it tries to automatically install it by downloading it from GitHub which causes the rate limit issue.
+
+
+

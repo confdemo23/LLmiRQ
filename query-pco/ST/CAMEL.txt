@@ -1,0 +1,17 @@
+17131	 AppInfoParser, KafkaConsumer, DefaultKafkaClientFactory, KafkaConsumer$KafkaFetchRecords
+17156	 Sqs2Consumer, TimeoutExtender, AbortedException, ReceiptHandleIsInvalidException
+17391	 Sniffer ElasticsearchNodesSniffer RestClient
+17536	 ServicePool, DefaultProducerCache, RecipientListProcessor, MulticastProcessor, SpringBootCamelContext, AbstractCamelContext, SpringApplicationShutdownHook
+17566	 RestOpenApiEndpoint, DefaultResourceLoader, ResourceHelper
+17579	 MessageSupport, ContractAdvice, CamelInternalProcessor, DirectProducer, SendProcessor, RedeliveryErrorHandler, DefaultReactiveExecutor, Pipeline, SharedCamelInternalProcessor, DefaultProducerCache, DefaultProducerTemplate, CamelClient, FallbackTypeConverter, FallbackTypeConverterLoader, CoreTypeConverterRegistry, UnmarshallerImpl, StAXStreamConnector, ProcessorValidator
+17861	 BlobUtils, BlobStreamAndLength, BlobOperations, BlobProducer, AsyncProcessorConverterHelper, SendDynamicProcessor
+17901	 GooglePubsubConsumer
+17945	 HazelcastSedaTransferExchangeTest, MockEndpoint
+17952	 HazelcastQueueConsumerPollTest, HazelcastQueueConsumerTest, HazelcastCamelTestSupport
+18234	 RouteReifier, DefaultModelReifierFactory, DefaultCamelContext, AbstractCamelContext, BaseService, SpringCamelContext, SimpleApplicationEventMulticaster, AbstractApplicationContext, SpringApplication, CamelApplication, ResolveEndpointFailedException, AbstractEndpointBuilder, Validate, SdkDefaultClientBuilder, DefaultSqsClientBuilder, Sqs2ClientIAMOptimized, Sqs2Endpoint, ServiceHelper
+18611	 BlueprintCamelContext, CamelContextFactoryBean, AbstractCamelContext, VaultConfiguration
+18816	 DefaultProducerCache, RecipientListProcessor, MulticastProcessor, RecipientList, Pipeline, DefaultReactiveExecutor, CamelInternalProcessor, TimerConsumer, AhcEndpoint, ServicePool, ProducerServicePool, AhcRecipientListTest
+18871	 NettyProducer, GenericObjectPool, SendProcessor, CamelInternalProcessor
+19081	 AggregateProcessor, ClusteredJdbcAggregationRepository, Exchange
+19220	 GroovyCastException, DefaultTypeTransformation, GroovyExpression, ExpressionSupport, FilterProcessor, ChoiceProcessor, RedeliveryErrorHandler, DefaultReactiveExecutor, Pipeline, CamelInternalProcessor, DirectProducer, SharedCamelInternalProcessor, DefaultAsyncProcessorAwaitManager, DefaultProducerCache, DefaultProducerTemplate
+19714	 JsonPathEngine JsonPathExpression TransformProcessor

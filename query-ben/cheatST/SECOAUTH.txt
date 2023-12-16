@@ -1,0 +1,3 @@
+312	 OAuthClientHttpRequestFactory, OAuthSecurityContext, OAuthSecurityContextHolder, CoreOAuthConsumerSupport, OAuthRestTemplate, OAuthConsumerToken
+385	 HierarchicalUriComponents, UriComponentsBuilder, OAuth2ClientContextFilter, FilterChainProxy, DelegatingFilterProxy
+409	 OAuth2ClientContextFilter UriComponents UriComponentsBuilder

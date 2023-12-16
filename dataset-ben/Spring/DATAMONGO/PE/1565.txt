@@ -1,0 +1,7 @@
+Placeholders in manually defined queries not escaped properly
+collection.findByApplicationIdAndName("fff?1fff", "This is outside of quotations");interface MyCollection  extends MongoRepository&lt;MyObject, String&gt; {
+     @Query(value="{ 'applicationId' : ?0, 'name' :?1}");
+     List&lt;MyObject&gt; findByApplicationIdAndName(String id, String name);
+}
+Resulting query:
+{'applicationId': "fff"This is outside of quotations"fff", 'name':?1}

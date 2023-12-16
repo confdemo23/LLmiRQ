@@ -1,0 +1,4 @@
+Hive throws NPE when writing map type data to a HBase backed table
+Hive throws NPE when writing data to a HBase backed table with below conditions:There is a map type column
+The map type column has NULL in its valuesBelow are the reproduce steps:
+1) Create a HBase backed Hive tablecreate table hbase_test (id bigint, data map&lt;string, string&gt;)stored by

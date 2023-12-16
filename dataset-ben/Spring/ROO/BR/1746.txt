@@ -1,0 +1,2 @@
+DBRE does not handle unique constraints
+Generated class does not have unique=true in @Column annotation

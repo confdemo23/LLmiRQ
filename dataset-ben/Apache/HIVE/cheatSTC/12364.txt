@@ -1,0 +1,7 @@
+Distcp job fails when run under Tez
+PROBLEM:
+insert into/overwrite directory '/path' invokes distcp for moveTask and fails
+query when execution engine is Tez 
+set hive.exec.copyfile.maxsize=40000;
+insert overwrite into '/tmp/testinser' select * from customer;
+failed at moveTask

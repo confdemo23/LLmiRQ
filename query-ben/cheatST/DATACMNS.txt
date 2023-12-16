@@ -1,0 +1,25 @@
+19	 Persistable, JpaRepositoryFactory, SimpleJpaRepository, RepositoryFactorySupport, TransactionInterceptor, PersistenceExceptionTranslationInterceptor, JdkDynamicAopProxy
+38	 SiteServiceTest Site SiteQuery
+55	 TypeDiscoverer ClassTypeInformation AbstractMappingContext
+68	 AbstractPersistentProperty, TestClassComplex, MongoTemplate
+98	 BaseRepository, FooRepository, ClassUtils, QueryMethod, JpaQueryLookupStrategy, RepositoryFactorySupport, RepositoryFactoryBeanSupport, FactoryBeanRegistrySupport
+153	 QueryDslPredicateExecutor, SimpleEntityPathResolver, JpaRepositoryFactory, QueryDslJpaRepository, SimpleJpaRepository
+176	 HashMap, ObjectUtils, TypeDiscoverer, ClassTypeInformation, ParentTypeAwareTypeInformation
+221	 DomainObjectWithSpecialChars Repository, PropertyReferenceException, PropertyPath, Part, PartTree
+257	 MongoOperations, MongoTemplate, SimpleMongoRepository, AbstractMappingContext, QueryMapper
+320	 MappingException, AnnotationBasedPersistentProperty, BasicMongoPersistentProperty, CachingMongoPersistentProperty, MongoMappingContext, MongoTemplate
+390	 MappingContextTypeInformationMapper, DefaultTypeMapper, MappingMongoConverter, AbstractMappingContext
+432	 Repositories, DomainClassConverter, GenericConversionService, TypeConverterDelegate, DataBinder, AbstractNamedValueMethodArgumentResolver, HandlerMethodArgumentResolverComposite, InvocableHandlerMethod, ServletInvocableHandlerMethod, RequestMappingHandlerAdapter, AbstractHandlerMethodAdapter, DispatcherServlet, FrameworkServlet, HttpServlet
+501	 PersonRepository JpaRepositoryFactoryBean DefaultRepositoryMetadata RepositoryFactoryBeanSupport
+502	 AnnotationRepositoryConfigurationSource, RepositoryConfigurationSourceSupport, RepositoryConfigurationExtensionSupport, RepositoryConfigurationDelegate, RepositoryBeanDefinitionRegistrarSupport
+518	 PreferredConstructor, CustomConversions, BasicPersistentEntity, MappingMongoConverter
+562	 ClassC, ClassA, ClassB, ClassD, MongoTemplate, AbstractMappingContext, ParameterizedTypeInformation, TypeDiscoverer, AbstractPersistentProperty, ReflectionUtils
+566	 QInvoice, QueryDslJpaRepository, QSort
+616	 ExtendedRevision, ReflectionUtils, AnnotationDetectionFieldCallback, AnnotationRevisionMetadata
+692	 PageableHandlerMethodArgumentResolver, AbstractPageRequest, PageRequest
+748	 BeanCreationException, AbstractAutowireCapableBeanFactory, RepositoryFactorySupport, JpaRepositoryFactoryBean, QueryExecutionConverters, Version, SpringVersion
+755	 QSort, Sort$Order, StringPath
+763	 MyRepositoryImpl, RepositoryFactorySupport, SimpleJpaRepository, MyRepository
+874	 Option, QueryExecutionConverters, ParametersParameterAccessor, PersonRepository
+916	 MongoDbMessageStore, MessageWrapper, ClassGeneratingPropertyAccessorFactory, BasicPersistentEntity, MongoTemplate, AbstractMessageGroupStore, DelayHandler, AbstractReplyProducingMessageHandler, AbstractMessageHandler, UnicastingDispatcher, AbstractSubscribableChannel, AbstractMessageChannel, DelayerHandlerRescheduleIntegrationTests, MongoDbAvailableRule, JUnitTestClassExecuter, JUnitTestClassProcessor, SuiteTestClassProcessor, TestWorker
+934	 BasicPersistentEntity, SimpleSolrPersistentEntity, SolrTemplate, SolrBCDaoImpl

@@ -1,0 +1,6 @@
+Patch HIVE-9473 breaks KERBEROS
+The patch from HIVE-9473 introduces a regression. Hive-Server2 does not start properly any more for our config (more or less the bigtop environment)
+sql std auth enabled, enableDoAs disabled, tez enabled, kerberos enabled.
+Problem seems to be that the kerberos ticket is not present when hive-server2 tries first to access HDFS. When HIVE-9473 is reverted getting the ticket is one of the first things hive-server2 does.
+Posting startup of vanilla hive-1.0.0 and startup of a hive-1.0.0 with this commit revoked, where hive-server2 correctly starts.commit 35582c2065a6b90b003a656bdb3b0ff08b0c35b9Author: 
+Thejas Nair &lt;thejas@apache.org&gt;Date:   Fri Jan 30 00:05:50 2015 +0000    HIVE-9473 : sql std auth should disallow built-in udfs that allow any java methods to be called (Thejas Nair, reviewed by Jason Dere)        git-svn-id: https://svn.apache.org/repos/asf/hive/branches/branch-1.0@1655891 13f79535-47bb-0310-9956-ffa450edef68revoked.

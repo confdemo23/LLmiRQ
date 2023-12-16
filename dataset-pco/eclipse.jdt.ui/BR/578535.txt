@@ -1,0 +1,34 @@
+[Spock][JUnit 5][m2e] Run as JUnit Test broken
+Created attachment 287960
+Example project to reproduce
+
+This action was working fine in 4.21 using Groovy Eclipse 4.4.0 and m2e.
+In 4.22, I have the following stack when running a Junit test configuration:
+
+
+org.junit.platform.commons.JUnitException: TestEngine with ID 'junit-jupiter' failed to discover tests
+	at org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discoverEngineRoot(EngineDiscoveryOrchestrator.java:111)
+	at org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discover(EngineDiscoveryOrchestrator.java:85)
+	at org.junit.platform.launcher.core.DefaultLauncher.discover(DefaultLauncher.java:92)
+	at org.junit.platform.launcher.core.DefaultLauncher.discover(DefaultLauncher.java:67)
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.<init>(JUnit5TestReference.java:46)
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestLoader.createTest(JUnit5TestLoader.java:96)
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestLoader.loadTests(JUnit5TestLoader.java:48)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:513)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: java.lang.NoClassDefFoundError: org/junit/jupiter/api/TestInstance$Lifecycle
+	at org.junit.jupiter.engine.JupiterTestEngine.discover(JupiterTestEngine.java:66)
+	at org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discoverEngineRoot(EngineDiscoveryOrchestrator.java:103)
+	... 10 more
+Caused by: java.lang.ClassNotFoundException: org.junit.jupiter.api.TestInstance$Lifecycle
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 12 more
+
+It looks like the jupiter-api is not included in the classpath anymore ?
+I can work around the issue by adding the Junit 5 library in the classpath or adding the jupiter-api dependency in my pom, but it seems not acceptable.
+
+You can import the project in attachment to reproduce the issue.

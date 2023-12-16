@@ -1,0 +1,5 @@
+camel-lra refactor LRAClient to use jdk11 HttpClient
+* Use JDK11 HttpClient
+* Fix test
+* Use correct printDuration for durations < 1s
+

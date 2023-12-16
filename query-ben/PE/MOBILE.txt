@@ -1,0 +1,5 @@
+51	 KNOWN_MOBILE_USER_AGENT_KEYWORDS
+63	 DeviceDelegatingViewResolver
+69	 QueryString
+70	 LiteDeviceDelegatingViewResolver
+79	 DeviceResolver, Spring Mobile

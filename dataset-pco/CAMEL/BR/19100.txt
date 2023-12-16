@@ -1,0 +1,22 @@
+Milo component does not use dataChangeFilterTrigger value from route
+The dataChangeFilterTrigger configured is not applied when the monitoring is set up.
+
+ 
+ 
+{code:java}
+return new DataChangeFilter(
+   DataChangeTrigger.StatusValueTimestamp,
+   this.getDataChangeFilterDeadbandType(),
+   this.getDataChangeFilterDeadbandValue());
+}{code}
+
+I think the code above has to be changed to something like this:
+
+
+  
+{code:java}
+return new DataChangeFilter(
+this.dataChangeFilterTrigger != null ? this.dataChangeFilterTrigger : DataChangeTrigger.StatusValueTimestamp,
+this.getDataChangeFilterDeadbandType(),
+this.getDataChangeFilterDeadbandValue());
+}{code}

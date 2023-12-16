@@ -1,0 +1,2 @@
+JavaBean ITD not deleted when governor fields have been deleted
+Since 1.2.0.M1, the Roo JavaBean ITD is not deleted after deleting all the fields in the governor, even after a shell restart.

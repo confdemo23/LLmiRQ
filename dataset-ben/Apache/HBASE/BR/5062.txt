@@ -1,0 +1,2 @@
+Missing logons if security is enabled
+Somehow the attached changes are missing from the security integration. 

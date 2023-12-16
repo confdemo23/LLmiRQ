@@ -1,0 +1,3 @@
+Fix domain mode for configuration changes
+The configuration changes feature is broken in domain mode: the propagation to managed servers / slaves HC doesn't work properly. 
+Once set it will fail on restarting the DC. So we need a clean refactoring of the feature to have a usable domain mode.

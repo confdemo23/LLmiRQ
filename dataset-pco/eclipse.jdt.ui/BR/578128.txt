@@ -1,0 +1,51 @@
+[Code Clean-Up] "Convert to switch expression where possible" discards assignments
+When I choose  "Convert to switch expression where possible" in Source->Code Clean-up menu on this example, the assignments end up being discarded.
+
+Example:
+
+
+public class Test {
+    public static void main(String[] args) {
+        boolean rulesOK = true;
+        switch (args[0].charAt(0)) {
+            case '+':
+                args[0] = "+";
+                break;
+            case '~':
+                args[0] = "~";
+                break;
+            case '-':
+                args[0] = "-";
+                break;
+            case '?':
+                args[0] = "?";
+                break;
+            default:
+                rulesOK = false;
+        }
+        System.out.println(rulesOK);
+    }
+}
+
+Result:
+
+
+public class Test {
+    public static void main(String[] args) {
+        boolean rulesOK = true;
+        rulesOK = switch (args[0].charAt(0)) {
+            case '+' -> "+";
+            case '~' -> "~";
+            case '-' -> "-";
+            case '?' -> "?";
+            default -> false;
+        };
+        System.out.println(rulesOK);
+    }
+}
+
+It also yields a compilation failure due to the type mismatches.
+
+I believe the sample could be considered non-elligible to the refactoring due to  the impossiblity to decide between multiple variables to assign.
+
+See also : org.eclipse.jdt.internal.compiler.batch.Main.addNewEntry(ArrayList<Classpath>, String, ArrayList<String>, String, String, boolean, boolean)

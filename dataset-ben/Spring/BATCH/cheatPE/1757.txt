@@ -1,0 +1,7 @@
+MinMaxPartitioner sets incorrect max value
+The max value in MinMaxPartitioner is incorrect set, as min is effectively being multiplied twice by range:
+			 int min = (i++)*range;
+			 int max = Math.min(total, (min+1)*range);
+The max line should presumably be:
+			int max = Math.min(total, i * range);
+(I am assuming that this is what the partitioner is supposed to be doing)

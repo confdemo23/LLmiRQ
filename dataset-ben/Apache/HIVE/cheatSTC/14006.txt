@@ -1,0 +1,3 @@
+Hive query with UNION ALL fails with ArrayIndexOutOfBoundsException
+set hive.cbo.enable=false;
+The same query succeeds when hive.ppd.remove.duplicatefilters=false with or without CBO on. It also succeeds with just CBO on.

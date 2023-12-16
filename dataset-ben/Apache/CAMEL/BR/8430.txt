@@ -1,0 +1,2 @@
+Camel HDFS2 - readSuffix option does not work
+Option readSuffix does not work. It staticly uses constant HdfsConstants.DEFAULT_READ_SUFFIX.

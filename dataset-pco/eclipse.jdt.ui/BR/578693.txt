@@ -1,0 +1,9 @@
+Move occurrence finders to jdt.core.manipulation
+The following occurrence finders have no UI dependencies and can be moved to jdt.core.manipulation:
+
+- BreakContinueTargetFinder
+- ExceptionOccurrencesFinder
+- ImplementOccurrencesFinder
+- MethodExitsFinder
+
+This allows for reuse in jdt.ls, see https://github.com/eclipse/eclipse.jdt.ls/pull/1941.

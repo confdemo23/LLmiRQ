@@ -1,0 +1,2 @@
+<Resource leak>: Fix the file handle leaks in Symbolic & Symlink related input formats.
+Noticed these file handle leaks while fixing the Symlink related unit test failures on Windows.

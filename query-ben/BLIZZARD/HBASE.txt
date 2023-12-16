@@ -1,0 +1,674 @@
+426	table region snapshot replication enabled async list split hbase apos find remote filesystem filesystem remote Hadoop DFS running pointing hbase count copying hadoop site xml hbase conf set fully qualified hbase rootdir sufficient hbase figuring backported
+433	table region snapshot restore file backup test replication region server deleted restore log successfull restore remove restore log oldlogfile log reopen region crashed region server Suggestion remove flush edits mapfile replay log memcache flush deleted log
+462	table region mob tracker file store test wal Update migration tool HBASE incompatible change format region server log file names Update Migration tool ensures unrecovered region server log files
+490	region meta node master log replica num wait Doubly assigned META master clients Internal cluster META regions region unassigned map meta scans close Worse master working META clients amp apos odd blocker track master doesn amp apos subsequent update META info ROOT
+505	region server regions create procedure pre transition post Region assignments time region server reports processing open request master assigns region region server reassignment timeout region server reports processing open region takes time large set transactions redo log initial compaction takes time master assign region server reassignment timeout occurs Assigning region multiple region servers easily corrupt region region server processing redo log creating mapfile takes interval master assigns region region server region server starts processing redo log creating essentially mapFile region server region server fail open region region server deletes log file open mapFile region server creating region server fail open region open mapFile region server creating region server eventually succeeds reports master finished opening region master tells close region assigned server Region server fails open region log file deleted fails process map file created region server Proposed solution open process region server send MSG PROCESS OPEN heartbeat region opened sends MSG REGION OPEN master extend reassignment timeout MSG PROCESS OPEN receives assign region server continues receive heart beat messages region server processing open
+528	mob test table multiple check snapshot html dir table apos exist apos amp apos times hql tables table select table hql reports table exist Digging happening getClosest facility failing find table region META table hacked region reading tool attached branch copy actual instance region getClosest fine amp apos pretty restarted HRS master META failing find region table Looked server logs amp apos healthy amp apos
+589	post files pre file row path dir set Remove references deprecated methods Hadoop hadoop released number methods Hadoop deprecated release released preferred alternate
+613	backup table file region create test read bulk Timestamp anchored scanning fails find records add versions cell scan set cells timestamp values upload bunch missing uploads thought fact set number cells HStore move current row column doesn amp apos upping MAX VERSIONs table closer Build unit test replicating cluster takes time
+620	increment log node ephemeral servlet test file config testmergetool failing branch trunk hbase hbase revealed testmergetool depends compactions running
+624	server region master cluster servers start list wait Master shut number active region servers shutdown requested master initiate shutdown number active region servers shutdown requested
+674	size block test cache eviction create lock count memcache size unreliable Multiple updates row column increments cache size insert play memcache flush time amp apos entry decrement memcache size size memcache
+697	type ermission ompression ata lock hrift ead server thrift idl update edit match API bugs Talking Bryan moving release
+698	test procedure lock list region proc recovery master HLog recovery performed master failure local cluster running logging hbase log kill master regionserver restart logs don amp apos recover hlog creates hlog existing startcode older hlog tables created inital session
+703	region regions table read write server compaction scan Invalid regions listed regionserver jsp region list displayed regionserver jsp regions ceased existence splits Region Encoded Start Key Key maxentriestest acacdk acacdk maxentriestest acacdk acacdk acqtzk maxentriestest acacdk acacdk adhlxw maxentriestest acqtzk acqtzk adhlxw maxentriestest adhlxw adhlxw maxentriestest adhlxw adhlxw aelrxo maxentriestest adhlxw adhlxw afpxzs maxentriestest aelrxo aelrxo afpxzs maxentriestest afpxzs afpxzs
+737	column delete pre store scan scanner row key Scanner cell row timestamp row multiple cells cell timestamp command shell demonstrates cells stored timestamps hbase main amp apos table amp apos amp apos row amp apos COLUMN CELL fam letters timestamp def fam numbers timestamp fam letters timestamp abc row seconds scanners retrieve cells timestamp hbase main scan amp apos table amp apos ROW COLUMN CELL row column fam letters timestamp def row column fam numbers timestamp row column fam letters timestamp abc row seconds scanners losing timestamp
+743	group table region regions procedure meta server split bin hbase migrate upgrade fails redo logs exists migrated hbase instances hbase trunk hbase cleanup leaves redo logs hdfs problems migrating data hbase trunk fails finds redo logs quit error message reinstall hbase shut cleanly theory erases redo logs work delete redo logs manually bad
+819	block test priority file region level create size Remove DOS style carriage returns code files DOS style carriage returns leading issues applying patches presence causing snowball IDEs editors attempt apply format lines files
+848	test table quota dir region set throttle task API inspect cell deletions cell deleted amp apos API deletion timestamp versions predate deletion possibility add flag HTable
+865	output file set telemetry outbound bytes table model javadoc warnings javadoc warnings branch trunk fixed released
+871	table region compaction store replication snapshot manager enabled Major compaction periodicity specifyable column family level cluster wide jon gray table ten rows couple columns constantly updated max versions table growing fast versions written major compaction table good major compactions day
+889	table scanner test row column namespace result region current Thrift API scanner created supplying column list APIs current Thrift API scanner created supplying column list api posted HBase Users mailing list concurred appears oversight Thrift API easy work column families names list open scanner
+900	files region split size store bulk enabled heap Regionserver memory leak causing OOME modest bulk importing recreated issue times appears introduced single table memory usage individual region servers grows bounds set eventually die OOME happened Daniel Ploeg mailing list nodes OOME heap regions previous versions imported regions heap size increasing max heap appearance newer versions leads kind memory leak happening region servers
+921	region server report master regions start servers replication region close open processed order disagreement master regionserver region Master assigns region decides close opened region rebalancing open close operations reported master operation processing components todo list processed thread master amp apos main loop close operation bulk work inline master main processing loop todo component work region offlined consequence open todo meta catalog table update location common cluster master todo queue occupied processing shutdown regionserver takes time process shutdown regionserver thousands regions delays processing open close todos open running close region limbo restart amp apos hosting amp apos regionserver amp apos fixes amp apos general HBASE issue happening alot cluster hack TRUNK backport Jim Firby good idea conditions Clients amp apos asked regions location times Master amp apos response ten times row time answer wrong Revisit notion region location Master drastic close reassign region
+938	compaction store files compact window max min num major compaction period checked periodically major compaction period hbase hregion majorcompaction checked periodically request major compaction region open split point check major compaction period
+994	address block edge host exception create call cell IPC interfaces versions problems morning situation region servers started joined cluster amp apos sort amp apos worked hrs communicate master clients communicate region servers api version changed master wouldn amp apos deployed root meta Suggestion single api version bumped interfaces
+1142	server test thrift conf header filter http create Cleanup thrift server remove Text profuse DEBUG messaging Ambiguous issue thrift server loads getText calls local function checks utf compliance don amp apos don amp apos Text missed time updated api clean amp apos Open suggestions
+1157	region table server cluster servers list load set start code region server recovery inadvertantly reassign regions assigned restarted server start code
+1185	region test server token context store wait data wrong request gui reporting wrong number request masters gui scanning moved report request secs request numbers hbase client scanner caching reason request reported set hbase client scanner caching request gui job records job time records caching side hbase client scanner caching making request running faster reported thought users wrong impression request read write
+1187	region table load group cluster server assignment enable disabling enabling table regions assigned region servers disabling enabling small table regions master tend assign regions region servers table extensively random reads kills hold regions restart HBase
+1267	store bytes column region filter test string tracker binary broken trunk Binary key nul amp apos amp apos don amp apos work Splits happen Logfile normal META doesnt list regions lists amp apos basic amp apos regions amp apos table amp apos regions binary middle dont META
+1279	region test move file regions random server block hostnames IPs handled list Yabo Arber amp apos unlocked port access web client running HBase User Tables Region Servers Address internal address domU compute internal guess client fails connect region server serves internal hbase site xml configure region server explicitly external property hbase regionserver compute amazonaws description host port HBase region server runs description property fact completely bypass hostname set hbase regionserver hostnames web good hadoop
+1290	region table set split add store file regions table jsp doesnt list regions table jsp errors viewing META ROOT table user tables doesn amp apos list regions
+1318	server thrift test read conf create port header Thrift server doesnt atomicIncrement thrift server atomicIncrement API implemented
+1457	region table test data create set backup dir ROOT META regionserver result cluster operational regionserver controlled uncontrolled shutdown master doesn amp apos properly reassign root meta regions
+1466	block num key root data row size region Binary citizens binary don amp apos full features binary broken grep search logfiles binary data displays unreadable weird utf issues amp apos region historian
+1485	column set check row version family versions filter Wrong indeterminate behavior duplicate versions column scanners returning duplicate versions column ordering indeterminate decide desired expected behavior happen Note amp apos impossible work implemented Scanner issue implement correctly undo basically optimizations making slower Scanner
+1545	region key set handle overlap size integrity max atomicIncrements creating values MAX Atomic increment creating key values timestamp MAX good hard range queries Thrift queries
+1547	table scanner region replica flush result row file atomicIncrement doesnt increase hregion memcacheSize prevents flushing
+1558	scan test column file set cell family row deletes apos HConstants LATEST TIMESTAMP apos translates apos apos Deletes don amp apos update MAX TIMESTAMP puts
+1574	post pre row test batch region partial scanner Client server APIs batch deletes batch delete add
+1576	set size test row partial block scan filter TIF set scanner caching size smaller row tables performance TIF scanner caching size row processed fast small limits performance setting higher scanner caching level achieve performance exact map reduce table
+1597	set cache size count block blocks hit max Prevent unnecessary caching blocks compactions running kind compaction read block storefile compacted block cache reuse cached blocks bog LRU unnecessary blocks bad LRU latest LRU implementation HBASE scan resistant ensures causing massive eviction blocks read multiple times memory tables add woes block referenced longer periods time overhead running LRU evictions
+1659	region merge backup regions table file procedure data merge tool doesnt binary regions escape format
+1714	test server read region user create hash thrift convenience functions Scan thrift API bug fixes number handy amp apos repo
+1784	test delete canary table row time scan memstore Missing rows medium intensity insert bug uncovered Mathias mail Issue data load Basically medium intensity insert lot rows missing Easy reproduce scan randomRead won amp apos uncover doesn amp apos bother rows Simply count shell easy test changed scanner caching shell faster tested light insertions force flush compact split shell doesn amp apos
+1792	set cell row key column version create delete Regression save timestamp compared previous versions doesn amp apos save timestamp set current time telling bad users upgrading timestamps hbase main amp apos testtable amp apos amp apos amp apos amp apos amp apos amp apos val amp apos row seconds hbase main scan amp apos testtable amp apos ROW COLUMN CELL column timestamp val row seconds
+1794	file store files compaction snapshot region size archive recovered log files inserted storefile map log recovery flushed file introduced store storefiles map data isnt region closed compacted
+1798	test delete table filter set scan row peer Regression Unable delete row Deleting doesn amp apos work resets
+1921	backup master region test server log sink list Master apos session times apos cluster wedged IRC fella session expiration Master Master znode
+3816	master balancer queue cluster start test nodes region balancer balancer lives master amp apos memory Yesterday master died strange restarted started balancing amp apos test cluster wasn amp apos big deal imagine ways screw people amp apos life
+3885	server region files servers table quota remove list Remove hbase regionserver flushlogentries
+3939	block set metrics context test exception source request crossports Hadoop IPC fixes fixes Hadoop IPC cross port copy HADOOP remove protocol version check call time HADOOP socket leak server HADOOP behavior response serialization exception HADOOP send nicer error response client IPC version
+4100	token sasl rpc provider authentication config client canonical Authentication clients Thrift gateway integrated authentication HBase RPC gateway HBase security active gateway interoperate HBase security server login keytab startup server principal clients authenticate security server server trusted proxy original client identities HBase authorization checks performed original client request Thrift implementing step bare minimum deploying server configured login application user startup authenticating clients gateway work HBase security active step SPNEGO provide Kerberos GSSAPI authentication clients HTTP Alfredo library Cloudera easy http cloudera github alfredo docs latest html
+5062	test group secure user login base configuration create Missing logons security enabled attached missing security integration
+5372	region flush table check seq store set write Table mutation operations check table level rights global rights drop modify disable enable table operations check global CREATE ADMIN rights table CREATE ADMIN rights check global permissions table permissions configuring table access global permissions work
+5640	bulk region file load table split cluster family bulk load runs slowly loading data external system hbase prints form regression caused patch filesystem destination store moving filesystem
+5714	table region set hdfs file backup regions meta Add write permissions check hbck modifies hdfs encoutered situation hbck privileged user unable write modify merge regions hdfs perms user alerted minutes read operations hbck fail early write perm check providing actionable advice hbase admin Current user write perms hbase hbck hdfs user xxx
+5820	table set region file meta hdfs hbck regions hbck check owner permissions cases hbck user write perms file system writes data hbase amp apos directories write files dirs hbase processes amp apos user permissions alert user situation
+6166	server conf executor thrift http create thread pool thrift start wih server type config thrift server type command amp apos config shouldn amp apos needed
+6446	log source replication queue wal peer buffer file Replication source EOF exception hlog size master cluster startup hlog size created start replication replication source print EOF exception openreader ignore print exception warning log
+7825	log file split meta dir chunk store server Retire distributed log splitting code distributed log splitting legacy code distributed log splitting retired objections Jeffrey
+8258	table num input scan restore config test region mapreduce tests pass hadoop HBASE attempt making work lost weeds attempt making hbase mapreduce jobs hadoop breaking mapreduce hadoop
+8962	table region split log procedure replication snapshot enabled Clean code remove regular log splitting Distributed log splitting kind stable amp apos time rid regular log splitting clean code bit
+10169	region flush seq check store batch set write Batch coprocessor designed improve coprocessor invocation client side coprocessor invocation send call region region server regions located server coprocessor invocation send calls call single thread client side threads coprocessor invocations heavy design calls region server grouped single coprocessor invocation call spread region server side
+10622	snapshot dir file export test input time files Improve log Exceptions Export Snapshot logs export snapshot clear amp apos adding extra debug places real exception thrown
+11222	tags visibility test label delete table labels set Add integration test visibility deletes HBASE checked create integration tests verify
+12178	region table server procedure create open set split Failed splits transition region split fails write reference files region stays SPLITTING transition master block balancer invocations
+12373	visibility label tags labels scanner auths set delete Provide command list visibility labels command list visibility labels place handy hbase list commands
+12469	visibility table label snapshot quota region labels num view current labels labels system user scan hbase labels interpret output
+12770	server region servers queue meta file num store Don apos transfer queued hlogs dead server alive server region server cluster restart hlog queues transferred alive region server shared cluster create peers replicating data peer clusters lots hlogs queued peers caused reasons peers disabled errors peer cluster prevent replication replication sources fail read hlog hdfs problem server restarted alive server replication jobs dead server bring big pressure resources network disk read alive server fast replicate queued hlogs alive server replication jobs including takes dead servers totally transferred alive server server large number queued hlogs shared cluster find server thousands queued hlogs replication optional reasonable alive server transfer peer amp apos hlogs dead server time alive region servers opportunity transfer hlogs peers queued hlogs processed fast discussion
+12813	region server regions meta procedure assign create transition Reporting region transition shouldn apos loop issue region server wasn amp apos send report region transition request failing retries point abort region server amp apos talk master
+13647	set namespace timeout meta rpc max exception connection hbase client operation timeout high hbase client operation timeout high Max block service calls coprocessor endpoints indefinitely introduce
+13737	table region snapshot test enabled mob replication compaction HBase MOB MOBTable cloned snapshot leads data loss actual snapshot main table deleted clone snapshot mob feature leads data loss mob data steps reproduce created MOB table column families mobcf mob enabled norcf insert mob data normal data time table scan MOB table snapshot table clone snapshot table check table created scan table mob data normal data client delete snapshot step delete main table step scan table
+13821	cache block test size bucket free file factor WARN hbase bucketcache percentage combinedcache set HBASE improved configuration bucket cache longer require hbase bucketcache percentage combinedcache aggressively mandatory configuration result crashes unsuspecting users add WARN hbase bucketcache percentage combinedcache set debugging crash straight
+13826	table acl dir snapshot region file base namespace Unable create table group acls appropriately set Steps reproducing issue Create user amp apos test amp apos group amp apos hbase admin amp apos Grant global create permissions amp apos hbase admin amp apos Add user amp apos test amp apos amp apos hbase admin amp apos group Create table operation amp apos test amp apos user ADE
+13863	size count cache block num store eviction hit Multi wal feature breaks reported number size HLogs multi wal enabled number size retained HLogs reported numbers sum retained logs
+13865	region flush store size file compaction files set Increase hbase hregion memstore block multipler book current master
+13885	snapshot table file snapshots quota test create node watches leaks snapshots snapshot table watcher hbase online snapshot abort snapshot created cleared snapshot successful snapshots backups daily accumulate lot watches Steps reproduce snapshot table snapshot amp apos table amp apos amp apos abc amp apos node alternatively observe watches metric echo wchc localhost hbase online snapshot abort abc
+13895	region flush store seq wal check write set DATALOSS Region assigned WAL replay abort Opening place holder finish analysis dataloss running ITBLL testing HBASE obvious culprit assignment
+14092	table region replication master manager server snapshot procedure hbck locks disable balancer HBCK check health cluster amp apos turn balancer amp apos needed lock runs hbck add lock balancer command flags
+14094	table region procedure test lock snapshot replication enabled Procedure proto apos compiled EOF defined symbol
+14098	table namespace base verify set scan update access dropping caches compactions
+14166	region replica set row server test stale column Region metrics stale amp apos machines reporting region metrics point Hadoop metrics system decided metrics display changing
+14208	proc metrics regions set update namespace compression stream Remove yarn dependencies common client amp apos needed amp apos server
+14224	coprocessor test load path file set observer remove coprocessor handling duplicate classes discussing Misty Stanley Jones HBASE noticed inconsistency copros loaded load consolidate
+14597	block size cache eviction user test factor thread Groups cache multi threaded env UGI doesn amp apos hash based user expected lots ugi created cache doesn amp apos amp apos job
+14723	test split table region batch cluster size splits tests split times Splitting table happening happen frequently regions
+14755	set file sync store dir writer html servlet broken links HTML problems Problems https builds apache org view view HBase job HBase Website Link Ckecker artifact link report html
+14778	block size cache file count data hit header block cache hit percentages integer metrics system amp apos close amp apos hard difference full percent change rare
+14781	region split store table test master create key Turn flushing ITBLL
+14788	region file replication split server log test files Splitting region support hbase evictblocksonclose config closing source region table bucket cache turned hbase evictblocksonclose set split region watched closing source region complete bucketcache flushed region
+14793	block size cache count data file eviction header limiting size block block cache badly lived large objects limiting size block block cache
+14822	lease scanner store seek scan read test scanners Renewing leases scanners doesn apos work
+14840	replication file peer sink region test table base Sink cluster reports data replication request success data replicated Scenario Sink cluster Create table enable table replication data restart sink cluster Observance Data replicated sink cluster source cluster updates WAL log position data loss sink cluster
+14983	block size count cache file data key update Create metrics block type hit ratios Missing root block worse missing data block difference
+15098	region normalizer merge split test table regions normalization Normalizer configuration newly global enable normalizer functionality meaning hbase xml property hbase normalizer enabled description set Master region size table description property test set implement proper statement checks properly disables feature cluster wide wanted
+15146	procedure queue block file key test proc data Don apos block Reader threads queueing scheduler queue Blocking epoll thread awful rpc scheduler lots queues queues capacity limits dispatch method block add blocking queue schedulers readers block tcp acks delayed slows
+15278	rpc response call connection set sasl read time AsyncRPCClient hangs Connection closes RPC call response test HBASE discovered issue Async RPC Client test closing connection RPC call writes call larger max allowed size server closes connection async client handle connection closes outstanding RPC calls client hangs Marking blocker
+15297	region node control shell command cluster exception wait error message wrong wrong namspace grant hbase shell HBase shell existing namespace grant command hbase main grant amp apos amp apos amp apos amp apos amp apos aaa amp apos namespace called aaa error message issued correct ERROR Unknown namespace user namespace error message ERROR Unknown namespace aaa amp apos find namespace aaa
+15315	post pre compaction rpc region queue complete priority Remove set user call high priority Current implementation set superuser call ADMIN QOS customers superuser normal table operation data client data region assignment RPC HMaster timeout handle remove set user call high priority
+15424	region flush file store seq write replication check Add bulk load hfile replication event appended WAL Currenlty hfile znode tracking bulk loaded data replication bulk load event appended WAL lead issue znode append WAL failed probelm znode left hfile deleted archive directory
+15441	split count file log region dir num requests WAL splitting region moved multiple times WAL splitting broken region opened multiple times minutes Region open region close write event markers wal markers sequence region moved multiple times mins multiple split log workers create recovered edits file sequence workers fail failing delete recovered edits Causing split wal attempts fail close correct sequence open Filter region events recovered edits appears close event sequence coming region warm
+15504	region group regions split table move servers server Balancer moving regions overloaded regionserver pushed couple clusters cases regions assigned evenly regions move ended thousands regions servers Running balancer balancer couldn amp apos find solution current cost
+15635	size cache block count store scan compaction file age Blocks cache seconds webUI greater
+15637	queue connection set buffer source rpc call replication TSHA Thrift server limiting call queue size thrift hsha server create unbounded queue lead OOM
+15669	table replication file region set snapshot list enabled HFile size considered correctly replication request single replication request source cluster send replication source size capacity size data replication source capacity entries size calculated cells size entry calculated wrongly bulk loaded data replication size hfiles cell
+15952	file region bulk load dir table family replication Bulk load data replication working user permission hfile node testing secure cluster user permission hfile znode failing replicate bulk loaded data hfile znode created hbase client user permission
+16062	log test region writer file create data split Improper error handling WAL Reader Writer creation creation WAL reader writer fails reason leak hanging socket CLOSE WAIT
+16110	sasl handler encryption create channel block datanode client AsyncFS WAL doesn apos work Hadoop async wal implementation doesn amp apos work Hadoop Fails compilation fail running
+16144	lock queue procedure set table region replication test Replication queue apos lock live acquiring lock died prematurely multi operation claimQueues set hbase zookeeper useMulti add lock copy nodes clean queue lock acquiring lock crash claimQueues lock claim queue
+16221	server thrift region port connection exception header file Thrift server drops connection scans Thrift servers connection cache drop connections hbase thrift connection max idletime milliseconds time connection object accessed update accessed time scan path scanners fail minutes underlying connection object operation paths
+16581	queue replication file wal source peer set region Optimize Replication queue transfers server fail region server fails replication queue server picked region server problem queue huge queues multiple cascading server failures production dump hbase replication data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext hbase replication data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext hbase replication data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext hbase replication data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext hbase replication data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext hbase replication data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext hbase replication data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext hbase replication data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext hbase replication data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext hbase replication data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext hbase replication data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext hbase replication data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext data pub xxx ext hundreds wals hanging queue coming diferent region servers time replicate strategy live region servers grep nested queue replicate parallel
+16614	thread event rpc data set client watch socket daemon thread netty event loop daemon thread rpc implementation
+16711	set create conf column jar add compression dir hadoop profile compile Dhadoop profile build failing code deprecated hadoop removed hadoop
+27	hbase row info rows hadoop servername figure split notice splita split hregioninfo cell empty meta table
+451	region htabledescriptor htable descriptor table schema info descriptor hregion hregioninfo hregion info times file remove egion htable
+464	map hadoop hbase table javadoc java org hbase regionserver test hbase introduced errors
+473	master region server region junit info meta scanner debug test table deleted sends multiple close messages server
+476	table row filter trigger test stores rows columns filter memcache regexprowfilter regexp row filter regexp behaves incorectly orectly multiple store files
+492	hbase javac files error src hadoop note org test source trunk build oop
+516	hstorekey hstore key finalkey final key hstore hstorefile hstore file region key top key split final tor file update
+524	cell mapfiles getfull full order masks amp values map cells isn problems full
+532	compactions hregion lines tool test regions interaction testmergetool test merge tool java test odd int eraction egion deleteall delete delete comp actions
+543	regions region hbase solution conditions regions hmaster apos class collection places master opening possibility race
+564	file entries entry text cache size trunk files data amp adding flush
+565	schema zookeeper regionservers master schema table instance zookeeper hri memory move table hregioninfo hregion info egion info hregion
+595	row filter decision hregion fhe row rowfilterinterface row filter interface hstorescanner hstore scanner hstore called interface rowprocessed row processed processed final filtering dec ision
+602	string interface address method return ipv hbase hadoop inet hbase ase crash network net work card ipv
+608	var hbase interface config server configuration method checks dns hregionserver hregion server egion getthisip hadoop oop hregion
+618	rule compaction files category hbase hadoop dir pricebin price statistics compact ion threshold setting
+622	static environment statictestenvironment static test environment test case properties log test src messes remove
+629	split regionunavailablelistener region unavailable listener compactsplitthread compact split thread listener unavailable region thread amp time doesn reports incorrect elapsed
+663	cache updates hstore lock number updateslock updates lock reconstruction sequence log guarantee incorrect flush
+680	hbase interval parameter hstore writer hbase hbase usage hstorefile hstore file config int erval accroding hbasemapfile hbase map file ase map file hbasewriter hbase writer
+694	rowatorbeforefrommapfile row map file map row statement key return firstkey key finalkey final key file hstore tor fails locate mapfiles map files
+714	region byte hadoop hbase org string map split reference base showing bytes log
+740	table table wasn amp byte tabledescriptor table descriptor gettableregions table regions thrift thrift descriptor thriftserver thrift server server ting names incorrectly
+744	filter negatives work bloomfilter bloom filter tests filter deserialization serialized broken running bloom serialization
+805	row getrow row hrs byte map regionname region getfull full final result remove unnecessary overloads loads
+812	compaction size file hadoop regionserver compaction copy algo column dir skip
+851	region master hadoop hbase server web nsre region left unassigned split rebalancing throws
+855	column versions compaction records timestamp record cell hstore bug file comp action return cases
+872	java amp jruby method hbase apos org table hadoop meta exceptions shell creating disabling tables tab les
+950	proceeds rowlock rowlocks row locks lock lock row locks api rowlock row lock works htable commit longer existing apos
+1148	hlog root regions region clients servers syncs change region readers flush meta updates
+1190	row filter stoprowfilter row filter row input combines tableinputformatbase table input format base base interface format table input filters scan
+1245	meta amp npes hfile apos block tests bugs doesn names handling
+1251	hbase hbase hconnectionmanager hconnection manager conf client manager hconnection admin connection number getconnection connection hbaseconfiguration hbase configuration ase configuration returns hbaseconfigurations hbase configurations configurations
+1264	return method values columnvaluefilter column filter column filter regex compareto compare comparators compare wrong
+1277	error hstore row logic key testcompaction test compaction hstorekey hstore key test comparator compaction tor wrong
+1292	amp row php hbase thrift apos getrow row row key client throw exception exist
+1293	jvm codec cluster amp return algorithm heap space returncompressor return compressor concept hfile doesn apos recycle decompressors dec ompressors
+1336	key abc column keyvalue key implementation keycomparator key comparator efg family defg compare splitting compares
+1365	input colums table typo tableinputformatbase table input format base base format setinputcolums set input colums getinputcolums input colums columns set
+1401	periods load hasnt minutes hlog hours hole light clusters open close edits
+1435	info hbase conf address addr server site bindaddress bind address java port hregionserver hregion server egion wrong bind address xml hregion
+1541	bytes fam byte test family scanner column row table keyvalue key scanning multiple families presence deleted bad scans
+1561	column row code ioexception param lock row lock rowlock row lock htable mismatch javadoc
+1562	machines bit user size heapsize heap size cluster heap problem correctness parameter handle setting
+1607	heap lrublockcache lru block cache memstore mem store store block cache lru size overhead method redo mem sizing accurate testable test lock
+1620	store storescanner store scanner constructor caching storefiles store files scanner compactions cache passed special major comp actions
+1625	keyvalue key check row add key instantiated adding ins tantiated
+1627	scanner catch exception timeout scannertimeoutexception scanner timeout exception scanner unknownscannerexception unknown scanner exception tableinputformatbase table input format base format retries table input base nextkeyvalue key key catches cat ches wrong
+1629	master initialization master hrs hregionserver hregion server hregion apache org hbase unable contact
+1635	evaluation trip performanceevaluation performance evaluation default performance performance rpc scanner prefetching set pref hing
+1644	result row mapreduce map reduce field getrow row reduce row map map null cached breaks
+1646	filter class writable hbaseobjectwritable hbase object writable hbase filter object writeobject write object write scan apos set
+1647	column row storescanner store scanner filter key row scanner store rows entire filter filterrow filter row called filters shouldn apos
+1649	filterrow filter row filter valuefilter filter row returns filter instances chain reset filterlist filter list internal
+1661	javac files hbase note org hadoop trunk details recompile xlint hbase partial commit broke compile
+1717	family trouble ryan side values array copy passed client reference byte copies
+1738	scanner snapshot apos amp scanners memstore code bit delay names scanner doesnt doesn reset created updates kvset active
+1790	row table filter temp desc rowkey parameter method hregion rows filters working correctly
+1793	row time range api getrow row behavior setting htable works timestamp regression broken
+1795	recovery log reset max shouldnt logfiles entries scenario seq fail doesnt doesn sequence files tossed apos duplicates
+1815	server hbase loop thrift timeout failure contact regionserver shutdown hbaseclient hbase client ase client stuck infinite inf init attempting failed region
+1828	tests filters client level region compare comparefilters compare filters broken side pass
+1856	list result map kvs totalbuffer total buffer null list bytes change hbase broke mapreduce map reduce reduce
+1865	table ioexception input bug tableinputformatbase table input format base startkeys start base npe context jobcontext job context table format
+1866	copy constructor cache cacheblocks cache blocks scan blocks locks
+1871	class table job output format tableoutputformat table output format job class reducer init wrong type tablemapreduceutil table map reduce util map reduce util inittablereducejob init table reduce job
+1883	doreconstructionlog reconstruction log wal reconstruction thbase minsequencenumber min sequence number hregion sequence number recovery min egion passes wrong log
+1888	delimiter exception key int methods illegalargumentexception illegal argument exception delimiter check pointer array keyvalue key throw nullpointerexception null pointer exception null illegal argument parameter sanity
+1896	row grab filter singlevaluecolumnfilter single column filter table rows column whilematchfilter match filter reset matched match call encapsulated encapsulate filter
+1913	connections listener error thread library filter regions apos regionserver master regionserver accepts doesn handle bad request
+1927	scanner memory heap scanners keyvalueheap key heap mem store returns close list closed properly circumstances leak
+1928	meta server root region master server cache regionserver region server servermanager server manager search tables tab les stay transition making system usable designated design ated dies assignment complete
+1930	timestamp apos amp constructor key bit batchupdate batch update update copy doesn settimestamp set time stamp set time stamp misleading change time stamp existing keyvalues key values values copied
+1957	issue fixes patch writable hbase hbase object readfields read fields hbaseobjectwritable hbase object writable custom apos set filter
+1979	data processing hash length block size implementation murmur yield murmurhash murmur hash reference
+1989	admin hcolumndescriptor hcolumn descriptor column family column descriptor hbase confusion sense method accurate family usage
+2027	servers hbaseconfiguration hbase configuration hbase configuration weakhashmap weak hash map hbase objects map instances tableservers table servers hconnectionmanager hconnection manager onnection manager leaks table hconnection
+2231	hlog step deals regions region region compaction files case compaction events written
+3497	job conf https issues table util job map hbase inittablereducerjob init table reducer job tablemapreduceutil table map reduce util reduce init reducer broken setconf set conf set conf method tableoutputformat
+3778	bytes key patch region startkey start key stuff boundary string admin hbase hbaseadmin hbase admin ase create doesn apos empty
+3920	flushlogentries options default hbase isn syncing amp config hlog xml regionserver region server flush log entries longer supported
+4055	regions htabledescriptor htable descriptor region descriptor instances apos memory copy table client location caches redundant htable
+4094	code error table region meta region check tool problem improve hbck hbase
+4099	thrift server clients thriftserver thrift server step hbase client login thrift implementation authentication
+4536	version versions parent hcolumndescriptor hcolumn descriptor number compaction memstore stone descriptor guard retain deleted rows
+4627	user regionsplitter region splitter splitter start figure key region region code meta ability custom
+4931	table instructions usage server org server details endtime regionserver starttime copytable copy table copy improved
+5128	regions region meta table consistency integrity regioninfo region files hdfs uber hbck online automated repair int egrity problems
+5834	org code amp book usage java html table mgt copytable copy table copy incorrect
+5876	testimportexport test import export profile export import hadoop test failing oop
+6196	export test cases test testimportexport test import export testimportexport test import export trunk hadoop test import testcases trunk oop
+6330	hbase patches months amp apos export problem profile testimportexport test import export hadoop test import failing oop
+6422	hbase user bulk permissions group directory hadoop switch permission api add loadincrementalhfiles load incremental hfiles load incremental files programatically program atically changing perms output hfiles
+6529	hfile system src bulk load region source store distributedfilesystem distributed file system srcfs src ile server perform extra copy files
+6617	replicationsourcemanager replication source manager manager track replication wal notification source path latestpath latest path log multiple paths
+7581	testaccesscontroller test access controller access controller execution test order depends cce
+7693	dns ptr period tableinputformatbase table input format base job data records format split jobtracker job tracker hostname returned table input base reversedns reverse dns trailing reverse
+8207	replication machine replication user hbase hdfs queue west test loss data hyphen
+8781	param writable bytes ibw code set ibw size immutablebyteswritable immutable bytes writable immutable constructor offset passed
+9033	replication replication tests source unit replicationsource replication source level logging enable tracing add
+9076	indexer hbase log messages cluster regionserver replication replicationsource replication source hbaseindexer hbase indexer hadoop throttle missing peer
+9427	constructor assertion writable immutablebyteswritable immutable bytes writable immutable bytes asserttrue assert true writable bytes assertionfailederror assertion failed error copy offset
+10448	exception zkw keeper catch data createephemeralnodeandwatch create ephemeral node watch node zoo watchandcheckexists watch check exists amp zkutil zku create watch methods don apos set cases
+10913	print copy snapshot exportsnapshot export snapshot directory exception snapshot pre figure users print failed export
+11333	meta migration release metamigrationconvertingtopb meta migration converting deprecated major deleted class converting remove
+11420	server thriftserver thrift server memory crash byte array request thrift jprof bug version oome
+11542	sun test failure jira ibm jdk algorithm algorithmid algorithm keystoretestutil key store test util test unit key store util java compilation
+11612	meta time migration metamigrationconvertingtopb meta migration converting release removed javadoc regions major remove converting
+11625	call block datablock switch hfileblock data block file java hfile reading data throws invalid ile magic hdfs checksum checks
+12491	bootclasspath tablemapreduceutil table map reduce util reduce jar util map findcontainingjar find jar library table classpath find npe
+13617	test timeout replica testreplicawithcluster test replica cluster cluster replication tests test mac table testchangetable test change table hang change
+13646	service exception messages check controller objects service hregion execservice exec service code egion exec build incomplete
+13651	files shutdown filenotfoundexception file exception region machine file amp exception region apos handle storefilescanner store file scanner store scanner
+13668	entry test hbase region test org flusher hadoop testflushregionentry test flush region entry apache flush flaky
+13686	lastts avail time amp canexecute execute amount ratelimiter rate limiter resources limiter fail limit rate rate
+13704	range currentreturncode current return code code code filter multirowrangefilter multi row range filter return filter hint fine hbase throws outoforderscannernextexception order scanner exception order scanner exception multi row range
+13706	hive class coprocessor classes loader jar apache org exempt coprocessorclassloader coprocessor class loader exe mpt
+13707	cells statistic cell counter count option counters drop cellcounter cell counter cellcounters cell counters counters ers
+13722	byte class bytebloomfilter byte bloom filter filter cleanup bloom bloomfilterutil bloom filter util byte method bloom avoid static util
+13733	startup keeper shutdown servers servers factory zoo server exception failed minizookeepercluster mini zoo keeper cluster mini cluster
+13734	cells cell visibility row tracker visibilityscandeletetracker visibility scan delete tracker visibility version deletes delete improper timestamp time stamp checking scan delete
+13779	result table existence family isempty empty result getexists exists getvalue instance qualifier calling exists empty
+13811	hbase wals server itblls handler servershutdownhandler server shutdown handler amp shutdown dataloss splitting wal filtering edits
+13813	procedure hbase procedure precommit pre commit javadoc pre org warning hadoop java warnings
+13834	tuner count heap context tune heapmemorytuner heap memory tuner class memory manager tunercontext tuner context evict properly passed
+13847	count int write return request server function getwriterequestcount write request count hregion hregionserver hregion server egion variable count
+13888	limit limiter avail refillamount refill amount return reviews rate delta hbase bug refill ill
+13897	columns key versions imports keyvaluereducer key reducer values row reducer oom keyvalues key values occur import
+13945	seekbefore seek block key byte getfirstkeyinblock key block copy api buffer util prefix tree work correctly seek
+13958	cluster manager port service void hostname hbaseclustermanager base cluster manager restapi servicetype service type method restapiclustermanager restapi cluster manager resta calls kill suspend resume
+13978	simpletotalorderpartitioner simple total order partitioner total code lastreduces reduces server hbase github getpartition partition order src variable assigned impl partitioner partition simple
+13982	tsv ttls info importtsv import tsv visibility tsv support hbase import cell add labels ttl
+13988	lease thread info threads handler flusher server hadoop regionserver apache add exception
+13995	server server region case aaa cases order servername server robin map fully insensitive ins ensitive
+14012	procedure master regions servers step server ssh scp hbase master double assignment dataloss servercrashprocedure server crash procedure crash runs failover fail
+14042	fshlog level log info roll amp ioexception exceptions warn fatal fatal logging fshl logged
+14076	resultserialization result serialization exception mutation invalid protocol mutationserialization mutation serialization serialization result crunch throw invalidprotocolbufferexception invalid protocol buffer exception buffer serializing serial izing cell larger
+14115	admin command admin hmastercommandline hmaster command connection hmaster leak factory createconnection create connection shutdown resource aster
+14145	region regionserver regions cluster flag canary depth canary server slow erver mode
+14146	replication sleepmultiplier sleep multiplier hbaseinterclusterreplicationendpoint hbase inter cluster replication endpoint cluster error multiplier source reset endpoint inter replication sees slows
+14153	manager proceduremanagerhost procedure manager host proce master procedure typo read conf host proceudre key
+14192	nodes cluster list string addall add port hostname method list colon rest constructor
+14206	key filter amp byte row range row test list apos multirowrangefilter multi row range filter multi returns records rowkeys row allowed ranges
+14228	format buffered close multi multitableoutputformat multi table output format record connection table bufferedmutator buffered mutator mutator output
+14229	size coprocessor memstoresize memstore size internalscanner internal scanner amp internalflushcache internal flush cache scanner null memstore data flushing canceled celed leads mem store set
+14256	force flushing region status task message monitor taskmonitor task monitor region hregion flush task confusing recovered
+14257	hregion region info hbase meta modifiedflushcheckinterval modified flush check interval interval issystemtable system table method meta periodic flusher handles system tables tab les
+14317	roll point log apos wal logs hbase thread time hdfs stuck fshlog fshl bad disk
+14343	region size smallestneighborofsmallestregion smallest neighbor smallest region getsecond avg normalizer log simpleregionnormalizer simple region normalizer neighbor smallestregion smallest region debug message impl small regions simple
+14347	option jars switch side hdfs client class dynamic hbase directory add dynamicclassloader dynamic class loader loader disable
+14362	hbase test testwalprocedurestoreonhdfs test walprocedure store hdfs hadoop org hdfs store procedure walprocedure master apache oop proc edure super duper flaky test
+14367	shell flag side java normalization issues support descriptor htabledescriptor htable descriptor attribute add malization
+14445	export export permissions group roberts chmod honor ian issue snapshot exportsnapshot export snapshot option
+14463	cache bucketcache bucket cache entry performance lock amp block map hbase severe downgrade grade parallel reading single key bucket
+14497	row readpt read seektopreviousrow seek previous row rows error mvcc scanner row overflow reverse scan threw stackoverflow stack overflow stack overflow caused read checking
+14512	groups ugi cache user amp mins life group user apos cache
+14521	retries exception retries region table property check maximum expectedsleep expected sleep number unify semantic hbase client
+14591	region policy upper hfile split region increasingtoupperboundregionsplitpolicy increasing upper bound region split policy assumptions store design reference forced ced increasing bound split
+14592	action batch itbll batch monkey slow deterministic slowdeterministicmonkeyfactory slow deterministic monkey factory factory batchrestartrsaction batch restart action restart restarts rest arts running slowdeterministicmonkey slow deterministic monkey
+14598	region buffer stream jvm max integer server death regionserver region server bytebufferoutputstream byte buffer output stream byte output grows heapbytebuffer heap byte buffer heap limitations limit ations
+14604	cost max cluster movecost move cost moves mult stochastic move load numregions num regions improve movecostfunction move cost function move function stochasticloadbalancer stochastic load balancer balancer
+14654	issue testmultiparallel test multi parallel multi hbase count test testactivethreadscount test active threads count test disabled threads reenable parallel active
+14658	monkeyfactory monkey factory monkey monkey class factory chaos users define loaded loading
+14663	config void service file hbase completion store wait cache hstore tor close honor evictblocksonclose
+14705	key param byte qualifier row family array hconstants constructor keyvalue key javadoc correct
+14711	info meta metatableaccessor meta table accessor table hregion accessor methods getcomparator comparator deprecated hbase remove annotated hregioninfo hregion info egion
+14742	manager heap testheapmemorymanager test heap memory manager test amp cluster memory test delta heavy flakey
+14759	sync math integer min abs runner runners log syncrunnerindex sync runner damaged avoid selecting syncrunner sync runner sync fshlog fshl
+14763	usages hconnection connection programs hbck hbaes load client interfaces incremental remove deprecated onnection
+14770	apos amp range row apache hbase argument jar table rowcounter row counter row counter input parse error
+14771	call server call amp rpcserver rpc server scanner null method getremoteip remote pair rpc getremoteaddress remote address remote address returns
+14782	row amp hbase xbb test apos filter filter issue rows fuzzyrowfilter fuzzy row filter fuzzy row skips valid
+14784	port port randomfreeport random free port loop hbasetestingutility hbase testing utility ports utility hbase conflict src resolved ase testing random free
+14802	recovery failover server crash servers master server crash processing num replaying procedure proc edure fail incorrect handling deadservers dead
+14809	amp grant permission hbase hbase group apos acl grant revoke rev oke namespace admin
+14811	case element sort elements entrylists entry lists endpoint entry array arraylist array list functionality hbaseinterclusterreplicationendpoint hbase inter cluster replication endpoint ase inter cluster replication retry logic broken hbase
+14838	regions region table region normalizer case normalizer hbase size hmaster clarify simpleregionnormalizer simple region normalizer impl merge empty simple
+14843	test load apache walprocedure wal https hadoop test testwalprocedurestore test walprocedure store org testload test load flakey store
+14861	master case znode server process string collocation servername server maxsessiontimeout max session timeout znode hbase file server overwritten written regionserver region
+14867	regions table action simpleregionnormalizer simple region normalizer normalizer data region number amp simple impl heuristics trigger merge operation
+14896	regionmover region mover region warnings org jenkins mover precommit pre commit hbase java link resolve javadoc walkey walk
+14901	encryption selection amp java test reader encryptionutil encryption util utils util unit duplicated code create manage encryption enc ryption
+14905	replication timestamp hbase verifyreplication verify replication column verify cell raw column honour versions option
+14923	content verify replication counter hbase verifyreplication verify replication fail server error comparison replication mask exception result
+14936	period roll combinedblockcache combined block cache cache nperiods metrics block rollmetricsperiod roll metrics period combined void lock overwrite cachestats cache stats stats
+14953	batches warnings execution encounter batch rejectedexecutionexception rejected execution exception replication hbase endpoint scenario hbaseinterclusterreplicationendpoint hbase inter cluster replication endpoint ase inter cluster endpoint retry edits case rejected exception
+14963	stopwatch metatablelocator meta table locator meta table locator guava code issue hbase wasn remove ase client
+15001	replication math size endpoint replicationsinkmanager replication sink manager hbaseinterclusterreplicationendpoint hbase inter cluster replication endpoint thread manager getsinks sinks cluster thread safety issues sink ase inter hbase
+15028	amp apos perf typo lock fault error provider hbase wal minor regiongroupingprovider region grouping provider region grouping
+15034	test failover integrationtestddlmasterfailover integration test ddlmaster failover ddlmaster notice test integration namespaces created clean names paces
+15035	hfiles hbase hfile split hfilecontextbuilder hfile context builder builder hfile context bulk defaults bulkloading tags require splits preserve
+15052	source time setageoflastshippedop set age shipped manager environmentedgemanager environment edge manager age environment apos system edge replicationsource replication source replication
+15070	servers tests master notices region hbase cluster distributedhbasecluster distributed hbase cluster process server distributed base restoreregionservers restore region servers restore starts
+15093	metricssource metrics source queue sizeof log setsizeoflogqueue set sizeof log queue report size replication source operations incorrect queue global multiwal enabled
+15102	memstore size default impact performance situation mark water tuning defaultheapmemorytuner default heap memory tuner heapmemorytuner heap memory tuner heap memory tuner overtune tune suddenly drop blocking zone
+15125	region orphan data apos function bug getsecond fsck orphan template hbasefsck hbase fsck ase adopthdfsorphan adopt hdfs orphan adopt hdfs creates wrong key boundary hbase
+15126	key amp apos storesfirstkey stores key region boundaries currentregionboundariesinformation current region boundaries fsck stores hbase hbasefsck hbase fsck ase checkregionboundaries check region boundaries check function sets incorrect
+15198	codec codec default connection class return classname class configuration default block rpc client cellblock cell block cell lock puts
+15218	cells codec wal decoder crash cell key walcell securewalcellcodec secure walcell codec replay loosing tags
+15231	tablestate table table javadoc links private broken evolving stack
+15247	cmp doesn filter amp reverse respect property operand inclusive scans inclusivestopfilter inclusive filter
+15252	timeout stream method protobuf hdfs size inputstream input stream eofexception ipbe catch data loss replaying wal
+15279	bytes isencodedvalue encoded int orderedbytes ordered bytes types ordered length encoded return result check
+15287	hbase row start row bytes key inputs counter start string mapreduce map reduce rowcounter row counter returns incorrect result binary
+15319	cache fut jmx clearjmxcache clear jmx cache jmxcachebuster jmx cache buster atomicreference atomic reference delay amp clear
+15324	region max size jitter max split filesize desiredmaxfilesize desired max file size file long jitter desired overflow constantsizeregionsplitpolicy constant size region split policy constant region split policy trigger unexpected
+15327	servers master canary number balancer region numberofservers number servers table regions check invoke admin sniffing period writesniffing write sniffing write sniffing enabled
+15360	testsimplerpcscheduler test simple rpc scheduler scheduler test rpc tests flaky simple hbase impl
+15364	hbase html hbase feb characters fsck master ingo link unescaped javadoc
+15378	scanner heartbeat scanner client limit mid message time scanning mark handle
+15433	table quota quota snapshot region snapshot manager namespace amp table snapshotmanager snapshot manager restoresnapshot restore snapshot restore update count correctly encountering exception
+15467	table descriptor amp apos problem incompatibility tabledescriptor table descriptor master htd schema remove ompatibility
+15520	async ipc rpc channel event max connection ioexception testasyncipc test async ipc catch broken test
+15548	table apache sync sourcehashdir source java code src ccf synctable sync table sourcehashdir source hash dir hash dir supposed optional won apos work
+15578	hbase replicationhfilecleaner replication hfile cleaner hfile replicationlogcleaner replication log cleaner cleaner replication handled handle log handle file
+15582	load spam regions debug manifest info snapshotmanifestv snapshot manifest region cleaner snapshot verbose
+15591	server exception procedure meta procedureyieldexception procedure yield exception crash servercrashprocedure server crash procedure yield executor wals yielding
+15593	client amp timeout scanner rpc rsrpc math limit rsrpcservices rsrpc services heartbeat time scanning offered
+15610	task hconnection hbase references deprecated removing remove onnection
+15615	rpcretryingcallerimpl rpc retrying caller impl pause caller region rpc time utils connectionutils connection utils pause retrying wrong sleep regionservercallable region server callable server callable retry
+15617	list regionservers regionserver time region filterregionserverbyname filter region server regionservermonitor region server monitor result server fires canary region server mode enumerate enum erate servers
+15622	user hbase login conf superusers hbase provider keytab hbasefoo manager key tab credentials
+15627	user access closing amp activeuser active user super space check exception apos quote accesscontroller access controller cce controller checksystemorsuperuser check system super user system
+15636	table hbase wait hbase regions tablename table hbasetestingutility hbase testing utility test assignment seconds hard coded code time ase testing utility waituntilallregionsassigned wait regions assigned regions assigned failure
+15645	rpc timeout timeout testhcm test hcm client hcm test operation hbase retries hbase operations htable
+15650	store file hbase range time timerangetracker time range tracker contention threads storefile store file tracker remove point content ion reading
+15668	request hfile archive hfilereplicator hfile replicator directory file hfile replicator return copier ile fails replicate hfiles
+15676	mask rows mask filter hbase byte fuzzy key ispreprocessedmask preprocessed mask table fuzzyrowfilter fuzzy row filter row fails matches consists
+15697	branch hregion testhregion test hregion master test unit hbase search hadoop default excessive running time
+15699	sync syncfuture sync future future fswal asyncfswal async fswal txid append edit async sync appended app ended
+15742	objects metrics region interns cache regions jmx project amp hbase reduce allocation met rics
+15746	region region preclose pre close hbase https apache rsrpcservices rsrpc services hregion regionserver remove extra regioncoprocessor region coprocessor coprocessor pre close rsr services closeregion close region close rsrpc
+15773	job support counter amp counters apos blow cellcounter cell counter areas cell improvements
+15848	rsgroup amp info region regions getmisplacedregions misplaced regions load balancer rsgroupbasedloadbalancer rsgroup based load balancer manager null point dereference rsg roup based misplaced
+15866	timeout rpc timeouts timeout configuration caller hbase rpc rpctimeout rpc timeout side split read write
+15884	kvs hfs readpoint npe storefilescanner store file scanner getrowlength row length store stopskippingkvsifnextrow skipping kvs row file skipkvsnewerthanreadpoint skip kvs newer readpoint scanner skip newer reverse scan
+15957	connection connection close hbase client thread writer mark connstoclose conns close ioexception rpcclientimpl rpc client impl rpc impl ends circumstances
+15976	wrapper blockcache server regionserver amp code region apache cache metrics regionservermetricswrapperrunnable region server metrics wrapper runnable metrics runnable failure disable block
+16017	getrecordwriter record writer issue writer connection mapreduce assumption leak lifecycle record function hbase ase tableoutputformat table output format table output format
+16032	scanner columns store amp scanners store memory scanner reader storescanner store scanner leak
+16058	test size accounting hregion mutate test post hadoop testhregion test hregion fails builds
+16066	rpc desc hmaster test hbase tbldesc tbl desc regions org details resolve repeated conditional findbugs find bugs warnings aster
+16081	replication completionservice completion service condition service executor completion cluster shutdown record hbaseinterclusterreplicationendpoint hbase inter cluster replication endpoint remove peer stuck blocks wal rolling
+16091	region canary info tests thread family pool reading column test takes lot time delete markers table
+16117	format tableoutputformat table output format formats apos leak output table spark fixes connection mapred map red
+16125	issue windows region breaks mover tmp style unix exists regionmover region mover hardcoded folder
+16165	oom queue rpcserver rpc server heap object bytes size response call runner decrease rpc server callqueuesize call queue size writeresponse write response write response
+16207	namespace apos controller snapshot rpc restoresnapshot restore snapshot permission getnamespace namespace amp restore snapshot admin
+16238	zookeeper scope counter sessionexpired case tracescope trace scope keeper retrycounter retry counter recoverable catch apos useless exception retry recoverablezookeeper recoverable zoo keeper zoo
+16294	amp table hbasefsck hbase fsck bca pool hbasefsck load dea hbck reporting hdfs region dir replicas
+16301	dev table compaction client blockingwaittime blocking wait time busy region regiontoobusyexception region busy exception time mail trigger flush waiting comp action disabled
+16309	compact test selection compaction test compaction ratio default condition testcompactionratio test compaction ratio testdefaultcompactselection test default compact selection flaky
+16310	behaviour track row standalone filterlist filter list filter filterrowkey filter row key jira api hbase revisit logic filter key filters
+16345	client exception replicas task executionexception execution exception execution read java exception calls rpcretryingcallerwithreadreplicas rpc retrying caller read replicas rpc retrying caller replicas call catch regionserver region server region server exceptions
+16360	class prefixtreecodec prefix tree codec code tree prefix module prefix table org tree tablemapreduceutil table map reduce util map reduce util addhbasedependencyjars add hbase dependency jars add base dependency jars
+16362	scanner mob cache partitionedmobcompactor partitioned mob compactor storescanner store scanner constructor compaction partitioned compactor default comp action set cacheblocks cache blocks locks false creating store blocks
+16367	server log initialization master log region system split hregionserver hregion server order race lead premature abort
+16375	conf mapreduce jobconf job conf conf address yarn string address hbase resourcemanager mapreduce mini min cluster hbasetestingutility hbase testing utility ase testing utility setting correct resource manager jobhistory job history
+16430	table group map info rsgroupinfo rsgroup info amp table src groupname group regionserver region server region server apos bug moving multiple tables tab les
+16456	rsgroup rsgroup org apache warnings wmi findbugs hbase warnings pre find bugs hbase module
+16460	bucket cache map map cache fileioengine file ioengine allocator allocator file bucket apos rebuild bucketallocator bucket allocator data structures bucketcache bucket cache ioengine
+16471	string master server servername server host context regionserver server hbase region metrics wrong machine hostname word
+16527	issue catalogjanitor catalog janitor code files catalog bit janitor client dfs deeper ioexceptions ioe xceptions delete referenced
+16528	server servercrashprocedure server crash procedure owner crash npe procedure case coprocessor procedure check misses
+16551	services manager splitlogmanager split log manager server masterservices master services split copy master helper method cleanup log catalogjanitor catalog janitor catalog janitor
+16552	mini getserverwith server hbase cluster minihbasecluster mini hbase cluster rss stopped server ignore base
+16572	sync method amp callback operation callback keeper async sync recoverablezookeeper recoverable zoo keeper recoverable zoo failed pass call function
+16578	maxseqid max seq file store compaction scanners seq readers cells scannerorder scanner order compactor mob data loss mob normal
+16612	cache key ordinals type code keyvalye key valye codetotype code type enum keyvalue key valye array types
+16615	testscannerheartbeatmessages test scanner heartbeat messages heartbeat scanner messages test flaky
+16645	map cellflatmap cell flat map return range flat cell desc tail order reasons wrong cells caused tailmap tail map headmap head map head submap map
+16697	tests time limit region medium metrics mediumtests medium tests testregionservermetrics test region server metrics largetests large tests large bump test server arg ests
+16699	rate interval unittest limiter averageintervalratelimiter average interval rate limiter post logic apache cases average overflows apos refill ill getwaitinterval wait interval wait
+16721	roller problem force logs max memstore data apos concurrency issue wal unflushed seqid seq seq tracking
+16723	registry registry connector server jmx startconnectorserver start connector server start server locateregistry locate registry jmxlistener rmi destroyed stopping
+16724	snapshot snapshot descriptor clone override controller ctx owner environment mastercoprocessorenvironment master coprocessor environment apos
+16731	amp load column rsrpc list data rsrpcservices rsrpc services filterlist filter list setloadcolumnfamiliesondemand set load column families demand filter inconsistent scan empty
+16743	test codel rpc codel hbase del mikhail default fyi amp testsimplerpcscheduler test simple rpc scheduler test impl scheduler testcodelscheduling test del scheduling scheduling broke simple
+16752	rpc size hbase amp exception apos client client error replication upgrading lead failures difference rpc limit
+16788	files compactedfiles hstore files file store compactedfiles hfile compacted readlock race compacted comp acted file deletion tor close closeandarchivecompactedfiles close archive compacted files archive
+16853	server hbase server region list master hmaster master servermanager server manager manager regions assigned servers draining hbase ase failover fail
+16855	pool construction ratio npe batch metapool meta pool meta executor pool metrics avoid metricsconnections metrics connections connections
+16870	metrics source source sources replication load replication list sinkmetrics sink metrics add metrics transformed dead replicationload replication load
+16880	position buffer length behaviour apis copy amp buffer code case correct javadoc api bytebufferutils byte buffer utils byte utils
+16889	tables ddl table test map verification tables tests hash failover proc verifytables verify tables verify ables integrationtestddlmasterfailover integration test ddlmaster failover incorrect integration test ddlmaster
+16910	table master status master cluster npe stochasticloadbalancer stochastic load balancer start balancer setclusterstatus set cluster status avoid starting stochastic load
+16931	cell compaction scanner seq cell cells hasmore writer flow scanner setting apos seqid seq seq comp action
+16966	branch apos amp jira testsimplerpcscheduler test simple rpc scheduler del test scheduler hbase test enable impl rpc testcodelscheduling test del scheduling scheduling master simple
+16971	waledit wal edit mutation durability wal amp durability edit effectivedurability effective durability store cell passed append increment isn apos sync
+16992	mutation family map mutation maps record cells wal row usage weird
+17039	amp balance regions balancer load min region servers plan apos simpleloadbalancer simple load balancer impl load schedules large amount invalid moves simple
+17042	observers observer masterobserver master observer keyword interface apos master amp minor public remove key word
+446	rootdir apos hbase file filesystems hadoop cluster amp jim files fully qualified root dir doesn work
+478	irc table problem test regions hql table offline offlining region lining reliably
+502	file work directory system hdfs filesystem file system works fileutil file util file util deleting fullydelete fully delete fully delete delete
+525	svn getrow row map row return work text empty find hbase htable
+527	columns column work values scanner filter row regexp regexprowfilter regexp row filter families multiple
+573	hbase dfs xml hadoop dir user conf hadoop classpath hbase ase read oop configuration moving contrib
+716	row hadoop mapfile map file test file closest logic returns map function testget test test testgetclosestbefore test closest loses fails oop
+742	side server length limit thrift hcolumndescriptor hcolumn descriptor hcolumn revision descriptor client column enforced
+756	process update shell batchupdate batch update timestamp row command batch hbase ase doesn apos time stamp
+791	args code row hbase yair count master output doesn zohar rowcount row count apos work
+810	scanner region data task map custom hbase deadlock operations iteration prevent temporary deadlocks dead locks scan write splits
+830	amp table time apos getmessage message servers hcm reason retry locateregioninmeta locate region meta debugging locate region meta painful
+831	row update npe batch ipc table debugger arg batchupdate batch update update committing commit ting complain
+876	classes public place serialversionuid serial version uid pointer assignment base hbase java access large number warnings ase
+891	length retries hrs donotretryioexception retry ioexception ioexception ioe retry values validatevalueslength validate values length throws validate caught
+912	table tabledescriptor table descriptor table descriptor iteration extanttables extant tables tables check log broken tables tab les exist
+1191	parentznode parent znode user keeper files zoo path calls zookeeper zoo keeper amp parent ensureparentexists ensure parent exists ensure exists fail absolute
+1275	test table table test broken create testcreatetable test create table create testtable test table
+1330	table row closest amp fact trunk getclosestrowbefore closest row null falls logs binary broken
+1332	amp ipc cpu drives apos binarysearch binary search thread cpu meta halt regionserver region server carrying meta starts sucking load infinite inf init loop
+1357	nitay master amp apos sets hbase local regionservers region servers find
+1431	doesn values update batchupdate batch update expectedvalues expected values npe row amp checkandsave check save apos htable check save exist
+1525	table bytes time siteid site column byte format client hbase master htable incrementcolumnvalue increment column increment hangs
+1563	wal scenarios option increments column client failure write increment incrementing incrementcolumnvalue increment column
+1580	row fixes filterrow filter row scan method row attempt patch filter addition store scanner consult scan
+1600	clients zoo hbase cfg clusters servers quorum zookeeperwrapper zoo keeper wrapper keeper multiple ase multiple indpendent jvm allowed
+1703	snapshot key icv timestamp apos keyvalue key amp reuse key memcache icvs flush multiple bad
+1718	key keyvalue key instance meta code inspection replay metarow key reuse log wrong data
+1740	icv timestamp race code memstore production keyvalue memcache snapshot subtle tle condition visible high load
+1804	family colon family test nosuchcolumnfamilyexception column family exception qualifier table column stored testfamily test family puts permitted mitted including appended app ended
+1831	client key filter side filters number filter filterkeyvalue filter key api row scanning reworked fully functional
+1847	bug columns exception qualifier runtimeexception runtime exception column runtime latest null exist delete qualifiers throws
+1919	region exception region exceptions throwable getregioninfo region info hrs ismetaregion meta region lid notservingregionexception serving region exception code delete ignore shouldnt shouldn
+1949	column ttl key family expiration row keyvalues key values table data compaction keyvalue key time live major comp action broken
+2048	row mylittlerow row usage api inconsistency myrow row comments refers small
+2535	tracker hostnames discrepancy split amp locality format input apos host split hostname host consistent tasktracker task
+3007	details blooms storefile store file file bloom apache error store org instrumentation blooms stored undersized
+3307	thrift api updates check checkandput check method roundtrip atomic common tasks add
+3604	region machine regionserver file master cluster hfiles loss hours node servers data
+3636	bloomfilter objects keyvalue key issues jira hbase bug amp function deciding dec iding rowcol
+3726	region rpc callback server call implementation moment hconnection regions invocation coprocessor calls batched level
+4834	source conf initializes job apos cluster frontend key block copytable copy table copy table destination
+5162	client amp situation apos memory exception stack payload wouldn basic pushback push mechanism
+5333	backpressure milliseconds concept time memstore writeload ddf memstore introduce pressure writes
+5498	load user hbase hfiles bulk job privileges directory bulkloadhfiles bulk load hfiles access secure
+6086	table admin tablename table requirepermission require permission void table hbase coprocessor user permission operations authorized orized permissions global
+6260	system balancer jira hbase issues amp issuetabpanels plugin comment stored
+6265	time timestamp timestamp call gettimestamp timestamp time updatelateststamp update latest stamp region server calling preput pre pre flushed
+6749	compaction hbase hfile amp hdfs org isreference reference fhtest compact expired ile time
+7507	dse exception droppedsnapshotexception dropped snapshot exception region regionserver region string system binary dropped memstore flush retry exception
+7770	server framework system test file integration multi createmulti create multi util filesystem file system minor fixes
+7774	amp preput pre timestamp apos return mslab max kvsayingifoundit ifound regionobserver region observer region observer pre rely timestamps times tamps data loss
+8212	hostname host scenario strings data amp apos logs regionserver znodes host introduce separator hyphen renaming recovered queues
+8923	cluster recovery code chaosmonkey chaos monkey exitcodeexception exit code exception chaos test teardown exit race monkey tear fail
+8937	node exception watch createephemeralnodeandwatch create ephemeral node watch node activemastermanager active master manager zkw amp ephemeral comment create don apos set watcher created
+10371	hbase file fce compaction regionserver info store size compaction creates empty hfile selects comp action
+10960	thrift functionalities append interface operations check hbase checkandput check support include enhance ase
+11039	data table tables row test auths visibility source entries itbll visibilitycontroller visibility controller visibility controller integration labeled set mixing filtered excise
+11052	thrift issue server segment memory header candidate requests data protocol sending random crashes service
+13608	java debug wya error error stargate knox spnego pre
+13630	hbase system issuetabpanels prioirty jira code plugin encoder buffered data remove dead buffereddataencoder buffered data encoder
+13662	seq nextcallseq call seq order exception client hbase call request rsh outoforderscannernextexception order scanner exception rsrpcservice rsrpc service rsr service scan throws outoforderscannernext order scanner scanner retriable failure rsrpc
+13693	mob data data hbase key encryption hfile table mob hfiles hbase ase mob files encrypting enc rypting
+13694	response rpc cur client curcall cur call rpcserver rpc server size call callqueuesize call queue size server queue incorrectly decremented dec remented
+13767	acls setup reset zkaclreset zkacl reset option zkacl acls cluster secure zka set clear acl
+13770	configuration jaas test zoo keeper integration option update zookeeper zoo keeper bug programmatic secure zookeeper broken
+13776	versions hcolumndescriptor hcolumn descriptor hcd hconstants descriptor bloom filter hcolumn bloomtype bloom type catalog setting illegal versions olumn throw illegalargumentexception illegal argument exception illegal argument exception
+13783	error scanner storefilescanner store file scanner reader aea file store disk feedback improve message seek issue bad
+13789	client foreignexception foreign exception test proc amp foreign workaround exception catch logs
+13857	server count jamon append servermetricstmpl server metrics tmpl slow count wal metrics tmpl hardcoded
+13923	command shell numberofstores number stores status amp coprocessors class refguide loaded region reported
+13933	tags problem case compression multibyte multibytebuffers multibyte buffers apos pointer branches trunk dbe seekbefore seek corrupts tag offset leading incorrect seek
+13959	splitting threadpool time size storefiles region setup region files number single thread common cases
+13969	mgr manager secret authentication authenticationtokensecretmanager authentication token secret manager start token setsecretmanager set secret manager stopped rpcserver rpcs erver
+14054	ntp timestamp hbase system check version july checkandput check time aggregation acknowledged writes lost regionserver region server clock set war
+14073	table test test code null trunk testdelete test delete remote testremotetable test remote table delete failed latest
+14156	failure testopentableincoprocessor test open table coprocessor table coprocessor hbase test test open
+14196	connection table instances issue thrift objects connectioncache connection cache chore cache cache server idle timeout
+14201	balancer hbck lock balancer default sense errors noswitchbalancer switch balancer disablebalancer disable balancer file fixing
+14209	amp java apos visibility hbase ruby test methods framework jruby testshell test shell test shell visibility tests failing
+14211	region size regions action chaos lot change time ability uniform add rigorous integration tests splits
+14380	tsv bulk importtsv import tsv data tsvimportertextmapper tsv importer text mapper mapper importer skipbadlines skip bad lines import lines correct skipped bad load text
+14624	bucket cache regions cache freeblock free block free bucketcache bucket cache bucket slow block lock expensive
+14761	amp visibility row user column manager row apos cell return deletes expression delete matching mutation
+14815	export test testmobexportsnapshot test mob export snapshot failure apache hbase test testexportfailure test export failure org snapshot mob timeout occasionally
+14818	user acl permission hbase amp namespace admin command permission list permissions missions
+14922	apos time amp queues hour periodicmemstoreflusher periodic memstore flusher flush periodic memstore queue delayed doesn work causing storms
+14942	amp apos boundedbytebufferpool bounded byte buffer pool people pool job buffer reason great byte turning bounded
+15050	count split getfirstkey key api region feature scanner decrement test work block counting cases
+15063	item int byte bytebuffers position itembeginpos item pos pos array byte tobytes bytes bug multibytebuf multi byte buf multi buf bytes
+15100	master dfs wals walprocs proc masterprocwals master proc wals bin hdfs walp rocs clean
+15101	scanners region hbase files number scanners issue references hfiles leaks leaked references storefile store file store file reader
+15120	split hbase branch test amp cluster issue transaction test testsplittransactiononcluster test split transaction cluster backport
+15137	exception server timing queue calltimeoutexception call timeout exception lots trigger call callqueuetoobigexception call queue big exception timeout big pffe
+15162	data ratio meta cache block express metrics cache percent hit add separate
+15214	region region codec action usage cells mutation regionaction region action valid mutate ops fail rpc moves
+15285	result issue respect hbase port bug return isreturnresult return result increment append
+15290	api cells cell code caller java users checkandput check cell save hbase rest checkandapi check api compared compare check
+15323	cells capability column row cell api family checkanddelete check delete version hbase rest checkanddeleteapi check delete api check delete delete
+15325	scanner row result rest client result region region scanner rpc resultscanner result scanner allowing partial moved requests
+15358	scope time timescope time scope sizescope size scope size bug limit enforce time critical canenforcetimelimitfromscope enforce time limit scope
+15425	bulk loadincrementalhfiles load incremental hfiles process wal cluster issue marker load case load failing write event
+15465	permission user namespace type action permissions namespace protos accesscontrolprotos access control protos list userpermission user permission user returned getuserpermission user permission selected set
+15485	batch limit resetfilters reset filters hbase filters batches filters reset discussed result filter called
+15515	server locality generator region localitybasedcandidategenerator locality based candidate generator candidate action function cluster top improve based balancer
+15664	ttl max hconstants family seconds hstore gettimetolive time live milliseconds time live long onstants compactionpolicy compaction policy compaction policy
+15684	len oldfilelen file len writer size log oldpath path accounting path newpath path doreplacewriter replace writer broken file
+15703	return client exception deadline queue apos codel adaptive calldroppedexception call dropped exception calls scheduler info skipped drop
+15707	output version import dimporttsv format hbase minspills tsv importtsv import tsv map importtsv import tsv bulk support tags hfile tsv
+15856	dns exception implementation rpc connection host channel connection resolve connections cached instances wind win addresses add resses resolved
+15889	locale case tolowercase case small apos html language examples amp letter string case conversions sensitive
+15946	security user apos amp file script code builder metrics threats eliminate concerns web store
+16074	test families amp raise test linked big size reports awareness itbll fails lost big tiny
+16076	apos amp test config table split replication encoding column configure split policy hbase ase shell
+16096	sources source replication error memory list code removequeues remove queues peers queues accumulating znodes
+16135	oldlogs directory znode cluster size data peer space problem deletion peerclusterznode peer cluster znode removed peer deleted
+16283	result count return mutation returnresult return result count response responseregionactionresultcount response region action result count exception apos batch append increment fail set returnresults return return false
+16403	version api conflict watch class client guava constructor dependency upgrade lastest
+16624	hfile values sequenceid sequence max memstore sequence tables amp case deserialization mvcc deserialization serialization serialization bug hfilescannerimpl hfile scanner impl ile scanner impl
+16649	amp data table apos region regioninfo master procedure case replay truncate splits preserved loss truncated appeared app eared
+16654	handler channel channelinactive channel inactive method rpc handler pass event netty cleanup handle channel inactive close client
+16676	server hbase priorityrpcserver priority rpc server loader rpc majority rpc change phase environment requests serviced service priority deploys
+16704	table keyvaluecodecwithtags key codec tags apos amp key codec start load scan broken working dbe tags
+16716	meta amp hbase directory randomnumber random number meta recovery repair offlinemetarepair offline meta repair offline leaves empty wals wal remains
+16801	increment point data return append operationcontext operation context context issue operation master future
+16856	currentsequence current sequence sequence print exception sync sync typo message future bug syncrunner sync runner runner current
+16960	server regions times service regionserver region regionserver region server hang applications aborting
+17058	jitter max filesize region verification hbase hbase increase desiredmaxfilesize desired max file size option epsilon jit ter
+12	when hbase regionserver restarts  it says  impossible state for createLease IOException RemoteException createLease invoke DelegatingMethodAccessorImpl GeneratedMethodAccessor11 Leases regionServerStartup RPC Invoker create Lease Method
+251	hbase  Stuck replaying the edits of crashed machine EOFException DataInputStream readFully SequenceFile Reader DataOutputBuffer Buffer HMaster ProcessServerShutdown splitLog write Data
+501	Empty region server address in info server entry and a startcode of    in  META IOException RemoteException clone Object HbaseRPC Server getParameterTypes searchMethods Class Handler HashMap KeySet getMethod0
+507	In master  there are a load of places where no sleep between retries NotServingRegionException HRegionServer getRegion Region HRegion Server
+534	Double assignment at SPLIT time  WAS  Stores retaining references to long deleted mapfiles decodeRemoteException FileNotFoundException IOException RemoteException init HStore StoreFileScanner getScanner Scanner openScanner HRegionServer NativeMethodAccessorImpl HRegion HStoreScanner DelegatingMethodAccessorImpl
+537	We no longer wait on hdfs to exit safe mode SafeModeException RemoteException mkdirs mkdirsInternal FSNamesystem NameNode NativeMethodAccessorImpl DelegatingMethodAccessorImpl Internal invoke Node Impl Method
+550	EOF trying to read reconstruction log stops region deployment EOFException DataInputStream readFully init SequenceFile Reader doReconstructionLog openRegion HStore HRegionServer Input Stream
+575	hbase master dies with stack overflow error if rootdir isn apos t qualified InvocationTargetException NativeConstructorAccessorImpl newInstance DelegatingConstructorAccessorImpl newInstance0 Constructor doMain URI Parser checkChars HMaster Impl
+659	HLog cacheFlushLock not cleared  hangs a region NotServingRegionException park parkAndCheckInterrupt AbstractQueuedSynchronizer ReentrantLock NonfairSync startCacheFlush LockSupport lock acquireQueued Lock internalFlushcache
+681	NPE in Memcache NullPointerException IOException internalGetKeys getKeys Memcache deleteAll DelegatingMethodAccessorImpl HRegion GeneratedMethodAccessor6 HRegionServer deleteMultiple internal invoke
+750	NPE caused by StoreFileScanner updateReaders DroppedSnapshotException NullPointerException internalFlushcache notifyChangedReadersObservers init updateReaders HRegion StoreFileScanner flushRegion internalFlushCache flushcache internal Flusher
+751	dfs exception and regionserver stuck during heavy write load SocketTimeoutException NullPointerException IOException rowAtOrBeforeFromMapFile getClosestRowBefore GeneratedMethodAccessor12 DelegatingMethodAccessorImpl HbaseRPC Server invoke getRowKeyAtOrBefore Method HRegionServer HStore
+758	Throwing IOE read only when should be throwing NSRE IOException batchUpdate HRegionServer DelegatingMethodAccessorImpl GeneratedMethodAccessor5 HbaseRPC Server invoke Method HRegion Handler batch
+790	During import  single region blocks requests for    minutes  thread dumps  throws out pending requests  and continues NotServingRegionException HRegionServer getRegion batchUpdate DelegatingMethodAccessorImpl GeneratedMethodAccessor12 HbaseRPC Server invoke Method Region Handler
+818	Deadlock running  apos flushSomeRegions apos reclaimMemcacheMemory flushSomeRegions GeneratedMethodAccessor3 DelegatingMethodAccessorImpl HbaseRPC Server Flusher invoke batchUpdate flushRegion Method
+833	Doing an insert with an unknown family throws a NPE in HRS NullPointerException IOException validateValuesLength HRegionServer batchUpdate NativeMethodAccessorImpl HbaseRPC Server DelegatingMethodAccessorImpl invoke Method Handler Values
+868	Incrementing binary rows cause strange behavior once table splits WrongRegionException batchUpdate checkRow HRegion obtainRowLock DelegatingMethodAccessorImpl GeneratedMethodAccessor5 HbaseRPC Server invoke HRegionServer Method
+1052	Stopping a HRegionServer with unflushed cache causes data loss from org apache hadoop hbase DroppedSnapshotException DroppedSnapshotException IOException HRegionServer internalFlushcache closeAllRegions run HRegion checkOpen DistributedFileSystem File getFileInfo init getFileStatus
+1087	DFS failures did not shutdown regionserver EOFException IOException ConnectException FileDispatcher write SocketOutputStream Writer SocketIOWithTimeout SocketChannelImpl Socket SocketDispatcher performIO Dispatcher write0
+1169	When a shutdown is requested  stop scanning META regions immediately FileNotFoundException DistributedFileSystem init getFileStatus SequenceFile Reader File FileSystem splitLog ProcessServerShutdown getLength System
+1175	HBA administrative tools do not work when specifying regionName NullPointerException IOException RemoteException invoke openScanner DelegatingMethodAccessorImpl GeneratedMethodAccessor16 HBaseServer Handler HBaseRPC Server HRegionServer Invoker HBaseClient
+1243	oldlogfile dat is screwed  so is it apos s region IOException DFSClient DFSInputStream chooseDataNode DataInputStream init SequenceFile Reader readFully blockSeekTo Data read
+1309	HFile rejects key in Memcache with empty value DroppedSnapshotException IOException internalFlushcache MemcacheFlusher HFile Writer internalFlushCache flushRegion flushCache HRegion checkValue flushcache internal
+1334	META  region running into hfile errors IllegalArgumentException Buffer position HFile Reader Scanner blockSeek block Seek
+1500	KeyValue KeyComparator array overrun ArrayIndexOutOfBoundsException compareTo Bytes compare JobClient submitJob DocumentParser Job runJob submit Client main
+1560	TIF  and other clients  cant seem to find one region  getClosestRowBefore issue RetriesExhaustedException NullPointerException HConnectionManager TableServers TableInputFormatBase TableRecordReader getRegionServerWithRetries MapTask TrackedRecordReader HTable ClientScanner next getScanner
+1569	rare race condition can take down a regionserver StoreFile getReader getStorefilesIndexSize Store HRegionServer Reader File doMetrics run Size Storefiles
+1591	HBASE   broke org apache hadoop hbase io hfile TestLruBlockCache testResizeBlockCache testResizeBlockCache TestLruBlockCache Block Cache test Test Resize Lru
+1686	major compaction can create empty store files  causing AIOOB when trying to read ArrayIndexOutOfBoundsException HFile Reader getFirstKey StoreFileGetScan get Key getStoreFile Store HRegionServer File HRegion
+1777	column length is not checked before saved to memstore DroppedSnapshotException IOException MemStoreFlusher internalFlushcache HFile Writer internalFlushCache checkKey flushRegion flushCache HRegion Store append
+1779	ThriftServer logged error if getVer  result is empty NullPointerException ThriftServer HBaseHandler TThreadPoolServer WorkerProcess getVer Hbase Processor ThreadPoolExecutor Worker run process
+1946	Unhandled exception at regionserver NullPointerException HRegionServer run HRegion Server Thread
+2022	NPE in housekeeping kills RS NullPointerException HRegionServer run housekeeping HRegion Server Thread
+2026	NPE in StoreScanner on compaction NullPointerException notifyChangedReadersObservers updateReaders StoreScanner Readers Store update Scanner Changed Observers notify
+6263	Use default mode for HBase Thrift gateway if not specified ThriftServerRunner ImplType setServerImpl ThriftServer processOptions Server Impl doMain Thrift set Runner
+7122	Proper warning message when opening a log file with no entries  idle cluster EOFException DataInputStream readFully SequenceFileLogReader WALReader init SequenceFile Reader ReplicationSource openReader Sequence File
+7580	TestAccessController fails in trunk RetriesExhaustedException NullPointerException IOException ServerCallable withRetries TestAccessController checkAndDelete Retries Server Callable HTable Delete check Access
+8991	TestMasterFailover testMasterFailoverWithMockedRITOnDeadRS failed again testMasterFailoverWithMockedRITOnDeadRS Assert fail assertTrue TestMasterFailover FrameworkMethod NativeMethodAccessorImpl invoke runReflectiveCall DelegatingMethodAccessorImpl Method
+8992	TestMasterFailover testMasterFailoverWithMockedRITOnDeadRS fails testMasterFailoverWithMockedRITOnDeadRS Assert fail assertTrue TestMasterFailover FrameworkMethod NativeMethodAccessorImpl invoke runReflectiveCall DelegatingMethodAccessorImpl Method
+9913	weblogic deployment project implementation under the mapreduce hbase reported a NullPointerException NullPointerException init TableMapReduceUtil initTableMapperJob addDependencyJars ZipFile findOrCreateJar updateMap File HBaseMapMerge Map Zip
+10831	IntegrationTestIngestWithACL is not setting up LoadTestTool correctly failNotEquals Assert assertEquals IntegrationTestIngest IntegrationTestIngestWithACL setUpCluster initTable fail Equals IntegrationTestBase Integration
+11089	Use proxy user for security integration test where multiple users are needed PriviledgedActionException GSSException SaslException evaluateChallenge GssKrb5Client HBaseSaslRpcClient saslConnect setupSaslConnection RpcClient Connection Challenge evaluate Gss Krb5Client
+12006	JDK    KeyStoreTestUtil generateCertificate fails due to  subject class type invalid NullPointerException CertificateException X509CertInfo setSubject KeyStoreTestUtil set TestSSLHttpServer generateCertificate setupSSLConfig Info X509Cert Subject setup
+12717	Pre split algorithm in HBaseAdmin create  can not find the split point IllegalArgumentException HBaseAdmin createTable JavaTest Admin HBase Table create Java Test main
+13317	Region server reportForDuty stuck looping if there is a master change ServiceException ConnectException RegionServerStatusProtos RegionServerStatusService BlockingStub RpcClient BlockingRpcChannelImplementation callBlockingMethod regionServerStartup HRegionServer reportForDuty run Blocking
+13574	Broken TestHBaseFsck in master with hadoop IOException ExecutionException FutureTask testParallelWithRetriesHbck TestHBaseFsck 2RunHbck HbckTestingUtil report HBaseFsck doFsck Fsck get call
+13607	TestSplitLogManager testGetPreviousRecoveryMode consistently failing Assert fail testGetPreviousRecoveryMode TestSplitLogManager assertTrue test Log Mode Manager Recovery Test
+13623	TestSplitLogManager testGetPreviousRecoveryMode is still flaky Assert fail testGetPreviousRecoveryMode TestSplitLogManager assertTrue test Log Mode Manager Recovery Test
+13625	Use HDFS for HFileOutputFormat  partitioner apos s path IllegalArgumentException DistributedFileSystem FileSystemLinkResolver File SequenceFile RecordCompressWriter init access 000 getPathName doCall System
+13711	Provide an API to set min and max versions in HColumnDescriptor IllegalArgumentException setMaxVersions HColumnDescriptor ChangeVersionsAction Versions Descriptor HColumn set Max Action perform Change
+13732	TestHBaseFsck testParallelWithRetriesHbck fails intermittently IOException ExecutionException FutureTask Sync testParallelWithRetriesHbck TestHBaseFsck 2RunHbck HbckTestingUtil doFsck HBaseFsck Fsck Task innerGet
+13741	Disable TestRegionObserverInterface testRecovery and testLegacyRecovery verifyMethodResult TestRegionObserverInterface testRecovery Assert testLegacyRecovery fail assertTrue test Recovery Method Result
+13802	Procedure V   Master fails to come up due to rollback of create namespace table IOException TimeoutIOException ProcedureSyncWait waitFor getMasterQuotaManager Procedure DeleteTableProcedure CreateTableProcedure deleteTableStates executeRollback StateMachineProcedure ProcedureExecutor rollbackState
+13809	TestRowTooBig should use HDFS directory for its region directory RowTooBigException IllegalArgumentException DistributedFileSystem File FileSystemLinkResolver access 000 System getPathName createRegionOnFileSystem doCall getFileStatus FileSystem
+13820	Zookeeper is failing to start NullPointerException ZKServerTool ZKServer main Tool
+13824	TestGenerateDelegationToken  Master fails to start in Windows environment RuntimeException IllegalArgumentException JVMClusterUtil LocalHBaseCluster startup TestGenerateDelegationToken DistributedFileSystem FileSystemLinkResolver access 000 doCall setUp File
+13825	Use ProtobufUtil mergeFrom and ProtobufUtil mergeDelimitedFrom in place of builder methods of same name InvalidProtocolBufferException IOException wrapException RpcClient BlockingRpcChannelImplementation ClientProtos ClientService BlockingStub callBlockingMethod wrapException RpcRetryingCaller call ProtobufUtil callWithRetries
+13873	LoadTestTool addAuthInfoToConf throws UnsupportedOperationException IOException UnsupportedOperationException addAuthInfoToConf LoadTestTool add AbstractList IntegrationTestIngest Test loadTable internalRunIngestTest AbstractHBaseTool doWork runTestFromCommandLine
+13878	Set hbase fs tmp dir config in HBaseTestingUtility java for Phoenix UT to use IllegalArgumentException init checkPathArg CsvBulkLoadTool TableLoader configureIncrementalLoad HFileOutputFormat2 Path HFileOutputFormat configurePartitioner check Arg
+13892	Scanner with all results filtered out results in NPE NullPointerException NativeException ClientScanner getResultsToAddToCache loadCache Cache Add next Scanner Client load
+13905	TestRecoveredEdits testReplayWorksThoughLotsOfFlushing failing consistently on branch IOException createRegionOnFileSystem testReplayWorksThoughLotsOfFlushing HRegionFileSystem createHRegion TestRecoveredEdits HRegion System File create Region Flushing
+13970	NPE during compaction in trunk NullPointerException PressureAwareCompactionThroughputController ActiveCompaction DefaultStoreEngine DefaultCompactionContext access 700 CompactSplitThread CompactionRunner compact Compaction performCompaction
+13971	Flushes stuck since   hours on a regionserver park parkAndCheckInterrupt AbstractQueuedSynchronizer LockSupport doAcquireSharedInterruptibly acquireSharedInterruptibly internalPrepareFlushCache CountDownLatch Unsafe getSequenceId internalFlushcache
+13974	TestRateLimiter testFixedIntervalResourceAvailability may fail Assert testFixedIntervalResourceAvailability assertFalse fail TestRateLimiter assertTrue Availability test Resource Fixed Interval
+14024	ImportTsv is not loading hbase default xml IllegalArgumentException init checkPathArg HFileOutputFormat2 configureIncrementalLoad Path createSubmittableJob configurePartitioner ImportTsv check Arg ToolRunner
+14050	NPE in org apache hadoop hbase ipc RpcServer Connection readAndProcess NullPointerException readAndProcess RpcServer Connection Listener Reader ThreadPoolExecutor Worker Rpc Server doRead doRunLoop
+14078	improve error message when HMaster can apos t bind to port RuntimeException BindException constructMaster HMasterCommandLine startMaster ToolRunner run HMaster ServerSocketChannelImpl ServerCommandLine doMain Master Command
+14079	improve error message when Master fails to connect to Hadoop auth RuntimeException LoginException constructMaster HMasterCommandLine startMaster Krb5LoginModule ToolRunner run ServerCommandLine HMaster promptForPass attemptAuthentication doMain
+14106	TestProcedureRecovery is flaky IllegalArgumentException checkArgument testRunningProcWithSameNonce ProcedureTestingUtility Preconditions submitAndWait ProcedureExecutor submitProcedure TestProcedureRecovery Argument check Procedure
+14291	NPE On StochasticLoadBalancer Balance Involving RS With No Regions NullPointerException IOException StochasticLoadBalancer LocalityBasedCandidateGenerator getLeastLoadedTopServerForRegion RpcServer run RpcExecutor BaseLoadBalancer Cluster CallRunner consumerLoop Rpc
+14366	NPE in case visibility expression is not present in labels table during importtsv run NullPointerException createVisibilityExpTags DefaultVisibilityExpressionResolver getLabelOrdinal VisibilityUtils TsvImporterMapper getLabelOrdinals Visibility Label Mapper populatePut MapTask
+14370	Use separate thread for calling ZKPermissionWatcher refreshNodes ZKPermissionWatcher refreshAuthManager nodeChildrenChanged refreshNodes ClientCnxn EventThread ZooKeeperWatcher refresh processEvent Watcher Manager
+14384	Trying to run canary locally with  regionserver option causes exception ClassCastException Canary newMonitor run ToolRunner Monitor main Runner Tool
+14525	Append and increment operation throws NullPointerException on non existing column families NullPointerException IOException run RpcServer RpcExecutor ClientProtos ClientService RSRpcServices callBlockingMethod CallRunner consumerLoop Rpc append
+14555	Deadlock in MVCC branch     toString MultiVersionConcurrencyControl waitForRead completeAndWait StringBuilder batchMutate String doMiniBatchMutation toString doNonAtomicRegionMutation RSRpcServices doBatchOp
+14578	URISyntaxException during snapshot restore for table with user defined namespace URISyntaxException IOException ExecutionException IllegalArgumentException ModifyRegionUtils createRegions RestoreSnapshotHelper handleCreateHdfsRegions cloneHdfsRegions restoreHdfsRegions CreateTableHandler Regions CloneSnapshotHandler handleCreateTable ThreadPoolExecutor Worker run EventHandler Hdfs Create Handler Modify Utils Region create runWorker Snapshot Thread handle Table process Executor Pool clone Restore Helper restore Clone Event
+14625	Chaos Monkey should shut down faster PolicyBasedChaosMonkey wait IntegrationTestBase waitForStop cleanUpMonkey Object join AbstractHBaseTool cleanUp Thread doWork
+14653	Balancer is getting NullPointerExceptions NullPointerException IOException StochasticLoadBalancer LocalityBasedCandidateGenerator getLeastLoadedTopServerForRegion RpcServer run BaseLoadBalancer Cluster RpcExecutor Rpc CallRunner consumerLoop
+14660	AssertionError found when using offheap BucketCache with assertion enabled IOException HFileReaderImpl HFileScannerImpl ShareableMemoryOffheapKeyValue RpcServer init run RpcExecutor CallRunner consumerLoop Rpc StoreFileScanner
+14699	Replication crashes regionservers when hbase wal provider is set to multiwal NoNodeException KeeperException KeeperException setData create RecoverableZooKeeper logPositionAndCleanOldLogs setLogPosition ReplicationQueuesZKImpl ZooKeeper Keeper ReplicationSourceManager Exception
+14777	Fix Inter Cluster Replication Future ordering issues IndexOutOfBoundsException ArrayList rangeCheck HBaseInterClusterReplicationEndpoint remove Check range Array List replicate Inter Cluster
+14885	NullPointerException in HMaster normalizeRegions  due to missing TableDescriptor NullPointerException normalizeRegions Executors RunnableAdapter ScheduledThreadPoolExecutor ScheduledFutureTask RegionNormalizerChore run HMaster access 301 ScheduledChore
+14926	Hung ThriftServer  no timeout on read from client  if client crashes  worker thread gets stuck reading SocketInputStream read BufferedInputStream socketRead0 TIOStreamTransport TFramedTransport readAll Input Stream readFrame Read0
+15014	Fix filterCellByStore in WALsplitter is awful for performance KeyValue WALSplitter LogRecoveredEditsOutputSink ArrayList equals filterCellByStore Key batchRemove WriterThread writeBuffer removeAll
+15018	Inconsistent way of handling TimeoutException in the rpc client implementations IOException wrapException CallTimeoutException TimeoutException HBaseInterClusterReplicationEndpoint Replicator AdminProtos AdminService BlockingStub AbstractRpcClient BlockingRpcChannelImplementation RpcClientImpl callBlockingMethod replicateWALEntry wrapException
+15019	Replication stuck when HDFS is restarted IOException DFSOutputStream DataStreamer setupPipelineForAppendOrRecovery processDatanodeError fetchLocatedBlocksAndGetLastBlockLength DFSInputStream readBlockLength openInfo init run Stream
+15030	Deadlock in master TableNamespaceManager while running IntegrationTestDDLMasterFailover TableNamespaceManager releaseExclusiveLock CreateNamespaceProcedure releaseLock execLoop ProcedureExecutor access 400 LockSupport Lock parkNanos
+15064	BufferUnderflowException after last Cell fetched from an HFile Block served from L  offheap cache BufferUnderflowException FastDiffDeltaEncoder BufferedDataBlockEncoder BufferedEncodedSeeker DirectByteBuffer Buffer get MultiByteBuff nextGetIndex StoreFileScanner Direct decodeNext
+15079	TestMultiParallel validateLoadedData AssertionError  null Assert assertTrue fail TestMultiParallel validateLoadedData testFlushCommitsNoAbort doTestFlushCommits Test Commits Flush Data
+15085	IllegalStateException was thrown when scanning on bulkloaded HFiles IllegalStateException IOException HFileReaderV2 EncodedScannerV2 updateCurrentBlock init StoreFileScanner Scanner StoreScanner HRegion RegionScannerImpl seekScanners instantiateRegionScanner
+15109	HM RS failed to start when  fs hdfs impl disable cache  is set to true RuntimeException suppressHdfsShutdownHook ShutdownHook HRegionServer blockAndCheckIfStopped preRegistrationInitialization initializeZooKeeper ZooKeeperNodeTracker run Hook Shutdown blockUntilAvailable
+15152	Automatically include prefix tree module in MR jobs if present ClassNotFoundException URLClassLoader run Loader URLClass
+15216	Canary does not accept config params from command line IOException login SecurityUtil UserProvider launchAuthChore User SecureHadoopUser AuthUtil Util main Security Provider
+15322	Operations using Unsafe path broken for platforms not having sun misc Unsafe RuntimeException constructMaster HMasterCommandLine startMaster ToolRunner run ServerCommandLine HMaster init doMain createByteArray Master
+15379	Fake cells created in read path not implementing SettableSequenceId IOException UnsupportedOperationException setSequenceId CellUtil setCurrentCell init StoreFileScanner requestSeek Scanner seekScanners StoreScanner HRegion RegionScannerImpl
+15430	Failed taking snapshot   Manifest proto message too large rethrowException ForeignException InvalidProtocolBufferException ForeignExceptionDispatcher CodedInputStream InvalidProtocolBufferException rethrowExceptionIfFailed sizeLimitExceeded Exception rethrowException init readRawBytes HBaseProtos RegionInfo
+15621	Suppress Hbase SnapshotHFile cleaner error messages when a snaphot is going on InvalidProtocolBufferException InvalidProtocolBufferException CodedInputStream SnapshotProtos SnapshotRegionManifest StoreFile init truncatedMessage readRawVarint64 parsePartialFrom refillBuffer readUInt64
+15634	TestDateTieredCompactionPolicy negativeForMajor is flaky TestDateTieredCompactionPolicy failNotEquals Assert assertEquals compactEquals Equals fail negativeForMajor compact Policy Compaction
+15741	Provide backward compatibility for HBase coprocessor service names unwrapRemoteException getRemoteException UnknownProtocolException instantiateException RemoteException RemoteWithExtrasException execService ClientProtos ClientService execServiceOnRegion RSRpcServices run callBlockingMethod RpcExecutor RpcServer CallRunner consumerLoop
+15908	Checksum verification is broken due to incorrect passing of ByteBuffers in DataChecksum CorruptHFileException IllegalArgumentException pickReaderVersion createReader init createStoreFileAndReader StoreFile Reader StoreFileInfo access 000 HFile open
+16012	Major compaction can apos t work due to obsolete scanner read point in RegionServer CallerDisconnectedException IOException throwException init Scanner StoreFileScanner getScanner seekScanners internalOpenScanner instantiateRegionScanner StoreScanner HRegion RegionScannerImpl Store
+16103	Procedure v    TestCloneSnapshotProcedure relies on execution order SnapshotTestingUtils waitForTableToBeOnline loadData TestCloneSnapshotProcedure testCloneSnapshotToSameTable Snapshot Table getSnapshot wait Online Clone
+16160	Get the UnsupportedOperationException when using delegation token with encryption UnsupportedOperationException ByteBuffer BufferChain RpcServer Call Buffer array wrapWithSasl getBytes setResponse RpcExecutor Handler
+16244	LocalHBaseCluster start timeout should be configurable RuntimeException JVMClusterUtil LocalHBaseCluster startup HMasterCommandLine ToolRunner startMaster run ServerCommandLine Util JVMCluster doMain
+16281	TestMasterReplication is flaky ServiceException IOException RpcServer RpcExecutor Handler AdminProtos AdminService callBlockingMethod CallRunner replicateWALEntry RSRpcServices run call
+16293	TestSnapshotFromMaster testSnapshotHFileArchiving flakey TestTimedOutException waitForMaximumCurrentTasks waitForAllPreviousOpsAndReset AsyncProcess BufferedMutatorImpl wait backgroundFlushCommits HBaseTestingUtility flushCommits loadTable Object HTable
+16304	HRegion RegionScannerImpl handleFileNotFoundException may lead to deadlock when trying to obtain write lock on updatesLock handleFileNotFoundException wait Object SynchronousQueue TransferStack LockSupport TimerThread parkNanos mainLoop awaitFulfill ThreadPoolExecutor park
+16359	NullPointerException in RSRpcServices openRegion NullPointerException RSRpcServices openRegion AdminProtos AdminService callBlockingMethod RpcServer CallRunner call RSRpc Services Region
+16368	test WhenRegionMove in TestPartialResultsFromClientSide is flaky throwEnrichedException SocketTimeoutException RetriesExhaustedException NotServingRegionException unwrapRemoteException getRemoteException RegionMovedException instantiateException RemoteException startRegionOperation ClientProtos ClientService getScanner HRegion RSRpcServices callBlockingMethod RpcServer CallRunner RpcExecutor Handler
+16429	FSHLog  deadlock if rollWriter called when ring buffer filled with appends parkNanos LockSupport park MultiProducerSequencer doMiniBatchMutation Unsafe RingBuffer batchMutate next RSRpcServices Nanos
+16464	archive folder grows bigger and bigger due to corrupt snapshot under tmp dir FileNotFoundException CorruptedSnapshotException Snapshot SnapshotDescriptionUtils readSnapshotInfo SnapshotFileCache SnapshotHFileCleaner SnapshotReferenceUtil getSnapshotsInProgress filesUnderSnapshot getHFileNames getUnreferencedFiles CleanerChore
+16609	Fake cells EmptyByteBufferedCell created in read path not implementing SettableSequenceId IOException UnsupportedOperationException setSequenceId CellUtil setCurrentCell StoreFileScanner requestSeek KeyValueHeap StoreScanner HRegion RegionScannerImpl seekAsDirection generalizedSeek
+16644	Errors when reading legit HFile Trailer of old  v     format file CorruptHFileException IOException pickReaderVersion createReader init createStoreFileAndReader StoreFile Reader StoreFileInfo access 000 HFile open
+16660	ArrayIndexOutOfBounds during the majorCompactionCheck in DateTieredCompaction ArrayIndexOutOfBoundsException DateTieredCompactionPolicy shouldPerformMajorCompaction HRegionServer CompactionChecker Compaction isMajorCompaction Major HStore Policy Tiered Perform
+16669	fix flaky TestAdmin testmergeRegions testMergeRegions assertEquals failNotEquals Assert TestAdmin1 fail Equals test Merge Regions Test
+16739	Timed out exception message should include encoded region name IOException getRowLockInternal batchMutate doMiniBatchMutation HRegion doNonAtomicRegionMutation RSRpcServices doBatchOp Internal Lock Row Batch
+16810	HBase Balancer throws ArrayIndexOutOfBoundsException when regionservers are in  hbase draining znode and unloaded ArrayIndexOutOfBoundsException StochasticLoadBalancer LocalityCostFunction BaseLoadBalancer Cluster MasterProtos MasterService MasterRpcServices getLocalityOfRegion balance callBlockingMethod RpcServer
+16815	Low scan ratio in RPC queue tuning triggers divide by zero exception RuntimeException ArithmeticException createMasterThread LocalHBaseCluster JVMClusterUtil HMasterCommandLine ToolRunner ServerCommandLine run startMaster Master addMaster startHandlers
+17020	keylen in midkey  dont computed correctly ArrayIndexOutOfBoundsException copyFromBufferToArray HFileBlockIndex CellBasedKeyBlockIndexReader ByteBufferUtils ConstantFamilySizeRegionSplitPolicy getSplitPoint Buffer SingleByteBuff HFileReaderImpl DefaultStoreFileManager midkey
+17113	finding middle key in HFileV  is always wrong and can cause IndexOutOfBoundsException IndexOutOfBoundsException HeapByteBuffer checkIndex Buffer ByteBufferUtils HFileBlockIndex BlockIndexReader HFileReaderV2 getSplitPoint DefaultStoreFileManager midkey StoreFile Reader getFileSplitPoint toBytes get RegionSplitPolicy check File Store Heap Split HFile Utils Point HStore Bytes Block Manager Policy Region
+495	No server address listed in  META NoServerForRegionException HConnectionManager TableServers locateRegionInMeta HTable ClientScanner locateRegion SelectCommand getRegionLocation scanPrint Region nextScanner
+496	impossible state for createLease writes  k lines in about  seconds IOException createLease regionServerStartup Leases GeneratedMethodAccessor5 HbaseRPC Server invoke Lease create Method Handler
+877	HCM is unable to find table with multiple regions which contains binary TableNotFoundException HConnectionManager TableServers locateRegionInMeta locateRegion init locate Region HBaseRef Meta Table Manager
+1876	DroppedSnapshotException when flushing memstore after a datanode dies DroppedSnapshotException NotServingRegionException IOException DFSClient DFSOutputStream DataStreamer createBlockOutputStream MemStoreFlusher nextBlockOutputStream internalFlushcache access 2000 flushRegion Stream
+2018	Updates to  META  blocked under high MemStore load RetriesExhaustedException HConnectionManager TableServers Batch processBatchOfRows flushCommits process Table Manager Servers HConnection Rows
+7385	Do not abort regionserver if StoreFlusher flushCache  fails LeaseExpiredException DroppedSnapshotException IOException RemoteException internalFlushcache HRegion ThreadPoolExecutor Worker CloseRegionHandler run doClose EventHandler close runTask Close
+12716	A bug in RegionSplitter UniformSplit algorithm NullPointerException RegionSplitter UniformSplit split Splitter Region Uniform Split
+12791	HBase does not attempt to clean up an aborted split when the regionserver shutting down InterruptedIOException RpcRetryingCaller callWithRetries call Retries Rpc Caller Retrying
+13601	Connection leak during log splitting IOException ServerSocketChannelImpl SelectChannelConnector SelectorManager SelectSet QueuedThreadPool PoolThread Channel accept doSelect RemoteBlockReader2 AbstractConnector Acceptor run acceptChannel checkSuccess Select Connector accept0 newBlockReader Manager Selector Server Impl Socket Block Queued Pool Thread Success check Set Remote Reader2 Reader
+13635	Regions stuck in transition because master is incorrectly assumed dead SocketTimeoutException FailedServerException RpcClientImpl Connection RegionServerStatusProtos RegionServerStatusService BlockingStub AbstractRpcClient BlockingRpcChannelImplementation setupIOstreams callBlockingMethod reportRegionStateTransition tracedWriteRequest
+13960	HConnection stuck with UnknownHostException UnknownHostException init RpcClient BlockingRpcChannelImplementation Connection callBlockingMethod createConnection Rpc Client getConnection call Blocking
+14155	StackOverflowError in reverse scan PhoenixIOException RuntimeException DoNotRetryIOException throwIOException createIOException ServerUtil BaseScannerRegionObserver createIOException ClientProtos ClientService DelegateRegionScanner nextRaw RSRpcServices callBlockingMethod throwIOException RpcServer
+14178	regionserver blocks because of waiting for offsetLock wait loadDataBlockWithScanInfo Object HFileReaderV2 AbstractScannerV2 StoreFileScanner HFileBlockIndex BlockIndexReader getLockEntry readBlock NonLazyKeyValueScanner
+14545	TestMasterFailover often times out TestTimedOutException sleep waitForActiveAndReadyMaster testMasterFailoverWithMockedRIT Thread MiniHBaseCluster Threads HBaseCluster TestMasterFailover Master Cluster HBase
+14557	MapReduce WALPlayer issue with NoTagsKeyValue IOException MapTask MapOutputBuffer TaskInputOutputContextImpl NewOutputCollector WrappedMapper Context write Task Mapper run WALPlayer WALKeyValueMapper Output Map Child runNewMapper collect map Buffer Collector Input Impl Wrapped WALKey
+15104	Occasional failures due to NotServingRegionException in IT tests SocketTimeoutException RuntimeException RetriesExhaustedException NotServingRegionException DoNotRetryIOException NotServerRegionException ClassNotFoundException ClientProtos ClientService getRegionByEncodedName HRegionServer RSRpcServices RpcServer callBlockingMethod run RpcExecutor CallRunner consumerLoop
+15672	hadoop hbase security visibility TestVisibilityLabelsWithDeletes fails ExecutionException IllegalArgumentException RegionServerFlushTableProcedureManager FlushTableSubprocedurePool FutureTask waitForOutstandingTasks FlushTableSubprocedure flushRegions acquireBarrier ThreadPoolExecutor Worker report run
+16270	Handle duplicate clearing of snapshot in region replicas UnexpectedStateException clearSnapshot HStore StoreFlusherImpl DefaultMemStore doReplayBatchOp replayWALFlushCommitMarker replay AdminProtos AdminService RSRpcServices replayFlushInStores
+16754	Regions failing compaction due to referencing non existent store file FileNotFoundException DistributedFileSystem File getFileStatus doCall FileSystemLinkResolver StoreFileInfo getModificationTimeStamp FilterFileSystem getReferencedFileStatus System getModificationTime

@@ -1,0 +1,3 @@
+Regular expression file name filter implementation
+I've written a RegexFilter for commons-io. I'd like to share it with other's.
+Hope there'll be a JDK 1.4+ branch soon, so this can be applied.

@@ -1,0 +1,18 @@
+Deploying a pure InFlow rar as module drive fail
+Deploying a pure InFlow rar as module drive to this exception:
+13:24:35,436 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-6) MSC000001: Failed to start service jboss.ra.deployment."org.wildfly.mail.ra:main": org.jboss.msc.service.StartException in service jboss.ra.deployment."org.wildfly.mail.ra:main": org.jboss.msc.service.DuplicateServiceException: Service jboss.ra."org.wildfly.mail.ra:main" is already registered
+	at org.jboss.as.connector.services.resourceadapters.deployment.ResourceAdapterXmlDeploymentService.start(ResourceAdapterXmlDeploymentService.java:137)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948) [jboss-msc-1.2.0.CR1.jar:1.2.0.CR1]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881) [jboss-msc-1.2.0.CR1.jar:1.2.0.CR1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_40]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_40]
+	at java.lang.Thread.run(Thread.java:724) [rt.jar:1.7.0_40]
+Caused by: org.jboss.msc.service.DuplicateServiceException: Service jboss.ra."org.wildfly.mail.ra:main" is already registered
+	at org.jboss.msc.service.ServiceRegistrationImpl.setInstance(ServiceRegistrationImpl.java:158) [jboss-msc-1.2.0.CR1.jar:1.2.0.CR1]
+	at org.jboss.msc.service.ServiceControllerImpl.startInstallation(ServiceControllerImpl.java:235) [jboss-msc-1.2.0.CR1.jar:1.2.0.CR1]
+	at org.jboss.msc.service.ServiceContainerImpl.install(ServiceContainerImpl.java:767) [jboss-msc-1.2.0.CR1.jar:1.2.0.CR1]
+	at org.jboss.msc.service.ServiceTargetImpl.install(ServiceTargetImpl.java:223) [jboss-msc-1.2.0.CR1.jar:1.2.0.CR1]
+	at org.jboss.msc.service.ServiceControllerImpl$ChildServiceTarget.install(ServiceControllerImpl.java:2401) [jboss-msc-1.2.0.CR1.jar:1.2.0.CR1]
+	at org.jboss.msc.service.ServiceBuilderImpl.install(ServiceBuilderImpl.java:317) [jboss-msc-1.2.0.CR1.jar:1.2.0.CR1]
+	at org.jboss.as.connector.services.resourceadapters.deployment.ResourceAdapterXmlDeploymentService.start(ResourceAdapterXmlDeploymentService.java:131)
+	... 5 more

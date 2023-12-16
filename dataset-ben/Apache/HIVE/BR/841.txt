@@ -1,0 +1,2 @@
+Context.java Uses Deleted (previously Deprecated) Hadoop Methods
+Building Hive against Trunk/Nightly Hadoop Fails (ql/src/java/org/apache/hadoop/hive/ql/Context.java)

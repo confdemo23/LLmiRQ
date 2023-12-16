@@ -1,0 +1,2 @@
+Refactor SwitchExpressionsFix.createConvertToSwitchExpressionFix to jdt.core.manipulation
+The static method: SwitchExpressionsFix.createConvertToSwitchExpressionFix() method is used by the QuickAssistProcessor.  The jdt.ls team wishes to use this quick assist and has requested this static method be moved to jdt.core.manipulation via the SwitchExpressionsFixCore class.  In addition, the quick assist uses a QuickAssistProcessor utility getIndex() which can be moved to QuickAssistProcessorUtil in jdt.core.manipulation.

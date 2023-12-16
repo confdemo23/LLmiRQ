@@ -1,0 +1,6 @@
+allow loading of Hibernate PersistenceProvider classes that are not listed in META-INF/services/javax.persistence.spi.PersistenceProvider
+Deprecated PersistenceProviders were removed from services - META-INF/services/javax.persistence.spi.PersistenceProvider
+https://hibernate.atlassian.net/browse/HHH-9141
+https://github.com/hibernate/hibernate-orm/commit/6a6a7c322861d230e124d79d746266aee937c1a6
+With respect to backward compatibility we need load deprecated providers too.
+https://github.com/wildfly/wildfly/blob/master/jpa/subsystem/src/main/java/org/jboss/as/jpa/persistenceprovider/PersistenceProviderLoader.java

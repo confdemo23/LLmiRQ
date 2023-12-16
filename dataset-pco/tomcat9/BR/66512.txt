@@ -1,0 +1,15 @@
+Invalid classpath entry not rejected
+I20040609
+
+1. Create 2 Java projects P1 and P2
+2. Edit .classpath file in P2:
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="/P1/src1/src2"/>
+	<classpathentry kind="con" 
+path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
+Observe: Not error are reported in the Problems view
+
+It should report the path "/P1/src1/src2" as an invalid entry.

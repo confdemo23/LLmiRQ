@@ -1,0 +1,7 @@
+Use 5.1.x version to be compatible with SB
+SB works with 5.1.x, and 5.2.x is not backwards compabile. You get a ClassNotFoundException if running on SB.
+
+If you run this example (remove the http client dependencies in pom.xml) to reproduce
+https://github.com/apache/camel-spring-boot-examples/tree/main/kamelet-chucknorris
+
+If we downsgrade to 5.1.x in camel-http then this should work OOTB

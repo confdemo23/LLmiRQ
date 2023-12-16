@@ -1,0 +1,7 @@
+83	 JdkSerializationRedisSerializer, AbstractOperations, RedisTemplate, DefaultSetOperations, RedisProxy, PlayerDAO, PlayerService
+294	 ZSetOperations, TypedTuple, DefaultTypedTuple, Leaderboard
+469	 RedisAtomicLong, RedisAtomicLongNullPointerTest, get
+495	 MappingRedisConverter, BasicPersistentEntity, RedisKeyValueAdapter, KeyValueTemplate, CollectionFactory
+513	 RedisCallback, RedisConnection, JedisDataException, BinaryJedis, JedisConnection, DefaultStringRedisConnection, CloseSuppressingInvocationHandler
+531	 JedisConnection, BinaryJedis, Protocol, Connection
+551	 RedisQueryEngine RedisTemplate findBy

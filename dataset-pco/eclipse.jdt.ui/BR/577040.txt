@@ -1,0 +1,20 @@
+Cursor positioning in lambda completion
+AFAICS the cursor position for the new lambda expression could be improve or tab could be supported to jump to the code block.
+
+Example:
+
+@Test
+void numberFieldsetWrongValueType() {
+	String testString = "testString";
+	assertThrows(IllegalArgumentException.class, CODE_COMPLETION_HERE)
+}
+
+I get:
+
+@Test
+void numberFieldsetWrongValueType() {
+	String testString = "testString";
+	assertThrows(IllegalArgumentException.class, CURSOR_HERE()->);
+}
+
+IMHO it would be better if the cursor could be after the -> or if I could jump to this position with tab.

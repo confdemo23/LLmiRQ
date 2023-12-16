@@ -1,0 +1,7 @@
+Deleting elements from the list of the "configuration" page does not work properly
+I200406072000
+In a runtime-workench launch configuration, go to the configuration page.
+Uncheck select "Use the default list", "add..." a plugin into the list (for
+example core.expressions) and say "OK" (don't add a startlevel). 
+Then select configurator and click remove. You will see that core.expression is
+actually being removed.

@@ -1,0 +1,13 @@
+HTable.getStartKeys() ignores table names when matching columns
+Dru Jensen wrote on hbase-user@
+&gt; I found what is causing the same rows being sent to multiple map tasks.
+&gt; If you have the same column family name in other tables, the Test will
+&gt; send the same rows to multiple map reducers.
+Stack wrote in response:
+&gt; Indeed, a bug in getStartKeys will make us process all tables that have
+&gt; a column family name in common.
+[...]
+&gt; The above Visitor is visiting the meta table.  Its checking column
+&gt; family name.  Any region that is not offlined or split gets added to the
+&gt; list of regions.  Its not checking that the region belongs to the wanted
+&gt; table.

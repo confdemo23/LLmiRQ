@@ -1,0 +1,13 @@
+222	user session time sync connection sign provider sign connection dates providersignincontroller provider sign controller controller automatically refresh access token
+224	settings caching controller controler headers cache caches connectcontroller connect controller prevent connect displayed
+258	path controller servlet dispatcherservlet dispatcher servlet redirect change application status connectionstatusredirect connection status redirect connection connectcontroller connect controller connect servlet performing redirect
+282	url profile values class api return springframework abstract abstractconnection abstract connection support requested times login
+283	users provider providerusers provider users npe connection isempty empty exception access argument illegal jdbcconnectionrepository jdbc connection repository jdbc repository findconnectiontousers find connection users find sers potential
+318	connection jdbc sql jdbcusersconnectionrepository jdbc users connection repository users user version javadoc multi snapshot find jdbcmultiuserconnectionrepository jdbc multi user connection repository repository mentioned sers
+356	time expiresin expires accesstoken access token grant token accessgrant access grant string expiretime expire time org oauth class springframework social cce generate wrong expire access
+426	exception api provider providerid provider string message uncategorized constructor set uncategorizedapiexception uncategorized api exception apiexception apie xception alternate
+432	url applicationurl application url support connectsupport connect support websupport web support sign setting support connectsupport connect support connection pointer exception set application providersignincontroller provider sign controller provider controller
+273	string method signin sign request web html documentation connection springsource wrong definition
+409	filter stackoverflow url case stack expiredauthorizationexception reconnect overflow facebook change reconnectfilter reconnect filter redirect correct
+427	providerid provider getprovideridfromrequest provider request experiences loops request authentication amp google redirectloops stead provider leads redirect
+430	OAuth Template createRestTemplate  throws NPE when useParametersForClientAuthentication is false NullPointerException postForAccessGrant OAuth2Template createRestTemplate exchangeCredentialsForAccess AsyncTask SerialExecutor ApplicationController getRestTemplate doInBackground Template ThreadPoolExecutor

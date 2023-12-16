@@ -1,0 +1,2 @@
+Separate slowlog thresholds for scans vs other requests
+Scans by their nature are able to more efficiently pull back larger response sizes than gets. They also may take longer to execute than other request types. We should make it possible to configure a separate threshold for response time and response time for scans. This will allow us to tune down the thresholds for others without adding unnecessary noise for requests which are known to be slower/bigger.

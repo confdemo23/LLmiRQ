@@ -1,0 +1,1 @@
+JASPIC verifyResponse is not called if proactive authentication is not in use

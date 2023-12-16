@@ -1,0 +1,34 @@
+65736	 org.apache.naming.factory.BeanFactory, javax.el.ELProcessor
+65757	 WriteListener, onWritePossible
+65776	 DuplicateAcceptDetectedTests
+65785	 Tomcat, HTTP/2.0, HPACK, org.apache.coyote.http2.Http2Protocol
+65806	 SessionIdGeneratorBase, SecureRandom, SHA1PRNG
+65853	 CsrfPreventionFilter, doFilter(), getSkipNonceCheck(), getRequestedPath()
+65959	 FunctionMapperImpl, write
+66009	 AuthenticatorBase.invoke, RealmBase.findSecurityConstraints, RealmBase.hasUserDataPermission, CombinedRealm.authenticate, RealmBase.authenticate, RealmBase.getPrincipal, AuthenticatorBase.register, RealmBase.hasResourcePermission, RealmBase.hasRole
+66023	 POST, h2c-upgrade, requestbody, inputstream, NullPointerException
+66068	 RemoteIpValve, request.getRemoteAddr(), request.startAsync()
+66084	 OutputBuffer, writeBytes()
+66120	 FormAuthenticator, j_security_check
+66194	 Http2UpgradeHandler, hpackDecoder.isHeaderSizeExceeded, hpackDecoder.getHeaderEmitter().setHeaderException
+66195	 jdk.util.jar.enableMultiRelease, Tomcat, JAR API
+66209	 UseBloomFilterForArchives, AbstractArchiveResourceSet.gc()
+66235	 MyBean, getText, JasperELResolver, GraalBeanELResolver, beanClass.getMethods(), PropertyDescriptor.getReadMethod, setValue, getValue, ELInterpreterFactory.EL_INTERPRETER_CLASS_NAME, JspUtil.interpreterCall
+66294	 Util.getContextClassLoader(), AccessController.doPrivileged, PrivilegedGetTccl.run(), Thread.currentThread().getContextClassLoader()
+66338	 ErrorReportValve, ErrorReportValve.report, ErrorReportValve.invoke, JsonErrorReportValve
+66359	 RemoteIpValve, RemoteIpFilter, setProtocolHeader
+66419	 AstFunction.getValue, testVarargMethod, ExpressionFactory.newInstance, ELContext, StandardELContext, FunctionMapper.mapFunction, createValueExpression, getValue, assertEquals
+66442	 DefaultHttp2Headers, Reactor Netty, Tomcat
+66471	 RemoteIpFilter, getSession(), getSession(Boolean), doGetSession, createSessionCookie, RemoteIpValve, ApplicationSessionCookieConfig
+66513	 PersistentManager, PersistentValve, org.apache.catalina.valves.PersistentValve, org.apache.catalina.session.DataSourceStore
+66524	 Cache.java, evicts
+66535	 FarmWarDeployer, FileMessageFactory, maxValidTime
+66536	 tomcat/jasper, umlaut.jsp, umlaut_tag.java
+66548	 Sec-WebSocket-Key, Tomcat
+66591	 HttpResponse, AJP messages
+66602	 Http2UpgradeHandler, endRequestBodyFrame, AbstractNonZeroStream, Stream, getInputBuffer, onDataAvailable, onSwallowedDataFramePayload
+66627	 MessageBytes, MessageBytes.toString(), MessageBytes.getType(), CoyoteAdapter.postParseRequest()
+66665	 Context.findRoleMapping, PropertiesRoleMappingListener
+66686	 Connector, maxParameterCount
+66841	 Http2UpgradeHandler, doStreamCancel, AbstractProcessor, asyncStateMachine.asyncError(), processSocketEvent, AbstractProtocol's timeoutFuture, timeoutAsync method.
+66842	 Http2AsyncUpgradeHandler, Http11Nio2Protocol, Http2Protocol, WINDOW_UPDATE

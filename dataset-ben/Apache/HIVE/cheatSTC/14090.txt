@@ -1,0 +1,5 @@
+JDOExceptions thrown by the Metastore have their full stack trace returned to clients
+When user try to create any database or table with a name longer than 128 characters:create database 
+
+It dumps the full exception stack-trace in a non-user-friendly message. The lends to relatively negative user-experience for Beeline users who hit this exception, they are generally not interested in the full stack-trace.
+The formatted stack-trace is below:Error while processing statement: FAILED: Execution Error, 

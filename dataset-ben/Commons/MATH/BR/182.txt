@@ -1,0 +1,3 @@
+converting some double numbers to Fraction can lead to integer overflows
+converting 0.75000000001455192 leads to an overflow at the third iteration
+ converting 1.0e10 leads to an overflow before the loop (while computiong a0)

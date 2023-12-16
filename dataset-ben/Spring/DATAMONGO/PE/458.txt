@@ -1,0 +1,4 @@
+When reading back empty collections unmodifiable instances of Collections.emptyList/Set is returned.
+When reading back a document stored with an empty collection, e.g:
+  private Set&lt;ClusterId&gt; clusters = new HashSet&lt;ClusterId&gt;();
+The driver deserializes this into a instance of Collections.emptySet, thus causing UnsupportedOperation exception when modifying.

@@ -1,0 +1,24 @@
+CompilationUnitResolver.getProjectPath(IJavaProject) is not correct
+The method will return the correct path only if the project is in the workspace.
+
+A related issue - https://github.com/eclipse/eclipse.jdt.ls/pull/2028#issuecomment-1075729400
+
+A potential patch:
+
+diff --git a/org.eclipse.jdt.core/dom/org/eclipse/jdt/core/dom/CompilationUnitResolver.java b/org.eclipse.jdt.core/dom/org/eclipse/jdt/core/dom/CompilationUnitResolver.java
+index 3efa1586ae..a72d0a0d7f 100644
+--- a/org.eclipse.jdt.core/dom/org/eclipse/jdt/core/dom/CompilationUnitResolver.java
++++ b/org.eclipse.jdt.core/dom/org/eclipse/jdt/core/dom/CompilationUnitResolver.java
+@@ -352,10 +352,8 @@ class CompilationUnitResolver extends Compiler {
+ 	}
+ 	private static String getProjectPath(IJavaProject project) {
+ 		String pPath = null;
+-		if (project != null && project.getProject() != null
+-				&& project.getProject().getWorkspace() != null) {
+-			pPath = project.getProject().getWorkspace().getRoot().getLocation().toString()
+-					+ project.getPath().toString();
++		if (project != null && project.getProject() != null) {
++			pPath = project.getProject().getLocation().toString();
+ 		}
+ 		return pPath;
+ 	}

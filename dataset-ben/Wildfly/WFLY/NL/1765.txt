@@ -1,0 +1,2 @@
+JDBC object store does not change LOG_STORE_TYPE attribute
+The transaction subsystem when set up to JDBC object store should keep a note about it in log-store-type attribute as HornetQ object store does. It seems not to be consistent when one object store does this, but others do not.

@@ -1,0 +1,6 @@
+Add support for hyperledger-aries
+With Nessus Aries we explore aspects of digital identy and verifiable credentials based on Hyperledger Aries.
+
+Who is going to control our digitial identity? Digital forms of our birth certificate, passport, drivers license, medical records, vaccination certificates, univeristy degrees, property certificates, etc. Is it the state, a corporation or should we be in control ourselves?
+
+https://github.com/tdiesler/nessus-aries

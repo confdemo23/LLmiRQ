@@ -1,0 +1,4 @@
+EnableGlobalMethodSecurity mode=ASPECTJ creates proxies if InfrastructureAdvisorAutoProxyCreator is Added
+If InfrastructureAdvisorAutoProxyCreator exists, then Spring Security will create proxies for security related classes when @EnableGlobalMethodSecurity(mode=ASPECTJ, ....
+This is due to the fact that GlobalMethodSecurityConfiguration creates a MethodSecurityMetadataSourceAdvisor.
+Instead we should conditionally create MethodSecurityMetadataSourceAdvisor in an ImportBeanDefintionRegistrar only when using proxies for Spring Security.

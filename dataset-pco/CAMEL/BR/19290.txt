@@ -1,0 +1,2 @@
+camel-solr - Remove component as its not maintainable
+We should deprecate it in v3 and remove it in v4

@@ -1,0 +1,2 @@
+StaxEventItemWriter test failures
+cca one half of the StaxItemWriterTests keep failing (reproduced on two machines, Windows &amp; Linux).

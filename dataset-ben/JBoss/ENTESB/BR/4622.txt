@@ -1,0 +1,2 @@
+Please update file name from jboss-fuse-full to jboss-fuse-karaf
+This was meant to be done for 6.2.1 but did not happen. Please correct for 6.3

@@ -1,0 +1,2 @@
+Port FileWatcher from ZK to autodetect keystore/truststore changes in TLS connections
+As a follow-up feature I'd like to port the file watcher functionality from ZooKeeper in order to avoid restarts when keystore/truststore is updated on a running cluster.

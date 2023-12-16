@@ -1,0 +1,2 @@
+Authentication LoggerListener JavaDocs incorrect
+The LoggerListener JavaDocs incorrect advise different logging levels are used for different ApplicationEvents. It should specify that all events are logged with warning severity.

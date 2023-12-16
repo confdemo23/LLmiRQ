@@ -1,0 +1,12 @@
+[PATCH] Add AccessCheckerTag based on URL resource access permissions.
+I have developed a tag (AccessCheckerTag) based on URL and not in roles, which reuse objectDefinitionSource (urls + roles) and accessDecisionManager (voters) of the filterInvocationInterceptor bean, inspired in AuthorizeTag and AccessControlListTag.
+jsp looks like this:
+&lt;authz:accesschecker url="/deletePerson.do"&gt;
+    &lt;A HREF="&lt;c:out value="$
+{request.contextPath}
+" /&gt;/deletePerson.do?id=&lt;c:out value="$
+{person.id}
+" /&gt;"&gt;Del&lt;/A&gt;
+&lt;/authz:accesschecker&gt;
+I consider that this tag can be useful for some cases in which before printing the html link or button it is necessary to verify if required access is had to url resource.
+see: http://forum.springframework.org/showthread.php?t=42550

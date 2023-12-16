@@ -1,0 +1,3 @@
+camel-netty4-http - Using no port number issue
+See nabble
+http://camel.465427.n5.nabble.com/netty4-http-IllegalArgumentException-port-out-of-range-1-tp5779995.html

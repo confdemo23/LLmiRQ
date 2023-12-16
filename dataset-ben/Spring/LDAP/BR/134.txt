@@ -1,0 +1,2 @@
+NameNotFound is silently ignored in search
+If a search results in a NameNotFoundException, it is silently ignored. This makes it really hard to detect that a search is being performed using an invalid search base.

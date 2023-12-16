@@ -1,0 +1,1 @@
+Resteasy+Spring integration can result in double VFS mount

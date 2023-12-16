@@ -1,0 +1,6 @@
+Default StoreHotnessProtector to off, with logs to guide when to turn it on
+As discussed in HBASE-26522 and somewhat in HBASE-26575, StoreHotnessProtector is too conservative. One can easily trigger RegionTooBusyException on an otherwise idle regionserver with relatively small amount of traffic. The idea behind this protection is good, but it needs to take into account current load in order to warrant being enabled by default.
+
+Until it's improved as such, we should change it to default off. One thing we can do to help drive usage would be to add warning logs when it would have triggered. Operators who are diagnosing performance issues will naturally look at the logs and see indication of a potential tool for mitigation.
+
+cc [~andrew.purtell@gmail.com] 

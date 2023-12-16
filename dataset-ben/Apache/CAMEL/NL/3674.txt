@@ -1,0 +1,5 @@
+Camel properties component - to leverage Blueprint properties
+The Camel properties component, should be able to ref to blueprint properties "stuff".
+We can add a new scheme blueprint you can specify in the location url, or re-use the ref which would refer to the blueprint "stuff".
+We may need some logic from camel-blueprint or whatever to type converter or help lookup and bridge the two of them.
+Just creating this ticket so we will look into this, sometime.

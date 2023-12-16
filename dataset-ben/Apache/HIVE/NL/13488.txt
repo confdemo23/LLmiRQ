@@ -1,0 +1,3 @@
+Restore dag summary when tez exec print summary enabled and in-place updates disabled
+Restore the old way of printing methods summary when file redirection is enabled. This may be used by some tools which will break because of the change introduced by HIVE-13226
+NO PRECOMMIT TESTS

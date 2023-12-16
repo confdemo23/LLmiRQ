@@ -1,0 +1,6 @@
+Netty consumer should return error on invalid request
+f you send the corrupted request to the Netty consumer...
+&gt; header1: value1
+&gt; GET /some/resource HTTP/1.1
+&gt; header2: value2
+...Netty will hang on the open connection, instead of returning error immediately.

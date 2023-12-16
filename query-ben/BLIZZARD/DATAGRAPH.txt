@@ -1,0 +1,2 @@
+896	auto component factory jrepositoryfactorybean repository factory bean tests mappingcontext mapping context data rest restriction context neo repository bean declare mapping wired
+920	work spring data projects sdn mapping regression mappingcontext mapping context time issues

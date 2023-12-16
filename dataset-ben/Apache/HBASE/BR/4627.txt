@@ -1,0 +1,2 @@
+Ability to specify a custom start/end to RegionSplitter
+HBASE-4489 changed the default endKey on HexStringSplit from 7FFF... to FFFF...  While this is correct, existing users of 0.90 RegionSplitter have 7FFF as the end key in their schema and the last region will not split properly under this new code.  We need to let the user specify a custom start/end key range for when situations like this arise.  Optimally, we should also write the start/end key in META so we could figure this out implicitly instead of requiring the user to explicitly specify it.

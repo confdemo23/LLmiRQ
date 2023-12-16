@@ -1,0 +1,2 @@
+Validate URL used by SSO workflow for JDBC connection
+Add a validation to ensure the URL used during SSO workflow is proper (http/https).

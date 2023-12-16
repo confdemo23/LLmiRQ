@@ -1,0 +1,3 @@
+Potential NPE in rabbitmq producer if header has null value and DEBUG logging enabled
+See nabble
+http://camel.465427.n5.nabble.com/Bug-in-RabbitMQProducer-tp5753248.html

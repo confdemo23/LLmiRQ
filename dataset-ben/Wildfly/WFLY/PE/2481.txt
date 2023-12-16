@@ -1,0 +1,2 @@
+CDI.current().getBeanManager() returns a beanmanager from a different deployment
+CDI.current().getBeanManager() uses the classname of the calling class to cache BeanManagers returned. This fails if multiple deployments contain classes with the same name. For example, wicket-cdi-1.1 looks up the BeanManager from org.apache.wicket.cdi.CdiConfiguration. If multiple Wicket-CDI applications are deployed in the same container, every BeanManager lookup will return the instance cached on the first call.

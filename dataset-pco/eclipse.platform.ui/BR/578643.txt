@@ -1,0 +1,5 @@
+Stable Sort Order in Progress View
+If there are frequently Jobs appearing in the Progress View they might get inserted/removed above a long runnning Job that i want to cancel. That makes it sometimes impossible to hit the right Job. 
+Happens especially if i have enabled to show sleeping/system Jobs which frequently pop up.
+
+I suggest to have a visual stable Sort order, i.e. Jobs that are once shown keep shown at the same place or above but are never moved down. i.e. new Jobs should never be visually added above an already shown job. "visually" because they might only have been filtered away.

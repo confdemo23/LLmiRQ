@@ -1,0 +1,2 @@
+FIx PartitionPruner not to fetch all partitions at once
+All partitions are fetched at once causing metastore to go OutOfMemory. 

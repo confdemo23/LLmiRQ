@@ -1,0 +1,16 @@
+Record specific error needs to be thrown when a Class tries to extend a Record
+In the Code below
+
+public record A() {
+
+}
+
+class B extends A{
+	
+}
+
+An error is thrown at 'extends A'. The error says that "The type B cannot subclass the final class A".
+
+as a result a quick fix is suggested to remove the final modifier from Class A.
+
+The error should be more specific to say that  "The type B cannot subclass record A".

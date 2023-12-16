@@ -1,0 +1,2 @@
+OrcRecordUpdater floods logs trying to create _orc_acid_version file   
+also move "strm.close()" to finally block

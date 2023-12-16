@@ -1,0 +1,2 @@
+<step/> with "ref=" silently ignores other attributes
+If the InlineStepParser finds a "ref=" attribute on the &lt;step/&gt;, it will ignore all other attributes.  Instead, it should be throwing errors if any other attributes are defined.

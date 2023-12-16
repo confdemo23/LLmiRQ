@@ -1,0 +1,2 @@
+Expose the file system space availability
+Implements a service to expose the file system space availability, run-time metric for known server locations(data, tmp, logs).

@@ -1,0 +1,34 @@
+[formatter] Wrong indentation for method invocation on multi-line expression
+Hi. I've tried to modify every possible indent and line wrap setting in the Eclipse Java formatter settings and I think this is a bug.
+
+I have this source test:
+```
+        when(identityService.getByValueFromReader(transactionBeneficiary.getIdentity().getType(), transactionBeneficiary.getIdentity().getValue(), organization.getCompanyId(), organization.getOrganizationId()))
+        .thenReturn(identity);
+```
+
+That I expect to format as:
+```
+        when(
+            identityService.getByValueFromReader(
+                transactionBeneficiary.getIdentity().getType(),
+                transactionBeneficiary.getIdentity().getValue(),
+                organization.getCompanyId(),
+                organization.getOrganizationId()))
+            .thenReturn(identity);
+```
+
+But it ends up indenting the last line too far:
+```
+        when(
+            identityService.getByValueFromReader(
+                transactionBeneficiary.getIdentity().getType(),
+                transactionBeneficiary.getIdentity().getValue(),
+                organization.getCompanyId(),
+                organization.getOrganizationId()))
+                    .thenReturn(identity);
+```
+
+Not that it should matter, this works correctly in IntelliJ.
+
+Thanks.

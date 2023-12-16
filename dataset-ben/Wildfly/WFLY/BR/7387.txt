@@ -1,0 +1,1 @@
+Infinispan cache containers should only use JMX if the associated capability is available.

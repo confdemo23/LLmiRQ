@@ -1,0 +1,6 @@
+122	 HibernateTransactionManager, AbstractPlatformTransactionManager, ContextSourceTransactionManager, TransactionSynchronizationManager
+123	 ContextSourceAndDataSourceTransactionManager, DataSourceTransactionManager, AbstractPlatformTransactionManager, PlatformTransactionManager, TransactionStatus, DefaultTransactionDefinition
+240	 SchemaReader SchemaToJava
+295	 DefaultObjectDirectoryMapper SpringVersion
+304	 DirContextAdapter, LDAPRepository, NameAwareAttribute
+321	 RoleRepoImplTest, TransactionalTestExecutionListener, ContextSourceTransactionManager, TransactionSynchronizationManager

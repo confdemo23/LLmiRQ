@@ -1,0 +1,8 @@
+Log a warning if multiple Compaction Worker versions are running compactions
+Log a warning if multiple versions of a Compaction Workers are running compactions.
+
+The start time of the individual HMS services are not stored at the moment, however this information could proved a good baseline of detecting multiple Worker versions. 
+Due to the lack of this information we can check periodically in the past N hours to detect the versions.
+The N hours can be configured by {{metastore.compactor.worker.detect_multiple_versions.threshold}} property.
+
+This periodical check only make sense if the Compaction are enabled.

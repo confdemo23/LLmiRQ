@@ -1,0 +1,4 @@
+ RemoteFailoverTestCase still fails intermittently
+Fail rate is at 1.5% atm.
+http://brontes.lab.eng.brq.redhat.com/project.html?projectId=WF&amp;testNameId=3213279503671281753&amp;tab=testDetails
+(making affected version alpha, but indeed its master)

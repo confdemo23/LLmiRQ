@@ -1,0 +1,2 @@
+JOIN should not output rows for NULL values
+We should filter out rows with NULL keys from the result of this querySELECT * FROM a JOIN b on a.key = b.key

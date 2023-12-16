@@ -1,0 +1,64 @@
+NullPointerException error message when server is going to be shutdown
+I'm hitting the very similar exception as described at WFLY-4548. It's
+ERROR [stderr] (Thread-182) Exception in thread "Thread-182" java.lang.NullPointerException
+ERROR [stderr] (Thread-182) 	at com.sun.corba.se.impl.oa.poa.POAImpl$DestroyThread.run(POAImpl.java:566)
+this happens when I'm stopping server which does have defined connection to another server (or at least I'm able to reproduce it with usual periodicity). The full server log is
+INFO  [org.jboss.as] (MSC service thread 1-6) WFLYSRV0049: EAP 7.0.0.Alpha1 (WildFly Core 2.0.0.CR5) starting
+DEBUG [org.jboss.as.config] (MSC service thread 1-6) Configured system properties:
+[Standalone] = 
+awt.toolkit = sun.awt.X11.XToolkit
+current.module.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbossts
+file.encoding = UTF-8java.awt.printerjob = sun.print.PSPrinterJob
+java.class.path = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/jboss-modules.jar:/tmp/btm/byteman.jar
+java.class.version = 52.0
+java.endorsed.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.60-14.b27.fc22.x86_64/jre/lib/endorsed
+java.ext.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.60-14.b27.fc22.x86_64/jre/lib/ext:/usr/java/packages/lib/ext
+java.home = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.60-14.b27.fc22.x86_64/jre
+java.io.tmpdir = /tmp
+java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+java.naming.factory.url.pkgs = org.jboss.as.naming.interfaces:org.jboss.ejb.client.naming
+java.net.preferIPv4Stack = true
+java.net.preferIPv6Addresses = false
+java.runtime.name = OpenJDK Runtime Environment
+java.runtime.version = 1.8.0_60-b27
+java.specification.name = Java Platform API Specification
+java.specification.vendor = Oracle Corporation
+java.specification.version = 1.8
+java.util.logging.manager = org.jboss.logmanager.LogManager
+java.vendor = Oracle Corporation
+java.vendor.url = http://java.oracle.com/
+java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+java.version = 1.8.0_60
+java.vm.info = mixed mode
+java.vm.name = OpenJDK 64-Bit Server VM
+java.vm.specification.name = Java Virtual Machine Specification
+java.vm.specification.vendor = Oracle Corporation
+java.vm.specification.version = 1.8
+java.vm.vendor = Oracle Corporation
+java.vm.version = 25.60-b23
+javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+jboss.home.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts
+jboss.host.name = ochaloup
+jboss.modules.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/modules
+jboss.modules.system.pkgs = org.jboss.byteman,org.jboss.qa.byteman,org.jboss.logmanager,org.jboss.as.cli
+jboss.node.name = jbossts
+jboss.qualified.host.name = ochaloup
+jboss.server.base.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone
+jboss.server.config.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/configuration
+jboss.server.data.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/data
+jboss.server.deploy.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/data/content
+jboss.server.log.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/log
+jboss.server.name = ochaloup
+jboss.server.persist.config = true
+jboss.server.temp.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/tmp
+jbossts.dist = /home/ochaloup/jboss/jboss-eap-7.0.0.DR11
+jbossts.module.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbosstsThe thing happens after EJB that is connected via IIOP to the second server is undeployed. The undeploy is interrupted by messages [stdout] (Thread-0) TransformListener() : handling connection on port 9091 which is message from byteman client that I've installed on the server for me being able to instrument it. Maybe that has some influence on order of shutdown sequence nevertheless the log should be clean I think.

@@ -1,0 +1,3 @@
+PersistanceResourceTestCase fails if defaultPermissions contain only groups
+PersistanceResourceTestCase fails on Windows 10 (out-of-box configuration) where defaultPermissins list contain only groups, ownerPermissions is empty set thus assertion fail - see discussion on https://github.com/wildfly/wildfly-core/pull/1513.
+Test the ownerPermissions for emptiness before making the assertion.

@@ -1,0 +1,6 @@
+Constant propagate returns string values in incorrect format
+STEP 1. Create and upload test data
+Execute in command line:nano stest.dataAdd to file:000126,000777000126,000778000126,000779000474,000888000468,000889000272,000880
+hadoop fs -put stest.data /
+hive&gt; create table stest(x STRING, y STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';hive&gt; LOAD DATA  INPATH '/stest.data' OVERWRITE INTO TABLE stest;STEP 2. Execute test query (with cast for x)select x from stest where cast(x as int) = 126;EXPECTED RESULT:000126000126000126ACTUAL RESULT:126126126STEP 3. Execute test query (no cast for x)hive&gt; select x from stest where  x = 126; EXPECTED RESULT:000126000126000126ACTUAL RESULT:126126126In steps #2, #3 I expected '000126' because the origin type of x is STRING in stest table.
+Note, setting hive.optimize.constant.propagation=false fixes the issue.hive&gt; set hive.optimize.constant.propagation=false;hive&gt; select x from stest where  x = 126;OK000126000126000126Related to HIVE-11104, HIVE-8555

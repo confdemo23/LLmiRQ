@@ -1,0 +1,2 @@
+[misc] TextViewer.revealRange very slow for long ranges
+ 

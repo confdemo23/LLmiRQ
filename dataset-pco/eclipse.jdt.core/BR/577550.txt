@@ -1,0 +1,33 @@
+NPE in EclipseCompiler when passing empty classes iterable
+Created attachment 287602
+Plug-in to reproduce with, import and run the Main class.
+
+We observed the following NPE during our build with ecj and bazel (details on the JDT invocation are not clear):
+
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.compiler.batch.Main.processClassNames(Main.java:4850)
+	at org.eclipse.jdt.internal.compiler.batch.Main.performCompilation(Main.java:4757)
+	at org.eclipse.jdt.internal.compiler.tool.EclipseCompilerImpl.call(EclipseCompilerImpl.java:100)
+	at org.eclipse.jdt.internal.compiler.tool.EclipseCompiler$1.call(EclipseCompiler.java:196)
+	at test.Main.main(Main.java:42)
+
+The reproducer we've been given is (import frm archive "TestEcjEmptyClassList.zip"):
+
+	Writer out = new PrintWriter(System.out);
+	JavaFileManager fileManager = new EclipseFileManager(Locale.getDefault(), StandardCharsets.UTF_8);
+	List<String> options = new ArrayList<>();
+	options.add("-sourcepath");
+	options.add(new File(".").getAbsolutePath());
+	options.add("-d");
+	options.add("none");
+	Iterable<String> classes = new ArrayList<>();
+	List<JavaFileObject> compilationUnits = new ArrayList<>();
+	compilationUnits.add(new EclipseFileObject("org.eclipse.xtext.common.types.access.jdt.Main", new File("src/main/java/org/eclipse/xtext/common/types/access/jdt/Main.java").toURI(), Kind.SOURCE, StandardCharsets.UTF_8));
+	DiagnosticListener<JavaFileObject> diagnosticListener = new DiagnosticListener<JavaFileObject>() {
+		@Override
+		public void report(Diagnostic<? extends JavaFileObject> diagnostic) {
+		}
+	};
+	JavaCompiler javaCompiler = new EclipseCompiler();
+	CompilationTask task = javaCompiler.getTask(out, fileManager, diagnosticListener , options, classes, compilationUnits);
+	task.call();

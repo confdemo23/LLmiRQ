@@ -1,0 +1,20 @@
+[Navigator] NestedProjectsProblemsModel: Cache removal breaks for IResources without location
+The
+
+  NestedProjectsProblemsModel#removeFromCache(Set<IResource>)
+
+implementation currently uses
+
+  IResource#getLocation()
+
+to get IPath objects to call
+
+  IPath#isPrefixOf(IPath)
+
+to check parent-child relationships.
+
+However, as the Javadoc of getLocation() states, this may return null for resources that do not have a physical local location, e.g. for IResources based on a custom IFileSystem implementation such as the Eclipse Semantic File System (SFS).
+
+As a result, error markers on project level do not disappear, even when the actual errors are resolved.
+
+Instead of getLocation() getFullPath() should be used, which is never null, and cheaper than getLocation().

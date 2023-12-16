@@ -1,0 +1,3 @@
+camel maven run plugin - Auto detect if spring or blueprint
+It would be nice if the mvn camel:run plugin could auto detect if your run a spring or blueprint project. Today it defaults to spring because it was the first. For blueprint you need to configure it to be blueprint.
+But we can detect the xml if its blueprint or spring in the namespace of the xml.

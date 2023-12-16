@@ -1,0 +1,1 @@
+JGroups subsystem does not expose a proper capability contract

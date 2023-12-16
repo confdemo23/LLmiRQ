@@ -1,0 +1,10 @@
+Rework "Large file alternative editor selection" story to allow explicit editor choice by user
+If I configure:
+
+org.eclipse.ui.workbench/LARGE_DOC_SIZE_FOR_EDITORS=1048576
+
+and open a large file by double clicking it, I get a dialog to select an alternative editor for this large file. This works as expected.
+
+However, if I right click the file and choose 'Open With' and then select a specific editor from the menu, then I still get the alternative editor selection dialog. This feels weird to me, as I specifically selected the editor I want. This means that there is no way to open a large file with a specific editor without selecting that editor in the dialog.
+
+Could the explicit editor choice then be used rather than that the alternative editor dialog is shown, if I explicitly choose an editor as described? Does that make sense to you?

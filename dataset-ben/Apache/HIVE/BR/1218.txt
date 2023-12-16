@@ -1,0 +1,2 @@
+CREATE TABLE t LIKE some_view should create a new empty base table, but instead creates a copy of view
+I think it should copy only the column definitions from the view metadata.  Currently it is copying the entire descriptor, resulting in a new view instead of a new base table.

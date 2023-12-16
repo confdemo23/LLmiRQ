@@ -1,0 +1,35 @@
+Suppress noisy logging in client.ConnectionImplementation
+_client.ConnectionImplementation_ logs a lot at INFO level:
+{code:java}
+hbase:001:0> restore_snapshot  'tableSnapshot'
+2023-02-09 05:15:35,538 INFO  [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+2023-02-09 05:15:35,538 INFO  [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+2023-02-09 05:15:36,599 INFO  [main] client.HBaseAdmin: Taking restore-failsafe snapshot: hbase-failsafe-tableSnapshot-1675919736599
+2023-02-09 05:15:36,608 INFO  [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+2023-02-09 05:15:36,608 INFO  [main] client.ConnectionImplementation: Getting master state using rpc call
+2023-02-09 05:15:36,806 INFO  [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+2023-02-09 05:15:36,806 INFO  [main] client.ConnectionImplementation: Getting master state using rpc call
+2023-02-09 05:15:37,026 INFO  [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+2023-02-09 05:15:37,026 INFO  [main] client.ConnectionImplementation: Getting master state using rpc call
+2023-02-09 05:15:37,334 INFO  [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+2023-02-09 05:15:37,334 INFO  [main] client.ConnectionImplementation: Getting master state using rpc call
+2023-02-09 05:15:37,341 INFO  [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+2023-02-09 05:15:37,342 INFO  [main] client.ConnectionImplementation: Getting master state using rpc call
+2023-02-09 05:15:37,413 INFO  [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+2023-02-09 05:15:37,413 INFO  [main] client.ConnectionImplementation: Getting master state using rpc call
+2023-02-09 05:15:37,534 INFO  [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+2023-02-09 05:15:37,535 INFO  [main] client.ConnectionImplementation: Getting master state using rpc call
+2023-02-09 05:15:37,742 INFO  [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+2023-02-09 05:15:37,742 INFO  [main] client.ConnectionImplementation: Getting master state using rpc call
+2023-02-09 05:15:38,055 INFO  [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+2023-02-09 05:15:38,056 INFO  [main] client.ConnectionImplementation: Getting master state using rpc call
+2023-02-09 05:15:38,561 INFO  [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+2023-02-09 05:15:38,561 INFO  [main] client.ConnectionImplementation: Getting master state using rpc call
+2023-02-09 05:15:38,568 INFO  [main] client.HBaseAdmin: Operation: MODIFY, Table Name: nj:testImport, procId: 392 completed
+2023-02-09 05:15:38,568 INFO  [main] client.HBaseAdmin: Deleting restore-failsafe snapshot: hbase-failsafe-tableSnapshot-1675919736599
+2023-02-09 05:15:38,570 INFO  [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+2023-02-09 05:15:38,570 INFO  [main] client.ConnectionImplementation: Getting master state using rpc call
+Took 3.1595 seconds
+{code}
+
+We should log these lines in TRACE level.

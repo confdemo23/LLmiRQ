@@ -1,0 +1,3 @@
+Bad equals test in WFLY-3306 fix
+GlobalOperationHandler L458 has this:
+if ((validChildType == null || validChildType.equals(validChildType))The second test is silly; should be using var 'type'.

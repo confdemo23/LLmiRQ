@@ -1,0 +1,3 @@
+SJMS does not respect QoS settings (ttl/persistence) for sending to queues
+Reproduced here:
+https://github.com/christian-posta/camel-sandbox/blob/master/camel-2.12.2-issues/src/test/java/posta/SjmsTestFromMailingList.java

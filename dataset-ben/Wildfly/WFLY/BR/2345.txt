@@ -1,0 +1,2 @@
+Port offset 0 does not work
+When a port offset is specified in the socket binding group and the socket binding has a port of 0, then the port offset is not used to calculate the port instead port 0 is bound.

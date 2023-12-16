@@ -1,0 +1,5 @@
+Cannot combine custom extension points and MANIFEST.MF
+When converting from plugin.xml to MANIFEST.MF, any custom extension points 
+get lost.  The extension point wizard in the MANIFEST.MF editor won't save so 
+there's no way to recreate them.  Thus, you cannot have a bundle that uses 
+the "Export-Package" header and also defines a custom extension point.

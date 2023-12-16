@@ -1,0 +1,2 @@
+PerfLogger.openScopes should be transient
+See the following exception when running Hive e2e tests:0: 

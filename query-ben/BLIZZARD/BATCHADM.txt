@@ -1,0 +1,19 @@
+28	set job step register servlet metrics resources execution Multiple registration URLS files mapped POST DELETE requested shouldn amp apos
+42	job test request file set time servlet item Job configuration upload String fails NPE
+44	job execution test restart set request step response Restart button Job execution screen generates incorrect url executions press Restart button Job execution screen generate url separator comma admin batch jobs myJob executions
+52	job sunny set view test list execution time Colons escaped job parameters Jobs Colons escaped job parameters Jobs input file files foo bar txt fatal backspace submit job
+78	job step set row instance query resources info period apos apos jobName confuse SBA displaying Job Instances execution mycom myJob job Jobs Tab click job amp apos job instances job amp apos Job Instances job amp apos amp apos amp apos amp apos jobName mycom myJob job Instances expected
+87	job set servlet task execution model profile handle MySQL timestamps resolution pagination concurrent environment integration tests fail obvious paged query MySQL special yuck amp apos clear correct field order ids monotonic cluster group application nodes MySQL work jobs launched concurrently command
+29	timezone gmt execution web locale job times time class configuration dates displayed jvm
+73	file error download mapping request source default wildcard file url xss vulnerability
+99	partitions controller executions jobexecutioncontroller job execution controller job steps execution step partition execution ensure itions represented job view
+154	execution info stepexecutioninfo step execution info springsource jira job jobexecutioninfo job execution info gmt amp zone start time steps displayed hard coded code
+177	names execution jobs details stepexecutions step executions job jobexecutioncontroller job execution controller controller suffix amp wrong step executions displayed partitioned itioned
+38	upload job reload load jobs configuration jobloader job loader job loader exception overwrites writes existing
+71	job console error objects console spring meta link tables admin protect admin cannotresolveclassexception resolve class exception annot resolve class exception deserializing data tab les
+77	job job stats step execution jmx step joba job jobb job instances stepexecution step execution scoped owning
+115	step amp apos getid candidate execution sql executions stepexecution step execution getlateststepexitdescription latest step exit description simplejobmetrics simple job metrics impl job metrics latest step exit description doesn work quick
+121	json return json jobs jobexecutionid job execution returns steps job html executions exec utions execution
+129	job execution job amp dao set time executions return searchable abandoned viewed running execution jdbcsearchablejobexecutiondao jdbc searchable job execution dao jdbc
+91	NPE in ContentTypeInterceptor  On WebSphere the method request getPathInfo  returns null NullPointerException FrameworkServlet processRequest WebAppFilterChain HiddenHttpMethodFilter Filter doFilter HttpServlet ServletWrapper Servlet doFilterInternal OncePerRequestFilter
+92	BatchMBeanExporter creation fails due to malformed object name UnableToRegisterMBeanException MalformedObjectNameException BatchMBeanExporter registerBeanNameOrInstance ObjectName MBeanExporter doStart init registerSteps DefaultLifecycleProcessor parseValue checkValue register

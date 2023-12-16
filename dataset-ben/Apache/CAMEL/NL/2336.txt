@@ -1,0 +1,4 @@
+Spring DSL - Some route scoped concerns such as onException etc. can vanish in some edge cases
+The JAXB creates the Spring DSL model in a bit wacky way so we need to work on it a bit before Camel can create the runtime routes.
+In some cases some of the cross functions such as onCompletion, onException could potentially vanish. 
+The problem is really that we should have divided the route into a upper / lower section where upper is the cross functions and the lower the actual route.

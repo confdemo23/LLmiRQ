@@ -1,0 +1,17 @@
+[18] Generated Javadoc includes the trailing brace
+For the below example:
+
+	/**
+	 * Here are the configuration properties:
+	 * {@snippet file="config.properties"}
+	 */
+
+The Javadoc shown by JDT is:
+
+Here are the configuration properties: 
+local.timezone=PST
+local.zip=94123                # @highlight regex="[0-9]+"
+local.area-code=415
+}
+
+Note the trailing '}', which shouldn't be there.

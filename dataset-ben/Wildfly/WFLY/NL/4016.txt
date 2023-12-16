@@ -1,0 +1,2 @@
+Memory leak on undeploy caused by ejb client
+EJB client application deployed with jboss-ejb-client.xml, when undeployed the classloader is not being released leading to a memory leak.

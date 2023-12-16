@@ -1,0 +1,2 @@
+Once replication sees an error it slows down forever
+sleepMultiplier inside of HBaseInterClusterReplicationEndpoint and ReplicationSource never gets reset to zero.

@@ -1,0 +1,6 @@
+JaxbDataFormat should not parse the Schema over and over again
+Currently the createMarshaller and createUnmarshaller methods parse the javax.xml.validation.Schema from scratch, which is a severe overhead considering that a Schema instance is threadsafe and it is  encuraged to re-use it as much as possible 
+(see http://xerces.apache.org/xerces2-j/javadocs/api/javax/xml/validation/Schema.html) 
+I extended the DataFormat and cached the parsed Schema and did a small benchmark:
+JaxbDataFormat: 3:18
+AltJaxbDataFormat: 0:35

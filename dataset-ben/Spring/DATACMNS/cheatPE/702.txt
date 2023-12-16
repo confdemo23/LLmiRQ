@@ -1,0 +1,2 @@
+QueryDSL starting from version 4.0.0 is not compatible due to package rename
+Packages of QueryDSL have been renamed from com.mysema.query.* to com.querydsl.* . QueryDslPredicateExecutor depends on the old package names, which makes latest QueryDSL unusable with Spring Data.

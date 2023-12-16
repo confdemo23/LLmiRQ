@@ -1,0 +1,4 @@
+java-joor-dsl - Drop support of class files
+I think we can remove the .class also in camel core for java-joor dsl as it is not really needed anymore. I think (I am getting older so it is maybe no longer there) there is an option in camel-main to configure a "compile directory" so removing would also need to remove that.
+
+source: https://github.com/apache/camel-quarkus/pull/4359#issuecomment-1372498183

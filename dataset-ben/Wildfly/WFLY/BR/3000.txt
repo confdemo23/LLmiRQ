@@ -1,0 +1,14 @@
+Incorrect 'Content-Type' response set after executing an erroneous command
+The http management interface, upon error, returns an incorrect 'Content-Type' of 'Content-Type: text/plain; charset=utf-8' 
+although JSON response is returned.
+To reproduce, issue from the command line a simple 'read' operation
+curl --digest -D - http://localhost:9990/management --header "Content-Type: application/json" -d '{"operation":"read-attribute", "name":"foo"}' -u &lt;username&gt;:&lt;password&gt;
+..
+Content-Type: text/plain; charset=utf-8
+Content-Length: 119
+Date: Sun, 23 Feb 2014 17:27:10 GMT{
+    "outcome" : "failed",
+    "failure-description" : "JBAS014792: Unknown attribute foo",
+    "rolled-back" : true
+}The 'Content-Type' should have been set to 'application/json' instead of 'text/plain'
+Note: On JBoss AS 7.1.1.Final, the correct type of 'application/json' is returned for the same operation.

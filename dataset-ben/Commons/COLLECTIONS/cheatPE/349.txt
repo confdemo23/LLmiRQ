@@ -1,0 +1,2 @@
+The method CollectionUtils.removeAll() call wrongly ListUtils.retainAll()
+The method CollectionUtils.removeAll() calls wrongly ListUtils.retainAll() instead of ListUtils.removeAll().

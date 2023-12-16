@@ -1,0 +1,2 @@
+Widget Factory for browser
+I think we should also add a factory for the SWT Browser widgets in JFace similar to the ButtonFactory.

@@ -1,0 +1,2 @@
+SingletonService can start multiple master nodes if election policies are not identical
+Currently, the the singleton master election occurs on every node, and nodes that detect if they have won the election will start the service.  If the election policy is non-deterministic, or not identical on every node, then there is a possibility that multiple singleton services could start.

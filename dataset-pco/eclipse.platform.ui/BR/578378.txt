@@ -1,0 +1,22 @@
+SWTError: No more handles if "Run in background" is disabled
+Created attachment 287900
+Error log after the failure
+
+Test steps:
+Uncheck Preferences/General/Always run in background
+Import all projects of a large PDE Git repository using eGit
+Check Project/Build automatically
+Checkout another branch a few times using eGit
+
+
+On each checkout mouse pointer becomes a progress indicator thousands of times (blinks in and out of progress indication). Eventually, SWT handles run out and multiple exceptions are logged (see error.log).
+
+I've captured jstack output for an Eclipse process that failed shortly after (see jstack.txt). In this case, a resource navigation dialog was opened, but I think this happens even without dialogs.
+I will try to capture more jstacks to find a pattern.
+
+
+
+Eclipse IDE for Eclipse Committers (includes Incubating components)
+
+Version: 2022-03 M1 (4.23.0 M1)
+Build id: 20220113-1818

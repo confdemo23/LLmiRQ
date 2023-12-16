@@ -1,0 +1,2 @@
+Return value for map, array, and struct needs to return a string 
+In order to be able to select/display any data from JDBC Hive driver, return value for map, array, and struct needs to return a string

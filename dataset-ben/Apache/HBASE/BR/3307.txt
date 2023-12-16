@@ -1,0 +1,2 @@
+Add checkAndPut to the Thrift API
+It would be very useful to have the checkAndPut method available via the Thrift API. This would both allow for easier atomic updates as well as cut down on at least one Thrift roundtrip for quite a few common tasks. 

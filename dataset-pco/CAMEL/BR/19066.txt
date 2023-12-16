@@ -1,0 +1,20 @@
+Multicast EIP sets correlationId on original Exchange
+When copying the result onto the original Exchange the Multicast EIP and related EIPs like Split and RecipientList copy the result back to the original Exchange, this copy includes the correlationId of the subexchange.
+
+This can be somewhat confusing, especially with FlexibleAggregationStrategy which aggregates the result in an Exchange which is correlated to a different Exchange than the original Exchange.
+
+Example:
+{code:java}
+from("direct:foo")
+    .log("Before split: exchangeId:'${exchangeId}' CorrelationId:'${exchangeProperty.CamelCorrelationId}'")
+    .split(body(), AggregationStrategies.flexible().pick(body()).accumulateInCollection(ArrayList.class))
+    .log("In split: exchangeId:'${exchangeId}' CorrelationId:'${exchangeProperty.CamelCorrelationId}'")
+    .end()
+    .log("After split: exchangeId:'${exchangeId}' CorrelationId:'${exchangeProperty.CamelCorrelationId}'"); {code}
+Which produces the following Logging output for a two-Element List:
+{code:java}
+Before split: exchangeId:'742F0530A58A761-0000000000000000' CorrelationId:''
+In split: exchangeId:'742F0530A58A761-0000000000000001' CorrelationId:'742F0530A58A761-0000000000000000'
+In split: exchangeId:'742F0530A58A761-0000000000000002' CorrelationId:'742F0530A58A761-0000000000000000'
+In split: exchangeId:'742F0530A58A761-0000000000000003' CorrelationId:'742F0530A58A761-0000000000000000'
+After split: exchangeId:'742F0530A58A761-0000000000000000' CorrelationId:'742F0530A58A761-0000000000000001' {code}

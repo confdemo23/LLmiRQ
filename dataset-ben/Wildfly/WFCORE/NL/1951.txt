@@ -1,0 +1,2 @@
+Expose content repository read-content as a GET operation
+Allows the use of the GET method to obtain the binary stream to a content in the content repository.

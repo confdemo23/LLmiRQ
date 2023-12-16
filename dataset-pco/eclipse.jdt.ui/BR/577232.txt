@@ -1,0 +1,7 @@
+[content assist] Quick Fix to add a static import to the list of content assist favorites
+Created attachment 287503
+content assist on static imports
+
+It would be nice to easily add a statically imported class to my list of favorites.
+
+Hence, I propose a quick fix in the java editor on a static import line so that the user can add this class to content assist favorites effortlessly. Currently, there is no quick fix at all available.

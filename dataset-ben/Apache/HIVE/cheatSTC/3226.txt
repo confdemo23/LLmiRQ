@@ -1,0 +1,2 @@
+ColumnPruner is not working on LateralView
+Column pruning is not applied to LVJ and SEL operator, which makes exceptions at various stages. 

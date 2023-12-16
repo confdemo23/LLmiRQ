@@ -1,0 +1,2 @@
+client region ignores destroy and close settings
+&lt;client-region .../&gt; parser ignores close and destroy attributes. By default they are both false.

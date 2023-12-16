@@ -1,0 +1,2 @@
+Executing cli commands into thrift server
+Let thrift server support set, add/delete file/jar and normal HSQL query.

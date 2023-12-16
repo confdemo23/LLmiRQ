@@ -1,0 +1,10 @@
+75	 java.util.Properties, propertyNames() method
+226	 LettuceConnTransIntTest, execute
+286	 RedisTemplate, Jedis
+333	 EvalSha, JedisScriptReturnConverter, SafeEncoder
+356	 EVALSHA, EVAL, NOSCRIPT
+415	 Listener Container, Thread
+431	 RedisConnection, RedisCache, RedisTemplate
+489	 Foo, RedisData, HashMap
+491	 KeyspaceEventMessageListener, ConnectionFactory
+510	 CacheValueAccessor, valueSerializer

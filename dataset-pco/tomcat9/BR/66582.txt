@@ -1,0 +1,9 @@
+[launching] launcher should support -vm and -vmargs
+Jeff would like to suggest that PDE add in the new -vm 
+and -vmargs.  
+
+-vm should be followed by the full path to the java executable used to launch.
+
+-vmargs come last and be followed by all of the command line entries following 
+the vm upto and including the name of the class being launched (e..g, 
+org.eclipse.core.launcher.Main).

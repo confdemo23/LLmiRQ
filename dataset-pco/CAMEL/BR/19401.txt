@@ -1,0 +1,13 @@
+Typo in kafka image name in ContainerLocalKafkaService
+Typo in kafka image name in [ContainerLocalKafkaService.java|https://github.com/apache/camel/blob/camel-3.20.x/test-infra/camel-test-infra-kafka/src/test/java/org/apache/camel/test/infra/kafka/services/ContainerLocalKafkaService.java#L28] in 3.20.5 (not in main branch though).
+
+
+{code:java}
+public static final String KAFKA3_IMAGE_NAME = "confluentinc/cp-kafkai:7.3.2";
+{code}
+
+should be 
+
+{code:java}
+public static final String KAFKA3_IMAGE_NAME = "confluentinc/cp-kafka:7.3.2";
+{code}

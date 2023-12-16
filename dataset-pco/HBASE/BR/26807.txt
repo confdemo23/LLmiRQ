@@ -1,0 +1,6 @@
+Unify CallQueueTooBigException special pause with CallDroppedException
+CallQueueTooBigException and CallDroppedException crop up in very similar circumstances – the former is thrown if the request cannot be enqueued because the queue is full; the latter is thrown when a call is dropped from the queue to make room for another call.
+
+HBASE-17114 added a special pause feature, which allows pausing for a longer period of time when CallQueueTooBigException is encountered, vs the normal pause for other exceptions. The idea here is to help reduce load so the server can process its queue. We should extend this feature to encompass CallDroppedException for the same reason.
+
+Currently the config is called "hbase.client.pause.cqtbe". We should probably deprecate that in favor of a more generic name.

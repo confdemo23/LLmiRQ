@@ -1,0 +1,3 @@
+IIOP operations need SerializablePermission("enableSubclassImplementation")
+Since JDK 7u25 version org.omg.CORBA_2_3.portable.Output/InputStream classes need extra permissions if Security Manager is enabled. Because of a previous vulnerability, it now checks SerializablePermission("enableSubclassImplementation"). There is a property flag to allow subclass instantiations without the security check (jdk.corba.allowOutputStreamSubclass=true), but this system property is subject to removal in the future Java releases, according to my findings. 
+At the moment, our IIOP code fails (can be seen in iiop tests of WildFly testsuite) when running with SM enabled.

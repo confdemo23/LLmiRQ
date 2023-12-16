@@ -1,0 +1,98 @@
+103	 SpringCamelContext
+171	 FromFileToFtpTest FtpProducer FileConsumer
+363	 RawMessageContentRedirectInterceptor, decryptProcessor, endpointSelector
+550	 NodeData, GraphGeneratorSupport, RouteDotGenerator, Main, RunMojo
+583	 DumpToXmlTest, MessageType, FallbackTypeConverter, DefaultTypeConverter, MessageSupport, ConvertBodyProcessor, AsyncProcessorTypeConverter, DeadLetterChannel, Pipeline, UnitOfWorkProcessor, FileConsumer, ScheduledPollConsumer
+584	 BeanWithPropertiesAndHeadersAndBodyInjectionTest, MyBean
+620	 ResequencerType, ProcessorType, InterceptorRef, RouteType, DefaultCamelContext, ServiceSupport, ContextTestSupport, ResequencerTest, TestCase, TestResult, TestSuite, JUnit3TestReference, TestExecution, RemoteTestRunner
+636	 ResolverUtil, FileProducer, ExchangeHelper, AsyncProcessorTypeConverter, SendProcessor, InstrumentationProcessor, DeadLetterChannel
+675	 ChoiceProcessor, Interceptor, InstrumentationProcessor, DeadLetterChannel
+702	 XQueryBuilder, StaticQueryContext, QueryParser, ExpressionParser, ThreadProcessor, ProcessorEndpoint, AsyncProcessorTypeConverter, SendProcessor, Pipeline
+795	 MinaConsumerTest, MinaProducer, Assert
+927	 InstrumentationProcessor
+942	 JmsProducer, JmsBinding, FileConsumer, ActiveMQMessage
+974	 DataSetSedaTest MockEndpoint
+1080	 DataSetSedaTest
+1135	 TestEndpointTest MockEndpoint
+1263	 MailConsumer IMAPFolder
+1271	 ObjectHelper InstanceMethodTypeConverter
+1325	 AnnotationTypeConverterLoader ResolverUtil
+1441	 GenericFile
+1565	 ValidatingProcessor, SchemaFactory, XMLSchemaFactory, ProcessorEndpoint, AsyncProcessorTypeConverter
+1630	 GenericFileProducer, FileOperations
+1696	 AbstractAutowireCapableBeanFactory, AbstractRefreshableApplicationContext, ConfigurerImpl, BusWiringBeanFactoryPostProcessor, CxfEndpointBeanDefinitionParser, ApplicationContextAwareProcessor
+1814	 XmlBeanDefinitionReader ClassPathResource Main
+2025	 CxfEndpoint, CxfConsumer, CamelTestSupport, DefaultCamelContext, ServiceSupport
+2027	 BeanJavaConfigTest, ApplicationContextRegistry, BeanInfo, BeanProcessor, BeanDefinition, ProcessorDefinition, RouteDefinition, DefaultCamelContext, SpringCamelContext, AbstractAutowireCapableBeanFactory
+2129	 CamelConduit, StaxInInterceptor, ClientImpl, JaxWsClientProxy
+2153	 FtpOperations
+2165	 FtpOperations, RemoteFileProducer, GenericFileProducer, SendProcessor, ProducerCache, DefaultProducerTemplate, FTP
+2214	 RssDateComparator
+2231	 MailConsumer, ScheduledPollConsumer, MailComponent
+2292	 JmsProducer, ProducerCache, DefaultProducerTemplate, ServerRequestDispatcher, LavaDataManager, ProducerCore, StartStopTest
+2362	 RemoteFileEndpoint, EventDrivenConsumerRoute, DefaultRoute, RouteService, ServiceSupport, DefaultCamelContext
+2376	 RetryRouteScopedUntilRecipientListParallelIssueTest
+2377	 DefaultProducerTemplateAsyncTest
+2496	 FileInputStreamCache, StreamCacheConverter, MessageHelper, XPathBuilder, Splitter, MulticastProcessor, InstrumentationProcessor, DeadLetterChannel, StreamCachingInterceptor, UnitOfWorkProcessor, SedaConsumer
+2744	 AggregateProcessor
+2762	 MinaConverter, DefaultTraceFormatter, TraceInterceptor
+2776	 FileInputStreamCache
+2942	 CamelHttpTransportServlet
+2958	 CaseInsensitiveMap
+2986	 CamelContinuationServlet, AsyncContinuation, InstrumentationProcessor, UnitOfWorkProcessor, DefaultChannel, RedeliveryErrorHandler
+2994	 CxfClientCallback, CXFWsdlOnlyTest, ClientOutFaultObserver, AutomaticWorkQueueImpl
+3335	 JpaConsumer
+3341	 JmsProducer, ProxyHelper, CamelProxyTest
+3343	 CxfRsInvoker ContinuationProvider getContinuation performInvocation CxfConsumer
+3428	 DefaultCamelContext DefaultCamelContextTest getEndpoint
+3433	 ExpressionBuilder FilterProcessor BinaryPredicateSupport PredicateBuilder Expression
+3493	 DefaultCamelContext
+7055	 FileInputStreamCache, CachedOutputStream, MarshalProcessor, DataFormat, GzipDataFormat, CryptoDataFormat, PGPDataFormat, SerializationDataFormat, XMLSecurityDataFormat, ZipDataFormat
+7139	 MvelExpression, ChoiceProcessor, SedaConsumer
+7256	 DefaultCxfRsBinding
+7262	 BeanExpression
+7320	 PGPKeyAccessDataFormat PGPCompressedData PGPSignature BCPGInputStream
+7429	 DefaultPropertiesParser
+7449	 JmsBinding, AMQMessageDelegate_0_10, AbstractJMSMessage, JmsMessage
+7451	 FtpChangedExclusiveReadLockStrategy
+7653	 DefaultSqlPrepareStatementStrategy
+7666	 CamelContext, ProducerCache, EndpointMessageListener, DefaultCamelContext, SpringCamelContext, CamelContextTest
+7730	 InfinispanOperation, InfinispanProducer, InfinispanComponentTest
+7739	 OnCompletionProcessor, DefaultExchange, MailMessage, POP3Folder
+7803	 DefaultJdbcPrepareStatementStrategy
+7836	 DefaultCamelContext LinkedHashMap
+7871	 AztecWriter, BarcodeDataFormat, MarshalProcessor, BarcodeFormatTest
+7971	 NettyHttpComponent
+8077	 DefaultCamelContext CamelSpringTestSupport
+8088	 FTPClient, FtpOperations, RemoteFileProducer, FtpInitialConnectTimeoutTest
+8193	 DefaultPromise, DefaultChannelPromise, NettyHelper, ServerResponseFutureListener
+8253	 DefaultCxfRsBinding, CxfRsInvoker
+8341	 RssEntryPollingConsumer, SyndFeedInput, RssUtils, FeedEntryPollingConsumer, PropertiesLoader, PluginManager, Converters, SyndFeedImpl
+8492	 RequestMessageTranslator RequestMessageTranslatorImpl BeanProcessor
+8556	 AnnotationTypeConverterLoader BaseTypeConverterRegistry
+8575	 RestApiIntegrationTest
+8707	 SmppConnectionFactory, SMPPSession, SmppConsumer
+8737	 CamelSalesforceMojo, SObjectDescription, SObjectField, FilteredLookupInfo, AbstractDTOBase
+8746	 JasyptPropertiesParser, BridgePropertyPlaceholderConfigurer, PropertyPlaceholderConfigurer
+8756	 KafkaConsumer
+8765	 JpaConsumer, ScheduledPollConsumer, TransactionTemplate
+8812	 HL7MLLPNettyDecoder, ByteBuf, DelimiterBasedFrameDecoder, ByteToMessageDecoder, AbstractChannelHandlerContext, DefaultChannelPipeline, AbstractNioByteChannel, NioEventLoop, SingleThreadEventExecutor
+8829	 DefaultExchangeFormatter
+8949	 NettyHttpConsumer, HttpServerMultiplexChannelHandler, OneToOneEncoder, DefaultChannelPipeline, NioServerSocketPipelineSink, AbstractNioWorker, FrameDecoder, SimpleChannelUpstreamHandler, Channels, AbstractChannel
+9159	 ScriptBuilder, ScriptLanguage, ToDynamicDefinition, WireTapDefinition, ProcessorDefinition, RouteDefinition
+9195	 UndertowProducer, UndertowRouteBuilder, ByteBufferSlicePool
+9223	 IntrospectionSupport, ProcessorDefinitionHelper, ProcessorDefinition, RouteDefinition, DefaultCamelContext, SpringCamelContext, CamelContextFactoryBean, SimpleApplicationEventMulticaster, AbstractApplicationContext, ClassPathXmlApplicationContext
+9238	 GenericFile
+9321	 CamelBlueprintHelper Main RunMojo ServiceSupport MainSupport
+9340	 FileIdempotentRepository
+9527	 ClientChannelHandler, AbstractChannelHandlerContext, ByteToMessageDecoder, DefaultChannelPipeline, AbstractChannel, SingleThreadEventExecutor, NioEventLoop, Thread, DefaultCamelContext
+9608	 JpaConsumer, AbstractEntityManagerImpl, QueryImpl, TransactionTemplate, LogicalConnectionImpl, Loader, QueryLoader, QueryTranslatorImpl, HQLQueryPlan, SessionImpl
+9730	 Activator, BundleTypeConverterLoader, OsgiTypeConverter, DefaultCamelContext, BlueprintCamelContext, CamelBlueprintTestSupport, FallbackTypeConverter, BaseTypeConverterRegistry
+9851	 ZooKeeperRoutePolicy, ZooKeeperElection, ZooKeeperConsumer, DefaultExecutorServiceManager, ZookeeperProducer, CreateOperation
+9874	 AttachmentHttpBinding, DefaultHttpBinding, HttpMessage, CamelContinuationServlet
+10116	 DefaultAsyncProcessorAwaitManager, StreamConsumer, AsyncProcessorHelper, DelegateAsyncProcessor
+10120	 StaxConverter, XMLStreamReaderInputStream, XMLStreamWriterImpl
+10238	 SubscriptionHelper, BayeuxClient, HttpReceiverOverHTTP, HttpSenderOverHTTP, SslConnection, LongPollingTransport
+10254	 MailConsumer, MailMessage, MailBinding
+10386	 BeanExpression, SimpleTest, ArrayList
+10425	 HttpMessage, CamelInternalProcessor, RedeliveryErrorHandler, Pipeline, CamelServlet, ApplicationTest

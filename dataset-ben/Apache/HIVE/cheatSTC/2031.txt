@@ -1,0 +1,2 @@
+Correct the exception message for the better traceability for the scenario load into the partitioned table having 2  partitions by specifying only one partition in the load statement. 
+ Load into the partitioned table having 2 partitions by specifying only one partition in the load statement is failing and logging the following exception message. 

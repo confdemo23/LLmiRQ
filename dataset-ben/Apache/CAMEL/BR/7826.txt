@@ -1,0 +1,2 @@
+Olingo2 component sets incorrect value for "id" element in create entry endpoint
+The serviceRoot property is not set correctly to the OData base URI when creating the EntityProviderWriteProperties, which causes the generated links in body to be incorrect. 

@@ -1,0 +1,5 @@
+Fail on table sampling 
+Trying table sampling on any non-empty table throws NPE. This does not occur by test on mini-MR.select count(*) from emp tablesample (0.1 percent);    
+ Total MapReduce jobs = 1Launching Job 1 out of 1Number of reduce tasks determined at compile time: 1In order to change the average load for a reducer (in bytes): 
+  set hive.exec.reducers.bytes.per.reducer=&lt;number&gt;In order to limit the maximum number of reducers:  set hive.exec.reducers.max=&lt;number&gt;
+  In order to set a constant number of reducers:  

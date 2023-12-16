@@ -1,0 +1,21 @@
+576658	 WindowEditor, Visible checkbox label
+576659	 MenuContributionEditor
+576668	 SideValue, TrimBarEditor
+576669	 ItemType, ToolItemEditor
+576710	 TrimContributionEditor, EClassLabelProvider
+576711	 VWindowControlEditor, EClassLabelProvider
+576740	 LRU cache, SoftReferences
+576877	 WorkbenchPage, busyOpenEditor, getWorkbenchWindow, getWorkbench, getEditorRegistry, findEditor, isOpenExternal, isLargeDocument, getAlternateEditor, PartInitException, getId
+577035	 FilteredTree
+577857	 WizardProjectsImportPage, setSelection
+577989	 ComputedValue, ComputedList, ComputedSet, ComputedValue.create
+578152	 Browser, ButtonFactory
+578360	 MarkerSupportView, openSelectedMarkers, ExtendedMarkersView
+578515	 NestedProjectsProblemsModel, removeFromCache, IResource, getLocation, IPath, isPrefixOf, getFullPath
+578786	 BookmarkNavigator, API
+578859	 MinMaxAddon, Double Clicking, Header, Composite Part, Area, SharedRef, Editorss Area, Ctrl+M
+579019	 NotificationPopup, AbstractNotificationPopup, createContentArea, getPopupShellTitle, SampleHandler, execute, showNotification
+579119	 Eclipse IDE, largeFileLimits_types
+579247	 pom-editor, StyledText
+579475	 CSSPropertyBackgroundSWTHandler, AbstractCSSPropertyBackgroundHandler
+579499	 MarkerSupportView, FiltersConfigurationDialog, MarkerContentGenerator, enabledFilters

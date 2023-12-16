@@ -1,0 +1,9 @@
+Improve tez print summary to print query execution breakdown
+When tez print summary is enabled, methods summary is printed which are difficult to correlate with the actual execution time. We can improve that to print  the execution times in the sequence of operations that happens behind the scenes.
+Instead of printing the methods name it will be useful to print something like below
+1) Query Compilation time
+2) Query Submit to DAG Submit time
+3) DAG Submit to DAG Accept time
+4) DAG Accept to DAG Start time
+5) DAG Start to DAG End time
+With this it will be easier to find out where the actual time is spent. 

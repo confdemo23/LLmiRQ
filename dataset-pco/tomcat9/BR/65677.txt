@@ -1,0 +1,134 @@
+Creating hierarchy failed.  See log for details.   0
+I have 3.0M9
+
+The message in the summary appears when I try to do Open Type Hierarchy on one
+of the types in my codebase.  Actually I have several subclasses of
+org.eclipse.jface.text.templates.TemplateContext and it happens when I try to
+open type hierarchy on any of them.  OTH seems to work fine on other types I try.
+
+
+the entries in the log look like this:
+
+!ENTRY org.eclipse.jdt.ui 4 10001 Jun 04, 2004 01:23:53.734
+!MESSAGE Internal Error
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:283)
+	at org.eclipse.jface.window.ApplicationWindow$1.run(ApplicationWindow.java:576)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:69)
+	at org.eclipse.jface.window.ApplicationWindow.run(ApplicationWindow.java:573)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:1588)
+	at
+org.eclipse.jdt.internal.ui.typehierarchy.TypeHierarchyLifeCycle.ensureRefreshedTypeHierarchy(TypeHierarchyLifeCycle.java:107)
+	at
+org.eclipse.jdt.internal.ui.typehierarchy.TypeHierarchyViewPart.updateInput(TypeHierarchyViewPart.java:497)
+	at
+org.eclipse.jdt.internal.ui.typehierarchy.TypeHierarchyViewPart.setInputElement(TypeHierarchyViewPart.java:465)
+	at
+org.eclipse.jdt.internal.ui.util.OpenTypeHierarchyUtil.openInViewPart(OpenTypeHierarchyUtil.java:98)
+	at
+org.eclipse.jdt.internal.ui.util.OpenTypeHierarchyUtil.open(OpenTypeHierarchyUtil.java:75)
+	at
+org.eclipse.jdt.ui.actions.OpenTypeHierarchyAction.run(OpenTypeHierarchyAction.java:176)
+	at
+org.eclipse.jdt.ui.actions.OpenTypeHierarchyAction.run(OpenTypeHierarchyAction.java:142)
+	at
+org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchRun(SelectionDispatchAction.java:216)
+	at
+org.eclipse.jdt.ui.actions.SelectionDispatchAction.run(SelectionDispatchAction.java:188)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:881)
+	at
+org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:899)
+	at
+org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:850)
+	at
+org.eclipse.jface.action.ActionContributionItem$7.handleEvent(ActionContributionItem.java:769)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:82)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:796)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:2716)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2382)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1363)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1334)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:253)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:141)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:97)
+	at
+org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:307)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:256)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:127)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:185)
+	at org.eclipse.core.launcher.Main.run(Main.java:638)
+	at org.eclipse.core.launcher.Main.main(Main.java:622)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 0
+	at
+org.eclipse.jdt.internal.compiler.parser.SourceTypeConverter.convert(SourceTypeConverter.java:92)
+	at
+org.eclipse.jdt.internal.compiler.parser.SourceTypeConverter.buildCompilationUnit(SourceTypeConverter.java:83)
+	at
+org.eclipse.jdt.internal.core.hierarchy.HierarchyResolver.resolve(HierarchyResolver.java:598)
+	at
+org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.buildForProject(IndexBasedHierarchyBuilder.java:195)
+	at
+org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.buildFromPotentialSubtypes(IndexBasedHierarchyBuilder.java:302)
+	at
+org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.build(IndexBasedHierarchyBuilder.java:131)
+	at
+org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.compute(TypeHierarchy.java:319)
+	at
+org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.refresh(TypeHierarchy.java:1234)
+	at
+org.eclipse.jdt.internal.core.CreateTypeHierarchyOperation.executeOperation(CreateTypeHierarchyOperation.java:90)
+	at
+org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:700)
+	at
+org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.BinaryType.newTypeHierarchy(BinaryType.java:690)
+	at org.eclipse.jdt.internal.core.BinaryType.newTypeHierarchy(BinaryType.java:709)
+	at org.eclipse.jdt.internal.core.BinaryType.newTypeHierarchy(BinaryType.java:679)
+	at
+org.eclipse.jdt.internal.ui.typehierarchy.TypeHierarchyLifeCycle.createTypeHierarchy(TypeHierarchyLifeCycle.java:118)
+	at
+org.eclipse.jdt.internal.ui.typehierarchy.TypeHierarchyLifeCycle.doHierarchyRefresh(TypeHierarchyLifeCycle.java:157)
+	at
+org.eclipse.jdt.internal.ui.typehierarchy.TypeHierarchyLifeCycle$1.run(TypeHierarchyLifeCycle.java:98)
+	at
+org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:101)
+Root exception:
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at
+org.eclipse.jdt.internal.compiler.parser.SourceTypeConverter.convert(SourceTypeConverter.java:92)
+	at
+org.eclipse.jdt.internal.compiler.parser.SourceTypeConverter.buildCompilationUnit(SourceTypeConverter.java:83)
+	at
+org.eclipse.jdt.internal.core.hierarchy.HierarchyResolver.resolve(HierarchyResolver.java:598)
+	at
+org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.buildForProject(IndexBasedHierarchyBuilder.java:195)
+	at
+org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.buildFromPotentialSubtypes(IndexBasedHierarchyBuilder.java:302)
+	at
+org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.build(IndexBasedHierarchyBuilder.java:131)
+	at
+org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.compute(TypeHierarchy.java:319)
+	at
+org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.refresh(TypeHierarchy.java:1234)
+	at
+org.eclipse.jdt.internal.core.CreateTypeHierarchyOperation.executeOperation(CreateTypeHierarchyOperation.java:90)
+	at
+org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:700)
+	at
+org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.BinaryType.newTypeHierarchy(BinaryType.java:690)
+	at org.eclipse.jdt.internal.core.BinaryType.newTypeHierarchy(BinaryType.java:709)
+	at org.eclipse.jdt.internal.core.BinaryType.newTypeHierarchy(BinaryType.java:679)
+	at
+org.eclipse.jdt.internal.ui.typehierarchy.TypeHierarchyLifeCycle.createTypeHierarchy(TypeHierarchyLifeCycle.java:118)
+	at
+org.eclipse.jdt.internal.ui.typehierarchy.TypeHierarchyLifeCycle.doHierarchyRefresh(TypeHierarchyLifeCycle.java:157)
+	at
+org.eclipse.jdt.internal.ui.typehierarchy.TypeHierarchyLifeCycle$1.run(TypeHierarchyLifeCycle.java:98)
+	at
+org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:101)

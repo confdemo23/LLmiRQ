@@ -1,0 +1,6 @@
+In HMS HA env, "show databases" fails when"current" HMS is stopped.
+Reproduce steps:Enable HMS HA on a cluster
+Use beeline to connect to HS2 and execute command show databases. Don't quit beeline after command has finished
+Stop the first HMS in configuration hive.metastore.uri
+Execute show databases in beeline again. Will get below error:MetaException(message:Got exception: org.apache.thrift.transport.TTransportException java.net.SocketException: Broken pipe)
+The error message in HS2 is as below:

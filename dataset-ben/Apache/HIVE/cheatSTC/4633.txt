@@ -1,0 +1,2 @@
+MR Jobs execution failed.
+I am running Hive-0.11.0 + Hadoop-0.23 version. All queries that spawn MR jobs got failed. When I look into logs, below exception is thrown in hive.logCaused by: 

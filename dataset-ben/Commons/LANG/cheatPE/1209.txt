@@ -1,0 +1,2 @@
+FastDateFormat does not support the 'u' pattern element
+java.lang.IllegalArgumentException: Illegal pattern component: u

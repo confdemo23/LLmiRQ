@@ -1,0 +1,6 @@
+Add BucketAllocator bucket size statistic logging
+BucketCache places blocks into configurably sized buckets based on the block size. The default sizes aim to provide broad coverage for common block sizes, but should probably be tuned for certain use-cases. However, we provide no way for operators to gain insight into the distribution of buckets.
+
+There already exists a BucketAllocator#logStatistics method, but it is not called anywhere. I suggest that we hook that up in BucketCache#logStats (which is called periodically by a stats thread). We can go from there.
+
+Looking at the IndexStatistics used in that method, it looks like a good start. One thing I'd like to add is a count of freeBuckets and completelyFreeBuckets per index. I think this will be useful for indicating how much more wiggle room we have for redistributing buckets among the various block sizes.

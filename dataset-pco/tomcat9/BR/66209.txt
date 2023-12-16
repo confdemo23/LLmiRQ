@@ -1,0 +1,3 @@
+[variable view] string type variables do not display their id
+strings variables do not display print their id in jvm
+(cannot track if instances are shared or not, etc...)

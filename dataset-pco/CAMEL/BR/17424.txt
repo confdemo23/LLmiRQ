@@ -1,0 +1,19 @@
+camel-kafka - Shutdown issues when attempting to consume from topic without authorization
+Hello :)
+
+Something has been introduced in 3.14.0 that causes long Camel shutdown when there has been an attempt to consume form a topic without necessary authorizations. The more consumers has been started the longer Camel takes to shut down.
+
+Below is what is logged many times after a shutdown has been initiated (I masked some parts I did not want to share). In this case I consumed from two topics: *some-other-topic-that-consumer-was-authorized-to*  and *e2k-test-bledu.*
+{noformat}
+2022-01-03 18:27:05.032  WARN 25556 --- [rdReplaceEvent]] o.a.c.component.kafka.KafkaFetchRecords  : Exception org.apache.kafka.common.errors.TopicAuthorizationException caught while polling some-other-topic-that-consumer-was-authorized-to-Thread 0 from kafka topic some-other-topic-that-consumer-was-authorized-to at offset {}: Not authorized to access topics: [e2k-test-bledu]
+2022-01-03 18:27:05.032  WARN 25556 --- [rdReplaceEvent]] o.a.c.component.kafka.KafkaFetchRecords  : Deferring processing to the exception handler based on polling exception strategy
+2022-01-03 18:27:05.032  INFO 25556 --- [rdReplaceEvent]] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-event2kafka_test3-12, groupId=event2kafka_test3] (Re-)joining group
+2022-01-03 18:27:05.051  INFO 25556 --- [rdReplaceEvent]] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-event2kafka_test3-12, groupId=event2kafka_test3] Successfully joined group with generation Generation{generationId=83, memberId='consumer-event2kafka_test3-12-74747411-96e8-4111-bab3-224cf754018f', protocol='range'}
+2022-01-03 18:27:05.066  INFO 25556 --- [-PZOdmowaTrans]] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-event2kafka_test3-13, groupId=event2kafka_test3] Requesting to re-join the group and trigger rebalance since the assignment metadata has changed from (***masked***)
+2022-01-03 18:27:05.066  INFO 25556 --- [-PZOdmowaTrans]] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-event2kafka_test3-13, groupId=event2kafka_test3] Requesting to re-join the group and trigger rebalance since the assignment metadata has changed from (***masked***)
+2022-01-03 18:27:05.071  WARN 25556 --- [rdReplaceEvent]] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-event2kafka_test3-12, groupId=event2kafka_test3] Error while fetching metadata with correlation id 133 : {e2k-test-bledu=TOPIC_AUTHORIZATION_FAILED}
+2022-01-03 18:27:05.071 ERROR 25556 --- [rdReplaceEvent]] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-event2kafka_test3-12, groupId=event2kafka_test3] Topic authorization failed for topics [e2k-test-bledu]
+2022-01-03 18:27:05.071  INFO 25556 --- [rdReplaceEvent]] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-event2kafka_test3-12, groupId=event2kafka_test3] Rebalance failed.
+
+org.apache.kafka.common.errors.TopicAuthorizationException: Not authorized to access topics: [e2k-test-bledu] {noformat}
+My use case may be specific because I start a separate route for every topic I want to consume from (I do not want to have a shared consumer for all topics because I need different prameters for selected topics, like offset reset etc.). Currently I consume from 44 topics and the Camel takes like four minutes to shut down. 

@@ -1,0 +1,28 @@
+[content assist] Provide concrete types when expecting an interface on new object completion
+Given the following Java code:
+
+  java.util.List<String> list = new |
+
+The completion list will show the constructors of the expected type. This feature is very handy when the expected type is an object. But when it comes to an interface (like the above example), it’s not useful anymore. Since most commonly people will new an implementation of the List interface like ‘ArrayList’ or ‘LinkedList’ instead of having an anonymous class creation.
+
+I have an idea to add more completion candidates for this case.
+
+For example, when the expected type is java.util.List, then we search all the constructors under the package java.util, and then only accept those which are compatible with java.util.List.
+
+A fake code of this proposal could look like this：
+
+In org.eclipse.jdt.internal.codeassist.CompletionEngine#findTypesAndPackages()@line 11624,
+
+if (isEmptyPrefix && !this.assistNodeIsAnnotation) {
+    if (!proposeConstructor) {
+        findTypesFromExpectedTypes(token, scope, typesFound, proposeType, proposeConstructor);
+    } else {
+        /* 1. Get qualified package name of the expected type */
+
+        /* 2. Find constructor declarations which start with the qualified package name */
+
+        /* 3. Filter out the constructors which are not compatible with the expected type */
+    }
+}
+
+By doing such changes, users are more likely to find the right completion candidate. And since we limit the search scope into a specific package, the performance should not be a big problem (We can even only do such search when the qualified package name has more than 2 components).

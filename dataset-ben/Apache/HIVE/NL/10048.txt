@@ -1,0 +1,2 @@
+JDBC - Support SSL encryption regardless of Authentication mechanism
+JDBC driver currently only supports SSL Transport if the Authentication mechanism is SASL Plain with username and password. SSL transport  should be decoupled from Authentication mechanism. If the customer chooses to do Kerberos Authentication and SSL encryption over the wire it should be supported. The Server side already supports this but the driver does not.

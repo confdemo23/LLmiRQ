@@ -1,0 +1,2 @@
+NewClassWizard should throw an error if a final class is selected as a super class
+In a NewClassWizard, selecting a final class as a super class should throw an error as it cannot be extended.

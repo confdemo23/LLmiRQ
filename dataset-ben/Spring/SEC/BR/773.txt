@@ -1,0 +1,32 @@
+global-method-security fails with JPA
+Enabling global-method-security with JPA @PersistenceContext annotations will fail on startup.  This is with the recent 2.0.0 release cut. 
+My userDetailsService is a custom implementation that requires access to an @Repository bean with an EntityManager.
+	&lt;sec:http auto-config="true"&gt;
+        &lt;sec:intercept-url pattern="/assets/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/&gt;
+        &lt;sec:intercept-url pattern="/login*" access="IS_AUTHENTICATED_ANONYMOUSLY"/&gt;
+        &lt;sec:intercept-url pattern="/logout*" access="IS_AUTHENTICATED_ANONYMOUSLY"/&gt;
+        &lt;sec:intercept-url pattern="/unsupported*" access="IS_AUTHENTICATED_ANONYMOUSLY"/&gt;        
+        &lt;sec:intercept-url pattern="/password-*" access="IS_AUTHENTICATED_ANONYMOUSLY"/&gt;
+        &lt;sec:intercept-url pattern="/**" access="ROLE_USER,ROLE_ADMIN"/&gt;
+        &lt;sec:form-login login-page="/login.html" default-target-url="/app.html" authentication-failure-url="?login_error=1"/&gt;
+        &lt;sec:logout logout-success-url="/logout.html"/&gt;
+    &lt;/sec:http&gt;
+	&lt;sec:authentication-provider user-service-ref="userDetailsService"&gt;
+		&lt;sec:password-encoder ref="passwordEncoder" /&gt;
+	&lt;/sec:authentication-provider&gt;
+	&lt;sec:global-method-security secured-annotations="enabled" /&gt;
+The exception: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:478)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:881)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:606)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:366)
+	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:255)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:199)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:45)

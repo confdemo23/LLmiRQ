@@ -1,0 +1,3 @@
+query execuction throws NPE when hive.exec.submitviachild is set to true
+If we set hive.exec.submitviachild to true and execute select count from src, the following exception is thrown.
+Seems queryState is not initialized when ExecDriver is called from main() in ExecDriver

@@ -1,0 +1,3 @@
+support count(*) and count distinct on multiple columns
+The following query does not work:
+select count(distinct col1, col2) from Tbl

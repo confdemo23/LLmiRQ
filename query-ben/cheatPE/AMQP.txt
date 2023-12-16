@@ -1,0 +1,39 @@
+65	 RabbitAdmin.deleteQueue(), AmqpIOException
+124	 Message.toString()
+125	 SimpleMessageListenerContainer, stop()
+148	 SimpleMessageListenerContainer, afterPropertiesSet(), validateConfiguration()
+150	 RabbitAdmin, CachingConnectionFactory, ConnectionListener
+151	 SingleConnectionFactory, SharedConnectionProxy, SharedConnectionProxy.createChannel, SharedConnectionProxy.target, SingleConnectionFactory.targetConnection
+168	 SimpleMessageListenerContainer, txSize
+179	 RabbitAdmin, Queue properties, Channel
+196	 RabbitTemplate, RabbitGatewaySupport, RabbitOperations, getConnection method
+249	 RabbitTemplate, Temporary Reply Queues, autoAck, replyHandoff, SynchronizedQueue, put(), take()
+260	 RabbitTransactionManager, SimpleMessageListenerContainer, channelTransacted, CachingConnectionFactory
+272	 setMessageKeyGeneretor, MessageKeyGenerator, StatefulRetryOperationsInterceptorFactoryBean
+307	 RabbitAdmin, Queue, connectionfactories
+309	 ConsumerChannelRegistry, ConnectionFactoryUtils.doGetTransactionalResource(), ConnectionFactory, ThreadLocal
+369	 AmqpAdmin, Declarable
+371	 MessageBuilderSupport, MessageProperties, MessagePropertiesBuilder, setHeader, build
+396	 SimpleMessageListenerContainer, BlockingQueueConsumer, Prefetch count
+398	 DirectExchangeParser, rabbit:direct-exchange, rabbit:binding
+421	 RabbitTemplate, pendingConfirms, ChannelProxy, PublisherCallbackChannel
+434	 convertAndSend(), MessageConversionException, convertMessageIfNecessary()
+438	 ConditionalRejectingErrorHandler.DefaultExceptionStrategy, org.springframework.amqp.support.converter.MessageConversionException, @RabbitListener, org.springframework.messaging.converter.MessageConversionException, org.springframework.amqp.rabbit.listener.exception.ListenerExecutionFailedException
+446	 RabbitAdmin, Queue
+447	 AbstractConnectionFactory.setAddresses(String), String.split(), hasText()
+463	 PublisherCallbackChannelImpl, TreeMap, getValue(), remove(), Iterator, hasNext(), next(), doHandleConfirm()
+472	 SimpleMessageListenerContainer, QueuesNotAvailableException, FatalListenerStartupException
+481	 RabbitListener, BeanPostProcessor, SmartInitializingBean, RabbitListenerEndpointRegistrar.afterPropertiesSet(), RabbitListenerAnnotationBeanPostProcessor.afterSingletonsInstantiated()
+490	 RabbitUtils.isNormalChannelClose(), CachingConnectionFactory
+506	 RabbitTemplate.getUnconfirmed(), ConcurrentModificationException, pendingConfirms
+540	 RabbitListenerAnnotationBeanPostProcessor, postProcessAfterInitialization, AopUtils.getTargetClass, AnnotationUtils.findAnnotation, ReflectionUtils.doWithMethods, @RabbitListener, @Transactional
+542	 @RabbitListener, @RabbitHandler, AnnotationUtils
+546	 CachingConnectionFactory, ContextClosedEvent, AmqpInboundChannelAdapter, Spring SmartLifeCycle, stop() method
+570	 SimpleAmqpHeaderMapper, org.springframework.util.MimeType, org.springframework.messaging.converter.AbstractMessageConverter, extractContentTypeAsString, org.springframework.amqp.support.AmqpHeaders.CONTENT_TYPE
+572	 TransactionTemplate, JtaTransactionManager, RabbitTemplate, ConnectionFactoryUtils, TransactionAspectSupport.currentTransactionStatus(), NoTransactionException, @Transactional
+591	 CachingConnectionFactory, channelCacheSize, channelCheckoutTimeout
+621	 SimpleMessageListenerContainer, ChannelAwareMessageListener, RabbitMQ, BlockingQueueConsumer
+625	 CachingConnectionFactory, CacheMode.CHANNEL, onClose
+633	 RabbitTemplate, RabbitResourceHolder, TransactionSynchronizationManager, getResource, getChannel, resourceFactory.isSynchedLocalTransactionAllowed
+653	 RabbitMessagingTemplate, RabbitTemplate, Jackson2JsonMessageConverter
+657	 SimpleAmqpHeaderMapper, receivedUserId header

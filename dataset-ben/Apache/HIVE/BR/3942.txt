@@ -1,0 +1,17 @@
+Add UDF month_add and month_sub 
+hive (default)&gt; desc function extended month_add;
+month_add(start_date, num_months) - Returns the date that is num_months after start_date.
+Synonyms: month_sub
+start_date is a string in the format 'yyyy-MM-dd HH:mm:ss' or 'yyyy-MM-dd'. num_months is a number. The time part of start_date is ignored.
+Example:
+   SELECT month_add('2012-04-12', 1) FROM src LIMIT 1; --Return 2012-05-12
+  SELECT month_add('2012-04-12 11:22:31', 1) FROM src LIMIT 1; --Return 2012-05-12
+  SELECT month_add(cast('2012-04-12 11:22:31' as timestamp), 1) FROM src LIMIT 1; --Return 2012-05-12
+hive (default)&gt; desc function extended month_sub;
+month_sub(start_date, num_months) - Returns the date that is num_months after start_date.
+Synonyms: month_add
+start_date is a string in the format 'yyyy-MM-dd HH:mm:ss' or 'yyyy-MM-dd'. num_months is a number. The time part of start_date is ignored.
+Example:
+   SELECT month_sub('2012-04-12', 1) FROM src LIMIT 1; --Return 2012-05-12
+  SELECT month_sub('2012-04-12 11:22:31', 1) FROM src LIMIT 1; --Return 2012-05-12
+  SELECT month_sub(cast('2012-04-12 11:22:31' as timestamp), 1) FROM src LIMIT 1; --Return 2012-05-12

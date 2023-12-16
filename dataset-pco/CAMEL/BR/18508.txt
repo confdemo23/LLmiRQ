@@ -1,0 +1,16 @@
+camel-jbang - User config file
+It would be good to allow a user config file, where you can store various default values and versions for camel-jbang, such as
+
+- 3rd party maven repos
+- specific camel version to use
+- specific spring boot / quarkus version to use
+- etc.
+
+The config should contain key=value pairs as .properties which maps to CLI arguments when using the camel CLI.
+
+We can have commands ala:
+
+camel config list
+camel config get x
+camel config set x=y
+camel config unset x

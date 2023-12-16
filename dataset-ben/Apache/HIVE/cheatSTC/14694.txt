@@ -1,0 +1,2 @@
+UDF rand throws NPE when input data is NULL
+When use rand function with null, HiveServer throws NPE:0

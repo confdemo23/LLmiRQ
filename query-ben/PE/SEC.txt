@@ -1,0 +1,77 @@
+325	 GrantedAuthority, GROUP
+750	 Spring Security, JPA PersistenceContext, EntityManager
+826	 PersistenceAnnotationBeanPostProcessor, userSecurityService
+832	 searchForSingleEntry, NamingEnumeration.hasMore, PartialResultException, org.springframework.security.ldap.searchForSingleEntry
+905	 MapBasedDefinitionSource
+943	 DefaultSpringSecurityContextSource, URI.getPath(), URI.getRawPath()
+1133	 authenticationDetailsSource, form-login
+1143	 AbstractProcessingFilter, SessionRegistry, SessionUtils
+1145	 DefaultSpringSecurityContextSource, LdapAuthenticationProvider, BindAuthenticator, FilterBasedLdapUserSearch, DefaultLdapAuthoritiesPopulator
+1277	 security:authorize, del.htm, contact.id
+1281	 RememberMeAuthenticationProvider, PersistentTokenBasedRememberMeServices
+1286	 Acl, AccessControlEntryImpl, AclAuthorizationStrategyImpl, ConsoleAuditLogger
+1333	 IllegalArgumentException
+1357	 ClassUtils, getDefaultClassLoader(), parserContext, getReaderContext(), getBeanClassLoader()
+1363	 ProviderManager
+1365	 AuthenticationSuccessHandler
+1367	 WebSecurityExpressionHandlder, WebSecurityExpressionHandler
+1369	 BeanComponentDefinition, registerWithGeneratedName, registerBeanComponent, generateBeanName
+1388	 AuthenticationDetailsSource, UsernamePasswordAuthenticationFilter, LoginUrlAuthenticationEntryPoint
+1396	 HttpSessionContextIntegrationFilter, SessionFixationProtectionFilter, RememberMeProcessingFilter, SecurityContext, SecurityContextHolder, AbstractSessionManager.Session, OnRedirectUpdateSessionResponseWrapper
+1404	 BeanDefinitionStoreException, filterChainProxy, form-login, intercept-url
+1412	 ShallowEtagHeaderFilter, springSecurityFilterChain, DelegatingFilterProxy
+1462	 SessionFixationProtectionFilter
+1540	 ChannelProcessingFilter, securityMetadataSource
+1561	 HttpSecurityContextRepository, SecurityContext, SaveToSessionResponseWrapper
+1583	 PreAuthorize, hasAuthority, hasRole, intercept-url, IS_AUTHENTICATED_ANONYMOUSLY, permitAll
+1584	 HttpServletRequest
+1592	 spring-security-cas, Cas20ProxyReceivingTicketValidationFilter, AbstractTicketValidationFilter
+1603	 rememberMeServices
+1608	 FirewalledRequest
+1628	 AuthenticationSuccessHandler, RememberMeServices
+1653	 org.springframework.security.userDetailsServiceFactory, spring-security-samples-tutorial-3.1.0.M2
+1674	 LoginUrlAuthenticationEntryPoint, HttpServletRequest, HttpServletResponse, AuthenticationException
+1705	 OpenIDAuthenticationFilter
+1752	 TextEncryptor, Encryptors, AesBytesEncryptor
+1764	 LdapShaPasswordEncoding, MD4PasswordEncoder
+1770	 SessionRegistry, SessionInformation
+1772	 SimpleUrlLogoutSuccessHandler, URLDecoder.decode, isUseReferer
+1790	 AbstractAuthenticationTargetUrlRequestHandler, DefaultRedirectStrategy, URLDecoder.decode
+1850	 ConcurrentSessionFilter, LogoutFilter, SecurityContextLogoutHandler, TokenBasedRememberMeServices
+1885	 FilterChainProxy, AuthenticationProvider, UserDetailsService, MyCustomAuthenticationProvider
+1893	 PortMapperImpl, ss:port-mappings, ss:form-login
+1900	 GrantedAuthorityImpl, SimpleGrantedAuthority, Collection
+1948	 AbstractUserDetailsAuthenticationProvider, UserDao
+2005	 SecurityContext, SecurityContextPersistenceFilter, HttpServletResponse
+2025	 HttpSessionSecurityContextRepository, SecurityContextPersistenceFilter, SaveToSessionResponseWrapper
+2055	 SaveContextServletOutputStream, ServletOutputStream
+2057	 ConcurrentSessionFilter, SecurityContextHolder
+2072	 SecurityContextHolder, Authentication, Authorities
+2136	 TestEntityPermission, DefaultPermissionEvaluator, TestEntityService
+2198	 HttpSecurity, BasicAuthenticationEntryPoint
+2215	 SecurityConfig, AuthenticationManagerBuilder, AuthenticationManager, HttpSecurity, SecurityContextHolderAwareRequestFilter, HttpServlet3RequestFactory
+2223	 FirewallRequest
+2280	 SessionFixationConfigurer
+2296	 HttpServletRequest
+2328	 Java configuration, hasAuthority, hasAnyAuthority, hasRole
+2376	 SessionManagementFilter, CsrfAuthenticationStrategy
+2422	 session-management, sessionAuthenticationStrategy, CSRF protection
+2455	 AbstractAuthenticationProcessingFilter, setFilterProcessesUrl
+2457	 setFilterProcessesUrl
+2543	 SecurityConfig, AuthenticationManagerBuilder, HttpSecurity
+2571	 UserDetailsService
+2595	 @EnableGlobalMethodSecurity, SecurityConfig, AspectJMethodSecurityInterceptor, AnnotationSecurityAspect, GlobalMethodSecurityBeanDefinitionParser
+2615	 accesscontrollist, hasPermission, authorize
+2688	 HttpServletRequest, CAS Service, CAS Proxy ticket authentication
+2719	 usuarioLogadoAcessaPagina, authenticated, withRoles, roles, user, mvc.perform, get, andExpect
+2727	 springVersion, MIN_SPRING_VERSION, logger
+2793	 WebSecurityConfigurerAdapter
+2815	 @EnableGlobalMethodSecurity, WebSecurityConfigurerAdapter, DataSource
+2913	 ChangeSessionIdAuthenticationStrategy, AuthenticationStrategy, NullEventPublisher
+2919	 DefaultLoginGeneratingFilter, DefaultSecurityFilterChain, DefaultLoginPageGeneratingFilter, BeanDefinitionRegistryPostProcessor, BeanDefinitionRegistry, ConfigurableListableBeanFactory
+2935	 Authentication, TestSecurityContext, ResultHandler
+2941	 DefaultRequestPostProcessor, MockMvcBuilders, springSecurity
+2948	 ContextLoaderListener, BeanDefinitionParsingException
+3019	 BasicAuthenticationFilter, RememberMeServices, NullRememberMeServices
+3020	 HttpServletRequest, isUserInRole
+3135	 HttpSecurity, antMatchers, authenticated, hasAnyRole, httpBasic, csrf, disable, userDetailsService

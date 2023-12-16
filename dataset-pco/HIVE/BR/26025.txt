@@ -1,0 +1,7 @@
+Remove IMetaStoreClient#listPartitionNames which is not used
+Currently the following method is not used and not yet released:
+{code:java}
+List<String> listPartitionNames(String catName, String dbName, String tblName,
+    String defaultPartName, byte[] exprBytes, String order, short maxParts)
+    throws MetaException, TException, NoSuchObjectException; {code}
+We should not release unused methods

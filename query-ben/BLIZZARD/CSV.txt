@@ -1,0 +1,14 @@
+167	test set header record headers parse string format Comment hides record CSV record comment processed record comment recognized comment lines record attached
+96	csvrecord exception header parser header test void mapping builder csvparser csvr ecord verify length matches number values
+118	tomap map map csvrecord headers documentation method excpetion pointer map nullpointerexcpetion null pointer excpetion csvr ecord throws npe formats form ats
+132	quote javadoc method references withquote quote folks csvformat apache org withquotechar quote char incorrect referencing commons csv csvf orm
+140	resultset result set csvprinter wasn apos result result amp numeric printrecords print records records quotemode quote mode quote mode doesn work csvp rinter print set
+145	comments header csvformat methods set null works passing constructor clear csvf orm
+156	mode character quote printing quotemode quote mode validate set illegal illegalargumentexception illegal argument exception argument incorrect javadoc
+161	format order csvformat mode declaration methods depends quoting return javadoc csvf orm
+170	string csvformat nullstring null string mysql apos null amp csvf orm
+106	output format amp format allways header csvformat bnull withheader header withskipheaderrecord skip header record csvf orm ways append null
+112	header parser format map store names raise behavior amp apos headermap header map inconsistent parsed parse input duplicate columns
+168	escape nullstring null string string csv case issue amp dev method text csvformat csv format format null escaped
+169	string string equalsignorecase equals ignore case reading case records equals case sensitive null
+128	CSVFormat EXCEL should ignore empty header names IllegalArgumentException initializeHeader init CSVParser Header initialize parse

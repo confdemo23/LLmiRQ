@@ -1,0 +1,13 @@
+Large file association not correctly removed if disabled beforehand
+Steps to reproduce below.
+
+In a clean workspace, from the preference page:
+
+1. Define a large file association for .java files, an editor prompt for files of size above 8 bytes.
+1.1. Open a .java file to see that the preference applies.
+2. Apply.
+3. Disable the .java preference.
+3.1. Open a .java file, see that the preference is disabled.
+4. Apply.
+5. Remove the .java preference.
+5.1. Observe that the preference still exists for .java files, although it was removed.

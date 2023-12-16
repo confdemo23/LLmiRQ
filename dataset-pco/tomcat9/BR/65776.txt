@@ -1,0 +1,4 @@
+[content assist] Emacs keys on code completion menus
+On the drop down code completion emails, it would be really nice to have the
+emacs keys ctrl-n & ctrl-p.   It a (minor) pain taking the hands off the keys to
+hit the down arrow.

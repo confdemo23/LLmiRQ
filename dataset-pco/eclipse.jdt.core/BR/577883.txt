@@ -1,0 +1,12 @@
+[content assist] no completions on lambda variables when the lambda is nested
+Sample Code:
+	public void bugbash() {
+		Runnable run = () -> {
+			Stream.of(1).map(t -> t.)
+		};
+	}
+
+
+Trying to invoke "t." will not provide any completions until the "Stream.of(1).map(t -> t.)" is completed with a semicolon.
+
+If you try to write the lambda by typing is "t -> " and try to complete the "t" variable, it is also not shown.

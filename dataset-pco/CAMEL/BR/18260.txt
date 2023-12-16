@@ -1,0 +1,2 @@
+debugger - Reflect exchange changes on BacklogTracerEventMessage
+While investigating on [https://github.com/camel-tooling/camel-idea-plugin/issues/734,] I realized that is was actually due to the fact that when a change is made on an exchange, the corresponding backlog tracer event message is not modified such that the change is not reflected in the debugger variables. 

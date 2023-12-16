@@ -1,0 +1,20 @@
+[18][switch pattern] non-abstract sealed class switch expression type of a non-exhaustive switch accepted incorrectly
+Consider:
+
+sealed class C permits D {}
+final class D extends C {}
+public class X {
+	@SuppressWarnings("preview")
+	static  void foo(C ji) {
+		 switch (ji) { // non-exhaustive
+		   case D d : System.out.println("D"); break;
+		}; 
+	} 
+	public static void main(String[] args) {
+		X.foo(new D());
+	}
+}
+
+This should not be accepted but no error is thrown.
+
+However do note that a variant of this with abstract class should be accepted and it is being accepted correctly - ie C is abstract sealed with rest of the code as above.

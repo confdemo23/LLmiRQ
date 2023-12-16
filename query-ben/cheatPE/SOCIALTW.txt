@@ -1,0 +1,5 @@
+27	 TwitterErrorHandler, HttpStatus, OperationNotPermittedException, RateLimitExceededException
+28	 UncategorizedApiException, RateLimitExceededException, TwitterErrorHandler, RateLimitStatus
+57	 TwitterErrorHandler, TwitterTemplate, extractErrorDetailsFromResponse, handleClientErrors, UncategorizedApiException, NotAuthorizedException
+64	 UserTemplate, PagingUtils
+71	 TwitterEscapingFormHttpMessageConverter, FormHttpMessageConverter, updateStatus

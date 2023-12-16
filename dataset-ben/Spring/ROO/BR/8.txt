@@ -1,0 +1,2 @@
+Review templating approach to be more flexible and allow better custom branding of generated applications
+The generated view artifacts do currently allow for customization of the generated application via CSS, the header.jsp and the footer.jsp but there are some opportunities to simplify end-user branding.

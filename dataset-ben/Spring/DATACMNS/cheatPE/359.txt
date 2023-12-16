@@ -1,0 +1,2 @@
+Incorrect deprecation message in PageableArgumentResolver
+PageableArgumentResolver is deprecated in 1.6.RC1 to favor PageableWebHandlerArgumentResolver. However the class PageableWebHandlerArgumentResolver does not exist. I believe the new class to be used now should be PageableHandlerMethodArgumentResolver i.e. without Web after Pageable.

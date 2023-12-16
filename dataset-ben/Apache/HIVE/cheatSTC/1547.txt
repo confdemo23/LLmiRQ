@@ -1,0 +1,4 @@
+Unarchiving operation throws NPE
+Unarchiving a partition throws a null pointer exception similar to the following:
+
+This error seems to be DFS specific, as local file system in the unit tests don't catch this.

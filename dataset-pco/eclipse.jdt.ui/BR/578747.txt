@@ -1,0 +1,6 @@
+[JUnit] Re-enable button to re-run failed first for JUnit 5
+With https://bugs.eclipse.org/bugs/show_bug.cgi?id=518052 the non-functioning button "Rerun Test - Failures first" if using JUnit 5 got "fixed" by disabling the button.
+
+The corresponding JUnit-Issue: https://github.com/junit-team/junit5/issues/884 resulted in re-opening of https://github.com/junit-team/junit5/issues/13, that got some attention, and in the meantime got closed as JUnit 5 has the ability to run tests in a certain order since several versions/years.
+
+Thus I'd like to request to re-enable the option in eclipse, making use of the new JUnit-5-API. :-)

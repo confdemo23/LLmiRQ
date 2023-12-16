@@ -1,0 +1,5 @@
+limit partition number involved in a table scan
+To protect the cluster, a new configure variable "hive.limit.query.max.table.partition" is added to hive configuration to
+limit the table partitions involved in a table scan. 
+The default value will be set to -1 which means there is no limit by default. 
+This variable will not affect "metadata only" query.

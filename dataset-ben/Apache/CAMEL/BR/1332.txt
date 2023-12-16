@@ -1,0 +1,3 @@
+StreamCachingInterceptor can be enabled both as a strategy and as an interceptor -- should only be a strategy
+Right now, there are two ways of enabling stream caching:explicitly enable it through the DSL
+implicitly enable it through e.g. a Multicast or DeadletterChannelWe should make that a single way of enablement or else document the rationale for the difference properly.

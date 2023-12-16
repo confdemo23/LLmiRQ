@@ -1,0 +1,1 @@
+Use `Reader.getSchema` instead of deprecated `Reader.getTypes`

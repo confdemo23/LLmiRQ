@@ -1,0 +1,2 @@
+Hot Swap of static content for JAXRSArchive doesn't work
+Static content hot swap fails with JAXRSArchive type

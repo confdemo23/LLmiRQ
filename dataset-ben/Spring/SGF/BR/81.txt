@@ -1,0 +1,2 @@
+use-bean-factory-locator attribute not parsed from the namespace
+The use-bean-factory-locator attribute is not parsed from the namespace resulting in inability to disable BeanFactory lookup.

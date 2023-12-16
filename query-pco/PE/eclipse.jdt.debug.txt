@@ -1,0 +1,11 @@
+576399	 JavaStackTraceConsole, JavaAppletLaunchConfigurationDelegate, java.nio.file.Files
+576829	 Main, MyClass, getBoolean
+576979	 AbstractReader
+576999	 testBug573547_insideLambda_onOuterScopeVariable_whileOnPreviousFrame
+577103	 JDIModelPresentation, IWatchExpression, JavaInspectExpression
+577119	 ExpTest, Record, run
+577564	 FinalBoolean, main, Boolean.valueOf
+578145	 InspectLambda, InspectLambdaOnChainCalls, main, Consumer, forEach, stream
+578450	 Set Object &Label..., IJavaObject
+579099	 Arrays.asList, stream, filter, length
+579100	 Drawable, draw, main

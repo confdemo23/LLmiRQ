@@ -1,0 +1,14 @@
+Java Search does not find any TYPE IMPLEMENTORS in .class files
+I am trying to solve search issues in .class files. I do not know if exactly this issue was reported in any of the many bug reports for search, so i create a new ticket:
+
+When i search for an implementor of a class and they are in a .class in a .jar without sourcecode attached then there are no hits. 
+For both modular and non-modular.
+While there are hits when i search for the same thing in the sourcecode project.
+
+As far as i see the issue is that the parameter IJavaSearchConstants.IMPLEMENTORS is converted to SuperTypeReferencePattern.ONLY_SUPER_INTERFACES and that does currently find strictly only explicit implemented interfaces that are listed in the class.
+The superclass is also implicit a implemented interface.
+
+(Even "Object" would be - which is never explicitly listed, but i wont search for that.)
+
+Note that IJavaSearchConstants.IMPLEMENTORS is defined as
+"The search result is a type that implements an interface *or extends a class*"

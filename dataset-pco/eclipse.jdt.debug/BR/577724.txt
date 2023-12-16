@@ -1,0 +1,2 @@
+[18] Add Execution Environment for JavaSE-18
+There should be an Execution Environment for JavaSE-18 in the Execution Environment Preference page.

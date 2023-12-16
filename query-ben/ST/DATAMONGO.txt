@@ -1,0 +1,8 @@
+199	 Field, AnnotationBasedPersistentProperty, BasicPersistentEntity, MappingMongoConverter, MongoTemplate, MongoOperations
+260	 Foo, GenericConversionService, BeanWrapper, MappingMongoConverter, MongoTemplate
+398	 DBCollection, MongoTemplate, PolicyDb, Activator
+410	 MongoTemplate TestConverterThatFails JSON BasicDBObject
+462	 ReflectionEntityInstantiator, MappingMongoConverter, MongoTemplate, InstituteRepository, ReaperApp
+806	 User, Aggregation, AggregationResults, PropertyReferenceException, PropertyPath
+887	 SourceRepository, MyEntity, MyClass, ParameterizedTypeInformation
+1360	 BasicBSONEncoder LocalDateTime

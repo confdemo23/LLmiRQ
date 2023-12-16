@@ -1,0 +1,2 @@
+Remove dead logic from CSSPropertyBackgroundSWTHandler / AbstractCSSPropertyBackgroundHandler
+I'm currently looking into Bug 577463 and Bug 577493. CSSPropertyBackgroundSWTHandler / AbstractCSSPropertyBackgroundHandler contains some dummy / generated code without any logic which makes it harder to follow the execution path. This code is ancient and unnecessary so it should be removed.

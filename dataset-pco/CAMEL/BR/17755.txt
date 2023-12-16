@@ -1,0 +1,4 @@
+camel-core - DoSwitch can be Choice with precondition set
+With CAMEL-17555 we use the term "precondition" to filter whether the route/EIP should be included or not (eager).
+
+To standardize on precondition then we can remove DoSwitch and use Choice instead and add precondition to choice.

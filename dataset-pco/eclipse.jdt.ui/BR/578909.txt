@@ -1,0 +1,24 @@
+[cleanup] Unboxing cleanup causes compile error
+The following class:
+
+public class Test3 {
+
+	public void foo(List<Object> byteList, byte[] blobContent, int blobLength) {
+		for (int i = 0; i < blobLength; i++)
+			blobContent[i] = (byte) ((Integer) byteList.get(i)).intValue();
+	}
+}
+
+when applied the Java Feature Use Unboxing cleanup creates the following:
+
+public class Test3 {
+
+	public void foo(List<Object> byteList, byte[] blobContent, int blobLength) {
+		for (int i = 0; i < blobLength; i++)
+		{
+			blobContent[i] = (byte) ((Integer) byteList.get(i));
+		}
+	}
+}
+
+which causes an error casting Integer to byte.

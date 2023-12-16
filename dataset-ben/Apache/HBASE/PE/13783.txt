@@ -1,0 +1,4 @@
+Improve error message "Could not seek StoreFileScanner" to indicate that issue could be a bad disk
+Feedback from customers.
+Following error could mean that a disk has gone bad. We have seen many users confused by this error. 
+java.io.IOException: Could not seek StoreFileScanner[HFileScanner for reader reader=hdfs://XXXX/843914879034b56117dfa6b7f3c8383d/content/b6f5e9961d2d4578aea3917c0637bb7c

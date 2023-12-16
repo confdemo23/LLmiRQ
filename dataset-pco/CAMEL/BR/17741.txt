@@ -1,0 +1,17 @@
+camel-yaml-dsl - Improper way to get the default name of a field annotated with XmlElement 
+It appears that the plugin *camel-yaml-dsl-maven-plugin* doesn't retrieve the default name of a property as the JAXB specification states.
+
+Indeed, I have the next mapping:
+{code:java}
+@XmlElement
+@Metadata(label = "security")
+private List<SecurityDefinition> securityRequirements = new ArrayList<>();{code}
+According the JAXB specification, if a field is annotated with the annotation {_}XmlElement{_}, its name should be retrieved from the attribute "name" if set otherwise it should use the field name.
+
+With the current code, I end up with "{_}security{_}" corresponding to the value of the attribute "{_}name{_}" of the annotation _XmlRootElement_ on the class _SecurityDefinition_ as you can see below:
+{code:java}
+@Metadata(label = "rest,security,configuration", title = "Rest Security")
+@XmlRootElement(name = "security")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class SecurityDefinition {{code}
+According to the specification, this behavior is actually only expected with a field annotated with {_}XmlElementRef{_}.

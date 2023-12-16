@@ -1,0 +1,3 @@
+TestHBaseCliDriver is broken
+It broken on the current trunk:
+$ ant test -Dtestcase=TestHBaseCliDriver 

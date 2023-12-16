@@ -1,0 +1,112 @@
+86	set read entry pax file archive tar sparse tar entries don‘t set magic properly oldgnu longname entries GNU longfile mode tar classes create special archive entries file original longer characters tar entry header holds magic indicating format special entries file magic ustar indicating oldgnu format https issues apache org bugzilla bug cgi http sunsite ualberta Documentation Gnu tar html chapter tar html
+110	set pax sparse add archive file delete tar Tar fails handle ustar prefix field Tar fails handle ustar prefix field file paths longer longer characters
+163	tar set archive pax sparse entry time read Unable extract file larger Posix format tar archive attempt read posix format tar archive file excess bytes size fail Size range illegal argument exception
+184	set pax file sparse entry archive link test PAX header parser fails ASCII values current logic parsing PAX extension headers fails number bytes encode entry number characters character ASCII range headers UTF encoded path takes bytes account trailing newline characters parser fails Expected chars read
+244	set read file archive pax parse input pad reading UINT data type wrong big values description large values indicating additional bytes shift integer bits leading overflow incorrect casted bitshift attached patch Details documentation UINT real UINT encoded scheme Size encoding sequence depends Extra Bytes binary xxxxxxx xxxxxxx xxxxxx xxxxxx xxxxx xxxxx
+252	test archive read entry file header zip size Writing empty entries produces incorrect corrupt archive couldn amp apos find exact rule incorrect behavior reduce simple scenarios reproduce Input folder files archive folder files incorrect behavior appears Scenario empty files Result created archive single folder entry archive matter file Scenario files empty content Result created archive folder entry archive number file entries archive number entries equal number empty files Scenario empty files Result zip Manager open archive stops working Scenario files empty content file alphabetically content Result behavior Scenario Scenario files empty content file empy Result archive corrupt message received open file amp apos archivename amp apos archive Zip Manager crash
+335	read block frame checksum file set sparse archive TAR checksum fails checksum aligned linked TAR checksum padding left expected SPACE terminator result digits stored checksum lost valid checksum treated invalid code checks digits range adding stored sum octal digits field
+351	zip entry file set read archive split local Defective zip archive produces problematic error message truncated zip File produces java EOFException conatining hughe amount data error message leading beeps crippeling workload potential console logger
+64	methods user finish archive stream archiveoutputstream archive output stream implementations close output output public impl ementations safe
+70	stream unicode input ziparchiveinputstream zip archive input stream archive fields extra zip field useunicodeextrafields unicode extra fields unused
+74	count data input ziparchiveinputstream zip archive input stream cases archive stream zip input fails update bytes read
+85	cpio stream archive outfiles files archive file entry file entry final corrupt
+87	return archive stream problem zip ziparchiveinputstream zip archive input stream ioexception truncated file length archive input doesn apos report truncated
+94	zip zip entries entry files ctor archive hashmap numbers analysis creating ocassionally produce corrupted output
+96	entry file entry stream archive bytes system tika testing file corrupt zip files infinite inf init loop
+100	method data entries archive stream zip input exception data entry ziparchiveinputstream zip archive input stream throw descriptor stored
+101	data signature descriptor descriptors files reading record signatures zip compatibility ziparchiveinputstream zip archive input stream archive input stream doesn apos handle
+114	tar characters entries buffer tarutils tar utils names model utils doern moe parsename parse parse properly handle range
+117	tar stream archive scruffohio rar cgi leo input winrar win rar file files recognised archivestreamfactory archive stream factory factory
+119	stream stream output method taroutputstream tar output stream tar socket data finish client tararchiveoutputstream tar archive output stream archive doesn apos flush content underlying
+125	ioexception stream change input init stream documentation returns number compressorinputstream compressor input stream bzip compressor throws ioe xception underlying returns
+129	entry stream zip integer eofexception max file zip entry bytesreadfromstream bytes read stream java eofe xception truncated zip extracting lager
+139	amp ant inflater apos inflaterinputstream inflater input stream code bug harmony input fact zipfile zip file zip file fails clean resources
+146	ioexception amp block crc eof blocksize block size file data bzip compressorinputstream compressor input stream compressor input stream treats treat eos
+159	zip stream archive file archiveinputstream archive input stream argument amp changesetperformer change set performer hang set performer reliable ziparchiveinputstreams zip archive input streams input streams change
+160	tar stream archive output numtowrite num write num stream tar file len tararchiveoutputstream tar archive output stream getbyteswritten bytes written bytes written returns invalid
+162	file planet bytes xml code compressorinputstream compressor input stream stream log open bzip compressor input stops decompressed dec ompressed large compressed
+164	zip map zipfile zip file problem entries hashmap hash map fields file entry unicode read winzip archives extra fields
+171	tar archives bytes createarchiveinputstream create archive input stream stream text file archivestreamfactory archive stream factory archive input create detects files
+173	character file bag archive factory tar createarchiveinputstream create archive input stream case tararchiveinputstream tar archive input stream object archivestreamfactory archive stream factory stream create input returns simple text
+175	tar uid gid entry gnu archive marker ascii fields binary encoding
+185	stream mbfile file pbzip file apos amp bunzip bytes bzip bzip compressorinputstream compressor input stream compressor input truncates files compressed
+187	comment zip amp entry archive file ziparchiveinputstream zip archive input stream stream zip entries input zipfile zip file don apos produce equals ziparchiveentry zip archive entry instances
+189	zip input zip file zipinput zip input stream archive calls zipfile zip file entry ziparchiveinputstream zip archive input stream read bytes reading nested
+191	aiff files compress file tar tika factory archive heuristics stream relaxed detection archivestreamfactory archive stream factory
+200	issue zip tararchiveoutputstream tar archive output stream characters truezip stream gnu trip conversion output ascii fails tar archive longfile
+201	link tararchiveentry tar archive entry flag entry slashes tar tar set string archive constructor create archive leading slash
+206	garbage stream apos archive checksum issue stream amp tararchiveoutputstream tar archive output stream tararchiveinputstream tar archive input stream tar output writes archive
+212	stream file input tar amp linux tararchiveinputstream tar archive input stream getname apos red tararchiveentry tar archive entry archive entry returns wrongly encoded set encoding
+218	compressorstreamfactory compressor stream factory factory compressor typo javadoc stream file decompressing examples compressing
+219	file exception stream zip ziparchiveinputstream zip archive input stream arrayindexoutofboundsexception array bounds exception array question input buf zip archive bounds extracting stored entry
+223	tar buffer tarbuffer tar buffer eofrecord npe getrecord record tararchiveinputstream tar archive input stream bin input loop trytoconsumesecondeofrecord consume eofrecord consume record
+224	file string file stream bzin apos download osm tofile file uncompress large bzip files
+227	map entries namemap map zip file input instances amp hash readcentraldirectory read central directory duplicate zipfile zip file getinputstream input stream stream return null
+237	gnu amp ascii link apos names mode long link longlink long link support tararchiveoutputstream tar archive output stream tar archive output stream
+239	stream stream method archive signature input bytes input archivestreamfactory archive stream factory contract factory create archiveinputstream archive input stream blocking
+240	utf zipencodinghelper zip encoding helper encoding string helper zip isutf utf aliases check
+245	stream topdirectory tar tar entry registry getnexttarentry tar entry input plugins fin tararchiveinputstream tar archive input stream archive returns null prematurely
+249	stream record readnow read size read readrecord read record tar recordsize record size bytesread bytes read int tararchiveinputstream tar archive input stream archive input properly underlying inputstream input stream
+253	cpython bytes jython implementation input stream compressor files compressorinputstream compressor input stream bzip reads truncated file ython apos
+259	property compressor honour createcompressorinputstream create compressor input stream auto format pass stream factory decompressconcatenated decompress concatenated compressorstreamfactory compressor stream factory compressor stream create input explicit compression dec ompress concatenated decompress
+264	system commons zip content entry byte buf archive println import zip reads correctly compress comp ress nul bytes
+267	archive factory stream archiver archivestreamfactory archive stream factory stream files cpio formats signature throws
+268	stream buf amp bytes apos method values zip stream extract buffer read time entries stored compression
+270	len stream tar tararchiveentry tar archive entry input pax rest inputstream input stream ioexception archive tararchiveinputstream tar archive input stream fails read header
+272	file auto list files bug doc compressor factory stream factory compressorstreamfactory compressor stream factory fails autodetect detect unix compress comp ress
+274	exception changeset change set null deletion change data pointer dir nullpointerexception null pointer exception bogus hang set adddeletion add deletion add
+276	stream output archive var attachment java ways data api nullpointerexception null pointer exception null pointer exception ziparchiveoutputstream zip archive output stream zip invalid entries
+277	ioutils stream case work input input cipherinputstream cipher input stream stream bytes iou tils skip advertised
+279	path stream input entry archive archivepath archive path input nextmatchedentry matched entry outputpath output path string tararchiveinputstream tar archive input stream tar silently finished unexpected eof occured
+289	entry tar stream checksums archive archives modification tararchiveoutputstream tar archive output stream link default output includes timestamp time stamp long headers
+302	field support thread immutability constuctor setting stream safety archive factory retore archivestreamfactory archive stream factory
+303	thread field compressorstreamfactory compressor stream factory factory amp safety method break compressor immutability restore stream
+306	archive stream archivestreamfactory archive stream factory jar factory jararchiveinputstream jar archive input stream cases cpioarchiveinputstream cpio archive input stream arj cpio fails pass encoding creating streams
+309	stream rawdata raw data buffer bzip bzip amp data length input byte compressorinputstream compressor input stream compressor return wrong told read full
+312	tar names times entry file file archive string slashes tararchiveentry tar archive entry public filename file normalize
+315	posix archive tar apos tararchiveentry tar archive entry entry bit gid uid spec tar write
+316	factory tar pass header files deflatez test stream amp streams compressorstreamfactory compressor stream factory compressor doesn apos handle deflate zlib
+330	archive archive directory tar stream size tar files bytes input unarchive archive fails sizes
+331	sum tarutils tar utils png file tar bug checksum verifychecksum verify check sum utils android files recognized archivestreamfactory archive stream factory archive stream factory
+332	snappy stream input snappycompressorinputstream snappy compressor input stream stream compressor int byte framed returns framedsnappycompressorinputstream framed snappy compressor input stream read invalid
+334	int getbsdlongname bsdlong entry bsd bsdlong readfully read fully toread read issue code increment ararchiveinputstream archive input stream archive input stream offset
+343	heap memory bugs archive decoder browse java case native memory leak sevenz deflatedecoder deflate decoder deflate
+344	file archive gnu lib null tool amp ioexception distribution handle terminated extended
+348	entry entry getnextentry entry exception zfile illegalstateexception illegal exception illegal block sevenzfile zfile archive calling read empty sevenzarchiveentry zarchive entry archive throws zarchive
+355	length amp tarball loop pack rest headers pax parsepaxheaders parse pax headers exception parsing fails negativearraysizeexception negative array size exception negative array size
+356	amp header pax header apos directory stream isdirectory directory tar issue entry problems
+357	finish stream calls apos output method class output synchronize time bzip compressoroutputstream compressor output stream compressor stream affect incorrectly
+363	byte bin bitscachedsize bits cached size count size stream bits bits exception overflow bitinputstream bit input stream bit input
+366	directory folder tar isdirectory directory tar getdirectoryentries directory entries file import stream entries tararchiveentry tar archive entry archive entry working
+73	input archive stream zip files ziparchiveinputstream zip archive input stream valid handle compress
+75	location problem bytes bytesread bytes read utils stream count archive extra zip ziparchiveinputstream zip archive input stream input file occurred
+107	ant compress files stream factory archive follow writes process checking archivestreamfactory archive stream factory recognise tar created
+113	size space tar parsetarheader parse tar header nul header entry archive header field tararchiveentry tar archive entry parse includes trailing parsing octal
+131	file text recv arrayindexoutofbounds array bounds array method arrayoutofbounds array bounds tables utility bounds decompressing dec ompressing
+152	resources instances streams output ziparchive ziparchiveinputstream ziparchive input stream stream compress input deflater ziparchiveoutputstream ziparchive output stream don apos clean inflater
+176	problem file archive umlaut stream zip directory winzip win zip zip umlauts archiveinputstream archive input stream input getnextentry entry entry problems win directories
+205	rsc stream resource url compressor input workspace test jenkins file unit tests fail path project trivial description
+209	doc factory input archive inputstream input stream tar createarchiveinputstream create archive input stream archivestreamfactory archive stream factory stream incorrectly recognized
+228	zip zip file archives archive tool length dotnetzip dot net zip file win zipexception zip exception exception reading valid
+229	gnu entries longlink long link git link tar long org src gnu incorrect handling longlink long link
+236	test illegal illegalargumentexception illegal argument exception cpio rpm archive amp trailer redline org argument exception reading generated redline
+265	pax compress file names headers bit tar bug tararchiveentry tar archive entry patrik strange written
+273	constructors var data apache archivers null couple pointer cases issue nullpointerexception null pointer exception exception creation fields entries scratch scr atch
+336	prefix time ascii header archive xstar apos access prefixlen amp extended standard tar format characters
+105	While Archiving the empty directories are not archived to the archive IOException ZipArchiveOutputStream ArchiveTest createArchive Archive finish close Zip Output Stream create Test
+169	RuntimeException on corrupted file RuntimeException IOException resolveLocalFileHeaderData init ZipFile ZipContainerDetector AutoDetectParser TikaIndexerHardenerTest parseToString CompositeDetector detect File Zip
+177	TarArchiveInputStream rejects valid TAR file IOException IllegalArgumentException Tar init parseOctal TarArchiveInputStream TarUtils parseTarHeader TarArchiveEntry newTarInputShop TarInputShop TarDriver getNextTarEntry
+178	TarArchiveInputStream throws IllegalArgumentException instead of IOException IOException IllegalArgumentException Tar init parseOctal TarArchiveInputStream TarUtils parseTarHeader TarArchiveEntry newTarInputShop TarInputShop TarDriver getNextTarEntry
+181	Tar files created by AIX native tar  and which contain symlinks  cannot be read by TarArchiveInputStream IOException IllegalArgumentException TarArchiveInputStream getNextTarEntry NativeMethodAccessorImpl Tar DelegatingMethodAccessorImpl invoke ExecuteJava Extractor Method Entry Archive
+197	Tar file for Android backup cannot be read IllegalArgumentException parseOctal TarUtils parseTarHeader TarArchiveEntry init Tar parse Octal Utils Header Archive
+203	Long directory names can not be stored in a tar archive because of error when writing PAX headers IOException TarArchiveOutputStream writePaxHeaders write putArchiveEntry OutputStream TarUtilities addFile addDirectory Archive Output Stream
+221	Compress cannot run without XZ included MimeTypeException ClassNotFoundException createCompressorInputStream ZipContainerDetector TikaResourceMetadataFactory CompressorStreamFactory createMetadata detect URLClassLoader CompositeDetector detectCompressorFormat AccessController Compressor
+241	writing  z entries with LZMA  fails when closing the stream XZIOException FilterOutputStream LZMA2Decoder FinishOnCloseStream LZMA2OutputStream flush Stream closeArchiveEntry close SevenZOutputFile LZMA2Output Filter
+256	z    MB dictionary is too big UnsupportedOptionsException init LZMAInputStream readEncodedHeader addDecoder SevenZFile readHeaders Coders LZMADecoder initialize SevenZipError decode
+262	TarArchiveInputStream fails to read entry with big user id value IllegalArgumentException parseOctalOrBinary TarUtils parseTarHeader init parseOctal TarArchiveEntry Tar TarArchiveInputStream parse Octal getNextTarEntry
+278	Incorrect handling of NUL username and group Tar gz entries FileNotFoundException IOException IllegalArgumentException TarArchiveInputStream extractNoFileOwner init parseTarHeader TarArchiveEntry Tar parseOctalOrBinary AppTest TarUtils getNextTarEntry parseOctal
+286	Error while expanding  z java io EOFException MojoExecutionException EOFException BuildException execute AntRunMojo DefaultPluginManager executeMojo DefaultLifecycleExecutor expandFile executeGoals UnknownElement Mojo NativeMethodAccessorImpl DelegatingMethodAccessorImpl
+287	Support for  z archives using  kDummy TikaException IOException AutoDetectParser parse CompositeParser parseToString readFilesInfo SevenZFile init Parser readHeader fileparser jsonstring
+297	Cleaning up unclosed ZipFile for archive FileNotFoundException constructorThatThrowsException IOException RandomAccessFile init TCommonCompressZipFileConstructor constructorThatThrowsExceptionLeavesBehindObjects ZipFile File open AppMain Zip Access Random
+314	TarArchiveInputStream rejects uid or gid    x NumberFormatException NumberFormatException applyPaxHeadersToCurrentEntry forInputString TarArchiveInputStream parseInt paxHeaders Input getNextTarEntry Exception Format Number
+321	Exception in X  NewUnix parseFromLocalFileData when parsing   sized  ux  local entry ArrayIndexOutOfBoundsException parseFromLocalFileData X7875 NewUnix init ExtraFieldUtils parseFromCentralDirectoryData setCentralDirectoryExtra readCentralDirectoryEntry ZipFile populateFromCentralDirectory ZipArchiveEntry

@@ -1,0 +1,21 @@
+[18][switch pattern] -  pattern dominating constant case label rule changes
+Investigate the delta:
+
+JEP 420 - Section 14.11.1 
+A switch label that has a pattern case label element p dominates another switch label that has a constant case label element c if p dominates c.
+
+A pattern p dominates a constant c if one of the following is true:
+
+p is a type pattern and either of the following is true:
+
+the type of c is a primitive type and its wrapper class (5.1.7) is a subtype of the erasure of the type of p.
+
+the type of c is a reference type and is a subtype of the erasure of the type of p.
+
+
+JEP 406 (First Preview) - Section 14.11.1
+
+A switch label that has a pattern case label element p dominates another switch label that has a constant case label element c if either of the following is true:
+
+the type of c is a primitive type and its wrapper class (5.1.7) is a subtype of the erasure of the type of p.
+the type of c is a reference type and is a subtype of the erasure of the type of p.

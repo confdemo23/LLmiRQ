@@ -1,0 +1,6 @@
+Type in the Reference documentation in section 6.1
+http://static.springsource.org/spring-security/site/docs/3.0.x/reference/core-services.html
+In the 3rd paragraph:
+"ProviderMananger"
+should read
+"ProviderManager"

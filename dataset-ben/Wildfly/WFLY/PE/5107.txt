@@ -1,0 +1,3 @@
+WFLYCTL0028: Attribute 'default-stack' in the resource at address '/subsystem=jgroups' is deprecated, and may be removed in future version.
+I noticed this message below in the server.log.  Is this message intended or a bug?
+INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool  27) WFLYCTL0028: Attribute 'default-stack' in the resource at address '/subsystem=jgroups' is deprecated, and may be removed in future version.

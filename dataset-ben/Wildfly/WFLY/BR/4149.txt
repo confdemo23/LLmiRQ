@@ -1,0 +1,2 @@
+NamingExceptions not properly handled in InitialContext
+The change in https://github.com/jbossas/jboss-eap/commit/db525bf1d90a40eb909c8f915fca787d55f4e7e5#diff-833175ffb151a3398216d6422dadeeeeR112 catches all Exception and rewraps them with NamingException.  This behavior is undesirable if the original exception was already a NamingException.  Catch and re-throw that exception type as-is before wrapping other exceptions.

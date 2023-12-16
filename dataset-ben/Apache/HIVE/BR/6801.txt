@@ -1,0 +1,70 @@
+beeline kerberos authentication fails if the client principal name has hostname part
+Kinited as guest@EXAMPLE.COM
+Connected successfully with beeline using command
+!connect jdbc:hive2://hdps.example.com:10001/default;principal=hive/hdps.example.com@EXAMPLE.COM;hive.server2.proxy.user=guest?hive.server2.transport.mode=http;hive.server2.thrift.http.path=cliservice  dummy dummy-pass org.apache.hive.jdbc.HiveDriver
+Kinited as bob/hdps.exmaple.com@EXAMPLE.COM
+!connect jdbc:hive2://hdps.example.com:10001/default;principal=hive/hdps.example.com@EXAMPLE.COM;hive.server2.proxy.user=guest?hive.server2.transport.mode=http;hive.server2.thrift.http.path=cliservice  dummy dummy-pass org.apache.hive.jdbc.HiveDriver
+Failed with stack trace
+Error: Could not establish connection to jdbc:hive2://hdps.example.com:10001/default;principal=hive/hdps.example.com@EXAMPLE.COM;hive.server2.proxy.user=guest?hive.server2.transport.mode=http;hive.server2.thrift.http.path=cliservice: org.apache.http.client.ClientProtocolException (state=08S01,code=0)
+java.sql.SQLException: Could not establish connection to jdbc:hive2://hdps.example.com:10001/default;principal=hive/hdps.example.com@EXAMPLE.COM;hive.server2.proxy.user=guest?hive.server2.transport.mode=http;hive.server2.thrift.http.path=cliservice: org.apache.http.client.ClientProtocolException
+	at org.apache.hive.jdbc.HiveConnection.openSession(HiveConnection.java:426)
+	at org.apache.hive.jdbc.HiveConnection.&lt;init&gt;(HiveConnection.java:193)
+	at org.apache.hive.jdbc.HiveDriver.connect(HiveDriver.java:105)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:154)
+	at org.apache.hive.beeline.DatabaseConnection.connect(DatabaseConnection.java:145)
+	at org.apache.hive.beeline.DatabaseConnection.getConnection(DatabaseConnection.java:186)
+	at org.apache.hive.beeline.Commands.connect(Commands.java:959)
+	at org.apache.hive.beeline.Commands.connect(Commands.java:880)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.hive.beeline.ReflectiveCommandHandler.execute(ReflectiveCommandHandler.java:44)
+	at org.apache.hive.beeline.BeeLine.dispatch(BeeLine.java:792)
+	at org.apache.hive.beeline.BeeLine.begin(BeeLine.java:659)
+	at org.apache.hive.beeline.BeeLine.mainWithInputRedirection(BeeLine.java:368)
+	at org.apache.hive.beeline.BeeLine.main(BeeLine.java:351)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:212)
+Caused by: org.apache.thrift.transport.TTransportException: org.apache.http.client.ClientProtocolException
+	at org.apache.thrift.transport.THttpClient.flushUsingHttpClient(THttpClient.java:281)
+	at org.apache.thrift.transport.THttpClient.flush(THttpClient.java:297)
+	at org.apache.thrift.TServiceClient.sendBase(TServiceClient.java:65)
+	at org.apache.hive.service.cli.thrift.TCLIService$Client.send_OpenSession(TCLIService.java:150)
+	at org.apache.hive.service.cli.thrift.TCLIService$Client.OpenSession(TCLIService.java:142)
+	at org.apache.hive.jdbc.HiveConnection.openSession(HiveConnection.java:415)
+	... 22 more
+Caused by: org.apache.http.client.ClientProtocolException
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:909)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:827)
+	at org.apache.thrift.transport.THttpClient.flushUsingHttpClient(THttpClient.java:235)
+	... 27 more
+Caused by: org.apache.http.HttpException
+	at org.apache.hive.jdbc.HttpKerberosRequestInterceptor.process(HttpKerberosRequestInterceptor.java:67)
+	at org.apache.http.protocol.ImmutableHttpProcessor.process(ImmutableHttpProcessor.java:109)
+	at org.apache.http.protocol.HttpRequestExecutor.preProcess(HttpRequestExecutor.java:176)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:518)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	... 29 more
+Caused by: java.lang.reflect.UndeclaredThrowableException
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1563)
+	at org.apache.hive.service.auth.HttpAuthUtils.getKerberosServiceTicket(HttpAuthUtils.java:94)
+	at org.apache.hive.jdbc.HttpKerberosRequestInterceptor.process(HttpKerberosRequestInterceptor.java:61)
+	... 33 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Failed to find any Kerberos tgt)
+	at sun.security.jgss.krb5.Krb5InitCredential.getInstance(Krb5InitCredential.java:130)
+	at sun.security.jgss.krb5.Krb5MechFactory.getCredentialElement(Krb5MechFactory.java:106)
+	at sun.security.jgss.GSSManagerImpl.getCredentialElement(GSSManagerImpl.java:178)
+	at sun.security.jgss.GSSCredentialImpl.add(GSSCredentialImpl.java:384)
+	at sun.security.jgss.GSSCredentialImpl.&lt;init&gt;(GSSCredentialImpl.java:42)
+	at sun.security.jgss.GSSManagerImpl.createCredential(GSSManagerImpl.java:139)
+	at org.apache.hive.service.auth.HttpAuthUtils$HttpKerberosClientAction.run(HttpAuthUtils.java:161)
+	at org.apache.hive.service.auth.HttpAuthUtils$HttpKerberosClientAction.run(HttpAuthUtils.java:126)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1548)
+	... 35 more

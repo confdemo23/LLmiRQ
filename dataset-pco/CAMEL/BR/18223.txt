@@ -1,0 +1,2 @@
+camel-plugin - Propose a goal to debug with the textual route debugger
+The textual route Debugger has several requirements to make it work properly (camel-debug in classpath, JMX enabled, {{CAMEL_DEBUGGER_SUSPEND}} set to true...) thus it could be interesting to propose a new maven goal to the camel plugin to set up everything automatically. 

@@ -1,0 +1,2 @@
+Upgrade to Junit 5.10.x
+We are currently using JUnit 5.9, but [5.10.0|https://junit.org/junit5/docs/5.10.0/release-notes/] is already available.

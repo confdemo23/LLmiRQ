@@ -1,0 +1,2 @@
+StringEscapeUtils.escapeHtml() escapes multibyte characters like Chinese, Japanese, etc.
+StringEscapeUtils.escapeHtml() escapes multibyte characters like Chinese, Japanes, etc.

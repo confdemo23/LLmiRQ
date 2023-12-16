@@ -1,0 +1,2 @@
+canEnforceTimeLimitFromScope should use timeScope instead of sizeScope
+A small but maybe critical bug

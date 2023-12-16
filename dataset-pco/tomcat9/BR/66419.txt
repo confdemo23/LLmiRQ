@@ -1,0 +1,17 @@
+*Possible* bug with "update with tag"
+I don't know if this is an actual bug, or if it's expected, but it feels like an
+actual bug.
+
+Scenario:
+Check out some work from branch A.
+Delete a file (or two or three).
+Update with branch B.
+Commit.
+
+Expected Result:
+the deleted files will be deleted from branch B.
+
+Actual Result:
+the deleted files are deleted from branch A.
+
+I200406090800

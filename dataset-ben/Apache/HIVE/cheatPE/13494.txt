@@ -1,0 +1,3 @@
+LLAP: Some metrics from daemon are not exposed to hadoop-metrics2
+LlapDaemonInfo is exposed via JMX but not sent to hadoop metrics.
+Async IO metrics also seems incorrect.

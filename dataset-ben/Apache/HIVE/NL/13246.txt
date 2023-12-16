@@ -1,0 +1,3 @@
+Add log line to ORC writer to print out the file path
+Currently ORC writer does not log anything making it difficult find where the destination path is. 
+NO PRECOMMIT TESTS

@@ -1,0 +1,5 @@
+SMB join in tez has ClassCastException when container reuse is on
+SMB join in tez has multiple work items that are connected based on input tag followed by input initialization etc. 
+In case of container re-use, what ends up happening is that we try to reconnect the work items and fail. 
+If we try to work around that issue by recognizing somehow that the cache was in play, we will run into other initialization issues with respect to record readers. 
+So the plan is to disable caching of the SMB work items by clearing out during the close phase.

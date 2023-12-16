@@ -1,0 +1,1 @@
+org.wildfly.clustering.server.dispatcher needs to account for security manager

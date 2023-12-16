@@ -1,0 +1,2 @@
+type attribute in the <repository/> tag is not read for configuration
+In Spring Web Flow 1.0.1, the type attribute of the new &lt;repository/&gt; tag is not read property.  This results in an error on start up.  An example is discussed in this forum thread: http://forum.springframework.org/showthread.php?t=33615

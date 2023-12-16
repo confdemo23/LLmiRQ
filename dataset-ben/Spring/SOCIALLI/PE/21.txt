@@ -1,0 +1,2 @@
+NetworkUpdateOperations.createNetworkUpdate uses wrong HTTP request method
+NetworkUpdateTemplate.createNetworkUpdate uses PUT while LinkedIn requires a POST request for this kind of operation causing error "405 Method Not Allowed". (see post-network-update)

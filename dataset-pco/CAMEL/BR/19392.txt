@@ -1,0 +1,26 @@
+Correct template bean definition schema
+The template bean, which is used by Kamelet, is out of sync between schema and actually used deserializer/definition
+https://github.com/apache/camel/blob/camel-3.x/dsl/camel-yaml-dsl/camel-yaml-dsl-deserializers/src/main/java/org/apache/camel/dsl/yaml/deserializers/RouteTemplateDefinitionDeserializer.java#L48
+https://github.com/apache/camel/blob/camel-3.x/dsl/camel-yaml-dsl/camel-yaml-dsl-deserializers/src/main/java/org/apache/camel/dsl/yaml/deserializers/RouteTemplateDefinitionDeserializer.java#L88
+
+NamedBeanDefinition supports
+{noformat}
+properties:
+  propName: propValue
+  objProp:
+    objPropProp: objPropPropVal
+{noformat}
+
+But the template bean actually supports following
+{noformat}
+property:
+  - key: propName
+    value: propValue
+{noformat}
+and
+{noformat}
+properties:
+  propName: propValue
+{noformat}
+
+In order to reflect the actual behavior in YAML DSL JSON schema, we need to change from `NamedBeanDefinition` to `RouteTemplateBeanDefinition` and `TemplatedRouteBeanDefinition` in the annotation.

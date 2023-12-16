@@ -1,0 +1,2 @@
+Fix unit tests for applications running in the Google App Engine
+Unit tests currently do not pass for applications running in the Google App Engine, either in STS/Eclipse or when running mvn gae:run or mvn gae:deploy

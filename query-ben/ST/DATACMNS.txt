@@ -1,0 +1,5 @@
+154	 UserRepository, JpaRepository, PagingAndSortingRepository, FactoryBeanRegistrySupport, AbstractBeanFactory, DefaultListableBeanFactory, AutowiredAnnotationBeanPostProcessor, JpaQueryLookupStrategy, RepositoryFactorySupport, RepositoryFactoryBeanSupport, PropertyPath, Part, PartTree, PartTreeJpaQuery
+157	 EntityRepository, CarRepository, JpaQueryLookupStrategy, RepositoryFactorySupport, PropertyPath, PartTree, PartTreeJpaQuery
+160	 DeleteOnlyRepository RepositoryFactorySupport RepositoryFactoryBeanSupport JpaQueryLookupStrategy PropertyPath PartTree
+358	 PagedResources, PagedResourcesAssembler, Assert
+943	 JpaMetamodelEntityInformation SimpleJpaRepository RepositoryFactorySupport TransactionInterceptor PersistenceExceptionTranslationInterceptor

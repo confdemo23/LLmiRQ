@@ -1,0 +1,2 @@
+ConfigurationFactoryBean sets wrong rm address property
+internalConfig.set("yarn.resource.manager", rmUri.trim()); is wrong, it should be yarn.resourcemanager.address. 

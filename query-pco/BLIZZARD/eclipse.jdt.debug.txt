@@ -1,0 +1,24 @@
+576399	code debug copies java byte delegate stack javastacktraceconsole java stack trace console configuration nio unnecessary file copy implementation eclipse jdt
+576670	create set filter java thread supports instance monitor Add ability label objects debugging pretty hard identify objects track debugging session instances remember unique pleasant experience human brain pretty limited area attach label objects object instances Variables Expressions view labels displayed stand
+576689	breakpoint test ava impl classes exit variable file Export breakpoints don work properly record Created attachment project project attached breakpoint attached Export breakpoints breakpoints breakpoints missing step
+576805	SWT Resource Leak in DebugTypeSelectionDialog FilteredItemsSelectionDialog ItemsListLabelProvider DebugTypeSelectionDialog DebugTypeLabelProvider initNonDisposeTracking init createImage Image ImageDescriptor Resource getImage
+576829	breakpoint error myclass class class breakpoints parameter compilation class project code conditional fail recursive generics involved
+576979	java git reader abstract releng endings jdi debug tests abstractreader abstract reader jdi ings
+576999	testbug test bug test bugs lambda https bug outer whileonpreviousframe previous frame insidelambda lambda cgi test onouterscopevariable outer scope variable scope variable previous ram failing windows frame
+577103	return wont iwatchexpression iwatch expression expression presentation javainspectexpression java inspect expression expressions foreground objects iwatch highlight labelled label led view
+577119	code source records class expressions println types classes user eclipse work defined
+577171	Exception processing async thread queue ArrayIndexOutOfBoundsException EvaluationSourceGenerator JavaWatchExpressionDelegate EvaluationRunnable getCompleteSnippet ASTEvaluationEngine JDIThread ThreadJob getCompiledExpression run Evaluation init
+577564	boolean change fields debugger jdt code debuggers java custom editor disallow final modifications
+577622	type test field method declaration expression impl array Possibility navigate field declaration debugging variable navigate actual declared type Open Actual Type Open Declared Type context menu item navigate declaration field hierarchy deep finding actual declaring trivial nice action navigate
+577724	java source environment compliance change rules initialize path Add Execution Environment JavaSE Execution Environment JavaSE Execution Environment Preference
+577731	source set type java underlying variable stack variables merging master BETA branch Beta periodic update
+577735	library install format test java set location path Java API doc JRE library Java doc location Java release Java
+577736	set thread breakpoint request supports event filter java Remove JCP disclaimers BETA code Debug Remove JCP disclaimers code Debug
+578145	variables lambda string consumer number args util method println system evaluations working nested
+578450	object nulls sense action check label ijava instanceof types wont setting primitive work
+578789	column java set thread debug monitor selection changed Deadlock situation adding JRE Created attachment Thread Dump adding JDK existing ended deadlock Menu Window Preferences Java Installed JRE Add Select JDK Folder Press Apply attached treaddump main thread Worker Update Installed JREs waiting lock locked thread Worker Update Installed JREs OpenJDK JRE list JDK Eclipse Restart JDK
+578899	NPE with breakpoint in ClassLoader getDefinedPackage NullPointerException JDIStackFrame updateVariables JavaStackFrameContentProvider StackFrameContentProvider getAllChildren getVariables0 ElementContentProvider retrieveChildCount getVariables getChildCount Variables
+578996	type java test breakpoint condition suspend thread breakpoints Breakpoints place nested lambdas place point lambda expression block lambda place breakpoint lambdas block lambda nested lambda expressions Supplier String Supplier Supplier String Supplier Supplier Supplier String place points statements point method lambdas converted anonymous classes placing point nested works Suppliers classes creation work Eclipse version Build encounter behaviour regression hope assigned Bugzilla Components
+579099	lines method stream list lambda entry breakpoint method lambda entry create breakpoints
+579100	breakpoint lambda width void entry println snippet interface int drawable suspend debugging
+579439	LineTrackerTests testFlood fails since I assertEquals failNotEquals Assert testFlood fail LineTrackerTests TestCase NativeMethodAccessorImpl Equals DelegatingMethodAccessorImpl invoke

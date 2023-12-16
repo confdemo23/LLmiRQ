@@ -1,0 +1,34 @@
+[compiler] ecj compiler error on code accepted by javac for generic varargs parameters
+The code below complies in javac, but produces the following error in ECJ:
+
+The method asList(T...) of type Arrays is not applicable as the formal varargs element type T is not accessible here
+
+
+  import java.util.Arrays;
+  import java.util.List;
+
+  import javax.swing.JDialog;
+  import javax.swing.JPanel;
+
+  public class Snippet {
+      public static void main(String[] args) {
+          var list = Arrays.asList(new JDialog(), new JPanel());
+      }
+  }
+
+The same happens with: Stream.of
+
+It can be worked-around using either:
+
+  Arrays.<Component>asList(new JDialog(), new JPanel());
+  Arrays.asList((Component) new JDialog(), new JPanel());
+
+In contrast, this works without a problem:
+
+  List.of(new JDialog(), new JPanel());
+
+Due to the 2-parameter overload, showing that ECJ is able to successfully resolve the common base-type Component in this case.
+
+Details:
+ * Java 11 compliance level
+ * I'm running Eclipse 4.20 with AdoptOpenJDK 11.0.4+11

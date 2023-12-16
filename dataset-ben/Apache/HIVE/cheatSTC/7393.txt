@@ -1,0 +1,2 @@
+Tez jobs sometimes fail with NPE processing input splits
+Input files are either ORC or RC format.  Only occurs on occasion - if the query is repeated it is likely to complete successfully.

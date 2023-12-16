@@ -1,0 +1,2 @@
+Register RangeArrayPropertyEditor automatically
+RangeArrayPropertyEditor could be registered automatically when someone use the new namespace configuration.

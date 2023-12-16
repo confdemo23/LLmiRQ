@@ -1,0 +1,3 @@
+DeploymentStatusHandler reads the model incorrectly
+DeploymentStatusHandler is calling Resource.Tools.readModel() to get the mode instead of the simple Resource.getModel().
+This fails because the resource is runtime-only and Resource.Tools.readModel() ignore runtime-only.

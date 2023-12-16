@@ -1,0 +1,12 @@
+Source -> Clean-up rule "Remove unnecessary parentheses" on Java 16 instanceof pattern matching
+The rule will remove parenthesis on a if with negation :
+
+if (!(expression)) => if (!expression)
+
+However if the expression is a Java 16 instanceof pattern matching, removing the parenthesis results into a compilation errror "The operator ! is undefined for the argument type(s) x" where x is the variable in the following if statement:
+
+if(!(x instanceof Employee e)) {
+
+}
+
+The parenthesis must be kept when this pattern is matched.

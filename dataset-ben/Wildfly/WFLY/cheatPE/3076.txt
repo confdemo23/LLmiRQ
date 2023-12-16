@@ -1,0 +1,2 @@
+ModelControllerMBeanHelper constructor invokes unnecessary management op
+ModelControllerMBeanHelper is invoking a read-attribute management op in its constructor to find out of the process is a standalone server. This is not necessary  JmxSubsystemAdd can find this out from the OperationContext and pass this information through to the ModelControllerMBeanHelper it indirectly creates.

@@ -1,0 +1,2 @@
+onException - continued should not log exhausted just as handled does neither
+Continued is in fact just like handled by will not break out but continue routing as if the exception didnt occur. So we should not log the exception by default.

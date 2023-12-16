@@ -1,0 +1,16 @@
+[18][switch pattern] compilation error for case with guarded pattern with a  boolean variable
+public class X {
+	@SuppressWarnings("preview")
+	static  int foo(Object o, boolean b) {
+		return switch (o) { 
+		   case X x && b -> 0; // compilation error
+		   default -> 1;
+		}; 
+	} 
+	public static void main(String[] args) {
+		System.out.println(X.foo(new X(), true));
+		System.out.println(X.foo(new Object(), true));
+	}
+}  
+
+Compilation error for the above code

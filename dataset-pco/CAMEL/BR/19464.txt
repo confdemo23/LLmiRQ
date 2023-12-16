@@ -1,0 +1,2 @@
+camel-kafka - Upgrade to 3.5.x
+We should upgrade to 3.5.x when SB and Q are also ready

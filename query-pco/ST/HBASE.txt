@@ -1,0 +1,9 @@
+26467	 KeyValueUtil, KeyValue, SizeCachedKeyValue, HFileReaderImpl, StoreFileScanner, StoreScanner, Compactor, DefaultCompactor, DefaultStoreEngine, HStore, HRegion, CompactSplit, MemStoreLABImpl
+26533	 KeyValueScanner, InternalScan, StoreScanner, RegionObserver
+26708	 ResourceLeakDetector, ByteToMessageDecoder, AbstractChannelHandlerContext, DefaultChannelPipeline, EpollEventLoop, SingleThreadEventExecutor, NettyRpcConnection, DefaultPromise, NettyHBaseSaslRpcClientHandler, PoolArena, PooledByteBufAllocator
+26712	 AssignmentManager, HMaster, BalancerChore
+26938	 HFileBlock, HFileWriterImpl, StoreFileWriter, Compactor, DefaultCompactor, DefaultStoreEngine, HStore, HRegion, CompactSplit
+27053	 HRegion, StoreEngine, HStore, BlockCacheUtil, BucketCache, CombinedBlockCache, HFileReaderImpl, HalfStoreFileReader, HStoreFile
+27170	 ByteBuffAllocator, HFileBlock, HFileReaderImpl, StoreFileScanner, StoreScanner, Compactor, DefaultCompactor, DefaultStoreEngine, HStore, HRegion, CompactSplit
+27390	 ClusterStatusProtos, ProtobufUtil, ClusterMetricsBuilder, MasterRpcServices, MasterProtos, RpcServer
+27498	 ConnectionImplementation, MasterCallable, RpcRetryingCallerImpl, HBaseAdmin, MoveWithoutAck

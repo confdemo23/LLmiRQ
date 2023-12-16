@@ -1,0 +1,13 @@
+Remove use of Xalan
+Xalan-J has an unfixed CVE. It is possible that this will be fixed in the future but Xalan-J has had only one release since 2008 (in 2014).
+
+https://www.cvedetails.com/cve/CVE-2022-34169/
+
+Java has built-in support for TransformerFactory and XPathFactory. This means most apps that use Xalan-J can readily switch away. Saxon-HE is another well maintained alternative.
+
+Places where Camel still uses Xalan:
+* https://github.com/apache/camel/blob/9d6ad653b6faa16e3c09047da66cd3bca94783ee/components/camel-xmlsecurity/pom.xml
+* https://github.com/apache/camel/blob/9d6ad653b6faa16e3c09047da66cd3bca94783ee/tooling/maven/camel-eip-documentation-enricher-maven-plugin/pom.xml#L73
+
+There are profiles for testing in a number of poms:
+eg https://github.com/apache/camel/blob/main/core/camel-core-engine/pom.xml#L325

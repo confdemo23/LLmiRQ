@@ -1,0 +1,47 @@
+78	redis cache prefix cache manager config code names rediscachemanager redis cache manager collection throw unsupportedoperationexception unsupported operation exception unsupported operation exception
+79	template timestamp time redis milliseconds gettime time expireat expire redis class parameter redistemplate redis template expire bug
+81	redismessagelistenercontainer redis message listener container redis message lifecycle method afterpropertiesset properties set start listener container properties mixed
+246	cache getcache cache manager redis apos rediscachemanager redis cache manager composite rediscache redis cache compositecachemanager composite cache manager rediscachemanagers redis cache managers anagers method match logical log ical managers
+283	names cache load cache properties redis afterpropertiesset properties set manager rediscachemanager redis cache manager remote loadcaches load caches caches overrides defined set
+285	lettuce byte valuelistoutput list output bytearrayoutput byte array output lettucetemplate lettuce template output lettuceconnection lettuce connection array definition reply template execute read convert entire response
+300	connection redis utils conn redisconnectionutils redis connection utils true bindconnection bind connection factory pool factory inconsistency onsistency connection open close
+310	connection thread methods rediscache redis cache cache exec lock inconsistencies amp conditions lock redis safe
+317	integer redis counter integer data xac object jedis increment redisatomicinteger redis atomic integer atomic
+328	cache manager useprefix prefix names cache manager prefix caches default properties rediscachemanager redis cache manager redis instantiate ins tantiate setcachenames set cache names set
+332	test enabletransactionsupport enable transaction support template support condition exec operations transaction rightpush push operation transactional multiple connections
+337	method class test listener foo listener message bug smth methods messagelistener message listener message invoked invoke
+347	script redis script serializer data sha exception executor defaultscriptexecutor default script executor default runs exception thrown
+354	type javatype java type class java getjavatype java type method jsonredisserializer json redis serializer mapper jackson json redis serializer customise javatype java type deserialization
+369	cache zset ttl redis cache apos rediscache redis cache production scenario fine redis zset leak
+375	cache manager cache method branch transaction cachename cache transactionawarecachedecorator transaction aware cache decorator aware caches transactional rediscachemanager redis cache manager redis decorates dec orates war decorator
+417	nosuchelementexception element exception java match element util cursor redis return scancursor scan cursor exception scan throw
+448	store intersectandstore intersect store key count elements rawdestkey raw dest key rawkeys raw amp method operations defaultsetoperations default set operations default set int ersect don apos return operation result intersect
+467	cluster cluster map apos mget amp jedisclusterconnection jedis cluster connection redis mset future mget working
+472	time jedis api max int connection jedisconnection jedis connection integer guard update add guards jedisconnetion jedis connetion connetion longer require casts long exceeding
+492	collection type iscollectionlike collection arrays path property property sink collectionlike collection properties force cast
+498	converter redis list sort mapping java requires mappingredisconverter mapping redis converter
+500	template redis hash key serializer string redistemplate redis template foo object key executepipelined execute pipelined execute pipelined rediscallback redis callback callback wrong serializer serial izer redistemplate redis template java
+501	redis amp loader class apos spring application template default configure redistemplate redis template serializer serial izer assumes classloader class loader class loader load types
+509	array object source arrays property exception class property string lang handle serializing serial izing arrays primitives
+524	factory connection noauth nodes redis sentinel lettuceconnectionfactory lettuce connection factory lettuce uri password authentication required connecting
+542	data redis redis check cache rediscache redis cache java master projects src putifabsent absent absent set ttl element
+547	redis query query amp start error npe desc ordering spring writing valid method criteria
+548	void ops template connection redistemplate redis template skips connection callback opsforvalue ops transaction released read transactions
+75	defaults null java pointer type breaks collection field property redis red properties initialized
+226	errors int syntax exec test trans transactions lettuce case individual reported
+286	method jedis redis timeout pexpire apos integer time template unit redistemplate redis template expire overflow
+333	redis encoder version eval utf sha safeencoder safe encoder bytes jedis evalsha eval sha returns incorrect result
+356	evalsha noscript exception eval code spring bug hasn scripts redis don apos fails
+415	thread task start subscription interruptedexception interrupted exception interrupted container bit listener container set
+431	dbindex cache operations cache library annotations redis caching jedis select called lettuce
+489	foo foo class object map string type redis hints store retrieve property values considered simple types
+491	factory keyspace keyspaceeventmessagelistener keyspace event message listener event connection listener check message case apos prevent starting repository detected
+510	byte serializer return object valueserializer serializer read accessor cachevalueaccessor cache accessor deserialize array current cache implementation null empty string
+83	invoke the template opsForSet randomMember Object key  method throw exception SerializationException StreamCorruptedException SerializationFailedException JdkSerializationRedisSerializer AbstractOperations ValueDeserializingRedisCallback Redis randomMember RedisTemplate DefaultSetOperations execute deserializeValue RedisProxy getRaceStrangers
+294	ZSetOperations TypedTuple will throw ClassCastException during sorting ClassCastException DefaultTypedTuple TreeMap TreeSet compareTo compare addAll Typed Tuple AbstractCollection Tree put
+469	RedisAtomicLong throws a null pointer if key is removed NullPointerException RedisAtomicLong get Redis Atomic
+495	Arrays are incorrectly considered Collections ClassCastException IllegalArgumentException MappingRedisConverter doWithPersistentProperty BasicPersistentEntity access 900 writeInternal doWithProperties Persistent Redis Mapping Converter
+513	Pipelining doesn apos t supports time operation JedisDataException DataAccessException checkIsInMultiOrPipeline BinaryJedis CloseSuppressingInvocationHandler time NativeMethodAccessorImpl invoke DefaultStringRedisConnection DelegatingMethodAccessorImpl JedisConnection Method Jedis
+531	ScanCursor holds reference to closed released Jedis connection ClassCastException JedisConnectionException readProtocolWithCheckingBroken getRawObjectMultiBulkReply Protocol processMultiBulkReply getObjectMultiBulkReply Connection process Multi Bulk Reply read
+551	NPE when counting keys while invoking findBy Pageable NullPointerException RedisQueryEngine doInRedis Redis RedisTemplate Query Engine execute Template
+392	Jackson RedisSerializer cannot deserialize ObjectId fields SerializationException UnrecognizedPropertyException IOException Jackson2JsonRedisSerializer handleUnknownProperty deserialize UnrecognizedPropertyException BeanDeserializerBase MetricIdCache handleUnknownVanilla reportUnknownProperty vanillaDeserialize BeanDeserializer DeserializationContext

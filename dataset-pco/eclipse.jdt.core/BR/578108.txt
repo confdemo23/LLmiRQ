@@ -1,0 +1,22 @@
+[18][switch pattern] - Exhaustive switch with type variable T with upper bound on abstract sealed class flagged error
+Consider:
+
+sealed abstract class C permits D {}
+final class D extends C {}
+public class X {
+	@SuppressWarnings("preview")
+	static <T extends C> void foo(T  ji) {
+		 switch (ji) { // exhaustive because C is sealed and abstract
+		   case D d : System.out.println("D"); break;
+		}; 
+	} 
+	public static void main(String[] args) {
+		X.foo(new D());
+	}
+}
+
+Error flagged : "An enhanced switch statement should be exhaustive; a default label expected"
+
+Since C is abstract and sealed, compiler should deduce that this is exhaustive.
+
+Similar case with interface as well [ie sealed interface C permits D]

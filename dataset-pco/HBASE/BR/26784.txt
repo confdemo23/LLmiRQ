@@ -1,0 +1,6 @@
+Use HIGH_QOS for ResultScanner.close requests
+Active scanners take resources on the RegionServer, and scanner leaks can have a big impact on GC. Under high load, ResultScanner.close() calls might get rejected or timed out before executing. Exceptions thrown by close() are currently swallowed, so clients will not retry. This leads to a leak of active scanners on the server side.
+
+These calls should be relatively free to execute, and executing them will free up the resources which can have an impact on overall RegionServer performance. As such it can be beneficial to execute all ResultScanner.close() requests with HIGH_QOS regardless of the priority of the underlying Scan.
+
+In a scan-heavy stress test I ran, after a couple minutes the Full GC time (using G1GC) starts increasing and we start seeing 1s pauses, due to increasing number of active scanners (into the 10s of thousands). Re-running the stress test with HIGH_QOS for ResultScanner.close() eliminates the leak and GC time remains stable.

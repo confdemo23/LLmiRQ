@@ -1,0 +1,3 @@
+OOMs are still possible when using clustered web sessions/SFSBs w/passivation
+Currently, the owner of a web session or SFSB is responsible for schedule passivation.  Unfortunately, much to my surprise, infinispan eviction commands are not broadcasted to the cluster, but are local-only.  Consequently, the number of cache entries stored in memory can grow beyond the configured passivation limits, since remote copies of old cache entries are never evicted.
+To fix this, we can use the CommandDispatcher to manually broadcast eviction commands to the cluster.

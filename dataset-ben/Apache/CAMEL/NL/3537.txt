@@ -1,0 +1,3 @@
+camel-snmp - Does not support tcp protocol
+See nabble
+http://camel.465427.n5.nabble.com/camel-snmp-2-5-problems-tp3339373p3339373.html

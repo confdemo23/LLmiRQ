@@ -1,0 +1,4 @@
+Postgres db issues after Datanucleus 4.x upgrade
+With the upgrade to  datanucleus 4.x versions in HIVE-6113, hive does not work properly with postgres.
+The nullable fields in the database have string "NULL::character varying" instead of real NULL values. This causes various issues.
+One example is -hive&gt; create table t(i int);OKTime taken: 1.9 secondshive&gt; create view v as select * from t;OKTime taken: 0.542 secondshive&gt; select * from v;FAILED: SemanticException Unable to fetch table v. java.net.URISyntaxException: Relative path in absolute URI: NULL::character%20varying

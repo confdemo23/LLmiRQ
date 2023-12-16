@@ -1,0 +1,24 @@
+Deadlock situation when adding new JRE
+Created attachment 288061
+Thread-Dump
+
+While adding a new JDK beside an existing one, I ended up with a deadlock.
+
+- Menu: Window - Preferences - Java - Installed JRE - Add
+- Select my JDK Folder
+- Press "Apply"
+
+See the attached treaddump!
+
+The "main"-thread and 
+"Worker-60: Update Installed JREs" 
+
+are waiting for lock
+
+0x000000070f611540
+
+This is locked by thread "Worker-52: Update Installed JREs"
+
+As default OpenJDK 11 was already in the JRE list. I added JDK8.
+
+After the Eclipse Restart, the JDK8 was successfully added.

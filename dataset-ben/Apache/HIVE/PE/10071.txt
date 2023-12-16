@@ -1,0 +1,2 @@
+CBO (Calcite Return Path): Join to MultiJoin rule
+CBO return path: auto_join3.q can be used to reproduce the problem.

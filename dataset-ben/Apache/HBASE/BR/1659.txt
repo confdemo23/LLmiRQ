@@ -1,0 +1,2 @@
+merge tool doesnt take binary regions with \x escape format
+as per short

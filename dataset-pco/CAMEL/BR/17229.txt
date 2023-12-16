@@ -1,0 +1,12 @@
+The file consumer finds files before they have content
+Unit tests for the file component frequently fail on the first execution when run with Junit5 parallel because the content of the file doesn't match the expected result.
+
+This is due to the way files are created when using template.sendBodyAndHeader(...) with a fileUrl. Currently the file is created and written using FileOperations.writeFileByStream() which first creates the file and then writes the content read from the body as an input stream.
+
+Also to speed up the tests, the default initialDelay of the file endpoint is overridden in almost all cases and set to 0 which means the File consumer starts to immediately poll the destination directory.
+
+When many tests are run in parallel, it frequently happens that the the FileConsumer thread reads the empty file before the FileProducer thread writes it and closes it. There are 2 solutions:
+ * use some initial delay such as 100 or 200ms. This reduces the number of failures but does not completely solve the issues
+ * add another case in FileOperations.storeFile() which already has several, which will check if the body content is a string and directly write it using the java Files.writeString() method. In my tests this appears to totally eliminate the issues of files being consumed before they are ready.
+
+Although such issues occur in the unit tests, it appears that it could also be an issue in non-test use cases if the consumer finds a file which is still being written.

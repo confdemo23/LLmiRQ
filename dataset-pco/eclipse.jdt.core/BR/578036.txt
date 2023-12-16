@@ -1,0 +1,21 @@
+[18][javadoc] provide @snippet support in javadoc for External snippets, including @start, @end and region
+provide support for the new inline tag in javadoc  
+@snippet for external snippets.
+
+Here is the same example for an external snippet:
+/**
+ * The following code shows how to use {@code println}:
+ * {@snippet file="PrintlnExample.java" region="example"}
+ */
+
+where PrintlnExample.java is a file containing:
+
+public class PrintlnExample {
+    void print(String msg) {
+        // @start region="example"
+        System.out.println(msg);
+        // @end
+    }
+}
+
+This includes support for @start, @end and region.

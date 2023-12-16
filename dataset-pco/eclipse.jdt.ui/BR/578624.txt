@@ -1,0 +1,4 @@
+Refactor clean ups that only forward to core clean ups
+There is quite a bit of code that is the same among the clean-ups that forward their implementation to a core clean-up. 
+
+The idea is to share this code in a new common superclass for those clean-ups.

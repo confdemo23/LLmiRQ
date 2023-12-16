@@ -1,0 +1,2 @@
+initFilterBean() is not called within AbstractPreAuthenticatedProcessingFilter
+AbstractPreAuthenticatedProcessingFilter overrides afterPropertiesSet() method thus initFilterBean() from GenericFilterBean is never called. I guess it should by the contract.

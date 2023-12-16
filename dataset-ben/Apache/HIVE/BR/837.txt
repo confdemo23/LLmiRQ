@@ -1,0 +1,27 @@
+virtual column support (filename) in hive
+Copying from some mails:
+I am dumping files into a hive partion on five minute intervals. I am using LOAD DATA into a partition.
+weblogs
+web1.00
+web1.05
+web1.10
+...
+web2.00
+web2.05
+web1.10
+....
+Things that would be useful..
+Select files from the folder with a regex or exact name
+select * FROM logs where FILENAME LIKE(WEB1*)
+select * FROM LOGS WHERE FILENAME=web2.00
+Also it would be nice to be able to select offsets in a file, this would make sense with appends
+select * from logs WHERE FILENAME=web2.00 FROMOFFSET=454644 [TOOFFSET=]
+select  
+substr(filename, 4, 7) as  class_A, 
+substr(filename,  8, 10) as class_B
+count( x ) as cnt
+from FOO
+group by
+substr(filename, 4, 7), 
+substr(filename,  8, 10) ;
+Hive should support virtual columns
