@@ -1,0 +1,18 @@
+38	 Message, MessageHandler, AbstractMessageListenerContainer, SimpleMessageListenerContainer
+122	 RabbitAdmin, DefaultLifecycleProcessor, SingleConnectionFactory, RabbitTemplate
+262	 PublisherCallbackChannelImpl, ChannelN, AMQChannel, AMQConnection
+351	 MessageListenerAdapter AlertsReceiver SimpleMessageListenerContainer
+384	 TestUtils SimpleMessageListenerContainerTests
+468	 RabbitTemplate, PublisherCallbackChannelImpl, ChannelN, AMQChannel, AMQConnection
+470	 SimpleMessageListenerContainer, BlockingQueueConsumer, AMQChannel, ChannelN, CachingConnectionFactory
+487	 AmqpOutboundEndpoint, CachingConnectionFactory, RabbitTemplate, AbstractMessageHandler, MessagingGatewaySupport
+532	 PublisherCallbackChannelImpl, CachingConnectionFactory, ConnectionFactoryUtils, RabbitTemplate, RabbitAdmin, AmqpOutboundEndpoint
+551	 LocalizedQueueConnectionFactoryTests testFailOver
+561	 AmqpConnectException, RabbitExceptionTranslator, AbstractConnectionFactory, CachingConnectionFactory, ConnectionFactoryUtils, RabbitTemplate, RabbitAdmin, AmqpAppender, PropertySetter, PropertyConfigurator, OptionConverter, LogManager, Logger
+565	 RabbitAdmin, RabbitTemplate, RabbitMessageChannelBinder, RabbitTestBinder, RabbitBinderTests
+594	 ConsumerService, TestingQueueConsumerServiceImpl, RabbitListenerAnnotationBeanPostProcessor, RabbitListenerEndpointRegistry
+598	 RabbitAdmin, AbstractBeanFactory, DefaultListableBeanFactory, AbstractApplicationContext, CachingConnectionFactory, ConnectionFactoryUtils, BlockingQueueConsumer, SimpleMessageListenerContainer, JobScope
+660	 AbstractMessageListenerContainer, SimpleMessageListenerContainer, AbstractSubscribableAmqpChannel, SerializerMessageConverter, DefaultExceptionStrategy
+663	 SimpleMessageListenerContainerIntegration2Tests, HashMap
+668	 MessageListenerContainerLifecycleIntegrationTests testNonTransactionalHighLevel
+682	 DirectMessageListenerContainer, CachingConnectionFactory, ApplicationContext

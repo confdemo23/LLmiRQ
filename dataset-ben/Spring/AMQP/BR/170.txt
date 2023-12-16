@@ -1,0 +1,3 @@
+Message header value has type com.rabbitmq.client.impl.LongStringHelper.ByteArrayLongString
+The problem has happened using spring-integration-amqp.
+Trying to read a value from the header of a message I get that this value is of com.rabbitmq.client.impl.LongStringHelper.ByteArrayLongString type, when it was supposed to be String.

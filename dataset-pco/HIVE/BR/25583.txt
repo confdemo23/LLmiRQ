@@ -1,0 +1,5 @@
+Support parallel load for HastTables - Interfaces
+Support parallel load for HastTables - Interfaces
+* Introducing VectorMapJoinFastHashTableContainerBase class that implements VectorMapJoinHashTable
+* Each VectorMapJoinFastStringHashMapContainer is a singleton that contains an array of HashTables (1 or more)
+* VectorMapJoinFastTableContainer now initializes VectorMapJoinFastHashTableContainers instead of HTs directly

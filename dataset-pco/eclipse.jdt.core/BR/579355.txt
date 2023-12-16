@@ -1,0 +1,102 @@
+[18][pattern switch] OOM error in switch pattern - valid code
+From bug 576746 comment 3 
+
+From Alexander Kriegisch --  reproduced below verbatim
+
+------------------------------------------------------------
+
+public class SwitchPatternPreview2OK {
+  static void constantLabelMustAppearBeforePattern(Integer o) {
+    switch (o) {
+      case -1, 1 -> System.out.println("special case:" + o);
+      case Integer i && i > 0 -> System.out.println("positive integer: " + o);
+      case Integer i -> System.out.println("other integer: " + o);
+    }
+  }
+}
+
+------------------------------------------------------------
+
+I immediately got:
+
+$ java -jar org.eclipse.jdt.core/target/org.eclipse.jdt.core-3.29.50-SNAPSHOT-batch-compiler.jar -18 --enable-preview ../AspectJ/tests/features199/java18/SwitchPatternPreview2OK.java
+Picked up _JAVA_OPTIONS: -Djava.net.preferIPv4Stack=true
+----------
+1. ERROR in C:\Users\alexa\Documents\java-src\AspectJ\tests\features199\java18\SwitchPatternPreview2OK.java (at line 0)
+        public class SwitchPatternPreview2OK {
+        ^
+Internal compiler error: java.lang.OutOfMemoryError: Java heap space at org.eclipse.jdt.internal.compiler.codegen.BranchLabel.addForwardReference(BranchLabel.java:57)
+----------
+2. WARNING in C:\Users\alexa\Documents\java-src\AspectJ\tests\features199\java18\SwitchPatternPreview2OK.java (at line 5)
+        case Integer i && i > 0 -> System.out.println("positive integer: " + o);
+             ^^^^^^^^^^^^^^^^^^
+You are using a preview language feature that may or may not be supported in a future release
+----------
+3. WARNING in C:\Users\alexa\Documents\java-src\AspectJ\tests\features199\java18\SwitchPatternPreview2OK.java (at line 6)
+        case Integer i -> System.out.println("other integer: " + o);
+             ^^^^^^^^^
+You are using a preview language feature that may or may not be supported in a future release
+----------
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at org.eclipse.jdt.internal.compiler.codegen.BranchLabel.addForwardReference(BranchLabel.java:57)
+        at org.eclipse.jdt.internal.compiler.codegen.CaseLabel.branch(CaseLabel.java:35)
+        at org.eclipse.jdt.internal.compiler.codegen.CodeStream.tableswitch(CodeStream.java:7552)
+        at org.eclipse.jdt.internal.compiler.ast.SwitchStatement.generateCode(SwitchStatement.java:563)
+        at org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration.generateCode(AbstractMethodDeclaration.java:354)
+        at org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration.generateCode(AbstractMethodDeclaration.java:291)
+        at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.generateCode(TypeDeclaration.java:761)
+        at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.generateCode(TypeDeclaration.java:831)
+        at org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration.generateCode(CompilationUnitDeclaration.java:412)
+        at org.eclipse.jdt.internal.compiler.Compiler.process(Compiler.java:913)
+        at org.eclipse.jdt.internal.compiler.ProcessTaskManager.run(ProcessTaskManager.java:145)
+        at java.base/java.lang.Thread.run(Thread.java:833)
+
+------------------------------------------------------------
+
+Actually, originally I wanted to use some example code right from JEP 420, ...
+
+public class SwitchPatternPreview2OK {
+  static void constantLabelMustAppearBeforePattern(Object o) {
+    switch (o) {
+      case -1, 1 -> System.out.println("special case:" + o);
+      case Integer i && i > 0 -> System.out.println("positive integer: " + o);
+      case Integer i -> System.out.println("other integer: " + o);
+      default -> System.out.println("non-integer: " + o);
+    }
+  }
+}
+
+------------------------------------------------------------
+
+but that yielded:
+
+$ java -jar org.eclipse.jdt.core/target/org.eclipse.jdt.core-3.29.50-SNAPSHOT-batch-compiler.jar -18 --enable-preview ../AspectJ/tests/features199/java18/SwitchPatternPreview2OK.java
+Picked up _JAVA_OPTIONS: -Djava.net.preferIPv4Stack=true
+----------
+1. ERROR in C:\Users\alexa\Documents\java-src\AspectJ\tests\features199\java18\SwitchPatternPreview2OK.java (at line 4)
+        case -1, 1 -> System.out.println("special case:" + o);
+             ^^
+Type mismatch: cannot convert from int to Object
+----------
+2. ERROR in C:\Users\alexa\Documents\java-src\AspectJ\tests\features199\java18\SwitchPatternPreview2OK.java (at line 4)
+        case -1, 1 -> System.out.println("special case:" + o);
+                 ^
+Type mismatch: cannot convert from int to Object
+----------
+3. WARNING in C:\Users\alexa\Documents\java-src\AspectJ\tests\features199\java18\SwitchPatternPreview2OK.java (at line 5)
+        case Integer i && i > 0 -> System.out.println("positive integer: " + o);
+             ^^^^^^^^^^^^^^^^^^
+You are using a preview language feature that may or may not be supported in a future release
+----------
+4. WARNING in C:\Users\alexa\Documents\java-src\AspectJ\tests\features199\java18\SwitchPatternPreview2OK.java (at line 6)
+        case Integer i -> System.out.println("other integer: " + o);
+             ^^^^^^^^^
+You are using a preview language feature that may or may not be supported in a future release
+----------
+4 problems (2 errors, 2 warnings)
+
+------------------------------------------------------------
+
+But Javac also does not seem to like the int constants with an Object switch type. I have no idea why they chose that example for the spec.
+
+I re-tested this with the upstream beta 18 branch, no AspectJ mixed in at all, pure JDT Core. So before you merge, better double-check. But maybe I was just misunderstanding the mailing list discussion,and this is actually still under development, as the open ticket suggests.

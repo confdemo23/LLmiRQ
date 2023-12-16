@@ -1,0 +1,28 @@
+Source clean-up save actions swallow comment when adding brackets
+When source clean-up adds brackets to a single-line if statement, it removes the comment.
+
+Example :
+
+public class Test {
+    public static void main(String[] args) {
+        if (args.length == 0) // no args
+            System.out.println("no args");
+    }
+}
+
+Result:
+
+public class Test {
+    public static void main(String[] args) {
+        if (args.length == 0) {
+            System.out.println("no args");
+        }
+    }
+}
+
+The comment "no args" vanished with the refactoring.
+
+The rule is "Use blocks in if/while/for/do" statements under "Code style" tab.
+
+Version: 2021-12 (4.22.0)
+Build id: 20211202-1639

@@ -1,0 +1,4 @@
+HStore.rowAtOrBeforeFromMapFile() fails to locate the row if # of mapfiles >= 2
+After HBASE-528 committed, a misplaced return statement and } cause 
+rowAtOrBeforeFromMapFile() never look into 2nd (and latter) MapFile
+if candidateKeys.firstKey() &lt;= map.finalKey().

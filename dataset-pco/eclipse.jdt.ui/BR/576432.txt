@@ -1,0 +1,4 @@
+[16] [quickfix] Provide quick fix to create a new Record when suggesting new types
+From Java 16 Records are a standard feature. 
+
+While suggesting new type creation in quick fixes for missing types, we suggest Class , interface but do not suggest Record. We will need to add support to provide quickfix for new Record too.

@@ -1,0 +1,5 @@
+camel-spring-boot - When camel start graceful shutdown, it still receive new request during graceful shutdown.
+< camel graceful shutdown time = 20s, the service thread.sleep = 10s >
+In my test case, at first I started the application, send the first request and then stop the JVM to run the camel graceful shutdown, in the console show that there have 2 infilght messages pending to complete, after about 4 sec, I send the second request, in theroy, camel shouldn't accept the second request, unfortunately, it still receive new request.
+
+[TestCode|https://github.com/chen19980/GracefulShutdown-test]

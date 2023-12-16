@@ -1,0 +1,2 @@
+JavaBean ITD doesn't refresh when changing to and from GAE
+The JavaBean ITD isn't being refreshed when changing persistence providers to and from GAE.

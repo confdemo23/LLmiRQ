@@ -1,0 +1,3 @@
+Ipv6 addresses may not be canonized properly
+On an ipv6 environment we may obtain IP addresses that are not properly canonized which may lead to strange issue with http proxies since the JDK ProxySelector relies on char per char matching.
+All call to InetAddress.getHostName() may produce such an uncanonized address.

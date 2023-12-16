@@ -1,0 +1,3 @@
+Add getFilterProcessesUrl() to org.acegisecurity.ui.logout.LogoutFilter
+Please add a getFilterProcessesUrl() method to LogoutFilter to give sub-classes access to the filterProcessesUrl field.
+For the JAMWiki project (jamwiki.org) we have a need to use a custom redirect, and therefore have created a subclass of LogoutFilter to implement a custom version of the sendRedirect() method.  Unfortunately this subclass cannot access the filterProcessesUrl field because it is private in the LogoutFilter class and there is no get method in LogoutFilter.  We have worked around the problem by extending the setFilterProcessesUrl() method in our subclass, but it would be much cleaner to just be able to call a parent getFilterProcessesUrl() method.

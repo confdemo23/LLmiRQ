@@ -1,0 +1,6 @@
+skipTrash option in hive command line
+hive drop table command deletes the data from HDFS warehouse and puts it into Trash.
+Currently there is no way to provide flag to tell warehouse to skip trash while deleting table data.
+This ticket is to add skipTrash feature in hive command-line, that looks as following. 
+hive -e "drop table skipTrash testTable"
+This would be good feature to add, so that user can specify when not to put data into trash directory and thus not to fill hdfs space instead of relying on trash interval and policy configuration to take care of disk filling issue.

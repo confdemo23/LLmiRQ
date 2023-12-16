@@ -1,0 +1,293 @@
+27	 HMaster info:regioninfo, info:splitA, info:splitB
+451	 HRegionInfo, HTableDescriptor
+464	  1. GroupingTableMap 2. IdentityTableMap 3. TableInputFormat 4. HAbstractScanner 5. HRegion 6. HRegionServer  1. map(HStoreKey, org.apache.hadoop.io.MapWritable, OutputCollector, Reporter) 2. next(HStoreKey, java.util.SortedMap)
+473	 TestHBaseCluster, ChangeTableState, HMaster, HRegionServer$Worker, HRegion, BaseScanner, ServerManager, ProcessRegionClose, HStore, RegionServerOperation, MetaScanner, HBaseAdmin  adding region to kill list, inserted local kill list into kill list for server, deleted table, MSG_REGION_CLOSE, compactions and cache flushes disabled for region, new updates and scanners for region disabled, no more active scanners for region, no more row locks outstanding on region, Started memcache flush for region, scanning meta region, scan of meta region complete, Added, closed, Received MSG_REPORT_CLOSE, no longer serving, Main processing loop, region closed, DELETING region, all meta regions scanned, table deleted.
+476	 RegexpRowFilter, Map/Reduces, Scanner, Unit Test, Memcache, RowFilter Scan, Put, Run, Flush
+492	  1. PerformanceEvaluation 2. PerformanceEvaluation.EvaluationMapTask 3. Mapper 4. MapReduceBase   1. map(java.lang.Object,java.lang.Object,OutputCollector,Reporter)
+516	 HStoreFile, HStoreKey finalKey
+524	 HStore getFull
+532	 HRegion, MetaUtils, TestMergeTool get, deleteAll
+543	 RegionManager, HMaster unassignedRegions, pendingRegions, regionsToClose, closingRegions, regionsToDelete
+564	 RegionServer, HStore cacheFlusher, Added
+565	 HRegionInfo, HTableDescriptor, Zookeeper, Master, Regionserver register themselves on startup, watch, notify them of minor schema changes
+595	 RowFilterInterface.rowProcessed(), HStoreScanner, HRegion
+602	  1. HRegionServer 2. org.apache.hadoop.net.DNS   1. getThisIP()  2. getDefaultIP(String strInterface) 3. getIPs(String strInterface)
+608	 HRegionServer, getThisIP()
+618	  1. HRegion 2. HStore   1. starting compaction 2. started compaction 3. moving 4. compaction completed
+622	 StaticTestEnvironment, log4j.properties
+629	 CompactSplitThread, RegionUnavailableListener closing(), closed()
+663	 HRegion, HStore flush, updatesLock (write lock, read lock)
+680	 HBaseMapFile.HbaseWriter, HStoreFile setIndexInterval
+694	 HStore, rowAtOrBeforeFromMapFile, candidateKeys.firstKey, map.finalKey
+714	  1. CompactSplitThread 2. util.SoftSortedMap 3. BaseScanner 4. Server   1. run() 2. batchUpdate()
+740	 ThriftServer, TableDescriptor getTableNames, getTableRegionsAnswer
+744	 BloomFilter, serialization, deserialization
+805	 HRS, HTable getRow, getFull
+812	 HStore Compaction, started compaction, moving, Completed compaction
+851	  1. ServerManager 2. RegionManager 3. HMaster 4. ProcessRegionOpen$1 5. RegionServerOperation 6. CompactSplitThread 7. HRegionServer 8. HRegion 9. HStore 10. Server  1. MSG_REPORT_PROCESS_OPEN 2. MSG_REPORT_OPEN 3. MSG_REGION_CLOSE 4. batchUpdate 5. Compaction requested for region 6. closed 7. Main processing loop: PendingOpenOperation 8. numberOfMetaRegions 9. onlineMetaRegions.size() 10. updating row 11. Total Load 12. Num Servers 13. Avg Load 14. Compactions and cache flushes disabled for region 15. Scanners disabled for region 16. No more active scanners for region 17. Updates disabled for region 18. No more row locks outstanding on region
+855	 HStoreFile compaction
+872	  1. NoServerForRegionException 2. HConnectionManager 3. HBaseAdmin 4. NativeMethodAccessorImpl 5. DelegatingMethodAccessorImpl 6. java.lang.reflect.Method 7. org.jrubysupport.JavaMethod 8. org.jrubysupport.JavaClass 9. SimpleCallbackMethod 10. DynamicMethod 11. CallSite 12. ASTInterpreter 13. org.jruby.Ruby 14. org.jruby.Main 15. java.io.IOException   1. locateRegionInMeta 2. locateRegion 3. createTable 4. invoke0 5. invoke 6. invokeWithExceptionHandling 7. execute 8. call 9. evalInternal 10. start 11. runScript 12. runNormally 13. runFromMain 14. run 15. disableTable
+950	 HTable, commit, RowLocks, update, expires, getting a new row lock
+1148	 HLog, SequenceFile.Writer, MSG_REGION_SPLIT sync()
+1190	 TableInputFormatBase, RowFilterInterface, StopRowFilter, HTable getScanner
+1245	 HFile get meta block, get all meta names
+1251	 HConnectionManager, HBaseConfiguration, HBaseAdmin, HTable getConnection(), checkHBaseAvailable()
+1264	 ColumnValueFilter, compareTo()
+1277	 HStoreKey, TestCompaction
+1292	 HbaseClient getRow(), recv_getRow(), isEmpty()
+1293	 HFile, Compression codec returnDecompressor, returnCompressor
+1336	 KeyValue.KeyComparator.compare
+1365	 TableInputFormatBase setInputColums, getInputColums, getInputColumns
+1401	 HLog, close, open
+1435	 HRegionServer, conf get, getBoolean
+1541	 Delete, Put, Scan, InternalScanner, List, ArrayList toBytes(), initHRegion(), deleteFamily(), delete(), add(), put(), getScanner(), next(), equals(), getRow(), clear()
+1561	 HTable, Delete, RowLock deleteAll(), delete(), deleteColumn(), deleteColumns()
+1562	 HeapSize, Bytes
+1607	 MemStore, LruBlockCache MemStore.heapSize()
+1620	 StoreScanner, StoreFiles
+1625	 Put add(KeyValue kv)
+1627	 TableInputFormatBase, HTable.ClientScanner, UnknownScannerException, ScannerTimeoutException nextKeyValue, next, getConnection, getRegionServerWithRetries, initCause
+1629	 HRegionServer
+1635	 PerformanceEvaluation, scanner prefetching
+1644	 Result, getRow, MapReduce, map(), reduce()
+1646	 Scan, HbaseObjectWritable, Filter writeObject, write
+1647	 Filter, ScanQueryMatcher, StoreScanner, KeyValue filterRow, filterEntireRow, next, filterKeyValue
+1649	 ValueFilter, ValueFilter#reset, ValueFilter#filterRow, FilterList, FilterList#filterRow, filter#filterRow
+1661	 FSUtils, Migrate allMajorCompacted
+1717	 Put, add()
+1738	 Scanner, MemStoreScanners, kvset, snapshot, memstore, META scanner reset, create, finalize, insert, lock
+1790	 HRegion, nextInternal, prefixfilter
+1793	 HTable, get, getRow
+1795	 Store.maxSeqId, log recovery
+1815	 HBaseClient, regionserver, Thrift server
+1828	 CompareFilters, region-level tests, client-side
+1856	 TableReducer, Result, ImmutableBytesWritable, KeyValue, DataInput, WritableSerialization reduce(), list(), readFields(), get(), isDebugEnabled(), debug(), increment(), isEmpty(), asList(), sorted(), readInt(), readFully()
+1865	  1. mapred.TableInputFormatBase 2. mapreduce.TableInputFormatBase   1. getSplits(JobContext context) 2. table.getStartKeys()
+1866	 Scan, Scan copy constructor, cacheBlocks
+1871	 TableMapReduceUtil, TableOutputFormat, TableReducer, Job, ImmutableBytesWritable, Put, Writable  initTableReducerJob(), setOutputFormatClass(), setReducerClass(), getConfiguration(), set(), setOutputKeyClass(), setOutputValueClass()
+1883	 HRegion, THBase, WAL doReconstructionLog
+1888	 KeyValue getDelimiter, getDelimiterInReverse
+1896	 WhileMatchFilter, SingleValueColumnFilter, Scanner reset
+1913	 Regionserver, HBaseServer, listener thread, socket, Exception, OOME, Error, TCP connections, master deserialize, shutdown, expire
+1927	 KeyValueHeap, StoreScanner, MemStoreScanner peek(), close(), constructor
+1928	 ServerManager, ProcessServerShutdown removeServerInfo, closeMetaRegions
+1930	 Put, BatchUpdate, KeyValue setTimeStamp, copy constructor, writeToWAL, add values
+1957	 HBASE-1646, Get#write, Get#readFields, HbaseObjectWritable, Scan
+1979	 MurmurHash, data[length 3], data[length 2], data[length 1], data[len_m +2], data[len_m + 1], data[len_m]
+1989	 Admin, HColumnDescriptor addColumn
+2027	 HConnectionManager, HBaseConfiguration, TableServers, WeakHashMap, HTable hashCode(), equals()
+2231	 Compaction, HLog, Compact region, Write, Delete
+3497	 TableMapReduceUtil, TableOutputFormat initTableReducerJob, setConf
+3778	 HBaseAdmin, Bytes createTable, getBytes, split
+3920	 HLog, hbase.flushlogentries, hbase-default.xml
+4055	 HRegionLocation, HTableDescriptor
+4094	  1. util.HBaseFsck 2. util.Merge   1. reportError 2. close_region 3. merge tool 4. new method to fix HOLE_IN_REGION_CHAIN
+4099	 ThriftServer, UserGroupInformation login
+4536	 HColumnDescriptor, Parent retain, delete, flush, compaction
+4627	 RegionSplitter, HexStringSplit startKey, endKey
+4931	 ReplicationRegionInterface, ReplicationRegionServer CopyTable
+5128	 HBaseFsck, META, HDFS, regionserver connect()
+5834	 rs, rs.impl, CopyTable
+5876	 TestImportExport, hadoop
+6196	 TestImportExport, MR testcases, hadoop2.0
+6330	 TestImportExport, hadoop 0.23/2.0, HBASE-5876, HBASE-8258, HBASE-6891
+6422	 LoadIncrementalHFiles, AccessControlException, MapReduce completebulkload, chgrp, chmod, chown, fs -mv
+6529	 HFile, HBase, HFileSystem, Store.bulkLoadHFile(), DistributedFileSystem
+6617	 ReplicationSourceManager, logRolled(), HLog, Path
+7581	 TestAccessController
+7693	 TableInputFormatBase.reverseDNS, org.apache.hadoop.net.DNS.reverseDns
+8207	 ReplicationSource, TestReplicationQueueFailover checkIfQueueRecovered
+8781	 ImmutableBytesWritable, ImmutableBytesWritable constructor, get(), getOffset(), getSize()
+9033	 ReplicationSource TRACE level logging, unit tests
+9076	  1. replication.ReplicationSource   1. Getting
+9427	 ImmutableBytesWritable ImmutableBytesWritable(), get(), getSize(), getOffset(), equals()
+10448	  1. ZKUtil 2. ZooKeeperWatcher 3. KeeperException   1. createNodeIfNotExistsAndWatch 2. createEphemeralNodeAndWatch 3. getRecoverableZooKeeper().create 4. getRecoverableZooKeeper().exists 5. createACL 6. watchAndCheckExists 7. interruptedException 8. Thread.currentThread().interrupt
+10913	 ExportSnapshot, copy
+11333	 MetaMigrationConvertingToPB
+11420	 ThriftServer Not explicitly mentioned in the bug report.
+11542	  1. sun.security.x509.AlgorithmId 2. sun.security.x509.CertificateAlgorithmId 3. com.ibm.security.x509.AlgorithmId 4. com.ibm.security.x509.CertificateAlgorithmId
+11612	 MetaMigrationConvertingToPB
+11625	 HFileBlock, readBlockDataInternal(), validateBlockChecksum(), HFileBlock()
+12491	 TableMapReduceUtil, findContainingJar
+13617	 TestReplicaWithCluster testChangeTable, testReplicaAndReplication
+13646	 HRegion, execService, RPC service, controller
+13651	 StoreFileScanner, Region-X, Machine-1, Machine-2 start compaction, (re)move, get the lease expired and shutdown, reassign, write on the WAL, handling FileNotFoundException, refresh the store files, shutdown the region, notify the master, shutdown the entire RS.
+13668	  1. TestFlushRegionEntry 2. MemStoreFlusher$FlushRegionEntry   1. test
+13686	 RateLimiter canExecute, refill
+13704	 MultiRowRangeFilter, OutOfOrderScannerNextException filterRowKey, contains
+13706	 CoprocessorClassLoader, org.apache.hadoop, Hive load classes
+13707	 CellCounters, dropStatisticPerRows, countCellsOverall
+13722	 BloomFilterUtil, ByteBloomFilter, contains
+13733	 MiniZooKeeperCluster, standaloneServerFactory, zooKeeperServers startup(), shutdown(), standaloneServerFactory.startup(), standaloneServerFactoryList.add(), zooKeeperServers.add()
+13734	 VisibilityScanDeleteTracker put cells, delete cells, delete full row, delete cf, family version delete
+13779	 Put, Get, Result, HTable put.add(), table.put(), table.exists(), assertEquals(), result.isEmpty(), Bytes.equals(), result.getValue(), get.setCheckExistenceOnly(), get.get(), r.getExists()
+13811	 ServerShutdownHandler, split logs
+13813	 Procedure
+13834	 HeapMemoryManager, HeapMemoryTuner, TunerContext tune
+13847	 HRegionServer, getWriteRequestCount
+13888	 RateLimiter, AverageIntervalRateLimiter, FixedIntervalRateLimiter refill(), canExecute()
+13897	 Import, KeyValueReducer
+13945	 Prefix_Tree, TestSeekTo, HFileReaderV2, KvUtil, Bytes seekBefore(), getFirstKeyInBlock(), copyToNewBuffer(), getBytes()
+13958	 RESTApiClusterManager, REST ClusterManager, hBaseClusterManager kill(), suspend(), resume()
+13978	 SimpleTotalOrderPartitioner getPartition()
+13982	 ImportTsv, HBASE-9832
+13988	  1. HRegionServer 2. HBaseServer 3. LogRoller 4. MemStoreFlusher 5. HRegionServer$CompactionChecker 6. HRegionServer$PeriodicMemstoreFlusher   1. STOPPED 2. Stopping server on 21600 3. LogRoller exiting 4. Thread-37 exiting 5. regionserver21600.compactionChecker exiting 6. regionserver21600.periodicFlusher exiting
+13995	 ServerName, BaseLoadBalancer, ServerManager roundRobinAssignment(), equals(), hashCode(), isSameHostnameAndPort()
+14012	  1. ServerCrashProcedure 2. ServerShutdownHandler 3. GeneralBulkAssigner 4. AssignmentManager 5. SplitLogManager   1. isFailoverCleanupDone() 2. throwProcedureYieldException()
+14042	 FSHLog, IOException
+14076	 ResultSerialization, MutationSerialization deserialization Exception: InvalidProtocolBufferException Bug Report: CRUNCH-534, HBASE-13230
+14115	 HMasterCommandLine, stopMaster(), ConnectionFactory.createConnection(), Connection, getAdmin(), Admin, shutdown(), LOG.error()
+14145	 Canary, RegionServer tryRegion
+14146	 HBaseInterClusterReplicationEndpoint, ReplicationSource, sleepMultiplier
+14153	 ProcedureManagerHost, MASTER_PROCEUDRE_CONF_KEY
+14192	 Cluster, Cluster(List<String> nodes)
+14206	  1. MultiRowRangeFilterTest 2. MultiRowRangeFilter 3. Filter   1. testRanges() 2. filterRowKey() 3. filterKeyValue() 4. getNextRangeIndex()
+14228	 MultiTableOutputFormat, MultiTableRecordWriter, BufferedMutator, close
+14229	 Coprocessor, Store, InternalScanner, HRegion preFlush, internalFlushCache, get
+14256	 HRegion, TaskMonitor setRecovering(), getTableDesc().getRegionReplication(), TaskMonitor.get().createStatus(), internalFlushcache()
+14257	 HRegion, HRegionInfo, PeriodicMemstoreFlusher shouldFlush, getRegionInfo, isMetaRegion, getReplicaId, isSystemTable
+14317	 FSHLog, HDFS-8960, append, syncers, flush, safe point, ring buffer, roll log
+14343	 SimpleRegionNormalizer getSecond()
+14347	 DynamicClassLoader, HBASE-1936, hbase.dynamic.jars.dir
+14362	 procedure.TestWALProcedureStoreOnHDFS
+14367	 HTableDescriptor, Java API, server side chore
+14445	 ExportSnapshot, -chuser, -chgroup, -chmod
+14463	 BucketCache, LruCache, IdLock, ReentranceReadWriteLock, IdReadWriteLock, ioEngine getBlock, getLockEntry, read, equals, getLength, deserializerReference, get.
+14497	 StoreFileScanner seekToPreviousRow, next
+14512	 User, Connection, cache groups
+14521	 ConnectionImplementation, RpcRetryingCallerImpl locateRegionInMeta, callWithRetries
+14591	 IncreasingToUpperBoundRegionSplitPolicy, split, hfile
+14592	 BatchRestartRsAction, SlowDeterministicMonkeyFactory, ITBLL batchRestartRSRatio
+14598	 ByteBufferOutputStream, HeapByteBuffer, RegionServer, ArrayList, ByteBuffer checkSizeAndGrow(), Scan
+14604	 StochasticLoadBalancer, MoveCostFunction scale, Math.min
+14654	 TestMultiParallel, testActiveThreadsCount, HBASE-14642
+14658	 MonkeyFactory, loadByClassName
+14663	 HStore, CompletionService, ExecutorCompletionService, StoreFile, Callable close, submit, call, closeReader
+14705	 KeyValue, KeyValue constructor
+14711	 HRegionInfo, MetaTableAccessor, HRegionInfo#getComparator
+14742	 TestHeapMemoryManager testWhenClusterIsReadHeavy, testWhenClusterIsWriteHeavy, assertHeapSpaceDelta
+14759	 FSHLog, DamagedWALException Math.abs, offer, requestLogRoll
+14763	 HConnection, Connection, ClusterConnection, LoadIncremental, HBCK
+14770	  1. RowCounter 2. NoSuchColumnFamilyException  1. main (in RowCounter class)
+14771	 RpcServer, Call, CallRunner getRemoteAddress, processRequest, getRemoteIp, run
+14782	 FuzzyRowFilter create, put, run code
+14784	 HBaseTestingUtility randomFreePort(), randomPort(), contains(), add()
+14802	 ServerCrashProcedure, balancer numProcessing, master failover, crash recovery procedure
+14809	 AccessController, Configuration grant, scan, whoami
+14811	 HBaseInterClusterReplicationEndpoint, ArrayList remove(), get(), sort()
+14838	 SimpleRegionNormalizer, HMaster normalize
+14843	 TestWALProcedureStore testLoad
+14861	 HRegionServer, ZNodeClearer, ServerName handleReportForDutyResponse(), clear()
+14867	 SimpleRegionNormalizer triggerMergeOperation, runNormalizer, verifyRegionNumber, checkMasterLog
+14896	 WALKey, RegionMover, RegionMoverBuilder setWriteEntry, RegionMover(String)
+14901	 MobUtils.createEncryptionContext, HStore, HFileReaderImpl, EncryptionUtil
+14905	 VerifyReplication, VerifyReplication$Verifier$Counters scan, --versions
+14923	 VerifyReplication logFailRowAndIncreaseCounter, LOG.error
+14936	 CombinedBlockCache, CacheStats rollMetricsPeriod(), getHitRatioPastNPeriods(), getHitCachingRatioPastNPeriods()
+14953	 HBaseInterClusterReplicationEndpoint, ReplicationSource
+14963	 MetaTableLocator, Stopwatch Stopwatch's constructor
+15001	 ReplicationSinkManager, HBaseInterClusterReplicationEndpoint, ArrayList, ReplicationSource getSinks(), size(), get(), add(), hashCode(), getEncodedRegionName()
+15028	 RegionGroupingProvider getWAL(String)
+15034	 IntegrationTestDDLMasterFailover, cleanCreatedNamespaces
+15035	 HFileContextBuilder includeTags
+15052	 ReplicationSource, MetricsSource, EnvironmentEdgeManager setAgeOfLastShippedOp(), currentTime()
+15070	 DistributedHBaseCluster, restoreRegionServers()
+15093	 MetricsSource setSizeofLogQueue, incrSizeofLogQueue, decrSizeofLogQueue
+15102	 HeapMemoryTuner, DefaultHeapMemoryTuner, memstore resets, tuning, updates
+15125	 HBaseFsck, HRegionInfo adoptHdfsOrphan, getTableName, getFirst, getSecond, Bytes.add
+15126	 HBaseFsck, currentRegionBoundariesInformation checkRegionBoundaries, keyOnly, comparator.compare
+15198	  1. MultiServerCallable 2. HConnection 3. Configuration 4. AbstractRpcClient 5. Codec 6. KeyValueCodec   1. isCellBlock() 2. getConnection() 3. getConfiguration() 4. getCodec() 5. getDefaultCodec() 6. get()
+15218	 KeyValueCodec, Decoder, NoTagsKeyValue, WalCellCodec, SecureWALCellCodec, Cells replay of WAL, writing to WAL
+15231	 TableState, TableState.State
+15247	 InclusiveStopFilter, Scans, Filter reverse
+15252	 ProtobufLogReader, ProtobufUtil, LimitInputStream, IOException, EOFException readNext, mergeFrom, getPos, initCause
+15279	 OrderedBytes isEncodedValue, length
+15287	 mapreduce.RowCounter scan.setStartRow, Bytes.toBytes, Bytes.toBytesBinary
+15319	 JmxCacheBuster, AtomicReference, ScheduledFuture clearJmxCache, get, isDone, getDelay
+15324	 ConstantSizeRegionSplitPolicy nextFloat()
+15327	 Canary, admin, ClusterStatus writeSniffing, checkWriteTableDistribution, getClusterStatus, getServers, size, balancer
+15360	 TestSimpleRpcScheduler, HBASE-15306, HBASE-15136
+15364	 HBaseFsck
+15378	 RS scanner, TIME_LIMIT_REACHED_MID_ROW, ClientScanner, open a new scanner
+15433	 SnapshotManager, MasterQuotaManager restoreSnapshot, checkAndUpdateNamespaceRegionQuota, removeTableFromNamespaceQuota, getName, getNameAsString
+15467	 Master, RSs, createTable, TableDescriptor, TableSchema, write, read
+15520	 AsyncIPC, IOException, testRpcMaxRequestSize, AsyncRpcChannel, channelInactive
+15548	  1) SyncTable  1) main
+15578	 ReplicationHFileCleaner, ReplicationLogCleaner
+15582	 SnapshotManifestV1, loadRegionManifests
+15591	 ServerCrashProcedure, ProcedureYieldException, ProcedureExecutor
+15593	 RSRpcServices.scan, Math.min, scannerLeaseTimeoutPeriod, rpcTimeout
+15610	 HConnection, HBASE-15174
+15615	 RpcRetryingCallerImpl, RegionServerCallable, ConnectionUtils sleep(), getPauseTime()
+15617	 Canary, RegionServerMonitor, Admin filterRegionServerByName, getAllRegionServerByName, getClusterStatus
+15622	 Superusers, HRegionServer, UserProvider, Configuration, CoordinatedStateManager Superusers.initialize(), UserProvider.instantiate(), login()
+15627	 AccessController, User, Superusers, AccessDeniedException checkSystemOrSuperUser(), getActiveUser(), isSuperUser(), getShortName()
+15636	 HBaseTestingUtility, HBaseAdmin waitUntilAllRegionsAssigned, getInt
+15645	 HTable, TestHCM setUpBeforeClass(), testOperationTimeout()
+15650	 TimeRangeTracker, StoreFile
+15668	 HFileReplicator$Copier
+15676	 FuzzyRowFilter, TestFuzzyRowFilterEndToEnd, Bytes isPreprocessedMask(), preprocessMask(), toBytesBinary(), testHBASE14782()
+15697	 TestHRegion
+15699	 AsyncFSWAL, SyncFuture append
+15742	 JMX, o.a.h.metrics2, MetricsInfo, Interns, MutableHistogram snapshot, expireAfterAccess
+15746	  1. RSRpcServices 2. HRegionServer 3. HRegion   1. preClose() 2. closeRegion() 3. doClose()
+15773	 CellCounter, TableInputFormat setScanBatching
+15848	 RSGroupBasedLoadBalancer, RSGroupInfoManager getMisplacedRegions(), containsServer(), getRegionNameAsString(), getRSGroupOfServer(), getName()
+15866	 HTable, RpcRetryingCallerFactory HTable#finishSetup, RpcRetryingCallerFactory#newCaller(int rpcTimeout)
+15884	 StoreFileScanner, hfs skipKVsNewerThanReadpoint, next, setCurrentCell, getKeyValue, getComparator, compareRows, getRowArray, getRowOffset, getRowLength
+15957	 RpcClientImpl, Connection close, isAlive, add, markClosed, take
+15976	  1. MetricsRegionServerWrapperImpl 2. RegionServerMetricsWrapperRunnable 3. blockCache   1. getStats()
+16017	 HBase TableOutputFormat, getRecordWriter
+16032	 StoreScanner, HStore, HRegion, RegionScanner, ScanQueryMatcher, KeyValueScanner StoreScanner(), addChangedReaderObserver(), getScannersNoCompaction(), seekScanners(), resetKVHeap(), getScanner(), next(), close()
+16058	  1. TestHRegion   1. testFlushSizeAccounting 2. testMemstoreSizeAccountingWithFailedPostBatchMutate
+16066	 HMaster normalizeRegions(), isSystemTable(), isNormalizationEnabled()
+16081	 CompletionService, HBaseInterClusterReplicationEndpoint, ReplicationSourceManager removePeer, recordLog, take
+16091	 Canary, tests.Canary read from region
+16117	 mapred.TableOutputFormat
+16125	 RegionMover
+16165	 RpcServer, CallRunner run, sendResponseIfReady
+16207	 MasterRpcServices, TestAccessController restoreSnapshot(), ensureNamespaceExists(), getNamespace(), getNamespaceAsString()
+16238	 RecoverableZooKeeper, TraceScope, KeeperException, RetryCounter exists, startSpan, create, checkZk, code, retryOrThrow, sleepUntilNextRetry, close
+16294	 HBaseFsck, HBase create, loadHdfsRegioninfo, hbck
+16301	 MemStoreFlusher blockingWaitTime, flush
+16309	 TestDefaultCompactSelection, testCompactionRatio, major compaction condition
+16310	 FilterList, Filters filterRowKey()
+16345	 RpcRetryingCallerWithReadReplicas call(), f.get()
+16360	 TableMapReduceUtil, PrefixTreeCodec addHBaseDependencyJars, forName
+16362	 StoreScanner, scan.getCacheBlocks, PartitionedMobCompactor.createScanner
+16367	 HRegionServer, HMaster, HFileSystem preRegistrationInitialization(), createInitialFileSystemLayout(), addLocationsOrderInterceptor()
+16375	 HBaseTestingUtility, MapReduceTestingShim, MiniMRCluster, JobConf, FileSystem  getJobConf, createJobConf, set, get, getUri, toString
+16430	 RSGroupInfoManagerImpl, RSGroupInfo, DoNotRetryIOException, Maps, IOException moveTables, containsKey, newHashMap, removeTable, getName, addTable, flushConfig
+16456	 1. rsgroup.RSGroupInfoManagerImpl 2. rsgroup.RSGroupAdminServer 3. rsgroup.RSGroupBasedLoadBalancer 4. rsgroup.RSGroupAdminEndpoint  1. RSGroupInfoManagerImpl(MasterServices) 2. RSGroupInfoManagerImpl$RSGroupStartupWorker.start() 3. moveServers(Set, String) 4. correctAssignments(Map) 5. getMisplacedRegions(Map) 6. RSGroupInfoManagerImpl$RSGroupStartupWorker.waitForGroupTableOnline() 7. RSGroupAdminEndpoint.start(CoprocessorEnvironment)
+16460	 BucketAllocator, FileIOEngine, BucketCache, ConcurrentHashMap, BlockCacheKey, BucketEntry retrieveFromFile(), readObject()
+16471	 RSRpcServices, MetricsHBaseServer, MetricsHBaseServerSourceFactory getProcessName(), createContextName()
+16527	 DFS client, CatalogJanitor delete referenced files Issues: HBASE-13331
+16528	 ServerCrashProcedure, coprocessor constructor, abort
+16551	 SplitLogManager, CatalogJanitor, Server, MasterServices, Stoppable, MockNoopMasterServices
+16552	 MiniHBaseCluster getServerWith()
+16572	 RecoverableZooKeeper, KeeperException sync, checkZk
+16578	 StoreFileScanners, StoreFile, Compactor, StoreFileScanner compact, getScannersForStoreFiles
+16612	 KeyValue.Type codeToType
+16615	 TestScannerHeartbeatMessages
+16645	 CellFlatMap, CellFlatMap#tailMap, CellFlatMap#headMap, CellFlatMap#SubMap, CellFlatMap#find, CellFlatMap#getValidIndex
+16697	 TestRegionServerMetrics
+16699	 AverageIntervalRateLimiter refill(), getWaitInterval()
+16721	  1. regionserver 2. wal.FSHLog 3. LogRoller   1. force flush 2. schedule flush 3. split 4. logRoller
+16723	 JMXListener, LocateRegistry startConnectorServer(), createRegistry()
+16724	 AccessController, preCloneSnapshot, SnapshotDescription, HTableDescriptor, requirePermission, getActiveUser, SnapshotDescriptionUtils.isSnapshotOwner
+16731	 RSRpcServices, Get, Scan, FilterList get(), setLoadColumnFamiliesOnDemand()
+16743	 TestSimpleRpcScheduler, FastPathBalancedQueueRpcExecutor testCoDelScheduling, get
+16752	 RpcServer, RpcClient, WALEdit send, unroll, close, return
+16788	 HStore, DefaultStoreFileManager, HRegionFileSystem, HFileArchiver, CompactedHFilesDischargeHandler  close(), closeAndArchiveCompactedFiles(), clearCompactedfiles(), removeCompactedfiles(), removeStoreFiles(), archiveStoreFiles()
+16853	  1. HMaster 2. RegionServerTracker 3. DrainingServerTracker 4. ServerManager 5. ZKUtil 6. RegionServerTracker 7. ServerManager 8. DrainingServerTracker 9. ZKUtil 10. RegionServerTracker 11. ServerManager   1. add 2. unload 3. failover 4. balancer 5. initialize 6. register 7. start 8. process 9. add 10. trigger 11. restart 12. register 13. list 14. grep 15. Set watcher on existing znode 16. Added tracking of RS 17. Set watcher on existing znode 18. Ignoring request to add it to draining list 19. Draining RS node created, adding to list 20. Set watcher on existing znode 21. Added tracking of RS 22. Registering server
+16855	 MetricsConnections, ConnectionImpls, ThreadPoolExecutor, RatioGauge getCurrentBatchPool(), getCurrentMetaLookupPool(), register(), getActiveCount(), getMaximumPoolSize(), getRatio()
+16870	 ReplicationSourceInterface, ReplicationSource, MetricsSource, MetricsSink, ReplicationLoad  buildReplicationLoad(), getSources(), getSourceMetrics(), getSinkMetrics(), buildReplicationLoad()
+16880	 ByteBufferUtils, BBUtil, UnsafeAccess copyFromBufferToBuffer(), copy(), put(), position(), remaining()
+16889	 IntegrationTestDDLMasterFailover, ConcurrentHashMap verifyTables, DeleteTableAction, verifyNamespaces
+16910	 StochasticLoadBalancer, setClusterStatus, setMasterServices, getClusterStatus, getTableDescriptors, getAll
+16931	 Compactor, Cell, CellUtil, StoreScanner performCompaction, next, getSequenceId, setSequenceId, append, clear, checkScanOrder
+16966	 TestSimpleRpcScheduler, testCoDelScheduling
+16971	 HRegion, Durability, Map, Store, Cell, WALEdit doDelta, getEffectiveDurability, reckonDeltas, doWALAppend
+16992	 HRegion, Mutation, Durability  doMiniBatchMutate, getFamilyCellMap, checkAndPrepareMutation, getRowLockInternal, getDurability, recordMutationWithoutWal, mergeFamilyMaps
+17039	 SimpleLoadBalancer balanceCluster
+17042	 MasterObserver

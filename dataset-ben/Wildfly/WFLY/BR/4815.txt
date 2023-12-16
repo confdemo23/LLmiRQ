@@ -1,0 +1,2 @@
+ AdvancedLdapLoginModuleTestCase fails on RHEL5 and IBM JDK
+Upstream of https://bugzilla.redhat.com/show_bug.cgi?id=1206177

@@ -1,0 +1,3 @@
+People search URI malformed causes LinkedIn to response with 400 Bad Request Error
+URI for HTTP GET request for people search on LinkedIn REST API is badly formed.
+It adds a &amp; sign before keywords field and adds one extra &amp; sign after the values that causes the 400 Bad Request Error response from LinkedIn 

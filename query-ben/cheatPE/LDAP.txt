@@ -1,0 +1,27 @@
+13	 DirContextAdapter, Person
+46	 DirContextAdapter, CollectionUtils, ModificationItem
+66	 ldapContext, PagedResultsRequestControl, Control
+96	 DirContextOperations, DistinguishedName, DirContextAdapter, mapToContext, modifyAttributes, collectModifications
+100	 LdapUtils, NamingException, SizeLimitExceededException, TimeLimitExceededException, LimitExceededException
+101	 LdapTemplate, FailureAwareDirContext, DelegatingContext, PoolingContextSource
+102	 LdapTemplate, SearchExecutor, NameClassPairCallbackHandler, DirContextProcessor
+109	 DistinguishedName.parse()
+121	 DefaultDirContextValidator, SearchControls
+128	 PagedResultsRequestControl, PagedResultsCookie
+177	 LdapUtils, UncategorizedLdapException, javax.naming.NameNotFoundException, LdapNameNotFoundException
+179	 DataSourceTransactionManager, ContextSourceAndDataSourceTransactionManager, TransactionSynchronizationManager, BasicDataSource
+184	 DefaultCompensatingTransactionOperationManager, CompensatingTransactionOperationExecutor
+186	 LdapTemplate, AuthenticationException
+188	 DirContextAdapter, DistinguishedName, LdapRdns, ldapTemplate
+189	 DefaultDirContextValidator, SearchControls
+196	 DefaultDirContextFactory, DefaultDirObjectFactory, IllegalArgumentException
+198	 NotPresentFilter, Filter
+213	 PresentFilter, NotPresentFilter
+215	 DirContextAdapter, getObjectAttribute, LdapUtils, NamingException
+217	 OrFilter, AndFilter, EqualsFilter
+233	 LdifParser, getRecord, LdapAttributes
+237	 DistinguishedName
+238	 ContextMapper, AttributesMapper, LdapTemplate, NamingExceptionTranslator
+246	 SchemaToJava, AttributeSchema
+290	 LdapTemplate, AuthenticatedLdapEntryContextCallback, AuthenticationErrorCallback
+335	 RepositoryConfigurationExtension, LdapNamespaceHandler

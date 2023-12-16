@@ -1,0 +1,2 @@
+Schema changes for HIVE-12353
+This JIRA just covers RDBMS schema changes for HIVE-12353.

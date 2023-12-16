@@ -1,0 +1,3 @@
+Provide a command to list visibility labels
+A command to list visibility labels that are in place would be handy.
+This is also in line with many of the other hbase list commands.

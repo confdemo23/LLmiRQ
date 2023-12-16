@@ -1,0 +1,2 @@
+Non-persistent properties not rendered
+See the Boot issue for reference.

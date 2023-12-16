@@ -1,0 +1,2 @@
+TestHiveOperationType is failing on master
+Presumably be broken by HIVE-13351

@@ -1,0 +1,2 @@
+Remove deprecated functions from Hive.java
+remove deprecated createTable and dropTable functions

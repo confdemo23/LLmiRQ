@@ -1,0 +1,2 @@
+ParseAndMarshalModelsTestCase is not testing EAP 6.4 files or legacy standalone-picketlink.xml files
+Our test coverage of parsing and marshaling compatibility has holes.

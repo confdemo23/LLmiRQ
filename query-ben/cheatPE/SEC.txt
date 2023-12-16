@@ -1,0 +1,206 @@
+99	 MethodDefinitionMap
+353	 A, B, I, MethodDefinitionMap
+422	 BasicLookupStrategy
+424	 MethodDefinitionMap
+467	 JdbcAclService, JdbcMutableAclService
+525	 AccessCheckerTag, filterInvocationInterceptor, AuthorizeTag, AccessControlListTag
+527	 EhCacheBasedAclCache, AclImpl, AclAuthorizationStrategy, AuditLogger, AccessControlEntry, ObjectIdentity, Sid
+530	 Acl, AclImpl, insertAce
+547	 BasicLookupStrategy, ProcessResultSet, extractData, lookupPrimaryKeys
+572	 AclImpl
+589	 BasicLookupStrategy, ObjectIdentity, Sid
+590	 BasicLookupStrategy, LookupStrategyTest
+597	 AclImpl, Acl, AclAuthorizationStrategy
+630	 UserServiceBeanDefinitionParser
+655	 JdbcMutableAclService, ObjectIdentity, ACL
+670	 JdbcMutableAclService, ObjectIdentity
+676	 jdbcMutableAclService, ObjectIdentityImpl, JdbcAclService, JdbcAclServiceTests
+783	 GlobalMethodSecurityBeanDefinitionParser, AfterInvocationProviderManager, MethodSecurityInterceptor
+792	 FilterChainProxyPostProcessor, FilterChainProxy, custom-filter
+831	 JdbcAclService
+837	 SpringSecurityLdapTemplate, LDAPSearch
+925	 BasicLookupStrategy
+951	 BasicLookupStrategy, AclImpl, StubAclParent, Acl, AccessControlEntryImpl, EhCacheBasedAclCache
+992	 SpringSecurityLdapTemplate, SearchControls, LdapTemplate, ContextMapper
+1006	 AccessControlListTag, SidRetrievalStrategy, SidRetrievalStrategyImpl
+1014	 LdapAuthenticationProvider, LdapAuthenticator, AbstractLdapAuthenticator, PasswordComparisonAuthenticator, UserDetailsContextMapper
+1038	 JdbcMutableAclService, ObjectIdentity
+1078	 WebSphere2SpringSecurityPropagationInterceptor, PreAuthenticatedAuthenticationToken, PreAuthenticatedAuthenticationProvider, WebSpherePreAuthenticatedProcessingFilter, WASSecurityHelper
+1081	 PersistentTokenBasedRememberMeServices, RememberMeAuthenticationException
+1084	 LdapAuthenticationProvider, Authentication.details
+1104	 ApacheDSContainer, Lifecycle, DisposableBean
+1117	 NtlmAwareLdapAuthenticator, LdapAuthenticationProvider
+1121	 InMemoryResource
+1151	 AclImpl
+1154	 LdapAuthenticationProvider, UsernamePasswordAuthenticationToken, UserDetails
+1156	 JdbcUserDetailsManager, createUser, updateUser, setEnableAuthorities
+1187	 AbstractUserDetailsAuthenticationProvider, UsernamePasswordAuthenticationToken
+1201	 PropertyPlaceholderConfigurer, HttpSecurityBeanDefinitionParser, FilterSecurityInterceptor
+1223	 BindAuthenticator
+1224	 BasicLookupStrategy, JdbcAclService, JdbcMutableAclService
+1236	 DefaultFilterInvocationSecurityMetadataSource
+1239	 JaasAuthenticationProvider, JaasNameCallbackHandler, PasswordCallbackHandler
+1240	 PasswordEncoderParser
+1241	 RequestCacheAwareFilter, SavedRequest, SavedRequestAwareAuthenticationSuccessHandler, SimpleUrlAuthenticationSuccessHandler
+1256	 FilterSecurityMetadataSource, FilterInvocationSecurityMetadataSourceBeanDefinitionParser, HttpSecurityBeanDefinitionParser, FilterSecurityInterceptor
+1272	 ProviderManager, DefaultAuthenticationEventPublisher, NullEventPublisher
+1282	 UnanimousBased, AccessDecisionManager
+1283	 AuthenticationConfigBuilder
+1287	 BasePermission, BasicLookupStrategy, PermissionFactory
+1289	 AuthenticationListener, ApplicationEvent, AuthenticationSuccessEvent, DefaultAuthenticationEventPublisher, ProviderManager, NullEventPublisher
+1295	 Roo_Entity, AbstractMethodSecurityMetadataSource, AspectJSecurityInterceptor
+1308	 JdbcMutableAclService, DefaultAclSQLSource, JdbcAclService, AclSQLSource
+1317	 ProviderManager, AuthenticationProviders
+1320	 JaasAuthenticationProvider, Configuration
+1328	 RedirectUtils, DefaultRedirectStrategy
+1353	 SessionManagementFilter, AnnotationMethodHandlerAdapter
+1358	 DefaultWebInvocationPrivilegeEvaluator
+1360	 AbstractAuthenticationTargetUrlRequestHandler
+1361	 Username:PasswordAuthenticationFilter
+1372	 SessionRegistry, SessionRegistryImpl
+1384	 DefaultWebInvocationPrivilegeEvaluator, AffirmativeBased, AuthenticatedVoter, RoleVoter
+1385	 AbstractRetryEntryPoint, DefaultRedirectStrategy, RetryWithHttpsEntryPoint
+1392	 PermissionEvaluator, DefaultMethodSecurityExpressionHandler
+1410	 AbstractRememberMeServices.decodeCookie()
+1413	 AbstractRetryEntryPoint, RedirectStrategy
+1418	 GrantedAuthorityImpl, SimpleGrantedAuthority
+1425	 AbstractRememberMeServices, StringUtils, InvalidCookieException
+1432	 UserMap
+1439	 HttpRequestResponseHolder, SecurityContextRepository, SecurityContext
+1443	 Jsr250Voter, vote(), Authentication, ConfigAttribute, GrantedAuthority
+1444	 BindAuthenticator, LdapEncoder
+1446	 Base64, BasicAuthenticationFilter
+1450	 IActionHandler, ConcreteActionHandler, AbstractFallbackMethodDefinitionSource, ClassUtils, AopUtils, AbstractFallbackMethodSecurityMetadataSource
+1454	 PreAutorize, AOPProxy, MethodSecurityEvaluationContext, addArgumentsAsVariables, TargetClassAware, TargetSource, Advised, AopUtils, ClassUtils, parameterNameDiscoverer
+1458	 HttpSessionEventPublisher, Log4jConfigListener, Log
+1480	 LdapUserDetailsImpl, equals, hashCode, session management config
+1500	 AbstractRetryEntryPoint, UrlUtils
+1501	 SwitchUserFilter
+1520	 SpringSecurityLdapTemplate, DefaultDirContextValidator
+1545	 LdapAuthenticationProvider, messages.properties
+1549	 AclPermissionCacheOptimizer, BasicLookupStrategy
+1553	 WebAuthenticationDetails
+1578	 ThreadLocalSecurityContextHolderStrategy, ThreadLocal
+1587	 HttpSessionSecurityContextRepository, LogoutFilter, SecurityContext, AnonymousAuthentication
+1590	 WebAuthenticationDetails, GrantedAuthoritiesContainer, IllegalArgumentException
+1606	 FilterChainProxy, FirewalledRequest, DefaultHttpFirewall, SimpleUrlAuthenticationFailureHandler
+1614	 Apache Tiles, Spring Security, HttpFirewall, FirewalledRequest, FilterChainProxy, RequestWrapper
+1639	 VirtualFilterChain, FilterChainProxy, FirewalledRequest, ServletRequestWrapper
+1670	 SpringSecurityLdapTemplate, CompositeName, SearchResult, DistinguishedName
+1683	 RequestHeaderAuthenticationFilter
+1699	 DefaultFilterChainValidator, AccessDecisionManager, AffirmativeBased, WebExpressionVoter, FilterInvocation
+1722	 HttpSessionCreatedEvent, HttpSessionDestroyedEvent, HttpSessionEventPublisher
+1735	 HttpSessionSecurityContextRepository, httpSessionContextIntegrationFilter
+1750	 AbstractSecurityInterceptor, SecurityContext, RunAsManager
+1751	 Encryptors, TextEncryptor
+1771	 TokenBasedRememberMeServices, Authentication, ProviderManager, UserDetailsService
+1782	 LdapAuthenticationProvider, BindAuthenticator
+1792	 RunAsUserToken, originalAuthentication
+1795	 AclImpl
+1802	 UrlUtils, isAbsoluteUrl
+1804	 User, eraseCredentials(), UserDetailsManager, AuthenticationException, UserDetailsService, loadUserByUsername
+1833	 HttpSessionSecurityContextRepository, generateNewContext
+1838	 FilterChainProxy, VirtualFilterChain, FirewalledRequest
+1848	 AbstractLdapAuthenticator, getUserDns, LdapEncoder, nameEncode
+1868	 SecurityNamespaceHandler, FilterChainProxy
+1870	 HttpSessionDestroyedEvent, SecurityContext
+1880	 LogoutBeanDefinitionParser
+1911	 CustomBasedAuthenticationProvider, AnnotationConfigBean, AutowiredBean
+1917	 ProviderManager, DefaultAuthenticationEventPublisher, HttpSecurityBeanDefinitionParser, AccountStatusException, AuthenticationException
+1919	 AuthenticationServiceException
+1927	 SessionManagementFilter
+1934	 SecurityNamespaceHandler, FilterChainProxy
+1939	 SwitchUserFilter
+1940	 ProviderManager, AccountStatusException, AuthenticationFailureLockedEvent, LockedException
+1951	 HttpSessionDestroyedEvent
+1958	 AbstractPreAuthenticatedProcessingFilter, doAuthenticate
+1964	 PersistentTokenBasedRememberMeServices, JdbcTokenRepositoryImpl
+1965	 DefaultWebSecurityExpressionHandler, WebSecurityExpressionHandler, AbstractAuthorizeTag
+1968	 AbstractPreAuthenticatedProcessingFilter, SecurityContextHolder, AbstractSecurityInterceptor
+1980	 WebConfigUtils, Sitemap, FailFastProblemReporter
+2011	 SessionFixationProtectionStrategy, ConcurrentSessionControlStrategy, SessionRegistry
+2012	 UserDetails, CredentialsContainer, User
+2013	 AbstractAuthenticationProcessingFilter, UsernamePasswordAuthenticationFilter, SessionAuthenticationException, SimpleUrlAuthenticationFailureHandler
+2020	 HttpSecurityBeanDefinitionParser, ProviderManager
+2027	 FilterChainProxy, SecurityContextPersistenceFilter
+2031	 PreInvocationAuthorizationAdviceVoter, MethodInvocation
+2036	 CookieClearingLogoutHandler, Cookie, Simple Hash-Based RememberMe Token
+2038	 AbstractPreAuthenticatedProcessingFilter, GenericFilterBean, initFilterBean(), afterPropertiesSet()
+2045	 AbstractAuthorizeTag, WebInvocationPrivilegeEvaluator
+2056	 DaoAuthenticationProvider, PasswordEncoder, BCryptPasswordEncoder, UsernamePasswordAuthenticationToken
+2067	 1. HttpServletRequest 2. HttpServletResponse 3. SaveContextOnUpdateOrErrorResponseWrapper.SaveContextServletOutputStream 4. HttpSessionSecurityContextRepository.SaveToSessionResponseWrapper
+2078	 AbstractPreAuthenticatedProcessingFilter, Principal
+2101	 AbstractAuthorizeTag, WebInvocationPrivilegeEvaluator
+2103	 JdbcTokenRepositoryImpl, EmptyResultDataAccessException
+2111	 SecurityContext, SecurityContextHolder, ServletRequest, SaveContextOnUpdateOrErrorResponseWrapper, SecurityContextRepository, AnonymousAuthenticationFilter, FilterSecurityInterceptor, WebExpressionVoter, AccessDeniedException
+2137	 ConcurrentSessionControlStrategy, SessionFixationProtectionStrategy
+2140	 AclAuthorizationStrategyImpl
+2143	 SecurityNamespaceHandler.parse()
+2177	 DefaultRedirectStrategy, SimpleUrlAuthenticationSuccessHandler
+2191	 AuthenticationManagerBuilder, ObjectPostProcessor, AuthenticationManager, SampleWebSecurityConfig
+2222	 WebSecurityConfigurerAdapter, EnableWebSecurity
+2237	 FirewalledRequest
+2246	 HttpSessionRequestCache, DefaultSavedRequest, SavedRequest
+2272	 CsrfRequestDataValueProcessor, RequestDataValueProcessor
+2276	 CsrfToken, HttpSession
+2295	 SpringSecurityCoreVersion, Gradle Shadow plugin
+2301	 GlobalMethodSecurityConfiguration, DefaultWebSecurityExpressionHandler, WebSecurityConfiguration, AbstractSecurityExpressionHandler
+2302	 AbstractSecurityWebApplicationInitializer, SpringSecurityFilterChain
+2303	 WebSecurity, DefaultExpressionHandler
+2304	 GlobalMethodSecurityConfiguration, Expression Handler
+2308	 DefaultSpringSecurityContextSource
+2327	 SecurityExpressionRoot
+2367	 ProviderManager, AuthenticationProviders, InternalAuthenticationServiceException, AuthenticationException, LDAP provider, UsernameNotFoundException, AccountStatusException
+2392	 KeyBasedPersistenceTokenService, generatePseudoRandomNumber, Sha512DigestUtils, Utf8, Base64
+2410	 AclFormattingUtils, printBinary, Integer.toString, Integer.toBinaryString
+2418	 LdapUserDetailsImpl, toString method
+2439	 HttpSessionCsrfTokenRepository, setHeaderName
+2461	 WebSecurityConfiguration, SpringApplicationHierarchyTests, springSecurityFilterChain
+2472	 BCryptPasswordEncoder, PasswordComparisonAuthenticator, AbstractLdapAuthenticator, PasswordEncoder
+2492	 ExpressionUrlAuthorizationConfigurer.interceptUrl
+2493	 DefaultLdapAuthoritiesPopulator
+2497	 AbstractPreAuthenticatedProcessingFilter, requiresAuthentication
+2507	 WebExpressionVoter, FilterInvocation
+2533	 SecurityConfig, AuthenticationManagerBuilder, HttpSecurity
+2549	 org.springframework.security.config.annotation.authentication.configuration.$Proxy90, AuthenticationConfiguration$LazyBean
+2570	 LogoutConfigurer, LogoutRequestMatcher, CsrfConfigurer, AntPathRequestMatcher
+2574	 SessionManagementConfigurer, SessionRegistryImpl, SessionDestroyedEvents, ConcurrencyControlConfigurer
+2578	 HttpSessionSecurityContextRepository, HttpServletResponseWrapper
+2606	 ApacheDSServerIntegrationTests
+2683	 AuthenticationPrincipalArgumentResolver
+2697	 SpringSecurityCoreVersion, String.compareTo()
+2698	 @EnableGlobalMethodSecurity, AdviceMode.ASPECTJ, AnnotationSecurityAspect, GlobalMethodSecurityBeanDefinitionParser, MethodSecurityConfig, GlobalMethodSecurityConfiguration, MethodSecurityExpressionHandler
+2709	 WithSecurityContextTestExecutionListener, AbstractTestExecutionListener, Ordered, AnnotationAwareOrderComparator, TestExecutionListeners
+2751	 AbstractPreAuthenticatedProcessingFilter, UserDetails
+2768	 DefaultMessageSecurityExpressionHandler, PermissionEvaluator
+2769	 DefaultMessageSecurityExpressionHandler, RoleHierarchy
+2791	 AbstractRememberMeServices
+2794	 AbstractPreAuthenticatedProcessingFilter, getPreAuthenticatedPrincipal, HttpServletRequest
+2819	 SimpDestinationMessageMatcher, SimpMessageType, AntPathMatcher
+2832	 CsrfFilter, SessionManagementFilter, CsrfAuthenticationStrategy, CsrfRequestDataValueProcessor, CsrfToken
+2845	 AbstractSecurityWebSocketMessageBrokerConfigurer, AuthenticationCredentialsNotFoundException, SecurityContextChannelInterceptor, AbstractSecurityInterceptor
+2879	 JdbcTokenRepositoryImpl
+2882	 SecurityConfig, HttpSecurity, DefaultLoginPageGeneratingFilter
+2895	 WebSecurityConfig, AuthenticationManagerBuilder, AuthenticationManager, AuthenticationProvider, ActiveDirectoryLdapAuthenticationProvider
+2897	 ActiveDirectoryLdapAuthenticationProvider, SpringSecurityLdapTemplate
+2900	 FilteringAuthenticationProvider, ActiveDirectoryLdapAuthenticationProvider
+2908	 HttpSecurity, RequestMatcher, RequestMatchersSecurityConfig, AuthenticationManagerBuilder, OrRequestMatcher
+2930	 SecurityExpressionOperations, hasRole, hasAuthority
+2931	 CsrfFilter, CsrfTokenRepository, HttpSessionCsrfTokenRepository
+2956	 AnnotationParameterNameDiscoverer, ParameterNameFactory
+2964	 CsrfTokenArgumentResolver, RestController
+2973	 SecurityContextRepository, SaveContextPrintWriter, SaveContextOnUpdateOrErrorResponseWrapper, SaveContextServletOutputStream
+2990	 SecurityNamespaceHandler
+3034	 AclPermissionEvaluator, BasePermissions
+3035	 SecurityContextHolderAwareRequestWrapper, isUserInRole, isGranted
+3045	 InfrastructureAdvisorAutoProxyCreator, GlobalMethodSecurityConfiguration, MethodSecurityMetadataSourceAdvisor, ImportBeanDefintionRegistrar
+3055	 SecurityContextHolderAwareRequestWrapper, isUserInRole, isGranted
+3056	 BCrypt
+3073	 AbstractAuthorizeTag, WebInvocationPrivilegeEvaluator, JSPAuthorizeTag
+3082	 DefaultSavedRequest, DefaultSavedRequestTests
+3108	 DigestAuthenticationFilter, SecurityContextHolder, SessionContextHolder, HttpServletRequest, AbstractSecurityInterceptor
+3109	 DelegatingSecurityContextScheduledExecutorService, DelegatingSecurityContextRunnable, DelegatingSecurityContextExecutor, ThreadPoolTaskScheduler, ReschedulingRunnable, SecurityContext
+3122	 DelegatingSecurityContextScheduledExecutorService, ReschedulingRunnable.run(), DelegatingSecurityContextRunnable, SecurityContext, SecurityContextHolder, GrantedAuthority, AuthorityUtils, UsernamePasswordAuthenticationToken
+3158	 AbstractAuthorizeTag, SecurityWebApplicationContextUtils, WebApplicationContextUtils
+3159	 HttpSecurity, headers
+3170	 RememberMeServices, LogoutHandler, RememberMeConfigurer, LogoutConfigurer, LogoutFilter, HttpSecurity

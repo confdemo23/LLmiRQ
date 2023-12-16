@@ -1,0 +1,4 @@
+Clustering XML readers are loaded eagerly
+[5:02 PM] Radoslav Husar: org.jboss.as.controller.parsing.ExtensionParsingContext#setSubsystemXmlMapping(java.lang.String, java.lang.String, java.util.function.Supplier&lt;org.jboss.staxmapper.XMLElementReader&lt;java.util.List&lt;org.jboss.dmr.ModelNode&gt;&gt;&gt;)
+[5:02 PM] Radoslav Husar: I mean we want to be using^
+[5:02 PM] Radoslav Husar: but we are using org.jboss.as.controller.parsing.ExtensionParsingContext#setSubsystemXmlMapping(java.lang.String, java.lang.String, org.jboss.staxmapper.XMLElementReader&lt;java.util.List&lt;org.jboss.dmr.ModelNode&gt;&gt;)

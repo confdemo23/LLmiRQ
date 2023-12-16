@@ -1,0 +1,19 @@
+495	 HConnectionManager, HTable, SelectCommand, HQLClient, Shell
+496	 Leases, HMaster, HbaseRPC, Server
+877	 HConnectionManager, HTable, HBaseRef, Import
+1876	 HRegion, DFSClient, MemStoreFlusher, HRegionServer, Store
+2018	 HConnectionManager, TableServers, HTable, MemStoreFlusher, HRegion
+7385	 HRegion, Store, StoreFlusherImpl, DFSClient, FSNamesystem, LeaseExpiredException, DroppedSnapshotException
+12716	 RegionSplitter, UniformSplit
+12791	 HRegion, HStore, MetricsRegionSourceImpl, ShutdownHook, SplitRequest, RpcRetryingCaller
+13601	 RemoteBlockReader2, BlockReaderFactory, DFSInputStream, HLogFactory, HLogSplitter, SplitLogWorker, HLogSplitterHandler, EventHandler
+13635	 HMaster, RegionStates, HRegionServer, CloseRegionHandler, EventHandler
+13960	 HConnection, RegionServerCallable, MultiServerCallable, HConnectionImplementation, BlockingRpcChannelImplementation, RpcClient
+14155	 PhoenixIOException, ServerUtil, BaseScannerRegionObserver, DelegateRegionScanner, RSRpcServices, ClientProtos, RpcServer, CallRunner, RpcExecutor, ChecksumUtil, HFileBlock, HFileReaderV2, StoreFileScanner
+14178	 HFileReaderV2, StoreFileScanner, KeyValueHeap, HRegion, HRegionServer, RpcServer, IdLock
+14545	 TestMasterFailover, MiniHBaseCluster, HBaseCluster
+14557	 MapTask, WALPlayer, WALKeyValueMapper
+15104	 IntegrationTestAcidGuarantees, AsyncProcess, NotServingRegionException, HRegionServer, RSRpcServices, ClientProtos$ClientService, RpcServer, CallRunner, RpcExecutor, RetriesExhaustedException, OpenRegionHandler, CompressionTest, HRegion, EventHandler
+15672	 TestVisibilityLabelsWithDeletes, RegionServerFlushTableProcedureManager, FlushTableSubprocedure, TimeRange, TimeRangeTracker, ImmutableSegment, SegmentFactory, DefaultMemStore, HStore, HRegion
+16270	 DefaultMemStore, HStore, HRegion, RSRpcServices, AdminProtos, RpcServer, CallRunner, RpcExecutor
+16754	 CompactSplitThread, StoreFileInfo, DistributedFileSystem, RatioBasedCompactionPolicy, SortedCompactionPolicy, DefaultStoreEngine, HStore

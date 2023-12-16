@@ -1,0 +1,3 @@
+Configure Tez to make nocondiional task size memory available for the Processor
+Currently, noconditionaltasksize is not validated against the container size, the reservations made in the container by Tez for Inputs / Outputs etc.
+Check this at compile time to see if enough memory is available, or set up the vertex to reserve additional memory for the Processor.

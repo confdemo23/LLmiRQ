@@ -1,0 +1,2 @@
+Remove unused icons from e4 FilteredTree
+AFAICS the icons created in FilteredTree are never accessed. Suggest to delete them and their static initialization block.

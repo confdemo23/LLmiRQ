@@ -1,0 +1,6 @@
+Cache Annotations in AnnotationBasedPersistentProperty
+Looking up annotations every time from Java reflection is prohibitively expensive.
+So please cache them.
+Read annotations from getters, setters and the field and store them in a map with the same precendence rules as findAnnotation(type)
+use that cache in isAnnotationPresent() and findAnnotation().
+Also provide a getAnnotations() method that returns all annotations on that property. This collection would be used for Bean-Validation (JSR-303) and other methods that have to check meta-annotations.

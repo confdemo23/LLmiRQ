@@ -1,0 +1,9 @@
+camel-debezium - Add support of default value for list to the maven-plugin 
+For now it is not possible to upgrade Debezium to 1.9 because  PostgresConnectorConfig has a default value for a type list that is not properly supported by the maven plugin such that we end up with compilation error of the following type:
+{noformat}
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /camel/components/camel-debezium/camel-debezium-postgres/src/generated/java/org/apache/camel/component/debezium/configuration/PostgresConnectorEmbeddedDebeziumConfiguration.java:[97,39] error: illegal start of expression
+[ERROR] /camel/camel/components/camel-debezium/camel-debezium-postgres/src/generated/java/org/apache/camel/component/debezium/configuration/PostgresConnectorEmbeddedDebeziumConfiguration.java:[97,41] error: <identifier> expected
+[INFO] 2 errors 
+{noformat}

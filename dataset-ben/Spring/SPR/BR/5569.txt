@@ -1,0 +1,12 @@
+not singleton StringBeans
+Bean definition:
+&lt;bean id="test" singleton="false" class="java.lang.String"&gt;
+   &lt;constructor-arg&gt;
+        &lt;value&gt;test&lt;/value&gt;
+   &lt;/constructor-arg&gt;
+&lt;/bean&gt;
+code:
+Object stringBean1 = ctx.getBean("test")
+Object stringBean2 = ctx.getBean("test")
+The first reading of the bean is ok.
+The second reading fails because the system interprets the bean as java.lang.StringBuilder.

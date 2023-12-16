@@ -1,0 +1,2 @@
+Delay storing the CsrfToken until the CsrfToken is accessed
+Rather than adding the CsrfToken to the HttpSession immediately, we can delay adding the CsrfToken until the token is accessed on the servlet request. This ensures that only a request that is just prior to CSRF will create the session.

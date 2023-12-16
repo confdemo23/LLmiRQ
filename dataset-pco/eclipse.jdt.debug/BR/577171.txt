@@ -1,0 +1,23 @@
+Exception processing async thread queue
+Trying to debug a Nebula snippets creates an exception. See below
+
+
+
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 0
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.getCompleteSnippet(EvaluationSourceGenerator.java:152)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.<init>(EvaluationSourceGenerator.java:70)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.getCompiledExpression(ASTEvaluationEngine.java:372)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.evaluate(ASTEvaluationEngine.java:154)
+	at org.eclipse.jdt.internal.debug.ui.JavaWatchExpressionDelegate$EvaluationRunnable.run(JavaWatchExpressionDelegate.java:153)
+	at org.eclipse.jdt.internal.debug.core.model.JDIThread$ThreadJob.run(JDIThread.java:3436)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+
+
+Tested with: Eclipse SDK
+Version: 2021-12 (4.22)
+Build id: I20211108-1800
+OS: Windows 10, v.10.0, x86_64 / win32
+Java vendor: Eclipse Foundation
+Java runtime version: 11.0.12+7
+Java version: 11.0.12

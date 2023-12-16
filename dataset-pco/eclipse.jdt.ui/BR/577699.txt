@@ -1,0 +1,15 @@
+[extract method] Entire lambda body cannot be extracted
+If the entire body of a lambda expression is selected then it cannot be extracted to a method.  An error says that the selection is not valid.  This is not the case with the body of an if statement for example.
+
+    public void foo(Object parent) {
+        List<String> a = new ArrayList<>();
+        if (parent instanceof Composite) {
+            ((Composite) parent).addDisposeListener(e -> {
+                a.add("abc");
+                a.add("def");
+            });
+        }
+
+    }
+
+In the code example, attemtping to select from paren to paren surrounding the a.add statements or if the Shift+alt+up is used to select the whole block, extract to method will not work either as quick assist or via the Refactoring menu.

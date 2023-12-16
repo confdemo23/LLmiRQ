@@ -1,0 +1,2 @@
+RowFilterInterface.rowProcessed() is called *before* fhe final filtering decision is made
+rowProcessed is called in HStoreScanner, however, the final filtering decision is not made until the full row has been assembled in HRegion

@@ -1,0 +1,2 @@
+Invalid tag is used for MapJoinProcessor
+Testing HIVE-2810, I've found tag and alias are used in very confusing manner. 

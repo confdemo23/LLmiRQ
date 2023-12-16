@@ -1,0 +1,2 @@
+AccessAuditContext domainUUID is not set when the domain-uuid header is set
+org.jboss.as.domain.controller.operations.coordination.PrepareStepHandler creates a UUID and sets "operations-headers" =&gt; "domain-uuid" on the op, but it does not pass the same UUID to AccessAuditContext. The result is the  log record has null in the domainUUID field but the operation headers part of the "ops" field shows the uuid. Confusing.

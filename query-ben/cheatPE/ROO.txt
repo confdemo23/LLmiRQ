@@ -1,0 +1,48 @@
+19	 MemberFindingUtils, Choice, AnnotatedJavaType, JavaType
+205	 JavaType, equals()
+343	 PollingFileMonitorService, MonitoringRequest
+505	 Edge, EdgeId, RooEntity, Embeddable, EmbeddedId
+558	 RooEntity, IdClass, Abc, AbcPK
+618	 AutoPopulationUtils, RooEntity, Pizza
+707	 Dependency
+710	 ItdSourceFileComposer, UserRepository, UserRepositoryImpl, Repository, RepositoryImpl
+741	 JavaType, com.contraza.test.domain.User, com.contraza.test.domain.metadata._User
+794	 PollingFileMonitorService
+831	 OperationImpl, XmlUtils, TransformerFactory, Transformer
+838	 CommandMarker, StaticFieldConverter, ComponentContext, ServiceEvent, ServiceListener, ServiceReference, ChannelType, org.springframework.roo.startlevel.Activator
+864	 JavaPackage
+898	 JavaPackage, JavaType
+969	 AbstractItdMetadataProvider, governorPhysicalTypeMetadata
+1022	 JavaType, AbstractItdMetadataProvider
+1098	 AnnotationMetadataUtils, NestedAnnotationAttributeValue, @Foo, @Bar
+1156	 org.springframework.roo.startlevel.Activator
+1172	 JspViewManager
+1404	 HintOperationsImpl, ResourceBundle
+1555	 Roo, Undo functionality
+1718	 FileConverter
+1763	 ShellStatus
+1952	 WebScaffoldMetadata, JspViewManager, FinderMetadata, WebScaffoldMetadataProviderImpl
+1988	 Dependency, JavaSymbolName
+1990	 Dependency, JavaPackage, JavaSymbolName
+2041	 ItdTypeDetailsBuilder, DeclaredFieldAnnotationDetails, MemberFindingUtils
+2266	 AbstractMemberHoldingTypeDetailsBuilder, MethodMetadataBuilder
+2315	 WebScaffoldMetadataProviderImpl, AbstractMemberDiscoveringItdMetadataProvider
+2481	 MemberDetailsScannerImpl, PollingFileMonitorService
+2506	 ItdTypeDetailsBuilder, MethodMetadataBuilder
+2531	 AbstractShell
+2658	 XmlUtils, Plugin
+2659	 TypeLocationService
+2662	 LayerTypeMatcher
+2663	 RepositoryJpaLocatorImpl, ServiceInterfaceLocatorImpl, PersistenceMemberLocatorImpl, Metadata
+2690	 ProjectOperations, Dependency
+2701	 MavenProjectMetadataProvider, Plugin
+2705	 ServiceInterfaceMetadata, ServiceClassMetadata, JpaEntityMetadata, EntityMetadata
+2709	 PgpServiceImpl
+2717	 IOUtils, Closeable
+2722	 AbstractIdentifiableAnnotatedJavaStructureBuilder, AnnotationMetadataBuilders
+2746	 PgpServiceImpl, Collections.emptyList, spring_roo_pgp.bpg
+2747	 AbstractMemberHoldingTypeDetailsBuilder, AbstractMemberHoldingTypeDetailsBuilderTest
+2754	 HttpPgpUrlStreamHandlerServiceImpl
+2899	 Dependency
+2904	 Parser, Completions, STS console integration
+2925	 ThingService, ThingServiceImpl, ThingRequest, ThingActivitiesMapper_Roo_Gwt, ThingDetailsActivity_Roo_Gwt, ThingListActivity_Roo_Gwt

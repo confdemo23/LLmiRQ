@@ -1,0 +1,17 @@
+No plug-in: "org.eclipse.jdt.core" included at runtime.
+Hi,
+
+I have downloaded Eclipse SDK 3.0 build M9. But I am not able to start Java-
+perspective. On observing the Product-Configuration I got the following 
+messages in the status for 
+"Eclipse Java Development Tools 3.0.0"
+1. No plug-in: "org.eclipse.jdt.core" included at runtime.
+2. No plug-in: "org.junit" included at runtime.
+
+Please let me know is this a bug or an environment issue.
+
+I am using JDK 1.4.2 on Win2000 Professional. (my earlier installations on 
+eclipse 3.0 m5/m3 are working fine).
+
+
+--Prashant Kumashi

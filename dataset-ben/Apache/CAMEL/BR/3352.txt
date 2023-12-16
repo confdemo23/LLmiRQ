@@ -1,0 +1,3 @@
+Multicast with UseLatestAggregationStrategy fails to propagated exceptions which has been handled by onException
+See nabble
+http://camel.465427.n5.nabble.com/Multicast-Behaviour-with-Exceptions-tp3270272p3270272.html

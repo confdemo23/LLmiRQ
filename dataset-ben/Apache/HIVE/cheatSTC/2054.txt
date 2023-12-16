@@ -1,0 +1,2 @@
+Exception on windows when using the jdbc driver. "IOException: The system cannot find the path specified"
+It seems something recently changed on the jdbc driver which causes this IOException on windows.

@@ -1,0 +1,5 @@
+Add a LRU resource cache for jface
+Eclipse IDE loads the same images (toolbar icons) over and over again because it decreases the reference count to 0 before applying the same images again to the toolbar.
+The idea is to either keep references to a fixed set of most used icons or simply automatically determine those by a LRU cache. The cache must be limited to avoid too many OS handles. 
+By using SoftReferences it can also be avoided to accidentally cache too many big images which may end up in Out of Memory Error.
+In a first test a little cache of 300 cached images was enough to never trigger reload during typical actions in jdt ui.

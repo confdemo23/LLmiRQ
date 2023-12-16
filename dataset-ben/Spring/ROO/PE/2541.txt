@@ -1,0 +1,2 @@
+Validation constraints not considered for fields of @Embeddable classes in DataOnDemand
+Only fields of the entity have their validation constraint annotations considered in DoD. Fields of embeddable classes also require their validation constraints to be honoured as well.

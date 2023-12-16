@@ -1,0 +1,3 @@
+camel-aws - Using cron scheduler on aws-s3 do not work
+See SO
+http://stackoverflow.com/questions/35865863/camel-aws-s3-cron-schedule

@@ -1,0 +1,2 @@
+Welcome screen should not hide toolbar
+Opening the welcome screen hides the toolbar which I as a user find inconsistent. As the welcome screen is the only view which does this, I suggest to remove this due to a consistent behavior.

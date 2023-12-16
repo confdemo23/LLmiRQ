@@ -1,0 +1,1036 @@
+123	set file lock transaction process unit rollback exception add apos commit rollback apos hook transactional components delete files processing completed file FTP delete file successful processing occurred
+158	set http create response body async ssl filter jetty endpoint consumer send exchange output HTTP response
+194	converter type override fallback set record disable add Converters properly converter dom Document xml transform DOMSource send DOM document implementation convert Source converter Document assigned implementation
+210	set expression strategy route exception definition remove endpoint exception clause doesn apos proceed pipeline Problem CAMEL time exception clause exceptions cleared pipeline doesn amp apos proceed
+304	test action addressing create endpoint duplicate method address Multithreaded HTTP invocations doesn apos work Description bug http nabble Multithreaded http endpoint html
+384	set endpoint create service message camel context cxf Support full customized soap fault incl fault code detail Don amp apos wrap Fault Fault
+404	add invalid web type errors set parse exception Javadoc warnings javadoc warnings reported javadoc generator fixed
+498	file set lock directory poll move create release file endpoint noop detect files moved directory
+517	set web type add socket custom array encode Javadoc improve summaries javadoc polished summaries statis Apache license summary amp apos javadoc components
+534	set mina session max pool exchange create receive camel mina udp exception released buffer http nabble camel mina udp exception released buffer html
+548	queue configuration component key storage handler wire error File component option deleting file handled exception handler user forum user detailed problem http nabble File Component Error handling html
+567	set print execute component missing write labels report camel route archetype missing depends camel core creating camel route project maven archetype dependeny camel core dependency groupId org apache camel groupId artifactId camel core artifactId version camel version version dependency
+574	set exchange aggregate parallel multicast create processor prepare Multicast excecutor create thread parallel processing loan broker CAMEL performance improvement parallelly mulitcast digging code create thread parallel processing
+593	set stream streams file body job create patch patch streams closed couple places streams opened closed patch fixes
+686	cxf camel header headers enabled exchange handler context CXF Feedback Eduard problems CXF JMS user forum http nabble Fwd Apache Camel Transport Apache CXF SOAP JMS html
+688	set client lock customer cache parameters http test process method check ExchnagePAttern setting
+707	set breakpoint message trace exchange backlog include remove JMX Instrumentation Nodeid processors registered JMX JMX path processor replace unknown endpoints generated
+710	set connection create test chat xmpp producer bare Presence xmpp smack library sending presence message login redundant smack documentation confirmed experiment login sends presence http igniterealtime org builds smack docs latest javadoc org jivesoftware smack XMPPConnection html login java lang String java lang String Logs server strongest authentication mode supported server sets presence
+718	set file test uri configuration query parameter ftp Anonymous FTP doesn apos work username web site FTP modules URL ftp publicftpserver download anonymous FTP doesn amp apos work username
+738	set attribute file xml start ftp connect type downloading process layout remote file system doesn apos match local apos downloading directory complex layout mutli level directory downloaded files reflect local info http nabble FTP component bug html
+773	breakpoint trace set message include exchange remove call Trace camel trace property simple spelling error
+777	set max ssl kafka key database time type apos apos usernames servers amp apos username amp apos amp apos servername amp apos login Camel mail doesn amp apos
+793	set test uri parameter query endpoint password proxy smtp connection authentication username password doesn apos work Connections smtp servers authentication fail mail smtp set patch sets username
+811	set redis definition route message endpoint type context delayer pattern doesn apos work Spring DSL amp apos configure delayer pattern properly Spring DSL attaching patch shortly
+826	set file lock endpoint create entity test idempotent File polling consumer remove file lock exchange fails
+849	set mina endpoint configuration create session max pool mina component endpoint easier spring configuration camel mina component endpoint spring xml firendly configuration configure endpoint spring xml bean routing configuration spring support IDE property completion easily properties endpoint supports set simple text values
+871	set json xml schema key message component type camel spring data format camel xml elements doesnt work route data format configure data format camel xml elements doesn amp apos work nabble http nabble xstream xml configuration html
+881	set mina pool max channel session client udp camel mina codec options fail find registry configure codec option camel mina spelling mistake camel Mina protocol exception user spelling mistake
+894	set ftp test password file path absolute connect camel ftp handle invalid login login FTP server fails Camel pool consume files ftp server network connection user connected Camel server stacktrace errors
+901	test set customer async create parameters producer context thread processor pipeline Camel redelivers wrong processor Setup Error handler thread processor processor thread call processor fails Bug exchange received failed processor redelivered processor pipe redeliver works thread processor Bug errorHandler log testError receives exchange entered processor pipe details attached unit test log log copy attached bottom log testError
+939	convert ftp factory charset failure test server chunked Investigate test failures AIX
+958	set exchange processor endpoint create cache list slip Inconsistency recipient list documentation mail thread http tinyurl bqre contradict documentation http activemq apache org camel recipient list html doc issue camel behavioural issue
+1003	set queue consumer seda exchange endpoint producer create seda component lose message stopped polls attached patch details Unit test inspired nabble http nabble Wait condition html
+1021	set github examples type definition message path consumer issues examples ticket holding issues examples ship Camel add find issues
+1057	set query create processor factory router key endpoint XQuery creates empty message impossible chain processors XQuery getOut function called message place filled empty message created xquery setBody setHeader filled real trouble choice xquery xquery uri direct follow choice uri direct follow patch property xquery context filled pipelines work
+1063	set sql stored source auto endpoint template create camel sql setting datasource easier improve wiki documentation nabble http nabble Camel SQL Component dataSource property html
+1091	set endpoint http message filter enable ssl context jetty endpoints ignore host URI expose endpoint interfaces http nabble Jetty Mina bind anylocal AKA wildcard address html
+1118	set file key signature lock data test configuration SFTP endpoint peform host key verification Camel users configure JSch hosts file users vulnerable man middle type attacks
+1187	set mina pool max codec client protocol channel Mina protocol recognising codec options protocol appears ignore codec options options missed URI tcp works fine
+1217	set proxy client http webhook context create max Jetty component apos apos httpClient apos options work apache http client Current Jetty component set amp apos httpClient amp apos parameter useless Jetty http client apache common http client pass parameters apache common http client remove useless Jetty http client
+1247	set file directory lock key poll exchange create SFTP Polling list directory Error http nabble SFTP Polling list directory html
+1265	file path dir rename write move string test Expression renamed Language
+1283	set sql query generated consume empty row prepare SQL component doesn apos handle wrong number parameters NPE thrown body SQL endpoint parameters set exception thrown wrong parameters set set body parameterless statement execute consistent Exception thrown wrong number parameters set
+1296	set ftp file create reconnect generated uri parameters camel ftp uri set endpoint stripped parameters wrong nabble http nabble Camel Remote File Producer Recipient List Password Issue html bug introduced CAMEL
+1330	set message endpoint cxf service context response camel camel cxf Soap Fault returned http error code mail thread talks http markmail org message qvwufpboro camel cxf Soap Fault returned http error code
+1379	set mina create codec max pool context protocol Mina configuration shared endpoints Establishing MINA endpoint custom codec establishing custom codec problem endpoint inherits endpoint amp apos codec recommendation share configuration data endpoint creation recommend MINA component instantiate configuration endpoint copying previous configuration workaround user codec URI parameter
+1408	file set path ftp absolute directory endpoint relative File component support absolute path nabble http nabble File absolute file paths moveExpressions html
+1444	set mina max pool channel server client store camel mina UDP protocol issue camel context client server sending localhost mina bytebuffer shared mina session nabble lead problem user http nabble Camel MINA UDP issue html
+1492	set retry context create test routing letter environment parementer append jms bindings endpoint test failures https issues apache org activemq browse AMQ
+1506	attachments email type context expect unary test prepare Recursively scan multipart nodes email attachments top level nodes current code scan top level multipart message misses attachments node unit tests applying patch
+1544	set queue consumer endpoint disruptor exchange kamelet handler Multiple consumers created custom endpoint restart camel context trouble creating multiple consumers mail thread talks http nabble Multiple consumers created custom endpoint html
+1590	camel maven set model son find json version camel test jar jndi properties required optional nabble http nabble Unit Tests jndi properties html
+1618	expression set type create endpoint bean letter configuration DSL doesn apos support bean expression registry mail thread http nabble registry beans html
+1622	type converter fallback set counter http file node camel osgi doesn apos support fallback converter camel osgi module doesn amp apos support lookup fallback coverter active bundles user complain support forums http fusesource forums message jspa messageID
+1641	thread set create file pool reconnect executor async camel ftp thread safe nabble discussion http nabble Threadsafety Camel FTP html Basically FTPClient created instance created producer consumer http component
+1645	set mail content message body attachments recipient duplicate apos set outgoing mail apos content type charset document http camel apache org mail html suggests contentType header set Content Type mail doesn amp apos work set content type mail send contentType header doesn amp apos work works contentType endpoint uri camel setHeader headerName contentType camel constant text html camel constant camel setHeader works smtp rohitr xyzab pramati password hds amp contentType text html set charset takes ascii mail content type header Content Type text html charset ascii camel setHeader headerName contentType camel constant text html charset UTF camel constant camel setHeader camel setHeader headerName content type camel constant text html charset UTF camel constant camel setHeader smtp rohitr xyzab pramati password hds amp contentType text html charset UTF works
+1697	set strategy test route definition expression create transacted Java DSL multicast split aggregate block explicit EIP nested route processing typically EIPs sort aggregation multicast aggregating response split aggregate pushBlock DSL route works correctly Java DSL
+1724	set mail content duplicate start repository decode attachments camel mail sending mails text plain content type error java mail
+1727	set mail message content body attachments recipient duplicate camel mail Alternative Body Header included mail header skipped nabble http nabble Camel Mail Alternate body included html
+1735	type converter stitch counter convert fallback test node camel etl bug sample type converter
+1755	failover set load processor error ratio exception context Failover load balancer prepare exchange failover failover load balancer fail clears exception dead letter channel error handler redeliveries enabled cleared failover clean fresh start
+1774	header cxf cache response camel http test customer cxfbean propagate http response code Camel header
+1780	routes set route definition add configuration dir scan templated common routes follow exchange Claus user forum camel routes spread multiple files amp apos templating hierarchical mechanism amp apos common routes Exception processing copy pasting files http nabble Multiple camelContext elements camel Spring DSL html
+1786	set irc channel create user endpoint router processor camel irc parsing channel parameters incorrect pass parameters camel irc turns camel joins IRC channel expected URI irc camel con irc codehaus org camel test nickname camel con camel join camel test nickname camel con camel test nickname camel con attach patch addresses updates unit test
+1797	set trace context add route span tracing strategy Spring DSL tracer tracing cases tracer Spring DSL circumstances registered tracing
+1815	set interceptor data endpoint camel info processor interceptors Remove debug interceptor newer implemented nabble http nabble Missing debug xml html
+1828	set type xml key schema json test create jaxb prettyPrint work mail thread discuss http nabble JAXB pretty print marshaling html
+1838	set reconnect notification file server ftp consumer create camel ftp Recover lost connection issue nabble http nabble FTP Component Network Failure Recovery Problem html
+1883	set test transaction data header exception body error EXCEPTION CAUGHT header set exception caught exception caught doCatch EXCEPTION CAUGHT header set exception set exchange doCatch traverses exception happen caught EXCEPTION CAUGHT header
+1913	set body http filter multipart enable form exception camel jetty support multipart form posted data message body CAMEL work expected posted data body stored message header body key empty instance sending file curl curl data src test data plain txt http localhost myapp myservice Camel provide file content body headers body Content Disposition form data data filename plain txt Content Type text plain
+1919	set route endpoint definition test include context add Include route builder template routes improve route reuse include route builder kind template improve route reuse existing method addRoutes change support properly add method tailor addRoutes method expose Spring XML
+1982	set message reply jms create listener destination correlation JMSBinding deal endpoint migrating activemq tests fail internal NPE problem activemq camel JMSBinding arg creation methods check endpoint
+1983	cxf header context set camel message headers request camel cxf users set SOAP headers User reported trouble setting SOAP headers http nabble setting soap headers camel cxf router html test adding documentation set SOAP headers POJO PAYLOAD modes
+2059	set exchange error processor endpoint executor strategy aggregate Creating transacted pipeline custom error handling difficult add error logging transacted pipeline discovered issues onException onCompletion work transacted route transacted tag element route endpoints silently custom error handlers interact awkwardly transacted routes transacted error handler work transacted route solve problem doTry doCatch good candidate adding docs issues corrected route designs desired support trigger errors pipeline attached tgz examples showing problems successful route
+2060	bean set injection method create inject camel registry Camel Bean component remember called method bean apos method explicitly mail thread discuses issue http nabble Bean endpoint route holding reference methodName invoke Camel Bean binding html
+2072	set mail message headers content body process attachments camel mail extracting mails headers multi values inserts duplicates Sending message headers values String values result side consuming mail message header entries entry values
+2075	bean parameter method set type property inject create camel bean method strict invoking method potential invoke method annotated Camel annotation told Camel method named foo Camel ensure methods foo invoke
+2084	set poll error endpoint scheduler consumer polling prepare http polling consumer support timeout consumer template receive remote http service camel http method receive timeout work expected Camel
+2090	set message create reply jms destination timeout consumer camel jms Option autoStartup work fact auto startup
+2092	set velocity context endpoint component client ftp template velocity endpoint remember template uri velocity endpoint linked pipeline find velocity
+2128	transaction rollback policy executor test set context elivery Rollback work transactional routes camel cxf request reply service exception occurs implementation jms Message committed normal reply implementation exception defined service contract jms message committed fault implemementation kind exception message delivery rolled received work expected fault returned caller transaction committed wrong
+2132	set message jms create destination reply consumer listener camel jms Sending Object message fail payload converted serializable message created send nabble http nabble JPA pass Object jpa jms html
+2186	jgroups channel message view start handler error wire ftp endpoint writeable messages logged DEBUG level project attached CAMEL delete ftp directory simply edit user properties ftp account readonly single write camel ftp endpoint fail notification DEBUG level opinion WARN
+2245	set processor slip endpoint routing create recipient expression Routing slip Exchange failed
+2274	set method proxy parameter create expression http body Camel proxy Detect proxied method returned valid answer nabble http nabble Camel remoting html
+2289	marshal set model data stream type empty factory camel bindy csv easier marshal POJO box ugly List Map String Object wrap POJO Bindy marhal POJO CSV record detect List plain POJO construct List based defaults
+2320	set jdbc ftp row parameters generated endpoint output JDBC component doesn apos preserve headers JDBC component doesn amp apos preserve headers
+2336	route init definition endpoint exception load include type Spring DSL route scoped concerns onException vanish edge cases JAXB creates Spring DSL model bit wacky work bit Camel create runtime routes cases cross functions onCompletion onException vanish problem divided route upper upper cross functions actual route
+2353	endpoint schema query java properties camel validation types Simple Language Parsing complex patterns fails additional colons nabble http nabble Camel Pattern html
+2389	cxf response camel message http header request server Split camel transport cxf camel cxf module camel transport cxf independents cxf cxf component module avoid unnecessary party dependency
+2395	set file lock create storage move include delete file component fileName option detect constant dynamic fileName header txt Camel header txt
+2439	file path set create dir strip absolute factory File consumer Consuming absolute paths issue Windows moving file file consumer absolute path file data process move file camel dir data correctly Windows issue logic Camel based path starting considered absolute Unix platforms Windows java File returns files cater Windows logic consistent
+2476	velocity add set object create cache template fields Camel Velocity change fields properties Header velocity component doesn amp apos respect matching fields header exchange properties CorrelationID change matching velocity component puts property lowercase correlationid
+2477	add freemarker set object create template property cache Camel Freemarker change fields properties Header Freemarker component doesn amp apos respect matching fields header exchange properties CorrelationID change matching Freemarker component puts property lowercase correlationid
+2478	set endpoint test template properties property layout create Camel Stringtemplate lose fields properties component Camel stringtemplate loses fields properties generation Result
+2495	set cxf context invoke enabled handler endpoint data Application SOAP fault support camel cxf PAYLOAD mode Camel cxf component support application SOAP fault PAYLOAD mode
+2545	set mail content multipart body attachments message recipient Camel Mail Alternative body handle charset Mail component set charset alternative body http nabble Camel Mail Alternative handle charset html
+2566	http filter set message header response stream websocket camel http component set Transfer Encoding chunked header response message checkChunked client side send request chunked message amp apos response http headers chunked response message
+2629	set completion timeout sql strategy completed complete exchange Aggregator Completion batch consumer trigger completion batch group multiple correlation Yeah odd multiple correlation batch consumer
+2639	set github examples ant test string definition path examples ANT nabble http nabble camel etl ant won html
+2640	set file lock create box test endpoint ant file component recursive noop picking files sibling folders nabble http nabble File consumer noop Dtrue recursive Dtrue html
+2662	file set poll lock error consumer ftp create ftp exception thrown remove file progress file polled subsequent calls SFTP component exception logic Camel remove file internal progress cache nabble http nabble SFTP rename problems html
+2821	file set lock key directory test logging uri camel ftp SFTP fileExists handle exception thrown code stating file nabble http camel nabble camel ftp create directory sftp html
+2843	set message endpoint filter proxy http reply create camel groovy setting header exchange lose message details SMX ticket issue
+2860	file ftp dir set directory path key strip camel ftp absolute paths leading included FTP Servers expect clients absolute paths camel ftp clients clip leading adding flag preserve behavior people rely behavior flag
+2897	token exchange iterator stream raw test saved executor Splitting file tokenizer close Scanner avoid files moved
+2922	set connection xmpp create chat producer message bare XMPPConsumer remove message OOME XMPP
+2952	file lock ftp key create set directory logging camel ftp Support polling MVS file system MVS file system requires change directory starting path traverse file path listFile path camel ftp walk path code remember path path list files loop files dir file add file remember path
+2972	context create container endpoint test camel routes definition onException working correctly routeContext routeContext xml file defined route scoped onException configuration shared routes context http camel nabble onException bug routeContext html
+2995	parse create set single quote properties expression text charset parser cater quotes single quotes nabble http camel nabble issue encoding HTTP component html bet systems report charset ways Content Type text xml charset utf Content Type text xml charset amp apos utf amp apos Content Type text xml charset utf ensure support ways setting spaces trim whatnot code improved creating ticket
+3060	set spool file memory lock move create min Heap memory issues Camel File processing large files Camel File component heap memory issue processing csv file Lines http camel nabble Java heap space issue reading large CSV file html
+3079	job process header create trigger test set query job rescheduling clustering work properly stateful cron jobs identified group job cron expression prevents easy rescheduling cron jobs instance stopping camel context rescheduling cron job editing cron expressing restart exception happen rescheduled job additional job existing job produce exception endpoint doesn amp apos exist previous solution deleting triggers shutdown doesn amp apos work cluster scenario identify cron jobs group job startup check trigger exists check cron expression changed rescheduled current explicit resuming stateful jobs produce exception startup scheduler automatically finds resumes stored triggers
+3093	smpp set message proxy reconnect command data body camel smpp shoud honor configured encoding camel smpp doesn amp apos honor encoding option creating consumer producer
+3130	set sql file consume gridfs endpoint entries poll component consumer parameters cleared delay initialDelay nabble http camel nabble delay option working CAMEL Java DSL mode html
+3133	message set key endpoint type xml json service Camel soap dataformat work correctly method input output camel soap dataformat handle exachanges soap method input output limitation support
+3137	set connection file create test key producer listener ftp login anonymous send empty string password parameter nabble http camel nabble anonymous FTP login fails html
+3174	file set directory print ftp execute missing labels camel ftp Change dir retrieving file nabble http camel nabble change directory sftp component html
+3199	address set quote data hash host create error quoted names addresses Snell Tracy tjs juicelabs breaks current address parsing
+3219	set exchange endpoint bindy test processor body resolve Bindy trim separate users tab separators likes nabble http camel nabble Big problem csv tab separator file bindy data format html
+3231	set test bean statistics beans management register find JMX MBeans registered initiators registering Initiator started register sessions mbeans JMX acceptors ther initiators
+3245	set http create ssl context filter async jetty Jetty continuation timeout configurable
+3319	cxf bean test endpoint service context properties invoke cxfEndpoint camel cxf doesn apos support shcemaLocation element mail thread discusses http camel nabble camel cxf exception parsing cxf schemaLocation element html
+3351	irc create exchange test nick set context user camel irc component silently fails nick collision camel irc component connects irc server amp apos nick collision silently fails note camel irc component Jira
+3394	set exchange redelivery log definition processor create exception Splitter Multicast EIP marks exchange exhausted early exception thrown evaluation nabble http camel nabble handle Exception thrown Splitter Expression html
+3448	route set definition exception endpoint init type intercept Route scoped onException pick onException route type clash route scoped onException exact key map isn amp apos catering route override route onException definition route onException IOException route onException IOException map entries exact type match
+3458	length set test record fixed trument instrument context Bindy support clipping fields exceed maximum length allowed fixed length Adding option bindy annotation clip data field exceeds allowed length fixed length clip enabled clip data fit length Camel exception data clip set
+3483	set csv unmarshal type data stream tar quote csv unmarshal components encoding discussion Nabble http camel nabble csv unmarshal encoding html
+3524	set http message context enabled create response filter camel jetty Add option set jetty continuation timeout Jetty timeout continuations users configure choice system longer time process exchange
+3531	scala xpath working choice Scala DSL xpath expressions work expected direct choice xpath mock english xpath hallo mock dutch mock german mock french Send messages direct hallo hellos receive message mocks reason messages mock english routes work expected Java DSL
+3537	set snmp trap create consumer error executor producer camel snmp support tcp protocol nabble http camel nabble camel snmp problems html
+3560	set message create synchronization letter exception reply unit Detect uncaught exceptions UoWProcessor ensure UoW uncaught exceptions Camel routing engines handle cases shutdown Spring Spring beans order beans fail operating graceful shutdown worst exceptions thrown situations cater situations UoWProcessor detect ensure flight registry tracked stuck missing inflight message causing Camel wait timeout shutdown hitting ctrl camel management
+3673	set properties log endpoint factory type add property Property placeholders work camel blueprint route xml version encoding UTF blueprint xmlns http osgi org xmlns blueprint xmlns xsi http org XMLSchema instance xmlns http aries apache org blueprint xmlns blueprint xmlns ext http aries apache org blueprint xmlns blueprint ext xsi schemaLocation http osgi org xmlns blueprint http osgi org xmlns blueprint blueprint xsd property placeholder persistent camel blueprint camelContext camel trace xmlns http camel apache org schema blueprint route uri file directory uri file directory route camelContext blueprint placeholders amp apos replaced actual
+3674	properties set configuration model main configure component json Camel properties component leverage Blueprint properties Camel properties component blueprint properties stuff add scheme blueprint location url refer blueprint stuff logic camel blueprint type converter lookup bridge creating ticket
+3801	set sql query generated consume empty statement row send Query Body Header Message exchange SQL component existing SQL component requires query attached endpoint parameters List replace symbol values JDBC component adopts philosophy query build processor bean setBody send JDBC endpoint syntax flexible setup dynamically queries route insert file uri file target datainsert moveFailed failed setBody simple INSERT REPORT INCIDENT INCIDENT INCIDENT FAMILY SUMMARY DETAILS EMAIL PHONE VALUES amp apos body amp apos amp apos amp apos amp apos Charles amp apos amp apos Moulliard amp apos amp apos Incident amp apos amp apos report incident webinar amp apos amp apos cmoulliard fusesource amp apos amp apos amp apos simple setBody uri sql route
+3901	cxf camel message response http header endpoint cache Create separate component camel transport cxf camel cxf component curently unrelated functions camel transport cxf cxf component cxfbean component cxfrs componet converters code component depend suck dependencies dependency cycles code easily solved step separate camel transport cxf code independent code pulled component advantages camel transport cxf dependencies vey light weight aproach combine cxf camel component nicely bridge cxd camel overhead components camel cxf component depdend camel transport cxf people maven needed attach patch simply deleted relevant camel transport cxf camel cxf project solution small component good start split interested opinions developers split Christian
+3907	set sql generated parameters consume statement stored message Component camel sql abiliity process sql body exchange camel sql support ability add sql statements exchange body processing linked
+4225	set mail message process start content messages decode camel mail add disconnect option perpetually open connection email server problems circumstances disconnect option connection closed action mail read folder message flagged deletion message
+4456	set mail message process start content messages decode camel mail Add option control mail folder closed poll control mail folder closed poll people routing mails SEDA async endpoints close mail folder mail message processed async option mina netty named disconnect option named
+5024	set exchange file prepare empty split context parallel Streaming splitter ignores exception handling exception occurs call Iterator streaming splitter exception propagated exception error handler lead improper route termination inifite rollback retry cycles attached minimal test demonstrating issue
+5255	set snmp create consumer response error producer executor Add SNMPv TRAP PDU message body camel snmp component attached patch captures additional SNMPv TRAP PDU enterprise trap agent addr trap specific trap system uptime camel snmp message body
+5669	message set header endpoint soap webservice exchange context spring Adding custom soap headers add custom soap headers spring nabble http camel nabble Adding custom soap header camel spring html
+6015	type dependencies file executable threads thread elements relevant camel maven plugin Auto detect spring blueprint nice mvn camel plugin auto detect spring blueprint project Today defaults spring blueprint configure blueprint detect xml blueprint spring namespace xml
+6565	set max ssl kafka key create timeout poll Component Apache Kafka written component Apache Kafka blank wiki edit documentation Kafka Apache license dependencies https github sgroschupf zkclient https github codahale metrics Apache
+6918	queue consumers error hazelcast seda endpoint handler full Error handler SEDA producer doesn apos work Exceptions thrown seda producer bypass exception handling bubble original caller
+7058	set sql generated query statement consume row parameters camel sql Setting SQL ROW COUNT header updated header exists nabble http camel nabble bug sql SQL Component change SQL ROW COUNT header html
+7092	max set kafka ssl consumer poll kerberos create Add camel kafka component thread request pull github fork http camel nabble camel pull request Apache Kafka component html
+7111	set create processor exchange definition strategy aggregation executor Multicast EIP child processor call aggregate strategy nabble http camel nabble multicast aggregation html
+7146	set completion aggregate create correlation aggregation expression definition NPE Aggregator completionSize Camel aggregator persistence repository completionSize configured message produces NPE attached stacktrace attached small project Exception completionSize runs fine minor flaw completionSize worked earlier versions Camel alternative completionSize Camel error Context startup completionSize
+7159	set camel model annotation type component context java camel bindy picking Link annotation items works fine tests provide bindy Map String Object model objects Linked classes figure users
+7160	set async group log expression max executor camel Throttling problems rate throttler header expression controlling rate changing rate work reliably mail thread http camel nabble Problems dynamic throttling html
+7172	set http netty max channel store server cert camel netty options netty configuration support lookup passphrase support passphrase myPassword lookup bean produces password
+7173	set context route init type create start http jmxAgent createConnector apos apos defalult set http camel nabble disabeling loadStatistics html
+7277	set file create scp ssh key message setup camel ssh close session execution finished complain stackoverfow
+7287	set message create args exchange retry mqtt topic SJMS connect durable topic noLocal hardcoded thread http camel nabble SJMS issue noLocal html
+7347	set endpoint api uri property context max properties camel netty context path match route service resource requested
+7369	set collection file mongodb mongo read debezium connection camel mongodb readPreference option doesnt work http camel nabble bug camel mongodb component html
+7426	set http response proxy connection context max host camel http component skip reading form body bridgeEndpoint camel http component post request parsers request body parameter feature trouble camel route proxy request endpoint
+7427	http set netty max channel exception store websocket camel netty http component skip reading form body bridgeEndpoint issue CAMEL camel netty http
+7452	set type counter session pool endpoint create instance beanRef caching instances unwanted behavior upgrading behavior beanRef changed unwanted behavior Beans instanted cache option explicitly set http camel nabble beanRef caching instances camel unwanted behavior html
+7572	set route create configuration add trace context definition custom CBR output duplicated dumping route XML JMX setting custom CBR dump route xml JMX operation include duplicated tag routes xmlns http camel apache org schema spring route route uri file src data noop uri activemq personnel records customId amq route route route uri activemq personnel records choice customId myChoice xpath person city amp apos London amp apos xpath uri file target messages customId myChoice uri file target messages choice route routes
+7603	max http kafka set infinispan proxy client key camel cxfrs store security context message header store security context generate camel exchange CXF request message camel cxf
+7642	http set max channel netty server consumer store Netty consumer error invalid request send corrupted request Netty consumer header resource HTTP header Netty hang open connection returning error
+7679	method type methods create bean number arguments argument cxfrs argument consumer invoke bean arguments
+7718	Constants camel infinispan component restricted access Constants setting headers camel infinispan accessible application constants unit tests documentation component minor mistake bug
+7754	test type context system socket chained endpoint timer Property Trigger timerZone declared constant implemented problem Quartz Quartz components doc claims setup property URI trigger timeZone http camel apache org quartz html timezone quartz don amp apos constant defined https dropbox wjt slsz jajlh Screenshot png issue quartz https dropbox jcxnn bzi qob Screenshot png
+7772	api file cache method option path account generator Maven plugin camel api component maven plugin read empty API components single proxy Maven issue empty parameter values set properties plugin configuration parameters error message Properties apiName proxyClass required camel api component maven plugin explicitly set apiName single proxy API components
+7784	entries mock feed server rss error endpoint exclude Camel RSS Ignores posts identical published updated running RSS feed multiple entries read filter rudimental unit test issue hashes entries detect duplicates
+7829	set http properties service create endpoint property response Olingo component handle responses OData servers method OData servers JBoss Data Virtualization server based OData library respond HTTP Content methods component handle scenario
+7855	set bus cluster suspend child start ship policy suspend JMS route stopped calling resume work reports error route consumes JMS Stopped Suspend Resume called route reports Started consuming endpoint
+7856	set cxf endpoint response http message request resource camel cxf producer HttpAPI send message body DELETE method discussion stackoverflow
+7866	docker test format image hint set type barcode barcodeFormat CODE amp apos testing camel barcode component Spring XML camelContext xmlns http camel apache org schema spring dataFormats barcode CODE width height imageType JPG barcodeFormat CODE barcode PDF width height imageType JPG barcodeFormat PDF dataFormats route uri direct CODE marshal CODE uri file target fileName code jpg route route uri direct PDF marshal PDF uri file target fileName pdf jpg route camelContext pdf jpg CODE PDF
+7869	test producer configuration invalid http message map headers endpointProperty work restConfiguration jetty http camel nabble bug restConfiguration jetty endpointProperty html
+7883	schema resource set validator create enc stream start XSD decoding bad guess Validator Validator component imported XSD encoding account validating XML lead validation errors imported XSD ISO encoded ASCII caracters XSD declares encoding correctly XML prolog
+7885	set timer create test time context pattern override Timer Restarting timer endpoint trigger expected time time timer route route inflight exchange causing route force timeout timer task running background restart timer route reuse timer instance running trigger time happen time expect timer foo period trigger
+7896	set http channel netty max camel store client camel netty http producer close channel connection header alive http request connection header alive camel http producer close channel trouble response connection header close close channel response connection header close
+7909	http channel netty client response max store camel camel netty http consumer close connection response connection header close Current Netty Http Consumer decided close connection checking request connection header response connection header amp apos close amp apos netty http consumer close connection time
+7931	node jcr property create multi error component wire JCR support multi valued property issue Camel User Forum camel jcr trouble JCR multi valued property JCR http camel nabble camel jcr trouble JCR multi valued property JCR html https github apache camel pull patch charlee
+8030	thread pool executor set netty context time body camel netty release thread pool shutdown CAMEL introduced side doesn amp apos shutdown thread pool netty producer shutdown clean thread shutting Netty endpoint
+8035	mail http content message set type headers file CXFRS consumer set Exchange apos charset content type JAXRS counterpart https issues apache org jira browse CAMEL
+8081	set exchange completion timeout aggregate processor correlation aggregation Multicast Aggregator processing exchange timeout sense multicast aggregator processing exchange exchange timeout thread camel user mailing list talks
+8160	endpoint route builder validation create camel parse find methods endpoints fail Java Java annotations duplicated generics amp apos bridge methods Camel rightly support bridge methods endpoints change language annotations Consume compilation leaving Camel invalid attach sample project ticket discussion thread http camel nabble Java generics breaking Camel html
+8168	set mina receive session max address test pool Mina Unbind Listening Port bundle includes mina consumer bundle port released restarting bundle amp apos port bind exception uri mina tcp sync Note problem exist amp apos address uri mina tcp host sync
+8214	test list partial application create factory client calendar Support partial responses google APIs good support partial responses Google API components https developers google blogger docs performance partial response
+8233	set file exchange definition path strategy input prepare Splitter Option parallelAggregate parallel procession options parallel aggregate runs sequence missing place code wasn amp apos changed parallelAggregate option Camel
+8289	set http channel max netty client send message camel netty http send error message client connection closed generate lots annoying warning message client connection closed camel netty http send error message
+8434	set file hdfs consumer read type kerberos stream Camel HDFS Unable consume empty file consume empty file camel HDFS consumer
+8461	set http max netty channel server client exception camel netty http respect client apos alive setting camel route remove header netty http consumer netty doesn amp apos close connection client send http header connection closed xml version encoding UTF blueprint xmlns http osgi org xmlns blueprint activation eager camelContext xmlns http camel apache org schema blueprint route uri netty http http localhost test removeHeaders pattern setBody constant constant setBody uri log XXX level ERROR route camelContext blueprint
+8484	tar file set test empty preserve untar existing File language support file extensions multiple dots tar http stackoverflow questions donefilename property camel file extension
+8578	http query parameter response servlet path build parameters camel http encode uri HTTP URI HTTP QUERY headers nabble http camel nabble Apache Camel decodes HTTP query params httpclient fails Invalid query exception html
+8587	set exchange redelivery error log exception definition create Exceptions multicast aggregators propagated global exception handler multicast aggregator exception setting exception returned exchange exception logged propagated global exception handler
+8636	commit offset storage connector set parameter exchange configuration camel kafka commit batch messages auto commit CAMEL introduced feature commit consumer offset batch mode doesn amp apos commit batch messages
+8660	file key lock message set create logging directory camel ftp Disconnect messages dont call disconnect disconnect UoW disconnect deleting files messages UoW called Exchange disconnect nabble http camel nabble FTP disconnect problem html
+8683	route definition init routes endpoint set populate processor load balancer onException adds duplicate outputs route defined load balancer context scoped onException adds duplicate outputs route routes duplicates additional routes
+8708	set create cxf camel invoke context soap tar SOAP unmarshalling shouldn apos fail Faults lack optional Detail element Camel soap code assumes Faults Camel SOAP endpoint receiving Detail element Sending Fault Detail result NPE Detail optional element SOAP Faults http org soap soapfault absence generate error
+8718	set create connection file consumer mongo connect component Connection leak ftp consumer invalid credentials iteration socket connection created closed leads growth ESTABLISHED connections FTP server
+8909	set node type create runtime definition jasypt source Jasypt CLI outputs output janstey bender apache camel java jar lib camel jasypt jar Apache Camel Jasypt takes options Displays screen command command Command encrypt decrypt password password Password input input Text encrypt decrypt algorithm algorithm Optional algorithm Error Command empty Apache Camel Jasypt takes options Displays screen command command Command encrypt decrypt password password Password input input Text encrypt decrypt algorithm algorithm Optional algorithm
+8945	set loop error processor expression shutdown exchanges letter Loop looping exception happened routing http stackoverflow questions apache camel loop exception
+9012	batch set request add http content uri query Olingo apos batch process generates invalid request syntax check olingo lib tighten version result batch message generated camel ollingo amp apos rejected olingo version newer Concretely current message includes extra lines batch rejected olingo library OLINGO remove extra lines
+9032	method bean registry parameter set methods matching inject Bean component filter methods call method bean introspector filter methods inheritance defined methods http stackoverflow questions camel ambiguousmethodcallexception classes
+9140	set properties methods method facebook http endpoint proxy Missing configuration properties camel facebook request methods introduced Facebook version CAMEL parameter arguments required endpoint configuration pageId getPage endpoints methods fail resolve work facebook getPage pageId
+9150	route repeat time start suspend camel child hang Seda suspend resume trigger start logic nabble http camel nabble Suspend Resume Routes Unreliable html doResume method calling doStart setup tasks
+9171	set connection create xmpp chat test component producer camel xmpp processes messages running Karaf Camel XMPP communication working version running Karaf feature installation works fine messages processed guess based changing Smack version Based existing Camel Karaf tests created simple test passes Camel Version fails Camel Version test https github achim karaf xmpp remember start XMPPServer running test readme
+9247	set component builder start dsl element properties api dsl api doc multiple apos http stackoverflow questions multiple camel dsl definitions swagger api doc endpoint merge multiple amp apos
+9255	path set signature create type result namespace xml documentType XPath predicates XML DSL documentType paramter XPath predicates XML DSL works XPath expression Java DSL
+9311	set router factory processor channel producer control endpoint Concurrency issue dynamic router service HTTP contexts http endpoin dynamic http endpoin dynamic endpoints called HTTP method dynamic router routes message differently HTTP endpoint instance dynamic router bean dynamic router bean shared HTTP endpoints called sequentially calls handled expected HTTP endpoints called concurrently dynamic router endpoin dynamic endpoint routing calls originating endpoin dynamic vice versa attached unit test detail
+9381	message reply jms hubs consumer headers timeout listener Upgrade camel amqp latest qpid jms client upgrade camel amqp latest qpid jms client drop support AMQP
+9386	test set branch git commit tag consumer target Camel git Support credentials clone operation https github oscerd camel git issues don amp apos support credentials clone operation
+9491	set jdbc sql row consume query parameters generated statement maxRows working expected camel jdbc tested multiple versio issue Camel JDBC component statement maxRows respected query fired repeatedly timer works fine route query records
+9582	set api component properties create context binding endpoint swagger api docs working xml java route nabble http camel nabble Swagger working html
+9599	set http proxy response customer exception websocket producer camel cxfrs responding content length input simple binding cxfrs content length header input response content length
+9640	set http channel max netty store message exception Query string decoded bridging netty http netty http problem CAMEL camel netty http camel http
+9641	set endpoint test expression camel qualified expressions predicate Simple parser bug file nabble http camel nabble Unknown File Language Syntax html
+9670	set create endpoint error file param reconnect ftp Camel ftp error message invalid credentials result CAMEL connection closed invalid credentials throwing exception disconnecting ftpclient reset reply string exception message attached patch store reply string disconnecting
+9673	test set create message schema exception invalid processor doTry doFinally block fault messages message fault flag doFinally block executed processor ensure entire block processed exception thrown kind logic apply fault
+9687	set properties route endpoint context add property definition camel swagger resolved placeholders output nabble http camel nabble camel swagger java parse property html
+9774	spool set test payload memory cxf body message CXFPayload lose CDATA sections stream caching CAMEL introduced CachedCXFPayload add stream caching support CXFPayload sequence conversions java xml transform Transformer convert javax xml transform stax StAXSource SAX drop CDATA sections CDATA handling empty http grepcode file repository grepcode java root jdk openjdk sun org apache xalan internal xsltc trax StAXStream SAX java StAXStream SAX handleCDATA avoid CachedCXFPayload conversion utility included CXF
+9777	zip file set unzip preserve stream test data camel zipfile zip iterator dataformat fail zip entry current size entry data
+9854	set spool print execute api memory element filter CXF Stream Cache duplicate namespace definition stream caching enabled incoming messages Camel CXF namespace defined SOAP envelope defined root tag payload document XML contained stream cache duplicate namespace definition attached unit test details
+9906	set sql code expression generated test header consume camel sql values valid nabble http camel nabble NULLs allowed named parameter SQL component html
+9917	set create route routes factory context start endpoint Route stopped events inconsistent order
+9926	set http proxy create client query max context HTTP Proxy support Salesforce component broken upgrade Jetty HTTP Proxy support Jetty Client broken HTTP Proxy tests Salesforce components fail marked fixed Jetty ASAP component updated version Jetty client working support Proxy authentication
+9933	set marshal schema header ignore disabled charset xml Camel CSV marshalling breaks characters charset Marshalling data camel csv JVM encoding configured message ascii characters platform encoding support platform encoding ASCII
+9986	data xml key content enc attachments type stream MIME Multipart Data Format inconsistent unmarshal MIME data data MIME Multipart marshal headersInline option set error thrown message left original message headersInline option set empty message returned patch behavior original message message mime multipart headersInline set limits message body stream stream caching enabled read stream order find MIME Multipart message body empty previous implementation
+10015	test set braintree create properties property proxy log syntax braintree component replace braintree braintree apiName methodName
+10016	key set signature create property store wire endpoint syntax crypto component replace crypto cryptoOperation crypto cryptoOperation
+10017	endpoint create iron configuration property delay batch consume syntax ironmq component replace ironmq queue ironmq queueName
+10032	test set component son log braintree load provider camel braintree install Karaf karaf root feature install camel braintree Error executing command Unable resolve root missing requirement root osgi identity osgi identity camel braintree type karaf feature version SNAPSHOT SNAPSHOT filter amp osgi identity camel braintree type karaf feature version SNAPSHOT version SNAPSHOT caused Unable resolve camel braintree SNAPSHOT missing requirement camel braintree SNAPSHOT osgi identity osgi identity org apache camel camel braintree type osgi bundle version SNAPSHOT SNAPSHOT resolution mandatory caused Unable resolve org apache camel camel braintree SNAPSHOT missing requirement org apache camel camel braintree SNAPSHOT osgi wiring filter amp osgi wiring org slf bridge version version caused Unable resolve jul slf missing requirement jul slf osgi wiring filter amp osgi wiring org slf version
+10087	kafka container service test header agated imzi report camel kafka work OSGI container component broken OSGI environment https issues apache org jira browse KAFKA leave broken bugs worked submit intermediate work jira https github apache camel pull
+10090	test type properties mail list charset protocol context Salesforce doesn apos support full ISO datetimes http camel nabble camel salesforce component time issue html communicating dates timezone offset ISO format seconds isn amp apos supported Salesforce
+10104	set mail trigger job time scheduler properties start Mail consumer work quartz scheduler mail consumer quartz scheduler imap myhost scheduler quartz amp scheduler cron amp scheduler timeZone Europe FBerlin leads error scheduler parameters couldn amp apos set endpoint Check uri parameters spelt correctly properties endpoint
+10110	set csv header job record disabled empty format Marshaling CSV insert escape header pipe separator bug supposedly resolved version bug remains escape characters Header Columns marshaling object Separator Output Header Header Pls advise expect Reply
+10151	set query sql generated consume parameter empty jdbc camel sql Query parameter count mismatch names SQL nabble http camel nabble camel sql query number parameters mismatch html
+10372	component set generate type java endpoint annotation builder camel stream Component doc issue mistake
+10383	set issue create test jira queue avatar topic activemq camel Issue parsing uri determine queue topic screenshot
+72	file box windows amp test configure fileconfiguretest file configure test apos windows separator pass
+154	context camel bean spring processor post instance context application amp improper wiring spring
+161	message camel org processor link transformer doc apache api url broken
+247	params exchange object exchangepattern exchange pattern invoker java camel camel cxf issues component
+320	message parameter methods defaults bean load process bean inmessage parameter defaultparametermappingstrategy default parameter mapping strategy default mapping strategy doesn apos
+324	class response request content method length jetty lead copies truncation bad content length header http
+370	consumer fixes server sftp seconds milliseconds integer issue math timestamp sftpconsumer sftp consumer connecting retrieving remote files
+383	mina mina exchange java message headers bean interfaces pojo issue getout returning blocking timeout exchangepattern exchange pattern pattern inout exchange properties passed camel
+410	apos pointer amp class map linked support errorhandlersupport error handler support hash exceptions exception handling error handler
+504	entries todo atom producer atomproducer atom producer categories test unit code set lacks feed
+505	endpoint spring bean property apos apache file stuff easier create instances nicely xml
+520	process channel stream deadletterchannel dead letter channel dead letter letter channel message content enable caching default
+524	managedroute managed route objectname object amp processor route object mbean apos instrumentation https intrumentationprocessor intrumentation processor intrumentation properly record processing time
+528	mailbox size box mailfetchsizetest mail fetch size test testcase mail checks size support trick intermittent test failure fetch
+547	builder context camel cycle method route builder addroutes add routes routes camelcontext camel context remove spi
+549	parameters output main duration operations apache debugger org option apos camel spring
+551	processing class component lock javadoc noop file file strategy
+597	strategy queue member jmsqueueendpoint jms queue endpoint queuebrowsestrategy queue browse strategy destination uri configuration initialization endpoint patch faulty ctor
+618	jms oracle jms typo jmsreplyto jmsreply spelling jmsxrecvtimestamp jmsxrecv time stamp binding headers ecv time stamp spec lists correct jmsxrcvtimestamp jmsxrcv time stamp camel apos jmsbinding jms binding patched prevent
+629	context endpoint getcontext context camel methods setcamelcontext set camel context setcontext set context deprecation refactorings getcamelcontext camel context add set deprecated improve war compatibilty comp atibilty
+634	dlc policy camel route brokers transactions apache routes message deadletterchannel dead letter channel dead letter channel default redelivery red elivery eclipsed eclipse expected transactional behaviour transacted
+642	test jms error camel case jms camel multicast java aggregation work
+651	method bean proxies aop pattern advisor removeadvisor remove advisor choosemethodwithmatchingbody choose method matching body server object beanprocessor bean processor processor intelligent int elligent choosing correct problems
+653	header jms amp message method check jms object jmsbinding jms binding weblogic web logic bean lost sending queue
+655	amp expression jython pythonexpressiontest python expression test script expression test camel returns apos expressions return null false
+657	csvconfig createconfig create config config marshal format method apache csvdataformat csv data format setconfig set config class csv data mars hal custom csvc onfig
+685	message jms jms primitives binding fwd apache html propation property properties honor spec allowed
+694	destination transport cxf camel org factory transport uri apache import cxf component apos cameldestination camel destination configured
+713	file producer test exception file code test blocker request void fileproducer file producer consumes producing
+727	customer application quotes issue xml customerservicestest customer services test camel header transport apos propagated cxf include
+741	conduit camelconduit camel conduit camel target targe instance transport camel reference apos check targetreference target reference create
+747	xpath npe amp message headerkey doesn apos camel expression doesnt header exist
+756	message object component test textmessage text message amqproutetest amqproute test org object amqp camel amqp apos send objectmessage object message
+758	bug producer folder sftp patch bela exsits html amp apos doesn handle exists create remote
+806	validation parameter options http test uri issue option exchanges uri strict fails requests
+807	message error message exchange producer http amp bill http header httpproducer http producer premature creation
+857	redelivery test letter attempt maximum dead camel failure counter camel deadletterchannel dead letter channel channel corrent wrong handled
+860	exchange exception bug property exception boolean data redeliverydata redelivery data data async deadletterchannel dead letter channel dead letter channel set
+873	message apos camel fault exchange amp test mina payload body current mina component tansfer
+882	port sftpendpoint sftp endpoint custom endpoint server ssh runs ignores sftp works
+885	default input extract defaultproducertemplate default producer template fault producer exchange extractresultbody extract result body failure exception template result body throw returning message
+906	timeout amp request requesttimeout request timeout apos endpoint option jms jms timeout jmsproducer jms producer producer isn configured properly
+919	routes context route routes list list route context getroutes routes camel routebuilder route builder builder return
+920	regexpattern regex pattern pattern directory file dir consumer file match regex filename component work expected matching applied app lied
+969	setroutes set routes java context doc definitions documentation routes camelcontext camel context context route camel set routes misleading
+983	info nabble beaninfo bean info ambiguity exception bean operations overridden list html methods selecting method
+1034	resequencer route defaults camel stream producer queue streamresequencer stream resequencer messages trace messages stream activemq active queues stuck active
+1037	process processor method batchprocessor batch processor jms consumer batch jms polling resequencer messages queues stuck
+1062	queue chance illegal test test machine exception pop illegalstateexception illegal exception pipeline pipelineconcurrenttest pipeline concurrent test concurrent java fails randomly
+1074	jaxbdataformat jaxb data format jaxbelement bar foo jaxb format data object generated desired unmarshal returning jaxbe lement
+1095	user content response type set jetty jpeg httpbinding http binding jetty setheader set header camel header
+1108	processing executor multicastprocessor multicast processor parallelprocessing parallel processing streaming processor executor pool aggregationstrategy aggregation strategy strategy parallelprocessing parallel processing parallel flags multicast processor
+1111	apos amp camel configuration data uri httpclient http client timeout http client httpproducer http producer http producer side based endpoint config disables post method
+1125	count expectedminimumcount expected minimum count minimum receivedcounter received counter counter message amp satisfied endpoint mockendpont mock endpont mock endpont expectedminimummessagecount expected minimum message count expected message doesn apos work
+1131	processing processor parallelprocessing parallel processing executor strategy thread multicast parallel multicastprocessor multicast processor threadpoolexecutor thread pool executor invalid contructor intitialization int itialization
+1140	mina nabble producer session raise response process html servicemix minaproducer mina producer remote closed exception
+1193	interceptor debugger multicast interceptors node mailing method break integration override multicast
+1196	endpoint mock mockendpoint mock endpoint nabble sleep html test work empty doesnt doesn
+1199	thread throttle throttler multiple appears threads throttling
+1249	mail spring mailconfiguration mail configuration config configuration camel configuration mailcomponent mail component mailbox component mail injected
+1270	main countdown camel camel support class bee hanging mainsupport main support ctrl starting count latch
+1278	parameter velocity windows endpoints setting support amp inputstreamreader input stream reader content velocityendpoints velocity endpoints velocityendpoint velocity endpoint endpoint reads velocity templates default encoding add set
+1301	class factoryfinder factory finder context activemq active finder bug issues exception null npe factory findclass find class find classloader class loader
+1332	strategy stream interceptor interceptor deadletterchannel deadletter channel caching document difference streamcachinginterceptor stream caching interceptor caching enabled
+1356	message processor exception exchange camel tryprocessor processor hop exchange processor header sets caught
+1366	reply exchange change pattern logic exchange message property body exchangepattern exchange pattern endpointmessagelistener endpoint message listener endpoint listener respect
+1384	copy inoptionalout optional method optional exchange message pattern exchangepattern exchange pattern source apache exchangehelper exchange helper helper respect
+1401	thread instances marshaller jaxbdataformat jaxb data format unmarshaller parse xml implementation synchronization jaxb jaxb data format safe
+1411	class load environments camel objecthelper object helper context work osgi camel classresolver class resolver camelcontext camel context add resolver class object helper loadclass load class osgi osg
+1414	message mail activemq mailprocessor mail processor processor getattachments attachments data text handler amp jmsmessage jmsm ess age vanishes attachments
+1417	type messagesupport message support streamcache stream cache support message cache lang stream convters getbody body converters convert ers
+1421	dataformat parser overridden camel bean endpoint map string definition html cxf bean properites proper ites merged
+1426	builder property spring camel configuration error thread doen context talks apos support scan springroutebuilder spring route builder route
+1428	file file generic string move relativefilename relative file separator exception renameexception rename exception sftpconsumer sftp consumer sftp consumer genericfilerenameprocessstrategy generic file rename process strategy rename process strategy bounds
+1461	request topic exchange node route mep pattern exchange time exception incurs urs wait refers wrong
+1463	jmx error unit test stream apache caching instrumentation streamcaching stream caching letter ins trumentation add deadletterchannel dead letter channel dead channel defined noerrorhandler error handler handler
+1475	policy transaction error client transactional rollback fallback handler default test easier transacted configuration routes
+1480	jms camel exception nabble message jms apache test component org sending jmstemplate jms template jms template true fails
+1488	camel method method info class bean bean type camel context beaninfo bean info overridesexistingmethod overrides existing method overrides existing doesn apos handle overloaded loaded methods correctly
+1497	jms template jmstemplate jms template values jms timeout spring wait message timeout jmspollingconsumer jms polling consumer polling consumer receive work
+1498	scheme instance getendpoint endpoint foo null endpoint context camel activemq colon camelcontext camel context returns defined properly
+1504	path message header http uri http endpoint mailing http createmethod create method path headers concatenated sending messages
+1509	camelctx camel ctx camel test route ctx start data context bean thread defaultcamelcontext default camel context default camel isstarting starting starting returns incorrect status
+1510	queue batch exchange exchange batch queue collection mutex void batchprocessor batch processor processor interrupt int errupt side effects
+1511	handler onexception exception error defaulterrorhandler default error handler exception support feature transaction transactionerrorhandler transaction error handler great default
+1513	msg values map text field config conf config csv camel csv mutliple messages lead repeated
+1524	uri org irc camel code amp html channel path apache parsing flawed
+1547	amp camelcontext camel context intercept strategies delayer interceptstrategy intercept strategy caching streamcaching stream caching apos context stream exculded camel restarted
+1568	string return amp input messages carriage stream string breaks converting reader
+1585	file file normalizepath normalize path genericfileproducer generic file producer createfilename create file sftp fileutil file util util separator generic producer create produces normalized normal ized doesn apos work
+1604	dsl work unit custom unitofwork unit work syntax camel synchronization discuss synchronization callbacks call backs add easy registering processor
+1615	exception camelexchangeexception camel exchange exception exchange camel serializable field serializable transient implements inheriting
+1650	message idempotent database repository consumer insert check instances version test race condition idempotentconsumer idempotent consumer
+1651	streaming response binding http defaulthttpbinding default http binding http default html nabble prevents str eaming
+1671	task reply waitfortasktocomplete wait task complete enum values ifreplyexpected reply expected expected wait complete newer incorrect
+1689	producer jmspriority message jms jms apache header consumer bug camel headers producer
+1711	context context camel web camel springcamelcontext spring camel context spring camelspringproblem camel spring problem project apos routes started webapplication webapp lication
+1740	httpconstants http constants http wiki constants class http documentation exchange encoding content docs http component incorrect
+1743	xml stream inputstream input stream validation type domsource input payload xml body validator component lacks doms converter
+1752	camel method spring mail context error loop thread issue service springcamelcontext spring camel context endless calling start route applicationcontext application context application refresh apos initial
+1759	throttle seda tracer split delay node tracer routes sedacomplexinouttest seda complex test parent race displaying
+1760	request jetty req http httpservletrequest http servlet request stream readrequest read request input defaulthttpbinding default http binding request unable read post params
+1771	list cache entry producer recipientlist recipient list producercache producer cache recipientlist recipient list cache producer memory producercache producer cache limited eat recipient leaks
+1813	http mail thread message httpproducer http producer producer loss http header component doesn apos copy
+1824	exchanges file generic loop max size poll poll getinprogressrepository progress repository progress genericfileconsumer generic file consumer consumer fails pick files directory maxmessageperpoll max message poll message setting
+1825	file file generic operations path javafile java file log exchange genericfiledeleteprocessstrategy generic file delete process strategy delete process strategy cases delete throw exception apos
+1848	endpoint portalid portal test nullpointer expectedheaderreceived expected header received typeconversion hub portal message mockendpoint mock point mock point yields null pointer mixed type conversion
+1849	files messages camel cachedoutputstream cached output stream stream cases feature tmp message apos cached output cleaning file based caching
+1867	headers message header header amp strategy jms getheader header key header jmskeyformatstrategy jms key format strategy format consistently jmsmessage jms message message returning correct
+1882	strategy aggregator aggregation doesn batch collection processor sender amp thread fails permanently manently exception thrown
+1912	exception removeendpoints remove endpoints concurrentmodificationexception concurrent modification exception endpoints entries endpoints default iterator camel defaultcamelcontext default camel context context remove fails concurrent modification
+1914	consumer work xmpp routes messages classes route chat test consumers stops consuming time
+1922	number method methods bridge arg return bean class amp beanendpoint bean endpoint endpoint fails presence
+1924	camel test test file assertion assertionfailederror assertion failed error file stream junit apache unit failures windows release
+1934	stream file idea test camel apache camel jetty unit failure windows streamcache stream cache cache temp deleted
+1955	test getout exchange attachment header copyfrom copy copy attachment xml header messagesupport message support message support doesn apos clean message attachments
+1957	sourcecache source cache cache source cache stringsource string source data stream method construction string wrong
+1960	message copy aggregationstrategy aggregation strategy headers problem method exchangehelper exchange helper support messagesupport message support logic enricher aggregation strategy preparing
+1963	shutdown jms getinstance instance debug main message amp org returns problem graceful
+1997	class bean camel definition camel context spring bean spring packagescandefinition package scan definition package scan missing public setter set ter methods making difficult configure camelcontext camel context camelcontextfactorybean camel context
+2018	timer configuration endpoint timercomponent timer component default component timerendpoint timer endpoint component createendpoint create endpoint properties starts thread
+2032	xmpp arounds apos message string instances strings xmppmessage xmpp message xmpp body xmppmessages xmpp messages messages don converted
+2049	mina thread configuration producer lazysessioncreation lazy session creation amp mina creation instances sync improper connector acceptor produce
+2054	content rfc mail body attachmentfilename attachment filename header attachment cid set messagebodypart message body component reference multipart broken
+2056	charset converter parameter converter convertbodyto convert body methods byte patch exchange optional convert body converters ers ioconverter ioc onverter
+2058	file apos amp operation scanners time failures indexers virus processes file component rename operations fail filesystems files ystems windows
+2067	email test addresses address failure comma rfc code message support mail component character recipient add resses
+2070	recipient dynamic comma delimeter issue list nabble delimiter html custom
+2088	string tostringtypeconverter string type converter camel null converter http bean bodies message html converted logging null
+2102	error exception custom trce route bean exception rollback routes handler transacted don apos handlers mark handled set
+2112	bean dependency test context config cameltransportfactory camel transport factory factory amp junit unit problem camel transport annotation
+2139	streams sftpoperations sftp operations stream sftp method operations channel methods channelsftp channel sftp file create closed
+2188	jcr node path exchange producer producer attempt mix jcr service jcrproducer jcr producer creation throws javax jcr pathnotfoundexception path exception path exception
+2215	data bcameldatasetindex bcamel data set failure bcamel dataset data set header map caseinsensitivemap case insensitive map http nabble case insensitive serializable
+2232	mail recipients mail camel bug amp uri hunt geronimo component sends wrong address
+2237	codec codec mina filter filter protocolcodecfilter protocol codec filter url mina default improper ordering filters
+2250	issue intercept slip failure endpoint interceptsendtoendpoint intercept send endpoint case exchange routing endpoint send sending intercepted int ercepted
+2306	duration windows input file problem jms file problem byte stream ioconverter ioc onverter close
+2325	camel bean delivery runtime bean exception route problem defaulterrorhandler default error handler org produce beaninvocation bean invocation invocation body subsequent invocations
+2387	string file converter utf honor converter class genericfileconverter generic file converter parameter exchange generic charset
+2436	method bean body html bean http processor type response return beanprocessor bean processor differentiate iate void returning null values
+2451	mllpdecoder packet message charcters length buffer control method read mllpd ecoder fails
+2456	mail attemp log template managed metadata thread managedresource managed resource jms temporary warning jmstemporarytopicendpoint jms temporary topic endpoint topic endpoint jmstemporaryqueueendpoint jms temporary queue endpoint queue don apos resource annotation
+2554	thread detail exception characters unsafeuricharactersencoder unsafe uri characters encoder class uri discussion bounds mail indexoutofboundsexception bounds exception occur unsafe encoder
+2559	http http configurer httpcomponent http component component sethttpclientconfigurer set http client configurer null void user client checks registry httpclientconfigurer http client configurer set longer works
+2622	hasnext helper util object string amp iterator org isnotempty empty camel invocation apache objecthelper object helper createiterator create iterator create node return
+2636	stream file file java close camel stream tempfile temp file exception input ioexception bad descriptor filenotfoundexception file exception
+2642	bean map property introspectionsupport introspection support support string map object introspection inconsistency getproperties properties properties getproperty property
+2694	gziphelper gzipinput togzipinputstream gzipinput stream inputstreamentity input stream entity http entity converter stream httpentityconverter http entity converter zip create input gziph elper
+2698	connection nettyproducer netty producer recovery netty mina minahelper mina helper operation http netty drop camel producer detect write failures async
+2743	case http thread http headers html httpproducer http producer producer mail sending
+2745	expressiondefinition expression definition bodyas body test definition body call method expression java string tostring string print expression time
+2750	class clazz org amp interface spring springsource java class beaninfo bean info apache camel component bean bean info working properly mocked interfaces
+2751	timer timercomponent timer component component endpoint instances unit timerendpoint timer endpoint instance test reference restartable
+2763	code ascii thread mail mail header binding apos subject handle mailbinding mail binding rightly
+2778	components query characters bug url httpproducer http producer http path producer http escaped urls work
+2824	testcase processdump luck defaulttimeoutmap default timeout map timeout bug apache org map camel deadlock util default
+2851	exchanges managedoperation managed operation number managed endpoint operation qeuesize qeue size size queuesize queue size queue typo managedbrowsableendpoint managed browsable endpoint browsable endpoint qeue
+2858	original message body useoriginalbody original body useoriginalmessage original message camel model api org onexceptiondefinition exception definition appears fluent
+2899	files heap space camel server ftp consumer amp memory lang remote site pick
+2935	exchange exception amp exchange default camel producer answer endpoint template broken failure reporting defaultproucertemplate default proucer template proucer asynccallback async callback async callback synchronization onfailure failure failure
+2937	stream camel streamproducer stream producer producer producer streams stream system close exceptions
+2944	stream cache streams mechanism stream splitter dom cachedoutputstream cached output stream file exchange streamcache stream cache file spooled cache work windows closing resource
+2949	attachment data handler datahandler data handler file binding message class content disposition attachment datahander data hander hander getname returns temporary storage mime
+2962	jmsproducer jms producer producer disablereplyto disable reply message option jms jms reply sending disable camel eply
+2980	entity method entitymanager entity manager jpa problem apos manager field database camel doesn entity merge
+3007	flag route startup camelcontext camel context context camel honor auto xml amp adding autostartup auto startup
+3015	mail nullpointer oncompletion completion component nabble mail consumer mailconsumer mail consumer camel completion commit rollback
+3047	bundles jetty servers component bundle jettyhttpcomponent jetty http component contexts http instance dostop shuts component
+3081	debug exchange file worker file exchange netty body body bye timeout exception
+3091	uri argument quartz quartz apos issue endpoint amp quartzendpoint quartz endpoint set job properly
+3107	address npi user destination list discussion binding smpp source set smppbinding smpp binding
+3113	param cxf query code string issue default binding bean queryparam query param doesn apos work cxfbeans cxf beans cxf beans
+3114	uri amp url method urisupport configuration format query gne camel encoding wrong org apache component rss rsscomponent rss component rss component afterconfiguration configuration
+3121	exchanges eip split nabble file camel seda camel exchange splitter completions original
+3124	feed poll entry polling process feed amp list consumer item feeds feedentrypollingconsumer feed entry polling consumer polling broken
+3143	converter type type context registry apos instanceof default registry osgi osgidefaultcamelcontext osgi default camel context camel gettypeconverterregistry type converter registry returns null
+3144	test ftp filename file root host file camel route parameter fileexist file exist exist fail honored producer produce works ftp path
+3187	shutdown event events notifier publisheventnotifier publish event notifier notifier publish startup event camel emit spawn processing
+3198	route route getroute route linkedhashset linked hash set string camel npe routes amp hash defaultcamelcontext default camel context default context throws
+3203	quartz description project context offer camel java quartzcomponent quartz component quartz component routes started component referenced
+3216	thread consumer poll scheduledpollconsumer scheduled poll consumer scheduled jdk poll catch die ensure avoid runnable scheduled
+3223	file inputstream input stream method file converter exchange stream input object boolean genericfileproducer generic file producer generic producer writefile write file write creates instance
+3281	user routes route builder dsl exception exception concerns routebuilder route builder supported fail configuring config uri onexception exception
+3321	message deliversm deliver string deliversm deliver pointer exception field deliverysm delivery method smppbinding smpp binding smpp binding raises nullpointerexception null pointer exception null smsc insert short data message payload
+3348	exchange consumer shutdown queue inflight endpoint exchange size consumers repository defaultshutdownstrategy default shutdown strategy default shutdown strategy shutdownaware shutdown aware war sedaconsumer seda consumer seda consumer losing aware
+3349	binding strategy binding header invocation cxf object filter thread getheaderfilterstrategy header filter strategy race condition cxfrsendpoint cxf endpoint endpoint ting endpoint load performing sync async
+3352	exceptions strategy camel exception onexception exception multicast uselatestaggregationstrategy latest aggregation strategy http behaviour latest aggregation fails propagated prop agated handled
+3353	exception camel camel exceptions exception invoker foo bean runtime validator cxfrsinvoker cxf invoker cxf silently swallows
+3356	bindy amp camel simpe datepatternformat pattern format locale nabble france format hard coded code pattern
+3388	headers test body map bean null dotest test java outheaders headers method binding issue inonly mep
+3389	package issue forums amp helper tstart thread version http packagehelper package helper numbers decimal dec imal
+3395	exchange correlation nabble point camel correlation exchange html http splitter parent
+3425	camel camel camelcontext camel context bundle blueprint context blueprint info osgi test started
+3442	class loader servicemix service mix issue osgi jbi classloader class loader service exception mix classloading class loading loading smx osgipackagescanclassresolver osgi package scan class resolver package scan resolver
+3479	jetty style load wiki camel http code servlet guides guide camelcontinuationservlet camel continuation servlet continuation produce npe heavy
+3489	seperator character bindy csv pipe bindycsvdataformat bindy csv data format length regex csv data format broken delimited files
+3497	amp util heap java arraylist array list apos list list processing multicast splitter component setting streaming str eaming true parallelprocessing parallel processing parallel consumes large amounts space big original messages
+3498	exchange multicast apos splitter processor exception error streaming exchange subexchange exchange component setting str eaming true breaks handling
+3528	writers thread schemas readers hybrid binding data cxf cxf properties hybridsourcedatabinding hybrid source data binding source safe
+3535	bean call amp aggregate oncomplete complete apos exchange processor aggregation loggging aggregation fails complete exchanges process
+3540	queue data int timeout entry seconds consumer dataqueue data queue unit dataqueueconsumer data queue consumer incorrectly implements semantics component
+3543	camel camel logic routes xml core load route definition reuse loading loadroutedefinition load route definition camelcontext camel context context lacks xml
+3545	instance bean method expression camel language answer context tests bean methodcallexpression method call expression call doesn apos validate method exists cases
+3800	query header uri endpoint sqlproducer sql producer message sql producer runtime sql introduce update string
+4482	eip expression file nabble evaluation onexception exception custom html camel splitter throws exception triggering exception
+4483	code exception splitter exception camel expression file runtime issue xml global invoked invoke case fired fire iterating file
+4882	queues exchange queue times seda producer exchanges sedaproducer seda producer seda remove timed removed
+5251	snmpv snmp camel pdu type camel amp snmp traps component correctly read pdus
+6387	jndiregistry jndi registry registry type jndi context implement findbytype find type find findbytypewithname find type list javax naming
+6703	process amp completion bug folder apos java mailconsumer mail consumer folder mail camel open
+6769	camel server transaction registry management jndi link html implement camel jndiregistry jndi registry methods return empty set
+6798	factory entitymanagerfactory entity manager factory jndi jndiregistry registry camel jpa container findbytypewithname find type map jpacomponent jpac omponent unable find entity manager jndir egistry
+7052	user key gpg dsa pgp subkeys key days pgpdataformat pgpdata format pgpd ata format unable encrypt enc rypt subkey pgpdata
+7061	getout getbody body cxf exchange body cxf camel response org component defaultcxfrsbinding default cxf binding default binding exchange
+7096	exception iterator nosuchelementexception element exception amp case apos object element objecthelper object helper contract helper createiterator create iterator create utility properly adhere java util
+7100	camel trouble splitter split details html camel linux scanner tokenize clone eat exceptions recorded underlying
+7102	authentication uri test jcr login camel connection token junit test broken nit classes testing
+7132	context jmx management camel custom quartz amp context component strategy quartzcomponent quartz component scheduler multiple contexts requires enabled
+7141	work strategy filter headerfilterstrategy header filter strategy custom binding netty uri patch component custom header set component endpoint
+7142	csvstrategy csv format tsv data lines code csv csvdataformat csv data format problem unmarshal overwrites writes delimiter static csvs trategy strategies
+7155	expression language hasstarttoken start token return string method camel simple token start incorrect implementation stringhelper string helper helper tar
+7163	type body string headers backlog backlog backlogdebugger backlog debugger change debugger debugger header
+7179	cxf endpoint property features cxfrsendpoint cxf endpoint
+7192	signing encryption keyflag key flag key flag key flag pgpdataformat pgpdata format usage process pgpd ata format supported correct selection enc ryption pgpdata
+7194	endpoint factory org amp bus apos bean cxf cxfrs features initialized
+7224	ucs alphabet config header smpp determinecharset determine charset options smpp alphabet charset camel smpp fails correctly send messages require encoding
+7229	bean producer cxfrs bus ccxfrs cxfrs apache bean setbus set bus cxf cxf cxfrs override bus
+7244	user pgpdataformat pgpdata format pgpdata verification work error signature implementation key subkey pgpd ata format restricted rest ricted
+7251	type outputtype output type sql query list object result getresultset result set output issue sqlproducer sql producer producer call set preparedstatement prepared statement prepared statement hsqldb npe
+7271	exchange list exchange strategy list test grouped newexchange exchange exception error abstractlistgroupedexchangeaggregationstrategy abstract list grouped exchange aggregation strategy abstract aggregation produces failed received fails
+7276	scheduler context camel context quartz camel instance component jmx exception management provide default scheduler breaks isolation
+7303	body header notation header apos route java remainder headeras header simple impl language access surrounded quotes
+7304	endpoint uri definition intercept interceptsendtoendpointdefinition intercept send endpoint definition key interceptsendtoendpoint intercept send endpoint file match method send work normalized normal ized
+7306	kafka kafkaconstants kafka constants amp server apos npe key topic guide messages camel consume kafka
+7311	component error camel mail message mail runtime http map fetch attachments mapmailmessage map mail message false
+7318	hdfs info ioexception consumer consumers input team hdfs hdfsinputstream hdfs input stream concurrency working efficiently
+7321	jcr problem test jiang maven xml environments consumer issue pom jcrconsumer jcr consumer freezes free zes
+7349	schema data format jaxb javax org http jaxbdataformat jaxb data format threadsafe xml parse
+7350	schema data format jaxb javax org input apache http methods jaxbdataformat jaxb data format parse
+7364	entitymanager entity manager thread jpamessageidrepository jpa message repository repository apache entity org oracle message camel jpa manager safe
+7379	channels producer nettyproducer netty producer user nabble netty shutdown html store allchannels channels channels static variable netty
+7398	fields component camel logintoken login token login salesforce breaks login api salesforce changed oauth uth
+7407	progress route ftp error files polling isvalidfile valid file consumer timeout inprogressrepospitory progress repospitory ftp considers progress poll
+7409	zip zipiterator zip iterator iterator split exception camel file route eat ioexception camel ioe xception
+7431	mail session sender host method port defaultjavamailsender default java mail sender java mail default impossible existing javax
+7432	map mybatis body hashmap hash map type resultsets component procedure camel issues calling oracle stored proc edure multiple ets
+7448	header throttler messages option eip workaround exception null expression html throttle unchanged
+7450	usemaps maps conjunction setup header amp flag resources context spring meta csvdataformat csv data format csv data format unable maps true
+7456	property parser property blueprint blueprint properties parser propertiescomponent properties component camel component ignores custom
+7459	raw uri query foo apos amp char logic prevent parsequery parse query parse drops char parameter
+7462	http netty component continue session http httpserverchannelhandler http server channel handler chunk camel http doesn apos expect continue correctly
+7472	group singleudpnettyserverbootstrapfactory single udpnetty server bootstrap factory netty camel attempt netty consumer udpnetty udp outcome single server bootstrap factory wait synchronously sync hronously joining multicast successful
+7483	void smpp datacoding data coding data byte configuration smppconfiguration smpp configuration setdatacoding set data coding coding data wrong set
+7500	messages callback case channel invocation exchange exception inflight thread exception concurrent modification retry netty tcp failure leads futher processing failed
+7513	camel java precio eventos map camel tesipro eventoprecio evento precio bean annotations jpa entities argument aggregator pojo
+7518	file regression file approach camel apache copy html bug util fileutil file util util renamefile rename file rename return true renamed delete app roach
+7541	redis apos doesn box idempotent message redisidempotentrepository redis idempotent repository repository integration idempotentrepository idempotent repository work
+7557	cxf headers copy cxfrsproducer cxf producer cxf camel producer messages proxy mode
+7577	iterator zipiterator zip iterator component file camel nabble eip zip splitter html zipfile zip closable
+7586	history amp mbean message jmx newmbeanproxy mbean proxy getter apos camel proxy notcompliantmbeanexception compliant mbean exception compliant bean exception attribute messagehistory message history ter
+7598	poll session entity jpa camel memory cache consumedelete consume delete persistence jpa camel clear jpa processed message batch
+7636	timeout camel jms exception correlation reply correlationtimeoutmap correlation timeout map entry processing org manager catch ensure oneviction eviction eviction return correclty
+7706	jgroups consumer producer jgroupsendpoint jgroups endpoint producer jgroupsproducer jgroups producer jchannel endpoint consumer disconnect camel roups shared hannel correctly
+7715	pool thread instance sjms producer producer pool time context executor sjmsconsumer sjms consumer consumer sjmsproducer sjms producer remove
+7731	toupper upper char character case upper bean append tolowercase case defaultbeanrowmapper default bean row mapper default row mapper broken
+7763	netty provider keystoreformat key store format configuration netty store server securityprovider security provider format org nettyserverbootstrapconfiguration netty server bootstrap configuration bootstrap provide default ssl settings
+7767	amp returns reason assertion method builder work valuebuilder builder builder thread mock defining message doest convertto convert convert
+7821	property parser placeholder parser properties custom properties apache spring camel bridgepropertyplaceholderconfigurer bridge property placeholder configurer bridge configurer fails propertiesparser properties parser
+7849	jasypt placeholder bean spring property properties camel parser decrypting jasypt camelcontext camel context context
+7868	configuration endpoint concatenation component jetty http jettyhttpcomponent jetty http component details property wrong parameters
+7870	format barcode camel image set writer setbarcodedataformat set barcode data format writer barcode apache bar code reader hints optimized setbarcodeformat set barcode format method called
+7876	exchange iterator group amp jvm apos groupiterator group iterator stream string encoding respect charset property
+7880	data format camel rest processor custom context dsl binding rest dataformats data formats formats
+7890	xmlconverter xml converter converter namespace stream xml aware saxsource tosaxsourcefromstream saxsource stream set setnamespaceaware set namespace aware war
+7900	int apache type java size camel param blob components org hdfs chunksize chunk size chunk honored
+7978	camel quartz quartzendpoint quartz endpoint cluster option camel endpoint context camelcontext camel context context share working mode
+7988	lock case issue camellock camel lock consumer file poll camel html call abort read lock acquired exception thrown
+7989	startup file fileidempotentrepository file idempotent repository nabble repository camel idempotent store file html create
+7990	implementation camel messageid message message consumer nomessageidexception idempotent error idempotentconsumer idempotent consumer engine handler react
+7994	connection connections sessions broker factory connectionfactoryresource connection factory resource connection test resource overhead sjmscomponent sjmsc omponent effectively ignores setconnectioncount set connection count set count
+8001	smpp charset method argument latin command smpputils smpp utils byte determinealphabet determine alphabet utils isgsm gsm gsm encodeable called arbitrary data
+8032	file stream data folder input file operation tmp channel issue fileutil file util util leaks fileinputstream file input stream renamefile rename file rename fails permission
+8033	consumer runtime poll pollenrich poll enrich poll async polling leak exchange pollenricher poll enricher caused enrich
+8053	context routecontext route context objects leak route camel leaks routes error registrations memory adding removing lot
+8063	tracking tail mongo dbcol col bug amp collection col apos persistent picks random tracker mongodb mongo mongo
+8092	matrix matrix camel content server localhost boxing proxy binding org cxf producer produce params missing
+8121	camel directory file apache fileutil file util util org util temp amp infinite loop temp writable
+8134	closedoncompletion closed completion cachedoutputstream cached output stream synchronization output producer oom stream completion exchange synchronisation add sync hronisation cached closed option false
+8153	connection component camel pool jdbc mode connection jdbc object streamlist stream list potential leak stream list
+8163	problem imaps factory trust factory smtps socket starttls sslcontextparameters ssl context parameters custom socketfactory socket factory set mailconfiguration mail configuration mail configuration
+8200	message message setmessageid set message exchange response method jms exchange jms dosend send race condition jmsproducer jms producer producer request messaging causing nondeterministic deterministic setting body null
+8213	exception exchange strategy check unit exception default oldexchange exchange field constructor useoriginalaggregationstrategy original aggregation strategy original aggregation suspicious nullpointerexception null pointer exception null pointer
+8222	size jetty response component header responseheadersize response header size answer buffer master http setting impossible
+8231	message connection callback call error method time stompendpoint stomp endpoint stomp stomp case stompendpoint stomp point tom point throw exceptions underlying broken sending
+8241	amp apos executor test command exec exec condition default java failures unix
+8339	session mail class load producer configuration create loader usage camel mail depends tccl
+8346	file utf problems linux test umlauts snapshot encondings problem files jsonpathengine json path engine json path engine skips encoding
+8352	method nettyserverbosspoolbuilder netty server boss pool builder netty pool boss builder package pools boss unit server build protected
+8353	lock channel method nabble file release camel html filelockexclusivereadlockstrategy file lock exclusive read lock strategy strategy lock exclusive read defer closing
+8356	stream input stream characters returns charset case reader file buffered ioconverter ioc onverter toinputstream input stream strange behaving
+8369	route advice builder operation split definition builder work route weaveaddlast weave add weave add property ends
+8424	transaction transaction route exception policy code template policy exchange request propagated prop agated ignoring requires direct component
+8462	http request handler netty store alway amp server btw field httpserverchannelhandler http server channel handler channel instance httprequest http request
+8476	test reference inout message processor behavior dotry route fault isfailed failed unexpected handling docatch catch catch
+8479	test trap receive trapreceivetest trap receive test failed camel
+8498	context method camel bean jaxb camelcontextfactorybean camel context factory bean route apache endpoints blueprint camel factory missing setendpoints set endpoints set
+8505	exchange headers report status string validation schematron validation header missed camelschematronvalidationstatus camel schematron validation status camel status
+8592	nabble pointer abstractlistaggregationstrategy abstract list aggregation strategy npe camel nullpointerexception null pointer exception strategy list null abstract aggregation empty list
+8624	bean npe info camel beaninfo bean info http nabble transformers html component potential
+8626	class route test flight camel generalflow general flow flow exception exchanges generalflowroute general flow route leaking exchangesinflightkeys exchanges flight managedroute managed route managed
+8687	syslog data camel nabble converter format parsing html apos syslogconverter syslog converter doesn handle structured rightly
+8688	file test cache issues route stream https streamcache stream cache camel removed stream wiretap
+8768	directory hdfs component files path option ret check path statement hdfs overwrite applied app lied filesystem ystem
+8774	http http apos camel headers jetty default encoding headers amp defaultjettyhttpbinding default jetty http binding binding preserves context request response doesn header
+8864	collection aggregator camel collection exchange exchange database oldexchange exchange flexible strategy jdbc repository overwrites writes
+8901	characters zookeeper kafkaconfiguration kafka configuration kafka set configuration nbsp parameter session timeout camel kafka
+8905	json configuration jsonpath path utf file url default path charset encoding problems
+8923	topic message kafka header loop user camel myprocessor processor processor refer topic lookup headers producer produce infinite inf init
+8954	file lock exchange file synchronizations strategies lock locks dat marker handovered hand overed completion synch ronizations
+9027	destinationname destination sjms destination test uri amp jms hov sjmsendpoint sjms endpoint topic camel parse endpointuri endpoint uri endpoint colon
+9029	messages dropnoncoordinatorviews drop coordinator views views channels jgroups amp filters coordinator routes management roups managed started early
+9037	component jms method apache threads leaks camel pool task executor defaultjmsmessagelistenercontainer default jms message listener container default jms message listener container threads
+9089	wildcards method lines service uri java uris isn amp uuid ambiguous rest api
+9104	path abc camel uri http camelhttppath camel http path header path http order httphelper http helper helper concats fixed endpoint query parameters path header wrong
+9108	camel pull github addresses kafka messages producer uri configuration topic camel component builds message
+9151	context exchange timer exchange metrics policy responses times setproperty set property onexchangedone exchange wrong statistics subroutes routes
+9177	entitymanager entity route jpa wiretap async manager exchange loop problem combination jpa component wire tap throws entitymanger entity manger cloesd exception
+9230	status status producer response cxf code cxfrsproducer cxf producer unit method code cxfrs npe response
+9233	apos charset project bugreport note zip data utf exchange camel zipfiledataformat zip file data format zip file format doesn exchange account
+9243	method method info bean class methods existingmethodinfo existing method info handler abstract interface invocation fails extends abstract implements actual
+9245	paho amp bean topic component mypaho pahocomponent paho component autowired endpoint input camel endpoint flexible naming
+9248	ibm jms message camel jms jmsdestination jmsmessage sphere patch input exception thrown receiving jmsd est ination null
+9259	main void class method camel context enabletrace enable trace support trace route enable doesn apos work
+9269	uri endpoint route fromroute route builder notifybuilder notify builder notify route exchange match work types
+9281	path http contextpath uri amp requests tomcat httphelper http helper somesite http component removes trailing slashes producer produce
+9316	exchange repository leveldbaggregationrepository level dbaggregation repository amp completion level apache cases component dbaggregation logging warnings complete aggregation
+9375	unit tar route test file splitter dataformat test tarsplitterrouteissuetest tar splitter route issue test apache camel tarfile tarsplitter tar splitter includes extra empty entry
+9417	reasontext string adapter exception soap data fault soap camel apache soap processing build exception message
+9426	route boot camel spring route doc routebuilder route builder builder api component spring rest dsl registers multiple instances routebuilders route builders builders
+9432	separator string csv cases data bindy autospanline autospan csvrecord csv record camel unquotetokens unquote tokens csv treated regex fixed character
+9444	exception splitter message steps log message split repeatcount repeat count incorrect exceptions handling
+9480	consumer exception idempotent idempotentconsumer idempotent consumer repo http onexception exception html idempotent idempotentconsumer idempotent consumer exception handle
+9553	delay endpoint log endpoint consumer twitter level amp getendpoint endpoint thread consumer doesn apos respect parameter
+9557	amp facebook readingoptions reading options configuration options user parameter getfeed feed illegal properties consumer throws illegalargumentexception illegal argument exception argument exception reading parameters
+9607	work src whitout apache java camel block org component core chmod file producer produce setting charset
+9656	abstract healthendpoint health endpoint java bean method amp method info https health springboot spring boot spring boot endpoint throws ambiguousmethodcallexception ambiguous method call exception ambiguous call exception
+9666	defaultexchange default exchange property exchange fault default java https apache work impl safe copy propagate apos
+9672	exception class definition amp camel class definition classcastexception class cast exception management jmx cast interceptfrom intercept int ercept intercept
+9805	data header getendpoint endpoint body exchange sql endpoint producer isnoop noop getout camel sql body copied useing outputheader output header output outputtype output type type selectone select select doesn apos
+9820	lock age readlockminage read lock min age milliseconds file combination seconds files age sftp readlock read lock read changed work min option
+9862	consumer unregisterconsumer unregister consumer undertow consumer port npe isempty empty serversregistry servers registry methods unregister potential undertowcomponent undertow component component
+9872	exception camel rethrowexception rethrow exception process main class user context org camel vetocamelcontextstartexception veto camel context start exception veto context tar ret hrow false cases mainsupport main support support hang
+9887	strategy completion completionawareaggregationstrategy completion aware aggregation strategy oncompletion completion strategy aggregation unit amp aware work called splitter configured war shareunitofwork share unit work share true
+9898	activateurl activate url test regex url exchange builder string header exception rest simplebuilder simple builder impl throws nullpointerexception null pointer exception null pointer replacing string regexall regex method simple
+9941	configuration blueprint getconfiguration configuration camel olingo component aries bug method documentation issues configuration
+9953	dostop ssh logic dostart start method sshconsumer ssh consumer client start ssh review camel tar consumer sshproducer ssh producer producer
+9982	link field record data format links format amp length building marshalling fixed fails
+10048	map processor slip handlers hash amp error destination slip object memory leak routingslip routing slip routing
+10082	names class format forname class package component method outclass class parser camel api maven plugin doesn apos handle javadoc
+10091	git check time instance jgit class gitproducer git producer producer closing double camel null
+10115	thread kafka consumer poll method status consumer message thread implementation stays running messages received shutdown start
+10145	git git operations endpoint gitendpoint git endpoint amp option situation apos camel pull push require remote path repository
+10147	exception message test camel string class builder mock history messsagehistory messsage history messsage long time large expressions
+10157	kafkaconstants kafka constants partition variable key exchange kafka apos string content constants values don fit
+10253	exception string class throwexceptionprocessor throw exception processor throwexception throw exception label processor trace getsimplename simple gettracelabel trace label nullpointer null pointer null pointer throw
+10273	jmx enablejmx enable jmx thread component jetty jmx listeners custom mbeans jetty missing jmx object thread pool
+10303	error consumer tcp server acknowledgement mllptcpserverconsumer mllp tcp server consumer acknowledgment route mllp caller fails silently failure
+10370	xml cxfpayload cxf payload byte converter cxf body cxfpayloadconverter cxf payload converter runtime exception payload conversion throws payload
+10376	bean issue info parameter method camel conversion implementation request beaninfo bean info bean introspect int rospect work correctly bridge methods
+10381	google mail component camel component npe client getclient client googlemailcomponent google mail component mail ting configuration
+10414	field mongo apache header java camelmongodbfieldsfilter camel mongo fields filter fields query camel query ignore filter set
+10443	mongo object objectid object amp createdofindbyid create find apos producer mongodbproducer mongo producer component exchange findbyid find find work
+112	jmsxgroup activemq active methodname method beanref bean thread endpoints bean header jmsxgroupid jmsxgroup jmsxg roup copied points active
+166	camel building developer test unit work org async unitofworkwithasyncflowtest unit work async flow test flow apache processor failure
+191	pipeline catch exchange clause processor thread html catch exceptions reject proceed proc eed
+197	route interceptor order invocation processor orderprocessor order processor test change patch
+211	endpoint settings configurer component property http client httpclientconfigurer http client configurer apos work doesn
+297	body exception exception block catch thrower tryblock block exceptionthrower exception thrower trycatch catch process doesn apos propagate handle
+340	textline mina body client tcp url builder response process support mina inout pattern
+380	bytes endpoint mock mina body list udp testsendingbytemessages test sending byte messages message string camel protocol fails sending
+415	answer processing strategy parallelprocessing parallel processing aggregationstrategy aggregation strategy output aggregation aggregation parallel type multicast true
+420	ftp filename problems server work configuration class convertbodyto convert body header box ftpcomponent ftpc omponent improvements
+518	protocol exception user nntp meta supported operation camel camel implementation mail thrown notsupportedoperation supported operation supporter
+581	cache producers start void endpoint cache producer dostop camel service cameltemplate camel template camel template clear stopping
+587	cxf component log logutils log utils java switch logger cxf camel logger apos
+679	processor bean instance register context jmx server test testbean test bean instrumentation agent multiple instances
+695	headers component camel doesnt propogate xquery apache org mock exchange doesn prop ogate
+697	headers dsl london result propogate apos transform exchange amp direct doesnt doesn prop ogate
+701	exchange return documentation code exchange invocation check dosomething beaninvocation bean invocation type bean
+712	amp message apos chat info connection user xmpp code xmpp private work
+737	builder routebuilder route builder component addinterceptorstrategy add interceptor strategy context bean tracer interceptor getcontext context export add strategy race class timer time work route
+755	tests message objectmessage object message mina textmessage text message amp type object classpath amqp tests disabled
+763	camel element jmx jmxagent jmx agent work dead letter policy sample redelivery camelcontext camel context context apos seterrorhandler set error handler set error handler agent disabled
+782	stream body input endpoint messages tracer code conditions stream serviceendpoint service endpoint race incorrectly treats inputstream input stream
+818	type exchange endpoint slip issue defaultexchange default exchange patch exchange default jbi preserve routing
+858	stream message body input log cache apos inputstream input stream producer producer log component
+886	attribute contextpath context path jaxb context element marshal dsl xml require path
+914	test camel routes classes plugin target testing classnotfoundexception class exception plugin class maven
+922	api persistence uniqueconstraint unique constraint jpa constraint spec change issue camel dependency remove deps jar compliant
+980	file nabble file route convertbodyto convert body memory java amp shouldn component delete consumed processing failed real
+1093	return exception response code exchange jetty process failures void stracktrace camel returned
+1107	client uri http sotimeout time time amp xxx uri httpclient http client option camel remove options
+1119	error access camel httpproducer http producer producer http response code route headers discards
+1144	exception endpoint context converter time exception class localdatetime local time body test exceptions thrown converters convert ers correctly handled
+1150	route exception getoutputs outputs html output aggregator warn isempty empty argument illegal fooled foo led onexception exception
+1188	exception method bean exception queue context exceptiontwoexception exception exception exceptiononeexception exception exception onexception exception exceptions thrown methodcall method call call caught
+1213	message copy jms jmstofilemessageidtest jms file message test jms copymessageid copy message test test user getmessageid message camel jms consumer set message based node
+1216	dead channel camel deadletterchannel dead letter channel letter html requests exchanges nabble enabled transacted
+1225	type nabble classes staticmethodtypeconverter static method type converter core converter camel exception transformerexception transformer exception converter duplicate type tostring string string source
+1274	jetty camel camel jetty camelcontext camel context context connector selectchannelconnector select channel connector http instances select channel closed stopped
+1292	foo headers start bar header sql setheader set header sqlcomponent mock preserve sqlc omponent
+1406	nabble processor shutdown delay http html delayer jvm delayprocessor delay processor handle interrupting int err upting shutting
+1412	osgi queue mail load queuebrowserstrategy queue browser strategy classloading strategy thread environment browser
+1442	unmarshaling pair stream key bindy method data csv model format data send occurence
+1454	mode uri getperson person component spring wsdl invocation endpoint cxfwsdlfirsttest cxf wsdl test payload cxf running payload work holders ers
+1462	access camel mbeanserver mbean server npe mbean jmx endpoint lookup grant jmxagent jmxa gen privileges lifecycle null
+1474	headers camel route relay relay message behaviour headers cxf patch wire dropped cxfendpoints cxf endpoints endpoints
+1477	route builder route handler spring void endpoint work data endpoint routebuilderref route builder injected endpoints points
+1496	parameters camel resolveendpointfailedexception resolve endpoint failed exception exception endpoint uri resolve atom request feed url result endpoint failed unknown
+1508	code object types converter converter type resort type checks super typeconverter type converter find specialized special ized
+1525	unitofwork unit work work uow unit component exchange source wire html seda copied
+1535	exception java error endpoint deal catches lang processing dataset failures thrown mock data set assertions assert ions async complete cat ches
+1548	errorhandler error handler error handler node incl children wrapped
+1566	messages exchanges codec html receivers protocolcodec protocol codec protocol long mllp receive fails
+1583	jndi component ldap thread release directory connection context ctx instantiation ldap safe
+1609	spurl type http routes void header addroutes add routes httpconstants http constants servlet string content send
+1614	jmsreplyto jmsreply jbossas jboss exchange nabble jmsreply http positives disabling html jboss warning jmsr eply capable false pos itives oss
+1621	spring expression set correlation configure balancer dsl load sticky stickyloadbalancer sticky load balancer ticky easily
+1624	message message camel exchange producer org object producer endpoint string subject correctly set xmpp chat producers produce
+1632	endpoint file component consumer getfromendpoint endpoint returns ftp endpoint exchange html file set
+1633	message packet smack xmppconsumer message messages processpacket process packet chat types packet xmppc onsumer process correctly handle received packets pack ets
+1642	java streaming file util leverage scanner generic splitter type str eaming genericfile generic file detected creating
+1652	processing problem batch heap exchanges body endpoint leak files list memory file component
+1663	cases route processor test processors builder spring builders bean post beanpostprocessors bean post processors work beans camel
+1670	file route exception files overlappingfilelockexception overlapping file lock exception directory thread lock overlapping components
+1676	participant getparticipant participant participant null getuser user return user endpoint user string
+1719	bean type type error converter nabble notypeconverterexception type converter exception header method signature component thrown exception parameter binding convert
+1728	method ambiguous method nabble methodnotexist method exist ambiguousmethodcallexception ambiguous method call exception bean camel exist throw exception
+1777	exchange inout inmessage message amp camel outmessage message message method exchangepatter exchange patter endpoint bean method header set rightly message exchange pattern
+1795	messages jms max maxmessagespertask max messages task thread message default configuratiuon camel listener wrong defaults receiving
+1803	counters headers redeliver handler error exchange redeliver handling exception exception redelivererrorhandler redeliver error handler remove red eliver failure processor caused
+1844	file camel dir application context outbox size files apos copy files simply route smaller original
+1864	endpoints exception endpoint interceptsendtoendpoint intercept send endpoint onexception exception intercept reason send initialized trigger int ercept points defined
+1873	context camel template apos context camel spring camelcontext camel context post test consumertemplate consumer template consumer template service proxy set spring application
+1878	message onmessage message javax camel bean method bean issue messagelistener message listener component invokes jms listener specific
+1925	http illegalargumentexception illegal argument exception http component argument discussion release illegal exception http throwing bridging jetty
+1927	file time progress repository file consumer max premove pre move fileconsumer file consumer poll pre move setting filename left
+2002	prefix amp jetty camel component uri http matchonuriprefix match uri prefix access match option set endpoint
+2064	interceptsendtoendpoint intercept send endpoint endpoint html interceptions issue http nabble send intercept redundant int erceptions ercept
+2074	converter camel typeconverter type converter setter type converter methods genericfile generic file file service camel bean skip getter ter set method candidates ates
+2089	reply work replyto reply consumers jms endpoint camel option applicable endpoint fixed configured
+2095	message body camel string jms type bean textmessage text message route support issue routing text proxy queue
+2106	payload camel body type conversion org bean type message parameter camel throw notypeconversionavailableexception type conversion exception exception converted
+2109	exception set file void onexception exception class fileout file mapping filemapping file mapping processor route
+2133	exception mandatory method convert mandatoryconvert mandatory convert apos doesn throw converter null
+2144	amp apos list message body endpoint node request kind type null cxf http disable accepting regular requests
+2145	http camel failure throwexceptiononfailure throw exception failure exception parameter google uri components endpoint creating special options
+2146	converter respect execution error executionexception execution exception convert failed exception type future
+2209	message body body jmsmessage jms message object dsl issue backing default javax setbody set body set remove specialized special ized long apply
+2221	list message recipient list endpoints method result ways pattern bean inconsistent recipient
+2222	cglib exception methods method ambiguous bean camel http ambiguousmethodcallexception ambiguous method call exception cglib classes enhanced skip
+2227	varargs method methods list work java component expected bodies expectedbodiesreceived expected bodies received mock received
+2249	message correlation client message patch solution correlation problem explanations usemessageidascorrelationid message idas correlation wrong handling usemessageidascorrelationid message idas correlation idas
+2269	exception catch exception catch docatch catch report default argument route failure problem
+2275	camel exception mail case type invalidpayloadexception invalid payload exception error payload thread issue jpa jpaendpoint jpae ndpoint eat invalid
+2278	ftp exception onexception exception redelivery strategy list delivery maximumredeliveries maximum redeliveries recipientlist recipient list endpoint recipient red elivery issue
+2303	download apache aggregator exchange org groupedexchange grouped exchange camel nabble latest html grouped working correctly
+2318	camel bindy key keyvalue key dataformat data dataformat data format void dsl type bin data format apos work
+2360	bean retryuntil retry test counter exception header logger class list method recipientlist recipient list recipient retry working
+2484	memory socketsessionimpl socket session impl mina nabble impl session camel session mina close released
+2510	string exception uri test someservice void target source http exchange mixing jetty route screws scr ews uri httpclient http client http client
+2529	number message message size body header break activemq consumer selector consumertemplate consumer template consumer template don apos support jms uri
+2551	stream buffer target buffer input log inputstream input stream count byte size file component correctly handle pipedinputstream piped input stream piped message body
+2575	client rest router amp routing service restrouter rest router address camel cxf cxfrs behave
+2621	file regard consumer share network return windows polling isfile file file net work files
+2633	endpoint component httpbindingref http binding endpoints binding options change camel http endpoint configured
+2637	handler lookup user error error errorhandler error handler fail errorhandlerref error handler registry mandatory
+2649	instance factory producertemplate producer template factorybeans factory beans consumer consumertemplate consumer template singleton beans producer template single ton avoid
+2665	processor lifecycle wrapprocessor wrap processor startup policy users processor wrap handle started policy wrapped automatic
+2692	getbody body body xml dom parallelprocessing parallel processing process article processing message null multithreading bug sporadically returns
+2708	orders directory amp exchange getheader header file characters file processor exchange file lost starts relative endpoint
+2716	forkmode fork mode cleanup context time test camelcontext camel context hope pertest mode effects incomplete jmx mbeans
+2722	thread html managed mailing definition nabble routes routedefinition route definition route managedroute managed route unregister removed
+2725	source problem xstl javax component string payload converter xml converter type typeconverterregistry type converter registry type registry
+2732	smpp status header status final smscdeliveryreceipt smsc delivery receipt camel org smsc getfinalstatus final status smpp component set final delivery notifications ifications
+2740	memory jboss pattern queue jconsole server thread inout camel connection static reply leak
+2741	file marshal gzip zip input gzip collector deletion garbage route zip mars hal unmarshal leaves open
+2742	message jmsmessage jms message setbooleanproperty set boolean property jmsbinding key web property exception ibm camel jms sending webspheremq web sphere sphere specific set boolean methods jms properties
+2755	route context size routes endpoint endpoints args points communicate don apos match
+2758	completion useoriginalbody original body body work filters step route exchange option oncompletion completion pipes ensure
+2772	data request component jetty attachment multipartform multi form multi camel stream form apos deal multiform mul tiform rightly
+2773	exception numberformatexception number format exception csv http html bindy format number nabble marshaling null key generated
+2798	files file batch amp correlation null correlationexpression correlation expression aggregator problem expression aggregation raises nullpointerexception null pointer exception pointer exception aggregated
+2805	implementation sql sql statement sign sqlproducer sql producer producer sql impossible turns camel
+2806	camel set class apos classcastexception class cast exception directory exception temp property jetty config multi form support rightly
+2817	file ftp file conax amp thread emm renames processed download failed
+2829	sftpclient camel attempt ftp channel work connection operations commons ftpsendpoint ftps endpoint unconnected sockets implemented impl emented exception ftps
+2854	endpoint amp message application defaultmessagelistenercontainer default message listener container apos request routes default container consumers direct xyz
+2867	body body convertbodyto convert body converter type exception null continue bodies convert handle
+2881	markrollbackonly mark rollback runtime dmlc consumer exceptions route rollback spring mark rollback jms handle
+2893	defintion logic return uri todefinition definition definition uri checking fromdefintion defintion simple geturiorref uri tend null
+2909	jms jmsreply provider support property feature exception jmsreplyto jmsreply supported oracle eply refore throws
+2912	timeout parameters int method ftpclient ftp client resolve timeout exception connectiontimeout connection timeout resolveendpointfailedexception resolve endpoint failed exception sftp throws endpoint failed ftp client connection option
+2978	netty apache test camel socket unit dependency url localhost apos java net socketexception socket exception exception open files tcp
+2979	login connection ftp amp camel ftp component maximumreconnectattempts maximum reconnect attempts reconnect data ftpcomponent ftp component ftp fails disconnect true opened
+3008	jmx start startup recall connector camelcontext camel context context startup user camel starting autostartup auto startup auto false
+3011	camel track quartz lookup default camelcontext camel context endpoints statefull camel context multiple scheduler individual contexts
+3069	completed processors routes exchanges exchangescompleted exchanges completed statistics stats appears jmx incomplete process ors
+3108	camel consumertemplate consumer template uow consumer nabble template issue return body complete hand
+3136	class handler amp instance handler bean webservice web service service spring cxfbean creates referenced
+3141	context camel startup property camel auto startup autostartup auto startup trace route configurable config urable
+3170	userinfo user info info port scott ftp userinfo password didn getport port uri camel setting username user work
+3188	test endpoint messages body route camel expectedbody expected body test builder routebuilder route builder concurrent consumers seda endpoint content routing mismatch
+3193	work connection client route request exchange jms problem destination start reply jms temporary queues lost queue created producer produce
+3220	configuration thread size nabble threadpoolexecutor thread pool executor executor pool camel pool threads core
+3237	account account log connection user manager point connection xmpp xmpp xmppendpoint xmpp point setting login false creating action
+3276	bar aggregate log problem sum sumaggregatebean sum aggregate bean result bean increasetwo increase increase multicast pipeline wrong aggregated exchange
+3286	spring support reflection executor task taskexecutor task executor settaskexecutor set task executor signature time overhead camel jms setting
+3314	string dsl eip route work camel body type property resolve
+3328	camel exchange exception test apache void pong url exchange import npe request reply inout attached
+3333	useoriginalaggregationstrategy original aggregation strategy issue splitter eip camel strategy nabble multicast aggregation nested split ter original
+3373	rollback transaction markrollbackonlylast mark rollback mark exception outer remove transactions caused affect avoid
+3403	nabble http endpoint intercept html dsl interceptsendtoendpoint intercept send endpoint component send check
+3430	endpoint endpoints issues intercept http html interceptsendtoendpoint intercept send endpoint nabble parameters send interception int erception points multiple
+3438	class formatter loader jaxbdataformatter jaxbdata formatter classloader class loader application applicationcontext application context spring instance jaxbdata jaxbd ata context apos explicitly
+3446	route media sides pointer nullpointerexception null pointer exception null printer camel target exception npe setting size omitting attribute
+3559	aggregator consumer batch completion nabble aggregated completionfrombatchconsumer completion batch consumer exchange option camel dont don aggregate incoming exchange
+4515	soap header header spring component camel headers message namespace populate
+4901	component jira camel producer exchange trunk track seda blockingqueue blocking queue doesn apos remove produce blocking queue consumer timeout
+5025	handler error thread error splitter handling model body camel deadletterchannel dead letter channel errorhandler error handler doesn apos work working streaming
+5376	option method completion work options folder disconnect deletion actions workaround mail component expected email partially ially broken
+6660	box jmx custom resource managed copy managedresource managed resource component camel assembler extending default components attributes unavailable
+6912	context exception test seda handler error message camel route builder producer produce doesn apos errohandlers err ohandlers work properly
+7112	receivebody receive body body messages exchanges project test issue template consumer amp single call consumertemplate consumer template template receive consumes seda queue
+7120	bindyfixedlengthfactory bindy fixed length factory header row bindy factory marshal copy length footer call nullpointerexception null pointer exception null pointer exception fixed unbind
+7125	endpoint xml camel child test tokenize camel message test tokenizexml tokenize xml fails attributes
+7144	processor osgi service route shutdown blueprint service dsl osgiservice osgi service tostring string osg
+7167	list strategy body split exchange class exchange string abstract list abstractlistaggregationstrategy abstract list aggregation strategy aggregation replaced agregated list
+7200	work documentation component karaf osgi getcomponentdocumentation component documentation api returns null osg
+7210	load location component work documentation dash components component getcomponentdocumentation component documentation
+7219	resource language org load apache start language route txt classpath endpoint constant
+7230	settings persistence respect java ttl camel sjms sjmstestfrommailinglist sjms test mailing list mailing qos sending queues
+7239	schemafactory schema factory schema thread validator issue factory validatorprocessor validator processor processor work safe address
+7241	buffer string exchange str camel buffer bug byte bytebuffer byte buffer getin conversion capacity limit
+7253	exception error illegal input illegalargumentexception illegal argument exception pgpdataformat pgpdata format argument format null nullpointerexception null pointer exception pgpd ata pointer decryptor dec ryptor body invalid format pgpdata
+7254	peek imap mail apos log set component getname class amp mailcomponent mail component mail doesn work programming program min error
+7275	route catch catch docatch catch dotry work class trigger start foo recipient list error handler
+7298	expression java resulttype result type lang type camel code log simple impl language binary equality fails
+7308	timer fire routes cache window mix time startuplistener startup listener listener requests timer component startup initialized
+7323	amp routes route json json endpoint error statistic eof create createroutestatisticendpointjson create route statistic endpoint json returns invalid
+7337	streams pgpdata pgpdataformat pgpdata format format stream doesn close correctly apos unmarshal pgpd ata
+7341	interceptor class exampleininterceptor interceptor message rsserver server configuration fault camel handlemessage handle message cxfrs ininterceptor interceptor defined spring
+7359	string body function body error developer touppercase upper case lang simple impl language additional text inbuilt call
+7391	nettyproduce netty produce component netty timer camel producer netty produce shared creating time produce
+7428	header body header headers boolean stackoverflow camel setting myheader header setheader set header simple impl language operators evaluated eval uated
+7443	printer uri unc test printexception print exception bbk gbv exception windows remote print changed
+7457	xml server application json jetty cxfrs localhost camel cxf simpleconsumer simple consumer impl consumer honur accept header simple
+7478	header length body property mysimpleheader simple header array simple myclass class return impl language length properties correctly evaluated eval uated
+7506	headerfilterstrategy header filter strategy strategy amp query parameters camel http jetty bar header nettyhttp netty http netty http remove filter option resolving
+7560	camel advice work nabble advicewith advice advice problem return isuseadvice advice html test transacted
+7562	clauses camel advice advicewith advice html cbr times advice camel nabble test add
+7565	test pollenrich poll enrich tests file enrich guess cases threads executions poll sftp pollenrich poll enrich poll disconnect true delete
+7568	route rollback log route completion bean exception process work level oncomplete complete complete transactioned
+7570	event amp exchange camel management doesn exchangesentevent exchange event exchangesendingevent exchange sending event dsl apos enrich send sending
+7578	bindy unity data csv pattern locale producer mandant createproducertemplate create producer template locale camel bin attribute set
+7593	netty frame http consumer content http size configure frame camel fixed chunked
+7595	update count headers camel camel cameljdbcupdatecount camel jdbc update count jdbc nabble route jdbc overrides time
+7622	context route route lookup params camel camel exception member advice outputs puts matching upgrading
+7644	context camel java test test import camel container builder defaultcamelcontext default camel context scala dsl creates numerous num erous default instances
+7659	problem feed entries entries atom entry splitentries split entries uri camel throttleentries throttle entries filter returns consumed
+7707	completion route oncompletion completion nabble fault exchange camel exception behavior oncompletion completion original handled
+7714	option honor route advice auto camel autostartup auto startup startup advicing default advicewith advice
+7798	log endpoint formatter properties exchange exchangeformatter exchange formatter component initialisations scope endpoints formatter configured lead incoherent oherent
+7826	sets component uri provider root entityproviderwriteproperties entity provider write properties endpoint service property entity olingo incorrect element create entry
+7839	namespaces xpath set expressions setproperty set property xml property camel expression definitions xpath namespace aware choice
+7874	option html upgrade work camel prettyprint pretty print dataformat data format json data json format pretty print expected
+7882	syslog lack util header java jms camelsyslogtimestamp camel syslog timestamp camel hours servers apos camel syslog timestamp suddenly gregoriancalendar gregorian calendar gregorian calendar
+7888	mina decoder iobuffer messages leaks oome memory time constant
+7899	rest jetty bye property route service camel mode json path camel support define multiple http method
+7910	client handler handler channelhandler channel handler server set event amp netty channel netty pass close open
+7953	poll interval pollinterval poll interval blockingqueue blocking queue util timeout time javase unit java hazelcast seda documentation misleading
+7966	mail issue bcc production recipients smtp smtpaddressfailedexception smtpaddress failed exception mailing user doesn apos set blank empty string
+7977	compression space user sftp setconfig set config session zlib option set openssh rightly
+7986	route routeid route start route stackoverflow auto camel camelcontext endpoint count disappears set
+8008	header smpp message alphabet camel submitmulti submit multi submitsm submit camelsmppalphabet camel smpp alphabet datasm data submit multi data checking
+8036	rest jetty security component jettycomponent jetty component setup consumer issue handler endpoint component
+8065	plugin windows box request component camel resourcemanagers apis separator patch camel won apos build api maven
+8082	object thread close exchange inonly response camel mode cxf cxfrs cxf producer produce connection mep
+8086	dynamicrouter dynamic router oom router someheadername body route bean exit memoryleak memory leak convertbodyto convert body convert dynamic
+8094	executorutil executor util util util executor feature netty jboss karaf org camel internal breaks
+8100	collection description route getdbstats stats stats optional
+8125	foo route propertyinject property inject endpoint bar nullpointerexception null pointer exception exception property bar springroutebuilder spring route builder inject null pointer
+8137	method path file java property file getfilename file apos simple impl language lang uage resolve overloaded loaded calls
+8147	context endpoint resource default managedresource managed resource managed endpoints camel camelcontext camel context endpoint removes jmx properties
+8190	topic keyedmessage keyed message object message message sense kafka null class init producer produce partition ition key optional required kafka client api
+8226	datasourceref data source feature validation endpoints createendpoint create endpoint source endpoint sql causing attribute deprecated data working correctly
+8313	namespace soap map soapenv body node element body addnamespace add namespace add namespace override apos
+8327	route test test exception builder override mock type start advice contexttestsupport context test support context support support weavebytype weave type weave cases
+8329	headers resultset sql camel attribute sql html sql retrieve camel propagate operations result set
+8336	qualifier xml signature xad xades xad format dataobjectformatidentifierqualifier data object format identifier qualifier data object identifier wrong attribute element commitmenttypeid commitment type commitment type
+8355	endpoint flag camel mongodb mongo collection dynamicity mongo header camelmongodbcollection camel mongo collection collection dynamicity mongodb dropindex drop drop command
+8358	classes package api parser core library uri uriinfo impl osgi avoid olingo apos designated design ated internal exposed osg headers
+8382	uri route xml dump reason behaviour dumproutesasxml dump routes xml myroute route route routes resolve endpoint property values uri
+8393	route exception exchange redelivery test router exchange class test dynamic redelivery doesn apos work correctly routers ers
+8401	file camel endpoints file description work camel camelfilename camel file amp overrule cameloverrulefilename camel overrule file correctly remote points
+8409	camel code key apos kafka keyedmessage keyed message kafkaconstants kafka constants key amp consumers producer produce message key partition ition
+8411	camel headers http names transfers host http camel html netty netty checking header invalid
+8417	raw getvalue start support parameter resolverawparametervalues resolve raw parameter values token values times uri removed query occurs multiple
+8430	suffix readsuffix read suffix constants hdfsconstants hdfs constants work default suffix option hdfs option camel read
+8437	doesn parameter apos body body route repeat header amp simple impl bean call parenthesis parent hesis values
+8453	amp saxparseexception saxparse exception apos complex number spring exception element class columnnumber column number camel avro throws saxp arse blueprint saxparse
+8519	listener security bayeuxclient bayeux client client bayeux exchange proceeds header camel copy salesforce component replace
+8520	resolver amp method class apos exception string resolver java dnsutil camel xmpp doesn dns srv records
+8547	camel context tccl respect application cross applicationcontextclassloader application context class loader loader class extras usage xmlbeans xml beans depends
+8643	client clients post jira https data camel issue setup http http streaming str eaming fails parse
+8649	raw data url file string txt camel filename file inbox case handle
+8665	eip period message requests call throttler java dsl nabble maxrequestsperperiod max requests period method exp fails spring
+8673	routes exception concurrentmodificationexception concurrent modification exception removeroutecollection remove route collection collection route parameter getroutes routes addroutecollection add route collection ticket concurrent modification creating dynamic
+8713	thread aggregate processing parallel boss option aggregate worker pool work parallelaggregate parallel aggregate parallel mode
+8715	result callback resultset result set object statement spring resources pool javadocs objects camel sql close set
+8780	import type lang export apache camel camel header typeconversionexception type conversion exception exec component trouble load arguments list message header
+8783	scala route camel route apos output error amp dsl outputs transacted working correctly
+8871	body method error string exception class errorbean error bean method bean exception null transform
+8885	entity lock consume entity function getendpoint endpoint consumedelete consume delete lockentity lock entity manager endpoint consumelockentity consume lock entity lock consumedelete consume delete delete
+8916	isn ftp amp ftps consumers file genericfileendpoint generic file endpoint fileconsumer generic endpoints support autocreate auto create auto create true sftp
+8933	debug inbox imap success mail consumer plain imaps ssl mail consumer polls continuously default polling interval int erval
+8964	route camel control api context routeservice route service camelcontext camel context started suspended camel routes update
+9013	stream camel stream input return http request tomcat bytes body camel longer supporting chunked transfer encoding
+9035	session connection smsc session code closesession close session smsc apache unbindandclose unbind close camel unbind smpp bug
+9059	jetty endpoint component jetty http route ping constant transform exposes
+9065	exchange event endpoint endpoint exchange amp exchangecreatedevent exchange created event uri string default created aware
+9087	endpoint exchange body amp mysecretpassword timer foo debug processor localhost camel pgevent payload null
+9106	messages method option test amp peek doesn process exception mapping uri mapmailmessage map mail message map mail message apos obey true
+9124	pattern redelivery delay placeholders redeliverypattern redelivery pattern support nabble html property camel place hold ers
+9139	facebook header exchange reading parameter uri camel endpoint facebook camelfacebook camel facebook reading configurable config urable camel
+9202	file camel work time uri parser parsing fixes consumer pzmap flatpack body reader closed
+9215	exchange def amp routedef route def body uri someuri uri camel tap definition missing handled true wiretap wire tap newexchangebody exchange body
+9246	content attachment org cxf png uuid xop baa camel proxy mtom rpc literal style wsdl
+9277	ftp exception startup autocreate auto create consumer failed context throwexceptiononconnectfailed throw exception connect failed shutdown amp throw connect true
+9319	template ssh threads discussion producertemplate producer template camel thread producer calls producer sshclient ssh client ssh client resource leak
+9442	http service netty query endpoint http header endpoint query request query string decoded bridging
+9468	spring converter bindy boot objecttolist object list camel list objects manually fails marshal mars hal
+9503	completion rollback key wrong oncompletion completion restores rest ores
+9506	tostring string string body stream object marshal stomp json serialization topic component handle objects
+9509	default default debug org camel route broadcast cometd queue context comet working
+9558	exception http response jetty camel onexception exception test camel httpclient code defaulterrorhandler default error handler default error handler logs handled true
+9569	memory eip nabble jdbc message consumer camel repository html idempotent leak add remove routes
+9606	context sjms jms process camel messages component void exchange amp consumer producer transaciton
+9658	http camel http path host prefix endpoint bridge bridgeendpoint bridge endpoint endpoint path decoded bridging endpoints points
+9660	http uri exchange instance java character test endpoints consumers producers produce crash header unencoded unsafe characters
+9700	questions file consumers seda camel stackoverflow lock discardifnoconsumers discard consumers completions http discard true call
+9713	producer jetty client endpoint httpclient http client camel user jetty option thread set custom http produce
+9779	illegal port illegalargumentexception illegal argument exception netty argument issue camel http nabble number
+9793	property rest url customerid customer customer holder portion camel service api propertyplaceholder property place holder place loading thinks parameter
+9807	converter cxf type endpoint error payload request http access consumer blocking
+9812	org consumer amp threads info camel ucms shutdown pool camel leaves kafka consumers running
+9828	swagger query parent header type dsl rest json param string swagger inject empty headers
+9841	mime data documents message checks multipart nullpointerexception null pointer exception camel exception data npe format file defined attachment
+9863	loop ahc component equal interval amp camelloopindex camel loop isequalto equal baidu loopdowhile loop
+9896	case test exceptions pastebin clause letter route classes exception failure deadletter failure processor invoked invoke error handling strategy defines continue routing
+9903	domain camel xml unit account test operation route apache dump dumproutestatsasxml dump route stats xml stats work jmx customized custom ized
+9911	auto rest bindingmode binding mode mode default restbindingmode rest binding mode definition binding binding xmlattribute xml attribute rest honored
+9920	exception mllp connection sockettimeoutexception socket timeout exception socket error timeout receiver accept logs handle
+9970	camel file lock length pastebin stores polls parameters camelfilelength camel file length file length header wrong long write
+10064	http request server parameter throwexceptiononfailure throw exception failure myapp amp bridgeendpoint bridge endpoint bridge proxy extra camel jetty component
+10111	issue default amp platform ascii parser xmlstream stream conversion utf creating inputstream input stream input stream xmlstreamreader xmlstream reader xml reader fails encoding
+10128	data camel consumer nabble component consumer dataqueue data queue problem call configure
+10143	time datetime time salesforce field java string soap xsd activity lang camel component lastactivitydate activity typed consistent type
+10144	api component apos fields amp properties dtos wells salesforce types breaking war compatibility adding older versions
+10161	type stream streamlist stream list sql query outputtype output type camel headers propagate output list
+10171	connection builder camel camel soap document context cxf message runtime cxf expired continuations memory leak
+10174	unsupported string exception test operation cbr case weavebytostring weave string throws unsupportedoperationexception unsupported operation exception weave
+10185	issue apache commitcomment cfaf camel fastexistscheck fast exists check check https ftp fast exists
+10195	json camel failure test output waitfortasktocomplete wait task complete content binding fabryprog fabry prog extract rest dsl automatic wait task complete
+10282	osgi avro map platform classcastexception class cast exception exception string situation cache data avro issue osg static
+10293	camel file plugin fileapplicationcontexturi file application context uri context blueprint uri useblueprint blueprint maven detected ignores blueprint application tags
+10429	http api producer uri path camel cxfrs client setheader set header client cxfrs requires exchange camel tranport
+10442	route camel test debug sendprocessor send processor pipelines processor start leaks apache multicast pipeline stages
+103	ClassCastException when using GenericApplicationContext ClassCastException ServiceSupport Support start Service
+171	org apache camel component file remote FromFileToFtpTest failure RuntimeCamelException AsyncProcessorTypeConverter ProcessorToAsynProcessorBridge process FtpProducer DeadLetterChannel UnitOfWorkProcessor SendProcessor Processor pollFileOrDirectory FileConsumer pollFile
+363	camel cxf component can apos t deal with the exception message in MESSAGE dataFormat NullPointerException RawMessageContentRedirectInterceptor handleMessage PhaseInterceptorChain OutgoingChainInterceptor ChainInitiationObserver doIntercept Message ServletController Interceptor invoke ServletDestination
+550	NPE from came run with below route codes NullPointerException init GraphGeneratorSupport RouteDotGenerator NodeData generateFile printNode getNodeData printRoutes Node printRoute drawRoutes
+583	JAXB   Unit test failing   DumpToXmlTest RuntimeCamelException notationException IllegalAnnotationsException IllegalAnnotationException AsyncProcessorTypeConverter ProcessorToAsyncProcessorBridge convertTo FallbackTypeConverter DeadLetterChannel DefaultTypeConverter process ConvertBodyProcessor MessageSupport Converter Type
+584	BeanWithPropertiesAndHeadersAndBodyInjectionTest causes java lang StackOverflowError init BeanWithPropertiesAndHeadersAndBodyInjectionTest MyBean HashMap EntryIterator EntrySet HashIterator Map StringBuilder Hash newEntryIterator
+620	ResequencerType createProcessor could throw NPE as stream config does not get initialized NullPointerException createStreamResequencer createProcessor createOutputsProcessor ResequencerType addRoutes ProcessorType startRouteDefinitions Processor RouteType create InterceptorRef
+636	ResolverUtil can apos t resolve converter annotations in WebSphere InvalidPayloadException ExchangeHelper getMandatoryInBody AsyncProcessorTypeConverter ProcessorToAsyncProcessorBridge process FileProducer DeadLetterChannel SendProcessor InstrumentationProcessor Helper Exchange
+675	intercept with stop and predicate causes NPE NullPointerException process ChoiceProcessor InstrumentationProcessor DeadLetterChannel Processor Interceptor Choice Instrumentation Letter Dead Channel
+702	net sf saxon trans StaticError  XQuery syntax error in   generated when several threads are created for a route RuntimeExpressionException XQueryBuilder process AsyncProcessorTypeConverter ProcessorToAsyncProcessorBridge ProcessorEndpoint Processor SendProcessor onExchange evaluate access 100
+795	MinaConsumerTest failure assertEquals testSendTextlineSyncText Assert MinaConsumerTest Equals test Text Send Textline Sync Mina
+927	Double input without output produce exception NullPointerException process DelegateProcessor AsyncProcessorHelper InstrumentationProcessor TraceInterceptor DeadLetterChannel Processor processNext proceed Instrumentation Delegate
+942	Can apos t set the jms message header which has the Data object in JMS Component MessageFormatException convertJmsAccessException convertJmsAccessException AsyncProcessorTypeConverter ProcessorToAsyncProcessorBridge Jms JmsUtils JmsTemplate JmsAccessor process JmsProducer DeadLetterChannel SendProcessor
+974	DataSetSedaTest intermittent test failure MockEndpoint assertIsSatisfied assertMockEndpointsSatisfied ContextTestSupport DataSetSedaTest fail Mock Satisfied Endpoint Test Endpoints
+1080	The DataSetSedaTest will fail in a slower box MockEndpoint assertIsSatisfied assertMockEndpointsSatisfied ContextTestSupport DataSetSedaTest fail Mock Satisfied Endpoint Test Endpoints
+1135	TestEndpointTest Unit test failed which may be caused by recent change of File Component MockEndpoint testMocksAreValid assertIsSatisfied assertEquals TestEndpointTest fail Endpoint Mock Equals Satisfied test
+1263	MailConsumer throws exception on line MessagingException CommandFailedException close ScheduledThreadPoolExecutor ScheduledFutureTask IMAPFolder Executors RunnableAdapter ScheduledPollConsumer access 101 MailConsumer FutureTask Sync innerRunAndReset runAndReset run runPeriodic Task call Reset Consumer Scheduled poll Adapter Runnable Mail Poll Periodic Executor Pool Thread
+1271	Can only interact with servicemix http if logging is at DEBUG RuntimeCamelException IOException TransformerException ObjectHelper invokeMethod Helper Object invoke Method
+1325	Two more NullPointerExceptions when context classloader is null NullPointerException AnnotationTypeConverterLoader findPackages findPackageNames find ResolverUtil getResources Packages Loader Annotation Type Converter
+1441	camel file   java lang StringIndexOutOfBoundsException  String index out of range StringIndexOutOfBoundsException replaceAll String appendReplacement normalizePathToProtocol setEndpointPath charAt Matcher FileConsumer GenericFile GenericFileConsumer ScheduledPollConsumer
+1565	Make camel validation thread safe toSAXException SAXException toSAXException AsyncProcessorTypeConverter ProcessorToAsyncProcessorBridge Util ValidatingProcessor SAXException ProcessorEndpoint newSchema process XMLSchemaFactory createSchema
+1630	GenericFileProducer does not work with absolute URLs on Linux GenericFileOperationFailedException FileNotFoundException AsyncProcessorTypeConverter ProcessorToAsyncProcessorBridge storeFile FileOperations GenericFileProducer process File writeFile DeadLetterChannel SendProcessor InstrumentationProcessor
+1696	Refreshing a bundle with a camel cxf route gives exception  apos BeanFactory not initialized or already closed BeanCreationException IllegalStateException AccessController executeWithCustomTCCL initWildcardDefinitionMap mpleteRefreshTask PrivilegedUtils doPrivileged AbstractBeanFactory getBean run Privileged addApplicationContext
+1814	Missing debug xml in     M BeanDefinitionStoreException FileNotFoundException IOException loadBeanDefinitions XmlBeanDefinitionReader AbstractBeanDefinitionReader Bean AbstractXmlApplicationContext refreshBeanFactory AbstractRefreshableApplicationContext obtainFreshBeanFactory Context Application AbstractApplicationContext
+2025	serviceClass needs to be specified for PAYLOAD or MESSAGE mode even though it apos s documented as not being required IllegalArgumentException ObjectHelper notEmpty createServerFactoryBean EventDrivenConsumerRoute init CxfEndpoint addServices CxfConsumer createConsumer onStartingServices Empty
+2027	NullPointerException when defining Camel route using Spring JavaConfig IllegalStateException NullPointerException ApplicationContextRegistry createParameterMappingStrategy init addRoutes BeanInfo ProcessorDefinition DefaultCamelContext BeanProcessor lookup createProcessor BeanDefinition
+2129	Misleading exception when a Camel CXF Service call times out  Null InputStream is not a valid argument SOAPFaultException IllegalArgumentException WstxInputFactory createXMLStreamReader createSR CamelConduit CamelOutputStream PhaseInterceptorChain StaxUtils commitOutputMessage ClientImpl StaxInInterceptor handleMessage
+2153	FTP Component issue with tempPrefix or tempFileName CamelExecutionException NullPointerException wrapCamelExecutionException wrapCamelExecutionException extractResultBody ObjectHelper sendBody DefaultProducerTemplate ExchangeHelper FtpOperations existsFile RemoteFileProducer Helper GenericFileProducer
+2165	ftp uploads can fail  File operation failed  Connection closed without indication  Code CamelExecutionException FTPConnectionClosedException GenericFileOperationFailedException wrapCamelExecutionException wrapCamelExecutionException extractResultBody ObjectHelper DefaultProducerTemplate handleFailedWrite RemoteFileProducer sendBody FtpOperations ExchangeHelper requestBody disconnect
+2214	NPE thrown from RssDateComparator when using a feed that doesn apos t parse properly NullPointerException RssDateComparator RssEntryPollingConsumer compare FeedEntryPollingConsumer mergeSort sortEntries populateList sort Rss ScheduledPollConsumer Arrays
+2231	Exception during mail connection requires folder to be reset IllegalStateException MessagingException NoRouteToHostException protocolConnect ScheduledThreadPoolExecutor ScheduledFutureTask Executors RunnableAdapter MailConsumer ScheduledPollConsumer POP3Store ensureIsConnected protocol Connect
+2292	RejectedExecutionException after restarting camel context FailedToCreateProducerException RejectedExecutionException testAndSetRequestor JmsProducer ProducerCache requestSymbolSectorArray Producer send doInProducer ServerRequestDispatcher DefaultProducerTemplate process processInOut
+2362	FTP assumes that directory name do not have dot IllegalArgumentException RemoteFileEndpoint createConsumer EventDrivenConsumerRoute addServices onStartingServices RouteService Consumer ServiceSupport Route DefaultRoute doStart
+2376	org apache camel issues RetryRouteScopedUntilRecipientListParallelIssueTest failing on build on trunk BuildFailureException MojoFailureException DefaultLifecycleExecutor execute executeGoalAndHandleFailures executeGoalWithLifecycle executeGoals executeTaskSegments executeGoal DefaultMaven doExecute MavenCli Goal
+2377	org apache camel impl DefaultProducerTemplateAsyncTest failing on build on trunk BuildFailureException MojoFailureException DefaultLifecycleExecutor execute executeGoalAndHandleFailures executeGoalWithLifecycle executeGoals executeTaskSegments executeGoal DefaultMaven doExecute MavenCli Goal
+2496	StreamCache Splitter race condition FileNotFoundException RuntimeCamelException FileInputStreamCache StreamCacheConverter StreamSourceCache XPathBuilder resetStreamCache createProcessorExchangePairs reset MessageHelper Stream Cache DeadLetterChannel
+2744	AggregationStrategy returning null causes NPE NullPointerException RuntimeCamelException wrapRuntimeCamelException wrapRuntimeCamelException ObjectHelper DefaultMessageListenerContainer AsyncMessageListenerInvoker AbstractPollingMessageListenerContainer AbstractMessageListenerContainer Listener invokeListener executeOngoingLoop EndpointMessageListener doReceiveAndExecute
+2762	Default Tracer configuration eats Mina ByteBuffer responses MinaConverter toByteArray DelegatingMethodAccessorImpl ObjectHelper StaticMethodTypeConverter Method DefaultTypeConverter convertTo toString invoke invokeMethod
+2776	Cached stream file deletion causing file not found errors FileNotFoundException RuntimeCamelException FileInputStreamCache resetStreamCache process RedeliveryErrorHandler MessageHelper UnitOfWorkProcessor deliverToFailureProcessor Stream reset Cache DefaultErrorHandler
+2942	CamelHttpTransportServlet destroy causes java lang IllegalArgumentException  Cannot find the deployed servlet IllegalArgumentException ServletComponent DefaultShutdownStrategy shutdownNow HttpConsumer HttpEndpoint getCamelServlet ServiceSupport disconnect ServiceHelper ShutdownTask stopService
+2958	java util ConcurrentModificationException in Method org apache camel util CaseInsensitiveMap putAll ConcurrentModificationException HashMap HashIterator KeyIterator nextEntry CaseInsensitiveMap copyFrom ExchangeHelper Map MessageSupport process DelegateProcessor
+2986	IllegalStateException in CamelContinuationServlet under heavy load IllegalStateException AsyncContinuation CamelContinuationServlet UnitOfWorkProcessor done RedeliveryErrorHandler InstrumentationProcessor dispatch DefaultChannel Continuation resume Async
+2994	camel cxf   CxfClientCallback is invoked twice when only one was expected handleException NoSuchElementException AbstractList Itr HTTPConduit WrappedOutputStream RedeliveryErrorHandler AutomaticWorkQueueImpl done CxfClientCallback ClientOutFaultObserver InstrumentationProcessor handleException
+3335	NPE occurs without  Entity annotation NullPointerException JpaConsumer createQueryFactory Jpa getEntityName JpaTemplateTransactionStrategy getQueryFactory doInJpa Transaction Template execute JpaTemplate
+3341	ProxyHelper and JMS component   need to start producer or fails with NPE NullPointerException process JmsProducer AsyncProcessorHelper CamelInvocationHandler simpleArgTest DefaultAsyncProducer CamelProxyTest NativeMethodAccessorImpl invoke DelegatingMethodAccessorImpl sayWordTo
+3343	CxfRsInvoker produces NullpointerException when no ContinuationProvider is set in the InMessage NullpointerException NullPointerException CxfRsInvoker getContinuation performInvocation Continuation Invoker AbstractInvoker Cxf Invocation perform invoke
+3428	DefaultCamelContext getEndpoint String name  Class T  endpointType  throws Nullpointer for unknown endpoint NullPointerException DefaultCamelContext testGetEndPointByTypeUnknown getEndpoint DefaultCamelContextTest Context Camel Endpoint Test Type test Unknown
+3433	Undefined header results in Nullpointer when expression is evaluated NullPointerException ExpressionBuilder ExpressionAdapter evaluate BinaryPredicateSupport PredicateBuilder DelegateAsyncProcessor AsyncProcessorHelper matches process Expression FilterProcessor
+3493	ConcurrentModificationException in DefaultCamelContext removeRouteDefinitions ConcurrentModificationException AbstractList Itr checkForComodification removeRouteDefinitions next Comodification check AbstractCollection DefaultCamelContext removeAll List
+7055	NullPointerException at FileInputStreamCache init FileInputStreamCache java    in connection with DataFormat marshal NullPointerException FileInputStreamCache init CachedOutputStream newStreamCache Stream Cache MarshalProcessor Input File Output Cached
+7139	Problem with MvelExpression class visibility between camel bundles ExpressionEvaluationException MvelExpression ExpressionSupport RedeliveryErrorHandler process CamelInternalProcessor Expression evaluate InstrumentationProcessor ChoiceProcessor SedaConsumer sendToConsumers
+7256	NullPointerException at DefaultCxfRsBinding NullPointerException populateCxfRsResponseFromExchange CxfRsInvoker DefaultCxfRsBinding asyncInvoke Cxf performInvocation returnResponse Response Binding Exchange populate
+7262	IAE with calling String replaceAll via simple expression in Karaf RuntimeBeanExpressionException IllegalArgumentException evaluate ExpressionBuilder KeyedOgnlExpressionAdapter Expression BeanExpression ExpressionDefinition ExpressionAdapter SimpleBuilder Builder ProcessorBuilder Adapter
+7320	PGP Data Format  EOFException  Unexpected end of ZIP input stream EOFException PGPCompressedData BCPGInputStream PartialInputStream readFully init InflaterInputStream read fill PGPCompressed Data SignaturePacket
+7429	Camel Properties Component concatenation issue CamelExecutionException RuntimeCamelException wrapRuntimeCamelException wrapCamelExecutionException IllegalArgumentException wrapCamelExecutionException extractResultBody ObjectHelper testConcatPropertiesComponentDefault PropertiesComponentConcatenatePropertiesTest DefaultProducerTemplate sendBody ExchangeHelper NativeMethodAccessorImpl DelegatingMethodAccessorImpl Helper
+7449	Camel Subscribing to messages published by non camel producers NullPointerException init AMQMessageDelegate getStringProperty String extractHeadersFromJms populateInitialHeaders JmsBinding JmsMessage Jms Headers Property
+7451	FTP consumer sometimes throws NullPointerException NullPointerException FtpChangedExclusiveReadLockStrategy acquireExclusiveReadLock GenericFileProcessStrategySupport processExchange GenericFileRenameProcessStrategy ScheduledPollConsumer GenericFileConsumer RemoteFileConsumer processBatch begin File
+7653	camel sql endpoint oracle failure UncategorizedSQLException SQLException AbstractFallbackSQLException AbstractFallbackSQLExceptionTranslator translate SQLException Translator Fallback
+7666	CamelContext addService may fail with java util ConcurrentModificationException FailedToCreateProducerException ConcurrentModificationException ProducerCache MethodInfo acquireProducer createProcessorExchangePairs Producer doGetProducer sendToRecipientList Processor process CamelInternalProcessor RecipientListProcessor
+7730	URI option  command  is not working in camel infinispan component NullPointerException CacheImpl AsyncProcessorConverterHelper ProcessorToAsyncProcessorBridge assertKeyValueNotNull putInternal InfinispanOperation Operation put process InfinispanProducer Key
+7739	camel mail poller onCompletion Folder is not Open IllegalStateException checkOpen POP3Folder getProtocol MimeMessage loadHeaders getAddressHeader MailUtils dumpMessage Open check getHeader
+7803	DefaultJdbcPrepareStatementStrategy Iterator fails on null value inserts SQLException DefaultJdbcPrepareStatementStrategy doCreateAndExecuteSqlStatementWithHeaders processingSqlBySettingAutoCommit createAndExecuteSqlStatement populateStatement Statement JdbcProducer Sql Jdbc Execute populate
+7836	ConcurrentModificationException when creating dynamic routes ConcurrentModificationException LinkedHashMap LinkedHashIterator KeyIterator amp init nextEntry ArrayList AbstractCollection DefaultCamelContext toArray Hash
+7871	camel barcode  failed to create AZTEC barcode ClassCastException MultiFormatWriter AztecWriter encode BarcodeDataFormat process RedeliveryErrorHandler printImage CamelInternalProcessor TraceInterceptor Writer InstrumentationProcessor
+7971	Setting bean reference in  restConfiguration  fails with IllegalFormatWidthException IllegalFormatWidthException Formatter FormatSpecifier checkText init NettyHttpComponent createConsumer EventDrivenConsumerRoute format addServices RestEndpoint parse
+8077	NullPointerException in getRouteDefinition before context is started NullPointerException DefaultCamelContext getRouteDefinition Context Definition Camel Route
+8088	FTP can wait indefinitely when connection timeout occurs during connect SocketException SocketTimeoutException RuntimeException GenericFileOperationFailedException IOException connectAction SocketClient connect FtpOperations FTP FTPClient Action Client Socket Ftp Operations
+8193	Frequent BlockingOperationExceptions under load IllegalStateException BlockingOperationException checkDeadLock DefaultChannelPromise awaitUninterruptibly syncUninterruptibly DefaultPromise NettyHelper ServerResponseFutureListener operationComplete Promise Uninterruptibly close
+8253	CXFRS Throws IndexOutOfBoundsException for Empty Headers IndexOutOfBoundsException ArrayList rangeCheck populateExchangeFromCxfRsRequest copyProtocolHeader DefaultCxfRsBinding CxfRsInvoker syncInvoke ServiceInvokerInterceptor performInvocation get Check
+8341	Usage of camel rss depends on TCCL RuntimeException ExceptionInInitializerError NullPointerException IOException SyndFeedInput ScheduledThreadPoolExecutor ScheduledFutureTask createFeed Executors RunnableAdapter FeedEntryPollingConsumer RssEntryPollingConsumer ScheduledPollConsumer Feed RssUtils
+8492	BeanInfo introspection ignores overriden methods IllegalStateException BeanProcessor process Processor Bean
+8556	AnnotationTypeConverterLoader treats package as class NullPointerException AnnotationTypeConverterLoader BaseTypeConverterRegistry loadConverterMethods loadTypeConverters load Converter Type Loader Annotation Methods Converters
+8575	Salesforce component doesn apos t properly retries the request when doing re login CamelExecutionException IllegalStateException onException wrapCamelExecutionException wrapCamelExecutionException extractResultBody ObjectHelper DefaultProducerTemplate RestApiIntegrationTest doTestGetGlobalObjects requestBody sendBody ExchangeHelper testRetry NativeMethodAccessorImpl
+8707	camel smpp  smpps doesn apos t work over proxy IOException SmppConnectionFactory createConnection connectAndBind createSession SmppConsumer Connection create Smpp SMPPSession Factory doStart
+8737	camel salesforce   Unable to generate DTOs for Filtered Lookup fields MojoExecutionException JsonMappingException CamelSalesforceMojo DefaultBuildPluginManager MojoExecutor execute Mojo executeMojo JsonMappingException Camel Salesforce Manager Build
+8746	Jasypt with BridgePropertyPlaceholderConfigurer is not handling spring property injection with defaults anymore BeanCreationException NullPointerException getTextLength init Matcher JasyptPropertiesParser BridgePropertyPlaceholderConfigurer reset parseProperty resolvePlaceholder Text Length PropertyPlaceholderConfigurer
+8756	KafkaConsumer doesn apos t stop consuming when suspended  preventing graceful route shutdown RejectedExecutionException RedeliveryErrorHandler process CamelInternalProcessor FilterProcessor AsyncProcessorHelper InstrumentationProcessor Processor Pipeline Error Handler Redelivery
+8765	JpaConsumer   May poll too soon before JPA stuff is initialized NullPointerException JpaConsumer ScheduledThreadPoolExecutor ScheduledFutureTask ScheduledPollConsumer Executors RunnableAdapter TransactionTemplate doInTransaction access 301 Consumer
+8812	Memory leak in HL MLLPNettyDecoder AdvancedLeakAwareByteBuf fireChannelRead AbstractChannelHandlerContext NioEventLoop invokeChannelRead ByteToMessageDecoder Channel AbstractNioByteChannel NioByteUnsafe channelRead processSelectedKey
+8829	ConcurrentModificationException while logging ConcurrentModificationException HashMap HashIterator EntryIterator nextNode StringBuilder Map String toString Hash Iterator next
+8949	Netty   component spins on receiving TCP RST IOException fireException SocketSendBufferPool UnpooledSendBuffer write NioServerSocketPipelineSink FileDispatcherImpl SocketChannelImpl AbstractNioWorker writeFromUserCode handleAcceptedSocket Socket write0
+9159	wireTap log    leads to script engine error IllegalArgumentException init createScriptEngine ScriptBuilder createExpression createProcessor ToDynamicDefinition WireTapDefinition ScriptLanguage Script ProcessorDefinition create
+9195	Memory leak in UndertowProducer CamelExecutionException wrapCamelExecutionException setException wrapCamelExecutionException ObjectHelper process RedeliveryErrorHandler CamelInternalProcessor setException InstrumentationProcessor SendProcessor sendTimerExchange DefaultExchange Processor
+9223	IllegalArgumentException when reverting fields using property placeholders stopOnException IllegalArgumentException setProperty IntrospectionSupport ProcessorDefinitionHelper RestoreAction setProperties addRoutes ProcessorDefinition set run Processor Definition
+9238	NPE while GenericFile changeFileName NullPointerException File init GenericFileRenameProcessStrategy GenericFileExpressionRenamer GenericFileOnCompletion processStrategyCommit changeFileName renameFile UnitOfWorkHelper GenericFile onComplete
+9321	Blueprint example and archetype does not work when executed with camel run RuntimeException InvocationTargetException NativeMethodAccessorImpl DelegatingMethodAccessorImpl invoke CamelBlueprintHelper Method RunMojo getOsgiService run invoke0 Accessor Impl
+9340	FileIdempotentRepository fails to create fileStore when no path is specified NullPointerException loadStore mpotentRepository FileIdempotentRepository Repository load Store mpotent doStart Idempotent File Start
+9527	camel netty    Should not log stacktrace when client has received reply CamelExchangeException fireChannelInactive AbstractChannelHandlerContext Channel SingleThreadEventExecutor ClientChannelHandler channelInactive invokeChannelInactive AbstractChannel AbstractUnsafe ByteToMessageDecoder DefaultChannelPipeline
+9608	camel jpa consumer fails to poll after transaction timeout HibernateException PersistenceException ExtendedEntityManagerCreator ExtendedEntityManagerInvocationHandler AbstractEntityManagerImpl NativeMethodAccessorImpl invoke DelegatingMethodAccessorImpl convert Method Impl remove Entity
+9730	NPE in camel jaxb when using in OSGi running from CamelTestBlueprint NullPointerException TypeConverterLoaderException Activator BundleTypeConverterLoader OsgiTypeConverter DefaultCamelContext forceLazyInitialization createRegistry access 000 doStartCamel getDelegate getStatistics
+9851	Zookeeper RoutePolicy failing to create znode NoNodeException KeeperException IllegalArgumentException create AsyncProcessorConverterHelper ProcessorToAsyncProcessorBridge KeeperException ZookeeperProducer ZooKeeperOperation synchronouslySetData ZooKeeper createNode CreateOperation Keeper
+9874	Camel Jetty consumer endpoint incorrectly handles multipart form data NullPointerException RuntimeCamelException AttachmentHttpBinding populateAttachments init ServletHandler CachedChain readRequest Http DefaultHttpBinding CamelContinuationServlet HttpMessage HttpServlet
+10116	NullPointerException in DefaultAsyncProcessorAwaitManager NullPointerException init DefaultAsyncProcessorAwaitManager AwaitThreadEntry StreamConsumer DelegateAsyncProcessor AsyncProcessorHelper ThreadPoolExecutor Worker Processor Async process
+10120	Creating an InputStream from XMLStreamReader fails without default namespace XMLStreamException XMLStreamWriterImpl writeAttribute XMLStreamReaderInputStream ensureBuffering XMLStream Attribute write Impl Writer Reader Input
+10238	Camel salesforce component never tries to reconnect after a disconnect ClosedChannelException EofException EOFException HttpReceiverOverHTTP earlyEOF HttpChannelOverHTTP HttpConnectionOverHTTP HttpParser Http receive QueuedThreadPool parseNext AbstractConnection HTTP
+10254	Error may still block mail consumer MessagingException RuntimeCamelException populateInitialAttachments ScheduledPollConsumer Executors RunnableAdapter MailMessage MailConsumer ScheduledThreadPoolExecutor ScheduledFutureTask DefaultMessage createExchanges createAttachments
+10386	simple language nullsafe expression fails on empty array IndexOutOfBoundsException RuntimeBeanExpressionException evaluate ExpressionBuilder Expression BeanExpression ExpressionDefinition ExpressionAdapter ContextTestSupport assertExpression LanguageTestSupport TestSupport Support
+10425	java io IOException  Stream closed   When setting result from bean in route RuntimeCamelException IOException createBody HttpMessage CamelInternalProcessor StreamCachingAdvice RedeliveryErrorHandler MessageSupport InternalCallback deliverToFailureProcessor getBody Body Message
+257	Build error from org apache camel component mina MinaUdpTest IllegalStateException PooledByteBufferAllocator PooledByteBuffer AbstractIoFilterChain EntryImpl SimpleProtocolDecoderOutput messageReceived ByteBufferUtil callNextMessageReceived TailFilter release releaseIfPossible
+373	xquery does not work from xml if query contains functions DOMException DynamicError RuntimeExpressionException XQueryBuilder XQuery Builder evaluate
+715	ConcurrentModificationException in ThreadProcessor ConcurrentModificationException HashMap EntryIterator HashIterator nextEntry Hash Map Pipeline next Entry Iterator putAll
+973	TypeConverter Exception is thrown in the latest build of camel NoTypeConversionAvailableException DefaultTypeConverter convertTo XPathBuilder MessageSupport getBody getDocument Type Converter convert evaluateAs ChoiceProcessor
+1261	camel spring   method call language can not be used with split NoSuchLanguageException DefaultLanguageResolver resolveLanguage noSpecificLanguageFound Language DefaultCamelContext createExpression ExpressionType createProcessor SplitterType Specific Resolver
+1505	deploy the CamelContext with velocity endpoint into the Servicemix     will get the NoClassDefFoundError forName0 Class Name0 forName ClassUtils getClass Utils
+1940	pollEnrich does not work with queue and quartz or timer endpoints ClassCastException BindyCsvDataFormat Format marshal Csv Data Bindy
+1965	onException does not work correctly when used in a transacted route and exception is not send to the bean component called showCaughtException OnException showException GenericFileOperationFailedException RollbackExchangeException onException SClientException processException GenericFileRenameProcessStrategy renameFile GenericFileOnCompletion processStrategyRollback File onCompletion rollback Strategy onFailure DefaultUnitOfWork rename
+2150	RSS Component   parameter filtering not working FileNotFoundException HttpURLConnection getInputStream Executors RunnableAdapter createFeed FeedEntryPollingConsumer RssEntryPollingConsumer ScheduledThreadPoolExecutor ScheduledFutureTask ScheduledPollConsumer openStream
+2486	DefaultCamelContext throws NPE in start  for route with no destination NullPointerException startCamelContext CamelTestSupport DefaultCamelContext Camel Context start setUp Support Test set
+2811	CamelContexts seems to not correctly create their own instance of an imported routeContext IllegalStateException RuntimeCamelException wrapRuntimeCamelException wrapRuntimeCamelException ObjectHelper SpringCamelContext onApplicationEvent Camel Helper Object Exception Runtime wrap Context
+3045	Flatpack component   unable to set the delimiter parameter in spring config file FailedToCreateRouteException RuntimeCamelException wrapRuntimeCamelException IOException InvalidPayloadException wrapRuntimeCamelException ObjectHelper CamelContextFactoryBean init SimpleApplicationEventMulticaster AbstractApplicationContext onApplicationEvent ClassPathXmlApplicationContext SpringCamelContext finishRefresh Context
+3186	EndpointInject not working in bean created by blueprint NullPointerException timerPop access 000 Producer mainLoop TimerThread run Pop timer Loop main
+7069	Sending an empty soap body message to a generic provider camel cxf consumer results in NPE NullPointerException CxfPayload NodeListWrapper DomConverter size toInputStream NativeMethodAccessorImpl getLength toString Cxf Payload toByteArray
+7415	lazyLoad with CSV blows up on last line IllegalStateException IOException CsvIterator Splitter SplitterIterable next doProcessSequential MulticastProcessor Csv Iterator Iterable Processor Process
+7544	XML DSL with customId attribute cannot be read by Camel BeanCreationException NotWritablePropertyException AbstractAutowireCapableBeanFactory Bean applyPropertyValues preInstantiateSingletons AbstractBeanFactory DefaultSingletonBeanRegistry DefaultListableBeanFactory Factory finishBeanFactoryInitialization createBean doCreateBean
+8585	The lazy load option doesn apos t unlock the file GenericFileOperationFailedException IOException renameFile GenericFileProcessStrategySupport GenericFileRenameProcessStrategy CamelInternalProcessor UnitOfWorkProcessorAdvice File GenericFileOnCompletion processStrategyRollback FileOperations UnitOfWorkHelper onFailure
+8785	StackOverFlowError using Custom InterceptStrategy CamelExecutionException wrapCamelExecutionException setException wrapCamelExecutionException ObjectHelper ThreadLocal ThreadLocalMap expungeStaleEntry setException ProducerCache doInProducer sendExchange Exception DefaultExchange
+8798	weaveAddLast throwing UnsupportedOperation when route have a ChoiceDefinition UnsupportedOperationException AbstractList add AdviceWithTasks List RouteDefinition task adviceWith Tasks Advice Definition Route
+8902	Camel Facebook   Endpoint URI must contain a parameter NullPointerException init Collections UnmodifiableCollection UnmodifiableList unmodifiableList FacebookEndpoint Unmodifiable List getCandidates Collection unmodifiable
+9094	Can apos t use custom FTPParser on OSGI ParserInitializationException createFileEntryParser DefaultFTPFileEntryParserFactory initiateListParsing listFiles FtpConsumer FtpOperations GenericFileConsumer Entry Parser doPollDirectory ScheduledPollConsumer
+10192	Specifying jobFromHeader in URI option throws exception ResolveEndpointFailedException resolveEndpoint CamelContextHelper DefaultCamelContext getMandatoryEndpoint SendDefinition getEndpoint Endpoint DefaultRouteContext Context ProcessorDefinition RouteDefinition
+10200	Mail consumer sets wrong Content Type header for mails with attachment MessagingException updateHeaders MimeMultipart MimeMessage MimeBodyPart DefaultJavaMailSender Mime parse saveChanges MailProducer Multipart Mail
+10399	OutOfMemoryError  Java heap space when sending large file to endpoint transferException init MultiPartFilter Wrapper StringCoding getParameterBytesAsString DefaultHttpBinding populateRequestParameters String getParameterValues readHeaders readRequest
+10427	CXFRS client gets  Response timeout  exception when used with Camel transport checkClientException ProcessingException waitForResponseCode preProcessResult checkClientException WebClient AbstractClient CxfRsProducer Client doChainedInvocation invokeHttpClient doInvoke doResponse

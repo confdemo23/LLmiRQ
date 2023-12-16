@@ -1,0 +1,4 @@
+AbstractItdMetadataProvider does not skip processing if the governor's type metadata is invalid
+AbstractItdMetadataProvider fails to consider if the governor's type metadata was returned as non-null but was invalid. The change should be:
+-               if (governorPhysicalTypeMetadata == null) {
++               if (governorPhysicalTypeMetadata == null || !governorPhysicalTypeMetadata.isValid()) {

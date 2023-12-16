@@ -1,0 +1,4 @@
+[javadoc] RefactoringWizard: Resolve reference to deprecated constant
+Documentation is pointing to the deprecated DIALOG_BASED_UESR_INTERFACE
+constant. Change to:
+  DIALOG_BASED_USER_INTERFACE

@@ -1,0 +1,4 @@
+return null for CxfPayloadConverter fallback converter so that other fallback coverter can get a chance to try
+So we get the change to return xml fragment(jaxb marshaller) from the object if necessary.
+
+registry.lookup(String.class, Object.class) can return the jaxb converter if camel-jaxb is on the classpath

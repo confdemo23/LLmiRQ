@@ -1,0 +1,2 @@
+File distribution fails with same client and localizer with multiple submits
+If same client and localizer is used to submit multiple app instances, localizer does distribution only once. This is a problem if we use staging dir and appmaster clears files at the end.

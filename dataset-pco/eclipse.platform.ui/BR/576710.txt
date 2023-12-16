@@ -1,0 +1,2 @@
+TrimContributionEditor displays unexternalized element names
+TrimContributionEditor displays unexternalized element names "ToolBar", "ToolControl" instead of using EClassLabelProvider like other editors.

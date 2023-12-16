@@ -1,0 +1,66 @@
+13	set request token http authorization consumer server access OAuth timing vulnerability http groups google group oauth browse thread thread lnk gst amp vulnerability
+81	set approval client request user expression scope regex Tonr photo service implementation security check Tonr photo service implementation security check breaks encapsulation Spring Security general security cross cutting concern
+109	token test set resource access response request authorization add token type JSON access token response add token type JSON access token response Version spec earlier mandates token type key don amp apos send
+143	token authentication server custom client access refresh test Client secret stored unconfirmed authorization token Client secret stored unconfirmed authorization token secret token implicit grants doesn amp apos work
+157	set token request authentication client server method url Newer versions spec access token parameter authentication bearer token
+212	token test authentication type server details custom resource Duplicate Authenticate header
+219	token redirect message set client servlet hmac resource Tonr sample doesn apos work Chrome browsers Tonr sample doesn amp apos work Chrome browsers browser sends Accept img tag error tonr SPR easy upgrade Spring properly namespace features
+234	set authentication request token parameters signature filter details oauth provider ignores authentication failed url attribute configuring oauth provider authentication failed url authorization filter URL send response caused configuration parser injecting failurehandler properly filter referenced forum thread
+266	set test request redirect authorization token query access Fragment URL encoded parts error response implicit grant Fragment URL encoded parts error response implicit grant scope values space separated
+308	set approval request redirect token code grant scope Validation authorization request bypassed auto approved
+314	request token authorization test set redirect grant access Authorization Code error response spec attempting access APP ROOT ENDPOINT URL providing parameters http localhost sparklr oauth authorize receives error response stating Request method amp apos amp apos supported header POST spec http tools ietf org html draft ietf oauth resource owner denies access request request fails reasons missing invalid redirection URI authorization server informs client adding parameters query component redirection URI application form urlencoded format Appendix error REQUIRED single ASCII USASCII error code invalid request request missing required parameter includes invalid parameter includes parameter malformed Compare response http localhost sparklr oauth authorize http localhost sparklr oauth authorize response type foo http localhost sparklr oauth authorize response type code http localhost sparklr oauth authorize response type code amp client foo http localhost sparklr oauth authorize response type code amp client tonr illustration
+315	request set code authentication implicit client authorization redirect code grant copy properties pending request authentication
+316	redirect request set code implicit client authorization query code grant overwrites requested scopes token endpoint token endpoint accept scope parameter general client code grant worse request factory overwrites existing input explicit scope client supply scope parameter token endpoint suspect
+337	token refresh authentication server set access custom test Refresh token issued irrespective client configuration Refresh token issued irrespective client configuration refresh token issued code grant client allowed
+400	redirect set token request grant response authorization session scopes appended redirect implicit grant properly encoded SECOAUTH exposed bug relates implicit grants
+408	request token set client authorization http redirect code Tokens token endpoint grant type implicit amp apos harmful tokens user scopes token endpoint granting implicit tokens
+427	redirect token client user resource grant set server Clients registered redirect uri shouldn apos explicitly SECOAUTH supposed didn amp apos reversion
+56	signature side validation signature pem guess hmac urlencoding characters validating properly
+70	exception badcredentialsexception bad credentials exception oauth patch json error report bad authenticate supply clientpasswordauthenticationprovider client password authentication provider client password authentication provider bad credentials correctly
+101	filter resource parameter protected bearer oauth protectedresourcefilter protected resource filter spec token access change hang incoming uth
+102	oauth filter authentication header oauth chain consumerkey http amp void legged fails token signature
+112	oauth client request access chain authentication amp manager parameter http token endpoint authenticated properly
+114	oauth chain guess amp recovery access resttemplate rest template move springsource filter weblogic repeat execution filter
+125	parameter token authorization request type code endpoint map access grant remove authorizationcodeauthenticationtoken authorization code authentication token code authentication
+162	access accesstokenproviderchain access token provider chain chain user access token provider token create anonoymous cce anonymous
+191	code authorization authorizationrequest authorization request request endpoint oauth authorizationendpoint authorization endpoint client type authorization bypassing user approval app roval grant
+214	bean provider param oauth user handler authentication definition handler oauthproviderbeandefinitionparser oauth provider bean definition parser token passed userauthorizationsuccessfulauthenticationhandler user authorization successful authentication handler authorization successful uth parser
+224	access appendaccesstoken append access token oauth endpoint authorization springframework grant implicit provider endpoint response preserve passed authorization request
+236	exception error response authenticationexception authentication exception details invalidtokenexception invalid token exception client ase defailwebresponseexceptiontranslator defail web response exception translator invalidclientexception invalid client exception wrong reported defaultwebresponseexceptiontranslator default web response exception
+256	order request authorizationrequest authorization request parameters authorization security constructor scope authentication hashset hash set scope lost
+269	clarity clients exception login authenticationexception authentication exception confusion user oauth lack authentication uth
+284	flow uri set authorization provider redirect code sto authorizationcodeaccesstokenprovider authorization code access token provider access preserved code pre registered
+288	details change flag request code interfaces constructors implementation client authorizationrequest authorization request authorization lose approved app roved flow
+295	approval request draft authorization authorizationrequest authorization request approval redirect view return snippet oauth authorizationendpoint authorization endpoint endpoint ignores user app roval flag implicit impl icit grant
+300	details oauth api object authentication class attempts serializable serialization authenticationdetails authentication details uth
+306	httprequestfactory http request factory request error message public oauth access accesstokensupport access token support http setter set ter uth cce token support problematic problem atic
+311	abstractjaxbmessageconverter abstract jaxb message converter converter abstract jaxb marshaller message java bounds thread jaxb class safe
+329	check string solution amp strings apos flow serializer term system implicit flow serial izer drops values oauth uth accesstoken access token cce token access
+333	uri oauth amp redirect request authorization client parameter authorizationrequest authorization request mismatch redirect mandatory field obtaining oauth uth access token
+339	exception authorization error sparklr block response request endpoint oauth catch supplying multiple wrong parameters returned stacktrace
+353	access request class default org defaultaccesstokenrequest default access token request amp type accesstokenrequest access token request oauth cce token serializable
+357	content return type endpoint tokenendpoint token endpoint token json application specification spring access hard coded code parameter
+363	exception method header default defaultwebresponseexceptiontranslator default web response exception translator web endpoint tokenendpoint token endpoint class token oauth uth responses pragma cache specification
+365	uri request amp client getparameternames parameter names filter apos codes clientcontextfilter client context filter names oauth uth context store real current
+386	filter exception oauthproviderprocessingfilter oauth provider processing filter exceptiontranslationfilter exception translation filter provider translation exception inability oauth point uth processing delegate error handling authenticationentrypoint authentication entry point authentication entry
+394	parameter scope appendaccesstoken append access token rfc grant endpoint access authorization scopes release response implicit impl icit requested
+403	error mismatch default oauth tools redirect resolver code client redirection defaultredirectresolver default redirect resolver throws wrong exceptions
+404	web security bean resolver field spring springframework pattern oauthconsumercontextfilter oauth consumer context filter uth consumer context filter autowired auto wire portresolver port resolver port oauth
+423	request user problem oauth spring lang security illegalargumentexception illegal argument exception argument authorizationrequest authorization request authorization longer serializable distributable applications
+431	endpoint whitelabelapprovalendpoint whitelabel approval endpoint approval oauth whitelabel endpoints text request content html patch set type header
+74	oauth request amp verifier apos provider client token processing workflow invalid check isn configured
+145	xml oauth application spring load security filter apos security dispatcher endpoints points filters split contexts
+216	oauth access access chain token resource context accesstokenproviderchain access token provider chain oauth client refresh token removed refreshing reshing
+313	apos token access refresh default defaulttokenservice default token service access oauth amp accesstoken access token cce didn enhanced refreshed reshed
+320	server scope insufficientscopeexception insufficient scope exception exception expressions handler access amp wrong http code returned insufficient spel security contstraints
+340	services client identity token random access randomvaluetokenservices random token services token refresh validate
+346	access oauth scope resource vote authentication security service attribute working correctly
+359	handler request method token html enpoint tokenenpoint token enpoint default grant amp missing type container error
+381	password database apos user grant amp authorization tokens passwords token user serialized authentication column type
+383	oauth signature method qtp content org foobar amp request hmac oauthresttemplate oauth rest template uth rest template creates invalid signatures multi values params start letter ter oauth
+415	invalid error rfc grant request spec token tokenendpoint token endpoint messages endpoint returns oauth
+312	legged OAuth should provide access to protected resource without pre existing security context IllegalStateException AccessTokenRequiredException OAuthClientHttpRequestFactory ContentTypeHeaderInterceptor InterceptingClientHttpRequest RequestExecution Request execute AbstractBufferingClientHttpRequest createRequest Http Client executeInternal
+385	Plus sign in query string error description param  in redirect  throws IllegalArgumentException IllegalArgumentException HierarchicalUriComponents verifyUriComponent UriComponentsBuilder calculateCurrentUri Uri OAuth2ClientContextFilter SecurityContextPersistenceFilter FilterChainProxy VirtualFilterChain doFilter Filter
+409	OAuth ClientContextFilter throws IllegalArgumentException for invalid query parameters IllegalArgumentException UriComponents init verifyUriComponent UriComponentsBuilder OAuth2ClientContextFilter calculateCurrentUri Uri FilterChainProxy VirtualFilterChain verify doFilter
+310	URL encoding issue in doing a FQL query IllegalArgumentException OAuth2ClientHttpRequestFactory appendQueryParameter createRequest HttpAccessor RestTemplate Request Http doExecute Query Parameter append
+388	Client Auth fails when scheme is set to AuthenticationScheme header HttpClientErrorException Token OAuth2AccessTokenSupport ClientCredentialsAccessTokenProvider AccessTokenProviderChain OAuth2RestTemplate retrieveToken obtainAccessToken Access obtainNewAccessTokenInternal acquireAccessToken createRequest

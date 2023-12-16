@@ -1,0 +1,2 @@
+StackOverflowError in HiveSortJoinReduceRule when limit=0
+L96 of HiveSortJoinReduceRule, you will see     // Finally, if we do not reduce the input size, we bail out    if (RexLiteral.intValue(sortLimit.fetch)            &gt;= RelMetadataQuery.getRowCount(reducedInput)) {      return false;    }It is using  RelMetadataQuery.getRowCount which is always at least 1. This is the problem that we resolved in CALCITE-987.

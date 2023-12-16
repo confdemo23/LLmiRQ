@@ -1,0 +1,2 @@
+Camel-Git: Always check if Git instance is null in GitProducer before closing
+We need to double check JGit Git class instance each time we want to close it.

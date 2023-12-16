@@ -1,0 +1,5 @@
+Memory leak with EJB Timer service
+There is a memory leak during undeploy (redeploy) when there is a timer used in EJB bean.
+When the timer is created (using @Schedule or programmatically), it is put in queue on Timer thread. According to JDK sources (http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/7u40-b43/java/util/Timer.java#Timer line 552) The queue is processed if new timer is created or the next timer task is due to be run and the reference to last timer is retained on stack (line 521). Therefore after the module undeploy there is still a reference to TimerTask from the module.
+It is not a true memory leak, because the reference will be removed when the task is due, but in environment with many redeploys (development and continuous integration) will soon hit the java.lang.OutOfMemoryError: PermGen space.
+One workaround is to have another Scheduler, which will schedule job for every second. This way, the timer thread will process the queue and throw away the reference to last timerTask.

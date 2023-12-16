@@ -1,0 +1,20 @@
+Useless warning in compact constructor of a record
+With "Errors/Warnings"-"Code style"-"Parameter assignment" on, I get two warnings in the code below:
+- The parameter denom should not be assigned
+- The parameter num should not be assigned
+
+public record Rational(int num, int denom) {
+    public Rational {
+        int gcd = gcd(num, denom);
+        num /= gcd;
+        denom /= gcd;
+    }
+    
+    private static int gcd(int a, int b) {
+        throw new UnsupportedOperationException();
+    }
+}
+
+The code is from "JEP 395 - Records", which states: "The compact form helps developers focus on validating and normalizing parameters (…)"
+
+Normalizing parameters in a compact constructor is only possible by assigning a new value to them, so the warning about parameter assignment should not be issued.

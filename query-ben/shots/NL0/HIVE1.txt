@@ -1,0 +1,411 @@
+218	method method method method method method method method 
+245	UDF 
+251	SELECT Hive 
+268	Table User 
+269	UDF 
+287	Column Table 
+305	Status 
+308	FileSinkOperator UnionOperator 
+323	CliDriver SessionState 
+325	Partition 
+326	Hive Select 
+327	SessionState HiveQueryResultSet HiveStatement HiveSessionImpl 
+338	File 
+342	null
+363	Reducer SelectOperator 
+367	GroupByOperator HiveInputFormat HiveConf RecordReader TableScanOperator ReduceSinkOperator 
+373	Reducer 
+386	null
+403	null
+419	Table HdfsUtils 
+454	Hive 
+458	null
+485	ExecReducer ObjectInspector 
+488	Hive Table Partition 
+497	Table Select SELECT PredicatePushdown Column 
+514	Table Partition 
+517	null
+532	null
+534	CliDriver 
+543	Hive 
+560	MapJoinOperator ColumnPruner SemanticAnalyzer Table SelectOperator 
+578	Optimizer Graph Partition Operator 
+592	Table 
+718	Table Partition Select Date 
+741	JoinOperator HiveInputFormat HiveOutputFormat HiveKey 
+774	SelectOperator 
+803	null
+823	null
+855	UDF 
+856	GenericUDFConcat 
+878	null
+940	Table Partition 
+953	null
+967	Table 
+1039	Hive Query select 
+1046	bug 
+1056	null
+1116	Table Hive 
+1124	Hive Expression 
+1187	Hive Derby MySQL 
+1218	null
+1271	null
+1281	null
+1315	null
+1341	FilterOperator 
+1344	Table 
+1350	CommandProcessor SessionState 
+1378	Hive driver 
+1385	UDF select 
+1418	select 
+1460	SELECT Filter Query 
+1465	null
+1471	Table 
+1494	UDAF 
+1501	null
+1509	bug 
+1550	method 
+1600	Output 
+1608	null
+1614	null
+1649	TRANSFORM 
+1654	SemanticAnalyzer 
+1676	Hive HiveCommand ShowTablesDesc ShowTablePropertiesDesc HiveHistory 
+1720	bug 
+1804	MapJoinOperator TableScanOperator 
+1853	null
+1856	Signal 
+1869	null
+1874	null
+1896	null
+1914	bug 
+1975	Hive method method method method 
+2060	null
+2080	bug 
+2086	null
+2096	null
+2101	MapJoinOperator FilterOperator JoinOperator 
+2178	bug 
+2264	Partition 
+2296	FileSinkOperator 
+2334	TABLE 
+2344	method method method method method method method method filter 
+2398	null
+2402	Function select like 
+2455	null
+2465	null
+2466	null
+2498	GroupByOperator Timestamp 
+2517	GroupByOperator StructObjectInspector UnionObjectInspector 
+2564	Hive Database 
+2584	Database 
+2748	bug 
+2757	null
+2792	null
+2905	table 
+2925	FetchTask SelectOperator LimitOperator FilterOperator 
+2955	null
+3045	table bug handle method bug column bug column method filter bug column filter bug 
+3062	Table QueryResult Database TableName 
+3064	Table Select select table table Partition partition 
+3081	null
+3090	Timestamp Table 
+3094	Warehouse 
+3099	null
+3126	File Task 
+3243	null
+3247	Table Column Hive Metadata select 
+3248	method method Qfile method method method 
+3480	null
+3589	Hive Database Table Command 
+3628	UDF 
+3682	null
+3699	GroupByOperator TableScanOperator SelectOperator SemanticAnalyzer QueryPlan description bug like bug 
+3756	operation Table method Warehouse 
+3853	UDF 
+3942	UDF method method method method method method method method method method table method method rows 
+4046	Table Partition Column Query 
+4173	Hive select Filter table table table Hive method select method 
+4239	Compiler 
+4266	bug package 
+4274	Table User 
+4386	Mapper Reducer Table 
+4507	null
+4868	file 
+4895	bug 
+4911	Hive Server 
+4940	null
+4977	null
+5237	GroupByOperator SemanticAnalyzer HiveDriver HiveQueryResultSet 
+5328	Date Timestamp Select 
+5329	Date Timestamp Select 
+5364	table Partition Query Table Method Method select Method 
+5419	null
+5528	bug 
+5568	PredicatePushdown 
+5580	expression 
+5676	bug 
+5843	null
+5845	table select 
+5901	Query Task 
+5956	Database Table TableName HiveTableName 
+5972	Hiveserver2 driver driver 
+6049	null
+6159	null
+6176	Beeline 
+6209	null
+6218	TABLE STATISTICS 
+6295	MetadataOnlyOptimizer 
+6410	Table Schema 
+6420	Derby 
+6469	HiveMetastore Warehouse 
+6492	null
+6506	null
+6542	bug 
+6561	Beeline Hive Hive 
+6693	Select 
+6833	Hive Query method Output Writer method Row method method 
+6847	null
+6933	TableName 
+6935	Hive Warehouse 
+7129	null
+7164	Hive partition 
+7200	Beeline 
+7212	null
+7316	Hive 
+7379	Beeline 
+7434	Beeline HiveCLI OutputFormat 
+7475	Beeline Hive 
+7566	null
+7681	AlterTableSetPropertiesOperation AlterTableChangeColumnOperation AlterTableAddPartitionOperation AlterTableDropPartitionOperation HiveMetaStoreClient 
+7944	Partition Table Column 
+7982	bug method Hive MySQL database query 
+8231	Table table table select table 
+8298	SemanticAnalyzer HiveSemanticAnalyzerHookContext HiveSemanticAnalyzerHook 
+8461	QueryResult DecimalUtil 
+8541	Decimal 
+8604	null
+8614	bug 
+8653	Filter 
+8690	bug entity method 
+8768	null
+9194	SemanticAnalyzer ASTNode HiveConf HiveException SelectOperator ColumnInfo RowResolver OperatorFactory TableScanOperator 
+9278	TABLE SELECT 
+9357	UDF 
+9459	bug method Hive description 
+9481	null
+9486	null
+9495	TABLE SELECT 
+9546	Beeline Hive 
+9616	Select Table Column 
+9632	bug method Hive description Date Date query partition 
+9669	bug 
+10026	null
+10048	driver 
+10493	null
+10541	Beeline 
+10709	null
+10755	bug 
+10965	HiveSQLException 
+10996	null
+11034	method method method method method 
+11049	bug 
+11424	Rule 
+11502	GroupByOperator HiveConf MapRedTask MapWork HiveAggregate HiveUtils HiveCatalog 
+11566	null
+11607	null
+11752	QB 
+11798	Beeline 
+11863	TestCliDriver 
+11918	Hive optimizer optimizer 
+11931	null
+12017	Query 
+12040	null
+12249	null
+12261	schema hive schema 
+12266	Hive Beeline Command 
+12275	Query method query method method 
+12277	null
+12304	Database FunctionRegistry 
+12330	bug 
+12363	Timestamp driver 
+12367	Database 
+12384	Operator Hive Operation Decimal Method Order Method Select Method Method Method 
+12432	Hive TABLE 
+12435	Hive SELECT table table 
+12437	RecordReader 
+12445	null
+12479	Date 
+12489	Hive TABLE STATISTICS 
+12503	null
+12566	method method method SELECT method TABLE method ROW method 
+12568	driver 
+12574	TABLE select partition order rows 
+12575	null
+12603	Query Partition 
+12609	null
+12610	null
+12635	Hive Timestamp Hive Column Timestamp 
+12656	null
+12687	null
+12728	Schema Table Serde File 
+12742	SELECT 
+12749	ConstantPropagateProcFactory HiveConf 
+12768	BinarySortableSerDe 
+12786	null
+12788	HiveConf UnionProcessor SemanticAnalyzer Hive HiveDriver HiveDatabaseMetaData HiveStatement HiveQueryResultSet HivePreparedStatement HiveConnection 
+12792	OperationType 
+12807	bug 
+12808	Table query query optimizer table function Filter bug description 
+12809	null
+12814	schema 
+12816	Schema 
+12818	bug 
+12819	null
+12820	null
+12821	null
+12822	null
+12823	null
+12824	Function Function 
+12829	null
+12830	bug 
+12831	null
+12832	bug 
+12867	bug 
+12893	Partition 
+12905	MapJoinOperator TezProcessor JoinOperator 
+12911	null
+12931	ShuffleHandler 
+12933	Beeline 
+12935	null
+12941	null
+12963	SemanticAnalyzer ReduceSinkOperator Table HiveConf 
+12993	Beeline 
+12995	null
+12996	TempTable 
+13063	UDF 
+13086	null
+13089	bug 
+13093	Database 
+13108	Operator Partition 
+13125	Database 
+13144	Node 
+13153	method method method 
+13175	Compactor 
+13186	TableName 
+13200	Table Partition SELECT TABLE TABLE ROW 
+13201	table table 
+13210	null
+13223	null
+13226	Query 
+13227	null
+13233	Column Expression 
+13236	null
+13242	WindowingSpec 
+13247	null
+13251	HiveDecimal 
+13258	null
+13269	null
+13286	method method query 
+13287	Filter operator 
+13291	null
+13320	null
+13327	method version bug 
+13342	LlapDecider 
+13343	null
+13372	FunctionRegistry 
+13381	Timestamp Date Server Oracle 
+13400	service 
+13412	Hive 
+13422	CreateTableDesc DecimalTypeInfo ColumnStatsDesc Table FieldSchema HiveDecimal LoadTableDesc 
+13428	bug description like 
+13439	Operation 
+13458	query 
+13485	null
+13525	null
+13540	method hplsql method method decimal 
+13542	null
+13553	null
+13602	null
+13618	Partition Mysql Derby Postgres Oracle Table Column 
+13619	null
+13628	bug 
+13676	null
+13701	task scheduler 
+13725	null
+13730	Partition 
+13744	Hive Complex type column 
+13749	Hive 
+13756	reducer 
+13809	BloomFilter ObjectCache 
+13813	Hive operation 
+13832	bug 
+13833	null
+13838	BasicStats 
+13840	OrcSplit OrcFile 
+13859	UDF employee 
+13927	bug 
+13934	Vertex 
+13945	Decimal HiveDecimal HiveDecimalWritable HiveServer2 SelectOperator FilterOperator Table Column 
+13961	null
+13971	null
+13985	null
+13997	Hive HiveConf HiveException FileSinkOperator Utilities SessionState HiveMetaStoreClient HiveDriver HiveOperation HiveFileFormatUtils HiveOutputFormat HiveInputFormat HiveStorageHandler HiveStatsUtils HiveTxnManager HiveMetaHook HiveAuthorizationProvider HiveLockManager HiveLockObject HiveLockMode HiveDriverRunHook HiveDriverRunHookContext 
+14003	Hive 
+14013	Table Column Output 
+14027	Table Select Isnull 
+14060	null
+14062	bug 
+14073	null
+14074	FunctionRegistry 
+14126	null
+14132	null
+14133	null
+14135	Beeline 
+14141	Beeline 
+14144	FunctionRegistry MetaStoreUtils HiveMetaStore FunctionInfo Hive Function 
+14146	Table Metadata Column 
+14147	Hive 
+14164	Driver Connection 
+14174	Table 
+14175	Table 
+14176	null
+14194	null
+14236	Select 
+14238	User 
+14248	SemanticAnalyzer UnionOperator Table 
+14251	Table Select Table 
+14254	bug description command Hive 
+14308	null
+14311	task Query Task scheduler 
+14324	null
+14326	JoinOperator 
+14345	Beeline HiveServer2 
+14346	bug 
+14349	UDFLike 
+14367	Type 
+14387	Beeline 
+14390	null
+14397	null
+14435	Vectorizer 
+14479	JoinOperator HiveConf HiveMetaStoreClient HiveTxnManager HiveDriver HiveSessionImpl 
+14566	Timestamp method method method method method bug 
+14581	UDF 
+14648	file 
+14652	Table Partition Select 
+14677	Beeline HiveConnection HiveStatement HiveDriver 
+14697	null
+14726	DatabaseConnection 
+14751	Date 
+14783	null
+14805	Hive 
+14865	bug 
+14873	UDF UDFDayOfWeek 
+14943	bug 
+14959	SemanticAnalyzer method 
+14984	bug 
+15029	Filter operator 
+15030	null
+15061	null
+15137	null
+15233	UDF 

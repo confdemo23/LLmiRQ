@@ -1,0 +1,2 @@
+Incorrect javadoc in org.springframework.ws.soap.SoapFault
+The javadoc for method getFaultDetail() refers to addFaultDetail() and vice versa.

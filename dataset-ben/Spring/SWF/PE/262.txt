@@ -1,0 +1,3 @@
+Make ThreadLocal variables final
+See:
+http://opensource.atlassian.com/projects/spring/browse/SPR-2442

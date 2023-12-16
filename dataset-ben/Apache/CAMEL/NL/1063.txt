@@ -1,0 +1,3 @@
+camel-sql - setting datasource should be easier, and improve the wiki documentation
+See nabble:
+http://www.nabble.com/Camel-SQL-Component---dataSource-property-td20386559s22882.html

@@ -1,0 +1,2 @@
+ConsumerTemplate return body should complete UoW beforehand
+Issue is discussed here: http://camel.465427.n5.nabble.com/ConsumerTemplate-not-finishing-td2642233.html#a2642233

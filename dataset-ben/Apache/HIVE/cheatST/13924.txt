@@ -1,0 +1,4 @@
+(Vectorization) Error evaluating ((bool0 and (not bool1)) or (bool1 and (not bool0)))
+Scratch column(s) in child expressions shouldn't be returned to the pool for PROJECTION.
+Problem introduced with HIVE-13084.
+Symptom:Caused by: java.lang.IllegalStateExceptionat com.google.common.base.Preconditions.checkState(Preconditions.java:133)        at org.apache.hadoop.hive.ql.exec.vector.expressions.ColOrCol.evaluate(ColOrCol.java:544)

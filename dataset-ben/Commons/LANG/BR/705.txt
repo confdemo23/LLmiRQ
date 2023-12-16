@@ -1,0 +1,3 @@
+StringEscapeUtil generate wrong output for some entities
+The entities such as "" are not correctly encoded in the org.apache.commons.lang3.text.translate.EntityArrays. E.g. "" is encoded as "00E4" according to the ISO-8859-1 standard, but is assigned to "00E5" in the class EntityArrays.
+The consequence is, that StringEscapeUtil can not produce correct output.

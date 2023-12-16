@@ -1,0 +1,8 @@
+Add getAndIncrement/getAndDecrement/getAndAdd/incrementAndGet/decrementAndGet/addAndGet in Mutable* classes
+Add below methods to Mutable* classes:
+    getAndIncrement
+    getAndDecrement
+    getAndAdd
+    incrementAndGet
+    decrementAndGet
+    addAndGet

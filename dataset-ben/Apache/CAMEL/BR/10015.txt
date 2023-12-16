@@ -1,0 +1,2 @@
+Fix syntax for braintree component
+replace braintree:name by braintree:apiName/methodName

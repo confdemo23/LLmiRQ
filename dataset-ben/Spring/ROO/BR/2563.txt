@@ -1,0 +1,2 @@
+Integration test ITD does not get updated when switching between GAE and relational DBs
+If the persistence is changed from a relational store to GAE for GWT projects, the integration test ITD is not refreshed, and vice versa

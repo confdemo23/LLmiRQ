@@ -1,0 +1,2 @@
+CompositeItemWriter should also implement ItemStream
+The StepFactoryBean automatically registers ItemReader and ItemWriter as streams if they implement the interface. It would be nice if the CompositeItemWriter could also implement this interface (and delegate the methods to its delegate if appropriate), so that a composite writer set as the writer in a StepFactoryBean will be registered as an ItemStream and delegate ItemStreams methods on its delegates automatically.

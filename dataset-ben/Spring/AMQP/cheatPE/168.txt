@@ -1,0 +1,2 @@
+SimpleMessageListenerContainer should only commit every txSize messages
+SimpleMessageListenerContainer should only commit every txSize messages (it looks like it does it for every message right now).

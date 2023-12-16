@@ -1,0 +1,3 @@
+OnCompletion - Should route even if original exchange has route stop / exception handled
+See nabble
+http://camel.465427.n5.nabble.com/Behavior-of-onCompletion-for-exception-fault-and-stop-td5754257.html

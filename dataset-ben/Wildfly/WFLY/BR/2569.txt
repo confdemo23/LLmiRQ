@@ -1,0 +1,3 @@
+Components in Web and EJB container should always have access to RAR included in the same EAR
+See also EE.8.3 Class Loading Requirements.
+In the mentioned Arquillian test (servlet protocol) if a class from an EJB module tries to access a class from an RAR you get a NoClassDefFoundError. I also tried to place the class in the WAR with the same result.

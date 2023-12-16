@@ -1,0 +1,274 @@
+88	 MapOperator, ReduceSinkOperator, TBinarySortableProtocol, ExecDriver, MapRedTask ant test, run, jar
+136	 MetadataTypedColumnsetSerDe, DynamicSerDe, LazySimpleSerDe
+253	 UDFRand, rand()
+322	 ClassLoader, FunctionTask, ExecDriver, GenericOptionsParser addToClassPath(String[] newPaths)
+324	 Path, Hive, FileSystem (fs) mkdirs(), nextInt()
+337	 LazySimpleSerDe, DynamicSerDe, TCTLSeparatedProtocol
+393	 MoveTask, SequenceFile, open, hadoop native lib
+417	 Hive, Indexing, lookup queries, range queries
+442	 Partition, Data, Processes, run queries
+443	 Hive createTable, dropTable
+487	  1. JobClient 2. InputFormat 3. hive.ql.exec.ExecDriver 4. HiveInputFormat   1. getCommandLineConfig() 2. validateInput(JobConf)
+498	 UDFRegExp, UDFRegExpReplace, UDFRegExpExtract
+520	 TestTCTLSeparatedProtocol
+523	 PartitionPruner, fetchAllPartitions, OutOfMemory
+528	 MapJoinObject, MapJoinObjectKey, MapJoinObjectValue
+557	 FileSinkOperator close(), commit()
+587	 FileSinkOperator commit, jobClose
+595	 Hive, fs copyFiles(), rename()
+635	 UnionOperator, ObjectInspector
+773	 FileSinkOperator, lzocodec
+794	 MergeTask, FileSinkOperator, OperatorFactory, fileSinkDesc, HiveConf getAndMakeChild, getConf, getBoolVar
+816	 hive.ql.metadata.Hive, IMetaStoreClient getMSC(), threadLocalMSC.get(), createMetaStoreClient(), threadLocalMSC.set()
+837	 logs, FOO LOAD DATA, LIKE, substr, count, group by
+841	 Context, Hadoop Deprecated Hadoop Methods
+869	 ScriptOperator, TRANSFORM, 'myscript', hive.exec.script.allow.partial.consumption
+1006	 HiveInputFormat, CombineHiveInputFormat getPartitionDescFromPath
+1016	 DistributedCache, GenericUDF, UDAF, UDTF static methods of DistributedCache class, exec_init(Configuration conf), initialize, compile_init
+1195	 Operator, ObjectInspector[], inputObjInspectors
+1207	 ScriptOperator, AutoProgressor, set the interval
+1242	 CombineHiveInputFormat
+1317	 CombineHiveInputFormat, URI, Path partitionToPathInfo
+1345	  1. TypedBytesSerDe 2. hive.contrib.serde2.TypedBytesSerDe 3. hive.ql.exec.DDLTask   1. CREATE TABLE 2. ROW FORMAT SERDE
+1376	  1. hive.ql.udf.UDAFPercentile$PercentileLongEvaluator 2. hive.ql.metadata.HiveException   1. iterate() 2. execute()
+1377	 CombineHiveInputFormat, CombineFileInputFormat getPartitionDescFromPath()
+1412	 CombineHiveInputFormat
+1428	 Configuration, TApplicationException, DDLTask get_partition, ALTER TABLE ADD PARTITION
+1444	 LoadSemanticAnalyzer applyConstraints
+1592	 ProxyFileSystem, close
+1628	 Base64, Base64TextInputFormat, constructor
+1681	 ObjectStore commitTransaction(), rollbackTransaction()
+1777	 GenericUDTF, forward(), close()
+1884	 CliDriver, Throttle, ExplainTask, DDLTask processReader(), checkJobTracker()
+1928	 GRANT, REVOKE, authorization_part, src Create, Update, Drop, select
+1959	  1. hive.ql.history.HiveHistory$TaskInfo 2. hive.ql.history.HiveHistory$QueryInfo
+1974	 ScriptOperator, StreamProcessor, Utilities, XMLEncoder
+1995	 HiveMetaStore, get_partition(), executeWithRetry()
+2042	 ExplainTask, Throttle execute(), checkJobTracker()
+2045	  1) TCTLSeparatedProtocol 2) SimpleTransportTokenizer   1) nextToken() 2) fillTokenizer()
+2059	 HiveConf, DataNucleus datanucleus.identifierFactory
+2095	  1) CommonJoinResolver 2) ConditionalResolverCommonJoin 3) Conditional task  1) Null check for back up tasks 2) Full mapping of pathToAliases 3) Addition of pathToAliases, aliasToSize, and intermediate dir path in ConditionalResolverCommonJoin 4) Logic to go over all the pathToAliases 5) Logic to get a list of big table candidates 6) Logic to scan the join condition array from left to right 7) Logic for inner join, left outer join, right outer join, and full outer join in the context of bigTableCandidates.
+2117	  1. hive.ql.metadata.Hive 2. Warehouse   1. loadPartition(Path, String, Map<String, String>, boolean, boolean) 2. getDataLocation() 3. makePartPath(partSpec) 4. getPath() 5. toUri() 6. getScheme() 7. getAuthority()
+2183	 Task, ExecDriver, LogFactory, LogHelper, HadoopJobExecHelper ExecDriver(), getLog(), LogHelper(), HadoopJobExecHelper()
+2184	 hive.ql.metadata.Hive.close(), HiveMetaStoreClient.close(), shutdown(), metaStoreClient.close(), metaStoreClient=null
+2196	 HiveConf, hive-default.xml
+2261	 GenericUDF initialize, close/cleanup
+2298	 UDAFPercentile
+2309	 Utilities, method for extracting task id
+2379	 HBaseStorageHandler TableMapREduceUtil.addDependencyJar, add jar
+2382	 SemanticAnalyzer insertSelectAllPlanForGroupBy
+2383	  1. OpProcFactory.DefaultPPD 2. ExprWalkerInfo 3. ExprWalkerProcFactory 4. OpProcFactory.JoinPPD  1. mergeWithChildrenPred 2. extractPushdownPreds 3. getQualifiedAliases
+2499	 HiveConf, hive-default.xml
+2520	 CommonJoinOperator genObject, genUniqueJoinObject
+2702	 ExpressionTree, Table listPartitionsByFilter, generateJDOFilterOverPartitions, getPartitionKeys, getType, equals
+2705	 SemanticAnalyzer, SemanticException
+2715	 HCat_server, Hive, Thrift
+2803	 GenericUDFFromUtcTimestamp applyOffset(), setTime()
+2829	 Hive script, hive.exec.max.dynamic.partitions.pernode, hive-default.xml
+2857	 QTestUtil, cleanUp()
+2907	  1. hive.metastore.ObjectStore 2. hive.ql.exec.DDLTask   1. dropTable
+2918	 hive.ql.exec.MoveTask
+2931	 Hive, metastore conf variable change, session variables change, update the corresponding Hive conf
+2935	 HiveServer2
+2939	 LazyArray, LazyMap getList, getMap
+2963	 Hive, HiveConf, hive.metastore.token.signature
+3057	 metastore.HiveMetaStore$HMSHandler, shutdown(), RawStore, threadLocalMS, getMS()
+3070	 SemanticAnalyzer mergeJoins(), getFilters(), add()
+3122	 JDBC driver, HiveServer2 API
+3168	 LazyBinaryObjectInspector, BytesWritable, ByteArrayRef, LazyBinary getPrimitiveJavaObject, copy constructor
+3179	 HBase Handler, HBaseStorageHandler, LazyHBaseRow uncheckedGetField
+3217	 HiveDatabaseMetaData, getFunctions(), SQL Statement, execute(), SHOW FUNCTIONS, create temporary function
+3230	 HadoopJobExecHelper, hive_job_log
+3232	 EximUtil
+3272	 RetryingRawStore retry, commit, rollback
+3295	 FileUtils, dynamic partitioning, map reduce cluster
+3335	  1. SymlinkTextInputFormat 2. HiveIgnoreKeyTextOutputFormat 3. SymbolicInputFormat   1. hadoop fs -cat 2. CREATE TABLE 3. hadoop fs -put 4. select 5. netstat -a 6. BufferedReader
+3420	 HiveHBaseTableInputFormat, TableSplit, Bytes convertFilter, getTableName, getStartRow, getEndRow, getRegionLocation, setStartRow, setStopRow, compareTo
+3546	 TestBeeLineDriver
+3596	 HiveConf Variables: confVarURL
+3785	 HiveServer2, core hive components
+4064	 HiveQL, SELECT, CREATE INDEX
+4195	  1. AvroSerDe (hive.serde2.AvroSerDe) 2. AvroContainerInputFormat (AvroContainerInputFormat) 3. AvroContainerOutputFormat (AvroContainerOutputFormat) 4. DeprecatedLzoTextInputFormat (com.hadoop.mapred.DeprecatedLzoTextInputFormat) 5. HiveIgnoreKeyTextOutputFormat (HiveIgnoreKeyTextOutputFormat) 6. LzopCodec (com.hadoop.compression.lzo.LzopCodec) 7. CombineHiveInputFormat (CombineHiveInputFormat)   1. CREATE EXTERNAL TABLE 2. DROP TABLE IF EXISTS 3. INSERT OVERWRITE TABLE 4. SET
+4222	 ExprNodeConstantDesc, TypeInfoFactory, Timestamp, Utilities, Configuration, java.sql.Timestamp, RuntimeException timestampTypeInfo, serializeExpression, deserializeExpression, new
+4247	 HiveHbaseHandler, HiveHBaseTableInputFormat, TableSplit convertFilter, getTableName, getRegionLocation
+4256	 HiveConnection, JDBC2
+4373	  1. HiveDatabaseMetaData 2. TestJdbcDriver2   1. getDatabaseProductVersion
+4425	 HiveSessionImpl, getInfo(), HiveServer2
+5056	 MapJoinProcessor removeRS
+5149	 ReduceSinkDeDuplication, partitioning columns
+5204	 FunctionRegistry, TypeInfo, PrimitiveCategory getCommonClass, implicitConvertable
+5256	 Semantic Analyzer, RowResolver, MapJoinProcessor genJoinOperatorChildren(), getRowResolver(), getTableNames(), convertMapJoin()
+5427	  1. TestMetastoreVersion 2. hive.ql.exec.DDLTask 3. hive.metastore   1. testVersionRestriction
+6037	 HiveConf, hive-default.xml.template, show conf
+6312	 TUGIContainingProcessor, doAs, Subject, FileSystem
+6363	  1. java.sql.DriverManager 2. org.apache.hive.jdbc.Utils 3. org.apache.hive.jdbc.HiveDriver 4. HiveDriver 5. DriverInfo  1. parseURL 2. getConnection 3. isDriverAllowed 4. connect 5. getClass 6. getName 7. forName
+6507	 HCatalog, OrcFile add, update
+6530	  1. LazyFlatRowContainer 2. java.util.AbstractCollection 3. AbstractRowContainer   1. add(java.util.List<java.lang.Object>) in LazyFlatRowContainer 2. add(E) in java.util.AbstractCollection 3. add(ROW) in AbstractRowContainer
+6626	 HiveConf, DOWNLOADED_RESOURCES_DIR, System.getProperty, File.separator, hive.session.id
+6652	 BeeLine main()
+6716	 ORCStruct, getStructFieldsDataAsList
+6741	 HiveAuthFactory, ShimLoader, SaslQOP, ConfVars, LOG getHadoopThriftAuthBridge(), getHadoopSaslProperties(), fromString(), get(), ordinal(), warn(), toString()
+6877	 TestOrcRawRecordMerger
+6908	 TestThriftBinaryCLIService, ThriftCLIServiceTest testExecuteStatementAsync
+6987	 ShimLoader, HadoopThriftAuthBridge, Metastore getHadoopThriftAuthBridge(), getHadoopSaslProperties()
+7011	 HiveInputFormat, Tez
+7303	 HiveStatement stmtHandle, unlock
+7306	 GenericUDAFAverage, GenericUDAFAverageEvaluatorDouble, getNextResult, remove
+7341	  1. HCatClient 2. HCatTable 3. HCatPartition 4. HCatCreateTableDesc 5. HCatAddPartitionDesc   1. HCatClient.addPartitions() 2. HCatClient.updateTableSchema() 3. HCatClient.serializeTable() 4. HCatClient.deserializeTable() 5. HCatTable.diff() 6. HCatTable.resolve() 7. HCatPartition 8. HCatAddPartitionDesc
+7390	 BeeLine, CSV output format, TSV output format, column wrapping method
+7399	 ObjectInspectorUtils, copyToStandardObject, Timestamp
+7428	 OrcSplit, FileSplit, RCFile getLen()
+7583	 FileSystem, StorageBasedAuthorizationProvider, FileUtils access()
+7935	 HiveServer2, JDBC client, JDBC driver, ZooKeeper HIVE_SERVER2_SUPPORT_DYNAMIC_SERVICE_DISCOVERY, HIVE_SERVER2_ZOOKEEPER_NAMESPACE
+7937	  1. hive.common.FileUtils 2. permission.FsPermission   1. getStickyBit()
+8192	 DummyTxnManager, DbTxnManager CREATE TEMPORARY FUNCTION, SELECT
+8526	  1. SemanticAnalyzer 2. HiveSortRel 3. HiveProjectRel 4. HiveAggregateRel 5. HiveJoinRel 6. HiveFilterRel 7. HiveTableScanRel 8. SemiJoinRel   1. apply 2. select 3. where 4. group by 5. order by 6. limit 7. join 8. in 9. and 10. from
+9199	 DummyTxnManager, WriteEntity, createTable, lockMode, writeType
+10022	  1. SQLStdHiveAuthorizerFactoryForTest 2. SessionStateConfigUserAuthenticator 3. SQLAuthorizationUtils 4. FileUtils   1. doAuthorizationV2() 2. getPrivilegesFromFS() 3. isActionPermittedForFileHierarchy()
+10309	 TestJdbcWithMiniHS2 Properties: hive.server2.thrift.http.max.worker.threads, hive.server2.thrift.http.min.worker.threads
+10523	  1. org.apache.hive.hcatalog.mapreduce.FileOutputCommitterContainer 2. FileStatus   1. isFile() 2. isDirectory()
+10895	 ObjectStore, Query, close
+10983	 SerDeUtils, Text transformTextToUTF8, transformTextFromUTF8, getBytes, copyBytes
+11021	 ObjectStore, getMDatabase(), getMTable(), closeAll()
+11095	 SerDeUtils, Text transformTextFromUTF8, getBytes(), copyBytes()
+11123	 MetaStoreDirectSql determineDbType, getProductName
+11293	 HiveConnection, setAutoCommit
+11657	 Hive, HiveConf, metastore client, objectstore Hive.get(), static reload functions call, static init
+12006	 HCatLoader, HIVE-5193, HIVE-10752
+12039	 TestSSL#testSSLVersion, HIVE-11720
+12202	 AcidUtils, AcidInputFormat.DeltaMetaData deserializeDeltas, getStmtIds
+12214	 TestSSL, testSSLVersion
+12215	 ReadEntity, WriteEntity pre/post execute hook interface, exchange partition operation
+12222	 RpcServer, ServerBootstrap, NioServerSocketChannel, ChannelInitializer, SocketChannel, SaslServerHandler, Rpc  initChannel, createServer, run, close, schedule
+12234	 Beeline, DatabaseConnection quit, close(), getDatabaseConnection(), getConnection()
+12257	 ORC FileDump utility, delta directories, *_flush_length files, offsets, footer, delta file
+12307	 TransactionBatch, close()
+12312	 1. java.lang.Throwable 2. GeneratedMethodAccessor5 3. DelegatingMethodAccessorImpl 4. java.lang.reflect.Method 5. LocationInfo 6. LoggingEvent 7. PatternParser$LocationPatternConverter 8. PatternConverter 9. PatternLayout 10. WriterAppender 11. DailyRollingFileAppender 12. AppenderSkeleton 13. AppenderAttachableImpl 14. Category 15. org.apache.commons.logging.impl.Log4JLogger 16. OpProcFactory$DefaultPPD 17. OpProcFactory$FilterPPD  1. getStackTraceElement(-2) 2. getOurStackTrace(827) 3. getStackTrace(816) 4. invoke(-1) 5. invoke(43) 6. invoke(497) 7. &lt;init&gt;(139) 8. getLocationInformation(253) 9. convert(500) 10. format(65) 11. format(506) 12. subAppend(310) 13. subAppend(369) 14. append(162) 15. doAppend(251) 16. appendLoopOnAppenders(66) 17. callAppenders(206) 18. forcedLog(391) 19. log(856) 20. info(176) 21. logExpr(707) 22. mergeWithChildrenPred(752) 23. process(437)
+12344	 HiveCalciteUtil, RexNode, SqlStdOperatorTable projectNonColumnEquiConditions, makeCall, makeInputRef, getType, get
+12346	 HiveConf set command, session resource jars
+12352	 CompactionTxnHandler, Worker, ValidCompactorTxnList markCleaned(), cleanEmptyAbortedTxns()
+12353	 Compactor, CompactionTxnHandler markedCleaned(), cleanEmptyAbortedTxns()
+12389	 CompactionTxnHandler, TxnHandler cleanEmptyAbortedTxns(), TIMED_OUT_TXN_ABORT_BATCH_SIZE
+12391	 SkewJoinOptimizer, TableScanOperator
+12396	 BucketingSortingReduceSinkOptimizer, IOB exception
+12405	 HiveSplitGenerator, InputSplitComparator, compare()
+12406	 LazySimpleSerDe, SerDeParamaters, LazySerDeParameters LazySimpleSerDe.initSerdeParms
+12407	 HiveCalciteUtil, SortLimit limitRelNode, fetch
+12409	 SessionState, initTxnMgr(), HS2
+12418	 HiveHBaseTableInputFormat, getRecordReader, HiveHBaseInputFormatUtil, getTable
+12441	 Driver.acquireLocksAndOpenTxn(), recordValidTxns()
+12473	 TableScan, PrimitiveObjectInspectorFactory, TypeInfoFactory, ObjectInspectorConverters, Converter getPrimitiveWritableObjectInspector, getPrimitiveTypeInfo, getConverter
+12478	 HiveJoinPushTransitivePredicatesRule
+12498	 OrcRecordUpdater, OrcRecordUpdater.OrcOptions, HiveConf.ConfVars, AcidOutputFormat.Options, OrcOutputFormat  tableProperties(), getRecordUpdater(), inspector(), bucket(), minimumTransactionId(), maximumTransactionId()
+12500	 JDBC driver, Utils, HiveConnection parseURL, HiveConnection constructor
+12505	 HDFS Trash, insert overwrite command, Hive data directory, encryption zone
+12508	 HiveAggregateJoinTransposeRule, areColumnsUnique, CBO planning
+12529	 HiveTxnManager, acquireLocks(), DbTxnManager
+12579	 TxnHandler, setupJdbcConnectionPool
+12583	 HS2, ShutdownHookManager, Driver, add a shutdown hook, release the lock
+12585	 TxnHandler, checkLock(CheckLockRequest rqst)
+12601	 Hive, Partition getFieldsFromDeserializerForMsStorage
+12620	  1. Acid moduleDbLockManger 2. DBLockManager 3. TxnHandler   1. unlock() 2. checkLock() 3. timeOutLocks() 4. getTxnIdFromLockId() 5. checkRetryable() 6. lock()
+12644	 HiveSortMergeRule merge Other relevant entities: offset, operators, Limit, outer join optimization, HIVE-11531, HIVE-11684
+12660	 HiveSessionImpl, GlobalHivercFileProcessor, executeStatementInternal, OperationHandle
+12661	 StatsSetupConst, OrcSerde, OrcInputFormat, OrcOutputFormat set, CREATE TABLE, insert into, select, analyze table compute statistics for columns
+12682	  1. hadoop.conf.Configuration 2. hive.ql.exec.FileSinkOperator   1. getOverlay 2. create table flights
+12698	 HiveAuthorizer, PrivilegeObjectDesc, PrivilegeDesc, PrincipalDesc, AuthorizationUtils
+12741	 HS2 ShutdownHookManager, Driver, HIVE-12187
+12757	 TestCodahaleMetrics, testFileReporting
+12758	 Operator, resetId, seqId.set, Operator(), seqId.getAndIncrement
+12766	 TezTask, DagClient
+12790	 HiveServer2, HMS, SessionState, HiveMetaStoreClient, TaskRunner, Hive printInfo(), open(), get(), getMSC(), close()
+12800	 HiveFilterSetOpTransposeRule
+12837	 BytesBytesMultiHashMap, HybridHashTableContainer Initialization, Load into hash partition, Allocate write buffer, Check for possible spilling
+12879	 RowResolver, CalcitePlanner, Semijoin, Project generate a Calcite plan, cast the column, introduce a project operators
+12904	 1. TaskExecutorService 2. TaskExecutorService$TaskWrapper 3. QueryInfo$FinishableStateTracker 4. QueryInfo 5. QueryTracker 6. ContainerRunnerImpl 7. LlapDaemon 8. LlapDaemonProtocolServerImpl 9. LlapDaemonProtocolProtos$LlapDaemonProtocol$2 10. ProtobufRpcEngine$Server$ProtoBufRpcInvoker 11. RPC$Server 12. Server$Handler$1 13. security.UserGroupInformation 14. QueryFragmentInfo 15. TaskExecutorService$InternalCompletionListener 16. Futures$4  1. isInWaitQueue() 2. finishableStateUpdated() 3. access$1500() 4. sourceStateUpdated() 5. registerSourceStateChange() 6. unregisterForUpdates() 7. unregisterFinishableStateUpdate() 8. maybeUnregisterForFinishedStateNotifications() 9. onSuccess() 10. run()
+12969	 PredicatePushDown class, hive.optimize.ppd
+12981	 ThriftCLIService, getShortName(), KerberosName
+13013	 TxnHandler, SELECT ... FOR UPDATE, READ_COMMITTED
+13021	 GenericUDAFEvaluator, AggregationType isEstimable(agg), estimate
+13126	 MapJoinOperator, object cache, plan cache
+13147	 Table, Parameters describe, analyze
+13159	 TxnHandler, datanucleus.connectionPoolingType, bonecp, dbcp
+13216	 FileSystem, Path, FSDataInputStream, FileMetaInfo open, file.close, extractMetaInfoFromFooter, ps.getCompression, ps.getCompressionBlockSize, ps.getMetadataLength, ps.getVersionList
+13240	 GroupByOperator, hashAggregates, PTF, TopN
+13260	 ReduceSinkDeDuplication, compute_stats, avg, max, variance, var_samp, substr
+13262	 DebugUtils, IO elevator add loggers, parametrized logging
+13326	 HiveServer2, ZK config publishing
+13333	 StatsOptimizer, TestCliDriver aggr, colExp
+13369	 AcidUtils, ValidTxnList, Directory, Cleaner  getAcidState(), getChildState()
+13383	 RetryingMetaStoreClient, Embedded metastore client
+13390	 HiveServer2, ZK service discovery, MiniHS2
+13396	 LlapServiceDriver, hadoop-metrics2.properties
+13403	 TransactionBatch, StreamingAPI, AbstractRecordWriter, Tez, MR bucket join algorithms createRecordUpdaters()
+13405	 OrcRawRecordMerger, getLastFlushLength, .available(), .readLong()
+13415	 ThriftBinaryCLIService setServerEventHandler
+13434	 BaseSemanticAnalyzer, unescapeSQLString
+13463	 ImportSemanticAnalyzer getExternalTmpLocation, check for emptiness
+13494	 LlapDaemonInfo, JMX, hadoop metrics, Async IO metrics
+13512	 TezWork TezWork(String queryId, Configuration conf)
+13523	 RecordReaderImpl, MetadataReaderImpl, DataReaderFactory, MetadataReaderFactory, MetadataReaderProperties, DataReaderProperties, DataReader, MetadataReader, Closer  create(), close(), builder()
+13527	 HBase, HTable, Connection, Table, TableInputFormatBase, HiveHBaseTableInputFormat, JobContext, InputSplit, TaskAttemptContext  initializeTable(), setHTable(), createRecordReader(), getSplits(), initialize()
+13533	 CalcitePlanner, ExplainTask dump, explain extended, LOG.TRACE
+13572	 ShimLoader, HadoopShims setFullFileStatus, getHadoopShims
+13608	 RetryingMetaStoreClient invoke()
+13610	 hive.ql.debug.Utils, com.sun.management.HotSpotDiagnosticMXBean
+13622	  1. TxhHandler 2. TxnHandler   1. TxhHandler.OperationType 2. TxnHandler.addDynamicPartitions() 3. TxnHandler.checkLock() 4. TxnHandler.enqueueLockWithRetry()
+13699	 JavaDataModel get
+13700	 TestHiveOperationType, HIVE-13351
+13702	 TestHiveSessionImpl, HIVE-4924
+13712	 LlapServiceDriver, MetricsSystem package
+13719	 TestConverters
+13720	 TestLlapTaskCommunicator
+13751	 LlapOutputFormatService, Netty channel
+13753	 DbTxnManager, metastore client, Thrift server RPC methods, synchronize methods
+13754	 HiveClientCache, RetryingMetaStoreClient tearDownIfUnused, finalize, reconnect, acquire, close
+13786	 org.apache.hive.service.cli.session.TestHiveSessionImpl testLeakOperationHandle
+13791	 TestHiveSessionImpl testLeakOperationHandle
+13831	 HBaseStorageHandler pushPredicate
+13834	 LinkedHashMap, HashMap, LockRequestBuilder
+13841	 OrcInputFormat, OrcInputFormat.Context minSplits
+13867	 HiveAuthorizer, HiveAuthzContext, HiveAuthenticationProvider
+13876	  1. java.lang.Throwable 2. java.lang.Exception 3. java.lang.RuntimeException 4. java.lang.IllegalArgumentException 5. java.lang.NumberFormatException 6. FloatingDecimal 7. java.lang.Float 8. hive.serde2.lazy.fast.LazySimpleDeserializeRead 9. VectorDeserializeRow 10. VectorMapOperator 11. MapRecordSource 12. MapRecordProcessor 13. TezProcessor 14. LogicalIOProcessorRuntimeTask 15. task.TaskRunner2Callable 16. AccessController 17. Subject 18. UserGroupInformation 19. CallableWithNdc 20. java.util.concurrent.FutureTask 21. java.util.concurrent.ThreadPoolExecutor 22. java.lang.Thread   1. fillInStackTrace(int) 2. fillInStackTrace() 3. &lt;init&gt;(String) 4. readJavaFormatString(String) 5. parseFloat(String) 6. readCheckNull() 7. deserializeRowColumn(VectorizedRowBatch, int, int) 8. deserialize(VectorizedRowBatch, int) 9. process(Writable) 10. processRow(Object) 11. pushRecord() 12. run() 13. initializeAndRunProcessor(Map, Map) 14. doPrivileged(PrivilegedExceptionAction, AccessControlContext) 15. doAs(Subject, PrivilegedExceptionAction) 16. doAs(PrivilegedExceptionAction) 17. callInternal() 18. call() 19. runWorker(ThreadPoolExecutor$Worker) 20. run()
+13883	 SecureProxySupport Not explicitly mentioned in the bug report.
+13900	 HiveStatement, executeAsync(), executeQuery(), hive.server2.async.exec.async.compile
+13972	 StringableMap, CompactorMR, TxnUtils N/A
+14038	 1. HouseKeeperServiceBase 2. hive.ql.txn.compactor.HouseKeeperServiceBase$1-0 3. HiveConf 4. dump metastore configs 5. add some tests
+14059	 DateParser, TestDateParser N/A
+14098	 Hive MapredLocalTask, spark properties Logging task properties, -Djavax.net.ssl.trustStorePassword
+14122	 VectorMapOperator, AbstractMapOperator::numRows, INPUT_RECORDS counter
+14178	 Hive, needsToCopy, FileUtils, equalsFileSystem, getClass, equals
+14192	 LockComponent, TxnHandler, EncodingUtils, hive.metastore.api.DataOperationType LockComponent(), isSetOperationType(), isSetIsAcid(), enqueueLockWithRetry(), testBit()
+14195	 HiveMetaStoreClient, NoSuchObjectException, MetaException getFunction()
+14222	 PTFOperator, initializeOp, currentKeys, keysAreEqual, finishPartition, copyKey
+14241	 Configuration, FetchOperator, Driver recordValidTxns()
+14268	 Hive Replication, Falcon INSERT-OVERWRITE, ALTER PARTITION
+14282	 HCatLoader, mytable, partmytable ToDate(), LOAD(), FILTER(), dump(), insert overwrite(), create table(), DaysBetween()
+14294	 HiveSchemaConverter, Parquet CREATE TABLE, parquet-schema
+14295	 DropTableEvent, PreDropPartitionEvent, PreDropTableEvent DropTableEvent constructor
+14296	 ThriftCLIService, HiveSessionImpl, SessionState Opened a session, Closing the session, Created HDFS directory, Created local directory, Operation log session directory is created
+14310	 SchemaEvolution N/A
+14330	 LockHandle, TxnHandler acquireLock(String key)
+14350	 ValidTxnList, Worker, Cleaner, Initiator, ErrorMsg ACID_NOT_ENOUGH_HISTORY
+14357	 TestDbTxnManager2, driver, txnMgr, ctx, LockType, LockState testLocksInSubquery, compileAndRespond, openTxn, acquireLocks, getPlan, getLocks, assertEquals, checkLock
+14360	 BeeLineOpts setconf
+14366	 FileSystem, FileStatus, Table, List, Assert get(), runStatementOnDriver(), runWorker(), assertEquals(), stringifyValues()
+14381	 WindowingTableFunction, WindowingIterator next()
+14414	 TestHiveMetaStoreTxns, HIVE-14350 commit
+14563	 StatsOptimizer, Fetch Operator, ListSink select, count
+14624	 1. LlapFixedRegistryImpl 2. MetricsUtils 3. LlapBaseInputFormat 4. AMReporter 5. ContainerRunnerImpl 6. LlapDaemon 7. LlapProtocolServerImpl 8. TaskRunnerCallable 9. LlapIoImpl 10. TestLlapDaemonProtocolServerImpl 11. LlapTaskCommunicator 12. LlapTaskSchedulerService  1. getHostName() 2. setAmHost() 3. getInstance() 4. getDagName() 5. getDagIndex() 6. getContainerIdString() 7. getCanonicalHostName()
+14674	 TxnHandler, addForUpdateClause()
+14686	 SessionState, SemanticAnalyzer, Table, HiveException get(), getHiveOperation(), analyzeCreateTable, getTable()
+14727	 llap-server, BuddyAllocator preallocate(int), getChannel(), map(), close(), delete()
+14739	 Runtime, FileSystem, ShutdownHookManager Cache, close, addShutdownHook
+14766	 ObjectStore.initialize(), RetryingHMSHandler, HMSHandler
+14779	 DbTxnManager.HeartbeaterThread, setDaemon, heartbeaterThreadPoolSize
+14814	 Hive, metastoreClient, getMSC()
+14819	 FunctionInfo, FunctionType, FunctionRegistry, LlapDecider
+14883	 SemanticAnalyzer, AcidUtils, QB, ReadEntity, ErrorMsg getMetaData(), isAcidTable(), getParseInfo(), isInsertIntoTable(), getDbName(), getTableName(), getNumBuckets(), updating(), deleting(), getClauseNamesForDest()
+14964	  1. TestBeelineArgParsing   1. testAddLocalJar[0] 2. testAddLocalJarWithoutAddDriverClazz[0] 3. testAddLocalJar[1]
+14975	 TestBeelineArgParsing, org.postgresql.Driver testAddLocalJarWithoutAddDriverClazz Exception: java.util.zip.ZipException
+14991	 jdbc.HiveQueryResultSet Not explicitly mentioned in the bug report.
+15065	 SimpleFetchOptimizer, metastore fetch optimizer, numRows, fileSize
+15099	 PTFOperator.PTFInvocation, inputPart
+15133	 TestBeelineArgParsing

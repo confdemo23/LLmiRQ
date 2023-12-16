@@ -1,0 +1,5 @@
+SideValue labels in TrimBarEditor not externalized
+SideValue labels "Top", "Bottom", "Left", "Right" in TrimBarEditor not externalized for translation.
+
+Labels hard-coded in:
+eclipse.platform.ui/bundles/org.eclipse.e4.ui.model.workbench/src/org/eclipse/e4/ui/model/application/ui/SideValue.java

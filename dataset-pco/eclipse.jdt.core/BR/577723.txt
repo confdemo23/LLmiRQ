@@ -1,0 +1,2 @@
+[18] Remove JCP disclaimers from code, UI and marketplace
+Remove JCP disclaimers from code, UI and marketplace

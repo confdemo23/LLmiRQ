@@ -1,0 +1,14 @@
+[18] Release Activities
+Top Level for bug general release activities:
+
+- Increase the bundle service version 
+	This must not use the same version as the base. As always, we increase the service segment by 50 for the beta work ==> 3.x. 50
+
+(e.g. 0 -> 50, 1 -> 50, 100 -> 150).
+
+Tasks:
+1. Disclaimers to be removed in Beta Branch 
+2. Y build after Disclaimer removal
+3. Merge Beta to master
+4. Updating Marketplace Entry
+5. Sending mail to community with MPE

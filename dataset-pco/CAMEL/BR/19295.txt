@@ -1,0 +1,8 @@
+Concurrency issues with dynamicMap in AbstractDynamicRegistry
+Hello everyone,
+
+We have detected concurrency issues related to the dynamicMap attribute of the AbstractDynamicRegistry class. By default, dynamicMap is an object of the SimpleLRUCache class, which inherits from LinkedHashMap.
+
+We have resolved the issue by creating our own LRUCacheFactory which returns a thread-safe synchronized map backed by the specified map.
+
+Could you please review it?

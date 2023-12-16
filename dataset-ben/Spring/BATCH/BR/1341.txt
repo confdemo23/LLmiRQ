@@ -1,0 +1,4 @@
+DataSourceInitializer throws ArrayOutOfBoundException when any destroyScript is specified
+basically, this is a typo:
+91:		for (int i = 0; i &lt; destroyScripts.length; i++) {
+92:			Resource destroyScript = initScripts[i];

@@ -1,0 +1,2 @@
+socketFactory must also be set in MailConfiguration when STARTTLS is used
+When using STARTTLS with custom sslContextParameters it fails since the factory setup is only done for smtps/imaps/pops, same problem applies to the "dummyTrustManager.

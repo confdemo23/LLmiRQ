@@ -1,0 +1,27 @@
+projectOperations.addPlugin adds empty <id/> and <phase/> tags per default which let maven ignore the build plugin
+when updating maven build plugin the configuration element adds some invalid maven markup, so that maven ignores the build plugin:
+empty tags (id, phase) are invalid:
+                    &lt;execution&gt;
+                        &lt;id/&gt;
+                        &lt;phase/&gt;
+                        &lt;goals&gt;
+                            &lt;goal&gt;compile&lt;/goal&gt;
+                            &lt;goal&gt;test-compile&lt;/goal&gt;
+                        &lt;/goals&gt;
+                    &lt;/execution&gt;
+Patch: MavenProjectMetadataProvider
+                final String id = execution.getId();
+                if (id !=null &amp;&amp; !id.isEmpty()) 
+{
+                Element executionId = document.createElement("id");
+                executionId.setTextContent(id);
+                executionElement.appendChild(executionId);
+                }
+                final String phase = execution.getPhase();
+                if (phase!=null &amp;&amp; !phase.isEmpty()) 
+{
+                Element executionPhase = document.createElement("phase");
+                executionPhase.setTextContent(phase);
+                executionElement.appendChild(executionPhase);
+                }
+ 

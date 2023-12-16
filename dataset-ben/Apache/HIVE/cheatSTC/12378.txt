@@ -1,0 +1,12 @@
+Exception on HBaseSerDe.serialize binary field
+An issue was reproduced with the binary typed HBase columns in Hive:
+It works fine as below:
+CREATE TABLE test9 (key int, val string)
+STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+WITH SERDEPROPERTIES (
+"hbase.columns.mapping" = ":key,cf:val#b"
+);
+insert into test9 values(1,"hello");
+But when string type is changed to binary as:
+
+We should support hive binary type column for hbase.

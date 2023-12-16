@@ -1,0 +1,2 @@
+Correcting the Store file tracker tool help doc option
+Column family is not an optional parameter, we need to correct the sysout msg properly.

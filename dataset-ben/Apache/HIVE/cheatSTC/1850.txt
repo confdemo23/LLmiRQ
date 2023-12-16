@@ -1,0 +1,3 @@
+alter table set serdeproperties bypasses regexps checks (leaves table in a non-recoverable state?)create table aa ( test STRING )  
+1. The alter table command should probably check the regexp just like the create table command does
+2. Even though the regexp is bad, it should be possible to do things like set the regexp again or drop the table.

@@ -1,0 +1,3 @@
+Unable to use path in input-stream-index argument in /core-service=patching:patch
+File system paths should be allowed as arguments for
+/core-service=patching:patch(input-stream-index=)

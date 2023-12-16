@@ -1,0 +1,2 @@
+DataOnDemandMetadataProvider and IntegrationTestMetadataProvider not responding to relevant external changes due to late dependency registration
+Dependency registrations in DataOnDemandMetadataProvider and IntegrationTestMetadataProvider are occurring too late which means that changes to the external model are not being passed onto the these providers.

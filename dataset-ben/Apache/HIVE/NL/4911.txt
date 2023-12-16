@@ -1,0 +1,2 @@
+Enable QOP configuration for Hive Server 2 thrift transport
+The QoP for hive server 2 should be configurable to enable encryption. A new configuration should be exposed "hive.server2.thrift.sasl.qop". This would give greater control configuring hive server 2 service.

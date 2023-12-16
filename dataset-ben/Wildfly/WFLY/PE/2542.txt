@@ -1,0 +1,4 @@
+Groovy class implementing javax.jms.MessageListener error
+A Groovy class implementing the MessageListener interface (Message Drive Beans) returns an error at the deployment.
+org.jboss.as.server.deployment.DeploymentUnitProcessingException: JBAS014194: EJB 3.1 FR 5.4.2 MessageDrivenBean com.filipeferraz.service.MDBGroovyService does not implement 1 interface nor specifies message listener interface
+I have tested with a Java version of the class and works fine, the problem appers only when using a groovy class to implements the MessageListener interface.

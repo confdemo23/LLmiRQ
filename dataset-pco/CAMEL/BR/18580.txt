@@ -1,0 +1,2 @@
+camel-elasticsearch - Propose an async producer
+In Camel 3.19, a new component based on the Java Api Client has been proposed. This component provides a blocking producer which could be improved by leveraging the asynchronous client to propose a non-blocking/asynchronous producer instead.

@@ -1,0 +1,8 @@
+camel-bean: MethodNotFoundException when using OSGi service reference
+We are using Camel 3.14.x and get a MethodNotFoundException when we try to call a method via OSGi service reference. Exactly the same issue as described in https://issues.apache.org/jira/browse/CAMEL-15793.
+
+ 
+
+It works with 3.7.0 and stopped working with 3.11.0 probably due to the following change: [https://github.com/apache/camel/commit/164f63eae7f0364604f0e796764544467829e7a7]
+
+And works again with 3.17.0 probably due to the change for CAMEL-17844. Will this fix also be available for 3.14.x?

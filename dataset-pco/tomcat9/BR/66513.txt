@@ -1,0 +1,19 @@
+Proposition to split 'Local variable declaration hides another field or variable' compiler option
+I propse to split Preferences->Java->Compiler->Advanced 'Local variable
+declaration hides another field or variable' option into two options:
+- 'Local variable declaration hides another field or variable'
+- 'Method parameter hides field or variable'
+
+First one would check only variabled defined in the method body while the second
+one would check for method parameters only. Combined, they would work as current
+implementation of 'Local variable declaration hides another field or variable'.
+
+Rationale: method arguments are very often named the same way as one of the
+class fields and forcing them to be different would result in either method
+arguments be named 'a', 'x' or some other shortened name (reduces readability)
+or all fields would have to be named with prefix eg. mName (ugly). However,
+variabled declared in method body need not to be pretty and (IMHO at least)
+should never have the same name as fields.
+
+In other worlds, I would highly appreciate first option after split but wouldn't
+use the second one. But I understand there are people who would like to use both.

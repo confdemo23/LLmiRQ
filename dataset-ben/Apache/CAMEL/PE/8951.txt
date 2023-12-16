@@ -1,0 +1,3 @@
+RecipientList with RAW parameter do not work
+See nabble
+http://camel.465427.n5.nabble.com/java-net-URISyntaxException-using-recipientList-tp5769103.html

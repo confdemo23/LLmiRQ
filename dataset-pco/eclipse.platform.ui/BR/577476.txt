@@ -1,0 +1,16 @@
+Accessibility Issues With "Restart notification" After Theme Change
+After a theme change eclipse needs to be re-started. In the past the user was notified about this with a blocking dialog. with bug 564335 a none-blocking notification was introduced instead of the blocking dialog.
+
+What was the exact reason for this? 
+
+This new implementation has issue with accessibility.
+1.) The none-blocking dialog is not read by screen readers (and this is by intention)
+2.) The none-blocking dialog is not reachable via keyboard navigation
+3.) The restart information is also shown on the preference page (with a little yellow triangle with a tooltip). Also it seems that this tooltip is not read by screenreaders.
+
+Vision impaired users most probably don't get this information.
+
+There are additional functional issues:
+A.) If you change the theme multiple times without closing the dialog you get multiple dialogs on top of each other.
+
+To be honest I found the old implementation perfectly fine. So I propose to revert the change from bug 564335.

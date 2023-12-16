@@ -1,0 +1,2 @@
+domain mode: remove a path entry from a server instance fails
+Adding a "path" to a "server-config" in domain mode (works fine) and then remove it again results in a NullPointerException

@@ -1,0 +1,3 @@
+error message is wrong when a wrong namspace is specified in grant in hbase shell
+In HBase shell, specify a non-existing namespace in "grant" command, such ashbase(main):001:0&gt; grant 'a1', 'R', '@aaa'    &lt;--- there is no namespace called "aaa"The error message issued is not correctERROR: Unknown namespace a1!a1 is the user name, not the namespace.
+The following error message would be betterERROR: Unknown namespace aaa!orCan't find a namespace: aaa

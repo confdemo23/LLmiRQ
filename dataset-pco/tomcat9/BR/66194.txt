@@ -1,0 +1,6 @@
+I18N: Export template dialog should not translate file name and file types
+Extracting problem from 51482 into separate defect. 
+
+In the Preferences page for Code Templates, click on the export button. The 
+file name and file type values that appear in the drop down list should not be 
+externalized.

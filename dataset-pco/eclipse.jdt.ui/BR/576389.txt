@@ -1,0 +1,5 @@
+[JUnit 5] Update to JUnit 5.8.1
+JUnit 5.8.1 has been released on September 22, 2021:
+https://junit.org/junit5/docs/5.8.1/release-notes/
+
+JDT should update to JUnit 5.8.1.

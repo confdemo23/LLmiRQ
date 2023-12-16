@@ -1,0 +1,3 @@
+[18] [DOM AST]Support for Regions and Multiple tags on Text element  in JavaDoc from DOM
+Bug 578523 requires support for DOM to be able to store and access multiple tags for a text line
+Bug 578041 requires the support of regions inside JavaDoc

@@ -1,0 +1,24 @@
+Dead code in the equals method of RequiredProjectWrapper
+The affected equals method can be found in org.eclipse.jdt.internal.ui.packageview.ClassPathContainer$RequiredProjectWrapper.
+
+The code after the second if statement (see below) is never reached. This causes that duplicate project dependencies appear in our Eclipse project.
+
+public boolean equals(Object obj) {
+	if (this == obj)
+		return true;
+	if (obj == null || obj!=this)
+		return false;
+	if (getClass() != obj.getClass())
+		return false;
+	RequiredProjectWrapper other= (RequiredProjectWrapper) obj;
+	if (!Objects.equals(fClasspathEntry, other.fClasspathEntry)) {
+		return false;
+	}
+	if (!Objects.equals(fParent, other.fParent)) {
+		return false;
+	}
+	if (!Objects.equals(fProject, other.fProject)) {
+		return false;
+	}
+	return true;
+		}

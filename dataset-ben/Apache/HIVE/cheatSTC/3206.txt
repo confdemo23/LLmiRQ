@@ -1,0 +1,2 @@
+FileUtils.tar assumes wrong directory in some cases
+Bucket mapjoin throws exception archiving stored hashtables.

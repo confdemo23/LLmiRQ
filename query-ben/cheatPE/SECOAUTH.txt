@@ -1,0 +1,33 @@
+56	 CoreOAuthConsumerSupport
+70	 ClientPasswordAuthenticationProvider, BadCredentialsException, OAuth2Exception
+101	 OAuth2ProtectedResourceFilter
+102	 ProtectedResourceProcessingFilter
+112	 DefaultOAuth2GrantManager, OAuth2ClientHttpRequestFactory, OAuth2AuthenticationTokenSupport
+114	 OAuth2ClientContextFilter, OAuth2RestTemplate
+125	 AuthorizationCodeAuthenticationToken, AuthorizationCodeTokenGranter
+162	 AccessTokenProviderChain
+191	 AuthorizationEndpoint
+214	 UserAuthorizationSuccessfulAuthenticationHandler, OAuthProviderBeanDefinitionParser
+224	 AuthorizationEndpoint, authorizationRequest
+236	 DefaultWebResponseExceptionTranslator, AuthenticationException, InvalidTokenException, InvalidClientException, ClientDetailsServiceImpl
+256	 AuthorizationRequest, AuthorizationEndpoint, OAuth2Utils, DefaultAuthenticationKeyGenerator
+269	 OAuth2Exception, AuthenticationException
+284	 AuthorizationCodeAccessTokenProvider
+288	 AuthorizationRequest
+295	 AuthorizationEndpoint
+300	 OAuth2AuthenticationDetails, OAuth2Authentication, Authentication
+306	 OAuth2AccessTokenSupport, HttpRequestFactory
+311	 AbstractJaxbMessageConverter
+329	 AuthorizationEndpoint, OAuth2AccessToken, ClassUtils
+333	 AuthorizationEndpoint, RedirectMismatchException
+339	 AuthorizationEndpoint, ExceptionHandler, OAuth2Exception
+353	 DefaultAccessTokenRequest, DefaultOAuth2ClientContext
+357	 TokenEndpoint
+363	 TokenEndpoint, DefaultWebResponseExceptionTranslator
+365	 OAuth2ClientContextFilter
+386	 OAuthProviderProcessingFilter, AuthenticationEntryPoint, ExceptionTranslationFilter
+394	 AuthorizationEndpoint.appendAccessToken
+403	 DefaultRedirectResolver
+404	 OAuthConsumerContextFilter, PortResolver
+423	 AuthorizationRequest
+431	 WhitelabelApprovalEndpoint

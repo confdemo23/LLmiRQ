@@ -1,0 +1,184 @@
+17043	openapi endpoint throwexceptiononfailure throw exception failure endpoint exception component query producer camel rest open api parameters forwarded warded underlaying laying
+17104	obs proxy image content poll error key ssl Support object download Huaweicloud OBS component producer mode Huaweicloud OBS component doesn support object download producer mode support this 
+17127	data query camel locator api client bulk default endpoint maxrecords max records salesforce max records param
+17128	apache java test exchange charset camel src msh https blob mllp longer overridable ridable message
+17131	camel kafka   JMX MBean InstanceAlreadyExistsException thrown InstanceAlreadyExistsException DefaultMBeanServerInterceptor addMBean MBean registerMBean registerDynamicMBean JmxMBeanServer registerWithRepository register AppInfoParser registerAppInfo registerObject
+17138	health health org error optional microprofile micro profile check healthcheckresponse health check response camel micro propagate details profile
+17156	camel aws   Cancelling  Extending visibility window  while processing completed causes interruption exception translatePipelineException handleInterruptedException ExecutionFailureException AbortedException SdkInterruptedException ReceiptHandleIsInvalidException TimeoutException AbortedException BuilderImpl ApiCallAttemptTimeoutTrackingStage ApiCallAttemptMetricCollectionStage Exception handleInterruptedException TimeoutExceptionHandlingStage translatePipelineException build Aborted execute
+17174	uow issues events exchangecreatedevents exchange created events helper exchange regressions functionality work unitofworkhelper unit work helper unit work doesn clear job
+17197	elasticsearch test request types response elasticsearch client logresponse log response log client camel avoid deprecated apis api
+17204	set message multipart file create body disposition key Warning message logged multipart uploads uploading file multipart uploads warning message logged upload file file bytes skipped introduced analysis fixes https github apache camel pull files diff dde dba ced iteration loop filePosition expected expected affect functionality unnecessary warning logged
+17229	file file tests content consumer issues files body fileoperations file operations java finds
+17232	body includebody include body body object stream autoclosebody autoclose body ffdf autoclose aws null include false regression
+17242	file hubs response create test key query options Azure producers delete headers exchange discovered Azure Blob Producer Azure Datalake producer Azure Queue producer is  Issue introduced CAMEL
+17258	exchange camel tracer defaulttracer default tracer worker org camel default test manual possibility change lengths len gths output groups tracing race
+17269	set endpoint producer property valid test create build Splunk HEC address accepted Splunk HEC Component IPv address place hostname
+17391	org elasticsearch client sniff Sniffer   error while sniffing nodes ConnectException extractAndWrapCause performRequest RestClient Executors RunnableAdapter run Sniffer Task ElasticsearchNodesSniffer ThreadPoolExecutor sniff
+17424	topics topic consumer test camel event bledu shutdown rdreplaceevent replace event polling camel kafka shutdown issues attempting consume authorization
+17437	camel client components sqs component apache aws github core java camel deadletter fails registry impact
+17438	deployments list deployment operations ability replacedeployment replace deployment getdeployment deployment scaledeployment scale deployment labels camel kubernetes add replace resource producers produce
+17472	smpp camel jan reconnect consumer version reconnect producer code https longer works updating
+17474	transacted async test policy context endpoint create recipient camel core deadlock multicast transacted context multicast child transacted context deadlock Reproducer https github jeremyross camel transacted multicast
+17476	set calendar api client error component delay service Google OAuth service account component camel google mail OAuth authentication clientId clientSecret service account works type authentication https developers google identity protocols oauth service account type authentication user consent server applications
+17505	builder format dsl class data methods xmlsecurity xml security apache camel route core propose formats form ats
+17506	predicate code entity org entity uri odata resource parts info olingo single key
+17512	tod spans span bit camel placeholder quarkus decorators https tracing spandecorators span decorators work
+17526	component camel url fhir serverurl server url fhir test abstractfhirtestsupport abstract fhir test support abstract endpoint server configuration shouldn
+17536	ServicePool doStop hangs during shutdown ServicePool Lambda 2274 0x000000084108fc40 LinkedHashMap LinkedValues Service BaseService stop ServiceHelper stopService
+17555	set routes max route enabled include template trace camel core Flag include exclude routes route templates route templates aka kamelets flexible benefit declare routes included excluded parameterize routes include template parameter included bit doSwitch optimizes select parameter template good option include exclude filter pattern enabled disabled simple language route enabled protocol avro route route enabled protocol json route
+17566	rest openapi simple of camel spring boot examples is broken IllegalArgumentException RestOpenApiEndpoint loadSpecificationFrom createAsyncProducer Producer createProducer ServicePool SinglePool ProducerServicePool resolveResourceAsInputStream acquire DefaultProducerCache
+17574	test classes routes applications camel cameltestsupport camel test support support camel module main test
+17579	camel core   Message DataType lost on exchange copy XMLStreamException TypeConversionException UnmarshalException handleStreamException InvalidPayloadException getMandatoryBody MessageSupport RedeliveryErrorHandler SimpleTask ContractAdvice CamelInternalProcessor convertIfRequired process DirectProducer SendProcessor DefaultReactiveExecutor Worker doTransform Body Mandatory Message Support scheduleMain Processor before run schedule Executor Reactive convert Required Transform Direct Producer Advice Contract Internal Camel Task Simple Redelivery Error Handler Send Main
+17586	mail attachments java data camel mash loss component mail blob camel consumer unable handle multiple filename file
+17607	leak list https stream jdk twitter status wbtwacm twacm hmgjmt gjm files close avoid
+17610	set endpoint ses configuration create proxy determine raw camel aws ses Support BCC endpoint parameters BCC missing uri params supported Amazon SDK Patch send bcc manually create javax mail instance
+17611	route code route xml java yaml bean camel parameter bean create template
+17633	bean routes camel test core auto pattern pool Support JUnit Camel CDI JUnit supported Camel CDI goal task support JUnit order users benefit features
+17682	set write main dir scan archetype project file camel archetype main test main module Nicolas good main archetype test module https github apache camel tree main archetypes camel archetype main
+17690	test class camel camel annotations testing app code context test main annotation based
+17713	set file lock client create data filter logging CAMEL AWS doesn support uploading files custom metadata headers documentation aws component supports custom metadata headers code isn implemented integration implementing hinges custom metadata aws benefit ticket affect versions feature SDK version
+17717	security definition model javatype java type securityrequirements security requirements type security requirements securityrequirementsdefinition security requirements definition camel rest dsl cleanup
+17741	xml element code security security field specification xmlelement xml element attribute jaxb camel yaml dsl improper default annotated
+17743	schema maven resilience github core types javatypes java types circuitbreaker blob camel spring boot generation fails jconfigurationcommon configuration common configuration common
+17754	route precondition configurations jars route routeconfigurationdefinition route configuration definition configuration definition camel conditions core hard exclude
+17755	choice doswitch switch precondition core route choice camel term eip camel switch set
+17802	commit offset consumer connector storage set exchange configuration Check manually commit offset auto commit enabled requested orpiske CAMEL
+17835	github git hub hub fork git jsch repo mwiede support jcraft algorithms switch jcr aft github
+17840	set message pulsar letter redelivery max auto timeout Pulsar component support retry letter topics versions pulsar introduced retry letter topic feature feature pulsar consumers mark messages resent time nice feature camel https pulsar apache org docs concepts messaging retry letter topic
+17849	set kafka consumer test cache context offset create camel kafka invalid log message shutdown topic patterns shutdown consumer logs Stopping Kafka consumer topic confusing topic patterns
+17850	trylock lock code lock illegalmonitorstateexception illegal monitor exception illegal monitor record call issue unlock camel kafka concurrency fetcher
+17861	Streaming in Azure  Blob Storage  component not working createBlobStreamAndLengthFromExchangeBody AsyncProcessorConverterHelper ProcessorToAsyncProcessorBridge AbstractByteArrayOutputStream Blob toByteArrayImpl ByteArrayOutputStream Stream toByteArray Array getInputStreamLength
+17894	test service chunked tracing partition bocy camel client build investigate ways faster talk https peter palaga org presentations maven jug luzern zurich html ppalaga  has interesting ideas improve build time Investigate tweak build profile fully skip plugin executions avoid costly operations pre execution instantiating instance evaluate disabling validation formatting plugins execution enable sourcecheck profile Async profiler find bottlenecks Maven plugins reduce execution time load
+17896	endpoint set java type component builder headers process Extract description header Javadoc components describe headers Javadoc interesting extract Javadoc header description header duplicating description
+17898	route definition set create add configuration template service retrieve header definitions classes components define common headers base specific headers specific classes extend base evolve code extracting metadata headers order retrieve header definitions classes implemented interfaces
+17901	camel google pubsub   concurrent access error on shutdown NullPointerException LinkedList ListItr next GooglePubsubConsumer Linked Itr List Iterable forEach Google Pubsub
+17918	header enum class headers headername header enum improvement method foo fookey foo key define provider case
+17921	hazelcast listener handler error wire type tar concrete Hazelcast operations misspelled operations ADD READ HEAD misspelled
+17922	web headerpowhash header pow hash pow header digest mix option camel digest supplier incorrect default mix
+17923	endpoint component java type headers header process source Add constant header model documentation header header good practice constant string propose constant holds header avoid typos ease potential renaming
+17924	set http max order documentation exception content status expose headers documentation fields holding header exposed documentation component expected internal headers
+17931	set filter file mongodb collection connection debezium mongo camel mongodb Headers starts underscore website build problems String MONGO field problem check links invalid urls components mongodb component html check links Fragment endpoint header Eid components mongodb component html exist
+17941	access api dropbox dropbox tokens app developers permissions summary camel long lived retired refresh token
+17945	Fix the unstable test HazelcastSedaTransferExchangeTest assertThrows HazelcastSedaTransferExchangeTest testExchangeTransferDisabled AssertThrows Method Assertions NativeMethodAccessorImpl ReflectionUtils DelegatingMethodAccessorImpl invoke invokeMethod
+17946	port time list set expression path header context camel Add https support component support TLS server client connections
+17948	tests race mockendpoint mock endpoint endpoint class mock code issue race message condition
+17949	netty camel test netty exception http delivery camel nettyhttpoperationfailedexception netty http operation failed exception warn infinite loop setting retries
+17952	Several Hazelcast tests fail on Github HazelcastQueueConsumerPollTest verifyHazelcastInstance HazelcastCamelTestSupport verifyHazelcastInstanceMock InvocationInterceptorChain ValidatingInvocation Method DelegatingMethodAccessorImpl GeneratedMethodAccessor33 Hazelcast ReflectionUtils
+17954	error test info camel api salesforce camel integration execution composite integrationtest integration test component broken
+18021	debezium error camel connector error postgresconnectorembeddeddebeziumconfiguration postgres connector embedded debezium configuration configuration expression configuration apache add support default list maven plugin
+18117	maven set version camel github json model source camel jbang uber jar include application properties automatic include application properties uber jar
+18130	file message camel outmessage message processing github core file link apache ftp move post processing ftp working outmessage message set
+18141	camel headers xxx patititionkey patitition key file setheader set header dont classpath component key endpoint dsl generate fluent builders
+18156	create onboard wallet job thrift property aries schema Add support hyperledger aries Nessus Aries explore aspects digital identy verifiable credentials based Hyperledger Aries control digitial identity Digital forms birth certificate passport drivers license medical records vaccination certificates univeristy degrees property certificates corporation control https github tdiesler nessus aries
+18157	jdbc useheadersasparameters headers parameters statement reset type list auto parameter parameters output camel settings query parameters headers
+18189	set definition route camel context bean enabled type camel core XML DSL beans custom beans embed Camel routes file root tag beans Camel specific works runtimes basic support dependency injection bean embed Camel routes rests routeConfigurations routeTemplates file handy code projects Camel Camel JBang
+18214	camel debugger apache https work time website unit zulipchat test backlog debugger
+18215	set camel context route create endpoint processor test camel test Enable JMX camel debug detected camel debug classpath intent Camel Backlog Debugger based JMX nice tests override method useJmx implicitely implicitly camel debug
+18217	messages debugger message improvement breakpoints backlog application backlogdebugger backlog debugger lifetime test suspend
+18223	route advice processor camel add create policy intercept camel plugin Propose goal debug textual route debugger textual route Debugger requirements work properly camel debug classpath JMX enabled CAMEL DEBUGGER SUSPEND set interesting propose maven goal camel plugin set automatically
+18234	Exception building aws  sqs route when certificate validation is disabled and a proxy is configured FailedToCreateRouteException ResolveEndpointFailedException IllegalArgumentException createRoute DefaultModelReifierFactory RouteReifier startRouteDefinitions AbstractCamelContext Route DefaultCamelContext start BaseService Reifier init
+18260	https debugger idea change fact event message tracer variables tracer reflect exchange backlogtracereventmessage backlog tracer event message backlog race
+18285	file length time load network user behaviour file experience solution camel lazy loading modified attributes faster performance
+18305	work classpath camel modeltoxmldumper model xmldumper xmldumper xml xml model dumper
+18315	event create quote wallet object management set aries camel hyperledger aries Add support single tenancy agent change admin wallet synonym existing single tenancy base wallet adds support connections accept invitation connections single
+18325	set create onboard component wallet job thrift property camel hyperledger aries Add support credentials endpoint
+18332	create onboard wallet host job thrift property aries camel hyperledger aries Upgrade nessus aries
+18337	set onboard create credential job jira thrift property camel hyperledger aries Add support issue credential send proposal
+18346	xalan camel cve pom blob https maven factory xml apache remove
+18387	message case strategy java test file error tar tarfile camel taraggregationstrategy tar aggregation strategy aggregation throws empty
+18411	camel osgi change https camel methodnotfoundexception method exception camel method call apache bean exception osg service reference
+18451	set bus hubs auto time client error producer camel azure eventhubs Add support Azure authentication
+18481	set mail content body attachments message recipient duplicate Mail Consumer handle duplicate empty attachment filenames mail consumer process mail attachments empty filename set attachments mail filename
+18508	bang user create call properties property application dev camel jbang User config file good user config file store values versions camel jbang party maven repos specific camel version specific spring boot quarkus version config key pairs properties maps CLI arguments camel CLI commands ala camel config list camel config camel config set camel config unset
+18514	health camel routes route check condition health impl code apache automatically started
+18555	maven jbang wrap fac apis library shrinkwrap shrink wrap ecd download camel standard shrink
+18575	code test temp time tempdir temp dir whatnot pursuit junit logic cleanup replace temporary dir
+18576	noformat json code yaml yaml camel scenario query query match kamelets json property finish
+18578	client print httpclient http client test http lra refactor lraclient camel duration lra jdk
+18580	test search planner set elasticsearch host timeout container camel elasticsearch Propose async producer Camel component based Java Api Client proposed component blocking producer improved leveraging asynchronous client propose blocking asynchronous producer
+18583	minio api deleteobjects delete objects minio objects https min request objects removeobjectsargs camel delete operation multiple
+18584	issues https attachment constructor result camel mail enhancements regressions contructor regression mailbinding mail binding binding extended creating contructor
+18601	test method org documentation support camel java github apache junit replace assertmockendpointssatisfied assert mock endpoints satisfied assert mock endpoints satisfied doc
+18611	camel karaf   CNFE when using camel blueprint ComponentDefinitionException ClassNotFoundException runBeanProcInit BeanRecipe internalCreate2 internalCreate BlueprintRepository AbstractRecipe create createInstances Recipe Bean BlueprintContainerImpl
+18612	string jsonpath class array json info test object file body inconsistency jsonpath json path path component problems databinding
+18620	factory redpanda service test kafka kafkaservicefactory kafka service factory service redpanda add container red panda infra inf
+18656	git branch master camel user branch operations repo target apache camel merge
+18660	localstack rate api github url map file path rest kinesis tests fail api limit exceeded
+18661	span camel java instrumentation bus code testme telemtery open otel opentelemtery open telemtery ins trumentation spans current
+18679	docker execute container create request exec remove image camel docker Bind mount support usefull camel docker support DOCKER BINDS message headers working Setting headers Docker bind
+18697	builder dsl methods bla expression apache tokenize route camel expression core propose languages lang uages
+18717	repository manual memorystaterepository memory repository camel offsetrepository offset repository test thread auto users max camel kafka investigate offset increasing
+18730	snapshot camel error maven report route plugin dataset emory mathcs class missing generating coverage
+18739	completion strategy zipaggregationstrategy zip aggregation strategy zip deletion issue exchange code problem directory aggregation loses oncompletion completion
+18764	route code templatedroute templated route java builder routebuilder route builder camel org builder void core template templates dsls dsl templated
+18795	camel shutdown apache consumer issue org https pollexceptionstrategies poll exception strategies strategies exception kafka closed
+18803	create wallet aries property admin service agent set Hyperledger Aries Add support service didexchange
+18812	ids route rest placeholder work class json restbindingmode rest binding mode uri binding rest dsl configuration place holder doesn
+18813	create onboard credential property job thrift aries schema Hyperledger Aries Add support service proof send proposal
+18816	camel ahc component crashes when a traffic starts too early FailedToCreateProducerException IllegalArgumentException acquireProducer DefaultProducerCache doCreateProcessorExchangePairs DefaultReactiveExecutor Worker createProcessorExchangePairs RecipientListProcessor Producer process Pipeline PipelineTask
+18860	set routes compile property file compilation java builder java joor dsl Adapt code compilation ease compilation routes written Java DSL adapt code reuse parts existing code https github apache camel quarkus issues
+18864	camel directory configure class drop issuecomment java dsl source joor support files
+18871	camel netty   Application does not recover  threads are WAITING  when NettyProducer pool is exhausted park LockSupport AbstractQueuedSynchronizer ConditionObject LinkedBlockingDeque Unsafe borrowObject NettyProducer GenericObjectPool process CamelInternalProcessor
+18880	json camel model settings configuration version dependency repository camel jbang upgrade maven resolver api changed internals code changed bit easier camel branch main unstable moment
+18890	set test camel path vertx uri create main Remove camel vertx kafka
+18904	component properties test endpoint json model uri validate camel core Add functions simple language create empty map list string json empty object manipulate camel routes require body empty list map string json add functions simple code situations
+18907	test expression letter set type builder create error camel datasonnet Datasonnet JakartaEE compatible Reported datasonnet https github datasonnet datasonnet mapper issues Jakarta compatible release disable remove camel datasonnet
+18912	client check sqs health component pass consumer camel sqsclient sqs client sqs consumerhealthcheck consumer health check health check broken injected
+18916	message camel logger instance xslt info xmlinput xsl current factory saxon injection
+18920	set property groovy context test failure create language camel groovy Upgrade Groovy
+18977	set code compile dependency error start compilation pre camel joor code flexible mode current code base hard change behavior jOOR language order move logic build time initialization time ugly hacks reflection goal task code flexible avoid hacks
+18978	http websocket host message enabled exception camel buffer Upgrade atmosphere Add JSR MAPPING PATH configuration  Atmosphere builds memory map consumer path logic Atmosphere messages redirected entry map
+18980	camel snmp test java apache snmp traptest trap test work components snmpv ver trap
+18985	messages message breakonfirsterror break error time camel error test test camel kafka kafka ting lost break
+18995	http components httpcomponents http components upgrade
+19004	signature route xml uri endpoint context key parse XML DSL parse route configuration XML namespace XML DSL load routeConfiguration XML namespace code routeConfiguration xmlns http camel apache org schema spring onException exception java lang Exception exception handled constant constant handled log message XML WARN exception message onException routeConfiguration code workaround explicitly remove namespace instance code routeConfiguration routeConfiguration code
+19014	exchange string class message expression template simple language exchange exception simplelanguage simple language impl cache issue
+19019	kafka consumer set create test header context factory camel kafka Upgrade Kafka https downloads apache org kafka RELEASE NOTES html
+19029	twilio set properties create endpoint api consumer error camel twilio Upgrade twilio java version Jakarta compatible version Jakarta compatible upgrade version https github twilio twilio java issues
+19066	exchange list split exchange property flexibleaggregationstrategy flexible aggregation strategy camelcorrelationid camel correlation camel split strategies multicast eip sets correlationid correlation correlation original
+19070	tests camel parameters resources infra nodes log test logs elasticsearch flaky apache
+19081	Start a route with aggregation fails due to NPE in AggregateProcessor NullPointerException restoreTimeoutMapFromAggregationRepository AggregateProcessor Processor Aggregate Aggregation Repository restore Timeout Map
+19100	filter code trigger change datachangefiltertrigger data change filter trigger data deadband status getdatachangefilterdeadbandvalue data change filter deadband monitoring milo component data hang route
+19101	policy api micrometer micrometer test micrometerroutepolicy micrometer route policy settings timers camel osgi features
+19123	camel json model settings version configuration dependency set camel jbang upgrade maven resolver API
+19130	set filter type host constructor websocket context camel Upgrade snakeyaml
+19132	test camel thread pool jslt core create text camel core Deprecate direct remove
+19137	registry instance meter registry behavior meterregistry meter registry compositemeterregistry composite meter registry configuration camel endpoint favor composite instances
+19155	bus error message method client async service component servicebusreceiverasyncclient service bus receiver async client route azure completes messages abandoning
+19160	return converter jaxb cxf converter cxfpayloadconverter cxf payload converter lookup object coverter registry null payload fallback chance
+19171	uri components http httpcomponents http components test fact investigation slashes endpoint org camel http prevent duplicating generated
+19184	http test camel httpcontext http context case components guide jiriondrusek jiri ondrusek ondrusek migration camel upgrade broke context
+19188	uri parameters header approaches headers message support key exchange query graphql graph rap component http custom graph
+19189	context deployment pool build add remove hazelcast producer camel groovy Adapt code mode Groovy language adapt current code provide pre compiled groovy classes build time
+19191	class https version classnotfoundexception class exception chucknorris camel examples xml apache compatible
+19193	micrometer default metrics https names meter naming docs concepts change hang follow naming conventions
+19220	camel groovy   Avoid setting variables to initialize the binding GroovyCastException DefaultTypeTransformation RedeliveryErrorHandler SimpleTask castToNumber intUnbox DefaultReactiveExecutor Worker GroovyExpression ExpressionSupport FilterProcessor ChoiceProcessor
+19224	prefix blob blobs camel camelazureblob camel azure blob blobconsumer blob consumer chat azure stream zulip consumer
+19245	compile routes builder letter output set error file camel java joor dsl Ease compiled classes anonymous classes compiled reflection introspection simplified adding methods
+19248	key range options consumer rangeendkey range key rangestartkey range start key couchbase couchbaseconsumer couchbase consumer color endkey key suspicious ignoring variable
+19279	component camel azure files rest file ftp polling consumer smb introduce mimic
+19280	set coap key test cipher method client property camel coap support coap observe RFC proposed feature support CoAP observe rfc camel coap component rfc https datatracker ietf org doc rfc
+19290	component json test create jslt endpoint object sample camel solr Remove component maintainable deprecate remove
+19295	lrucache registry map map class thread issue factory dynamicmap dynamic map linked concurrency issues dynamic abstractdynamicregistry abstract dynamic registry abstract dynamic
+19311	set thread pool function executor aggregation hazelcast context Review SimpleLRUCache thread safe SimpleLRUCache thread safe discussion check https github apache camel pull issue https issues apache org jira browse CAMEL
+19334	redis camel container external host start create work Upgrade spring data redis
+19348	set trace camel exchange span include host log camel tracing Upgrade test errors upgrading camel observation upgrading newer release
+19359	request gracefulshutdown graceful shutdown code github graceful test console thread test shutdown camel spring boot start graceful shutdown receive
+19386	noformat definition property template object properties foo bean obj bean support
+19392	noformat obj route schema definition bean bean template prop namedbeandefinition named bean definition correct definition
+19399	converter converter test cxf payload camel cxf cxfpayloadconvertertest cxf payload converter test camel test prevent storing invalid entry cache error
+19400	test timeout list failure sniffer watch camel wire camel elasticsearch Reduce integration tests duration build Jenkins takes max duration allowed idea task reduce duration integration tests elasticsearch component potential test propagate concept integration tests eventually
+19401	code test string kafka github service typo containerlocalkafkaservice container local kafka service local infra kafka image container kafka
+19402	set log redelivery delay processor avoidance url async test infra Reduce boilerplate code needed working CAMEL realized duplicated code test infra goal task propose reduce boilerplate code needed add service
+19408	set component ftp container file property swift endpoint camel swift Restore component component removed underlying library prowide support Jakarta namespace time latest version supports component restored
+19445	camel caffeine tests cache test caffeineloadcacheproducertest caffeine load cache producer test producer repository assertions caffeine cleanup assert ions
+19464	filter host camel external header test consumer websocket camel kafka Upgrade upgrade ready
+19479	print create expression commit execute onboard missing parse camel core Add threadId function simple language threadName threadId number
+19488	set type xml registry constructor context text camel OSGi features snakeyaml
+19490	host test search container timeout builder camel external camel elasticsearch Upgrade
+19605	change create wire property test camel service exchange camel xchange Upgrade xchange Thomas mind upgrading camel xchange API
+19615	file set directory lock key create logging delete camel ftp chmodDirectory option junk change directory permission fails blocking issue current chmodDirectory option https camel apache org components sftp component html endpoint query option chmodDirectory Steps reproduce SFTP Directory user restricted dir subdir restricted change rights current user Component Call sftp localhost user restricted dir subdir newDir username admin password admin chmod chmodDirectory Behaviour current implementation steps directory create junk chmodDirectory option set color existing junk change directory permission fails color Expected Behaviour change permission directory exists created Testcase debugging Testcase reproduce error remove permission current user root rights delete Testdirectory suitable pipeline builds https github michael salzburg camel
+19624	filter host http external camel websocket context header Upgrade Derby testing org apache derby derby embedded derby changed bit upgrade require components
+19650	configuration producer workerpool worker pool worker pool code threads worker props pool camel kafka doesn honor
+19711	filter pool host camel external configuration websocket http Upgrade Junit JUnit https junit org junit docs release notes
+19714	camel jsonpath  Consider removing json smart exclusion ClassNotFoundException DefaultsImpl RelationalExpressionNode FilterCompiler CompiledFilter getEffectiveDefaults ValueNodes PathNode access 000 Configuration ConfigurationBuilder

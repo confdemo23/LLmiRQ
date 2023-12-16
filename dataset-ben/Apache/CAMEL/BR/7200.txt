@@ -1,0 +1,2 @@
+getComponentDocumentation do not work in OSGi
+This API returns null in OSGi, eg Karaf.

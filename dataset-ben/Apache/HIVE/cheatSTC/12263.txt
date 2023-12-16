@@ -1,0 +1,2 @@
+Hive SchemaTool does not tolerate leading spaces in JDBC url
+With configuration as below:

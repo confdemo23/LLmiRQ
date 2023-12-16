@@ -1,0 +1,87 @@
+512	map key set object comparator entry hash equals equals hashCode mismatch Randoop collection classes test cases objects equal hash code differs attach file test cases tests longer versions showing issue
+583	map set bidi object hash unmodifiable sorted reference JAVA serialization vulnerability CVE commons collections jar vulnerability talking number CVE file commons collections jar jar file takes care deserialization commons collections jar version jar vulnerability
+217	entry case map apos values setvalue set amp statement source illegal flat set overwrites writes
+219	listutils list utils retainall retain collection calls utils collectionutils collection utils method removeall remove list retain remove
+221	classes amp usage rmi sessions composite shouldn collection compositeset composite set compositemap composite map compositecollection composite collection collection map set implement serializable
+222	collection retainall retain removeall remove utils listutils list utils collectionutils collection utils method collection remove list retain
+228	return multi map putall case multvaluemap mult map multivaluemap multi map object multihashmap multi hash map mult correct values
+237	map map iterator return behavior entryset entry set array entries multi iteration multivaluemap multi map entry set expected
+240	map cluster session multivaluemap multi map object http multi serializable container classes implement
+249	coll addall add setuniquelist set unique list collection list list int adds call unique set add
+256	list list listutils list utils utils method apos transformer transformer mylist list amp transformedlist transformed list transformed doesn transform
+261	map print flat integer return println remove code size final correct
+262	apidoc amp key class lastkey key map abstractlinkedmap abstract linked map method linked firstkey key api doc error abstract
+266	key code multikey multi key hash multi subkeys system hash code amp issue serialized deserialized rmi
+284	collection removeall remove utils list listutils list utils retainall retain remove collection collectionutils collection utils return calls retain
+288	utils map entries map list javadoc piece list transformedmap transformed map method javadoc incorrect behavior explained listutils list utils transformedlist transformed list transformed
+294	bug case caseinsensitivemap case insensitive map behavior platform string map insensitive common handling case ins ensitive
+304	list decoratedlist decorated list string list element method set code add setuniquelist set unique list set unique corrupts uniqness
+307	list list sublist list subuniquelist unique list setuniquelist set unique list array method range uniquelist unique list checks set unique full parent sublist
+315	utils removeall remove collection listutils list utils list calls version amp retainall retain collectionutils collection utils remove wrong method
+316	size lrumap maxsize max size max javadoc map size illegalargumentexception illegal argument exception code constructor lrum behavior inconsistent
+323	map constructor caseinsensitivemap case insensitive map exception illegal hashmap hash map illegalargumentexception illegal argument exception argument capacity case behavior constructors insensitive inconsistent standard java hash
+331	comparator collatingiterator collating iterator iterator object curobject cur object collections org change sort cur collating npe comparator null
+349	listutils list utils utils retainall retain collection collectionutils collection utils calls remove method retain list removeall remove call wrongly
+350	system info amp loginfo log info behavior log code map parse number maputils map utils utils getnumber number sends output
+353	map key map linked lastkey key firstkey key amp shouldn abstractlinkedmap abstract linked map java abstract javadoc java doc doc reversed
+357	collection removeall remove collection listutils list utils listutils utils return list method remove collectionutils collection utils invokes wrong
+358	collection utils listutils list utils retainall retain collection removeall remove remove list collectionutils collection utils retain calls
+359	list list behavior intersection listutils list utils amp code utils doesn apos duplicates
+360	var collections hasnext predicate list java apache specification lang iterator filterlistiterator filter list iterator filter throws exception associate junit nit tests
+371	collection utils removeall remove org collections listutils list utils collection bug remove apache commons collectionutils collection utils
+372	comparator transformer string integer utils transformer test generics comparatorutils comparator utils transformedcomparator transformed comparator transformed wrongly typed
+379	collection outputcollection output collection null comments method output inputcollection input collection elements exception param bugs javadoc comment collectionutils collection utils utils class
+384	map method exception map illegalargumentexception illegal argument exception null code argument pointer illegal inconsistent javadoc comment synchronizedmap synchronized map synchronized org apache commons collections maputils map utils utils
+386	collection removeall remove listutils list utils collection failure copypaste copy paste utils return list paste collectionutils collection utils remove copy ast
+388	prototype factory return method illegalargumentexception illegal argument exception argument object exception inconsistent javadoc comment code prototypefactory prototype factory org apache commons collections factoryutils factory utils utils
+389	map transformer illegalargumentexception illegal argument exception exception illegal instance maptransformer map transformer comment return inconsistent javadoc code map super extends org apache commons collections transformerutils transformer utils utils
+391	properties map map param answer object apache toproperties properties commons org inconsistent javadoc comment code final collections maputils map utils utils
+400	collection null null method addignorenull add ignore null exception javadoc collection object inconsistent comment code add ignore org apache commons collections collectionutils collection utils utils
+406	patch hash collections problem list listutils list utils cardinality test hashbag hash bag bag list utils subtract tract slow
+407	test listorderedset list ordered set object problem version code result patch list collection ordered set removeall remove remove slow
+409	version test list problem order elements patch time setorder set order arraylist array list listorderedset list ordered set ordered set addall add add slow
+415	test problem version patch java list coll abstractlinkedlist abstract linked list abstract linked removeall remove remove slow
+424	collection composite compositecollection composite collection compositeset composite set exception coll type amp encounter kind surprising set situation works fine
+426	coll retainall retain collection test problem java behavior list version patch performance listorderedset list ordered set ordered set retain
+427	retainall retain test patch list version code coll problem collections misunderstanding performance setuniquelist set unique list set unique retain
+435	collection listutils list utils removeall remove retainall retain utils list collectionutils collection utils collection remove retain calls
+437	collection utils listutils list utils removeall remove collectionutils collection utils retainall retain remove collection return list invoke retain
+444	obj test element lset list setuniquelist set unique list testset test set amp set unique inconsistent
+453	input methods representation constructor findbugs find bugs arguments bugs transformer classes array find warnings package functors fun ctors expose internal
+454	bugs flat iterators iterator map entry warning find suggested rewritten findbugs find bugs
+470	map transformed class classes splitmap packages time transformedmap transformed map compat test exists
+472	work containsall patch abstract bag version map fixes uniqueset unique set return wasted ted abstractmapbag abstract map bag
+475	validateandconverttomillis validate convert millis unit time null millis timeunit time unit expiration convert map ctor wrong timeout handling policies passiveexpiringmap passive expiring map passive expiring
+487	removeall remove commons retainall retain collections view apache java utils collections method collectionutils collection utils collection remove work expected
+488	method members collection amp development utility satisfies satisfies deal collection
+493	utils method collection collectionutils collection utils list members predicate method satisfies element
+495	trie object unmodifiable return wrappers case unmodifiabletrie unmodifiable trie type unmodifiable trie decorate
+496	bounded interface unmodifiable unmodifiableboundedcollection unmodifiable bounded collection collection marker implement
+500	map method methods return java multimap multi map removemapping remove mapping clash type version rename multi remove avoid clashes newly introduced default
+501	methods map method multi key key problems arguments clash multikeymap multi key map rename remove avoid clashes newly introduced default java
+506	test res list println size utils lista list objecttest object test version result collectionutils collection utils collection
+507	comparator utils chainedcomparator chained comparator objects comparatorutils comparator utils force implement chained comparable
+516	map entries map properties toproperties properties javadoc input contents maputils map utils nullpointerexception null pointer exception null pointer exception utils
+524	list method duplicates org list iterator apache size iterations number listorderedset list ordered set ordered set
+531	list collection integer equator int method isequalcollection equal collection class generic wildcards collectionutils collection utils utils equal throw classcastexception class cast exception cast exception cases
+534	retainall retain bag collection coll bag array collection bug performance collectionbag collection bag retain
+536	map map size putall method call apos npe amp trigger code style maputils map utils utils
+537	predicate type signature legacy collection predicateutils predicate utils compatibility methods utils misbehaviour array
+543	abstract list collection decorator delegate classes hashcode interface abstractlistdecorator abstract list decorator test abstractcollectiondecorator abstract collection decorator collection equals hcode
+544	collection retainall retain collection utils list return code list undocumented performance issue retain method collectionutils collection utils
+545	collection removeall remove collection utils method elements code list undocumented performance issue remove collectionutils collection utils
+555	object exception argument type parameter treebag tree bag bag statement illigalargumentexception illigal argument exception add undefined nullpointerexception null pointer exception null pointer tree java
+558	los list listorderedset list ordered set string return int object fails set returns ordered remove
+566	fact iterator utils collatediterator collated iterator javadoc exception case comparator iterator time iteratorutils iterator utils coll ated natural ordering collated
+576	multikey multi key key object stream hashcode hash code code java multi resolve subclassing classing deserialization problem collections declare protected readresolve read resolve read final
+580	invokertransformer invoker transformer java transformer code entry annotation annotationinvocationhandler annotation invocation handler object vulnerability handler arbitrary remote execution invoker
+597	utils foralldo org commons strlist str list javadoc collections apache closure rethrow correction functors fun ctors catchandrethrowclosure catch rethrow closure catch
+279	map key entry move testfirst test equals void test lrumap test lrum movetomru move mru invoked invoke mru
+363	transformedmap transformed map void map object exception stream noptransformer map test transformed serializable superclass doesn apos define accessible constructor
+413	test map dualhashbidimap dual hash bidi map entryset entry set version removeall remove patch hash performance problem dual bidi
+525	atree tree map tree prefixmap prefix map string prefix patricia patriciatrie patricia trie codes unittest trie
+570	null exception constructor illegalargumentexception illegal argument exception null nullpointerexception null pointer exception pointer argument argument illegal decorators throw decorated
+577	class difference data trie prefix methods level abstract amp bits patriciatrie patricia trie patricia bugs change
+265	TreeBag allows uncomparable item to be added  breaking toString ClassCastException TreeMap getEntry AbstractMapBag compare get Map getCount Tree toString Entry Count
+474	Exception in ListOrderedMap putAll if map contains null values IndexOutOfBoundsException ArrayList ListOrderedMap List add Array put putAll Ordered Map Test main
+586	PatriciaTrie prefixMap clear throws NullPointerException NullPointerException AbstractPatriciaTrie PrefixRangeEntrySet EntryIterator testPrefixMapClear PatriciaTrieTest clear AbstractCollection AbstractMap remove Patricia Trie

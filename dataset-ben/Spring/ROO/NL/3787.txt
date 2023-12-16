@@ -1,0 +1,2 @@
+Changes to publish finders in controller layer compatible with new finder commands
+Due to new architecture, web mvc finder command need to be updated to  be compatible with new finder commands and new controller layer.

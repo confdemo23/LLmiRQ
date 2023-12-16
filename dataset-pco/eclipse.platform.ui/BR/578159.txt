@@ -1,0 +1,2 @@
+Reduce IDE dependencies of org.eclipse.ui.monitoring to make it usable in RCP application
+Would be nice to be able to use the freeze monitor also in e4 RCP applications. for this we should try to reduce / remove the dependencies to the IDE / e3 API.

@@ -1,0 +1,82 @@
+Introduce a file component for Azure Files (mimic the FTP component)
+I have a new RFE which includes integrating Microsoft Azure Files over public Internet.
+
+ 
+
+Initial findings and constraints:
+
+ 
+
+  - Azure Files do not implement the FTP standard.
+
+  - Azure Files could expose SMB protocol but SMB over public Internet is blacklisted by the security policy.
+
+  - Azure Files could expose NFS protocol but its pricing is prohibitive (so security has not been even evaluated).
+
+  - Azure Files have REST API <[https://github.com/Azure/azure-rest-api-specs]> and Java SDK <[https://github.com/azure/azure-sdk-for-java]>.
+
+  - My team is used to Camel 3.x components (includes the FTP component).
+
+ 
+
+In pre-discussions having a Camel Azure Files component that extends RemoteFileComponent<FTPFile> took preference over trying to use the Camel REST component as a client of the Azure Files REST API.  
+
+ 
+
+The Camel Azure Files component that extends RemoteFileComponent<> does not exist yet.
+
+ 
+
+This feature request is to develop the Camel Azure Files component that supports:
+
+ 
+
+  - producer
+
+  - consumer (polling unless Azure Java SDK allows event driven)
+
+  - secure auth over public Internet
+
+  - move and moveFailed
+
+  - filters  
+
+  - recursive
+
+  - read locks  (the changed lock unless Azure Java SDK allows a superior)
+
+  - timeouts (connect, read, write, changed lock)
+
+  - retries
+
+  - disconnect
+
+  - multiple protocol versions (if applicable)
+
+  - compatible with Camel 3.x
+
+  - many files 
+
+  - large files 
+
+ 
+
+-----
+
+Appendix
+
+The initial question on the users mailing list, that ended with the recommendation to enter new Camel feature request for a file-based component.   
+
+ 
+
+_Given that I see the two options:_
+
+ 
+
+  _A: use Camel REST component._
+
+  _B: use Azure Files remote file component._
+
+ 
+
+_Neither seems easy. For the Camel REST component, I'd need to implement a polling consumer via REST and match the FTPS component-like capabilities. For Azure Files, I have not found a developed Camel remote file component so its development would be required, i.e. likely a continuation at the Camel dev list..._

@@ -1,0 +1,5 @@
+Missing markup in the reference documentation section 8.4
+http://static.springsource.org/spring-security/site/docs/3.0.x/reference/core-web-filters.html#form-login-filter
+In the first paragraph:
+&lt;form-login&gt;
+should be wrapped within &lt;tt&gt;&lt;/tt&gt; to appear in monospace font

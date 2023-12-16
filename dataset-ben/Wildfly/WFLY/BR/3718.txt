@@ -1,0 +1,47 @@
+UT005023: Exception handling request to /frontend/images/favicon.ico: java.lang.NullPointerException
+2014-07-30 02:12:30,088 ERROR [io.undertow.request] (default task-15) UT005023: Exception handling request to /frontend/images/favicon.ico: java.lang.NullPointerException
+        at org.wildfly.clustering.web.infinispan.session.coarse.CoarseImmutableSessionAttributes.getAttributeNames(CoarseImmutableSessionAttributes.java:51)
+        at org.wildfly.clustering.web.infinispan.session.InfinispanSessionManager.findListeners(InfinispanSessionManager.java:320)
+        at org.wildfly.clustering.web.infinispan.session.InfinispanSessionManager.triggerPostActivationEvents(InfinispanSessionManager.java:309)
+        at org.wildfly.clustering.web.infinispan.session.InfinispanSessionManager.findSession(InfinispanSessionManager.java:164)
+        at org.wildfly.clustering.web.undertow.session.DistributableSessionManager.getSession(DistributableSessionManager.java:115)
+        at io.undertow.servlet.spec.ServletContextImpl.getSession(ServletContextImpl.java:677) [undertow-servlet-1.0.15.Final.jar:1.0.15.Final]
+        at io.undertow.servlet.spec.ServletContextImpl.getSession(ServletContextImpl.java:707) [undertow-servlet-1.0.15.Final.jar:1.0.15.Final]
+        at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:62) [undertow-servlet-1.0.15.Final.jar:1.0.15.Final]
+        at io.undertow.security.handlers.SecurityInitialHandler.handleRequest(SecurityInitialHandler.java:76) [undertow-core-1.0.15.Final.jar:1.0.15.Final]
+        at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:25) [undertow-core-1.0.15.Final.jar:1.0.15.Final]
+        at org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:61)
+        at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:25) [undertow-core-1.0.15.Final.jar:1.0.15.Final]
+        at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:25) [undertow-core-1.0.15.Final.jar:1.0.15.Final]
+        at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:240) [undertow-servlet-1.0.15.Final.jar:1.0.15.Final]
+        at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:227) [undertow-servlet-1.0.15.Final.jar:1.0.15.Final]
+        at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:73) [undertow-servlet-1.0.15.Final.jar:1.0.15.Final]
+        at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:146) [undertow-servlet-1.0.15.Final.jar:1.0.15.Final]
+        at io.undertow.server.Connectors.executeRootHandler(Connectors.java:177) [undertow-core-1.0.15.Final.jar:1.0.15.Final]
+        at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:727) [undertow-core-1.0.15.Final.jar:1.0.15.Final]
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [rt.jar:1.8.0_11]
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [rt.jar:1.8.0_11]
+        at java.lang.Thread.run(Thread.java:745) [rt.jar:1.8.0_11]
+2014-07-30 02:12:30,786 ERROR [io.undertow.request] (default task-15) Blocking request failed HttpServerExchange
+{ GET /frontend/images/favicon.ico}
+: java.lang.NullPointerException
+        at org.wildfly.clustering.web.infinispan.session.coarse.CoarseImmutableSessionAttributes.getAttributeNames(CoarseImmutableSessionAttributes.java:51)
+        at org.wildfly.clustering.web.infinispan.session.InfinispanSessionManager.findListeners(InfinispanSessionManager.java:320)
+        at org.wildfly.clustering.web.infinispan.session.InfinispanSessionManager.triggerPostActivationEvents(InfinispanSessionManager.java:309)
+        at org.wildfly.clustering.web.infinispan.session.InfinispanSessionManager.findSession(InfinispanSessionManager.java:164)
+        at org.wildfly.clustering.web.undertow.session.DistributableSessionManager.getSession(DistributableSessionManager.java:115)
+        at io.undertow.servlet.spec.ServletContextImpl.getSession(ServletContextImpl.java:677)
+        at io.undertow.servlet.spec.ServletContextImpl.getSession(ServletContextImpl.java:707)
+        at io.undertow.servlet.spec.ServletContextImpl.updateSessionAccessTime(ServletContextImpl.java:711)
+        at io.undertow.servlet.spec.HttpServletResponseImpl.responseDone(HttpServletResponseImpl.java:522)
+        at io.undertow.servlet.spec.HttpServletResponseImpl.sendError(HttpServletResponseImpl.java:137)
+        at io.undertow.servlet.spec.HttpServletResponseImpl.sendError(HttpServletResponseImpl.java:142)
+        at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:273)
+        at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:227)
+        at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:73)
+        at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:146)
+        at io.undertow.server.Connectors.executeRootHandler(Connectors.java:177)
+        at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:727)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [rt.jar:1.8.0_11]
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [rt.jar:1.8.0_11]
+        at java.lang.Thread.run(Thread.java:745) [rt.jar:1.8.0_11]

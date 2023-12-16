@@ -1,0 +1,5 @@
+StopWatch: increase precision by using System.nanoTime()
+In Java5, theres a new, more precise way to measure elapsed timespans:
+http://java.sun.com/j2se/1.5.0/docs/api/java/lang/System.html#nanoTime()
+It will probably break the class contract of the current StopWatch class, as the returned timestamps cannot be transformed to Dates etc., but it will add precision to the stopwatch aspect (as opposed to the timewatch aspect) of the class.
+Perhaps the way to go is to introduce a new HighPrecisionStopWatch class.

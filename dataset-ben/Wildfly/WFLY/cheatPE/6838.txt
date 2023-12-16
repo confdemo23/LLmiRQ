@@ -1,0 +1,3 @@
+RPCs to non-existant FORK channel are dropped
+RPCs sent to a FORK channel that is not currently running are not responded to correctly, causing the caller to eventually time out.
+An error response is being sent by org.jboss.as.clustering.jgroups.JChannelFactory, but the request ID is hard-coded to 0 so the reply can not be routed back to the sender and gets dropped.

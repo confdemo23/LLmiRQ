@@ -1,0 +1,4 @@
+camel-elasticsearch - Reduce integration tests duration
+The build on Jenkins takes between 7h and 8h which is much too long especially when we know that the max duration allowed is about 9 h. 
+
+So the idea of this task is to reduce the duration of the integration tests of the elasticsearch component as the first potential test to propagate the concept to other integration tests eventually.

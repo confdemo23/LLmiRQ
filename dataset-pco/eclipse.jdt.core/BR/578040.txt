@@ -1,0 +1,4 @@
+[18][javadoc] provide support for @link markup in @snippet
+@link markup can be used to linkthe display text in a snippet to declarations elsewhere in the API, in javadoc
+
+https://openjdk.java.net/jeps/413 has examples

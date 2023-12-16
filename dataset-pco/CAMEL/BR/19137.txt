@@ -1,0 +1,10 @@
+Favor CompositeMeterRegistry instances in Camel registry
+When Spring Boot detects more than one instance of `MeterRegistry` in the application context configuration (for example, both `meter-registry-jmx` and `meter-registry-prometheus` are on the classpath and the actuator endpoint for Prometheus is enabled), the auto-configuration adds an instance of `CompositeMeterRegistry` and configures it as the primary bean.
+
+When the micrometer component starts, it looks for an instance of `MeterRegistry` on Camel registry with the name `MicrometerConstants.METRICS_REGISTRY_NAME`. If not found, the component tries to locate a single instance of any `MeterRegistry` object on the registry.
+
+In the previous example configuration, there will be 3 instances of `MeterRegistry`, and the current behavior is to create a new instance of `MeterRegistry` to use.
+
+This changes the default behavior to look first for instances of `CompositeMeterRegistry` before looking for instances of `MeterRegistry`.
+
+ 

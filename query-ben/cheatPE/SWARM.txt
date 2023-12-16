@@ -1,0 +1,12 @@
+309	 SetupActions, InitialContext, context.lookup
+445	 Swarm, start(), Container
+493	 ConsulTopologyFraction
+527	 JAXRSArchive, addClass, setContextRoot, HealthCheckResource, CustomJsonProvider
+543	 MessagingFraction, activemq-ra.rar, org.apache.activemq.artemq.core.server, org.jboss.as.connector.deployment, org.apache.activemq.artemis.ra, org.jboss.as.server.deployment
+611	 RuntimeServer, stageConfig(), client()
+667	 UberjarSimpleContainer, pom.xml
+697	 GradleArtifactResolvingHelper, fullTree, ResolutionStrategy
+700	 DefaultSocketBindingGroupProducer, SocketBindingGroup, SwarmProperties.propertyVar
+762	 MavenArtifactResolvingHelper, settings.xml, mirrorOf, wildfly-swarm-plugin
+846	 TopologyProxyService, Undertow Reverse Proxy
+884	 ApplicationModuleFinder

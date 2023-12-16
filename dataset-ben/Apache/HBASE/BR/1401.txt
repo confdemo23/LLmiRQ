@@ -1,0 +1,2 @@
+close HLog (and open new one) if there hasnt been edits in N minutes/hours
+this will help narrow the write hole on clusters with periods of light load.  

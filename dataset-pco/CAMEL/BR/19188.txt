@@ -1,0 +1,10 @@
+GraphQL component should support Exchange.HTTP_QUERY or custom headers
+We are trying to access Pimcore through the camel-graphql component. It requires that an API-Key ist either send as a Query-Parameter (by appending "?apikey=123456" to the uri) or as a Header (".setHeader('x-api-key', constant('123456'))").
+
+At the moment neither approaches work because the additional parameter triggers the following error:
+
+ There are 1 parameters that couldn't be set on the endpoint. Check the uri if the parameters are spelt correctly and that they are properties of the endpoint. Unknown parameters=[\{apikey=123456} And the headers in the incoming message are simply ignored.
+
+I think two approaches are possible to fix this: Either the component should support the Exchange.HTTP_QUERY-Header and append this to the uri or there should be an option to copy headers to the http message - preferable with a list or regex to limit the headers sent.
+
+What approaches do you recommend/prefer? I would be willing to provide a path for either.

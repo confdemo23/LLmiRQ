@@ -1,0 +1,2 @@
+ScanCursor throw " java.util.NoSuchElementException"
+when scan big key with "match" options, redis server continuous return empty resultScanCursor throw " java.util.NoSuchElementException"

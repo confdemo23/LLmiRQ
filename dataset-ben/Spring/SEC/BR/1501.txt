@@ -1,0 +1,8 @@
+Documention uses incorrect package in example bean definition
+The JavaDoc page for SwitchUserFilter lists an example bean definition:
+ &lt;bean id="switchUserProcessingFilter" class="org.springframework.security.web.authentication.SwitchUserFilter"&gt;
+    &lt;property name="userDetailsService" ref="userDetailsService" /&gt;
+    &lt;property name="switchUserUrl"&gt;&lt;value&gt;/j_spring_security_switch_user&lt;/value&gt;&lt;/property&gt;
+    &lt;property name="exitUserUrl"&gt;&lt;value&gt;/j_spring_security_exit_user&lt;/value&gt;&lt;/property&gt;
+    &lt;property name="targetUrl"&gt;&lt;value&gt;/index.jsp&lt;/value&gt;&lt;/property&gt;&lt;/bean&gt;
+The package is incorrectly stated as org.springframework.security.web.authentication; it should be org.springframework.security.web.authentication.switchuser

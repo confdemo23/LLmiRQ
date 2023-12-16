@@ -1,0 +1,2 @@
+"ulp" in "FastMath"
+When the argument is infinite, method "ulp" in "FastMath" produces "NaN" (whereas "Math" gives "Infinity").

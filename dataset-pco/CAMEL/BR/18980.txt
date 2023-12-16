@@ -1,0 +1,7 @@
+camel snmp - SNMP Ver1 trap does not work
+Although camel-snmp supports SNMP v1, v2, and v3 trap, v1 trap does not work as expected.
+
+By checking the test code for camel-snmp, v2 trap is only tested.
+https://github.com/apache/camel/blob/camel-3.x/components/camel-snmp/src/test/java/org/apache/camel/component/snmp/TrapTest.java
+
+Based on the TrapTest.java, I implemented a TrapTestSnmpv1.java. Please use the test code for this issue.

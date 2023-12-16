@@ -1,0 +1,64 @@
+NPE with breakpoint in ClassLoader.getDefinedPackage()
+Created attachment 288101
+Screen recording showing the NPE occurring.
+
+I sporadically see the following exception and an error dialog when I try to debug code in: java.lang.ClassLoader.getDefinedPackage(String)
+
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.debug.core.model.JDIStackFrame.updateVariables(JDIStackFrame.java:765)
+	at org.eclipse.jdt.internal.debug.core.model.JDIStackFrame.getVariables0(JDIStackFrame.java:395)
+	at org.eclipse.jdt.internal.debug.core.model.JDIStackFrame.getVariables(JDIStackFrame.java:307)
+	at org.eclipse.debug.internal.ui.model.elements.StackFrameContentProvider.getAllChildren(StackFrameContentProvider.java:50)
+	at org.eclipse.jdt.internal.debug.ui.variables.JavaStackFrameContentProvider.getAllChildren(JavaStackFrameContentProvider.java:36)
+	at org.eclipse.debug.internal.ui.model.elements.StackFrameContentProvider.getChildCount(StackFrameContentProvider.java:29)
+	at org.eclipse.debug.internal.ui.model.elements.ElementContentProvider.retrieveChildCount(ElementContentProvider.java:126)
+	at org.eclipse.debug.internal.ui.model.elements.ElementContentProvider$2.run(ElementContentProvider.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+
+See attached video: "npe_when_debugging_ClassLoader_getDefinedPackage.mp4"
+
+To reproduce:
+
+1. Create a Java project.
+2. Create 2 Java sources:
+
+package test;
+
+public class Test {
+
+	public static void main(String[] args) {
+		int x = 42;
+		System.out.println("(1) x=" + x);
+		SomeClass c = new SomeClass();
+		c.foo();
+		System.out.println("(1) x=" + x);
+	}
+
+}
+
+package test;
+
+public class SomeClass {
+
+	public void foo() {
+		System.out.println("SomeClass.foo()");
+	}
+}
+
+3. Set breakpoints:
+
+ClassLoader [line: 2241] - getDefinedPackage(String)	- at "NamedPackage p = packages.get(name);"
+Test [line: 7] - main(String[])))	- at the 1st print in the snippet
+Test [line: 10] - main(String[]))	- at the 2nd print in the snippet
+
+4. Debug the "Test.java" snippet.
+5. Resume until you see the error dialog and the exception in the Error Log view.
+
+Seen with:
+
+Eclipse SDK
+Version: 2022-03 (4.23)
+Build id: I20220216-1800
+
+Also seen with latest JDT.

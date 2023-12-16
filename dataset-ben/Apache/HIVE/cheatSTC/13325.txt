@@ -1,0 +1,2 @@
+Excessive logging when ORC PPD fails type conversions
+Timestamp was specified as "YYYY-MM-DD HH:MM:SS":

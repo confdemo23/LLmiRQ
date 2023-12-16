@@ -1,0 +1,51 @@
+64	 SomeEntityRepository, JpaRepository, Query, Hibernate
+86	 findAll, IncorrectResultSizeDataAccessException, Specification, Pageable
+121	 Tree, findByParent
+137	 deleteAll(), findAll(), delete(), em.remove(), em.contains(), em.merge()
+169	 TreeEntity, JPA Repository, @Query, @ManyToMany, @JoinTable, @JoinColumn, @Param
+226	 IllegalArgumentException, @Query, Foo
+252	 PagingAndSortingRepository, Pageable, Sort, Person, Address
+277	 JpaSpecficationExecutor, findAll, Specification
+327	 ItemRepository, PageRequest, Direction, Sort, ColumnExpressionSort
+330	 @EnableJpaRepositories, @Repository
+342	 Media, User
+346	 PreApprovalRequest, PaceUser
+359	 DataObjectRepository, findOne, findOneAndLock, LockModeType.PESSIMISTIC_WRITE
+362	 Example, findByOneOrTwo
+373	 NullPointerException
+388	 EntityManager, @Alternative
+396	 CriteriaQueryImpl, CriteriaQueryCompiler
+397	 PayrollParametersRepository, PayrollParameters, PriceSchedule, ProcessPeriod, CalculationType
+401	 Spring Data JPA, log4jdbc
+420	 Student, Pageable
+424	 StringQuery, QueryUtils, OrderRepository
+427	 QueryDsl, Hibernate
+429	 InvalidDataAccessApiUsageException, @Query
+442	 CreateIfNotFoundQueryLookupStrategy, NamedQuery, Hibernate, Spring Data JPA
+492	 CrudRepository, Product
+494	 BeanDefinitionParsingException, Spring Data JPA auditing-feature, spring-aspects.jar
+505	 EntityWithBlobField, @Query, getBytes
+510	 spring-data-jpa, querydsl, hibernate
+561	 ChildEntity, spring-data-jpa, spring-data-commons
+567	 MyEntity, JpaRepository, OptimisticLockException
+597	 Spring Data JPA
+606	 AvatarEntity, findByCategoryInOrderByCategoryAsc, SQLGrammarException, EJBTransactionRolledbackException, PersistenceException, MySQLSyntaxErrorException
+608	 JpaPersistentEntityImpl, JpaPersistentProperty, Collection, Map
+681	 newAdhocStoredProcedureQuery
+684	 QueryDslPredicateExecutor, EntityGraph, findAll, org.hibernate.QueryException
+758	 RoleRepository, Permission
+763	 Specification, InvalidDataAccessApiUsageException, QueryException
+790	 @EntityGraph, QueryException, findAll(Predicate, Pageable), findAll(Predicate), com.physioclinic.entity.Appointment, com.physioclinic.entity.User
+798	 @Query, Movement
+820	 User, AbstractEntity, SimpleJpaRepository
+830	 NotContaining
+851	 Repository, Spring Data JPA
+858	 User, Role
+903	 Stream, List, Hibernate, streamQuery, listQuery, listVsStreamQuery
+913	 FoobarEntity, FoobarRepository, @NamedQuery, @Query
+951	 UserPrincipalRepository, Optional, AuthenticationPrincipal
+960	 Query, Prodotto, Pageable, Sort, PageRequest
+974	 Document, DocumentWithoutParent, findByParentIsNull()
+984	 DATAJPA-885, Joda LocalDate
+1023	 PushNotificationRepository, PushNotificationFlusherService
+1024	 org.joda.time.LocalDate, java.time.LocalDate

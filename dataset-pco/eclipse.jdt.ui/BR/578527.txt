@@ -1,0 +1,2 @@
+Refactor SubstringCleanup to jdt.core.manipulation
+Create a core version of the cleanup in the jdt.core.manipulation package and forward the existing cleanup to use that new version

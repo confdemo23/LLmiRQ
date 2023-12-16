@@ -1,0 +1,3 @@
+EnumeratedRealDistribution.inverseCumulativeProbability returns values not in the samples set
+The method EnumeratedRealDistribution.inverseCumulativeProbability() sometimes returns values that are not in the initial samples domain...
+I will attach a test to exploit this bug.

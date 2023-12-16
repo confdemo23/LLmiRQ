@@ -1,0 +1,2 @@
+HRS.validateValuesLength throws IOE, gets caught in the retries
+When HRS.validateValuesLength throws a IOE, it gets caught in the retries because it does not use a DoNotRetryIOException.

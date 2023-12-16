@@ -1,0 +1,6 @@
+Getting "Attribute 'enabled' in the resource at address ... is deprecated" when creating a datasource
+Following message's are seen while adding datasource via Management console:
+~~~
+INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool  25) JBAS014627: Attribute 'enabled' in the resource at address '/subsystem=datasources/xa-data-source=xyz' is deprecated
+, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+~~~

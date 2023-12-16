@@ -1,0 +1,3 @@
+further reduce jdt state save
+continue from Bug 576646,
+a few more bytes can be saved when writing Long int that do only require 3 bytes instead of 4.

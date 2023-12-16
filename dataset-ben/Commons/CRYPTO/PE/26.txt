@@ -1,0 +1,2 @@
+Utility classes should not have public constructors
+Utility classes should not have public constructors

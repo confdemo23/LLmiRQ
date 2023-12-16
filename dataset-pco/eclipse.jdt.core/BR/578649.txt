@@ -1,0 +1,33 @@
+Compiler wrongly parses text block escape sequences
+Compile and run this program in Eclipse:
+
+// ------------------------------------------
+package p;
+
+public class Test {
+    public static void main(String[] args) {
+        System.out.println("""
+        <record>
+          <value field=\"NAME1\">a\tb</value>
+          <value field=\"NAME2\">b\tc</value>
+        </record>
+        """);
+    }
+}
+// ------------------------------------------
+
+It prints:
+
+<record>
+  <value field="NAME1">a	b</value>
+  <value field=\AME2	c</value>
+</record>
+
+I.e. on the second value element, the escape sequences stop working. With javac, the following call works correctly:
+
+$ java p/Test.java
+<record>
+  <value field="NAME1">a        b</value>
+  <value field="NAME2">b        c</value>
+</record>
+Comment 1

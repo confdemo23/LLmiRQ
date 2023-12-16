@@ -1,0 +1,5 @@
+(Plat) Test connection succeeds even if no RAC exists
+If you test the connection on a valid host with a valid port that is being 
+listened to, it reports a successful connection. That is, if you try to connect 
+to an ftp server on port 21, or an http server on port 80, it also reports 
+success.

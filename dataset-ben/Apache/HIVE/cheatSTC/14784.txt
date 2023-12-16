@@ -1,0 +1,3 @@
+Operation logs are disabled automatically if the parent directory does not exist.
+Operation logging is disabled automatically for the query if for some reason the parent directory (named after the hive session id) that gets created when the session is established gets deleted (for any reason). For ex: if the operation logdir is /tmp which automatically can get purged at a configured interval by the OS.
+Running a query from that session leads to2016-09-15 15:09:16,723 WARN org.apache.hive.service.cli.operation.Operation: Unable to create operation log file: 

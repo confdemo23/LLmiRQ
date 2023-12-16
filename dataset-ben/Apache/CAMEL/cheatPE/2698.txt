@@ -1,0 +1,4 @@
+camel-netty - NettyProducer should detect write failures as its async operation
+It should do as MinaHelper
+See nabble
+http://old.nabble.com/Recovery-From-Netty-Connection-Drop-ts28467631.html

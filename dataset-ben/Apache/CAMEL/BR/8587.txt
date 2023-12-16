@@ -1,0 +1,2 @@
+Exceptions from multicast aggregators are not propagated to the global exception handler
+When a multicast aggregator throws an exception, either directly or by setting the exception to the returned exchange, the exception is just logged instead of being  propagated to the global exception handler.

@@ -1,0 +1,10 @@
+Caching StartKeys and EndKeys of Regions
+Each call for HTable.getStartEndKeys will read meta table.
+In particular, 
+in the case of client side multi-threaded concurrency statistics, 
+we must call HTable.coprocessorExec== &gt; getStartKeysInRange ==&gt; getStartEndKeys,
+resulting in the need to always scan the meta table.
+This is not necessary,
+we can implement the HConnectionManager.HConnectionImplementation.locateRegions(byte[] tableName) method,
+then, get the StartKeys and EndKeys from the cachedRegionLocations of HConnectionImplementation.
+Combined with https://issues.apache.org/jira/browse/HBASE-5491, can improve the performance of statistical

@@ -1,0 +1,2 @@
+CBO nesting windowing function within each other when merging Project operators
+The translation into a physical plan does not support this way of expressing windowing functions. Instead, we will not merge the Project operators when we find this pattern.

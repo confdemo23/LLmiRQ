@@ -1,0 +1,5 @@
+CollectionUtils.removeAll() calls ListUtils.retainAll()
+A snippet from CollectionUtils.java:
+CollectionUtils.javapublic static Collection removeAll(Collection collection, Collection remove) {
+        return ListUtils.retainAll(collection, remove);
+}It should call ListUtils.removeAll() instead.

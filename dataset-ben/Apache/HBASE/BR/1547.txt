@@ -1,0 +1,2 @@
+atomicIncrement doesnt increase hregion.memcacheSize
+this prevents flushing!  

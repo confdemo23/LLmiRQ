@@ -1,0 +1,3 @@
+Authentication token in session triggers replication of session each request
+If an authentication token exists in the web session, and the user is using FORM or a custom authentication mechanism, then that token is read from the session each request.  The token is treated as a mutable object by the clustering code and triggers replication of the session on each request.
+Annotating this with @Immutable will fix the problem.

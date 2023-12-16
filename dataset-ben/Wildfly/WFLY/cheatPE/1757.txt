@@ -1,0 +1,3 @@
+InflowJarTestCase is failing
+InflowJarTestCase is failing intermittently on all configurations.
+But most of the time it fails for EAP and one some enviroments we got 100% failure ratio.

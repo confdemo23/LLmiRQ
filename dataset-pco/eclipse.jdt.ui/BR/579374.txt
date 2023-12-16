@@ -1,0 +1,2 @@
+[dogfooding] Use Charset.defaultCharset() instead of System.getProperty("file.encoding")
+Use system properties cleanup to remove usage of System.getProperty("file.encoding")

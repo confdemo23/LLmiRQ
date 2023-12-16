@@ -1,0 +1,47 @@
+2657	 ActionMessage, Messages, Errors
+4661	 PropertiesPlaceHolderConfigurer, context:property-placeholder
+5016	 context:property-placeholder
+5120	 GenericApplicationContext, ClassPathBeanDefinitionScanner, TransactionService
+5171	 org.junit.Assume$AssumptionViolatedException
+5362	 AnnotationMethodHandlerAdapter.ServletHandlerMethodResolver, RequestMethod, ModelAndView
+5395	 ApplicationContext, ContextConfiguration, DisposableBeans, Test
+5406	 TilesViewResolver, UrlBasedViewResolver, TilesView
+5569	 java.lang.String, java.lang.StringBuilder
+5584	 Spel parser, Math
+5854	 ReportingServiceImpl, AbstractJasperReportJDBCCallableTask, AllBankDataInfoCallableTask
+5924	 @RequestMapping, RequestMethod.GET
+6161	 TaskNamespaceHandler, ThreadPoolExecutor$AbortPolicy
+6164	 AnnotationMethodHandlerAdapter, AntPathStringMatcher
+6180	 HttpClient, Ivy
+6231	 RequestMapping, RequestMethod, ModelAndView, @PathVariable
+6373	 Valid, Default, MyValidationGroup, Foo
+6378	 BookController, RequestMethod.GET, RequestMethod.POST
+6482	 @RequestMapping, RequestMethod.GET, ModelMap
+6493	 ClassPathXmlApplicationContext, XmlBeanDefinitionReader, DefaultListableBeanFactory
+6494	 ClassPathXmlApplicationContext, XmlBeanDefinitionReader, DefaultListableBeanFactory
+6499	 DispatcherServlet
+6560	 @RequestMapping, RequestMethod.GET
+6871	 Continent, ContinentController
+6901	 task:scheduler, task:scheduled-tasks, org.springframework.beans.factory.support.DefaultListableBeanFactory, org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler
+6902	 ExceptionHandler, ResponseBody
+6965	 Spring JDBC, WebLogic JDBC Driver, getDatabaseProductName
+6981	 TaskScheduler
+7278	 @ResponseBody, HttpMessageConverter, ContentNegotiatingViewResolver, ExceptionResolver, SimpleMappingExceptionResolver, AnnotationMethodHandlerAdapter
+7645	 RestTemplate, MultiThreadedHttpConnectionManager, WebappClassLoader
+7820	 @Controller, @ExceptionHandler, @ResponseBody, MyCustomValidationErrorsException, MyCustomValidationErrors
+8124	 ExceptionHandler
+8178	 BindException, HandlerMethodInvoker, RequestMapping, HandlerExceptionResolver, AnnotationMethodHandlerAdapter
+8665	 Spring Framework, WebDataBinder, UsernamesToRecipientsEditor, UserAccountDao, PropertyEditorSupport, List, Recipient, UserAccount, StringUtils
+8674	 TypeConverterDelegate, Collection
+8808	 AnnotationConfigWebApplicationContext, @Configuration, @ComponentScan, ConflictingBeanDefinitionException, Config
+8880	 @ComponentScan, @Configuration, FilterType, Configuration.class
+8992	 SpringJUnit4ClassRunner, ActiveProfiles, ContextConfiguration, ImportResource, MyClass, ProfileSpecificResource
+9046	 AnnotationConfigContextLoader, @Configuration, @ImportResource, @ActiveProfiles, NoSuchBeanDefinitionException, @Autowired
+9051	 ContextConfiguration, @Configuration, @Bean
+9092	 Contrib2A, Contrib2B, Contrib3A, Contrib3B, ApplicationRest
+9479	 @Configuration, @EnableTransactionManagement, transactionManager(), SingleConnectionDataSource
+10026	 @RequestMapping, @PathVariable, RequestMethod.GET, Model
+11598	 AnnotatedElementUtils
+12661	 Composed, MyTestExecutionListener, Experiment, AbstractTestNGSpringContextTests, TestExecutionListeners
+14080	 DefaultCorsProcessor, WebUtils, URI, CorsUtils, HttpServletRequest
+14678	 @RequestMapping, @PathVariable, RequestMethod.GET, @ResponseBody, HttpServletResponse

@@ -1,0 +1,6 @@
+Working directoy error not cleared after setting to be in same VM
+On the Ant JRE tab, specify a local directory that does not exist.
+Set the JRE to be the same as the workspace
+
+The working directory error is not cleared and the launch configuation is not 
+considered valid (you can't run)

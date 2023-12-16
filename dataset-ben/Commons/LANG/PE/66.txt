@@ -1,0 +1,2 @@
+[lang] StringEscaper.escapeXml() escapes characters > 0x7f
+StringEscaper.escapeXml() escapes characters &gt; 0x7f. That's both undesired and undocumented.

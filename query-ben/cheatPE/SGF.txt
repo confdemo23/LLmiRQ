@@ -1,0 +1,34 @@
+36	 PoolFactoryBean, PoolConnection
+39	 WiringInstantiator, Instantiator, BeanConfigurerSupport
+46	 InstantiatorFactoryBean, Instantiator
+69	 ClientRegionFactoryBean, CacheListeners
+80	 ClientRegionFactoryBean
+92	 GemfireRepositoryFactory, Region
+185	 OnServers
+189	 LocalRegionFactoryBean.setPersistent
+218	 CacheServerFactoryBean, parseSubscription
+225	 ReplicatedRegionFactoryBean, SubRegionFactoryBean
+238	 CacheParser, DomUtils
+247	 Predicates, getOperator
+252	 AdminUser, GuestUser, @Region
+271	 ContinuousQueryListenerContainer
+275	 ContinuousQueryListenerContainer
+277	 Person, Car, PersonRepository, GemfireRepository, QueryService, Pool
+280	 ContinuousQueryListenerContainer
+304	 GroupMemberFunctionExecution, FunctionService, onMember, onMembers
+311	 ClientRegionFactoryBean, ClientRegionFactory
+371	 GatewayReceiverFactoryBean, GatewayReceiverFactory.setManualStart, GatewayReceiver.isRunning
+374	 GatewayHubFactoryBean, DiskStore, Gateway Queue
+381	 RegionFactoryBean, RegionAttributesFactoryBean, PartitionAttributesFactoryBean
+414	 DistributedSystem, PoolFactoryBean, ClientCacheFactoryBean
+421	 MappingPdxSerializer, BeanWrapper
+425	 LazyWiringDeclarableSupport, Declarable, WiringDeclarableSupport
+429	 GemfirePersistentProperty, SimpleTypeHolder, BigDecimal
+432	 IndexFactoryBean, IndexExistsException, IndexNameConflictException
+434	 ClientCache, ClientRegionFactoryBean
+441	 ClientCacheFactoryBean, ClientCache, ClientCacheFactory
+448	 GemfireRepositoryConfigurationExtension, RepositoryConfigurationExtensionSupport, AnnotationRepositoryConfigurationSource
+449	 GemfireRepositoryFactoryBean, RepositoryFactoryBeanSupport
+450	 GemfireRepositoryFactoryBean, GemfireMappingContext
+474	 MappingPdxSerializer, fromData method
+570	 GatewaySenderFactoryBean, GatewayReceiverFactoryBean, GatewaySenderFactory, GatewayReceiverFactory

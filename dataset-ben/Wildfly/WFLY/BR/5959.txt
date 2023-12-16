@@ -1,0 +1,4 @@
+Infinispan caches non transactional despite transactional cache mode
+Local Infinispan caches declared in standalone.xml are no longer set as transactional even if a transactional mode is selected.
+This prevents creation of atomic maps using AtomicMapLookup as that specifically checks if the cache is transactional (throws java.lang.IllegalStateException: AtomicMap needs a transactional cache.)
+Possibly caused by issue WFLY-5327.

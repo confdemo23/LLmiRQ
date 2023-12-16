@@ -1,0 +1,2 @@
+Remove Code Duplication between ...Fix and ...FixCore
+We have some duplicated code between classes like ConvertLoopFix and ConvertLoopFixCore. We should clean these up to prevent the two locations from getting out of sync.

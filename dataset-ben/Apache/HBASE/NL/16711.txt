@@ -1,0 +1,2 @@
+Fix hadoop-3.0 profile compile
+The -Dhadoop.profile=3.0 build is failing currently due to code deprecated in hadoop2 and removed in hadoop3.

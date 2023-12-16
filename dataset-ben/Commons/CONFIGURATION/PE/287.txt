@@ -1,0 +1,56 @@
+XMLConfiguration.addNodes() problem using other configuration Nodes
+Trying to use the method XMLConfiguration.addNodes() to add a tree of configuration properties to a node in other tree fails. 
+Example:
+public static void main(String ...args){            
+try
+{
+           configDestination = new XMLConfiguration("output.xml");
+           configSource = new XMLConfiguration("input.xml");
+       }
+       catch(ConfigurationException cex)
+{
+           System.out.println("File not found");
+       }
+             Collection collection = new ArrayList();
+       collection = configSource.getRoot().getChildren();
+             configDestination.addNodes("newNodes", collection);                  
+try 
+{
+           configDestination.save();
+            }
+ catch (ConfigurationException e) 
+{
+           System.out.println("Error saving");
+       }
+}
+The XML files:
+input.xml
+&lt;rootNode&gt;
+   &lt;newNodeChild&gt;
+       &lt;newNodeChildChild&gt;child value&lt;/newNodeChildChild&gt;
+       &lt;newNodeChildChild&gt;child value 2&lt;/newNodeChildChild&gt;
+       &lt;newNodeChildChild&gt;child value 3&lt;/newNodeChildChild&gt;
+   &lt;/newNodeChild&gt;
+&lt;/rootNode&gt;
+output.xml
+&lt;testRootNode&gt;
+   &lt;test&gt;TEST&lt;/test&gt;
+&lt;/testRootNode&gt;
+output.xml after running the code:
+&lt;testRootNode&gt;
+   &lt;test&gt;TEST&lt;/test&gt;
+   &lt;newNodes/&gt;
+&lt;/testRootNode&gt;
+Expected output.xml:
+&lt;testRootNode&gt;
+   &lt;test&gt;TEST&lt;/test&gt;
+   &lt;newNodes&gt;
+       &lt;newNodeChild&gt;
+           &lt;newNodeChildChild&gt;child value&lt;/newNodeChildChild&gt;
+           &lt;newNodeChildChild&gt;child value 2&lt;/newNodeChildChild&gt;
+           &lt;newNodeChildChild&gt;child value 3&lt;/newNodeChildChild&gt;
+       &lt;/newNodeChild&gt;
+   &lt;newNodes/&gt;
+&lt;/testRootNode&gt; 
+Apparently "the copied nodes still contain a reference to their old configuration (because you directly fetched them from the root node of the source configuration). Because of this reference they are not detected as new nodes when the destination configuration is saved, and hence not written to disk.
+I think addNodes() should reset this reference, so that the added nodes can be detected as new nodes. (But then you have to be aware that you break the source configuration because a node can only be contained in exactly one configuration.) " 

@@ -1,0 +1,2 @@
+Synchronize HiveConf with hive-default.xml.template and support show conf
+see HIVE-5879

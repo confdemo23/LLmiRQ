@@ -1,0 +1,2 @@
+VWindowControlEditor displays unexternalized element names
+VWindowControlEditor displays unexternalized element names "PerspectiveStack", "PartSashContainer", "PartStack", "Part", "Area" instead of using EClassLabelProvider like other editors.

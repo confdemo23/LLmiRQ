@@ -1,0 +1,4 @@
+Disable insert overwrite for bucket partitioned Iceberg tables
+Insert overwrite should be disabled where the target Iceberg table is a bucket partitioned table, since which existing partitions will be overwritten is very hard to predict from a user's POV, as it depends on the bucket hash values calculated for the new dataset's rows. It's better to be on the safe side and disable this operation to avoid unwanted data loss.
+
+Note: this the same approach followed by Impala too.

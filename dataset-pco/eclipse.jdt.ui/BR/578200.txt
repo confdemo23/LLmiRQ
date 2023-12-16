@@ -1,0 +1,2 @@
+[18] Allow JDT to target Java 18 in compiler preferences
+Add "18 (BETA)" on the Compiler preferences page and show the corresponding disclaimer when it is selected.

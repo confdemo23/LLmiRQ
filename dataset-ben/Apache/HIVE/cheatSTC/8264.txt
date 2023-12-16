@@ -1,0 +1,2 @@
+Math UDFs in Reducer-with-vectorization fail with ArrayIndexOutOfBoundsException
+Following queries are representative of the exceptions we are seeing with trunk. These queries pass if vectorization is disabled (or if limit is removed, which means no reducer).

@@ -1,0 +1,37 @@
+Method Signature error with compareAndSet()
+import java.lang.invoke.MethodHandles;
+import java.lang.invoke.VarHandle;
+
+public class VarHandleBug {
+	private static final VarHandle VH;
+	static {
+		var lookup = MethodHandles.lookup();
+		try {
+			VH = lookup.findVarHandle(VarHandleBug.class, "value", int.class);
+		} catch (NoSuchFieldException | IllegalAccessException e) {
+			throw new AssertionError(e);
+		}
+	}
+
+	private volatile int value;
+
+	public void test() {
+		VH.compareAndSet(this, 2, 3); // <--- HERE
+	}
+
+	public static void main(String[] args) {
+		new VarHandleBug().test();
+	}
+}
+
+the compareAndSet() is typed
+  VarHandle.compareAndSet(VarHandleBug,int,int)void
+instead of
+  VarHandle.compareAndSet(VarHandleBug,int,int)Z
+
+the workaround is to introduce an unused boolean variable.
+  boolean result = VH.compareAndSet(this, 2, 3);
+
+The way to compute a @PolymoprhicSignature as changed between Java 7 and Java 9, in Java 9 if the declared method returns a type which is not Object, then that return type should be used instead of trying to infer the return type from the context. So here boolean (the return type of compareAndSet) should be used instead of void the type inferred from the context.
+
+Thanks to Remi Forax for the above bug

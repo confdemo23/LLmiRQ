@@ -1,0 +1,2 @@
+JBossMetaData.getInterceptors(String beanName, JBossMetaData jbossMetaData) doesn't return the default interceptors for a bean
+If no explicit interceptor bindings have been specified for a bean, then JBossMetaData.getInterceptors(String beanName, JBossMetaData jbossMetaData) doesn't return the default interceptor bindings (i.e. bindings for ejb-name=*)

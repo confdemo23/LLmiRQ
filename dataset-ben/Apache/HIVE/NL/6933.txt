@@ -1,0 +1,6 @@
+"alter table add partition" should support db_name.table_name as table name.
+Currently, 
+"alter table table_name add partition ...." works.
+but
+"alter table db_name.table_name add partition ..." throws an error message (different error for different versions).
+For consistency, I suggest with support both ways of referring to a table.

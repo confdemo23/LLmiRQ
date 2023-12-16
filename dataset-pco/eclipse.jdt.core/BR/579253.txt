@@ -1,0 +1,19 @@
+[18][javadoc] support identifiers as values in @snippet for @highlight @link and @replace
+support idedntifiers as values in @snippet for @highlight @link and @replace
+
+
+for the below snippet 
+
+/**
+ * {@snippet :
+ *    System.out.println; //@replace substring=out replacement=in
+ * }
+ */
+public void foo() {
+
+}
+
+
+the snippet should show as below
+
+ System.in.println;

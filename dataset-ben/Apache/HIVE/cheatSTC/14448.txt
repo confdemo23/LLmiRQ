@@ -1,0 +1,6 @@
+Queries with predicate fail when ETL split strategy is chosen for ACID tables
+When ETL split strategy is applied to ACID tables with predicate pushdown (SARG enabled), split generation fails for ACID. 
+This bug will be usually exposed when working with data at scale, because in most otherwise cases only BI split strategy is chosen. 
+My guess is that this is happening because the correct readerSchema is not being picked up when we try to extract SARG column names.
+Quickest way to reproduce is to add the following unit test to ql/src/test/org/apache/hadoop/hive/ql/TestTxnCommands2.java
+ql/src/test/org/apache/hadoop/hive/ql/TestTxnCommands2.java

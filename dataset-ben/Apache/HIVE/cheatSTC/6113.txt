@@ -1,0 +1,4 @@
+Upgrade DataNucleus [was: Unable to instantiate org.apache.hadoop.hive.metastore.HiveMetaStoreClient]
+CLEAR LIBRARY CACHE
+When I exccute SQL "use fdm; desc formatted fdm.tableName;"  in python, throw Error as followed.
+but when I tryit again , It will success.

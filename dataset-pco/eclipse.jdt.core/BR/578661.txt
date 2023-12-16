@@ -1,0 +1,7 @@
+[null][external] broken internal data flows for EEA
+While configuring a set of real world projects to leverage bug 488494, bug 509397 and bug 574603 I found some data flows where information about external annotations was dropped in name environments:
+
+NameEnvironment.computeClasspathLocations(..) passes allLocationsForEEA into some newly created ClasspathLocations, but not all. Notably this is missing when calling ClasspathLocation.forLibrary() where target is a java.io.File (i.e., an external jar).
+
+
+SearchableEnvironment.createAnswer(..) uses the wrong format of packageName when passed into new ExternalAnnotationProvider(..): we are using a '.' separated (as suitable for findPackageFragments()), which then doesn't match the '/' separated name in the EEA-header. An exception will let the type appear unannotated.

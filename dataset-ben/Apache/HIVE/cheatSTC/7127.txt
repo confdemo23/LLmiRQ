@@ -1,0 +1,2 @@
+Handover more details on exception in hiveserver2
+Currently, JDBC hands over exception message and error codes. But it's not helpful for debugging.org.apache.hive.service.cli.HiveSQLException: 

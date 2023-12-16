@@ -1,0 +1,45 @@
+Query string isn't ignored while url - filterchain pattern matching
+While upgrading from Acegi Security 1.0.7 to Spring Security 2.0.2 I noticed that url matching doesn't work as it was before.
+In Acegi I used the following url - filter chaing mapping:
+&lt;bean id="filterChainProxy" class="org.acegisecurity.util.FilterChainProxy"&gt;
+    &lt;property name="filterInvocationDefinitionSource"&gt;
+	&lt;value&gt;
+	     CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON 
+	     PATTERN_TYPE_APACHE_ANT
+                  j_acegi_security_check=httpSessionContextIntegrationFilter,....................			
+	    j_acegi_logout=httpSessionContextIntegrationFilter,.......................
+                 /*/.htm=httpSessionContextIntegrationFilter,.....................
+            &lt;/value&gt;
+  &lt;/property&gt;
+&lt;/bean&gt;
+I Spring Security the same mapping looks as follows:
+&lt;bean id="filterChainProxy" class="org.springframework.security.util.FilterChainProxy"&gt;
+    &lt;security:filter-chain-map path-type="ant"&gt;
+            &lt;security:filter-chain pattern="/j_spring_security_check" filters="httpSessionContextIntegrationFilter, ..............." /&gt;
+	&lt;security:filter-chain pattern="/j_spring_security_logout" filters="httpSessionContextIntegrationFilter,....." /&gt;
+	&lt;security:filter-chain pattern="/*/.htm" filters="httpSessionContextIntegrationFilter,....." /&gt;			
+    &lt;/security:filter-chain-map&gt;	
+&lt;/bean&gt;
+But  I received NullPointerException while performing some requests.  It appears because these requests bypass filterchain and Security Context isn't integrated into a session. Such situation occurs for requests which includes parameters in url.
+For instance, request url 'page1.htm' matches to pattern '/*/.htm' but url 'page1.htm?param=value' doesn't. 
+It caused by changes in url - filterchain pattern matching. In Acegi PathBasedFilterInvocationDefinitionMap ignores query string (any symbols after first '?') but in Spring FilterChainProxy provides full requests url to matcher (in this case AntUrlPathMatcher) :
+public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+            throws IOException, ServletException 
+{        FilterInvocation fi = new FilterInvocation(request, response, chain);
+        List filters = getFilters(fi.getRequestUrl());
+       .................}public List getFilters(String url)  {
+      Iterator filterChains = filterChainMap.entrySet().iterator();
+        while (filterChains.hasNext()) {
+            Map.Entry entry = (Map.Entry) filterChains.next();
+            Object path = entry.getKey();
+            if (matcher.requiresLowerCaseUrl()) {
+                url = url.toLowerCase();
+                if (logger.isDebugEnabled()) 
+{
+                    logger.debug("Converted URL to lowercase, from: '" + url + "'; to: '" + url + "'");
+                }
+            }
+            boolean matched = matcher.pathMatchesUrl(path, url);
+             ......
+}
+To keep backward compatibility I offer to change doFilter() implementation to pass request url without query string into getFilters() method.

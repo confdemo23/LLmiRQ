@@ -1,0 +1,2 @@
+Improve AnnotateWithStatistics with support for cartesian product
+Currently cartesian product stats based on cardinality of inputs are not inferred correctly.

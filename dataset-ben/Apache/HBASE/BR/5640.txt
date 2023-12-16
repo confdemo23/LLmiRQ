@@ -1,0 +1,3 @@
+bulk load runs slowly than before
+I am loading data from an external system into hbase. There are many prints of the form. This is possibly a regression caused by a recent patch.
+....on different filesystem than destination store - moving to this filesystem

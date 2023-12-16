@@ -1,0 +1,2 @@
+Typo in CompressorStreamFactory Javadoc
+The Javadoc for CompressorStreamFactory contains two examples of "Compressing a file". In actuality, the second example is decompressing a file.

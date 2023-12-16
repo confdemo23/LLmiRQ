@@ -1,0 +1,22 @@
+hplsql registerUDF conflicts with pom.xml
+in hplsql code, registerUDF code is
+    sql.add("ADD JAR " + dir + "hplsql.jar");
+    sql.add("ADD JAR " + dir + "antlr-runtime-4.5.jar");
+    sql.add("ADD FILE " + dir + Conf.SITE_XML);
+but pom configufation is
+  &lt;parent&gt;
+    &lt;groupId&gt;org.apache.hive&lt;/groupId&gt;
+    &lt;artifactId&gt;hive&lt;/artifactId&gt;
+    &lt;version&gt;2.2.0-SNAPSHOT&lt;/version&gt;
+    &lt;relativePath&gt;../pom.xml&lt;/relativePath&gt;
+  &lt;/parent&gt;
+  &lt;artifactId&gt;hive-hplsql&lt;/artifactId&gt;
+  &lt;packaging&gt;jar&lt;/packaging&gt;
+  &lt;name&gt;Hive HPL/SQL&lt;/name&gt;
+    &lt;dependency&gt;
+       &lt;groupId&gt;org.antlr&lt;/groupId&gt;
+       &lt;artifactId&gt;antlr4-runtime&lt;/artifactId&gt;
+       &lt;version&gt;4.5&lt;/version&gt;
+    &lt;/dependency&gt;
+when run hplsql , errors occur as below
+ Error while processing statement: /opt/apps/apache-hive-2.0.0-bin/lib/hplsql.jar does not exist

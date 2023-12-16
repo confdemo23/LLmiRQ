@@ -1,0 +1,5 @@
+ISO-8859-1 text output has fragments of previous longer rows appended
+If a LazySimpleSerDe table is created using ISO 8859-1 encoding, query results for a string column are incorrect for any row that was preceded by a row containing a longer string.
+Example steps to reproduce:
+1. Create a table using ISO 8859-1 encoding:CREATE TABLE person_lat1 (name STRING)ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe' WITH SERDEPROPERTIES ('serialization.encoding'='ISO8859_1');2. Copy an ISO-8859-1 encoded text file into the appropriate warehouse folder in HDFS. I'll attach an example file containing the following text: Mller,ThomasJrgensen,JrgenPea,AndrsNm,Fk3. Execute SELECT * FROM person_lat1
+Result - The following output appears:+-------------------+--+| person_lat1.name |+-------------------+--+| Mller,Thomas || Jrgensen,Jrgen || Pea,Andrsrgen || Nm,Fkdrsrgen |+-------------------+--+

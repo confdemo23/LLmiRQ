@@ -1,0 +1,2 @@
+Correct stage name value in replication_metrics.progress column in replication_metrics table
+ To improve diagnostic capability from Source to backup replication, update replication_metrics table by adding pre_optimized_bootstrap in progress bar in case of optimized bootstrap first cycle.

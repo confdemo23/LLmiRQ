@@ -1,0 +1,47 @@
+Evaluations for lambda variables are not working on nested lambda
+Sample 1:
+
+```
+import java.util.function.Consumer;
+
+public class InspectLambda {
+
+	public static void main(String[] args) {
+		int number = 23;
+
+		Consumer<Integer> myConsumer = (id) -> {
+			System.out.println("id = " + id);
+			System.out.println();   // Add a breakpoint here
+		};
+		myConsumer.accept(number);
+	}
+}
+```
+
+Stop at the lambda 'myConsumer', it can evaluate variables such as 'number', 'args' from enclosing method well.
+
+
+
+Sample 2:
+```
+import java.util.ArrayList;
+import java.util.List;
+
+public class InspectLambdaOnChainCalls {
+	public static void main(String[] args) {
+		int number = 23;
+		List<String> users = new ArrayList<String>();
+		users.add("a");
+
+		users.stream().forEach(u -> {
+			String localName = "local name";
+			System.out.println("user name: " + u); // Add a breakpoint here
+		});
+	}
+}
+```
+
+Stop at the lambda `System.out.println("user name: " + u)` of the chain calls, it cannot evaluate variables such as 'number', 'users' from enclosing method. But hovering at those variables, it can display their values well.
+
+
+Currently the evaluation engine collects variables for 3 frames starting from lambda, that works for the simple lambda calls. But for chain calls, there are more than 3 frames between the lambda frame and the enclosing method. That's why local variables of enclosing method are not recognized.

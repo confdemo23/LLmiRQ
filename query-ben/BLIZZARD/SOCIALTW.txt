@@ -1,0 +1,8 @@
+27	status limit rate exception user exception spring twitter http apos ratelimitexceededexception rate limit exceeded exception limit exceeded thrown hit daily update
+28	rate limit user exception twitter limit requests error uncategorized uncategorizedapiexception uncategorized api exception ratelimitexceededexception rate limit exceeded exception exceeded thrown hit apos hourly request
+57	error streaming uncategorizedapiexception uncategorized api exception api uncategorized amp api template notauthorizedexception authorized exception extract twittererrorhandler twitter error handler twitter handler doesn apos detect str eaming
+64	amp paging method users pagingutils paging utils utils twitter entities problem url size searching doesn apos work
+71	converter form message http images updatestatus update status formhttpmessageconverter form http message converter status twitter escaping twitterescapingformhttpmessageconverter twitter escaping form http message converter corrupting
+14	daily format searchoperations search operations exception null pointer operations trends incorrect
+37	debug media content status twitter iso http json org encoding problem update api
+58	message symbol problem star apos signature oauth amp exception additionalparameters additional parameters posting status fails authentication

@@ -1,0 +1,14 @@
+[18][javadoc] provide @snippet support in javadoc for inline snippets
+provide support for the new inline tag in javadoc  
+@snippet for code snippets.
+
+This bug is to mainly support @snippet inline tag and add inline code snippets
+
+example given below
+
+/**
+ * The following code shows how to use {@code println}:
+ * {@snippet :
+ * System.out.println("Hello world");
+ * }
+ */

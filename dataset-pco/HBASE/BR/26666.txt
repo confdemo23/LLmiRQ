@@ -1,0 +1,8 @@
+Add native TLS encryption support to RPC server/client
+Today, HBase must complete the SASL handshake (saslClient.complete()) prior to turning on any RPC encryption (hbase.rpc.protection=privacy, sasl.QOP=auth-conf).
+
+This is a problem because we have to transmit the bearer token to the server before we can complete the sasl handshake. This would mean that we would insecurely transmit the bearer token (which is equivalent to any other password) which is a bad smell.
+
+Ideally, if we can solve this problem for the oauth bearer mechanism, we could also apply it to our delegation token interface for digest-md5 (which, I believe, suffers the same problem).
+
+The plan is to port Server/Client TLS implementation from the ZooKeeper project. It's a Netty based solution which looks like the best fit for NettyRpc client/server. 

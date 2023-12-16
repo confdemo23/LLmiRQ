@@ -1,0 +1,14 @@
+Make XML Dumper work XML-IO
+I use the XML Dumper. But now in 3.18.0 it says:
+
+Cannot find ModelToXMLDumper on classpath. Add camel-xml-jaxb to classpath.
+
+It's true that I don't have camel-xml-jaxb on the classpath. I do however have:
+
+camel-xml-io
+
+On my classpath. Would be nice if ModelToXMLDumper would work with the camel-xml-io dependency also.
+
+
+
+:{{{}Cannot find ModelToXMLDumper on classpath. Add camel-xml-jaxb to classpath.{}}}

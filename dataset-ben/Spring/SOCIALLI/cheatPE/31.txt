@@ -1,0 +1,3 @@
+Error in JSON mapping when call to network updates
+In network updates the field likable is mapped with LinkedInNetworkUpdateMixin, but the property has an typing error. 
+The correct way is "likable" but the property is typed "likeable".

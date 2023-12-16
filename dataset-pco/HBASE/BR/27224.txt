@@ -1,0 +1,8 @@
+HFile tool statistic sampling produces misleading results
+HFile tool uses codahale metrics for collecting statistics about key/values in an HFile. We recently had a case where the statistics printed out that the max row size was only 25k. This was confusing because I was seeing bucket cache allocation failures for blocks as large as 1.5mb. 
+
+Digging in, I was able to find the large row using the "-p" argument (which was obviously very verbose). Once I found the row, I saw the vlen was listed as ~1.5mb which made much more sense.
+
+First thing I notice here is that default codahale metrics histogram is using ExponentiallyDecayingReservoir. This probably makes sense for a long-lived histogram, but the HFile tool is run at a point in time. It might be best to use UniformReservoir instead.
+
+Secondly, we do not need sampling for min/max. Let's supplement the histogram with our own calculation which is guaranteed to be accurate for the entirety of the file.

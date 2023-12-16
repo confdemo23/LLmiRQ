@@ -1,0 +1,3 @@
+HS2 unable to load UDFs on startup when HMS is not ready
+The error looks like this:2016-02-18 14:43:54,251 INFO  hive.metastore: 
+This is not desired behaviour, we shouldn't allow HS2 to be in a servicing state if function list is not ready. Or, maybe instead of initialize the function list when HS2 starts, try to load the function list when each Hive session is created. Of course we can have a cache of function list somewhere for better performance, but we would better decouple it from class Hive.

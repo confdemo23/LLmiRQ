@@ -1,0 +1,3 @@
+seda - discardIfNoConsumers=true do not call on completions 
+See SO
+http://stackoverflow.com/questions/35938139/how-to-release-file-lock-with-camel-when-not-consuming-from-seda-queue/35940850#35940850

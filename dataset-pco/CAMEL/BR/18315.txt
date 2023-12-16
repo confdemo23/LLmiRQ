@@ -1,0 +1,5 @@
+[camel-hyperledger-aries] Add support for single tenancy agent
+This change uses the 'admin' wallet as a synonym for the already existing single tenancy base wallet. It also adds support for ...
+
+* /connections/accept-invitation
+* /connections/get-single

@@ -1,0 +1,2 @@
+Few warnings in jdt core
+I see few warnings in jdt.core in my workspace.

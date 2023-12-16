@@ -1,0 +1,2 @@
+FlatFileItemReader should identify missing resource in warning
+Current warning says: "Input resource does not exist," but does not identify the resource, forcing debugging to correct.  Patch adds the resource.toString() to the message.

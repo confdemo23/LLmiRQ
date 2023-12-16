@@ -1,0 +1,6 @@
+Change default to use the external browser instead of the internal browser of Eclipse
+Currently Eclipse preferences states to use the internal browser instead of the external browser.
+
+Is this useful? I never, ever use the internal browser in Eclipse, it the normal browser buttons, preferences, etc. 
+
+If more people think the same way, we should change the default to use the default system browser.

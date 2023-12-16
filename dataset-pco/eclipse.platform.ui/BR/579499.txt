@@ -1,0 +1,6 @@
+MarkerSupportView: It should be possible to determine if a filter has been set on the MarkerSupportView through the FiltersConfigurationDialog.
+For our use case we require to know if a filter has been set on the MarkerSupportView through the FiltersConfigurationDialog.
+
+From searching the code, I see that enabledFilters in MarkerContentGenerator is a collection of all the filters that have been enabled through the FiltersConfigurationDialog.   
+
+The issue is that both MarkerContentGenerator and enabledFilters are not accessible through the Eclipse API and so it is not possible for us to determine if there is a filter set on the MarkerSupportView.

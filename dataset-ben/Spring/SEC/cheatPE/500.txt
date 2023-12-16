@@ -1,0 +1,2 @@
+Provide a getFilterProcessesUrl (protected or public) method in org.acegisecurity.ui.logout.LogoutFilter so that subclasses can access this parameter
+Provide a getFilterProcessesUrl (protected or public) method in org.acegisecurity.ui.logout.LogoutFilter so that subclasses can access this parameter.

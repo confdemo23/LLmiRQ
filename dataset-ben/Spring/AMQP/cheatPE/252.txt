@@ -1,0 +1,2 @@
+Remove System.out Call In JsonMessageConverter
+Line #122, when a ClassMapper is provided.

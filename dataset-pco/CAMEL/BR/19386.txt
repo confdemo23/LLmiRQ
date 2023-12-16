@@ -1,0 +1,24 @@
+Support object property on template bean
+The template bean, which is used by Kamelet, is out of sync between schema and deserializer/definition
+[https://github.com/apache/camel/blob/main/dsl/camel-yaml-dsl/camel-yaml-dsl-deserializers/src/main/java/org/apache/camel/dsl/yaml/deserializers/RouteTemplateDefinitionDeserializer.java#L48]
+[https://github.com/apache/camel/blob/main/dsl/camel-yaml-dsl/camel-yaml-dsl-deserializers/src/main/java/org/apache/camel/dsl/yaml/deserializers/RouteTemplateDefinitionDeserializer.java#L88]
+
+Note that the "RouteTemplateBeanDefinition" only allows key/value style with only string value allowed, no object properties.
+[https://github.com/apache/camel/blob/main/core/camel-core-model/src/main/java/org/apache/camel/model/RouteTemplateBeanDefinition.java]
+[https://github.com/apache/camel/blob/main/core/camel-core-model/src/main/java/org/apache/camel/model/BeanFactoryDefinition.java#L59]
+{noformat}
+property:
+  - key: foo
+    value: :bar
+{noformat}
+
+However "RegistryBeanDefinition" uses Map<String, Object> for properties, where the key is directly used for a property name (e.g. without explicit key/value entry).
+{noformat}
+properties:
+  foo:bar
+  fooObj:
+    fooObjProp: val
+{noformat}
+
+While we would want to keep backward compatibility on Kamelets with string key/value, it would be nice also for Kamelet to support object properties just like non-template beans can do.
+So, I propose to use template bean "properties" to be Map<String, Object> to align with non-template beans, but not a list of "PropertyDefinition". Then we can keep template bean "property" as-is, a list of "PropertyDefinition", i.e. string key/value.

@@ -1,0 +1,2 @@
+Merge multiple joins when join keys are the same
+CBO return path: auto_join3.q is joined on the same key from 3 sources. It is translated into 2 map joins. Need to merge them into a single one.

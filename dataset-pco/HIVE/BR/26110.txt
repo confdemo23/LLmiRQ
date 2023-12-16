@@ -1,0 +1,4 @@
+Bulk insert into partitioned table creates lots of files in iceberg
+For e.g, create web_returns table in tpcds in iceberg format and try to copy over data from regular table. More like "insert into web_returns_iceberg as select * from web_returns".
+
+This inserts the data correctly, however there are lot of files present in each partition. IMO, dynamic sort optimisation isn't working fine and this causes records not to be grouped in the final phase.

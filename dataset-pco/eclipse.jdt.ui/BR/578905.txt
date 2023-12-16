@@ -1,0 +1,32 @@
+[cleanup] convert fields to local var if only used locally causes error if transient modifier used
+The following class:
+
+public class Test1 {
+	
+	private transient int iRows = 0, iColumns = 0, iSeries = 0;
+
+	public void foo(String[] sea) {
+		iSeries = sea.length;
+	}
+
+}
+
+causes an issue when the following cleanup:
+
+Convert fields to local variables if only locally used
+
+is applied.
+
+It results in the following:
+
+public class Test1 {
+
+	private int iRows = 0, iColumns = 0;
+
+	public void foo(String[] sea) {
+		transient int iSeries = sea.length;
+	}
+
+}
+
+where the transient modifier is moved to the local variable and is an error.

@@ -1,0 +1,2 @@
+Camel-CSV marshalling breaks characters not in default charset
+Marshalling data with camel-csv will use the JVM default encoding instead of the one configured for the message. This will break non-ascii characters, especially if the platform default encoding does not support them (e.g. because the platform default encoding is ASCII)

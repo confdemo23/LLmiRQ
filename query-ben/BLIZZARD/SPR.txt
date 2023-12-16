@@ -1,0 +1,121 @@
+3542	set bean request context type scope expose output scope attributes beans inherited child beans permitted config bean parent scope prototype property prop prop bean bean child parent parent bean child parent parent bean child parent parent scope singleton prototype attribute parent carry child beans child amp scoped singleton wouldn amp apos sense inherit throwing child beans override scope attributes doesn amp apos sense amp scope generate xml error waste typing
+6366	bean set location loader load definition invoke key bean definitions classpath resource location bean definitions classpath resource location behaviour resource classpath changed treated relative resource
+6369	handler add configure message registry view resolver mvc Support apos groups apos addition Valid MVC Controllers JSR validation group Valid Controller don amp apos validation group time guess inject javax validation Validator reference Controller handle programmatically nice driven annotation Valid doesn amp apos support group attribute guys
+6385	bean config component loader transformer set parent oss Context Scanning doesnt work Jboss context scanning deploy Jboss Spring issue finding beans classpath war dropped Jboss Work fine newer Spring luck suggestions appreciated Sundar http forum springsource org showthread php
+6464	context attribute property request destruction servlet bind values Flash Scope Spring MVC Spring Web Flow Geert Pante submitted codes issue MOD
+6921	set property tag write ignore method read indexed Indexed properties set correctly form tags input form tag generates html code indexed properties form input path searchValues author searchValues Map String String object model html input searchValuesauthor searchValues author type text generates input searchValuesauthor searchValuesauthor type text unset properties model property searchValues modify parameter request manually form values set correctly
+7040	field object empty list set args row map form select regression bug binding map bug surfaced Spring problem binding map form select tag JSP select tag bind Map String String field command object form select path questions question key cssClass question key items question answers itemValue key itemLabel view source problem Spring select questionsARTISAN ARMOIRE WOOD questions ARTISAN ARMOIRE WOOD ARTISAN ARMOIRE WOOD option selected selected Cherry option option Walnut option select Spring select questionsARTISAN ARMOIRE WOOD questionsARTISAN ARMOIRE WOOD ARTISAN ARMOIRE WOOD option selected selected Cherry option option Walnut option select Notice questionsARTISAN ARMOIRE WOOD questions ARTISAN ARMOIRE WOOD brackets dropped
+7062	set validation provider message mapping parameter validator annotation Add Group support JSR Validation Valid replacement Valid group classes JSR validation group JSR Constraints Valid refer forum thread detail http forum springsource org showthread php
+1461	class beans classloader class loader thread class classutils class utils web string forname load loader set webapplicationcontext web application context application context inject properties current apos context
+4702	class test context dirtiescontext dirties context test context execution dirties destroytestinstance destroy test instance behavior support level
+5275	message exception message exception amp linkedex linked buildexceptionmessage build exception message string jmsexception return jmsutils jms utils jms utils build throws npe linked doesn apos
+5332	getmessage message message message exception linkedex linked jms jmsexception jmsutils jms utils npe string jmsexception jms exception throws doesn apos
+5958	exception message jms spring container linkedex linked message null nullpointerexception null pointer exception defaultmessagelistenercontainer default message listener container pointer jmsutils jms utils jms utils buildexceptionmessage build exception message build
+6053	metadata sybase database procedure sql jdbc call factory sql retrieve
+6184	class class config context configuration contextconfiguration context configuration change core java locations provide testcontext test context test support classes
+6250	executor util parser java namespace def thread bean backport error executorbeandefinitionparser executor bean definition parser definition depends port concurrent
+6269	sybase database amp provider source database product server data apos include ase list names recognised jdbcutils jdbcu tils
+6379	amp apos xml test case default resources defaultbeandefinitiondocumentreader default bean definition document reader document import classpath urls url doesn work
+6440	jdbc jdbctemplate jdbc template template rowmapper row mapper simplejdbctemplate simple jdbc template mapper row types size lacks merge impl deprecate simple
+6475	controller org web class requestmapping request mapping springframework mapping findall find spring package combining controllerclassnamehandlermapping controller class handler mapping class handler request relative method doesn apos work
+6525	context method tests inventions placeofbirth place birth test void length integer method spel wrong parameter resolution
+6567	context test annotation configuration amp spring config locations class loader configuration based testcontext test context
+6656	info springframework org context task context web spring bean application scheduledannotationbeanpostprocessor scheduled annotation bean post processor scheduled annotation post processor registers schedules application
+6663	context task application context init servlet scheduled event child web tasks scheduled multiple times application refreshed reshed
+6719	client factory gethttpclient http client template http httpclient http client commons resttemplate rest template eol service commonsclienthttprequestfactory commons client http request factory request returns apos
+6752	status resttemplate rest template template response headers status httpstatus http status error http implementation rest throws illegalargumentexception illegal argument exception illegal argument exception http enum
+6856	jdbc simple types java operations dao spring reasons separation xyz simplejdbctemplate simple jdbc template impl template daosupport dao support support deprecated
+6858	template jdbc jdbctemplate jdbc template java simplifications simple amp functionality advantage simplejdbctemplate simple jdbc template push impl
+6922	batch template jdbc simplejdbctemplate simple jdbc template object methods list int deprecate impl favor jdbctemplate jdbc template simple
+6955	executor shutdown amp message reason problem executor taskexecutorfactorybean task executor factory bean task factory taskexecutor task executor created task context closes
+7004	task scheduler println crontrigger cron trigger void executor system trigger initscheduler init scheduler taskexecutor task executor cron triggered correct time
+7190	default converter root annotationmethodhandlerexceptionresolver annotation method handler exception resolver mapping element mappingjacksonhttpmessageconverter mapping jackson http message converter parser annotation class annotationmethodhandleradapter annotation method handler adapter method handler adapter exception resolver
+7191	message http list httpmessageconverter http message converter converter mvc read amp converters annotation driven supports attributes setting customized custom ized bean
+7289	list list descriptor conversion stack string problem overflow assertnotnull assert null service stackoverflowerror stack overflow error error converting nested lists ists
+7562	type element descriptor list element getelementtype element type elementtype element type descriptor typedescriptor type descriptor forelementtype element type broken nested collections
+7603	timeout session message sessiontouse session transaction message container polling npe abstract abstractpollingmessagelistenercontainer abstract polling message listener container listener committing commit ting receive
+7650	session message sessiontouse session container message abstractpollingmessagelistenercontainer abstract polling message listener container polling defaultmessagelistenercontainer default message listener container java listener npe default committing commit ting received
+7688	exception pointer injection check metadata property null jvm injectionmetadata injection metadata checkpropertyskipping check property skipping nullpointerexception null pointer exception thrown synchronized pvs skipping
+7795	multipart file request property multipartfile multipart file bean model hidden binder htmlhiddenmethodfilter html hidden method filter servletrequestdatabinder servlet request data binder servlet data bind hiddenhttpmethodfilter hidden http method filter http
+7842	collection default data binder property apos autogrownestedpaths auto grow nested paths elements request paths databinder data binder define strategy beanwrapperimpl bean wrapper impl bean wrapper impl autogrowing auto growing handle
+7931	classes xml xmlrootelement xml root element amp annotation apos supportsinternal supports internal element element xjc checking root optional jaxb marshaller
+8013	header headers content amp jetty entity status response content resourcehttprequesthandler resource http request handler resource http request handler code setting length
+8040	request multipart method request servlet filter post hiddenhttpmethodfilter hidden http method filter multipartrequest multipart request wrapper servletrequestdatabinder servlet request data binder data binder bind wrapped servletrequests servlet requests requests checking
+8375	form model data items web binder exception memory outofmemoryexception memory exception sending modified list property high
+8766	codes setter introspector map status statuscodes status codes status properties type works impossible set simplemappingexceptionresolver simple mapping exception resolver impl mapping exception resolver simple
+8986	jaxb classes apos marshaller ability property jaxb amp annotation add scan packages marshalling java
+9068	status enumeration amp rfc httpstatus http status codes response http http apos implementation status precludes
+9197	http http apos resumablehttprequestsproposal resumable http requests proposal status amp httpstatus http status requests template requests response code
+9206	classpathscanningjaxb classpath scanning jaxb scanning spring marshaller jaxb class springinpractice marshaller http oxm add classpath
+9742	support xml element jaxb jaxbelement jaxb element instances check info xmlrootelement xml root element marshaller
+2657	action messages errors success message amp display libraries spring provide
+4661	property amp tag apos place resource properties configurer propertiesplaceholderconfigurer properties place holder configurer ignoreresourcenotfound ignore resource improve context placeholder place holder configurablity config urablity
+5016	ignoreunresolvableplaceholders ignore unresolvable placeholders placeholder placeholders property usage advance context location add properties place holder
+5120	context ejb service scanner appcontext app context spring definition application bean exception spring component scanning work jboss oss container
+5171	assumptionviolatedexception assumption violated exception junit org exception junit assumption spring assume violated longer incompatible nit
+5362	path method controller method match isbetterpathmatch path match request sets match request requestmapping request mapping mapping wrong wildcards
+5395	test test applicationcontext application context class context tests beans context dispoable application closed contextconfiguration context configuration configuration implement integration
+5406	tiles view urlbasedviewresolver url based view resolver url viewclass view class convenience resolver tilesviewresolver tiles view resolver configure url easier spring mvc
+5569	bean test string java lang stringbean string bean stringbuilder string builder builder singleton single ton stringbeans string beans beans
+5584	property amp bean definition math sqrt resolve class spel parser variable passed parameter static method
+5854	bean scope report property method prototype task report beans method lookup facility doesn apos work properly defined parent
+5924	variables path method resource path request resourcename resource mapping mappings requestmethod request method reopened pathvariable path variable variable map pings greedy hard coded code
+6161	org springframework backport class namespace task exception exception application java usage require concurrent port jars jar
+6164	vari apos amp string method request path matcher src abc uri incorrectly extracted
+6180	httpclient http client client http branch version apache commons year life upgrade
+6231	dots email variable path view file extension spr path rest restful rest ful urls url variables incorrectly mapped
+6373	foo mvc void class method processfoo process foo foo validation myvalidationgroup validation group post support validation groups valid spring
+6378	list book book method request post method return dao requestmapping request mapping issue requestmethod request method differs
+6482	projects problem order method message fault direction request variable code requestmapping request mapping mapping handled incorrectly dot character
+6493	context org xml bean info beans resource file regression suppport tag import
+6494	context org xml bean info beans resource file regression suppport tag import
+6499	bill uri http smith variable dispatcher template handler nohandlerfound handler mvc regression matching values dot
+6560	mapping amp usernames theme documenttype breeze addresses domain method requests uris uri mapped correctly requestmapping request mapping request
+6871	continent org continent countries springframework class form map spring mvc regression binding indexed properties broken
+6901	task org scheduler beans server post reference factory bean springframework tomcat shutdown correctly scheduled taks
+6902	method body output getmessage message mvc response spring resolve handler work responsebody response body exceptionhandler exception handler exception
+6965	jdbc weblogic web logic sql logic sybase server driver web documentation databases isn apos detected metadata driver
+6981	time taskscheduler task scheduler expression trigger cst mon task scheduler task spring accurate
+7278	body exception resolver responsebody response body code http view handler style status response usage limitations limit ations
+7645	http client apache version support leak org note upgrade server provide
+7820	methods custom support object responsebody response body exception exceptionhandler exception handler case body handler add request response
+8124	method controller exceptions fact controllers handler exception apos type exceptionhandler exception handler doesn handle control lers
+8178	method exception controller handler method request adapter bindexception bind exception bindexceptions bind exceptions handlerexceptionresolver handler exception resolver expose handler bind thrown handlermethodinvoker handler method invoker invoker
+8665	list property string account recipients editor editor recipient work code spring framework break support apos bug created
+8674	elements type type bug collection collection thread elements converter conversion binding broken typeconverterdelegate type converter delegate delegate bind
+8808	config case package configuration class annotation componentscan component scan bean amp foo classes component scan
+8880	class configuration componentscan component scan base default component package exception class classes default scan apos exclude filter annotated
+8992	context test spring test profiles tests beans profiles resource profilespecificresource profile specific resource activeprofiles active profiles active cascaded contexts loaded importresource import resource import
+9046	xml context profiles configuration profiles springframework resource test beans bean activeprofiles active profiles active account importresource import resource import imported context definitions definition
+9051	configuration apos test annotation reference problem isn methods amp solution spring configuration classes annotated
+9092	contrib provider contrib list list contribute object pvdcontrib pvd contrib objectfactory object factory contribrest contrib rest injecting autowiring auto wiring collection provider doen apos work
+9479	transaction configuration class readme spring program reference didn log amp missing annotation working
+10026	pathvariable path variable path string system request requestmapping request mapping var model dot method spring eats variable
+11598	spr cases annotations annotated annotatedelementutils annotated element utils utils annotation order annotation search favor locally declared composed inherited
+12661	test amp context class apos test experiment listeners logger configuration testexecutionlisteners test execution listeners execution fully supported meta annotation
+14080	request issue cors number string nature uri amp utils apos defaultcorsprocessor default cors processor default processor origin comparison restrictive rest rictive inefficient
+14678	test response pathvariable path variable wil request path method ioexception method response variable cut point
+5145	Spring TestContext Framework not compatible with JUnit SurefireExecutionException NoClassDefFoundError AssumptionViolatedException SpringMethodRoadie RunBeforesThenTestThenAfters invokeTestMethod Method Test runTestMethod run SpringJUnit4ClassRunner runWithRepetitions runTest Spring
+5785	NullPointerException in JmsUtils buildExceptionMessage buildException NullPointerException indexOf String handleListenerSetupFailure DefaultMessageListenerContainer AsyncMessageListenerInvoker buildExceptionMessage JmsUtils Message Listener run Container
+6052	NullPointerException can occur from JmsUtils buildException buildException NullPointerException indexOf String handleListenerSetupFailure DefaultMessageListenerContainer AsyncMessageListenerInvoker buildExceptionMessage JmsUtils Message Listener run Container
+6070	Differing types for getter setter of CookieGenerator cookieMaxAge causes configuring to fail NotWritablePropertyException BeanWrapperImpl setPropertyValue setPropertyValues AbstractAutowireCapableBeanFactory Property AbstractPropertyAccessor applyPropertyValues Bean set Wrapper Impl
+6082	cookieMaxAge field fails in org springframework web servlet i n CookieLocaleResolver NotWritablePropertyException AbstractAutowireCapableBeanFactory BeanWrapperImpl Bean setPropertyValues setPropertyValue applyPropertyValues AbstractBeanFactory Property AbstractPropertyAccessor populateBean doCreateBean
+6163	Using ignoreAcceptHeader and defaultContentType together causes problems UnsupportedOperationException set AbstractList ListItr ContentNegotiatingViewResolver DispatcherServlet resolveViewName List processRequest doDispatch FrameworkServlet doService
+6178	Using defaultContentType property in ContentNegotiatingViewResolver throws java lang UnsupportedOperationException UnsupportedOperationException set AbstractList ListItr ContentNegotiatingViewResolver DispatcherServlet resolveViewName List processRequest doDispatch FrameworkServlet doService
+6356	NPE in AbstractApplicationContext finishRefresh when initialized via Spring DM NullPointerException DependencyWaiterApplicationContextExecutor CompleteRefreshTask AbstractDelegatedExecutionApplicationContext run finishRefresh AbstractOsgiBundleApplicationContext executeWithCustomTCCL ContextPropagatingTaskExecutor Context ThreadPoolExecutor Worker
+6359	lifecycleProcessor Is NULL NullPointerException DependencyWaiterApplicationContextExecutor CompleteRefreshTask AbstractDelegatedExecutionApplicationContext executeWithCustomTCCL AbstractOsgiBundleApplicationContext finishRefresh run PrivilegedUtils Context Application completeRefresh
+7084	IllegalArgumentException thrown for simple java lang String prototype bean BeanCreationException BeanInstantiationException IllegalArgumentException autowireConstructor AbstractAutowireCapableBeanFactory ConstructorResolver Bean createBeanInstance AccessController doCreateBean Constructor doPrivileged createBean AbstractBeanFactory
+7478	Setup of JMS message listener invoker failed for destination when upgrading from       to NullPointerException rollbackOnException DefaultMessageListenerContainer AsyncMessageListenerInvoker AbstractPollingMessageListenerContainer handleListenerSetupFailure rollbackOnException Listener executeOngoingLoop doReceiveAndExecute AbstractMessageListenerContainer receiveAndExecute invokeListener
+7482	Exception  SpelEvaluationException  EL E  when using spring eval with Jetty SpelEvaluationException AccessException JasperException NullPointerException PropertyOrFieldReference readProperty getValueInternal SpelNodeImpl CompoundExpression Property SpelExpression HttpJspBase EvalTag getValue JspServletWrapper
+7638	spring eval causes SpelEvaluationException when page is opened in second user session SpelEvaluationException AccessException JasperException NullPointerException handleJspException JspServletWrapper handleJspException service renderMergedOutputModel InternalResourceView JspServlet Jsp DispatcherServlet render serviceJspFile HttpServlet
+7686	NullPointerException in InjectionMetadata BeanCreationException NullPointerException BeansException AutowiredAnnotationBeanPostProcessor AutowiredMethodElement checkPropertySkipping InjectionMetadata InjectedElement processInjectionBasedOnServletContext SpringBeanAutowiringSupport Injection inject processInjection Bean
+7769	SpringJUnit ClassRunner is not compatible with java context configuration IllegalArgumentException notNull Assert loadApplicationContext TestContext getApplicationContext Context Application load Test
+8759	SimpleMappingExceptionResolver  setStatusCodes getter return not same as setter  Makes override impossible NotWritablePropertyException SimpleMappingException MySimpleException BeanWrapperImpl setPropertyValue Wrapper Impl Bean set Property
+8887	QuartzJobBean throws IncompatibleClassChangeError when using Quartz   x QuartzJobBean SimpleThreadPool WorkerThread JobRunShell run Job execute Quartz Bean Shell Simple
+8889	QuartzJobBean doesn apos t work with Quartz     at runtime SchedulerException QuartzJobBean SimpleThreadPool WorkerThread JobRunShell run Job execute Quartz Bean Shell Simple
+9030	javax Provider Spring support doesn apos t work for collections NoSuchBeanDefinitionException DefaultListableBeanFactory DependencyProvider DependencyObjectFactory doResolveDependency setPropertyRelatedClasses Dependency NativeMethodAccessorImpl Factory Listable Bean getObject
+9067	ServletContextResource isReadable  returns  true  for directories FileNotFoundException getInputStream ServletContextResource ResourceHttpRequestHandler HttpRequestHandlerAdapter DispatcherServlet FrameworkServlet writeContent Servlet processRequest Request doDispatch
+9074	Spring MVC resources handler generates a   internal error when accessing a directory resource FileNotFoundException ServletContextResource getInputStream ResourceHttpRequestHandler HttpRequestHandlerAdapter writeContent DispatcherServlet handleRequest Resource Request Servlet handle
+14248	Recent ServletServerHttpRequest getURI  change breaks CORS requests with encoded characters URISyntaxException URI Parser init ServletServerHttpRequest UriComponentsBuilder checkChars parseHierarchical AbstractHandlerMapping CorsInterceptor WebUtils fromHttpRequest
+5402	NullPointerException in JmsException getLinkedException NullPointerException JmsException JMSException String Throwable indexOf printStackTrace getThrowableStrRep getLocalizedMessage JmsException toString PrintWriter getMessage valueOf
+7706	responses should not have non   Content Length ProtocolException ensureContentLength ServletOutputStreamImpl ServletResponseImpl ServletRequestImpl Impl Servlet ExecuteThread send ensure Length Content

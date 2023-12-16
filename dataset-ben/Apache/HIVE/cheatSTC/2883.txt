@@ -1,0 +1,2 @@
+Metastore client doesnt close connection properly
+While closing connection, it always fail with following trace. Seemingly, it doesnt have any harmful effects.

@@ -1,0 +1,10 @@
+50	 BlockJUnit4ClassRunner, ParentRunner, TestDataOnDemand
+1041	 BeanELResolver, TSecurityquestion, AstValue, PageContextImpl, table_tagx
+1105	 BeanELResolver, AstValue, AstDynamicExpression, AstCompositeExpression, ValueExpressionImpl, PageContextImpl, Pays
+1770	 HashMap, AbstractItdMetadataProvider
+1999	 Tee, TeeController, EntityManagerFactoryUtils, JpaExceptionTranslatorAspect, HandlerMethodInvoker, AnnotationMethodHandlerAdapter, DispatcherServlet, FrameworkServlet, HttpServlet, ApplicationFilterChain, OpenEntityManagerInViewFilter, HiddenHttpMethodFilter, CharacterEncodingFilter, StandardWrapperValve, StandardContextValve, StandardHostValve, ErrorReportValve, StandardEngineValve, CoyoteAdapter, Http11Processor, Http11Protocol, JIoEndpoint
+2443	 GwtOperationsImpl, DefaultMetadataDependencyRegistry, MavenProjectMetadataProvider, PollingFileMonitorService, DefaultFileManager, MavenOperationsImpl, MavenCommands, DefaultProcessManager, ProcessManagerHostedExecutionStrategy, JLineShell
+2626	 GenericConversionService, StandardTypeConverter
+2627	 javax.servlet.jsp.JspException, org.apache.taglibs.standard.tag.rt.core.ForTokensTag, org.apache.jsp.WEB_002dINF.views.admin.users.list_jspx, org.apache.jsp.tag.web.form.list_tagx, org.apache.jsp.tag.web.util.panel_tagx
+2909	 GAV, Pom, PomFactoryImpl, PomManagementServiceImpl, AbstractProjectOperations, DbreModelServiceImpl, DbreDatabaseListenerImpl, PollingFileMonitorService, DefaultProcessManager, ProcessManagerHostedExecutionStrategy, AbstractShell, JLineShell
+3496	 Felix StartLevelImpl

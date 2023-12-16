@@ -1,0 +1,78 @@
+252	 HibernateFailureJob
+268	 ItemOrientedTasklet, RetryOperations, RetryPolicy, ItemReaderRetryPolicy
+368	 StepExecution, OptimisticLockingException
+383	 StringBuilder, Integer.valueOf
+398	 Step, StepExecutorFactory, StepExecutor, Job, StepFactory
+454	 isAllowedStartIfComplete
+491	 stepOperations, chunkOperations, RepeatException
+537	 ItemKeyGenerator
+548	 ResourceItemReader, BufferedItemReader
+552	 MBeanServer
+579	 FlatFileIteReader
+616	 stream, ItemOrientedStep
+651	 BufferedReader, BatchUpdateWriter
+661	 jobExecution, StepListener, ItemOrientedStep, TaskletSteps
+722	 ExitStatus, BatchStatus
+751	 StepExecution, ExecutionContext
+833	 TransactionAttributes, StepOperations
+857	 Map daos, ExecutionContext, transactional collection wrappers
+897	 JobInstance, JobExecution
+921	 ExecutionContext
+1004	 StepExecution, job, step, tasklet
+1005	 AbstractStep, SimpleStepFactoryBean
+1007	 JobRepository, Step, StringUtils
+1075	 TaskletStep
+1111	 ChunkListener, WriteListener
+1122	 StaxEventWriter
+1128	 FlatFileItemReader
+1129	 DataIntegrityViolationException, TransactionAttribute
+1147	 FaultTolerantStepFactoryBean, ItemProcessor, StepExecution
+1159	 FaultTolerantStepFactoryBean, HibernateTemplate, StepExecution, RecoverableDataAccessException, TransientDataAccessException, FatalProcessingException, JobInterruptedException
+1160	 Batch, stepType, flowStepType
+1164	 StepListenerFactoryBean, MyListener
+1172	 RangeArrayPropertyEditor
+1174	 flatFileItemReader, jobParameters
+1181	 TaskletStep, Step, FlowJob
+1185	 flat file item reader, playerFileItemReader
+1196	 JdbcJobExecutionDao, ExecutionContext
+1198	 StepExecution
+1201	 AfterProcess, StepListenerMetaData, ItemProcessListener
+1213	 FactoryBean, transactionManager, jobRepository
+1284	 Partition Step Stop, BatchStatus
+1291	 Namespace parser, ConnectivityInspector
+1301	 FlatFileItemReader, DefaultLineMapper, DelimitedLineTokenizer, ItemFieldSetMapper, FlatFileItemWriter, SearchResultsAggregator
+1304	 StepExecution
+1326	 allowStartIfComplete
+1354	 ItemWriter, ExpectationError
+1383	 CommandStepListener, onSkipInProcess, initialize, StepExecution
+1392	 ChunkElementParser
+1420	 Partitioning method, Partitioner, ExecutionContext
+1453	 OraclePagingQueryProvider
+1502	 HibernatePagingItemReader, createQuery, statefulSession
+1503	 JobExecution, StepExecution
+1539	 CompositeItemWriter, ItemStreamInterface, WriterNotOpenException
+1567	 JobRepository, ExecutionContext
+1572	 org.springframework.transaction.UnexpectedRollbackException, org.springframework.batch.core.step.item.SimpleRetryExceptionHandler, RetryPolicy, ExceptionHandler, BinaryExceptionClassifier
+1574	 TaskExecutor, Tasklet, Chunk
+1616	 Spring Batch, BATCH-1531, PARTITION_PREFIX, partitionNumberFormat, partitionName
+1619	 Batch Servlet, SqlException
+1633	 InnerBeanStepScopedTest$Hello
+1639	 OraclePagingQueryProvider, generateJumpToItemQuery
+1656	 ItemProcessor, Exception
+1739	 IllegalArgumentException, myStep
+1743	 PartitionHandler
+1745	 step, startable, flow
+1753	 FlatFileItemWriter
+1775	 FlatFileItemReader, PassThroughLineMapper, DefaultLineMapper, DelimitedLineTokenizer, UserFieldSetMapper
+1783	 ChunkListener
+1804	 RetryInWriterTest, RetryInProcessorTest
+1822	 TaskletStep.ChunkTransactionCallback, StepExecution
+1908	 PartitionStep, StepExecutionContext
+1920	 AMQPItemReader, AMQPItemWriter
+1924	 job, step, tasklet, chunk, listener
+1946	 HibernateItemWrite
+1959	 FlatFileItemWriter, FlatFileItemWriter.OutputState
+2040	 Db2PagingQueryProvider, generateJumpToItemQuery, buildSortKeySelect
+2153	 StepSynchronizationManager, HashMap, Hashtable
+2205	 MethodInvokingTaskletAdapter
+2242	 JobExecution, OptimisticLockingFailureException, SimpleJobService.stop

@@ -1,0 +1,4 @@
+Unnecessary compliance parsing in batch compiler
+Just stumbled over the compiler code in /org.eclipse.jdt.core/batch/org/eclipse/jdt/internal/compiler/batch/Main.java that used 16 instead of 17 compliance, but that was even not a problem because whole block was not needed after bug 562473.
+
+I will push a gerrit.

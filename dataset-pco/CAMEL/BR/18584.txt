@@ -1,0 +1,2 @@
+Regression: MailBinding Contructor has been extended instead of creating a new contructor
+During the enhancements of the attachment handling (https://issues.apache.org/jira/browse/CAMEL-18481) an existing constructor was extended which could result in regressions for users that invoke this constructor from a derived class

@@ -1,0 +1,22 @@
+5145	 SpringMethodRoadie, SpringJUnit4ClassRunner, JUnit4ClassRunner, Assume
+5785	 JmsUtils DefaultMessageListenerContainer
+6052	 JmsUtils, DefaultMessageListenerContainer, String
+6070	 CookieGenerator, CookieRetrievingCookieGenerator, BeanWrapperImpl, AbstractPropertyAccessor, AbstractAutowireCapableBeanFactory
+6082	 CookieLocaleResolver, CookieGenerator, AbstractAutowireCapableBeanFactory, DefaultSingletonBeanRegistry, AbstractBeanFactory, DefaultListableBeanFactory, AbstractApplicationContext, FrameworkServlet, HttpServletBean
+6163	 ContentNegotiatingViewResolver, DispatcherServlet, FrameworkServlet
+6178	 ContentNegotiatingViewResolver, DispatcherServlet, FrameworkServlet
+6356	 AbstractApplicationContext, AbstractOsgiBundleApplicationContext, AbstractDelegatedExecutionApplicationContext, DependencyWaiterApplicationContextExecutor, ContextPropagatingTaskExecutor
+6359	 AbstractApplicationContext, AbstractOsgiBundleApplicationContext, AbstractDelegatedExecutionApplicationContext, DependencyWaiterApplicationContextExecutor, PrivilegedUtils
+7084	 IllegalArgumentProblem, GenericApplicationContext, XmlBeanDefinitionReader, AbstractAutowireCapableBeanFactory, BeanUtils
+7478	 DefaultMessageListenerContainer AbstractMessageListenerContainer AbstractPollingMessageListenerContainer
+7482	 EvalTag, PageContextImpl, SpelEvaluationException, PropertyOrFieldReference, CompoundExpression, SpelExpression, JspServletWrapper, JspServlet, ServletHolder, ServletHandler, SecurityHandler, SessionHandler, ContextHandler, WebAppContext, Dispatcher, InternalResourceView, DispatcherServlet, FrameworkServlet, HttpServlet, SiteMeshFilter, RuleChain, UrlRewriter, UrlRewriteFilter, GzipFilter, RequestContextFilter, FilterSecurityInterceptor, ExceptionTranslationFilter, SessionManagementFilter, AnonymousAuthenticationFilter, SecurityContextHolderAwareRequestFilter, RequestCacheAwareFilter, BasicAuthenticationFilter, DefaultLoginPageGeneratingFilter, AbstractAuthenticationProcessingFilter, LogoutFilter, SecurityContextPersistenceFilter, FilterChainProxy, DelegatingFilterProxy, HiddenHttpMethodFilter, MultipartFilter, CharacterEncodingFilter, Server, HttpConnection, SelectChannelEndPoint, QueuedThreadPool, ScopedAttributeELResolver, CompositeELResolver, VariableResolverImpl
+7638	 EvalTag, SpelEvaluationException, PropertyOrFieldReference, WelcomeController, InternalResourceView, DispatcherServlet, FrameworkServlet, UrlRewriteFilter
+7686	 InjectionMetadata, AutowiredAnnotationBeanPostProcessor, SpringBeanAutowiringSupport
+7769	 SpringJUnit4ClassRunner, SomeTestContext, SomeTest, TestContext
+8759	 SimpleMappingExceptionResolver, BeanWrapperImpl
+8887	 QuartzJobBean, JobExecutionContext, JobRunShell, SimpleThreadPool, MethodInvokingJobDetailFactoryBean
+8889	 QuartzJobBean, JobExecutionContext, JobRunShell, SchedulerException
+9030	 TestClass, RelatedClass2, DefaultListableBeanFactory
+9067	 ServletContextResource, ResourceHttpRequestHandler, DispatcherServlet, FrameworkServlet
+9074	 ServletContextResource, ResourceHttpRequestHandler, HttpRequestHandlerAdapter, DispatcherServlet
+14248	 ServletServerHttpRequest, DefaultCorsProcessor, AbstractHandlerMapping, DispatcherServlet, FrameworkServlet, HttpServlet

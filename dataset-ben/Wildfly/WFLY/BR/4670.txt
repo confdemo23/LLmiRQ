@@ -1,0 +1,18 @@
+Term 'jacorb' is part of xml configuration file despite of fact being replaced by IIOP orb
+Implementation of ORB - JacORB is replaced by JDK ORB in WildFly 10. Neverhteless server xml configuration files contain term 'jacorb' at several places.
+Should not be word 'jacorb' removed from xml configuration and replaced by term 'iiop orb'?
+Examples of occurrence
+        &lt;!-- TODO - only show this if the jacorb subsystem is added  --&gt;
+        &lt;interface name="unsecure"&gt;
+            &lt;!--
+              ~  Used for IIOP sockets in the standard configuration.
+              ~                  To secure JacORB you need to setup SSL 
+              --&gt;
+            &lt;inet-address value="${jboss.bind.address.unsecure:127.0.0.1}"/&gt;
+        &lt;/interface&gt;
+            &lt;logger category="jacorb"&gt;
+                &lt;level name="WARN"/&gt;
+            &lt;/logger&gt;
+            &lt;logger category="jacorb.config"&gt;
+                &lt;level name="ERROR"/&gt;
+            &lt;/logger&gt;

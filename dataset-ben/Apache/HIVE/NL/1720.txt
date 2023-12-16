@@ -1,0 +1,3 @@
+hbase_stats.q is failing
+Saw this failure on Hudson and in my own sandbox.
+https://hudson.apache.org/hudson/job/Hive-trunk-h0.20/392/

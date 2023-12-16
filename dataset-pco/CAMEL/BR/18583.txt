@@ -1,0 +1,7 @@
+[camel-minio] deleteObjects operation does not delete multiple objects
+The bug is in the org.apache.camel.component.minio.MinioProducer.deleteObjects() method.
+Minio API performs deletion lazily, deleteObjects request is performed while iterating through the result object.
+[https://min.io/docs/minio/linux/developers/java/API.html#removeobjects-removeobjectsargs-args]
+{quote}
+_Removes multiple objects lazily. Its required to iterate the returned Iterable to perform removal._
+{quote}

@@ -1,0 +1,7 @@
+HiveInputFormat may fail to column names to read in some cases
+The primary issue is when plan is generated pathToAliases map is populated with directory paths to table aliases. 
+pathToAliases.put() uses path.toString() as map key. During probing, path.toUri().toString() is used. 
+This can cause probe misses when path contains spaces in them. path.toUri() will escape the spaces in the path whereas path.toString() does not escape the spaces. 
+As a result, HiveInputFormat can trigger a different code path which can fail to set list of columns to read from the source table. 
+This was causing unexpected NPE in OrcInputFormat (after refactoring HIVE-11705) which removed null check for column names. 
+The resulting exception is Caused by: java.lang.RuntimeException: ORC split generation failed with exception: java.lang.NullPointerException       

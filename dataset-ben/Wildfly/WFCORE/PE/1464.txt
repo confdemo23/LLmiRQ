@@ -1,0 +1,2 @@
+LogContexts are not removed for ear subdeployments
+If an ear does not have its own LogContext created, but a subdeployment in it does, the subdeployment never has its LogContext cleaned up upon undeploy, leading to PermGen leaks.

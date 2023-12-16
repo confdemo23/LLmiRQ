@@ -1,0 +1,6 @@
+PartialObjectActivationJarTestCase fails if ran after any of InflowFlatTestCase or TwoModulesOfDifferentTypeTestCase
+PartialObjectActivationJarTestCase fails if it runs after InflowFlatTestCase.  It seems that the inflow2 resource adapter is not fully unregistered by InflowFlatTestCase before PartialObjectActivationJarTestCase begins to start its own RA.
+Here is the server log snippet (DEBUG level):
+http://pastebin.test.redhat.com/147968
+Line 10 of this snippet corresponds to the invocation of setConfiguration("basic.xml"); in PartialObjectActivationJarTestCase. Then, the server is apparently trying to activate MultipleConnectionFactory2Impl and MultipleAdminObject2Impl even though these are not involved in basic.xml of PartialObjectActivationJarTestCase at all. A suspicious exception is on line 19 there. 
+I tried to put some delay between remove(address); and removeModule(defaultPath); in AbstractModuleDeploymentTestCaseSetup#tearDown() but it did not help. I also tried to put @Ignore to both test methods in the InflowFlatTestCase which also did not help, so it is evidently related only to the RA deployment/undeployment.

@@ -1,0 +1,2 @@
+camel-groovy - Adapt the code for native mode
+To use the Groovy language in native, we need to adapt the current code to be able to provide all the pre-compiled groovy classes at build time. 

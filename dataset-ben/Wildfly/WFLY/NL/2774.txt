@@ -1,0 +1,4 @@
+Non-distributed, stateful web applications cannot be load balanced using sticky sessions
+In AS7, one could configure a load balancer with sticky sessions to support load balancing for non-distributed web applications.
+While the distributed session manager supports parsing and formatting of the instance-id from/to the session id, the in-memory session manager does not.
+The use case for this are stateful web applications that do not require high-availability of state (e.g. a stateless web-app that uses container managed authentication), but would also like to scale beyond the capacity of a single server.

@@ -1,0 +1,2 @@
+[formatter] Wrong indentation for method invocation on multi-line expression - UI
+UI part for bug 577117

@@ -1,0 +1,7 @@
+276	 StopMojo DefaultBuildPluginManager MojoExecutor
+497	 TempFileManager
+574	 Shrinkwrap, MemoryMapArchiveImpl, ServiceExtensionLoader, ArchiveBase, AssignableBase, SwarmApp, NativeConstructorAccessorImpl, DelegatingConstructorAccessorImpl, SecuredImpl
+657	 ArquillianTest, ServiceControllerImpl, DaemonServiceActivator, DaemonService
+671	 PackageMojo, BuildTool, ArtifactAsset, WebInfLibFilteringArchiveAsset, ArchiveFactory, ShrinkWrap
+705	 PackageMojo, BuildTool, FileSystemException
+710	 BeanManagerImpl, ContextualInstanceStrategy, ContextualInstance, InstanceImpl, RuntimeServer

@@ -1,0 +1,25 @@
+257	 MinaUdpTest, MinaFileUdpTest, MinaUdpUsingTemplateTest, MinaConsumer, PooledByteBufferAllocator, ByteBufferUtil, AbstractIoFilterChain, SimpleProtocolDecoderOutput, ProtocolCodecFilter, ExecutorFilter
+373	 XQueryBuilder
+715	 ThreadProcessor, Pipeline, HashMap
+973	 DefaultTypeConverter, JbiMessage, CamelProviderEndpoint
+1261	 DefaultLanguageResolver, DefaultCamelContext, ExpressionType, SplitterType
+1505	 Apache Velocity, Log4JLogChute, ClassUtils, LogManager, Servicemix
+1940	 QueueAggregator, BindyCsvDataFormat, pollEnrich
+1965	 GenericFileRenameProcessStrategy, GenericFileOnCompletion, DefaultUnitOfWork
+2150	 RssUtils RssEntryPollingConsumer FeedEntryPollingConsumer ScheduledPollConsumer
+2486	 DefaultCamelContext, CamelTestSupport, RouteBuilder, TriggerNPETest
+2811	 SpringCamelContext, ObjectHelper, RuntimeCamelException
+3045	 SpringCamelContext, CamelContextFactoryBean, DelimitedEndpoint
+3186	 Producer, ProducerTemplate, EndpointInject
+7069	 CxfPayload, NodeListWrapper, DomConverter, DefaultCXFBinding
+7415	 CsvDataFormat, CsvIterator, Splitter, MulticastProcessor
+7544	 CamelEndpointFactoryBean, AbstractAutowireCapableBeanFactory, BeanWrapperImpl
+8585	 GenericFileOperationFailedException, FileOperations, GenericFileProcessStrategySupport, GenericFileRenameProcessStrategy, GenericFileOnCompletion, DefaultUnitOfWork, CamelInternalProcessor, GenericFileConsumer, ScheduledPollConsumer, FileUtil
+8785	 InterceptorToAsyncProcessorBridge, DefaultExchange, ProducerCache, ObjectHelper, ThreadLocal
+8798	 AdviceWithTasks, RouteDefinition, ChoiceDefinition
+8902	 FacebookEndpoint
+9094	 DefaultFTPFileEntryParserFactory, FTPClient, FtpOperations, FtpConsumer, GenericFileConsumer, ScheduledPollConsumer
+10192	 DefaultCamelContext, CamelContextHelper, RouteDefinition, DefaultRouteContext, SendDefinition, ProcessorDefinition
+10200	 MailConsumer, MailProducer, DefaultJavaMailSender, MimeMultipart
+10399	 JettyHttpComponent9, JettyHttpEndpoint9, DefaultJettyHttpBinding, MultiPartFilter, DefaultHttpBinding, HttpMessage, CamelContinuationServlet, CamelServlet, CamelFilterWrapper
+10427	 AbstractClient, WebClient, CxfRsProducer

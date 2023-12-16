@@ -1,0 +1,8 @@
+Replace temporary dir logic in test code
+I think [~essobedo] gave this idea sometime in the past, but I did not have time to pursuit it back then. 
+
+Here's the change: there's many places in the test code where we are using temporary directories for the tests. There is code to create, cleanup and whatnot to handle this.
+
+ 
+
+However, there is a TempDir extension that is part of JUnit 5 that we can use instead.

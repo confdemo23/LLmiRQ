@@ -1,0 +1,25 @@
+[Code Clean-Up] "Use '==' or '^' on booleans" results into compilation failure
+I did Source->Clean-up and selected "Use '==' or '^' on booleans" on the following example:
+
+public class TestCleanUp {
+
+    void check(String s1, String s2) {
+        assert (s1 == null && s2 != null) || (s1 != null && s2 == null);
+    }
+
+}
+
+Result:
+
+public class TestCleanUp {
+
+    void check(String s1, String s2) {
+        assert s1 == null == s2 != null;
+    }
+
+}
+
+Error "Incompatible operand types boolean and String"
+
+could it be just missing parenthesis?
+	assert (s1 == null) == (s2 != null);

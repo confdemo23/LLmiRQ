@@ -1,0 +1,2 @@
+Spring Context startup fails with NPE at Neo4jPersistentProperty:72
+Seems that owningClassInfo is null for any class outside the specified packages in the sessionfactory.

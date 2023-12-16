@@ -1,0 +1,16 @@
+Severe error on deploy of ear: "Unable to obtain CDI 1.1 utilities for Mojarra"
+Deploy of test.ear shows a severe error:
+00:23:21,917 INFO  org.jboss.as.server.deployment#start JBAS015876: Starting deployment of "test.ear" (runtime-name: "test.ear")
+00:23:21,941 INFO  org.jboss.as.server.deployment#start JBAS015876: Starting deployment of "null" (runtime-name: "web.war")
+00:23:21,942 INFO  org.jboss.as.server.deployment#start JBAS015876: Starting deployment of "null" (runtime-name: "ejb.jar")
+00:23:22,080 INFO  org.jboss.weld.deployer#deploy JBAS016002: Processing weld deployment test.ear
+00:23:22,121 INFO  org.jboss.weld.deployer#deploy JBAS016002: Processing weld deployment ejb.jar
+00:23:22,141 INFO  org.jboss.weld.deployer#deploy JBAS016002: Processing weld deployment web.war
+00:23:22,157 INFO  org.jboss.weld.deployer#deploy JBAS016005: Starting Services for CDI deployment: test.ear
+00:23:22,192 INFO  org.jboss.weld.deployer#start JBAS016008: Starting weld service for deployment test.ear
+00:23:22,734 SEVERE javax.enterprise.resource.webcontainer.jsf.flow#afterBeanDiscovery Unable to obtain CDI 1.1 utilities for Mojarra
+00:23:22,753 SEVERE javax.enterprise.resource.webcontainer.jsf.application.view#afterBeanDiscovery Unable to obtain CDI 1.1 utilities for Mojarra
+00:23:23,099 INFO  test.web.Startup#contextInitialized contextInitialized
+00:23:23,405 INFO  org.wildfly.extension.undertow#registerDeployment JBAS018210: Register web context: /intern/web
+00:23:23,465 INFO  org.jboss.as.server#handleResult JBAS018559: Deployed "test.ear" (runtime-name : "test.ear")
+Although everything seems to be fine. App works without errors.

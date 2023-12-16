@@ -1,0 +1,26 @@
+[cleanup] Use valueOf() instead of instantiation needs to use parentheses
+When the following class:
+
+public class Test6 {
+
+	private int getResolution() {
+		return 7;
+	}
+	public void foo(Map<Integer, Float> fontAttribs) {
+		fontAttribs.put(Integer.MAX_VALUE, new Float(4 * getResolution() / 72d));
+	}
+}
+
+is cleaned up with Use valueOf() rather than instantiation results in:
+
+public class Test6 {
+
+	private int getResolution() {
+		return 7;
+	}
+	public void foo(Map<Integer, Float> fontAttribs) {
+		fontAttribs.put(Integer.MAX_VALUE, Float.valueOf((float) 4 * getResolution() / 72d));
+	}
+}
+
+which is an error because the computation will end up being a double unless parentheses are added around the expression 4 * getResolution() / 72d.

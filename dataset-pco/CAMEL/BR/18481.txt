@@ -1,0 +1,2 @@
+Allow Mail Consumer to handle duplicate/empty attachment filenames
+The mail consumer is not able to process mail attachments that are empty or if no filename is set. Its also not possible to get all attachments of a mail if they have the same filename.

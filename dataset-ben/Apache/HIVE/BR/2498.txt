@@ -1,0 +1,2 @@
+Group by operator does not estimate size of Timestamp & Binary data correctly
+It currently defaults to default case and returns constant value, whereas we can do better by getting actual size at runtime.

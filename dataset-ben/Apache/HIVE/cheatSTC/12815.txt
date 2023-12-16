@@ -1,0 +1,3 @@
+column stats NPE for a query w/o a table
+I was running something like create table as select 1;
+First it logs why it cannot get stats:

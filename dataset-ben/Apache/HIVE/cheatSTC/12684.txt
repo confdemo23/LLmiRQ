@@ -1,0 +1,3 @@
+NPE in stats annotation when all values in decimal column are NULLs
+When all column values are null for a decimal column and when column stats exists. 
+AnnotateWithStatistics optimization can throw NPE. Following is the exception tracejava.lang.NullPointerException       

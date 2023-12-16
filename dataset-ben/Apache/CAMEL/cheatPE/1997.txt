@@ -1,0 +1,18 @@
+PackageScanDefinition missing public setter methods making it difficult to configure CamelContext via CamelContextFactoryBean using regular Spring definition
+In order to use spring features like "depends-on" and PropertyPlaceholderConfigure, it is desirable to configure the CamelContext using the standard Spring boolean definition (bean and property tags, etc), instead of the shortcut xbean style definition (&lt;camelContext&gt; tag).
+However, the org.apache.camel.spring.CamelContextFactoryBean, which is typically used to configure the CamelContext bean, uses the org.apache.camel.model.PackageScanDefinition class to hold the package scanning information. This class does not have any public setter for its private properties and can only be configured via xbean. This makes it very hard to configure the CamelContext bean using the standard Spring bean definition. Please add the public setters to this class so it can be used by Spring directly.
+At present, a workaround is to implement a subclass of the org.apache.camel.model.PackageScanDefinition to add the missing setters. A sample Spring definition would look like this:
+    &lt;bean id="camel" class="org.apache.camel.spring.CamelContextFactoryBean" depends-on="my-other-bean"&gt;
+        &lt;property name="trace" value="false"/&gt;
+        &lt;property name="packageScan"&gt;
+            &lt;bean class="com.mypackage.CamelPackageScanDefinition"&gt;
+                &lt;property name="packageList"&gt;&lt;value&gt;$
+{route.packageScan}
+&lt;/value&gt;&lt;/property&gt;
+            &lt;/bean&gt;
+        &lt;/property&gt;
+        &lt;/bean&gt;
+    &lt;bean id="template" class="org.apache.camel.spring.CamelProducerTemplateFactoryBean"&gt;
+        &lt;property name="camelContext" ref="camel"/&gt;
+    &lt;/bean&gt;
+In the above sample, the CamelPackageScanDefinition is the custom subclass.

@@ -1,0 +1,224 @@
+214	step field dot linear kutta external object set fixed step Runge Kutta integrators change step size fixed step Runge Kutta integrator change step size integration range step recomputation feature ensures step ends range feature removed unnatural obey users choices replaced kind solution discrete events truncating step
+272	test solution max linear solver accuracy model pivot Simplex Solver arrives incorrect solution reduced problem reported minimal test attach
+406	vector function compute test square relative data point Wrong weight handling Levenberg Marquardt comparison Fortran version Levenberg Marquardt reveals observations weights version reaches function correspond minimum
+409	test error calculate regression data sum obs variance Multiple Regression API specification estimate intercept term OLS GLS regression APIs support estimating models including intercepts design matrices including variable data
+790	test data exact markers check integer valid equals Mann Whitney Test Suffers Integer Overflow Large Data Sets performing Mann Whitney Test large data sets attached test element sets intermediate integer values calculateAsymptoticPValue overflow leading invalid values NaN incorrect calculations Attached patch including test modifies code doubles
+1192	impl set statistics summary values sum bias check Descriptive statistics field Field windowSize setter method
+60	fraction source parse format position pos properfractionformat proper fraction format string denominator function math function fraction proper parse parseposition parse position return illogical result
+85	errors regression getsumsquarederrors sum squared errors simple reg sum test asserttrue assert true testsimpleregression test simple regression adddata add data math simpleregression simple regression impl squared
+151	utils mathutils math utils mode big math default bigdecimal big decimal number scale decimal incorrect result
+153	int integer overflow subandcheck check int biginteger big integer values return difference big randomdataimpl random data impl random data impl nextint int nextlong long long long
+166	gamma precision default accuracy erf amp function epsilon set functions special accurate
+175	test chi square chi sum test statistic project chisquare chi square double expected long observed returning incorrect statistic
+182	fraction converting computiong integer iteration loop leads overflow lead numbers double overflows flows
+184	cumulativeprobability cumulative probability returns abstract default distribution abstractintegerdistribution abstract integer distribution abstractdistribution abstract distribution integer int probability cumulative double distributions
+185	server method valueserver server calls data url exception replay mode pointer empty file replay triggers null
+191	method summarystatistics summary statistics report access logs sum logs sum sumoflogs sum logs statistics summary computes provide
+197	lambda row poisson randomdataimpl random data impl nextpoisson poisson poissonlambda poisson lambda currenttimemillis current time millis ghz random time data impl extreme ext reme slow large lambdas
+198	source getimaginarycharacter imaginary character format complexformat complex format start length substring pos exception character java lang stringindexoutofboundsexception string bounds exception string bounds complex parse parseposition parse position parse position
+205	sum transformer fastcosinetransformer fast cosine transformer cosine comment form error formula cos mathematical fast
+207	algorithm genetic implementation mutation chromosome nextgeneration generation generation geneticalgorithm genetic algorithm generation sending implementation wrong
+221	complex bug method res complex println comp numbers program problem result multiplying mul tiplying equals wrong
+226	generator print vector random math void row system cov real correlatedrandomvectorgenerator correlated random vector generator correlated generates invariant samples
+227	univariaterealsolverutils univariate real solver utils bracket denominator method freedom infinity math calculations real fdistribution denominatordegreeoffreedom denominator degree freedom degree ist ribution leads illegalargumentsexception illegal arguments exception illegal arguments exception univariate
+238	gcd mathutils math utils test utils arguments power math powers product fails high
+240	math loop utils logarithms mathutils math utils errors result int calculations long factorial fact orial fails
+241	binomialcoefficient binomial coefficient mathutils math utils biginteger big integer test utils return math integer valueof long bin omial coefficient fails large binomial
+252	precision returns compareto compare compar system fraction comparto compar display differente fractions
+260	integer methods parameter getxxx frequency object api addvalue add reason version inconsistent
+273	tableau simplex tableau amp path test code bug simplextableau simplex tableau suite basic variable correctly simplex simple table
+279	length regression rows samples exception amp linear math null test multiplelinearregression multiple linear regression multiple minimum number
+286	constraint solution solver simplexsolver simplex solver constraints linear apache relationship simplex working expected
+288	objective simplex solver constraint simplexsolver simplex solver kritfcia krit fcia fcia software program linearconstraint linear constraint working expected
+290	solution simplex exception constraint linear apache linearconstraint linear constraint math svn nullpointerexception null pointer exception null pointer simplextableau simplex tableau tableau initialize
+292	error utils assertion framework testutils test utils assertrelativelyequals assert equals message generates test assert equals misleading failure
+296	implementation loessfit loess fit loessinterpolator loess interpolator output output input funtionality fit test interpolator loess smooth working correctly
+306	apos formula case createcomplex create complex division return method divide class complex false mula special erroneous err oneous
+307	scale big divide bigreal big real result real mode class outcome decimal fieldelement setting proper exception exact representable decimal dec imal
+309	exception bug check src parameter argument data apache nextexponential exponential exponential patch supplied
+320	rank constructor solution getsolver solver matrix bunch solver alist commons nan singular svd
+326	max norm real iterator vector abs test iter math return getlinfnorm linf norm inf norm wrong formula mula arrayrealvector array real vector array openmaprealvector open map real vector open map
+338	integrator scale method step step initializestep initialize step tolerance size parameter wrong guess embedded runge kutta methods
+352	values axis check parameters rank guess cylinder cutoff comparison optimizer jacobian determination levenbergmarquardtoptimizer levenberg marquardt optimizer levenberg marquardt numerically num erically robust
+362	custom vectorial levenberg optimizer checker marquardt criteria vectorialconvergencechecker vectorial convergence checker levenbergmarquardtoptimizer levenberg marquardt optimizer convergence ignores parameter passed
+365	class interpolator smoothingbicubicsplineinterpolator smoothing bicubic spline interpolator bicubic smoothing issue spline function order polynomial issue
+368	getsparcity sparcity sparcity vector sparsity sparsity term open nonzero matrix getsparsity sparsity openmaprealvector open map real vector map real vector
+369	exception impl pointer max bisection nullpointerexception null pointer exception bisectionsolver bisection solver solver univariate function solve final univariaterealfunction univariate real function real double min initial throws null
+371	probability pvalues math problem pearsonscorrelation pearsons correlation correlation machine cumulativeprobability cumulative probability probabilty pearsons getcorrelationpvalues correlation pvalues values precision limited epsilon
+382	setmicropshereelements set micropshere elements package void argument method micropshere elements precondition interpolator instance wrong variable check
+391	length vectors array cases operators apos arithmetic amp addition vector inconsistent behaviour constructors arrayrealvector array real vector real class
+392	residuals yvariance documentation ols linear regression product glsmultiplelinearregression glsmultiple linear regression dimension vector calculateyvariance calculate yvariance glsm ult iple res iduals vars calculate glsmultiple
+395	implementation amp apos test brent optimizer class brentoptimizer brent optimizer unit time bugs
+397	exception iterations abstractunivariaterealoptimizer abstract univariate real optimizer converging impl optimizer algorithm convergence count abstract inconsistencies optimization univariate general
+398	java math util commons org math method mathutilstest math utils test nextup conflict utils test
+404	optimizer vectorial check marquardt checker field levenbergmarquardtoptimizer levenberg marquardt optimizer vectorialconvergencechecker vectorial convergence checker interface levenberg confusing
+429	space clusterer domain kmeansplusplusclusterer kmeans clusterer division blocker occurs breaks kmeans eans
+479	math signum fastmath fast math tests test valueof test asserttrue assert true work assert fast agree
+480	method infinite nan fastmath fast math ulp math infinity argument fast produces
+482	bug max min float fastmath fast math max testminmaxfloat test min max float test case variable fast math
+483	cases math degrees expected radians infinity atan special fastmath fast math fast handle correctly
+484	step size event math code integration detection event time events events ode solvers solve complex robust
+486	radian toradian radian nan max math numbers fastmath fast math degrees degree fast todegree degree don apos handle large double
+489	nan code ratio fastmath fast math input math returns temp infinite fast acos fails abs
+493	nan infinity max isnan float fastmath fast math actual failures min double fast math fail
+494	atan entries strictmath strict math math bug sign values problems nan fastmath fast math fast agree strict special cases
+505	thread fields object utils testutils test utils updated mutable synchronised single update test hostile
+529	clirr report apos regression amp linear variance abstractmultiplelinearregression abstract multiple linear regression error abstract math org apache commons math stat multiple regression
+530	amp clirr apos javadoc stat regression calculateerrorvariance calculate error variance report isn glsmultiplelinearregression glsmultiple linear regression math org apache commons math glsm ult iple linear regression glsmultiple
+531	report apos clirr olsmultiple class regression amp clirr javadocs methods math org apache commons math stat olsmultiplelinearregression olsmultiple linear regression olsm ult iple linear regression
+532	amp apos report javadoc order float methods math boolean checkorder check order clirr org apache commons math util mathutils math utils utils
+533	clirr apos util amp method function elements math mention javadoc math report org apache commons resizabledoublearray resizable double array resizable double array
+540	probability distribution decrement values abstractintegerdistribution abstract integer distribution inversecumulativeprobability inverse cumulative probability function abstract integer bound inverse cumulative bug
+546	int distances points bug return cluster clusterer clusterer kmeansplusplusclusterer kmeans clusterer version truncation issue eans kmeans
+552	string counter int multidimensionalcounter multidimensional counter system output counter println getcounts counts arrays multidimensional counts returns wrong array indices
+555	exception math exceptions argument runitme conditions int wrap arithmetic runtime mathutils math utils utils method propagate
+572	field field constructor getfield field constructor array arrayfieldvector array field vector parameter
+573	constructor vector array array calls clones return field field arrayfielvector array fiel vector fiel subtract tract wrong
+575	math genetics package abstractlistchromosome abstract list chromosome constructor iae chromosome exception invalidrepresentationexception invalid representation exception list exceptions gen etics consistent rest
+578	descriptivestatistics descriptive statistics values statistics math addvalue add performance getpercentile percentile descriptive math decrease
+582	api position returns call utils statutils stat utils floor ceil values work percentile
+644	uppercumulativeprobability upper cumulative probability probability math return hypergeometricdistributionimpl hypergeometric distribution impl distribution method code distribution error class hyper geometric number upper cumulative probability greater impossible
+648	constructor distribution instance impl time simpleregression simple regression int tdistribution field member impl regression extraneous extra neous simple
+669	package analysis amp remnants exception integration developer convergenceexception convergence exception univariate occurences univariaterealintegrator univariate real integrator real integrator throws convergence
+691	stats getstandarddeviation standard deviation variance impl nan workaround mikkel int summary statistics setvarianceimpl set variance impl set standard deviation produce
+692	definition distribution distribution function probability amp apos probability returns cumulative inverse cumulative inconsistencies onsistencies
+722	complex return amp math fastmath fast math apos tanh createcomplex create complex tanh cos math big numbers
+728	point bobyqaoptimizer error points entry optim interpolation test apos errors bobyqao ptimizer numberofinterpolationpoints number interpolation points number interpolation greater dim
+744	doublevalue double big denominator numerator figure amp patch cases digit denominators bigfraction big fraction fraction double returns double nan large numerators num erators
+760	setter size validation impl subclasses windowsize window size descriptivestatistics descriptive statistics univariate listunivariateimpl list univariate impl window descriptive statistics getter ter set protected bypass check
+770	lqtest conjugategradient conjugate gradient symmlqtest symm lqtest residual norm gradient symm conjugate test symmlq symm tested
+775	check population limit populationlimit population limit constructor list listpopulation list population occur population number negative pop ulation
+776	rate population elitismrate elitism rate constructors list elitism range elitistic method setelitismrate set elitism rate checks elitisticlistpopulation elitistic list population
+778	int fieldelement field element contract field element org dfp method math multiply comply general
+779	population list iterator listpopulation list population iterator list chromosomes method remove population pop ulation
+782	block brent criterion location code user algorithm amp optimizer addition brentoptimizer brent optimizer defined check badly
+789	matrix matrices cholesky matrix generator data correlatedrandomvectorgenerator correlated random vector generator vector generator random correlated random fails silently faced rows covariance
+798	fitter exception polynomial polynomialfitter polynomial fitter return program method stalls min times fit
+802	real vector data realvector real vector format import openmaprealvector open map real vector open org realvectorformat real vector format subtract tract returns wrong answer
+803	iter ebe openmaprealvector open map real vector complex entries vector realvector real vector return real bug bugs ebemultiply ebe multiply multiply ebedivide ebe divide divide
+805	calculation data percentile quantile notice code performance test array entries slow input constants
+812	entries isnan dotproduct dot product product realvector real vector cpu iterators dot assumption speed real vector outerproduct outer product outer return wrong misuse sparse
+821	map sign real openmaprealvector open map real vector requirements class vector issue function test sparserealvectortest sparse real vector test sparse test testmap test map testmaptoself test map fail entries lose
+825	class amp method roots argument function laguerresolver laguerre solver list laguerre solver public private
+828	variables problem number apos unboundedsolutionexception unbounded solution exception simplexsolver simplex solver exception solver coefficients behavior expected unbounded solution
+835	method percentagevalue percentage bug fraction percentage result overflows max integer double centage rare overflow
+836	fraction fraction testing maxdenominator max denominator bugs algorithm class int test constructor double strange behaviour
+843	epsilon number class eps documentation docs api property error java precision wrong
+844	package parameterguesser parameter guesser optimization guess guesser harmonicfitter harmonic fitter fitter parameter class fails harmonic return values
+855	optimizer optimization point check return brentoptimizer brent optimizer package univariate brent reporting
+859	definition xxx interface support issupportxxxinclusive support xxx inclusive realdistribution real distribution distribution message real nan deprecate inclusive
+864	bounds isfeasible feasible count program loop check dooptimize optimize default cmaesoptimizer feasible cmaeso ptimizer enforce
+865	nan max parameters optimizer fitness cmaesoptimizer fitnessfunction fitness function fitness guess divide wide bounds cmaeso ptimizer result passed function
+879	code default lambda case input cmaesoptimizer field amp apos exception cmaeso ptimizer silently invalid
+880	case verticies difference polygon test difference vector polygon duplicates complex produces erronious err onious cases
+881	properties connected distribution real interface multivariaterealdistribution multivariate real distribution multivariate classes issuportconnected suport connected suport eliminate meaningless ingless multivariate mul tivariate
+891	nan nstrategy removed ranking implementation naturalranking natural ranking natural input rosellen care spearmanscorrelation spearmans correlation spearmans correlation fails nanstrategy nstrategy
+900	javac copyright ascii localizedformatstest localized formats test commons users localized dropbox math font problem formats test java header
+904	math power fastmath fast math jeff hain pow integer exponent values fast deviates dev iates negative finite base exp
+905	math exp values cosh fastmath fast math overflow strictmath strict math log max jeff fast sinh support range counterparts count erparts
+914	multi constraint optim change method base user optimizers multivariate multi inconsistent start randomization domization
+927	distribution abstract serializable stream gamma gammadistribution gamma distribution abstractrealdistribution abstract real distribution distribution generator amp cloning broken
+929	distribution multivariatenormaldistribution multivariate normal distribution multivariate dimension density assertequals assert equals double assert odd assert normal returns wrong
+930	constraint linear solver relationship relationship exception simplex solution simplexsolver simplex solver foo finds suboptimal optimal throws nofeasiblesolutionexception feasible solution exception feasible solution
+949	optimizer test evaluations iterations iterations levenbergmarquardtoptimizer levenberg marquardt optimizer multivariate marquardt levenberg target reports
+962	whitespace dformat vector system println ingores parse prints javadoc orm ignore
+985	spline apos amp test bicubic values spline distance data interpolator bicubicspline bicubic spline interpolation int erpolation returns unexpected bicubicsplineinterpolator bicubic spline interpolator bicubicsplineinterpolationfunction bicubic spline interpolation function interpolation function
+993	convergence solver case exception behavior unable multivariate solution optimizer function gaussnewtonoptimizer gauss newton optimizer gauss newton conv ergence singularity
+996	overflow max maxdenominator max denominator fraction test fraction denominator unit exception close simple throw
+1005	linearcombination linear combination prodhighnext prod high arguments exception length arrays matharrays math arrays arrayoutofboundsexception array bounds exception array bounds arrayindexoutofboundsexception array bounds exception math linear combination
+1022	function parametric sigmoid org logistic logit parameters wiki math analysis confused api docs apache commons
+1033	measnoise meas noise commons matrix dimension filter filter mismatch column apache measurementmatrix measurement matrix kalman work covarance matrix dimension
+1037	test test distribution geometricdistributiontest geometric distribution test values orders integerdistributionabstracttest integer distribution abstract test tolerance geometric probability tests meaningless ingless high
+1045	eigenvalues imag solver values solver eigen apos equality class eigendecomposition eigen decomposition decomposition tiny purposes determining singularity
+1056	algorithm distribution bug fastmath fast math lambda poissondistribution poisson distribution poisson poisson division apos small error nextpoisson poisson
+1058	methods error exp math improvement lognormaldistribution log normal distribution expm log distribution fastmath fast math beta normal weibulldistribution weibull distribution weibull wrong answer extremely small args log inaccuracy
+1065	test distribution values bug returns inversecumulativeprobability inverse cumulative probability real enumeratedrealdistribution enumerated real distribution domain samples enumerated inverse cumulative probability set
+1067	condition beta recursion iterations maxiterations max iterations epsilon overflow precision apache stack regularizedbeta regularized beta regular ized regularized
+1068	overflow pairs integer numpairs num pairs array nan arrays root square kendallscorrelation kendalls correlation kendalls correlation suffers large
+1070	usage precision float apache memory util org decimal math big incorrect rounding
+1088	hasnext element counter return exception multidimensional multidimensionalcounter multidimensional counter throw iterator called nosuchelementexception element exception
+1096	cases test iteration ball radius testing finding welzlencloser welzl encloser smallest dtest implementation enclosing algorithm time fails
+1110	solution threshold system jira situation order values exception matrix amp olsmultiplelinearregression olsmultiple linear regression olsm ult iple linear regression singularity instantiating ins tantiating qrdecomposition qrd ecomposition olsmultiple
+1118	hashcode hash code code signs numbers return hashcode complex parts contract amp semantics equals double mismatch hash
+1129	onequarter quarter percentile threequarters quarters iqr statistics percentile descriptivestatistics descriptive statistics data java quarter computation errs
+1131	dataset smirnov test tests kolmogorovsmirnovtest kolmogorov smirnov test kolmogorov code stddev kst tests takes apos item data set
+1134	initialization derivatives array thread spline computepartialderivatives compute partial derivatives bicubicsplineinterpolatingfunction bicubic spline interpolating function lasti interpolating threads unsafe bicubic function
+1135	point hull test java test vector case math convex bug monotonechain monotone chain monotone chain collinear landing existing boundary dropped patch
+1138	values interpolator array bicubic arrayindexx array matlab mat lab spline lab amp interpolatorfunction interpolator function bicubicsplineinterpolator bicubic spline interpolator interpolator returning incorrect interpolated int erpolated
+1145	lengths integer diff fef issue mannwhitneyutest mann whitney utest gist overflow casting whitney overflows flows mann test mannwhitneyu mann whitney man utest mann
+1146	result sum summary formula definition infinity classes infinity error infinity class returns incorrect result processing
+1149	interpolator interpolator step clone dummystepinterpolator dummy step interpolator docopy copy nordsieck dummy java nordsieckstepinterpolator nordsieck step interpolator unsafe initialization
+1152	int sample probability distribution search enumerateddistribution enumerated distribution java size randomvalue random enumerated suboptimal implementation
+1154	instance distribution initialization test tests generator reason math generator proposal statistical stat inference package slow implicit impl icit randomgenerator random generator random
+1165	membership updatemembershipmatrix update membership matrix point newcluster cluster condition matrix membership cluster problem addpoint add point rare case update fuzzykmeansclusterer fuzzy kmeans clusterer fuzzy clusterer kmeans
+1167	qrdecomposition threshold getx data olsmultiple sample newxsampledata xsample data xsample regression method olsmultiplelinearregression olsmultiple linear regression olsm ult iple linear singularity instantiating ins tantiating qrd ecomposition
+1203	case distribution issues kernel getkernel kernel values bin math amp buckets fails multiple instances random empiricaldistribution empirical distribution empirical
+1204	bracket utils solver function univariate roots univariatesolverutils univariate solver utils interval ignores bound early
+1205	println methods statistic sense system getresult result storeless abstract abstractunivariatestatistic abstract univariate statistic statistic abstractstorelessunivariatestatistic abstract storeless univariate statistic univariate extend
+1206	squares method cost apache returns leastsquares abstractevaluation abstract evaluation cost abstract math fitting
+1208	empirical variance bin distribution empiricaldistribution empirical distribution return kernel nan cumulativeprobability cumulative probability probability cumulative evaluated eval uated constant
+1209	org commons rng epfl cmos pmmi documentation poissondistribution poisson distribution web http documentation poisson distribution sample dead link
+1214	callback optim solution class javadoc solutioncallback solution callback linear incorrect describe
+1224	classes cases issue pointer concerns data npe math nullpointerexception null pointer exception apache nullpointerexceptions null pointer exceptions null exceptions documented
+1229	array initialarray initial array resizabledoublearray resizable double array length expansion resizable util initialcapacity initial capacity capacity mode double wrong initial
+1230	answer solver subject simplex number function program returning simplexsolver simplex solver wrong optimize
+1231	microsphereinterpolator microsphere interpolator restriction constructor microsphere integer algorithm unnecessery analysis interpolation exponent interpolator
+1234	bstats stats distribution getstandarddeviation standard deviation deviation summarystatistics summary statistics shouldn notstrictlypositiveexception strictly positive exception empiricaldistribution empirical distribution summary contract impossible strictly positive exception standard
+1241	nan digamma nans stack outcome doesn digamma exception amp overflow calculation produces soe argument
+1251	getnumberofcalls number calls package method kohonenupdateaction kohonen update action sofm update number action kohonen neuralnet wrong number calls
+1255	kohonenupdateaction kohonen update action kohonen size sofm neighbourhood action neuralnet bug deviation function update
+1257	erf erf cumulativeprobability cumulative probability distribution probability deviation addition cases isn replication normaldistribution normal distribution normal cumulative suffers cancellation cancel lation
+1269	nan return arguments function math fastmath fast math exp result infinity positive fast
+1277	pairs size returns data kendall tau concordantminusdiscordant concordant discordant numpairs num pairs commons mistake incorrect calc type mistmatch
+1283	gamma absx abs values gammaabs gamma abs abs computation abs math returns fastmath fast math gamma function
+1294	utils java race methods degree list comparison polynomialutils polynomial utils blob block data polynomial buildpolynomial build polynomial build
+1296	descriptivestatistics descriptive statistics nan stats apache statistics prints commons void system math descriptive return geometric product values expected
+1300	byte nextbytes bytes bytes bitsstreamgenerator bits stream generator mersenne mersennetwister mersenne twister bytes size bits util stream generator wrong
+1376	point iteration checker checker convergence prev simplex dooptimize optimize optimizer simplexoptimizer simplex optimizer simplex optimize wrong iteration number passed
+1384	probability log edge cases binomialdistribution binomial distribution nan implementation binomial hypergeometricdistribution hypergeometric distribution distribution hypergeometric logprobability log probability returns
+1396	methods variables distribution operations uniformintegerdistribution uniform integer distribution distribution integer overflows cumulativeprobability cumulative probability uniform overflows
+42	fraction format source string function parse position pos denominator string math function fraction fractionformat fraction format parse parseposition parse position handle parsing numerater num erater properly
+282	probability distribution cumulativeprobability cumulative probability squared chi chisquareddistributionimpl chi squared distribution impl returns impl bogus cumulative
+322	event step function integration bug signs events interval detected maximum ode int egration pair close
+341	test polynomialfunction polynomial function ball polynomial curve function error business firsst creoss test derivative function
+343	apos amp exception illegalargumentexception illegal argument exception values function claims case real univariaterealfunction univariate real function brent solver doesn throw illegal argument initial guess wrong sign
+344	returns endpoint min max root brent univariaterealfunction univariate real function real bracket max solver wrong
+347	min javadoc java doc java verifysequence verify sequence apos real univariaterealfunction univariate real function shouldn univariate max brent solver strict ordering initial
+358	integrator exception test finalt final integrator integration range derivativeexception derivative exception ydot dot accuracy ode int egrator
+373	nan sum length case debug erros nans user debugging statutils stat utils stat utils returns arrays
+377	getrms rms rms observation weight square getchisquare chi square chi abstractleastsquares abstract squares squares weights sigma abstract
+405	point dooptimize optimize point levenberg returns vectorialpointvaluepair vectorial point pair marquardt vectorial method function inconsistent result
+408	computations class package tests models regression tests linear statistics glsmultiplelinearregression glsmultiple linear regression glsm ult iple nontrivial trivial validation glsmultiple
+411	newsampledata sample data methods column data regression ncols method regression unit parameters multiple sample inconsistently onsistently create omit intercepts int ercepts
+418	algorithm percentile quantile summary viewdoc psu version class incremental chen add storeless store
+421	event epsilon sign solver convergence start triggered depends ode integrators restarting stopped doesn apos work
+465	problem rank decomposition rank getrank rank math singularvaluedecompositionimpl singular decomposition impl stability impl math incorrect matrix svd
+619	regression idx info integers rank nobs globalfitinfo global fit info adjrsq double squared adjusted incorrect
+640	abstract long random default nextint int nextlong long int int interface values abstractrandomgenerator abstract random generator generator implementations impl ementations generate positive pos itive
+699	math definition unit test bug distribution report cdf plateau fails inversecumulativedistribution inverse cumulative distribution inverse cumulative cumulative distribution
+704	length methods int method moment work weights values variance math evaluate correctly
+718	probability method binomial binomialdistributionimpl binomial distribution impl returns impl distribution apos code problem inversecumulativeprobability inverse cumulative probability inverse cumulative binomialdistribution binomial distribution wrong large trials
+723	generators bit seed nextgaussian gaussian setseed set seed bitstreamgenerators bit stream generators bitstream bit stream stream gaussian twister generators mersennetwister mersenne twister mersenne gen erators clear normal deviate dev iate
+781	math test simplexsolver simplex solver solver commons methode simplex bad simple works
+813	solution linear relationship solver point constraint optimization linearconstraint linear constraint problem geq simplexsolver simplex solver simplex bug
+848	default decomposition realmatrix real matrix real format utils eigendecomposition step eigen matrix eigendecomposition eigen decomposition fails matrices
+899	error probability mersenne problem arrayindexoutofboundsexception array bounds exception array thread mersennetwister mersenne twister lang generator random crash twister
+1051	math translations eigen maxcountexceededexception max count exceeded exception exception count decomposition max eigen eigendecomposition eigen decomposition converge matrices
+1059	math jvms fastmath fast math xxx differences calls math subtle counterparts fast
+1111	commons summary org package paragraph math api spelling pass mistake apache fitting
+1112	advantage percentile implementation input stream htm percentiles space inputs amp implementation function store values
+1116	getweight weight weight optimizer weightmatrix weight matrix weight exception null levenberg usage marquardt nullpointerexception null pointer exception pointer advertized javadoc
+1174	infinity vertices origin tolerances rectangles rectangle point effects polygonsset polygons set size thin handled properly polygons set
+1197	issue kolmogorov test kolmogorovsmirnov kolmogorov smirnov kolmogorov smirnov kolmogorovsmirnovtest kolmogorov smirnov test statistic samples incorrect
+1310	method sample chapter smirnov implementation exactp exact estimation simulation monte samples improve accuracy performance kolmogorov test
+1356	hypergeometricdistribution hypergeometric distribution probability hgd distribution nan thomas return cases hypergeometric returns result
+204	BrentSolver throws IllegalArgumentException MaxIterationsExceededException FunctionEvaluationException IllegalArgumentException BrentSolver solve Solver Brent
+280	bug in inverseCumulativeProbability  for Normal Distribution MathException inverseCumulativeProbability AbstractContinuousDistribution NormalDistributionImpl Distribution Continuous inverse Cumulative Probability Impl Normal
+293	Matrix apos s  OutOfBoundException  in SimplexSolver OutOfBoundException MatrixIndexException Array2DRowRealMatrix getEntry SimplexTableau getBasicRow SimplexSolver getSolution doOptimize AbstractLinearOptimizer Array2DRow Matrix Real
+294	RandomDataImpl nextPoisson fails for means in range MathRuntimeException createIllegalArgumentException createIllegalArgumentException MathRuntimeException MathUtils factorialLog Exception RandomDataImpl Math Argument Illegal create Runtime
+519	GaussianFitter Unexpectedly Throws NotStrictlyPositiveException NotStrictlyPositiveException validateParameters Gaussian Parametric Parameters validate value
+588	Weighted Mean evaluation may not have optimal numerics failNotEquals Assert Equals assertEquals testWeightedConsistency assertRelativelyEquals TestUtils UnivariateStatisticAbstractTest fail Test Utils
+645	MathRuntimeException with simple ebeMultiply on OpenMapRealVector MathRuntimeException createConcurrentModificationException createConcurrentModificationException MathRuntimeException DemoBugOpenMapRealVector OpenIntToDoubleHashMap Iterator OpenMapRealVector ebeMultiply Exception Open Map Math
+1148	MonotoneChain handling of collinear points drops low points in a near column ConvergenceException AbstractConvexHullGenerator2D generate MonotoneChain NativeMethodAccessorImpl DelegatingMethodAccessorImpl invoke Convex Generator2D Hull Method Monotone
+1295	NonLinearConjugateGradientOptimizer and BracketFinder TooManyEvaluationsException TooManyEvaluationsException BracketFinder search NonLinearConjugateGradientOptimizer eval optimize LineSearch BaseMultivariateOptimizer doOptimize Optimizer Bracket Finder
+305	NPE in KMeansPlusPlusClusterer unittest NullPointerException assignPointsToClusters KMeansPlusPlusClusterer KMeans Clusterer Points Clusters assign

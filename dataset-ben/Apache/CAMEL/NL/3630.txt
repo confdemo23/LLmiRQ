@@ -1,0 +1,2 @@
+Upgrade to Spring Integration 2.0.x
+As part of the Spring 3.0x upgrade, we can upgrade to SI 2.x as it requires Spring 3.0

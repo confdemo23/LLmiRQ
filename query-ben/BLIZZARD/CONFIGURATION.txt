@@ -1,0 +1,117 @@
+413	test configuration node event set property configurations subset Subset configuration support events
+604	set reloading lookup bean configuration lookups interpolator parameters combining properties names discards entries Commons property files combined commons config aggregate configuration returns expected result entries Commons configuration higher set drops expected property names include names appears names arranged combiner returns expected result release notes isn amp apos defect intended implementation change
+220	format getdatelist list data configuration key getdatearray array dataconfiguration data configuration argument array list string defaultvalue default default ignores
+227	configuration configurations work values list subset hierarchicalconfiguration hierarchical configuration hierarchical getlist list implementation configurationdynabean configuration dyna bean dyna bean types
+230	path configuration node tree delimiter attr isattribute attribute node org method xpathexpressionengine xpath expression engine ath expression engine nodekey node key key create wrong key attribute xpath
+232	configuration base apos amp logger system configurationutils configuration utils utils printstacktrace print stack trace urlexception spews std err exceptions
+233	getlist list list compositeconfiguration composite configuration configuration methods property subconfiguration interpolation abstractconfiguration abstract configuration files incomplete int erpolation composite
+242	configuration subset configuration hierarchical property interpolation parent hierarchicalconfiguration hierarchical configuration returned account set globally interpolate int erpolate
+252	url file jar filename file properties basepath base path apos configuration amp base detection absolute filenames file names names sources defined jar
+254	xmlconfiguration copy delegate configuration clone references xmlfileconfigurationdelegate xmlfile configuration delegate void node xmlfile wrong creation xmlf ile xml
+255	methods string property values delimiter array character list delimiters list databaseconfiguration database configuration database configuration doesn apos support
+256	string list delimiter amp map configuration list property key mapconfiguration map configuration decode escaped delimiters
+263	xml config test xmlconfiguration file statement file xmlconfig xml config list xmlc onfiguration drops attributes property
+264	config item config configuration reloading string parent configuration parentitemconfig parent item config item subnodeconfiguration subnode configuration subnode reloads
+265	config item conf parent config xml xmlconfiguration subnodeconfiguration subnode configuration configuration subnode xml setautosave set auto save set auto save true doesn apos save changed
+267	configurations iniconfiguration file printwriter print writer method writer save saved flushed doesn inic onfiguration apos correctly
+268	delimiter list parsing values xmlconfiguration delimiters file parsing set delimiter xmlc onfiguration fully support disabled
+269	delimiter configuration propertiesconfiguration properties configuration characters configuration parsing properties values disabled character save generates superfluous super fluous escaping
+270	support properties writer writer method propertieswriter properties writer printwriter print writer getstring string propertiesconfiguration properties configuration string iniconfiguration inic onfiguration multi
+272	copy property characters long someotherproperty property property somelongproperty long property character escape getstring string configurationutils configuration utils configuration utils escaped longer
+274	list temp property escape character delimiter propertiesconfiguration properties configuration addproperty add property properties configuration configuration save support escaping
+277	method iterator string clearproperty clear property property operation unsupportedoperationexception unsupported operation exception unsupported exception configuration abstractconfiguration abstract configuration abstract handle unsupportedoperationexceptions unsupported operation exceptions exceptions remove gracefully
+279	configuration file configuration propertiesconfiguration properties configuration layout properties construction file load calls dysfunctional constructed nonexistent xistent
+280	configuration configuration autosave auto save config method xmlconfig auto filechangedreloadingstrategy file changed reloading strategy autosavebak auto save bak bak save file changed reloading strategy corrupts
+281	recursivegetkeys recursive amp configuration max jndiconfiguration debugging problem maxdepth max depth check depth jndic onfiguration recursive stack
+294	configuration apos property node addnodes add nodes method setproperty set property file reload set values newly xmlconfiguration xmlc onfiguration doesn work
+295	subset configuration configuration test title clone children apidocs http behaviour hierarchicalconfiguration hierarchical configuration hierarchical misses entry key equal prefix
+296	config root property test configuration attribute xmlconfiguration attributes addproperty add property change xmlc onfiguration node
+299	type string classcastexception class cast exception const class cache xxx exception lookup obtains interpolation variables cast
+300	configuration exception file apos propertiesconfiguration properties configuration properties properties stack configuration method create filename
+306	amp apos values sdog ini string configuration space commons quotes iniconfiguration inic onfiguration quoted trimmed
+310	configurationfactory configuration factory configurationbuilder configuration builder configuration digester class builder alternative factory depend longer remove actory
+315	configuration fire event combinedconfiguration combined configuration configuration invalidate call combined update combined contained updated
+316	xml text element code copy sample xmlconfiguration amp constructor configuration hierarchicalconfiguration hierarchical configuration hierarchical invalidates invalid ates singular top
+318	element root xmlconfiguration configuration configuration copy hierarchical constructor constructor hierarchicalconfiguration hierarchical configuration xml loses
+320	values configuration apos xmlproperty bits amp size big xmlpropertylistconfiguration xmlproperty list configuration spec xmlp roperty list limited integers int egers
+321	key configuration getkeys prefix test iterator hasnext hierarchical order test abstracthierarchicalconfiguration abstract hierarchical configuration abstract doesn apos return
+322	configuration configuration arrays bean apos array configurationdynabean configuration dyna bean dyna list mapconfiguration map configuration doesn work indexed properties stored internally int ernally
+328	node amp apos attr test addnodes add nodes property properties xmlconfiguration xmlc onfiguration add nodes behaving correctly
+332	configuration config file dataconfiguration data configuration data test apos property foo configuration propertiesconfiguration properties configuration properties save doesn persist sist properties
+334	nodes node configuration node hierarchicalconfiguration hierarchical configuration root configuration method child setrootnode set root node inconsistent parent hierarchical set
+335	attribute xml attributes splitting apos parsing setparseattributesasis set parse attributes parse delimiter string xmlconfiguration xmlc onfiguration disable
+339	configuration properties properties cfg converter amp configurationconverter configuration converter subset override test handle compositeconfiguration composite configuration composite correctly
+341	configuration config queue xml subnode reload xmlconfiguration xml configuration int apos getint int filechangedreloadingstrategy file changed reloading strategy file changed reloading strategy working subnodeconfiguration subnode configuration combinedconfiguration combined configuration combined
+345	configuration propertiesconfiguration properties configuration constructors block default java properties string encoding default encoding load files
+346	values configuration structures utils property configuration list configurationutils configuration utils indices node converttohierarchical convert hierarchical convert hierarchical correctly handle properties multiple
+348	reload file abstract method configuration hierarchical abstracthierarchicalfileconfiguration abstract hierarchical file configuration getkeys call trigger
+357	big integer configuration decimal conversionexception conversion exception configurationexception configuration exception abstractconfiguration abstract configuration getbiginteger big integer exception abstract conversion message incorrect string biginteger big integer
+362	configuration configuration xmlproperty dictionary children xmlpropertylistconfiguration xmlproperty list configuration dict print xmlp roperty list doesn apos handle empty correctly
+368	configuration xmlconfiguration exception subnodeconfiguration subnode configuration xml configuration nosuchelementexception element exception util combinedconfiguration combined configuration combined java element reload enclosed subnode xml
+369	subsetconfiguration subset configuration configuration str abstractconfiguration abstract configuration lookup strlookups str lookups subset abstract lookups local ignores
+385	property event clearproperty clear property configuration superclass databaseconfiguration database configuration event abstractconfiguration abstract configuration clearpropertydirect clear property direct property clear generate events database
+388	delimiter element attribute amp list xmlconfiguration escaped character disabled delimiting updating
+393	properties clone map base data work values lists configuration object baseconfiguration base configuration list
+396	children visit configuration key node configurationkey configuration key key apos visitafterchildren visit children length hierarchicalconfiguration hierarchical configuration hierarchical visits points parent path call
+397	validation error exception configuration exceptions schema file multifilehierarchicalconfiguration multi file hierarchical configuration default configuration schema combined result empty include message
+403	configuration xml isempty empty version bug documnetation file values empty xmlconfiguration xmlc onfiguration empty altered alt ered behaviour
+412	property method key clearproperty clear property setproperty set property configuration databaseconfiguration database configuration datasource addproperty add property connections database data source autocommit auto commit false
+415	sign urls format form mime url url problem spaces filefromurl file url configurationutils configuration utils configuration utils mangles files apos file
+418	parsing char return problem esc data delimiter list converter returns incorrect backslash slash
+427	config property list system plist chair door configuration hat xmlpropertylistconfiguration xmlproperty list configuration xmlp roperty save arrays correct form xmlproperty
+428	test config cluster location xml server xmlconfiguration utf windows file path saved correctly expected xmlc onfiguration
+433	property properties cases bean configurationdynabean configuration dyna bean javadoc dyna configuration work exception advertised indexed
+446	config attribute configuration foo xmlconfiguration shouldn node xpathexpressionengine xpath expression engine xmlc onfiguration removes empty attributes update
+456	getkeys apos reading behaviour string configuration source prefix configuration abstract abstractconfiguration abstract configuration docs doesn point
+458	configuration implementation configuration parent method subnodeconfiguration subnode configuration node structure subnode property clear work correctly
+460	user configuration file configuration application strategy properties println reloadstrategy reload strategy reload work files additional tag defaultconfigurationbuilder default configuration builder default builder
+471	configuration user config memory default configuration withmemoryconfig memory config userconf user conf conf property compositeconfiguration composite configuration composite delivers wrong child
+476	configuration configuration baseconfiguration base configuration delimiter class compositeconfiguration composite configuration memory base type object classcastexception class cast exception cast exception composite special
+487	string method conversion types case configuration data conversions type propertyconverter property converter dataconfiguration data configuration handle trivial
+501	configuration exceptions set configuration chance values method plist setdatevalue set node xmlpropertylistconfiguration xmlproperty list configuration xmlp roperty list swallows invalid properties xmlproperty
+504	node configuration node file method configuration hierarchicalconfiguration hierarchical configuration code hierarchical works clear doesn apos remove parent xml source
+516	test config properties string configuration quotes testfile test file utils quote java propertiesconfiguration properties configuration save escapes double qoutes unecessary
+521	work amp file apos filefromurl file url commons url configuration url utils decoding dec oding encoded character
+525	comments properties configuration propertiesconfigurationlayout properties configuration layout layout properties bottom file preserve helloworld
+534	property files beans controls java property configuration propertiesconfiguration properties configuration method start propertyconfiguration property configuration apos handling includes depends existence base path
+537	class configurationfactory configuration factory configuration version factory series deprecated removed remove
+540	configuration properties system map systemconfiguration system configuration systemproperties system properties getproperties properties replacement mapconfiguration map configuration properties copies
+555	node getlist list whitespace list space xml values test xmlconfiguration xmlc onfiguration doesn apos preserving current preserve set
+567	node configuration child declaration hierarchicalconfiguration hierarchical configuration getconfiguration configuration bean getname hierarchical xmlbeandeclaration xmlbean declaration xml getnestedbeandeclarations nested bean declarations nested declarations doesn apos escape query xmlbean
+570	configuration properties system pconf property systemconfiguration system configuration code configuration apos setproperty set property passing propertiesconfiguration properties configuration concurrentmodificationexception concurrent modification exception concurrent modification exception
+610	java behavior list javadoc java doc method substitution load features properties configuration improve variable documentation
+622	ini expressionengine expression engine file iniconfiguration expression engine config learningtask conf writing
+632	array list string getstringarray string array configuration element compositeconfiguration composite configuration composite configuration interpolation variable int erpolation return
+640	properties configuration colon test property reading propertiesconfiguration properties configuration file path colon file longer unescaped commons configuration
+228	config subset item filechangedreloadingstrategy file changed reloading strategy changed xmlconfiguration conf string strategy xmlc onfiguration set file reloading apos file
+235	base obase base string getstring string amp apos subset subset getint int problem variable interpolation int erpolation
+241	configuration property configuration property events factory apos config println clearproperty clear property clear generate
+275	apos configurationutils configuration utils utils configuration elements append list properties doesn object merge
+283	configuration config string properties test testcase test case import println combined combinedconfiguration combined configuration doesn apos escaped characters account
+287	configuration xmlconfiguration xml config node collection root node test destination xmlc onfiguration addnodes add nodes add nodes problem
+291	nodes config child amp node xml xmlconfiguration auto nodes file addnodes add nodes add doesn apos trigger saving
+399	class variables env interpolator reading prefix strlookup str lookup str lookup java int erpolator environment
+408	config foo newprops props google propertiesconfiguration properties configuration url setproperty set property http properties string save property ward slashes ting escaped
+465	configuration commons jexl osgi org package bundle version osgi issue depends jexl release
+481	configuration properties test desc commons file configuration files variable interpolation int erpolation broken
+495	configuration parsing properties elements values complex delimiter property abstract array disabled adding list abstractconfiguration abstract configuration configuration work correctly
+547	xml string config writer key xmlconfiguration behaviour roundtrippedxmlconfig tripped xml config xmlconfig xml config version handling backslashes slashes
+552	comments properties save file dropped trailing deleted called
+564	version configuration application properties amp apos reader properties library parse propertiesreader properties reader doparseproperty parse property property war compatible
+573	config string dsig xml xpath org test xmldsig algorithm values xml configuration namespace prefix null
+581	system demo newdemovalue demo demo property propertyfromsysconf property sys conf sysconf sys conf property setproperty set property demoid demo systemconfiguration system configuration configuration correct system
+214	Adding an integer and getting it as a long causes an exception ConversionException AbstractConfiguration getLong Configuration
+282	NPE in HierarchicalConfiguration fetchNodeList after redeployment NullPointerException fetchNodeList AbstractHierarchicalFileConfiguration resolveContainerStore getProperty HierarchicalConfiguration AbstractConfiguration Configuration getBoolean Hierarchical Node fetch
+336	Brackets in property key causes NumberFormatException NumberFormatException NumberFormatException forInputString findNodesForKey DefaultExpressionEngine KeyIterator parseInt setProperty checkIndex HierarchicalConfiguration ConfigurationUtils nextKey
+344	Deadlock during refresh properties throwException CombinedConfiguration AbstractFileConfiguration fireEvent configurationChanged ManagedReloadingStrategy testPropertyProvider jsp PropertyProviderImpl EventSource invalidate isEmpty
+404	Revisit   Brackets in property key causes NumberFormatException NumberFormatException NumberFormatException forInputString findNodesForKey DefaultExpressionEngine KeyIterator parseInt setProperty checkIndex HierarchicalConfiguration ConfigurationUtils nextKey
+405	Using load InputStream  on a new XMLPropertyListConfiguration results in a thrown ConfigurationException ConfigurationException ClassCastException load AbstractHierarchicalFileConfiguration FileConfigurationDelegate XMLPropertyListConfiguration XMLPropertyListHandler Configuration TestCC endElement AbstractFileConfiguration endNamespaceScope File
+432	ConfugrationConverter treats properties different by type ConversionException getList AbstractConfiguration ConfigurationConverter Configuration List getProperties Converter Properties
+452	HierarchicalConfiguration with XPathExpressionEngine does not work when setting a new property RuntimeException ConfigurationException IllegalArgumentException XPathExpressionEngine prepareAdd addPropertyDirect AbstractHierarchicalFileConfiguration setProperty HierarchicalConfiguration Add prepare XPath Expression Engine
+483	DatabaseConfiguration unclosed resultset checkAndCloseResultSets PoolConnection DatabaseConfiguration close resolveContainerStore CompositeConfiguration containsKey getProperty Configuration AbstractConfiguration Result
+546	ClassCastException in BeanHelper constructing beans with a list of child beans ClassCastException BeanHelper TestBeanHelper TestBeanFactory createBean initBean Bean Helper init Test Factory create
+582	PropertiesConfigurationLayout getCanonicalComment throws StringIndexOutOfBoundsException when line before property has a single space StringIndexOutOfBoundsException charAt String PropertiesConfigurationLayout constructCanonicalComment stripCommentChar trimComment Comment getCanonicalComment Canonical strip trim
+609	When using a VFSFileSystem on a PropertiesConfiguration  processing an include token defaults back to DefaultFileSystem ConfigurationException IOException load FileHandler DefaultFileSystem PropertiesConfiguration getInputStream loadIncludeFile loadFromTransformedStream propertyLoaded File loadFromReader PropertiesConfigurationLayout
+618	Accessing missing properties of immutable subset throws UndeclaredThrowableException instead of NoSuchElementException UndeclaredThrowableException setThrowException NoSuchElementException InvocationTargetException throwMissingPropertyException ImmutableConfigurationInvocationHandler throwMissingPropertyException getString invoke NativeMethodAccessorImpl DelegatingMethodAccessorImpl AbstractConfiguration Method Proxy0 convert main
+634	BasePath is incorrectly computed while init of CompositeConfiguration ConfigurationException FileLocatorUtils FileBasedConfigurationBuilder locateOrThrow initResultInstance initFileHandler File FileHandler BasicConfigurationBuilder createResult load locate
+627	BeanHelper exception on XMLConfiguration builder getConfiguration IntrospectionException setWriteMethod findPropertyType PropertyDescriptor Property PropertyUtilsBean init FluentPropertyBeanIntrospector createFluentPropertyDescritor fetchIntrospectionData getIntrospectionData getPropertyDescriptor

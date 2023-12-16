@@ -1,0 +1,2 @@
+Update spring-integration to 1.0.0.RC1
+The api has changed, plus there are tests failures anyway that need to be addressed, but i think better is to upgrade.

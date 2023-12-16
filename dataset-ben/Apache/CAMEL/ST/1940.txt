@@ -1,0 +1,26 @@
+pollEnrich does not work with queue and quartz or timer endpoints
+Hi,
+In the following route example, the pollenrich processor is never called            &lt;camel:from uri="quartz://x3sReporting/clientError?cron=0+0/5+9-18+?+*+MON-FRI"/&gt;
+            &lt;camel:pollEnrich uri="queuingservice:x3s:reporting" strategyRef="queueAggregator"/&gt;            &lt;camel:transacted ref="PROPAGATION_REQUIRED_NEW" /&gt;
+            &lt;camel:choice&gt;
+                &lt;camel:when&gt;
+                    &lt;camel:simple&gt;${body} != null&lt;/camel:simple&gt;
+                    &lt;camel:doTry&gt;
+                        &lt;camel:marshal ref="csvAuditBindyDataFormat" /&gt;
+Definiton of the AggregationStrategy class usedpublic class QueueAggregator implements AggregationStrategy {
+   
+    private static final transient Log LOG = LogFactory.getLog(QueueAggregator.class);    public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
+        if (newExchange == null) {
+            LOG.info("Old object received (null exchange) : " + oldExchange.getIn().getBody().toString());
+            return oldExchange;
+        }
+        Object oldBody = oldExchange.getIn().getBody();
+        LOG.info("Old object received : " + oldBody.toString());
+        Object newBody = newExchange.getIn().getBody();
+        LOG.info("New object received : " + newBody.toString());
+        oldExchange.getIn().setBody(newBody);
+        return oldExchange;
+    }
+}
+Unfortunately, the aggregator is not called (no info trace in the LOG) and the body object send to the endpoint (marshall) is of type org.quartz.JobDetailCaughtExceptionType:java.lang.ClassCastException, CaughtExceptionMessage:org.quartz.JobDetail, StackTrace:java.lang.ClassCastException: org.quartz.JobDetail
+    at org.apache.camel.dataformat.bindy.csv.BindyCsvDataFormat.marshal(BindyCsvDataFormat.java:60)

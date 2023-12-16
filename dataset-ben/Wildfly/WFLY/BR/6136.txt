@@ -1,0 +1,16 @@
+Wildfly 10.0.0.Final duplitates contents of <jsp-config><include-prelude> or <include-coda> directives in web.xml
+I have been successfully deploying an application on WildFly 8.2.1 and WildFly 9.0.2 versions with the following &lt;jsp-config&gt; directives in web.xml deployment descriptor:
+&lt;jsp-config&gt;
+&lt;jsp-property-group&gt;
+&lt;description&gt;header and footer settings&lt;/description&gt;
+&lt;url-pattern&gt;/WEB-INF/view/*&lt;/url-pattern&gt;
+&lt;url-pattern&gt;/WEB-INF/error/*&lt;/url-pattern&gt;
+&lt;include-prelude&gt;/WEB-INF/jspf/header.jspf&lt;/include-prelude&gt;
+&lt;include-coda&gt;/WEB-INF/jspf/footer.jspf&lt;/include-coda&gt;
+&lt;/jsp-property-group&gt;
+&lt;/jsp-config&gt;
+This code fragment includes the contents of /WEB-INF/jspf/header.jspf at the beginning of each .jsp file and &lt;include-coda&gt;/WEB-INF/jspf/footer.jspf&lt;/include-coda&gt; at the end of each .jsp file that matches the &lt;url-pattern&gt;.
+But when I try to deploy this application with the same deployment descriptor in WildFly 10.0.0.Final, the contents of /WEB-INF/jspf/header.jspf and /WEB-INF/jspf/footer.jspf are included twice in each .jsp file that matches the &lt;url-pattern&gt;.
+If I add another &lt;url-pattern&gt; line, then the contents of /WEB-INF/jspf/header.jspf and /WEB-INF/jspf/footer.jspf are included three times, and so on.
+Any suggestion about this issue?
+Is this a deployment descriptor issue or a configuration issue in the standalone.xml of WildFly 10.0.0.Final version?

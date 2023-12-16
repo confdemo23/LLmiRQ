@@ -1,0 +1,26 @@
+[18] Pattern variable reported as uninitialized when mixing case pattern with instanceof pattern
+The code in question is this:
+
+public class X1 {
+    public int testMethod(I i) {
+       return switch (i) {
+            case I p1 && (p1 instanceof C p2) : {
+                yield p2.value(); // Error here
+            }
+            case I p3 : {
+                yield p3.value(); // No error here
+            }
+        };
+    }
+    interface I {
+        public int value();
+    }
+    class C implements I {
+    	@Override
+    	public int value() {
+    		return 0;
+    	}
+    }
+}
+
+The pattern variable p2 is reported as not initialized but it is wrong.

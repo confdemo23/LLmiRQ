@@ -1,0 +1,15 @@
+Tab completion is doesn't work for cli variables and properties
+CLI tab completion doesn't work for CLI variables.
+Add a CLI variable:set myvar=/subsystem=datasources/data-source=ExampleDS
+[standalone@embedded /] $myvar:read-resource
+{
+    "outcome" =&gt; "success",
+    "result" =&gt; {...Now try to use tab completion
+actual
+[standalone@embedded /] $myvar:read&lt;TAB&gt;
+[standalone@embedded /] $myvar:readread-&lt;TAB&gt;
+[standalone@embedded /] $myvar:readread-
+'readread-' is not a valid operation name.
+expected
+[standalone@embedded /] $myvar:read&lt;TAB&gt;
+[standalone@embedded /] $myvar:read-resource

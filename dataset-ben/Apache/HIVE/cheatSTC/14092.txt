@@ -1,0 +1,2 @@
+Kryo exception when deserializing VectorFileSinkOperator
+Following exception is thrown for queries using VectorFileSinkOperatorCaused by: 

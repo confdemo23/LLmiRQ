@@ -1,0 +1,2 @@
+Unnecessary file into byte[] copy implementation in eclipse.jdt.debug
+In JavaStackTraceConsole and JavaAppletLaunchConfigurationDelegate there are unnecessary code which copies into a byte array from a File, instead of using the built in java.nio.file.Files APIs.

@@ -1,0 +1,12 @@
+256	 ChannelBindingSaslClient, ChannelBindingSaslServerFactory, TLSServerEndPointChannelBindingSaslClientFactory, ChannelBindingCallback, FastUnsupportedCallbackException
+395	 Undertow HTTPS listener, CipherSuiteSelector.fromString
+538	 ElytronPermissionCollection.readResolve()
+542	 ProtocolSelector.RemovingProtocolSelector, applyFilter method
+543	 AbstractDigestMechanism, messageDigestAlgorithm, MessageDigest.getInstance
+546	 SecurityDomain.mapName()
+589	 RawClearPassword, Destroyable interface, destroy() method
+610	 X509CertificateBuilder.build(), ASN1.oidFromSignatureAlgorithm(), derEncoder.encodeObjectIdentifier()
+611	 LongNameSetPermissionCollection, getBitsForName
+612	 AbstractDigestMechanism, getSaltedPasswordFromTwoWay, userRealmPasswordDigest
+614	 AbstractPermission.equals()
+691	 LegacyPropertiesSecurityRealm, properties-realm

@@ -1,0 +1,53 @@
+camel-kafka: messages are getting lost with "breakOnFirstError"
+*Description:*
+
+Messages are getting lost with "breakOnFirstError=true" when processing of a particular message failed several times in a raw.
+
+ 
+
+*Configuration:*
+ * autoCommitEnable=false
+ * allowManualCommit=true
+ * breakOnFirstError=true
+ * autoOffsetReset=earliest
+ * maxPollRecords is greater than one (e.g. 5 in this test)
+
+ 
+
+*Test Scenario:*
+ # inbound-topic contains 10 messages: 0,1,2,3,4,5,6,7,8,9
+ # camel-route polls 5 messages: 0,1,2,3,4
+ # camel-route successfully processes message=0 and manually commits offset
+ # camel-route successfully processes message=1 and manually commits offset
+ # camel-route fails with processing message=2 first time
+ # breakOnFirstError=true causes camel-route to reconnect and poll from the committed offset
+ # camel-route polls 5 messages: 2,3,4,5,6
+ # camel-route fails with processing message=2 second time
+ # *ACTUAL:* camel-route reconnects and polls messages 7,8,9 - as result messages 3,4,5,6 are never processed
+
+*EXPECTED:* camel-route should do the following on the step 9:
+ * reconnect and poll the same 5 messages again: 2,3,4,5,6
+ * process message=2 third time (the test is configured to succeed on the 3rd attempt)
+ * continue with processing messages 3,4,5,6...
+
+ 
+
+*GitHub project reproducing the issue:*
+
+[https://github.com/opershai/camel-kafka-lost-messages-demo] 
+
+Test-runs:
+ * 3.18.5 (failing): [https://github.com/opershai/camel-kafka-lost-messages-demo/actions/runs/4039702564] 
+ * 3.19.0 (failing): [https://github.com/opershai/camel-kafka-lost-messages-demo/actions/runs/4039815226] 
+ * 3.20.0 (failing): [https://github.com/opershai/camel-kafka-lost-messages-demo/actions/runs/4039709753] 
+ * 3.20.1 (failing): [https://github.com/opershai/camel-kafka-lost-messages-demo/actions/runs/4039673222] 
+ * 2.25.4 (passing): [https://github.com/opershai/camel-kafka-lost-messages-demo/actions/runs/4057277373] 
+
+ 
+
+*Impact:*
+
+It seems "breakOnFirstError" is not fully reliable in LTS versions of Camel Kafka component at the moment:
+ * 3.20.x - due to this bug
+ * 3.18.x - due to this bug
+ * 3.14.x - due to another bug https://issues.apache.org/jira/browse/CAMEL-17925 as fix was not back-ported to the 3.14.x

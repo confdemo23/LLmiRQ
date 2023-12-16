@@ -1,0 +1,49 @@
+Observed lot of threads blocked in ConnectionImplementation.getKeepAliveMasterService
+Recently We observed that lot of threads are blocked in method "ConnectionImplementation.getKeepAliveMasterService" during some initialization stages of rolling restart workflow. 
+
+During rolling restart, we make RPC calls to Master using RpcRetryingCallerImpl, so as part of initialization we call "ConnectionImplementation.getKeepAliveMasterService" for each thread. Internally this method do RPC call within a synchronized block to check if master is running (mss.isMasterRunning).
+
+Lots of threads are in blocked state due following synchronized block
+
+synchronized (masterLock) {
+   if (!isKeepAliveMasterConnectedAndRunning(this.masterServiceState))
+
+{      MasterServiceStubMaker stubMaker = new MasterServiceStubMaker();      this.masterServiceState.stub = stubMaker.makeStub();    }
+
+   resetMasterServiceState(this.masterServiceState);
+ }
+
+In Thread Dump Analyzer (2.4), we get warning that "A lot of threads are waiting for this monitor to become available again.
+ This might indicate a congestion. You also should analyze other locks blocked by threads waiting for this monitor as there might be much more threads waiting for it.". Please check attached screenshot  !Screenshot 2022-11-16 at 10.06.59 AM.png|width=1639,height=971!
+
+--------------------
+
+"pool-11-thread-158" #313 prio=5 os_prio=0 tid=0x000055b88bcb8800 nid=0x404e waiting for monitor entry [0x00007fa48aa86000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+    at org.apache.hadoop.hbase.client.ConnectionImplementation.getKeepAliveMasterService(ConnectionImplementation.java:1336)
+    - waiting to lock <0x00000005d30ecb68> (a java.lang.Object)
+    at org.apache.hadoop.hbase.client.ConnectionImplementation.getMaster(ConnectionImplementation.java:1327)
+    at org.apache.hadoop.hbase.client.MasterCallable.prepare(MasterCallable.java:57)
+    at org.apache.hadoop.hbase.client.RpcRetryingCallerImpl.callWithRetries(RpcRetryingCallerImpl.java:103)
+    at org.apache.hadoop.hbase.client.HBaseAdmin.executeCallable(HBaseAdmin.java:3019)
+    at org.apache.hadoop.hbase.client.HBaseAdmin.executeCallable(HBaseAdmin.java:3011)
+    at org.apache.hadoop.hbase.client.HBaseAdmin.move(HBaseAdmin.java:1458)
+    at org.apache.hadoop.hbase.util.MoveWithoutAck.call(MoveWithoutAck.java:58)
+    at org.apache.hadoop.hbase.util.MoveWithoutAck.call(MoveWithoutAck.java:33)
+
+-------------------
+
+ 
+
+*Proposal:*
+We can optimize this flow as follows
+1. Use double checked lock for "isKeepAliveMasterConnectedAndRunning(this.masterServiceState)" so that theads don't race for monitor, when master is running.
+2. "isKeepAliveMasterConnectedAndRunning()" method should reuse the Globally cached state of isMasterRunning instead of doing expensive Call in for each thread. 
+
+Check PR [https://github.com/apache/hbase/pull/4889] for more details.
+
+Note: The "master" branch uses "AsyncConnectionImpl" so apparently we don't have issues there.
+
+ 
+
+ 

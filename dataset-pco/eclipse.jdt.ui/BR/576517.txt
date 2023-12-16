@@ -1,0 +1,2 @@
+NewClassWizard should throw an error if record is selected as a super class
+In a NewClassWizard, selecting a Record as a super class should throw an error as a Record is final and cannot be extended.

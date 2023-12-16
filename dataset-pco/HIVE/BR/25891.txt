@@ -1,0 +1,2 @@
+Improve Iceberg error message for unsupported vectorization cases
+Currently, if you attempt to read a Parquet or Avro Iceberg table with vectorization turned on, you will eventually get an error message since it's not supported. However, this error message is very misleading and does not explain clearly what the problem is and how to work around it. 

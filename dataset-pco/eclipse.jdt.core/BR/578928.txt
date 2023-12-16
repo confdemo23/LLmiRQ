@@ -1,0 +1,6 @@
+[18][javadoc] provide support for properties for @snippet
+Provide support to specify properties for a snippet
+
+such as class, file , id etc
+
+Please look at https://openjdk.java.net/jeps/413#Other-kinds-of-files

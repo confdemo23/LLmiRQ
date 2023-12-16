@@ -1,0 +1,35 @@
+IllegalArgumentException when hovering over anonymous class
+version: 4.22, commit https://git.eclipse.org/c/jdt/eclipse.jdt.core.git/commit/?id=89168b7454f75fd318f7f21d5c38c7352453b5f8
+A related issue - https://github.com/eclipse/eclipse.jdt.ls/issues/1915
+
+Steps to reproduce:
+
+1. Open class
+public class Tuples {
+    public static void main(String[] args) {
+        var tuple = new Object() {
+            String name = "Java";
+            int age = 25;
+        };
+        System.out.println(tuple.name +" is "+ tuple.age);
+    }
+}
+2. Hover over the tuple field
+
+You will get the following exception:
+java.lang.IllegalArgumentException: new java.lang.Object(){}
+	at org.eclipse.jdt.core.Signature.createCharArrayTypeSignature(Signature.java:1097)
+	at org.eclipse.jdt.core.Signature.createTypeSignature(Signature.java:1293)
+	at org.eclipse.jdt.internal.core.SelectionRequestor.acceptLocalVariable(SelectionRequestor.java:479)
+	at org.eclipse.jdt.internal.codeassist.SelectionEngine.selectFrom(SelectionEngine.java:1386)
+	at org.eclipse.jdt.internal.codeassist.SelectionEngine.select(SelectionEngine.java:1089)
+	at org.eclipse.jdt.internal.core.Openable.codeSelect(Openable.java:168)
+	at org.eclipse.jdt.internal.core.CompilationUnit.codeSelect(CompilationUnit.java:388)
+	at org.eclipse.jdt.internal.core.CompilationUnit.codeSelect(CompilationUnit.java:381)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractJavaEditorTextHover.getJavaElementsAt(AbstractJavaEditorTextHover.java:121)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:662)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:658)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)

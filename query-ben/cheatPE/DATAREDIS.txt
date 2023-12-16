@@ -1,0 +1,29 @@
+78	 RedisCacheManager, RedisCache, RedisTemplate, DefaultRedisCachePrefix
+79	 RedisTemplate, expireAt, getTime
+81	 RedisMessageListenerContainer
+246	 RedisCacheManager, CompositeCacheManager, RedisCache
+283	 RedisCacheManager, afterPropertiesSet, loadCaches
+285	 LettuceTemplate, LettuceConnection, ByteArrayOutput, ValueListOutput
+300	 RedisConnectionUtils, RedisTemplate, JedisConnectionFactory, RedisConnectionHolder, TransactionSynchronizationManager, RedisConnectionFactory
+310	 RedisCache
+317	 RedisAtomicInteger, RedisAtomicLong, JedisDataException
+328	 RedisCacheManager, InitializingBean
+332	 RedisTemplate, listOperations
+337	 MessageListenerAdapter, AbstractTest, Test
+347	 DefaultScriptExecutor
+354	 Jackson2JsonRedisSerializer, getJavaType, JavaType
+369	 RedisCache
+375	 RedisCacheManager, TransactionAwareCacheDecorator, AbstractCacheManager
+417	 ScanCursor
+448	 DefaultSetOperations, RedisCallback, RedisConnection
+467	 JedisClusterConnection, ClusterCommandExecutor, RedisClusterNode
+472	 JedisConnection
+492	 MappingRedisConverter, PersistentProperty, TypeDiscoverer
+498	 MappingRedisConverter, List.sort
+500	 RedisTemplate, RedisCallback, StringRedisSerializer, GenericToStringSerializer, DataAccessException
+501	 RedisTemplate, JdkSerializationRedisSerializer
+509	 MappingRedisConverter, WithArrays
+524	 LettuceConnectionFactory, RedisURI
+542	 RedisCache, RedisCachePutIfAbsentCallback
+547	 RedisQueryCreator
+548	 RedisTemplate

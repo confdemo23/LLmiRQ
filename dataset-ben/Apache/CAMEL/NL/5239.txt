@@ -1,0 +1,2 @@
+Moving camel-itest-osgi to Pax-Exam 2.x
+As the pax-exam 2.3 is released for a long time, we should consider to upgrade out osgi integration tests to 2.x.

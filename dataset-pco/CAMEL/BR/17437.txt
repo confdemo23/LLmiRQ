@@ -1,0 +1,17 @@
+Camel-aws2-sqs: Deadletter fails with sqs client from registry (could impact more components)
+I'm investigating an error on camel-quarkus ([https://github.com/apache/camel-quarkus/issues/3436)] and found that it is happening on camel itself. It affects probably more components, so I set "camel-core" as a component.
+
+ 
+
+Here is a description:
+ * aws2-sqs allows to use client from contex, which is autowired into the component
+ * if deadletter is used (via RouteBuilder), endpoint is created immediately (even if context is not started yet) - see BuilderSupport l434 ([code|https://github.com/apache/camel/blob/main/core/camel-core-model/src/main/java/org/apache/camel/builder/BuilderSupport.java#L434])
+ * Creation of component fails, because there is no client which could be autowired (see [code|https://github.com/apache/camel/blob/main/components/camel-aws/camel-aws2-sqs/src/main/java/org/apache/camel/component/aws2/sqs/Sqs2Component.java#L73])
+
+ 
+
+I created junit reproducer in my fork - [https://github.com/JiriOndrusek/camel/commit/f8d294afae9c6919b19cb6ca6f7cec50570d6208]
+
+ 
+
+ 

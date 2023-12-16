@@ -1,0 +1,11 @@
+21	user layar request positives litedeviceresolver lite device resolver lite list agent device resolver false pos itives
+25	user ipad discussion resolver amp device lite agent forum kit litedeviceresolver lite device resolver mobile
+61	filter url bean initfilterbean init filter bean factory site url delegating constructors request siteswitcherrequestfilter site switcher request filter switcher init overwrites writes values constructor
+62	chain filterchain filter chain response filter switcher site request internal handler dofilter filter siteswitcherrequestfilter site switcher request filter filter called committed
+68	path path url formats abstractsitepathurlfactory abstract site path url factory formatpath format path site abstract format site formatting matting overwritten written slashes trailing
+95	device tablet mobile resolver phone galaxy litedeviceresolver lite device resolver tab instance lite returning device table
+51	user agent apos amp blackberry device developers applewebkit apple web kit mobile mobile blackberry missing
+63	view device prefix delegating devicedelegatingviewresolver device delegating view resolver resolver mobile extra website redirect redirects
+69	reference query details string forum parameters redirecting honored querystring query string
+70	http google context resolver view lite website urls device litedevicedelegatingviewresolver lite device delegating view resolver absolute url handled correctly redirecting
+79	mobile firefox device user view device release resolver version agent missing

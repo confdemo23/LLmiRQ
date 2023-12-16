@@ -1,0 +1,16 @@
+perform command not working on Win 7
+I was following the Roo documentation, specifically section 1.4, and when running the 3 perform commands I get no output.  I was assuming the "perform tests" command would generate something similiar to the output I get when running tests from Maven.
+Here is the output:
+roo&gt; version
+    ____  ____  ____
+   / __ \/ __ \/ __ \
+  / /_/ / / / / / / /
+ / , _/ // / /_/ /
+// ||___/___/    1.0.0.RC3 [rev 401]
+roo&gt; per
+perform assembly    perform clean       perform command     perform eclipse
+perform package     perform tests       persistence setup
+roo&gt; perform tests
+roo&gt; perform package
+roo&gt; perform eclipse
+roo&gt;

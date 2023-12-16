@@ -1,0 +1,6 @@
+Indexer does sometimes not show progress in Progress View
+the ProgressJob only show progress until currentJob() is null.
+Unfortunatly currentJob() does not return the current but the next job that would need to run. So during the last job the ProgressJob always terminates.
+=> the last job can never been see in Progress View.
+ 
+More over a new ProgressJob is only scheduled if JobManager.progressJob==null but the termination of the ProgressJob does not reset progressJob to null. So after a last Job has been executed the index progress remains silent until eventually the currentJob() becomes null again... while during the time the last jobs runs a lot of other jobs can have been queued up. Especially if the last job is a job like IndexAllProject which spawns new jobs for every source file.

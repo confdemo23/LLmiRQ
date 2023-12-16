@@ -1,0 +1,14 @@
+[Intro] Welcome Tutorials  -Java Development
+Java Development- Simple Java Application
+
+-Step 2 (Create a Java project)
+ Should include manual instructions to create a New Java project.
+ Select File-> New-> Project from the menu bar. Select Java Project and
+ click Next, then complete the New Java Project Wizard as required.
+-Step 3 (Create your HelloWorld class)
+ Replace abbreviation of application with full word in last sentence.
+-Step 4 (Add a System.out.printIn line in your main method)
+ specify exactly where the line should appear
+-Step 5 (Test your application)
+ remove reference to running man
+ replace "Application" with "Java Application"

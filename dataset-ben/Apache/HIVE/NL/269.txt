@@ -1,0 +1,2 @@
+Add log/exp UDF functions to Hive
+See http://dev.mysql.com/doc/refman/5.0/en/mathematical-functions.htmlEXP() 	Raise to the power ofLN() 	Return the natural logarithm of the argumentLOG10() 	Return the base-10 logarithm of the argumentLOG2() 	Return the base-2 logarithm of the argumentLOG() 	Return the natural logarithm of the first argument POW() 	Return the argument raised to the specified powerPOWER() 	Return the argument raised to the specified power

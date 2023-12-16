@@ -1,0 +1,2 @@
+TIF needs to be able to set scanner caching size for smaller row tables & performance
+TIF goes with the default scanner caching size (1).  When each row is processed very fast and is small, this limits the overall performance.  By setting a higher scanner caching level you can achieve 100x+ the performance with the exact same map-reduce and table.

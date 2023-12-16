@@ -1,0 +1,2 @@
+Remove BookmarkNavigator and related API
+Continuation of bug 550439 .

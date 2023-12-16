@@ -1,0 +1,6 @@
+Review the SimpleLRUCache to become thread-safe
+The SimpleLRUCache to become thread-safe. To know more about this discussion check [this|https://github.com/apache/camel/pull/9972] PR.
+
+ 
+
+Related issue: https://issues.apache.org/jira/browse/CAMEL-19295

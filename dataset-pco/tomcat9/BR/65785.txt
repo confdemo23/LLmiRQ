@@ -1,0 +1,42 @@
+compile errors in osgi classes using Sun compiler on Linux
+I am unable to get a clean compile using javac in the Linux Sun 1.4.2 of some 
+of the osgi classes released to the I200406040800 build.  This may be a 
+compiler bug as it does not occur on Windows, however OT has indicated that 
+the java source could be modified to work around.
+    
+[javac] /home/sdimitro/srci/plugins/org.eclipse.osgi/osgi/src/org/osgi/framewor
+k/Bundle.java:662: error: unrecognized character in in
+put stream.
+    [javac]      *
+    [javac]        ^
+    [javac] 2 errors
+    [javac] Compile failed; see the compiler error output for details.
+     [copy] Copying 1 file 
+to /home/sdimitro/srci/plugins/org.eclipse.osgi/temp.folder/osgi.jar.bin
+     [copy] Copied 11 empty directories 
+to /home/sdimitro/srci/plugins/org.eclipse.osgi/temp.folder/osgi.jar.bin
+      [jar] Building jar: /home/sdimitro/srci/plugins/org.eclipse.osgi/osgi.jar
+   [delete] Deleting 
+directory /home/sdimitro/srci/plugins/org.eclipse.osgi/temp.folder/osgi.jar.bin
+
+properties:
+
+init:
+
+core.jar:
+    [mkdir] Created 
+dir: /home/sdimitro/srci/plugins/org.eclipse.osgi/temp.folder/core.jar.bin
+    [javac] Compiling 84 source files 
+to /home/sdimitro/srci/plugins/org.eclipse.osgi/temp.folder/core.jar.bin
+    
+[javac] /home/sdimitro/srci/plugins/org.eclipse.osgi/core/adaptor/org/eclipse/o
+sgi/util/ManifestElement.java:30: error: unrecognized
+character in input stream.
+    [javac]     * attribute ::= key = value
+    [javac]                                  ^
+    
+[javac] /home/sdimitro/srci/plugins/org.eclipse.osgi/core/adaptor/org/eclipse/o
+sgi/util/ManifestElement.java:31: error: unrecognized
+character in input stream.
+    [javac]     * key ::= token
+    [javac]                    ^

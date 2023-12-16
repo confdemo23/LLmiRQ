@@ -1,0 +1,6 @@
+[Databinding] Add ComputedList/Set.create
+The ComputedValue class has gotten a utility method to create a ComputedValue from a lambda:
+
+ComputedValue.create(() -> ...)
+
+We should add corresponding methods to ComputedList and ComputedSet.

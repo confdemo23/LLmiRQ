@@ -1,0 +1,4 @@
+[18][javadoc] provide support for @highlight markup in @snippet
+@highlight markup can be used to highlight a specific substring in a snippet in javadoc
+
+https://openjdk.java.net/jeps/413 has examples

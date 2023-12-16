@@ -1,0 +1,9 @@
+Different built-in properties from Ant at the commandline
+From the Ant User mailing list:
+> > Comparing the two outputs, I saw that ant from
+> command line outputs two properties more, namely:
+> > [echoproperties] ant.home=/usr/java/ant
+> > [echoproperties] ant.library.dir=/usr/java/ant1.6.1/lib
+
+These properties are set from the Ant launcher class 
+org.apache.tools.ant.launch.Launcher when using the commandline.

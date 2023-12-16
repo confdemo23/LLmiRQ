@@ -1,0 +1,8 @@
+Implicit Access Grant response should preserve state if passed in authorization request
+org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.appendAccessToken() should preserve state if passed
+eg.
+	String state = authorizationRequest.getState();
+	if (state != null) 
+{
+		url.append("&amp;state=").append(state);
+	}

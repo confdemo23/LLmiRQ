@@ -1,0 +1,2 @@
+Non-distributable session manager ignores max-active-sessions from jboss-web.xml
+InMemorySessionManagerFactory already has a constructor that accepts the maximum session size, we just need to utilize it.

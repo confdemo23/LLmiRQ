@@ -1,0 +1,15 @@
+Server should close scanner if client times out before results are ready
+When heartbeats are enabled, we try to return from a scan before {{clientTimeout / 2}} millis has passed. Previously, this did not account for queue times so could still easily timeout. That problem was handled in HBASE-27048. It's still possible to timeout if heartbeats are disabled, we have queued for longer than \{{ clientTimeout / 2 }} millis and scan is slow, or if the RegionScanner is otherwise delayed in returning.
+
+How a scanner timeout is handled by the client depends on the point at which the timeout occurred:
+ * In openScanner(), the call will be retried. We will not have received a scannerId, so cannot close that scanner that may have been open on the server side.
+ * In next(), the timeout will bubble up and fail the scan. In this case we try to close the scanner, but that could be interrupted if server is overwhelmed (close call gets queued and then dropped) or client terminates.
+
+Active scanners carry with them a non-trivial amount of memory and resource overhead on the server. In my experience, if a server becomes overwhelmed, client scanners can start to time out. Those scanners live on on the server, contributing to memory and resource pressure. That further slows down the server, etc. This is especially problematic when openScanner times out because of the inherent retries of that call, with a single scanner possibly contributing multiple "leaked" scanners on the server before finally failing.
+
+We should attempt to close the scanner on the server side when a scan call takes longer than the client timeout to finish. I think this would be a matter of adding something like this to the end of RSRpcServices.scan:
+{code:java}
+if (EnvironmentEdgeManager.currentTime() > rpcCall.getDeadline()) {
+  throw new TimeoutIOException("Client deadline exceeded, cannot return results");
+}{code}
+We already have a catch of IOException, wherein we close the scanner. The actual exception thrown shouldn't matter much since the client will not receive the response.

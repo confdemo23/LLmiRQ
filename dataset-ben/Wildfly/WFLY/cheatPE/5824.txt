@@ -1,0 +1,2 @@
+Messaging outgoing interceptors are not set
+In org.wildfly.extension.messaging.activemq.ServerAdd#processOutgoingInterceptors, the interceptors are wrongly added to the incoming interceptors instead of the outgoing interceptors.

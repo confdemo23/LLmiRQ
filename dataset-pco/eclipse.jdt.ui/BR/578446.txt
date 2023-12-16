@@ -1,0 +1,2 @@
+[formatter] Keep braced code on one line: settings for new switch constructs - UI
+The UI part for bug 578361

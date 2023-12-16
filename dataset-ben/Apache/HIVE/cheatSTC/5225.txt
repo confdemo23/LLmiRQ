@@ -1,0 +1,4 @@
+There is no database named nonexistentdatabaseusedforhealthcheck
+HiveClientCache.CacheableHiveMetaStoreClient.isOpen() tries to do a health status check of the connection.  This causes the following exception to be written to the log file.  It needlessly pollutes the log file and cause alarm for customers.
+The exception itself is produced by the metastore so the client can't suppress it.
+Metastore should not log this since this is clearly a user error.  It should instead throw an exception to the client (or return an error some other way).

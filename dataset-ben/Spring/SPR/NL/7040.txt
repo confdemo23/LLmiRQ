@@ -1,0 +1,14 @@
+form:select 3.0.1 regression bug when binding to a map
+I found a bug that surfaced in Spring 3.0.1. The problem is with binding a value to a map with the form select tag.
+In my JSP I have the following select tag. This will bind to a Map&lt;String, String&gt; field in my command object.
+&lt;form:select path="questions[$
+{question.key}]" cssClass="${question.key}
+" items="$
+{question.answers}
+" itemValue="key" itemLabel="name"/&gt;
+If I do a view source I can clearly see the problem.
+In Spring 3.0 I have this:
+&lt;select id="questionsARTISAN_ARMOIRE_WOOD" name="questions[ARTISAN_ARMOIRE_WOOD]" class="ARTISAN_ARMOIRE_WOOD"&gt;&lt;option value="001" selected="selected"&gt;Cherry&lt;/option&gt;&lt;option value="002"&gt;Walnut&lt;/option&gt;&lt;/select&gt;
+In Spring 3.0.1 I have this:
+&lt;select id="questionsARTISAN_ARMOIRE_WOOD" name="questionsARTISAN_ARMOIRE_WOOD" class="ARTISAN_ARMOIRE_WOOD"&gt;&lt;option value="001" selected="selected"&gt;Cherry&lt;/option&gt;&lt;option value="002"&gt;Walnut&lt;/option&gt;&lt;/select&gt;
+Notice how the name is "questionsARTISAN_ARMOIRE_WOOD" instead of "questions[ARTISAN_ARMOIRE_WOOD]". The brackets got dropped in 3.0.1.

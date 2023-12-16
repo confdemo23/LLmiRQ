@@ -1,0 +1,13 @@
+89	 ContinuousQueryListenerAdapter, ContinuousQueryListenerContainer, ContinuousQueryListenerImpl
+177	 NumberFormatException PartitionedRegionParser
+235	 DefaultFunctionArgumentResolver, FunctionContextInjectingArgumentResolver, PojoFunctionWrapper, AbstractExecution
+251	 AutowiredAnnotationBeanPostProcessor, AbstractAutowireCapableBeanFactory, DependencyInjectionTestExecutionListener, TestContextManager, SpringJUnit4ClassRunner, ParentRunner, RunBeforeTestClassCallbacks, RunAfterTestClassCallbacks, JUnitCore, JUnit4IdeaTestRunner, JUnitStarter, NativeMethodAccessorImpl, AppMain, FactoryBeanRegistrySupport, AbstractBeanFactory, DefaultListableBeanFactory, GemfireRepositoryFactory, RepositoryFactorySupport, RepositoryFactoryBeanSupport
+278	 ContinuousQueryListenerContainer, GemfireListenerContainerParser
+290	 StringBasedGemfireRepositoryQuery, RepositoryFactorySupport, ReflectiveMethodInvocation, SubscriberService, GeoApplication
+360	 SubRegionNamespaceTest
+366	 IndexFactoryBean, DefaultQueryService, AbstractAutowireCapableBeanFactory, ClientCache
+409	 GemfireDataSourcePostProcessor, ListRegionsOnServerFunction, ExecuteFunctionOp, AbstractOp, ConnectionImpl, PooledConnection, OpExecutorImpl, PoolImpl, SingleHopOperationCallable, ThreadPoolExecutor, URLClassLoader, ObjectInputStream, InternalDataSerializer, DataSerializer, BlobHelper, CacheServerHelper, Part, ExecuteFunction66, ExecuteFunction70, BaseCommand, ServerConnection, AcceptorImpl
+433	 PoolParser, AutoConnectionSourceImpl, ConnectionFactoryImpl, ConnectionManagerImpl, PoolImpl
+497	 DurableClientCacheIntegrationTest, DefaultCacheAwareContextLoaderDelegate, DependencyInjectionTestExecutionListener, SpringJUnit4ClassRunner, DefaultSingletonBeanRegistry, AbstractAutowireCapableBeanFactory, FactoryBeanRegistrySupport
+534	 CompiledSelect, DefaultQuery, GemfireTemplate, SimpleGemfireRepository
+565	 AbstractCacheConfiguration setLocators setMcastPort

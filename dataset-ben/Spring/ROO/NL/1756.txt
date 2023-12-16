@@ -1,0 +1,5 @@
+--scope option in "dependency add" command
+A very simple and obvious feature request. Being able to apply standard maven dependency configuration.
+Add the optional --scope parameter to the dependency add command in the roo shell.
+Default value of course "compile", optional other values "test", "provided", "runtime" etc..
+No need to manually set the scope of test libraries in the pom.

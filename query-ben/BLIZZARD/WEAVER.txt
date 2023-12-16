@@ -1,0 +1,2 @@
+11	method annotated visit visitor annotation validate field constructor bytecode generated java earlier versions Encountered bval building java bytecode java compliant breaks java org apache bval util reflection Reflection setAccessible Utf java lang reflect Executable injected java Executable java
+15	generator security eligible constructor visit method visitor helper build encounters missing classes wanted plugin execution eclipse differences inconsistencies Maven lifecycle artifact resolution scopes

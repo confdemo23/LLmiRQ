@@ -1,0 +1,2 @@
+EJBAccessException for methods with @PermitAll but using arrays in parameters
+Calling an EJB method containing an array in parameters throws EJBAccessException, even if the method has @PermitAll annotation.

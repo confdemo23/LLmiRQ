@@ -1,0 +1,14 @@
+RC1 - formatter add useless line wrap
+The formatter breaks the following two lines of code
+
+trustSfc.rebind(AuthSocketFactory.TRUST_STORE_NAME_PROP, trustStoreName);
+trustSfc.rebind(AuthSocketFactory.TRUST_STORE_TYPE_PROP, trustStoreType);
+
+as follows
+
+trustSfc
+        .rebind(AuthSocketFactory.TRUST_STORE_NAME_PROP, trustStoreName);
+trustSfc
+        .rebind(AuthSocketFactory.TRUST_STORE_TYPE_PROP, trustStoreType);
+
+where the wrapped lines have the same length an those before wrap.

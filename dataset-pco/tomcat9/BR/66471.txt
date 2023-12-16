@@ -1,0 +1,84 @@
+Changing Perspective Bar Layout Mangles Search Menus [JUnit]
+I200406070800
+Win XP
+Java Sun 1.4.2_04
+
+Search menus are being lost when closing and opening Perspective menu icons on 
+the menu bar resulting in this in the log:
+
+!SESSION Jun 10, 2004 09:41:13.301 --------------------------------------------
+-
+eclipse.buildId=I200406070800
+java.version=1.4.2_04
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+!ENTRY org.eclipse.ui 4 4 Jun 10, 2004 09:41:13.301
+!MESSAGE Unable to find Action Set: org.eclipse.help.internal.ui.HelpActionSet
+!ENTRY org.eclipse.ui 4 4 Jun 10, 2004 09:41:13.311
+!MESSAGE Unable to find Action Set: org.eclipse.help.ide.HelpSearchActionSet
+!ENTRY org.eclipse.ui 4 4 Jun 10, 2004 09:42:39.716
+!MESSAGE Unable to find Action Set: org.eclipse.help.internal.ui.HelpActionSet
+!ENTRY org.eclipse.ui 4 4 Jun 10, 2004 09:42:39.726
+!MESSAGE Unable to find Action Set: org.eclipse.help.ide.HelpSearchActionSet
+!SESSION Jun 10, 2004 09:43:47.73 ---------------------------------------------
+-
+eclipse.buildId=I200406070800
+java.version=1.4.2_04
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+!ENTRY org.eclipse.ui 4 4 Jun 10, 2004 09:43:47.73
+!MESSAGE Invalid Menu Extension (Path is invalid): junit.actions.GotoTestAction
+
+
+I'm using the R21 Presentation with the perspective bar docked on the left.  
+Something is being mangled in 
+the .metadata\.plugins\org.eclipse.ui.workbench.xml file.
+
+Here's how I reproduce:
+
+Prerequisites
+--------------
+
+1. Ensure you're using the R21 presentation (don't know if this is important, 
+but just in case) with the Perspective Bar docked on Left (not "Top Left").
+
+2. Delete the .metadata\.plugins\org.eclipse.ui.workbench.xml file to start 
+clean.
+
+
+Actions
+-------
+
+1. Launch Eclipse (should be in Resources Perspective) and open a file in the 
+Editor.  Open the Java Perspective.  Note that the Java Perspective icon over-
+write the Resource Perspective icon.  Note that there is a Search->Referring 
+Tests... menu item.
+
+2. Dock the Perspective Bar on the Top Right (get this from right click 
+context menu).
+
+3. Close all Perspectives on the Bar (get this from right click context menu).
+
+4. Click on the "Open a Perspective" button and open "CVS Repository 
+Exploring", then "Team Synchronizing",  then "Debug", then "Java", 
+then "Resource (default)".
+
+5. Dock the Bar on the left again and open up a Java file again.
+
+6. Now close Eclipse.
+
+7. Launch Eclipse.  The Search menu item is no longer there.  This is written 
+to the log:
+
+!SESSION Jun 10, 2004 10:02:28.225 --------------------------------------------
+-
+eclipse.buildId=I200406070800
+java.version=1.4.2_04
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+!ENTRY org.eclipse.ui 4 4 Jun 10, 2004 10:02:28.225
+!MESSAGE Invalid Menu Extension (Path is invalid): junit.actions.GotoTestAction
+
+
+
+PB

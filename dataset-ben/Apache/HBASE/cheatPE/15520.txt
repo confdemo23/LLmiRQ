@@ -1,0 +1,4 @@
+Fix broken TestAsyncIPC
+There are two problems
+1. AsyncIPC will throw IOException when connection reset so we need to change the catch type in testRpcMaxRequestSize.
+2. AsyncRpcChannel does not deal with channelInactive event in netty.

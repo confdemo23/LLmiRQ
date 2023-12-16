@@ -1,0 +1,13 @@
+[quickfix] Add try-with-resources quick fix for possible unclosed resource error
+When an autocloseable resource is missing a close:
+
+public class TestMissingTryWithResources {
+    
+    public void foo() throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader("a.b")); 
+        br.markSupported();
+    }
+
+}
+
+br will be noted as having a resource leak.  There is no current quick fix for surrounding with try-with-resources though a quick assist is offered for the same line.

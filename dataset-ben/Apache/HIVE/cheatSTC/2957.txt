@@ -1,0 +1,5 @@
+Hive JDBC doesn't support TIMESTAMP column
+Steps to replicate:
+1. Create a table with at least one column of type TIMESTAMP
+2. Do a DatabaseMetaData.getColumns () such that this TIMESTAMP column is part of the resultset.
+3. When you iterate over the TIMESTAMP column it would fail, throwing the below exception:

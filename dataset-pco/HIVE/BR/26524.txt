@@ -1,0 +1,18 @@
+Use Calcite to remove sections of a query plan known never produces rows
+Calcite has a set of rules to remove sections of a query plan known never produces any rows. In some cases the whole plan can be removed. Such plans are represented with a single {{Values}} operators with no tuples. ex.:
+{code:java}
+select y + 1 from (select a1 y, b1 z from t1 where b1 > 10) q WHERE 1=0
+{code}
+{code:java}
+HiveValues(tuples=[[]])
+{code}
+Other cases when plan has outer join or set operators some branches can be replaced with empty values moving forward in some cases the join/set operator can be removed
+{code:java}
+select a2, b2 from t2 where 1=0
+union
+select a1, b1 from t1
+{code}
+{code:java}
+HiveAggregate(group=[{0, 1}])
+  HiveTableScan(table=[[default, t1]], table:alias=[t1])
+{code}

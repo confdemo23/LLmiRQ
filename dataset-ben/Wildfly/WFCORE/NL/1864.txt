@@ -1,0 +1,13 @@
+Whitespaces are not removed from dependencies in module add command
+Running 
+module add --name=foo.bar --resources=foo.jar --dependencies=[org.a, org.b ]
+will result in following dependencies in module.xml
+{{
+...
+    &lt;dependencies&gt;
+        &lt;module name="org.a"/&gt;
+        &lt;module name=" org.b "/&gt;
+    &lt;/dependencies&gt;
+...
+}}
+The module name in dependencies should be stripped of leading and trailing whitespaces.

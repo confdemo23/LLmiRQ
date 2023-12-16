@@ -1,0 +1,20 @@
+Need support for @IdClass
+We need @RooEntity to support @IdClass annotation for we have existing project to migrate.
+for ROO 1.0.0.RELEASE, following code will not work correct:
+@Entity
+@RooJavaBean
+@RooToString
+@RooEntity
+@IdClass(AbcPK.class)
+public class Abc {
+	@Id
+	@Column
+	private String pk1;
+	@Id
+	@Column
+	private String pk2;
+	@Column
+	private String name;
+	@Column
+	private Integer count;
+}

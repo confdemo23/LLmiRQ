@@ -1,0 +1,2 @@
+WebScaffoldMetadataProviderImpl should use AbstractMemberDiscoveringItdMetadataProvider
+WebScaffoldMetadataProviderImpl should use AbstractMemberDiscoveringItdMetadataProvider

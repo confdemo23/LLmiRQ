@@ -1,0 +1,5 @@
+describe/show partition/show tblproperties command should accept database name
+describe command not giving the details when called as describe dbname.tablename.
+Throwing the error "Table dbname not found".
+Ex: hive -e "describe masterdb.table1" will throw error
+"Table masterdb not found"

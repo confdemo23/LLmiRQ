@@ -1,0 +1,25 @@
+Base path behavior inconsistent between flow-location and flow-location-pattern
+WORKS
+&lt;webflow:flow-registry id="flowRegistry" flow-builder-services="facesFlowBuilderServices" base-path="/WEB-INF/"&gt;
+&lt;webflow:flow-location path="hotel/search/search.xml" /&gt;
+&lt;/webflow:flow-registry&gt;
+WORKS
+&lt;webflow:flow-registry id="flowRegistry" flow-builder-services="facesFlowBuilderServices" base-path="/WEB-INF/"&gt;
+&lt;webflow:flow-location-pattern value="*/.xml" /&gt;
+&lt;/webflow:flow-registry&gt;
+WORKS
+&lt;webflow:flow-registry id="flowRegistry" flow-builder-services="facesFlowBuilderServices" base-path="/WEB-INF"&gt;
+&lt;webflow:flow-location-pattern value="*/.xml" /&gt;
+&lt;/webflow:flow-registry&gt;
+WORKS
+&lt;webflow:flow-registry id="flowRegistry" flow-builder-services="facesFlowBuilderServices" base-path="/WEB-INF"&gt;
+&lt;webflow:flow-location-pattern value="/*/.xml" /&gt;
+&lt;/webflow:flow-registry&gt;
+DOES NOT WORK
+&lt;webflow:flow-registry id="flowRegistry" flow-builder-services="facesFlowBuilderServices" base-path="/WEB-INF"&gt;
+&lt;webflow:flow-location path="hotel/search/search.xml" /&gt;
+&lt;/webflow:flow-registry&gt;
+DOES NOT WORK
+&lt;webflow:flow-registry id="flowRegistry" flow-builder-services="facesFlowBuilderServices" base-path="/WEB-INF"&gt;
+&lt;webflow:flow-location path="/hotel/search/search.xml" /&gt;
+&lt;/webflow:flow-registry&gt;

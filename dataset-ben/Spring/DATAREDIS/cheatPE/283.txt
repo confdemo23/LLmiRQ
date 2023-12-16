@@ -1,0 +1,2 @@
+RedisCacheManager.loadCaches overrides already defined cache names in afterPropertiesSet().
+Already defined cache names should not be cleared when loading remote caches.

@@ -1,0 +1,3 @@
+Tez: Vertex creation reduce NN IPCs
+Tez vertex building has a decidedly slow path in the code, which is not related to the DAG plan at all.
+The total number of RPC calls is not related to the total number of operators, due to a bug in the DagUtils inner loops.

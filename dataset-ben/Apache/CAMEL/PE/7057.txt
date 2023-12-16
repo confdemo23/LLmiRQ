@@ -1,0 +1,6 @@
+Issue with password having double &&
+there is an issue with handling password with double &amp;&amp; even when wrapping it into RAW() constraint 
+For instance the use of URI 
+http://hostname/script.php?authMethod=Basic&amp;authPassword=RAW(pa&amp;&amp;word)&amp;authUsername=usr
+throws the exception: 
+org.apache.camel.ResolveEndpointFailedException: Failed to resolve endpoint: http://hostname/script.php?authMethod=Basic&amp;authPassword=RAW(pa&amp;&amp;word)&amp;authUsername=usr due to: Invalid uri syntax: Double &amp;&amp; marker found. Check the uri and remove the duplicate &amp; marker. 

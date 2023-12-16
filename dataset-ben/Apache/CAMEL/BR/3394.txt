@@ -1,0 +1,3 @@
+Splitter and Multicast EIP marks exchange as exhausted to early if exception was thrown from an evaluation
+See nabble
+http://camel.465427.n5.nabble.com/Cannot-handle-Exception-thrown-from-Splitter-Expression-tp3286043p3286043.html

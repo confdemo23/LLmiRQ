@@ -1,0 +1,4 @@
+Wrong range of Cells is caused by CellFlatMap#tailMap, headMap, and SubMap
+Two reasons are shown below:
+1) CellFlatMap#find doesnt consider desc order array
+2) CellFlatMap#getValidIndex return the wrong upper bound

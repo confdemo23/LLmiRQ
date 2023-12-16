@@ -1,0 +1,2 @@
+fix HBase filter pushdown broken by HIVE-1638
+See comments at end of HIVE-1660 for what happened.

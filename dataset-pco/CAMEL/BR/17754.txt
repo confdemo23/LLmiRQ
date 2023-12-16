@@ -1,0 +1,4 @@
+camel-core - precondition to hard exclude route configurations
+The same as CAMEL-17555 but for route configurations (RouteConfigurationDefinition).
+
+With this you could potentially have shared/nested JARs with a common set of route configurations that have pre-conditions so they will only be included if the precondition is true.

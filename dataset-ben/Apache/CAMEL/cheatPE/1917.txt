@@ -1,0 +1,2 @@
+DefaultPackageScanClassResolver not able to scan package in jar url
+The DefaultPackageScanClassResolver seems to have problem finding packages from URL jar:file:/path/to/my.jar!/"

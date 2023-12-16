@@ -1,0 +1,2 @@
+Hive failing on insert empty array into parquet table
+The insert will fail with following stack:by:

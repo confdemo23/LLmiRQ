@@ -1,0 +1,30 @@
+LineTrackerTests.testFlood fails since I20220326-1800
+https://download.eclipse.org/eclipse/downloads/drops4/I20220327-1800/testresults/html/org.eclipse.jdt.debug.tests_ep424I-unit-cen64-gtk3-java11_linux.gtk.x86_64_11.html
+
+LineTrackerTests	testFlood	Failure	Wrong number of lines expected:<10000> but was:<5740>
+
+junit.framework.AssertionFailedError: Wrong number of lines expected:<10000> but was:<5740>
+at junit.framework.Assert.fail(Assert.java:57)
+at junit.framework.Assert.failNotEquals(Assert.java:329)
+at junit.framework.Assert.assertEquals(Assert.java:78)
+at junit.framework.Assert.assertEquals(Assert.java:234)
+at junit.framework.TestCase.assertEquals(TestCase.java:377)
+at org.eclipse.jdt.debug.tests.core.LineTrackerTests.testFlood(LineTrackerTests.java:170)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at junit.framework.TestCase.runTest(TestCase.java:177)
+at junit.framework.TestCase.runBare(TestCase.java:142)
+at org.eclipse.jdt.debug.tests.AbstractDebugTest.runBare(AbstractDebugTest.java:2679)
+at junit.framework.TestResult$1.protect(TestResult.java:122)
+at junit.framework.TestResult.runProtected(TestResult.java:142)
+at junit.framework.TestResult.run(TestResult.java:125)
+at junit.framework.TestCase.run(TestCase.java:130)
+at junit.framework.TestSuite.runTest(TestSuite.java:241)
+at junit.framework.TestSuite.run(TestSuite.java:236)
+at junit.framework.TestSuite.runTest(TestSuite.java:241)
+at org.eclipse.jdt.debug.tests.DebugSuite$1.run(DebugSuite.java:61)
+at java.base/java.lang.Thread.run(Thread.java:829)
+
+Interestingly, I'm unable to execute testst locally, the launch config in the test doesn't start at all.

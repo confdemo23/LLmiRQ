@@ -1,0 +1,3 @@
+Simple Language - Parsing complex date patterns fails if they contain additional colons
+See nabble
+http://old.nabble.com/Camel-%3A-Date-Pattern-ts27131137.html

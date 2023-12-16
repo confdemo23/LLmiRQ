@@ -1,0 +1,2 @@
+Fix UDAFPercentile ndexOutOfBoundsException
+The counts array can be empty. We should directly return null in that 

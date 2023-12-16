@@ -1,0 +1,213 @@
+212	 InputSource, ItemProvider, Recoverable
+304	 BatchCommandLineLauncher, SimpleCommandLineJobDispatcher, JobLauncher
+347	 RepeatInterceptor, RepeatOperationsInterceptor, RetryInterceptor, RetryOperationsInterceptor
+362	 ExecutionAttributes
+364	 Step, ApplicationContext, StepContextAware, scope="step"
+366	 StepInstance, SimpleJob, StepExecutor/ChunkedStep, StepExecution, JobExecution, JobInstance
+371	 FlatFileItemWriter, LineAggregator, ItemTransformer, LineTokenizer, ItemReader
+385	 StepContext, ExecutionContext
+444	 ExecutionContext#putString, JdbcCursorItemReader
+448	 StaxEventItemWriter, endDocument()
+457	 SimpleJob.execute(), rethrow(), UnexpectedJobExecutionException
+459	 StepExecution, apply(StepContribution), setItemCount, setCommitCount, incrementItemCount, incrementCommitCount
+461	 StepExecution#apply(StepContribution), StepContribution.getSkipCount()
+465	 ExitStatus class, CommandLineJobRunner, exitCodeMapper.getExitCode(), jobExecution.getExitStatus().getExitCode()
+468	 ExitStatusExceptionClassifier, ExitCodeMapper, StepExecutionSynchronizer, StepInterruptionPolicy
+478	 SimpleJobLauncher, TaskExecutor, afterPropertiesSet()
+483	 ExecutionContext, put method, Serializable.class, Assert.isInstanceOf, map.put
+489	 JobExecutionException
+492	 CommandLineJobRunner.start, Spring context
+495	 TransactionSynchronization, afterCommit(), mark(), StaxEventItemReader
+498	 Skip method, ExecutionContext, Skippable readers, Skippable writers, StepListener
+507	 FlatFileItemWriter, FlatFileItemWriter.setShouldDeleteIfExists, FlatFileItemWriter.open(), FlatFileItemWriterRestartTests, JobParameters, JobExecution, launcher.run, BatchStatus.COMPLETED
+511	 read method, getItemReader().read(), itemSkipPolicy.shouldSkip, getItemReader() instanceof Skippable, ((Skippable) getItemReader()).skip(), SimpleLimitExceptionHandler, exceptionHandler.setLimit, exceptionHandler.setExceptionClasses, exceptionHandler.setFatalExceptionClasses, getStepOperations().setExceptionHandler
+513	 setListeners method, CompositeItemReadListener, CompositeItemWriteListener, ChunkListener[], ItemReadListener[], ItemWriteListener[]
+523	 FlatFileItemReader, mark(), Step
+532	 StepExecutionListener, afterStep(), BatchStatus
+533	 JobRepositoryFactoryBean, dao.setJobIncrementer, dao.setJobExecutionIncrementer, dao.setStepExecutionIncrementer, incrementerFactory.getIncrementer
+538	 HibernateCursorItemReader, close(), useStatelessSession, statelessSession
+549	 JdbcCursorItemReader, BufferedResultSetReader
+560	 StepExecutionResourceProxy, FlatFileItemWriter, afterPropertiesSet(), beforeStep()
+561	 ItemReaderAdapter, close method
+564	 CompositeSkipListener, StepExecutionListener
+571	 Step, StepExecution, Job, JobInstance
+589	 StepExecutionResourceProxy, toString(), setResource(), FlatFileItemReader, Resource
+590	 JdbcCursorItemReader, rollback, commit, buffer
+595	 JdbcJobInstanceDao.insertParameter, Types.INTEGER, Types.BIGINT
+603	 JobExecution
+604	 JdbcStepExecutionDao, executionContext.put, rs.getObject
+608	 JobExecutionListener.onInterrupt(), SimpleJob, JobInterruptedException
+610	 JdbcCursorItemReader, close method, resultset
+613	 StaxEventItemReader, XMLEvents
+618	 DefaultJobParametersConverter, JobParameters, JobParametersBuilder
+625	 SkipListener#onSkipInWrite(..)
+650	 HibernateCursorItemReader, sessionFactory, openStatelessSession, openSession, createQuery, scroll, FORWARD_ONLY
+654	 ItemOrientedStep, StepExecutionContext, commit operation
+660	 SimpleStepFactoryBean#setExceptionHandler(), SimpleStepFactoryBean#applyConfiguration(), ItemOrientedStep#setExceptionHandler(), SkipLimitFactoryBean, StatefulRetryFactoryBean, DefaultExceptionHandler
+698	 StaxEventItemWriter, StaxItemWriterTests
+703	 JdbcJobInstanceDao, JOB_INSTANCE, JOB_KEY, JdbcJobRepositoryTests
+705	 TradeJobFunctionalTests, verification queries, ORDER clause
+713	 FlatFileItemWriter, write method, open method, initializeBufferedWriter method, OutputState class
+723	 JobRepositoryFactoryBean, JdbcJobInstanceDao, JdbcJobExecutionDao, JdbcStepExecutionDao, JdbcExecutionContextDao, afterPropertiesSet(), tablePrefix
+732	 FlatFileItemReader, firstLineIsHeader
+734	 MultiResourceItemReader, afterPropertiesSet(), ItemStream#open()
+737	 JdbcCursorItemReader, moveCursorToRow, numberOfProcessRows, ExecutionContext
+744	 FlatFileItemWriter, restart.count
+752	 FlatFileItemReader, RecordSeparatorPolicy, jumpToItem(int) method
+761	 StaxEventItemWriter, NoStartEndDocumentStreamWriter, Woodstox 3.2.6, finishDocument(), close(), endDocument()
+776	 StaxEventItemWriter, Marshaller
+778	 MapJobRepositoryFactoryBean, AbstractJobRepositoryFactoryBean, TransactionManager, afterPropertiesSet method, JobRepositoryFactoryBean
+795	 JdbcJobExecutionDao.findJobExecutions, JobExecutionDao, ORDER BY clause
+807	 JobExecution, createStepExecution(), StepExecution
+814	 JobRepository, Step, Job
+830	 DelegatingItemReader, read method, FieldSet
+832	 DefaultTransactionAttribute, TaskletStep, rollbackOn method, Tasklet interface
+835	 JdbcJobInstanceDao.getJobInstance()
+836	 CompositeItemWriter, ItemStream, StepFactoryBean, ItemReader, ItemWriter
+838	 TimeoutTerminationPolicy, isCompleted methods, CompletionPolicySupport, ExitStatus parameter, exitCode
+843	 FlatFileItemWriter, LineAggregator
+847	 FaultTolerantChunkOrientedTasklet, RepeatTemplate, JdbcPagingItemReader
+865	 CompositeItemProcessor, ItemProcessor
+870	 ExitStatus, JobExecution
+892	 TaskExecutorRepeatTemplate, ResultHolder
+912	 JobRegistryBackgroundJobRunner, errors, ArrayList, Collections.synchronizedCollection
+948	 MapJobInstanceDao.getLastJobInstances, jobName
+951	 MapJobInstanceDao.getLastJobInstances
+952	 StagingItemReader, read() method, ChunkContext, @ChunkAttribute, JDBC ItemReader
+954	 SimpleJobOperator, JobExecution, OptimisticLockingFailureException
+963	 ItemStream.close(ExecutionContext), ExecutionContext
+969	 FlatFileItemWriter, CompositeItemWriter
+1001	 spring-batch-2.0.xsd, AbstractJob class, "restartable" attribute
+1021	 AssertFile.assertFileEquals(File,File) method
+1022	 Chunk, ChunkRequest, Serializable
+1030	 FlowJob, SimpleFlow, StateTransition, StepState, StepSupport, execute, StepExecution, JobInterruptedException, UnexpectedJobExecutionException, BatchStatus, ExitStatus, jobRepository.update, StubStep, setStateTransitions, afterPropertiesSet, job.execute, jobExecution.getExitStatus, jobExecution.getStepExecutions, jobRepository.createJobExecution, JobParameters
+1031	 FlatFileItemReader, resource.toString()
+1053	 AbstractJobTests, Job interface, getStep(String), getSteps(), SimpleJob, AbstractJob
+1059	 JdbcJobInstanceDao.createJobKey, JobParameters, getStringParameters, getLongParameters, getDoubleParameters, getDateParameters, DATE_PARAMETER_FORMAT.format
+1061	 FlowJob, getLastStepExecution(), isLater(), StepExecution
+1086	 JdbcJobExecutionDao.getRunningJobExecutions()
+1106	 SqlPagingQueryProviderFactoryBean, SimpleDelegatingPagingQueryProvider, ascending property
+1119	 SimpleChunkProcessor.doWrite(), afterWrite()
+1123	 ExecutionContextPromotionListener, promotion, matched pattern, loop
+1124	 MethodInvokerUtils.getMethodInvokerByAnnotation(), TradeWriter, AfterWrite
+1125	 NoWorkFoundStepExecutionListener, AfterStep method, ExitStatus.FAILED
+1146	 MD5, JobParameters, JdbcJobInstanceDao
+1155	 FFIR, DefaultLineMapper
+1178	 InlineStepParser, ref attribute, <step/>
+1180	 AbstractStepParser.parseTasklet(), BeanDefinition
+1197	 JobInstance, jobExplorer.getJobInstances(), jobLauncher.run(), getJobParameters(), JdbcJobInstanceDao.FIND_PARAMS_FROM_ID, JobParameters, LinkedHashMap
+1210	 AbstractStep, STOPPED steps, custom exit status, and() method
+1218	 FaultTolerantStepFactoryBean.registerStreams(), ItemStream, ChunkMonitor.getItemStream(), chunkMonitor.setItemStream()
+1225	 FlatFileItemWriter, StaxEventItemWriter, update() method, fileChannel's position() method
+1232	 JdbcExecutionContextDao, BATCH_JOB_EXECUTION_CONTEXT, SERIALIZED_CONTEXT, Types.CLOB
+1245	 StaxEventItemWriter, Woodstox
+1255	 STepListenerFactoryBean, MethodInvokerUtils
+1264	 StepParserStepFactoryBean#configureTaskletStep(), indexUpdaterTasklet, batch:transaction-attributes
+1272	 FaultTolerantChunkProcessor, multi-threaded step
+1278	 RepeatTemplate, BATCH-1272
+1280	 JobParserJobFactoryBean, JobRegistry
+1282	 JobRegistryBeanPostProcessor, JobParserJobFactoryBean, SmartFactoryBean, JobRegistry
+1289	 CoreNamespaceUtils.rangeArrayEditorAlreadyDefined(), customEditor, getPropertyValue("customEditors")
+1311	 SimpleJobExplorer, StepExecution, JobExecution
+1313	 loopFlowSample, LimitDecider
+1319	 StepSynchronizationManager, counts map
+1330	 CommandLineJobRunner, main(String[])
+1341	 DataSourceInitializer, destroyScripts, ArrayOutOfBoundException, Resource, destroyScript, initScripts
+1363	 SplitState, SimpleFlow, ExecutionExceptions
+1390	 ExecutionContextPromotionListener, check for the existence of each value by key, erase information from previous steps
+1401	 JdbcJobInstanceDao.createJobInstance, JdbcJobExecutionDao.saveJobExecution, JdbcJobInstanceDao.insertParameter, Types.INTEGER, Types.BIGINT
+1417	 FlatFileItemReader, RecordSeparatorPolicy.preProcess, RecordSeparatorPolicy.isEndOfRecord, readLine
+1418	 FlatFileItemReader, lineTokenizer, fieldSetMapper, skippable-exception-classes
+1422	 HibernateCursorItemReader, AbstractItemCountingItemStreamItemReader.jumpToItem(), ScrollMode.FORWARD_ONLY, jumpToItem(), cursor.setRowNumber()
+1423	 FlatFileItemReader, lineTokenizer, fieldSetMapper, skippable-exception-classes
+1427	 SimpleRetryExceptionHandler, AbstractStep$FatalException
+1444	 ChunkMonitor, ItemStream, multi-threaded access, registered stream, composite
+1460	 DerbyPagingQueryProvider, Rownum clauses
+1473	 ClassPathXmlJobLoader, *Aware, application contexts, infrastructure beans
+1490	 StaxEventItemWriter, commitInterval, step handling
+1494	 HibernateCursorItemReader, setFetchSize, HibernateItemReaderHelper
+1497	 SqlServerPagingQueryProvider, inner query, jump-to-item query
+1498	 JdbcPagingItemReader
+1499	 SqlServerPagingQueryProvider, jump to subquery
+1501	 JdbcPagingItemReader, SqlPagingQueryProviderFactoryBean, sortKey, dataSource, queryProvider, rowMapper, pageSize, saveState
+1506	 StoredProcedureItemReader, refCursorPosition, openCursor method, parameters.length
+1507	 FlowJob.getStep(), StepLocator interface, state names, step names
+1510	 getStepNames, FlowJob
+1513	 HibernateItemReaderHelper, AbstractHibernateQueryProvider, MyQueryProvider
+1522	 FaultTolerantStepFactoryBean, MapJobRepositoryFactoryBean, FaultTolerantStepFactoryBeanRollbackTests
+1525	 ExitStatus
+1526	 ChunkMonitor, ThreadLocal
+1528	 CoreNamespacePostProcessor, AbstractStepParser, NoSuchBeanDefinitionException
+1542	 JobExecution, StepExecution, MapJobRepository
+1543	 OrderedComposite, StepListener
+1545	 FlatFileItemWriter, JdbcBatchItemWriter
+1547	 ExecutionContextPromotionListener
+1551	 Db2PagingQueryProvider
+1569	 MultiResourceItemReader, getCurrentResource
+1571	 PostgresPagingQueryProvider, SqlPagingQueryUtils, org.springframework.jdbc.BadSqlGrammarException, org.postgresql.util.PSQLException
+1573	 AbstractFlowParser, BatchStatus
+1582	 DefaultStepExecutionAggregator, TaskExecutorPartitionHandler, SimpleStepExecutionSplitter
+1587	 DefaultFieldSetFactory, DefaultFieldSet, enhance
+1588	 AbstractListenerParser, MyListener, JobExecutionListenerParserTests
+1590	 OraclePagingQueryProvider, JdbcPagingItemReader
+1594	 StepListenerSupport, StepExecutionListener
+1595	 OraclePagingQueryProvider
+1597	 DirectPoller
+1598	 JobRepositoryTestUtils
+1600	 CommandLineJobRunner, JobExecution
+1601	 DataSourceInitializer
+1602	 JdbcJobInstanceDao, JobParameter
+1603	 MultiResourceItemReader, StaxEventItemReader, ResourceAwareItemReaders, ItemReader
+1605	 PropertyExtractingDelegatingItemWriter, HippyMethodInvoker, MyWriter
+1618	 MultiResourceItemWriter
+1620	 FlowStep
+1623	 StepParserStepFactoryBean
+1629	 FaultTolerantChunkProcessor, StringBuilder, logger.debug, isDebugEnabled
+1632	 DefaultFieldSet, readBigDecimal
+1635	 HibernateItemWriter, HibernateTemplate, org.hibernate.LazyInitializationException
+1640	 TransactionAwareBufferedWriter, FlatFileItemWriter
+1643	 BeanWrapperFieldSetMapper, FieldSet, NotWritablePropertyException
+1652	 CommandLineJobRunner
+1671	 ExecutionContextTestUtils
+1681	 StaxEventItemWriter, Woodstox, XMLEventWriter
+1703	 MapStepExecutionDao, JobExecution, StepExecutions
+1707	 MapJobInstanceDao, MyMapJobInstanceDao
+1709	 BeanWrapperFieldSetMapper
+1738	 StaxEventItemReader, DefaultFragmentEventReader
+1742	 HippyMethodInvoker, IllegalArgumentException
+1756	 DefaultJobParametersConverter, JobParametersBuilder, JobParameters, JobParameter, ParameterType
+1757	 MinMaxPartitioner
+1813	 BeanWrapperFieldSetMapper, ConcurrentHashMap
+1841	 FaultTolerantStepFactoryBean, ExponentialBackOffPolicy, StepParserStepFactoryBean, ChunkElementParser
+1847	 BeanCreationException, AbstractStepScopeTest
+1848	 JdbcPagingItemReader, SqlPagingQueryProviderFactoryBean
+1849	 JdbcPagingItemReader, DelegatingItemWriterAdapterFactoryBean, SqlPagingQueryProviderFactoryBean
+1853	 JobParameters
+1860	 JdbcPagingItemReader, DerbyPagingQueryProvider, SqlWindowingPagingQueryProvider, Db2PagingQueryProvider, SqlServerPagingQueryProvider, SybasePagingQueryProvider
+1863	 JobParser, InlineFlowParser, SimpleFlowFactoryBean, JobParserJobFactoryBean, BeanDefinitionParsingException
+1865	 SimpleChunkProvider, doRead, afterRead
+1903	 JdbcJobExecutionDao, Spring Batch, HSQL
+1916	 RecordSeparatorPolicy, FlatFileItemReader, applyRecordSeparatorPolicy, isEndOfRecord
+2011	 ExitStatus
+2019	 AbstractApplicationContextFactory, PropertyPlaceholderConfigurer, CustomEditorConfigurer, PropertySourcesPlaceholderConfigurer
+2023	 FlatFileItemReader, ScopedProxyMode, ItemReader
+2038	 DerbyPagingQueryProvider, InvalidDataAccessResourceUsageException
+2045	 JobParser
+2050	 AbstractItemCountingItemStreamItemReader, FlatfileItemWriter, StepScope
+2086	 FlatFileItemWriter, StaxEventItemWriter, MultiResourceItemWriter, ItemStreamSupport, ExecutionContextUserSupport
+2096	 ChunkElementParser, SimpleCompletionPolicy, StepParserStepFactoryBean, FaultTolerantStep
+2126	 DefaultJobParametersConverter, SimpleJobOperator, SimpleAsyncTaskExecutor, TaskExecutor
+2141	 RepositoryItemReader, doPageRead
+2172	 DatabaseType, fromMetaData(), getDatabaseProductName(), getDatabaseProductVersion(), startsWith(), equals()
+2179	 DefaultJobParametersConverter, getProperties, JobParameters
+2189	 DefaultBatchConfigurer
+2204	 FaultTolerantStepBuilder, StepParserStepFactoryBean
+2206	 MongoItemReader
+2212	 ClassPathXmlApplicationContext, AnnotationConfigApplicationContext, BeansException, BeanCreationException, NoSuchBeanDefinitionException
+2235	 ExitStatus
+2257	 DefaultStepExecutionAggregator, StepExecution
+2311	 JobLauncher, JobExecution, SimpleJobLauncher, SimpleJobRepository, StepExecution
+2347	 DefaultJobLoader
+2352	 StaxEventItemReader
+2359	 CommandLineJobRunner
+2380	 DelimitedLineTokenizer, doTokenize

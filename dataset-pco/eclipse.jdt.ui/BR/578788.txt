@@ -1,0 +1,29 @@
+Localization popup complains about missing key when using String constants
+We are using String-based localization in our projects, so we have the Messages.java class, containing the regular "public static String getString(final String key)" method.
+
+Since we have various keys, that are reused in the code base, we would like to define some String constants in the Messages class, that can be used as valid keys in the localization messages. So our Messages.java class looks a bit like this:
+
+```
+public class Messages {
+    private static final String BUNDLE_NAME = "com.example.jdt.messages"; //$NON-NLS-1$
+
+    private static final ResourceBundle RESOURCE_BUNDLE = ResourceBundle.getBundle(BUNDLE_NAME);
+
+    public static final String FIRST_TEXT = "SomeLongStringFoo.FirstText"; //$NON-NLS-1$
+    public static final String OTHER_TEXT = "SomeLongStringFoo.OtherText"; //$NON-NLS-1$
+
+    private Messages() {}
+
+    public static String getString(final String key) {
+        try {
+            return RESOURCE_BUNDLE.getString(key);
+        } catch (@SuppressWarnings("unused") final MissingResourceException e) {
+            return '!' + key + '!';
+        }
+    }
+}
+```
+
+If we now use these constants in our code as in `Messages.getString(Messages.FIRST_TEXT)` the popup complains that the key is missing. When I Ctrl-Click on the call it opens the messages.properties but then fails to find the key.
+
+It looks like it just doesn't follow the value of the String constant.

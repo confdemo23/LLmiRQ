@@ -1,0 +1,32 @@
+[completion] wrong setting of relevance for created type proposal
+In JavaTypeCompletionProposalComputer.computeCompletionProposals() a loop figures out the minimum relevance of all the existing proposals.  It is done using getRelevance() calls.  If a type proposal is created, the relevance used is such to be lower than the minimum relevance calculated earlier.  It creates either a TYPE_REF proposal that is wrapped in either a LazyGenericTypeProposal or a LazyJavaTypeCompletionProposal.  The problem is that the initial relevance set gets massaged on first access which involves multiplying by 16 and adding a constant.  The minimum relevance value has already been massaged but when we use it to set the TYPE_REF proposal, the lazy classes will massage the value on first reference which will multiply by 16 and then add a constant to make a value that is no longer below the minimum value and can end up showing up as the first entry for the end-user.  The relevance must be set in the lazy classes directly so no further massaging is done.
+
+For the following:
+
+package tests;
+
+public interface CompletionSubClass1 {
+
+}
+
+-------------------------------------------------
+
+package tests;
+
+public class CompletionSubClass2 implements CompletionSubClass1 {
+
+}
+
+-------------------------------------------------
+
+package tests;
+
+public class CompletionClass {
+
+	public void foo() {
+		CompletionSubClass1 k = new <== completion here
+	}
+}
+
+
+When completion occurs, it puts a type proposal first which is not the most relevant as there are constructor completions in the list which should be offered first.

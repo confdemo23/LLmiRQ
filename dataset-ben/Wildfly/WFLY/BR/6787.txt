@@ -1,0 +1,2 @@
+WebSockets compression should be allowed by default
+In EAP 6.4 there was allowed WebSockets compression by default if requested by client. In EAP 7 it is not. I believe it should be also allowed by default in EAP 7.

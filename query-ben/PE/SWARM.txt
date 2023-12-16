@@ -1,0 +1,18 @@
+337	 undertow-handlers.conf, org.wildfly.swarm:jaxrs:1.0.0.Beta3-SNAPSHOT, module.xml, pom.xml
+485	 JacksonJaxbJsonProvider
+551	 DefaultCacheContainer, EmbeddedCacheManager
+553	 LoggingFraction, PeriodicSizeRotatingFileHandler
+564	 ClassNotFoundException, PostgreSQL database connection, datasource
+571	 Arquillian, mssql JDBC driver, @RunWith(Arquillian.class), datasource config, swarm.build.modules property
+575	 swarmtool, javax.transaction.jta, ArtifactNotFoundException
+586	 monitoring endpoints, IllegalStateException, response
+587	 WildFly Swarm, JMS topics, queues, connection factory
+588	 @ApplicationPath, javax.ws.rs.core.Application, HealthCheck endpoint
+635	 ExplodedImporter, main()
+662	 addAllDependencies()
+669	 maven-war-plugin, wildfly-swarm-plugin, mvn clean wildfly-swarm:run, mvn wildfly-swarm:run, mvn clean package
+691	 Archive#as, Secured.class, web.xml, login-config
+751	 WildFly Swarm Maven Plugin, swarm.https.port, swarm.https.certificate.generate
+793	 module.xml, resource-root, artifact, oracle.jdbc, standalone.xml, JBOSS_MODULEPATH
+863	 org.wildfly.swarm.Swarm, main, start, stop, deploy
+879	 Maven plugin, ArtifactResolutionException

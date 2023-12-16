@@ -1,0 +1,11 @@
+[Progress] "Check-out" operation hangs on a clean workspace
+I am using 3.0RC1.
+
+Steps:
+- Start from a clean workspace
+- Switch to CVS perspective and check out a project
+- The “check-out” operation seems to hang (the percentage in the status bar does
+not change anymore). I usually have to "force quit" eclipse and start over
+
+I do not believe this happens every time, but it has happened to me quite a few
+times.

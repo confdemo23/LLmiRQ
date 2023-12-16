@@ -1,0 +1,4 @@
+JndiRegistry - Implement the methods that return empty set
+See nabble
+http://camel.465427.n5.nabble.com/Proper-way-to-initialize-Transaction-management-for-Camel-in-an-Application-Server-tp5739760.html
+We should implement the methods that return empty set. So it would work in the situation from the link

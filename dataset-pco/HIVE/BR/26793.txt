@@ -1,0 +1,4 @@
+Create a new configuration to override "no compaction" for tables
+Currently a simple user can create a table with {color:#6a8759}no_auto_compaction=true{color} table property and create an aborted write transaction writing to this table. This way a malicious user can prevent cleaning up data for the aborted transaction, creating performance degradation.
+
+This configuration should be allowed to overridden on a database level: adding {color:#6a8759}no_auto_compaction=false{color} should override the table level setting forcing the initiator to schedule compaction for all tables.

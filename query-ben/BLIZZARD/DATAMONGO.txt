@@ -1,0 +1,254 @@
+298	render object correctly mongo properties converter field type Spring custom converters work subclasses java lang Number detail description http forum springsource org showthread php Custom convertor primitive Integer
+321	set update type collection options client aggregation field field type integer saved set user calling save exception field autopopulated saved string
+420	find lastname firstname query type collection options projection Extra quotes Query values fields Quotes values passed Query annotations Query fields someMethod String values String fields pass values fields wrapped quotes inserted query MongoDB String values amp apos amp apos rendered amp apos amp apos valid query quotes String values field rendered field valid projection quotes String values field rendered field valid projection quotes turn string renders undefined
+424	write lazy mongo property reference objects time type Declaring list DBRef domian DBRef reading mongo database requirement define field domain reason restriction domain integration system Field deletions List mongodb DBRef deletions Saving deletions collections works fine verify deletions list stored properly list read Mongo instance mongodb DBRef issue define mongodb DBRef domain creating reading converter converts mongodb DBRef mongodb DBRef
+633	mongo query repository querydsl context fluent apply factory Upgrade Querydsl
+688	filter correctly mapping explicit create partial collation hiding precedence annotation field named attempted domain attribute named annotate field spring data mongo errors map error correct amp apos surprises doesn amp apos precedence vain find issue listed jira read post forums hitting issue apologies duplicate Original forum post http forum springsource org showthread php mapping
+741	correctly type object nested update collection field aggregation apos group apos field object error Spring Data MongoDB Aggregation support fails amp apos group amp apos property object referenced Gist context debugger lead code resolve amp apos code amp apos property parent object contained object top level property works great amp apos equivalent aggregation MongoDB shell amp apos group amp apos object amp apos property doesn amp apos illegal MongoDB
+788	query fields aggregation field type mongo context expression Projection operations render synthetic fields properly group referenced projection operation rendered rendered
+852	reference collection type write object objects map lazy Increase version update traverse DBObject correctly order find version property Version property nested resolved correctly version
+934	collection type options query repository command callback stream Add support bulk operations introduced MongoDB Latest version spring data mongodb support bulk operations introduced MongoDB mongodb recommends write protocols bulk api bulk opertations
+1053	type collection filter options find callback property create field mapped object named language fail map type String restriction field named language String map map instantly pipeline engine model javax persistence Foobar String Number language String getId setId String Number getLanguage language setLanguage Number language language language
+1133	collection type options aggregation field operation callback stream Field aliasing honored Aggregation operations aggretation property designated Field
+1254	find aggregation lastname projection field correctly query firstname Group Project aggregation incorrect field creating aggregation field named project field converted group projection passed group incorrect test
+1297	set nested compound definition type resolve named property Unique DBRef amp apos uniquely property amp apos reference DBRef Indexed unique work DBRef User user Indexed unique works fine User user amp apos unique DBRef amp apos doesn amp apos work pretty piece functionality
+1425	correctly nested query property object field document string keyword issues query
+1438	object correctly update version insert collection replace remove warning logs switched Spring Data MongoDB Hopper Release Train Spring Boot start Spring Boot application custom conversions Spring Data MongoDB Release Train Hopper warning logs Registering converter java lang Number java lang Number writing converter doesn amp apos convert Mongo supported type wanna check annotation setup converter implementation Spring Boot integrated version warning exists alle Domain classes saved MongoDB annotated Document DATAMONGO
+1476	type options collection query callback database mongo aggregation stream method partially collection stream Method allowing collection collection read callback time
+181	shutdown mongo factory mongofactorybean mongo factory bean reports resources tomcat closed close amp bean call
+315	query template order sort sort mongotemplate mongo template findone find class mongotemplate mongo template mongo find methods ignore sortorder sort order
+318	errors document operations current org lock case documents handleanywriteresulterrors handle write result errors updates distinguishing write writes doc uments
+325	classpath error map coll template mycoll coll function map reducefunction reduce function mongotemplate mongo template mongo fails correctly report file calling mapreduce map reduce reduce
+333	event access amp listener exception parameter abstractmongoeventlistener abstract mongo event listener null case type abstract mongo throws nullpointerexception null pointer exception pointer generic
+343	property list serveraddresspropertyeditor server address property editor bean spring address java server data illegalargumentexception illegal argument exception editor disables default conversion
+354	push update pushall push mongo multi field addmultifieldoperation add multi field operation operation support template mongotemplate mongo template multiple update
+359	forum paths dsl spring querydslmongorepository query dsl mongo repository qdsl westkmper mongo data query collection apos treated property
+368	test collection test mongo values method object internal empty collections supported
+411	event mongo types creator persistent mechanism check listeners class potential classcastexceptions class cast exceptions cast exceptions mongopersistententityindexcreator mongo persistent entity creator entity
+412	getusercredentials user credentials factory mongo credentials user usercredentials user credentials usercredentials user credentials mongodbfactory mongo factory return called abstractmongoconfiguration abstract mongo configuration abstract configuration mongo
+429	query array mongo mongo mongodb error query clause shell exception annotation arrays translated creation interpretation int erpretation
+454	address replica string array host port list editor hostandport host port serveraddress server address serveraddresspropertyeditor server address property editor server property fails hostname unresolvable
+469	member password member mongodb query password query pseudo test spring creation method names criteria work
+471	addtoset add set list values method update mongo org query springframework operation add set support adding
+472	status criteria query query mongo apos converted method nextconverted converted mongo keyword method doesn work
+483	field amp apos document mongo user issue field defact api indexed unique true foo puts key mongodb mongo
+489	string collection object list array class issue classcastexception class cast exception sata method cast exception loading map
+493	criterion object querymapper query mapper objectid object method query mapper mapped getmappedobject mapped object criteria converts
+494	entity entityclass entity class class regex criteria calls query options string code expressions class mapping
+508	dbref persistent object property amp persistentproperty persistent property converter entity mappingmongoconverter mapping mongo converter persistententity persistent entity dbr accidentally
+517	complex keywords property values query mapping querymapper query mapper mapper actual drops querymapping query mapping incorrectly translates key
+521	query string person firstname findonebyfirstnameandlastname find firstname lastname criteria reddy runquery query names repository creation method work
+527	criterias complex equals criteria broken
+530	abstractmappingcontext abstract mapping context initialization method setapplicationcontext set application context mongomappingcontext mongo mapping context mapping entity abstract context mongo set application invoke superclass
+534	grid query fields dbobject query gridfs grid instance resources matter execution return sorted sorting defined definition
+549	exception nullpointexception null point exception template mongo null collection mongotemplate mongo template point pointer nullpointerexception null pointer exception save suffers potential
+550	dbobject mongotemplate mongo template basicdbobject basic dbobject npe string mongo upgrading template release save basic
+551	string case mongotemplate mongo template npe mongo template release json save upgrading
+568	query illegal template parameter nullpointer nullpointer null pointer null pointer exception null mongotemplate mongo template mongo find method
+588	insert version mongotemplate mongo template template mongo object object null versions initialize
+617	mongopersistententity mongo persistent entity entity version exception persistent mongo mongo mongotemplate mongo template property template nullpointerexception null pointer exception null pointer initializeversionproperty initialize version property initialize
+620	versioned objecttosave object save mongo collection getclass class collectionname collection class handed dosaveversioned save versioned object mongotemplate mongo template template save method
+621	mongo service property property case mongoconverter mongo converter mongotemplate mongo template conversionservice conversion service version conversion template initializeversionproperty initialize version property initialize
+622	insert object conditions doinsert insert dosaveversioned save versioned mongo dosave save race insert versioned unversioned created save
+629	count query field test mongo response query user method template find criteria apos
+663	method spec field query fieldspec field spec springframework class org mongodb data core equals
+675	field template object description modify mongo doupdate update annotation mongotemplate mongo template issue findandmodify find modify find doesn apos field update
+676	repository mongo simplemongorepository simple mongo repository simple entity entity mongoentityinformation mongo entity collection fails customized impl custom ized
+679	objecttosave object save mongo json string dbobject doc collection object mongotemplate mongo template template dosave save save passed doesn apos save
+683	mapping mapper query querymapper query mapper metadata default mappingmetadata mapping metadata handle
+693	apos amp host property mongo replicaset spring bean factory instance mongofactorybean mongo factory bean create mongo port null empty
+706	query keywords mapper querymapper query mapper dbrefs nested transform correctly dbr efs key
+746	spring data root spring guys info versions trisha stackoverflow defaultindexoperations default operations indexinfo info read indices created mongo shell
+804	impl repositoryimplementationpostfix repository implementation postfix postfix string repository implementation default mongo enablemongorepositories enable mongo repositories contrast enable repositories repository ementation empty
+829	query query num type distance nearquery query geo geonear geo limit object nearquery query conjunction sets specifies
+863	mongo query ops mapped dbobject ids array version idstoremove ids remove update querymapper query mapper mapper getmappedvalue mapped fails handle arrays
+884	method object class obj string args null exception dbref nullpointerexception null pointer exception potential pointer lazy dbrefs dbr efs
+892	store converter apos mongo doesn amp beans bean mongo mapping converter configured nested bean definition
+893	foo class mongo java method class repository embeddedclass embedded class mapping convertor remove property collection embedded objects
+901	injection bean method invocation beanpostprocessor bean post processor registerbeansforroot register beans root post datamongo order mongo mongorepositoryconfigurationextension mongo repository configuration extension repository configuration extension fails invoke super
+917	version spring getversion version class startswith starts springversion spring version amp resolver maven doesn defaultdbrefresolver default resolver default throws npe bundled bundle uberjar
+948	query mongotemplate mongo template error query querycursorpreparer query cursor preparer type template object cursor problem assertion mongo getmappedsortobject mapped sort object mapped sort
+963	expireafterseconds expire seconds compound ttl indexes error mongodb number seconds org key expire repeating server
+978	query method event type result query operations writeresult write result type apos deleteby delete delete removeby remove remove repository methods don set afterdeleteevent delete event delete
+995	amp builder query mongodb string parameter apos exception mongo version parameter binding based bind parameters
+996	query pageableoutofscope pageable scope pageable mongo query method return scope data pagination broken introduction int roduction support top
+1025	time read time def chip event timeread time read documents compound collection duplicate creation embedded doc uments
+1040	query query mongo result collection writeresult write result type entity collection metadata deleteall delete delete repository don apos entitymetadata entity metadata
+1043	entity mongo query problem spel document executions annotations expressions evaluated eval uated query exec utions
+1057	element slicedexecution sliced execution execution size pagesize size query sliced abstractmongoquery abstract mongo query mongo abstract execute skips nth
+1062	address data bar address test tom unit documents timeout server failing serveraddresspropertyeditorunittests server address property editor unit tests property editor ests tests
+1068	match criteria elemmatch elem match json gte list elem criteria room documents class fails build special cirteria
+1077	dbobject update dbref test dbrefannotatedlist annotated list ensure operator list void removes positional pos itional key dbr property
+1080	methods conversion query process abstractmongoquery abstract mongo query amp service execution conversionservice conversion service abstract mongo query eagerly post
+1094	field data mapping mongodb persistent mongo basic java entity basicmongopersistententity basic mongo persistent entity wrong reference documentfield document field document error message
+1096	runtime queries template exceptions logs exception data serializetojsonsafely serialize json safely mongotemplate mongo template json runtimeexceptions runtime exceptions debug query printing mongo
+1118	converter converters mongo enum apos converter amp names service enum custom convert ers map
+1139	neutral distance returns creator default amp query sphere metric nearsphere sphere mongoquerycreator mongo query creator mongo query create neutral
+1180	query tree message mongo illegalstateexception illegal exception jsonparseexception jsonparse exception jsonparse creation string parttreemongoquery tree mongo query incorrect exception
+1190	bulk bulk operations doc col dbdoc doc write mongo insert adding bulkwriteoperations bulk write operations unorderedbulkinsert unordered bulk insert unordered insert
+1193	database collections lookups dbref degradation driver instance case prevent unnecessary resolving dbrefs dbr efs
+1202	customer generics github mongo scenarios test embedmongo test amp customer indexed annotation problems
+1208	limit query operation sort stream pagesize size timeout time direction size mongotemplate mongo template mongo template order sort
+1229	bar string foo bar query lang findbyfoobar find foo bar illegalargumentexception illegal argument exception argument illegal mongoquerycreator mongo query creator mongo query creator incorrectly rejects ignorecase ignore case ignore case
+1244	string mongo amp parameter complex expressions query apos data spring stringbasedmongoquery string based mongo query based handles expression parameters incorrectly
+1257	org comma mongodb authentication database usernames client namespace property string mongo support user names
+1269	map content somecontent content map query integer query text string template querymapper query mapper mapper drops numeric num eric maps
+1307	mongo exception exception user return template code translator npes mongotemplate mongo template converting defined runtime exceptions npe
+1334	map mapreduceoptions map reduce options limit options return apos reduce amp code result mapresultoptions map result options implemented impl emented
+1342	nullpointerexception null pointer exception exception nextasarray array method object array null element query array potential pointer mongoquerycreator mongo query creator mongo creator
+1387	fields query object query basicquery basic query getfieldsobject fields object basic apos class ops include doesn stick
+1397	log template instance logger mongotemplate mongo template geonear geo class mongo queries query geo
+1437	exception default resolver access data defaultdbrefresolver default resolver dataaccessexception data access exception swallows translatable cce
+1465	script arguments defaultscriptoperations default script operations script default operations dbobject calls convertscriptargs convert script args execute string passed quoted
+1497	apos method associations accessor property constructor dbobject amp converter mappingmongoconverter mapping mongo converter mapping mongo check dbobjectaccessor object accessor object
+1521	operation int skipoperation skip operation method count skipcount skip count factory operation istrue true elementstoskip elements skip aggregation skip expects skip supports long
+309	mongo amp apos array string listofmaps list maps maps anarray array file list pojo persisting sisting properly
+319	level concern testing mongo strings factory mongodbfactory mongo factory writeconcern write concern assumption write parsed parse correctly namespace handlers
+322	type field int pojo string objectid object biginteger big integer operation object big throw exception save apos null integer
+329	map valuetype type type load string dbobject class basicdbobject basic dbobject converted correctly
+331	mongo writeconcern write concern write class safe replicas org data mongodb concern wrong enumeration schema
+336	precision data geonear geo pointer exception mongo mongodb test mongodb mongo geo returning null
+346	core template org arg operations mongodb mongo springframework mongooperations mongo operations mongotemplate mongo template remove object working
+358	list document item attribute array valuelist list attribute set nested work
+367	doc collection java childdoc child doc class list spring child object data indexed field embedded creates
+376	expression querydsl invocation case npe ticket amp visit issue spring potential springdatamongodbserializer spring data mongodb serializer data mongodb serializer
+385	test repository class long mongorepository mongo repository mongo entity type factory support mongorepositoryfactory mongo repository factory classes java lang
+387	geopage geo geo query methods class repository core classcastexception class cast exception return org executing doesn apos work
+392	type class mongo object type model point read method domain updating write objects updated
+404	objectid object update object objects object objectid object dbref pull apos blah removing dbr work
+407	list type generics test element mongoops mongo ops work domain linkedhashmap linked hash map map collection losing set update
+422	uuid subtype bson driver source work mongo binary basic java uuidtobinaryconverter uuidto binary converter uuidt converter compatible uuidto
+425	question stack overflow query stackoverflow stack overflow manually defined binding repository details fails
+445	query test query cases paging findall find functionality amp size apos geonear geo geo doesn work pageable
+458	collections instance operation emptyset empty set list collections unsupportedoperation unsupported operation unsupported instances hashset hash set reading empty unmodifiable emptylist empty list set returned
+459	class match goal getid goal player match player update set nested arrays save attribute
+467	string query aea dsl object objectid object querydsl query dsl spring query data field mapped path
+480	checking insert result update insert doupdate update dbobject doinsert insert case save writeresultchecking write result checking write documents doc uments
+481	query release work findbyusernameandconfirmedistrue find username confirmed true account true confirmed confirmed username release upgrading istrue true properly method
+505	collection dbref property entity property associations values converting convertingiterator converting iterator repository conversion doesn apos work
+523	type typealias type alias alias abstractmongoconfiguration abstract mongo configuration classes document simple class configuration mapping annotation abstract mongo
+539	item item test operations apos collection document string works document remove doesn work parameter
+540	query findone find upsert object template class property returns foo mongotemplate mongo template mongo ert find handle queries differently
+553	cycle object type getcause org springsource jira fact amp detection stackoverflowerror stack overflow error stack overflow error objects cycles
+562	person optimistic locking version version exception optimisticlockingfailureexception optimistic locking failure exception tostring string entity integer create optimisticlocking optimistic locking initial
+571	class version repository domain field crudrepository crud repository method mongodb mongo data spring mongo doesn apos save null values
+583	cursor dbcursor mongodb obj java jira switch case memory loop check dbc ursor
+592	constructor persistenceconstructor persistence constructor variables member expression overflow parameter amp apos file persisting objects persistence mappinginstantiationexception mapping instantiation exception mapping instantiation exception
+602	list integer query profileids profile ids document profile field biginteger big integer ids work querying operator type big returns
+603	distance point repository distance getaveragedistance average distance geo georesults geo metrics repository apos geo queries dont don supplied applied app lied
+647	field query score field order method question questionid question desc orderby order ignores annotation alias
+702	field template search mongodb mongo field data java annotation mongo spring projection project ion properly configured respective java pojo
+717	context mongo entity entity mongomappingcontext mongo mapping context application mappingcontext mapping context persistent context properly distributed persistent entities
+721	mongo template attribute list class class childclass child class document mongotemplate mongo template parentclass parent class polymorphic type persisted update operations
+745	snapshot snapshotid snapshot defects pageable query mongo elements quary mongorepository mongo repository defects result total
+789	database mongo amp mongodb mongo authentication database mongodb mongo apos support login admin
+807	class iuser exception mappinginstantiationexception mapping instantiation exception user userwrapper user wrapper instantiation findandmodify find modify mapping field find modify removes encapsulated encapsulate classes causing
+828	versionedperson versioned person updatefirst update update person versioned document class findone find exception long updatefirst update throws optimisticlockingfailureexception optimistic locking failure exception optimistic locking failure updating exist
+843	auditing enablemongoauditing enable mongo auditing amp mapping error mappingcontext mapping context bean exception application enable unable mongo auditing annotation java config
+862	mongo update array version options error ops findandmodify find modify class operator array field positional work
+868	addresses increment findandmodify find modify modify method datamongo version issue update field find version
+880	object property dbref content class proxy java template content message error persist sist dbr lazy loaded
+888	sort query object orderid order order amp method applied sortobject sort object filed mapping app lied queries
+897	mongo project interface spring exception template target details update findandupdate find update find broken dbref
+909	classes child compound entity class indexes annotation parent references compoundindexes compound indexes compoundindex compound inherited
+914	lazy classes lazyloading lazy loading resolving hashcode equals override proxies loading improve hash code
+928	strategy field names bean definition xsd parsing xsd beandefinitionparsingexception bean definition parsing exception error naming
+938	query exception criteria box illegalargumentexception illegal argument exception upperright upper illegal data argument org creating geo mapreduce map reduce map reduce
+952	fields query query field string work findbyemail find email returns limit restrictions annotation rest rictions
+969	collection string collection user repository query dsl quser field mapped objectid object object querydsl query dsl
+970	object object prop property dbobject savedobject saved object wrapper null return type query created remove dbo bject
+987	class parent entity template parent child string attribute test situation problem lazy loading dbref dbr ting data mongotemplate mongo template mongo
+1001	child child relatedchild child parent getname mongo string mongotemplate mongo template parent class apos save update lazy load object
+1027	books context book object exception class mongoexception mongo exception key authors duplicatekey duplicate key collection inherits complex embedded
+1030	collection return entity types summary entity repository userrepository user repository amp usersummary user summary query methods retuning single work projecting proj ecting
+1050	class objects documents workaround mongo data ids start args simplemongorepository simple mongo repository impl mongo repository findbyid find find don apos return nested doc uments simple
+1058	foo foos model map foo model dao object field dbref breaking behavior
+1072	key query query joe placeholders release parameters processing place hold ers longer correctly substituted stituted
+1078	query type class myuserid user user complex string user queries key annotated repository query fails map structure
+1088	query class bug property embeddedobject embedded object jira query remove collection embedded objects
+1120	counts bit collection object definitions findbyuserid find user calls elements fine return pageable queries timeout incorrect
+1123	query object geonear geo method max geo return nearquery query documents nearquery query matching elements returns doc uments
+1126	repository types string pageable item class equals ids keyword key word query findbyinid find find returning correctly
+1166	preference preference data pool pass template mongodb connection readpreference read preference mongotemplate mongo template read aggregations
+1204	object objectid object path java mongo github check objectpath object path equality breaks mongodb mongo mongo
+1210	type hint findandmodify find modify class addtoset add set fields foreach documents modify test inconsistent property order breaks document equality
+1232	regex sort string case generator query case sign mail amp ignorecase ignore case ignore escape queries
+1236	map linkedhashmap linked hash map maven test updatefirst update findandmodify find modify hash class mongooperations mongo operations operations mongo find modify update include values
+1250	converter allocation string object test update mypersistantobject persistant object allocation code enum custom implementation updates
+1263	indexes type mongo class book product productwrapper product wrapper spring data missing associations involving generic types
+1288	number atomicinteger atomic integer amp integer method apos data update mongodb wrappers string fails work atomic
+1289	field property object test amp exception driver versions java apos nullpointerexception null pointer exception null pointer saving annotation
+1290	sample byte data query sample test project object domain annotation parameter work
+1368	case engineer findonebyidandnameignorecase find ignore case parenthesis query template escaping log mongotemplate mongo template findbyignorecase find ignore case find ignore
+1394	library book library book bookrepository book repository amp java querydsl query dsl exp references handled correctly query dsl
+1406	field query fields resolution string object status dbobject field query mapper querying nested combination keywords key
+1416	converter number bootstrap custom data setup core apos warnings registration standard issues warning
+1423	class thumbnails video object map query ops standard metadata nested document update doesn apos apply converters convert ers embedded maps
+1436	number converters numbertonumberconverterfactory number number converter factory constructor slew mongo mongodb mongo customconversions custom conversions list custom conversions complains built convert ers
+1453	point geo lang classcastexception class cast exception geojsonpoint geo json point location class java exception type parse error json coordinates integers int egers
+1485	connection converter connectiontype connection type expr class type integer type querydsl mongodbserializer mongodb serializer mongodb serializer registered converters convert ers enums nums account
+1498	spring rest types properties joda time data datetime time property mongo mongomappingcontext mongo mapping context mapping context doesn apos auto detected jodatime joda time jdk time
+1513	dbobject ids mongo entities object time insert objectid object dbo list identifiers ide ntifiers generated event listeners populated documents doc uments inserted batch
+1534	class ops bulkoperations bulk operations info bulkops bulk ops bulk bulk template operations mongotemplate mongo template type hint missing insert
+1565	string amp application fff quotations apos applicationid application myobject object placeholders manually defined queries escaped properly
+306	NullPointerException if mongo factory created via URI with out credentials NullPointerException init SimpleMongoDbFactory String valueOf Mongo Factory Simple
+312	Cannot retrieve persisted Enum implementing an abstract method MappingInstantiationException BeanInstantiationException IllegalArgumentException init BeanWrapper MappingMongoConverter doWithPersistentProperty BasicPersistentEntity getValueInternal create doWithProperties read Bean Wrapper
+316	Replica Set configuration via properties file throws ArrayIndexOutOfBoundsException ArrayIndexOutOfBoundsException parseReplicaSet ParsingUtils parse parseCustomElement NamespaceHandlerSupport BeanDefinitionParserDelegate DefaultBeanDefinitionDocumentReader Bean AbstractSingleBeanDefinitionParser AbstractBeanDefinitionParser registerBeanDefinitions
+360	java lang ClassCastException when placing GeospatialIndex into IndexOperations and invoking IndexOperations getIndexInfo ClassCastException DefaultIndexOperations getIndexData doInCollection MongoTemplate Data Operations getIndexInfo execute Collection Mongo Template
+378	MapReduceResults ClassCastException due to raw results counts as Long UnexpectedException ClassCastException encodeResponseForFailure invokeAndEncodeResponse ApplicationFilterChain RemoteServiceServlet AbstractRemoteServiceServlet RPC processCall HttpServlet StandardWrapperValve internalDoFilter processPost
+380	maps with mongo reserved characters for keys generate on save  java lang IllegalArgumentException  fields stored in the db can apos t have   in them IllegalArgumentException validateKey DBCollection checkObject checkKeys MongoTemplate save saveDBObject doInCollection check Key validate
+382	ClassCastException   com mongodb BasicDBObject cannot be cast to com mongodb BasicDBList  during find ClassCastException MappingMongoConverter convertToMongoType createOrUpdateGroupPersons writeInternal getMappedObject MongoTemplate write QueryMapper doFind Mongo PersonService
+401	StringBasedMongoQuery suffers from NullPointerException in case a null parameter gets bound to a parameter placeholder NullPointerException StringBasedMongoQuery getParameterWithIndex replacePlaceholders Parameter Query Mongo String Based Placeholders replace
+402	Inner class not supported IllegalArgumentException init PropertyPath MappedConstructor MappedParameter create from MappingMongoConverter Mapped Constructor Path Property
+413	Using  Or  in repository query yields a ClassCastException ClassCastException RepositoryFactorySupport QueryExecutorMethodInterceptor getMappedObject QueryMapper Query AbstractMongoQuery CollectionExecution ReflectiveMethodInvocation JdkDynamicAopProxy MongoTemplate Execution
+423	Criteria regex should use java util Pattern instead of  regex MongoException MongoException DBApiLayer MyCollection parse Mongo Exception find DBApi Collection Layer DBCursor
+428	ClassCastException when using outputDatabase option in map reduce ClassCastException init MapReduceResults mapReduce MongoTemplate Reduce Map map Mongo Template
+447	Removal of Documents fails in in debug mode for Documents with complex ids RuntimeException serialize JSON BasicDBObject StringBuilder MongoTemplate doInCollection String toString append valueOf doRemove
+450	enabling DEBUG causes RuntimeException RuntimeException serialize JSON BasicDBObject StringBuilder MongoTemplate String doFindAndModify findAndModify toString append valueOf
+474	Wrong property is used for Id mapping ConverterNotFoundException GenericConversionService handleConverterNotFound BeanWrapper convert MongoTemplate getProperty getPotentiallyConvertedValue SimpleMongoRepository populateIdIfNecessary Converter handle
+475	apos group apos  operation fails where query references non primitive property RuntimeException ClassMapBasedObjectSerializer JSONSerializers IterableSerializer MapSerializer serialize Serializer Map Object Based Iterable
+495	JSON can apos t serialize Enum when printing Query in DEBUG message RuntimeException serialize JSON BasicDBObject StringBuilder String MongoTemplate toString doFind append valueOf Builder
+497	Reading an empty List throws a MappingInstantiationException because it returns an HashSet instead of returning an ArrayList MappingInstantiationException BeanInstantiationException IllegalArgumentException ReflectionEntityInstantiator createInstance MongoTemplate ReadDbObjectCallback executeFindMultiInternal MappingMongoConverter read Instance create Entity Instantiator
+570	Query methods on  DBRef field with the qualifier isNull throws Exception IllegalArgumentException notNull Assert MappingMongoConverter QueryMapper convertAssociation createDBRef getMappedObject toDBRef MongoTemplate getMappedValue doFind
+646	Can apos t insert DBObjects through MongoTemplate NullPointerException initializeVersionProperty MongoTemplate testThatRequiresInsertionOfRawObjects doInsert insert Version initialize Property AnITCase Mongo Template
+669	Incompatibility with Querydsl SpringDataMongodbSerializer MongodbSerializer getKeyForPath PathImpl accept asDBValue Path asDBKey visit Mongodb Serializer
+686	ClassCastException while reusing Query object ClassCastException QueryMapper getMappedObject getMappedKeyword Mapped getMappedValue MongoTemplate doFind Query Mapper Keyword Object
+752	QueryMapper prevents searching for values that start with a    dollarsign ClassCastException start with dollar sign the QueryMapper Keyword isKeyword recognizes this keyword resulting ClassCastException Exception Mapper Query
+753	Add support for nested field references in group operations IllegalArgumentException ExposedFieldsAggregationOperationContext getReference GroupOperation toDBObject toDbObject Operation Aggregation Reference Context Exposed Fields
+761	ClassCastException in SpringDataMongodbSerializer getKeyForPath ClassCastException PathMetadata SpringDataMongodbSerializer getKeyForPath Path getName Metadata Key Data Mongodb Spring Serializer
+805	Excluding DBRef field in a query causes a MappingException MappingException createDBRef MappingMongoConverter QueryMapper CollectionNameProvidedMongoConverter MongoTemplate convertAssociation ExcludeDBRefFieldTest getMappedObject findOne toDBRef testExcludeChildren
+816	Unable to execute query with DocumentCallbackHandler when query contains Criteria with enums IllegalArgumentException BasicBSONEncoder putObject putObjectField putIterable writeObject Object DefaultDBEncoder OutMessage writeQuery write Basic
+821	MappingException for  size queries on subcollections containing dbrefs MappingException MappingMongoConverter createDBRef QueryMapper AbstractMongoQuery PagedExecution convertAssociation MongoTemplate toDBRef getMappedKeyword getMappedObject Mongo
+833	EnumSet is not handled correctly IllegalArgumentException InstantiationException MappingMongoConverter MongoDbPropertyValueProvider createCollection CollectionFactory readCollectionOrArray Collection access 100 doWithPersistentProperty BasicPersistentEntity getValueInternal
+908	Nested field references in group operations broken IllegalArgumentException ExposedFieldsAggregationOperationContext getReference DomainKnowledgeReportServiceImpl GroupOperation toDbObject generateCategoryWiseReport MongoTemplate Aggregation toDBObject Operation aggregate
+912	Aggregation project followed by Aggregation match with custom converter causes IllegalArgumentException IllegalArgumentException BasicBSONEncoder putObjectField putObject putIterable Object writeObject DefaultDBEncoder Basic BSONEncoder Iterable Field
+913	Can apos t query using lazy DBRef objects MappingException MappingMongoConverter createDBRef toDBRef DBRef create Mongo Converter Mapping
+924	Aggregation not working with as  method in project  pipeline operator IllegalArgumentException ExposedFieldsAggregationOperationContext getReference GroupOperation toDbObject Aggregation MongoTemplateTest testAggregation NativeMethodAccessorImpl toDBObject MongoTemplate DelegatingMethodAccessorImpl
+926	Stack Overflow Error with       RC  Release ConcurrentReferenceHashMap Segment getReference init getTypeVariableMap Type getComponentType TypeDiscoverer createInfo Reference ClassTypeInformation
+949	CyclicPropertyReferenceException in versions         for MongoDB CyclicPropertyReferenceException MongoPersistentEntityIndexResolver CycleGuard doWithPersistentProperty Persistent Entity BasicPersistentEntity access 000 doWithProperties Resolver Mongo
+962	Cycle found with Spring Data Mongo CyclicPropertyReferenceException MongoPersistentEntityIndexResolver CycleGuard doWithPersistentProperty Persistent BasicPersistentEntity Entity Resolver Mongo protect doWithProperties Cycle
+1002	Update toString  might throw exception RuntimeException ClassMapBasedObjectSerializer JSONSerializers MapSerializer serialize BasicDBObject Map Serializer toString JSON Object Based
+1008	IndexOperations fail  when   dsphere  index is present NumberFormatException readJavaFormatString FloatingDecimal parseDouble init DefaultIndexOperations MongoTemplate doInCollection Double getIndexData getIndexInfo PersistenceConfig
+1049	Reserved field name  apos language apos  causes trouble InvalidDataAccessApiUsageException TextIndexDefinition TextIndexDefinitionBuilder withLanguageOverride MongoPersistentEntityIndexResolver BasicPersistentEntity appendTextIndexInformation doWithPersistentProperty access 400 doWithProperties Text
+1063	IllegalStateException using any in IllegalStateException PathMetadata SpringDataMongodbSerializer MongodbSerializer getName isReference Path Metadata OperationImpl getPropertyFor visit Mongodb
+1070	Query annotation with  oid leads to a parse error IllegalArgumentException init ObjectId objectDone Object parseObject parse JSONCallback JSONParser object
+1076	Finalizer hit db on lazy dbrefs invokeFinalize System access 100 Finalize invoke Finalizer FinalizerThread runFinalizer run Thread
+1087	Incorrect warning for MongoPersistentEntityIndexResolver CyclicPropertyReferenceException  Found cycle for field CyclicPropertyReferenceException MongoPersistentEntityIndexResolver CycleGuard BasicPersistentEntity doWithPersistentProperty Persistent appendTextIndexInformation access 400 Entity doWithProperties Resolver
+1121	Cycle found  false positive CyclicPropertyReferenceException MongoPersistentEntityIndexResolver CycleGuard BasicPersistentEntity doWithPersistentProperty Persistent appendTextIndexInformation access 400 Entity doWithProperties Resolver
+1251	update   findAndModify throws NullPointerException NullPointerException processTypeHintForNestedDocuments UpdateMapper delegateConvertToMongoType getTypeHintForEntity convertSimpleOrDBObject QueryMapper getMappedObjectForField Type getMappedObject getMappedKeyword Mapped
+1276	MongoTemplate CloseableIterableCursorAdapter does not null check return values from PersistenceExceptionTranslator MongoException NullPointerException PersistenceException MappingException MongoTemplate CloseableIterableCusorAdapter Spliterators IteratorSpliterator forEachRemaining AbstractPipeline ReduceOps ReduceOp wrapAndCopyInto next copyInto
+1293	MongoDbFactoryParser should allow id attribute in addition to client uri BeanDefinitionParsingException FailFastProblemReporter error ReaderContext MongoDbFactoryParser parseInternal Reporter Problem Fast Fail Context Reader
+1295	The MongoTemplate CloseableIterableCusorAdapter runs into an NPE when a MappingException was raised translateException IllegalStateException NullPointerException MappingException SpringApplication runCommandLineRunners afterRefresh ExtractorApplication run NativeMethodAccessorImpl DelegatingMethodAccessorImpl Application Runners Command invoke
+1361	geoNear  queries fail when the accompanying query returns no results NullPointerException MongoTemplate geoNear Mongo Template geo
+1401	GeoJsonPoint error on update getPersistentPropertyPath init QueryMapper MetadataBackedField AbstractMappingContext UpdateMapper MetadataBackedUpdateField createPropertyField convertSimpleOrDBObject getMappedObject getPath
+1471	MappingMongoConverter attempts to set null value on potentially primitive identifier throwSetIllegalArgumentException IllegalArgumentException throwSetIllegalArgumentException UnsafeFieldAccessorImpl Field ReflectionUtils UnsafeLongFieldAccessorImpl set setProperty ConvertingPropertyAccessor MappingMongoConverter BeanWrapper setField
+1486	Changes to MappingMongoConverter Result in Class Cast Exception ClassCastException PersistenceException DBObjectCodec BsonDocumentWrapperCodec encodeMap writeValue encode addDocument RequestMessage Codec write Document DBObject
+1500	RuntimeException for query methods with fields declaration and Pageable parameters RuntimeException ClassMapBasedObjectSerializer RepositoryFactorySupport QueryExecutorMethodInterceptor JSONSerializers MapSerializer serialize PartTreeMongoQuery BasicDBObject createQuery AbstractMongoQuery Query
+199	Synchronisation during performance tests declaredAnnotations MongoTemplate ReadDbObjectCallback AnnotationBasedPersistentProperty BasicPersistentEntity Field MappingMongoConverter executeFindMultiInternal getAnnotation AccessibleObject Annotation
+260	MapReduce fails when using with Long as key type ConverterNotFoundException GenericConversionService convert BeanWrapper MappingMongoConverter BasicPersistentEntity doWithPersistentProperty setProperty getPotentiallyConvertedValue Service Conversion doWithProperties
+398	Fails to store org osgi service event Event BundleException IllegalArgumentException start BundleContextImpl FrameworkCommandProvider BundleHost startActivator NativeMethodAccessorImpl startWorker DelegatingMethodAccessorImpl Bundle AbstractBundle Impl
+410	Update with pushAll doesnt recognize defined Converter RuntimeException serialize JSON BasicDBObject StringBuilder MongoTemplate String toString doInCollection append valueOf Builder
+462	findAll  fails with NPE   discovering the root cause MappingInstantiationException PersistenceException BeanInstantiationException NoSuchMethodException ReflectionEntityInstantiator MappingMongoConverter MongoDbPropertyValueProvider createInstance doWithPersistentProperty BasicPersistentEntity getValueInternal Entity getPropertyValue doWithProperties Property
+806	Spring Data MongoDB   Aggregation Framework   No property  id found for type com entity User PropertyReferenceException init PropertyPath create from Path Property
+887	Repository not instantiated when entity contains field of type TreeMap ArrayIndexOutOfBoundsException ParameterizedTypeInformation getComponentType Type Parameterized Component
+1360	Cannot query with JSR IllegalArgumentException putObjectField BasicBSONEncoder Field Basic BSONEncoder Object

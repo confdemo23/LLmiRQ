@@ -1,0 +1,2 @@
+Bad error message when adding singleton policy with new cache container in Singleton Subsystem
+Adding a new singleton policy as described in https://access.redhat.com/documentation/en/red-hat-jboss-enterprise-application-platform/version-7.0/development-guide/#clustered_ha_singleton_service with a newly created cache-container leads to a non-explanatory fail message "WFLYCTL0180: Services with missing/unavailable dependencies" =&gt; undefined.

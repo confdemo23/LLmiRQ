@@ -1,0 +1,9 @@
+camel-route archetype missing depends on camel-core
+When creating a new camel route project using maven archetype there is no dependeny on camel-core. This should be added.
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.apache.camel&lt;/groupId&gt;
+      &lt;artifactId&gt;camel-core&lt;/artifactId&gt;
+      &lt;version&gt;$
+{camel-version}
+&lt;/version&gt;
+    &lt;/dependency&gt;

@@ -1,0 +1,2 @@
+Salesforce recently changed their login API to use new OAuth fields, which breaks the camel-salesforce component
+Salesforce added new fields to the login API response. These fields should be added to the LoginToken DTO. 

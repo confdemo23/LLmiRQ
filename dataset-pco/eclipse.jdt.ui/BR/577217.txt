@@ -1,0 +1,2 @@
+[formatting] Add formatting setting for whitespace in permits clause - UI
+The UI part for bug 576373

@@ -1,0 +1,4 @@
+Camel-git always merge at master branch
+[Merge operations|[https://github.com/apache/camel/blob/main/components/camel-git/src/main/java/org/apache/camel/component/git/producer/GitProducer.java#L511]] always is done at _master_ branch.
+
+Once default branch name can be whatever user needs and _master_ is being replaced by _main_ in many repo this could led to problems. That way camel-git needs to allow user especify a targetBranch and, if this are no set, get default branch from user configs.

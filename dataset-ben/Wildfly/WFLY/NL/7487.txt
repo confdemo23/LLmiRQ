@@ -1,0 +1,3 @@
+Infinispan cache container resource registers default-cache capabilities even when undefined
+The management operations specified in the description for: https://issues.jboss.org/browse/WFLY-7486
+... should fail during model validation due to a missing capability, since the default-cache was not defined.  However, the commands will succeed, even though the singleton policy will fail at runtime due to a missing service dependency.

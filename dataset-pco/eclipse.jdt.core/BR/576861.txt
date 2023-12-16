@@ -1,0 +1,56 @@
+Internal compiler error when switch expression returns a functional interface
+Consider the following piece of code:
+==========
+import java.util.ArrayList;
+import java.util.Comparator;
+
+public class Hello {
+	public static void main(String[] args) {
+		String someSwitchCondition = null;
+		new ArrayList<Long>().stream().sorted(switch (someSwitchCondition) {
+			case "some_long" -> Comparator.comparingLong(Long::longValue);
+			default -> throw new IllegalArgumentException("Unsupported");
+		});
+	}
+}
+==========
+
+An internal compiler error will be thrown with the following stack trace:
+==========
+java.lang.NullPointerException: Cannot read field "selector" because "method" is null
+	at org.eclipse.jdt.internal.compiler.ast.FunctionalExpression$1BridgeCollector.<init>(FunctionalExpression.java:331)
+	at org.eclipse.jdt.internal.compiler.ast.FunctionalExpression.getRequiredBridges(FunctionalExpression.java:386)
+	at org.eclipse.jdt.internal.compiler.ast.FunctionalExpression.requiresBridges(FunctionalExpression.java:389)
+	at org.eclipse.jdt.internal.compiler.ast.ReferenceExpression.shouldGenerateImplicitLambda(ReferenceExpression.java:281)
+	at org.eclipse.jdt.internal.compiler.ast.ReferenceExpression.generateCode(ReferenceExpression.java:319)
+	at org.eclipse.jdt.internal.compiler.ast.Statement.generateArguments(Statement.java:443)
+	at org.eclipse.jdt.internal.compiler.ast.MessageSend.generateCode(MessageSend.java:549)
+	at org.eclipse.jdt.internal.compiler.ast.YieldStatement.generateCode(YieldStatement.java:190)
+	at org.eclipse.jdt.internal.compiler.ast.SwitchStatement.statementGenerateCode(SwitchStatement.java:713)
+	at org.eclipse.jdt.internal.compiler.ast.SwitchExpression.statementGenerateCode(SwitchExpression.java:235)
+	at org.eclipse.jdt.internal.compiler.ast.SwitchStatement.generateCodeForStringSwitch(SwitchStatement.java:425)
+	at org.eclipse.jdt.internal.compiler.ast.SwitchStatement.generateCode(SwitchStatement.java:487)
+	at org.eclipse.jdt.internal.compiler.ast.SwitchExpression.generateCode(SwitchExpression.java:330)
+	at org.eclipse.jdt.internal.compiler.ast.Statement.generateArguments(Statement.java:443)
+	at org.eclipse.jdt.internal.compiler.ast.MessageSend.generateCode(MessageSend.java:549)
+	at org.eclipse.jdt.internal.compiler.ast.Expression.generateCode(Expression.java:767)
+	at org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration.generateCode(AbstractMethodDeclaration.java:354)
+	at org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration.generateCode(AbstractMethodDeclaration.java:291)
+	at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.generateCode(TypeDeclaration.java:761)
+	at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.generateCode(TypeDeclaration.java:831)
+	at org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration.generateCode(CompilationUnitDeclaration.java:412)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.resolve(CompilationUnitResolver.java:1246)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.resolve(CompilationUnitResolver.java:712)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1245)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+==========
+
+Note that this is a Java 17 project and I'm using the latest JDT nightly build at the time of writing, 3.18.1000.v20211022-1800.

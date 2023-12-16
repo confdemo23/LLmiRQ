@@ -1,0 +1,7 @@
+JDBC-based cache stores require a DataSource attribute for runtime
+Currently, there are 2 attributes for defining the DataSource of a JDBC-based cache store:
+1. "data-store", which references a named DataSource capability
+2. "datasource", the legacy attribute which specifies the jndi name of a DataSource
+Both attributes are currently nullable.  Consequently, the model does not require either to be specified, which would cause the runtime to fail.
+The data-source attribute should be required, with "datasource" set as an alternative.
+No transformer is necessary since "datasource" was a required attribute in older versions of the model.

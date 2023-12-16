@@ -1,0 +1,82 @@
+[compiler] java.lang.invoke.LambdaConversionException: Invalid receiver type class java.lang.Enum; not a subtype of implementation type interface
+The following code snippet implements an enum lookup by some enum property:
+
+// -----------------------------------------------------------------------
+package p;
+
+import static java.util.function.Function.identity;
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class Lookup {
+
+    private static final Map<Class<?>, Map<String, I>> LOOKUP = new ConcurrentHashMap<>();
+
+    @SuppressWarnings("unchecked")
+    static <E extends Enum<E> & I> E lookupLiteral(Class<E> enumType, String literal) {
+        return (E) LOOKUP.computeIfAbsent(enumType, t ->
+            Stream.of(enumType.getEnumConstants()).collect(Collectors.<E, String, I>toMap(E::getLiteral, identity()))
+        ).get(literal);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Lookup.lookupLiteral(X.class, "a"));
+    }
+
+    interface I {
+        String getLiteral();
+    }
+
+    enum X implements I {
+        A("a");
+
+        final String literal;
+
+        X(String literal) {
+            this.literal = literal;
+        }
+
+        @Override
+        public String getLiteral() {
+            return literal;
+        }
+    }
+}
+// -----------------------------------------------------------------------
+
+It runs fine on JDK 17:
+
+// -----------------------------------------------------------------------
+$ java -version
+openjdk version "17" 2021-09-14
+OpenJDK Runtime Environment (build 17+35-2724)
+OpenJDK 64-Bit Server VM (build 17+35-2724, mixed mode, sharing)
+
+$ java p/Lookup.java
+A
+// -----------------------------------------------------------------------
+
+However, when I'm using Eclipse to compile this code, I'm getting the following error at runtime:
+
+// -----------------------------------------------------------------------
+Exception in thread "main" java.lang.BootstrapMethodError: bootstrap method initialization exception
+	at java.base/java.lang.invoke.BootstrapMethodInvoker.invoke(BootstrapMethodInvoker.java:188)
+	at java.base/java.lang.invoke.CallSite.makeSite(CallSite.java:315)
+	at java.base/java.lang.invoke.MethodHandleNatives.linkCallSiteImpl(MethodHandleNatives.java:281)
+	at java.base/java.lang.invoke.MethodHandleNatives.linkCallSite(MethodHandleNatives.java:271)
+	at x/p.Lookup.lambda$0(Lookup.java:17)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at x/p.Lookup.lookupLiteral(Lookup.java:16)
+	at x/p.Lookup.main(Lookup.java:22)
+Caused by: java.lang.invoke.LambdaConversionException: Invalid receiver type class java.lang.Enum; not a subtype of implementation type interface p.Lookup$I
+	at java.base/java.lang.invoke.AbstractValidatingLambdaMetafactory.validateMetafactoryArgs(AbstractValidatingLambdaMetafactory.java:271)
+	at java.base/java.lang.invoke.LambdaMetafactory.metafactory(LambdaMetafactory.java:340)
+	at java.base/java.lang.invoke.BootstrapMethodInvoker.invoke(BootstrapMethodInvoker.java:134)
+	... 7 more
+// -----------------------------------------------------------------------
+
+There used to be a similar bug in javac, which seems to have been fixed by now:
+https://bugs.openjdk.java.net/browse/JDK-8141508

@@ -1,0 +1,146 @@
+84	 Hive
+320	 ExecReducer  GroupByOperator
+504	 ScriptOperator ReporterTask
+1064	 HiveConf  ExecDriver  Task
+1097	 ScriptOperator, StringUtils, ExecDriver, Utilities, FileSystem, CharsetEncoder, StringWriter, PrintWriter
+1176	 Hive  HiveException  HiveMetaStoreClient
+1291	 UDAFPercentile
+1320	 LineageCtx
+1716	 TestHBaseCliDriver  HBaseTestSetup  HTable
+1829	 TestRemoteHiveMetaStore
+1850	 RegexSerDe  MetaStoreUtils  Table
+1860	 HiveResultSetMetaData
+1911	 TestHBaseCliDriver, HBaseTestSetup, HConnectionManager, HTable
+2031	 BaseSemanticAnalyzer
+2182	 ExecMapper  ReflectionUtils  GenericUDFBridge
+2332	 MapRedTask, ArrayList, StandardStructObjectInspector, ObjectInspectorFactory, ReduceSinkOperator, Operator, TableScanOperator, MapOperator
+2372	 ScriptOperator ExecReducer ReduceTask
+2390	 LazyBinarySerDe
+2736	 PrimitiveObjectInspectorFactory
+2752	 ObjectStore
+2778	 CombineHiveInputFormat
+2784	 CombineHiveInputFormat, ExecDriver, JobClient, JobSubmitter
+2820	 HashTableSinkOperator, TableScanOperator, MapredLocalTask, ExecDriver, RunJar
+2883	 HiveMetaStoreClient, FacebookService, TServiceClient, TBinaryProtocol, TIOStreamTransport
+2958	 MapOperator, ExecMapper, GroupByOperator, LazyIntObjectInspector, KeyWrapperFactory, LazyDioInteger, LazyInteger
+3205	 BucketMapJoinOptimizer
+3206	 FileUtils
+3218	 ExecMapper
+3225	 Driver
+3226	 ExecReducer, ExprNodeColumnEvaluator, SelectOperator, JoinOperator, Operator, ObjectInspectorUtils, StandardStructObjectInspector
+3253	 LazyFactory, LazySimpleSerde
+3408	 QueryPlan  extractCounters  updateCountersInQueryPlan
+4491	 ObjectInspectorUtils
+4619	 MapOperator, MapTask, Child, ReflectionUtils, MapRunner, ExecMapper
+4633	 HiveException, MapOperator, ExecMapper
+5099	 ExpressionTree
+5225	 HiveClientCache
+5515	 Configuration  Utilities  FileSinkOperator
+5546	 ORCInputFormat
+5680	 HBaseStorageHandler  Utilities
+5926	 Hive
+6113	 HiveMetaStoreClient  DDLTask  MetaStoreUtils
+6491	 AbstractParquetMapInspector, StandardParquetHiveMapInspector, DeepParquetHiveMapInspector, ObjectInspectorFactory, SelectOperator, TableScanOperator, FetchTask
+6801	 HiveConnection, HiveDriver, DatabaseConnection, Commands, ReflectiveCommandHandler, BeeLine, THttpClient, TCLIService, HttpKerberosRequestInterceptor, HttpAuthUtils, UserGroupInformation
+7127	 HiveSQLException, SQLOperation, HiveSessionImpl, CLIService, ThriftCLIService, TSetIpAddressProcessor
+7393	 HiveInputFormat, TezGroupedSplitsInputFormat, MRHelpers, MRInputAMSplitGenerator, RootInputInitializerRunner
+7539	 GenericUDAFAverage
+8264	 TezProcessor  ReduceRecordSource
+8440	 Driver, HiveServer, ThriftHive, TThreadPoolServer
+8606	 CLIService
+9598	 HiveStatement
+9685	 CLIService
+9748	 MetaStoreDirectSql, ObjectStore
+10240	 HiveServer2  HiveMetaStore  UserGroupInformation
+10322	 HiveSQLException
+11616	 DelegationTokenSecretManager, DelegationTokenStore, TokenStoreDelegationTokenSecretManager, HadoopThriftAuthBridge, DBTokenStore, ObjectStore
+11733	 GenericUDFReflect, FetchTask, CliDriver, ExprNodeGenericFuncEvaluator, SelectOperator, TableScanOperator, FetchOperator
+11801	 HiveMetaStoreClient
+11920	 SessionState
+11977	 AvroGenericRecordReader
+12087	 Hadoop23Shims
+12238	 VectorUDFDateString, VectorUDFAdaptor, VectorUDFTimestampFieldLong, VectorSelectOperator
+12248	 DBTokenStore, RawStore, ObjectStore, MDelegationToken, ExecutionContextImpl, ExecutionContextThreadedImpl, JDOPersistenceManager
+12364	 Hive  MoveTask  FileUtils
+12378	 HBaseSerDe  HBaseRowSerializer  LazyUtils
+12450	 OrcFileMergeOperator
+12463	 VectorMapJoinFastKeyStore
+12490	 MySQLSyntaxErrorException, NucleusJDOHelper, JDOQuery, MetaStoreDirectSql, ObjectStore
+12532	 LlapInputFormat  EncodedReaderImpl
+12533	 VectorMapJoinFastHashTableLoader  VectorMapJoinFastLongHashTable
+12563	 TezProcessor  ReduceRecordProcessor  CommonMergeJoinOperator
+12567	 TxnHandler
+12572	 FSNamesystem, NameNodeRpcServer, ClientNamenodeProtocolServerSideTranslatorPB, HiveException, HiveIOExceptionHandlerChain, HiveContextAwareRecordReader, HiveRecordReader, TezProcessor, MapRecordSource, MapRecordProcessor, DFSClient, DistributedFileSystem, ReaderImpl, OrcEncodedDataReader
+12577	 LlapTaskCommunicator, TaskCommunicatorManager, AMContainerImpl
+12596	 Timestamp ConvertAstToSearchArg
+12599	 TezTask
+12662	 HiveSortJoinReduceRule
+12684	 StatsUtils
+12712	 HiveInputFormat
+12740	 CombineHiveInputFormat  HiveInputFormat
+12784	 SemanticAnalyzer
+12785	 SemanticAnalyzer
+12795	 VectorExpressionWriterFactory
+12797	 TezSessionPoolManager
+12815	 StatsUtils
+12926	 TezSessionPoolManager, HiveServer2
+12937	 DbNotificationListener, ObjectStore, JDOPersistenceManager, ForwardQueryResult, MNotificationLog
+12947	 MapRecordProcessor
+12990	 OrcStripeMetadata, OrcEncodedDataConsumer, OrcEncodedDataReader
+12999	 FileSystem
+13008	 SecureProxySupport HcatDelegator Server
+13017	 HiveServer2
+13042	 ReaderImpl, FileDump
+13065	 HBaseSerDe, HBaseRowSerializer, FileSinkOperator, ExecReducer
+13094	 HiveReduceExpressionsRule, CalcitePlanner, HepPlanner, RelOptUtil, Util
+13115	 MetaStoreDirectSql, ObjectStore, HiveMetaStore, HadoopThriftAuthBridge20S
+13128	 SecurityUtil
+13146	 IllegalArgumentException, Enum, CompressionKind
+13160	 HiveServer2  Hive
+13174	 Vectorizer
+13209	 HiveMetaStore
+13261	 ObjectStore RetryHMSHandler
+13325	 RecordReaderImpl
+13392	 CompactorMR, FSNamesystem, NameNodeRpcServer, ClientNamenodeProtocolServerSideTranslatorPB, ProtobufRpcEngine, RPC, Server
+13394	 ReduceRecordSource, GroupByOperator, NumDistinctValueEstimator, GenericUDAFComputeStats, GenericUDAFEvaluator
+13489	 HiveEndPoint, TransactionBatchImpl, HiveWriter, HiveState, HiveUpdater
+13510	 DynamicPartitionCtx
+13539	 HiveHFileOutputFormat
+13570	 ColumnPrunerProcCtx
+13599	 TaskExecutorService LlapDaemon
+13632	 ParquetEncodingException  MessageColumnIO  DataWritableWriter
+13691	 Initiator
+13856	 TxnHandler
+13872	 VectorExtractRow
+13912	 DbTxnManager  TxnHandler
+13924	 ColOrCol Preconditions
+13929	 DataOperationType  AcidUtils
+14004	 SchemaEvolution  TreeReaderFactory  RecordReaderImpl
+14006	 ExecMapper  MapOperator  UnionOperator
+14015	 SparkMapRecordHandler, HiveMapFunctionResultList, HiveBaseFunctionResultList, SMBMapJoinOperator, MapOperator, FetchOperator, FSNamesystem, NameNodeRpcServer, AuthorizationProviderProxyClientProtocol, ClientNamenodeProtocolServerSideTranslatorPB, DFSClient, DistributedFileSystem, TokenCache, FileInputFormat
+14022	 SemanticAnalyzer
+14090	 JDOFatalUserException, NucleusJDOHelper, JDOPersistenceManager, ObjectStore, RawStoreProxy, HiveMetaStore, RetryingHMSHandler, ThriftHiveMetastore, HadoopThriftAuthBridge
+14092	 VectorFileSinkOperator  SerializationUtilities  Kryo
+14109	 HadoopJobExecHelper, ExecDriver
+14113	 SessionState  FunctionTask  Registry
+14210	 ExecDriver, ReloadingX509TrustManager, TimelineClientImpl, SSLFactory
+14234	 TestHiveMetaStorePartitionSpecs, TestObjectStore, testDatabaseOps
+14258	 CommonJoinOperator, ExecReducer, ReduceTask, RowContainer, SequenceFileRecordReader
+14292	 TxnHandler
+14293	 Utilities, DagUtils, TezTask, Task, Driver, SQLOperation, UserGroupInformation
+14297	 OrcRecordUpdater, DFSOutputStream, DFSClient, DistributedFileSystem, FileSystem, HiveEndPoint, HiveWriter
+14313	 TestMetaStoreMetrics, MetricsTestUtils
+14363	 MapRecordProcessor TezProcessor
+14402	 BytesColumnVector
+14448	 OrcInputFormat
+14521	 CodahaleMetrics
+14538	 Commands
+14607	 OrcInputFormat, TestTxnCommands2, HiveInputFormat, JobSubmitter, ExecDriver, MapRedTask, Driver
+14617	 GenericUDFMapValues, ExecMapper, MapOperator, SelectOperator
+14659	 SemanticAnalyzer DFSOutputStream
+14690	 FSNamesystem, NameNodeRpcServer, ClientNamenodeProtocolServerSideTranslatorPB, SessionState, TaskRunner
+14694	 UDFRand, FunctionRegistry
+14743	 HiveHBaseTableInputFormat
+14784	 Operation  HiveSessionImpl  CLIService
+14839	 TestSessionManagerMetrics
+15143	 LlapInputFormat

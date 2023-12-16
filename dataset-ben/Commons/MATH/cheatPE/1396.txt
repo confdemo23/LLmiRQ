@@ -1,0 +1,6 @@
+Overflows in "UniformIntegerDistribution"
+In o.a.c.m.distribution.UniformIntegerDistribution, several methods will compute an invalid result when the lower and upper bounds are such thatupper - loweroverflows.
+Affected methods:probability
+cumulativeProbability
+getNumericalVarianceMethodgetNumericalMeanwill return an invalid result whenupper + loweroverflows.
+A possible fix is to define instances variablesupperPlusLower = (double) upper + (double) lower;upperMinusLower = (double) upper - (double) lower;and use them instead of the respective integer operations in the above methods.

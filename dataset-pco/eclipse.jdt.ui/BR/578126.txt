@@ -1,0 +1,30 @@
+[Code Clean-Up] "Make inner classes static where possible" results into compilation failure
+When I do Source->Clean-Up on the following example, it results into compilation failure :
+
+I selected the rule "Make inner classes static where possible" but in this case it was not possible.
+
+Example:
+
+public class Test {
+    public Test() {
+        this.new Inner();
+    }
+    class Inner {
+        
+    }
+}
+
+Result:
+
+public class Test {
+    public Test() {
+        this.new Inner();
+    }
+    static class Inner {
+        
+    }
+}
+
+I never use this syntax "this.new", I just happened to find it in org.eclipse.jdt.internal.compiler.classfmt.ModuleInfo.
+
+There are other rules to remove redundant 'this.' prefixes, and it might be a possible idea to extend them to support this syntax, but if the rule removing the prefix is not selected by the user, it will still fail.

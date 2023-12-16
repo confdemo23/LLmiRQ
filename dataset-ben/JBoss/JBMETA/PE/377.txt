@@ -1,0 +1,4 @@
+NullPointerException occurs during parsing web.xml with missing context param-name
+[Opening this issue to track down the issue specific to jboss metadata] 
+While deploying a WAR, If the web.xml file is used which has context 'param-value' defined, However it has missing 'param-name' then it causes NullPointerException.
+Refer to for more details: https://issues.jboss.org/browse/WFLY-3699 

@@ -1,0 +1,5 @@
+245	 DatasetTemplate, FileSystemDatasetWriter, AvroWriter, HdfsWritingMessageHandler, ReflectDatumWriter, GenericDatumWriter, DataFileWriter
+374	 AbstractDataStreamWriter, INodeId, FSNamesystem, NameNodeRpcServer
+375	 RollingFileNamingStrategy NumberFormatException forInputString
+510	 TextFileStoreAppendTests, DataChecksum, RemoteBlockReader2, DFSInputStream, LineReader, TextFileReader
+572	 FsShell, FsShellPermissions, Chmod

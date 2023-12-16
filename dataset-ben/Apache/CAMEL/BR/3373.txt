@@ -1,0 +1,2 @@
+markRollbackOnlyLast should remove caused exception to avoid it affecting outer transaction
+The markRollbackOnlyLast() should remove any caused exception because it should not affect outer transactions.

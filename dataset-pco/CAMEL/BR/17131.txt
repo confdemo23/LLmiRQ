@@ -1,0 +1,30 @@
+camel-kafka - JMX MBean InstanceAlreadyExistsException thrown
+When using camel-kafka receiving messages, InstanceAlreadyExistsException is thrown in registerAppInfo().
+
+{code}
+[thread #0 - KafkaConsumer[abc]] AppInfoParser                  WARN  Error registering AppInfo mbean
+javax.management.InstanceAlreadyExistsException: kafka.consumer:type=app-info,id=789
+        at java.management/com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:436)
+        at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(DefaultMBeanServerInterceptor.java:1855)
+        at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:955)
+        at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:890)
+        at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:320)
+        at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522)
+        at org.apache.kafka.common.utils.AppInfoParser.registerAppInfo(AppInfoParser.java:64)
+        at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:814)
+        at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:665)
+        at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:646)
+        at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:626)
+        at org.apache.camel.component.kafka.DefaultKafkaClientFactory.getConsumer(DefaultKafkaClientFactory.java:34)
+        at org.apache.camel.component.kafka.KafkaConsumer$KafkaFetchRecords.doInit(KafkaConsumer.java:267)
+        at org.apache.camel.component.kafka.KafkaConsumer$KafkaFetchRecords.run(KafkaConsumer.java:215)
+        at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at java.base/java.lang.Thread.run(Thread.java:834)
+{code}
+
+Attached project test-kafka.zip for quickly reproduce this issue.
+
+Note that there was no this kind of issue on Camel-kafka 2.24.x.

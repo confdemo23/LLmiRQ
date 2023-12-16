@@ -1,0 +1,7 @@
+Investigate Infinispan test XML files do not validate against XSD yet are parsed ok
+So one or the other should to change.
+cvc-complex-type.2.4.a: Invalid content was found starting with element 'store'. 
+One of '{"urn:jboss:domain:infinispan:2.0":backups, "urn:jboss:domain:infinispan:2.0":backup-for}' is expected.
+cvc-complex-type.2.4.a: Invalid content was found starting with element 'mixed-keyed-jdbc-store'. 
+One of '{"urn:jboss:domain:infinispan:2.0":backups, "urn:jboss:domain:infinispan:2.0":backup-for}' is expected.
+cvc-complex-type.2.4.d: Invalid content was found starting with element 'binary-keyed-table'. No child element is expected at this point.

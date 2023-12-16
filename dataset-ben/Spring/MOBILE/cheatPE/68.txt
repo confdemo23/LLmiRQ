@@ -1,0 +1,2 @@
+Site path formatting is overwritten if it contains no slashes or only trailing slashes
+In AbstractSitePathUrlFactory, if a site path is configured with no slashes or only a trailing slash, formatPath incorrectly formats the path.

@@ -1,0 +1,4 @@
+Regression in showing global messages only
+Global messages are identified as follows:
+(isGlobalOnly) ? facesContext.getMessages(null) : facesContext.getMessages();
+facesContext.getMessages(null) incorrectly returns all messages.

@@ -1,0 +1,25 @@
+Replication fails in case of Control Character in the table description
+In case there is a control character in the table metadata. The LOAD fails while decoding the JSON.
+
+*Exception:*
+{noformat}
+Caused by: com.fasterxml.jackson.core.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 24)): has to be escaped using backslash to be included in string value
+ at [Source: (String)"{"server":"","servicePrincipal":"","db":"sampletestreplic","table":"testlmo","tableType":"MANAGED_TABLE","tableObjBeforeJson":"{\"1\":{\"str\":\"testlmo\"},\"2\":{\"str\":\"sampletestreplic\"},\"3\":{\"str\":\"hive\"},\"4\":{\"i32\":1641717786},\"5\":{\"i32\":0},\"6\":{\"i32\":0},\"7\":{\"rec\":{\"1\":{\"lst\":[\"rec\",1,{\"1\":{\"str\":\"dc_codeacteurcandidat\"},\"2\":{\"str\":\"string\"},\"3\":{\"str\":\"Code de l'acteur de candidature (^XA' a dterminer, ^XC' conseiller ou ^XD' candidat)\"}}]},\"[truncated 3054 chars]; line: 1, column: 445]
+        at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1840) ~[jackson-core-2.10.5.jar:2.10.5]
+        at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:712) ~[jackson-core-2.10.5.jar:2.10.5]
+        at com.fasterxml.jackson.core.base.ParserBase._throwUnquotedSpace(ParserBase.java:1046) ~[jackson-core-2.10.5.jar:2.10.5]
+        at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._finishString2(ReaderBasedJsonParser.java:2073) ~[jackson-core-2.10.5.jar:2.10.5]
+        at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._finishString(ReaderBasedJsonParser.java:2044) ~[jackson-core-2.10.5.jar:2.10.5]
+        at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.getText(ReaderBasedJsonParser.java:293) ~[jackson-core-2.10.5.jar:2.10.5]
+        at com.fasterxml.jackson.databind.deser.std.StringDeserializer.deserialize(StringDeserializer.java:35) ~[jackson-databind-2.10.5.1.jar:2.10.5.1]
+        at com.fasterxml.jackson.databind.deser.std.StringDeserializer.deserialize(StringDeserializer.java:10) ~[jackson-databind-2.10.5.1.jar:2.10.5.1]
+        at com.fasterxml.jackson.databind.deser.impl.FieldProperty.deserializeAndSet(FieldProperty.java:138) ~[jackson-databind-2.10.5.1.jar:2.10.5.1]
+        at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:288) ~[jackson-databind-2.10.5.1.jar:2.10.5.1]
+        at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:151) ~[jackson-databind-2.10.5.1.jar:2.10.5.1]
+        at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4218) ~[jackson-databind-2.10.5.1.jar:2.10.5.1]
+        at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3214) 
+        at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3182) 
+        at org.apache.hadoop.hive.metastore.messaging.json.JSONMessageDeserializer.getAlterTableMessage(JSONMessageDeserializer.java:111) 
+        at org.apache.hadoop.hive.ql.parse.repl.load.message.TableHandler.extract(TableHandler.java:111)]
+        at org.apache.hadoop.hive.ql.parse.repl.load.message.TableHandler.handle(TableHandler.java:51) 
+        at org.apache.hadoop.hive.ql.exec.repl.incremental.IncrementalLoadTasksBuilder.analyzeEventLoad(IncrementalLoadTasksBuilder.java:213){noformat}

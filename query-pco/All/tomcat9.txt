@@ -1,0 +1,56 @@
+66076	WsFrameBase WsSession WsRemoteEndpointImplBase WsRemoteEndpointAsync WsRemoteEndpointBasic NullPointerException when opening Code Formatter preference page with old (M9) code formatter profilesHi,I installed RC1 but use my old workspace from M9. When I open Window >Preferences > Java > Code Style > Code Formatter, I get the attached NPE(probably because of the old formatter profile format):I will aslo attach my<workspace>/.metadata/.plugins/org.eclipse.jdt.ui/code_formatter_profiles.xmlBest regards, Jan----------------- exception -------------------------------Message: Plug-in "org.eclipse.jdt.ui" was unable to instantiateclass "org.eclipse.jdt.internal.ui.preferences.CodeFormatterPreferencePage".Stacktrace:java.lang.NullPointerExceptionat org.apache.xalan.serialize.SerializerToXML.writeAttrString(SerializerToXML.java:2340)at org.apache.xalan.serialize.SerializerToXML.processAttribute(SerializerToXML.java:1099)at org.apache.xalan.serialize.SerializerToXML.startElement(SerializerToXML.java:959)at org.apache.xalan.transformer.TransformerIdentityImpl.startElement(TransformerIdentityImpl.java:1020)at org.apache.xml.utils.TreeWalker.startNode(TreeWalker.java:379)at org.apache.xml.utils.TreeWalker.traverse(TreeWalker.java:191)at org.apache.xalan.transformer.TransformerIdentityImpl.transform(TransformerIdentityImpl.java:325)atorg.eclipse.jdt.internal.ui.preferences.formatter.ProfileStore.writeProfilesToStream(ProfileStore.java:296)at org.eclipse.jdt.internal.ui.preferences.formatter.ProfileStore.writeProfiles(ProfileStore.java:148)atorg.eclipse.jdt.internal.ui.preferences.formatter.ProfileStore.readOldForCompatibility(ProfileStore.java:200)at org.eclipse.jdt.internal.ui.preferences.formatter.ProfileStore.readProfiles(ProfileStore.java:140)atorg.eclipse.jdt.internal.ui.preferences.formatter.CodingStyleConfigurationBlock.<init>(CodingStyleConfigurationBlock.java:347)at org.eclipse.jdt.internal.ui.preferences.CodeFormatterPreferencePage.<init>(CodeFormatterPreferencePage.java:44)at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)at java.lang.reflect.Constructor.newInstance(Constructor.java:274)at java.lang.Class.newInstance0(Class.java:308)at java.lang.Class.newInstance(Class.java:261)atorg.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:141)atorg.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:124)atorg.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:113)at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:180)at org.eclipse.ui.internal.dialogs.WorkbenchPreferenceNode.createPage(WorkbenchPreferenceNode.java:60)at org.eclipse.jface.preference.PreferenceDialog.showPage(PreferenceDialog.java:984)at org.eclipse.jface.preference.PreferenceDialog$8.selectionChanged(PreferenceDialog.java:529)at org.eclipse.jface.viewers.StructuredViewer$3.run(StructuredViewer.java:452)at org.eclipse.core.internal.runtime.InternalPlatform.run(InternalPlatform.java:615)at org.eclipse.core.runtime.Platform.run(Platform.java:758)at org.eclipse.jface.viewers.StructuredViewer.firePostSelectionChanged(StructuredViewer.java:450)at org.eclipse.jface.viewers.StructuredViewer.handlePostSelect(StructuredViewer.java:710)at org.eclipse.jface.viewers.StructuredViewer$5.widgetSelected(StructuredViewer.java:728)at org.eclipse.jface.util.OpenStrategy.firePostSelectionEvent(OpenStrategy.java:200)at org.eclipse.jface.util.OpenStrategy.access$4(OpenStrategy.java:195)at org.eclipse.jface.util.OpenStrategy$3.run(OpenStrategy.java:349)at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:106)at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2693)at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2385)at org.eclipse.jface.window.Window.runEventLoop(Window.java:668)at org.eclipse.jface.window.Window.open(Window.java:648)at org.eclipse.ui.internal.OpenPreferencesAction.run(OpenPreferencesAction.java:72)at org.eclipse.jface.action.Action.runWithEvent(Action.java:881)at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:915)at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:866)at org.eclipse.jface.action.ActionContributionItem$7.handleEvent(ActionContributionItem.java:785)at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:82)at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:796)at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:2716)at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2382)at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1363)at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1334)at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:253)at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:141)at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:96)at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:334)at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:273)at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:128)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)at java.lang.reflect.Method.invoke(Method.java:324)at org.eclipse.core.launcher.Main.basicRun(Main.java:185)at org.eclipse.core.launcher.Main.run(Main.java:638)at org.eclipse.core.launcher.Main.main(Main.java:622)Session data:eclipse.buildId=I200405290105java.version=1.4.2_04java.vendor=Sun Microsystems Inc.BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_USCommand-line arguments: -showlocation
+66277	TagLibraryInfo TagFileProcessor JasperException TagLibraryValidator TagInfo TagAttributeInfo TagData TagExtraInfo TagHandlerPool No CVS views in build I20040608_2000- start build with a fresh workspace- Window->Show View. Observe: no CVS categroy.
+65736	 org.apache.naming.factory.BeanFactory, javax.el.ELProcessor
+65757	 WriteListener, onWritePossible
+65776	 DuplicateAcceptDetectedTests
+65785	 Tomcat, HTTP/2.0, HPACK, org.apache.coyote.http2.Http2Protocol
+65806	 SessionIdGeneratorBase, SecureRandom, SHA1PRNG
+65853	 CsrfPreventionFilter, doFilter(), getSkipNonceCheck(), getRequestedPath()
+65959	 FunctionMapperImpl, write
+66009	 AuthenticatorBase.invoke, RealmBase.findSecurityConstraints, RealmBase.hasUserDataPermission, CombinedRealm.authenticate, RealmBase.authenticate, RealmBase.getPrincipal, AuthenticatorBase.register, RealmBase.hasResourcePermission, RealmBase.hasRole
+66023	 POST, h2c-upgrade, requestbody, inputstream, NullPointerException
+66068	 RemoteIpValve, request.getRemoteAddr(), request.startAsync()
+66084	 OutputBuffer, writeBytes()
+66120	 FormAuthenticator, j_security_check
+66194	 Http2UpgradeHandler, hpackDecoder.isHeaderSizeExceeded, hpackDecoder.getHeaderEmitter().setHeaderException
+66195	 jdk.util.jar.enableMultiRelease, Tomcat, JAR API
+66209	 UseBloomFilterForArchives, AbstractArchiveResourceSet.gc()
+66235	 MyBean, getText, JasperELResolver, GraalBeanELResolver, beanClass.getMethods(), PropertyDescriptor.getReadMethod, setValue, getValue, ELInterpreterFactory.EL_INTERPRETER_CLASS_NAME, JspUtil.interpreterCall
+66294	 Util.getContextClassLoader(), AccessController.doPrivileged, PrivilegedGetTccl.run(), Thread.currentThread().getContextClassLoader()
+66338	 ErrorReportValve, ErrorReportValve.report, ErrorReportValve.invoke, JsonErrorReportValve
+66359	 RemoteIpValve, RemoteIpFilter, setProtocolHeader
+66419	 AstFunction.getValue, testVarargMethod, ExpressionFactory.newInstance, ELContext, StandardELContext, FunctionMapper.mapFunction, createValueExpression, getValue, assertEquals
+66442	 DefaultHttp2Headers, Reactor Netty, Tomcat
+66471	 RemoteIpFilter, getSession(), getSession(Boolean), doGetSession, createSessionCookie, RemoteIpValve, ApplicationSessionCookieConfig
+66513	 PersistentManager, PersistentValve, org.apache.catalina.valves.PersistentValve, org.apache.catalina.session.DataSourceStore
+66524	 Cache.java, evicts
+66535	 FarmWarDeployer, FileMessageFactory, maxValidTime
+66536	 tomcat/jasper, umlaut.jsp, umlaut_tag.java
+66548	 Sec-WebSocket-Key, Tomcat
+66591	 HttpResponse, AJP messages
+66602	 Http2UpgradeHandler, endRequestBodyFrame, AbstractNonZeroStream, Stream, getInputBuffer, onDataAvailable, onSwallowedDataFramePayload
+66627	 MessageBytes, MessageBytes.toString(), MessageBytes.getType(), CoyoteAdapter.postParseRequest()
+66665	 Context.findRoleMapping, PropertiesRoleMappingListener
+66686	 Connector, maxParameterCount
+66841	 Http2UpgradeHandler, doStreamCancel, AbstractProcessor, asyncStateMachine.asyncError(), processSocketEvent, AbstractProtocol's timeoutFuture, timeoutAsync method.
+66842	 Http2AsyncUpgradeHandler, Http11Nio2Protocol, Http2Protocol, WINDOW_UPDATE
+65677	 Http11InputBuffer CoyoteInputStream ChunkedInputFilter SocketWrapperBase Request InputBuffer Nio2Channel Nio2Endpoint ThreadPoolExecutor TaskThread
+65726	 Request InputBuffer CoyoteInputStream H2cServlet
+65763	 WsRemoteEndpointImplBase, WsSession, AsyncChannelWrapperSecure, WsRemoteEndpointImplClient
+65921	 Request RewriteValve
+65940	 DefaultInstanceManager StandardWrapper StandardContext HostConfig
+65952	 TomcatWebServer ServletWebServerApplicationContext ApplicationContextException WebServerException LifecycleException TaskThreadFactory PrivilegedSetAccessControlContext InaccessibleObjectException
+65991	 SSLAuthenticator HostConfig
+66196	 HPackHuffman HpackEncoder Http2UpgradeHandler Stream StreamProcessor AbstractProcessor Response Http2OutputBuffer OutputBuffer CoyoteOutputStream
+66203	 JspCompilationContext
+66276	 Http2UpgradeHandler Http2AsyncUpgradeHandler Http2Parser SocketWrapperBase NioEndpoint ThreadPoolExecutor TaskThread
+66388	 ClassLoader Tomcat URI
+66512	 AjpProcessor MessageBytes
+66530	 Http2UpgradeHandler Http2Parser AprEndpoint ThreadPoolExecutor TaskThread
+66554	 WebappClassLoaderBase SeedGenerator
+66567	 NamingContextListener StandardContext LifecycleException URI toURL
+66574	 WsSession WebSocketEndPoint AbstractWebSocketEndPoint WsRemoteEndpointImplBase ThreadPoolExecutor CompletableFuture WsFrameBase WsHttpUpgradeHandler NioEndpoint
+66582	 ImportHandler SessionModel PageContextImpl JspContextWrapper HttpJspBase HttpServlet JspServletWrapper JspServlet
+66600	 Http11OutputBuffer ChunkedOutputFilter Http11Processor AbstractProcessor Response OutputBuffer CoyoteOutputStream ResponseWriter CommittingOutputStream OutboundMessageContext ContainerResponse ServerRuntime Errors RequestScope
+66681	 PerMessageDeflate WsRemoteEndpointImplBase WsRemoteEndpointBase
+66822	 Net NioEndpoint

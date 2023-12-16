@@ -1,0 +1,3 @@
+Review hasRole/hasAuthority documentation in SecurityExpressionOperations
+1. After the changes from SEC-2758 the hasRole/hasAuthority methods are not 100% synonyms.
+2. hasAuthority(String) is described as a synonym for itself
