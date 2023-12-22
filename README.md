@@ -3,12 +3,12 @@
 ## Repository Directory Structure
 
 - BR: bug information file (.xml)
-- dataset-ben: bug reports (Dataset$_{Ben}$) in different categories (PE*, PE-, ST*, ST-, NL)
-- dataset-pce: bug reports (Dataset$_{Ben}$) in different categories (PE*, PE-, ST*, ST-, NL)
-- query-ben: queries for Dataset$_{Ben}$
-- query-pco: queries for Dataset$_{Pco}$
-- results-ben: results for Dataset$_{Ben}$
-- results-pco: results for Dataset$_{Pco}$
+- dataset-ben: bug reports ($Dataset_{Ben}$) in different categories (PE*, PE-, ST*, ST-, NL)
+- dataset-pce: bug reports ($Dataset_{Ben}$) in different categories (PE*, PE-, ST*, ST-, NL)
+- query-ben: queries for $Dataset_{Ben}$
+- query-pco: queries for $Dataset_{Pco}$
+- results-ben: results for $Dataset_{Ben}$
+- results-pco: results for $Dataset_{Pco}$
 
 ## Dataset
 
@@ -19,7 +19,7 @@
 - JBoss: [ENTESB](https://github.com/jboss-fuse/fuse), [JBMETA](https://github.com/jboss/metadata), [ELY](https://github.com/wildfly-security/wildfly-elytron), [SWARM](https://github.com/thorntail/thorntail), [WFARQ](https://github.com/wildfly/wildfly-arquillian), [WFCORE](https://github.com/wildfly/wildfly-core.git), [WFLY](https://github.com/wildfly/wildfly.git), [WFMP](https://github.com/wildfly/wildfly-maven-plugin.git)
 - Spring: [AMQP](https://github.com/spring-projects/spring-amqp), [ANDROID](https://github.com/spring-projects/spring-android), [BATCH](https://github.com/spring-projects/spring-batch), [BATCHADM](https://github.com/spring-projects/spring-batch-admin), [DATACMNS](https://github.com/spring-projects/spring-data-commons), [DATAGRAPH](https://github.com/spring-projects/spring-data-neo4j), [DATAJPA](https://github.com/spring-projects/spring-data-jpa), [DATAMONGO](https://github.com/spring-projects/spring-data-mongodb), [DATAREDIS](https://github.com/spring-projects/spring-data-redis), [DATAREST](https://github.com/spring-projects/spring-data-rest), [LDAP](https://github.com/spring-projects/spring-ldap), [MOBILE](https://github.com/spring-projects/spring-mobile), [ROO](https://github.com/spring-projects/spring-roo), [SEC](https://github.com/spring-projects/spring-security), [SECOAUTH](https://github.com/spring-projects/spring-security-oauth), [SGF](https://github.com/spring-projects/spring-data-gemfire), [SHDP](https://github.com/spring-projects/spring-hadoop), [SHL](https://github.com/spring-projects/spring-shell), [SOCIAL](https://github.com/spring-projects/spring-social), [SOCIALFB](https://github.com/spring-projects/spring-social-facebook), [SOCIALLI](https://github.com/spring-projects/spring-social-linkedin), [SOCIALTW](https://github.com/spring-projects/spring-social-twitter), [SPR](https://github.com/spring-projects/spring-framework), [SWF](https://github.com/spring-projects/spring-webflow), [SWS](https://github.com/spring-projects/spring-ws)
 
-### Dataset$_{Pco}$
+### $Dataset_{Pco}$
 
 - Apache: [CAMEL](https://github.com/apache/camel), [HBASE](https://github.com/apache/hbase), [HIVE](https://github.com/apache/hive)
 - Eclipse: [eclipse.jdt.core](https://github.com/eclipse-jdt/eclipse.jdt.core), [eclipse.jdt.debug](https://github.com/eclipse-jdt/eclipse.jdt.debug), [eclipse.jdt.ui](https://github.com/eclipse-jdt/eclipse.jdt.ui), [eclipse.platform.ui](https://github.com/eclipse-platform/eclipse.platform.ui)
