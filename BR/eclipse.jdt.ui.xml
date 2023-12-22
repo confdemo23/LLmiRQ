@@ -1,0 +1,2738 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<bugrepository name="eclipse.jdt.ui">
+    <bug id="576389" opendate="2021-10-01 11:49:16" fixdate="2021-10-23 12:03:35" resolution="Fixed">
+        <buginformation>
+            <summary>[JUnit 5] Update to JUnit 5.8.1</summary>
+            <description>JUnit 5.8.1 has been released on September 22, 2021:
+                https://junit.org/junit5/docs/5.8.1/release-notes/
+
+                JDT should update to JUnit 5.8.1.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.junit.JUnitPreferencesConstants.java</file>
+            <file type="M">org.eclipse.jdt.internal.junit.JunitPreferenceInitializer.java</file>
+            <file type="M">org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport.java</file>
+            <file type="M">org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576431" opendate="2021-10-04 19:06:13" fixdate="2021-10-29 22:16:07" resolution="Fixed">
+        <buginformation>
+            <summary>[refactoring] Refactor SurroundWithTryWithResouresRefacatoring to jdt.core.manipulation</summary>
+            <description>jdt.ls requires SurroundWithTryWithResourcesRefactoring</description>
+            <version>4.21</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.QuickAssistProcessorUtil.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.surround.ExceptionAnalyzer.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.surround.SurroundWithTryWithResourcesAnalyzer.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.surround.SurroundWithTryWithResourcesRefactoringCore.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.refactoring.AllTests.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.surround.SurroundWithTryCatchRefactoring.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.surround.SurroundWithTryWithResourcesRefactoring.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.QuickAssistProcessor.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.proposals.AssignToVariableAssistProposal.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576432" opendate="2021-10-05 05:22:59" fixdate="2021-11-10 07:24:03" resolution="Fixed">
+        <buginformation>
+            <summary>[16] [quickfix] Provide quick fix to create a new Record when suggesting new types</summary>
+            <description>From Java 16 Records are a standard feature.
+
+                While suggesting new type creation in quick fixes for missing types, we suggest Class , interface but do not suggest Record. We will need to add support to provide
+                quickfix for new Record too.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.CorrectionMessages.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.QuickFixTest17.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.proposals.NewCUUsingWizardProposal.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576482" opendate="2021-10-06 18:24:06" fixdate="2022-02-10 20:54:25" resolution="Fixed">
+        <buginformation>
+            <summary>Add serial version ID generates empty comment</summary>
+            <description>version: 4.22, commit https://git.eclipse.org/c/jdt/eclipse.jdt.ui.git/commit/?id=a8e3244e6579dcfc19dc4db727589e9ce9b67ee5
+                A related issue - https://github.com/eclipse/eclipse.jdt.ls/issues/1899
+
+                Steps to reproduce:
+
+                - open the following class
+                import java.io.Serializable;
+
+                public class Test3 implements Serializable {
+
+                }
+                - call Quick Fix)Add default serial version ID
+                - you will get
+                import java.io.Serializable;
+
+                public class Test3 implements Serializable {
+
+                /**
+                *
+                */
+                private static final long serialVersionUID = 1L;
+
+                }
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.AbstractSerialVersionOperationCore.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576502" opendate="2021-10-07 20:23:41" fixdate="2021-11-06 01:35:00" resolution="Fixed">
+        <buginformation>
+            <summary>[quickfix] Add try-with-resources quick fix for possible unclosed resource error</summary>
+            <description>When an autocloseable resource is missing a close:
+
+                public class TestMissingTryWithResources {
+
+                public void foo() throws IOException {
+                BufferedReader br = new BufferedReader(new FileReader("a.b"));
+                br.markSupported();
+                }
+
+                }
+
+                br will be noted as having a resource leak. There is no current quick fix for surrounding with try-with-resources though a quick assist is offered for the same
+                line.
+            </description>
+            <version>4.21</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.QuickAssistProcessorUtil.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.QuickFixTest1d8.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.LocalCorrectionsSubProcessor.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.QuickAssistProcessor.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.QuickFixProcessor.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576517" opendate="2021-10-08 07:44:06" fixdate="2021-11-10 07:28:36" resolution="Fixed">
+        <buginformation>
+            <summary>NewClassWizard should throw an error if record is selected as a super class</summary>
+            <description>In a NewClassWizard, selecting a Record as a super class should throw an error as a Record is final and cannot be extended.</description>
+            <version>4.21</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.ui.tests.wizardapi.NewTypeWizardTest17.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.wizards.NewWizardMessages.java</file>
+            <file type="M">org.eclipse.jdt.ui.wizards.NewTypeWizardPage.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576518" opendate="2021-10-08 07:45:40" fixdate="2021-11-10 07:27:19" resolution="Fixed">
+        <buginformation>
+            <summary>NewClassWizard should throw an error if a final class is selected as a super class</summary>
+            <description>In a NewClassWizard, selecting a final class as a super class should throw an error as it cannot be extended.</description>
+            <version>4.21</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.ui.tests.wizardapi.NewTypeWizardTest.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.wizardapi.NewTypeWizardTest17.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.wizards.NewWizardMessages.java</file>
+            <file type="M">org.eclipse.jdt.ui.wizards.NewTypeWizardPage.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576535" opendate="2021-10-08 22:14:12" fixdate="2021-10-29 22:24:45" resolution="Fixed">
+        <buginformation>
+            <summary>[quick assist] SurroundWithTryWithResources fails inside blocks and when anonymous classes used</summary>
+            <description>The following tests fail to surround fileReader declarations with try-with-resources quick assist:
+
+                public void foo2() throws IOException {
+                final File file = new File("somefile");
+                final FileReader fileReader = new FileReader(file);
+                char[] in = new char[50];
+                fileReader.read(in);
+                new Runnable() {
+                public void run() {
+                try {
+                fileReader.close();
+                FileReader localReader = new FileReader(file);
+                } catch (IOException ex) { /* nop */ }
+                }}.run();
+                }
+
+                public void foo3(boolean f1, boolean f2) throws IOException {
+                File file = new File("somefile");
+                if (f1) {
+                FileReader fileReader = new FileReader(file);
+                char[] in = new char[50];
+                fileReader.read(in);
+                while (true) {
+                FileReader loopReader = new FileReader(file);
+                loopReader.close();
+                break;
+                }
+                } else {
+                FileReader fileReader = new FileReader(file);
+                if (f2)
+                fileReader.close();
+                }
+                }
+            </description>
+            <version>4.21</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.surround.SurroundWithTryWithResourcesAnalyzer.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.surround.SurroundWithTryWithResourcesRefactoringCore.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.refactoring.SurroundWithResourcesTests1d8.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.surround.SurroundWithTryWithResourcesRefactoring.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.QuickAssistProcessor.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576549" opendate="2021-10-10 14:07:14" fixdate="2021-11-06 09:03:10" resolution="Fixed">
+        <buginformation>
+            <summary>[type filters] Missing proposals in Swing, etc. because of java.awt.* type filter enabled by default</summary>
+            <description>Since 4.21, the type filter java.awt.* has been added and is enabled by default (see bug 571758).
+
+                Unfortunately, the AWT API is exposed/used in Swing, for example by javax.swing.JFrame extending java.awt.Frame, by javax.swing.JComponent extending
+                java.awt.Component which provides the method getBounds() that returns a java.awt.Rectangle, etc.
+
+                There is also java.awt.Robot contained in AWT without there being an alternative for that in Swing or somewhere else.
+
+                Samples:
+
+                class Sample extends javax.swing.JFrame {
+                void init() {
+                | // (- here no proposal for "setSize(...)"
+                }
+                void foo(javax.swing.JFrame jFrame) {
+                jFrame.| // (- here no proposal for "setSize(...)"
+                }
+                void bounds() {
+                this.getBounds().| // (- here no proposal for "x"
+                }
+                void robot() {
+                new Rob| // (- here no proposal for "Robot"
+                }
+                }
+
+                A couple of questions were asked on Stack Overflow because of this (most are closed as duplicate of the first; some might already be deleted):
+                - https://stackoverflow.com/q/69357171/6505250 (JFrame)
+                - https://stackoverflow.com/q/69515233/6505250 (Rectangle)
+                - https://stackoverflow.com/q/69511421/6505250 (Graphics)
+                - https://stackoverflow.com/q/69509896/6505250 (BorderLayout)
+                - https://stackoverflow.com/q/69393367/6505250 (JFrame)
+                - https://stackoverflow.com/q/69415574/6505250 (JFrame)
+                - https://stackoverflow.com/q/69399195/6505250 (BorderLayout)
+                - ...
+
+                I suggest removing the type filter "java.awt.*" or at least disabling it by default.
+                Instead, I would like to have "java.awt.List" filtered by default.
+            </description>
+            <version>4.21</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.JavaPlugin.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576566" opendate="2021-10-11 19:44:15" fixdate="2021-11-09 11:15:06" resolution="Fixed">
+        <buginformation>
+            <summary>Preference ) Editor ) Content-Assist auto-activation triggers text is too narrow</summary>
+            <description>Preference ) Editor ) Content-Assist auto-activation triggers text is too narrow and hides most of the chars in some cases.</description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.CodeAssistConfigurationBlock.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576615" opendate="2021-10-13 22:59:29" fixdate="2022-03-15 16:27:39" resolution="Fixed">
+        <buginformation>
+            <summary>Create a java type/member filter editing component</summary>
+            <description>JDT contains a couple of preference pages, dialogs where Java type/member filters can be configured.
+                For example in : JUnitPreferencePage,TypeFilterPreferencePage,JavaStepFilterPreferencePage,SelectImportsDialog,ExceptionFilterEditor
+
+                The visible behavior is more or less the same, however there are slight differences between them:
+                * Is it possible to add a new filter manually, without package/type selector? Is it happens in a new dialog, or inline in the table?
+                * Is it possible to edit a filter? In a dialog or inline?
+                * How the results are stored?
+                ** In IPreferenceStorage under two keys, with the values separated by ',' or by ';'
+                ** In some other structure
+                * Does it show icons in the table for packages/types?
+                * Does it handle pressing the delete button?
+                * Does it maintain inactive filters too, or just has active ones?
+
+                Creating a dedicated component would:
+                * improve the user experience
+                * reduce the amount of code to maintain, and make it more easy to develop new features
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.filtertable.FilterManager.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.filtertable.JavaFilterTable.java</file>
+            <file type="M">org.eclipse.jdt.internal.junit.JUnitPreferencesConstants.java</file>
+            <file type="M">org.eclipse.jdt.internal.junit.JunitPreferenceInitializer.java</file>
+            <file type="M">org.eclipse.jdt.internal.junit.ui.JUnitPreferencePage.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.filtertable.Filter.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.filtertable.FilterLabelProvider.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.filtertable.FilterViewerComparator.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.filtertable.SWTFactory.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.filtertable.TypeFilterInputDialog.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.TypeFilterPreferencePage.java</file>
+            <file type="M">org.eclipse.jdt.ui.JavaUI.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576619" opendate="2021-10-14 06:12:30" fixdate="2021-10-14 07:05:05" resolution="Fixed">
+        <buginformation>
+            <summary>Add toString() to MethodCall and MethodWrapper</summary>
+            <description>Useful while debugging Call Hierarchy Co, like bug 533524 changes.
+                I will push a trivial patch.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.callhierarchy.MethodCall.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.callhierarchy.MethodWrapper.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576632" opendate="2021-10-14 16:50:50" fixdate="2021-10-21 04:39:14" resolution="Fixed">
+        <buginformation>
+            <summary>Convert hard-coded char delimiter as string applying "Join" cleanup</summary>
+            <description>Instead of writing String.valuOf('a'), "Join" cleanup should write "a".
+
+                Given:
+                boolean isFirst = true;
+                StringBuilder concatenation = new StringBuilder();
+
+                for (String text : texts) {
+                if (isFirst) {
+                isFirst = false;
+                } else {
+                concatenation = concatenation.append(',');
+                }
+                concatenation = concatenation.append(text);
+                }
+
+                return concatenation.toString();
+
+                When:
+                Clean up the code enabling "Uses String.join() when possible"
+
+                Then:
+                String concatenation= String.join(",", texts);
+
+                return concatenation;
+
+                It also allows not hard-coded delimiters if the delimiter is immutable.
+            </description>
+            <version>4.21</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest1d8.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.JoinCleanUp.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576701" opendate="2021-10-18 14:47:50" fixdate="2021-10-29 22:26:41" resolution="Fixed">
+        <buginformation>
+            <summary>[quickfix] Surround with try-with-resources duplicated</summary>
+            <description>The new quickfix for resource leaks to surround with try-with-resources is also offered as a quick assist so is duplicated when using CTRL-1.</description>
+            <version>4.21</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.QuickAssistProcessor.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.QuickFixTest.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.QuickFixTest1d8.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576733" opendate="2021-10-19 11:44:46" fixdate="2022-02-10 23:03:09" resolution="Fixed">
+        <buginformation>
+            <summary>Problems View freeze on git rebase.</summary>
+            <description>Created attachment 287348
+                VisualVM screenshot.png
+
+                The user restarted eclipse after waiting for minutes. Samples where taken for a half minute. The samples where taken on windows, but similar stacktraces where
+                reported for gtk in bug 450663#c7. However the general symptoms of bug 450663 are different.
+
+                In thread "Worker-106" we see jgits IndexChangedEvent.
+                In thread "main" we see ProblemMarkerManager.runPendingUpdates() updating the Problems View for extended period of time.
+
+                Autobuild was enabled during rebase and my guess is a lot of jdt problems occurred during rebase.
+                The Problems View was on default settings to show only 100 items.
+
+                The main focus should be to get rid of the UI freeze even if the problem view update might be slow.
+            </description>
+            <version>4.20</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.viewsupport.ProblemMarkerManager.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576826" opendate="2021-10-21 21:15:07" fixdate="2021-10-29 22:17:25" resolution="Fixed">
+        <buginformation>
+            <summary>[refactoring] Refactor TypeAnnotationRewrite to jdt.core.manipulation</summary>
+            <description>Move TypeAnnotationRewrite to jdt.core.manipulation for use by jdt.ls.</description>
+            <version>4.21</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.dom.TypeAnnotationRewrite.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576949" opendate="2021-10-29 07:08:53" fixdate="2022-04-06 19:57:33" resolution="Fixed">
+        <buginformation>
+            <summary>Add org.assertj.core.api.Assertions to JDT favorites</summary>
+            <description>AssertJ is (one of) the most popular Assert frameworks. I suggest we add org.assertj.core.api.Assertions as favorite to the JDT preferences. AFAIK this is
+                almost no negative side-effects and will help developer using this framework.
+
+                Similar to BUg 562639 in which we did this for Mockito.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.junit.ui.JUnitPlugin.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576980" opendate="2021-10-31 12:27:45" fixdate="2021-11-04 22:38:21" resolution="Fixed">
+        <buginformation>
+            <summary>[releng] Files with CR-LF as line endings</summary>
+            <description>There are three source files in JDT UI that use CR-LF line endings. Two of these even use mixed line endings (the majority of lines terminated by LF, a few
+                by CR-LF).
+
+                I suggest to normalize these files to use LF as line ending.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.ui.actions.OpenNewRecordWizardAction.java</file>
+            <file type="M">org.eclipse.jdt.ui.wizards.NewTypeWizardPage.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576995" opendate="2021-11-01 18:13:06" fixdate="2022-01-05 20:15:59" resolution="Fixed">
+        <buginformation>
+            <summary>[junit 5] Add @Suite support from JUnit 5.8.1</summary>
+            <description>JUnit 5.8.1 now supports the @Suite annotation for a class with additional annotations such as @SelectClasses, @SelectPackages, @SuiteDisplayName.
+            </description>
+            <version>4.21</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.junit.JUnitCorePlugin.java</file>
+            <file type="M">org.eclipse.jdt.internal.junit.launcher.JUnit5TestFinder.java</file>
+            <file type="M">org.eclipse.jdt.internal.junit.util.CoreTestSearchEngine.java</file>
+            <file type="M">org.eclipse.jdt.junit.launcher.JUnitLaunchConfigurationDelegate.java</file>
+            <file type="M">org.eclipse.jdt.internal.junit.JUnitPreferencesConstants.java</file>
+            <file type="M">org.eclipse.jdt.internal.junit.JunitPreferenceInitializer.java</file>
+            <file type="M">org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport.java</file>
+            <file type="M">org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577040" opendate="2021-11-03 14:01:21" fixdate="2021-11-08 06:44:28" resolution="Fixed">
+        <buginformation>
+            <summary>Cursor positioning in lambda completion</summary>
+            <description>AFAICS the cursor position for the new lambda expression could be improve or tab could be supported to jump to the code block.
+
+                Example:
+
+                @Test
+                void numberFieldsetWrongValueType() {
+                String testString = "testString";
+                assertThrows(IllegalArgumentException.class, CODE_COMPLETION_HERE)
+                }
+
+                I get:
+
+                @Test
+                void numberFieldsetWrongValueType() {
+                String testString = "testString";
+                assertThrows(IllegalArgumentException.class, CURSOR_HERE()-));
+                }
+
+                IMHO it would be better if the cursor could be after the -) or if I could jump to this position with tab.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.text.java.JavaLambdaCompletionProposal.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577180" opendate="2021-11-10 12:05:00" fixdate="2021-11-17 11:32:14" resolution="Fixed">
+        <buginformation>
+            <summary>[16] New Java Record creation wizard not creating stubs for inherited abstract methods on request</summary>
+            <description>In the New Java Record creation Wizard, there is an option provided under
+                'Which method stubs would you like to create?' to create 'inherited abstract methods' stubs.
+
+                Selecting this and creating a record should create method stubs for
+
+                1) public boolean equals(Object obj)
+                2) public int hashCode()
+                3) public String toString()
+
+                which are abstract methods sin java.lang.Record.
+
+                but currently these method stubs are not created.
+
+                The right behaviour is that when the option to create these method stubs is selected, the above method stubs also need to be created in the Record.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.codemanipulation.StubUtility2Core.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.wizardapi.NewTypeWizardTest17.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577182" opendate="2021-11-10 12:30:36" fixdate="2021-11-17 11:32:42" resolution="Fixed">
+        <buginformation>
+            <summary>[16] Provide option in New Record Creation Wizard to create stubs for the main function.</summary>
+            <description>Currently there is no option provided in New Record Creation Wizard to create stubs for
+
+                public static void main(String []args) at the time of record creation.
+
+                This support is there in New Class Creation Wizard. Similar support needs to be added to New Record Creation Wizard.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.ui.tests.wizardapi.NewTypeWizardTest17.java</file>
+            <file type="M">org.eclipse.jdt.ui.wizards.NewClassWizardPage.java</file>
+            <file type="M">org.eclipse.jdt.ui.wizards.NewRecordWizardPage.java</file>
+            <file type="M">org.eclipse.jdt.ui.wizards.NewTypeWizardPage.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577217" opendate="2021-11-11 18:29:30" fixdate="2021-12-26 12:00:59" resolution="Fixed">
+        <buginformation>
+            <summary>[formatting] Add formatting setting for whitespace in permits clause - UI</summary>
+            <description>The UI part for bug 576373</description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">formatter.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.formatter.FormatterMessages.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.formatter.FormatterModifyDialog.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577232" opendate="2021-11-12 11:51:22" fixdate="2022-01-05 19:59:49" resolution="Fixed">
+        <buginformation>
+            <summary>[content assist] Quick Fix to add a static import to the list of content assist favorites</summary>
+            <description>Created attachment 287503
+                content assist on static imports
+
+                It would be nice to easily add a statically imported class to my list of favorites.
+
+                Hence, I propose a quick fix in the java editor on a static import line so that the user can add this class to content assist favorites effortlessly. Currently,
+                there is no quick fix at all available.
+            </description>
+            <version>4.21</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.CorrectionMessages.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.AssistQuickFixTest.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.IProposalRelevance.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.QuickAssistProcessor.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.proposals.AddStaticFavoriteProposal.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577286" opendate="2021-11-16 12:03:47" fixdate="2022-02-17 16:33:52" resolution="Fixed">
+        <buginformation>
+            <summary>partially qualified names need a asterisk wildcard to be found by Open Type dialog</summary>
+            <description>Bug 447798 converts
+                "C:\org.eclipse.debug.core\bin\org\eclipse\debug\core\DebugPlugin$EventDispatchJob.class"
+                to
+                DebugPlugin.EventDispatchJob
+                but that class is not found by the Open Type dialog.
+
+                Alternative search pattern which find org.eclipse.debug.core.DebugPlugin.EventDispatchJob:
+                .DebugPlugin.EventDispatchJob
+                *.DebugPlugin.EventDispatchJob
+                *DebugPlugin.EventDispatchJob
+                I am not sure about the differences but i suggest to automatically prepend
+                *.
+                when the resulting search text contains ".".
+
+                i.e. Map$Entry -) *.Map.Entry
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.ui.tests.core.TypeInfoTest.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.util.TypeInfoFilter.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577317" opendate="2021-11-18 07:14:56" fixdate="2022-05-10 06:12:49" resolution="Fixed">
+        <buginformation>
+            <summary>[17] Provide quick fixes to add permitted class/interface for sealed class/interface</summary>
+            <description>I create a "sealed" class C1 without any permits.
+                This shows compilation error "Sealed class or interface lacks the permits clause and no class or interface from the same compilation unit declares test1 as its
+                direct superclass or superinterface"
+                But I don't see any corresponding quick fix, it will be good to see 2 quickfixes. One to create class in the same compilation unit and other one to create a child
+                class in the same package.
+            </description>
+            <version>4.21</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.CorrectionMessages.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.QuickFixTest17.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.IProposalRelevance.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.LocalCorrectionsSubProcessor.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.QuickFixProcessor.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.proposals.NewCUUsingWizardProposal.java</file>
+            <file type="M">org.eclipse.jdt.ui.wizards.NewTypeWizardPage.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577540" opendate="2021-11-30 21:14:14" fixdate="2022-01-05 19:21:15" resolution="Fixed">
+        <buginformation>
+            <summary>Refactor SwitchExpressionsFix.createConvertToSwitchExpressionFix to jdt.core.manipulation</summary>
+            <description>The static method: SwitchExpressionsFix.createConvertToSwitchExpressionFix() method is used by the QuickAssistProcessor. The jdt.ls team wishes to use this
+                quick assist and has requested this static method be moved to jdt.core.manipulation via the SwitchExpressionsFixCore class. In addition, the quick assist uses a
+                QuickAssistProcessor utility getIndex() which can be moved to QuickAssistProcessorUtil in jdt.core.manipulation.
+            </description>
+            <version>4.21</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.QuickAssistProcessorUtil.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.SwitchExpressionsFixCore.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.SwitchExpressionsFix.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.QuickAssistProcessor.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577699" opendate="2021-12-08 22:03:53" fixdate="2022-01-05 19:14:59" resolution="Fixed">
+        <buginformation>
+            <summary>[extract method] Entire lambda body cannot be extracted</summary>
+            <description>If the entire body of a lambda expression is selected then it cannot be extracted to a method. An error says that the selection is not valid. This is not
+                the case with the body of an if statement for example.
+
+                public void foo(Object parent) {
+                List(String) a = new ArrayList()();
+                if (parent instanceof Composite) {
+                ((Composite) parent).addDisposeListener(e -) {
+                a.add("abc");
+                a.add("def");
+                });
+                }
+
+                }
+
+                In the code example, attemtping to select from paren to paren surrounding the a.add statements or if the Shift+alt+up is used to select the whole block, extract to
+                method will not work either as quick assist or via the Refactoring menu.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.ui.tests.refactoring.resources.ExtractMethodWorkSpace.ExtractMethodTests.error_out.A_test804.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.refactoring.ExtractMethodTests1d8.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.code.ExtractMethodAnalyzer.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.code.ExtractMethodRefactoring.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577766" opendate="2021-12-12 21:34:52" fixdate="2022-01-05 19:03:31" resolution="Fixed">
+        <buginformation>
+            <summary>Source -) Clean-up rule "Remove unnecessary parentheses" on Java 16 instanceof pattern matching</summary>
+            <description>The rule will remove parenthesis on a if with negation :
+
+                if (!(expression)) =) if (!expression)
+
+                However if the expression is a Java 16 instanceof pattern matching, removing the parenthesis results into a compilation errror "The operator ! is undefined for the
+                argument type(s) x" where x is the variable in the following if statement:
+
+                if(!(x instanceof Employee e)) {
+
+                }
+
+                The parenthesis must be kept when this pattern is matched.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.core.manipulation.dom.NecessaryParenthesesChecker.java</file>
+            <file type="M">org.eclipse.jdt.internal.core.manipulation.dom.OperatorPrecedence.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest16.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577840" opendate="2021-12-16 10:19:58" fixdate="2022-01-05 20:02:46" resolution="Fixed">
+        <buginformation>
+            <summary>Dead code in the equals method of RequiredProjectWrapper</summary>
+            <description>The affected equals method can be found in org.eclipse.jdt.internal.ui.packageview.ClassPathContainer$RequiredProjectWrapper.
+
+                The code after the second if statement (see below) is never reached. This causes that duplicate project dependencies appear in our Eclipse project.
+
+                public boolean equals(Object obj) {
+                if (this == obj)
+                return true;
+                if (obj == null || obj!=this)
+                return false;
+                if (getClass() != obj.getClass())
+                return false;
+                RequiredProjectWrapper other= (RequiredProjectWrapper) obj;
+                if (!Objects.equals(fClasspathEntry, other.fClasspathEntry)) {
+                return false;
+                }
+                if (!Objects.equals(fParent, other.fParent)) {
+                return false;
+                }
+                if (!Objects.equals(fProject, other.fProject)) {
+                return false;
+                }
+                return true;
+                }
+            </description>
+            <version>4.21</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.packageview.ClassPathContainer.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577919" opendate="2021-12-21 09:44:08" fixdate="2022-02-17 17:09:56" resolution="Fixed">
+        <buginformation>
+            <summary>[call hierarchy] show subtype hierarchies for Call Hierarchy with Callee Hierarchy</summary>
+            <description>Take the following example
+
+                public interface A {
+                void foo();
+                }
+
+                public class AImpl implements A {
+                public void foo() {
+                System.out.println();
+                }
+                }
+
+
+                public class B {
+                private A handler;
+
+                public avoid callFoo() {
+                handler.foo();
+
+                }
+
+                }
+
+
+                invoking the callee hierarchy on the callFoo method. I would expect to see the hierarchy with AImpl.foo. Today's implementation stops at A.foo.
+
+                This is probably due to we don't know which implementation to expand on if there are multiple implementations.
+
+                But as a starting point could we expand if we only see one subtype, may be that solution can be improved in future to expand on demand for selected subtype when
+                there are multiple by the user.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.callhierarchy.CallSearchResultCollector.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.callhierarchy.CalleeAnalyzerVisitor.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.callhierarchy.CalleeMethodWrapper.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.callhierarchy.Implementors.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.callhierarchy.MethodCall.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.callhierarchy.CallHierarchyTestHelper.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.core.CallHierarchyTest.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.callhierarchy.CallHierarchy.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.callhierarchy.CallHierarchyLabelProvider.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.callhierarchy.CallHierarchyMessages.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.JavaBasePreferencePage.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.PreferencesMessages.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578081" opendate="2022-01-06 12:46:20" fixdate="2022-02-10 22:48:11" resolution="Fixed">
+        <buginformation>
+            <summary>Source clean-up save actions swallow comment when adding brackets</summary>
+            <description>When source clean-up adds brackets to a single-line if statement, it removes the comment.
+
+                Example :
+
+                public class Test {
+                public static void main(String[] args) {
+                if (args.length == 0) // no args
+                System.out.println("no args");
+                }
+                }
+
+                Result:
+
+                public class Test {
+                public static void main(String[] args) {
+                if (args.length == 0) {
+                System.out.println("no args");
+                }
+                }
+                }
+
+                The comment "no args" vanished with the refactoring.
+
+                The rule is "Use blocks in if/while/for/do" statements under "Code style" tab.
+
+                Version: 2021-12 (4.22.0)
+                Build id: 20211202-1639
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.ControlStatementsFix.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.ControlStatementsFix.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578115" opendate="2022-01-08 12:21:25" fixdate="2022-01-29 19:54:55" resolution="Fixed">
+        <buginformation>
+            <summary>[formatter] Wrong indentation for method invocation on multi-line expression - UI</summary>
+            <description>UI part for bug 577117</description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.formatter.ProfileVersionerCore.java</file>
+            <file type="M">formatter.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.formatter.FormatterMessages.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.formatter.FormatterModifyDialog.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578122" opendate="2022-01-09 11:25:00" fixdate="2022-01-29 19:12:59" resolution="Fixed">
+        <buginformation>
+            <summary>[formatter] Case statement in switch expression is not line wrapped - UI</summary>
+            <description>UI part for bug 578044</description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.formatter.ProfileVersionerCore.java</file>
+            <file type="M">org.eclipse.jdt.ui.preview.formatter.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.formatter.FormatterMessages.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.formatter.FormatterModifyDialog.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578124" opendate="2022-01-09 11:42:05" fixdate="2022-04-06 19:48:52" resolution="Fixed">
+        <buginformation>
+            <summary>[Code Clean-Up] "Reduce indentation" is missing expression</summary>
+            <description>When I do Source-)Clean-Up on the example below, it results into a compilation failure.
+
+                I selected the 2 following rules:
+                - Reduce indentation
+                - Merge conditions of if/else if/else that have the same blocks
+
+                Example:
+
+                public class Test {
+                public static void main(String[] args) {
+                if (!(args != null)) {
+                System.out.println("null args: we should not be here");
+                } else {
+                return;
+                }
+                return;
+                }
+                }
+
+                Result:
+
+                public class Test {
+                public static void main(String[] args) {
+                if (MISSING) {
+                return;
+                }
+                System.out.println("null args: we should not be here");
+                return;
+                }
+                }
+
+
+                Moreover, the error could go un-noticed with this modified example (it compiles only by coincidence) :
+
+                public class Test {
+
+                public static final boolean MISSING = true;
+
+                public static void main(String[] args) {
+                if (MISSING) {
+                return;
+                }
+                System.out.println("null args: we should not be here");
+                return;
+                }
+                }
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.dom.ASTNodeFactory.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.ReduceIndentationCleanUp.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578126" opendate="2022-01-09 12:29:37" fixdate="2022-04-06 20:05:14" resolution="Fixed">
+        <buginformation>
+            <summary>[Code Clean-Up] "Make inner classes static where possible" results into compilation failure</summary>
+            <description>When I do Source-)Clean-Up on the following example, it results into compilation failure :
+
+                I selected the rule "Make inner classes static where possible" but in this case it was not possible.
+
+                Example:
+
+                public class Test {
+                public Test() {
+                this.new Inner();
+                }
+                class Inner {
+
+                }
+                }
+
+                Result:
+
+                public class Test {
+                public Test() {
+                this.new Inner();
+                }
+                static class Inner {
+
+                }
+                }
+
+                I never use this syntax "this.new", I just happened to find it in org.eclipse.jdt.internal.compiler.classfmt.ModuleInfo.
+
+                There are other rules to remove redundant 'this.' prefixes, and it might be a possible idea to extend them to support this syntax, but if the rule removing the
+                prefix is not selected by the user, it will still fail.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.StaticInnerClassCleanUp.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578127" opendate="2022-01-09 14:49:20" fixdate="2022-04-06 20:07:26" resolution="Fixed">
+        <buginformation>
+            <summary>[Code Clean-Up] "Reduce indentation" fails</summary>
+            <description>Consider the example below:
+
+                public class Test {
+                public static void main(String[] args) {
+                if (args != null)
+                if (args.length == 0)
+                System.out.println("no args");
+                else
+                throw new IllegalArgumentException(); // remove this comment or add enclosing brackets to make clean-up successful
+                }
+                }
+
+                When I do "Source-)Clean-up", and choose "reduce indentation" under "code style" tab, the refactoring fails with the following stacktrace:
+
+                java.lang.reflect.InvocationTargetException
+                at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:395)
+                at org.eclipse.jface.wizard.WizardDialog.run(WizardDialog.java:1033)
+                at org.eclipse.ltk.ui.refactoring.RefactoringWizard.createChange(RefactoringWizard.java:662)
+                at org.eclipse.ltk.ui.refactoring.RefactoringWizard.computeUserInputSuccessorPage(RefactoringWizard.java:504)
+                at org.eclipse.ltk.ui.refactoring.UserInputWizardPage.computeSuccessorPage(UserInputWizardPage.java:77)
+                at org.eclipse.ltk.ui.refactoring.UserInputWizardPage.getNextPage(UserInputWizardPage.java:113)
+                at org.eclipse.jdt.internal.ui.fix.CleanUpRefactoringWizard$CleanUpConfigurationPage.getNextPage(CleanUpRefactoringWizard.java:437)
+                at org.eclipse.jface.wizard.WizardDialog.nextPressed(WizardDialog.java:910)
+                at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:468)
+                at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+                at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+                at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+                at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+                at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+                at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+                at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+                at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+                at org.eclipse.jface.window.Window.open(Window.java:799)
+                at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation.lambda$0(RefactoringWizardOpenOperation.java:190)
+                at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+                at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation.run(RefactoringWizardOpenOperation.java:209)
+                at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation.run(RefactoringWizardOpenOperation.java:126)
+                at org.eclipse.jdt.internal.ui.refactoring.actions.RefactoringStarter.activate(RefactoringStarter.java:41)
+                at org.eclipse.jdt.internal.corext.refactoring.RefactoringExecutionStarter.startCleanupRefactoring(RefactoringExecutionStarter.java:257)
+                at org.eclipse.jdt.internal.ui.actions.AllCleanUpsAction.performRefactoring(AllCleanUpsAction.java:71)
+                at org.eclipse.jdt.internal.ui.actions.CleanUpAction.run(CleanUpAction.java:180)
+                at org.eclipse.jdt.internal.ui.actions.CleanUpAction.run(CleanUpAction.java:101)
+                at org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchRun(SelectionDispatchAction.java:278)
+                at org.eclipse.jdt.ui.actions.SelectionDispatchAction.run(SelectionDispatchAction.java:252)
+                at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+                at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+                at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+                at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+                at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+                at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+                at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+                at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+                at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+                at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+                at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+                at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+                at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+                at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+                at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+                at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+                at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+                at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+                at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+                at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+                at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+                at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+                at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+                at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+                Caused by: org.eclipse.text.edits.MalformedTreeException: Range of child edit lies outside of parent edit
+                at org.eclipse.text.edits.TextEdit.internalAdd(TextEdit.java:780)
+                at org.eclipse.text.edits.TextEdit.addChild(TextEdit.java:340)
+                at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.addEdit(ASTRewriteAnalyzer.java:350)
+                at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doTextRemove(ASTRewriteAnalyzer.java:410)
+                at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doTextRemoveAndVisit(ASTRewriteAnalyzer.java:418)
+                at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.rewriteBodyNode(ASTRewriteAnalyzer.java:943)
+                at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:3010)
+                at org.eclipse.jdt.core.dom.IfStatement.accept0(IfStatement.java:178)
+                at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:3129)
+                at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisit(ASTRewriteAnalyzer.java:453)
+                at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doTextRemoveAndVisit(ASTRewriteAnalyzer.java:421)
+                at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.rewriteBodyNode(ASTRewriteAnalyzer.java:970)
+                at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2993)
+                at org.eclipse.jdt.core.dom.IfStatement.accept0(IfStatement.java:178)
+                at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:3129)
+                at org.eclipse.jdt.core.dom.rewrite.ASTRewrite.internalRewriteAST(ASTRewrite.java:307)
+                at org.eclipse.jdt.core.dom.rewrite.ASTRewrite.rewriteAST(ASTRewrite.java:296)
+                at org.eclipse.jdt.internal.corext.refactoring.structure.CompilationUnitRewrite.attachChange(CompilationUnitRewrite.java:290)
+                at org.eclipse.jdt.internal.corext.refactoring.structure.CompilationUnitRewrite.createChange(CompilationUnitRewrite.java:252)
+                at org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.createChange(CompilationUnitRewriteOperationsFixCore.java:101)
+                at org.eclipse.jdt.internal.corext.fix.CleanUpRefactoring.calculateChange(CleanUpRefactoring.java:775)
+                at org.eclipse.jdt.internal.corext.fix.CleanUpRefactoring$CleanUpASTRequestor.calculateSolutions(CleanUpRefactoring.java:301)
+                at org.eclipse.jdt.internal.corext.fix.CleanUpRefactoring$CleanUpASTRequestor.acceptAST(CleanUpRefactoring.java:279)
+                at org.eclipse.jdt.core.dom.CompilationUnitResolver.resolve(CompilationUnitResolver.java:930)
+                at org.eclipse.jdt.core.dom.CompilationUnitResolver.resolve(CompilationUnitResolver.java:614)
+                at org.eclipse.jdt.core.dom.ASTParser.createASTs(ASTParser.java:954)
+                at org.eclipse.jdt.internal.corext.dom.ASTBatchParser.createASTs(ASTBatchParser.java:82)
+                at org.eclipse.jdt.internal.corext.fix.CleanUpRefactoring$CleanUpFixpointIterator.next(CleanUpRefactoring.java:399)
+                at org.eclipse.jdt.internal.corext.fix.CleanUpRefactoring.cleanUpProject(CleanUpRefactoring.java:682)
+                at org.eclipse.jdt.internal.corext.fix.CleanUpRefactoring.checkFinalConditions(CleanUpRefactoring.java:642)
+                at org.eclipse.ltk.core.refactoring.CheckConditionsOperation.run(CheckConditionsOperation.java:86)
+                at org.eclipse.ltk.core.refactoring.CreateChangeOperation.run(CreateChangeOperation.java:122)
+                at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+                at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+                at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+                at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.ReduceIndentationCleanUp.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578128" opendate="2022-01-09 15:32:17" fixdate="2022-02-10 22:51:46" resolution="Fixed">
+        <buginformation>
+            <summary>[Code Clean-Up] "Convert to switch expression where possible" discards assignments</summary>
+            <description>When I choose "Convert to switch expression where possible" in Source-)Code Clean-up menu on this example, the assignments end up being discarded.
+
+                Example:
+
+
+                public class Test {
+                public static void main(String[] args) {
+                boolean rulesOK = true;
+                switch (args[0].charAt(0)) {
+                case '+':
+                args[0] = "+";
+                break;
+                case '~':
+                args[0] = "~";
+                break;
+                case '-':
+                args[0] = "-";
+                break;
+                case '?':
+                args[0] = "?";
+                break;
+                default:
+                rulesOK = false;
+                }
+                System.out.println(rulesOK);
+                }
+                }
+
+                Result:
+
+
+                public class Test {
+                public static void main(String[] args) {
+                boolean rulesOK = true;
+                rulesOK = switch (args[0].charAt(0)) {
+                case '+' -) "+";
+                case '~' -) "~";
+                case '-' -) "-";
+                case '?' -) "?";
+                default -) false;
+                };
+                System.out.println(rulesOK);
+                }
+                }
+
+                It also yields a compilation failure due to the type mismatches.
+
+                I believe the sample could be considered non-elligible to the refactoring due to the impossiblity to decide between multiple variables to assign.
+
+                See also : org.eclipse.jdt.internal.compiler.batch.Main.addNewEntry(ArrayList(Classpath), String, ArrayList(String), String, String, boolean, boolean)
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.SwitchExpressionsFixCore.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest14.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578129" opendate="2022-01-09 15:43:04" fixdate="2022-02-10 22:50:05" resolution="Fixed">
+        <buginformation>
+            <summary>[Code Clean-Up] "Convert to switch expression where possible" result missing the default case</summary>
+            <description>Consider the example below (simplified from org.eclipse.osgi.util.NLS.log(int, String, Exception)) :
+
+
+                public class Test {
+                private static final int SEVERITY_ERROR = 0;
+                private static final int SEVERITY_WARNING = 1;
+
+                static void log(int severity) {
+                String statusMsg;
+                switch (severity) {
+                case SEVERITY_ERROR:
+                statusMsg = "Error: ";
+                break;
+                case SEVERITY_WARNING:
+                default:
+                statusMsg = "Warning: ";
+                }
+                System.err.println(statusMsg);
+                }
+                }
+
+                When I choose "Convert to switch expression where possible" in the Source-)Clean-Up menu, I end up with the default case missing:
+
+
+                public class Test {
+                private static final int SEVERITY_ERROR = 0;
+                private static final int SEVERITY_WARNING = 1;
+
+                static void log(int severity) {
+                String statusMsg = switch (severity) {
+                case SEVERITY_ERROR -) "Error: ";
+                case SEVERITY_WARNING -) "Warning: ";
+                };
+                System.err.println(statusMsg);
+                }
+                }
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.SwitchExpressionsFixCore.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest14.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578130" opendate="2022-01-09 16:02:37" fixdate="2022-02-10 22:44:09" resolution="Fixed">
+        <buginformation>
+            <summary>[Code Clean-Up] "Convert to switch expression where possible" swallows comments</summary>
+            <description>When I Choose "Convert to switch expression where possible" in the Source-)Clean-Up menu, the comments end up being discarded.
+
+                Example:
+
+                public class Test {
+                public static void main(String[] args) {
+                boolean isWhiteSpace;
+                switch (args[0].charAt(0)) {
+                case 10: /* \ u000a: LINE FEED */
+                case 12: /* \ u000c: FORM FEED */
+                case 13: /* \ u000d: CARRIAGE RETURN */
+                case 32: /* \ u0020: SPACE */
+                case 9: /* \ u0009: HORIZONTAL TABULATION */
+                isWhiteSpace = true;
+                break;
+                default:
+                isWhiteSpace = false;
+                }
+                System.out.println(isWhiteSpace);
+                }
+                }
+
+                Result:
+
+                public class Test {
+                public static void main(String[] args) {
+                boolean isWhiteSpace = switch (args[0].charAt(0)) {
+                case 10, 12, 13, 32, 9 -) true;
+                default -) false;
+                };
+                System.out.println(isWhiteSpace);
+                }
+                }
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.SwitchExpressionsFixCore.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest14.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578146" opendate="2022-01-11 06:33:53" fixdate="2022-04-06 19:25:22" resolution="Fixed">
+        <buginformation>
+            <summary>[cleanup] Text block cleanup fails on string ending with backslash</summary>
+            <description>String s = "first\r\n" + "second\r\n" + "third\\";
+
+                This gets converted basically correctly to a text block. However, the backslash in the last string then acts as an escape sequence for the text block ending,
+                therefore the result doesn't compile anymore.
+
+                String s = """
+                first
+                second
+                third\""";
+
+                // this is still contained in the text block
+
+                I'm not sure if there is any valid escape sequence to avoid that, so this might be a case where the cleanup just shouldn't do anything, probably.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.StringConcatToTextBlockFixCore.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest15.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578168" opendate="2022-01-11 20:58:00" fixdate="2022-02-10 22:46:11" resolution="Fixed">
+        <buginformation>
+            <summary>[Code Clean-Up] "Convert if/else if/else chain to switch" results into compilation failure</summary>
+            <description>The different cases of a switch share the same scope of local variables, contrary to if/else blocks.
+
+                Introducing brackets in the cases might be necessay like in the example below:
+
+
+                public class TestCleanUp {
+
+                private int gt;
+                private int b;
+                private int a;
+
+                public void test() {
+                if (gt == 1) {
+                b = b - 150;
+                a = a - 20;
+                } else if (gt == 2) {
+                final double br = Math.random();
+                b = (int) (b - br * 40 - 80);
+                } else if (gt == 3) {
+                b = b - 150;
+                } else {
+                final double br = Math.random();
+                b = (int) (b - br * 30 - 80);
+                }
+                }
+
+                }
+
+
+                Cleanup result:
+
+
+                public class TestCleanUp {
+
+                private int gt;
+                private int b;
+                private int a;
+
+                public void test() {
+                switch (gt) {
+                case 1:
+                b = b - 150;
+                a = a - 20;
+                break;
+                case 2:
+                final double br = Math.random();
+                b = (int) (b - br * 40 - 80);
+                break;
+                case 3:
+                b = b - 150;
+                break;
+                default:
+                final double br = Math.random();
+                b = (int) (b - br * 30 - 80);
+                break;
+                }
+                }
+
+                }
+
+                Possible expected result with brackets:
+
+
+                public class TestCleanUp {
+
+                private int gt;
+                private int b;
+                private int a;
+
+                public void test() {
+                switch (gt) {
+                case 1: {
+                b = b - 150;
+                a = a - 20;
+                break;
+                }
+                case 2: {
+                final double br = Math.random();
+                b = (int) (b - br * 40 - 80);
+                break;
+                }
+                case 3: {
+                b = b - 150;
+                break;
+                }
+                default: {
+                final double br = Math.random();
+                b = (int) (b - br * 30 - 80);
+                break;
+                }
+                }
+                }
+
+                }
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.SwitchFixCore.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest12.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578169" opendate="2022-01-11 21:18:03" fixdate="2022-02-10 22:36:50" resolution="Fixed">
+        <buginformation>
+            <summary>[Code Clean-Up] "Remove unused local variables" results into compilation failure</summary>
+            <description>The problem occurs when an unused local variable is assigned a direct field access.
+
+                Consider the following example:
+
+                public class TestCleanUp {
+
+                static class Point {
+                int x, y;
+                }
+
+                static class Rect {
+                Point loc;
+                int w, h;
+                }
+
+                Rect getRect() {
+                return new Rect();
+                }
+
+                void test() {
+                int x;
+                int y;
+                x = getRect().loc.x;
+                y = getRect().loc.y;
+                System.out.println(y);
+                }
+                }
+
+                And the clean-up result:
+
+                public class TestCleanUp {
+
+                static class Point {
+                int x, y;
+                }
+
+                static class Rect {
+                Point loc;
+                int w, h;
+                }
+
+                Rect getRect() {
+                return new Rect();
+                }
+
+                void test() {
+                int y;
+                getRect().loc.x;
+                y = getRect().loc.y;
+                System.out.println(y);
+                }
+                }
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.UnusedCodeFixCore.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578170" opendate="2022-01-11 21:38:25" fixdate="2022-02-10 22:33:58" resolution="Fixed">
+        <buginformation>
+            <summary>[Code Clean-Up] "Use '==' or '^' on booleans" results into compilation failure</summary>
+            <description>I did Source-)Clean-up and selected "Use '==' or '^' on booleans" on the following example:
+
+                public class TestCleanUp {
+
+                void check(String s1, String s2) {
+                assert (s1 == null s2 != null) || (s1 != null s2 == null);
+                }
+
+                }
+
+                Result:
+
+                public class TestCleanUp {
+
+                void check(String s1, String s2) {
+                assert s1 == null == s2 != null;
+                }
+
+                }
+
+                Error "Incompatible operand types boolean and String"
+
+                could it be just missing parenthesis?
+                assert (s1 == null) == (s2 != null);
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.StrictlyEqualOrDifferentCleanUp.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578200" opendate="2022-01-13 13:00:18" fixdate="2022-01-13 15:07:23" resolution="Fixed">
+        <buginformation>
+            <summary>[18] Allow JDT to target Java 18 in compiler preferences</summary>
+            <description>Add "18 (BETA)" on the Compiler preferences page and show the corresponding disclaimer when it is selected.</description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.util.JavaModelUtil.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.ComplianceConfigurationBlock.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.PreferencesMessages.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578388" opendate="2022-01-26 10:11:49" fixdate="2022-02-16 08:33:59" resolution="Fixed">
+        <buginformation>
+            <summary>Outline selection invalidates enclosing project for search</summary>
+            <description>Version: 2021-12 (4.22)
+                Build id: I20211124-1800
+
+                While editing a Java file, use of Search-)File offers Enclosing Project as a search context.
+
+                However after selecting an outline entry, this option is lost. Surely the enclosing project should still be available?
+
+                repro:
+
+                Edit a Java file.
+                Left click an outline entry.
+                Search-)File
+                -- Enclosing Project radio box is greyed out
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.JavaElementAdapterFactory.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578446" opendate="2022-01-29 17:16:14" fixdate="2022-01-29 19:14:23" resolution="Fixed">
+        <buginformation>
+            <summary>[formatter] Keep braced code on one line: settings for new switch constructs - UI</summary>
+            <description>The UI part for bug 578361</description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">formatter.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.formatter.FormatterMessages.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.formatter.FormatterModifyDialog.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578490" opendate="2022-01-31 14:43:58" fixdate="2022-02-17 17:04:29" resolution="Fixed">
+        <buginformation>
+            <summary>NPE in CPListElement.toString() when changing project classpath JRE to another JRE installation</summary>
+            <description>To reproduce:
+
+                1. Apply this change:
+
+                diff --git a/org.eclipse.jdt.ui/ui/org/eclipse/jdt/internal/ui/wizards/buildpaths/BuildPathBasePage.java
+                b/org.eclipse.jdt.ui/ui/org/eclipse/jdt/internal/ui/wizards/buildpaths/BuildPathBasePage.java
+                index 8cb4a06c0f..9d67b7f4bb 100644
+                --- a/org.eclipse.jdt.ui/ui/org/eclipse/jdt/internal/ui/wizards/buildpaths/BuildPathBasePage.java
+                +++ b/org.eclipse.jdt.ui/ui/org/eclipse/jdt/internal/ui/wizards/buildpaths/BuildPathBasePage.java
+                @@ -330,6 +330,7 @@ public abstract class BuildPathBasePage {
+                break;
+                rootCPListElement.addCPListElement(selElement);
+                List(CPListElement) all= listField.getElements();
+                + System.out.println(all);
+                listField.removeAllElements();
+                listField.setElements(all);
+                listField.refresh();
+
+                2. Debug Eclipse, the debuggee Eclipse:
+                3. Define a separate JRE 8 installation.
+                4. Create a Java project, default is classpath JRE 11.
+                5. Change the JRE 11 to JRE 8.
+                6. Observe NPE:
+
+                java.lang.NullPointerException
+                at org.eclipse.jdt.internal.ui.wizards.buildpaths.CPListElement.toString(CPListElement.java:635)
+                at java.base/java.lang.String.valueOf(String.java:2951)
+                at java.base/java.lang.StringBuilder.append(StringBuilder.java:168)
+                at java.base/java.util.AbstractCollection.toString(AbstractCollection.java:473)
+                at java.base/java.lang.String.valueOf(String.java:2951)
+                at java.base/java.io.PrintStream.println(PrintStream.java:897)
+                at org.apache.felix.gogo.runtime.threadio.ThreadPrintStream.println(ThreadPrintStream.java:184)
+                at org.eclipse.jdt.internal.ui.wizards.buildpaths.BuildPathBasePage.moveCPElementAcrossNode(BuildPathBasePage.java:333)
+                at org.eclipse.jdt.internal.ui.wizards.buildpaths.LibrariesWorkbookPage.editElementEntry(LibrariesWorkbookPage.java:903)
+                at org.eclipse.jdt.internal.ui.wizards.buildpaths.LibrariesWorkbookPage.editEntry(LibrariesWorkbookPage.java:754)
+                at org.eclipse.jdt.internal.ui.wizards.buildpaths.LibrariesWorkbookPage.libaryPageCustomButtonPressed(LibrariesWorkbookPage.java:468)
+                at org.eclipse.jdt.internal.ui.wizards.buildpaths.LibrariesWorkbookPage$LibrariesAdapter.customButtonPressed(LibrariesWorkbookPage.java:403)
+                at org.eclipse.jdt.internal.ui.wizards.dialogfields.TreeListDialogField.buttonPressed(TreeListDialogField.java:177)
+                at org.eclipse.jdt.internal.ui.wizards.dialogfields.TreeListDialogField.doButtonSelected(TreeListDialogField.java:412)
+                at org.eclipse.jdt.internal.ui.wizards.dialogfields.TreeListDialogField$2.widgetSelected(TreeListDialogField.java:373)
+                at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+                at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+                at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5895)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1516)
+                at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5126)
+                at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4581)
+                at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+                at org.eclipse.jface.window.Window.open(Window.java:799)
+                at org.eclipse.jdt.internal.ui.wizards.buildpaths.newsourcepage.ConfigureBuildPathAction.run(ConfigureBuildPathAction.java:88)
+                at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+                at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+                at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+                at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+                at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5895)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1516)
+                at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5126)
+                at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4581)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+                at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+                at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+                at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+                at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+                at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+                at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+                at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+                at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+                at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+                at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+                at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+                at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+                at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+                at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+                at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+                at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+                at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+                at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+                This NPE makes debugging in BuildPathBasePage.moveCPElementAcrossNode() very difficult, as toString() no longer works with the reproduction sequence. So all hovers
+                show "an invocation exception occurred in remote JVM" instead of actual text for elements of type CPListElement.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.wizards.buildpaths.CPListElement.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578491" opendate="2022-01-31 14:50:48" fixdate="2022-02-10 08:54:36" resolution="Fixed">
+        <buginformation>
+            <summary>Changing classpath to another installed JRE results in classpath re-ordering</summary>
+            <description>Created attachment 287938
+                Screenshot after changing JRE to 8.
+
+                To reproduce:
+
+                1. Define a separate JRE 8 installation.
+                2. Create a Java project, default is classpath JRE 11.
+                3. Change the JRE 11 to JRE 8.
+                4. Observe the order of elements on the classpath changed.
+            </description>
+            <version>4.21</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.wizards.buildpaths.BuildPathBasePage.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578527" opendate="2022-02-02 09:47:18" fixdate="2022-02-17 16:28:35" resolution="Fixed">
+        <buginformation>
+            <summary>Refactor SubstringCleanup to jdt.core.manipulation</summary>
+            <description>Create a core version of the cleanup in the jdt.core.manipulation package and forward the existing cleanup to use that new version</description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.SubstringCleanUpCore.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.SubstringCleanUp.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578535" opendate="2022-02-02 13:46:18" fixdate="2022-02-17 16:57:42" resolution="Fixed">
+        <buginformation>
+            <summary>[Spock][JUnit 5][m2e] Run as JUnit Test broken</summary>
+            <description>Created attachment 287960
+                Example project to reproduce
+
+                This action was working fine in 4.21 using Groovy Eclipse 4.4.0 and m2e.
+                In 4.22, I have the following stack when running a Junit test configuration:
+
+
+                org.junit.platform.commons.JUnitException: TestEngine with ID 'junit-jupiter' failed to discover tests
+                at org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discoverEngineRoot(EngineDiscoveryOrchestrator.java:111)
+                at org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discover(EngineDiscoveryOrchestrator.java:85)
+                at org.junit.platform.launcher.core.DefaultLauncher.discover(DefaultLauncher.java:92)
+                at org.junit.platform.launcher.core.DefaultLauncher.discover(DefaultLauncher.java:67)
+                at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.(init)(JUnit5TestReference.java:46)
+                at org.eclipse.jdt.internal.junit5.runner.JUnit5TestLoader.createTest(JUnit5TestLoader.java:96)
+                at org.eclipse.jdt.internal.junit5.runner.JUnit5TestLoader.loadTests(JUnit5TestLoader.java:48)
+                at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:513)
+                at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)
+                at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
+                at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+                Caused by: java.lang.NoClassDefFoundError: org/junit/jupiter/api/TestInstance$Lifecycle
+                at org.junit.jupiter.engine.JupiterTestEngine.discover(JupiterTestEngine.java:66)
+                at org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discoverEngineRoot(EngineDiscoveryOrchestrator.java:103)
+                ... 10 more
+                Caused by: java.lang.ClassNotFoundException: org.junit.jupiter.api.TestInstance$Lifecycle
+                at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+                at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+                at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+                ... 12 more
+
+                It looks like the jupiter-api is not included in the classpath anymore ?
+                I can work around the issue by adding the Junit 5 library in the classpath or adding the jupiter-api dependency in my pom, but it seems not acceptable.
+
+                You can import the project in attachment to reproduce the issue.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.junit.launcher.JUnitLaunchConfigurationDelegate.java</file>
+            <file type="M">org.eclipse.jdt.ui.unittest.junit.launcher.JUnitLaunchConfigurationDelegate.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578547" opendate="2022-02-02 19:59:56" fixdate="2022-02-17 16:58:58" resolution="Fixed">
+        <buginformation>
+            <summary>[open type] Make TypeInfoFilter more robust when a class is specified without a package in Open Type Dialog</summary>
+            <description>Currently if there is the following innerclass:
+
+                Test.TestInner1.TestInner2
+
+                Specifying Test.TestInner1.TestInner2 in the Open Type dialog works and
+                so does TestInner1 or TestInner2 by themselves
+
+                Specifying TestInner1.TestInner2 does not. Currently, TestInner1 is treated as a package name since it has a dot after it. If the TypeInfoFilter assumes that
+                upper-case names are not packages, this scenario plus others will work.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.ui.tests.core.TypeInfoTest.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.util.TypeInfoFilter.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578624" opendate="2022-02-07 15:58:55" fixdate="2022-04-06 20:16:00" resolution="Fixed">
+        <buginformation>
+            <summary>Refactor clean ups that only forward to core clean ups</summary>
+            <description>There is quite a bit of code that is the same among the clean-ups that forward their implementation to a core clean-up.
+
+                The idea is to share this code in a new common superclass for those clean-ups.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.AbstractCleanUpCoreWrapper.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.AbstractMultiFixCoreWrapper.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.ArrayWithCurlyCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.BooleanValueRatherThanComparisonCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.CodeStyleCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.ConstantsForSystemPropertyCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.DoWhileRatherThanWhileCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.InvertEqualsCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.LambdaExpressionsCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.OneIfRatherThanDuplicateBlocksThatFallThroughCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.PatternMatchingForInstanceofCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.PlainReplacementCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.PotentialProgrammingProblemsCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.PrimitiveComparisonCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.PrimitiveRatherThanWrapperCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.PullOutIfFromIfElseCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.RedundantComparatorCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.ReturnExpressionCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.StandardComparisonCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.StringBufferToStringBuilderCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.StringConcatToTextBlockCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.SubstringCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.SwitchCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.SwitchExpressionsCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.UnnecessaryCodeCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.ValueOfRatherThanInstantiationCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.VariableDeclarationCleanUp.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578693" opendate="2022-02-11 12:43:35" fixdate="2022-02-17 17:38:33" resolution="Fixed">
+        <buginformation>
+            <summary>Move occurrence finders to jdt.core.manipulation</summary>
+            <description>The following occurrence finders have no UI dependencies and can be moved to jdt.core.manipulation:
+
+                - BreakContinueTargetFinder
+                - ExceptionOccurrencesFinder
+                - ImplementOccurrencesFinder
+                - MethodExitsFinder
+
+                This allows for reuse in jdt.ls, see https://github.com/eclipse/eclipse.jdt.ls/pull/1941.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.core.manipulation.search.BreakContinueTargetFinder.java</file>
+            <file type="M">org.eclipse.jdt.internal.core.manipulation.search.ExceptionOccurrencesFinder.java</file>
+            <file type="M">org.eclipse.jdt.internal.core.manipulation.search.ImplementOccurrencesFinder.java</file>
+            <file type="M">org.eclipse.jdt.internal.core.manipulation.search.MethodExitsFinder.java</file>
+            <file type="M">org.eclipse.jdt.internal.core.manipulation.search.SearchMessages.java</file>
+            <file type="M">org.eclipse.jdt.text.tests.BreakContinueTargetFinderTest.java</file>
+            <file type="M">org.eclipse.jdt.text.tests.MarkOccurrenceTest1d7.java</file>
+            <file type="M">org.eclipse.jdt.text.tests.MarkOccurrenceTest1d8.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.javaeditor.JavaElementHyperlinkDetector.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.search.OccurrencesSearchResultPage.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.search.SearchMessages.java</file>
+            <file type="M">org.eclipse.jdt.ui.actions.FindBreakContinueTargetOccurrencesAction.java</file>
+            <file type="M">org.eclipse.jdt.ui.actions.FindExceptionOccurrencesAction.java</file>
+            <file type="M">org.eclipse.jdt.ui.actions.FindImplementOccurrencesAction.java</file>
+            <file type="M">org.eclipse.jdt.ui.actions.FindMethodExitOccurrencesAction.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578747" opendate="2022-02-14 19:34:37" fixdate="2022-04-06 20:45:00" resolution="Fixed">
+        <buginformation>
+            <summary>[JUnit] Re-enable button to re-run failed first for JUnit 5</summary>
+            <description>With https://bugs.eclipse.org/bugs/show_bug.cgi?id=518052 the non-functioning button "Rerun Test - Failures first" if using JUnit 5 got "fixed" by
+                disabling the button.
+
+                The corresponding JUnit-Issue: https://github.com/junit-team/junit5/issues/884 resulted in re-opening of https://github.com/junit-team/junit5/issues/13, that got
+                some attention, and in the meantime got closed as JUnit 5 has the ability to run tests in a certain order since several versions/years.
+
+                Thus I'd like to request to re-enable the option in eclipse, making use of the new JUnit-5-API. :-)
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.junit.ui.TestRunnerViewPart.java</file>
+            <file type="M">org.eclipse.jdt.internal.junit5.runner.FailuresFirstMethodOrderer.java</file>
+            <file type="M">org.eclipse.jdt.internal.junit5.runner.JUnit5TestLoader.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578788" opendate="2022-02-16 14:31:52" fixdate="2022-05-04 22:10:13" resolution="Fixed">
+        <buginformation>
+            <summary>Localization popup complains about missing key when using String constants</summary>
+            <description>We are using String-based localization in our projects, so we have the Messages.java class, containing the regular "public static String getString(final
+                String key)" method.
+
+                Since we have various keys, that are reused in the code base, we would like to define some String constants in the Messages class, that can be used as valid keys in
+                the localization messages. So our Messages.java class looks a bit like this:
+
+                ```
+                public class Messages {
+                private static final String BUNDLE_NAME = "com.example.jdt.messages"; //$NON-NLS-1$
+
+                private static final ResourceBundle RESOURCE_BUNDLE = ResourceBundle.getBundle(BUNDLE_NAME);
+
+                public static final String FIRST_TEXT = "SomeLongStringFoo.FirstText"; //$NON-NLS-1$
+                public static final String OTHER_TEXT = "SomeLongStringFoo.OtherText"; //$NON-NLS-1$
+
+                private Messages() {}
+
+                public static String getString(final String key) {
+                try {
+                return RESOURCE_BUNDLE.getString(key);
+                } catch (@SuppressWarnings("unused") final MissingResourceException e) {
+                return '!' + key + '!';
+                }
+                }
+                }
+                ```
+
+                If we now use these constants in our code as in `Messages.getString(Messages.FIRST_TEXT)` the popup complains that the key is missing. When I Ctrl-Click on the call
+                it opens the messages.properties but then fails to find the key.
+
+                It looks like it just doesn't follow the value of the String constant.
+            </description>
+            <version>4.15</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.nls.NLSHintHelper.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578794" opendate="2022-02-17 06:11:17" fixdate="2022-03-14 14:15:52" resolution="Fixed">
+        <buginformation>
+            <summary>[18] Merge from master to BETA_JAVA18 Periodically</summary>
+            <description>Merge periodically from master to BETA_JAVA18</description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.refactoring.reorg.RenameLinkedMode.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.viewsupport.ImagesOnFileSystemRegistry.java</file>
+            <file type="M">org.eclipse.jdt.core.manipulation.CoreASTProvider.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.SubstringCleanUpCore.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.formatter.ProfileVersionerCore.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.CorrectionMessages.java</file>
+            <file type="M">org.eclipse.jdt.internal.core.manipulation.dom.NecessaryParenthesesChecker.java</file>
+            <file type="M">org.eclipse.jdt.internal.core.manipulation.dom.OperatorPrecedence.java</file>
+            <file type="M">org.eclipse.jdt.internal.core.manipulation.search.BreakContinueTargetFinder.java</file>
+            <file type="M">org.eclipse.jdt.internal.core.manipulation.search.ExceptionOccurrencesFinder.java</file>
+            <file type="M">org.eclipse.jdt.internal.core.manipulation.search.ImplementOccurrencesFinder.java</file>
+            <file type="M">org.eclipse.jdt.internal.core.manipulation.search.MethodExitsFinder.java</file>
+            <file type="M">org.eclipse.jdt.internal.core.manipulation.search.SearchMessages.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.callhierarchy.CallSearchResultCollector.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.callhierarchy.CalleeAnalyzerVisitor.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.callhierarchy.CalleeMethodWrapper.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.callhierarchy.Implementors.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.callhierarchy.MethodCall.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.dom.ASTNodes.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.dom.LinkedNodeFinder.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.AbstractSerialVersionOperationCore.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.SwitchExpressionsFixCore.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.SwitchFixCore.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.UnusedCodeFixCore.java</file>
+            <file type="M">org.eclipse.jdt.internal.junit.JUnitPreferencesConstants.java</file>
+            <file type="M">org.eclipse.jdt.internal.junit.JunitPreferenceInitializer.java</file>
+            <file type="M">org.eclipse.jdt.junit.launcher.JUnitLaunchConfigurationDelegate.java</file>
+            <file type="M">org.eclipse.jdt.internal.junit.ui.JUnitPreferencePage.java</file>
+            <file type="M">org.eclipse.jdt.text.tests.BreakContinueTargetFinderTest.java</file>
+            <file type="M">org.eclipse.jdt.text.tests.EnumConstructorTargetFinderTest.java</file>
+            <file type="M">org.eclipse.jdt.text.tests.MarkOccurrenceTest1d7.java</file>
+            <file type="M">org.eclipse.jdt.text.tests.MarkOccurrenceTest1d8.java</file>
+            <file type="M">org.eclipse.jdt.text.tests.PluginsNotLoadedTest.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.refactoring.PullUpTests.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.callhierarchy.CallHierarchyTestHelper.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.core.CallHierarchyTest.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.core.TypeInfoTest.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.AssistQuickFixTest.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.AssistQuickFixTest1d8.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpStressTest.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest12.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest14.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest16.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest1d5.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.LocalCorrectionsQuickFixTest1d8.java</file>
+            <file type="M">org.eclipse.jdt.ui.unittest.junit.launcher.JUnitLaunchConfigurationDelegate.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.callhierarchy.CallHierarchy.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.ControlStatementsFix.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.UnnecessaryArrayCreationFix.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.javadoc.JavaDocLocations.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.util.TypeInfoFilter.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.RefactoringAvailabilityTester.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.code.IntroduceIndirectionRefactoring.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.structure.PullUpRefactoringProcessor.java</file>
+            <file type="M">org.eclipse.jdt.ui.preview.formatter.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.refactoring.reorg.RenameLinkedMode.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.JavaElementAdapterFactory.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.callhierarchy.CallHierarchyLabelProvider.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.callhierarchy.CallHierarchyMessages.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.filtertable.Filter.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.filtertable.FilterLabelProvider.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.filtertable.FilterManager.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.filtertable.FilterViewerComparator.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.filtertable.JavaFilterTable.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.filtertable.SWTFactory.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.filtertable.TypeFilterInputDialog.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.AutoboxingCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.StrictlyEqualOrDifferentCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.SubstringCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.UnboxingCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.javaeditor.EnumConstructorTargetFinder.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.javaeditor.JavaElementHyperlinkDetector.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.javaeditor.SemanticHighlightingReconciler.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.packageview.ClassPathContainer.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.JavaBasePreferencePage.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.PreferencesMessages.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.TypeFilterPreferencePage.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.formatter.FormatterMessages.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.preferences.formatter.FormatterModifyDialog.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.search.OccurrencesSearchResultPage.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.search.SearchMessages.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.JavaReconciler.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.IProposalRelevance.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.QuickAssistProcessor.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.proposals.NewDefiningMethodProposal.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.java.IJavaReconcilingListener.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.viewsupport.ProblemMarkerManager.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.wizards.buildpaths.BuildPathBasePage.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.wizards.buildpaths.CPListElement.java</file>
+            <file type="M">org.eclipse.jdt.ui.JavaUI.java</file>
+            <file type="M">org.eclipse.jdt.ui.ProblemsLabelDecorator.java</file>
+            <file type="M">org.eclipse.jdt.ui.actions.FindBreakContinueTargetOccurrencesAction.java</file>
+            <file type="M">org.eclipse.jdt.ui.actions.FindExceptionOccurrencesAction.java</file>
+            <file type="M">org.eclipse.jdt.ui.actions.FindImplementOccurrencesAction.java</file>
+            <file type="M">org.eclipse.jdt.ui.actions.FindMethodExitOccurrencesAction.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578905" opendate="2022-02-22 16:04:57" fixdate="2022-04-06 20:15:19" resolution="Fixed">
+        <buginformation>
+            <summary>[cleanup] convert fields to local var if only used locally causes error if transient modifier used</summary>
+            <description>The following class:
+
+                public class Test1 {
+
+                private transient int iRows = 0, iColumns = 0, iSeries = 0;
+
+                public void foo(String[] sea) {
+                iSeries = sea.length;
+                }
+
+                }
+
+                causes an issue when the following cleanup:
+
+                Convert fields to local variables if only locally used
+
+                is applied.
+
+                It results in the following:
+
+                public class Test1 {
+
+                private int iRows = 0, iColumns = 0;
+
+                public void foo(String[] sea) {
+                transient int iSeries = sea.length;
+                }
+
+                }
+
+                where the transient modifier is moved to the local variable and is an error.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest1d7.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.SingleUsedFieldCleanUp.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578906" opendate="2022-02-22 16:18:48" fixdate="2022-04-06 20:24:52" resolution="Fixed">
+        <buginformation>
+            <summary>[cleanup] Remove unused local in for loop causes compile error</summary>
+            <description>The following class:
+
+                public class Test2 {
+
+                public void foo(List(String) resultHints, List(String) results) {
+                Iterator(String) it = results.iterator();
+                for (int j = resultHints.size(); it.hasNext(); j++)
+                {
+                // do nothing
+                }
+
+                }
+
+                }
+
+                when Remove unused local variables cleanup is applied creates:
+
+                public class Test2 {
+
+                public void foo(List(String) resultHints, List(String) results) {
+                Iterator(String) it = results.iterator();
+                for (resultHints.size();; it.hasNext();)
+                {
+                // do nothing
+                }
+
+                }
+
+                }
+
+                which causes a compile error for the for statement as it has an extraneous semi-colon
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.UnusedCodeFixCore.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578909" opendate="2022-02-22 16:26:27" fixdate="2022-04-06 20:27:23" resolution="Fixed">
+        <buginformation>
+            <summary>[cleanup] Unboxing cleanup causes compile error</summary>
+            <description>The following class:
+
+                public class Test3 {
+
+                public void foo(List(Object) byteList, byte[] blobContent, int blobLength) {
+                for (int i = 0; i ( blobLength; i++)
+                blobContent[i] = (byte) ((Integer) byteList.get(i)).intValue();
+                }
+                }
+
+                when applied the Java Feature Use Unboxing cleanup creates the following:
+
+                public class Test3 {
+
+                public void foo(List(Object) byteList, byte[] blobContent, int blobLength) {
+                for (int i = 0; i ( blobLength; i++)
+                {
+                blobContent[i] = (byte) ((Integer) byteList.get(i));
+                }
+                }
+                }
+
+                which causes an error casting Integer to byte.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest1d5.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.UnboxingCleanUp.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578910" opendate="2022-02-22 16:40:10" fixdate="2022-04-06 20:28:57" resolution="Fixed">
+        <buginformation>
+            <summary>[cleanup] Convert to enhanced for loop isn't correctly removing element declaration</summary>
+            <description>The following class:
+
+                public class Test4 {
+
+                public void foo(Map(Expression, String) extensionMap) {
+                for (Iterator(Expression) iterator = extensionMap.keySet().iterator(); iterator.hasNext();) {
+                try {
+                Expression expression = iterator.next();
+                System.out.println(expression);
+                } catch (Exception e) {
+                }
+                }
+                }
+
+                }
+
+                when JAva Feature Convert to enhanced for loops cleanup is applied results in:
+
+                public class Test4 {
+
+                public void foo(Map(Expression, String) extensionMap) {
+                for (Expression expression : extensionMap.keySet()) {
+                try {
+                Expression expression = expression;
+                System.out.println(expression);
+                } catch (Exception e) {
+                }
+                }
+                }
+
+                }
+
+                which is an error because the var name "expression" is duplicated
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.ConvertIterableLoopOperation.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest1d5.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578911" opendate="2022-02-22 16:49:35" fixdate="2022-04-06 19:56:29" resolution="Fixed">
+        <buginformation>
+            <summary>[cleanup] Remove unnecessary casts can cause compile error if assigning to self</summary>
+            <description>If code has a cast of assignment to self:
+
+                e.g. Integer x;
+
+                x = (Integer)x;
+
+                using the Remove unnecessary casts cleanup results in:
+
+                x = x;
+
+                which has no effect and may cause warning/error
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.UnusedCodeFixCore.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.LocalCorrectionsQuickFixTest.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578917" opendate="2022-02-22 23:01:48" fixdate="2022-04-06 20:08:56" resolution="Fixed">
+        <buginformation>
+            <summary>[cleanup] Use valueOf() instead of instantiation needs to use parentheses</summary>
+            <description>When the following class:
+
+                public class Test6 {
+
+                private int getResolution() {
+                return 7;
+                }
+                public void foo(Map(Integer, Float) fontAttribs) {
+                fontAttribs.put(Integer.MAX_VALUE, new Float(4 * getResolution() / 72d));
+                }
+                }
+
+                is cleaned up with Use valueOf() rather than instantiation results in:
+
+                public class Test6 {
+
+                private int getResolution() {
+                return 7;
+                }
+                public void foo(Map(Integer, Float) fontAttribs) {
+                fontAttribs.put(Integer.MAX_VALUE, Float.valueOf((float) 4 * getResolution() / 72d));
+                }
+                }
+
+                which is an error because the computation will end up being a double unless parentheses are added around the expression 4 * getResolution() / 72d.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.ValueOfRatherThanInstantiationFixCore.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578948" opendate="2022-02-24 05:26:49" fixdate="2022-03-16 04:23:42" resolution="Fixed">
+        <buginformation>
+            <summary>[18][javadoc] incorrect handling of overlapping multiple annotations within @snippet</summary>
+            <description>in the snippet below
+
+                The below scenario
+
+                /**
+                * {@snippet:
+                * System.out.println(); // @highlight substring="out.println" @replace regex="out" replacement="in"
+                * }
+                */
+
+                the string ".println" should be in bold
+
+                but "in.println" is in bold, which is not the desired behavior.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.text.javadoc.JavaDocSnippetStringEvaluator.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578997" opendate="2022-02-28 07:07:33" fixdate="2022-03-01 05:10:57" resolution="Fixed">
+        <buginformation>
+            <summary>[18] QuickFixTest17 - 12 tests fail in the BETA_JAVA18 gerrit builds</summary>
+            <description>The below tests
+
+                1)org.eclipse.jdt.ui.tests.core.HierarchicalASTVisitorTest.test
+                2)org.eclipse.jdt.ui.tests.quickfix.QuickFixTest17.testAddSealedAsDirectSuperTypeProposal1
+                3)org.eclipse.jdt.ui.tests.quickfix.QuickFixTest17.testAddSealedAsDirectSuperTypeProposal2
+                4)org.eclipse.jdt.ui.tests.quickfix.QuickFixTest17.testAddSealedAsDirectSuperTypeProposal3
+                5)org.eclipse.jdt.ui.tests.quickfix.QuickFixTest17.testAddSealedAsDirectSuperTypeProposal4
+                6)org.eclipse.jdt.ui.tests.quickfix.QuickFixTest17.testAddSealedAsDirectSuperInterface1
+                7)org.eclipse.jdt.ui.tests.quickfix.QuickFixTest17.testAddSealedAsDirectSuperInterface2
+                8)org.eclipse.jdt.ui.tests.quickfix.QuickFixTest17.testAddSealedAsDirectSuperInterface3
+                9)org.eclipse.jdt.ui.tests.quickfix.QuickFixTest17.testAddSealedAsDirectSuperInterface4
+                10)org.eclipse.jdt.ui.tests.quickfix.QuickFixTest17.testDoNotAddRecordAsSubType
+                11)org.eclipse.jdt.ui.tests.quickfix.QuickFixTest17.testAddSealedAsDirectSuperClass1
+                12)org.eclipse.jdt.ui.tests.quickfix.QuickFixTest17.testAddRecordAsSubType
+
+
+                fail in the BTA_JAVA18 gerrit builds
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.dom.HierarchicalASTVisitor.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.core.HierarchicalASTVisitorTest.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.QuickFixTest17.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579044" opendate="2022-03-02 04:27:03" fixdate="2022-04-06 20:21:00" resolution="Fixed">
+        <buginformation>
+            <summary>[cleanup] Use declaring class as qualifier should not reference package-private class</summary>
+            <description>In the following example:
+
+                package tests;
+
+                public class TestClass extends SuperClass {
+
+                public SuperClass getPackageClass() {
+                return new SuperClass();
+                }
+                }
+
+                package tests;
+
+                class SuperClass {
+
+                public static int value;
+                public static void setValue(int val) {
+                value = val;
+                }
+
+                }
+
+                If the following class applies the cleanup: Use declaring class as qualifier"
+
+                package p;
+
+                import tests.TestClass;
+
+                public class Test7 {
+
+                public void foo() {
+                TestClass.setValue(8);
+                }
+                }
+
+                The TestClass.setValue(8); line gets changed to SuperClass.setValue(8); which is an error because SuperClass is in a separate package and is package-private.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.CodeStyleFixCore.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579169" opendate="2022-03-09 16:11:29" fixdate="2022-04-06 19:04:37" resolution="Fixed">
+        <buginformation>
+            <summary>Hover UI Freeze waiting for indexer</summary>
+            <description>i just stumpled on a freeze where UI thread TextViewerHoverManager is waiting for the jdt indexer. This must not happen in the UI thread. I could wait
+                hours.
+
+
+                "main" #1 prio=6 os_prio=0 cpu=83812.50ms elapsed=2996.09s tid=0x0000020ae2c7b800 nid=0x5124 in Object.wait() [0x000000ee96ffc000]
+                java.lang.Thread.State: TIMED_WAITING (on object monitor)
+                at java.lang.Object.wait(java.base@11.0.9.1/Native Method)
+                - waiting on (no object reference available)
+                at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:284)
+                - waiting to re-lock in wait() (0x0000000744d78898) (a org.eclipse.jdt.internal.core.search.indexing.IndexManager)
+                at org.eclipse.jdt.internal.core.search.BasicSearchEngine.findMatches(BasicSearchEngine.java:235)
+                at org.eclipse.jdt.internal.core.search.BasicSearchEngine.search(BasicSearchEngine.java:602)
+                at org.eclipse.jdt.core.search.SearchEngine.search(SearchEngine.java:670)
+                at org.eclipse.pde.internal.ui.correction.java.FindClassResolutionsOperation.findValidPackagesContainingSimpleType(FindClassResolutionsOperation.java:302)
+                at org.eclipse.pde.internal.ui.correction.java.FindClassResolutionsOperation.getValidPackages(FindClassResolutionsOperation.java:235)
+                at org.eclipse.pde.internal.ui.correction.java.FindClassResolutionsOperation.run(FindClassResolutionsOperation.java:170)
+                at org.eclipse.pde.internal.ui.correction.java.QuickFixProcessor.handleImportNotFound(QuickFixProcessor.java:223)
+                at org.eclipse.pde.internal.ui.correction.java.QuickFixProcessor.getCorrections(QuickFixProcessor.java:52)
+                at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionCollector.safeRun(JavaCorrectionProcessor.java:381)
+                at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.run(JavaCorrectionProcessor.java:341)
+                at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+                at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.process(JavaCorrectionProcessor.java:336)
+                at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.collectCorrections(JavaCorrectionProcessor.java:465)
+                at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.getJavaAnnotationFixes(ProblemHover.java:105)
+                at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.getCompletionProposals(ProblemHover.java:79)
+                at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover$AnnotationInformationControl.deferredCreateContent(AbstractAnnotationHover.java:304)
+                at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover$AnnotationInformationControl.setInput(AbstractAnnotationHover.java:190)
+                at org.eclipse.jface.text.AbstractInformationControlManager.internalShowInformationControl(AbstractInformationControlManager.java:1151)
+                at org.eclipse.jface.text.AbstractInformationControlManager.presentInformation(AbstractInformationControlManager.java:1120)
+                at org.eclipse.jface.text.AbstractHoverInformationControlManager.presentInformation(AbstractHoverInformationControlManager.java:884)
+                at org.eclipse.jface.text.TextViewerHoverManager.doPresentInformation(TextViewerHoverManager.java:237)
+                at org.eclipse.jface.text.TextViewerHoverManager.lambda$3(TextViewerHoverManager.java:227)
+                at org.eclipse.jface.text.TextViewerHoverManager$$Lambda$1538/0x000000080145b040.run(Unknown Source)
+                at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+                at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+                - locked (0x00000007610012c8) (a org.eclipse.swt.widgets.RunnableLock)
+                at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+                at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+                at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+                at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+                at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+                at org.eclipse.ui.internal.Workbench$$Lambda$217/0x00000008003d1040.run(Unknown Source)
+                at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+                at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+                at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+                at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+                at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+                at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+                at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+                at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+                at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+                at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(java.base@11.0.9.1/Native Method)
+                at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(java.base@11.0.9.1/NativeMethodAccessorImpl.java:62)
+                at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(java.base@11.0.9.1/DelegatingMethodAccessorImpl.java:43)
+                at java.lang.reflect.Method.invoke(java.base@11.0.9.1/Method.java:566)
+                at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+                at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+                at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+                at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579183" opendate="2022-03-10 01:38:00" fixdate="2022-03-14 19:05:26" resolution="Fixed">
+        <buginformation>
+            <summary>[content assist] Adopt CompletionProposal new API to allow filtering types before creating certain proposals</summary>
+            <description>This is a follow-up for https://bugs.eclipse.org/bugs/show_bug.cgi?id=578817.
+
+                In jdt.core, CompletionRequestor adds a new API "isIgnored(char[] fullTypeName)" to check ignored types before creating certain proposals, which can boost code
+                completion performance for constructor method.
+
+                This issue is to ask jdt.ui (mainly CompletionProposalCollector) to provide an implementation for this new API.
+
+                ```
+                @Override
+                public boolean isIgnored(char[] fullTypeName) {
+                return fullTypeName!= null TypeFilter.isFiltered(fullTypeName);
+                }
+
+                ```
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.ui.text.java.CompletionProposalCollector.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579285" opendate="2022-03-16 20:57:49" fixdate="2022-04-11 17:31:42" resolution="Fixed">
+        <buginformation>
+            <summary>Fix typos seen in Holger video</summary>
+            <description>Some typos were discovered by Mike Keppler and should be fixed.</description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">formatter.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579315" opendate="2022-03-18 10:29:58" fixdate="2022-04-06 19:38:33" resolution="Fixed">
+        <buginformation>
+            <summary>Bindings.visitHierarchy misses some interfaces</summary>
+            <description>Consider the following code:
+
+                interface I1 {
+                }
+
+                interface I2 {
+                }
+
+                class Test1 implements I1 {
+                }
+
+                class Test2 extends Test1 implements I2 {
+                }
+
+                When I compute an AST over this code and invoke Bindings.visitHierarchy((type binding of Test2)), I would expect the following types to be visited: Test1, Object,
+                I1, I2. However, the interface I1 is never seen.
+
+                The problem seems to be that the algorithm misses all interfaces not implemented directly, but by superclasses of "Test1".
+
+                This is very old code, so I'm not sure it's meant to work that way. However, the doc for the method says "Method to visit a type hierarchy defined by a given type".
+                That for me would include interfaces implemented by superclasses.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.dom.Bindings.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.core.BindingsHierarchyTest.java</file>
+            <file type="M">org.eclipse.jdt.ui.tests.core.CoreTestSuite.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579331" opendate="2022-03-18 21:00:10" fixdate="2022-04-06 19:46:01" resolution="Fixed">
+        <buginformation>
+            <summary>Remove unused code in BuildPathsBlock</summary>
+            <description>There is unused code in BuildPathsBlock.java</description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.wizards.buildpaths.BuildPathsBlock.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579374" opendate="2022-03-22 20:06:16" fixdate="2022-04-06 19:40:06" resolution="Fixed">
+        <buginformation>
+            <summary>[dogfooding] Use Charset.defaultCharset() instead of System.getProperty("file.encoding")</summary>
+            <description>Use system properties cleanup to remove usage of System.getProperty("file.encoding")</description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.text.tests.spelling.SpellCheckEngineTestCase.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.javadocexport.JavadocWizard.java</file>
+            <file type="M">org.eclipse.jdt.ui.PreferenceConstants.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579393" opendate="2022-03-23 20:10:06" fixdate="2022-04-06 19:35:38" resolution="Fixed">
+        <buginformation>
+            <summary>[cleanup] Simplify lambda expression creates invalid statement</summary>
+            <description>Using the simplify lambda cleanup on the following:
+
+                import java.util.stream.Stream;
+
+                public class WeirdCleanupAndCallSiteInitializationException {
+                public static void main(String[] args) {
+                B b = () -) new A() {
+                };
+                A a = get();
+                System.out.println("done");
+                }
+
+                public static A get(B(?)... sources) {
+                return Stream.of(sources) //
+                .map(B::getT) //
+                .filter(x -) x.exists_testOpen()) //
+                .findFirst() //
+                .orElse(null);
+                }
+
+                public interface B(T extends A) extends A {
+                T getT();
+                }
+
+                public interface A {
+                default boolean exists_testOpen() {
+                return true;
+                }
+                }
+                }
+
+                results in changing x -) x.exists_testOpen() to Object::exists_testOpen
+
+                This is wrong. The bug appears to be due to the B(?) specification instead of B(A) for example which gives the correct A::exists_testOpen
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.ui.tests.quickfix.CleanUpTest1d8.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.LambdaExpressionAndMethodRefCleanUp.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579473" opendate="2022-03-29 12:23:03" fixdate="2022-03-29 13:54:31" resolution="Fixed">
+        <buginformation>
+            <summary>[javadoc] RefactoringWizard: Resolve reference to deprecated constant</summary>
+            <description>Documentation is pointing to the deprecated DIALOG_BASED_UESR_INTERFACE
+                constant. Change to:
+                DIALOG_BASED_USER_INTERFACE
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.ltk.ui.refactoring.RefactoringWizard.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579526" opendate="2022-03-31 11:48:56" fixdate="2022-04-06 18:48:50" resolution="Fixed">
+        <buginformation>
+            <summary>Remove Code Duplication between ...Fix and ...FixCore</summary>
+            <description>We have some duplicated code between classes like ConvertLoopFix and ConvertLoopFixCore. We should clean these up to prevent the two locations from getting
+                out of sync.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.AbstractFixCore.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.CodeStyleFix.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.ConvertLoopFix.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.fix.UnnecessaryArrayCreationFix.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.CleanUpFixWrapper.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.fix.ConvertLoopCleanUp.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.LocalCorrectionsSubProcessor.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.QuickAssistProcessor.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579545" opendate="2022-04-01 20:26:27" fixdate="2022-04-06 18:50:19" resolution="Fixed">
+        <buginformation>
+            <summary>fix minor typo in StringButtonStatusDialogField Javadoc</summary>
+            <description>The Javadoc for StringButtonStatusDialogField has some minor typo errors</description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.wizards.dialogfields.StringButtonStatusDialogField.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579588" opendate="2022-04-05 23:31:59" fixdate="2022-05-04 22:15:04" resolution="Fixed">
+        <buginformation>
+            <summary>[completion] wrong setting of relevance for created type proposal</summary>
+            <description>In JavaTypeCompletionProposalComputer.computeCompletionProposals() a loop figures out the minimum relevance of all the existing proposals. It is done using
+                getRelevance() calls. If a type proposal is created, the relevance used is such to be lower than the minimum relevance calculated earlier. It creates either a
+                TYPE_REF proposal that is wrapped in either a LazyGenericTypeProposal or a LazyJavaTypeCompletionProposal. The problem is that the initial relevance set gets
+                massaged on first access which involves multiplying by 16 and adding a constant. The minimum relevance value has already been massaged but when we use it to set the
+                TYPE_REF proposal, the lazy classes will massage the value on first reference which will multiply by 16 and then add a constant to make a value that is no longer
+                below the minimum value and can end up showing up as the first entry for the end-user. The relevance must be set in the lazy classes directly so no further
+                massaging is done.
+
+                For the following:
+
+                package tests;
+
+                public interface CompletionSubClass1 {
+
+                }
+
+                -------------------------------------------------
+
+                package tests;
+
+                public class CompletionSubClass2 implements CompletionSubClass1 {
+
+                }
+
+                -------------------------------------------------
+
+                package tests;
+
+                public class CompletionClass {
+
+                public void foo() {
+                CompletionSubClass1 k = new (== completion here
+                }
+                }
+
+
+                When completion occurs, it puts a type proposal first which is not the most relevant as there are constructor completions in the list which should be offered first.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.text.java.JavaTypeCompletionProposalComputer.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579612" opendate="2022-04-07 00:10:51" fixdate="2022-05-04 22:11:04" resolution="Fixed">
+        <buginformation>
+            <summary>Regression: Fix for 578788 causes regression in NLS hover</summary>
+            <description>The fix for Bug 578788 causes a regression in hovering on message constants from a Class that extends NLS. Problem found in I20220406 build.</description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579635" opendate="2022-04-08 11:57:00" fixdate="2022-04-13 12:17:17" resolution="Fixed">
+        <buginformation>
+            <summary>NPE in MatchLocator.findIndexMatches(MatchLocator.java:306)</summary>
+            <description>Found this in my workspace log.
+
+                The null is coming most likely from org.eclipse.jdt.internal.core.search.indexing.IndexManager.cleanUpIndexes() where some dummy job is created with null pattern
+                (looks like a hack):
+
+                PatternSearchJob job = new PatternSearchJob(null, SearchEngine.getDefaultSearchParticipant(), scope, null);
+
+                However, the code in org.eclipse.jdt.internal.core.search.PatternSearchJob.search(Index, IndexQueryRequestor, IProgressMonitor) and other places didn't even knows
+                that pattern can be null!!!
+
+                This hack in IndexManager.cleanUpIndexes() needs some fix.
+
+                eclipse.buildId=4.24.0.I20220407-0240
+                java.version=11.0.10
+                java.vendor=Red Hat, Inc.
+                BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+                Command-line arguments: -data /data/4x_platform_workspace -os linux -ws gtk -arch x86_64
+
+                org.eclipse.jdt.ui
+                Error
+                Thu Apr 07 17:57:38 CEST 2022
+                Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+
+                java.lang.NullPointerException
+                at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+                at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+                at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:118)
+                at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:300)
+                at org.eclipse.jdt.internal.core.search.BasicSearchEngine.findMatches(BasicSearchEngine.java:235)
+                at org.eclipse.jdt.internal.core.search.BasicSearchEngine.search(BasicSearchEngine.java:602)
+                at org.eclipse.jdt.core.search.SearchEngine.search(SearchEngine.java:670)
+                at org.eclipse.pde.internal.ui.correction.java.FindClassResolutionsOperation.findValidPackagesContainingSimpleType(FindClassResolutionsOperation.java:302)
+                at org.eclipse.pde.internal.ui.correction.java.FindClassResolutionsOperation.getValidPackages(FindClassResolutionsOperation.java:235)
+                at org.eclipse.pde.internal.ui.correction.java.FindClassResolutionsOperation.run(FindClassResolutionsOperation.java:170)
+                at org.eclipse.pde.internal.ui.correction.java.QuickFixProcessor.handleImportNotFound(QuickFixProcessor.java:223)
+                at org.eclipse.pde.internal.ui.correction.java.QuickFixProcessor.getCorrections(QuickFixProcessor.java:52)
+                at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionCollector.safeRun(JavaCorrectionProcessor.java:381)
+                at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.run(JavaCorrectionProcessor.java:341)
+                at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+                at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.process(JavaCorrectionProcessor.java:336)
+                at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.collectCorrections(JavaCorrectionProcessor.java:465)
+                at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.getJavaAnnotationFixes(ProblemHover.java:115)
+                at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.computeCompletionProposals(ProblemHover.java:89)
+                at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.(init)(ProblemHover.java:74)
+                at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover.createAnnotationInfo(ProblemHover.java:178)
+                at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover.getHoverInfo2(AbstractAnnotationHover.java:755)
+                at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+                at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+                at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+                at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.RefactoringSearchEngine2.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.code.InlineConstantRefactoring.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.code.TargetProvider.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.structure.ConstructorReferenceFinder.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.structure.MemberVisibilityAdjustor.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.structure.MoveInnerToTopRefactoring.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.structure.MoveInstanceMethodProcessor.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.structure.MoveStaticMembersProcessor.java</file>
+            <file type="M">org.eclipse.jdt.internal.junit.ui.TestMethodSelectionDialog.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.code.IntroduceFactoryRefactoring.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.rename.RenameFieldProcessor.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.rename.RenameMethodProcessor.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.rename.RenameModuleProcessor.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.rename.RenamePackageProcessor.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.rename.RenameTypeProcessor.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.rename.RippleMethodFinder2.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.reorg.CreateCopyOfCompilationUnitChange.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.sef.SelfEncapsulateFieldRefactoring.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.structure.ChangeSignatureProcessor.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.structure.ChangeTypeRefactoring.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.structure.HierarchyProcessor.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.structure.PushDownRefactoringProcessor.java</file>
+            <file type="M">org.eclipse.jdt.internal.corext.refactoring.structure.constraints.SuperTypeRefactoringProcessor.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.refactoring.nls.search.NLSSearchQuery.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.javaeditor.codemining.JavaReferenceCodeMining.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.DefaultModulepathFixProcessor.java</file>
+            <file type="M">org.eclipse.jdt.internal.ui.text.correction.ModuleCorrectionsSubProcessor.java</file>
+        </fixedFiles>
+    </bug>
+</bugrepository>

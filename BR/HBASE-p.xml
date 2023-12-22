@@ -1,0 +1,1905 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<bugrepository name="HBASE">
+    <bug id="26323" opendate="2021-10-03 13:39:53" fixdate="2022-03-12 16:00:13" resolution="Fixed">
+        <buginformation>
+            <summary>Introduce a SnapshotProcedure</summary>
+            <description>Currently，snapshot in hbase uses zk as coordinator. It has some limitations, 
+                a. Snapshot maybe fails when there are region server crashes.
+                b. Snapshot maybe failed when master restarts.
+                c. Only one snapshot per table can be taken in a time.
+                d. Snapshot verify will be handled by master, which may take long time when our table has a large number of regions, for example 10000.
+
+                 
+
+                Since we have procedure v2 framework now, it is possible to solve the above problems. So here is a procedure2-based snapshot implementation. It has some goals,
+                a. Snapshot can continue when there are region server crashes.
+                b. Snapshot can continue when master restarts.
+                c. More than one snapshot per table can be taken in a time.
+                d. We can use region servers to verify snapshot to accelerate procedure.
+
+                 
+
+                Here are some details about implementation.
+                *SnapshotProcedure*
+                SnapshotProcedure is used to take snapshot on a table. It acquires shared table lock on the snapshot table and hold the shared lock during suspend and yield. 
+                *SnapshotRegionProcedure*
+                SnapshotRegionProcedure is used to take snapshot on a specific region of the snapshot table. It acquires exclusive region lock and releases lock during suspend and
+                yield. Before dispatch remote snapshot operations to region server, it will check target region in RIT or not. If target region is in RIT, it will sleep some time
+                and retry.
+                *SnapshotVerifyProcedure*
+                SnapshotVerifyProcedure is used to send snapshot verify request to region server. If snapshot is corrupted, it will notify parent snapshot to retry. When remote
+                region server is crashed, it will choose another online server and retry.
+
+                 
+
+                I would be very grateful for any advice and guidance. Is anyone interested in taking a look?
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.6.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.client.RawAsyncHBaseAdmin.java</file>
+            <file type="M">org.apache.hadoop.hbase.executor.EventType.java</file>
+            <file type="M">org.apache.hadoop.hbase.executor.ExecutorType.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.MasterCoprocessorHost.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.MasterRpcServices.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.ServerManager.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.SplitWALManager.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.WorkerAssigner.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.assignment.MergeTableRegionsProcedure.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.assignment.SplitTableRegionProcedure.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.procedure.ServerProcedureInterface.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.procedure.ServerQueue.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.procedure.SnapshotProcedure.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.procedure.SnapshotRegionProcedure.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.procedure.SnapshotVerifyProcedure.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.procedure.TableProcedureInterface.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.procedure.TableQueue.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.snapshot.MasterSnapshotVerifier.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.snapshot.SnapshotManager.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.snapshot.TakeSnapshotHandler.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.HRegionServer.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.RSSnapshotVerifier.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.SnapshotRegionCallable.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.SnapshotVerifyCallable.java</file>
+            <file type="M">org.apache.hadoop.hbase.snapshot.SnapshotDescriptionUtils.java</file>
+            <file type="M">org.apache.hadoop.hbase.snapshot.SnapshotReferenceUtil.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.procedure.TestSnapshotProcedure.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.procedure.TestSnapshotRegionProcedure.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26339" opendate="2021-10-08 02:23:19" fixdate="2021-10-09 02:14:34" resolution="Fixed">
+        <buginformation>
+            <summary>SshPublisher will skip uploading artifacts if the build is failure</summary>
+            <description>This is not what we expect, need to force it always try to upload the artifacts.</description>
+            <version>2.5.0</version>
+            <fixedVersion>1.4.14</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.TestCellUtil.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26364" opendate="2021-10-18 03:57:10" fixdate="2021-10-18 14:36:55" resolution="Fixed">
+        <buginformation>
+            <summary>TestThriftServer is failing 100% in our flaky test job</summary>
+            <description>https://nightlies.apache.org/hbase/HBase/HBase-Find-Flaky-Tests/master/410/output/dashboard.html</description>
+            <version>3.0.0-alpha-1</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.thrift.TestThriftServer.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26444" opendate="2021-11-10 22:13:11" fixdate="2021-11-16 00:42:28" resolution="Fixed">
+        <buginformation>
+            <summary>BucketCacheWriter should log only the BucketAllocatorException message, not the full stack trace</summary>
+            <description>We have recently improved the logging of BucketAllocatorException to not overwhelm the log if there are a lot of blocks that are too large, but when we do
+                log it, we still log the full stack trace. That is wasteful. The messages always come from the same location in source code. The stack trace provides no value.
+            </description>
+            <version>2.4.8</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.bucket.BucketCache.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26467" opendate="2021-11-18 18:37:56" fixdate="2021-11-21 13:11:05" resolution="Fixed">
+        <buginformation>
+            <summary>Wrong Cell Generated by MemStoreLABImpl.forceCopyOfBigCellInto when Cell size bigger than data chunk size</summary>
+            <description>In our company 2.X cluster. I found some region compaction keeps failling because some cell can't construct succefully. In fact , we even can't read these
+                cell.
+
+                From follow stack , we can found the bug cause KeyValue can't constructed.
+
+                Simple Log and Stack: 
+                {code:java}
+                // code placeholder
+                2021-11-18 16:50:47,708 ERROR [regionserver/xxxx:60020-longCompactions-4] regionserver.CompactSplit: Compaction failed
+                region=xx_table,3610ff49595a0fc4a824f2a575f37a31,1570874723992.dac703ceb35e8d8703233bebf34ae49f., storeName=c, priority=-319, startTime=1637225447127
+                java.lang.IllegalArgumentException: Invalid tag length at position=4659867, tagLength=0,         
+                at org.apache.hadoop.hbase.KeyValueUtil.checkKeyValueTagBytes(KeyValueUtil.java:685)
+                        at org.apache.hadoop.hbase.KeyValueUtil.checkKeyValueBytes(KeyValueUtil.java:643)
+                        at org.apache.hadoop.hbase.KeyValue.(init)(KeyValue.java:345)
+                        at org.apache.hadoop.hbase.SizeCachedKeyValue.(init)(SizeCachedKeyValue.java:43)
+                        at org.apache.hadoop.hbase.io.hfile.HFileReaderImpl$HFileScannerImpl.getCell(HFileReaderImpl.java:981)
+                        at org.apache.hadoop.hbase.regionserver.StoreFileScanner.seek(StoreFileScanner.java:233)
+                        at org.apache.hadoop.hbase.regionserver.StoreScanner.seekScanners(StoreScanner.java:418)
+                        at org.apache.hadoop.hbase.regionserver.StoreScanner.(init)(StoreScanner.java:322)
+                        at org.apache.hadoop.hbase.regionserver.StoreScanner.(init)(StoreScanner.java:288)
+                        at org.apache.hadoop.hbase.regionserver.compactions.Compactor.createScanner(Compactor.java:487)
+                        at org.apache.hadoop.hbase.regionserver.compactions.Compactor$1.createScanner(Compactor.java:248)
+                        at org.apache.hadoop.hbase.regionserver.compactions.Compactor.compact(Compactor.java:318)
+                        at org.apache.hadoop.hbase.regionserver.compactions.DefaultCompactor.compact(DefaultCompactor.java:65)
+                        at org.apache.hadoop.hbase.regionserver.DefaultStoreEngine$DefaultCompactionContext.compact(DefaultStoreEngine.java:126)
+                        at org.apache.hadoop.hbase.regionserver.HStore.compact(HStore.java:1468)
+                        at org.apache.hadoop.hbase.regionserver.HRegion.compact(HRegion.java:2266)
+                        at org.apache.hadoop.hbase.regionserver.CompactSplit$CompactionRunner.doCompaction(CompactSplit.java:624)
+                        at org.apache.hadoop.hbase.regionserver.CompactSplit$CompactionRunner.run(CompactSplit.java:666)
+                        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+                        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                        at java.lang.Thread.run(Thread.java:748) {code}
+                From further observation, I found the following characteristics:
+                # Cell size more than 2M
+                # We can reproduce the bug only after in memory compact
+                # Cell bytes end with \x00\x02\x00\x00
+
+                 
+
+                In fact, the root reason is method (MemStoreLABImpl.forceCopyOfBigCellInto) which only invoked when cell bigger than data chunk size construct cell with wrong
+                length.  So there are 4 bytes (chunk head size) append end of the cell bytes.
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.regionserver.MemStoreLABImpl.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.TestCompactingToCellFlatMapMemStore.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.TestMemStoreLAB.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26533" opendate="2021-12-02 08:41:18" fixdate="2021-12-05 14:45:21" resolution="Fixed">
+        <buginformation>
+            <summary>KeyValueScanner might not be properly closed when using InternalScan.checkOnlyMemStore()</summary>
+            <description>While writing a custom RegionObserver and using InternalScan.checkOnlyMemStore() I stumbled upon an issue. The number of files opened by region servers
+                would grow steadily and eventually region servers would crash with
+                {code:java}
+                2021-11-15 00:54:34,290 ERROR [MemStoreFlusher.1] regionserver.HStore: Failed to commit store file
+                hdfs://(...removed...):8020/hbase/data/default/(...removed...)/743071139057c819d7e6f7b59f065152/.tmp/f/394ba71102ec401d8779aa5f45819f84
+                java.io.IOException: Failed on local exception: java.io.IOException: Too many open files; Host Details : local host is: "(...removed...)/(...removed...)";
+                destination host is: "(...removed...)":8020;
+                        at org.apache.hadoop.net.NetUtils.wrapException(NetUtils.java:805)
+                        at org.apache.hadoop.ipc.Client.getRpcResponse(Client.java:1544)
+                        at org.apache.hadoop.ipc.Client.call(Client.java:1486)
+                        at org.apache.hadoop.ipc.Client.call(Client.java:1385)
+                        at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:232)
+                        at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:118)
+                        at com.sun.proxy.$Proxy27.getFileInfo(Unknown Source)
+                        at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getFileInfo(ClientNamenodeProtocolTranslatorPB.java:800)
+
+                {code}
+                Another symptom is the following messages in region server logs:
+                {code:java}
+                2021-11-18 13:41:29,539 INFO [RS_COMPACTED_FILES_DISCHARGER-regionserver/(...removed...):16020-7] regionserver.HStore: Can't archive compacted file
+                hdfs://(...removed...):8020/hbase/data/default/(...removed...)/ce6f08fdd82967df94d1c83e289d3142/f/9b01b8bdea324c22a92f1ba6b386e050.6261a24c6a689d5406ae1ea87dc9bb9f
+                because of either isCompactedAway=true or file has reference, isReferencedInReads=true, refCount=7, skipping for now.
+                {code}
+                The culprit is KeyValueScanner not being closed in StoreScanner.selectScannersFrom() before `continue`
+
+                [https://github.com/apache/hbase/blame/f000b775320330eb2f426f6b2a3b5e27a794a707/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/StoreScanner.java#L467]
+
+                 
+
+                 
+            </description>
+            <version>2.3.6</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.regionserver.StoreScanner.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.TestStoreScanner.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26537" opendate="2021-12-03 15:06:33" fixdate="2021-12-18 02:56:40" resolution="Fixed">
+        <buginformation>
+            <summary>FuzzyRowFilter backwards compatibility</summary>
+            <description>HBASE-15676 introduced a backwards incompatible change which makes it impossible to upgrade in our designated upgraded order (server first, then client)
+                without potential bad results. Worse, the failure mode is silent – a pre-HBASE-15676 client would incorrectly receive 0 results from a post-HBASE-15676 server.
+
+                I solved this internally as part of our upgrade from 1.2.0 to 2.4.6 by adding a new proto field to switch between the two implementations. I'm submitting this Jira
+                to capture and potentially backport that fix for anyone else who encounters it. 
+            </description>
+            <version>1.1.13</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.filter.FuzzyRowFilter.java</file>
+            <file type="M">org.apache.hadoop.hbase.filter.TestFuzzyRowFilter.java</file>
+            <file type="M">org.apache.hadoop.hbase.filter.TestFuzzyRowFilterEndToEnd.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26666" opendate="2022-01-13 22:17:50" fixdate="2022-08-06 23:53:55" resolution="Fixed">
+        <buginformation>
+            <summary>Add native TLS encryption support to RPC server/client</summary>
+            <description>Today, HBase must complete the SASL handshake (saslClient.complete()) prior to turning on any RPC encryption (hbase.rpc.protection=privacy,
+                sasl.QOP=auth-conf).
+
+                This is a problem because we have to transmit the bearer token to the server before we can complete the sasl handshake. This would mean that we would insecurely
+                transmit the bearer token (which is equivalent to any other password) which is a bad smell.
+
+                Ideally, if we can solve this problem for the oauth bearer mechanism, we could also apply it to our delegation token interface for digest-md5 (which, I believe,
+                suffers the same problem).
+
+                The plan is to port Server/Client TLS implementation from the ZooKeeper project. It's a Netty based solution which looks like the best fit for NettyRpc
+                client/server. 
+            </description>
+            <version>3.0.0-alpha-2</version>
+            <fixedVersion>2.6.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.ipc.NettyRpcConnection.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.TestNettyRpcConnection.java</file>
+            <file type="M">org.apache.hadoop.hbase.exceptions.X509Exception.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.crypto.tls.KeyStoreFileType.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.crypto.tls.SSLContextAndOptions.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.crypto.tls.X509Util.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.crypto.tls.BaseX509ParameterizedTestCase.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.crypto.tls.TestX509Util.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.crypto.tls.X509KeyType.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.crypto.tls.X509TestContext.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.crypto.tls.X509TestHelpers.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.NettyRpcServer.java</file>
+            <file type="M">org.apache.hadoop.hbase.security.TestTLSIPC.java</file>
+            <file type="M">org.apache.hadoop.hbase.security.TestTlsWithKerberos.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26679" opendate="2022-01-18 09:17:42" fixdate="2022-01-28 12:53:32" resolution="Fixed">
+        <buginformation>
+            <summary>Wait on the future returned by FanOutOneBlockAsyncDFSOutput.flush would stuck</summary>
+            <description>Consider there are three dataNodes: dn1,dn2,and dn3, and we write some data to {{FanOutOneBlockAsyncDFSOutput}} and then flush it, there are one
+                {{Callback}} in {{FanOutOneBlockAsyncDFSOutput.waitingAckQueue}}. If the ack from dn1 arrives firstly and triggers Netty to invoke
+                {{FanOutOneBlockAsyncDFSOutput.completed}} with dn1's channel, then in {{FanOutOneBlockAsyncDFSOutput.completed}}, dn1's channel is removed from
+                {{Callback.unfinishedReplicas}}.
+                But dn2 and dn3 respond slowly, before dn2 and dn3 sending ack , dn1 is shut down or have a exception, so {{FanOutOneBlockAsyncDFSOutput.failed}} is triggered by
+                Netty with dn1's channel, and because the {{Callback.unfinishedReplicas}} does not contain dn1's channel,the {{Callback}} is skipped in
+                {{FanOutOneBlockAsyncDFSOutput.failed}} method, just as following line250, and at line 245, {{FanOutOneBlockAsyncDFSOutput.state}} is set to {{State.BROKEN}}.
+                {code:java}
+                233 private synchronized void failed(Channel channel, Supplier(Throwable) errorSupplier) {
+                234 if (state == State.BROKEN || state == State.CLOSED) {
+                235 return;
+                236 }
+                ....
+                244 // disable further write, and fail all pending ack.
+                245 state = State.BROKEN;
+                246 Throwable error = errorSupplier.get();
+                247 for (Iterator(Callback) iter = waitingAckQueue.iterator(); iter.hasNext();) {
+                248 Callback c = iter.next();
+                249 // find the first sync request which we have not acked yet and fail all the request after it.
+                250 if (!c.unfinishedReplicas.contains(channel.id())) {
+                251 continue;
+                252 }
+                253 for (;;) {
+                254 c.future.completeExceptionally(error);
+                255 if (!iter.hasNext()) {
+                256 break;
+                257 }
+                258 c = iter.next();
+                259 }
+                260 break;
+                261 }
+                262 datanodeInfoMap.keySet().forEach(ChannelOutboundInvoker::close);
+                263 }
+                {code}
+                At the end of above method in line 262, dn1,dn2 and dn3 are all closed, so the {{FanOutOneBlockAsyncDFSOutput.failed}} is triggered again by dn2 and dn3, but at the
+                above line 234, because {{FanOutOneBlockAsyncDFSOutput.state}} is already {{State.BROKEN}}, the whole {{FanOutOneBlockAsyncDFSOutput.failed}} is skipped. So wait on
+                the future returned by {{FanOutOneBlockAsyncDFSOutput.flush}} would stuck for ever.
+
+                When we roll the wal, we would create a new {{FanOutOneBlockAsyncDFSOutput}} and a new {{AsyncProtobufLogWriter}}, in {{AsyncProtobufLogWriter.init}} we write wal
+                header to {{FanOutOneBlockAsyncDFSOutput}} and wait it to complete. If we run into this situation, the roll would stuck forever.
+
+                I have simulate this case in the PR, and my fix is even through the {{FanOutOneBlockAsyncDFSOutput.state}} is already {{State.BROKEN}}, we would still try to
+                trigger {{Callback.future}}
+            </description>
+            <version>3.0.0-alpha-2</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.io.asyncfs.FanOutOneBlockAsyncDFSOutput.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.asyncfs.TestFanOutOneBlockAsyncDFSOutputHang.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26707" opendate="2022-01-25 16:06:06" fixdate="2022-02-25 20:12:56" resolution="Fixed">
+        <buginformation>
+            <summary>Reduce number of renames during bulkload</summary>
+            <description>Make sure we only do a single rename operation during bulkload when StoreEngine does not require the the use of tmp directories.</description>
+            <version>2.5.0</version>
+            <fixedVersion>2.6.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.mapreduce.IntegrationTestFileBasedSFTBulkLoad.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.HRegion.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.HRegionFileSystem.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.SecureBulkLoadManager.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.TestBulkLoad.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.TestBulkloadBase.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.TestCompactionAfterBulkLoad.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.TestSecureBulkLoadManager.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.TestSecureBulkloadListener.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26708" opendate="2022-01-25 18:36:20" fixdate="2022-07-07 08:31:15" resolution="Fixed">
+        <buginformation>
+            <summary>Netty "leak detected" and OutOfDirectMemoryError due to direct memory buffering with SASL implementation</summary>
+            <description>Under constant data ingestion, using default Netty based RpcServer and RpcClient implementation results in OutOfDirectMemoryError, supposedly caused by
+                leaks detected by Netty's LeakDetector.
+                {code:java}
+                2022-01-25 17:03:10,084 ERROR [S-EventLoopGroup-1-3] util.ResourceLeakDetector - java:115)
+                  org.apache.hbase.thirdparty.io.netty.handler.codec.ByteToMessageDecoder.expandBTW. have you run the related test case?(ByteToMessageDecoder.java:538)
+                  org.apache.hbase.thirdparty.io.netty.handler.codec.ByteToMessageDecoder$1.cumulate(ByteToMessageDecoder.java:97)
+                  org.apache.hbase.thirdparty.io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:274)
+                  org.apache.hbase.thirdparty.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+                  org.apache.hbase.thirdparty.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+                  org.apache.hbase.thirdparty.io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+                  org.apache.hbase.thirdparty.io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+                  org.apache.hbase.thirdparty.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+                  org.apache.hbase.thirdparty.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+                  org.apache.hbase.thirdparty.io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+                  org.apache.hbase.thirdparty.io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:795)
+                  org.apache.hbase.thirdparty.io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:480)
+                  org.apache.hbase.thirdparty.io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+                  org.apache.hbase.thirdparty.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+                  org.apache.hbase.thirdparty.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+                  org.apache.hbase.thirdparty.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+                  java.lang.Thread.run(Thread.java:748)
+                {code}
+                {code:java}
+                2022-01-25 17:03:14,014 ERROR [S-EventLoopGroup-1-3] util.ResourceLeakDetector -
+                apache.hbase.thirdparty.io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:507)
+                  org.apache.hbase.thirdparty.io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:446)
+                  org.apache.hbase.thirdparty.io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276)
+                  org.apache.hbase.thirdparty.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+                  org.apache.hbase.thirdparty.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+                  org.apache.hbase.thirdparty.io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+                  org.apache.hbase.thirdparty.io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+                  org.apache.hbase.thirdparty.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+                  org.apache.hbase.thirdparty.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+                  org.apache.hbase.thirdparty.io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+                  org.apache.hbase.thirdparty.io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:795)
+                  org.apache.hbase.thirdparty.io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:480)
+                  org.apache.hbase.thirdparty.io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+                  org.apache.hbase.thirdparty.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+                  org.apache.hbase.thirdparty.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+                  org.apache.hbase.thirdparty.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+                  java.lang.Thread.run(Thread.java:748)
+                {code}
+                And finally handlers are removed from the pipeline due to OutOfDirectMemoryError:
+                {code:java}
+                2022-01-25 17:36:28,657 WARN  [S-EventLoopGroup-1-5] channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the
+                pipeline. It usually means the last handler in the pipeline did not handle the exception.
+                org.apache.hbase.thirdparty.io.netty.channel.ChannelPipelineException: org.apache.hadoop.hbase.security.NettyHBaseSaslRpcClientHandler.handlerAdded() has thrown an
+                exception; removed.
+                  at org.apache.hbase.thirdparty.io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:624)
+                  at org.apache.hbase.thirdparty.io.netty.channel.DefaultChannelPipeline.addFirst(DefaultChannelPipeline.java:181)
+                  at org.apache.hbase.thirdparty.io.netty.channel.DefaultChannelPipeline.addFirst(DefaultChannelPipeline.java:358)
+                  at org.apache.hbase.thirdparty.io.netty.channel.DefaultChannelPipeline.addFirst(DefaultChannelPipeline.java:339)
+                  at org.apache.hadoop.hbase.ipc.NettyRpcConnection.saslNegotiate(NettyRpcConnection.java:229)
+                  at org.apache.hadoop.hbase.ipc.NettyRpcConnection.access$600(NettyRpcConnection.java:79)
+                  at org.apache.hadoop.hbase.ipc.NettyRpcConnection$2.operationComplete(NettyRpcConnection.java:312)
+                  at org.apache.hadoop.hbase.ipc.NettyRpcConnection$2.operationComplete(NettyRpcConnection.java:300)
+                  at org.apache.hbase.thirdparty.io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
+                  at org.apache.hbase.thirdparty.io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
+                  at org.apache.hbase.thirdparty.io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
+                  at org.apache.hbase.thirdparty.io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
+                  at org.apache.hbase.thirdparty.io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
+                  at org.apache.hbase.thirdparty.io.netty.util.concurrent.DefaultPromise.setSuccess0(DefaultPromise.java:605)
+                  at org.apache.hbase.thirdparty.io.netty.util.concurrent.DefaultPromise.trySuccess(DefaultPromise.java:104)
+                  at org.apache.hbase.thirdparty.io.netty.channel.DefaultChannelPromise.trySuccess(DefaultChannelPromise.java:84)
+                  at org.apache.hbase.thirdparty.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.fulfillConnectPromise(AbstractEpollChannel.java:653)
+                  at org.apache.hbase.thirdparty.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:691)
+                  at org.apache.hbase.thirdparty.io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567)
+                  at org.apache.hbase.thirdparty.io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+                  at org.apache.hbase.thirdparty.io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+                  at org.apache.hbase.thirdparty.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+                  at org.apache.hbase.thirdparty.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+                  at org.apache.hbase.thirdparty.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+                  at java.lang.Thread.run(Thread.java:748)
+                Caused by: org.apache.hbase.thirdparty.io.netty.util.internal.OutOfDirectMemoryError: failed to allocate 16777216 byte(s) of direct memory (used: 33269220801, max:
+                33285996544)
+                  at org.apache.hbase.thirdparty.io.netty.util.internal.PlatformDependent.incrementMemoryCounter(PlatformDependent.java:802)
+                  at org.apache.hbase.thirdparty.io.netty.util.internal.PlatformDependent.allocateDirectNoCleaner(PlatformDependent.java:731)
+                  at org.apache.hbase.thirdparty.io.netty.buffer.PoolArena$DirectArena.allocateDirect(PoolArena.java:632)
+                  at org.apache.hbase.thirdparty.io.netty.buffer.PoolArena$DirectArena.newChunk(PoolArena.java:607)
+                  at org.apache.hbase.thirdparty.io.netty.buffer.PoolArena.allocateNormal(PoolArena.java:202)
+                  at org.apache.hbase.thirdparty.io.netty.buffer.PoolArena.tcacheAllocateSmall(PoolArena.java:172)
+                  at org.apache.hbase.thirdparty.io.netty.buffer.PoolArena.allocate(PoolArena.java:134)
+                  at org.apache.hbase.thirdparty.io.netty.buffer.PoolArena.allocate(PoolArena.java:126)
+                  at org.apache.hbase.thirdparty.io.netty.buffer.PooledByteBufAllocator.newDirectBuffer(PooledByteBufAllocator.java:395)
+                  at org.apache.hbase.thirdparty.io.netty.buffer.AbstractByteBufAllocator.directBuffer(AbstractByteBufAllocator.java:187)
+                  at org.apache.hbase.thirdparty.io.netty.buffer.AbstractByteBufAllocator.directBuffer(AbstractByteBufAllocator.java:178)
+                  at org.apache.hbase.thirdparty.io.netty.buffer.AbstractByteBufAllocator.buffer(AbstractByteBufAllocator.java:115)
+                  at org.apache.hadoop.hbase.security.NettyHBaseSaslRpcClientHandler.writeResponse(NettyHBaseSaslRpcClientHandler.java:79)
+                  at org.apache.hadoop.hbase.security.NettyHBaseSaslRpcClientHandler.handlerAdded(NettyHBaseSaslRpcClientHandler.java:115)
+                  at org.apache.hbase.thirdparty.io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+                  at org.apache.hbase.thirdparty.io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+                  ... 24 more
+                {code}
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.security.CryptoAESWrapHandler.java</file>
+            <file type="M">org.apache.hadoop.hbase.security.SaslWrapHandler.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.NettyServerRpcConnection.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.ServerRpcConnection.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.SimpleServerRpcConnection.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26712" opendate="2022-01-26 19:34:46" fixdate="2022-02-16 10:10:10" resolution="Fixed">
+        <buginformation>
+            <summary>Balancer encounters NPE in rare case</summary>
+            <description> 
+                {code:java}
+                ERROR [ster-1:60000.Chore.1] hbase.ScheduledChore - Caught error
+                java.lang.NullPointerException
+                    at org.apache.hadoop.hbase.master.assignment.AssignmentManager.balance(AssignmentManager.java:758)
+                    at org.apache.hadoop.hbase.master.HMaster.executeRegionPlansWithThrottling(HMaster.java:1834)
+                    at org.apache.hadoop.hbase.master.HMaster.balance(HMaster.java:1797)
+                    at org.apache.hadoop.hbase.master.HMaster.balance(HMaster.java:1707)
+                    at org.apache.hadoop.hbase.master.balancer.BalancerChore.chore(BalancerChore.java:49)
+                    at org.apache.hadoop.hbase.ScheduledChore.run(ScheduledChore.java:153)
+                    at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+                    at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+                    at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+                    at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+                    at org.apache.hadoop.hbase.JitterScheduledThreadPoolExecutorImpl$JitteredRunnableScheduledFuture.run(JitterScheduledThreadPoolExecutorImpl.java:111)
+                    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+                    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+                    at java.lang.Thread.run(Thread.java:748)
+                {code}
+                Let's fix this.
+            </description>
+            <version>2.4.9</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.master.HMaster.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.assignment.AssignmentManager.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.TestMasterBalancerNPE.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26720" opendate="2022-01-28 01:14:51" fixdate="2022-03-16 12:34:17" resolution="Fixed">
+        <buginformation>
+            <summary>ExportSnapshot should validate the source snapshot before copying files</summary>
+            <description>Running {{ExportSnapshot}} with default parameters will copy the snapshot to a target location, and then use {{verifySnapshot}} to validate the integrity
+                of the written snapshot. However, it is possible for the source snapshot to be invalid which leads to an invalid exported snapshot.
+
+                We can validate the source snapshot before export.
+
+                By default, we can validate the source snapshot unless the {{-no-target-verify}} parameter is set. We could also introduce a separate parameter for
+                {{-no-source-verify}} if an operator wanted to validate the target but not validate the source for some reason, to provide some amount of backwards compatibility if
+                that scenario is important.
+            </description>
+            <version>0.99.0</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.snapshot.ExportSnapshot.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26745" opendate="2022-02-08 16:29:03" fixdate="2022-03-03 01:49:20" resolution="Fixed">
+        <buginformation>
+            <summary>MetricsStochasticBalancerSource metrics don't render in /jmx endpoint</summary>
+            <description>The check in JSONBean [here|https://github.com/apache/hbase/blob/master/hbase-http/src/main/java/org/apache/hadoop/hbase/util/JSONBean.java#L266] causes
+                the balancer cost metrics to be excluded from the {{/jmx}} endpoint. I think we should just remove the check for ":". I don't think including metrics with a colon
+                in them poses any problem, since the strings are quoted. We removed this check in our cdh5 fork almost a year ago and have not seen any issues.
+
+                Alternatively we can fix the MetricsStochasticBalancerSource metrics to emit metrics that adhere to these filters, but I think that would be a backwards
+                incompatible change since this is only a json rendering issue and people might be consuming JMX directly.
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.util.JSONBean.java</file>
+            <file type="M">org.apache.hadoop.hbase.util.TestJSONBean.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26783" opendate="2022-03-01 18:50:42" fixdate="2022-03-09 22:41:12" resolution="Fixed">
+        <buginformation>
+            <summary>ScannerCallable doubly clears meta cache on retries</summary>
+            <description>Way back in HBASE-15658 [~ghelmling] fixed RegionServerCallable to not clear meta in {{{}prepare(boolean reload){}}}. because it already would have cleared
+                it in the try/catch when {{{}throwable(Throwable t, boolean retrying){}}}.
+
+                I have recently been doing some load tests where I am causing HBase RegionServers to throw many CallDroppedExceptions because they are overloaded by the test. While
+                this is an extreme example, it does sometimes crop up in production when a bad actor executes a job without rate limiting, etc. What I noticed was that the
+                RegionServer hosting meta was most affected by the load, way more than any other server in the cluster. Digging into the issue I realized that the extra meta load
+                was coming mostly from the scans, originating from {{{}ScannerCallable.prepare(boolean reload){}}}.
+
+                I'm not sure why ScannerCallable was excluded from the original jira, maybe an oversight. But ScannerCallable is called in the same context of RetryingRpcCaller,
+                which will handle clearing meta in the try/catch like other callables. We should similarly update ScannerCallable's prepare method not always pass useCache=true
+                when getting region locations.
+            </description>
+            <version>2.4.10</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.client.ReversedScannerCallable.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.ScannerCallable.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.TestReversedScannerCallable.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.TestScannerCallable.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.TestMetaCache.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26784" opendate="2022-03-01 20:58:22" fixdate="2022-03-08 19:40:58" resolution="Fixed">
+        <buginformation>
+            <summary>Use HIGH_QOS for ResultScanner.close requests</summary>
+            <description>Active scanners take resources on the RegionServer, and scanner leaks can have a big impact on GC. Under high load, ResultScanner.close() calls might get
+                rejected or timed out before executing. Exceptions thrown by close() are currently swallowed, so clients will not retry. This leads to a leak of active scanners on
+                the server side.
+
+                These calls should be relatively free to execute, and executing them will free up the resources which can have an impact on overall RegionServer performance. As
+                such it can be beneficial to execute all ResultScanner.close() requests with HIGH_QOS regardless of the priority of the underlying Scan.
+
+                In a scan-heavy stress test I ran, after a couple minutes the Full GC time (using G1GC) starts increasing and we start seeing 1s pauses, due to increasing number of
+                active scanners (into the 10s of thousands). Re-running the stress test with HIGH_QOS for ResultScanner.close() eliminates the leak and GC time remains stable.
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.client.ScannerCallable.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.HBaseRpcControllerImpl.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.TestTableRpcPriority.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26790" opendate="2022-03-02 15:53:15" fixdate="2022-06-24 11:56:54" resolution="Fixed">
+        <buginformation>
+            <summary>getAllRegionLocations can cache locations with null hostname</summary>
+            <description>RegionLocator methods typically delegate to ConnectionImplementation.locateRegion, which throws a NoServerForRegionException if the located region's
+                serverName is null. RegionLocator.getAllRegionLocations does not go through that path, instead caching all returned region locations without any validation. This
+                can result in a "dirty" meta cache, since clients do not expect to have null serverNames in the meta cache. We should add the same throwing
+                of NoServerForRegionException to this method as used in the others. Or at least we should not cache the result if the serverName is null.
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncTableRegionLocatorImpl.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.TestAsyncNonMetaRegionLocator.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26807" opendate="2022-03-07 14:14:46" fixdate="2022-04-25 17:28:06" resolution="Fixed">
+        <buginformation>
+            <summary>Unify CallQueueTooBigException special pause with CallDroppedException</summary>
+            <description>CallQueueTooBigException and CallDroppedException crop up in very similar circumstances – the former is thrown if the request cannot be enqueued because
+                the queue is full; the latter is thrown when a call is dropped from the queue to make room for another call.
+
+                HBASE-17114 added a special pause feature, which allows pausing for a longer period of time when CallQueueTooBigException is encountered, vs the normal pause for
+                other exceptions. The idea here is to help reduce load so the server can process its queue. We should extend this feature to encompass CallDroppedException for the
+                same reason.
+
+                Currently the config is called "hbase.client.pause.cqtbe". We should probably deprecate that in favor of a more generic name.
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.CallDroppedException.java</file>
+            <file type="M">org.apache.hadoop.hbase.CallQueueTooBigException.java</file>
+            <file type="M">org.apache.hadoop.hbase.HBaseServerException.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncAdminBuilder.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncAdminBuilderBase.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncAdminRequestRetryingCaller.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncBatchRpcRetryingCaller.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncClientScanner.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncConnectionConfiguration.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncMasterRequestRpcRetryingCaller.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncRpcRetryingCaller.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncRpcRetryingCallerFactory.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncScanSingleRegionRpcRetryingCaller.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncServerRequestRpcRetryingCaller.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncSingleRequestRpcRetryingCaller.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncTableBuilder.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncTableBuilderBase.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.ConnectionConfiguration.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.ConnectionOverAsyncConnection.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.RawAsyncHBaseAdmin.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.RawAsyncTableImpl.java</file>
+            <file type="M">org.apache.hadoop.hbase.exceptions.ClientExceptionsUtil.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.IPCUtil.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.RemoteWithExtrasException.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.TestAsyncConnectionConfiguration.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.TestRemoteWithExtrasException.java</file>
+            <file type="M">org.apache.hadoop.hbase.HConstants.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncRegionReplicationRetryingCaller.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26814" opendate="2022-03-08 20:41:16" fixdate="2022-03-10 18:12:25" resolution="Fixed">
+        <buginformation>
+            <summary>Default StoreHotnessProtector to off, with logs to guide when to turn it on</summary>
+            <description>As discussed in HBASE-26522 and somewhat in HBASE-26575, StoreHotnessProtector is too conservative. One can easily trigger RegionTooBusyException on an
+                otherwise idle regionserver with relatively small amount of traffic. The idea behind this protection is good, but it needs to take into account current load in
+                order to warrant being enabled by default.
+
+                Until it's improved as such, we should change it to default off. One thing we can do to help drive usage would be to add warning logs when it would have triggered.
+                Operators who are diagnosing performance issues will naturally look at the logs and see indication of a potential tool for mitigation.
+
+                cc [~andrew.purtell@gmail.com] 
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.regionserver.throttle.StoreHotnessProtector.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26817" opendate="2022-03-09 11:56:53" fixdate="2022-03-11 10:12:34" resolution="Fixed">
+        <buginformation>
+            <summary>Mark RpcExecutor as IA.LimitedPrivate COPROC and PHOENIX</summary>
+            <description>{{RpcExecutor}}, an abstract base class, is marked as {{IA.Private}}. However, it has several subclasses that are marked as {{IA.LimitedPrivate(COPROC,
+                PHOENIX)}}. I think that the base class needs to match the highest exposure level of any of its subclasses.
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.ipc.BalancedQueueRpcExecutor.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.FastPathBalancedQueueRpcExecutor.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.FastPathRWQueueRpcExecutor.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.RWQueueRpcExecutor.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.RpcExecutor.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26860" opendate="2022-03-17 18:58:09" fixdate="2022-04-30 01:58:15" resolution="Fixed">
+        <buginformation>
+            <summary>Backport "HBASE-25681 Add a switch for server/table queryMeter" to branch-2.4</summary>
+            <description>https://issues.apache.org/jira/browse/HBASE-25687 backported this config to branch-2, but that didn't include 2.4 because it was already released by then.
+                This backports to branch-2.4, because I think the config is valuable. I find in performance testing that the per-table metrics specifically here can have a
+                non-trivial impact on throughput.
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.4.12</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.regionserver.MetricsTableQueryMeter.java</file>
+            <file type="M">org.apache.hadoop.hbase.test.MetricsAssertHelper.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.MetricsTableQueryMeterImpl.java</file>
+            <file type="M">org.apache.hadoop.hbase.test.MetricsAssertHelperImpl.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.MetricsRegionServer.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.RegionServerTableMetrics.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.TestMetricsRegionServer.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.TestMetricsTableLatencies.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26876" opendate="2022-03-21 15:11:24" fixdate="2022-03-25 22:50:36" resolution="Fixed">
+        <buginformation>
+            <summary>Use toStringBinary for rowkey in RegionServerCallable error string</summary>
+            <description>Bytes.toString does not work well with most row keys, since the row key is very unlikely to actually be a simple UTF-8 string. Bytes.toStringBinary is
+                better
+            </description>
+            <version>2.4.11</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.client.RegionServerCallable.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26938" opendate="2022-04-07 23:30:29" fixdate="2022-04-17 14:57:30" resolution="Fixed">
+        <buginformation>
+            <summary>Compaction failures after StoreFileTracker integration</summary>
+            <description>[ Currently this has only been tested with branch-2.5 and branch-2. Testing with master next, will update afterward. ]
+
+                Test cluster of 10 regionservers is configured each RS with 5 flush threads, 5 large compaction threads, and 10 small compaction threads.
+
+                Hadoop is 3.3.2. Java is 11. HFiles are on HDFS.
+
+                All the StoreFileTracker implementations, DEFAULT or FILE, exhibit compaction time store writer errors in an ingest heavy use case. Unit tests don't seem to cover
+                whatever this is. Most compactions succeed, but some do not. Those that do not are failing with state or sanity check assertions. Below errors are all from DEFAULT.
+                They seem related... store writer instance usage/close/locking issues during compactions.
+
+                Warnings like "writer exists when it should not":
+
+                {noformat}
+                2022-04-07T23:13:11,351 WARN  [regionserver/ip-172-31-63-83:8120-shortCompactions-8]
+                compactions.Compactor: Writer exists when it should not: {
+                hdfs://ip-172-31-58-47.us-west-2.compute.internal:8020/hbase/data/default/IntegrationTestLoadCommonCrawl/b518f72941d4427e7e1923407643df67/.tmp/c/29d7b88c4c214ddcbba4f747514a2cf5
+                }
+                {noformat}
+
+                Errors like:
+
+                IllegalStateException thrown from HFileBlockIndex$BlockIndexWriter.shouldWriteBlock:
+                {noformat}
+                2022-04-07T23:13:11,508 ERROR [regionserver/ip-172-31-63-83:8120-shortCompactions-6] regionserver.CompactSplit: Compaction failed
+                region=IntegrationTestLoadCommonCrawl,,1649373172576.b518f72941d4427e7e1923407643df67., storeName=b518f72941d4427e7e1923407643df67/c, priority=10,
+                startTime=1649373185476
+                java.lang.IllegalStateException: curInlineChunk is null; has shouldWriteBlock been called with closing=true and then called again?
+                at org.apache.hadoop.hbase.io.hfile.HFileBlockIndex$BlockIndexWriter.shouldWriteBlock(HFileBlockIndex.java:1258) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.io.hfile.HFileWriterImpl.writeInlineBlocks(HFileWriterImpl.java:523) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.io.hfile.HFileWriterImpl.close(HFileWriterImpl.java:608) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.StoreFileWriter.close(StoreFileWriter.java:377) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.compactions.DefaultCompactor.abortWriter(DefaultCompactor.java:84) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.compactions.DefaultCompactor.abortWriter(DefaultCompactor.java:76) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.compactions.Compactor.compact(Compactor.java:384) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.compactions.DefaultCompactor.compact(DefaultCompactor.java:62) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.DefaultStoreEngine$DefaultCompactionContext.compact(DefaultStoreEngine.java:125)
+                ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                {noformat}
+                and IllegalStateException thrown from HFileBlock$Writer.expectState:
+                {noformat}
+                2022-04-07T23:13:11,559 ERROR [regionserver/ip-172-31-63-83:8120-shortCompactions-8] regionserver.CompactSplit: Compaction failed
+                region=IntegrationTestLoadCommonCrawl,,1649373172576.b518f72941d4427e7e1923407643df67., storeName=b518f72941d4427e7e1923407643df67/c, priority=0,
+                startTime=1649373191325
+                java.lang.IllegalStateException: Expected state: BLOCK_READY, actual state: WRITING
+                at org.apache.hadoop.hbase.io.hfile.HFileBlock$Writer.expectState(HFileBlock.java:1190) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.io.hfile.HFileBlock$Writer.getOnDiskSizeWithHeader(HFileBlock.java:1106) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.io.hfile.HFileWriterImpl.finishBlock(HFileWriterImpl.java:346) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.io.hfile.HFileWriterImpl.checkBlockBoundary(HFileWriterImpl.java:327) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.io.hfile.HFileWriterImpl.append(HFileWriterImpl.java:739) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.StoreFileWriter.append(StoreFileWriter.java:301) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.compactions.Compactor.performCompaction(Compactor.java:456) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.compactions.Compactor.compact(Compactor.java:364) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.compactions.DefaultCompactor.compact(DefaultCompactor.java:62) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.DefaultStoreEngine$DefaultCompactionContext.compact(DefaultStoreEngine.java:125)
+                ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.HStore.compact(HStore.java:1138) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.HRegion.compact(HRegion.java:2392) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.CompactSplit$CompactionRunner.doCompaction(CompactSplit.java:656) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.CompactSplit$CompactionRunner.run(CompactSplit.java:702) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                {noformat}
+
+                and the dreaded "added a key not lexically larger than previous":
+                {noformat}
+                2022-04-07T23:13:14,715 ERROR [regionserver/ip-172-31-63-83:8120-shortCompactions-8] regionserver.CompactSplit: Compaction failed
+                region=IntegrationTestLoadCommonCrawl,de.bao,1649373172576.083eb1ede8bf8c82174f614b06d4741e., storeName=083eb1ede8bf8c82174f614b06d4741e/c, priority=-1,
+                startTime=1649373194643
+                java.io.IOException: Added a key not lexically larger than previous.
+                ...
+                at org.apache.hadoop.hbase.util.BloomContext.sanityCheck(BloomContext.java:63) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.util.BloomContext.writeBloom(BloomContext.java:54) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.StoreFileWriter.appendGeneralBloomfilter(StoreFileWriter.java:280) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.StoreFileWriter.append(StoreFileWriter.java:299) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.compactions.Compactor.performCompaction(Compactor.java:456) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.compactions.Compactor.compact(Compactor.java:364) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.compactions.DefaultCompactor.compact(DefaultCompactor.java:62) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.DefaultStoreEngine$DefaultCompactionContext.compact(DefaultStoreEngine.java:125)
+                ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.HStore.compact(HStore.java:1138) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.HRegion.compact(HRegion.java:2392) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.CompactSplit$CompactionRunner.doCompaction(CompactSplit.java:656) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.CompactSplit$CompactionRunner.run(CompactSplit.java:702) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                {noformat}
+
+                and another bloomfilter addition sanity check failure:
+                {noformat}
+                2022-04-07T23:23:44,001 ERROR [regionserver/ip-172-31-49-8:8120-longCompactions-4] regionserver.CompactSplit: Compaction failed
+                region=IntegrationTestLoadCommonCrawl,com.fc2.blog.idp,1649373775847.9d960338d85e2bb9c68669fad6a89f73., storeName=9d960338d85e2bb9c68669fad6a89f73/c, priority=-1,
+                startTime=1649373823967
+                java.lang.IllegalStateException: First key in chunk already set: com.filmestipo|/film/1335-algures-hoje-a-noite|1649373441720
+                at org.apache.hadoop.hbase.io.hfile.CompoundBloomFilterWriter.append(CompoundBloomFilterWriter.java:174) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.util.BloomContext.writeBloom(BloomContext.java:55) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.StoreFileWriter.appendGeneralBloomfilter(StoreFileWriter.java:280) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.StoreFileWriter.append(StoreFileWriter.java:299) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.compactions.Compactor.performCompaction(Compactor.java:456) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.compactions.Compactor.compact(Compactor.java:364) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.compactions.DefaultCompactor.compact(DefaultCompactor.java:62) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.DefaultStoreEngine$DefaultCompactionContext.compact(DefaultStoreEngine.java:125)
+                ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.HStore.compact(HStore.java:1138) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.HRegion.compact(HRegion.java:2392) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.CompactSplit$CompactionRunner.doCompaction(CompactSplit.java:656) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.CompactSplit$CompactionRunner.run(CompactSplit.java:702) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                {noformat}
+
+                and a NPE in HFileBlock$Writer.getEncodingState:
+                {noformat}
+                2022-04-07T23:17:26,373 ERROR [regionserver/ip-172-31-63-83:8120-shortCompactions-6] regionserver.CompactSplit: Compaction failed
+                region=IntegrationTestLoadCommonCrawl,com.fc2.blog.idp,1649373315303.2bd16fac0c088fa135a855f0165f1dba., storeName=2bd16fac0c088fa135a855f0165f1dba/c, priority=10,
+                startTime=1649373438988
+                java.lang.NullPointerException: null
+                at org.apache.hadoop.hbase.io.hfile.HFileBlock$Writer.getEncodingState(HFileBlock.java:837) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.io.hfile.HFileBlock$Writer.beforeShipped(HFileBlock.java:831) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.io.hfile.HFileWriterImpl.beforeShipped(HFileWriterImpl.java:770) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.StoreFileWriter.beforeShipped(StoreFileWriter.java:309) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.compactions.Compactor.performCompaction(Compactor.java:515) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.compactions.Compactor.compact(Compactor.java:364) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.compactions.DefaultCompactor.compact(DefaultCompactor.java:62) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.DefaultStoreEngine$DefaultCompactionContext.compact(DefaultStoreEngine.java:125)
+                ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.HStore.compact(HStore.java:1138) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.HRegion.compact(HRegion.java:2392) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.CompactSplit$CompactionRunner.doCompaction(CompactSplit.java:656) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                at org.apache.hadoop.hbase.regionserver.CompactSplit$CompactionRunner.run(CompactSplit.java:702) ~[hbase-server-2.5.0-SNAPSHOT.jar:2.5.0-SNAPSHOT]
+                {noformat}
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.mob.DefaultMobStoreCompactor.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.AbstractMultiFileWriter.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.BrokenStoreFileCleaner.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.DateTieredMultiFileWriter.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.HRegionFileSystem.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.HRegionServer.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.HStore.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.StoreEngine.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.StripeMultiFileWriter.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.compactions.AbstractMultiOutputCompactor.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.compactions.Compactor.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.compactions.DateTieredCompactor.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.compactions.DefaultCompactor.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.compactions.StripeCompactor.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.storefiletracker.FileBasedStoreFileTracker.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.storefiletracker.MigrationStoreFileTracker.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.storefiletracker.StoreFileTracker.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.storefiletracker.StoreFileTrackerBase.java</file>
+            <file type="M">org.apache.hadoop.hbase.mob.FaultyMobStoreCompactor.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.TestBrokenStoreFileCleaner.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.TestCompactorMemLeak.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.storefiletracker.TestStoreFileTracker.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="26945" opendate="2022-04-11 20:51:37" fixdate="2022-06-23 20:52:01" resolution="Fixed">
+        <buginformation>
+            <summary>Quotas causes too much load on meta for large clusters</summary>
+            <description>We've been upgrading larger clusters to hbase 2, and ran into this issue where two equivalent clusters (one on 1.2 and the other on 2.4.x) running almost
+                identical workloads, but the hbase2 cluster was doing way more meta requests.
+
+                One of the reasons seems to be from https://issues.apache.org/jira/browse/HBASE-21820, which added an updateQuotaFactors method to the QuotaCache QuotaRefreshChore.
+                This new method  calls MetaTableAcessor.scanMeta for every table in the cluster. This is happening on every regionserver, so if you have many tables and/or many
+                regionservers you can easily start sending lots of traffic to meta. One way to offset this is to reduce frequency of hbase.quota.refresh.period, but this means you
+                are less able to quickly respond to changes in load.
+
+                We should figure out a caching or notification mechanism that can reduce the need scan meta so much. It seems like we're mainly scanning meta to get a count of
+                total regions per table, which should not be changing so often.
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.quotas.QuotaCache.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27023" opendate="2022-05-11 08:44:43" fixdate="2022-06-02 12:27:17" resolution="Fixed">
+        <buginformation>
+            <summary>Add protobuf to NOTICE file</summary>
+            <description>The spotless formatting removed the protobuf credit from the AbstractByteRange. It is currently not included in the NOTICE file.
+
+                https://github.com/apache/hbase/commit/9c8c9e7fbf8005ea89fa9b13d6d063b9f0240443#diff-f5806f14849a23b9265b022f3f330b80d08bcc10fcf69d8ee2e1b0d5af266d52
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.testclassification.ClientTests.java</file>
+            <file type="M">org.apache.hadoop.hbase.testclassification.CoprocessorTests.java</file>
+            <file type="M">org.apache.hadoop.hbase.testclassification.FilterTests.java</file>
+            <file type="M">org.apache.hadoop.hbase.testclassification.FlakeyTests.java</file>
+            <file type="M">org.apache.hadoop.hbase.testclassification.IOTests.java</file>
+            <file type="M">org.apache.hadoop.hbase.testclassification.IntegrationTests.java</file>
+            <file type="M">org.apache.hadoop.hbase.testclassification.LargeTests.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27038" opendate="2022-05-15 18:05:23" fixdate="2022-06-06 21:50:40" resolution="Fixed">
+        <buginformation>
+            <summary>CellComparator should extend Serializable</summary>
+            <description>Prior to HBASE-18945, CellComparator was a class which implemented Serializable. In that jira, an interface was extracted with the intent of making the
+                implementation IA.Private. This broke some downstream consumers, so the new CellComparator interface was made IA.Public in HBASE-19160.
+
+                One remaining breakage from that change is that if someone is using CellComparator in spark it will fails because it's not serializable. Everything in spark needs
+                to be serializable, and the old CellComprator class used to extend Serializable. There was some small discussion in HBASE-18945 about removing Serializable, but I
+                don't think anyone thought of this use-case.
+
+                The failure is:
+
+                Job aborted due to stage failure: Task not serializable: java.io.NotSerializableException: org.apache.hadoop.hbase.CellComparatorImpl
+
+                We should make CellComparator extend Serializable, or have CellComparatorImpl implement it.
+            </description>
+            <version>3.0.0-alpha-2</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.CellComparator.java</file>
+            <file type="M">org.apache.hadoop.hbase.CellComparatorImpl.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27048" opendate="2022-05-17 16:16:13" fixdate="2022-07-14 23:34:53" resolution="Fixed">
+        <buginformation>
+            <summary>Server side scanner time limit should account for time in queue</summary>
+            <description>When a scan request comes in with a timeout specified and heartbeats/partials allowed, we calculate a time limit for running the scan to be half of that
+                timeout. The idea is to return before the timeout expires.
+
+                The calculation of that time limit is "now + timeout / 2", where now is the point at which the scan is starting to run. What's missed here is the scan may have
+                spent upwards of a few seconds in the IPC queue before being serviced. In this case, the time limit may extend beyond the timeout of the request and the server will
+                not return in time.
+
+                We should calculate the time limit from ServerCall.getReceiveTime instead to avoid these timeouts.
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.regionserver.RSRpcServices.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.TestScannerHeartbeatMessages.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27053" opendate="2022-05-19 04:45:45" fixdate="2022-07-16 22:21:34" resolution="Fixed">
+        <buginformation>
+            <summary>IOException during caching of uncompressed block to the block cache.</summary>
+            <description>When prefetch to block cache is enabled and blocks are compressed sometimes caching fails with the exception:
+                {noformat}
+                2022-05-18 21:37:29,597 ERROR [RS_OPEN_REGION-regionserver/x1:16020-2] regionserver.HRegion: Could not initialize all stores for the
+                region=cluster_test,66666666,1652935047946.a57ca5f9e7bebb4855a44523063f79c7.
+                2022-05-18 21:37:29,598 WARN [RS_OPEN_REGION-regionserver/x1:16020-2] regionserver.HRegion: Failed initialize of region=
+                cluster_test,66666666,1652935047946.a57ca5f9e7bebb4855a44523063f79c7., starting to roll back memstore
+                java.io.IOException: java.io.IOException: java.lang.RuntimeException: Cached block contents differ, which should not have
+                happened.cacheKey:19307adf1c2248ebb5675116ea640712.c3a21f2005abf308e4a8c9759d4e05fe_0
+                at org.apache.hadoop.hbase.regionserver.HRegion.initializeStores(HRegion.java:1149)
+                at org.apache.hadoop.hbase.regionserver.HRegion.initializeStores(HRegion.java:1092)
+                at org.apache.hadoop.hbase.regionserver.HRegion.initializeRegionInternals(HRegion.java:996)
+                at org.apache.hadoop.hbase.regionserver.HRegion.initialize(HRegion.java:946)
+                at org.apache.hadoop.hbase.regionserver.HRegion.openHRegion(HRegion.java:7240)
+                at org.apache.hadoop.hbase.regionserver.HRegion.openHRegionFromTableDir(HRegion.java:7199)
+                at org.apache.hadoop.hbase.regionserver.HRegion.openHRegion(HRegion.java:7175)
+                at org.apache.hadoop.hbase.regionserver.HRegion.openHRegion(HRegion.java:7134)
+                at org.apache.hadoop.hbase.regionserver.HRegion.openHRegion(HRegion.java:7090)
+                at org.apache.hadoop.hbase.regionserver.handler.AssignRegionHandler.process(AssignRegionHandler.java:147)
+                at org.apache.hadoop.hbase.executor.EventHandler.run(EventHandler.java:100)
+                at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+                at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+                at java.lang.Thread.run(Thread.java:748)
+                Caused by: java.io.IOException: java.lang.RuntimeException: Cached block contents differ, which should not have
+                happened.cacheKey:19307adf1c2248ebb5675116ea640712.c3a21f2005abf308e4a8c9759d4e05fe_0
+                at org.apache.hadoop.hbase.regionserver.StoreEngine.openStoreFiles(StoreEngine.java:294)
+                at org.apache.hadoop.hbase.regionserver.StoreEngine.initialize(StoreEngine.java:344)
+                at org.apache.hadoop.hbase.regionserver.HStore.(init)(HStore.java:294)
+                at org.apache.hadoop.hbase.regionserver.HRegion.instantiateHStore(HRegion.java:6375)
+                at org.apache.hadoop.hbase.regionserver.HRegion$1.call(HRegion.java:1115)
+                at org.apache.hadoop.hbase.regionserver.HRegion$1.call(HRegion.java:1112)
+                at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+                at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+                at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+                ... 3 more
+                Caused by: java.lang.RuntimeException: Cached block contents differ, which should not have
+                happened.cacheKey:19307adf1c2248ebb5675116ea640712.c3a21f2005abf308e4a8c9759d4e05fe_0
+                at org.apache.hadoop.hbase.io.hfile.BlockCacheUtil.validateBlockAddition(BlockCacheUtil.java:199)
+                at org.apache.hadoop.hbase.io.hfile.BlockCacheUtil.shouldReplaceExistingCacheBlock(BlockCacheUtil.java:231)
+                at org.apache.hadoop.hbase.io.hfile.bucket.BucketCache.shouldReplaceExistingCacheBlock(BucketCache.java:447)
+                at org.apache.hadoop.hbase.io.hfile.bucket.BucketCache.cacheBlockWithWait(BucketCache.java:432)
+                at org.apache.hadoop.hbase.io.hfile.bucket.BucketCache.cacheBlock(BucketCache.java:418)
+                at org.apache.hadoop.hbase.io.hfile.CombinedBlockCache.cacheBlock(CombinedBlockCache.java:60)
+                at org.apache.hadoop.hbase.io.hfile.HFileReaderImpl.lambda$readBlock$2(HFileReaderImpl.java:1319)
+                at java.util.Optional.ifPresent(Optional.java:159)
+                at org.apache.hadoop.hbase.io.hfile.HFileReaderImpl.readBlock(HFileReaderImpl.java:1317)
+                at org.apache.hadoop.hbase.io.hfile.HFileReaderImpl$HFileScannerImpl.readAndUpdateNewBlock(HFileReaderImpl.java:942)
+                at org.apache.hadoop.hbase.io.hfile.HFileReaderImpl$HFileScannerImpl.seekTo(HFileReaderImpl.java:931)
+                at org.apache.hadoop.hbase.io.HalfStoreFileReader$1.seekTo(HalfStoreFileReader.java:171)
+                at org.apache.hadoop.hbase.io.HalfStoreFileReader.getFirstKey(HalfStoreFileReader.java:321)
+                at org.apache.hadoop.hbase.regionserver.HStoreFile.open(HStoreFile.java:477)
+                at org.apache.hadoop.hbase.regionserver.HStoreFile.initReader(HStoreFile.java:490)
+                at org.apache.hadoop.hbase.regionserver.StoreEngine.createStoreFileAndReader(StoreEngine.java:231)
+                at org.apache.hadoop.hbase.regionserver.StoreEngine.lambda$openStoreFiles$0(StoreEngine.java:272)
+                ... 6 more
+
+                {noformat}
+            </description>
+            <version>2.4.12</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.HFileBlock.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.TestChecksum.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.TestHFileBlock.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.TestHFileBlockUnpack.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27060" opendate="2022-05-24 20:47:39" fixdate="2022-06-24 14:54:49" resolution="Fixed">
+        <buginformation>
+            <summary>Allow sharing connections between AggregationClient instances</summary>
+            <description>AggregationClient only has a single constructor which takes a Configuration. The constructor uses the Configuration to create a Connection.
+
+                However, some of the AggregationClient methods take a Table argument. In those cases it doesn't use the created Connection at all.
+
+                We should add another constructor which does not create a Connection so that people can use AggregationClient with externally managed Connection.
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.client.coprocessor.AggregationClient.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.coprocessor.TestAggregationClient.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27080" opendate="2022-06-01 00:48:36" fixdate="2022-06-06 05:45:58" resolution="Fixed">
+        <buginformation>
+            <summary>Optimize debug output log of ConstantSizeRegionSplitPolicy class.</summary>
+            <description>https://github.com/apache/hbase/blob/master/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.java#L103
+                https://github.com/apache/hbase/blob/master/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.java#L111
+
+                The debug log should be changed to "Should split because {} size={}, sizeToCheck={}{}".
+            </description>
+            <version>2.4.12</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.regionserver.ConstantSizeRegionSplitPolicy.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27149" opendate="2022-06-22 18:18:13" fixdate="2022-07-12 02:47:37" resolution="Fixed">
+        <buginformation>
+            <summary>Server should close scanner if client times out before results are ready</summary>
+            <description>When heartbeats are enabled, we try to return from a scan before {{clientTimeout / 2}} millis has passed. Previously, this did not account for queue times
+                so could still easily timeout. That problem was handled in HBASE-27048. It's still possible to timeout if heartbeats are disabled, we have queued for longer than
+                \{{ clientTimeout / 2 }} millis and scan is slow, or if the RegionScanner is otherwise delayed in returning.
+
+                How a scanner timeout is handled by the client depends on the point at which the timeout occurred:
+                * In openScanner(), the call will be retried. We will not have received a scannerId, so cannot close that scanner that may have been open on the server side.
+                * In next(), the timeout will bubble up and fail the scan. In this case we try to close the scanner, but that could be interrupted if server is overwhelmed (close
+                call gets queued and then dropped) or client terminates.
+
+                Active scanners carry with them a non-trivial amount of memory and resource overhead on the server. In my experience, if a server becomes overwhelmed, client
+                scanners can start to time out. Those scanners live on on the server, contributing to memory and resource pressure. That further slows down the server, etc. This is
+                especially problematic when openScanner times out because of the inherent retries of that call, with a single scanner possibly contributing multiple "leaked"
+                scanners on the server before finally failing.
+
+                We should attempt to close the scanner on the server side when a scan call takes longer than the client timeout to finish. I think this would be a matter of adding
+                something like this to the end of RSRpcServices.scan:
+                {code:java}
+                if (EnvironmentEdgeManager.currentTime() ) rpcCall.getDeadline()) {
+                  throw new TimeoutIOException("Client deadline exceeded, cannot return results");
+                }{code}
+                We already have a catch of IOException, wherein we close the scanner. The actual exception thrown shouldn't matter much since the client will not receive the
+                response.
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.ipc.MetricsHBaseServer.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.RSRpcServices.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.TestScannerTimeoutHandling.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27153" opendate="2022-06-23 12:19:42" fixdate="2022-08-02 12:10:34" resolution="Fixed">
+        <buginformation>
+            <summary>Improvements to read-path tracing</summary>
+            <description>Take another pass through tracing of the read path, make adjustments accordingly. One of the major concerns raised previously is that we create a span for
+                every block access. Start by simplifying this to trace events and see what else comes up.
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.client.trace.hamcrest.AttributesMatchers.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.trace.HFileContextAttributesBuilderConsumer.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.util.BlockIOUtils.java</file>
+            <file type="M">org.apache.hadoop.hbase.trace.HBaseSemanticAttributes.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.HFileBlock.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.HFileReaderImpl.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.PrefetchExecutor.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.ScannerContext.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.SegmentScanner.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.StoreFileScanner.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.StoreScanner.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.querymatcher.ScanQueryMatcher.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.querymatcher.UserScanQueryMatcher.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.TestBlockIOUtils.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.TestPrefetch.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27154" opendate="2022-06-23 15:10:01" fixdate="2022-10-05 00:06:53" resolution="Fixed">
+        <buginformation>
+            <summary>Backport missing MOB related changes to branch-2</summary>
+            <description>While trying to backport https://issues.apache.org/jira/browse/HBASE-26969 to branch-2 I have found that multiple major MOB related changes are missing.
+
+                This change is required for FileBased SFT correctness so the changes it depends on should be backported first. Also any improvement to MOB stability is usually
+                welcomed.
+
+                The missing changes I have found so far:
+                https://issues.apache.org/jira/browse/HBASE-22749
+                https://issues.apache.org/jira/browse/HBASE-23723
+                https://issues.apache.org/jira/browse/HBASE-24163
+
+                There is also a docs change describing the new MOB functionality. But considering that the book is always generated based on master I think it is safe to skip
+                backporting it.
+                https://issues.apache.org/jira/browse/HBASE-23198
+
+                I'm planning to backport these changes one by one until we reach a state where HBASE-26969 can be backported too.
+            </description>
+            <version>2.6.0</version>
+            <fixedVersion>3.0.0-alpha-2</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.mob.DefaultMobStoreCompactor.java</file>
+            <file type="M">org.apache.hadoop.hbase.mob.FaultyMobStoreCompactor.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27170" opendate="2022-06-30 17:41:11" fixdate="2022-07-04 20:50:43" resolution="Fixed">
+        <buginformation>
+            <summary>ByteBuffAllocator leak when decompressing blocks near minSizeForReservoirUse</summary>
+            <description>Recently I started testing out BucketCache on some of our new hbase2 clusters. When BucketCache is enabled, it causes all disk reads to use
+                ByteBuffAllocator in an attempt to avoid heap allocations. Without BucketCache enabled, even with ByteBuffAllocator enabled it will not be used for disk reads.
+
+                At first this was amazing, we had close to 0% heap allocations which drastically reduces CPU and GC time. Over time I noticed that the ByteBuffAllocator pool filled
+                up, and at that point all allocations come from the heap and our heap allocation % goes to 100%.
+
+                We were using default max buffer count, which was 4096 for a smaller host and 7680 for a larger one. At first I figured we just needed more buffers, so I upped it
+                to 120k. It took longer, but still eventually exhausts the pool.
+
+                This does not cause an OOM, because I made sure to allocate enough direct memory for max buffer count * buffer size (65k). It just causes the usedBufCount to exceed
+                maxBufCount, resulting in 100% heap allocations going forward. It never recovers from this state until the server is restarted.
+
+                Some early observations:
+                * Running a major compaction causes a drastic up-tick in used buffers. Major compacting a 1.5GB region could easily expand the usedBufCount by ~10,000. Most of
+                those are never recovered. I could keep compacting the same region over and over, each time increasing the usedBufCount by 5000-15000, until max is reached.
+                * Despite usedBufCount increasing, direct memory usage largely does not increase. This indicates to me that the DirectByteBuffers are being reclaimed by GC, but the
+                Recycler is not being called.
+                ** This was confirmed with a heap dump, which showed really no obvious leak in the typical sense. There were very very few DirectByteBuffers with capacity 66560.
+                * Enabling BucketCache triggers use of ByteBuffAllocator, but I don't think it's related to the actual problem. First of all, compactions skip the cache so that
+                would be odd. Secondly, I disabled hbase.block.data.cacheonread and all other CacheConfig, so the BucketCache is going unused (0 bytes used) and the problem still
+                persists.
+
+                Digging deeper, I instrumented ByteBuffAllocator in two ways:
+                # I added some trace loggings in getBuffer() and putbackBuffer() so I could see the number of allocations, returns, pool size at the time, and a stacktrace.
+                # I added netty's ResourceLeakDetector to the RefCnt class we use in ByteBuffAllocator. Calling track() on creation of a RefCnt, record() in RefCnt.retain(), and
+                close() in RefCnt.deallocate().
+
+                The ResourceLeakDetector immediately picked up leaks on start of the regionserver. I saw leaks coming from both user requests and, as expected, the Compactor. 
+
+                I collected 21 unique LEAK stacktraces, which is too many to list. But all of them had 2 common roots, so below I post a full stacktrace for 2 examples of those
+                roots:
+                {code:java}
+                Created at:
+                org.apache.hadoop.hbase.nio.RefCnt.(init)(RefCnt.java:58)
+                org.apache.hadoop.hbase.nio.RefCnt.create(RefCnt.java:53)
+                org.apache.hadoop.hbase.nio.ByteBuff.wrap(ByteBuff.java:597)
+                org.apache.hadoop.hbase.io.ByteBuffAllocator.allocate(ByteBuffAllocator.java:350)
+                org.apache.hadoop.hbase.io.hfile.HFileBlock.allocateBuffer(HFileBlock.java:671)
+                org.apache.hadoop.hbase.io.hfile.HFileBlock.unpack(HFileBlock.java:640)
+                org.apache.hadoop.hbase.io.hfile.HFileReaderImpl.readBlock(HFileReaderImpl.java:1340)
+                org.apache.hadoop.hbase.io.hfile.HFileBlockIndex$CellBasedKeyBlockIndexReader.loadDataBlockWithScanInfo(HFileBlockIndex.java:331)
+                org.apache.hadoop.hbase.io.hfile.HFileReaderImpl$HFileScannerImpl.seekTo(HFileReaderImpl.java:679)
+                org.apache.hadoop.hbase.io.hfile.HFileReaderImpl$HFileScannerImpl.seekTo(HFileReaderImpl.java:631)
+                org.apache.hadoop.hbase.regionserver.StoreFileScanner.seekAtOrAfter(StoreFileScanner.java:315)
+                org.apache.hadoop.hbase.regionserver.StoreFileScanner.seek(StoreFileScanner.java:216)
+                org.apache.hadoop.hbase.regionserver.StoreScanner.seekScanners(StoreScanner.java:417)
+                org.apache.hadoop.hbase.regionserver.StoreScanner.(init)(StoreScanner.java:257)
+                org.apache.hadoop.hbase.regionserver.HStore.createScanner(HStore.java:2152)
+                org.apache.hadoop.hbase.regionserver.HStore.getScanner(HStore.java:2142)
+                org.apache.hadoop.hbase.regionserver.HRegion$RegionScannerImpl.initializeScanners(HRegion.java:7211)
+                org.apache.hadoop.hbase.regionserver.HRegion$RegionScannerImpl.(init)(HRegion.java:7191)
+                org.apache.hadoop.hbase.regionserver.HRegion.instantiateRegionScanner(HRegion.java:3160)
+                org.apache.hadoop.hbase.regionserver.HRegion.getScanner(HRegion.java:3140)
+                org.apache.hadoop.hbase.regionserver.HRegion.getScanner(HRegion.java:3122)
+                org.apache.hadoop.hbase.regionserver.HRegion.getScanner(HRegion.java:3116)
+                org.apache.hadoop.hbase.regionserver.RSRpcServices.get(RSRpcServices.java:2657)
+                org.apache.hadoop.hbase.regionserver.RSRpcServices.doNonAtomicRegionMutation(RSRpcServices.java:807)
+                org.apache.hadoop.hbase.regionserver.RSRpcServices.multi(RSRpcServices.java:2898)
+                org.apache.hadoop.hbase.shaded.protobuf.generated.ClientProtos$ClientService$2.callBlockingMethod(ClientProtos.java:45961)
+                org.apache.hadoop.hbase.ipc.RpcServer.call(RpcServer.java:392)
+                org.apache.hadoop.hbase.ipc.CallRunner.run(CallRunner.java:134)
+                org.apache.hadoop.hbase.ipc.RpcExecutor$Handler.run(RpcExecutor.java:358)
+                org.apache.hadoop.hbase.ipc.RpcExecutor$Handler.run(RpcExecutor.java:338) {code}
+                and
+                {code:java}
+                Created at:
+                org.apache.hadoop.hbase.nio.RefCnt.(init)(RefCnt.java:58)
+                org.apache.hadoop.hbase.nio.RefCnt.create(RefCnt.java:53)
+                org.apache.hadoop.hbase.nio.ByteBuff.wrap(ByteBuff.java:597)
+                org.apache.hadoop.hbase.io.ByteBuffAllocator.allocate(ByteBuffAllocator.java:350)
+                org.apache.hadoop.hbase.io.hfile.HFileBlock.allocateBuffer(HFileBlock.java:671)
+                org.apache.hadoop.hbase.io.hfile.HFileBlock.unpack(HFileBlock.java:640)
+                org.apache.hadoop.hbase.io.hfile.HFileReaderImpl.readBlock(HFileReaderImpl.java:1340)
+                org.apache.hadoop.hbase.io.hfile.HFileReaderImpl$HFileScannerImpl.readAndUpdateNewBlock(HFileReaderImpl.java:968)
+                org.apache.hadoop.hbase.io.hfile.HFileReaderImpl$HFileScannerImpl.seekTo(HFileReaderImpl.java:957)
+                org.apache.hadoop.hbase.regionserver.StoreFileScanner.seekAtOrAfter(StoreFileScanner.java:322)
+                org.apache.hadoop.hbase.regionserver.StoreFileScanner.seek(StoreFileScanner.java:216)
+                org.apache.hadoop.hbase.regionserver.StoreScanner.seekScanners(StoreScanner.java:417)
+                org.apache.hadoop.hbase.regionserver.StoreScanner.(init)(StoreScanner.java:324)
+                org.apache.hadoop.hbase.regionserver.StoreScanner.(init)(StoreScanner.java:290)
+                org.apache.hadoop.hbase.regionserver.compactions.Compactor.createScanner(Compactor.java:513)
+                org.apache.hadoop.hbase.regionserver.compactions.Compactor$1.createScanner(Compactor.java:254)
+                org.apache.hadoop.hbase.regionserver.compactions.Compactor.compact(Compactor.java:333)
+                org.apache.hadoop.hbase.regionserver.compactions.DefaultCompactor.compact(DefaultCompactor.java:65)
+                org.apache.hadoop.hbase.regionserver.DefaultStoreEngine$DefaultCompactionContext.compact(DefaultStoreEngine.java:126)
+                org.apache.hadoop.hbase.regionserver.HStore.compact(HStore.java:1510)
+                org.apache.hadoop.hbase.regionserver.HRegion.compact(HRegion.java:2390)
+                org.apache.hadoop.hbase.regionserver.CompactSplit$CompactionRunner.doCompaction(CompactSplit.java:617)
+                org.apache.hadoop.hbase.regionserver.CompactSplit$CompactionRunner.run(CompactSplit.java:659)
+                java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+                java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+                java.base/java.lang.Thread.run(Thread.java:829) {code}
+                My trace logging gave some insight as well:
+                * It showed very similar stacktraces to above for the allocations
+                * It also confirmed that we are indeed returning many buffers to the pool, coming from calls to Shipper.shipped() in Compactor and ServerCall.setResponse for user
+                requests.
+                * However, the count allocations vs returns further validated the leak. We might have 150k allocations but only 140k returns (as an example).
+                * Similarly, the pool size (buffers.size()) was always less than 1000, sometimes close to 0. Once the usedBufCount ) maxBufCount, the pool size shrinks to 0 and
+                stays at 0 forever.
+
+                Things I've tried:
+                * I've been pouring over the stacktraces, trying to see how we might leak. Certainly we do some extra allocations when unpacking compressed blocks, but it seems
+                like we always release one. I also tried picking through from bottom to top, trying to trace that we're closing everything and it seems like we are. This code is
+                complicated though so I easily could have missed something.
+                * I tried setting COMPRESSION =) NONE and compacting a region in that table, it still caused a massive expansion/leak of buffers.
+                * We don't fully use cell block encoding, and I wondered if there were some assumptions about that in regards to when the blocks are released in ServerCall. I
+                enabled cell block encoding for all clients of a cluster and the leak still occurred. It's worth noting our client is version 1.2, which doesn't support cell block
+                encoding for plain Gets. So we aren't fully enabled, but I read through the ServerCall code and it seems like we don't make assumptions.
+
+                I've tried digging into the stacktraces above and haven't yet found an obvious leak. I tried turning setting COMPRESSION =) NONE, but compacting a region in that
+                table still causes a massive leak.
+            </description>
+            <version>3.0.0-alpha-3</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.io.ByteBuffAllocator.java</file>
+            <file type="M">org.apache.hadoop.hbase.nio.ByteBuff.java</file>
+            <file type="M">org.apache.hadoop.hbase.nio.RefCnt.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.TestByteBuffAllocator.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.TestByteBuffAllocatorLeakDetection.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.HFileBlock.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.TestHFileBlockUnpack.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27189" opendate="2022-07-10 14:49:14" fixdate="2022-07-12 01:48:22" resolution="Fixed">
+        <buginformation>
+            <summary>NettyServerRpcConnection is not properly closed when the netty channel is closed</summary>
+            <description>We have a close method for NettyServerRpcConnection where we dispose the SaslServer and also release the ByteBuf if needed, but we never call it...
+
+                This could also leak memory and also other resources...
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.ipc.NettyRpcFrameDecoder.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.NettyRpcServer.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.NettyServerRpcConnection.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.TestNettyIPCCloseConnection.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27204" opendate="2022-07-14 13:43:15" fixdate="2022-07-25 06:15:16" resolution="Fixed">
+        <buginformation>
+            <summary>BlockingRpcClient will hang for 20 seconds when SASL is enabled after finishing negotiation</summary>
+            <description>Found this when implementing HBASE-27185. When running TestSecureIPC, if BlockingRpcClient is used, the tests will spend much more time comparing to
+                NettyRpcClient.
+
+                The problem is that, for the normal kerberos authentication, the last step is client send a reply to server, so after server receives the last token, it will not
+                write anything back but expect client to send connection header.
+
+                In HBASE-24579, for reading the error message, we added a readReply after the SaslClient indicates that the negotiation is completed. But as said above, for normal
+                cases, we will not write anything back from server side, so the client will hang there and only throw an exception when timeout is reached, which is 20 seconds.
+
+                This nearly makes the BlockingRpcClient unusable when sasl is enabled, as it will hang 20 seconds when connecting...
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.security.HBaseSaslRpcClient.java</file>
+            <file type="M">org.apache.hadoop.hbase.security.TestHBaseSaslRpcClient.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27205" opendate="2022-07-14 15:40:50" fixdate="2022-07-18 19:19:12" resolution="Fixed">
+        <buginformation>
+            <summary>Fix tests that rely on EnvironmentEdgeManager in branch-2.4</summary>
+            <description>https://issues.apache.org/jira/browse/HBASE-25911 converted all System.currentTimeMillis() calls in master and branch-2 to use EnvironmentEdgeManager. For
+                whatever reason, this was not backported to branch-2.4. 
+
+                There exists tests TestAppendTimeRange and TestIncrementTimeRange which rely on EnvironmentEdge injection. These tests are consistently timing out due to logic in
+                RSRpcServices.getRemainingRpcTimeout which subtracts "now" from call.getReceiveTime(). 
+
+                In this case, the now calculation uses EnvironmentEdge, but the ServerCalls use System.currentTimeMillis(). This discrepancy causes the calculated timeout to be
+                unexpectedly large, hanging the test.
+
+                We have two options:
+                # Add EnvironmentEdgeManager in the narrowly necessary places to get this to work.
+                # Revert branch-2.4's getTimeLimit to use System.currentTimeMillis.
+
+                I'm going to push a PR which does option 1, but I'm open to open 2 if that is desired instead.
+            </description>
+            <version>2.4.13</version>
+            <fixedVersion>2.4.14</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.ipc.CallRunner.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.NettyRpcServer.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.NettyServerRpcConnection.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.RpcServer.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.ServerCall.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.SimpleRpcServer.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.SimpleRpcServerResponder.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.SimpleServerRpcConnection.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.RSRpcServices.java</file>
+            <file type="M">org.apache.hadoop.hbase.regionserver.ScannerContext.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27224" opendate="2022-07-19 13:20:04" fixdate="2022-09-06 19:42:22" resolution="Fixed">
+        <buginformation>
+            <summary>HFile tool statistic sampling produces misleading results</summary>
+            <description>HFile tool uses codahale metrics for collecting statistics about key/values in an HFile. We recently had a case where the statistics printed out that the
+                max row size was only 25k. This was confusing because I was seeing bucket cache allocation failures for blocks as large as 1.5mb. 
+
+                Digging in, I was able to find the large row using the "-p" argument (which was obviously very verbose). Once I found the row, I saw the vlen was listed as ~1.5mb
+                which made much more sense.
+
+                First thing I notice here is that default codahale metrics histogram is using ExponentiallyDecayingReservoir. This probably makes sense for a long-lived histogram,
+                but the HFile tool is run at a point in time. It might be best to use UniformReservoir instead.
+
+                Secondly, we do not need sampling for min/max. Let's supplement the histogram with our own calculation which is guaranteed to be accurate for the entirety of the
+                file.
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.HFilePrettyPrinter.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.TestHFilePrettyPrinter.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27225" opendate="2022-07-19 14:29:08" fixdate="2022-07-26 01:13:30" resolution="Fixed">
+        <buginformation>
+            <summary>Add BucketAllocator bucket size statistic logging</summary>
+            <description>BucketCache places blocks into configurably sized buckets based on the block size. The default sizes aim to provide broad coverage for common block sizes,
+                but should probably be tuned for certain use-cases. However, we provide no way for operators to gain insight into the distribution of buckets.
+
+                There already exists a BucketAllocator#logStatistics method, but it is not called anywhere. I suggest that we hook that up in BucketCache#logStats (which is called
+                periodically by a stats thread). We can go from there.
+
+                Looking at the IndexStatistics used in that method, it looks like a good start. One thing I'd like to add is a count of freeBuckets and completelyFreeBuckets per
+                index. I think this will be useful for indicating how much more wiggle room we have for redistributing buckets among the various block sizes.
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.bucket.BucketAllocator.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.bucket.BucketCache.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.bucket.TestBucketCache.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27229" opendate="2022-07-21 00:09:17" fixdate="2022-07-26 21:13:24" resolution="Fixed">
+        <buginformation>
+            <summary>BucketCache statistics should not count evictions by hfile</summary>
+            <description>The eviction metrics are helpful for determining how much access-related churn there is in your block cache. The LruBlockCache properly ignores evictions
+                by invalidation of HFile, but the BucketCache tracks them. 
+
+                We should make the BucketCache work similarly so that one can get an accurate view of the evictions occurring through too much random access or too large working
+                set.
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.bucket.BucketCache.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.bucket.TestBucketCache.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.bucket.TestBucketCacheRefCnt.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27233" opendate="2022-07-24 19:21:57" fixdate="2022-12-21 18:33:05" resolution="Fixed">
+        <buginformation>
+            <summary>Read blocks into off-heap if caching is disabled for read</summary>
+            <description>Currently we decide whether a disk read {{shouldUseHeap}} based on three criteria:
+                # If block cache is disabled, return false
+                # If block cache is anything other than CombinedBlockCache, return true
+                # Otherwise return false for DATA blocks and true for other blocks
+
+                The assumption here is we're making the decision based on which cache the block is likely to end up in. But if the read has caching disabled (i.e.
+                setCacheBlocks(false)), it won't get into any cache. So we should return false in that case too.
+
+                The only caller to {{shouldUseHeap}} in HFileReaderImpl has a boolean {{cacheBlock}} available which determines if the read block should attempt to be cached. We
+                can pass that boolean into the function. We should probably also account for cacheConf.shouldCacheBlockOnRead for the same reason.
+
+                 
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>3.0.0-alpha-4</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.HFileReaderImpl.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.hfile.TestHFile.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27253" opendate="2022-07-27 23:52:35" fixdate="2022-12-15 22:56:02" resolution="Fixed">
+        <buginformation>
+            <summary>Make slow log configs updatable with configuration observer</summary>
+            <description>It would be very useful to be able to turn slow log on or off, change thresholds, etc on demand as needed when diagnosing a traffic issue. Should be a
+                simple matter of moving the configs into RpcServer#onConfigurationChange
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>3.0.0-alpha-4</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.ipc.RpcServer.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27317" opendate="2022-08-23 09:29:22" fixdate="2022-09-14 11:46:46" resolution="Fixed">
+        <buginformation>
+            <summary>Correcting the Store file tracker tool help doc option</summary>
+            <description>Column family is not an optional parameter, we need to correct the sysout msg properly.</description>
+            <version>2.5.0</version>
+            <fixedVersion>2.6.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.regionserver.storefiletracker.StoreFileListFilePrettyPrinter.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27342" opendate="2022-08-29 12:24:20" fixdate="2022-09-01 08:06:30" resolution="Fixed">
+        <buginformation>
+            <summary>Use Hadoop Credentials API to retrieve passwords of TLS key/trust stores</summary>
+            <description>Based on a discussion in the TLS Jira and mailing list, it would be beneficial to protect the password of trust and key stores for TLS encryption support
+                in Netty RPC.
+
+                Hadoop Credentials API is built for the same purpose, extensible and simple to use:
+
+                [https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/CredentialProviderAPI.html]
+
+                 
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.6.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.ipc.NettyRpcClient.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.crypto.tls.X509Util.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.crypto.tls.TestX509Util.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.crypto.tls.X509TestContext.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.crypto.tls.X509TestContextProvider.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.crypto.tls.X509TestHelpers.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.NettyRpcServer.java</file>
+            <file type="M">org.apache.hadoop.hbase.security.AbstractTestTlsRejectPlainText.java</file>
+            <file type="M">org.apache.hadoop.hbase.security.TestNettyTlsIPC.java</file>
+            <file type="M">org.apache.hadoop.hbase.security.TestSaslTlsIPC.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27347" opendate="2022-08-30 12:05:14" fixdate="2022-11-28 14:20:32" resolution="Fixed">
+        <buginformation>
+            <summary>Port FileWatcher from ZK to autodetect keystore/truststore changes in TLS connections</summary>
+            <description>As a follow-up feature I'd like to port the file watcher functionality from ZooKeeper in order to avoid restarts when keystore/truststore is updated on a
+                running cluster.
+            </description>
+            <version>3.0.0-alpha-3</version>
+            <fixedVersion>2.6.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.ipc.NettyRpcClient.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.FileChangeWatcher.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.crypto.tls.X509Util.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.TestFileChangeWatcher.java</file>
+            <file type="M">org.apache.hadoop.hbase.io.crypto.tls.X509TestContext.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.NettyRpcServer.java</file>
+            <file type="M">org.apache.hadoop.hbase.security.TestNettyTLSIPCFileWatcher.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27390" opendate="2022-09-24 00:00:05" fixdate="2022-12-15 17:06:41" resolution="Fixed">
+        <buginformation>
+            <summary>getClusterMetrics NullPointerException when ServerTask status null</summary>
+            <description>We had a situation where an hmaster had just started up and something started calling Admin.getClusterMetrics. It seems there were ServerTasks in memory,
+                but at least one had no status. This resulted in a spam of NPE:
+                {code:java}
+                [RpcServer.default.FPBQ.Fifo.handler=29,queue=2,port=60000] ERROR org.apache.hadoop.hbase.ipc.RpcServer: Unexpected throwable object
+                java.lang.NullPointerException
+                at org.apache.hadoop.hbase.shaded.protobuf.generated.ClusterStatusProtos$ServerTask$Builder.setStatus(ClusterStatusProtos.java:14352)
+                at org.apache.hadoop.hbase.shaded.protobuf.ProtobufUtil.toServerTask(ProtobufUtil.java:3565)
+                at org.apache.hadoop.hbase.ClusterMetricsBuilder.lambda$toClusterStatus$4(ClusterMetricsBuilder.java:80)
+                at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+                at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+                at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+                at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+                at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+                at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+                at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+                at org.apache.hadoop.hbase.ClusterMetricsBuilder.toClusterStatus(ClusterMetricsBuilder.java:80)
+                at org.apache.hadoop.hbase.master.MasterRpcServices.getClusterStatus(MasterRpcServices.java:980)
+                at org.apache.hadoop.hbase.shaded.protobuf.generated.MasterProtos$MasterService$2.callBlockingMethod(MasterProtos.java)
+                at org.apache.hadoop.hbase.ipc.RpcServer.call(RpcServer.java:385)
+                at org.apache.hadoop.hbase.ipc.CallRunner.run(CallRunner.java:124)
+                at org.apache.hadoop.hbase.ipc.RpcHandler.run(RpcHandler.java:102)
+                at org.apache.hadoop.hbase.ipc.RpcHandler.run(RpcHandler.java:82) {code}
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.6.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.monitoring.MonitoredRPCHandlerImpl.java</file>
+            <file type="M">org.apache.hadoop.hbase.monitoring.MonitoredTaskImpl.java</file>
+            <file type="M">org.apache.hadoop.hbase.monitoring.TaskMonitor.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.TestCallRunner.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.TestFifoRpcScheduler.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.TestSimpleRpcScheduler.java</file>
+            <file type="M">org.apache.hadoop.hbase.monitoring.TestTaskMonitor.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27487" opendate="2022-11-15 22:08:57" fixdate="2022-12-01 13:33:07" resolution="Fixed">
+        <buginformation>
+            <summary>Slow meta can create pathological feedback loop with multigets</summary>
+            <description>This only affects the Table implementation in 2.x releases.
+                h4. Call stack
+
+                When Table.batch is called, an AsyncProcessTask is created with SubmittedRows.ALL, which is sent to AsyncProcess.submit(). For the ALL case, this goes to submitAll
+                which creates an AsyncRequestFutureImpl and then calls groupAndSendMultiAction on that.
+
+                When a AsyncRequestFutureImpl is created, a RetryingTimeTracker is created and started as the last step of the constructor.
+
+                In groupAndSendMultiAction, the first thing that has to be done is resolve the HRegionLocation for every action in the batch. This is currently done sequentially,
+                with no timeout on the overall batch completion.
+
+                Once all actions have been resolved, they are passed into sendMultiAction which creates a SingleServerRequestRunnable. Once that runnable is executed, the first
+                thing it does is create a new MultiServerCallable using the same RetryingTimeTracker that was originally created way back.
+
+                That callable extends CancellableRegionServerCallable, and the call method first checks the tracker.getRemainingTime() before actually doing any work. If exceeded,
+                it throws an exception.
+                h4. Problem
+
+                If meta is overloaded, or you send any sufficiently large batch of actions, the resolving of HRegionLocations (which happens sequentially) may take a while.
+
+                Depending on the operation timeout configured for the client, that duration may already exceed that timeout before even reaching the
+                CancellableRegionServerCallable.call().
+
+                When the timeout is exceeded there, a DoNotRetryIOException is thrown. This is considered a cache clearing exception, so any locations that may have been slowly
+                resolved earlier up the chain will be thrown away.
+
+                If done with enough concurrency, this can create a feedback loop that is impossible to recover from.
+                h4. Potential Solutions
+                # Change the thrown exception type from DoNotRetryIOException to something more appropriate for the actual error (some sort of timeout exception). We'd have to make
+                that exception a "special" exception in ClientExceptionUtil so that it doesn't clear the cache.
+                # Make DoNotRetryIOException itself a "special" exception. The point of clearing cache is to make retries more likely to succeed if the failure was related to a
+                wrong location. But DoNotRetryIOException explicitly is not supposed to be retried, so you might think it shouldn't clear the cache as well. There are many usages
+                of this exception, so it's hard to say for sure that this would be universally safe.
+                # Reset the RetryingTimeTracker after resolving region locations.
+
+                I think I'd lean towards option 1, because it seems odd to say "don't retry in that case". In fact, retrying should be more likely to succeed because locations will
+                have been resolved.
+
+                Whichever we choose, I think we should additionally check the timeout in groupAndSendMultiAction after resolving each region location. We should not allow that
+                process to exceed timeouts and currently it can way more than exceed them before finally being checked incidentally at the end.
+            </description>
+            <version>2.5.1</version>
+            <fixedVersion>2.4.16</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncRequestFutureImpl.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.CancellableRegionServerCallable.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.OperationTimeoutExceededException.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.TestClientOperationTimeout.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27490" opendate="2022-11-16 19:34:58" fixdate="2022-12-06 13:09:35" resolution="Fixed">
+        <buginformation>
+            <summary>Locating regions for all actions of batch requests can exceed operation timeout</summary>
+            <description>This affects both AsyncTable and branch-2's Table. It's a follow-on from HBASE-27487.
+
+                In both cases, for a batch request, the first thing that must be done is resolve region locations for all actions in a batch. This is done in sequence for all
+                actions, and the timeout is not checked after each action. If meta is slow or a sufficiently large batch is sent, the time to sequentially resolve all actions may
+                exceed the operation timeout.
+
+                Currently, the code will eventually check the operation timeout after all locations have been resolved and before submitting the MultiRequests. We should check the
+                timeout before each call to locate a region, and abort early if it's exceeded.
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.3</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncRequestFutureImpl.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.CancellableRegionServerCallable.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.TestClientOperationTimeout.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27498" opendate="2022-11-19 06:01:21" fixdate="2022-12-12 18:48:06" resolution="Fixed">
+        <buginformation>
+            <summary>Observed lot of threads blocked in ConnectionImplementation.getKeepAliveMasterService</summary>
+            <description>Recently We observed that lot of threads are blocked in method "ConnectionImplementation.getKeepAliveMasterService" during some initialization stages of
+                rolling restart workflow. 
+
+                During rolling restart, we make RPC calls to Master using RpcRetryingCallerImpl, so as part of initialization we call
+                "ConnectionImplementation.getKeepAliveMasterService" for each thread. Internally this method do RPC call within a synchronized block to check if master is running
+                (mss.isMasterRunning).
+
+                Lots of threads are in blocked state due following synchronized block
+
+                synchronized (masterLock) {
+                   if (!isKeepAliveMasterConnectedAndRunning(this.masterServiceState))
+
+                {      MasterServiceStubMaker stubMaker = new MasterServiceStubMaker();      this.masterServiceState.stub = stubMaker.makeStub();    }
+
+                   resetMasterServiceState(this.masterServiceState);
+                 }
+
+                In Thread Dump Analyzer (2.4), we get warning that "A lot of threads are waiting for this monitor to become available again.
+                 This might indicate a congestion. You also should analyze other locks blocked by threads waiting for this monitor as there might be much more threads waiting for
+                it.". Please check attached screenshot !Screenshot 2022-11-16 at 10.06.59 AM.png|width=1639,height=971!
+
+                --------------------
+
+                "pool-11-thread-158" #313 prio=5 os_prio=0 tid=0x000055b88bcb8800 nid=0x404e waiting for monitor entry [0x00007fa48aa86000]
+                   java.lang.Thread.State: BLOCKED (on object monitor)
+                    at org.apache.hadoop.hbase.client.ConnectionImplementation.getKeepAliveMasterService(ConnectionImplementation.java:1336)
+                    - waiting to lock (0x00000005d30ecb68) (a java.lang.Object)
+                    at org.apache.hadoop.hbase.client.ConnectionImplementation.getMaster(ConnectionImplementation.java:1327)
+                    at org.apache.hadoop.hbase.client.MasterCallable.prepare(MasterCallable.java:57)
+                    at org.apache.hadoop.hbase.client.RpcRetryingCallerImpl.callWithRetries(RpcRetryingCallerImpl.java:103)
+                    at org.apache.hadoop.hbase.client.HBaseAdmin.executeCallable(HBaseAdmin.java:3019)
+                    at org.apache.hadoop.hbase.client.HBaseAdmin.executeCallable(HBaseAdmin.java:3011)
+                    at org.apache.hadoop.hbase.client.HBaseAdmin.move(HBaseAdmin.java:1458)
+                    at org.apache.hadoop.hbase.util.MoveWithoutAck.call(MoveWithoutAck.java:58)
+                    at org.apache.hadoop.hbase.util.MoveWithoutAck.call(MoveWithoutAck.java:33)
+
+                -------------------
+
+                 
+
+                *Proposal:*
+                We can optimize this flow as follows
+                1. Use double checked lock for "isKeepAliveMasterConnectedAndRunning(this.masterServiceState)" so that theads don't race for monitor, when master is running.
+                2. "isKeepAliveMasterConnectedAndRunning()" method should reuse the Globally cached state of isMasterRunning instead of doing expensive Call in for each thread. 
+
+                Check PR [https://github.com/apache/hbase/pull/4889] for more details.
+
+                Note: The "master" branch uses "AsyncConnectionImpl" so apparently we don't have issues there.
+
+                 
+
+                 
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.4.16</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.client.ConnectionImplementation.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.TestConnectionImplementation.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27531" opendate="2022-12-13 14:02:44" fixdate="2023-01-10 13:09:46" resolution="Fixed">
+        <buginformation>
+            <summary>AsyncRequestFutureImpl unnecessarily clears meta cache for full server</summary>
+            <description>In AsyncRequestFutureImpl.receiveGlobalFailure, the meta cache is cleared twice. First the entire cache is cleared for the serverName, then each individual
+                region's cache is further cleared. See
+                [here.|https://github.com/apache/hbase/blob/branch-2/hbase-client/src/main/java/org/apache/hadoop/hbase/client/AsyncRequestFutureImpl.java#L766-L780]
+
+                This behavior was introduced in HBASE-19900, which was a Jira more related to return value corruption rather than meta cache. I believe the change was an accident
+                in the refactoring. Take a look at the commit
+                [here.|https://github.com/apache/hbase/commit/e2636c81f7700a34368d73079375dbce6e180547#diff-7c58ffd83c150488599591ed5a3a068599646ebdbbbfdcd2233386e5472cca35L709]
+
+                In the commit, the cleanServerCache call should have been wrapped in tableName == null. Then the updateCachedLocations call should have been wrapped in tableName !=
+                null. So we should only go down one path or another based on the existence of a tableName.
+
+                Full server cache clears are extremely expensive in a high concurrency client. This is especially true in AsyncProcess, where a single request might hit many
+                servers. We should reinstate the tableName checks so that we only do one or the other.
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.5.3</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncRequestFutureImpl.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.TestAsyncProcess.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27535" opendate="2022-12-14 15:55:33" fixdate="2023-04-22 04:23:37" resolution="Fixed">
+        <buginformation>
+            <summary>Separate slowlog thresholds for scans vs other requests</summary>
+            <description>Scans by their nature are able to more efficiently pull back larger response sizes than gets. They also may take longer to execute than other request
+                types. We should make it possible to configure a separate threshold for response time and response time for scans. This will allow us to tune down the thresholds
+                for others without adding unnecessary noise for requests which are known to be slower/bigger.
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.6.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.ipc.RpcServer.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27626" opendate="2023-02-09 11:38:29" fixdate="2023-02-09 18:34:35" resolution="Fixed">
+        <buginformation>
+            <summary>Suppress noisy logging in client.ConnectionImplementation</summary>
+            <description>_client.ConnectionImplementation_ logs a lot at INFO level:
+                {code:java}
+                hbase:001:0) restore_snapshot 'tableSnapshot'
+                2023-02-09 05:15:35,538 INFO [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+                2023-02-09 05:15:35,538 INFO [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+                2023-02-09 05:15:36,599 INFO [main] client.HBaseAdmin: Taking restore-failsafe snapshot: hbase-failsafe-tableSnapshot-1675919736599
+                2023-02-09 05:15:36,608 INFO [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+                2023-02-09 05:15:36,608 INFO [main] client.ConnectionImplementation: Getting master state using rpc call
+                2023-02-09 05:15:36,806 INFO [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+                2023-02-09 05:15:36,806 INFO [main] client.ConnectionImplementation: Getting master state using rpc call
+                2023-02-09 05:15:37,026 INFO [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+                2023-02-09 05:15:37,026 INFO [main] client.ConnectionImplementation: Getting master state using rpc call
+                2023-02-09 05:15:37,334 INFO [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+                2023-02-09 05:15:37,334 INFO [main] client.ConnectionImplementation: Getting master state using rpc call
+                2023-02-09 05:15:37,341 INFO [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+                2023-02-09 05:15:37,342 INFO [main] client.ConnectionImplementation: Getting master state using rpc call
+                2023-02-09 05:15:37,413 INFO [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+                2023-02-09 05:15:37,413 INFO [main] client.ConnectionImplementation: Getting master state using rpc call
+                2023-02-09 05:15:37,534 INFO [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+                2023-02-09 05:15:37,535 INFO [main] client.ConnectionImplementation: Getting master state using rpc call
+                2023-02-09 05:15:37,742 INFO [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+                2023-02-09 05:15:37,742 INFO [main] client.ConnectionImplementation: Getting master state using rpc call
+                2023-02-09 05:15:38,055 INFO [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+                2023-02-09 05:15:38,056 INFO [main] client.ConnectionImplementation: Getting master state using rpc call
+                2023-02-09 05:15:38,561 INFO [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+                2023-02-09 05:15:38,561 INFO [main] client.ConnectionImplementation: Getting master state using rpc call
+                2023-02-09 05:15:38,568 INFO [main] client.HBaseAdmin: Operation: MODIFY, Table Name: nj:testImport, procId: 392 completed
+                2023-02-09 05:15:38,568 INFO [main] client.HBaseAdmin: Deleting restore-failsafe snapshot: hbase-failsafe-tableSnapshot-1675919736599
+                2023-02-09 05:15:38,570 INFO [main] client.ConnectionImplementation: Getting master connection state from TTL Cache
+                2023-02-09 05:15:38,570 INFO [main] client.ConnectionImplementation: Getting master state using rpc call
+                Took 3.1595 seconds
+                {code}
+
+                We should log these lines in TRACE level.
+            </description>
+            <version>2.4.16</version>
+            <fixedVersion>2.6.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.client.ConnectionImplementation.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27657" opendate="2023-02-20 14:28:07" fixdate="2023-07-29 19:31:53" resolution="Fixed">
+        <buginformation>
+            <summary>Connection and Request Attributes</summary>
+            <description>Currently we have the ability to set Operation attributes, via Get.setAttribute, etc. It would be useful to be able to set attributes at the request and
+                connection level.
+
+                These levels can result in less duplication. For example, send some attributes once per connection instead of for every one of the millions of requests a connection
+                might send. Or send once for the request, instead of duplicating on every operation in a multi request.
+
+                Additionally, the Connection and RequestHeader are more globally available on the server side. Both can be accessed via RpcServer.getCurrentCall(), which is useful
+                in various integration points – coprocessors, custom queues, quotas, slow log, etc. Operation attributes are harder to access because you need to parse the raw
+                Message into the appropriate type to get access to the getter.
+
+                I was thinking adding two new methods to Connection interface:
+
+                - setAttribute (and getAttribute/getAttributes)
+
+                - setRequestAttributeProvider
+
+                Any Connection attributes would be set onto the ConnectionHeader during initialization. The RequestAttributeProvider would be called when creating each
+                RequestHeader.
+
+                An alternative to setRequestAttributeProvider would be to add this into HBaseRpcController, which can already be customized via site configuration. 
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.6.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncAdminRequestRetryingCaller.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncBatchRpcRetryingCaller.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncClientScanner.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncConnectionImpl.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncMasterRequestRpcRetryingCaller.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncRpcRetryingCaller.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncRpcRetryingCallerFactory.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncScanSingleRegionRpcRetryingCaller.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncServerRequestRpcRetryingCaller.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncSingleRequestRpcRetryingCaller.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncTable.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncTableBuilder.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncTableBuilderBase.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.AsyncTableImpl.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.ConnectionFactory.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.ConnectionOverAsyncConnection.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.RawAsyncTableImpl.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.Table.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.TableBuilder.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.TableBuilderBase.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.TableOverAsyncTable.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.AbstractRpcClient.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.BlockingRpcClient.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.BlockingRpcConnection.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.Call.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.DelegatingHBaseRpcController.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.HBaseRpcController.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.HBaseRpcControllerImpl.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.IPCUtil.java</file>
+            <file type="M">org.apache.hadoop.hbase.ipc.NettyRpcClient.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27671" opendate="2023-02-27 10:41:43" fixdate="2023-03-20 22:14:24" resolution="Fixed">
+        <buginformation>
+            <summary>Client should not be able to restore/clone a snapshot after it's TTL has expired</summary>
+            <description>Steps:
+
+                precondition : base.master.cleaner.snapshot.interval to 5 min in hbase-site.xml
+
+                1. create a table t1 , put some data
+
+                2. create a snapshot 'snapt1' with TTL 1 mins
+
+                let the TTL expries 
+
+                3. disable and drop table t1
+
+                4. restore snapshot t1
+
+                Actual : restore snapshot successful 
+
+                Expected : restore operation should fail and throw specified snapshot TTL expried cant restore
+
+                Note : its can consider as improvement point 
+            </description>
+            <version>2.5.2</version>
+            <fixedVersion>2.6.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.snapshot.SnapshotTTLExpiredException.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.cleaner.SnapshotCleanerChore.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.procedure.CloneSnapshotProcedure.java</file>
+            <file type="M">org.apache.hadoop.hbase.master.procedure.RestoreSnapshotProcedure.java</file>
+            <file type="M">org.apache.hadoop.hbase.snapshot.SnapshotDescriptionUtils.java</file>
+            <file type="M">org.apache.hadoop.hbase.client.TestSnapshotWithTTLFromClient.java</file>
+            <file type="M">org.apache.hadoop.hbase.snapshot.SnapshotTestingUtils.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="27996" opendate="2023-07-27 15:31:50" fixdate="2023-08-04 12:55:12" resolution="Fixed">
+        <buginformation>
+            <summary>Remove InterfaceStability.Stable from HTable</summary>
+            <description>HTable is InterfaceAudience.Private, but the InterfaceStability.Stable annotation was not removed when that was changed. Based on our compatibility
+                guidelines, IS.Stable only applies to IA.Public classes. This annotation is confusing to new developers who might work on modifying HTable
+
+                Reference: https://hbase.apache.org/book.html#_interface_classifications
+            </description>
+            <version>2.5.0</version>
+            <fixedVersion>2.6.0</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.hadoop.hbase.client.HTable.java</file>
+        </fixedFiles>
+    </bug>
+</bugrepository>

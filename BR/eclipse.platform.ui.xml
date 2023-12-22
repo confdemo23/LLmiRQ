@@ -1,0 +1,1279 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<bugrepository name="eclipse.platform.ui">
+    <bug id="576658" opendate="2021-10-16 04:26:02" fixdate="2021-10-19 08:04:12" resolution="Fixed">
+        <buginformation>
+            <summary>"Visible" checkbox label on WindowEditor not externalized</summary>
+            <description>"Visible" checkbox label on WindowEditor not externalized for translation.</description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.e4.tools.emf.ui.internal.common.component.WindowEditor.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576659" opendate="2021-10-16 05:30:58" fixdate="2021-10-19 08:08:57" resolution="Fixed">
+        <buginformation>
+            <summary>Checkbox labels on MenuContributionEditor not externalized</summary>
+            <description>"To Be Rendered" and "Visible" checkbox labels on MenuContributionEditor not externalized for translation.</description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.e4.tools.emf.ui.internal.common.component.MenuContributionEditor.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576668" opendate="2021-10-16 16:06:14" fixdate="2021-10-19 10:22:59" resolution="Fixed">
+        <buginformation>
+            <summary>SideValue labels in TrimBarEditor not externalized</summary>
+            <description>SideValue labels "Top", "Bottom", "Left", "Right" in TrimBarEditor not externalized for translation.
+
+                Labels hard-coded in:
+                eclipse.platform.ui/bundles/org.eclipse.e4.ui.model.workbench/src/org/eclipse/e4/ui/model/application/ui/SideValue.java
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.e4.tools.emf.ui.internal.Messages.java</file>
+            <file type="M">org.eclipse.e4.tools.emf.ui.internal.common.component.TrimBarEditor.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576669" opendate="2021-10-16 16:06:29" fixdate="2021-10-19 10:54:28" resolution="Fixed">
+        <buginformation>
+            <summary>ItemType labels in ToolItemEditor not externalized</summary>
+            <description>ItemType labels "Push", "Check", "Radio" in ToolItemEditor not externalized for translation.
+
+                Labels hard-coded in:
+                eclipse.platform.ui/bundles/org.eclipse.e4.ui.model.workbench/src/org/eclipse/e4/ui/model/application/ui/menu/ItemType.java
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.e4.tools.emf.ui.internal.Messages.java</file>
+            <file type="M">org.eclipse.e4.tools.emf.ui.internal.common.component.MenuItemEditor.java</file>
+            <file type="M">org.eclipse.e4.tools.emf.ui.internal.common.component.ToolItemEditor.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576703" opendate="2021-10-18 15:40:28" fixdate="2021-10-19 05:19:04" resolution="Fixed">
+        <buginformation>
+            <summary>e4 TrimBarRenderer causes EMF ConcurrentModificationException on platform startup</summary>
+            <description>This stack trace comes up in our Eclipse 4.20-based product on (clean) startup.
+
+                java.util.ConcurrentModificationException
+                at org.eclipse.emf.common.util.AbstractEList$EIterator.checkModCount(AbstractEList.java:751)
+                at org.eclipse.emf.common.util.AbstractEList$EIterator.doNext(AbstractEList.java:699)
+                at org.eclipse.emf.common.util.AbstractEList$EIterator.next(AbstractEList.java:685)
+                at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:70)
+                at org.eclipse.e4.ui.workbench.renderers.swt.TrimBarRenderer.processContents(TrimBarRenderer.java:109)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:544)
+                at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:528)
+                at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:688)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+                at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1083)
+                at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+                at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+                at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+                at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+                at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+                at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+                at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+                at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+                at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+                at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+                at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+                at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+                at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+                at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+                at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:654)
+                at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+                at org.eclipse.equinox.launcher.Main.run(Main.java:1462)
+            </description>
+            <version>4.15</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576710" opendate="2021-10-18 19:40:35" fixdate="2021-10-19 09:18:11" resolution="Fixed">
+        <buginformation>
+            <summary>TrimContributionEditor displays unexternalized element names</summary>
+            <description>TrimContributionEditor displays unexternalized element names "ToolBar", "ToolControl" instead of using EClassLabelProvider like other editors.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.e4.tools.emf.ui.internal.common.component.TrimContributionEditor.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576711" opendate="2021-10-18 19:40:44" fixdate="2021-10-19 09:31:36" resolution="Fixed">
+        <buginformation>
+            <summary>VWindowControlEditor displays unexternalized element names</summary>
+            <description>VWindowControlEditor displays unexternalized element names "PerspectiveStack", "PartSashContainer", "PartStack", "Part", "Area" instead of using
+                EClassLabelProvider like other editors.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.e4.tools.emf.ui.internal.common.component.virtual.VWindowControlEditor.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576740" opendate="2021-10-19 17:46:25" fixdate="2022-02-17 11:39:04" resolution="Fixed">
+        <buginformation>
+            <summary>Add a LRU resource cache for jface</summary>
+            <description>Eclipse IDE loads the same images (toolbar icons) over and over again because it decreases the reference count to 0 before applying the same images again
+                to the toolbar.
+                The idea is to either keep references to a fixed set of most used icons or simply automatically determine those by a LRU cache. The cache must be limited to avoid
+                too many OS handles.
+                By using SoftReferences it can also be avoided to accidentally cache too many big images which may end up in Out of Memory Error.
+                In a first test a little cache of 300 cached images was enough to never trigger reload during typical actions in jdt ui.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jface.resource.DeferredImageDescriptor.java</file>
+            <file type="M">org.eclipse.jface.resource.DerivedImageDescriptor.java</file>
+            <file type="M">org.eclipse.jface.resource.LazyResourceManager.java</file>
+            <file type="M">org.eclipse.jface.resource.DeviceResourceDescriptor.java</file>
+            <file type="M">org.eclipse.jface.resource.FileImageDescriptor.java</file>
+            <file type="M">org.eclipse.jface.resource.ImageDescriptor.java</file>
+            <file type="M">org.eclipse.jface.resource.JFaceResources.java</file>
+            <file type="M">org.eclipse.jface.resource.URLImageDescriptor.java</file>
+            <file type="M">org.eclipse.jface.tests.images.LazyResourceManagerTest.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576877" opendate="2021-10-25 15:01:13" fixdate="2021-11-16 16:41:50" resolution="Fixed">
+        <buginformation>
+            <summary>Large file alternative editor support doesn't open with selected editor</summary>
+            <description>I have a '.cif' file and in the Eclipse ESCET IDE this is opened by the CIF Text Editor (editor id `org.eclipse.escet.cif.texteditor.CifTextEditor`) by
+                default.
+
+                If I configure in plugin_customization.ini' the following:
+
+                org.eclipse.ui.workbench/LARGE_DOC_SIZE_FOR_EDITORS=1048576
+
+                Then files larger than 1 MiB don't open directly, but instead I get a dialog to select an alternative editor. If I then select the 'Text Editor' internal editor and
+                click 'OK', it still opens with the 'CIF Text Editor', and not the 'Text Editor'.
+
+                I looked in the source code and found the functionality in org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(IEditorInput, String, boolean, int, IMemento,
+                boolean):
+
+                ```
+                IEditorDescriptor desc = getWorkbenchWindow().getWorkbench().getEditorRegistry().findEditor(editorId);
+                if (desc != null !desc.isOpenExternal() isLargeDocument(input)) {
+                desc = getAlternateEditor();
+                if (desc == null) {
+                // the user pressed cancel in the editor selection dialog
+                return null;
+                }
+                }
+                if (desc == null) {
+                throw new PartInitException(NLS.bind(WorkbenchMessages.EditorManager_unknownEditorIDMessage, editorId));
+                }
+                ```
+
+                If the file is large, the dialog is shown by 'getAlternateEditor' and it returns the proper new 'IEditorDescriptor' and this is put into 'desc'. However, 'editorId'
+                is not updated to 'org.eclipse.ui.DefaultTextEditor', but remains 'org.eclipse.escet.cif.texteditor.CifTextEditor'. The CIF Text Editor is then still opened.
+
+                I think this can be resolved by changing:
+
+                ```
+                desc = getAlternateEditor();
+                if (desc == null) {
+                // the user pressed cancel in the editor selection dialog
+                return null;
+                }
+                ```
+
+                to
+
+                ```
+                desc = getAlternateEditor();
+                if (desc == null) {
+                // the user pressed cancel in the editor selection dialog
+                return null;
+                }
+                editorId = desc.getId();
+                ```
+
+                The 'editorId' is subsequently used when creating the editor part.
+
+                Does this make sense?
+            </description>
+            <version>4.4.1</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.ui.internal.WorkbenchPage.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577035" opendate="2021-11-03 12:33:48" fixdate="2021-12-13 13:19:39" resolution="Fixed">
+        <buginformation>
+            <summary>Remove unused icons from e4 FilteredTree</summary>
+            <description>AFAICS the icons created in FilteredTree are never accessed. Suggest to delete them and their static initialization block.</description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.e4.ui.dialogs.filteredtree.FilteredTree.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577081" opendate="2021-11-05 08:42:25" fixdate="2022-09-12 12:27:11" resolution="Fixed">
+        <buginformation>
+            <summary>Change default to use the external browser instead of the internal browser of Eclipse</summary>
+            <description>Currently Eclipse preferences states to use the internal browser instead of the external browser.
+
+                Is this useful? I never, ever use the internal browser in Eclipse, it the normal browser buttons, preferences, etc.
+
+                If more people think the same way, we should change the default to use the default system browser.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.ui.internal.browser.WebBrowserInitializer.java</file>
+            <file type="M">org.eclipse.ui.internal.browser.WebBrowserPreference.java</file>
+            <file type="M">org.eclipse.ui.internal.browser.WebBrowserPreferencePage.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577126" opendate="2021-11-08 09:32:35" fixdate="2021-11-09 14:36:30" resolution="Fixed">
+        <buginformation>
+            <summary>NPE in LazyResourceManager.shouldBeCached</summary>
+            <description>We see few NPE's coming after opening/closing various wizards in our application tests.
+
+                All NPE's are looking very similar:
+
+                !ENTRY org.eclipse.jface 4 4 2021-11-06 02:36:56.471
+                !MESSAGE NullPointerException
+                !STACK 0
+                java.lang.NullPointerException
+                at org.eclipse.jface.resource.LazyResourceManager.shouldBeCached(LazyResourceManager.java:78)
+                at org.eclipse.jface.resource.LazyResourceManager.destroy(LazyResourceManager.java:114)
+                at org.eclipse.jface.resource.ResourceManager.destroyImage(ResourceManager.java:224)
+                at org.eclipse.jface.wizard.Wizard.dispose(Wizard.java:208)
+                at org.eclipse.jface.wizard.WizardDialog.hardClose(WizardDialog.java:878)
+                at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:840)
+                at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:472)
+                at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+                at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+                at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+                at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+                at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5889)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1515)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1541)
+
+                The problem is that some wizards were initialized with null descriptor (which is allowed), but on dispose that fails to release image for null descriptor in the new
+                LazyResourceManager.destroy() code.
+
+                Note: JFaceResources.getResources().createImageWithDefault(defaultImageDescriptor) which is called in org.eclipse.jface.wizard.Wizard.getDefaultPageImage() allows
+                to create an image for null descriptor.
+
+                I have a patch.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jface.resource.LazyResourceManager.java</file>
+            <file type="M">org.eclipse.jface.tests.images.LazyResourceManagerTest.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577289" opendate="2021-11-16 16:01:40" fixdate="2022-03-08 15:58:22" resolution="Fixed">
+        <buginformation>
+            <summary>Rework "Large file alternative editor selection" story to allow explicit editor choice by user</summary>
+            <description>If I configure:
+
+                org.eclipse.ui.workbench/LARGE_DOC_SIZE_FOR_EDITORS=1048576
+
+                and open a large file by double clicking it, I get a dialog to select an alternative editor for this large file. This works as expected.
+
+                However, if I right click the file and choose 'Open With' and then select a specific editor from the menu, then I still get the alternative editor selection dialog.
+                This feels weird to me, as I specifically selected the editor I want. This means that there is no way to open a large file with a specific editor without selecting
+                that editor in the dialog.
+
+                Could the explicit editor choice then be used rather than that the alternative editor dialog is shown, if I explicitly choose an editor as described? Does that make
+                sense to you?
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.ui.actions.OpenWithMenu.java</file>
+            <file type="M">org.eclipse.ui.IWorkbenchPage.java</file>
+            <file type="M">org.eclipse.ui.internal.WorkbenchPage.java</file>
+            <file type="M">org.eclipse.ui.internal.handlers.NewEditorHandler.java</file>
+            <file type="M">org.eclipse.ui.tests.largefile.LargeFileLimitsPreferenceHandlerTest.java</file>
+            <file type="M">org.eclipse.ui.internal.ide.LargeFileAssociationsPreferencePage.java</file>
+            <file type="M">org.eclipse.ui.internal.LargeFileLimitsPreferenceHandler.java</file>
+            <file type="M">org.eclipse.ui.internal.IWorkbenchHelpContextIds.java</file>
+            <file type="M">org.eclipse.ui.tests.internal.InternalTestSuite.java</file>
+            <file type="M">org.eclipse.ui.tests.largefile.LargeFileLimitsPreferenceHandlerTest.java</file>
+            <file type="M">org.eclipse.ui.internal.ide.IDEPreferenceInitializer.java</file>
+            <file type="M">org.eclipse.ui.internal.WorkbenchPreferenceInitializer.java</file>
+            <file type="M">org.eclipse.ui.internal.ide.IDEWorkbenchMessages.java</file>
+            <file type="M">org.eclipse.ui.internal.IPreferenceConstants.java</file>
+            <file type="M">org.eclipse.ui.internal.WorkbenchMessages.java</file>
+            <file type="M">org.eclipse.ui.internal.WorkbenchPage.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577476" opendate="2021-11-26 07:39:32" fixdate="2021-11-30 14:06:19" resolution="Fixed">
+        <buginformation>
+            <summary>Accessibility Issues With "Restart notification" After Theme Change</summary>
+            <description>After a theme change eclipse needs to be re-started. In the past the user was notified about this with a blocking dialog. with bug 564335 a none-blocking
+                notification was introduced instead of the blocking dialog.
+
+                What was the exact reason for this?
+
+                This new implementation has issue with accessibility.
+                1.) The none-blocking dialog is not read by screen readers (and this is by intention)
+                2.) The none-blocking dialog is not reachable via keyboard navigation
+                3.) The restart information is also shown on the preference page (with a little yellow triangle with a tooltip). Also it seems that this tooltip is not read by
+                screenreaders.
+
+                Vision impaired users most probably don't get this information.
+
+                There are additional functional issues:
+                A.) If you change the theme multiple times without closing the dialog you get multiple dialogs on top of each other.
+
+                To be honest I found the old implementation perfectly fine. So I propose to revert the change from bug 564335.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.ui.internal.WorkbenchMessages.java</file>
+            <file type="M">org.eclipse.ui.internal.WorkbenchWindow.java</file>
+            <file type="M">org.eclipse.ui.internal.dialogs.ViewsPreferencePage.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577857" opendate="2021-12-16 22:14:52" fixdate="2022-03-30 08:01:11" resolution="Fixed">
+        <buginformation>
+            <summary>WizardProjectsImportPage does not correctly set fields when switching to import archieve</summary>
+            <description>When switching the WizardProjectsImportPage to the import from archive mode the first two checkboxes in the Options area (i.e., Search for nested projects
+                and Copy projects into workspace) are selected and deactivated. However the functionality behind these two checkboxes is not activated correctly. Therefore when
+                importing a project from the archive where in the archive is a project with the same name as you already have in workspace the content of the two projects gets
+                merged. However if you first manually turn on the options in the select root directory mode and then switch to import from archive mode the correct checks are
+                performed and any projects in the archive with the same name as a project are greyed out and marked as they can not be imported.
+
+                I would expect the latter behavior on both cases.
+
+                I looked into the code and when activating the import from archive mode only the check boxes are selected but not the according fields of the import wizard set. I
+                debugged that and it seems that the selection listener for the two checkboxes is not called when invoking setSelection on the checbox.
+
+                For me the solution would be to in addition set the fields to have the correct behavior. Will submit a page right afterwards.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.ui.internal.wizards.datatransfer.WizardProjectsImportPage.java</file>
+            <file type="M">org.eclipse.ui.tests.datatransfer.ImportExistingProjectsWizardTest.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577947" opendate="2021-12-23 08:36:26" fixdate="2022-04-27 05:58:32" resolution="Fixed">
+        <buginformation>
+            <summary>[Mac] Views like Quick search, Git Pull and History view is not aligned at top and left</summary>
+            <description>Git Version : Eclipse EGit Git integration for Eclipse 6.0.0.202111291000-r org.eclipse.egit
+                Eclipse Version - 4.23.0.v20211222-1800
+
+                The Tables are not aligned in the top and left for Git History and Git pull view.
+
+                Attaching the image for History view.
+
+                Same issue with Egit 5.12 version and Eclipse Version - 4.23.0.v20211222-1800
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jface.layout.AbstractColumnLayout.java</file>
+            <file type="M">org.eclipse.ui.texteditor.templates.ColumnLayout.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577989" opendate="2021-12-29 14:23:33" fixdate="2021-12-31 12:41:28" resolution="Fixed">
+        <buginformation>
+            <summary>[Databinding] Add ComputedList/Set.create</summary>
+            <description>The ComputedValue class has gotten a utility method to create a ComputedValue from a lambda:
+
+                ComputedValue.create(() -) ...)
+
+                We should add corresponding methods to ComputedList and ComputedSet.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.core.databinding.observable.list.ComputedList.java</file>
+            <file type="M">org.eclipse.core.databinding.observable.set.ComputedSet.java</file>
+            <file type="M">org.eclipse.core.databinding.observable.value.ComputedValue.java</file>
+            <file type="M">org.eclipse.core.tests.databinding.observable.list.ComputedListTest.java</file>
+            <file type="M">org.eclipse.core.tests.databinding.observable.set.ComputedSetTest.java</file>
+            <file type="M">org.eclipse.core.tests.databinding.observable.value.ComputedValueTest.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578152" opendate="2022-01-11 09:43:14" fixdate="2022-01-17 08:33:37" resolution="Fixed">
+        <buginformation>
+            <summary>Widget Factory for browser</summary>
+            <description>I think we should also add a factory for the SWT Browser widgets in JFace similar to the ButtonFactory.</description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jface.widgets.BrowserFactory.java</file>
+            <file type="M">org.eclipse.jface.widgets.WidgetFactory.java</file>
+            <file type="M">org.eclipse.jface.tests.widgets.TestUnitBrowserFactory.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578159" opendate="2022-01-11 12:02:57" fixdate="2022-01-18 22:33:46" resolution="Fixed">
+        <buginformation>
+            <summary>Reduce IDE dependencies of org.eclipse.ui.monitoring to make it usable in RCP application</summary>
+            <description>Would be nice to be able to use the freeze monitor also in e4 RCP applications. for this we should try to reduce / remove the dependencies to the IDE / e3
+                API.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.ui.internal.monitoring.EventLoopMonitorThread.java</file>
+            <file type="M">org.eclipse.ui.internal.monitoring.Messages.java</file>
+            <file type="M">org.eclipse.ui.internal.monitoring.MonitoringPlugin.java</file>
+            <file type="M">org.eclipse.ui.internal.monitoring.DefaultUiFreezeEventLogger.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578360" opendate="2022-01-24 18:22:37" fixdate="2022-02-13 08:07:52" resolution="Fixed">
+        <buginformation>
+            <summary>MarkerSupportView should allow custom open method for markers.</summary>
+            <description>Like most of the methods in ExtendedMarkersView the openSelectedMarkers is package private.
+                This means it is not possible to have a custom method of opening the editor.
+                This could be easily fixed by making that method protected.
+                This would allow any views implementing MarkerSupportView to implement their own method of opening the correct editor.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.ui.internal.views.markers.ExtendedMarkersView.java</file>
+            <file type="M">org.eclipse.ui.views.markers.MarkerSupportViewTest.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578378" opendate="2022-01-25 12:37:57" fixdate="2022-03-30 08:10:55" resolution="Fixed">
+        <buginformation>
+            <summary>SWTError: No more handles if "Run in background" is disabled</summary>
+            <description>Created attachment 287900
+                Error log after the failure
+
+                Test steps:
+                Uncheck Preferences/General/Always run in background
+                Import all projects of a large PDE Git repository using eGit
+                Check Project/Build automatically
+                Checkout another branch a few times using eGit
+
+
+                On each checkout mouse pointer becomes a progress indicator thousands of times (blinks in and out of progress indication). Eventually, SWT handles run out and
+                multiple exceptions are logged (see error.log).
+
+                I've captured jstack output for an Eclipse process that failed shortly after (see jstack.txt). In this case, a resource navigation dialog was opened, but I think
+                this happens even without dialogs.
+                I will try to capture more jstacks to find a pattern.
+
+
+                Eclipse IDE for Eclipse Committers (includes Incubating components)
+
+                Version: 2022-03 M1 (4.23.0 M1)
+                Build id: 20220113-1818
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.e4.ui.progress.internal.ProgressMonitorJobsDialog.java</file>
+            <file type="M">org.eclipse.jface.dialogs.ProgressMonitorDialog.java</file>
+            <file type="M">org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578515" opendate="2022-02-01 17:20:12" fixdate="2022-02-03 18:04:26" resolution="Fixed">
+        <buginformation>
+            <summary>[Navigator] NestedProjectsProblemsModel: Cache removal breaks for IResources without location</summary>
+            <description>The
+
+                NestedProjectsProblemsModel#removeFromCache(Set(IResource))
+
+                implementation currently uses
+
+                IResource#getLocation()
+
+                to get IPath objects to call
+
+                IPath#isPrefixOf(IPath)
+
+                to check parent-child relationships.
+
+                However, as the Javadoc of getLocation() states, this may return null for resources that do not have a physical local location, e.g. for IResources based on a
+                custom IFileSystem implementation such as the Eclipse Semantic File System (SFS).
+
+                As a result, error markers on project level do not disappear, even when the actual errors are resolved.
+
+                Instead of getLocation() getFullPath() should be used, which is never null, and cheaper than getLocation().
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.ui.internal.navigator.resources.nested.NestedProjectsProblemsModel.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578597" opendate="2022-02-05 15:19:53" fixdate="2022-02-10 08:43:36" resolution="Fixed">
+        <buginformation>
+            <summary>report progress for "System: Decoration Calculation"</summary>
+            <description>bug 533970 added a progress bar for Decoration Calculation but did not report any progress.
+                to reproduce see https://bugs.eclipse.org/bugs/show_bug.cgi?id=533970#c3
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jface.viewers.DecorationContext.java</file>
+            <file type="M">org.eclipse.ui.internal.WorkbenchPlugin.java</file>
+            <file type="M">org.eclipse.ui.internal.decorators.DecorationReference.java</file>
+            <file type="M">org.eclipse.ui.internal.decorators.DecorationScheduler.java</file>
+            <file type="M">org.eclipse.ui.internal.decorators.DecoratorManager.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578629" opendate="2022-02-08 05:22:20" fixdate="2022-03-16 11:10:05" resolution="Fixed">
+        <buginformation>
+            <summary>[Accessibility] Model Spy Form tab has text labels which JAWS doesn't read</summary>
+            <description>Created attachment 288008
+                JAWS recording, the issue can be shown around at 50 secs
+
+                On Form tab of Model Spy, Application default tab has text label with check box, "To Be Rendered" and "Visible".
+                JAWS doesn't read these labels.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.e4.tools.emf.ui.internal.common.component.ControlFactory.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578643" opendate="2022-02-08 16:31:21" fixdate="2022-03-08 09:43:58" resolution="Fixed">
+        <buginformation>
+            <summary>Stable Sort Order in Progress View</summary>
+            <description>If there are frequently Jobs appearing in the Progress View they might get inserted/removed above a long runnning Job that i want to cancel. That makes it
+                sometimes impossible to hit the right Job.
+                Happens especially if i have enabled to show sleeping/system Jobs which frequently pop up.
+
+                I suggest to have a visual stable Sort order, i.e. Jobs that are once shown keep shown at the same place or above but are never moved down. i.e. new Jobs should
+                never be visually added above an already shown job. "visually" because they might only have been filtered away.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.ui.internal.progress.JobInfo.java</file>
+            <file type="M">org.eclipse.ui.tests.progress.ProgressViewTests.java</file>
+            <file type="M">org.eclipse.ui.internal.progress.ProgressManagerUtil.java</file>
+            <file type="M">org.eclipse.e4.ui.tests.css.CssSwtTestSuite.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578759" opendate="2022-02-15 10:30:44" fixdate="2022-03-08 12:32:13" resolution="Fixed">
+        <buginformation>
+            <summary>Large file association not correctly removed if disabled beforehand</summary>
+            <description>Steps to reproduce below.
+
+                In a clean workspace, from the preference page:
+
+                1. Define a large file association for .java files, an editor prompt for files of size above 8 bytes.
+                1.1. Open a .java file to see that the preference applies.
+                2. Apply.
+                3. Disable the .java preference.
+                3.1. Open a .java file, see that the preference is disabled.
+                4. Apply.
+                5. Remove the .java preference.
+                5.1. Observe that the preference still exists for .java files, although it was removed.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.ui.internal.ide.LargeFileAssociationsPreferencePage.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578786" opendate="2022-02-16 14:14:38" fixdate="2022-03-15 09:13:18" resolution="Fixed">
+        <buginformation>
+            <summary>Remove BookmarkNavigator and related API</summary>
+            <description>Continuation of bug 550439 .</description>
+            <version>4.24</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.ui.actions.AddBookmarkAction.java</file>
+            <file type="M">org.eclipse.ui.views.bookmarkexplorer.BookmarkAction.java</file>
+            <file type="M">org.eclipse.ui.views.bookmarkexplorer.BookmarkContentProvider.java</file>
+            <file type="M">org.eclipse.ui.views.bookmarkexplorer.BookmarkLabelProvider.java</file>
+            <file type="M">org.eclipse.ui.views.bookmarkexplorer.BookmarkMessages.java</file>
+            <file type="M">org.eclipse.ui.views.bookmarkexplorer.BookmarkNavigator.java</file>
+            <file type="M">org.eclipse.ui.views.bookmarkexplorer.BookmarkPropertiesDialog.java</file>
+            <file type="M">org.eclipse.ui.views.bookmarkexplorer.BookmarkSorter.java</file>
+            <file type="M">org.eclipse.ui.views.bookmarkexplorer.CopyBookmarkAction.java</file>
+            <file type="M">org.eclipse.ui.views.bookmarkexplorer.EditBookmarkAction.java</file>
+            <file type="M">org.eclipse.ui.views.bookmarkexplorer.IBookmarkHelpContextIds.java</file>
+            <file type="M">org.eclipse.ui.views.bookmarkexplorer.MarkerUtil.java</file>
+            <file type="M">org.eclipse.ui.views.bookmarkexplorer.OpenBookmarkAction.java</file>
+            <file type="M">org.eclipse.ui.views.bookmarkexplorer.PasteBookmarkAction.java</file>
+            <file type="M">org.eclipse.ui.views.bookmarkexplorer.RemoveBookmarkAction.java</file>
+            <file type="M">org.eclipse.ui.views.bookmarkexplorer.SelectAllAction.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578799" opendate="2022-02-17 10:17:14" fixdate="2022-02-24 10:08:51" resolution="Fixed">
+        <buginformation>
+            <summary>Eclipse hangs when preferences dialog closed after selecting Appearance page</summary>
+            <description>Happens with Eclipse 4.20 and also with latest I-build - I20220216-1800
+
+                Steps to reproduce:
+                1. Open Eclipse in dark theme
+                2. Open a Java class in the Editor
+                3. Open Preferences ) General ) Appearance
+                4. Close or cancel the Preference dialog
+
+                Eclipse just hangs.
+                Doesn't happen if I close all the files in the editor and try the same steps.
+                Also, was not able to reproduce on Light theme.
+
+                It looks like Eclipse is trying to set a theme, though nothing was changed and the the dialog was cancelled.
+            </description>
+            <version>4.20</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.ui.internal.dialogs.ViewsPreferencePage.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578844" opendate="2022-02-19 08:30:52" fixdate="2022-02-22 20:34:27" resolution="Fixed">
+        <buginformation>
+            <summary>Toggle visibility of window toolbars/main toolbar/status bar have strange interferences</summary>
+            <description>I'm facing some strange interferences and anomalies while using the options above.
+
+                (Background: I was wondering how to achieve a kind of "zen mode" in Eclipse and came up with combining "full screen/maximize editor/hide toolbars/hide status bar"
+                might do the trick ...)
+
+                Things I notices:
+
+                * "Toggle visibility of status bar" does hide the status bar, but not show it again when invoked a second time. It does show again if I e.g. toggle the main toolbar
+                or maximize the window. --) looks like a refresh of the window is missing here
+
+                * "Toggle visibility of the window toolbars" does also hide the main toolbar, yet a subsequent "toggle main toolbar visibility" does not bring the main toolbar back
+                to visibility, but seems to confirm the state "it should really be hidden". Calling "toggle main toolbar visibility" again then makes the main toolbar visible
+                again.
+
+                * "Toggle visibility of the window toolbar" has a very annoying side effect: it blocks other views to show up when invoked by keyboard. E.g. if I press Ctrl-Shift-G
+                in a Java Editor to find references in the workspace I would expect the view with the found references to show up. Yet nothing happens! I have to enable the
+                visibility of the window toolbar again, before I can actually use this keyboard shortcut again. (While this might ensure my intended "Zen mode" to actually be only
+                focused on my current code, it's more focus than I was looking for ;-)...)
+
+                I was not sure if I should create one or several issues for this, as these things seem to be somewhat strangely interrelated.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">rg.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578859" opendate="2022-02-21 08:31:23" fixdate="2022-10-12 11:40:26" resolution="Fixed">
+        <buginformation>
+            <summary>[MinMaxAddon] NPE on maximize with sub Area</summary>
+            <description>Created attachment 288088
+                E4 Model Setup
+
+                When Double Clicking on the Header of an Part that is nested inside a Composite Part with an own Area an NPE is thrown.
+
+                See the Attached Screenshot for the E4 Part Setup.
+
+                Form my analysis it looks like that the MinMaxAddon looks for the element to maximize, in most cases the found element is the Editorss Area, from this then the
+                SharedRef is used without a Null check.
+
+                But the Element that is found in my use case is the nested Area inside the Composite Part. Which does not have a SharedRef because it is directly attached below the
+                Composite Part.
+
+                My desired behavior would be that the Editorss Area is found and maximized.
+                This already works for the Hot Key Ctrl+M
+            </description>
+            <version>4.17</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578864" opendate="2022-02-21 09:46:34" fixdate="2022-03-09 11:32:26" resolution="Fixed">
+        <buginformation>
+            <summary>remove fake job "The user is waiting for background work to complete" while waiting</summary>
+            <description>When the "User Operation is waiting" Dialog pops up to allow canceling of Jobs then there is a Job called "The user is waiting for background work to
+                complete".
+
+                It's purely fake and does not add any value. The text is even sometimes wrong. (see example screenshot: Should be the same as the Info item - 'is waiting for
+                "Building"').
+                Using the cancel button on that entry is the same as pressing the dedicated "Cancel user Operation" Button.
+                It's confusing to have two ways to cancel the waiting job. I prefer to only have the cancel button and the correct text is in the headline anyway.
+
+                The only value it might ever had that in principle it could had displayed a progressbar how many jobs we are waiting for. But that does not work either, as it only
+                would try to count down while additional jobs can and do still start as long as they do not conflicting.
+            </description>
+            <version>4.24</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.ui.internal.dialogs.WorkbenchDialogBlockedHandler.java</file>
+            <file type="M">org.eclipse.ui.internal.progress.BlockedJobsDialog.java</file>
+            <file type="M">org.eclipse.ui.internal.progress.ProgressMessages.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578885" opendate="2022-02-22 06:47:14" fixdate="2022-04-04 13:47:16" resolution="Fixed">
+        <buginformation>
+            <summary>ViewLabelProvider - java.lang.Error: SWT Resource was not properly disposed</summary>
+            <description>I see the following stacktrace if I use the show view dialog in my runtime Eclipse.
+
+                !ENTRY org.eclipse.ui.ide 4 4 2022-02-22 07:45:02.312
+                !MESSAGE Not properly disposed SWT resource
+                !STACK 0
+                java.lang.Error: SWT Resource was not properly disposed
+                at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+                at org.eclipse.swt.graphics.Resource.(init)(Resource.java:120)
+                at org.eclipse.swt.graphics.Image.(init)(Image.java:683)
+                at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:275)
+                at org.eclipse.jface.resource.DeferredImageDescriptor.createImage(DeferredImageDescriptor.java:80)
+                at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:290)
+                at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:268)
+                at org.eclipse.ui.internal.dialogs.ViewLabelProvider.getImage(ViewLabelProvider.java:102)
+                at org.eclipse.jface.viewers.ColumnLabelProvider.update(ColumnLabelProvider.java:41)
+                at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:144)
+                at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:957)
+                at org.eclipse.jface.viewers.AbstractTreeViewer$UpdateItemSafeRunnable.run(AbstractTreeViewer.java:126)
+                at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+                at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+                at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:1035)
+                at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:427)
+                at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+                at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+                at org.eclipse.jface.viewers.StructuredViewer.updateItem(StructuredViewer.java:2109)
+                at org.eclipse.jface.viewers.AbstractTreeViewer.createTreeItem(AbstractTreeViewer.java:851)
+                at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:829)
+                at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:611)
+                at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:777)
+                at org.eclipse.jface.viewers.AbstractTreeViewer.internalInitializeTree(AbstractTreeViewer.java:1597)
+                at org.eclipse.jface.viewers.TreeViewer.internalInitializeTree(TreeViewer.java:787)
+                at org.eclipse.jface.viewers.AbstractTreeViewer.lambda$1(AbstractTreeViewer.java:1582)
+                at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1398)
+                at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:365)
+                at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1359)
+                at org.eclipse.jface.viewers.AbstractTreeViewer.inputChanged(AbstractTreeViewer.java:1576)
+                at org.eclipse.ui.dialogs.FilteredTree$NotifyingTreeViewer.inputChanged(FilteredTree.java:966)
+                at org.eclipse.jface.viewers.ContentViewer.setInput(ContentViewer.java:282)
+                at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1632)
+                at org.eclipse.ui.internal.dialogs.ShowViewDialog.createFilteredTreeViewer(ShowViewDialog.java:226)
+                at org.eclipse.ui.internal.dialogs.ShowViewDialog.createDialogArea(ShowViewDialog.java:164)
+                at org.eclipse.jface.dialogs.Dialog.createContents(Dialog.java:767)
+                at org.eclipse.jface.window.Window.create(Window.java:431)
+                at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1094)
+                at org.eclipse.jface.window.Window.open(Window.java:788)
+                at org.eclipse.ui.handlers.ShowViewHandler.openOther(ShowViewHandler.java:106)
+                at org.eclipse.ui.handlers.ShowViewHandler.execute(ShowViewHandler.java:81)
+                at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:283)
+                at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+                at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+                at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+                at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+                at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:317)
+                at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:251)
+                at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+                at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+                at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+                at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+                at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+                at org.eclipse.ui.internal.handlers.LegacyHandlerService.executeCommand(LegacyHandlerService.java:389)
+                at org.eclipse.ui.internal.ShowViewMenu$1.run(ShowViewMenu.java:132)
+                at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+                at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+                at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+                at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+                at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+                at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+                at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+                at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+                at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+                at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+                at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+                at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+                at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+                at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+                at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+                at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+                at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+                at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+                at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+                at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+                at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+                at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+                at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+                at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+                at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+            </description>
+            <version>4.5</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.ui.internal.dialogs.ViewLabelProvider.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578964" opendate="2022-02-25 07:03:56" fixdate="2022-07-13 13:45:32" resolution="Fixed">
+        <buginformation>
+            <summary>NPE in MenuManagerHideProcessor.java:105</summary>
+            <description>i do not know how it happend or how to reproduce, but it was in my logfile.
+
+                According to the stacktrace it happend during closing eclipse, where a null value for currentMenuElement.getObject() seems plausible:
+
+                currentMenuElement.getTransientData().get(MenuManagerShowProcessor.DYNAMIC_ELEMENT_STORAGE_KEY); may return null
+
+                java.lang.NullPointerException
+                at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:251)
+                at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+                at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerHideProcessor.lambda$0(MenuManagerHideProcessor.java:105)
+                at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+                at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+                at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+                at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+                at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:166)
+                at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:368)
+                at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:468)
+                at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:228)
+                at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.disconnectFromWorkspace(IDEWorkbenchAdvisor.java:560)
+                at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$2.run(IDEWorkbenchAdvisor.java:367)
+                at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.postShutdown(IDEWorkbenchAdvisor.java:388)
+                at org.eclipse.ui.internal.Workbench.shutdown(Workbench.java:2942)
+                at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1124)
+                at org.eclipse.ui.internal.Workbench.lambda$4(Workbench.java:1392)
+                at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+                at org.eclipse.ui.internal.Workbench.close(Workbench.java:1392)
+                at org.eclipse.ui.internal.Workbench.close(Workbench.java:1368)
+                at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1716)
+                at org.eclipse.ui.internal.WorkbenchWindow.lambda$5(WorkbenchWindow.java:1743)
+                at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+                at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1743)
+                at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1752)
+                at org.eclipse.ui.internal.WorkbenchWindow.lambda$2(WorkbenchWindow.java:503)
+                at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.lambda$4(WBWRenderer.java:570)
+                at org.eclipse.swt.events.ShellListener$2.shellClosed(ShellListener.java:102)
+                at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:102)
+                at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+                at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1069)
+                at org.eclipse.swt.widgets.Decorations.closeWidget(Decorations.java:269)
+                at org.eclipse.swt.widgets.Decorations.WM_CLOSE(Decorations.java:1552)
+                at org.eclipse.swt.widgets.Control.windowProc(Control.java:4755)
+                at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+                at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+                at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+                at org.eclipse.swt.widgets.Display.windowProc(Display.java:5002)
+                at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+                at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+                at org.eclipse.swt.widgets.Control.windowProc(Control.java:4854)
+                at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+                at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+                at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+                at org.eclipse.swt.widgets.Display.windowProc(Display.java:5002)
+                at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+                at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+                at org.eclipse.swt.widgets.Control.windowProc(Control.java:4854)
+                at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+                at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+                at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+                at org.eclipse.swt.widgets.Display.windowProc(Display.java:5002)
+                at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+                at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+                at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+                at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+                at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+                at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+                at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+                at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+                at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+                at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+                at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+                at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+                at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+                at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+                at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+                at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+                at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+                at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+                at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerHideProcessor.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579019" opendate="2022-03-01 08:47:14" fixdate="2022-04-01 11:13:32" resolution="Fixed">
+        <buginformation>
+            <summary>[JFace] Clicking on NotificationPopup should reveal parent window</summary>
+            <description>Clicking on NotificationPopup doesn't reveal the parent window.
+
+                NotificationPopup has absolute positioning and is always shown on the top of desktop environments windows stack. If there are any 3rd windows on the top of the
+                parent window, it is not clear to what window/app the popped-up notification belongs to. On clicking on the header of notification nothing happens. This is
+                confusing.
+
+                In order to reproduce this one can use the following handler (to trigger notification on user action, e.g. icon click):
+
+                import org.eclipse.core.commands.AbstractHandler;
+                import org.eclipse.core.commands.ExecutionEvent;
+                import org.eclipse.core.commands.ExecutionException;
+                import org.eclipse.jface.layout.GridDataFactory;
+                import org.eclipse.jface.notifications.AbstractNotificationPopup;
+                import org.eclipse.swt.SWT;
+                import org.eclipse.swt.widgets.Composite;
+                import org.eclipse.swt.widgets.Display;
+                import org.eclipse.swt.widgets.Label;
+
+                public class SampleHandler extends AbstractHandler {
+
+                @Override
+                public Object execute(ExecutionEvent event) throws ExecutionException {
+                showNotification();
+                return null;
+                }
+
+                private void showNotification() {
+                if (Display.getCurrent() == null) {
+                Display.getDefault().asyncExec(new Runnable() {
+                @Override
+                public void run() {
+                showNotification();
+                }
+                });
+                return;
+                }
+                try {
+                Thread.sleep(10000); // time to open 3rd app. windows
+                } catch (InterruptedException e) {
+                e.printStackTrace();
+                }
+                NotificationPopup notificationPopup = new NotificationPopup(Display.getCurrent(), "header text",
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+                typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
+                notificationPopup.open();
+                }
+
+                public class NotificationPopup extends AbstractNotificationPopup {
+
+                private String fText;
+                private String fTitle;
+
+                public NotificationPopup(Display display, String title, String text) {
+                super(display);
+                this.fTitle = title;
+                this.fText = text;
+                }
+
+                @Override
+                protected void createContentArea(Composite parent) {
+                Label contentLabel = new Label(parent, SWT.WRAP);
+                contentLabel.setText(fText);
+                GridDataFactory.fillDefaults().grab(true, false).align(SWT.FILL,
+                SWT.BEGINNING).applyTo(contentLabel);
+                }
+
+                @Override
+                protected String getPopupShellTitle() {
+                return fTitle;
+                }
+
+                }
+                }
+
+                Expected behavior:
+                Popup parent window should be shown (brought upfront) on clicking on NotificationPopup.
+            </description>
+            <version>4.21</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jface.notifications.AbstractNotificationPopup.java</file>
+            <file type="M">org.eclipse.jface.notifications.AbstractNotificationPopup.java</file>
+            <file type="M">org.eclipse.jface.snippets.dialogs.Snippet081AbstractNotificationPopup.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579048" opendate="2022-03-02 08:52:44" fixdate="2022-03-23 09:41:22" resolution="Fixed">
+        <buginformation>
+            <summary>Widget is disposed exception from SWTPartRenderer during unit tests for disposed toolbar entries</summary>
+            <description>During unit test exececution we see Widget is disposed excpetions from SWTPartRenderer.
+
+                I guess we should also check here if the widget is disposed before setting a CSS class.
+
+                !ENTRY org.eclipse.e4.ui.workbench 4 0 2022-03-02 09:47:41.961
+                !MESSAGE Exception occurred while rendering: ch.belimo.bd.tools.pagedesigner.toolbar=org.eclipse.e4.ui.model.application.ui.menu.impl.ToolBarImpl@7057dbda (tags:
+                [Draggable], contributorURI: null) (widget: ImageBasedFrame {}, renderer: org.eclipse.e4.ui.workbench.renderers.swt.ToolBarManagerRenderer@71d0b8a4, toBeRendered:
+                true, onTop: false, visible: false, containerData: null, accessibilityPhrase: null)
+                !STACK 0
+                org.eclipse.swt.SWTException: Widget is disposed
+                at org.eclipse.swt.SWT.error(SWT.java:4907)
+                at org.eclipse.swt.SWT.error(SWT.java:4822)
+                at org.eclipse.swt.SWT.error(SWT.java:4793)
+                at org.eclipse.swt.widgets.Widget.error(Widget.java:561)
+                at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:476)
+                at org.eclipse.swt.widgets.Widget.setData(Widget.java:1745)
+                at org.eclipse.e4.ui.css.swt.dom.WidgetElement.setCSSClass(WidgetElement.java:70)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.setClassnameAndId(PartRend
+                at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.setCSSInfo(SWTPartRenderer.java:114)
+                at org.eclipse.e4.ui.workbench.renderers.swt.ToolBarManagerRenderer.createWidget(ToolBarManagerRenderer.java:425)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:994)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:658)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
+                at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.subscribeChildrenHandler(PartRenderingEngine.java:311)
+                at jdk.internal.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)
+                at java.base/jdk.int
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579119" opendate="2022-03-07 07:59:31" fixdate="2022-03-29 15:38:24" resolution="Fixed">
+        <buginformation>
+            <summary>Large file association editor prompt appears even when disabled</summary>
+            <description>Using 2022-03 RC1 Eclipse IDE for Java Developers it seems that the
+                check box
+
+                Default limit
+                [ ] For not listed types, prompt for editor if the size exceeds
+
+                is ignored and it always checks the listed size.
+
+                E.g. set enabled and size to 8B, prompt appears for a small Java file.
+                set disabled, leave size to 8B, prompt appears for a small Java file.
+                set enabled and size to 80000B, prompt does not appear for a small Java file.
+                prompt does appear for a large file.
+                set disabled, leave size to 80000B, prompt does not appear for a small Java file.
+                prompt does appear for a large file.
+
+                Also, I think the large file association options might be inconvenient for
+                Eclipse Memory Analyzer, bug 579110.
+
+                Currently MAT uses content types and associated editors, and parsers for the
+                different dump types are pluggable.
+
+                Having a plug-in customization with a list of values doesn't seem extensible
+                org.eclipse.ui.workbench/largeFileLimits_types=java,xml,txt
+
+                How would each parser plugin independently say it correctly handles large files
+                of the type it processes?
+
+                Also the matching on file extensions seems to just match the last part of the
+                extension, and not the content type, or a double extension.
+
+                E.g.
+                the MAT HPROF parser handles
+                *.hprof
+                *.hprof.gz
+                files. It seems that I would have to match all *.gz files to get the HPROF
+                parser to handle *.hprof.gz files, which doesn't seem right.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.ui.internal.LargeFileLimitsPreferenceHandler.java</file>
+            <file type="M">org.eclipse.ui.tests.largefile.LargeFileLimitsPreferenceHandlerTest.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579149" opendate="2022-03-08 15:02:42" fixdate="2022-03-09 07:57:49" resolution="Fixed">
+        <buginformation>
+            <summary>Large file editor selection dialog cannot be cancelled after remembering an editor selection</summary>
+            <description>Steps to reproduce:
+
+                1. Enable large file associations default limit, set it to 1 byte.
+                2. Open some file, select some external editor (e.g. Emacs on Linux) and remember selection.
+                3. In the Large File Associations preference page, delete the newly added preference and apply.
+                4. Open the file again, cancel the prompt dialog.
+                5. Observe that the previously chosen editor is still chosen.
+
+                This occurs for any file type, until an IDE restart.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.ui.internal.LargeFileLimitsPreferenceHandler.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579247" opendate="2022-03-13 22:22:29" fixdate="2022-03-15 21:41:31" resolution="Fixed">
+        <buginformation>
+            <summary>[Multiple carets] Commands for multi selection not available in pom.xml editor</summary>
+            <description>When opening a pom.xml file in the source code view of the pom-editor the multi-selection commands are not accessible/actionable.
+                This is true for
+                - "To Multi-selection"
+                - The new multi selection commands currently under development like "Add next match to multi selection"
+
+                I guess the pom-editor is part of m2e, but I'd need a little help where to look further. Doesn't the pom-editor use StyledText and thus inherit it's capabilities? I
+                couldn't easily orient in the multitude of m2e-packages -- can anyone help me out where to start?
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.ui.internal.texteditor.ToMultiSelectionHandler.java</file>
+            <file type="M">org.eclipse.ui.internal.texteditor.multiselection.AbstractMultiSelectionHandler.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579463" opendate="2022-03-29 09:32:52" fixdate="2022-03-30 15:25:42" resolution="Fixed">
+        <buginformation>
+            <summary>Welcome screen should not hide toolbar</summary>
+            <description>Opening the welcome screen hides the toolbar which I as a user find inconsistent. As the welcome screen is the only view which does this, I suggest to
+                remove this due to a consistent behavior.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.ui.internal.ViewIntroAdapterPart.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579475" opendate="2022-03-29 12:42:47" fixdate="2022-08-16 09:17:30" resolution="Fixed">
+        <buginformation>
+            <summary>Remove dead logic from CSSPropertyBackgroundSWTHandler / AbstractCSSPropertyBackgroundHandler</summary>
+            <description>I'm currently looking into Bug 577463 and Bug 577493. CSSPropertyBackgroundSWTHandler / AbstractCSSPropertyBackgroundHandler contains some dummy /
+                generated code without any logic which makes it harder to follow the execution path. This code is ancient and unnecessary so it should be removed.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.e4.ui.css.swt.helpers.CSSSWTColorHelper.java</file>
+            <file type="M">org.eclipse.e4.ui.css.swt.properties.css2.CSSPropertyBackgroundSWTHandler.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579499" opendate="2022-03-30 08:51:19" fixdate="2022-10-27 22:10:32" resolution="Fixed">
+        <buginformation>
+            <summary>MarkerSupportView: It should be possible to determine if a filter has been set on the MarkerSupportView through the FiltersConfigurationDialog.</summary>
+            <description>For our use case we require to know if a filter has been set on the MarkerSupportView through the FiltersConfigurationDialog.
+
+                From searching the code, I see that enabledFilters in MarkerContentGenerator is a collection of all the filters that have been enabled through the
+                FiltersConfigurationDialog.
+
+                The issue is that both MarkerContentGenerator and enabledFilters are not accessible through the Eclipse API and so it is not possible for us to determine if there
+                is a filter set on the MarkerSupportView.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.ui.internal.views.markers.ExtendedMarkersView.java</file>
+            <file type="M">org.eclipse.ui.views.markers.MarkerSupportView.java</file>
+            <file type="M">org.eclipse.ui.views.markers.MarkerSupportViewTest.java</file>
+            <file type="M">org.eclipse.ui.tests.internal.InternalTestSuite.java</file>
+            <file type="M">org.eclipse.ui.tests.markers.MarkerSupportViewTest.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579509" opendate="2022-03-30 13:08:21" fixdate="2022-04-05 06:27:16" resolution="Fixed">
+        <buginformation>
+            <summary>IES423:(ICT) Missing space between two strings</summary>
+            <description>Created attachment 288336
+                missing_space_CSY
+
+                Build: I20220323-1001
+
+                Problem:
+                CSY Testers requested to have spaces between two strings.
+
+                Steps to reproduce:
+                Double click in desktop to open Eclipse client.
+                Click Launch with default workspace
+                Click Windows -) Preference in the top menu
+                Click 'Model Editor' in the left
+
+                Please see attachment for details
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.e4.tools.emf.editor3x.ModelEditorPreferencePage.java</file>
+        </fixedFiles>
+    </bug>
+</bugrepository>

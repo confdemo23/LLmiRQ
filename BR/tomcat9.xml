@@ -1,0 +1,2500 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<bugrepository name="tomcat9">
+    <bug id="65677" opendate="2021-11-10 10:39:16" fixdate="2021-11-25 12:11:49" resolution="Fixed">
+        <buginformation>
+            <summary>InvalidMarkException in Http11InputBuffer.fill when socket read throws AsynchronousCloseException</summary>
+            <description>When reading a CoyoteInputStream during a chunked Http/1.1
+                POST request, I've encountered a java.nio.InvalidMarkException
+                under certain conditions. Here's the stacktrace I observe:
+
+                java.nio.InvalidMarkException: null
+                at java.nio.Buffer.reset(Unknown Source)
+                at java.nio.ByteBuffer.reset(Unknown Source)
+                at java.nio.ByteBuffer.reset(Unknown Source)
+                at o.a.coyote.http11.Http11InputBuffer.fill(Http11InputBuffer.java:813)
+                at o.a.coyote.http11.Http11InputBuffer.access$400(Http11InputBuffer.java:42)
+                at o.a.c.h.Http11InputBuffer$SocketInputBuffer.doRead(Http11InputBuffer.java:1172)
+                at o.a.c.h.filters.ChunkedInputFilter.readBytes(ChunkedInputFilter.java:310)
+                at o.a.c.h.filters.ChunkedInputFilter.parseChunkHeader(ChunkedInputFilter.java:338)
+                at o.a.c.h.filters.ChunkedInputFilter.doRead(ChunkedInputFilter.java:164)
+                at o.a.coyote.http11.Http11InputBuffer.doRead(Http11InputBuffer.java:249)
+                at org.apache.coyote.Request.doRead(Request.java:640)
+                at o.a.catalina.connector.InputBuffer.realReadBytes(InputBuffer.java:317)
+                at o.a.catalina.connector.InputBuffer.checkByteBufferEof(InputBuffer.java:600)
+                at o.a.catalina.connector.InputBuffer.read(InputBuffer.java:340)
+                at o.a.c.connector.CoyoteInputStream.read(CoyoteInputStream.java:132)
+
+                I currently assume that the thread reading the CoyoteInputStream is
+                interrupted because it's running within a Resilience4j TimeLimiter
+                and the POST request takes too long. This should be ok though and
+                I'd expect an InterruptedException or IOException in that case
+                from the read call, but instead I get an InvalidMarkException.
+
+                This InvalidMarkException is thrown in the "finally"
+                block of this part in Http11InputBuffer.fill:
+
+                byteBuffer.mark();
+                try {
+                if (byteBuffer.position() ( byteBuffer.limit()) {
+                byteBuffer.position(byteBuffer.limit());
+                }
+                byteBuffer.limit(byteBuffer.capacity());
+                SocketWrapperBase(?) socketWrapper = this.wrapper;
+                if (socketWrapper != null) {
+                nRead = socketWrapper.read(block, byteBuffer);
+                } else {
+                throw new CloseNowException(sm.getString("iib.eof.error"));
+                }
+                } finally {
+                // Ensure that the buffer limit and position are returned to a
+                // consistent "ready for read" state if an error occurs during in
+                // the above code block.
+                byteBuffer.limit(byteBuffer.position()).reset();
+                }
+
+                I've instrumented that part with more debug logs as follows (in
+                particular, for upcoming Tomcat versions, it might be good to add at
+                least the catch block to enhance debugging of such issues in the future):
+
+                byteBuffer.mark();
+                if (log.isDebugEnabled()) {
+                log.debug("Set mark at position " + byteBuffer.position());
+                }
+                try {
+                if (byteBuffer.position() ( byteBuffer.limit()) {
+                if (log.isDebugEnabled()) {
+                log.debug("Setting position to limit " + byteBuffer.limit());
+                }
+                byteBuffer.position(byteBuffer.limit());
+                }
+                byteBuffer.limit(byteBuffer.capacity());
+                if (log.isDebugEnabled()) {
+                log.debug("Position before read " + byteBuffer.position());
+                }
+                SocketWrapperBase(?) socketWrapper = this.wrapper;
+                if (socketWrapper != null) {
+                nRead = socketWrapper.read(block, byteBuffer);
+                } else {
+                throw new CloseNowException(sm.getString("iib.eof.error"));
+                }
+                } catch (Throwable e) {
+                if (log.isDebugEnabled()) {
+                log.debug("Encountered exception in read during fill, position=" + byteBuffer.position(), e);
+                }
+                throw e;
+                } finally {
+                // Ensure that the buffer limit and position are returned to a
+                // consistent "ready for read" state if an error occurs during in
+                // the above code block.
+                if (log.isDebugEnabled()) {
+                log.debug("Calling limit on byteBuffer with position " + byteBuffer.position());
+                }
+                byteBuffer.limit(byteBuffer.position()).reset();
+                }
+
+                When that exception occurs, I see the following logs (before
+                that, the POST request was already running for about 30 seconds
+                until the TimeLimiter kicked in and interrupted the thread):
+
+                10:03:18.899 Before fill(): parsingHeader: [false], parsingRequestLine: [false], parsingRequestLinePhase: [0], parsingRequestLineStart: [0], byteBuffer.position():
+                [3313], byteBuffer.limit(): [3313], end: [2019]
+                10:03:18.899 Set mark at position 2019
+                10:03:18.899 Position before read 2019
+                10:03:18.942 Calling limit on byteBuffer with position 3306
+
+                10:03:18.942 Before fill(): parsingHeader: [false], parsingRequestLine: [false], parsingRequestLinePhase: [0], parsingRequestLineStart: [0], byteBuffer.position():
+                [3306], byteBuffer.limit(): [3306], end: [2019]
+                10:03:18.942 Set mark at position 2019
+                10:03:18.942 Position before read 2019
+                10:03:19.007 Calling limit on byteBuffer with position 3306
+                10:03:19.007 Received [500 (binary output)]
+
+                10:03:19.007 Before fill(): parsingHeader: [false], parsingRequestLine: [false], parsingRequestLinePhase: [0], parsingRequestLineStart: [0], byteBuffer.position():
+                [3306], byteBuffer.limit(): [3306], end: [2019]
+                10:03:19.007 Set mark at position 2019
+                10:03:19.007 Position before read 2019
+                10:03:19.062 Calling limit on byteBuffer with position 3306
+                10:03:19.062 Received [500 (binary output)]
+
+                10:03:19.063 Before fill(): parsingHeader: [false], parsingRequestLine: [false], parsingRequestLinePhase: [0], parsingRequestLineStart: [0], byteBuffer.position():
+                [3306], byteBuffer.limit(): [3306], end: [2019]
+                10:03:19.063 Set mark at position 2019
+                10:03:19.063 Position before read 2019
+                10:03:19.131 Calling limit on byteBuffer with position 3306
+
+                10:03:19.132 Before fill(): parsingHeader: [false], parsingRequestLine: [false], parsingRequestLinePhase: [0], parsingRequestLineStart: [0], byteBuffer.position():
+                [3306], byteBuffer.limit(): [3306], end: [2019]
+                10:03:19.132 Set mark at position 2019
+                10:03:19.132 Position before read 2019
+                10:03:19.244 Calling limit on byteBuffer with position 3306
+
+                10:03:19.245 Before fill(): parsingHeader: [false], parsingRequestLine: [false], parsingRequestLinePhase: [0], parsingRequestLineStart: [0], byteBuffer.position():
+                [3306], byteBuffer.limit(): [3306], end: [2019]
+                10:03:19.245 Set mark at position 2019
+                10:03:19.245 Position before read 2019
+                10:03:19.854 Encountered exception in read during fill, position=0
+                j.n.c.AsynchronousCloseException: null
+                at s.n.c.UnixAsynchronousSocketChannelImpl.finishRead(Unknown Source)
+                at s.n.c.UnixAsynchronousSocketChannelImpl.finish(Unknown Source)
+                ... 2 frames excluded
+                at o.apache.tomcat.util.net.Nio2Channel.close(Nio2Channel.java:81)
+                at o.apache.tomcat.util.net.Nio2Channel.close(Nio2Channel.java:94)
+                at o.a.t.u.n.Nio2Endpoint$Nio2SocketWrapper.doClose(Nio2Endpoint.java:935)
+                at o.a.t.util.net.SocketWrapperBase.close(SocketWrapperBase.java:422)
+                at o.a.t.u.n.Nio2Endpoint$SocketProcessor.doRun(Nio2Endpoint.java:1685)
+                at o.a.t.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+                at o.a.tomcat.util.net.AbstractEndpoint.processSocket(AbstractEndpoint.java:1171)
+                at o.a.t.u.n.Nio2Endpoint$Nio2SocketWrapper$2.completed(Nio2Endpoint.java:613)
+                at o.a.t.u.n.Nio2Endpoint$Nio2SocketWrapper$2.completed(Nio2Endpoint.java:591)
+                ... 3 frames excluded
+                at o.a.t.u.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+                at o.a.t.u.t.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+                at o.a.t.u.t.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+                ... 1 frames excluded
+                10:03:19.854 Calling limit on byteBuffer with position 0
+
+                So, the java.nio.channels.AsynchronousCloseException thrown presumably from
+                socketWrapper.read leaves the byteBuffer with position=0. So the limit is
+                set to 0 in the finally block, which sets the mark to -1, as its larger than
+                the limit (it was 2019 according to logs). Here's the snippet for Buffer.limit:
+
+                public Buffer limit(int newLimit) {
+                if (newLimit ) capacity | newLimit ( 0)
+                throw createLimitException(newLimit);
+                limit = newLimit;
+                if (position ) newLimit) position = newLimit;
+                if (mark ) newLimit) mark = -1;
+                return this;
+                }
+
+                This in turn makes the reset() call fail
+                on the byte buffer as the mark is invalid.
+
+                I've also observed that the above logs are sometimes missing
+                the "Received" log. I assume that this is swallowed by my
+                logging consumer as either the message is too large or the "raw
+                bytes" make it choke. But I think that shouldn't worry us now!
+
+                Now the question is: Is this really a bug in Tomcat? Do you agree that
+                the limit(0) call above should not happen? Is it reasonable that a thread
+                interruption could lead to the observed AsynchronousCloseException above?
+
+                I've tried to reproduce it locally, but currently I can only observe
+                it on a production system. I appreciate hints what could be going on or
+                how one could try to reproduce this within a more isolated environment.
+
+                Let me know if you need further information.
+            </description>
+            <version>9.0.54</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.coyote.http11.Http11InputBuffer.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="65726" opendate="2021-12-06 14:18:50" fixdate="2021-12-07 11:46:36" resolution="Fixed">
+        <buginformation>
+            <summary>NullPointerException while reading request input with H2C upgraded exchanges</summary>
+            <description>See https://github.com/spring-projects/spring-boot/issues/28912 for original issue.
+
+                It looks like trying to read the request body with an H2C-upgraded request fails with an NPE, while this doesn't fail with H2C prior-knowledge or HTTP 1.1.
+
+                Here is the stacktrace:
+
+                java.lang.NullPointerException: Cannot invoke "org.apache.coyote.InputBuffer.doRead(org.apache.tomcat.util.net.ApplicationBufferHandler)" because "this.inputBuffer"
+                is null
+                at org.apache.coyote.Request.doRead(Request.java:640)
+                at org.apache.catalina.connector.InputBuffer.realReadBytes(InputBuffer.java:317)
+                at org.apache.catalina.connector.InputBuffer.checkByteBufferEof(InputBuffer.java:600)
+                at org.apache.catalina.connector.InputBuffer.read(InputBuffer.java:340)
+                at org.apache.catalina.connector.CoyoteInputStream.read(CoyoteInputStream.java:132)
+                at java.base/java.io.InputStream.readNBytes(InputStream.java:409)
+                at java.base/java.io.InputStream.readAllBytes(InputStream.java:346)
+                at h2c.H2cServlet.doGet(H2cServlet.java:18)
+                at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+                at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+                at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+                at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+                at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+                at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+                at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+                at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+                at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+                at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+                at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+                at org.apache.coyote.http2.StreamProcessor.service(StreamProcessor.java:413)
+                at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+                at org.apache.coyote.http2.StreamProcessor.process(StreamProcessor.java:74)
+                at org.apache.coyote.http2.StreamRunnable.run(StreamRunnable.java:35)
+                at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+                at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+                at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+                at java.base/java.lang.Thread.run(Thread.java:833)
+
+
+                A sample application can be found here: https://github.com/bclozel/h2c-tomcat
+            </description>
+            <version>9.0.55</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.coyote.http2.Stream.java</file>
+            <file type="M">org.apache.coyote.http2.Http2TestBase.java</file>
+            <file type="M">org.apache.coyote.http2.TestHttp2UpgradeHandler.java</file>
+            <file type="M">org.apache.coyote.http11.Http11Processor.java</file>
+            <file type="M">org.apache.coyote.http11.upgrade.UpgradeApplicationBufferHandler.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="65736" opendate="2021-12-10 08:32:52" fixdate="2022-05-09 18:25:51" resolution="Fixed">
+        <buginformation>
+            <summary>Improve org.apache.naming.factory.BeanFactory to mitigate JNDI injection</summary>
+            <description>I can reproduce that vulnerability which leverage "org.apache.naming.factory.BeanFactory" and "javax.el.ELProcessor" described in
+                https://www.veracode.com/blog/research/exploiting-jndi-injections-java
+                It would be great if tomcat can do something to mitigate it.
+            </description>
+            <version>9.0.55</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.naming.factory.BeanFactory.java</file>
+            <file type="M">org.apache.naming.factory.TestBeanFactory.java</file>
+            <file type="M">org.apache.naming.factory.TesterBean.java</file>
+            <file type="M">org.apache.tomcat.util.net.NioEndpoint.java</file>
+            <file type="M">org.apache.tomcat.util.net.Nio2Endpoint.java</file>
+            <file type="M">org.apache.tomcat.util.net.AprEndpoint.java</file>
+            <file type="M">org.apache.tomcat.util.net.SocketWrapperBase.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="65757" opendate="2021-12-20 20:17:39" fixdate="2022-01-05 15:23:07" resolution="Fixed">
+        <buginformation>
+            <summary>Async WriteListener#onWritePossible never called</summary>
+            <description>If the servlet 3.1 async WriteListener is registered on the correct context but on a container thread other than the one that spanwed the request (or maybe
+                even if on same thread but after context.end is called), then WriteListener#onWritePossible is never called.
+
+                This was originally reported https://www.mail-archive.com/users@tomcat.apache.org/msg124043.html and repeated asked again by me at
+                https://mail.google.com/mail/u/0/#inbox/KtbxLxGcBcrfltMWNvZcJHFJLdbkfFWJdq. Our scenario involves RestEasy and many layers, but we're 99% sure we are experiencing
+                the same issue Violeta reported.
+
+                From what I can tell her test is also a pretty good reproducer. I could make a few tweaks, but if it's good enough, I don't want to change it.
+            </description>
+            <version>9.0.x</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.connector.CoyoteAdapter.java</file>
+            <file type="M">org.apache.coyote.Request.java</file>
+            <file type="M">org.apache.catalina.nonblocking.TestNonBlockingAPI.java</file>
+            <file type="M">org.apache.coyote.AbstractProtocol.java</file>
+            <file type="M">org.apache.coyote.AsyncStateMachine.java</file>
+            <file type="M">org.apache.coyote.ContainerThreadMarker.java</file>
+            <file type="M">org.apache.coyote.http11.upgrade.UpgradeServletInputStream.java</file>
+            <file type="M">org.apache.coyote.http11.upgrade.UpgradeServletOutputStream.java</file>
+            <file type="M">org.apache.coyote.http2.StreamProcessor.java</file>
+            <file type="M">org.apache.tomcat.util.net.ContainerThreadMarker.java</file>
+            <file type="M">org.apache.catalina.connector.CoyoteAdapter.java</file>
+            <file type="M">org.apache.catalina.connector.InputBuffer.java</file>
+            <file type="M">org.apache.coyote.Response.java</file>
+            <file type="M">org.apache.catalina.servlets.WebdavServlet.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="65763" opendate="2021-12-23 08:51:03" fixdate="2022-01-07 03:11:09" resolution="Fixed">
+        <buginformation>
+            <summary>WsRemoteEndpointImplBase#sendMessageBlock cannot close session properly when have TimeoutException</summary>
+            <description>Firstly, I found this exception:
+                ####
+                java.io.IOException: java.util.concurrent.TimeoutException
+                at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:324)
+                at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:259)
+                at
+                ####
+
+                It happens in org.apache.tomcat.websocket.WsRemoteEndpointImplBase#sendMessageBlock(byte, java.nio.ByteBuffer, boolean, long):
+                ###java
+                if (!bsh.getSendResult().isOK()) {
+                messagePartInProgress.release();
+                Throwable t = bsh.getSendResult().getException();
+                wsSession.doClose(new CloseReason(CloseCodes.GOING_AWAY, t.getMessage()),
+                new CloseReason(CloseCodes.CLOSED_ABNORMALLY, t.getMessage()), true);
+                throw new IOException (t);
+                }
+                ###
+
+                Actually, it is caused by org.apache.tomcat.websocket.WsRemoteEndpointImplClient#doWrite which has a LongToIntegerFuture.get timeout exception:
+                ###java
+                try {
+                channel.write(byteBuffer).get(timeout, TimeUnit.MILLISECONDS);
+                } catch (InterruptedException | ExecutionException | TimeoutException e) {
+                handler.onResult(new SendResult(e));
+                return;
+                }
+                ###
+
+                But "writing" value is not set to "false" which has been set "true" in org.apache.tomcat.websocket.AsyncChannelWrapperSecure#write(java.nio.ByteBuffer). Only in
+                org.apache.tomcat.websocket.AsyncChannelWrapperSecure.WriteTask, "writing" will be reset to "false", but WriteTask may not finish when LongToIntegerFuture.get
+                timeout happens. This problem may like https://bz.apache.org/bugzilla/show_bug.cgi?id=61003, but writing.set(false) doesn't work in this timeout situation.
+
+                When WsRemoteEndpointImplBase#sendMessageBlock get TimeoutException, it will try to close session, see "wsSession.doClose(new CloseReason(CloseCodes.GOING_AWAY,
+                t.getMessage())".
+
+                This method "wsSession.doClose" will set state = State.OUTPUT_CLOSED and send a close message (org.apache.tomcat.websocket.WsSession#sendCloseMessage). But it will
+                case exception, because "writing" value is still "true":
+                ###
+                Caused by: java.lang.IllegalStateException: Concurrent write operations are not permitted
+                at org.apache.tomcat.websocket.AsyncChannelWrapperSecure.write(AsyncChannelWrapperSecure.java:117)
+                at org.apache.tomcat.websocket.WsRemoteEndpointImplClient.doWrite(WsRemoteEndpointImplClient.java:62)
+                at org.apache.tomcat.websocket.WsRemoteEndpointImplBase$OutputBufferSendHandler.write(WsRemoteEndpointImplBase.java:893)
+                at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.writeMessagePart(WsRemoteEndpointImplBase.java:506)
+                at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:311)
+                at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:259)
+                at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:613)
+                at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:498)
+                at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:322)
+                ###
+
+                In org.apache.tomcat.websocket.WsSession#sendCloseMessage, it doesn't catch IllegalStateException and close websocket channel:
+                ###java
+                try {
+                wsRemoteEndpoint.sendMessageBlock(Constants.OPCODE_CLOSE, msg, true);
+                } catch (IOException | WritePendingException e) {
+                // Failed to send close message. Close the socket and let the caller
+                // deal with the Exception
+                if (log.isDebugEnabled()) {
+                log.debug(sm.getString("wsSession.sendCloseFail", id), e);
+                }
+                wsRemoteEndpoint.close();
+                ###
+
+                And this session may cannot be closed again because state has been set to "OUTPUT_CLOSED".
+
+                I think IllegalStateException should be caught in org.apache.tomcat.websocket.WsSession#sendCloseMessage or a better way to close session when timeout happens.
+            </description>
+            <version>9.0.44</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.tomcat.websocket.WsSession.java</file>
+            <file type="M">org.apache.catalina.ha.session.BackupManager.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="65776" opendate="2021-12-31 09:25:36" fixdate="2023-02-15 09:50:54" resolution="Fixed">
+        <buginformation>
+            <summary>"Duplicate accept detected" error from a subsequent request with the same local port</summary>
+            <description>"Duplicate accept detected" error might happen if a client reuses its local port somehow.
+
+                This is a synthetic test to demonstrate it:
+                https://github.com/izeye/spring-boot-throwaway-branches/blob/tomcat-duplicate-accept-detected/src/test/java/com/izeye/throwaway/DuplicateAcceptDetectedTests.java
+
+                This is happening in my production environment that is running on CentOS in a Kubernetes cluster. Although I didn't get to the bottom of the reason why the same
+                local port is being used yet, it seems that it might prevent from accepting valid requests from a client.
+            </description>
+            <version>9.0.56</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.tomcat.util.net.Nio2Endpoint.java</file>
+            <file type="M">org.apache.tomcat.util.net.NioEndpoint.java</file>
+            <file type="M">org.apache.catalina.webresources.AbstractArchiveResource.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="65785" opendate="2022-01-06 11:35:45" fixdate="2022-01-08 11:02:29" resolution="Fixed">
+        <buginformation>
+            <summary>HTTP/2.0 non US-ASCII header names should be rejected</summary>
+            <description>Issue summary
+                =============
+
+                Tomcat does not follows HTTP/2.0 header name specification : Header names should be US-ASCII encoded but Tomcat :
+                - does not check their encoding,
+                - allows non US-ASCII encoded
+                - corrupts non US-ASCII characters by suffixing them with "0xff", example : "0xf0" -) "0xf0 0xff"
+
+                Expected behaviour would be : to reject the HTTP/2.0 request as ill-formatted with a HTTP 400 error code.
+
+                The specifications
+                ==================
+
+                HTTP/2.0
+                --------
+
+                The HTTP/2.0 specification (https://datatracker.ietf.org/doc/html/rfc7540#section-8.1.2) says:
+                ) Just as in HTTP/1.x, header field names are strings of ASCII
+                ) characters that are compared in a case-insensitive fashion. However,
+                ) header field names MUST be converted to lowercase prior to their
+                ) encoding in HTTP/2. A request or response containing uppercase
+                ) header field names MUST be treated as malformed (Section 8.1.2.6).
+
+                HTTP/1.1
+                --------
+
+                The HTTP/1.1 specification () says :
+                ) A recipient MUST parse an HTTP message as a sequence of octets in an
+                ) encoding that is a superset of US-ASCII [USASCII]. Parsing an HTTP
+                ) message as a stream of Unicode characters, without regard for the
+                ) specific encoding, creates security vulnerabilities due to the
+                ) varying ways that string processing libraries handle invalid
+                ) multibyte character sequences that contain the octet LF (%x0A).
+
+                HPACK
+                -----
+
+                HPACK specification (https://www.rfc-editor.org/rfc/rfc7541.html#section-1.1) says:
+                ) The format defined in this specification treats a list of header
+                ) fields as an ordered collection of name-value pairs that can include
+                ) duplicate pairs. Names and values are considered to be opaque
+                ) sequences of octets, and the order of header fields is preserved
+                ) after being compressed and decompressed.
+
+
+                Problem description
+                ===================
+
+                Tomcat does not reject non-ascii HTTP/2.0 header names, and its HPACK implementation casts the received bytes into chars so that "0xf0" becomes "0xf0 0xff".
+                It looks like the HPACK algorithm corrupts the header name, and the HTTP/2.0 implementation is then not able to reject this invalid header value (an US-ASCII
+                character is coded with 7 bits, so the first bit MUST be always 0 and obviously "0xf0" has its first bit to 1).
+
+                As seen in the previous parts, HPACK algorithm should treat its input as "opaque sequence of octets" and thus should not try to convert them to String directly
+                without knowing their encoding.
+                Then the HTTP/2.0 implementation should verify that the header names bytes are using only 7 bits (and thus can be safely decoded as ASCII characters).
+
+
+                HTTP/1.1 comparison
+                ===================
+
+                Tomcat handles an invalid HTTP/1.1 header correctly, returning a HTTP 400 with this message : "The HTTP header line [0xf0: aa] does not conform to RFC 7230 and has
+                been ignored."
+
+
+                Comparison with other products
+                ==============================
+
+                - Netty (tested with 4.1.72) handles it badly too, but the header name "0xf0" is corrupted into "0x00 0xf0" (which is different from what tomcat does : "0xf0 0xff")
+
+                Reproducer
+                ==========
+                - A fresh install of Tomcat (tested with 9 but I guess it will work out with any version of tomcat handling HTTP/2.0)
+                - the HTTP/2.0 connector configured (`(UpgradeProtocol className="org.apache.coyote.http2.Http2Protocol" /)`)
+                - A simple servlet
+                - run this command : `$ curl -v http://localhost:8080/static --http2-prior-knowledge -H "😱: aa"`
+                The request should be rejected with HTTP 400 error because the header name is not US-ASCII encoded.
+            </description>
+            <version>9.0.x</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.coyote.http2.Http2Protocol.java</file>
+            <file type="M">org.apache.coyote.http2.StreamProcessor.java</file>
+            <file type="M">org.apache.coyote.http2.TestStreamProcessor.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="65806" opendate="2022-01-17 08:33:55" fixdate="2022-02-03 10:05:53" resolution="Fixed">
+        <buginformation>
+            <summary>When running in FIPS mode on openjdk-17, SessionIdGeneratorBase.java throws SEVERE log messages</summary>
+            <description>Unless one changes default configuration, starting catalina in a fips-enabled machine with jdk-17 print 2 SEVERE errors in catalina.out per context
+                initialized.
+
+                The messages are generated in SessionIdGeneratorBase.java, and are caused by the fact that SHA1PRNG is missing in jdk-17.
+
+                The messages are confusing, but harmless. The class will use the default SecureRandom (PKCS11) when SHA1PRNG is not found.
+
+                Workaround:
+
+                * For webapps that don't define a '(Context)(Manager)', one can add '(Manager secureRandomAlgorithm=""/)' to conf/context.xml. This works for ROOT and examples in a
+                default install
+                * For webapps that define a '(Context)(Manager)', set 'secureRandomAlgorithm=""' in META-INF/context.xml This works for manager and host-manager in a default
+                install.
+
+                The log spam could be managed by checking on initialization of the class if the initial value works, and special-casing it from SHA1PRNG to "" (maybe printing a
+                warning) in case it doesn't.
+
+                Also, I think the messages should be scaled down from SEVERE to INFO when the secureRandomAlgorithm value is SHA1PRNG, FIPS is enabled and the java version is
+                jdk-17.
+            </description>
+            <version>unspecified</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.authenticator.AuthenticatorBase.java</file>
+            <file type="M">org.apache.catalina.session.ManagerBase.java</file>
+            <file type="M">org.apache.catalina.util.SessionIdGeneratorBase.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="65853" opendate="2022-01-27 16:53:18" fixdate="2022-05-10 15:47:32" resolution="Fixed">
+        <buginformation>
+            <summary>[CsrfPreventionFilter] Extract evaluation of skipNonceCheck into overridable method</summary>
+            <description>Currently evaluation of skipNonceCheck is inlined into big doFilter() method. If I want to change behavior of this evaluation (enabling use of wildcards) I
+                have to copy the whole class or at least the whole doFilter() method and reimplement it. If changes are made to the code, I have to reflect these changes in my
+                copy. Bad idea!
+
+                I suggest to extract this code into a separate method with at least protected visibility.
+
+                ####################
+                if (Constants.METHOD_GET.equals(req.getMethod())
+                entryPoints.contains(getRequestedPath(req))) {
+                if(log.isTraceEnabled()) {
+                log.trace("Skipping CSRF nonce-check for GET request to entry point " + getRequestedPath(req));
+                }
+
+                skipNonceCheck = true;
+                }
+                ####################
+
+                Like this:
+
+                ####################
+                protected boolean getSkipNonceCheck(HttpServletRequest request) throws IOException, ServletException {
+                if (!Constants.METHOD_GET.equals(request.getMethod()))
+                return true;
+
+                if (!entryPoints.contains(getRequestedPath(request)))
+                return false;
+
+                return true;
+                }
+                ####################
+
+
+                doFilter()
+                ####################
+                ...
+                if (getSkipNonce(req)) {
+                if(log.isTraceEnabled()) {
+                log.trace("Skipping CSRF nonce-check for GET request to entry point " + getRequestedPath(req));
+                }
+
+                skipNonceCheck = true;
+                }
+                ...
+                ####################
+
+
+                Maybe some other details would deserve to be in their own (overridable) methods as well.
+            </description>
+            <version>9.0.54</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.filters.CsrfPreventionFilter.java</file>
+            <file type="M">org.apache.catalina.filters.CsrfPreventionFilterBase.java</file>
+            <file type="M">org.apache.catalina.filters.RestCsrfPreventionFilter.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="65921" opendate="2022-02-28 14:53:24" fixdate="2022-03-01 16:51:02" resolution="Fixed">
+        <buginformation>
+            <summary>Null pointer exception if RewriteRule attempts to set mime type</summary>
+            <description>A rewrite rule like:
+
+                RewriteRule ^/path/.*$ - [T=text/xml]
+
+                fails with a NullPointerException because the contentTypeMB field in the Request object has not initialized. Request.setContentType should initialize contentTypeMB,
+                or the rewrite valve should call getContentType first. The former is preferable in case there is no content type in the request.
+
+                This always happens with the HTTP/1.1 connector. With the AJP connector the exeception occurs if the request does not contain a Content-Type header.
+
+                Backtrace:
+
+                java.lang.NullPointerException: Cannot invoke "org.apache.tomcat.util.buf.MessageBytes.setString(String)" because "this.contentTypeMB" is null
+                at org.apache.coyote.Request.setContentType(Request.java:465)
+                at org.apache.catalina.connector.Request.setContentType(Request.java:1057)
+                at org.apache.catalina.valves.rewrite.RewriteValve.invoke(RewriteValve.java:448)
+                at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+                at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+                at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+                at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+                at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+                at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+                at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735)
+                at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+                at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+                at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+                at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+                at java.base/java.lang.Thread.run(Thread.java:833)
+            </description>
+            <version>9.0.55</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.valves.rewrite.RewriteValve.java</file>
+            <file type="M">org.apache.catalina.valves.TesterAccessLogValve.java</file>
+            <file type="M">org.apache.coyote.http11.AbstractHttp11Processor.java</file>
+            <file type="M">org.apache.coyote.http11.Http11AprProcessor.java</file>
+            <file type="M">org.apache.coyote.http11.Http11NioProcessor.java</file>
+            <file type="M">org.apache.coyote.http11.Http11Processor.java</file>
+            <file type="M">org.apache.catalina.startup.HostConfig.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="65940" opendate="2022-03-07 21:32:53" fixdate="2022-03-09 09:48:01" resolution="Fixed">
+        <buginformation>
+            <summary>DefaultInstanceManager.destroyInstance can lead to a NullPointerException</summary>
+            <description>On our Tomcat instance, we noticed the following stack trace:
+
+
+                19:46:49.556 [Catalina-utility-12] [ - ] ERROR o.a.catalina.core.StandardWrapper - InstanceManager.destroy() pour le Servlet [AtmosphereServlet] a renvoyé une
+                exception
+                java.lang.NullPointerException: null
+                at org.apache.catalina.core.DefaultInstanceManager.destroyInstance(DefaultInstanceManager.java:196)
+                at org.apache.catalina.core.StandardWrapper.unload(StandardWrapper.java:1343)
+                at org.apache.catalina.core.StandardWrapper.stopInternal(StandardWrapper.java:1627)
+                at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+                at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5465)
+                at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+                at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3811)
+                at org.apache.catalina.startup.HostConfig.reload(HostConfig.java:1443)
+                at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1415)
+                at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1654)
+                at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:315)
+                at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+                at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1162)
+                at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1365)
+                at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1369)
+                at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1347)
+                at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+                at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+                at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+                at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+                at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+                at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+                at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+                https://github.com/apache/tomcat/blob/662cc9171c22ac790532d38a2b59990faaa7b971/java/org/apache/catalina/core/DefaultInstanceManager.java#L196 gives this :
+
+                @Override
+                public void destroyInstance(Object instance) throws IllegalAccessException,
+                InvocationTargetException {
+                if (!ignoreAnnotations) {
+                preDestroy(instance, instance.getClass()); // NPE on this line
+                }
+                }
+
+                So I guess parameter "instance" is null here.
+            </description>
+            <version>9.0.55</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.core.StandardWrapper.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="65952" opendate="2022-03-14 10:34:50" fixdate="2022-03-15 19:41:35" resolution="Fixed">
+        <buginformation>
+            <summary>Exception in PrivilegedSetAccessControlContext initialisation with SecurityManager activated and java.lang module not opened</summary>
+            <description>We use Tomcat 9.0.x in an executable jar produced by SpringBoot (2.6.x) with the SecurityManager activated (JDK 17.0.x).
+
+                When upgrading from SpringBoot 2.6.3 (Tomcat 9.0.56) to SpringBoot 2.6.4 (Tomcat 9.0.58), this exception is thrown during startup :
+
+                org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException:
+                Unable to start embedded Tomcat
+                at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:163)
+                at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+                at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+                at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+                at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+                at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+                at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+                at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+                at com.alsyontech.thetys.ingestion.Ingestion.main(Ingestion.java:15)
+                at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+                at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+                at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+                at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+                at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+                at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+                Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+                at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+                at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.(init)(TomcatWebServer.java:104)
+                at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:478)
+                at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
+                at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:182)
+                at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:160)
+                ... 16 common frames omitted
+                Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat]]
+                at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+                at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+                at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+                at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+                at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:927)
+                at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+                at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+                at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+                ... 21 common frames omitted
+                Caused by: java.lang.ExceptionInInitializerError: null
+                at org.apache.tomcat.util.threads.TaskThreadFactory.newThread(TaskThreadFactory.java:63)
+                at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.(init)(ThreadPoolExecutor.java:630)
+                at java.base/java.util.concurrent.ThreadPoolExecutor.addWorker(ThreadPoolExecutor.java:920)
+                at java.base/java.util.concurrent.ThreadPoolExecutor.ensurePrestart(ThreadPoolExecutor.java:1593)
+                at java.base/java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:346)
+                at java.base/java.util.concurrent.ScheduledThreadPoolExecutor.scheduleWithFixedDelay(ScheduledThreadPoolExecutor.java:680)
+                at org.apache.tomcat.util.threads.ScheduledThreadPoolExecutor.scheduleWithFixedDelay(ScheduledThreadPoolExecutor.java:138)
+                at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:951)
+                at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
+                at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+                ... 27 common frames omitted
+                Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field private java.security.AccessControlContext
+                java.lang.Thread.inheritedAccessControlContext accessible: module java.base does not "opens java.lang" to unnamed module @69ea3742
+                at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+                at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+                at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+                at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
+                at org.apache.tomcat.util.security.PrivilegedSetAccessControlContext.(clinit)(PrivilegedSetAccessControlContext.java:41)
+                ... 37 common frames omitted
+
+                I presume this is linked to the changes made for https://bz.apache.org/bugzilla/show_bug.cgi?id=65714 in version 9.0.57.
+
+                During the static initialization of org.apache.tomcat.util.security.PrivilegedSetAccessControlContext, a call is done to
+                java.lang.reflect.AccessibleObject#checkCanSetAccessible(java.lang.Class(?), java.lang.Class(?), boolean) with
+                * caller = org.apache.tomcat.util.security.PrivilegedSetAccessControlContext =) callerModule = unnamed module
+                * declaringClass = java.lang.Thread =) declaringModule = java.base
+
+                It seems now mandatory to add "--add-opens=java.base/java.lang=ALL-UNNAMED" when running Tomcat in SpringBoot with SecurityManager.
+
+                This "add-opens" is done in catalina.sh to prevent errors on shutdown according to webapps/docs/setup.html : "When running on Java 9 you will need to additionally
+                specify the following when starting jsvc to avoid warnings on shutdown".
+
+                Regards.
+            </description>
+            <version>9.0.58</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.tomcat.util.net.SSLSupport.java</file>
+            <file type="M">org.apache.tomcat.util.net.jsse.JSSEImplementation.java</file>
+            <file type="M">org.apache.tomcat.util.net.jsse.JSSESupport.java</file>
+            <file type="M">org.apache.tomcat.util.net.jsse.openssl.Cipher.java</file>
+            <file type="M">org.apache.coyote.Request.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="65959" opendate="2022-03-16 15:24:49" fixdate="2022-03-22 12:50:16" resolution="Fixed">
+        <buginformation>
+            <summary>Tomcat 9.0.59 and 9.0.60 implementation of FunctionMapperImpl breaks application</summary>
+            <description>Created attachment 38229
+                full stack trace
+
+                Hello,
+                We have a JSF application that is properly running on tomcat 9.0.58 and previous.
+                We use Primefaces as JSF component provider.
+
+                When we use a dynamic view with ajax, we obtain a full stacktrace du to Serialization error of FunctionMapperImpl (see attached).
+
+                I analyzed your release notes and commits and found that the full "write" section was modified for the FunctionMapperImpl.
+
+                I cloned tomcat repository, opened the 9.0.x branch and reverted the code https://github.com/apache/tomcat/commit/89c63c4757854435f8d6525e08c02fc598f4aae7 then
+                redeployed the libraries and everything ran fine.
+            </description>
+            <version>9.0.60</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.el.lang.FunctionMapperImpl.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="65991" opendate="2022-04-01 14:55:06" fixdate="2022-04-11 18:40:03" resolution="Fixed">
+        <buginformation>
+            <summary>NPE in SSLAuthenticator.java:201 if bindOnInit="false"</summary>
+            <description>When the https connector has bindOnInit="false" set, we are facing NPE in SSLAuthenticator.java:201 and the webapp cannot start.
+
+                01-Apr-2022 16:38:17.047 SEVERE [main] org.apache.catalina.startup.HostConfig.deployWAR Error deploying web application archive
+                [/home/michal/java/tomcat9-nodeA/webapps/upp.war]
+                java.lang.IllegalStateException: Error starting child
+                at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:729)
+                at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:698)
+                at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:696)
+                at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1024)
+                at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1911)
+                at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+                at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+                at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+                at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:118)
+                at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:825)
+                at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:475)
+                at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1618)
+                at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:319)
+                at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+                at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+                at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+                at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:946)
+                at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+                at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+                at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+                at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+                at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+                at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+                at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+                at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+                at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
+                at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+                at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+                at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+                at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:927)
+                at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+                at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+                at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+                at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+                at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+                at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+                Caused by: org.apache.catalina.LifecycleException: Failed to start component
+                [SSLAuthenticator[StandardEngine[Catalina].StandardHost[localhost].StandardContext[/upp]]]
+                at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+                at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+                at org.apache.catalina.core.StandardPipeline.startInternal(StandardPipeline.java:176)
+                at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+                at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5147)
+                at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+                at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:726)
+                ... 37 more
+                Caused by: java.lang.NullPointerException
+                at org.apache.catalina.authenticator.SSLAuthenticator.startInternal(SSLAuthenticator.java:201)
+                at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+                ... 42 more
+            </description>
+            <version>9.0.62</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.authenticator.SSLAuthenticator.java</file>
+            <file type="M">org.apache.catalina.core.TestApplicationFilterChain.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66009" opendate="2022-04-12 09:07:51" fixdate="2022-04-14 10:55:45" resolution="Fixed">
+        <buginformation>
+            <summary>M-TLS Fails, no user is found because "OID.2.5.4.5" is used as field name instead of "SERIALNUMBER", in Subject</summary>
+            <description>We upgraded from Tomcat 9.0.60 to 9.0.62 and the Mutual-TLS failed.
+
+                Logging from Tomcat 9.0.60 (M-TLS Works)
+                01 org.apache.catalina.authenticator.AuthenticatorBase.invoke Security checking request POST /speer/soap/services/somefunctionality
+                02 org.apache.catalina.realm.RealmBase.findSecurityConstraints Checking constraint 'SecurityConstraint[MijnvfRealm]' against POST /services/somefunctionality --)
+                true
+                03 org.apache.catalina.realm.RealmBase.findSecurityConstraints Checking constraint 'SecurityConstraint[MijnvfRealm]' against POST /services/somefunctionality --)
+                true
+                04 org.apache.catalina.authenticator.AuthenticatorBase.invoke Calling hasUserDataPermission()
+                05 org.apache.catalina.realm.RealmBase.hasUserDataPermission User data constraint already satisfied
+                06 org.apache.catalina.authenticator.AuthenticatorBase.invoke Calling authenticate()
+                07 org.apache.catalina.realm.CombinedRealm.authenticate Attempting to authenticate user [CN=cn, O=o, L=l, ST=st, C=c, SERIALNUMBER=00000001804415183000] with realm
+                [org.apache.catalina.realm.UserDatabaseRealm]
+                08 org.apache.catalina.realm.RealmBase.authenticate Authenticating client certificate chain
+                09 org.apache.catalina.realm.RealmBase.authenticate Checking validity for 'CN=cn, O=o, L=l, ST=st, C=c, SERIALNUMBER=00000001804415183000'
+                10 org.apache.catalina.realm.RealmBase.authenticate Checking validity for 'CN=cnCA, O=o, C=c'
+                11 org.apache.catalina.realm.RealmBase.getPrincipal Got user name from X509 certificate: [CN=cn, O=o, L=l, ST=st, C=c, SERIALNUMBER=00000001804415183000]
+                12 org.apache.catalina.realm.CombinedRealm.authenticate Authenticated user [CN=cn, O=o, L=l, ST=st, C=c, SERIALNUMBER=00000001804415183000] with realm
+                [org.apache.catalina.realm.UserDatabaseRealm]
+                13 org.apache.catalina.authenticator.AuthenticatorBase.register Authenticated 'CN=cn, O=o, L=l, ST=st, C=c, SERIALNUMBER=00000001804415183000' with type
+                'CLIENT_CERT'
+                14 org.apache.catalina.authenticator.AuthenticatorBase.invoke Calling accessControl()
+                15 org.apache.catalina.realm.RealmBase.hasResourcePermission Checking roles GenericPrincipal[CN=cn, O=o, L=l, ST=st, C=c, SERIALNUMBER=00000001804415183000()]
+                16 org.apache.catalina.realm.RealmBase.hasRole Username [CN=cn, O=o, L=l, ST=st, C=c, SERIALNUMBER=00000001804415183000] has role [correctUser]
+                17 org.apache.catalina.realm.RealmBase.hasResourcePermission Role found: correctUser
+                18 org.apache.catalina.authenticator.AuthenticatorBase.invoke Successfully passed all security constraints
+
+
+                Logging from Tomcat 9.0.62 (M-TLS fails, no/wrong user found)
+                01 org.apache.catalina.authenticator.AuthenticatorBase.invoke Security checking request POST /speer/soap/services/somefunctionality
+                02 org.apache.catalina.realm.RealmBase.findSecurityConstraints Checking constraint 'SecurityConstraint[MijnvfRealm]' against POST /services/somefunctionality --)
+                true
+                03 org.apache.catalina.realm.RealmBase.findSecurityConstraints Checking constraint 'SecurityConstraint[MijnvfRealm]' against POST /services/somefunctionality --)
+                true
+                04 org.apache.catalina.authenticator.AuthenticatorBase.invoke Calling hasUserDataPermission()
+                05 org.apache.catalina.realm.RealmBase.hasUserDataPermission User data constraint already satisfied
+                06 org.apache.catalina.authenticator.AuthenticatorBase.invoke Calling authenticate()
+                07 org.apache.catalina.realm.CombinedRealm.authenticate Attempting to authenticate user [CN=cn, O=o, L=l, ST=st, C=c, SERIALNUMBER=00000001804415183000] with realm
+                [org.apache.catalina.realm.UserDatabaseRealm]
+                08 org.apache.catalina.realm.RealmBase.authenticate Authenticating client certificate chain
+                09 org.apache.catalina.realm.RealmBase.authenticate Checking validity for 'CN=cn, O=o, L=l, ST=st, C=c, SERIALNUMBER=00000001804415183000'
+                10 org.apache.catalina.realm.RealmBase.authenticate Checking validity for 'CN=cnCA, O=o, C=c'
+                11 org.apache.catalina.realm.RealmBase.getPrincipal Got user name from X509 certificate: [CN=cn, O=o, L=l, ST=st, C=c, OID.2.5.4.5=00000001804415183000]
+                12 org.apache.catalina.realm.CombinedRealm.authenticate Failed to authenticate user [CN=cn, O=o, L=l, ST=st, C=c, SERIALNUMBER=00000001804415183000] with realm
+                [org.apache.catalina.realm.UserDatabaseRealm]
+                13 org.apache.catalina.authenticator.AuthenticatorBase.invoke Failed authenticate() test
+
+
+                If you look at line 11, in both logging you can see that "OID.2.5.4.5" is used in Tomcat 9.0.62 and "SERIALNUMBER" in Tomcat 9.0.60. While in all other instances
+                "SERIALNUMBER" is used.
+                Because of this correct user can not be found.
+
+                Possible workaround: is to add the "OID.2.5.4.5" version also to the "tomcat-users.xml" file (not tested yet, but I expect id to work).
+
+                We are running Tomcat in Docker and are using the "tomcat:9-jdk11" container as base image.
+                When we reverted to the container using Tomcat 9.0.60 it worked again.
+
+                Possible suspect is release 9.0.61, and the change in Coyote,
+                https://tomcat.apache.org/tomcat-9.0-doc/changelog.html
+            </description>
+            <version>9.0.62</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.realm.CombinedRealm.java</file>
+            <file type="M">org.apache.catalina.realm.LockOutRealm.java</file>
+            <file type="M">org.apache.catalina.realm.RealmBase.java</file>
+            <file type="M">org.apache.catalina.valves.rewrite.ResolverImpl.java</file>
+            <file type="M">org.apache.catalina.realm.X509SubjectDnRetriever.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66023" opendate="2022-04-22 07:29:34" fixdate="2022-05-06 15:20:33" resolution="Fixed">
+        <buginformation>
+            <summary>Getting requestbody as inputstream fails when upgrading to h2c</summary>
+            <description>See here
+                https://github.com/bclozel/h2c-tomcat/tree/spring-boot-30771
+                for a sample app demonstrating the issue. (It's a pure Tomcat application - no Spring Boot)
+
+                Summary: when processing a POST request that asks for an h2c-upgrade, reading the requestbody as an inputstream results in a NullPointerException.
+                [reply] [−]Comment 1
+            </description>
+            <version>9.0.62</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.coyote.http2.Stream.java</file>
+            <file type="M">org.apache.coyote.http2.Http2TestBase.java</file>
+            <file type="M">org.apache.coyote.http2.TestHttp2UpgradeHandler.java</file>
+            <file type="M">org.apache.tomcat.util.net.jsse.openssl.Cipher.java</file>
+            <file type="M">org.apache.tomcat.util.net.jsse.openssl.TestCipher.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66068" opendate="2022-05-17 12:56:27" fixdate="2022-05-26 16:57:06" resolution="Fixed">
+        <buginformation>
+            <summary>Asynchronous request processing changes IP behind RemoteIpValve</summary>
+            <description>Created attachment 38287
+                example project
+
+                Hi guys
+
+                Request that is made to the Tomcat 9 server that is behind load balancer and with RemoteIpValve enabled.
+
+                RemoteIpValve is configured in server.xml exactly before access log valve as follows:
+                (Valve className="org.apache.catalina.valves.RemoteIpValve"
+                remoteIpHeader="x-forwarded-for"
+                protocolHeader="x-forwarded-proto"
+                /)
+
+                In the case request is processed in synchronous way the right ip of caller is received from request.getRemoteAddr()
+
+                In the case request is moved to asynchronous mode by request.startAsync( request, response ) and is processed on the same thread the right ip of client is received
+                from asyncContext.getRequest().getRemoteAddr()
+
+                In the case request is moved to asynchronous mode by request.startAsync( request, response ) and is processed on the OTHER thread the ip of client is NOT received
+                from asyncContext.getRequest().getRemoteAddr(), but ip of proxy server.
+
+                In all cases access log prints right client ip.
+
+                Example source code is attached both with compiled .war file.
+                Example request is made to:
+                http://localhost/remoteipvalve-bug-example/
+                with the following headers:
+                X-Forwarded-For: 1.2.3.4
+                X-Forwarded-Proto: 443
+
+                Example logger result:
+                17-May-2022 15:47:19.623 WARNING [http-nio-80-exec-53] RootServlet.doGet Request ip before async start: 1.2.3.4
+                17-May-2022 15:47:19.623 WARNING [http-nio-80-exec-53] RootServlet.doGet Request ip after async started: 1.2.3.4)
+                17-May-2022 15:47:19.625 WARNING [Thread-67] RootServlet$1.run Request ip after async started: 127.0.0.1)
+            </description>
+            <version>9.0.62</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.valves.RemoteIpValve.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66076" opendate="2022-05-18 18:30:45" fixdate="2022-05-26 06:48:27" resolution="Fixed">
+        <buginformation>
+            <summary>Final block of encrypted response payload not being sent occasionally over TLS</summary>
+            <description>Created attachment 38291
+                server-side tcpdump
+
+                We're occasionally encountering a problem where the last encrypted block of an outbound websocket payload is not being sent over TLS.
+
+                This looks very similar to bug 65448, but this is not simulating blocking and this is not when sending a file. It's async I/O over NIO for outbound websocket
+                traffic.
+
+                Most of the time it works, but occasionally it does not. We can usually reproduce the problem in a few hours when sending a request every 2 seconds.
+
+                The problem only occurs over TLS, not over unencrypted channels. It reproduces with both openssl (via tomcat native) and Java's TLS impl.
+
+                The outbound payload being sent in this test is 105493 bytes (encrypted).
+
+                I've attached a tcpdump that shows the behavior, but I'll copy a bit of it here....
+
+                Here's an example of a working request/response (I have removed the client acks for brevity, but they can be seen in the attachment)...
+
+
+                # Begin Request 3
+                16:42:43.728300 IP 10.132.54.95.58275 ) 10.63.72.78.8444: Flags [P.], seq 4338:4390, ack 4052, win 8210, length 52
+                # Begin Response 3 (success) Full response is 105493 bytes
+                16:42:43.735921 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [.], seq 4052:6972, ack 4390, win 311, length 2920
+                16:42:43.735936 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [.], seq 6972:9892, ack 4390, win 311, length 2920
+                16:42:43.735947 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [.], seq 9892:12812, ack 4390, win 311, length 2920
+                16:42:43.735954 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [.], seq 12812:15732, ack 4390, win 311, length 2920
+                16:42:43.735962 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [.], seq 15732:18652, ack 4390, win 311, length 2920
+                16:42:43.736675 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [.], seq 18652:24492, ack 4390, win 311, length 5840
+                16:42:43.736695 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [.], seq 24492:30332, ack 4390, win 311, length 5840
+                16:42:43.736702 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [.], seq 30332:36172, ack 4390, win 311, length 5840
+                16:42:43.736720 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [.], seq 36172:44932, ack 4390, win 311, length 8760
+                16:42:43.737386 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [.], seq 44932:58072, ack 4390, win 311, length 13140
+                16:42:43.737457 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [.], seq 58072:72672, ack 4390, win 311, length 14600
+                16:42:43.738146 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [.], seq 72672:82892, ack 4390, win 311, length 10220
+                16:42:43.738187 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [.], seq 82892:100412, ack 4390, win 311, length 17520
+                16:42:43.738926 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [P.], seq 100412:109545, ack 4390, win 311, length 9133
+                # End Response 3 (all 105493 bytes sent and acknowledged)
+
+
+                And here is an example of a response that demonstrates the problem (again with client acks removed)...
+
+
+                # Begin Request 4
+                16:42:45.750396 IP 10.132.54.95.58275 ) 10.63.72.78.8444: Flags [P.], seq 4390:4442, ack 109545, win 8212, length 52
+                # Begin Response 4 (failure) Full response is 105493 bytes
+                16:42:45.757878 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [P.], seq 109545:125958, ack 4442, win 311, length 16413
+                16:42:45.757953 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [P.], seq 125958:142371, ack 4442, win 311, length 16413
+                16:42:45.758108 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [.], seq 142371:146751, ack 4442, win 311, length 4380
+                16:42:45.758765 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [.], seq 146751:165731, ack 4442, win 311, length 18980
+                16:42:45.758832 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [.], seq 165731:181791, ack 4442, win 311, length 16060
+                16:42:45.759519 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [.], seq 181791:197851, ack 4442, win 311, length 16060
+                16:42:45.759635 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [P.], seq 197851:210991, ack 4442, win 311, length 13140
+
+                ########### START OF PROBLEM ###########
+                # Only 101446 bytes sent so far. This last block of 4047 bytes is not sent until the connection begins closing over a minute after the previous block was sent.
+                16:44:21.222056 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [P.], seq 210991:215038, ack 4442, win 311, length 4047
+                # End Response 4 (all 105493 bytes sent and acknowledged)
+                ########### END OF PROBLEM #############
+
+                # Begin closing handshake
+                16:44:21.222117 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [P.], seq 215038:215119, ack 4442, win 311, length 81
+                16:44:21.222812 IP 10.132.54.95.58275 ) 10.63.72.78.8444: Flags [.], ack 215119, win 8212, length 0
+                16:44:21.237321 IP 10.132.54.95.58275 ) 10.63.72.78.8444: Flags [P.], seq 4442:4527, ack 215119, win 8212, length 85
+                16:44:21.237428 IP 10.132.54.95.58275 ) 10.63.72.78.8444: Flags [P.], seq 4527:4558, ack 215119, win 8212, length 31
+                16:44:21.237503 IP 10.132.54.95.58275 ) 10.63.72.78.8444: Flags [F.], seq 4558, ack 215119, win 8212, length 0
+                16:44:21.237786 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [.], ack 4559, win 311, length 0
+                16:44:21.239201 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [P.], seq 215119:215150, ack 4559, win 311, length 31
+                16:44:21.239234 IP 10.63.72.78.8444 ) 10.132.54.95.58275: Flags [F.], seq 215150, ack 4559, win 311, length 0
+                16:44:21.240606 IP 10.132.54.95.58275 ) 10.63.72.78.8444: Flags [R.], seq 4559, ack 215150, win 0, length 0
+
+
+                Unfortunately, I do not have a simple reproducible project yet, but I'm hoping you might have an idea where to look, since this looks very similar to bug 65448
+            </description>
+            <version>9.0.63</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.tomcat.util.net.NioEndpoint.java</file>
+            <file type="M">org.apache.tomcat.util.net.SocketWrapperBase.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66084" opendate="2022-05-24 01:51:14" fixdate="2022-05-24 10:25:27" resolution="Fixed">
+        <buginformation>
+            <summary>bytesWritten in writeBytes() miscalculation for OutputBuffer</summary>
+            <description>Created attachment 38301
+                left is source code, right is test code
+
+                在org.apache.catalina.connector.OutputBuffer类的private void writeBytes(ByteBuffer from) 方法中，不能正确的将可写入字节长度计入写入字节数据总量中。
+
+                In org. Apache. Catalina. Connector. OutputBuffer class private void writeBytes (ByteBuffer from) method, is unable to correctly write bytes will be recorded in
+                writing bytes of data amount. -By translation software
+            </description>
+            <version>9.0.63</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.connector.OutputBuffer.java</file>
+            <file type="M">org.apache.jasper.compiler.JspReader.java</file>
+            <file type="M">org.apache.jasper.compiler.Mark.java</file>
+            <file type="M">org.apache.jasper.compiler.ParserController.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66120" opendate="2022-06-14 19:44:24" fixdate="2022-08-22 15:02:18" resolution="Fixed">
+        <buginformation>
+            <summary>j_security_check returns 408 if j_security_check request lands on different tomcat server from original server</summary>
+            <description>Setup:
+                1. Have two tomcat instances and session back-up with Memcached for failover.
+                2. Use FormAuthenticator for authentication
+
+                Scenario:
+                1. render login form from TC-instance-1
+                2. submit login form request (j_security_check) to TC-instance-2 ( to simulate tomcat fail-over or load balancer routes the request to other instance for any reason
+                )
+
+                Observation:
+                TC-instance-2 returns 408
+
+                Addition information:
+                From commit https://github.com/apache/tomcat/commit/fd381e94f222831fd2bee697deb6246d417b8f33 form authenticator expects session id from session-note,
+                Session note being transient, it’s not serialized, not backed up by backup manager. This result into session is set to expire/null and cascading 408 error
+
+                With modern infrastructure failure is expected (like pod/node eviction [Kubernetes HPA trashing] or load balancers consistent hashing algorithm changes sticky ness
+                ) so the failover is more frequent
+            </description>
+            <version>9.0.30</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.ha.session.DeltaRequest.java</file>
+            <file type="M">org.apache.catalina.ha.session.DeltaSession.java</file>
+            <file type="M">org.apache.catalina.session.StandardSession.java</file>
+            <file type="M">org.apache.catalina.ha.session.JvmRouteBinderValve.java</file>
+            <file type="M">org.apache.catalina.authenticator.SavedRequest.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66194" opendate="2022-08-01 20:46:22" fixdate="2022-08-23 18:29:13" resolution="Fixed">
+        <buginformation>
+            <summary>When using http2 and maxHeaderSize is exceeded, nothing is logged</summary>
+            <description>We are using http2 and we have some requests with many cookies and this results in us exceeding the maxHeaderSize limit. This has taken a very long time to
+                track down as tomcat does not log anything under these conditions - prior to http2 I'm pretty sure this situation was logged (at least once).
+
+                The code in question is:
+
+                if (hpackDecoder.isHeaderSizeExceeded(headerReadBuffer.position())) {
+                StreamException headerException = new StreamException(sm.getString(
+                "http2Parser.headerLimitSize", connectionId, Integer.valueOf(streamId)),
+                Http2Error.ENHANCE_YOUR_CALM, streamId);
+                hpackDecoder.getHeaderEmitter().setHeaderException(headerException);
+                }
+
+                Note: it is logged if I turn on debug logging but we can't do that in production.
+
+                o.a.coyote.http2.Http2UpgradeHandler : Connection [1], Stream [1], Error [ENHANCE_YOUR_CALM], Message [Connection [1], Stream [1], Total header size too big], RST
+                (closing stream)
+
+                Could this be logged as a warning, so we can at least detect this situation in production?
+            </description>
+            <version>9.0.63</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.coyote.http2.Http2UpgradeHandler.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66195" opendate="2022-08-02 09:49:34" fixdate="2022-08-15 10:36:45" resolution="Fixed">
+        <buginformation>
+            <summary>Observe multi-release JAR system property from JVM if available via system properties</summary>
+            <description>In 61601 , the multi-release JAR support was added. (1)
+
+                JVM also has a property to control whether the feature should be enabled or not (2):
+
+                - system property: `jdk.util.jar.enableMultiRelease`
+                - Default value if not specified: `true`
+
+                This has side effects:
+
+                - Tomcat 9+ on JDK ( 9 -- unaffected
+                - Tomcat 9+ on JDK 9+ MR-JAR ON -- expected to work
+                - Tomcat 9+ on JDK 9+ MR-JAR OFF -- unnecessary resource loading
+
+                On the latter cases, Tomcat actually delegates to JAR API which can be avoided. The impact is that when there're large number of "resources" to cache with Tomcat,
+                since it also holds a lock for them, there is good chance of contention.
+
+                If Tomcat also observes the same property, it'll enable the user applications to completely disable MR-JAR processing which also decreases the resource contention
+                due to locking.
+
+
+                (1): https://bz.apache.org/bugzilla/show_bug.cgi?id=61601
+                (2): https://github.com/openjdk/jdk/blob/jdk-11%2B28/src/java.base/share/classes/java/util/jar/JarFile.java#L188
+            </description>
+            <version>9.0.x</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.tomcat.util.net.jsse.openssl.Cipher.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66196" opendate="2022-08-02 11:16:29" fixdate="2023-03-14 20:26:58" resolution="Fixed">
+        <buginformation>
+            <summary>HTTP/1 connector doesn't blow-up when HTTP header contains non-ASCII characters</summary>
+            <description>... unlike the HTTP/2 connector which complains:
+
+                Caused by: java.lang.IllegalArgumentException: The Unicode character [Б] at code point [1,041] cannot be encoded as it is outside the permitted range of 0 to 255.
+                at org.apache.coyote.http2.HPackHuffman.encode(HPackHuffman.java:452)
+                at org.apache.coyote.http2.HpackEncoder.writeHuffmanEncodableValue(HpackEncoder.java:229)
+                at org.apache.coyote.http2.HpackEncoder.encode(HpackEncoder.java:191)
+                at org.apache.coyote.http2.Http2UpgradeHandler.doWriteHeaders(Http2UpgradeHandler.java:727)
+                at org.apache.coyote.http2.Http2UpgradeHandler.writeHeaders(Http2UpgradeHandler.java:680)
+                at org.apache.coyote.http2.Stream.writeHeaders(Stream.java:466)
+                at org.apache.coyote.http2.StreamProcessor.prepareResponse(StreamProcessor.java:151)
+                at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:379)
+                at org.apache.coyote.Response.action(Response.java:211)
+                at org.apache.coyote.Response.sendHeaders(Response.java:440)
+                at org.apache.coyote.http2.Http2OutputBuffer.doWrite(Http2OutputBuffer.java:57)
+                at org.apache.coyote.Response.doWrite(Response.java:615)
+                at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:340)
+                at org.apache.catalina.connector.OutputBuffer.flushByteBuffer(OutputBuffer.java:784)
+                at org.apache.catalina.connector.OutputBuffer.append(OutputBuffer.java:689)
+                at org.apache.catalina.connector.OutputBuffer.writeBytes(OutputBuffer.java:388)
+                at org.apache.catalina.connector.OutputBuffer.write(OutputBuffer.java:366)
+                at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:96)
+
+                It would be nice for the HTTP/1 code to do the same as I would have caught a bug with my tests rather than debugging in production. :D
+            </description>
+            <version>9.0.65</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.coyote.http11.Http11Processor.java</file>
+            <file type="M">org.apache.tomcat.util.buf.MessageBytes.java</file>
+            <file type="M">org.apache.coyote.http11.TestHttp11OutputBuffer.java</file>
+            <file type="M">org.apache.tomcat.util.buf.TestMessageBytes.java</file>
+            <file type="M">org.apache.tomcat.util.buf.TestMessageBytesConversion.java</file>
+            <file type="M">org.apache.catalina.core.ApplicationContext.java</file>
+            <file type="M">org.apache.catalina.mapper.Mapper.java</file>
+            <file type="M">org.apache.catalina.valves.rewrite.RewriteValve.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66203" opendate="2022-08-04 10:27:54" fixdate="2022-09-21 10:56:19" resolution="Fixed">
+        <buginformation>
+            <summary>Better error message than "llegalStateException: No output folder" in JspCompilationContext.createOutputDir()</summary>
+            <description>in org.apache.jasper.JspCompilationContext.createOutputDir(JspCompilationContext.java:697), please
+
+                1) say which folder is attempted to be created
+                2) what userId the current tomcat is running under
+                3) what permission rights are found on the super-directory
+
+                This would make it a lot easier to diagnose.
+
+                Probably it was a permission rights problem as in
+                https://stackoverflow.com/questions/18348741/message-java-lang-illegalstateexception-no-output-folder
+            </description>
+            <version>9.0.37</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.jasper.JspCompilationContext.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66209" opendate="2022-08-11 18:06:43" fixdate="2022-12-21 18:15:29" resolution="Fixed">
+        <buginformation>
+            <summary>CPU regression when classpath Bloom filters are active</summary>
+            <description>Created attachment 38363
+                Patch with one-line fix and relevant unit test
+
+                On applications with large classpaths, enabling UseBloomFilterForArchives tremendously accelerates classpath scans by performing early exits on each jar, rather
+                than accessing the manifest. Unfortunately the underlying Bloom filters can be cleaned at runtime by AbstractArchiveResourceSet.gc(), which forces the next
+                classpath scan to reinitialize the entire set of bloom filters. On our large application we are therefore observing both huge improvements to startup, and huge cpu
+                regressions while handling traffic.
+
+                I've attached a patch containing a one-line fix, as well as a unit test that detects the error.
+            </description>
+            <version>9.0.46</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.Context.java</file>
+            <file type="M">org.apache.catalina.WebResourceRoot.java</file>
+            <file type="M">org.apache.catalina.core.StandardContext.java</file>
+            <file type="M">org.apache.catalina.webresources.AbstractArchiveResourceSet.java</file>
+            <file type="M">org.apache.catalina.webresources.StandardRoot.java</file>
+            <file type="M">org.apache.catalina.webresources.TestAbstractArchiveResourceSet.java</file>
+            <file type="M">org.apache.catalina.webresources.TestStandardRoot.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66235" opendate="2022-08-23 16:34:28" fixdate="2022-08-24 12:23:05" resolution="Fixed">
+        <buginformation>
+            <summary>Java Beans Standard not honoured in EL expressions when running under Graal VM (JVM Runtime Mode)</summary>
+            <description>I recently tried to run an existing application under tomcat 9 with the Graal VM in JVM Runtime Mode, that means not as an Native exceutable, see
+                https://www.graalvm.org/22.2/docs/introduction/#runtime-modes ).
+
+                I have a class similar like
+
+                public class MyBean {
+                public String getText(Locale locale) { ... }
+                public String getText() { ... }
+                }
+
+                When I use an EL expression like ${pageScope.mybean.text} it fails (returns null/an empty string) under certain conditions.
+
+                I think the problem is the following:
+
+                a) the JasperELResolver uses an GraalBeanELResolver when it thinks it runs under graal (see
+                https://github.com/apache/tomcat/blob/main/java/org/apache/jasper/el/JasperELResolver.java#L72 ), I'm not sure if the GraalBeanELResolver would be really needed
+                under Graal VM in JVM Runtime mode as this one should support reflection. But at the moment the JasperELResolver/JspRuntimeLibrary.GRAAL is configured to to so.
+
+                b) the GraalBeanELResolver tries to find the getter of my property, see
+                https://github.com/apache/tomcat/blob/79173cfbcaf6e82972cce98fbdc619e227037ab8/java/org/apache/jasper/el/JasperELResolver.java#L243 , to do so it simply iterates
+                over all methods and tries to find "getText", it simply uses the first one. In my example above it depends on the order of beanClass.getMethods() if this will
+                succeed at the end.
+
+                I think the GraalBeanELResolver should use the same logic as the default BeanELResolver which uses the java.beans.PropertyDescriptor.getReadMethod, this means to:
+                - only search for getters without arguments
+                - also honor the special "is" logic for boolean arguments
+
+                I only checked the code for reading (getValue) at the moment, but I guess also the setValue might have similar issues.
+
+                You might say that the above class MyBean is a bad architecture, but nevertheless with Graal VM the application behaves different than with standard JDK.
+
+                Above I wrote that the code fails in my case under "certain conditions". The exact difference was that it only failed when I had an
+                "serletContext.setAttribute(ELInterpreterFactory.EL_INTERPRETER_CLASS_NAME, someCustomElInterpreter);"
+                in place. Nevertheless, this custom el interpreter did not interprete this special el expression on its own but used JspUtil.interpreterCall (which usees the
+                default mechanism). But while debugging I saw that the main difference was the order of beanClass.getMethods() inside GraalBeanELResolver. I don't know how this
+                order is determined. But in my optinion the GraalBeanELResolver should not rely on any specific order as the javadoc of getMethods says: "The elements in the
+                returned array are not sorted and are not in any particular order."
+            </description>
+            <version>9.0.x</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.jasper.el.JasperELResolver.java</file>
+            <file type="M">org.apache.jasper.el.TestJasperELResolver.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66276" opendate="2022-09-26 08:35:41" fixdate="2022-09-27 07:48:38" resolution="Fixed">
+        <buginformation>
+            <summary>Intermittent ClassCastException with HTTP/2 streams</summary>
+            <description>Overview: When Tomcat is configured to use HTTP/2, the following errors will occasionally be seen in the application logs:
+
+                2022-09-04 09:28:59.481 FATAL [http-exec-36] Unhandled exception in thread "http-exec-36": java.lang.ClassCastException: org.apache.coyote.http2.RecycledStream
+                cannot be cast to org.apache.coyote.http2.Stream
+                java.lang.ClassCastException: org.apache.coyote.http2.RecycledStream cannot be cast to org.apache.coyote.http2.Stream
+                at org.apache.coyote.http2.AbstractNonZeroStream.rePrioritise(AbstractNonZeroStream.java:79)
+                at org.apache.coyote.http2.Http2UpgradeHandler.reprioritise(Http2UpgradeHandler.java:1651)
+                at org.apache.coyote.http2.Http2AsyncUpgradeHandler.reprioritise(Http2AsyncUpgradeHandler.java:41)
+                at org.apache.coyote.http2.Http2Parser.readPriorityFrame(Http2Parser.java:299)
+                at org.apache.coyote.http2.Http2AsyncParser$FrameCompletionHandler.completed(Http2AsyncParser.java:254)
+                at org.apache.coyote.http2.Http2AsyncParser$FrameCompletionHandler.completed(Http2AsyncParser.java:164)
+                at org.apache.tomcat.util.net.SocketWrapperBase$VectoredIOCompletionHandler.completed(SocketWrapperBase.java:1113)
+                at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper$NioOperationState.run(NioEndpoint.java:1634)
+                at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+                at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+                at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+                at java.lang.Thread.run(Thread.java:750)
+
+
+                Steps to reproduce: Enable HTTP/2 connections, and view the application logs after it has been running for a period of time.
+
+                Actual Results: No obvious affect on the application. Appears to be an intermittent error.
+            </description>
+            <version>9.0.55</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.coyote.http2.AbstractNonZeroStream.java</file>
+            <file type="M">org.apache.tomcat.util.buf.UriUtil.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66277" opendate="2022-09-27 06:49:41" fixdate="2022-10-06 09:26:05" resolution="Fixed">
+        <buginformation>
+            <summary>The taglib file cannot be found with version 9.0.67</summary>
+            <description>Created attachment 38393
+                codes
+
+                The file cannot be found with version 9.0.67, but it is possible to find it with version 9.0.65,Runs in a docker environment.It is normal to use in version 9.0.65
+            </description>
+            <version>9.0.67</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.core.StandardContext.java</file>
+            <file type="M">org.apache.catalina.servlets.WebdavServlet.java</file>
+            <file type="M">org.apache.jasper.compiler.ParserController.java</file>
+            <file type="M">org.apache.tomcat.util.log.SystemLogHandler.java</file>
+            <file type="M">org.apache.catalina.core.TestStandardContext.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66294" opendate="2022-10-04 10:20:37" fixdate="2022-11-08 14:21:59" resolution="Fixed">
+        <buginformation>
+            <summary>Util.getContextClassLoader() can be a hotspot</summary>
+            <description>Created attachment 38401
+                Benchmark which shows performance difference between getting class loader with/without privileges
+
+                In our application Util.getContextClassLoader() is a hotspot with almost all the cost coming from AccessController.doPrivileged. By adding instrumentation we've
+                confirmed that the native implementation of AccessController.doPrivileged itself and not PrivilegedGetTccl.run() is expensive. In an example request to our
+                application we had 17000 calls to Util.getContextClassLoader() and recorded this CPU time in the methods:
+                0.682 ms for javax.el.Util$PrivilegedGetTccl.run()
+                27.800 ms for javax.el.Util.getContextClassLoader()
+
+                This potential hotspot was introduced four years ago when a change was made to get the context class loader of the Thread with privileges enabled:
+                https://bz.apache.org/bugzilla/show_bug.cgi?id=62080
+
+                We'd like to fix this hotspot by calling Thread.currentThread().getContextClassLoader() without privileges enabled again. This would be a revert of the change here:
+                https://github.com/apache/tomcat/commit/7c359957f0b600b92e964b1a2497374e6cac4bc3#diff-f5b7c13f66b3d070a6b1c1713ad4b60fd70b26f579a746edc8fe9f19109243b2L93
+                Since this change addressed a rare bug, we probably have to make this change backwards compatible by adding a configuration switch.
+
+                I have also included a basic benchmark which compares the performance of the two approaches. The benchmark shows a difference by factor 100. I ran the benchmark
+                with JDK 8 and 11.
+
+                Since SecurityManager and related functionality are on track to deprecation, this change may be mandatory in the future, irrespective of the performance benefit:
+                https://openjdk.org/jeps/411
+            </description>
+            <version>9.0.65</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">java.jakarta.el.Util.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66338" opendate="2022-11-04 08:10:16" fixdate="2022-11-07 02:22:40" resolution="Fixed">
+        <buginformation>
+            <summary>ErrorReportValve.report no longer called for all errors</summary>
+            <description>Up to and including tomcat 9.0.65, the report method of ErrorReportValve was invoked for all requests, and subclasses could then decide on the exact
+                conditions when to report an error. The logic at the start of the report method of ErrorReportValve and JsonErrorReportValve was identical, so it was refactored
+                into the invoke method of ErrorReportValve in 9.0.67.
+                However, this changes the behavior of all custom subclasses of ErrorReportValve - their report method now only gets called if the response is explitcitly marked as
+                error. The report method no longer gets called for responses with status code )= 400, but without a Throwable. There is no way to customize this behavior without
+                copy-pasting the whole invoke method.
+                It would be nice if the deduplicated code was not directly a part of the invoke method, but in a separate protected method that could be overridden by subclasses.
+            </description>
+            <version>9.0.67</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.valves.ErrorReportValve.java</file>
+            <file type="M">org.apache.catalina.valves.JsonErrorReportValve.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66359" opendate="2022-11-21 23:00:40" fixdate="2022-12-05 20:11:43" resolution="Fixed">
+        <buginformation>
+            <summary>Document default value for RemoteIpValve#protocolHeader and RemoteIpFilter#protocolHeader</summary>
+            <description>Update the Java documentation for RemoteIpValve and RemoteIpFilter with the correct protocolHeader default value of "x-forwarded-proto". Documentation
+                still shows default value as "null", although this value was changed with Bug 63196. JavaDoc updates are needed in both the class and setProtocolHeader method
+                locations.
+            </description>
+            <version>9.0.19</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.filters.RemoteIpFilter.java</file>
+            <file type="M">org.apache.catalina.valves.RemoteIpValve.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66388" opendate="2022-12-13 21:02:49" fixdate="2023-01-04 09:39:12" resolution="Fixed">
+        <buginformation>
+            <summary>Classpath resource having a name containing a space can't be read anymore by ClassLoader.getResources(String name)</summary>
+            <description>We are trying to upgrade from Tomcat 9.0.69 to 9.0.70.
+
+                Booting our application on 9.0.70 fails because we are trying to read a the content of a classpath resource (sql file) having name containing a space.
+                The file name is: 'com/aqme/product/database/migration/sql/_443/V443_17_36495__some name.sql'
+
+                I think this is caused by
+                https://github.com/apache/tomcat/commit/2a03ff1b778e6f4d05a60c3a9597b42ed4176aed#diff-019a2ddbffcf645220f667a8344672adca68f474f437195916ff157adb955fadR129 aka
+                "Refactor code base to replace use of URL constructors. While they are deprecated in Java 20 onwards, the reasons for deprecation are valid for all versions so move
+                away from them now." .
+
+                According to my test, the URI constructor considers a space character as illegal:
+
+
+                )import java.net.URISyntaxException;
+
+
+                )class Scratch {
+                ) public static void main(String[] args) throws URISyntaxException {
+                ) new )java.net.URI("com/aqme/product/database/migration/sql/_443/V443_17_36495__some name.sql");
+                ) }
+                )}
+
+
+                )Exception in thread "main" java.net.URISyntaxException: Illegal character in )path at index 65: )com/aqme/product/database/migration/sql/_443/V443_17_36495__some
+                name.sql
+                ) at java.base/java.net.URI$Parser.fail(URI.java:2974)
+                ) at java.base/java.net.URI$Parser.checkChars(URI.java:3145)
+                ) at java.base/java.net.URI$Parser.parseHierarchical(URI.java:3227)
+                ) at java.base/java.net.URI$Parser.parse(URI.java:3186)
+                ) at java.base/java.net.URI.(init)(URI.java:623)
+                ) at Scratch.main(scratch_11.java:5)
+
+
+                So my guess is that since
+                https://github.com/apache/tomcat/commit/2a03ff1b778e6f4d05a60c3a9597b42ed4176aed#diff-019a2ddbffcf645220f667a8344672adca68f474f437195916ff157adb955fadR129 any
+                resource name containing a space will be unreachable.
+
+                Is it forbidden (from the Java Spec) to ask a ClassLoader for a resource name containing a space? If yes, could you please push back this breaking change to a new
+                Tomcat major version?
+                [reply] [−]Comment 1
+            </description>
+            <version>9.0.70</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.webresources.AbstractArchiveResource.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66419" opendate="2023-01-12 08:24:47" fixdate="2023-01-23 20:40:04" resolution="Fixed">
+        <buginformation>
+            <summary>Function with varargs argument fails for single argument</summary>
+            <description>Function with varargs argument fails for a single argument. The problem was introduced by fix of bug 60431. The single argument is always coerced into
+                array which fails for non-array argument. The reason is the test for array type is done on methods argument which is always array instead of actual argument type.
+                The code in question - AstFunction.getValue:
+
+                } else if (inputParameterCount == methodParameterCount
+                paramTypes[i].isArray()) {
+                params[i] = parameters.jjtGetChild(i).getValue(ctx);
+
+                Following test should pass but fails on the third expression:
+                @Test
+                public void testVarargMethod() throws NoSuchMethodException, SecurityException {
+                ExpressionFactory factory = ExpressionFactory.newInstance();
+                ELContext context = new StandardELContext(factory);
+                context.getFunctionMapper().mapFunction("fn", "format", String.class.getMethod("format",String.class, Object[].class));
+
+                Object result = factory.createValueExpression(context, "${fn:format('%s-%s','one','two')}",
+                String.class).getValue(context);
+                Assert.assertEquals("one-two",result);
+
+                result = factory.createValueExpression(context, "${fn:format('%s-%s','one,two'.split(','))}",
+                String.class).getValue(context);
+                Assert.assertEquals("one-two",result);
+
+                result = factory.createValueExpression(context, "${fn:format('%s','one')}",
+                String.class).getValue(context);
+                Assert.assertEquals("one",result);
+                }
+                [reply] [−]Comment 1
+            </description>
+            <version>9.0.65</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.el.parser.AstFunction.java</file>
+            <file type="M">org.apache.el.parser.TestAstFunction.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66442" opendate="2023-01-25 10:00:24" fixdate="2023-01-26 13:29:19" resolution="Fixed">
+        <buginformation>
+            <summary>Data frame included in response for 204 No Content status</summary>
+            <description>Hi,
+
+                While investigating issue https://github.com/reactor/reactor-netty/issues/2664
+                where the server is Tomcat and the client is Reactor Netty, I'm observing that Tomcat sends (the logs below are from the client side):
+
+                HEADERS: streamId=3 headers=DefaultHttp2Headers[:status: 204, date: Wed, 25 Jan 2023 07:46:07 GMT] padding=0 endStream=false
+
+                DATA: streamId=3 padding=0 endStream=true length=0 bytes=
+
+                I expect that for responses 204/304 Tomcat will send only HEADERS with endStream=true as these kind of response are defined as "no content".
+
+                A reproducible example can be found in the linked issue above.
+
+                Regards,
+                Violeta
+            </description>
+            <version>9.0.71</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.coyote.http2.Http2AsyncUpgradeHandler.java</file>
+            <file type="M">org.apache.coyote.http2.Http2UpgradeHandler.java</file>
+            <file type="M">org.apache.coyote.http2.Stream.java</file>
+            <file type="M">org.apache.coyote.http2.StreamProcessor.java</file>
+            <file type="M">org.apache.coyote.http2.Http2TestBase.java</file>
+            <file type="M">org.apache.coyote.http2.TestStreamProcessor.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66471" opendate="2023-02-09 07:48:43" fixdate="2023-02-10 02:08:50" resolution="Fixed">
+        <buginformation>
+            <summary>JSessionId secure attribute missing with RemoteIpFilter and X-Forwarded-Proto set to https</summary>
+            <description>I use the org.apache.catalina.filters.RemoteIpFilter Filter behind a NGINX reverse proxy. On the NGINX I set the http header X-Forwarded-Proto to https.
+
+                If I now make a request with a Browser to the reverse proxy the JSESSIONID cookie I get back is missing the secure attribute.
+
+                I have debugged the RemoteIpFilter, the isSecure flag of the wrapper request it creates, is correctly set to true. Unfortunately, the method getSession() or
+                getSession(Boolean) is forwarded to the wrapped original request were the isSecure Flag is still not set. Therefore, the JSESSIONID cookie is missing the secure
+                flag. See org.apache.catalina.connector.Request method doGetSession and org.apache.catalina.core.ApplicationSessionCookieConfig method createSessionCookie.
+
+                As workaround org.apache.catalina.valves.RemoteIpValve can be used, which seems to handle this correct. Also, the secure flag can be enforced by setting it in the
+                web.xml.
+
+                However, I would like to use RemoteIpFilter because it has some advantages over the RemoteIpValve or statically setting it in the web.xml.
+            </description>
+            <version>9.0.68</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.Globals.java</file>
+            <file type="M">org.apache.catalina.connector.Request.java</file>
+            <file type="M">org.apache.catalina.filters.RemoteIpFilter.java</file>
+            <file type="M">org.apache.catalina.filters.TestRemoteIpFilter.java</file>
+            <file type="M">org.apache.jasper.JspCompilationContext.java</file>
+            <file type="M">org.apache.jasper.compiler.TagLibraryInfoImpl.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66512" opendate="2023-03-06 14:53:10" fixdate="2023-03-07 11:27:28" resolution="Fixed">
+        <buginformation>
+            <summary>File downloads render as empty if access to Tomcat based application is delegated via AJP</summary>
+            <description>Hi there,
+
+                I would like to place a report about an issue we are struggling with since we installed latest security patches for Apache Tomcat and Apache HTTPD on our hosting
+                servers.
+
+                We - Plunet GmbH - develop a Java based application and our inbuilt file manager is using a Java Servlet for the file exchange. Our application only supports Java
+                8. There are plans to support 11 or 17 but we will need time for this unfortunately so we can not just update Java in case this might help.
+
+                We see that since the latest updates of Tomcat users complaint that files with Non-Unicode characters are downloaded as empty files. Such characters are for
+                instance greek, kyrillic or hebrew characters.
+
+                We see the following error in the stderror.log of Tomcat
+                01-Mar-2023 17:59:39.100 SCHWERWIEGEND [ajp-nio-127.0.0.1-9129-exec-3] org.apache.coyote.ajp.AjpProcessor.service Error processing request
+                java.lang.IllegalArgumentException: Das Unicode Zeichen [Π] an Code Punkt [928] kann nicht kodiert werden, da es außerhalb des erlaubten Bereiches von 0 bis 255
+                ist.
+                at org.apache.tomcat.util.buf.MessageBytes.toBytesSimple(MessageBytes.java:292)
+
+                We are aware that this issue happens since Tomcat 9.0.71 and also 9.0.73 did not resolve it as we hoped to I am afraid so it is definitely related with one of the
+                latest changes in the MessageBytes implementation of the Tomcat Util library as I could see them in the code history of this file.
+                This issue happens though ONLY if - as it is done on our SaaS servers - the access to our application is delegated via AJP connectors. This is done because all
+                instances on a shared server access it via virtual hosting on ports 80 and 443.
+
+                Currently we have two possible fixing options which both work as we can confirm:
+                1. We replace the tomcat-util.jar in Tomcat's lib directory with one from an older Tomcat 9.x release. (this is not very practical though)
+                2. We change the delegation via mod_ajp to delegation via mod_proxy (this is huge effort to change it for hundreds of instances)
+
+                We therefore wonder if this is considered to be a bug of maybe just a planned change and we have to maybe change something in the config of server.xml or so. But
+                for me it rather feels like a bug, especially since it only happens in this special scenario. I did some research in the web yet but I did not find anyone who
+                reported the same issue yet so I am putting it into this bugtracker.
+
+                Let me know in case you need more information for addressing my issue.
+
+                Thank you very much!
+
+                Cheers!
+
+                Alex
+            </description>
+            <version>9.0.73</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.coyote.ajp.AjpProcessor.java</file>
+            <file type="M">org.apache.coyote.ajp.TestAbstractAjpProcessor.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66513" opendate="2023-03-06 18:00:34" fixdate="2023-06-01 17:12:27" resolution="Fixed">
+        <buginformation>
+            <summary>Primary Key Violation using PersistentManager + PersistentValves +</summary>
+            <description>Hi all,
+                when using PersistentManager + org.apache.catalina.valves.PersistentValve to store session data in a Database table (in order to run Tomcat on containers without
+                sticky sessions) we get sometimes a "primary key constraint violation" due to different thread that are badly synchronized.
+
+                When looking at source code, it appears that the usage of PersistentValve assumes that we get only one request per session at any on time (and you propose a filter
+                parameter on the persistentValve component to avoid having several requests at the same time).
+                However, in the case this filter is not complete (and so we get several requests with the same sessionId at a time), the source code in
+                org.apache.catalina.valves.PersistentValve as well in org.apache.catalina.session.DataSourceStore use a synchronized block to avoid this problem but this
+                synchronized block is useless because it uses a session object that is different for each request.
+
+                You could solve this issue by using a static HashMap with keys and values storing sessionId string, and using this sessionId string value as an object to
+                synchronize the blocks used to store the session in the DB table.
+                The process could be :
+                -If sessionId String not already store as a HashMap Key
+                -Store sessionId String as key and values
+                Synchronized(theHashMap(sessionId) {
+                ....
+                ....
+                remove it from the hashMap
+                }
+
+                That way you would really synchronize threads that use a same sessionId (and no more) and would avoid those "primary key violation" errors.
+
+                Regards
+            </description>
+            <version>9.0.72</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.valves.PersistentValve.java</file>
+            <file type="M">org.apache.catalina.session.PersistentManager.java</file>
+            <file type="M">org.apache.catalina.valves.PersistentValve.java</file>
+            <file type="M">org.apache.catalina.valves.TestPersistentValve.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66524" opendate="2023-03-10 16:54:34" fixdate="2023-03-14 21:31:43" resolution="Fixed">
+        <buginformation>
+            <summary>resource cache eviction is MRU not LRU</summary>
+            <description>Cache.java evicts items using "MRU except we wont evict items last accessed
+                within 5s".
+
+                The comments indicate that LRU was intended.
+
+                The fix is simple, just remove the ".reverse()" from this line.
+
+                https://github.com/apache/tomcat/blob/main/java/org/apache/catalina/webresources/Cache.java#L211
+            </description>
+            <version>9.0.73</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.webresources.Cache.java</file>
+            <file type="M">org.apache.tomcat.util.net.jsse.openssl.TesterOpenSSL.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66530" opendate="2023-03-16 11:22:16" fixdate="2023-03-17 09:40:44" resolution="Fixed">
+        <buginformation>
+            <summary>ERR_HTTP2_SERVER_REFUSED_STREAM since 9.0.72</summary>
+            <description>Hi team,
+
+                Since Tomcat 9.0.72 (also tested in 9.0.73) seems there is an issue related to HTTP2 Protocol. We are using default values for HTTP2 protocol
+
+                (UpgradeProtocol className="org.apache.coyote.http2.Http2Protocol"/)
+
+                But since 9.0.72 version we receive randomly ERR_HTTP2_SERVER_REFUSED_STREAM error messages for random static files (images, js, etc...)
+
+                org.apache.coyote.http2.Http2UpgradeHandler.upgradeDispatch Connection [0], Stream [473] Closed due to error
+                Note: further occurrences of HTTP/2 stream errors will be logged at DEBUG level.
+                org.apache.coyote.http2.StreamException: The client attempted to use more than [100] active streams
+                at org.apache.coyote.http2.Http2UpgradeHandler.headersEnd(Http2UpgradeHandler.java:1723)
+                at org.apache.coyote.http2.Http2Parser.onHeadersComplete(Http2Parser.java:622)
+                at org.apache.coyote.http2.Http2Parser.readHeadersFrame(Http2Parser.java:284)
+                at org.apache.coyote.http2.Http2Parser.readFrame(Http2Parser.java:110)
+                at org.apache.coyote.http2.Http2Parser.readFrame(Http2Parser.java:82)
+                at org.apache.coyote.http2.Http2UpgradeHandler.upgradeDispatch(Http2UpgradeHandler.java:345)
+                at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+                at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+                at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+                at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2156)
+                at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+                at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+                at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+                at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+                at java.base/java.lang.Thread.run(Thread.java:829)
+
+                Error is quite clear. Basically we are using more streams that available. But the problem is that we are not loading 100 files in the requests, but 20 or 30. Based
+                in docs we have increased the maxConcurrentStreams up to 400 with the same result. So seems that streams are not being closed correctly.
+
+                As told, this issue only appeared in 9.0.72 and 9.0.73, but on on 9.0.71 and below, so seems some issue caused by some change in version 9.0.72
+
+                It would be great if you wan take a look.
+
+                Thank you!
+            </description>
+            <version>9.0.72</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.coyote.http2.Http2AsyncUpgradeHandler.java</file>
+            <file type="M">org.apache.coyote.http2.Http2UpgradeHandler.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66535" opendate="2023-03-20 17:03:44" fixdate="2023-03-23 11:34:22" resolution="Fixed">
+        <buginformation>
+            <summary>FarmWarDeployer will fail to deploy a WAR file when maxvalidtime is less than the time it takes to transfer</summary>
+            <description>We have been tracking down an issue where a cluster using FarmWebDeployer would only deploy to some nodes, and on others the war file would be written to
+                the tempdir, but would fail to deploy.
+
+                The destination tempdir war file would eventually become 0 bytes on the failed nodes, with no log entries to explain why.
+
+                After extensive testing, it was determined that maxValidTime is not a setting relevant to idle time or files left open but not being written to, but is actually a
+                time limit on the amount of time a FileMessageFactory file can be open at all.
+
+                The file will be immediately unlinked and appear as 0 bytes in the tempdir location as soon as the maxvalidtime has run out, regardless of the fact that the
+                deployer is actively writing to it.
+            </description>
+            <version>9.0.x</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.ha.deploy.FileMessageFactory.java</file>
+            <file type="M">org.apache.coyote.http2.Http2Parser.java</file>
+            <file type="M">org.apache.coyote.http2.Http2UpgradeHandler.java</file>
+            <file type="M">org.apache.coyote.http2.Stream.java</file>
+            <file type="M">org.apache.coyote.http2.Http2TestBase.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66536" opendate="2023-03-21 13:47:54" fixdate="2023-03-22 17:16:47" resolution="Fixed">
+        <buginformation>
+            <summary>tagsfiles seem to be compiled with the wrong source encoding</summary>
+            <description>Created attachment 38526
+                minimal webapp
+
+                Hi there,
+
+                When I let tomcat/jasper compile the following tag file
+                (WEB-INF/tags/umlaut.jsp):
+
+                (%@tag
+                trimDirectiveWhitespaces="true"
+                pageEncoding="UTF-8"
+                %)
+                (%= "ü does not work" %) // bytes c3 bc
+
+                compiles into umlaut_tag.java in which the umlaut is doubly utf-8 encoded
+                like this:
+
+                out.print( "Ã¼ does not work" ); // bytes c3 83 c2 bc
+
+                String literals in jsp files work just fine, so I'd like to rule out
+                errors in my encoding setup.
+
+                (Tomcat is running with LC_ALL=de_DE.UTF-8.)
+
+                I've attached a minimal webapp demonstrating that jsp is working, but the tag files are not.
+
+                Regards,
+                Holger
+            </description>
+            <version>9.0.73</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.jasper.compiler.ParserController.java</file>
+            <file type="M">org.apache.tomcat.jdbc.test.DefaultTestCase.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66548" opendate="2023-03-30 19:44:48" fixdate="2023-05-24 10:32:39" resolution="Fixed">
+        <buginformation>
+            <summary>Tomcat does not validate value of Sec-Websocket-Key header</summary>
+            <description>In the websocket RFC (https://www.rfc-editor.org/rfc/rfc6455#section-4.1) we read:
+
+                The request MUST include a header field with the name
+                |Sec-WebSocket-Key|. The value of this header field MUST be a
+                nonce consisting of a randomly selected 16-byte value that has
+                been base64-encoded (see Section 4 of [RFC4648]). The nonce
+                MUST be selected randomly for each connection.
+
+                Tomcat appears to accept any value for Sec-WebSocket-Key - even if it's not a base64 string, and even if it's not the correct length.
+
+                I don't think this causes any functional or security issues, but since the WebSocket spec is worded pretty strongly ("MUST"), I think it would make sense for Tomcat
+                to throw an exception if the Sec-WebSocket-Key header does not meet this requirement.
+            </description>
+            <version>9.0.73</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.tomcat.util.codec.binary.Base64.java</file>
+            <file type="M">org.apache.tomcat.websocket.server.UpgradeUtil.java</file>
+            <file type="M">org.apache.tomcat.websocket.server.TestKeyHeader.java</file>
+            <file type="M">org.apache.tomcat.websocket.server.TesterWsClient.java</file>
+            <file type="M">org.apache.catalina.connector.CoyoteAdapter.java</file>
+            <file type="M">org.apache.catalina.connector.Request.java</file>
+            <file type="M">org.apache.catalina.core.AsyncContextImpl.java</file>
+            <file type="M">org.apache.coyote.http11.Http11Processor.java</file>
+            <file type="M">org.apache.catalina.core.TestAsyncContextImpl.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66554" opendate="2023-04-05 07:18:00" fixdate="2023-04-06 20:48:14" resolution="Fixed">
+        <buginformation>
+            <summary>tomcat shutdown error in log</summary>
+            <description>Good morning,
+
+                ibm i platform, but I think on windows or linux there would be the same error.
+
+                I only encounter the problem on one application and not the others, when tomcat stops an error is written in the log, I do not encounter any problem with tomcat
+                9.10
+
+                error :
+
+                04-Apr-2023 14:27:08.822 AVERTISSEMENT [http-nio-81-exec-7] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads L'application web [planning]
+                semble avoir démarré un thread nommé [SeedGenerator Thread] mais ne l'a pas arrêté, ce qui va probablement créer une fuite de mémoire ; la trace du thread est :
+                java.base/java.lang.Object.wait(Native Method)
+                java.base/java.lang.Object.wait(Object.java:190)
+                java.base/sun.security.provider.SeedGenerator$ThreadedSeedGenerator.run(SeedGenerator.java:332)
+                java.base/java.lang.Thread.run(Thread.java:839)
+
+                Cordially.
+            </description>
+            <version>9.0.73</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.core.JreMemoryLeakPreventionListener.java</file>
+            <file type="M">org.apache.catalina.core.StandardServer.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66567" opendate="2023-04-17 22:10:04" fixdate="2023-04-18 15:13:34" resolution="Fixed">
+        <buginformation>
+            <summary>java.lang.IllegalArgumentException: URI is not absolute - Feature change or Regression ?</summary>
+            <description>Given a web.xml containing the following:
+
+                (wsdl-file)/WEB-INF/wsdl/SomeRequestDelegator.wsdl(/wsdl-file)
+
+
+                This works fine in previous versions of Tomcat through at least 9.0.68.
+                Something changed between 9.0.68 and 9.0.72/9.0.73
+
+                In 9.0.73 this now yields at application startup:
+
+                Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SOMEapp]]
+                at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+                at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+                at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+                ... 37 more
+                Caused by: java.lang.IllegalArgumentException: URI is not absolute
+                at java.base/java.net.URL.fromURI(Unknown Source)
+                at java.base/java.net.URI.toURL(Unknown Source)
+                at org.apache.catalina.core.NamingContextListener.addService(NamingContextListener.java:833)
+                at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:566)
+                at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:243)
+                at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+                at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4851)
+                at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+                ... 38 more
+
+
+                Relevant code in NamingContextListener in 9.0.73:
+
+                public void addService(ContextService service) {
+
+                Reference ref = lookForLookupRef(service);
+
+                if (ref == null) {
+
+                if (service.getWsdlfile() != null) {
+                URL wsdlURL = null;
+
+                try {
+                URI wsdlURI = new URI(service.getWsdlfile());
+                wsdlURL = wsdlURI.toURL(); (-- line 833
+                } catch (MalformedURLException | URISyntaxException e) {
+                // Ignore and carry on
+                }
+
+
+                I can't tell if there has been a feature change to tighten up adherence to an RFC specification or if this is a regression.
+
+                This works fine on OpenJDK 11.0.18 Temurin with Tomcat 9.0.68 but fails with Tomcat 9.0.72 and 9.0.73.
+            </description>
+            <version>9.0.73</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.tomcat.util.net.AprEndpoint.java</file>
+            <file type="M">org.apache.catalina.tribes.group.GroupChannel.java</file>
+            <file type="M">org.apache.catalina.tribes.group.interceptors.NonBlockingCoordinator.java</file>
+            <file type="M">org.apache.catalina.tribes.group.interceptors.TcpPingInterceptor.java</file>
+            <file type="M">org.apache.catalina.tribes.membership.McastServiceImpl.java</file>
+            <file type="M">org.apache.juli.AsyncFileHandler.java</file>
+            <file type="M">org.apache.tomcat.util.net.NioBlockingSelector.java</file>
+            <file type="M">org.apache.tomcat.util.threads.ThreadPoolExecutor.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66574" opendate="2023-04-20 06:47:19" fixdate="2023-04-26 09:21:55" resolution="Fixed">
+        <buginformation>
+            <summary>Deadlock in websocket code</summary>
+            <description>I believe this is a regression from 9.0.73 - that is, I never encountered that issue with 9.0.73 (which of course doesn't say that it wasn't there but with
+                9.0.74 it happens very often so...).
+
+                I think it's closely related to (or the same as) these:
+
+                https://bz.apache.org/bugzilla/show_bug.cgi?id=63191
+                https://bz.apache.org/bugzilla/show_bug.cgi?id=66531
+
+                The first issue I opened a few years ago. Then, around Tomcat 9.0.71 it stopped appearing and all was fine. 9.0.72 seemed fine as well as 9.0.73. But now 9.0.74
+                seems to have introduced it again (or something new). Here are the relevant stack traces:
+
+                -----------------
+
+                "thread name" #615 [2030] daemon prio=5 os_prio=0 cpu=667.09ms elapsed=57804.86s tid=0x00007fc189c87000 nid=2030 waiting on condition [0x00007fc0bb57c000]
+                java.lang.Thread.State: WAITING (parking)
+                at jdk.internal.misc.Unsafe.park(java.base@19.0.2/Native Method)
+                - parking to wait for (0x0000000743e004f8) (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+                at java.util.concurrent.locks.LockSupport.park(java.base@19.0.2/LockSupport.java:221)
+                at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@19.0.2/AbstractQueuedSynchronizer.java:715)
+                at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@19.0.2/AbstractQueuedSynchronizer.java:938)
+                at java.util.concurrent.locks.ReentrantLock$Sync.lock(java.base@19.0.2/ReentrantLock.java:153)
+                at java.util.concurrent.locks.ReentrantLock.lock(java.base@19.0.2/ReentrantLock.java:322)
+                at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:654)
+                at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:636)
+                at org.apache.tomcat.websocket.WsSession.close(WsSession.java:624)
+                at org.cometd.server.websocket.javax.WebSocketEndPoint$Delegate.close(WebSocketEndPoint.java:119)
+                at org.cometd.server.websocket.common.AbstractWebSocketEndPoint.lambda$onMessage$0(AbstractWebSocketEndPoint.java:70)
+                at org.cometd.server.websocket.common.AbstractWebSocketEndPoint$$Lambda$1929/0x00000007c10e7078.accept(Unknown Source)
+                at org.cometd.bayeux.Promise$2.fail(Promise.java:108)
+                at org.cometd.server.websocket.common.AbstractWebSocketEndPoint$$Lambda$1953/0x00000007c111c440.accept(Unknown Source)
+                at org.cometd.bayeux.Promise$2.fail(Promise.java:108)
+                at org.cometd.server.websocket.common.AbstractWebSocketEndPoint$Entry.fail(AbstractWebSocketEndPoint.java:645)
+                at org.cometd.server.websocket.common.AbstractWebSocketEndPoint$Flusher.lambda$onCompleteFailure$0(AbstractWebSocketEndPoint.java:612)
+                at org.cometd.server.websocket.common.AbstractWebSocketEndPoint$Flusher$$Lambda$2642/0x00000007c13f9800.accept(Unknown Source)
+                at java.util.ArrayList.forEach(java.base@19.0.2/ArrayList.java:1511)
+                at org.cometd.server.websocket.common.AbstractWebSocketEndPoint$Flusher.onCompleteFailure(AbstractWebSocketEndPoint.java:612)
+                at org.eclipse.jetty.util.IteratingCallback.failed(IteratingCallback.java:417)
+                at org.cometd.server.websocket.javax.WebSocketEndPoint$Delegate.lambda$send$0(WebSocketEndPoint.java:106)
+                at org.cometd.server.websocket.javax.WebSocketEndPoint$Delegate$$Lambda$1954/0x00000007c111d438.onResult(Unknown Source)
+                at org.apache.tomcat.websocket.WsRemoteEndpointImplBase$TextMessageSendHandler.onResult(WsRemoteEndpointImplBase.java:846)
+                at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.endMessage(WsRemoteEndpointImplBase.java:442)
+                at org.apache.tomcat.websocket.WsRemoteEndpointImplBase$EndMessageHandler.onResult(WsRemoteEndpointImplBase.java:563)
+                at org.apache.tomcat.websocket.server.WsRemoteEndpointImplServer$OnResultRunnable.run(WsRemoteEndpointImplServer.java:395)
+                at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+                at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+                at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+                at java.lang.Thread.run(java.base@19.0.2/Thread.java:1589)
+
+                Locked ownable synchronizers:
+                - (0x00000006cf2712d8) (a org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker)
+
+                -----------------
+
+                "other thread name" #713 [2702] daemon prio=5 os_prio=0 cpu=523.94ms elapsed=53545.41s tid=0x00007fc187e92000 nid=2702 waiting on condition [0x00007fc0c107c000]
+                java.lang.Thread.State: WAITING (parking)
+                at jdk.internal.misc.Unsafe.park(java.base@19.0.2/Native Method)
+                - parking to wait for (0x0000000743e008a8) (a java.util.concurrent.CompletableFuture$Signaller)
+                at java.util.concurrent.locks.LockSupport.park(java.base@19.0.2/LockSupport.java:221)
+                at java.util.concurrent.CompletableFuture$Signaller.block(java.base@19.0.2/CompletableFuture.java:1864)
+                at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@19.0.2/ForkJoinPool.java:3745)
+                at java.util.concurrent.ForkJoinPool.managedBlock(java.base@19.0.2/ForkJoinPool.java:3690)
+                at java.util.concurrent.CompletableFuture.waitingGet(java.base@19.0.2/CompletableFuture.java:1898)
+                at java.util.concurrent.CompletableFuture.get(java.base@19.0.2/CompletableFuture.java:2072)
+                at org.cometd.server.websocket.javax.WebSocketEndPoint.onMessage(WebSocketEndPoint.java:60)
+                at org.cometd.server.websocket.javax.WebSocketEndPoint.onMessage(WebSocketEndPoint.java:35)
+                at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:390)
+                at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:129)
+                at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:484)
+                at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+                at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+                at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:84)
+                at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:183)
+                at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:163)
+                at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+                at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+                at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+                at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+                at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+                at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+                at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+                at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+                at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+                at java.lang.Thread.run(java.base@19.0.2/Thread.java:1589)
+
+                Locked ownable synchronizers:
+                - (0x000000070362a330) (a org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker)
+                - (0x0000000743e004f8) (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+
+                -----------------
+
+                Not sure how to help more but I'm reverting to 7.0.73 for now. Let me know what I can do.
+            </description>
+            <version>9.0.74</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.tomcat.websocket.WsSession.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66582" opendate="2023-04-27 16:00:06" fixdate="2023-05-02 12:33:41" resolution="Fixed">
+        <buginformation>
+            <summary>Can't reference static fields declared in interfaces in JSP pages: javax.el.ELException: The class [...] must be public, in an exported package (for Java 9+),
+                non-abstract and not an interface
+            </summary>
+            <description>On a JSP page we have the following import:
+
+                (%@ page import="static jetbrains.buildServer.auth.SessionModel.KEY_ENABLE_LOGOUT_ALL_SESSIONS" %)
+
+                After upgrading to Tomcat 9.0.72, it stopped working with the following error:
+
+                javax.el.ELException: The class [jetbrains.buildServer.auth.SessionModel] must be public, in an exported package (for Java 9+), non-abstract and not an interface
+                at javax.el.ImportHandler.findClass(ImportHandler.java:455) ~[el-api.jar:3.0.FR]
+                at javax.el.ImportHandler.importStatic(ImportHandler.java:297) ~[el-api.jar:3.0.FR]
+                at org.apache.jasper.runtime.PageContextImpl.getELContext(PageContextImpl.java:710) ~[jasper.jar:9.0.74]
+                at org.apache.jasper.runtime.JspContextWrapper.getELContext(JspContextWrapper.java:513) ~[jasper.jar:9.0.74]
+                at org.apache.jsp.tag.web.ext.includeExtensions_tag.doTag(includeExtensions_tag.java:157) ~[?:?]
+                at org.apache.jsp.profile.userGeneralSettings_jsp._jspService(userGeneralSettings_jsp.java:264) ~[?:?]
+                at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70) ~[jasper.jar:9.0.74]
+                at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[servlet-api.jar:4.0.FR]
+                at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:466) ~[jasper.jar:9.0.74]
+                at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379) ~[jasper.jar:9.0.74]
+                at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327) ~[jasper.jar:9.0.74]
+
+
+                "jetbrains.buildServer.auth.SessionModel" is indeed an interface, but to me this looks like a valid usage of the import statement
+            </description>
+            <version>9.0.72</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.jasper.runtime.PageContextImpl.java</file>
+            <file type="M">test.jakarta.servlet.jsp.el.TestImportELResolver.java</file>
+            <file type="M">org.apache.tomcat.unittest.TesterBug66582.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66591" opendate="2023-05-03 06:26:40" fixdate="2023-05-03 16:46:15" resolution="Fixed">
+        <buginformation>
+            <summary>HttpResponse without any header generates corrupted AJP messages</summary>
+            <description>Fix for bug 66512 caused an issue in one of our applications, which does not set any response header at all. At a first glance no RFC defines that one MUST
+                set some http header. But we definitely "should".
+
+                So this "Bug" is only to bring this to your attention. At least there should be an appropriate error message instead of generating corrupted AJP messages.
+
+                KR Conny
+            </description>
+            <version>9.0.74</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.coyote.ajp.AjpProcessor.java</file>
+            <file type="M">org.apache.coyote.ajp.TestAbstractAjpProcessor.java</file>
+            <file type="M">org.apache.coyote.ajp.TesterAjpMessage.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66600" opendate="2023-05-15 11:56:42" fixdate="2023-05-15 13:31:34" resolution="Fixed">
+        <buginformation>
+            <summary>NPE in certain scenarios</summary>
+            <description>I'm not exactly sure when. I think it happens when some requests that take a very long time in the beginning (before some caches are populated). Here is a
+                stacktrace:
+
+                ERROR o.g.j.server.ServerRuntime$Responder - Error while closing the output stream in order to commit response.
+                java.lang.NullPointerException: Cannot invoke "org.apache.tomcat.util.net.SocketWrapperBase.flush(boolean)" because "this.this$0.socketWrapper" is null
+                at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:566)
+                at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157)
+                at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:220)
+                at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1246)
+                at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:398)
+                at org.apache.coyote.Response.action(Response.java:207)
+                at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:305)
+                at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:271)
+                at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
+                at org.glassfish.jersey.servlet.internal.ResponseWriter$NonCloseableOutputStreamWrapper.flush(ResponseWriter.java:307)
+                at org.glassfish.jersey.message.internal.CommittingOutputStream.flush(CommittingOutputStream.java:263)
+                at org.glassfish.jersey.message.internal.OutboundMessageContext.close(OutboundMessageContext.java:864)
+                at org.glassfish.jersey.server.ContainerResponse.close(ContainerResponse.java:389)
+                at org.glassfish.jersey.server.ServerRuntime$Responder.writeResponse(ServerRuntime.java:721)
+                at org.glassfish.jersey.server.ServerRuntime$Responder.processResponse(ServerRuntime.java:380)
+                at org.glassfish.jersey.server.ServerRuntime$Responder.process(ServerRuntime.java:370)
+                at org.glassfish.jersey.server.ServerRuntime$AsyncResponder$3.run(ServerRuntime.java:871)
+                at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+                at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+                at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+                at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+                at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+                at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+                at org.glassfish.jersey.server.ServerRuntime$AsyncResponder.resume(ServerRuntime.java:903)
+                at org.glassfish.jersey.server.ServerRuntime$AsyncResponder.resume(ServerRuntime.java:859)
+                ...
+
+                Any ideas? Is that a bug in Tomcat or I've done something wrong?
+            </description>
+            <version>9.0.75</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.tomcat.util.net.AprEndpoint.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66602" opendate="2023-05-16 10:07:52" fixdate="2023-05-19 06:11:29" resolution="Fixed">
+        <buginformation>
+            <summary>TCP abnormal shutdown during pressure testing based on HTTP2 (h2c)</summary>
+            <description>Created attachment 38559
+                normal request log comparison
+
+                **Perform a simple GET request pressure test on the HTTP2 (h2c) service, and the TCP link will shutdown abnormally.**
+
+
+                1.By simulating 50 concurrent requests with 500 each, perform pressure testing and packet capture on a simple GET request.
+                2.The process found that the TCP link would be disconnected.
+                3.The reason is that tomcat sent a WINDOW_UPDATE Frame with window size value is zero.
+
+
+                call Http2UpgradeHandler.endRequestBodyFrame method the dataLength is zero? Is this reasonable？
+
+                Http2UpgradeHandler:
+
+                public void endRequestBodyFrame(int streamId, int dataLength) throws Http2Exception, IOException {
+                AbstractNonZeroStream abstractNonZeroStream = getAbstractNonZeroStream(streamId, true);
+                if (abstractNonZeroStream instanceof Stream) {
+                ((Stream) abstractNonZeroStream).getInputBuffer().onDataAvailable();
+                } else {
+                // The Stream was recycled between the call in Http2Parser to
+                // startRequestBodyFrame() and the synchronized block that contains
+                // the call to this method. This means the bytes read will have been
+                // written to the original stream and, effectively, swallowed.
+                // Therefore, need to notify that those bytes were swallowed here.
+                onSwallowedDataFramePayload(streamId, dataLength);
+                }
+                }
+            </description>
+            <version>9.0.75</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.coyote.http2.Http2UpgradeHandler.java</file>
+            <file type="M">webapps.examples.WEB-INF.classes.async.AsyncStockServlet.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66627" opendate="2023-06-07 04:06:55" fixdate="2023-06-08 15:37:15" resolution="Fixed">
+        <buginformation>
+            <summary>Regression due to MessageBytes refactoring</summary>
+            <description>This commit, https://github.com/apache/tomcat/commit/10a1a6d46d952bab4dfde44c3c0de12b0330da79, that appeared in 9.0.71 made changes to
+                MessageBytes.toString() that cause a serious regression under some circumstances. This is preventing us from upgrading to later Tomcat releases to pick up security
+                fixes.
+
+                If the MessageByte object is of type T_BYTES or T_CHARS, it gets converted to type T_STR. Although there is nothing in the general contract of toString() that
+                prohibits modifying the object, it's an unexpected side-effect. The JavaDoc for MessageBytes.getType() explicitly says it returns "the type of the original
+                content", so the change breaks that contract.
+
+                But it's more serious than a mere disagreement with documentation. Some colleagues of mine were a few days ahead of me in investigating this problem (they were
+                working with tomcat-embed-core and I was working woth Tomcat standalone). Most of this explanation is due to their research.
+
+                If something calls MessageBytes.toString(), fragile assumptions elsewhere can fall apart. For example, if you use a Java agent like OpenTelemetry, it intercepts
+                every request in order to obtain the URL path for logging. CoyoteAdapter.postParseRequest() then makes a mistake because the MessageBytes object changed from type
+                T_BYTES to type T_STR, and this assumption is no longer true:
+
+                /*
+                * The URI is chars or String, and has been sent using an in-memory protocol handler. The following
+                * assumptions are made: - req.requestURI() has been set to the 'original' non-decoded, non-normalized
+                * URI - req.decodedURI() has been set to the decoded, normalized form of req.requestURI()
+                */
+
+                The downstream result of that is a 404 response for every URL path.
+
+                Experimentally, I found that simply removing the type reassignment, as seen here, was enough to resolve the immediate issue. State tracking in the MessageBytes
+                class is a bit complicated, and I have not looked carefully to see if this proposed fix has any undesired consequences.
+
+                /**
+                * Compute the string value.
+                * @return the string
+                */
+                @Override
+                public String toString() {
+                switch (type) {
+                case T_NULL:
+                case T_STR:
+                // No conversion required
+                break;
+                case T_BYTES:
+                //type = T_STR;
+                strValue = byteC.toString();
+                break;
+                case T_CHARS:
+                //type = T_STR;
+                strValue = charC.toString();
+                break;
+                }
+
+                return strValue;
+                }
+            </description>
+            <version>9.0.71</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.tomcat.util.buf.MessageBytes.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66665" opendate="2023-06-22 07:43:15" fixdate="2023-08-30 16:43:45" resolution="Fixed">
+        <buginformation>
+            <summary>Provide option to supply role mapping from a properties file</summary>
+            <description>Note: This applies to all Tomcat versions
+
+                In enterprises you often use a centralized identity store where you do not have control over the group/roles names, but in your application you want to use friendly
+                role names, e.g., 'admin', 'user', 'clerk', etc. Luckily realms utilize Context.findRoleMapping(String) indirectly, so we only need to populate those mappings.
+
+                I have written such a mapping listener and would like to integrate it into upstream:
+                https://mo-tomcat-ext.sourceforge.net/apidocs/net/sf/michaelo/tomcat/extras/listeners/PropertiesRoleMappingListener.html if there is a general interest, I guess
+                there is. There code is straight forward:
+                https://sourceforge.net/p/mo-tomcat-ext/code/HEAD/tree/trunk/src/main/java/net/sf/michaelo/tomcat/extras/listeners/PropertiesRoleMappingListener.java
+            </description>
+            <version>9.0.76</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.core.PropertiesRoleMappingListener.java</file>
+            <file type="M">org.apache.catalina.core.TestPropertiesRoleMappingListener.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66681" opendate="2023-07-07 21:51:20" fixdate="2023-07-24 15:15:02" resolution="Fixed">
+        <buginformation>
+            <summary>.getBasicRemote().flushBatch() causes NPE with PerMessageDeflate</summary>
+            <description>java.lang.NullPointerException: Cannot invoke "java.nio.ByteBuffer.limit()" because the return value of
+                "org.apache.tomcat.websocket.MessagePart.getPayload()" is null
+                at org.apache.tomcat.websocket.PerMessageDeflate.sendMessagePart(PerMessageDeflate.java:317)
+                at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:282)
+                at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:256)
+                at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.flushBatch(WsRemoteEndpointImplBase.java:124)
+                at org.apache.tomcat.websocket.WsRemoteEndpointBase.flushBatch(WsRemoteEndpointBase.java:48)
+            </description>
+            <version>9.0.76</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.tomcat.websocket.PerMessageDeflate.java</file>
+            <file type="M">org.apache.tomcat.websocket.TestPerMessageDeflate.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66686" opendate="2023-07-11 12:28:23" fixdate="2023-07-12 20:30:51" resolution="Fixed">
+        <buginformation>
+            <summary>Default value of maxParameterCount</summary>
+            <description>Documentation (https://tomcat.apache.org/tomcat-9.0-doc/config/http.html) says, that the default value for maxParameterCount is 1000, when in fact, for
+                Tomcat 9.x, it is still 10000.
+
+                See https://github.com/apache/tomcat/blob/9.0.78/java/org/apache/catalina/connector/Connector.java#L197-L201 to confirm.
+            </description>
+            <version>9.0.78</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.Globals.java</file>
+            <file type="M">org.apache.catalina.connector.Request.java</file>
+            <file type="M">org.apache.catalina.valves.SSLValve.java</file>
+            <file type="M">org.apache.tomcat.util.net.SSLSupport.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66822" opendate="2023-07-31 10:08:19" fixdate="2023-08-03 13:46:02" resolution="Fixed">
+        <buginformation>
+            <summary>"BindException: Address already in use" - pls say which ip/port is causing the problem</summary>
+            <description>if the mnemonic DNS name is know best mention that one too
+
+                Caused by: java.net.BindException: Address already in use
+                at java.base/sun.nio.ch.Net.bind0(Native Method)
+                at java.base/sun.nio.ch.Net.bind(Net.java:555)
+                at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+                at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+                at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:277)
+
+
+                similar to bug 47499 , Bug 44558
+            </description>
+            <version>9.0.43</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.catalina.connector.Connector.java</file>
+            <file type="M">org.apache.catalina.loader.WebappClassLoaderBase.java</file>
+            <file type="M">org.apache.tomcat.util.compat.Jre9Compat.java</file>
+            <file type="M">org.apache.tomcat.util.compat.JreCompat.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66841" opendate="2023-08-03 17:06:04" fixdate="2023-09-20 14:25:54" resolution="Fixed">
+        <buginformation>
+            <summary>Memory leak from cancelled async http/2 streams</summary>
+            <description>Regression caused by fixed for https://bz.apache.org/bugzilla/show_bug.cgi?id=63816
+
+                Have application using Spring server sent events for notifying logged in users of application events. SSE emitters have timeout of 1 day and so are active for the
+                whole user session. Application tests registered SSE emitters at regular intervals to confirm the emitter is still alive and perform application cleanup if the
+                emitter connection has been closed for any reason. Test is done by sending heartbeat message through each SSE emitter.
+
+                If the SSE connection is cancelled from the remote client, the stream for the SSE emitter is set to a state of CLOSED_RST_RX which causes the heartbeat test message
+                to receive a CloseNowException, this is expected based on our understanding of http/2 and tomcat. However the stream does not actually get closed because the
+                asyncStateMachine is not updated and remains in a state of STARTED. This keeps the stream, stream processor, and associated resources from being closed and garbage
+                collected. Streams in this state are only cleaned up when their asyncTimeout expires and the AbstractProtocol's timeoutFuture calls the processor's timeoutAsync
+                method.
+
+                The memory used by the closed streams is leaked until they timeout.
+
+                The streams appear to be stuck in this state because when the application attempts to send the heartbeat message the Http2UpgradeHandler calls doStreamCancel when
+                reserving the window size because the stream state does not allow writing. doStreamCancel sets the error flag on the stream's coyoteResponse (Stream.java line 275)
+                and returns the CloseNowException. After the CloseNowException is returned the AbstractProcessor attempts to set the error state to CLOSE_NOW (AbstractProcessor
+                line 241) but this fails to update the asyncStateMachine to an ERROR state because the if condition depends on the setError flag being true. But the setError flag
+                can never be true in this scenario because the response error flag had already been set in doStreamCancel. This means the asyncStateMachine is never set to an error
+                state or told to process an ERROR SocketEvent.
+
+                boolean setError = response.setError();
+                boolean blockIo = this.errorState.isIoAllowed() !errorState.isIoAllowed();
+                this.errorState = this.errorState.getMostSevere(errorState);
+                // Don't change the status code for IOException since that is almost
+                // certainly a client disconnect in which case it is preferable to keep
+                // the original status code http://markmail.org/message/4cxpwmxhtgnrwh7n
+                if (response.getStatus() ( 400 !(t instanceof IOException)) {
+                response.setStatus(500);
+                }
+                if (t != null) {
+                request.setAttribute(RequestDispatcher.ERROR_EXCEPTION, t);
+                }
+                if (blockIo isAsync() setError) { (- setError is always false
+                if (asyncStateMachine.asyncError()) {
+                processSocketEvent(SocketEvent.ERROR, true);
+                }
+                }
+
+                We deployed a patched version of AbstractProcessor with the if condition like this:
+
+                if (blockIo isAsync() !asyncStateMachine.isAsyncError()) {
+
+                Our assumption is that whether the asyncStateMachine should process an ERROR event should depend on if the asyncStateMachine is already in an error state not on if
+                the coyote Response is already in an error state.
+
+                Connector settings used:
+                (Connector port="8443" protocol="org.apache.coyote.http11.Http11Nio2Protocol"
+                connectionTimeout="20000" maxThreads="150"
+                SSLEnabled="true" scheme="https" secure="true" useAsyncIO="false" )
+                (UpgradeProtocol className="org.apache.coyote.http2.Http2Protocol" /)
+                (SSLHostConfig)
+                (Certificate certificateKeystoreFile="conf/certs/devkeystore"
+                type="RSA"/)
+                (/SSLHostConfig)
+                (/Connector)
+
+                Note: issue occurred with NIO and APR protocol as well. useAsyncIO had to be set to false because we encountered a different bug when it was set to true.
+            </description>
+            <version>9.0.76</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.coyote.AsyncStateMachine.java</file>
+            <file type="M">org.apache.coyote.AbstractProcessor.java</file>
+            <file type="M">org.apache.coyote.http2.TestAsyncError.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="66842" opendate="2023-08-03 17:51:44" fixdate="2023-08-06 11:50:05" resolution="Fixed">
+        <buginformation>
+            <summary>Http2AsyncUpgradeHandler does not update overhead count based on sent frames</summary>
+            <description>Encountered while testing configurations for https://bz.apache.org/bugzilla/show_bug.cgi?id=66841
+
+                (Connector port="8443" protocol="org.apache.coyote.http11.Http11Nio2Protocol"
+                connectionTimeout="20000" maxThreads="150"
+                SSLEnabled="true" scheme="https" secure="true" useAsyncIO="true" )
+                (UpgradeProtocol className="org.apache.coyote.http2.Http2Protocol" /)
+                (SSLHostConfig)
+                (Certificate certificateKeystoreFile="conf/certs/devkeystore"
+                type="RSA"/)
+                (/SSLHostConfig)
+                (/Connector)
+
+                Given an application using Spring server sent event emitters to send notifications to logged in users and the application sends heartbeat messages through those SSE
+                emitters to test they are still active. If using a connector config similar to above (HTTP 2 upgrade and useAsyncIO true) then the data frames of the heartbeat
+                message will not reduce the overhead count but the WINDOW_UPDATE frames received in acknowledgement will increase the overhead count. This causes the overhead count
+                to be exceeded within just a few heartbeat cycles.
+
+                To reproduce:
+                1. Use NIO2 protocol with Http2Protocol upgrade and useAsyncIO true
+                2. deploy application with endpoint to create event stream that the application sends messages on continuously from separate thread
+                3. Access endpoint from browser (I used chrome but assume it occurs with other browsers)
+                4. wait
+
+                After each message sent on the event stream a WINDOW_UPDATE frame will be received which increases the overhead count. Without the data frames of the sent messages
+                lowering the overhead count the connection will quickly be closed due to overhead count exceeded.
+            </description>
+            <version>9.0.76</version>
+            <fixedVersion>10.0.1</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.apache.coyote.http2.Http2AsyncUpgradeHandler.java</file>
+            <file type="M">org.apache.coyote.http2.Http2UpgradeHandler.java</file>
+        </fixedFiles>
+    </bug>
+</bugrepository>

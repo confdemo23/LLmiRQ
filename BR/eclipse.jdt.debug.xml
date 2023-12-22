@@ -1,0 +1,830 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<bugrepository name="eclipse.jdt.debug">
+    <bug id="576399" opendate="2021-10-01 20:09:19" fixdate="2021-10-12 19:24:35" resolution="Fixed">
+        <buginformation>
+            <summary>Unnecessary file into byte[] copy implementation in eclipse.jdt.debug</summary>
+            <description>In JavaStackTraceConsole and JavaAppletLaunchConfigurationDelegate there are unnecessary code which copies into a byte array from a File, instead of using
+                the built in java.nio.file.Files APIs.
+            </description>
+            <version>4.8</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.console.JavaStackTraceConsole.java</file>
+            <file type="M">org.eclipse.jdt.internal.launching.JavaAppletLaunchConfigurationDelegate.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576670" opendate="2021-10-16 16:54:52" fixdate="2021-11-10 14:12:35" resolution="Fixed">
+        <buginformation>
+            <summary>Add ability to label objects during debugging</summary>
+            <description>It is pretty hard to quickly identify objects and track them during the debugging session, because there could be hundred similar instances, and trying to
+                remember the unique id, is not a too pleasant experience - and the human brain - at least mine - is pretty limited in this area.
+                It would be much better, if we could attach label to various objects, and if that object instances show up in the Variables/Expressions view, these labels could be
+                displayed so it will stand out.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.debug.tests.ui.presentation.ModelPresentationTests.java</file>
+            <file type="M">org.eclipse.jdt.debug.tests.ui.presentation.TestIJavaObjectValue.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.DebugUIMessages.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.IJDIPreferencesConstants.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.JDIModelPresentation.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.actions.ActionMessages.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.actions.SetObjectLabelAction.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.variables.JavaVariableColumnPresentation.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.variables.JavaVariableLabelProvider.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.variables.VariableMessages.java</file>
+            <file type="M">org.eclipse.jdt.debug.core.IJavaObject.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.core.logicalstructures.LogicalObjectStructureValue.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.core.model.JDIDebugTarget.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.core.model.JDIObjectValue.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576689" opendate="2021-10-18 07:20:42" fixdate="2021-11-10 14:10:44" resolution="Fixed">
+        <buginformation>
+            <summary>Export and import of breakpoints don't work properly for record</summary>
+            <description>Created attachment 287324
+                project
+
+                1) Import the project attached
+                2) Import the breakpoint attached.
+                3) Export all breakpoints
+                4) Import all breakpoints
+
+                2 breakpoints are missing after step 4
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.debug.core.breakpoints.JavaBreakpointImportParticipant.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576805" opendate="2021-10-21 11:04:26" fixdate="2021-10-25 03:42:02" resolution="Fixed">
+        <buginformation>
+            <summary>SWT Resource Leak in DebugTypeSelectionDialog</summary>
+            <description>java.lang.Error: SWT Resource was not properly disposed
+                at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+                at org.eclipse.swt.graphics.Resource.(init)(Resource.java:120)
+                at org.eclipse.swt.graphics.Image.(init)(Image.java:824)
+                at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:338)
+                at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:287)
+                at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:265)
+                at org.eclipse.jdt.internal.debug.ui.launcher.DebugTypeSelectionDialog$DebugTypeLabelProvider.getImage(DebugTypeSelectionDialog.java:68)
+                at org.eclipse.ui.dialogs.FilteredItemsSelectionDialog$ItemsListLabelProvider.getImage(FilteredItemsSelectionDialog.java:1518)
+                at org.eclipse.ui.dialogs.FilteredItemsSelectionDialog$ItemsListLabelProvider.update(FilteredItemsSelectionDialog.java:1568)
+                at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:144)
+                at org.eclipse.jface.viewers.AbstractTableViewer.doUpdateItem(AbstractTableViewer.java:396)
+                at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:427)
+                at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+                at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+                at org.eclipse.jface.viewers.StructuredViewer.refreshItem(StructuredViewer.java:1499)
+                at org.eclipse.jface.viewers.AbstractTableViewer.replace(AbstractTableViewer.java:1014)
+                at org.eclipse.ui.dialogs.FilteredItemsSelectionDialog$ContentProvider.updateElement(FilteredItemsSelectionDialog.java:2625)
+                at org.eclipse.jface.viewers.AbstractTableViewer.getVirtualSelection(AbstractTableViewer.java:499)
+                at org.eclipse.jface.viewers.AbstractTableViewer.getSelectionFromWidget(AbstractTableViewer.java:472)
+                at org.eclipse.jface.viewers.StructuredViewer.getSelection(StructuredViewer.java:987)
+                at org.eclipse.jface.viewers.StructuredViewer.handleSelect(StructuredViewer.java:1176)
+                at org.eclipse.jface.viewers.StructuredViewer$4.widgetSelected(StructuredViewer.java:1205)
+                at org.eclipse.jface.util.OpenStrategy.fireSelectionEvent(OpenStrategy.java:263)
+                at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:421)
+                at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+                at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4524)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1522)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1545)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1530)
+                at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1324)
+                at org.eclipse.ui.dialogs.FilteredItemsSelectionDialog.refresh(FilteredItemsSelectionDialog.java:884)
+                at org.eclipse.ui.dialogs.FilteredItemsSelectionDialog$RefreshJob.runInUIThread(FilteredItemsSelectionDialog.java:1307)
+                at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+                at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+                at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+                at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4262)
+                at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3885)
+                at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+                at org.eclipse.jface.window.Window.open(Window.java:799)
+                at org.eclipse.jdt.debug.ui.launchConfigurations.JavaMainTab.handleSearchButtonSelected(JavaMainTab.java:186)
+                at org.eclipse.jdt.internal.debug.ui.launcher.SharedJavaMainTab$2.widgetSelected(SharedJavaMainTab.java:81)
+                at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+                at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+                at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4524)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1522)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1545)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1530)
+                at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1324)
+                at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4310)
+                at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3883)
+                at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+                at org.eclipse.jface.window.Window.open(Window.java:799)
+                at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.open(LaunchConfigurationsDialog.java:1238)
+                at org.eclipse.debug.ui.DebugUITools.lambda$1(DebugUITools.java:630)
+                at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+                at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:636)
+                at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:574)
+                at org.eclipse.debug.ui.actions.OpenLaunchDialogAction.run(OpenLaunchDialogAction.java:85)
+                at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+                at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+                at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+                at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+                at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4524)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1522)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1545)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1530)
+                at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1324)
+                at org.eclipse.jface.action.ActionContributionItem.lambda$8(ActionContributionItem.java:1207)
+                at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+                at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4524)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1522)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1545)
+                at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1530)
+                at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1324)
+                at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4310)
+                at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3883)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+                at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+                at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
+                at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+                at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+                at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+                at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+                at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+                at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+                at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+                at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+                at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+                at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+                at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+                at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+                at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+                at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+                at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+                at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+            </description>
+            <version>3.8.2</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.launcher.DebugTypeSelectionDialog.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576829" opendate="2021-10-21 23:21:09" fixdate="2021-11-10 17:55:55" resolution="Fixed">
+        <buginformation>
+            <summary>Conditional breakpoints fail when recursive generics are involved</summary>
+            <description>Created attachment 287375
+                example project
+
+                When evaluating a conditional breakpoint that involves an object that itself uses recursive generics, eclipse cannot evaluate the breakpoint and reports that the
+                condition has compilation errors.
+
+                Here is an example code (a project is attached):
+
+                public class Main {
+
+                public static void main(String[] args) {
+                MyClass(?) cls = new MyClass()();
+                System.out.println("x"); // add conditional breakpoint here (e.g. "cls.getBoolean()")
+                }
+
+                private static class MyClass(T extends MyClass(T)) {
+
+                public boolean getBoolean() {
+                return false;
+                }
+                }
+                }
+
+                Notice the recursive generic parameter of class MyClass. A conditional breakpoint like the one stated in the comment fails during debugging with the following error
+                message:
+
+                "Conditional breakpoint has compilation error(s).
+
+                Reason:
+                Evaluations must contain either an expression or a block of well-formed statements"
+
+                The error log further contains the following warning:
+                "Compile error during code evaluation: Bound mismatch: The type Object is not a valid substitute for the bounded parameter (T extends Main.MyClass(T)) of the type
+                Main.MyClass(T)"
+
+                No stack trace is available.
+
+                Conditional breakpoints worked in situations like above at least until eclipse 4.15.
+            </description>
+            <version>4.21</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">Bug576829.java</file>
+            <file type="M">org.eclipse.jdt.debug.tests.eval.GenericsEval17Test.java</file>
+            <file type="M">org.eclipse.jdt.debug.tests.AbstractDebugTest.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576979" opendate="2021-10-31 12:19:13" fixdate="2021-11-02 07:31:36" resolution="Fixed">
+        <buginformation>
+            <summary>[releng] AbstractReader in the JDI tests uses CR as line endings</summary>
+            <description>org.eclipse.jdt.debug.jdi.tests/tests/org/eclipse/debug/jdi/tests/AbstractReader.java uses single CRs as line endings. (Not CR-LF!)
+
+                For git, this is a binary file.
+
+                I suggest to normalize this to use LF as line endings.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.debug.jdi.tests.AbstractReader.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="576999" opendate="2021-11-02 07:25:33" fixdate="2022-03-14 14:22:43" resolution="Fixed">
+        <buginformation>
+            <summary>[Test] testBug573547_insideLambda_onOuterScopeVariable_whileOnPreviousFrame failing on windows</summary>
+            <description>Follow up from
+                https://bugs.eclipse.org/bugs/show_bug.cgi?id=573547#c5
+            </description>
+            <version>4.21</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.debug.tests.ui.DebugHoverTests.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577103" opendate="2021-11-06 07:32:14" fixdate="2022-01-27 10:23:25" resolution="Fixed">
+        <buginformation>
+            <summary>Highlight labelled objects in the "Expressions" view too</summary>
+            <description>Currently JDIModelPresentation doesnt return foreground color for IWatchExpression and JavaInspectExpression, so if the user labels an object, they wont
+                get highlighted.
+                Unfortunately, the 'Variables' and the 'Expressions' view use different logic to return the 'Value' of a variable, so we can't easily add the label there.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.debug.tests.ui.presentation.ModelPresentationTests.java</file>
+            <file type="M">org.eclipse.jdt.debug.tests.ui.presentation.TestIJavaVariable.java</file>
+            <file type="M">org.eclipse.jdt.debug.tests.ui.presentation.TestIWatchExpression.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.JDIModelPresentation.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577119" opendate="2021-11-07 22:28:59" fixdate="2021-11-10 17:59:26" resolution="Fixed">
+        <buginformation>
+            <summary>Expressions does not work when records defined as inner classes are used</summary>
+            <description>1, Create a class:
+
+                public class ExpTest {
+                record Record(String name, int age) {
+                }
+
+                void run() {
+                var r = new Record("xxx", 5);
+                System.out.println("r:" + r);
+                }
+                }
+
+                2, Put a breakpoint into the run method, on the println-line
+                3, Run the code
+                4, Try to use the 'Expressions' view, but it fails, neither 'r.name' nor 'r.name()' works, and even 'r' or 'this' fails
+
+                It seems, that Eclipse tries to parse the source file and construct a new 'skeleton' which contains all the relevant types for evaluating the user entered
+                expression. However, this parsing and source-generating code is not compatible with Java 17 syntax, and it doesn't generate anything for records.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577171" opendate="2021-11-10 09:21:25" fixdate="2021-11-18 07:17:38" resolution="Fixed">
+        <buginformation>
+            <summary>Exception processing async thread queue</summary>
+            <description>Trying to debug a Nebula snippets creates an exception. See below
+
+
+                java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 0
+                at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.getCompleteSnippet(EvaluationSourceGenerator.java:152)
+                at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.(init)(EvaluationSourceGenerator.java:70)
+                at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.getCompiledExpression(ASTEvaluationEngine.java:372)
+                at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.evaluate(ASTEvaluationEngine.java:154)
+                at org.eclipse.jdt.internal.debug.ui.JavaWatchExpressionDelegate$EvaluationRunnable.run(JavaWatchExpressionDelegate.java:153)
+                at org.eclipse.jdt.internal.debug.core.model.JDIThread$ThreadJob.run(JDIThread.java:3436)
+                at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+
+                Tested with: Eclipse SDK
+                Version: 2021-12 (4.22)
+                Build id: I20211108-1800
+                OS: Windows 10, v.10.0, x86_64 / win32
+                Java vendor: Eclipse Foundation
+                Java runtime version: 11.0.12+7
+                Java version: 11.0.12
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577564" opendate="2021-12-01 14:29:19" fixdate="2022-02-02 16:48:23" resolution="Fixed">
+        <buginformation>
+            <summary>Allow debugger to disallow final fields modifications</summary>
+            <description>Bug 94223 opened final fields for modifications in Eclipse debugger. For some obscure reasons JVM allows debugger to do that, and that allows fun for
+                experienced Java developers.
+
+                However, in the real world we might have cases where the consequences of the change are not trivial and could affect seemingly unrelated code.
+
+                We have custom product that uses extends JDT debugger. Customers can debug their code and because of bug 94223 they can change final fields *without* noticing they
+                do something that is considered to be used by advanced users and only if the change is "safe".
+
+                So they debug application to some point where they want to change a Boolean value embedded in some domain object. They *think* they change the domain object state
+                only, but because the same Boolean.TRUE instance is shared with gazillion of other objects, application explodes.
+
+                Below a trivial code that demonstrates the failed assumption after changing value of a Boolean.
+
+                public class FinalBoolean {
+                public static void main(String[] args) {
+                Boolean b1 = Boolean.valueOf("true");
+                System.out.println(b1); // true
+                // On breakpoint on the line below change b1.value to true.
+                Boolean b2 = Boolean.valueOf("false");
+                System.out.println(b2); // false
+                System.out.println(b1); // false !!!
+                System.out.println("'true' equals 'false'? " + b1.equals(b2)); // true !
+                }
+                }
+
+                Same applies to everything else that has final fields, but especially Boolean, Integer Long are very dangerous because they are widely used and cached by default.
+
+                There are few things we could improve:
+
+                1) We should allow to disallow change of final fields in debugger
+                2) We should allow debuggers that extend default JDT debugger and reuse "org.eclipse.jdt.debug” model to provide their own "variableValueEditor" via
+                "org.eclipse.debug.ui.variableValueEditors".
+                3) We should warn if someone tries change final fields
+
+                I plan to propose two patches for 1) and 2) that would introduce a UI preference and allow custom Java debuggers to overwrite "variableValueEditor" contribution
+                from JDT to implement more sophisticated logig regarding debug value changes.
+            </description>
+            <version>3.1</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.DebugUIMessages.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.IJDIPreferencesConstants.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.JDIDebugUIPreferenceInitializer.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.JavaDebugPreferencePage.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.actions.JavaVariableValueEditor.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577622" opendate="2021-12-05 00:18:55" fixdate="2022-02-15 05:04:28" resolution="Fixed">
+        <buginformation>
+            <summary>Possibility to navigate to field declaration</summary>
+            <description>During debugging, for a variable, currently it is possible to navigate to the actual or to the declared type - with the "Open Actual Type" and "Open
+                Declared Type" context menu item - but it's not possible to navigate to the declaration of the field - and if the class hierarchy is deep, finding the actual
+                declaring class is not always trivial. It would be nice, if there were an action to navigate there.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.JavaVarActionFilter.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.actions.OpenTypeAction.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.actions.OpenVariableConcreteTypeAction.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.actions.OpenVariableConcreteTypeHierarchyAction.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.actions.OpenVariableDeclarationAction.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577724" opendate="2021-12-09 17:53:47" fixdate="2021-12-09 19:17:19" resolution="Fixed">
+        <buginformation>
+            <summary>[18] Add Execution Environment for JavaSE-18</summary>
+            <description>There should be an Execution Environment for JavaSE-18 in the Execution Environment Preference page.</description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.launching.EECompilationParticipant.java</file>
+            <file type="M">org.eclipse.jdt.internal.launching.StandardVMType.java</file>
+            <file type="M">org.eclipse.jdt.internal.launching.environments.EnvironmentsManager.java</file>
+            <file type="M">org.eclipse.jdt.internal.launching.environments.ExecutionEnvironmentAnalyzer.java</file>
+            <file type="M">org.eclipse.jdt.launching.JavaRuntime.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577731" opendate="2021-12-10 06:12:22" fixdate="2022-03-18 07:25:17" resolution="Fixed">
+        <buginformation>
+            <summary>[18] Keep merging from master to BETA branch</summary>
+            <description>Beta needs a periodic update</description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.debug.core.breakpoints.ValidBreakpointLocationLocator.java</file>
+            <file type="M">Bug575551.java</file>
+            <file type="M">org.eclipse.jdt.debug.tests.AbstractDebugTest.java</file>
+            <file type="M">org.eclipse.jdt.debug.tests.eval.LambdaVariableTest.java</file>
+            <file type="M">org.eclipse.jdt.debug.tests.ui.presentation.ModelPresentationTests.java</file>
+            <file type="M">org.eclipse.jdt.debug.tests.ui.presentation.TestIJavaVariable.java</file>
+            <file type="M">org.eclipse.jdt.debug.tests.ui.presentation.TestIWatchExpression.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.BreakpointMarkerUpdater.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.CreateStepFilterDialog.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.DebugUIMessages.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.Filter.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.FilterLabelProvider.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.FilterViewerComparator.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.IJDIPreferencesConstants.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.JDIDebugUIPreferenceInitializer.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.JDIModelPresentation.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.JavaDebugPreferencePage.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.JavaStepFilterPreferencePage.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.JavaVarActionFilter.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.actions.ActionMessages.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.actions.BreakpointToggleUtils.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.actions.JavaVariableValueEditor.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.actions.OpenTypeAction.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.actions.OpenVariableConcreteTypeAction.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.actions.OpenVariableConcreteTypeHierarchyAction.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.actions.OpenVariableDeclarationAction.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.actions.RetargetToggleLambdaEntryBreakpointAction.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.actions.RulerToggleLambdaEntryBreakpointActionDelegate.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.actions.ToggleBreakpointAdapter.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.jres.InstalledJREsBlock.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.propertypages.ExceptionFilterEditor.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.snippeteditor.SelectImportsDialog.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.core.breakpoints.FirstLambdaLocationLocator.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.core.breakpoints.JavaMethodBreakpoint.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.core.breakpoints.ValidBreakpointLocationLocator.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.core.model.JDIThread.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.core.model.LambdaUtils.java</file>
+            <file type="M">org.eclipse.jdt.internal.launching.LaunchingMessages.java</file>
+            <file type="M">org.eclipse.jdt.internal.launching.Standard11xVMRunner.java</file>
+            <file type="M">org.eclipse.jdt.internal.launching.StandardVMDebugger.java</file>
+            <file type="M">org.eclipse.jdt.internal.launching.StandardVMRunner.java</file>
+            <file type="M">org.eclipse.jdt.launching.JavaLaunchDelegate.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577735" opendate="2021-12-10 07:05:17" fixdate="2022-03-22 18:03:32" resolution="Fixed">
+        <buginformation>
+            <summary>[18] Java 18 API doc to be added for JRE library</summary>
+            <description>Java doc location should be added for new Java 18 release. This will be available only after Java 18 GA.</description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.launching.StandardVMType.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="577736" opendate="2021-12-10 07:58:40" fixdate="2022-03-22 18:03:58" resolution="Fixed">
+        <buginformation>
+            <summary>[18] Remove JCP disclaimers and BETA from code in Debug</summary>
+            <description>Remove JCP disclaimers from code in Debug.</description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.launching.EECompilationParticipant.java</file>
+            <file type="M">org.eclipse.jdt.internal.launching.StandardVMType.java</file>
+            <file type="M">org.eclipse.jdt.internal.launching.environments.EnvironmentsManager.java</file>
+            <file type="M">org.eclipse.jdt.internal.launching.environments.ExecutionEnvironmentAnalyzer.java</file>
+            <file type="M">org.eclipse.jdt.launching.JavaRuntime.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578145" opendate="2022-01-11 06:18:52" fixdate="2022-04-06 08:24:07" resolution="Fixed">
+        <buginformation>
+            <summary>Evaluations for lambda variables are not working on nested lambda</summary>
+            <description>Sample 1:
+
+                ```
+                import java.util.function.Consumer;
+
+                public class InspectLambda {
+
+                public static void main(String[] args) {
+                int number = 23;
+
+                Consumer(Integer) myConsumer = (id) -) {
+                System.out.println("id = " + id);
+                System.out.println(); // Add a breakpoint here
+                };
+                myConsumer.accept(number);
+                }
+                }
+                ```
+
+                Stop at the lambda 'myConsumer', it can evaluate variables such as 'number', 'args' from enclosing method well.
+
+
+                Sample 2:
+                ```
+                import java.util.ArrayList;
+                import java.util.List;
+
+                public class InspectLambdaOnChainCalls {
+                public static void main(String[] args) {
+                int number = 23;
+                List(String) users = new ArrayList(String)();
+                users.add("a");
+
+                users.stream().forEach(u -) {
+                String localName = "local name";
+                System.out.println("user name: " + u); // Add a breakpoint here
+                });
+                }
+                }
+                ```
+
+                Stop at the lambda `System.out.println("user name: " + u)` of the chain calls, it cannot evaluate variables such as 'number', 'users' from enclosing method. But
+                hovering at those variables, it can display their values well.
+
+
+                Currently the evaluation engine collects variables for 3 frames starting from lambda, that works for the simple lambda calls. But for chain calls, there are more
+                than 3 frames between the lambda frame and the enclosing method. That's why local variables of enclosing method are not recognized.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">Bug578145LambdaInAnonymous.java</file>
+            <file type="M">Bug578145LambdaInConstructor.java</file>
+            <file type="M">Bug578145LambdaInFieldDeclaration.java</file>
+            <file type="M">Bug578145LambdaInStaticInitializer.java</file>
+            <file type="M">Bug578145LambdaOnChainCalls.java</file>
+            <file type="M">Bug578145NestedLambda.java</file>
+            <file type="M">org.eclipse.jdt.debug.tests.AbstractDebugTest.java</file>
+            <file type="M">org.eclipse.jdt.debug.tests.eval.LambdaVariableTest.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.core.model.LambdaUtils.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578450" opendate="2022-01-30 12:05:39" fixdate="2022-04-06 09:44:57" resolution="Fixed">
+        <buginformation>
+            <summary>Setting label on nulls and primitive types does not work/make sense</summary>
+            <description>The "Set Object Label..." action is visible even for nulls and for primitive types.
+                For primitive values, the dialog wont come up - as there is an explicit check, that 'value instanceof IJavaObject', however it shows up for nulls. But in the end,
+                labeling nulls wont make any sense. It would be better, if this action is visible only for non-null objects.
+            </description>
+            <version>4.22</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.JavaVarActionFilter.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.actions.SetObjectLabelAction.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578789" opendate="2022-02-16 14:33:17" fixdate="2022-02-16 15:47:52" resolution="Fixed">
+        <buginformation>
+            <summary>Deadlock situation when adding new JRE</summary>
+            <description>Created attachment 288061
+                Thread-Dump
+
+                While adding a new JDK beside an existing one, I ended up with a deadlock.
+
+                - Menu: Window - Preferences - Java - Installed JRE - Add
+                - Select my JDK Folder
+                - Press "Apply"
+
+                See the attached treaddump!
+
+                The "main"-thread and
+                "Worker-60: Update Installed JREs"
+
+                are waiting for lock
+
+                0x000000070f611540
+
+                This is locked by thread "Worker-52: Update Installed JREs"
+
+                As default OpenJDK 11 was already in the JRE list. I added JDK8.
+
+                After the Eclipse Restart, the JDK8 was successfully added.
+            </description>
+            <version>4.4</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.jres.InstalledJREsBlock.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578899" opendate="2022-02-22 13:28:38" fixdate="2022-03-09 08:28:50" resolution="Fixed">
+        <buginformation>
+            <summary>NPE with breakpoint in ClassLoader.getDefinedPackage()</summary>
+            <description>Created attachment 288101
+                Screen recording showing the NPE occurring.
+
+                I sporadically see the following exception and an error dialog when I try to debug code in: java.lang.ClassLoader.getDefinedPackage(String)
+
+                java.lang.NullPointerException
+                at org.eclipse.jdt.internal.debug.core.model.JDIStackFrame.updateVariables(JDIStackFrame.java:765)
+                at org.eclipse.jdt.internal.debug.core.model.JDIStackFrame.getVariables0(JDIStackFrame.java:395)
+                at org.eclipse.jdt.internal.debug.core.model.JDIStackFrame.getVariables(JDIStackFrame.java:307)
+                at org.eclipse.debug.internal.ui.model.elements.StackFrameContentProvider.getAllChildren(StackFrameContentProvider.java:50)
+                at org.eclipse.jdt.internal.debug.ui.variables.JavaStackFrameContentProvider.getAllChildren(JavaStackFrameContentProvider.java:36)
+                at org.eclipse.debug.internal.ui.model.elements.StackFrameContentProvider.getChildCount(StackFrameContentProvider.java:29)
+                at org.eclipse.debug.internal.ui.model.elements.ElementContentProvider.retrieveChildCount(ElementContentProvider.java:126)
+                at org.eclipse.debug.internal.ui.model.elements.ElementContentProvider$2.run(ElementContentProvider.java:76)
+                at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+
+                See attached video: "npe_when_debugging_ClassLoader_getDefinedPackage.mp4"
+
+                To reproduce:
+
+                1. Create a Java project.
+                2. Create 2 Java sources:
+
+                package test;
+
+                public class Test {
+
+                public static void main(String[] args) {
+                int x = 42;
+                System.out.println("(1) x=" + x);
+                SomeClass c = new SomeClass();
+                c.foo();
+                System.out.println("(1) x=" + x);
+                }
+
+                }
+
+                package test;
+
+                public class SomeClass {
+
+                public void foo() {
+                System.out.println("SomeClass.foo()");
+                }
+                }
+
+                3. Set breakpoints:
+
+                ClassLoader [line: 2241] - getDefinedPackage(String) - at "NamedPackage p = packages.get(name);"
+                Test [line: 7] - main(String[]))) - at the 1st print in the snippet
+                Test [line: 10] - main(String[])) - at the 2nd print in the snippet
+
+                4. Debug the "Test.java" snippet.
+                5. Resume until you see the error dialog and the exception in the Error Log view.
+
+                Seen with:
+
+                Eclipse SDK
+                Version: 2022-03 (4.23)
+                Build id: I20220216-1800
+
+                Also seen with latest JDT.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.debug.core.model.JDIDebugModelMessages.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.core.model.JDILocalVariable.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.core.model.JDIStackFrame.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.core.model.JDIThread.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="578996" opendate="2022-02-27 08:40:25" fixdate="2022-03-02 01:30:25" resolution="Fixed">
+        <buginformation>
+            <summary>Breakpoints cannot be place in nested lambdas</summary>
+            <description>It is possible to place a break-point in a lambda expression block like the "s1" lambda in the following example.
+                But unfortunately it is not possible to place a breakpoint in a lambdas block if that lambda is nested in the other lambda like the "s2" or "s3" expressions below
+
+                Supplier(String) s1= () -) {
+                return "";
+                };
+                Supplier(Supplier(String)) s2= () -) () -) {
+                return "";
+                };
+                Supplier(Supplier(Supplier(String))) s3= () -) () -) () -) {
+                return "";
+                };
+
+
+                When I try to place a break-points in the line of the return statements of s2 or s3 the break-point is added to the method below instead. When both lambdas are
+                converted to anonymous classes placing a break-point at the nested return works, but only if both Suppliers are classes, if only the inner one is a class creation
+                it still does not work.
+
+                My Eclipse version is 2022-03 M3 (4.23.0 M3), Build id: 20220224-1226 and I did not encounter this behaviour before so it could be a regression. I hope I have
+                assigned the right Bugzilla Components.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.debug.core.breakpoints.ValidBreakpointLocationLocator.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579099" opendate="2022-03-05 05:48:04" fixdate="2022-04-06 09:46:05" resolution="Fixed">
+        <buginformation>
+            <summary>Cannot create lambda entry breakpoints on same method on 2 different lines</summary>
+            <description>Arrays.asList("a", "b", "c").stream().filter(s -) s.length() ) 0);
+                Arrays.asList("a", "b", "c").stream().filter(s -) s.length() ) 0);
+
+                Adding Lambda Entry Method breakpoint on both the lines does not work as it finds already a method breakpoint on same method.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.actions.ToggleBreakpointAdapter.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579100" opendate="2022-03-05 06:00:45" fixdate="2022-04-07 07:27:05" resolution="Fixed">
+        <buginformation>
+            <summary>Lambda entry breakpoint does not suspend while debugging</summary>
+            <description>Snippet provided by Vikas:
+
+                interface Drawable{
+                public void draw();
+                }
+                public class c {
+                public static void main(String[] args) {
+                int width=10;
+                //with lambda
+                Drawable d2=()-){ // Lambda entry breakpoint
+                System.out.println("Drawing "+width);
+                };
+                d2.draw();
+                }
+                }
+
+                Lambda entry breakpoint at the above mentioned line does not stop during debug run.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.internal.debug.ui.actions.ToggleBreakpointAdapter.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.core.breakpoints.FirstLambdaLocationLocator.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.core.breakpoints.LambdaLocationLocatorHelper.java</file>
+            <file type="M">org.eclipse.jdt.internal.debug.core.breakpoints.ValidBreakpointLocationLocator.java</file>
+        </fixedFiles>
+    </bug>
+    <bug id="579439" opendate="2022-03-28 08:00:37" fixdate="2022-03-29 06:44:56" resolution="Fixed">
+        <buginformation>
+            <summary>LineTrackerTests.testFlood fails since I20220326-1800</summary>
+            <description>
+                https://download.eclipse.org/eclipse/downloads/drops4/I20220327-1800/testresults/html/org.eclipse.jdt.debug.tests_ep424I-unit-cen64-gtk3-java11_linux.gtk.x86_64_11.html
+
+                LineTrackerTests testFlood Failure Wrong number of lines expected:(10000) but was:(5740)
+
+                junit.framework.AssertionFailedError: Wrong number of lines expected:(10000) but was:(5740)
+                at junit.framework.Assert.fail(Assert.java:57)
+                at junit.framework.Assert.failNotEquals(Assert.java:329)
+                at junit.framework.Assert.assertEquals(Assert.java:78)
+                at junit.framework.Assert.assertEquals(Assert.java:234)
+                at junit.framework.TestCase.assertEquals(TestCase.java:377)
+                at org.eclipse.jdt.debug.tests.core.LineTrackerTests.testFlood(LineTrackerTests.java:170)
+                at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+                at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+                at junit.framework.TestCase.runTest(TestCase.java:177)
+                at junit.framework.TestCase.runBare(TestCase.java:142)
+                at org.eclipse.jdt.debug.tests.AbstractDebugTest.runBare(AbstractDebugTest.java:2679)
+                at junit.framework.TestResult$1.protect(TestResult.java:122)
+                at junit.framework.TestResult.runProtected(TestResult.java:142)
+                at junit.framework.TestResult.run(TestResult.java:125)
+                at junit.framework.TestCase.run(TestCase.java:130)
+                at junit.framework.TestSuite.runTest(TestSuite.java:241)
+                at junit.framework.TestSuite.run(TestSuite.java:236)
+                at junit.framework.TestSuite.runTest(TestSuite.java:241)
+                at org.eclipse.jdt.debug.tests.DebugSuite$1.run(DebugSuite.java:61)
+                at java.base/java.lang.Thread.run(Thread.java:829)
+
+                Interestingly, I'm unable to execute testst locally, the launch config in the test doesn't start at all.
+            </description>
+            <version>4.23</version>
+            <fixedVersion>4.22</fixedVersion>
+            <type>Bug</type>
+        </buginformation>
+        <fixedFiles>
+            <file type="M">org.eclipse.jdt.debug.tests.core.LineTrackerTests.java</file>
+        </fixedFiles>
+    </bug>
+</bugrepository>
