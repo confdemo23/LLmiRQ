@@ -1,0 +1,3 @@
+RawClearPassword should implement Destroyable interface
+Class RawClearPassword doesn&amp;apos;t implement method destroy() from Destroyable interface thus causing warnings in runtime.
+It should be implemented anyway.  

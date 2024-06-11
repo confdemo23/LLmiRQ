@@ -1,0 +1,70 @@
+Security subsystem does not handle acl&apos;s module properly, and is missing transformer
+The parsed add is done for /subsystem=security/security-domain=other/acl=classic/acl-module=acl
+However in the acl resource this is called login-module=acl.
+WHen marshalling
+
+
+
+
+
+
+	&lt;acl&gt;
+
+
+
+
+	   &lt;acl-module name="acl" code="AclThingy" flag="required" module="test"&gt;
+
+
+
+
+                &lt;module-option name="d" value="r"/&gt;
+
+
+
+
+	   &lt;/acl-module&gt;
+
+
+
+
+	&lt;/acl&gt;
+
+
+
+
+
+
+becomes
+
+
+
+
+
+
+	&lt;acl&gt;
+
+
+
+
+	   &lt;login-module name="acl" code="AclThingy" flag="required" module="test"&gt;
+
+
+
+
+                &lt;module-option name="d" value="r"/&gt;
+
+
+
+
+	   &lt;/login-module&gt;
+
+
+
+
+	&lt;/acl&gt;
+
+
+
+
+

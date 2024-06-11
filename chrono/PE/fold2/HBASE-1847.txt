@@ -1,0 +1,2 @@
+Delete latest of a null qualifier when non-null qualifiers exist throws a RuntimeException
+Bug in delete latest code when deleting the null qualifier column when other columns also exist.

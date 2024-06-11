@@ -1,0 +1,90 @@
+NotSupported tx attribute is not taken into account without a MethodIntf for CMT MDB
+A MDB is configured using a deployment descriptor as a CMT with:
+
+
+
+
+
+
+    &lt;assembly-descriptor&gt;
+
+
+
+
+        &lt;container-transaction&gt;
+
+
+
+
+            &lt;method&gt;
+
+
+
+
+                &lt;ejb-name&gt;ContainerManagedTransactionNotSupportedMDBWithDD&lt;/ejb-name&gt;
+
+
+
+
+                &lt;method-name&gt;onMessage&lt;/method-name&gt;
+
+
+
+
+                &lt;method-params&gt;
+
+
+
+
+                    &lt;method-param&gt;javax.jms.Message&lt;/method-param&gt;
+
+
+
+
+                &lt;/method-params&gt;
+
+
+
+
+            &lt;/method&gt;
+
+
+
+
+            &lt;trans-attribute&gt;NotSupported&lt;/trans-attribute&gt;
+
+
+
+
+        &lt;/container-transaction&gt;
+
+
+
+
+    &lt;/assembly-descriptor&gt;
+
+
+
+
+
+
+According to the sec, a call to MessageDrivenContext.setRollbackOnly() in the MDB&amp;apos;s onMessage() method must throw an illegal state exception (as there is no active transaction).
+Thats&amp;apos;s not the case.
+I debugged the code and WildFly identifies the invocation as the component MESSAGE_ENDPOINT methodIntf and its tx attribute as REQUIRED. The call to MessageDrivenContext.setRollbackOnly() succeeds when it must not.
+The component txattrs do contain a BEAN methodIntf for the same method onMessage(javax.jms.Message) with NOT_SUPPORTED that corresponds to the deployment descriptor but it is not used.
+If I explicitly set
+
+
+
+
+
+
+   &lt;method-intf&gt;MessageEndpoint&lt;/method-intf&gt;
+
+
+
+
+
+
+the test passes (MessageDrivenContext.setRollbackOnly() throws the expected exception)
+I think it is a bug to have to specify the &lt;method-intf&gt; in the DD. The test should pass without it as this "style 3" method declaration is legal for MDB.

@@ -1,0 +1,2 @@
+Thrift and schema changes for HIVE-11685
+This JIRA depends on HIVE-12814.

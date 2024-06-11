@@ -1,0 +1,56 @@
+EJB subsystem adds a capability but does not remove it in remove handler
+EJB3SubsystemAdd adds capability org.wildfly.ejb3.clustered.singleton but then EJB3SubsystemRemove does not remove it.
+This breaks use cases where the subsystem is repeatedly added, particularly a cycle of 
+/profile=foo:clone(to-profile=bar)
+... make some adjustments to bar
+... oops, screwed up on those adjustments, lets start over!
+/profile=bar:remove
+/profile=foo:clone(to-profile=bar)
+The last step will fail with:
+
+
+
+
+
+
+[Host Controller] &amp;amp#27;[33m&amp;amp#27;[0m&amp;amp#27;[31m12:05:13,818 ERROR [org.jboss.as.controller.management-operation] (management-handler-thread - 4) WFLYCTL0013: Operation ("add") failed - address: ([&amp;amp#27;[0m
+
+
+
+
+[Host Controller] &amp;amp#27;[31m    ("profile" =&gt; "clone"),&amp;amp#27;[0m
+
+
+
+
+[Host Controller] &amp;amp#27;[31m    ("subsystem" =&gt; "ejb3")&amp;amp#27;[0m
+
+
+
+
+[Host Controller] &amp;amp#27;[31m]): java.lang.IllegalStateException: WFLYCTL0363: Capability &amp;apos;org.wildfly.ejb3.clustered.singleton&amp;apos; is already registered in context &amp;apos;profile=clone&amp;apos;.&amp;amp#27;[0m
+
+
+
+
+[Host Controller] &amp;amp#27;[31m	at org.jboss.as.controller.CapabilityRegistry.registerCapability(CapabilityRegistry.java:146)&amp;amp#27;[0m
+
+
+
+
+[Host Controller] &amp;amp#27;[31m	at org.jboss.as.controller.OperationContextImpl.registerCapability(OperationContextImpl.java:1430)&amp;amp#27;[0m
+
+
+
+
+[Host Controller] &amp;amp#27;[31m	at org.jboss.as.controller.OperationContextImpl.registerCapability(OperationContextImpl.java:1417)&amp;amp#27;[0m
+
+
+
+
+[Host Controller] &amp;amp#27;[31m	at org.jboss.as.ejb3.subsystem.EJB3SubsystemAdd.recordCapabilitiesAndRequirements(EJB3SubsystemAdd.java:178)&amp;amp#27;[0m
+
+
+
+
+

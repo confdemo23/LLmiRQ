@@ -1,0 +1,5 @@
+Intermittent failure in DeploymentScannerUnitTestCase
+DeploymentScannerUnitTestCase.testStartup() has been failing intermittently since May:
+https://ci.wildfly.org/project.html?projectId=WildFlyCore&amp;buildTypeId=&amp;tab=testDetails&amp;testNameId=-2364482317512802563&amp;order=TEST_STATUS_DESC&amp;branch_WildFlyCore=__all_branches__&amp;itemsCount=50
+The May 4 failure is the first that was not associated with some large scale failure; i.e. is more likely to be relevant to the test itself.
+I&amp;apos;ll send up a PR to @Ignore this test.

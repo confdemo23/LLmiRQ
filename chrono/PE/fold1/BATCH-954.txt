@@ -1,0 +1,5 @@
+Failure on job stop
+Try to stop a job with SimpleJobOperator through JMX.
+A OptimisticLockingFailureException is thrown because the jobExecution version doesn&amp;apos;t match with persisted one.
+Bug origin :
+When the JobExecution status is synchronized, the version is not updated.

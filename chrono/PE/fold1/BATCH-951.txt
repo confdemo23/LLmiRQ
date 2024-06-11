@@ -1,0 +1,2 @@
+MapJobInstanceDao.getLastJobInstances doesn&apos;t return the last job instance 
+Wrong order of job instances in MapJobInstanceDao.getLastJobInstances. MapJobInstanceDao.getLastJobInstances returns always  &amp;apos;old&amp;apos; job instances.

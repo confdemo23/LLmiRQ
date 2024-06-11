@@ -1,0 +1,3 @@
+BaseSemanticAnalyzer.unescapeSQLString doesn&apos;t unescape \u0000 style character literals.
+BaseSemanticAnalyzer.unescapeSQLString method may have a fault. When "\u0061" style character literals are passed to the method, it&amp;apos;s not unescaped successfully.
+In Spark SQL project, we referenced the unescaping logic and noticed this issue (SPARK-14426)

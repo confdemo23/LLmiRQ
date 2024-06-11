@@ -1,0 +1,93 @@
+Smoke testsuite fails when running under security manager on JDK8
+see http://brontes.lab.eng.brq.redhat.com/viewLog.html?buildId=52198&amp;tab=buildResultsDiv&amp;buildTypeId=WF_PullRequest_LinuxSm
+failed tests:
+
+
+
+
+
+
+org.jboss.as.test.integration.jsp.JspTagTestCase.test 	
+
+
+
+
+org.jboss.as.test.integration.web.jsp.taglib.external.ExternalTagLibTestCase.testExternalAndInternalTagLib 
+
+
+
+
+org.jboss.as.test.integration.web.jsp.taglib.external.ExternalTagLibTestCase.testExternalTagLibOnly
+
+
+
+
+
+
+
+
+
+
+
+
+Caused by: java.security.AccessControlException: WFSM000001: Permission check failed (permission "("java.lang.RuntimePermission" "accessDeclaredMembers")" in code source "(file:/opt/buildAgent/work/a31d203e70e89f90/testsuite/integration/web/target/jbossas/standalone/tmp/external-dependency-only.war/ &lt;no signer certificates&gt;)" of "org.apache.jasper.servlet.JasperLoader@1b8fd02")
+
+
+
+
+    at org.wildfly.security.manager.WildFlySecurityManager.checkPermission(WildFlySecurityManager.java:270)
+
+
+
+
+    at org.wildfly.security.manager.WildFlySecurityManager.checkPermission(WildFlySecurityManager.java:172)
+
+
+
+
+    at java.lang.Class.checkMemberAccess(Class.java:2348)
+
+
+
+
+    at java.lang.Class.getDeclaredConstructor(Class.java:2177)
+
+
+
+
+    at org.jboss.as.ee.component.ReflectiveClassIntrospector.createFactory(ReflectiveClassIntrospector.java:22)
+
+
+
+
+    at org.jboss.as.ee.component.ComponentRegistry.createInstanceFactory(ComponentRegistry.java:76)
+
+
+
+
+    at org.jboss.as.web.common.WebInjectionContainer.newInstance(WebInjectionContainer.java:67)
+
+
+
+
+    at org.wildfly.extension.undertow.deployment.UndertowJSPInstanceManager.newInstance(UndertowJSPInstanceManager.java:67)
+
+
+
+
+    at org.apache.jsp.test_jsp._jspx_meth_e_005ftest_005f0(test_jsp.java:83)
+
+
+
+
+    at org.apache.jsp.test_jsp._jspService(test_jsp.java:61)
+
+
+
+
+    at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:69)
+
+
+
+
+

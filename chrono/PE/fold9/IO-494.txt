@@ -1,0 +1,2 @@
+Mismatch return type in api docs of class DirectoryWalker.
+In the api docs of class org.apache.commons.io.DirectoryWalker&lt;T&gt;, topic of 3.1 External / Multi-threaded.Method handleIsCancelled in demo code returns boolean but with a void return type.

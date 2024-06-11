@@ -1,0 +1,9 @@
+split hostname format should be consistent with tasktracker for locality
+I was running a mapreduce job (via Hive) against HBase, and noticed that I wasn&amp;apos;t getting any locality (the input split location and the task tracker machine in the job tracker UI were always different, and "Rack-local map tasks" in the job counters was 0).
+I tracked this down to a discrepancy in the way hostnames were being compared.
+The task tracker detail had a Host like
+/f/s/1.2.3.4/h.s.f.com.
+(with trailing dot)
+But the Input Split Location had
+/f/s/1.2.3.4/h.s.f.com
+(without trailing dot)

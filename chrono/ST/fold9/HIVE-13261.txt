@@ -1,0 +1,46 @@
+Can not compute column stats for partition when schema evolves
+To repro
+
+
+
+CREATE TABLE partitioned1(a INT, b STRING) PARTITIONED BY(part INT) STORED AS TEXTFILE;
+
+
+
+insert into table partitioned1 partition(part=1) values(1, &amp;apos;original&amp;apos;),(2, &amp;apos;original&amp;apos;), (3, &amp;apos;original&amp;apos;),(4, &amp;apos;original&amp;apos;);
+
+
+
+-- Table-Non-Cascade ADD COLUMNS ...
+
+alter table partitioned1 add columns(c int, d string);
+
+
+
+insert into table partitioned1 partition(part=2) values(1, &amp;apos;new&amp;apos;, 10, &amp;apos;ten&amp;apos;),(2, &amp;apos;new&amp;apos;, 20, &amp;apos;twenty&amp;apos;), (3, &amp;apos;new&amp;apos;, 30, &amp;apos;thirty&amp;apos;),(4, &amp;apos;new&amp;apos;, 40, &amp;apos;forty&amp;apos;);
+
+
+
+insert into table partitioned1 partition(part=1) values(5, &amp;apos;new&amp;apos;, 100, &amp;apos;hundred&amp;apos;),(6, &amp;apos;new&amp;apos;, 200, &amp;apos;two hundred&amp;apos;);
+
+
+
+analyze table partitioned1 compute statistics for columns;
+
+
+
+Error msg:
+
+
+
+2016-03-10T14:55:43,205 ERROR [abc3eb8d-7432-47ae-b76f-54c8d7020312 main[]]: metastore.RetryingHMSHandler (RetryingHMSHandler.java:invokeInternal(177)) - NoSuchObjectException(message:Column c for which stats gathering is requested doesn&amp;apos;t exist.)
+
+        at org.apache.hadoop.hive.metastore.ObjectStore.writeMPartitionColumnStatistics(ObjectStore.java:6492)
+
+        at org.apache.hadoop.hive.metastore.ObjectStore.updatePartitionColumnStatistics(ObjectStore.java:6574)
+
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+
+

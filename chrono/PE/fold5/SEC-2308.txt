@@ -1,0 +1,32 @@
+DefaultSpringSecurityContextSource should accept empty Base DNs
+If DefaultSpringSecurityContextSource is constructed through DefaultSpringSecurityContextSource(List&lt;String&gt; urls, String baseDn) with an empty string for baseDn,it fails as follows in line 127
+
+
+
+
+
+
+            if (trimmedUrl.contains(trimmedBaseDn)) {
+
+
+
+
+                throw new IllegalArgumentException("LDAP URL string must not include the base DN! &amp;apos;" + trimmedUrl + "&amp;apos;");
+
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+This check is over-eager if the Base DN is empty. This is the case with at least one of our customers, where their directory has an anonymous base.
+I suggest to amend that check with a condition that trimmedBaseDn is longer than zero.

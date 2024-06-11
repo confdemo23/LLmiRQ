@@ -1,0 +1,3 @@
+JSON Patch request not recognized if Content-Type header contains media type parameters
+A request isn&amp;apos;t properly recognized as a JSON Patch one, resulting in exception (as detailed in StackOverflow URL).
+Issue appears to be that PersistentEntityResourceHandlerMethodArgumentResolver builds an IncomingRequest, and that constructor sets its contentType to application/json-patch+json;charset=UTF-8. This then fails the IncomingRequest&amp;apos;s isJsonPatchRequest() test because the inbound otherType now has a parameters map entry (charset -&gt; UTF-8) and the  RestMediaTypes.JSON_PATCH_JSON does not. 

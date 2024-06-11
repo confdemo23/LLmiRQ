@@ -1,0 +1,80 @@
+CLI operation export-journal does not work with custom journal paths
+To reproduce the issue run server in stadalone mode with following properties (or you can use attached standalone-full-ha.xml)
+
+
+
+
+
+
+&lt;bindings-directory path="/var/tmp/journal/bindings"/&gt;
+
+
+
+
+&lt;journal-directory path="/var/tmp/journal/journal"/&gt;
+
+
+
+
+&lt;large-messages-directory path="/var/tmp/journal/largemessages"/&gt;
+
+
+
+
+&lt;paging-directory path="/var/tmp/journal/paging"/&gt;
+
+
+
+
+&lt;jms-queue name="testQueue" entries="jms/queue/testQueue java:jboss/exported/jms/queue/testQueue"/&gt;
+
+
+
+
+
+
+Send some messages into the testQueue with JMSDeliveryMode set to Persistent.
+
+
+
+
+
+
+TextMessage textMessage = context.createTextMessage(content);
+
+
+
+
+textMessage.setJMSDeliveryMode(DeliveryMode.PERSISTENT);
+
+
+
+
+context.createProducer().send(destination, textMessage);
+
+
+
+
+
+
+Run
+
+
+
+
+
+
+./bin/jboss-cli.sh -c ":reload(admin-only=true)"
+
+
+
+
+./bin/jboss-cli.sh -c "/subsystem=messaging-activemq/server=default/:export-journal()"
+
+
+
+
+
+
+Expectation: Exported file contains sent messages.
+Reality: Exported file contains no message.

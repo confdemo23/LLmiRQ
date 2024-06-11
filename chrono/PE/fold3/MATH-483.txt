@@ -1,0 +1,13 @@
+FastMath does not handle all special cases correctly
+FastMath has some issues with special cases such as +0.0 and -0.0.
+Here are the double cases so far found:
+abs(-0.0) expected:&lt;0.0&gt; but was:&lt;-0.0&gt;
+signum(-0.0) expected:&lt;-0.0&gt; but was:&lt;0.0&gt;
+asin(-0.0) expected:&lt;-0.0&gt; but was:&lt;0.0&gt;
+atan(-0.0) expected:&lt;-0.0&gt; but was:&lt;0.0&gt;
+log10(-0.0) expected:&lt;-Infinity&gt; but was:&lt;NaN&gt;
+toDegrees(-0.0) expected:&lt;-0.0&gt; but was:&lt;0.0&gt;
+toRadians(-0.0) expected:&lt;-0.0&gt; but was:&lt;0.0&gt;
+ulp(-Infinity) expected:&lt;Infinity&gt; but was:&lt;NaN&gt;
+And float cases:
+abs(-0.0) expected:&lt;0.0&gt; but was:&lt;-0.0&gt;

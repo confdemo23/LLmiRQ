@@ -1,0 +1,2 @@
+ensure StepExecution is saved before trying to save ExecutionContext
+http://forum.springframework.org/showthread.php?t=57647

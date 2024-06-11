@@ -1,0 +1,3 @@
+FactoryBeans for ProducerTemplate and ConsumerTemplate should be singleton to avoid
+You want the ProducerTemplate with the assigned id to be a singleton scoped instance, so its shared.
+Currently it creates a new instance which it should not.

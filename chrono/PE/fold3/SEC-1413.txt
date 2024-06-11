@@ -1,0 +1,3 @@
+AbstractRetryEntryPoint should use RedirectStrategy
+For consistency, AbstractRetryEntryPoint should probably use RedirectStrategy as implemented in SEC-1226. Possible use cases include URL pre-processing, which users might want consistently applied.
+Let me know if you agree and I am happy to supply a patch.

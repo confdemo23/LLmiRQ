@@ -1,0 +1,29 @@
+Jdbc[Mutable]AclService  can allow (all) sql statements to be configured
+I&amp;apos;m providing a candidate patch for consideration. It&amp;apos;s an enhancement to jdbc acl service that allows all sql statement strings to be configured by via spring. Please review and incorporate if desired.
+The attached patch contains:
+1) Interface for AclSQLSource (not sure if setters should really be part of this or not. I decided to include them.)
+2) DefaultAclSQLSource - contains the usual Postgres SQL statements and setters for Spring configuration. Additional constructor takes a map with property and sql map entries.
+3) Changes to JdbcAclService and JdbcMutableAclService to read statements from the AclSQLSource.
+===
+Sample configuration:
+	&lt;bean id="sqlSource"
+		class="org.springframework.security.acls.jdbc.DefaultAclSQLSource"&gt;
+		&lt;constructor-arg&gt;
+			&lt;map&gt;
+				&lt;entry key="classIdentityQuery" value="SELECT ACL_CLASS_ID_SEQ.CURRVAL FROM DUAL" /&gt;
+				&lt;entry key="sidIdentityQuery" value="SELECT ACL_SID_ID_SEQ.CURRVAL FROM DUAL" /&gt;
+				&lt;entry key="selectSidPrimaryKey"
+					value="select id from acl_sid where principal=DECODE(?,&amp;apos;TRUE&amp;apos;,&amp;apos;1&amp;apos;,&amp;apos;Y&amp;apos;,&amp;apos;1&amp;apos;,&amp;apos;1&amp;apos;,&amp;apos;1&amp;apos;,&amp;apos;FALSE&amp;apos;,&amp;apos;0&amp;apos;,&amp;apos;N&amp;apos;,&amp;apos;0&amp;apos;,&amp;apos;0&amp;apos;,&amp;apos;0&amp;apos;) and sid=?" /&gt;
+				&lt;entry key="insertSid"
+					value="insert into acl_sid (principal, sid) values (DECODE(?,&amp;apos;TRUE&amp;apos;,&amp;apos;1&amp;apos;,&amp;apos;Y&amp;apos;,&amp;apos;1&amp;apos;,&amp;apos;1&amp;apos;,&amp;apos;1&amp;apos;,&amp;apos;FALSE&amp;apos;,&amp;apos;0&amp;apos;,&amp;apos;N&amp;apos;,&amp;apos;0&amp;apos;,&amp;apos;0&amp;apos;,&amp;apos;0&amp;apos;), ?)" /&gt;
+			&lt;/map&gt;
+		&lt;/constructor-arg&gt;
+	&lt;/bean&gt;
+	&lt;bean id="aclService"
+		class="org.springframework.security.acls.jdbc.JdbcMutableAclService"&gt;
+		&lt;constructor-arg ref="secDataSource" index="0"/&gt;
+		&lt;constructor-arg ref="lookupStrategy" index="1"/&gt;
+		&lt;constructor-arg ref="aclCache" index="2"/&gt;
+		&lt;constructor-arg ref="sqlSource" index="3"/&gt;
+	&lt;/bean&gt;
+===

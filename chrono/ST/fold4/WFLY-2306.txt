@@ -1,0 +1,113 @@
+NPE in UndertowDeploymentInfoService.authMethod
+If I do not define auth method in web.xml then NPE happens during deployment (Yoda would have saved you)
+web.xml:
+
+
+
+
+
+
+    &lt;login-config&gt;
+
+
+
+
+        &lt;realm-name&gt;RestBase&lt;/realm-name&gt;
+
+
+
+
+    &lt;/login-config&gt;
+
+
+
+
+
+
+Stacktrace:
+
+
+
+
+
+
+java.lang.NullPointerException
+
+
+
+
+	at org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService.authMethod(UndertowDeploymentInfoService.java:758)
+
+
+
+
+	at org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService.createServletConfig(UndertowDeploymentInfoService.java:693)
+
+
+
+
+	at org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService.start(UndertowDeploymentInfoService.java:214)
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1944) [jboss-msc-1.2.0.Beta2.jar:1.2.0.Beta2]
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1877) [jboss-msc-1.2.0.Beta2.jar:1.2.0.Beta2]
+
+
+
+
+
+
+Related source code:
+
+
+
+
+
+
+    private static String authMethod(String configuredMethod) {
+
+
+
+
+        // TODO - Feels like a candidate for an enum but will hold off until configuration of custom methods and chaining is
+
+
+
+
+        // defined.
+
+
+
+
+        if (configuredMethod.equals("CLIENT-CERT")) { //Speak Yoda here please
+
+
+
+
+            return HttpServletRequest.CLIENT_CERT_AUTH;
+
+
+
+
+        }
+
+
+
+
+        return configuredMethod;
+
+
+
+
+    }
+
+
+
+
+

@@ -1,0 +1,2 @@
+ProxyProjectionFactory does not handle arrays correctly
+The ProxyProjectionFactory currently does not handle primitive and non-primitive arrays correctly.

@@ -1,0 +1,2 @@
+ Incorrect syntax near the keyword &apos;with&apos; using MS SQL Server
+addForUpdateClause() in TxnHandler incorrectly handles queries with WHERE clause

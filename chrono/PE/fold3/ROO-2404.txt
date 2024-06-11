@@ -1,0 +1,8 @@
+ImportRegistrationResolver uses fqn for genric types, even if not necessary
+Let&amp;apos;s assume, we have an ITD, where we use the following types:
+java.util.List&lt;java.lang.String&gt;
+java.util.List&lt;java.lang.Integer&gt;
+For the first type, the ImportRegistrationResolver sucessfully adds the proper import for java.util.List. So, the type name in the code becomes the short form:  List&lt;String&gt;
+But when the second type is resolved, ImportRegistrationResolver.isAdditionLegal() will return false, since both types have the same simple type name (List). Thus, the Javatype java.util.List&lt;java.lang.Integer&gt; is not registered as an import.
+Thus, the long form is used in the generated code: java.util.List&lt;Integer&gt;
+I think a solution to this problem could be not to keep the full JavaTypes in the Set of registered types in ImportRegistrationResolver.  Instead, the generic type arguments (and probably also array dimesions and so on) should be stripped off.  (Since java.util.List&lt;java.lang.String&gt; ,  java.util.List&lt;java.lang.Integer&gt;, java.util.List&lt;java.lang.String&gt; [] are all the same import statement java.util.List...) 

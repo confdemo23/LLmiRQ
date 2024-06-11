@@ -1,0 +1,23 @@
+EJBs accessible too early (spec violation)
+
+
+
+
+
+
+EJB 3.1 spec, section 4.8.1:
+
+
+
+
+    "If the Startup annotation appears on the Singleton bean class or if the Singleton has been designated via the deployment descriptor as requiring eager initialization, the container must initialize the Singleton bean instance during the application startup sequence. The container must initialize all such startup-time Singletons before any external client requests (that is, client requests originating outside of the application) are delivered to any enterprise bean components in the application.
+
+
+
+
+
+
+Wildlfy does not implement this correctly, and allows calls to other EJBs before a @Startup @Singleton finishes its @PostConstruct call.
+This Jira ticket handles two PR&amp;apos;s on WFLY:
+https://github.com/wildfly/wildfly/pull/8824 (that is already merged)
+and https://github.com/wildfly/wildfly/pull/8989

@@ -1,0 +1,31 @@
+Inefficient usage of map iterators
+Inefficient usage of map iterators
+
+
+
+
+
+
+Map&lt;String, CommandArgument&gt; options = getDynamicOptions(ctx);
+
+
+
+
+for (String k : options.keySet()) {
+
+
+
+
+   args.add(options.get(k));
+
+
+
+
+}
+
+
+
+
+
+
+can be replaced with args.addAll(getDynamicOptions(ctx).values());

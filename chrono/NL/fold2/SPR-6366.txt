@@ -1,0 +1,2 @@
+Cannot import bean definitions using classpath*: resource location
+Cannot import bean definitions using classpath*: resource location. Somewhere between RC1 and RC2 the behaviour of &lt;import resource="classpath*:..."/&gt; changed so that it is now treated as a relative resource, where clearly it is not.

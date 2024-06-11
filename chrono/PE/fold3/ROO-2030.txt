@@ -1,0 +1,6 @@
+exception on mixedcase imports
+To use some of the fixes made for 1.1.2 I grabbed the code from git, 1.1.2 rev 91ece7d
+The project that worked fine with ROO 1.1.2 now says when Roo starts up:
+java.lang.IllegalArgumentException: The entire package name must be lowercase (received &amp;apos;org.apache.sanselan.common.byteSources&amp;apos;)
+Problem is, the package name IS mixed case, so this requirement seems weird. What&amp;apos;s going on?
+(reference to the package name: http://commons.apache.org/sanselan/api-release/org/apache/sanselan/common/byteSources/package-summary.html )

@@ -1,0 +1,11 @@
+Enhance or create LdapTemplate.authenticate methods to throw exception rather than simply returning "false".
+The ldaptemplate.authenticate method swallows the AuthenticationException.
+I realize that the AuthenticationException is logged, but I need to return this information to the caller so that they can seek remedy.
+For example, if error is:
+52e then user will know to re-enter password
+530 then user will know to try later
+532 then user will know password has expired
+533 then user will know that account is disabled
+etc....
+Please make the ldaptemplate.authenticate throwable or somehow able to return the exception message along with FALSE.
+Or create a new set of "authenticate" methods that throw the Exception.

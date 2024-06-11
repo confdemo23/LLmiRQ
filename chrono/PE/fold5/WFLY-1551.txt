@@ -1,0 +1,3 @@
+ServletContextListener loaded twice from TLD
+With Undertow, if you define a ServletContextListener in a TLD it will be instantiated and initialized twice.
+I&amp;apos;m attaching a reproducer app.  This works on JBossWeb.

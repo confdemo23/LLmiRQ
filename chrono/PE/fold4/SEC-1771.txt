@@ -1,0 +1,2 @@
+TokenBasedRememberMeServices won&apos;t work with erased credentials
+TokenBasedRememberMeServices attempts to obtain the user&amp;apos;s password from the Authentication object, after it has been erased by the ProviderManager, meaning that remember-me won&amp;apos;t work. It will probably need to load it from the UserDetailsService when the password isn&amp;apos;t directly available.

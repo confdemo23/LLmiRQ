@@ -1,0 +1,2 @@
+camel-netty-http consumer need to close the connection if the response connection header is close
+Current Netty Http Consumer decided if it need to close connection by checking the request connection header. But if the response connection header is &amp;apos;close&amp;apos;,  the netty http consumer need to close the connection at the same time.

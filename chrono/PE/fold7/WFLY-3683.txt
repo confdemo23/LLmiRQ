@@ -1,0 +1,604 @@
+ScheduledFuture#cancel(boolean) failing to cancel tasks on bean PreDestroy
+Calls to ScheduledFuture#cancel on bean cleanup are failing to cancel subsequent tasks. 
+NOTE This only occurs when using the Trigger functionality. I tested the same code with scheduleAtFixedRate, and it works as expected.
+The following bean demonstrates the bug:
+
+
+
+
+
+
+Executor.java
+
+
+
+
+
+
+import java.util.ArrayList;
+
+
+
+
+import java.util.Collections;
+
+
+
+
+import java.util.Date;
+
+
+
+
+import java.util.Iterator;
+
+
+
+
+import java.util.List;
+
+
+
+
+import java.util.concurrent.ScheduledFuture;
+
+
+
+
+import java.util.concurrent.TimeUnit;
+
+
+
+
+
+
+
+
+
+import javax.annotation.PostConstruct;
+
+
+
+
+import javax.annotation.PreDestroy;
+
+
+
+
+import javax.annotation.Resource;
+
+
+
+
+import javax.ejb.Singleton;
+
+
+
+
+import javax.ejb.Startup;
+
+
+
+
+import javax.enterprise.concurrent.LastExecution;
+
+
+
+
+import javax.enterprise.concurrent.ManagedScheduledExecutorService;
+
+
+
+
+import javax.enterprise.concurrent.Trigger;
+
+
+
+
+
+
+
+
+
+import org.slf4j.Logger;
+
+
+
+
+import org.slf4j.LoggerFactory;
+
+
+
+
+
+
+
+
+
+/**
+
+
+
+
+ * Session Bean implementation class DataRecorderManagerBean
+
+
+
+
+ */
+
+
+
+
+@Singleton
+
+
+
+
+@Startup
+
+
+
+
+public class ExecutorBug {
+
+
+
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(ExecutorBug.class);
+
+
+
+
+
+
+
+
+
+    @Resource
+
+
+
+
+    private ManagedScheduledExecutorService executorService;
+
+
+
+
+
+
+
+
+
+    private List&lt;ScheduledFuture&lt;?&gt;&gt; scheduledTasks;
+
+
+
+
+
+
+
+
+
+    /**
+
+
+
+
+     * Default constructor.
+
+
+
+
+     */
+
+
+
+
+    public ExecutorBug() {
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+    @PostConstruct
+
+
+
+
+    void intialize() {
+
+
+
+
+        this.scheduledTasks = Collections.synchronizedList(new ArrayList&lt;ScheduledFuture&lt;?&gt;&gt;());
+
+
+
+
+
+
+
+
+
+        // Schedule the device task.
+
+
+
+
+        PeriodicTrigger trigger = new PeriodicTrigger(0, 10, TimeUnit.SECONDS);
+
+
+
+
+        ScheduledFuture&lt;?&gt; future = this.executorService.schedule(new LogRunner(), trigger);
+
+
+
+
+
+
+
+
+
+        // Create the scheduled task and add it to the map.
+
+
+
+
+        this.scheduledTasks.add(future);
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+    @PreDestroy
+
+
+
+
+    void cleanup() {
+
+
+
+
+        // Cancel any scheduled tasks, ensuring that the map is locked.
+
+
+
+
+        synchronized (this.scheduledTasks) {
+
+
+
+
+            Iterator&lt;ScheduledFuture&lt;?&gt;&gt; i = this.scheduledTasks.iterator();
+
+
+
+
+
+
+
+
+
+            while (i.hasNext()) {
+
+
+
+
+                ScheduledFuture&lt;?&gt; future = i.next();
+
+
+
+
+                // Cancel the task.
+
+
+
+
+                future.cancel(true);
+
+
+
+
+            }
+
+
+
+
+        }
+
+
+
+
+        this.scheduledTasks.clear();
+
+
+
+
+        this.scheduledTasks = null;
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+    private class LogRunner implements Runnable {
+
+
+
+
+        public LogRunner() {
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        @Override
+
+
+
+
+        public void run() {
+
+
+
+
+            LOGGER.info("I am running");
+
+
+
+
+        }
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+    private class PeriodicTrigger implements Trigger {
+
+
+
+
+        private final long periodMillis;
+
+
+
+
+        private Date startTime;
+
+
+
+
+
+
+
+
+
+        /**
+
+
+
+
+         * Creates and executes a periodic action that becomes enabled first after the given initial delay, and subsequently with the given period; that is executions will commence after initialDelay
+
+
+
+
+         * then initialDelay+period, then initialDelay + 2 * period, and so on.
+
+
+
+
+         * 
+
+
+
+
+         * @param initialDelay the time to delay first execution
+
+
+
+
+         * @param period the period between successive executions
+
+
+
+
+         * @param unit the time unit of the initialDelay and period parameters
+
+
+
+
+         */
+
+
+
+
+        public PeriodicTrigger(final long initialDelay, final long period, final TimeUnit unit) {
+
+
+
+
+            this.periodMillis = TimeUnit.MILLISECONDS.convert(period, unit);
+
+
+
+
+
+
+
+
+
+            // Calculate the start time.
+
+
+
+
+            Date now = new Date();
+
+
+
+
+            long millis = TimeUnit.MILLISECONDS.convert(initialDelay, unit);
+
+
+
+
+            this.startTime = new Date(now.getTime() + millis);
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @Override
+
+
+
+
+        public Date getNextRunTime(final LastExecution lastExecutionInfo, final Date taskScheduledTime) {
+
+
+
+
+            if (lastExecutionInfo == null) {
+
+
+
+
+                return this.startTime;
+
+
+
+
+            }
+
+
+
+
+            else {
+
+
+
+
+                return new Date(lastExecutionInfo.getScheduledStart().getTime() + this.periodMillis);
+
+
+
+
+            }
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        @Override
+
+
+
+
+        public boolean skipRun(final LastExecution lastExecutionInfo, final Date scheduledRunTime) {
+
+
+
+
+            return false;
+
+
+
+
+        }
+
+
+
+
+    }
+
+
+
+
+}
+
+
+
+
+
+
+Steps:
+
+Deploy bean in Wildfly 8.1.0-Final using maven deploy goal.
+Verify log statement is output.
+Un-deploy bean from admin console.
+
+Expected
+Log statement is no longer called
+Actual
+Log statement continues to output after bean is destroyed.

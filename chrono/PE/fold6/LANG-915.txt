@@ -1,0 +1,2 @@
+Wrong locale handling in LocaleUtils.toLocale()
+The static method LocaleUtils.toLocale() fails, at least, to parse 3-char locale strings, which are completelly valid BCP47 locales.

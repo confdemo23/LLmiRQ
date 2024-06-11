@@ -1,0 +1,4 @@
+VelocityEndpoint reads velocity templates using default encoding - add parameter to set encoding
+VelocityEndpoints reads templates using default encoding, so I cannot get correct content while running on Windows and Linux.
+The reason is that there is used InputStreamReader constructor without encoding parameter.
+I&amp;apos;ve added simple support for setting encoding - see attached patch

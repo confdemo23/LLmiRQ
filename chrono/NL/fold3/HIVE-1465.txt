@@ -1,0 +1,32 @@
+hive-site.xml ${user.name} not replaced for local-file derby metastore connection URL
+Seems that for this parameter
+
+
+
+&lt;property&gt;
+
+&lt;name&gt;javax.jdo.option.ConnectionURL&lt;/name&gt;
+
+&lt;value&gt;jdbc:derby:;databaseName=/var/lib/hive/metastore/${user.name}_db;create=true&lt;/value&gt;
+
+&lt;description&gt;JDBC connect string for a JDBC metastore&lt;/description&gt;
+
+&lt;/property&gt;
+
+
+
+${user.name} is never replaced by the actual user name:
+
+
+
+$ ls -la /var/lib/hive/metastore/
+
+total 24
+
+drwxrwxrwt 3 root root 4096 Apr 30 12:37 .
+
+drwxr-xr-x 3 root root 4096 Apr 30 12:25 ..
+
+drwxrwxr-x 5 hadoop hadoop 4096 Apr 30 12:37 ${user.name}_db
+
+

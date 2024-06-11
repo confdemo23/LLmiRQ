@@ -1,0 +1,22 @@
+XMLConfiguration isEmpty has altered behaviour between 1.4  and 1.6
+Given xml configuration file
+
+ 
+
+&lt;?xml version="1.0" encoding="ISO-8859-1" ?&gt;
+
+&lt;empty&gt;&lt;/empty&gt;
+
+
+
+
+
+
+XMLConfiguration xml = new XMLConfiguration(file);
+
+assertTrue(xml.isEmpty());
+
+
+
+isEmpty() returned true on version 1.4 ?, now it returns false, and the configuration contains a single empty string as key.
+Not sure if this should be considered a bug, but the documnetation reads: Checks if this configuration is empty. Empty means that there are no keys with any values, though there can be some (empty) nodes. 

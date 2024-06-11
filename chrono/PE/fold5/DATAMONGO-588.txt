@@ -1,0 +1,7 @@
+MongoTemplate.insert does not initialize null versions to zero
+When persisting an object with a null @version field, you get different results when calling MongoTemplate.insert(Object) versus MongoTemplate.save(Object):
+
+MongoTemplate.insert ==&gt; @version = null
+MongoTemplate.save ==&gt; @version = 0
+
+I think the insert method should set @version to zero when it is null, like is done for the save method.

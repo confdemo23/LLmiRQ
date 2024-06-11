@@ -1,0 +1,7 @@
+BUG in org.apache.commons.collections.CollectionUtils.removeAll(Collection, Collection)   
+line: 1121
+public static Collection removeAll(Collection collection, Collection remove) 
+{
+    return ListUtils.retainAll(collection, remove); //&lt;&lt;&lt;&lt;&lt;-------- here absolutely wrong!
+
+}

@@ -1,0 +1,1 @@
+JGroups extension uses deprecated transformer API

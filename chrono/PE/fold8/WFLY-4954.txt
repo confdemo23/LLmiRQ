@@ -1,0 +1,43 @@
+Undertow mod_cluster proxy enforces aliases checks a.k.a. UseAlias:true
+If one uses hostnames and a worker registers itself e.g. as Host=karm.brq.redhat.com the Undertow mod_cluster proxy enforces exact alias matching, which corresponds to Apache HTTP Server mod_cluster module implementation directive UseAlias being set to 1 (enforcing).
+Symptoms
+Thus registered worker&amp;apos;s context:
+
+
+
+
+
+
+INFO  [io.undertow] (default task-3) registering context /clusterbench, for node worker-1, 
+
+
+
+
+with aliases [default-host, localhost]
+
+
+
+
+
+ causes HTTP 404 errors both while trying to access the context on IP address or hostname.
+This worker: 
+
+
+
+
+
+INFO  [io.undertow] (default task-20) registering context /clusterbench, for node worker-1, 
+
+
+
+
+with aliases [default-host, karm.brq.redhat.com]
+
+
+
+
+
+, with one of its aliases being karm.brq.redhat.com could be accessed via the Undertow mod_cluster proxy without problems.
+Call to action
+We need to decide whether this difference in default behaviour is desirable or not and act accordingly.
+WDYT? 

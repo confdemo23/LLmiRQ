@@ -1,0 +1,30 @@
+Raise an exception if a step cannot be reached.
+If a &lt;job/&gt; is defined with a &lt;step/&gt; that cannot be reached during the flow of the job, then an exception should be raised by the parser.
+For example, the following will raise an exception because "stepB" can never be executed.
+
+
+
+
+
+
+&lt;job id="job"&gt;
+
+
+
+
+    &lt;step id="stepA"/&gt;
+
+
+
+
+    &lt;step id="stepB"/&gt;
+
+
+
+
+&lt;/job&gt;
+
+
+
+
+

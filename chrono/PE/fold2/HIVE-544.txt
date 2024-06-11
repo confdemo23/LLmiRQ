@@ -1,0 +1,2 @@
+predicate pushdown is not handling exprFieldNodeDesc correctly
+complex column fields are not handled correctly resulting in ClassCastException.

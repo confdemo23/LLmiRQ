@@ -1,0 +1,2 @@
+SaajSoapMessage.setSaajMessage() and AxiomSoapMessage.setAxiomMessage() should clear cached fields
+The cached envelope fields in SaajSoapMessage and AxiomSoapMessage should be set to null when setSaajMessage or setAxiomMessage is called.

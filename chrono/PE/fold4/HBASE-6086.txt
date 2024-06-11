@@ -1,0 +1,22 @@
+Admin operations on a table should be authorized against table permissions instead of global permissions.
+Still some inconsistency exists after HBASE-6061. We actually need to authorize against table permissions instead of global permissions here.
+
+
+
++  private void requireTableAdminPermission(MasterCoprocessorEnvironment e,
+
++      byte[] tableName) throws IOException {
+
++    if (isActiveUserTableOwner(e, tableName)) {
+
++      requirePermission(Permission.Action.CREATE);
+
++    } else {
+
++      requirePermission(Permission.Action.ADMIN);
+
++    }
+
++  }
+
+

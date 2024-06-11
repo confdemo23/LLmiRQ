@@ -1,0 +1,3 @@
+Function like with empty string is throwing null pointer exception
+select emp.ename from emp where ename like &amp;apos;&amp;apos;
+This query is throwing null pointer exception

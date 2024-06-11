@@ -1,0 +1,16 @@
+Tab completion does not work in messaging-activemq subsystem for "path" attributes 
+Tab completion does not work in message-activemq subsystem for "path" attributes. For example when trying to specify exported journal file on file system for :import-journal operation:
+
+
+
+
+
+
+/subsystem=messaging-activemq/server=default:import-journal(file=/home/mnovak/jour &lt;-- tab does not provide help
+
+
+
+
+
+
+Pressing Tab does not provide help.

@@ -1,0 +1,2 @@
+MessageContextErrors implementation does not implement all Errors methods
+See http://forum.springframework.org/showthread.php?t=58249

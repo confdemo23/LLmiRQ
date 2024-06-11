@@ -1,0 +1,2 @@
+hbck should check fs owner/permissions.
+In some cases, hbck needs to be run as a user that has write perms to the file system.  If it writes data to hbase&amp;apos;s directories, it may write new files/dirs that the hbase processes&amp;apos;s user does not have permissions to.  We should alert the user of this situation.

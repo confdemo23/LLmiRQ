@@ -1,0 +1,1 @@
+Singleton extension uses deprecated transformer API

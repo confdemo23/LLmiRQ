@@ -1,0 +1,3 @@
+Failure to commit state shouldn&apos;t trigger response failure
+We should log a warning instead, ideally commit data to the local node (e.g. AS5/AS7 behavior).
+In sync case its too late to propagate to undertow because the response was already commited.

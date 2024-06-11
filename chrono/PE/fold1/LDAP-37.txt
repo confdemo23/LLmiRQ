@@ -1,0 +1,46 @@
+Controls[]  java.lang.NullPointerException when performing PagedResultsRequestControl search
+http://forum.springframework.org/showthread.php?p=96427#post96427
+
+
+
+
+
+
+        Control[] requestControls = ldapContext.getRequestControls();
+
+
+
+
+        Control newControl = createRequestControl();
+
+
+
+
+
+
+
+
+
+        Control[] newControls = new Control[requestControls.length + 1];
+
+
+
+
+        for (int i = 0; i &lt; requestControls.length; i++) {
+
+
+
+
+            newControls[i] = requestControls[i];
+
+
+
+
+        }
+
+
+
+
+
+
+new Control(int) needs to perform a null pointer check. 

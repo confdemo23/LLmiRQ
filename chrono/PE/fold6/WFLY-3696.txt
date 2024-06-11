@@ -1,0 +1,78 @@
+Security domain configuration doesn&apos;t allow empty or missing login-module-stack
+https://bugzilla.redhat.com/show_bug.cgi?id=901075 description: 
+project_key: JBPAPP6
+Adding a security domain with JASPI authentication fails if there is no (or is empty) login-module-stack. It should be possible to add custom ServerAuthModule, which doesn&amp;apos;t use JAAS login modules.
+
+
+
+
+
+
+&lt;security-domain name="jmx-console" cache-type="default"&gt;
+
+
+
+
+	&lt;authentication-jaspi&gt;
+
+
+
+
+
+
+
+
+
+		&lt;!-- FIXME: the not empty login-module-stack must be provided even it&amp;apos;s not used --&gt;
+
+
+
+
+		&lt;login-module-stack name="lm-stack"&gt;
+
+
+
+
+			&lt;login-module code="UsersRoles" flag="required"/&gt;
+
+
+
+
+		&lt;/login-module-stack&gt;
+
+
+
+
+
+
+
+
+
+		&lt;auth-module code="org.jboss.example.CustomServerAuthModule" flag="required"&gt;
+
+
+
+
+			&lt;module-option name="option1" value="value1" /&gt;
+
+
+
+
+		&lt;/auth-module&gt;
+
+
+
+
+	&lt;/authentication-jaspi&gt;
+
+
+
+
+&lt;/security-domain&gt;
+
+
+
+
+
+
+It should be possible to remove here the login-module-stack element.

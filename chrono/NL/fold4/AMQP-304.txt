@@ -1,0 +1,16 @@
+Tests are not closing Rabbit connections properly
+The JUnit tests are not closing the RabbitMQ connections correctly. This may lead to a hanging build (depends on the OS but observed on Mac OS):
+
+
+
+
+
+
+Building &gt; :spring-rabbit:test &gt; 254 tests completed, 1 skipped
+
+
+
+
+
+
+In the RabbitMQ admin you may observe that the Socket descriptors max out (E.g. on my Mac I have 138 available)

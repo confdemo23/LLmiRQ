@@ -1,0 +1,3 @@
+BoundedQueueThreadPoolWriteAttributeHandler does not deal with undefined core-threads correctly
+BoundedQueueThreadPoolWriteAttributeHandler doesn&amp;apos;t deal with undefined values for core-threads correctly. It assumes the attribute will be defined, and that&amp;apos;s not required.
+The attribute doesn&amp;apos;t have a fixed default value. Instead, the behavior in add is to set the runtime value to match max-threads of core-threads is undefined. BoundedQueueThreadPoolWriteAttributeHandler should do the same.

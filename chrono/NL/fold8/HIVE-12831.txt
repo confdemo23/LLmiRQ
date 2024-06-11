@@ -1,0 +1,1 @@
+Thrift and RDBMS changes for HIVE-10249

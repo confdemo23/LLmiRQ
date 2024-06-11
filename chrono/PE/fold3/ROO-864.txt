@@ -1,0 +1,8 @@
+Give more details with error message "The entire package name must be lowercase"
+When starting roo, I receive the message "The entire package name must be lowercase".
+Roo starts but I cannot execute any commands.
+I found where the message is thrown in an AssertTrue statement assumption. 
+I found where in the ROO code that throws the assertion: https://src.springframework.org/svn/spring-roo/branches/branch-1.0.x/model/src/main/java/org/springframework/roo/model/JavaPackage.java
+The problem is I am unsure where or how to find out what could be wrong with my code.  
+This is a project that has been running just fine.  I deleted some classes and now I cannot get roo to run.
+Based upon the assertion, it is running as specified so it may not be a bug, but I cannot figure out where in the load process it is failing.

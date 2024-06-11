@@ -1,0 +1,2 @@
+Fix MethodUtilsTest so it does not depend on JDK method ordering
+Placeholder for https://github.com/apache/commons-lang/pull/30.

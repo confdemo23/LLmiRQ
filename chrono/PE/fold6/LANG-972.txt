@@ -1,0 +1,2 @@
+NumberUtils#isNumber does not allow for hex 0XABCD
+isNumber() does not allow for 0XABCD whereas createNumber() allows for both 0xABCD and 0XABCD

@@ -1,0 +1,3 @@
+Allow HBaseStorageHandler to work with hbase 0.90.1
+Currently HBase handler works with hbase 0.89
+We should make it work with 0.90.1 and utilize new features of 0.90.1

@@ -1,0 +1,5 @@
+Event with qualifier @Initialized not raised if no webapp is deployed
+As stated in the CDI-specification (section 6.7.3. Application context lifecycle)
+
+An event with qualifier @Initialized(ApplicationScoped.class) is fired when the application context is initialized and an event with qualifier @Destroyed(ApplicationScoped.class) is fired when the application is destroyed. 
+But in my environment this is only true, if the deployed application (packaged in an EAR) contains a webapplication (as WAR inside the EAR). If there is no webapplication, the event is not raised and observer-methods are not called at all.

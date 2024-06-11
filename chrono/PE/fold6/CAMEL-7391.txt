@@ -1,0 +1,2 @@
+camel-netty - NettyProduce should use timer from component instead of creating new timer per producer
+We should use the shared timer, instead of creating a new timer per producer.

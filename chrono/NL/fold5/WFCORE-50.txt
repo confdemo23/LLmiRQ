@@ -1,0 +1,2 @@
+CLI tests using non-standard output stream don&apos;t reset the terminal when done
+The problem appears only when running single tests. If the tests are run using a wildcard, there is no problem.

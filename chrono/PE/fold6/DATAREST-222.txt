@@ -1,0 +1,1 @@
+Path.matches() should escape reference before trying to match it

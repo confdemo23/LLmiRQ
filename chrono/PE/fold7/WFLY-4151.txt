@@ -1,0 +1,5 @@
+Spring Security with Active Directory Provider throwing Wrapped NamingException
+There is a bug logged against Spring Security for this issue as well https://jira.spring.io/browse/SEC-2754
+Providing the ActiveDirectoryLdapAuthenticationProvider with incorrect credentials causes internal server error when running on JBoss.
+This is because ActiveDirectoryLdapAuthenticationProvider only considers top-level LdapExceptions, whereas JBoss seems to wrap exceptions thrown by InitialLdapContext into a top-level NamingException.
+The issue does provide a suggested patch to spring security however I don&amp;apos;t understand why Wildfly is wrapping the LdapExceptions when it did not appear to do this as late as JBoss EAP 6.2.0.GA

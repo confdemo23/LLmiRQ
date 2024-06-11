@@ -1,0 +1,149 @@
+Deploying an empty managed exploded deployment to server group in domain fails
+Deploying an empty exploded deployment created on domain controller fails with the following:
+
+
+
+
+
+
+    [domain@localhost:9990 /] /deployment=empty-deployment.jar:add(content=[{empty=true}])
+
+
+
+
+    {
+
+
+
+
+        "outcome" =&gt; "success",
+
+
+
+
+        "result" =&gt; undefined,
+
+
+
+
+        "server-groups" =&gt; undefined
+
+
+
+
+    }
+
+
+
+
+    [domain@localhost:9990 /] /server-group=main-server-group/deployment=empty-deployment.jar:add()              
+
+
+
+
+    {
+
+
+
+
+        "outcome" =&gt; "failed",
+
+
+
+
+        "result" =&gt; undefined,
+
+
+
+
+        "failure-description" =&gt; {"WFLYDC0074: Operation failed or was rolled back on all servers. Server failures:" =&gt; {"server-group" =&gt; {"main-server-group" =&gt; {"host" =&gt; {"master" =&gt; {
+
+
+
+
+            "server-one" =&gt; "WFLYSRV0201: Cannot have more than one of [bytes, input-stream-index, hash, url, empty]",
+
+
+
+
+            "server-two" =&gt; "WFLYSRV0201: Cannot have more than one of [bytes, input-stream-index, hash, url, empty]"
+
+
+
+
+        }}}}}},
+
+
+
+
+        "rolled-back" =&gt; true,
+
+
+
+
+        "server-groups" =&gt; {"main-server-group" =&gt; {"host" =&gt; {"master" =&gt; {
+
+
+
+
+            "server-one" =&gt; {"response" =&gt; {
+
+
+
+
+                "outcome" =&gt; "failed",
+
+
+
+
+                "failure-description" =&gt; "WFLYSRV0201: Cannot have more than one of [bytes, input-stream-index, hash, url, empty]",
+
+
+
+
+                "rolled-back" =&gt; true
+
+
+
+
+            }},
+
+
+
+
+            "server-two" =&gt; {"response" =&gt; {
+
+
+
+
+                "outcome" =&gt; "failed",
+
+
+
+
+                "failure-description" =&gt; "WFLYSRV0201: Cannot have more than one of [bytes, input-stream-index, hash, url, empty]",
+
+
+
+
+                "rolled-back" =&gt; true
+
+
+
+
+            }}
+
+
+
+
+        }}}}
+
+
+
+
+    }
+
+
+
+
+

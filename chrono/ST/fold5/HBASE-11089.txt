@@ -1,0 +1,34 @@
+Use proxy user for security integration test where multiple users are needed
+We have seen the following test failure:
+
+
+
+2014-02-06 02:58:25,315|beaver.machine|INFO|RUNNING: /usr/bin/kinit -c /grid/0/hadoopqe/artifacts/kerberosTickets/hbase.kerberos.ticket -k -t /home/hrt_qa/hadoopqa/keytabs/hbase.headless.keytab hbase
+
+2014-02-06 02:58:25,325|beaver.machine|INFO|RUNNING: /usr/lib/hbase/bin/hbase --config /tmp/hbaseConf org.apache.hadoop.hbase.IntegrationTestsDriver -regex IntegrationTestIngestWithACL
+
+
+
+2014-02-06 02:58:34,489|beaver.machine|INFO|2014-02-06 02:58:34,489 DEBUG HBaseWriterThreadWithACL_1 token.AuthenticationTokenSelector: No matching token found
+
+2014-02-06 02:58:34,493|beaver.machine|INFO|2014-02-06 02:58:34,489 DEBUG HBaseWriterThreadWithACL_1 security.HBaseSaslRpcClient: Creating SASL GSSAPI client. Server&amp;apos;s Kerberos principal name is hbase/h2-ubuntu12-sec-1391405488-hbase-7.cs1cloud.internal@EXAMPLE.COM
+
+2014-02-06 02:58:34,493|beaver.machine|INFO|2014-02-06 02:58:34,491 WARN HBaseWriterThreadWithACL_1 security.UserGroupInformation: PriviledgedActionException as:owner (auth:SIMPLE) cause:javax.security.sasl.SaslException: GSS initiate failed Caused by GSSException: No valid credentials provided (Mechanism level: Failed to find any Kerberos tgt)
+
+2014-02-06 02:58:34,493|beaver.machine|INFO|2014-02-06 02:58:34,492 WARN HBaseWriterThreadWithACL_1 ipc.RpcClient: Exception encountered while connecting to the server : javax.security.sasl.SaslException: GSS initiate failed Caused by GSSException: No valid credentials provided (Mechanism level: Failed to find any Kerberos tgt)
+
+2014-02-06 02:58:34,498|beaver.machine|INFO|2014-02-06 02:58:34,493 FATAL HBaseWriterThreadWithACL_1 ipc.RpcClient: SASL authentication failed. The most likely cause is missing or invalid credentials. Consider &amp;apos;kinit&amp;apos;.
+
+2014-02-06 02:58:34,499|beaver.machine|INFO|javax.security.sasl.SaslException: GSS initiate failed Caused by GSSException: No valid credentials provided (Mechanism level: Failed to find any Kerberos tgt)
+
+2014-02-06 02:58:34,499|beaver.machine|INFO|at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:194)
+
+2014-02-06 02:58:34,499|beaver.machine|INFO|at org.apache.hadoop.hbase.security.HBaseSaslRpcClient.saslConnect(HBaseSaslRpcClient.java:152)
+
+2014-02-06 02:58:34,500|beaver.machine|INFO|at org.apache.hadoop.hbase.ipc.RpcClient$Connection.setupSaslConnection(RpcClient.java:762)
+
+
+
+The above test failure was due to the second user in the test not being able to authenticate using kerberos.
+This can be solved using impersonation which is described here : http://hadoop.apache.org/docs/r1.2.1/Secure_Impersonation.html
+The superuser needs to authenticate using kerberos. The superuser can impersonate any member of the specified groups.

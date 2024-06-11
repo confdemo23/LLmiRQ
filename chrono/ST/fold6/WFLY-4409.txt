@@ -1,0 +1,172 @@
+java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy. It&apos;s not clear what&apos;s the reason of the problem from the log
+In the log during the application server startup we see in the log file:
+
+
+
+
+
+
+[0m[31m15:10:25,997 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-1) MSC000001: Failed to start service jboss.deployment.subunit."mms.ear"."webservices.jar".POST_MODULE: org.jboss.msc.service.StartException in service jboss.deployment.subunit."mms.ear"."webservices.jar".POST_MODULE: JBAS018733: Failed to process phase POST_MODULE of subdeployment "webservices.jar" of deployment "mms.ear"
+
+
+
+
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:166) [wildfly-server-8.2.0.Final.jar:8.2.0.Final]
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948) [jboss-msc-1.2.2.Final.jar:1.2.2.Final]
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881) [jboss-msc-1.2.2.Final.jar:1.2.2.Final]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [rt.jar:1.8.0_25]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [rt.jar:1.8.0_25]
+
+
+
+
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.8.0_25]
+
+
+
+
+Caused by: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy
+
+
+
+
+	at sun.reflect.annotation.AnnotationParser.parseClassArray(AnnotationParser.java:724) [rt.jar:1.8.0_25]
+
+
+
+
+	at sun.reflect.annotation.AnnotationParser.parseArray(AnnotationParser.java:531) [rt.jar:1.8.0_25]
+
+
+
+
+	at sun.reflect.annotation.AnnotationParser.parseMemberValue(AnnotationParser.java:355) [rt.jar:1.8.0_25]
+
+
+
+
+	at sun.reflect.annotation.AnnotationParser.parseAnnotation2(AnnotationParser.java:286) [rt.jar:1.8.0_25]
+
+
+
+
+	at sun.reflect.annotation.AnnotationParser.parseAnnotations2(AnnotationParser.java:120) [rt.jar:1.8.0_25]
+
+
+
+
+	at sun.reflect.annotation.AnnotationParser.parseAnnotations(AnnotationParser.java:72) [rt.jar:1.8.0_25]
+
+
+
+
+	at java.lang.Class.createAnnotationData(Class.java:3513) [rt.jar:1.8.0_25]
+
+
+
+
+	at java.lang.Class.annotationData(Class.java:3502) [rt.jar:1.8.0_25]
+
+
+
+
+	at java.lang.Class.getAnnotation(Class.java:3407) [rt.jar:1.8.0_25]
+
+
+
+
+	at org.jboss.as.ejb3.deployment.processors.BusinessViewAnnotationProcessor.getRemoteBusinessInterfaces(BusinessViewAnnotationProcessor.java:148)
+
+
+
+
+	at org.jboss.as.ejb3.deployment.processors.BusinessViewAnnotationProcessor.processViewAnnotations(BusinessViewAnnotationProcessor.java:116)
+
+
+
+
+	at org.jboss.as.ejb3.deployment.processors.BusinessViewAnnotationProcessor.deploy(BusinessViewAnnotationProcessor.java:90)
+
+
+
+
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:159) [wildfly-server-8.2.0.Final.jar:8.2.0.Final]
+
+
+
+
+	... 5 more
+
+
+
+
+...
+
+
+
+
+[0m[31m15:10:27,315 ERROR [org.jboss.as.controller.management-operation] (management-handler-thread - 4) JBAS014613: Operation ("deploy") failed - address: ([("deployment" =&gt; "mms.ear")]) - failure description: {
+
+
+
+
+    "JBAS014671: Failed services" =&gt; {"jboss.deployment.subunit.\"mms.ear\".\"webservices.jar\".POST_MODULE" =&gt; "org.jboss.msc.service.StartException in service jboss.deployment.subunit.\"mms.ear\".\"webservices.jar\".POST_MODULE: JBAS018733: Failed to process phase POST_MODULE of subdeployment \"webservices.jar\" of deployment \"mms.ear\"
+
+
+
+
+    Caused by: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy"},
+
+
+
+
+    "JBAS014771: Services with missing/unavailable dependencies" =&gt; [
+
+
+
+
+        "jboss.deployment.unit.\"mms.ear\".weld.weldClassIntrospector is missing [jboss.deployment.unit.\"mms.ear\".beanmanager]",
+
+
+
+
+        "jboss.naming.context.java.comp.mms.wp.TemplateVariableService.Validator is missing [jboss.naming.context.java.comp.mms.wp.TemplateVariableService]",
+
+
+
+
+        "jboss.naming.context.java.comp.mms.configuration.GenericDao.InAppClientContainer is missing [jboss.naming.context.java.comp.mms.configuration.GenericDao]",
+
+
+
+
+        "jboss.naming.context.java.comp.mms.mmsServiceEJB.MMSMagnoliaSSOService.ORB is missing [jboss.naming.context.java.comp.mms.mmsServiceEJB.MMSMagnoliaSSOService]",
+
+
+
+
+...
+
+
+
+
+
+
+From this  output it&amp;apos;s not clear what exactly is absent in the ear file. 
+Could you refactor logging for this error. In order to display which exactly annotation was not found.

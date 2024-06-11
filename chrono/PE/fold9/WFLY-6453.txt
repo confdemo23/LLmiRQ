@@ -1,0 +1,2 @@
+InfinispanSessionManager#getLocalSessions should only return sessions with current node locality
+Stumbled upon while fixing WFLY-6294; mod_cluster is the only consumer of this at the moment.

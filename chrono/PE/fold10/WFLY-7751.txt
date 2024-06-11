@@ -1,0 +1,3 @@
+mod_cluster XML parsers are loaded eagerly
+We need to make use of the new API method: 
+org.jboss.as.controller.parsing.ExtensionParsingContext#setSubsystemXmlMapping(java.lang.String, java.lang.String, java.util.function.Supplier&lt;org.jboss.staxmapper.XMLElementReader&lt;java.util.List&lt;org.jboss.dmr.ModelNode&gt;&gt;&gt;)

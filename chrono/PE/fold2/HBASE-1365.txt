@@ -1,0 +1,2 @@
+Typo in TableInputFormatBase.setInputColums
+Typo in method name.  TableInputFormatBase.getInputColums should be .getInputColumns.

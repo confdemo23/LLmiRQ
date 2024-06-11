@@ -1,0 +1,183 @@
+Cannot inject TransactionSynchronizationRegistry into CDI bean
+It&amp;apos;s not possible to inject TransactionSynchronizationRegistry to CDI bean as follows:
+
+
+
+
+
+
+@ApplicationScoped
+
+
+
+
+public class CdiBean {
+
+
+
+
+
+
+
+
+
+    @Resource
+
+
+
+
+    TransactionSynchronizationRegistry transactionSynchronizationRegistry;
+
+
+
+
+}
+
+
+
+
+
+
+This results to:
+
+
+
+
+
+
+java.lang.IllegalArgumentException: WFLYWELD0049: Error injecting resource into CDI managed bean. Can&amp;apos;t find a resource named java:comp/env/org.jboss.as.test.integration.weld.jta.CdiBean/transactionSynchronizationRegistry defined on javax.transaction.TransactionSynchronizationRegistry org.jboss.as.test.integration.weld.jta.CdiBean.transactionSynchronizationRegistry
+
+
+
+
+	at org.jboss.as.naming.ServiceBasedNamingStore.lookup(ServiceBasedNamingStore.java:106)
+
+
+
+
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:207)
+
+
+
+
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:184)
+
+
+
+
+	at org.jboss.as.naming.InitialContext$DefaultInitialContext.lookup(InitialContext.java:237)
+
+
+
+
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:193)
+
+
+
+
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:189)
+
+
+
+
+	at javax.naming.InitialContext.lookup(InitialContext.java:417)
+
+
+
+
+	at javax.naming.InitialContext.lookup(InitialContext.java:417)
+
+
+
+
+	at org.jboss.as.weld.services.bootstrap.WeldResourceInjectionServices.resolveResource(WeldResourceInjectionServices.java:210)
+
+
+
+
+	at org.jboss.as.weld.services.bootstrap.WeldResourceInjectionServices$1.createResource(WeldResourceInjectionServices.java:158)
+
+
+
+
+	at org.jboss.weld.injection.AbstractResourceInjection.getResourceReference(AbstractResourceInjection.java:44)
+
+
+
+
+	at org.jboss.weld.injection.AbstractResourceInjection.injectResourceReference(AbstractResourceInjection.java:53)
+
+
+
+
+	at org.jboss.weld.util.Beans.injectEEFields(Beans.java:351)
+
+
+
+
+	at org.jboss.weld.injection.producer.ResourceInjector$1.proceed(ResourceInjector.java:69)
+
+
+
+
+	at org.jboss.weld.injection.InjectionContextImpl.run(InjectionContextImpl.java:48)
+
+
+
+
+	at org.jboss.weld.injection.producer.ResourceInjector.inject(ResourceInjector.java:72)
+
+
+
+
+	at org.jboss.weld.injection.producer.BasicInjectionTarget.inject(BasicInjectionTarget.java:121)
+
+
+
+
+	at org.jboss.weld.bean.ManagedBean.create(ManagedBean.java:159)
+
+
+
+
+	at org.jboss.weld.context.AbstractContext.get(AbstractContext.java:96)
+
+
+
+
+	at org.jboss.weld.bean.ContextualInstanceStrategy$DefaultContextualInstanceStrategy.get(ContextualInstanceStrategy.java:101)
+
+
+
+
+	at org.jboss.weld.bean.ContextualInstanceStrategy$ApplicationScopedContextualInstanceStrategy.get(ContextualInstanceStrategy.java:141)
+
+
+
+
+	at org.jboss.weld.bean.ContextualInstance.get(ContextualInstance.java:50)
+
+
+
+
+	at org.jboss.weld.bean.proxy.ContextBeanInstance.getInstance(ContextBeanInstance.java:99)
+
+
+
+
+	at org.jboss.weld.bean.proxy.ProxyMethodHandler.getInstance(ProxyMethodHandler.java:125)
+
+
+
+
+	at org.jboss.as.test.integration.weld.jta.CdiBean$Proxy$_$$_WeldClientProxy.isTransactionSynchronizationRegistryInjected(Unknown Source)
+
+
+
+
+	at org.jboss.as.test.integration.weld.jta.TransactionSynchronizationRegistryInjectionTestCase.testTransactionSynchronizationRegistryIsInjected(TransactionSynchronizationRegistryInjectionTestCase.java:30)
+
+
+
+
+

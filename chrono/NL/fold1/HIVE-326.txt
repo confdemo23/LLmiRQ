@@ -1,0 +1,4 @@
+[hive] groupby count distinct with nulls has some problems
+select a, count(distinct b) from T group by a;
+had some problems if b is null.
+I will construct the exact testcase and get back

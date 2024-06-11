@@ -1,0 +1,3 @@
+XML Signature: XAdES: Wrong value for attribute "Qualifier" of element CommitmentTypeId
+If you specify in the XAdES Properties a value of the attribute
+attribute "Qualifier" of the element "CommitmentTypeId" then this value is not used, instead wrongly the value of the  DataObjectFormatIdentifierQualifier is used. 

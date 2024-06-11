@@ -1,0 +1,120 @@
+Javadoc for DefaultLdapAuthoritiesPopulator lists wrong class name & incorrect property
+http://docs.spring.io/spring-security/site/docs/3.2.0.RELEASE/apidocs/org/springframework/security/ldap/userdetails/DefaultLdapAuthoritiesPopulator.html
+shows
+
+
+
+
+
+
+&lt;bean id="ldapAuthoritiesPopulator"
+
+
+
+
+       class="org.springframework.security.authentication.ldap.populator.DefaultLdapAuthoritiesPopulator"&gt;
+
+
+
+
+   &lt;constructor-arg ref="contextSource"/&gt;
+
+
+
+
+   &lt;constructor-arg value="ou=groups"/&gt;
+
+
+
+
+   &lt;property name="groupRoleAttribute" value="ou"/&gt;
+
+
+
+
+ &lt;!-- the following properties are shown with their default values --&gt;
+
+
+
+
+   &lt;property name="searchSubTree" value="false"/&gt;
+
+
+
+
+   &lt;property name="rolePrefix" value="ROLE_"/&gt;
+
+
+
+
+   &lt;property name="convertToUpperCase" value="true"/&gt;
+
+
+
+
+ &lt;/bean&gt;
+
+
+
+
+
+
+but should be
+
+
+
+
+
+
+&lt;bean id="ldapAuthoritiesPopulator"
+
+
+
+
+       class="org.springframework.security.ldap.userdetails.DefaultLdapAuthoritiesPopulator"&gt;
+
+
+
+
+   &lt;constructor-arg ref="contextSource"/&gt;
+
+
+
+
+   &lt;constructor-arg value="ou=groups"/&gt;
+
+
+
+
+   &lt;property name="groupRoleAttribute" value="ou"/&gt;
+
+
+
+
+ &lt;!-- the following properties are shown with their default values --&gt;
+
+
+
+
+   &lt;property name="searchSubTree" value="false"/&gt;
+
+
+
+
+   &lt;property name="rolePrefix" value="ROLE_"/&gt;
+
+
+
+
+   &lt;property name="convertToUpperCase" value="true"/&gt;
+
+
+
+
+ &lt;/bean&gt;
+
+
+
+
+
+

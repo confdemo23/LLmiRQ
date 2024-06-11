@@ -1,0 +1,3 @@
+Webservices subsystem requires reload when it does not actually need to
+When trying undefining and already undefined attribute of the webservices subsystem of a WildFly container on which at least a WS deployment is active, the operation requires reload if the attribute has a default value.
+See http://lists.jboss.org/pipermail/wildfly-dev/2015-June/004013.html for further details.

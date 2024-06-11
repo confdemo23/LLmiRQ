@@ -1,0 +1,2 @@
+Hive fails on zero length files
+Flume will, at times, generate zero length files. This causes queries to fail on Avro data and likely sequence file as well.

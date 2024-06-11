@@ -1,0 +1,14 @@
+Bucket pruning: bucketing for -ve hashcodes have historical issues
+The different ETL pathways differed in reducer choice slightly for -ve hashcodes.
+
+
+
+(hashCode &amp; Integer.MAX_VALUE) % numberOfBuckets;
+
+!=
+
+Math.abs(hashCode) % numberOfBuckets
+
+
+
+Add a backwards compat option, which can be used to protect against old data left over from 0.13.

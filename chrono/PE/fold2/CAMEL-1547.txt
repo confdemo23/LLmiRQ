@@ -1,0 +1,3 @@
+Delayer and StreamCaching will not be exculded if the CamelContext is restarted
+The InterceptStrategy of Delayer and StreamCaching can&amp;apos;t tell if the camelContext&amp;apos;s InterceptStrategies has the instance of Delayer or StreamCaching.
+So the  InterceptStrategy of Delayer and StreamCaching  will be added to the CamelContext&amp;apos;s InterceptStrategies, when the CamelContext  is restarted.

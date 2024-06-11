@@ -1,0 +1,31 @@
+Operation list-delivering-messages is missing in CLI
+There is missing operation list-delivering-messages on runtime-queue:
+
+
+
+
+
+
+[standalone@localhost:9990 /] /subsystem=messaging-activemq/server=default/runtime-queue=jms.queue.testQueue:list-
+
+
+
+
+list-add                              list-get                              list-message-counter-history-as-html  list-messages-as-json                 list-scheduled-messages-as-json       
+
+
+
+
+list-clear                            list-message-counter-as-html          list-message-counter-history-as-json  list-remove                           
+
+
+
+
+list-consumers-as-json                list-message-counter-as-json          list-messages                         list-scheduled-messages    
+
+
+
+
+
+
+This was hit on Wildfly 9 with ActiveMQ (built from Jeff&amp;apos;s branch)

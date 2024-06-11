@@ -1,0 +1,137 @@
+Fix incompatibilities with latest Hibernate 4.3 (CR2 currently)
+Hibernate&amp;apos;s behaviour changed with version 4.3.0.Beta5, I think.
+Instead of throwing an IllegalStateException, null is returned.
+Something like the following might fix it.
+In org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.IdMetadata
+
+
+
+
+
+
+		public Class&lt;?&gt; getType() {
+
+
+
+
+
+
+
+
+
+			if (idType != null) {
+
+
+
+
+				return idType;
+
+
+
+
+			}
+
+
+
+
+
+
+
+
+
+			Class&lt;?&gt; idType;
+
+
+
+
+
+
+
+
+
+			try {
+
+
+
+
+                final Type&lt;?&gt; idType1 = type.getIdType();
+
+
+
+
+                if (idType1 != null) {
+
+
+
+
+                    idType = idType1.getJavaType();
+
+
+
+
+                } else {
+
+
+
+
+                    IdClass annotation = AnnotationUtils.findAnnotation(type.getJavaType(), IdClass.class);
+
+
+
+
+                    idType = annotation == null ? null : annotation.value();
+
+
+
+
+                }
+
+
+
+
+			} catch (IllegalStateException e) {
+
+
+
+
+				// see https://hibernate.onjira.com/browse/HHH-6951
+
+
+
+
+				IdClass annotation = AnnotationUtils.findAnnotation(type.getJavaType(), IdClass.class);
+
+
+
+
+				idType = annotation == null ? null : annotation.value();
+
+
+
+
+			}
+
+
+
+
+
+
+
+
+
+			this.idType = idType;
+
+
+
+
+			return idType;
+
+
+
+
+		}
+
+
+
+
+

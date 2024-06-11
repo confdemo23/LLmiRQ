@@ -1,0 +1,2 @@
+StepExecutionResourceProxy can not be used with FlatFileItemWriter
+StepExecutionResourceProxy can work with FlatFileItemReader, but FlatFileItemWriter. It seems FlatFileItemWriter try to get the real file during its afterPropertiesSet(), which means before StepExecutionResourceProxy.beforeStep() get called. Hence, the "The delegate resource has not been initialised..." exception always get thrown by StepExecutionResourceProxy.

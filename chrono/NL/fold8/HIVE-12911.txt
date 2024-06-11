@@ -1,0 +1,2 @@
+PPD might get exercised even when flag is false if CBO is on
+Introduced in HIVE-11865.

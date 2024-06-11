@@ -1,0 +1,22 @@
+Can&apos;t set the outgoing mail&apos;s content-type and charset
+The document at http://camel.apache.org/mail.html suggests that contentType header should set the Content-Type of the out going mail, but that doesn&amp;apos;t work.
+I am trying to set the content type of the mail I send using the contentType header. That doesn&amp;apos;t work, but it works if I put the contentType in the endpoint uri. i.e. - 
+            &lt;camel:setHeader headerName="contentType"&gt; 
+                &lt;camel:constant&gt;text/html&lt;/camel:constant&gt; 
+            &lt;/camel:setHeader&gt; 
+Has no effect, while this works - 
+             smtp://rohitr@xyzab.pramati.com?password=32478hds78&amp;contentType=text/html 
+But I am not able to set the charset and it always takes us-ascii 
+So for the mail the content type header comes as - 
+Content-Type: text/html; charset=us-ascii
+I tried using 
+            &lt;camel:setHeader headerName="contentType"&gt; 
+                &lt;camel:constant&gt;text/html;charset=UTF-8&lt;/camel:constant&gt; 
+            &lt;/camel:setHeader&gt; 
+and also 
+            &lt;camel:setHeader headerName="content-type"&gt; 
+                &lt;camel:constant&gt;text/html;charset=UTF-8&lt;/camel:constant&gt; 
+            &lt;/camel:setHeader&gt; 
+and 
+smtp://rohitr@xyzab.pramati.com?password= 32478hds78&amp;contentType=text/html;charset=UTF-8 
+but nothing works

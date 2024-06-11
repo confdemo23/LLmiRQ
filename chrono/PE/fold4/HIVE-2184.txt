@@ -1,0 +1,3 @@
+Few improvements in org.apache.hadoop.hive.ql.metadata.Hive.close()
+1)Hive.close() will call HiveMetaStoreClient.close() in this method the variable "standAloneClient" is never become true then client.shutdown() never call.
+2)Hive.close() After calling metaStoreClient.close() need to make metaStoreClient=null

@@ -1,0 +1,26 @@
+roo controller add: NullPointerException in org.springframework.roo.addon.web.mvc.jsp.JspViewManager
+I&amp;apos;m trying to scaffold controllers in a test roo project, however,
+
+
+
+
+
+
+roo&gt; controller all --package ~.server.web
+
+
+
+
+[...]
+
+
+
+
+NullPointerException at org.springframework.roo.addon.web.mvc.jsp.JspViewManager.addCommonAttributes(JspViewManager.java:560)
+
+
+
+
+
+
+Perhaps this is related to ROO-1419.

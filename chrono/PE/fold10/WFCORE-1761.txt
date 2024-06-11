@@ -1,0 +1,2 @@
+Bogus "alternative" in server NativeManagementResourceDefinition.SOCKET_BINDING attribute definition
+SOCKET_BINDING declares that INTERFACE is an alternative. There is no INTERFACE attribute allowed on this resource. Perhaps this is leftover cruft.

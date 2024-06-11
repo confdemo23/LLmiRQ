@@ -1,0 +1,2 @@
+@TransactionAttribute ignored on non-public SFSB PostActivate and PrePassivate lifecycle callbacks
+Non-public PostActivate and PrePassivate SFSB are not supposed to be lifecycle methods by WFLY-4127 which leads to a situation where transactional attributes on them are ignored. Public methods work as expected.

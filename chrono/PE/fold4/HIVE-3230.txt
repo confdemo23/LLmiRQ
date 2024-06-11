@@ -1,0 +1,2 @@
+Make logging of plan progress in HadoopJobExecHelper configurable
+Currently, by default, every second a job is run a massive JSON string containing the query plan, the tasks, and some counters is logged to the hive_job_log.  For large, long running jobs that can easily reach gigabytes of data. This logging should be configurable as average user doesn&amp;apos;t need this logging.

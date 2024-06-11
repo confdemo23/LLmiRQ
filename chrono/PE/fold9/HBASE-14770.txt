@@ -1,0 +1,67 @@
+RowCounter argument input parse error
+I&amp;apos;m tried to use https://github.com/apache/hbase/blob/master/hbase-server/src/main/java/org/apache/hadoop/hbase/mapreduce/RowCounter.java code and package a new jar then excuted following shell script:
+
+
+
+hadoop jar test.jar &lt;tablename&gt; --range=row001,row002 cf:c2
+
+
+
+Then I got "NoSuchColumnFamilyException".
+It seems input argument parsing problem.
+And I tried to add 
+
+
+
+continue; 
+
+
+
+after #L123 to avoid "--range=*" string be appended to qualifer.
+Then the problem seems solve.
+
+data in table:
+
+
+row
+cf:c1
+cf:c2
+cf:c3
+cf:c4
+
+
+row001
+v1
+v2
+
+
+
+
+row002
+
+v2
+v3
+
+
+
+row003
+
+
+v3
+v4
+
+
+row004
+v1
+
+
+v4
+
+
+Exception Message:
+
+
+
+org.apache.hadoop.hbase.regionserver.NoSuchColumnFamilyException: org.apache.hadoop.hbase.regionserver.NoSuchColumnFamilyException: Column family --range=row001,row002 does not exist in region frank_rowcounttest1,,1446191360354.6c52c71a82f0fa041c467002a2bf433c. in table &amp;apos;frank_rowcounttest1&amp;apos;, {NAME =&gt; &amp;apos;cf&amp;apos;, DATA_BLOCK_ENCODING =&gt; &amp;apos;NONE&amp;apos;, BLOOMFILTER =&gt; &amp;apos;ROW&amp;apos;, REPLICATION_SCOPE =&gt; &amp;apos;0&amp;apos;, COMPRESSION =&gt; &amp;apos;NONE&amp;apos;, VERSIONS =&gt; &amp;apos;1&amp;apos;, TTL =&gt; &amp;apos;FOREVER&amp;apos;, MIN_VERSIONS =&gt; &amp;apos;0&amp;apos;, KEEP_DELETED_CELLS =&gt; &amp;apos;false&amp;apos;, BLOCKSIZE =&gt; &amp;apos;65536&amp;apos;, IN_MEMORY =&gt; &amp;apos;false&amp;apos;, BLOCKCACHE =&gt; &amp;apos;true&amp;apos;}
+
+

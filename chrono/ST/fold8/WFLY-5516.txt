@@ -1,0 +1,2305 @@
+NullPointerException error message when server is going to be shutdown
+I&amp;apos;m hitting the very similar exception as described at WFLY-4548. It&amp;apos;s
+
+
+
+
+
+
+ERROR [stderr] (Thread-182) Exception in thread "Thread-182" java.lang.NullPointerException
+
+
+
+
+ERROR [stderr] (Thread-182) 	at com.sun.corba.se.impl.oa.poa.POAImpl$DestroyThread.run(POAImpl.java:566)
+
+
+
+
+
+
+this happens when I&amp;apos;m stopping server which does have defined connection to another server (or at least I&amp;apos;m able to reproduce it with usual periodicity). The full server log is
+
+
+
+
+
+
+INFO  [org.jboss.as] (MSC service thread 1-6) WFLYSRV0049: EAP 7.0.0.Alpha1 (WildFly Core 2.0.0.CR5) starting
+
+
+
+
+DEBUG [org.jboss.as.config] (MSC service thread 1-6) Configured system properties:
+
+
+
+
+[Standalone] = 
+
+
+
+
+awt.toolkit = sun.awt.X11.XToolkit
+
+
+
+
+current.module.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbossts
+
+
+
+
+file.encoding = UTF-8
+
+
+
+
+file.encoding.pkg = sun.io
+
+
+
+
+file.separator = /
+
+
+
+
+java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+
+
+
+
+java.awt.headless = true
+
+
+
+
+java.awt.printerjob = sun.print.PSPrinterJob
+
+
+
+
+java.class.path = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/jboss-modules.jar:/tmp/btm/byteman.jar
+
+
+
+
+java.class.version = 52.0
+
+
+
+
+java.endorsed.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.60-14.b27.fc22.x86_64/jre/lib/endorsed
+
+
+
+
+java.ext.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.60-14.b27.fc22.x86_64/jre/lib/ext:/usr/java/packages/lib/ext
+
+
+
+
+java.home = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.60-14.b27.fc22.x86_64/jre
+
+
+
+
+java.io.tmpdir = /tmp
+
+
+
+
+java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+
+
+
+
+java.naming.factory.url.pkgs = org.jboss.as.naming.interfaces:org.jboss.ejb.client.naming
+
+
+
+
+java.net.preferIPv4Stack = true
+
+
+
+
+java.net.preferIPv6Addresses = false
+
+
+
+
+java.runtime.name = OpenJDK Runtime Environment
+
+
+
+
+java.runtime.version = 1.8.0_60-b27
+
+
+
+
+java.security.auth.login.config = jar:file:/home/ochaloup/jboss/jboss-eap-7.0.0.DR11/modules/system/layers/base/org/picketbox/main/picketbox-4.9.3.Final.jar!/auth.conf
+
+
+
+
+java.specification.name = Java Platform API Specification
+
+
+
+
+java.specification.vendor = Oracle Corporation
+
+
+
+
+java.specification.version = 1.8
+
+
+
+
+java.util.logging.manager = org.jboss.logmanager.LogManager
+
+
+
+
+java.vendor = Oracle Corporation
+
+
+
+
+java.vendor.url = http://java.oracle.com/
+
+
+
+
+java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+
+
+
+
+java.version = 1.8.0_60
+
+
+
+
+java.vm.info = mixed mode
+
+
+
+
+java.vm.name = OpenJDK 64-Bit Server VM
+
+
+
+
+java.vm.specification.name = Java Virtual Machine Specification
+
+
+
+
+java.vm.specification.vendor = Oracle Corporation
+
+
+
+
+java.vm.specification.version = 1.8
+
+
+
+
+java.vm.vendor = Oracle Corporation
+
+
+
+
+java.vm.version = 25.60-b23
+
+
+
+
+javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+
+
+
+
+javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+
+
+
+
+javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+
+
+
+
+javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+
+
+
+
+javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+
+
+
+
+javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+
+
+
+
+javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+
+
+
+
+javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+
+
+
+
+javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+
+
+
+
+javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+
+
+
+
+jboss.home.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts
+
+
+
+
+jboss.host.name = ochaloup
+
+
+
+
+jboss.modules.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/modules
+
+
+
+
+jboss.modules.system.pkgs = org.jboss.byteman,org.jboss.qa.byteman,org.jboss.logmanager,org.jboss.as.cli
+
+
+
+
+jboss.node.name = jbossts
+
+
+
+
+jboss.qualified.host.name = ochaloup
+
+
+
+
+jboss.server.base.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone
+
+
+
+
+jboss.server.config.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/configuration
+
+
+
+
+jboss.server.data.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/data
+
+
+
+
+jboss.server.deploy.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/data/content
+
+
+
+
+jboss.server.log.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/log
+
+
+
+
+jboss.server.name = ochaloup
+
+
+
+
+jboss.server.persist.config = true
+
+
+
+
+jboss.server.temp.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/tmp
+
+
+
+
+jbossts.dist = /home/ochaloup/jboss/jboss-eap-7.0.0.DR11
+
+
+
+
+jbossts.module.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbossts
+
+
+
+
+line.separator = 
+
+
+
+
+
+
+
+
+
+logging.configuration = file:/home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/configuration/logging.properties
+
+
+
+
+mcast = 230.0.0.4
+
+
+
+
+module.path = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/modules:/home/ochaloup/jboss/jboss-eap-7.0.0.DR11/modules:/home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/modules
+
+
+
+
+node0 = 127.0.0.1
+
+
+
+
+node1 = 127.0.0.1
+
+
+
+
+node2 = 127.0.0.1
+
+
+
+
+org.apache.xml.security.ignoreLineBreaks = true
+
+
+
+
+org.jboss.boot.log.file = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/log/server.log
+
+
+
+
+org.jboss.byteman.contrib.dtest.rmiregistry.port = 1199
+
+
+
+
+org.jboss.byteman.debug = true
+
+
+
+
+org.jboss.byteman.verbose = true
+
+
+
+
+org.jboss.com.sun.CORBA.ORBUseDynamicStub = true
+
+
+
+
+org.jboss.logmanager.nocolor = true
+
+
+
+
+org.jboss.resolver.warning = true
+
+
+
+
+org.jboss.security.context.ThreadLocal = true
+
+
+
+
+org.omg.CORBA.ORBClass = com.sun.corba.se.impl.orb.ORBImpl
+
+
+
+
+org.omg.CORBA.ORBSingletonClass = com.sun.corba.se.impl.orb.ORBSingleton
+
+
+
+
+org.xml.sax.driver = __redirected.__XMLReaderFactory
+
+
+
+
+os.arch = amd64
+
+
+
+
+os.name = Linux
+
+
+
+
+os.version = 4.1.8-200.fc22.x86_64
+
+
+
+
+path.separator = :
+
+
+
+
+project.root.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/..
+
+
+
+
+sun.arch.data.model = 64
+
+
+
+
+sun.boot.class.path = /home/ochaloup/jboss/jboss-eap-7.0.0.DR11/modules/system/layers/base/org/jboss/logmanager/main/;/tmp/btm/btm-help.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.60-14.b27.fc22.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.60-14.b27.fc22.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.60-14.b27.fc22.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.60-14.b27.fc22.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.60-14.b27.fc22.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.60-14.b27.fc22.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.60-14.b27.fc22.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.60-14.b27.fc22.x86_64/jre/classes
+
+
+
+
+sun.boot.library.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.60-14.b27.fc22.x86_64/jre/lib/amd64
+
+
+
+
+sun.cpu.endian = little
+
+
+
+
+sun.cpu.isalist = 
+
+
+
+
+sun.io.unicode.encoding = UnicodeLittle
+
+
+
+
+sun.java.command = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/jboss-modules.jar -mp /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/modules:/home/ochaloup/jboss/jboss-eap-7.0.0.DR11/modules:/home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/modules org.jboss.as.standalone -Djboss.home.dir=/home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts -Djboss.server.base.dir=/home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone -Djboss.server.log.dir=/home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/log -Djboss.server.config.dir=/home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/configuration -c=standalone-full.xml
+
+
+
+
+sun.java.launcher = SUN_STANDARD
+
+
+
+
+sun.jnu.encoding = UTF-8
+
+
+
+
+sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+
+
+
+
+sun.nio.ch.bugLevel = 
+
+
+
+
+sun.os.patch.level = unknown
+
+
+
+
+ts.timeout.factor = 100
+
+
+
+
+user.country = US
+
+
+
+
+user.dir = /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/workdir
+
+
+
+
+user.home = /home/ochaloup
+
+
+
+
+user.language = en
+
+
+
+
+user.name = ochaloup
+
+
+
+
+user.timezone = Europe/Prague
+
+
+
+
+DEBUG [org.jboss.as.config] (MSC service thread 1-6) VM Arguments: -D[Standalone] -Xms64m -Xmx512m -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv4Stack=true -Djava.awt.headless=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djboss.modules.system.pkgs=org.jboss.byteman,org.jboss.qa.byteman,org.jboss.logmanager,org.jboss.as.cli -Xms256m -Xmx2048m -XX:MaxPermSize=256m -Djava.net.preferIPv6Addresses=false -Dts.timeout.factor=100 -Dnode0=127.0.0.1 -Dnode1=127.0.0.1 -Dnode2=127.0.0.1 -Dmcast=230.0.0.4 -Dorg.jboss.logmanager.nocolor=true -Djbossts.dist=/home/ochaloup/jboss/jboss-eap-7.0.0.DR11 -Dcurrent.module.dir=/home/ochaloup/Transactions/eap-tests-transactions/jbossts -Djbossts.module.dir=/home/ochaloup/Transactions/eap-tests-transactions/jbossts -Dproject.root.dir=/home/ochaloup/Transactions/eap-tests-transactions/jbossts/.. -Dorg.jboss.byteman.debug=true -Dorg.jboss.byteman.verbose=true -Dorg.jboss.byteman.contrib.dtest.rmiregistry.port=1199 -Djava.util.logging.manager=org.jboss.logmanager.LogManager -javaagent:/tmp/btm/byteman.jar=address:127.0.0.1,port:9091,listener:true,sys:/tmp/btm/byteman-dtest.jar,sys:/tmp/btm/btm-help.jar -Xbootclasspath/p:/home/ochaloup/jboss/jboss-eap-7.0.0.DR11/modules/system/layers/base/org/jboss/logmanager/main/;/tmp/btm/btm-help.jar -Djboss.node.name=jbossts -ea -Djboss.home.dir=/home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts -Dorg.jboss.boot.log.file=/home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/log/server.log -Dlogging.configuration=file:/home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/configuration/logging.properties 
+
+
+
+
+INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 24) WFLYCTL0028: Attribute &amp;apos;enabled&amp;apos; in the resource at address &amp;apos;/subsystem=datasources/data-source=ExampleDS&amp;apos; is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+
+
+
+
+INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+
+
+
+
+INFO  [org.wildfly.iiop.openjdk] (ServerService Thread Pool -- 42) WFLYIIOP0001: Activating IIOP Subsystem
+
+
+
+
+INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 41) WFLYCLINF0001: Activating Infinispan subsystem.
+
+
+
+
+INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 36) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+
+
+
+
+INFO  [org.jboss.as.connector] (MSC service thread 1-6) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.3.0.Final)
+
+
+
+
+INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0018: Started Driver service with driver-name = h2
+
+
+
+
+INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 40) WFLYIO001: Worker &amp;apos;default&amp;apos; has auto-configured to 8 core threads with 64 task threads based on your 4 available processors
+
+
+
+
+INFO  [org.jboss.as.ejb3] (MSC service thread 1-5) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 64 (per class), which is derived from thread worker pool sizing.
+
+
+
+
+INFO  [org.jboss.as.ejb3] (MSC service thread 1-8) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 16 (per class), which is derived from the number of CPUs on this host.
+
+
+
+
+INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 52) WFLYNAM0001: Activating Naming Subsystem
+
+
+
+
+INFO  [org.jboss.as.naming] (MSC service thread 1-8) WFLYNAM0003: Starting Naming Service
+
+
+
+
+INFO  [org.jboss.as.mail.extension] (MSC service thread 1-8) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+
+
+
+
+INFO  [org.jboss.as.security] (ServerService Thread Pool -- 59) WFLYSEC0002: Activating Security Subsystem
+
+
+
+
+INFO  [org.jboss.as.security] (MSC service thread 1-7) WFLYSEC0001: Current PicketBox version=4.9.3.Final
+
+
+
+
+WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 60) WFLYTX0013: Node identifier property is set to the default value. Please make sure it is unique.
+
+
+
+
+INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 61) WFLYUT0003: Undertow 1.3.0.CR2 starting
+
+
+
+
+INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 62) WFLYWS0002: Activating WebServices Extension
+
+
+
+
+INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 61) WFLYUT0014: Creating file handler for path &amp;apos;/home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/welcome-content&amp;apos; with options [directory-listing: &amp;apos;false&amp;apos;, follow-symlink: &amp;apos;false&amp;apos;, case-sensitive: &amp;apos;true&amp;apos;, safe-symlink-paths: &amp;apos;[]&amp;apos;]
+
+
+
+
+INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0003: Undertow 1.3.0.CR2 starting
+
+
+
+
+INFO  [com.arjuna.ats.jbossatx] (MSC service thread 1-8) ARJUNA032010: JBossTS Recovery Service (tag: abfdf) - JBoss Inc.
+
+
+
+
+INFO  [com.arjuna.ats.jbossatx] (MSC service thread 1-8) ARJUNA032013: Starting transaction recovery manager
+
+
+
+
+INFO  [com.arjuna.ats.arjuna] (MSC service thread 1-8) ARJUNA012324: Start RecoveryActivators
+
+
+
+
+INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0012: Started server default-server.
+
+
+
+
+INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0018: Host default-host starting
+
+
+
+
+INFO  [org.wildfly.iiop.openjdk] (MSC service thread 1-1) WFLYIIOP0009: CORBA ORB Service started
+
+
+
+
+INFO  [com.arjuna.ats.arjuna] (MSC service thread 1-8) ARJUNA012310: Recovery manager listening on endpoint 127.0.0.1:4712
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (MSC service thread 1-8) PeriodicRecovery: starting listener worker thread
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (MSC service thread 1-8) ExpiredEntryMonitor - constructed
+
+
+
+
+INFO  [com.arjuna.ats.arjuna] (MSC service thread 1-8) ARJUNA012344: RecoveryManagerImple is ready on port 4712
+
+
+
+
+INFO  [com.arjuna.ats.arjuna] (Transaction Expired Entry Monitor) ARJUNA012296: ExpiredEntryMonitor running at Mon, 12 Oct 2015 16:16:45
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (MSC service thread 1-8) ObjectStoreDir: /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/data/tx-object-store
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Periodic Recovery) PeriodicRecovery: background thread Status &lt;== SCANNING
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Periodic Recovery) PeriodicRecovery: background thread scanning
+
+
+
+
+INFO  [com.arjuna.ats.jbossatx] (MSC service thread 1-8) ARJUNA032017: JBossTS Transaction Service (JTA version - tag: abfdf) - JBoss Inc.
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Periodic Recovery) Periodic recovery first pass at Mon, 12 Oct 2015 16:16:45
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (MSC service thread 1-8) registering bean jboss.jta:type=ObjectStore
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Periodic Recovery) CommitMarkableResourceRecordRecoveryModule::periodicWorkFirstPass
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Periodic Recovery) InputObjectState::InputObjectState()
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Periodic Recovery) FileSystemStore.allObjUids(/StateManager/BasicAction/TwoPhaseCoordinator/AtomicActionConnectable, InputObjectState Uid   : 0:0:0:0:0
+
+
+
+
+InputObjectState Type  : null
+
+
+
+
+InputObjectState Size  : 0
+
+
+
+
+InputObjectState Buffer: , -1)
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Periodic Recovery) OutputObjectState::OutputObjectState()
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Periodic Recovery) processing /StateManager/BasicAction/TwoPhaseCoordinator/AtomicAction transactions
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Periodic Recovery) InputObjectState::InputObjectState()
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Periodic Recovery) FileSystemStore.allObjUids(/StateManager/BasicAction/TwoPhaseCoordinator/AtomicAction, InputObjectState Uid   : 0:0:0:0:0
+
+
+
+
+InputObjectState Type  : null
+
+
+
+
+InputObjectState Size  : 0
+
+
+
+
+InputObjectState Buffer: , -1)
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Periodic Recovery) OutputObjectState::OutputObjectState()
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Periodic Recovery)  
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Periodic Recovery) InputObjectState::InputObjectState()
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Periodic Recovery) AtomicActionRecoveryModule first pass
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Periodic Recovery) FileSystemStore.allObjUids(/StateManager/BasicAction/TwoPhaseCoordinator/AtomicAction, InputObjectState Uid   : 0:0:0:0:0
+
+
+
+
+InputObjectState Type  : null
+
+
+
+
+InputObjectState Size  : 0
+
+
+
+
+InputObjectState Buffer: , -1)
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Periodic Recovery) OutputObjectState::OutputObjectState()
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Periodic Recovery) processing /StateManager/BasicAction/TwoPhaseCoordinator/AtomicAction transactions
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Periodic Recovery)  
+
+
+
+
+DEBUG [com.arjuna.ats.txoj] (Periodic Recovery) TORecoveryModule - first pass
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Periodic Recovery) InputObjectState::InputObjectState()
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Periodic Recovery) FileSystemStore.allTypes(InputObjectState Uid   : 0:0:0:0:0
+
+
+
+
+InputObjectState Type  : null
+
+
+
+
+InputObjectState Size  : 0
+
+
+
+
+InputObjectState Buffer: )
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Periodic Recovery) OutputObjectState::OutputObjectState()
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Periodic Recovery)  
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Periodic Recovery)  
+
+
+
+
+INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 36) WFLYJCA0005: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 9.4)
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Transaction Expired Entry Monitor) ExpiredTransactionStatusManagerScanner - scanning to remove items from before Mon, 12 Oct 2015 04:16:45
+
+
+
+
+INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0018: Started Driver service with driver-name = module_dsdriver.jar
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Transaction Expired Entry Monitor) InputObjectState::InputObjectState()
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Transaction Expired Entry Monitor) FileSystemStore.allObjUids(/Recovery/TransactionStatusManager, InputObjectState Uid   : 0:0:0:0:0
+
+
+
+
+InputObjectState Type  : null
+
+
+
+
+InputObjectState Size  : 0
+
+
+
+
+InputObjectState Buffer: , -1)
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Transaction Expired Entry Monitor) OutputObjectState::OutputObjectState()
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Transaction Expired Entry Monitor)   
+
+
+
+
+INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-8) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+
+
+
+
+INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
+
+
+
+
+INFO  [org.jboss.ws.common.management] (MSC service thread 1-4) JBWS022052: Starting JBoss Web Services - Stack CXF Server 5.1.0.Final
+
+
+
+
+INFO  [org.apache.activemq.artemis.core.server] (ServerService Thread Pool -- 64) AMQ221000: live Message Broker is starting with configuration Broker Configuration (clustered=false,journalDirectory=/home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/data/activemq/journal,bindingsDirectory=/home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/data/activemq/bindings,largeMessagesDirectory=/home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/data/activemq/largemessages,pagingDirectory=/home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/data/activemq/paging)
+
+
+
+
+INFO  [org.apache.activemq.artemis.core.server] (ServerService Thread Pool -- 64) AMQ221012: Using AIO Journal
+
+
+
+
+INFO  [org.apache.activemq.artemis.core.server] (ServerService Thread Pool -- 64) AMQ221043: Protocol module found: [artemis-server]. Adding protocol support for: CORE
+
+
+
+
+INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-5) WFLYDS0013: Started FileSystemDeploymentService for directory /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/deployments
+
+
+
+
+INFO  [org.apache.activemq.artemis.core.server] (ServerService Thread Pool -- 64) AMQ221043: Protocol module found: [artemis-amqp-protocol]. Adding protocol support for: AMQP
+
+
+
+
+INFO  [org.apache.activemq.artemis.core.server] (ServerService Thread Pool -- 64) AMQ221043: Protocol module found: [artemis-hornetq-protocol]. Adding protocol support for: HORNETQ
+
+
+
+
+INFO  [org.apache.activemq.artemis.core.server] (ServerService Thread Pool -- 64) AMQ221043: Protocol module found: [artemis-stomp-protocol]. Adding protocol support for: STOMP
+
+
+
+
+INFO  [org.wildfly.extension.messaging-activemq] (MSC service thread 1-7) WFLYMSGAMQ0016: Registered HTTP upgrade for activemq-remoting protocol handled by http-acceptor acceptor
+
+
+
+
+INFO  [org.wildfly.extension.messaging-activemq] (MSC service thread 1-2) WFLYMSGAMQ0016: Registered HTTP upgrade for activemq-remoting protocol handled by http-acceptor acceptor
+
+
+
+
+INFO  [org.wildfly.extension.messaging-activemq] (MSC service thread 1-4) WFLYMSGAMQ0016: Registered HTTP upgrade for activemq-remoting protocol handled by http-acceptor-throughput acceptor
+
+
+
+
+INFO  [org.wildfly.extension.messaging-activemq] (MSC service thread 1-8) WFLYMSGAMQ0016: Registered HTTP upgrade for activemq-remoting protocol handled by http-acceptor-throughput acceptor
+
+
+
+
+INFO  [org.apache.activemq.artemis.core.server] (ServerService Thread Pool -- 64) AMQ221007: Server is now live
+
+
+
+
+INFO  [org.apache.activemq.artemis.core.server] (ServerService Thread Pool -- 64) AMQ221001: Apache ActiveMQ Artemis Message Broker version 1.1.0 [nodeID=d8f999f9-70eb-11e5-b4bd-574d43db2219] 
+
+
+
+
+INFO  [org.apache.activemq.artemis.core.server] (ServerService Thread Pool -- 65) AMQ221003: trying to deploy queue jms.queue.crashRecoveryQueue
+
+
+
+
+INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-7) WFLYJCA0007: Registered connection factory java:/JmsXA
+
+
+
+
+INFO  [org.apache.activemq.artemis.core.server] (ServerService Thread Pool -- 69) AMQ221003: trying to deploy queue jms.queue.DLQ
+
+
+
+
+INFO  [org.wildfly.extension.messaging-activemq] (ServerService Thread Pool -- 67) WFLYMSGAMQ0002: Bound messaging object to jndi name java:jboss/exported/jms/RemoteConnectionFactory
+
+
+
+
+INFO  [org.apache.activemq.artemis.core.server] (ServerService Thread Pool -- 70) AMQ221003: trying to deploy queue jms.queue.ExpiryQueue
+
+
+
+
+INFO  [org.wildfly.extension.messaging-activemq] (ServerService Thread Pool -- 68) WFLYMSGAMQ0002: Bound messaging object to jndi name java:/ConnectionFactory
+
+
+
+
+INFO  [org.apache.activemq.artemis.core.server] (ServerService Thread Pool -- 66) AMQ221003: trying to deploy queue jms.queue.MDBTriggerQueue
+
+
+
+
+INFO  [org.apache.activemq.artemis.ra] (MSC service thread 1-7) Resource adaptor started
+
+
+
+
+INFO  [org.jboss.as.connector.services.resourceadapters.ResourceAdapterActivatorService$ResourceAdapterActivator] (MSC service thread 1-7) IJ020002: Deployed: file://RaActivatoractivemq-ra
+
+
+
+
+INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-4) WFLYJCA0002: Bound JCA ConnectionFactory [java:/JmsXA]
+
+
+
+
+INFO  [org.wildfly.extension.messaging-activemq] (MSC service thread 1-1) WFLYMSGAMQ0002: Bound messaging object to jndi name java:jboss/DefaultJMSConnectionFactory
+
+
+
+
+INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:42042/management
+
+
+
+
+INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:42042
+
+
+
+
+INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: EAP 7.0.0.Alpha1 (WildFly Core 2.0.0.CR5) started in 779ms - Started 259 of 536 services (335 services are lazy, passive or on-demand)
+
+
+
+
+INFO  [org.jboss.as.repository] (management-handler-thread - 4) WFLYDR0001: Content added at location /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/data/content/da/9c37de616498ab31f4fe9949bb0999a72ab0ae/content
+
+
+
+
+INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0027: Starting deployment of "crashrecovery-txpropag-client.jar" (runtime-name: "crashrecovery-txpropag-client.jar")
+
+
+
+
+WARN  [org.jboss.as.dependency.private] (MSC service thread 1-7) WFLYSRV0018: Deployment "deployment.crashrecovery-txpropag-client.jar" is using a private module ("org.jboss.jts:main") which may be changed or removed in future versions without notice.
+
+
+
+
+WARN  [org.jboss.as.dependency.private] (MSC service thread 1-7) WFLYSRV0018: Deployment "deployment.crashrecovery-txpropag-client.jar" is using a private module ("org.jboss.jboss-transaction-spi:main") which may be changed or removed in future versions without notice.
+
+
+
+
+INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) WFLYWELD0003: Processing weld deployment crashrecovery-txpropag-client.jar
+
+
+
+
+INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-2) HV000001: Hibernate Validator 5.2.1.Final
+
+
+
+
+INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-2) WFLYEJB0473: JNDI bindings for session bean named &amp;apos;MessageHelper&amp;apos; in deployment unit &amp;apos;deployment "crashrecovery-txpropag-client.jar"&amp;apos; are as follows:
+
+
+
+
+
+
+
+
+
+java:global/crashrecovery-txpropag-client/MessageHelper!org.jboss.as.test.jbossts.crashrec.jms.MessageHelperRemote
+
+
+
+
+java:app/crashrecovery-txpropag-client/MessageHelper!org.jboss.as.test.jbossts.crashrec.jms.MessageHelperRemote
+
+
+
+
+java:module/MessageHelper!org.jboss.as.test.jbossts.crashrec.jms.MessageHelperRemote
+
+
+
+
+java:jboss/exported/crashrecovery-txpropag-client/MessageHelper!org.jboss.as.test.jbossts.crashrec.jms.MessageHelperRemote
+
+
+
+
+java:global/crashrecovery-txpropag-client/MessageHelper
+
+
+
+
+java:app/crashrecovery-txpropag-client/MessageHelper
+
+
+
+
+java:module/MessageHelper
+
+
+
+
+
+
+
+
+
+INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-2) WFLYEJB0473: JNDI bindings for session bean named &amp;apos;TestXAResourceRecoveryHelper&amp;apos; in deployment unit &amp;apos;deployment "crashrecovery-txpropag-client.jar"&amp;apos; are as follows:
+
+
+
+
+
+
+
+
+
+java:global/crashrecovery-txpropag-client/TestXAResourceRecoveryHelper!com.arjuna.ats.jta.recovery.XAResourceRecoveryHelper
+
+
+
+
+java:app/crashrecovery-txpropag-client/TestXAResourceRecoveryHelper!com.arjuna.ats.jta.recovery.XAResourceRecoveryHelper
+
+
+
+
+java:module/TestXAResourceRecoveryHelper!com.arjuna.ats.jta.recovery.XAResourceRecoveryHelper
+
+
+
+
+java:global/crashrecovery-txpropag-client/TestXAResourceRecoveryHelper
+
+
+
+
+java:app/crashrecovery-txpropag-client/TestXAResourceRecoveryHelper
+
+
+
+
+java:module/TestXAResourceRecoveryHelper
+
+
+
+
+
+
+
+
+
+INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-2) WFLYEJB0473: JNDI bindings for session bean named &amp;apos;JMSCrashBean&amp;apos; in deployment unit &amp;apos;deployment "crashrecovery-txpropag-client.jar"&amp;apos; are as follows:
+
+
+
+
+
+
+
+
+
+java:global/crashrecovery-txpropag-client/JMSCrashBean!org.jboss.as.test.jbossts.crashrec.jms.JMSCrashBeanHome
+
+
+
+
+java:app/crashrecovery-txpropag-client/JMSCrashBean!org.jboss.as.test.jbossts.crashrec.jms.JMSCrashBeanHome
+
+
+
+
+java:module/JMSCrashBean!org.jboss.as.test.jbossts.crashrec.jms.JMSCrashBeanHome
+
+
+
+
+java:jboss/exported/crashrecovery-txpropag-client/JMSCrashBean!org.jboss.as.test.jbossts.crashrec.jms.JMSCrashBeanHome
+
+
+
+
+java:global/crashrecovery-txpropag-client/JMSCrashBean!org.jboss.as.test.jbossts.crashrec.jms.JMSCrashBeanRemote
+
+
+
+
+java:app/crashrecovery-txpropag-client/JMSCrashBean!org.jboss.as.test.jbossts.crashrec.jms.JMSCrashBeanRemote
+
+
+
+
+java:module/JMSCrashBean!org.jboss.as.test.jbossts.crashrec.jms.JMSCrashBeanRemote
+
+
+
+
+java:jboss/exported/crashrecovery-txpropag-client/JMSCrashBean!org.jboss.as.test.jbossts.crashrec.jms.JMSCrashBeanRemote
+
+
+
+
+
+
+
+
+
+INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-2) WFLYEJB0473: JNDI bindings for session bean named &amp;apos;CrashHelperTestXAResource&amp;apos; in deployment unit &amp;apos;deployment "crashrecovery-txpropag-client.jar"&amp;apos; are as follows:
+
+
+
+
+
+
+
+
+
+java:global/crashrecovery-txpropag-client/CrashHelperTestXAResource!org.jboss.as.test.jbossts.crashrec.common.CrashHelperRemote
+
+
+
+
+java:app/crashrecovery-txpropag-client/CrashHelperTestXAResource!org.jboss.as.test.jbossts.crashrec.common.CrashHelperRemote
+
+
+
+
+java:module/CrashHelperTestXAResource!org.jboss.as.test.jbossts.crashrec.common.CrashHelperRemote
+
+
+
+
+java:jboss/exported/crashrecovery-txpropag-client/CrashHelperTestXAResource!org.jboss.as.test.jbossts.crashrec.common.CrashHelperRemote
+
+
+
+
+java:global/crashrecovery-txpropag-client/CrashHelperTestXAResource
+
+
+
+
+java:app/crashrecovery-txpropag-client/CrashHelperTestXAResource
+
+
+
+
+java:module/CrashHelperTestXAResource
+
+
+
+
+
+
+
+
+
+INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-2) WFLYEJB0473: JNDI bindings for session bean named &amp;apos;CrashClientBean&amp;apos; in deployment unit &amp;apos;deployment "crashrecovery-txpropag-client.jar"&amp;apos; are as follows:
+
+
+
+
+
+
+
+
+
+java:global/crashrecovery-txpropag-client/CrashClientBean!org.jboss.as.test.jbossts.crashrec.txpropagation.jms.CrashClientBeanRemote
+
+
+
+
+java:app/crashrecovery-txpropag-client/CrashClientBean!org.jboss.as.test.jbossts.crashrec.txpropagation.jms.CrashClientBeanRemote
+
+
+
+
+java:module/CrashClientBean!org.jboss.as.test.jbossts.crashrec.txpropagation.jms.CrashClientBeanRemote
+
+
+
+
+java:jboss/exported/crashrecovery-txpropag-client/CrashClientBean!org.jboss.as.test.jbossts.crashrec.txpropagation.jms.CrashClientBeanRemote
+
+
+
+
+java:global/crashrecovery-txpropag-client/CrashClientBean!org.jboss.as.test.jbossts.crashrec.txpropagation.jms.CrashClientBeanHome
+
+
+
+
+java:app/crashrecovery-txpropag-client/CrashClientBean!org.jboss.as.test.jbossts.crashrec.txpropagation.jms.CrashClientBeanHome
+
+
+
+
+java:module/CrashClientBean!org.jboss.as.test.jbossts.crashrec.txpropagation.jms.CrashClientBeanHome
+
+
+
+
+java:jboss/exported/crashrecovery-txpropag-client/CrashClientBean!org.jboss.as.test.jbossts.crashrec.txpropagation.jms.CrashClientBeanHome
+
+
+
+
+
+
+
+
+
+INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-2) WFLYEJB0473: JNDI bindings for session bean named &amp;apos;JMSCrashHelper&amp;apos; in deployment unit &amp;apos;deployment "crashrecovery-txpropag-client.jar"&amp;apos; are as follows:
+
+
+
+
+
+
+
+
+
+java:global/crashrecovery-txpropag-client/JMSCrashHelper!org.jboss.as.test.jbossts.crashrec.jms.JMSCrashHelperRemote
+
+
+
+
+java:app/crashrecovery-txpropag-client/JMSCrashHelper!org.jboss.as.test.jbossts.crashrec.jms.JMSCrashHelperRemote
+
+
+
+
+java:module/JMSCrashHelper!org.jboss.as.test.jbossts.crashrec.jms.JMSCrashHelperRemote
+
+
+
+
+java:jboss/exported/crashrecovery-txpropag-client/JMSCrashHelper!org.jboss.as.test.jbossts.crashrec.jms.JMSCrashHelperRemote
+
+
+
+
+java:global/crashrecovery-txpropag-client/JMSCrashHelper
+
+
+
+
+java:app/crashrecovery-txpropag-client/JMSCrashHelper
+
+
+
+
+java:module/JMSCrashHelper
+
+
+
+
+
+
+
+
+
+INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-2) WFLYEJB0473: JNDI bindings for session bean named &amp;apos;TransactionStoreBrowserService&amp;apos; in deployment unit &amp;apos;deployment "crashrecovery-txpropag-client.jar"&amp;apos; are as follows:
+
+
+
+
+
+
+
+
+
+java:global/crashrecovery-txpropag-client/TransactionStoreBrowserService!org.jboss.as.test.jbossts.common.TransactionStoreBrowserService
+
+
+
+
+java:app/crashrecovery-txpropag-client/TransactionStoreBrowserService!org.jboss.as.test.jbossts.common.TransactionStoreBrowserService
+
+
+
+
+java:module/TransactionStoreBrowserService!org.jboss.as.test.jbossts.common.TransactionStoreBrowserService
+
+
+
+
+java:global/crashrecovery-txpropag-client/TransactionStoreBrowserService
+
+
+
+
+java:app/crashrecovery-txpropag-client/TransactionStoreBrowserService
+
+
+
+
+java:module/TransactionStoreBrowserService
+
+
+
+
+
+
+
+
+
+INFO  [org.jboss.ejb.client.remoting] (default task-5) EJBCLIENT000017: Received server version 2 and marshalling strategies [river]
+
+
+
+
+INFO  [org.jboss.ejb.client.remoting] (MSC service thread 1-2) EJBCLIENT000013: Successful version handshake completed for receiver context EJBReceiverContext{clientContext=org.jboss.ejb.client.EJBClientContext@6ab639e9, receiver=Remoting connection EJB receiver [connection=Remoting connection &lt;4d314cbc&gt;,channel=jboss.ejb,nodename=jbossts2]} on channel Channel ID c3a6574d (outbound) of Remoting connection 3e45a5ec to /127.0.0.1:8180
+
+
+
+
+INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) WFLYWELD0006: Starting Services for CDI deployment: crashrecovery-txpropag-client.jar
+
+
+
+
+INFO  [org.jboss.weld.Version] (MSC service thread 1-2) WELD-000900: 2.3.0 (Final)
+
+
+
+
+INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) WFLYWELD0009: Starting weld service for deployment crashrecovery-txpropag-client.jar
+
+
+
+
+TRACE [com.arjuna.ats.jta] (ServerService Thread Pool -- 27) BaseTransaction.begin
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) StateManager::StateManager( 2, 0 )
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) BasicAction::BasicAction()
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) BasicAction::Begin() for action-id 0:ffff0a28048f:-3f561f30:561bc0c4:10
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) BasicAction::actionInitialise() for action-id 0:ffff0a28048f:-3f561f30:561bc0c4:10
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) ActionHierarchy::ActionHierarchy(1)
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) ActionHierarchy::add(0:ffff0a28048f:-3f561f30:561bc0c4:10, 1)
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) BasicAction::addChildThread () action 0:ffff0a28048f:-3f561f30:561bc0c4:10 adding Thread[ServerService Thread Pool -- 27,5,ServerService ThreadGroup]
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) BasicAction::addChildThread () action 0:ffff0a28048f:-3f561f30:561bc0c4:10 adding Thread[ServerService Thread Pool -- 27,5,ServerService ThreadGroup] result = true
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) TransactionReaper::insert ( BasicAction: 0:ffff0a28048f:-3f561f30:561bc0c4:10 status: ActionStatus.RUNNING, 300 )
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) ReaperElement::ReaperElement ( BasicAction: 0:ffff0a28048f:-3f561f30:561bc0c4:10 status: ActionStatus.RUNNING, 300 )
+
+
+
+
+TRACE [com.arjuna.ats.jta] (ServerService Thread Pool -- 66) BaseTransaction.begin
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 66) StateManager::StateManager( 2, 0 )
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 66) BasicAction::BasicAction()
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 66) BasicAction::Begin() for action-id 0:ffff0a28048f:-3f561f30:561bc0c4:11
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 66) BasicAction::actionInitialise() for action-id 0:ffff0a28048f:-3f561f30:561bc0c4:11
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 66) ActionHierarchy::ActionHierarchy(1)
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 66) ActionHierarchy::add(0:ffff0a28048f:-3f561f30:561bc0c4:11, 1)
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 66) BasicAction::addChildThread () action 0:ffff0a28048f:-3f561f30:561bc0c4:11 adding Thread[ServerService Thread Pool -- 66,5,ServerService ThreadGroup]
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 66) BasicAction::addChildThread () action 0:ffff0a28048f:-3f561f30:561bc0c4:11 adding Thread[ServerService Thread Pool -- 66,5,ServerService ThreadGroup] result = true
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 66) TransactionReaper::insert ( BasicAction: 0:ffff0a28048f:-3f561f30:561bc0c4:11 status: ActionStatus.RUNNING, 300 )
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 66) ReaperElement::ReaperElement ( BasicAction: 0:ffff0a28048f:-3f561f30:561bc0c4:11 status: ActionStatus.RUNNING, 300 )
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Transaction Reaper) ReaperThread.run ()
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Transaction Reaper) TransactionReaper::check ()
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Transaction Reaper) TransactionReaper::check - comparing 1444659710006
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Transaction Reaper) Thread Thread[Transaction Reaper,5,main] sleeping for 299997
+
+
+
+
+INFO  [org.jboss.as.test.jbossts.common.TestXAResourceCommon] (ServerService Thread Pool -- 27) TestXAResourceCommon.created()[id=226]
+
+
+
+
+INFO  [org.jboss.as.test.jbossts.common.TestXAResourceRecovered] (ServerService Thread Pool -- 27) TestXAResourceRecovered.created()[id=226]
+
+
+
+
+INFO  [org.jboss.as.test.jbossts.common.TestXAResourceRecoveryHelper] (ServerService Thread Pool -- 27) TestXAResourceRecoveryHelper starting
+
+
+
+
+INFO  [org.jboss.as.test.jbossts.common.TransactionStoreBrowserService] (ServerService Thread Pool -- 66) TransactionStoreBrowserService.start
+
+
+
+
+INFO  [org.jboss.as.test.jbossts.common.TestXAResourceRecoveryHelper] (ServerService Thread Pool -- 27) Using file /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/data/tx-object-store/TestXAResourceStateStore/TestXAResource.ser for saving state of the org.jboss.as.test.jbossts.common.TestXAResource XA resource
+
+
+
+
+INFO  [org.jboss.as.test.jbossts.common.TestXAResourceRecoveryHelper] (ServerService Thread Pool -- 27) file /home/ochaloup/Transactions/eap-tests-transactions/jbossts/target/jbossas-jbossts/standalone/data/tx-object-store/TestXAResourceStateStore/TestXAResource.ser does not exists - no data for recovery
+
+
+
+
+INFO  [stdout] (ServerService Thread Pool -- 66) registering bean jboss.jta:type=com.arjuna.ats.arjuna.tools.osb.api.mbeans.RecoveryStoreBean,name=store1
+
+
+
+
+TRACE [com.arjuna.ats.jta] (ServerService Thread Pool -- 27) TransactionImple.getStatus: javax.transaction.Status.STATUS_ACTIVE
+
+
+
+
+TRACE [com.arjuna.ats.jta] (ServerService Thread Pool -- 27) BaseTransaction.commit
+
+
+
+
+TRACE [com.arjuna.ats.jta] (ServerService Thread Pool -- 27) TransactionImple.commitAndDisassociate
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) BasicAction::End() for action-id 0:ffff0a28048f:-3f561f30:561bc0c4:10
+
+
+
+
+TRACE [com.arjuna.ats.jta] (ServerService Thread Pool -- 66) TransactionImple.getStatus: javax.transaction.Status.STATUS_ACTIVE
+
+
+
+
+TRACE [com.arjuna.ats.jta] (ServerService Thread Pool -- 66) BaseTransaction.commit
+
+
+
+
+TRACE [com.arjuna.ats.jta] (ServerService Thread Pool -- 66) TransactionImple.commitAndDisassociate
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 66) BasicAction::End() for action-id 0:ffff0a28048f:-3f561f30:561bc0c4:11
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 66) BasicAction::End() result for action-id (0:ffff0a28048f:-3f561f30:561bc0c4:11) is (TwoPhaseOutcome.PREPARE_OK) node id: (1)
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 66) BasicAction::removeChildThread () action 0:ffff0a28048f:-3f561f30:561bc0c4:11 removing TSThread:2
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 66) BasicAction::removeChildThread () action 0:ffff0a28048f:-3f561f30:561bc0c4:11 removing TSThread:2 result = true
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 66) TransactionReaper::remove ( BasicAction: 0:ffff0a28048f:-3f561f30:561bc0c4:11 status: ActionStatus.COMMITTED )
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) BasicAction::End() result for action-id (0:ffff0a28048f:-3f561f30:561bc0c4:10) is (TwoPhaseOutcome.PREPARE_OK) node id: (1)
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) BasicAction::removeChildThread () action 0:ffff0a28048f:-3f561f30:561bc0c4:10 removing TSThread:1
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) BasicAction::removeChildThread () action 0:ffff0a28048f:-3f561f30:561bc0c4:10 removing TSThread:1 result = true
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) TransactionReaper::remove ( BasicAction: 0:ffff0a28048f:-3f561f30:561bc0c4:10 status: ActionStatus.COMMITTED )
+
+
+
+
+INFO  [org.jboss.as.server] (management-handler-thread - 4) WFLYSRV0010: Deployed "crashrecovery-txpropag-client.jar" (runtime-name : "crashrecovery-txpropag-client.jar")
+
+
+
+
+INFO  [org.jboss.ejb.client.remoting] (default task-8) EJBCLIENT000016: Channel Channel ID c3a6574d (outbound) of Remoting connection 3e45a5ec to /127.0.0.1:8180 can no longer process messages
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Periodic Recovery) Periodic recovery second pass at Mon, 12 Oct 2015 16:16:55
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Periodic Recovery) InputObjectState::InputObjectState()
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Periodic Recovery) FileSystemStore.allObjUids(/StateManager/BasicAction/TwoPhaseCoordinator/AtomicAction, InputObjectState Uid   : 0:0:0:0:0
+
+
+
+
+InputObjectState Type  : null
+
+
+
+
+InputObjectState Size  : 0
+
+
+
+
+InputObjectState Buffer: , -1)
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Periodic Recovery) OutputObjectState::OutputObjectState()
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Periodic Recovery) FileSystemStore.allObjUids(/StateManager/BasicAction/TwoPhaseCoordinator/AtomicActionConnectable, InputObjectState Uid   : 0:0:0:0:0
+
+
+
+
+InputObjectState Type  : null
+
+
+
+
+InputObjectState Size  : 40
+
+
+
+
+InputObjectState Buffer: , -1)
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (Periodic Recovery) OutputObjectState::OutputObjectState()
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Periodic Recovery)  
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Periodic Recovery) AtomicActionRecoveryModule second pass
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Periodic Recovery)  
+
+
+
+
+DEBUG [com.arjuna.ats.txoj] (Periodic Recovery) TORecoveryModule - second pass
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Periodic Recovery)  
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Periodic Recovery) XARecoveryModule state change BETWEEN_PASSES-&gt;SECOND_PASS
+
+
+
+
+
+
+
+
+
+DEBUG [com.arjuna.ats.jta] (Periodic Recovery) Local XARecoveryModule - second pass
+
+
+
+
+DEBUG [com.arjuna.ats.jta] (Periodic Recovery) Local XARecoveryModule.transactionInitiatedRecovery completed
+
+
+
+
+DEBUG [com.arjuna.ats.jta] (Periodic Recovery) Local XARecoveryModule.resourceInitiatedRecovery completed
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Periodic Recovery) XARecoveryModule state change SECOND_PASS-&gt;IDLE
+
+
+
+
+
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Periodic Recovery)  
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Periodic Recovery) PeriodicRecovery: background thread Status &lt;== INACTIVE
+
+
+
+
+INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0211: Suspending server with 0ms timeout.
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Periodic Recovery) PeriodicRecovery: background thread backing off
+
+
+
+
+INFO  [org.jboss.as.server] (Thread-3) WFLYSRV0220: Server shutdown has been requested.
+
+
+
+
+TRACE [com.arjuna.ats.jta] (ServerService Thread Pool -- 27) BaseTransaction.begin
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) StateManager::StateManager( 2, 0 )
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) BasicAction::BasicAction()
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) BasicAction::Begin() for action-id 0:ffff0a28048f:-3f561f30:561bc0c4:14
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) BasicAction::actionInitialise() for action-id 0:ffff0a28048f:-3f561f30:561bc0c4:14
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) ActionHierarchy::ActionHierarchy(1)
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) ActionHierarchy::add(0:ffff0a28048f:-3f561f30:561bc0c4:14, 1)
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) BasicAction::addChildThread () action 0:ffff0a28048f:-3f561f30:561bc0c4:14 adding Thread[ServerService Thread Pool -- 27,5,ServerService ThreadGroup]
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) BasicAction::addChildThread () action 0:ffff0a28048f:-3f561f30:561bc0c4:14 adding Thread[ServerService Thread Pool -- 27,5,ServerService ThreadGroup] result = true
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) TransactionReaper::insert ( BasicAction: 0:ffff0a28048f:-3f561f30:561bc0c4:14 status: ActionStatus.RUNNING, 300 )
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) ReaperElement::ReaperElement ( BasicAction: 0:ffff0a28048f:-3f561f30:561bc0c4:14 status: ActionStatus.RUNNING, 300 )
+
+
+
+
+INFO  [org.jboss.as.test.jbossts.common.TransactionStoreBrowserService] (ServerService Thread Pool -- 27) TransactionStoreBrowserService.stop
+
+
+
+
+INFO  [stdout] (ServerService Thread Pool -- 27) unregistering bean jboss.jta:type=com.arjuna.ats.arjuna.tools.osb.api.mbeans.RecoveryStoreBean,name=store1
+
+
+
+
+TRACE [com.arjuna.ats.jta] (ServerService Thread Pool -- 27) TransactionImple.getStatus: javax.transaction.Status.STATUS_ACTIVE
+
+
+
+
+TRACE [com.arjuna.ats.jta] (ServerService Thread Pool -- 27) BaseTransaction.commit
+
+
+
+
+TRACE [com.arjuna.ats.jta] (ServerService Thread Pool -- 27) TransactionImple.commitAndDisassociate
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) BasicAction::End() for action-id 0:ffff0a28048f:-3f561f30:561bc0c4:14
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) BasicAction::End() result for action-id (0:ffff0a28048f:-3f561f30:561bc0c4:14) is (TwoPhaseOutcome.PREPARE_OK) node id: (1)
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) BasicAction::removeChildThread () action 0:ffff0a28048f:-3f561f30:561bc0c4:14 removing TSThread:1
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) BasicAction::removeChildThread () action 0:ffff0a28048f:-3f561f30:561bc0c4:14 removing TSThread:1 result = true
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 27) TransactionReaper::remove ( BasicAction: 0:ffff0a28048f:-3f561f30:561bc0c4:14 status: ActionStatus.COMMITTED )
+
+
+
+
+TRACE [com.arjuna.ats.jta] (ServerService Thread Pool -- 5) BaseTransaction.begin
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 5) StateManager::StateManager( 2, 0 )
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 5) BasicAction::BasicAction()
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 5) BasicAction::Begin() for action-id 0:ffff0a28048f:-3f561f30:561bc0c4:15
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 5) BasicAction::actionInitialise() for action-id 0:ffff0a28048f:-3f561f30:561bc0c4:15
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 5) ActionHierarchy::ActionHierarchy(1)
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 5) ActionHierarchy::add(0:ffff0a28048f:-3f561f30:561bc0c4:15, 1)
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 5) BasicAction::addChildThread () action 0:ffff0a28048f:-3f561f30:561bc0c4:15 adding Thread[ServerService Thread Pool -- 5,5,ServerService ThreadGroup]
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 5) BasicAction::addChildThread () action 0:ffff0a28048f:-3f561f30:561bc0c4:15 adding Thread[ServerService Thread Pool -- 5,5,ServerService ThreadGroup] result = true
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 5) TransactionReaper::insert ( BasicAction: 0:ffff0a28048f:-3f561f30:561bc0c4:15 status: ActionStatus.RUNNING, 300 )
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 5) ReaperElement::ReaperElement ( BasicAction: 0:ffff0a28048f:-3f561f30:561bc0c4:15 status: ActionStatus.RUNNING, 300 )
+
+
+
+
+INFO  [org.jboss.as.test.jbossts.common.TestXAResourceRecoveryHelper] (ServerService Thread Pool -- 5) TestXAResourceRecoveryHelper stopping
+
+
+
+
+TRACE [com.arjuna.ats.jta] (ServerService Thread Pool -- 5) TransactionImple.getStatus: javax.transaction.Status.STATUS_ACTIVE
+
+
+
+
+TRACE [com.arjuna.ats.jta] (ServerService Thread Pool -- 5) BaseTransaction.commit
+
+
+
+
+TRACE [com.arjuna.ats.jta] (ServerService Thread Pool -- 5) TransactionImple.commitAndDisassociate
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 5) BasicAction::End() for action-id 0:ffff0a28048f:-3f561f30:561bc0c4:15
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 5) BasicAction::End() result for action-id (0:ffff0a28048f:-3f561f30:561bc0c4:15) is (TwoPhaseOutcome.PREPARE_OK) node id: (1)
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 5) BasicAction::removeChildThread () action 0:ffff0a28048f:-3f561f30:561bc0c4:15 removing TSThread:3
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 5) BasicAction::removeChildThread () action 0:ffff0a28048f:-3f561f30:561bc0c4:15 removing TSThread:3 result = true
+
+
+
+
+TRACE [com.arjuna.ats.arjuna] (ServerService Thread Pool -- 5) TransactionReaper::remove ( BasicAction: 0:ffff0a28048f:-3f561f30:561bc0c4:15 status: ActionStatus.COMMITTED )
+
+
+
+
+INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) WFLYJCA0019: Stopped Driver service with driver-name = module_dsdriver.jar
+
+
+
+
+INFO  [org.wildfly.extension.messaging-activemq] (ServerService Thread Pool -- 5) WFLYMSGAMQ0006: Unbound messaging object to jndi name java:jboss/exported/jms/RemoteConnectionFactory
+
+
+
+
+INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) WFLYWELD0010: Stopping weld service for deployment crashrecovery-txpropag-client.jar
+
+
+
+
+INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0019: Host default-host stopping
+
+
+
+
+INFO  [stdout] (Thread-0) TransformListener() : handling connection on port 9091
+
+
+
+
+ERROR [stderr] (Thread-182) Exception in thread "Thread-182" java.lang.NullPointerException
+
+
+
+
+ERROR [stderr] (Thread-182) 	at com.sun.corba.se.impl.oa.poa.POAImpl$DestroyThread.run(POAImpl.java:566)
+
+
+
+
+INFO  [stdout] (Thread-0) TransformListener() : handling connection on port 9091
+
+
+
+
+INFO  [stdout] (Thread-0) TransformListener() : handling connection on port 9091
+
+
+
+
+INFO  [stdout] (Thread-0) TransformListener() : handling connection on port 9091
+
+
+
+
+INFO  [stdout] (Thread-0) TransformListener() : handling connection on port 9091
+
+
+
+
+INFO  [stdout] (Thread-0) TransformListener() : handling connection on port 9091
+
+
+
+
+INFO  [stdout] (Thread-0) TransformListener() : handling connection on port 9091
+
+
+
+
+INFO  [stdout] (Thread-0) TransformListener() : handling connection on port 9091
+
+
+
+
+INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+
+
+
+
+INFO  [org.wildfly.extension.messaging-activemq] (MSC service thread 1-2) WFLYMSGAMQ0006: Unbound messaging object to jndi name java:jboss/DefaultJMSConnectionFactory
+
+
+
+
+INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-1) WFLYJCA0011: Unbound JCA ConnectionFactory [java:/JmsXA]
+
+
+
+
+INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) WFLYJCA0019: Stopped Driver service with driver-name = h2
+
+
+
+
+INFO  [org.apache.activemq.artemis.ra] (ServerService Thread Pool -- 66) AMQ151003: resource adaptor stopped
+
+
+
+
+INFO  [com.arjuna.ats.jbossatx] (MSC service thread 1-2) ARJUNA032018: Destroying TransactionManagerService
+
+
+
+
+INFO  [com.arjuna.ats.jbossatx] (MSC service thread 1-3) ARJUNA032014: Stopping transaction recovery manager
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Listener:4712) Recovery listener existing com.arjuna.ats.internal.arjuna.recovery.WorkerService
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (MSC service thread 1-3) PeriodicRecovery: Mode &lt;== TERMINATED
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (MSC service thread 1-3) PeriodicRecovery: shutdown scan wait complete
+
+
+
+
+INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0028: Stopped deployment crashrecovery-txpropag-client.jar (runtime-name: crashrecovery-txpropag-client.jar) in 164ms
+
+
+
+
+DEBUG [com.arjuna.ats.arjuna] (Periodic Recovery) PeriodicRecovery: background thread exiting
+
+
+
+
+INFO  [org.apache.activemq.artemis.core.server] (ServerService Thread Pool -- 66) AMQ221002: Apache ActiveMQ Artemis Message Broker version 1.1.0 [d8f999f9-70eb-11e5-b4bd-574d43db2219] stopped
+
+
+
+
+INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0008: Undertow HTTP listener default suspending
+
+
+
+
+INFO  [stdout] (Thread-0) TransformListener() : handling connection on port 9091
+
+
+
+
+INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:8080
+
+
+
+
+INFO  [stdout] (Thread-0) TransformListener() : handling connection on port 9091
+
+
+
+
+INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0004: Undertow 1.3.0.CR2 stopping
+
+
+
+
+INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0050: EAP 7.0.0.Alpha1 (WildFly Core 2.0.0.CR5) stopped in 302ms
+
+
+
+
+
+
+The thing happens after EJB that is connected via IIOP to the second server is undeployed. The undeploy is interrupted by messages [stdout] (Thread-0) TransformListener() : handling connection on port 9091 which is message from byteman client that I&amp;apos;ve installed on the server for me being able to instrument it. Maybe that has some influence on order of shutdown sequence nevertheless the log should be clean I think.

@@ -1,0 +1,2 @@
+bracket function gives up too early 
+In UnivariateSolverUtils.bracket(...) the search ends prematurely if a = lowerBound, which ignores some roots in the interval. 

@@ -1,0 +1,18 @@
+HiveServer2 in http-kerberos mode is restrictive on client usernames
+Unable to use client usernames of the format:
+
+
+
+username/host@REALM
+
+username@FOREIGN_REALM
+
+
+
+The following works fine:
+
+
+
+username@REALM 
+
+

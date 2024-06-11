@@ -1,0 +1,3 @@
+Check DDL&apos;s writetype in DummyTxnManager
+The patch of HIVE-6734 added some DDL writetypes and checked DDL writetype in DbTxnManager.java.
+We use DummyTxnManager as the default value of hive.txn.manager in hive-site.xml. We noticed that the operation of CREATE TEMPORARY FUNCTION has a DLL_NO_LOCK writetype but it requires a EXCLUSIVE lock. If we try to create a temporary function while there&amp;apos;s a SELECT is processing at the same database, then the console will print &amp;apos;conflicting lock present for default mode EXCLUSIVE&amp;apos; and the CREATE TEMPORARY FUNCTION operation won&amp;apos;t get the lock until the SELECT is done. Maybe it&amp;apos;s a good idea to check the DDL&amp;apos;s writetype in DummyTxnManager too.

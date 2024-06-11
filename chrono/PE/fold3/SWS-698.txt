@@ -1,0 +1,3 @@
+EndpointExceptionResolver is not registered automatically when used together with <sws:annotation-driven/> tag
+After removing &lt;sws:annotation-driven/&gt; EndpointExceptionResolver starts to work. Whats more - it looks like that &lt;sws:annotation-driven/&gt; tag is not needed as anotation based Endpoints works without it.
+Additional details in the Spring forum post.

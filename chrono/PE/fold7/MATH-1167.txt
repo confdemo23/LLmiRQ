@@ -1,0 +1,7 @@
+OLSMultipleLinearRegression STILL needs a way to specify non-zero singularity threshold when instantiating QRDecomposition
+A fix was made for this issue in MATH-1110 for the newSampleData method but not for the newXSampleData method.
+It&amp;apos;s a simple change to propagate the threshold to QRDecomposition:
+237c237
+&lt;         qr = new QRDecomposition(getX());
+
+&gt;         qr = new QRDecomposition(getX(), threshold);

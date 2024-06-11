@@ -1,0 +1,2 @@
+camel-kafka need to commit the last batch of messages when the auto commit is false
+CAMEL-8085 introduced a new feature of commit the consumer offset in batch mode, but it doesn&amp;apos;t commit the last batch of messages.

@@ -1,0 +1,3 @@
+Splitter EIP - The sub exchanges should not contains on completions from original Exchange
+See nabble
+http://camel.465427.n5.nabble.com/Camel-calling-commit-too-early-when-using-split-seda-file-endpoint-tp2830894p2830894.html

@@ -1,0 +1,2 @@
+Interrupted step does not fail job.
+Interrupted step does not fail job.  This has to be wrong otherwise you can&amp;apos;t restart it.

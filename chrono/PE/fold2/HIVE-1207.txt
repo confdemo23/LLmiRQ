@@ -1,0 +1,2 @@
+ScriptOperator AutoProgressor does not set the interval
+As title. I will show more details in the patch.

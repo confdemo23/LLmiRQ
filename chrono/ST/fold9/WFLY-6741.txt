@@ -1,0 +1,161 @@
+Missing validation for messaging-activemq (journal-buffer-size)
+There is no validation for journal-buffer-size attribute. 
+The following request shouldn&amp;apos;t be successful:
+
+
+
+
+
+
+[standalone@localhost:9990 /] /subsystem=messaging-activemq/server=default:write-attribute(name=journal-buffer-size, value=-8L
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "success",
+
+
+
+
+}
+
+
+
+
+[standalone@localhost:9990 /] reload
+
+
+
+
+
+
+server.log
+
+
+
+
+
+
+15:11:57,787 ERROR [org.apache.activemq.artemis.core.server] (ServerService Thread Pool -- 64) AMQ224000: Failure in initialisation: java.lang.IllegalArgumentException: initialCapacity: -8 (expectd: 0+)
+
+
+
+
+	at io.netty.buffer.AbstractByteBufAllocator.validate(AbstractByteBufAllocator.java:196)
+
+
+
+
+	at io.netty.buffer.AbstractByteBufAllocator.heapBuffer(AbstractByteBufAllocator.java:135)
+
+
+
+
+	at io.netty.buffer.Unpooled.buffer(Unpooled.java:135)
+
+
+
+
+	at org.apache.activemq.artemis.api.core.ActiveMQBuffers.fixedBuffer(ActiveMQBuffers.java:86)
+
+
+
+
+	at org.apache.activemq.artemis.core.io.buffer.TimedBuffer.&lt;init&gt;(TimedBuffer.java:108)
+
+
+
+
+	at org.apache.activemq.artemis.core.io.AbstractSequentialFileFactory.&lt;init&gt;(AbstractSequentialFileFactory.java:74)
+
+
+
+
+	at org.apache.activemq.artemis.core.io.aio.AIOSequentialFileFactory.&lt;init&gt;(AIOSequentialFileFactory.java:77)
+
+
+
+
+	at org.apache.activemq.artemis.core.persistence.impl.journal.JournalStorageManager.&lt;init&gt;(JournalStorageManager.java:251)
+
+
+
+
+	at org.apache.activemq.artemis.core.server.impl.ActiveMQServerImpl.createStorageManager(ActiveMQServerImpl.java:1421)
+
+
+
+
+	at org.apache.activemq.artemis.core.server.impl.ActiveMQServerImpl.initialisePart1(ActiveMQServerImpl.java:1540)
+
+
+
+
+	at org.apache.activemq.artemis.core.server.impl.LiveOnlyActivation.run(LiveOnlyActivation.java:61)
+
+
+
+
+	at org.apache.activemq.artemis.core.server.impl.ActiveMQServerImpl.start(ActiveMQServerImpl.java:396)
+
+
+
+
+	at org.apache.activemq.artemis.jms.server.impl.JMSServerManagerImpl.start(JMSServerManagerImpl.java:381)
+
+
+
+
+	at org.wildfly.extension.messaging.activemq.jms.JMSService.doStart(JMSService.java:199)
+
+
+
+
+	at org.wildfly.extension.messaging.activemq.jms.JMSService.access$000(JMSService.java:63)
+
+
+
+
+	at org.wildfly.extension.messaging.activemq.jms.JMSService$1.run(JMSService.java:97)
+
+
+
+
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+
+
+
+
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+
+
+
+	at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+	at org.jboss.threads.JBossThread.run(JBossThread.java:320)
+
+
+
+
+
+
+This issue can occur on other subsystem resources as well.

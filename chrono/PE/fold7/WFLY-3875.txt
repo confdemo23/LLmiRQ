@@ -1,0 +1,26 @@
+HTTPSession sharing between wars delivered in an EAR failure in standalone-ha.xml
+Deploying two Web applications within an EAR achive with the following jboss-all.xml, leads to a failure in deployment when using standalone-ha.xml configuration: 
+&lt;jboss umlns="urn:jboss:1.0"&gt;
+    &lt;shared-session-config xmlns="urn:jboss:shared-session-config:1.0"&gt;
+        &lt;session-config&gt;
+            &lt;cookie-config&gt;
+                &lt;path&gt;/&lt;/path&gt;
+            &lt;/cookie-config&gt;
+        &lt;/session-config&gt;
+    &lt;/shared-session-config&gt;
+&lt;/jboss&gt;
+Exception raised:
+15:58:52,160 ERROR [org.jboss.as.controller.management-operation] (DeploymentScanner-threads - 2) WFLYCTL0013: Operation ("deploy") failed - address: ([("deployment" =&gt; "ear1.ear")]) - failure description: 
+{"WFLYCTL0180: Services with missing/unavailable dependencies" =&gt; [
+
+    "jboss.undertow.deployment.default-server.default-host./webapp1.codec.locator is missing [jboss.clustering.web.locator.\"ear1.ear.webapp1.war\"]",
+
+    "jboss.undertow.deployment.default-server.default-host./webapp2.codec.locator is missing [jboss.clustering.web.locator.\"ear1.ear.webapp2.war\"]"
+
+]}
+15:58:52,227 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) WFLYSRV0010: Deployed "ear1.ear" (runtime-name : "ear1.ear")
+15:58:52,230 INFO  [org.jboss.as.controller] (DeploymentScanner-threads - 2) WFLYCTL0183: Service status report
+WFLYCTL0184:    New missing/unsatisfied dependencies:
+      service jboss.clustering.web.locator."ear1.ear.webapp1.war" (missing) dependents: [service jboss.undertow.deployment.default-server.default-host./webapp1.codec.locator]
+      service jboss.clustering.web.locator."ear1.ear.webapp2.war" (missing) dependents: [service jboss.undertow.deployment.default-server.default-host./webapp2.
+codec.locator]

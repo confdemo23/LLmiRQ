@@ -1,0 +1,5 @@
+SESSION_DRAINING_STRATEGY is missing a validator and incorrectly uses setAlternatives()
+
+this is wrong .setAlternatives("DEFAULT", "ALWAYS" , "NEVER")
+add a proper validator
+

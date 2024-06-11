@@ -1,0 +1,3 @@
+No reload required when add mime-mapping to servlet-container
+When mime-mapping is added to servlet container then no reload of server is required, although change takes effect after server restart is performed.
+Expected behaivour is either that change takes effect immediatelly after configuration is changed or that server reload is required in response message and result of the operation.

@@ -1,0 +1,3 @@
+TwitterEscapingFormHttpMessageConverter corrupting images
+Since 1.1.0.M4 updateStatus with media results in an corrupted image.
+The normal FormHttpMessageConverter works fine. 

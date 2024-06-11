@@ -1,0 +1,22 @@
+exception during deployment when using websocket annotation
+This exception occurs during deployment:
+"17:07:33,154 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-3) MSC000001: Failed to start service jboss.undertow.deployment.default-host./jboss-as-kitchensink: org.jboss.msc.service.StartException in service jboss.undertow.deployment.default-host./jboss-as-kitchensink: Failed to start service
+at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1900) [jboss-msc-1.2.0.Beta2.jar:1.2.0.Beta2]
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_21]
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_21]
+at java.lang.Thread.run(Thread.java:722) [rt.jar:1.7.0_21]
+Caused by: org.jboss.weld.exceptions.IllegalArgumentException: JBAS016071: Singleton not set for ModuleClassLoader for Module "org.wildfly.extension.undertow:main" from local module loader @21d1cd0d (finder: local module finder @54ed21d3 (roots: /Users/max/code/wildfly/build/target/wildfly-8.0.0.Beta1-SNAPSHOT/modules,/Users/max/code/wildfly/build/target/wildfly-8.0.0.Beta1-SNAPSHOT/modules/system/layers/base)). This means that you are trying to access a weld deployment with a Thread Context ClassLoader that is not associated with the deployment.
+at org.jboss.weld.manager.InjectionTargetFactoryImpl.createInjectionTarget(InjectionTargetFactoryImpl.java:83)
+at org.jboss.weld.manager.InjectionTargetFactoryImpl.createInjectionTarget(InjectionTargetFactoryImpl.java:69)
+"
+full details at https://gist.github.com/maxandersen/798e6f9eb9c23285df5d
+When I have this annotation on a class:
+@javax.websocket.server.ServerEndpoint(
+        value = "/registration", 
+        encoders = 
+{MemberEncoder.class}
+)
+Without it things deploy but of course the websocket does not work.
+Full example:
+https://github.com/pjiricka/jboss-as-quickstart/commit/7484d494ea294034aded6a28b80a5c754053bc03
+/kitchensink in this repo fails with this commit.

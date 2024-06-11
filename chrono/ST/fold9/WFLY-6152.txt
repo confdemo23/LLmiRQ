@@ -1,0 +1,16 @@
+EJB timer scheduler log an Exception for an already canceled timer
+If a timer is canceled inside of the @timeout method the scheduler will log an ERROR if the timer duration is longer than the intervall and an overlapping execution should be fired.
+This is due to internal validatons.
+This will not happen if the timer is canceled by an external process, here the scheduler is removed.
+The log message is like this:
+ERROR [org.jboss.as.ejb3] (EJB default - 3) WFLYEJB0164: Exception running timer task for timer [id=0bd9870b-568b-42f5-9bda-e1525c3500aa timedObjectId=ejb30-timer.ejb30-timer.SimpleTimerBean auto-timer?:false persistent?:true timerService=org.jboss.as.ejb3.timerservice.TimerServiceImpl@53ba1a7f initialExpiration=Tue Feb 09 17:19:32 CET 2016 intervalDuration(in milli sec)=5000 nextExpiration=Tue Feb 09 17:19:37 CET 2016 timerState=CANCELED info=SimpleTimerInfo description=A timer started every 5 seconds] on EJB ejb30-timer.ejb30-timer.SimpleTimerBean: javax.ejb.NoSuchObjectLocalException: WFLYEJB0331: Timer was canceled
+	at org.jboss.as.ejb3.timerservice.TimerImpl.assertTimerState(TimerImpl.java:459)
+	at org.jboss.as.ejb3.timerservice.TimerImpl.isPersistent(TimerImpl.java:215)
+	at org.jboss.as.ejb3.timerservice.TimerServiceImpl.shouldRun(TimerServiceImpl.java:1117)
+	at org.jboss.as.ejb3.timerservice.TimerTask.run(TimerTask.java:124)
+	at org.jboss.as.ejb3.timerservice.TimerServiceImpl$Task$1.run(TimerServiceImpl.java:1221)
+	at org.wildfly.extension.requestcontroller.RequestController$QueuedTask$1.run(RequestController.java:497)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+	at org.jboss.threads.JBossThread.run(JBossThread.java:320)

@@ -1,0 +1,3 @@
+Add support for date truncation
+Add support for floor (&lt;time&gt; to &lt;timeunit&gt;), which is equivalent to date_trunc(&lt;timeunit&gt;, &lt;time&gt;).
+https://www.postgresql.org/docs/9.1/static/functions-datetime.html#FUNCTIONS-DATETIME-TRUNC

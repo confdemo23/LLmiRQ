@@ -1,0 +1,40 @@
+windowing function returns incorrect result when the window size is larger than the partition size
+In PTF windowing, when the partition is small and the window size is larger than the partition size, we are seeing incorrect result. It happens for max, min, first_value, last_value and sum functions. 
+
+CREATE TABLE sdy1(
+
+ord int,
+
+type string);
+
+
+
+The data is:
+
+2 a
+
+3 a
+
+1 a 
+
+
+
+The result is as follows for the query select ord, min(ord) over (partition by type order by ord rows between 1 preceding and 7 following)
+
+1 1
+
+2 1
+
+3 1 
+
+
+
+The expected result is:
+
+1 1
+
+2 1
+
+3 2
+
+

@@ -1,0 +1,5 @@
+ClientRegionFactoryBean Adds Region Listeners Twice
+CacheListeners are added twice to the ClientRegionFactory (one inside if (attributes != null) 
+{ ...}
+ and again immediately after).
+Not serious for a simple logging listener but could be an issue for more complex listeners.

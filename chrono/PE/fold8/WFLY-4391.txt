@@ -1,0 +1,2 @@
+When testing with WildFly Full, the WSTestCase is randomly unstable
+Sometimes the WSTestCase will fail without any reason.

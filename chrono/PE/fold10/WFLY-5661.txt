@@ -1,0 +1,3 @@
+Enable CCM for jta=false
+Currently AbstractDataSourceAdd doesn&amp;apos;t add the CCM service for jta=false deployments, which could work if applications rely on the CCM boundaries.
+For both jta=true and jta=false deployments the dependency should be guarded with a "if (useCCM)"

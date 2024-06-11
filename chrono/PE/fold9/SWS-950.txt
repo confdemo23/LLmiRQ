@@ -1,0 +1,61 @@
+getResponseHeaders() is case sensitive
+In org.springframework.ws.transport.http.HttpUrlConnection we find the following code:
+
+
+
+
+
+
+@Override
+
+
+
+
+	public Iterator&lt;String&gt; getResponseHeaders(String name) throws IOException {
+
+
+
+
+		Map&lt;String, List&lt;String&gt;&gt; mapHeader = connection.getHeaderFields();
+
+
+
+
+		List&lt;String&gt; listHeaderValues = mapHeader.get(name);
+
+
+
+
+		if (listHeaderValues == null) {
+
+
+
+
+		    return Collections.&lt;String&gt;emptyList().iterator();
+
+
+
+
+		} else {
+
+
+
+
+		    return listHeaderValues.iterator();
+
+
+
+
+		}
+
+
+
+
+	}
+
+
+
+
+
+
+This code returns an Iterator containing the HTTP-Header(s) that matches the parameter "name" . The problem is that this is case sensitive. According to the RFC HTTP-Headers are case-insensitive

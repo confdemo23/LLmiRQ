@@ -1,0 +1,4 @@
+LikeOperations.getPagesLiked doesn&apos;t get cover obj and link
+I tested directly the fb graph api explorer and got the full information. In the Java LikesOPerations call I get all the information less the cover object (id, image url, offsetx, offsety) and the link of the link
+Apparently the permissions are the same in the graph api explorer and the fb connect (user_likes,friends_likes,publish_stream,user_photos,offline_access,friends_birthday,friends_location,read_friendlists)
+GET me/friends?fields=likes.fields(link,name,website,cover),name,link&amp;limit=5

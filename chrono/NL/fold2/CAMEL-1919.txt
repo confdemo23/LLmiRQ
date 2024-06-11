@@ -1,0 +1,5 @@
+Include route builder as template for other routes to improve route reuse
+It should be possible to include another route builder as a kind of template to improve route reuse.
+The existing method addRoutes should either be change to support this properly or we add a new method.
+However it does looks as if we could just tailor addRoutes method.
+What needs also is to expose this in the Spring XML as well.

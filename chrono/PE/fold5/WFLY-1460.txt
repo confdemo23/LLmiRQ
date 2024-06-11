@@ -1,0 +1,83 @@
+WildFly server fails to start with transactions configured to be run with JDBCObject store
+In case that you configure transactions subsystem for running with JDBCObject store the app server fails to start because of (it seems so) a circular dependency.
+You can expect the exception like:
+
+
+
+
+
+
+ERROR [org.jboss.as.controller.management-operation] (ServerService Thread Pool -- 52) JBAS014612: Operation ("add") failed - address: ([("subsystem" =&gt; "transactions")]): org.jboss.msc.service.CircularDependencyException: Container jboss-as has a circular dependency: [service jboss.txn.ArjunaObjectStoreEnvironment, service jboss.txn.ArjunaRecoveryManager, service jboss.connector.transactionintegration, service jboss.cached-connection-manager, service jboss.data-source.java:jboss/datasources/JDBCObjectDS] 
+
+
+
+
+
+
+My assumption came from the configuration similar to this:
+
+
+
+
+
+
+&lt;datasource jta="false" jndi-name="java:jboss/datasources/JDBCObjectDS" pool-name="JDBCObjectDS" enabled="true" use-ccm="false"&gt; 
+
+
+
+
+&lt;connection-url&gt;jdbc:postgresql://postgresserver.com:5432/user1&lt;/connection-url&gt;
+
+
+
+
+  &lt;driver-class&gt;org.postgresql.Driver&lt;/driver-class&gt;
+
+
+
+
+  &lt;driver&gt;postgresql-9.2-1002.jdbc4.jar&lt;/driver&gt;
+
+
+
+
+  &lt;security&gt;
+
+
+
+
+    &lt;user-name&gt;user1&lt;/user-name&gt;
+
+
+
+
+    &lt;password&gt;user1&lt;/password&gt;
+
+
+
+
+  &lt;/security&gt;
+
+
+
+
+&lt;/datasource&gt; 
+
+
+
+
+
+
+and the transaction config looks like this
+
+
+
+
+
+
+&lt;jdbc-store datasource-jndi-name="java:jboss/datasources/JDBCObjectDS" /&gt;
+
+
+
+
+

@@ -1,0 +1,3 @@
+Multicast EIP with only one child processor does not call aggregate strategy
+See nabble
+http://camel.465427.n5.nabble.com/multicast-aggregation-tp5745571.html

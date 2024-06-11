@@ -1,0 +1,4 @@
+CamelContextFactoryBean missing setEndpoints method
+The Spring JAXB model class for &lt;camelContext&gt; is missing a setEndpoints() method, which means you cannot add an endpoint outside the route definition using JAXB.  Interestingly, the Blueprint version of CamelContextFactoryBean has this method, so I&amp;apos;m guessing it was just missed.
+Impacted classes:
+org.apache.camel.spring.CamelContextFactoryBean

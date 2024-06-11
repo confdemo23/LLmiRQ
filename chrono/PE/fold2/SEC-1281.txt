@@ -1,0 +1,17 @@
+RememberMeAuthenticationProvider is created with default "key" parameter instead of my own specified
+I tried to define my own RememberMeService as shown
+&lt;security:remember-me 
+   services-ref="rememberMeServices" 
+   key="$
+{app.security.key.rememberMe}"/&gt;
+
+&lt;bean id="rememberMeServices" class="org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices"&gt;
+        &lt;property name="key" value="${app.security.key.rememberMe}
+"/&gt;
+        &lt;property name="cookieName" value="rememberme-ref"/&gt;
+        &lt;property name="parameter" value="j_rememberme"/&gt;
+        &lt;property name="tokenValiditySeconds" value="1209600"/&gt;
+        &lt;property name="tokenRepository" ref="rememberMeDao"/&gt;
+        &lt;property name="userDetailsService" ref="userDetailsDao" /&gt;
+&lt;/bean&gt;
+But RememberMeAuthenticationProvider instance is created with default "SpringSecured" key instead of my own so RememberMeAuthenticationProvider.authenticate never succeeds.

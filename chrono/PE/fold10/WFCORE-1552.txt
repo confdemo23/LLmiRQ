@@ -1,0 +1,127 @@
+Slaves should report the master&apos;s version in the domain model
+Setting up the mixed domain tests for an EAP7 slave, I get the following error :
+
+
+
+
+
+
+  SimpleMixedDomain700TestCase&gt;SimpleMixedDomainTest.test00002_Versioning:139 expected:&lt;{
+
+
+
+
+    "management-major-version" =&gt; 4,
+
+
+
+
+    "management-micro-version" =&gt; 0,
+
+
+
+
+    "management-minor-version" =&gt; 1,
+
+
+
+
+    "name" =&gt; "Unnamed Domain",
+
+
+
+
+    "namespaces" =&gt; [],
+
+
+
+
+    "product-name" =&gt; "WildFly Full",
+
+
+
+
+    "product-version" =&gt; "10.1.0.Final-SNAPSHOT",
+
+
+
+
+    "release-codename" =&gt; "Kenny",
+
+
+
+
+    "release-version" =&gt; "2.2.0.CR2",
+
+
+
+
+    "schema-locations" =&gt; []
+
+
+
+
+}&gt; but was:&lt;{
+
+
+
+
+    "management-major-version" =&gt; 4,
+
+
+
+
+    "management-micro-version" =&gt; 0,
+
+
+
+
+    "management-minor-version" =&gt; 1,
+
+
+
+
+    "name" =&gt; "Unnamed Domain",
+
+
+
+
+    "namespaces" =&gt; [],
+
+
+
+
+    "product-name" =&gt; "JBoss EAP",
+
+
+
+
+    "product-version" =&gt; "7.0.0.GA",
+
+
+
+
+    "release-codename" =&gt; "Kenny",
+
+
+
+
+    "release-version" =&gt; "2.1.2.Final-redhat-1",
+
+
+
+
+    "schema-locations" =&gt; []
+
+
+
+
+}&gt;
+
+
+
+
+
+
+The &amp;apos;expected&amp;apos; is the WildFly master values, while the &amp;apos;actual&amp;apos; are the slave values. product-name, product-version, release-codename and release-version on the slave should be the same as the master values. Once we upgrade to Wildfly Core 3.0.0 we should also check that the management-[major/minor/micro]-version attributes on the slave are the same as the DC&amp;apos;s values as well (i.e 5.0.0 rather than 4.0.1) This is similar to WFLY-3228 back in the day.
+This is probably caused by the SyncXXX handlers for pushing the domain config as operations (WFCORE-401)

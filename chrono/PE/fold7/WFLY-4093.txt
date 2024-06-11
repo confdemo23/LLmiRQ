@@ -1,0 +1,2 @@
+Changing IOR settings should require restart of jacorb subsystem
+When using management operations to add IOR settings, the settings don&amp;apos;t get reflected in the IORSecConfigMetaDataService until a server reload. The management operations should mark that the jacorb subsystem needs to be restarted.

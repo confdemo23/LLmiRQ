@@ -1,0 +1,3 @@
+enrich doesn&apos;t send out ExchangeSendingEvent nor ExchangeSentEvent 
+When using enrich DSL, camel doesn&amp;apos;t send out ExchangeSendingEvent nor ExchangeSentEvent  for management.
+You can find more information about it here

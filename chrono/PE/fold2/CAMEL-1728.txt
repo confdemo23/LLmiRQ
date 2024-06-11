@@ -1,0 +1,3 @@
+camel-bean - should throw MethodNotExist exception if method name provided but not found on bean
+See nabble
+http://www.nabble.com/AmbiguousMethodCallException-td24042324s22882.html

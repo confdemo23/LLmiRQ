@@ -1,0 +1,2 @@
+Master will shut down if number of active region servers is zero even if shutdown was not requested
+The master will initiate shutdown if the number of active region servers goes to zero, even if shutdown has not been requested.

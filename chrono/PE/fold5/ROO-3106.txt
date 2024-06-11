@@ -1,0 +1,70 @@
+Spring Roo doesn&apos;t support new Java 7 language features
+Java 7 new language features do not work in Roo. The following has been tested:
+
+Underscore Between Literals
+
+
+
+
+
+
+public static final int TEST = 1_000_000;
+
+
+
+
+
+
+Roo error: Encountered " &lt;IDENTIFIER&gt; "_000_000 "" at line 18, column 41.
+
+
+Diamond Syntax:
+
+
+
+
+
+
+List&lt;String&gt; list = new ArrayList&lt;&gt;();
+
+
+
+
+
+
+Roo error: Encountered " "&lt;" "&lt; "" at line 23, column 42.
+
+
+Try with Resources
+
+
+
+
+
+
+try (FileInputStream in = new FileInputStream("readme.txt")) 
+
+
+
+
+{          
+
+
+
+
+    System.out.println(in.read());
+
+
+
+
+}...
+
+
+
+
+
+
+Roo error: Encountered " "}" "} "" at line 19, column 9.
+
+Japa (Java Parser used in Roo) is obsolete project that supports 1.5
+Either japa should be modified or new java parser selected for future releases.

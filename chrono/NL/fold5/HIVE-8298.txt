@@ -1,0 +1,3 @@
+Incorrect results for n-way join when join expressions are not in same order across joins
+select *  from srcpart a join srcpart b on a.key = b.key and a.hr = b.hr join srcpart c on a.hr = c.hr and a.key = c.key;
+is minimal query which reproduces it

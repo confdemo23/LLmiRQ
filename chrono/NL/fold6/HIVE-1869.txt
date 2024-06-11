@@ -1,0 +1,4 @@
+TestMTQueries failing on jenkins
+TestMTQueries has been failing intermittently on Hudson. The first failure I can find
+a record of on Hudson is from svn rev 1052414 on December 24th, but it&amp;apos;s 
+likely that the failures actually started earlier.

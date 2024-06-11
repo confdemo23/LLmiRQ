@@ -1,0 +1,9 @@
+PersistenceProperty specified in @PersistenceContext should be passed to the created EntityManager 
+While working on the unit test for WFLY-7075, I noticed that PersistenceContext properties are not being passed correctly to the Injected EntityManager, we should fix that.
+For Example:
+
+@PersistenceContext(type = PersistenceContextType.TRANSACTION, unitName = "mypc", properties=
+Unknown macro: {@PersistenceProperty(name="wildfly.jpa.allowjoinedunsync", value="true")} 
+)
+private EntityManager allowjoinedunsyncEm;
+Is passing an incorrect form of the property values.

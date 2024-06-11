@@ -1,0 +1,2 @@
+Javadoc error - WebSecurityConfigurerAdapter.registerAuthentication & EnableWebSecurity refer to wrong parameter
+The example for WebSecurityConfigurerAdapter.registerAuthentication and EnableWebSecurity refer to &amp;apos;registry&amp;apos; rather than &amp;apos;auth&amp;apos;.

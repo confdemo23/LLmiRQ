@@ -1,0 +1,3 @@
+Error in javadoc LdapTemplate search(SearchExecutor, NameClassPairCallbackHandler, DirContextProcessor)
+Javadoc of org.springframework.ldap.core.LdapTemplate.search(SearchExecutor, NameClassPairCallbackHandler, DirContextProcessor) says it supports a null DirContextProcessor. 
+It doesn&amp;apos;t. Please fix documentation or code.

@@ -1,0 +1,16 @@
+nextExponential parameter check bug - patch supplied
+Index: src/main/java/org/apache/commons/math/random/RandomDataImpl.java
+===================================================================
+ src/main/java/org/apache/commons/math/random/RandomDataImpl.java	(revision 830102)
++++ src/main/java/org/apache/commons/math/random/RandomDataImpl.java	(working copy)
+@@ -462,7 +462,7 @@
+
+@return the random Exponential value
+      */
+     public double nextExponential(double mean) {
+
+
+if (mean &lt; 0.0) {
++        if (mean &lt;= 0.0) 
+Unknown macro: {             throw MathRuntimeException.createIllegalArgumentException(                   "mean must be positive ({0})", mean);         } 
+

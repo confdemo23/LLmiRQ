@@ -1,0 +1,3 @@
+The Append/Increment may return the data from future
+OperationContext maintains the mvcc as a static member, so any Appends and Increments read point will be changed by others. That is, a retrying Append/Increment may see the future data.
+This is a master only issue.

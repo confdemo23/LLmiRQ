@@ -1,0 +1,2 @@
+Create constructors
+Roo generates setters for entities, but only a default constructor.  Constructors are a perfectly normal way to initialise a Java class, especially when setting mandatory fields since there is no guarantee that setters are ever invoked.  Maybe provide a switch to specify whether mandatory (@NotNull) fields are to be passed via setters or via a constructor.

@@ -1,0 +1,18 @@
+MockEndpont.expectedMinimumMessageCount() doesn&apos;t work right
+In MockEndpoint.assertIsSatisfied(), don&amp;apos;t use the right counter for assertion.
+
+      
+      if (expectedMinimumCount &gt;= 0) {
+            int receivedCounter = getReceivedCounter();
+            assertTrue("Received message count " + receivedCounter + ", expected at least " + expectedCount, expectedCount &lt;= receivedCounter);
+        }
+
+
+it should be change to 
+
+      
+      if (expectedMinimumCount &gt;= 0) {
+            int receivedCounter = getReceivedCounter();
+            assertTrue("Received message count " + receivedCounter + ", expected at least " + expectedMinimumCount, expectedMinimumCount &lt;= receivedCounter);
+        }
+

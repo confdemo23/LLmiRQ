@@ -1,0 +1,5 @@
+ObjectPath equality check breaks due to changes MongoDB V3.
+The equality check for ObjectPathItem item id&amp;apos;s in ObjectPath seems to break when used with MongoDB V3 due to contract changes of MongoDB&amp;apos;s ObjectID. 
+From the referenced commit in the mongo-java-driver:
+https://github.com/mongodb/mongo-java-driver/commit/aa4b4355c808e045ce00cc1dfbdd0bf78fb6901a
+(ObjectId.)equals method will no longer compare equal to anything but an ObjectId

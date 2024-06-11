@@ -1,0 +1,233 @@
+NPE on missing name of <distributed-workmanager>
+When the name attribute of &lt;distributed-workmanager&gt; is missing instead of a descriptive log message you get a NullPointerException. The issue is that the StringBuilder constructor is called with the value of the name attribute instead of the name of the name attribute ("name").
+Something like this:
+
+
+
+
+
+
+&lt;subsystem xmlns="urn:jboss:domain:jca:2.0"&gt;
+
+
+
+
+    &lt;distributed-workmanager/&gt;
+
+
+
+
+&lt;/subsystem&gt;
+
+
+
+
+
+
+Will produce a stack trace like this:
+
+
+
+
+
+
+[org.jboss.as.server] (Controller Boot Thread) WFLYSRV0055: Caught exception during boot: org.jboss.as.controller.persistence.ConfigurationPersistenceException: WFLYCTL0085: Failed to parse configuration
+
+
+
+
+	at org.jboss.as.controller.persistence.XmlConfigurationPersister.load(XmlConfigurationPersister.java:131)
+
+
+
+
+	at org.jboss.as.server.ServerService.boot(ServerService.java:347)
+
+
+
+
+	at org.jboss.as.controller.AbstractControllerService$1.run(AbstractControllerService.java:271)
+
+
+
+
+	at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+Caused by: java.lang.NullPointerException
+
+
+
+
+	at java.lang.StringBuilder.&lt;init&gt;(StringBuilder.java:112)
+
+
+
+
+	at org.jboss.as.connector.subsystems.jca.JcaExtension$ConnectorSubsystemParser.parseDistributedWorkManager(JcaExtension.java:560)
+
+
+
+
+	at org.jboss.as.connector.subsystems.jca.JcaExtension$ConnectorSubsystemParser.readElement(JcaExtension.java:367)
+
+
+
+
+	at org.jboss.as.connector.subsystems.jca.JcaExtension$ConnectorSubsystemParser.readElement(JcaExtension.java:119)
+
+
+
+
+	at org.jboss.staxmapper.XMLMapperImpl.processNested(XMLMapperImpl.java:110)
+
+
+
+
+	at org.jboss.staxmapper.XMLExtendedStreamReaderImpl.handleAny(XMLExtendedStreamReaderImpl.java:69)
+
+
+
+
+	at org.jboss.as.server.parsing.StandaloneXml.parseServerProfile(StandaloneXml.java:1199)
+
+
+
+
+	at org.jboss.as.server.parsing.StandaloneXml.readServerElement_1_4(StandaloneXml.java:457)
+
+
+
+
+	at org.jboss.as.server.parsing.StandaloneXml.readElement(StandaloneXml.java:144)
+
+
+
+
+	at org.jboss.as.server.parsing.StandaloneXml.readElement(StandaloneXml.java:106)
+
+
+
+
+	at org.jboss.staxmapper.XMLMapperImpl.processNested(XMLMapperImpl.java:110)
+
+
+
+
+	at org.jboss.staxmapper.XMLMapperImpl.parseDocument(XMLMapperImpl.java:69)
+
+
+
+
+	at org.jboss.as.controller.persistence.XmlConfigurationPersister.load(XmlConfigurationPersister.java:123)
+
+
+
+
+
+
+After the patch the stack trace looks like this:
+
+
+
+
+
+
+org.jboss.as.server] (Controller Boot Thread) WFLYSRV0055: Caught exception during boot: org.jboss.as.controller.persistence.ConfigurationPersistenceException: WFLYCTL0085: Failed to parse configuration
+
+
+
+
+	at org.jboss.as.controller.persistence.XmlConfigurationPersister.load(XmlConfigurationPersister.java:131) [wildfly-controller-1.0.0.Beta2.jar:1.0.0.Beta2]
+
+
+
+
+	at org.jboss.as.server.ServerService.boot(ServerService.java:347) [wildfly-server-1.0.0.Beta2.jar:1.0.0.Beta2]
+
+
+
+
+	at org.jboss.as.controller.AbstractControllerService$1.run(AbstractControllerService.java:271) [wildfly-controller-1.0.0.Beta2.jar:1.0.0.Beta2]
+
+
+
+
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.8.0_40]
+
+
+
+
+Caused by: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[274,13]
+
+
+
+
+Message: WFLYCTL0133: Missing required attribute(s): name
+
+
+
+
+	at org.jboss.as.connector.subsystems.jca.JcaExtension$ConnectorSubsystemParser.parseDistributedWorkManager(JcaExtension.java:563)
+
+
+
+
+	at org.jboss.as.connector.subsystems.jca.JcaExtension$ConnectorSubsystemParser.readElement(JcaExtension.java:368)
+
+
+
+
+	at org.jboss.as.connector.subsystems.jca.JcaExtension$ConnectorSubsystemParser.readElement(JcaExtension.java:120)
+
+
+
+
+	at org.jboss.staxmapper.XMLMapperImpl.processNested(XMLMapperImpl.java:110) [staxmapper-1.2.0.Beta1.jar:1.2.0.Beta1]
+
+
+
+
+	at org.jboss.staxmapper.XMLExtendedStreamReaderImpl.handleAny(XMLExtendedStreamReaderImpl.java:69) [staxmapper-1.2.0.Beta1.jar:1.2.0.Beta1]
+
+
+
+
+	at org.jboss.as.server.parsing.StandaloneXml.parseServerProfile(StandaloneXml.java:1199) [wildfly-server-1.0.0.Beta2.jar:1.0.0.Beta2]
+
+
+
+
+	at org.jboss.as.server.parsing.StandaloneXml.readServerElement_1_4(StandaloneXml.java:457) [wildfly-server-1.0.0.Beta2.jar:1.0.0.Beta2]
+
+
+
+
+	at org.jboss.as.server.parsing.StandaloneXml.readElement(StandaloneXml.java:144) [wildfly-server-1.0.0.Beta2.jar:1.0.0.Beta2]
+
+
+
+
+	at org.jboss.as.server.parsing.StandaloneXml.readElement(StandaloneXml.java:106) [wildfly-server-1.0.0.Beta2.jar:1.0.0.Beta2]
+
+
+
+
+	at org.jboss.staxmapper.XMLMapperImpl.processNested(XMLMapperImpl.java:110) [staxmapper-1.2.0.Beta1.jar:1.2.0.Beta1]
+
+
+
+
+	at org.jboss.staxmapper.XMLMapperImpl.parseDocument(XMLMapperImpl.java:69) [staxmapper-1.2.0.Beta1.jar:1.2.0.Beta1]
+
+
+
+
+	at org.jboss.as.controller.persistence.XmlConfigurationPersister.load(XmlConfigurationPersister.java:123) [wildfly-controller-1.0.0.Beta2.jar:1.0.0.Beta2]
+
+
+
+
+

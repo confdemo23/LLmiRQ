@@ -1,0 +1,3 @@
+PGPDataFormat: NullPointerException if decryptor gets body with invalid format
+if the PGPDataFormat gets an invalid format during the decryption process a NullPointerException is thrown.
+The attached patch throws an IllegalArgumentException instead and improves further error situations if a wrong formated input is provided.

@@ -1,0 +1,5 @@
+add findbugs in build.xml
+see HIVE-1172 and HIVE-2169 
+it was used default rules.
+exclude filter file is in findbugs\findbugs-exclude.xml
+the result of xml files to html file is not added because no style files.

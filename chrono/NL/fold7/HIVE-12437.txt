@@ -1,0 +1,2 @@
+SMB join in tez fails when one of the tables is empty
+It looks like a better check for empty tables is to depend on the existence of the record reader for the input from tez. 

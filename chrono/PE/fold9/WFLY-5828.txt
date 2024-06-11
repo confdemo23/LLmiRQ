@@ -1,0 +1,359 @@
+Format differences between default configuration and read/persisted oneFormat differences between default configuration and read/persisted one in infinispan/undertow/ejb3 subsystems and management section
+Neverending classic, just like every release:
+
+
+
+
+
+
+[rhusar@syrah wildfly-10.0.0.Final-SNAPSHOT]$ diff standalone/configuration/standalone-ha.xml standalone/configuration/standalone_xml_history/standalone-ha.initial.xml
+
+
+
+
+1c1
+
+
+
+
+&lt; &lt;?xml version=&amp;apos;1.0&amp;apos; encoding=&amp;apos;UTF-8&amp;apos;?&gt;
+
+
+
+
+---
+
+
+
+
+&gt; &lt;?xml version="1.0" ?&gt;
+
+
+
+
+4d3
+
+
+
+
+&lt;
+
+
+
+
+36,37d34
+
+
+
+
+&lt;
+
+
+
+
+&lt;
+
+
+
+
+64c61
+
+
+
+
+&lt;                 &lt;file-handler name="file" formatter="json-formatter" path="audit-log.log" relative-to="jboss.server.data.dir"/&gt;
+
+
+
+
+---
+
+
+
+
+&gt;                 &lt;file-handler name="file" formatter="json-formatter" relative-to="jboss.server.data.dir" path="audit-log.log"/&gt;
+
+
+
+
+87d83
+
+
+
+
+&lt;
+
+
+
+
+178a175
+
+
+
+
+&gt;                 &lt;stateful default-access-timeout="5000" cache-ref="distributable" passivation-disabled-cache-ref="simple"/&gt;
+
+
+
+
+182d178
+
+
+
+
+&lt;                 &lt;stateful default-access-timeout="5000" cache-ref="distributable" passivation-disabled-cache-ref="simple"/&gt;
+
+
+
+
+186a183
+
+
+
+
+&gt;                     &lt;!-- Automatically configure pools. Alternatively, max-pool-size can be set to a specific value --&gt;
+
+
+
+
+193c190
+
+
+
+
+&lt;                 &lt;cache name="distributable" passivation-store-ref="infinispan" aliases="passivating clustered"/&gt;
+
+
+
+
+---
+
+
+
+
+&gt;                 &lt;cache name="distributable" aliases="passivating clustered" passivation-store-ref="infinispan"/&gt;
+
+
+
+
+220c217
+
+
+
+
+&lt;             &lt;cache-container name="server" aliases="singleton cluster" module="org.wildfly.clustering.server" default-cache="default"&gt;
+
+
+
+
+---
+
+
+
+
+&gt;             &lt;cache-container name="server" aliases="singleton cluster" default-cache="default" module="org.wildfly.clustering.server"&gt;
+
+
+
+
+226c223
+
+
+
+
+&lt;             &lt;cache-container name="web" module="org.wildfly.clustering.web.infinispan" default-cache="dist"&gt;
+
+
+
+
+---
+
+
+
+
+&gt;             &lt;cache-container name="web" default-cache="dist" module="org.wildfly.clustering.web.infinispan"&gt;
+
+
+
+
+234c231
+
+
+
+
+&lt;             &lt;cache-container name="ejb" aliases="sfsb" module="org.wildfly.clustering.ejb.infinispan" default-cache="dist"&gt;
+
+
+
+
+---
+
+
+
+
+&gt;             &lt;cache-container name="ejb" aliases="sfsb" default-cache="dist" module="org.wildfly.clustering.ejb.infinispan"&gt;
+
+
+
+
+242c239
+
+
+
+
+&lt;             &lt;cache-container name="hibernate" module="org.hibernate.infinispan" default-cache="local-query"&gt;
+
+
+
+
+---
+
+
+
+
+&gt;             &lt;cache-container name="hibernate" default-cache="local-query" module="org.hibernate.infinispan"&gt;
+
+
+
+
+244,247d240
+
+
+
+
+&lt;                 &lt;local-cache name="local-query"&gt;
+
+
+
+
+&lt;                     &lt;eviction max-entries="10000" strategy="LRU"/&gt;
+
+
+
+
+&lt;                     &lt;expiration max-idle="100000"/&gt;
+
+
+
+
+&lt;                 &lt;/local-cache&gt;
+
+
+
+
+250c243
+
+
+
+
+&lt;                     &lt;eviction max-entries="10000" strategy="LRU"/&gt;
+
+
+
+
+---
+
+
+
+
+&gt;                     &lt;eviction strategy="LRU" max-entries="10000"/&gt;
+
+
+
+
+252a246,249
+
+
+
+
+&gt;                 &lt;local-cache name="local-query"&gt;
+
+
+
+
+&gt;                     &lt;eviction strategy="LRU" max-entries="10000"/&gt;
+
+
+
+
+&gt;                     &lt;expiration max-idle="100000"/&gt;
+
+
+
+
+&gt;                 &lt;/local-cache&gt;
+
+
+
+
+403c400
+
+
+
+
+&lt;                 &lt;http-listener name="default" redirect-socket="https" socket-binding="http"/&gt;
+
+
+
+
+---
+
+
+
+
+&gt;                 &lt;http-listener name="default" socket-binding="http" redirect-socket="https"/&gt;
+
+
+
+
+418,419c415,416
+
+
+
+
+&lt;                 &lt;response-header name="server-header" header-value="WildFly/10" header-name="Server"/&gt;
+
+
+
+
+&lt;                 &lt;response-header name="x-powered-by-header" header-value="Undertow/1" header-name="X-Powered-By"/&gt;
+
+
+
+
+---
+
+
+
+
+&gt;                 &lt;response-header name="server-header" header-name="Server" header-value="WildFly/10"/&gt;
+
+
+
+
+&gt;                 &lt;response-header name="x-powered-by-header" header-name="X-Powered-By" header-value="Undertow/1"/&gt;
+
+
+
+
+434d430
+
+
+
+
+&lt;
+
+
+
+
+446d441
+
+
+
+
+&lt;
+
+
+
+
+
