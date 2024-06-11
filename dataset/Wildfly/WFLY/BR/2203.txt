@@ -1,0 +1,206 @@
+Error deploying multiple *-ds.xml files
+Our individual *-ds.xml datasources were all deploying fine in Alpha4 but in the Beta1 nightlies this error appears on startup:
+
+
+
+
+
+
+15:07:52,111 ERROR [org.jboss.msc.service] (MSC service thread 1-4) MSC000002: Invocation of listener "org.jboss.as.connector.subsystems.datasources.D
+
+
+
+
+ataSourceStatisticsListener@7d18ac99" failed: java.lang.IllegalArgumentException: JBAS014742: A node is already registered at &amp;apos;(deployment =&gt; *)(subsy
+
+
+
+
+stem =&gt; datasources)(data-source =&gt; *)(statistics =&gt; jdbc)&amp;apos;
+
+
+
+
+        at org.jboss.as.controller.registry.NodeSubregistry.register(NodeSubregistry.java:86) [wildfly-controller-8.0.0.Beta1-SNAPSHOT.jar:8.0.0.Beta1
+
+
+
+
+-SNAPSHOT]
+
+
+
+
+        at org.jboss.as.controller.registry.ConcreteResourceRegistration.registerSubModel(ConcreteResourceRegistration.java:149) [wildfly-controller-8
+
+
+
+
+.0.0.Beta1-SNAPSHOT.jar:8.0.0.Beta1-SNAPSHOT]
+
+
+
+
+        at org.jboss.as.controller.registry.AbstractResourceRegistration.registerSubModel(AbstractResourceRegistration.java:90) [wildfly-controller-8.
+
+
+
+
+0.0.Beta1-SNAPSHOT.jar:8.0.0.Beta1-SNAPSHOT]
+
+
+
+
+        at org.jboss.as.connector.subsystems.datasources.DataSourceStatisticsListener.transition(DataSourceStatisticsListener.java:72) [wildfly-connec
+
+
+
+
+tor-8.0.0.Beta1-SNAPSHOT.jar:8.0.0.Beta1-SNAPSHOT]
+
+
+
+
+        at org.jboss.msc.service.ServiceControllerImpl.invokeListener(ServiceControllerImpl.java:1533) [jboss-msc-1.2.0.Beta2.jar:1.2.0.Beta2]
+
+
+
+
+
+
+Our datasource files look like this. I haven&amp;apos;t tried putting all the datasource elements into one file.
+
+
+
+
+
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+
+
+
+&lt;datasources&gt;
+
+
+
+
+  &lt;datasource jndi-name="java:/AlphaDS" enabled="true" use-java-context="true" pool-name="AlphaDS"&gt;
+
+
+
+
+    &lt;connection-url&gt;jdbc:oracle:thin://@db-host:1666/dev-db&lt;/connection-url&gt; 
+
+
+
+
+    &lt;driver&gt;oracle&lt;/driver&gt;
+
+
+
+
+    &lt;security&gt;
+
+
+
+
+      &lt;user-name&gt;XXX&lt;/user-name&gt;
+
+
+
+
+      &lt;password&gt;YYY&lt;/password&gt;
+
+
+
+
+    &lt;/security&gt;
+
+
+
+
+    &lt;connection-property name="defaultNChar"&gt;true&lt;/connection-property&gt;
+
+
+
+
+  &lt;/datasource&gt;
+
+
+
+
+&lt;/datasources&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+
+
+
+&lt;datasources&gt;
+
+
+
+
+  &lt;datasource jndi-name="java:/BetaDS" enabled="true" use-java-context="true" pool-name="BetaDS"&gt;
+
+
+
+
+    &lt;connection-url&gt;jdbc:oracle:thin://@db-host:1666/dev-db&lt;/connection-url&gt; 
+
+
+
+
+    &lt;driver&gt;oracle&lt;/driver&gt;
+
+
+
+
+    &lt;security&gt;
+
+
+
+
+      &lt;user-name&gt;XXX&lt;/user-name&gt;
+
+
+
+
+      &lt;password&gt;YYY&lt;/password&gt;
+
+
+
+
+    &lt;/security&gt;
+
+
+
+
+    &lt;connection-property name="defaultNChar"&gt;true&lt;/connection-property&gt;
+
+
+
+
+  &lt;/datasource&gt;
+
+
+
+
+&lt;/datasources&gt;
+
+
+
+
+

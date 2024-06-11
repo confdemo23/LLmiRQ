@@ -1,0 +1,270 @@
+Subject not populated with groups/roles when authenticated via JASPIC
+After having authenticated via JASPIC, requesting the current Subject via JACC and then using that for permission checks fails.
+For instance the following code will always set hasAccess to false given that "/protected/*" requires a role and the authenticated user is in that role:
+
+
+
+
+
+
+Subject subject = (Subject) PolicyContext.getContext("javax.security.auth.Subject.container");
+
+
+
+
+ 
+
+
+
+
+boolean hasAccess = Policy.getPolicy().implies(
+
+
+
+
+    new ProtectionDomain(
+
+
+
+
+        new CodeSource(null, (Certificate[]) null),
+
+
+
+
+        null, null, 
+
+
+
+
+        subject.getPrincipals().toArray(new Principal[subject.getPrincipals().size()])
+
+
+
+
+    ),
+
+
+
+
+    new WebResourcePermission("/protected/Servlet", "GET"))
+
+
+
+
+;
+
+
+
+
+
+
+As it appears, the problem originates from the fact that subject.getPrincipals() does not contain the roles.
+This can be traced back to org.jboss.security.auth.callback.JASPICallbackHandler.handleCallBack, where it becomes clear that the roles are only put into the "util", but not in the "authenticatedSubject":
+
+
+
+
+
+
+String[] rolesArray = groupPrincipalCallback.getGroups();
+
+
+
+
+int sizeOfRoles = rolesArray != null ? rolesArray.length : 0;
+
+
+
+
+ 
+
+
+
+
+if( sizeOfRoles &gt; 0 )
+
+
+
+
+{
+
+
+
+
+  List&lt;Role&gt; rolesList = new ArrayList&lt;Role&gt;();
+
+
+
+
+  for( int i = 0; i &lt; sizeOfRoles ; i++ )
+
+
+
+
+  {
+
+
+
+
+     Role role = new SimpleRole( rolesArray[ i ] );
+
+
+
+
+     rolesList.add( role );
+
+
+
+
+  }
+
+
+
+
+  RoleGroup roles = new SimpleRoleGroup( SecurityConstants.ROLES_IDENTIFIER, rolesList );
+
+
+
+
+
+
+
+
+
+  // if the current security context already has roles, we merge them with the incoming roles.
+
+
+
+
+  RoleGroup currentRoles = currentSC.getUtil().getRoles();
+
+
+
+
+
+
+
+
+
+  // *** ROLES ARE ONLY SET HERE ***
+
+
+
+
+  if (currentRoles != null) {
+
+
+
+
+      currentRoles.addAll(roles.getRoles());
+
+
+
+
+  }
+
+
+
+
+  else {
+
+
+
+
+      currentSC.getUtil().setRoles( roles );
+
+
+
+
+  }
+
+
+
+
+} 
+
+
+
+
+
+
+
+
+
+// *** BELOW THIS LINE ROLES ARE NOT REFERENCED ANYMORE
+
+
+
+
+// *** SUBJECT IS NOT POPULATED WITH ANY ROLE INFO 
+
+
+
+
+
+
+
+
+
+Subject subject = groupPrincipalCallback.getSubject();
+
+
+
+
+if( subject != null )
+
+
+
+
+{
+
+
+
+
+   // if the current security context already has an associated subject, we merge it with the incoming subject.
+
+
+
+
+   Subject currentSubject = currentSC.getSubjectInfo().getAuthenticatedSubject();
+
+
+
+
+   if (currentSubject != null) {
+
+
+
+
+       subject.getPrincipals().addAll(currentSubject.getPrincipals());
+
+
+
+
+       subject.getPublicCredentials().addAll(currentSubject.getPublicCredentials());
+
+
+
+
+       subject.getPrivateCredentials().addAll(currentSubject.getPrivateCredentials());
+
+
+
+
+   }
+
+
+
+
+   currentSC.getSubjectInfo().setAuthenticatedSubject(subject);
+
+
+
+
+}
+
+
+
+
+

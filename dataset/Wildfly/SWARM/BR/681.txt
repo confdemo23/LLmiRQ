@@ -1,0 +1,3 @@
+health endpoints are available on their original paths, but only if they are not secured
+If a health endpoint is defined at path /app/health, it&amp;apos;s primarily available under /health/app/health. If it&amp;apos;s unsecured, it&amp;apos;s also available at the original path /app/health, but if it&amp;apos;s secured, the original path /app/health returns 403.
+That&amp;apos;s inconsistent and counter-intuitive. I believe that all original paths should just return 301 redirect to /health/..., regardless of the security constraints.

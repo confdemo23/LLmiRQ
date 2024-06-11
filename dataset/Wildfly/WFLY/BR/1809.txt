@@ -1,0 +1,2 @@
+The security subsystem plugins use deprecated Infinispan API
+org.jboss.as.security.plugins.JNDIBasedSecurityManagement uses a deprecated way of configuring an Infinispan cache which must be removed.

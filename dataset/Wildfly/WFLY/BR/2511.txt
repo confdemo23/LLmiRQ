@@ -1,0 +1,30 @@
+NPE in QueueReadAttributeHandler if QueueControl does not exist
+I noticed this in a testsuite server log for EAP, but looking at WF code the same thing could happen there. Basically QueueReadAttributeHandler assumes a QueueControl exists and throws an NPE if that assumption is wrong:
+19:14:25,402 ERROR [org.jboss.as.controller.management-operation] (management-handler-thread - 4) JBAS014612: Operation ("read-attribute") failed - address: ([
+    ("subsystem" =&gt; "messaging"),
+    ("hornetq-server" =&gt; "default"),
+    ("queue" =&gt; "39742e8e-32e7-481d-905a-580fd6b67476")
+]): java.lang.NullPointerException
+    at org.jboss.as.messaging.QueueReadAttributeHandler.executeRuntimeStep(QueueReadAttributeHandler.java:115)
+    at org.jboss.as.controller.AbstractRuntimeOnlyHandler$1.execute(AbstractRuntimeOnlyHandler.java:96) [jboss-as-controller-7.3.0.Final-redhat-SNAPSHOT.jar:7.3.0.Final-redhat-SNAPSHOT]
+    at org.jboss.as.controller.AbstractOperationContext.executeStep(AbstractOperationContext.java:607) [jboss-as-controller-7.3.0.Final-redhat-SNAPSHOT.jar:7.3.0.Final-redhat-SNAPSHOT]
+    at org.jboss.as.controller.AbstractOperationContext.doCompleteStep(AbstractOperationContext.java:485) [jboss-as-controller-7.3.0.Final-redhat-SNAPSHOT.jar:7.3.0.Final-redhat-SNAPSHOT]
+    at org.jboss.as.controller.AbstractOperationContext.completeStepInternal(AbstractOperationContext.java:282) [jboss-as-controller-7.3.0.Final-redhat-SNAPSHOT.jar:7.3.0.Final-redhat-SNAPSHOT]
+    at org.jboss.as.controller.AbstractOperationContext.executeOperation(AbstractOperationContext.java:277) [jboss-as-controller-7.3.0.Final-redhat-SNAPSHOT.jar:7.3.0.Final-redhat-SNAPSHOT]
+    at org.jboss.as.controller.ModelControllerImpl.internalExecute(ModelControllerImpl.java:231) [jboss-as-controller-7.3.0.Final-redhat-SNAPSHOT.jar:7.3.0.Final-redhat-SNAPSHOT]
+    at org.jboss.as.controller.ModelControllerImpl.execute(ModelControllerImpl.java:137) [jboss-as-controller-7.3.0.Final-redhat-SNAPSHOT.jar:7.3.0.Final-redhat-SNAPSHOT]
+    at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler.doExecute(ModelControllerClientOperationHandler.java:173) [jboss-as-controller-7.3.0.Final-redhat-SNAPSHOT.jar:7.3.0.Final-redhat-SNAPSHOT]
+    at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler.access$300(ModelControllerClientOperationHandler.java:105) [jboss-as-controller-7.3.0.Final-redhat-SNAPSHOT.jar:7.3.0.Final-redhat-SNAPSHOT]
+    at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler$1$1.run(ModelControllerClientOperationHandler.java:125) [jboss-as-controller-7.3.0.Final-redhat-SNAPSHOT.jar:7.3.0.Final-redhat-SNAPSHOT]
+    at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler$1$1.run(ModelControllerClientOperationHandler.java:121) [jboss-as-controller-7.3.0.Final-redhat-SNAPSHOT.jar:7.3.0.Final-redhat-SNAPSHOT]
+    at java.security.AccessController.doPrivileged(Native Method) [rt.jar:1.7.0_25]
+    at javax.security.auth.Subject.doAs(Subject.java:415) [rt.jar:1.7.0_25]
+    at org.jboss.as.controller.AccessAuditContext.doAs(AccessAuditContext.java:94) [jboss-as-controller-7.3.0.Final-redhat-SNAPSHOT.jar:7.3.0.Final-redhat-SNAPSHOT]
+    at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler$1.execute(ModelControllerClientOperationHandler.java:121) [jboss-as-controller-7.3.0.Final-redhat-SNAPSHOT.jar:7.3.0.Final-redhat-SNAPSHOT]
+    at org.jboss.as.protocol.mgmt.AbstractMessageHandler$2$1.doExecute(AbstractMessageHandler.java:283) [jboss-as-protocol-7.3.0.Final-redhat-SNAPSHOT.jar:7.3.0.Final-redhat-SNAPSHOT]
+    at org.jboss.as.protocol.mgmt.AbstractMessageHandler$AsyncTaskRunner.run(AbstractMessageHandler.java:504) [jboss-as-protocol-7.3.0.Final-redhat-SNAPSHOT.jar:7.3.0.Final-redhat-SNAPSHOT]
+    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_25]
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_25]
+    at java.lang.Thread.run(Thread.java:724) [rt.jar:1.7.0_25]
+    at org.jboss.threads.JBossThread.run(JBossThread.java:122) [jboss-threads-2.1.1.Final-redhat-1.jar:2.1.1.Final-redhat-1]
+IIRC this kind of thing has been fixed elsewhere???

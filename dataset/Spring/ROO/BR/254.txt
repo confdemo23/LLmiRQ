@@ -1,0 +1,2 @@
+enums cannot be entered in web interface
+The new enum facility does not work with the web-interface.  The enumerator field appears as two empty drop-downs.  See attached screenshot.

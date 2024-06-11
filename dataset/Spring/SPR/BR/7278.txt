@@ -1,0 +1,18 @@
+@ResponseBody usage limitations
+The recommended way to develop REST-style webservices is the usage of @ResponseBody annotation and HttpMessageConverter instead of generating a model and a view (ContentNegotiatingViewResolver etc.).
+But there are some limitations, that make things hard to handle:
+
+ExceptionResolver support
+	
+@RequestBody is only supported with @ExceptionHandler annotation. I need a centralized exception handling to generate a special error object as the return value. So I must wrote a method in each controller class to delegate to the centralized exception handler. I think the ExceptionResolver-interface is more like an AOP-approach, with no glue code.
+ExceptionResolver also have some nice standard implementations like SimpleMappingExceptionResolver, where I can handle the returned HTTP status code very easy. This is also not supported by @ExceptionHandler out of the box
+
+
+&amp;apos;useNotAcceptableStatusCode&amp;apos; from ContentNegotiatingViewResolver (so for some features, I must also configure view-handling)
+	
+simple and easy to use attribute to enable NOT_ACCEPTABLE Http Status code
+
+
+missing option for enabling global @ResponseBody-like handling instead of annotate all methods (e.g. in AnnotationMethodHandlerAdapter)
+
+I also would recommend the full HttpMessageConverter way (@RequestBody &amp; @ResponseBody) without view handling, so it would be nice, if @ResponseBody has fewer limitations. Additionaly it would be great, if the documentation have some notes about the recommended way for webservice-only REST-style applications (with hints to the limitations above)

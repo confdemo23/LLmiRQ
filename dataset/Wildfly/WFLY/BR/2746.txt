@@ -1,0 +1,2 @@
+Workaround for auditlog syslog Facility not being configurable
+Use -Dorg.jboss.TEMP.audit.log.facility=5 where the number is the FACILITY as mentioned in section 6.2.1 of RFC-5424

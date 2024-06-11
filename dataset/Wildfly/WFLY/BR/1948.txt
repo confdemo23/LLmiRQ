@@ -1,0 +1,6 @@
+JMXPropertyEditorsTestCase fails on Solaris SPARC
+Test org.jboss.as.test.integration.ee.jmx.property.JMXPropertyEditorsTestCase fails on Solaris, because environment variable USER is not set.
+From the source:
+USER_SYS_PROP = System.getProperty("os.name","linux").contains("indows")?"USERNAME":"USER";
+So there is already a differentiation between Windows and others.
+For Solaris LOGNAME is the variable to use. And os.name is SunOS.

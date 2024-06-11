@@ -1,0 +1,37 @@
+@ResponseBody does not work with @ExceptionHandler
+When this method is executed
+
+
+
+
+
+
+@ExceptionHandler
+
+
+
+
+@ResponseBody
+
+
+
+
+public String dummyExceptionHandler(Exception e) {
+
+
+
+
+    return e.getMessage();
+
+
+
+
+}
+
+
+
+
+
+
+Spring mvc tries to resolve the view using the method output --&gt; 404.
+As the method is annotated with @ResponseBody, it should directly write the method output to the response.

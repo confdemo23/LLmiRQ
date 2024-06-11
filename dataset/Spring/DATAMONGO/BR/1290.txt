@@ -1,0 +1,31 @@
+@Query annotation with byte[] parameter does not work
+In a repository, these finders should be equivalent:
+
+
+
+
+
+
+Optional&lt;SampleDomainObject&gt; findBySampleData(byte[] sampleDate);
+
+
+
+
+
+
+
+
+
+@Query("{ &amp;apos;sampleData&amp;apos; : ?0 }")
+
+
+
+
+Optional&lt;SampleDomainObject&gt; findBySampleDateWithAnnotation(byte[] sampleData);
+
+
+
+
+
+
+... but only the first works. Please find an example project with test attached!

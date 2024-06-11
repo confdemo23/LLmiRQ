@@ -1,0 +1,21 @@
+Maven addon should intepret enableSnapshot attribute when adding a repository to pom.xml
+The Repository class provides the enableSnapshot field.
+Consider an addon which wants to add a repository to pom.xml based on information within addon&amp;apos;s configuration.xml. The Repository object is created with the help of XmlUtils and takes all attributes including enableSnapshot. But when it comes to adding the repository to project&amp;apos;s pom.xml, the enableSnapshot attribute is omitted.
+Causing implementation is in MavenProjectMetadataProvider#createRepositoryElement(Document document, Repository repository, String path)
+Expectation:
+someRepository : Repository
+
+id   : string = "sample.id"
+name : string = "sample.repo"
+url  : string = "http://com.example.repo"
+enableSnapshots : boolean = "true"
+
+results in pom entry:
+&lt;repository&gt;
+  &lt;id&gt;sample.id&lt;/id&gt;
+  &lt;name&gt;sample.repo&lt;/name&gt;
+  &lt;url&gt;http://com.example.repo&lt;/url&gt;
+  &lt;snapshots&gt;
+    &lt;enabled&gt;true&lt;/enabled&gt;
+  &lt;/snapshots&gt;
+&lt;/repository&gt;

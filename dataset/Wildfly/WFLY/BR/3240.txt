@@ -1,0 +1,6 @@
+Implement workaround for WFLY-3044 without requiring a spec maintenance release
+We  can do this ourselves by:
+
+fixing implementation part in Mojarra fork
+using weld portable extensions to modify the annontation metadata
+

@@ -1,0 +1,4 @@
+Support existsBy in Repository
+Currently to implements exists with predicate (e.g. existsByUsername) we have to use @Query manually, e.g. http://stackoverflow.com/a/27156094/122441
+Please support this convenience method directly in Spring Data JPA.
+Related to DATAJPA-665

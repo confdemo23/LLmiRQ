@@ -1,0 +1,92 @@
+RedisCacheManager should not instantiate caches in setCacheNames()
+It is possible that setCacheNames() is called on the cache manager before all other properties are set, in which case the caches constructed during the call will be instantiated with default values for some properties.
+Affected properties include usePrefix, defaultExpiration, and the expires map.
+RedisCacheManager should implement InitializingBean or similar and set up its caches after initialization completes.
+E.g.
+This fails (prefixes aren&amp;apos;t used): 
+
+
+
+
+
+
+    &lt;bean id="cache.manager"
+
+
+
+
+          class="org.springframework.data.redis.cache.RedisCacheManager"
+
+
+
+
+          c:template-ref="redis.template"
+
+
+
+
+    &gt;
+
+
+
+
+        &lt;property name="cacheNames" value="cache.test.spring"/&gt;
+
+
+
+
+        &lt;property name="usePrefix" value="true"/&gt;
+
+
+
+
+    &lt;/bean&gt;
+
+
+
+
+
+
+...but this works:
+
+
+
+
+
+
+    &lt;bean id="cache.manager"
+
+
+
+
+          class="org.springframework.data.redis.cache.RedisCacheManager"
+
+
+
+
+          c:template-ref="redis.template"
+
+
+
+
+    &gt;
+
+
+
+
+        &lt;property name="usePrefix" value="true"/&gt;
+
+
+
+
+        &lt;property name="cacheNames" value="cache.test.spring"/&gt;
+
+
+
+
+    &lt;/bean&gt;
+
+
+
+
+

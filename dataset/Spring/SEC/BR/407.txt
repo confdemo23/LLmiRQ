@@ -1,0 +1,45 @@
+Hitting LogoutFilter&apos;s URL when not logged in causes NPE
+After upgrading to 1.0.3, I&amp;apos;m getting the following error when running
+some tests:
+[INFO] [talledLocalContainer] ERROR - StandardWrapperValve.invoke(260)
+
+
+ Servlet.service() for servlet jsp threw exception
+[INFO] [talledLocalContainer] java.lang.NullPointerException
+[INFO] [talledLocalContainer]   at
+org.acegisecurity.ui.rememberme.TokenBasedRememberMeServices.logout(TokenBasedRememberMeServices.java:295)
+[INFO] [talledLocalContainer]   at
+org.acegisecurity.ui.logout.LogoutFilter.doFilter(LogoutFilter.java:98)
+
+
+Here&amp;apos;s what I have in my security.xml context file:
+   &lt;bean id="filterChainProxy" class="org.acegisecurity.util.FilterChainProxy"&gt;
+       &lt;property name="filterInvocationDefinitionSource"&gt;
+           &lt;value&gt;
+               CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON
+               PATTERN_TYPE_APACHE_ANT
+/**=httpSessionContextIntegrationFilter,logoutFilter,authenticationProcessingFilter,securityContextHolderAwareRequestFilter,rememberMeProcessingFilter,anonymousProcessingFilter,exceptionTranslationFilter,filterInvocationInterceptor
+           &lt;/value&gt;
+           &lt;!-- Put channelProcessingFilter before
+securityContextHolderAwareRequestFilter to turn on SSL switching --&gt;
+           &lt;!-- It&amp;apos;s off by default b/c Canoo WebTest doesn&amp;apos;t support
+SSL out-of-the-box --&gt;
+       &lt;/property&gt;
+   &lt;/bean&gt;
+   &lt;bean id="httpSessionContextIntegrationFilter"
+class="org.acegisecurity.context.HttpSessionContextIntegrationFilter"/&gt;
+   &lt;bean id="logoutFilter" class="org.acegisecurity.ui.logout.LogoutFilter"&gt;
+       &lt;constructor-arg value="/index.jsp"/&gt; &lt;!-- URL redirected to
+after logout --&gt;
+       &lt;constructor-arg&gt;
+           &lt;list&gt;
+               &lt;ref bean="rememberMeServices"/&gt;
+               &lt;bean
+class="org.acegisecurity.ui.logout.SecurityContextLogoutHandler"/&gt;
+           &lt;/list&gt;
+       &lt;/constructor-arg&gt;
+       &lt;property name="filterProcessesUrl" value="/logout.jsp"/&gt;
+   &lt;/bean&gt;
+The problem appears to be caused by trying to logout before you&amp;apos;ve
+tried to login.  This worked fine in previous releases where the
+LogoutFilter was present.

@@ -1,0 +1,19 @@
+CXF fails with IllegalStateException: UT000005: getRequestChannel() has already been called
+asoldano is seeing CXF problems with the latest modcluster undertow integration:
+18:40:41,678 ERROR [io.undertow.request] (default task-10) Blocking request failed HttpServerExchange
+{ POST /jaxws-samples-asynch}
+: java.lang.IllegalStateException: UT000005: getRequestChannel() has already been called
+	at io.undertow.server.HttpServerExchange.addRequestWrapper(HttpServerExchange.java:1052) [undertow-core-1.0.0.Beta13.jar:1.0.0.Beta13]
+	at org.wildfly.mod_cluster.undertow.metric.BytesReceivedThreadSetupAction.setup(BytesReceivedThreadSetupAction.java:46) [wildfly-mod_cluster-undertow-8.0.0.Beta1-SNAPSHOT.jar:8.0.0.Beta1-SNAPSHOT]
+	at io.undertow.servlet.core.CompositeThreadSetupAction.setup(CompositeThreadSetupAction.java:42) [undertow-servlet-1.0.0.Beta13.jar:1.0.0.Beta13]
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:204) [undertow-servlet-1.0.0.Beta13.jar:1.0.0.Beta13]
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:196) [undertow-servlet-1.0.0.Beta13.jar:1.0.0.Beta13]
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchToPath(ServletInitialHandler.java:141) [undertow-servlet-1.0.0.Beta13.jar:1.0.0.Beta13]
+	at io.undertow.servlet.spec.AsyncContextImpl$2$1.handleRequest(AsyncContextImpl.java:189) [undertow-servlet-1.0.0.Beta13.jar:1.0.0.Beta13]
+	at io.undertow.server.HttpHandlers.executeRootHandler(HttpHandlers.java:36) [undertow-core-1.0.0.Beta13.jar:1.0.0.Beta13]
+	at io.undertow.servlet.spec.AsyncContextImpl$2.run(AsyncContextImpl.java:186) [undertow-servlet-1.0.0.Beta13.jar:1.0.0.Beta13]
+	at io.undertow.servlet.spec.AsyncContextImpl$5.run(AsyncContextImpl.java:411) [undertow-servlet-1.0.0.Beta13.jar:1.0.0.Beta13]
+	at io.undertow.servlet.spec.AsyncContextImpl$TaskDispatchRunnable.run(AsyncContextImpl.java:496) [undertow-servlet-1.0.0.Beta13.jar:1.0.0.Beta13]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_17]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_17]
+	at java.lang.Thread.run(Thread.java:722) [rt.jar:1.7.0_17]

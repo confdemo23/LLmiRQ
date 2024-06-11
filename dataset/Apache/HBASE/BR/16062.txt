@@ -1,0 +1,2 @@
+Improper error handling in WAL Reader/Writer creation
+If creation of WAL reader/ writer fails for some reason RS may leak hanging socket in CLOSE_WAIT state. 

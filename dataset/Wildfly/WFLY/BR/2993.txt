@@ -1,0 +1,44 @@
+Core: jboss.sh fails to start with org.picketbox module not found
+Note that the issue occurs only when using the WildFly 8 core distribution, the regular distribution is fine. 
+
+
+
+
+
+
+wildfly-core-8.0.0.Final$ ./bin/jboss-cli.sh -c
+
+
+
+
+org.jboss.modules.ModuleNotFoundException: org.picketbox:main
+
+
+
+
+        at org.jboss.modules.Module.addPaths(Module.java:1030)
+
+
+
+
+        at org.jboss.modules.Module.link(Module.java:1386)
+
+
+
+
+        at org.jboss.modules.Module.relinkIfNecessary(Module.java:1414)
+
+
+
+
+        at org.jboss.modules.ModuleLoader.loadModule(ModuleLoader.java:242)
+
+
+
+
+        at org.jboss.modules.Main.main(Main.java:385)
+
+
+
+
+

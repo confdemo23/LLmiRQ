@@ -1,0 +1,2 @@
+Test transformation of jmx audit log resources against AS 7.2.0 (ModelVersion 1.2.0)
+Do this once the artifacts are uploaded to maven, or the subsystem test stuff is changed to be able to use the internal maven repository for certain tests

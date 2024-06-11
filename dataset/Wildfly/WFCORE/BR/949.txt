@@ -1,0 +1,4 @@
+Removing http-interface autocompletes but fails
+Executing /core-service=management/management-interface=http-interface:remove() autocompletes but does not succeed. 
+This is a link to a paste of the server stacktrace.
+http://pastebin.test.redhat.com/310136

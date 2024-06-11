@@ -1,0 +1,2 @@
+Transaction resource definition missing validator for default timeout
+TransactionSubsystemRootResourceDefinition is missing a validator for default-timeout. This affects web console when something bigger than a 32-bit integer is entered. I see no specification but I&amp;apos;m assuming (0,MAX_INT) is the expected range.

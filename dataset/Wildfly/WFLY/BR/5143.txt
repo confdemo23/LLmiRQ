@@ -1,0 +1,7 @@
+JGroups subsystem parser should not allow thread pool to be defined per protocol
+In this case, the parser does not match the schemas.  There are 3 issues here:
+
+Thread pool elements should only be parsed for schema version &gt;= 3.0
+Thread pool elements are only valid children of a &lt;transport/&gt; element, but are currently accepted as children of a &lt;protocol/&gt; element.
+We should always create thread pool resources, even if xml is undefined - that way the thread pool parameters, as applied to the runtime, are expressed in the model.
+

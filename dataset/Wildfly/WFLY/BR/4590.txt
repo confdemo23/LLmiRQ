@@ -1,0 +1,2 @@
+l1-lifespan attribute in distributed cache configuration does not enable l1 cache
+l1-lifespan attribute in distributed cache configuration is not honored. If set to a non-zero value it just sets the underlying cache config parameter, but does not explicitly enable l1 which is by default disabled.

@@ -1,0 +1,4 @@
+HiveServer2 JDBC connect to non-default database
+When connecting to HiveServer to via the following URLs, the session uses the &amp;apos;default&amp;apos; database, instead of the intended database.
+jdbc://localhost:10000/customDb
+jdbc:///customDb

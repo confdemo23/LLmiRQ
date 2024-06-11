@@ -1,0 +1,119 @@
+StatsSetupConst.COLUMN_STATS_ACCURATE is not used correctly
+PROBLEM:
+Hive stats are autogathered properly till an &amp;apos;analyze table [tablename] compute statistics for columns&amp;apos; is run. Then it does not auto-update the stats till the command is run again. repo:
+
+
+
+set hive.stats.autogather=true; 
+
+set hive.stats.atomic=false ; 
+
+set hive.stats.collect.rawdatasize=true ; 
+
+set hive.stats.collect.scancols=false ; 
+
+set hive.stats.collect.tablekeys=false ; 
+
+set hive.stats.fetch.column.stats=true; 
+
+set hive.stats.fetch.partition.stats=true ; 
+
+set hive.stats.reliable=false ; 
+
+set hive.compute.query.using.stats=true; 
+
+
+
+CREATE TABLE `default`.`calendar` (`year` int) ROW FORMAT SERDE &amp;apos;org.apache.hadoop.hive.ql.io.orc.OrcSerde&amp;apos; STORED AS INPUTFORMAT &amp;apos;org.apache.hadoop.hive.ql.io.orc.OrcInputFormat&amp;apos; OUTPUTFORMAT &amp;apos;org.apache.hadoop.hive.ql.io.orc.OrcOutputFormat&amp;apos; TBLPROPERTIES ( &amp;apos;orc.compress&amp;apos;=&amp;apos;NONE&amp;apos;) ; 
+
+
+
+insert into calendar values (2010), (2011), (2012); 
+
+select * from calendar; 
+
++----------------+--+ 
+
+| calendar.year | 
+
++----------------+--+ 
+
+| 2010 | 
+
+| 2011 | 
+
+| 2012 | 
+
++----------------+--+ 
+
+
+
+select max(year) from calendar; 
+
+| 2012 | 
+
+
+
+insert into calendar values (2013); 
+
+select * from calendar; 
+
++----------------+--+ 
+
+| calendar.year | 
+
++----------------+--+ 
+
+| 2010 | 
+
+| 2011 | 
+
+| 2012 | 
+
+| 2013 | 
+
++----------------+--+ 
+
+
+
+select max(year) from calendar; 
+
+| 2013 | 
+
+
+
+insert into calendar values (2014); 
+
+select max(year) from calendar; 
+
+| 2014 |
+
+
+
+analyze table calendar compute statistics for columns;
+
+
+
+insert into calendar values (2015);
+
+select max(year) from calendar;
+
+| 2014 |
+
+
+
+insert into calendar values (2016), (2017), (2018);
+
+select max(year) from calendar;
+
+| 2014  |
+
+
+
+analyze table calendar compute statistics for columns;
+
+select max(year) from calendar;
+
+| 2018  |
+
+

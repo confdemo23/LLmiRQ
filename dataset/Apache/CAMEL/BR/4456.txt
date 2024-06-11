@@ -1,0 +1,4 @@
+camel-mail - Add option to control if mail folder should be closed after poll
+It should be possible to control if the mail folder should be closed after a poll or not.
+For example if people is routing mails over SEDA or other async endpoints, then we should not close the mail folder before the mail message is being processed async.
+We have a similar option on mina,netty etc. named disconnect. So the option could be named like that as well.

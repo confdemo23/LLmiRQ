@@ -1,0 +1,18 @@
+[Migration operation] HA configuration is not migrated
+HA configuration is not migrated.
+For example:
+
+
+
+
+
+
+                &lt;shared-store&gt;true&lt;/shared-store&gt;
+
+
+
+
+
+
+does not have equivalent config in in migrated configuration.
+Customer with HA configuration for HornetQ will not have this configuration after migration.

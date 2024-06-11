@@ -1,0 +1,4 @@
+FORM authenticated identity lost on failover
+Unlike BASIC, DIGEST, and CERT authentication, FORM authentication requires an additional server side mechanism to store the credentials from the login form so that a user does not need to reauthenticate on failover.
+Traditionally, clustered SSO was the mechanism of choice (see https://issues.jboss.org/browse/JBAS-1900 )
+An analogous strategy is needed for Undertow.

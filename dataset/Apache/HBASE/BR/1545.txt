@@ -1,0 +1,2 @@
+atomicIncrements creating new values with Long.MAX_VALUE
+Atomic increment is creating new key values with timestamp of Long.MAX_VALUE.  This is not good, makes it hard to do range queries (as most of Thrift queries are).

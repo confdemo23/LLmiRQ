@@ -1,0 +1,10 @@
+missing documentation in binary distribution tarballs
+The documentation in the 2.8.0 binary distribution tarballs (both apache-camel-2.8.0.tar.gz and apache-camel-2.8.0.zip) is missing. The documentation file in doc/manual/camel-manual-2.8.0.html contains the following error message:
+
+
+
+&lt;html&gt;
+
+&lt;body&gt;Download of http://camel.apache.org/book-in-one-page.html failed&lt;/body&gt;
+
+

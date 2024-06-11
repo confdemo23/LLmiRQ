@@ -1,0 +1,74 @@
+EE Subsystem doesn&apos;t check some value of params when creating Concurrency utilities resources
+EE Subsystem doesn&amp;apos;t check some value of params when creating Concurrency utilities resources
+
+
+
+
+
+
+[standalone@localhost:9990 /] /subsystem=ee/managed-executor-service=other:add(jndi-name=java\:jboss\/ee\/executor\/other, core-threads=2, keepalive-time=-20)
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "failed",
+
+
+
+
+    "failure-description" =&gt; {"WFLYCTL0080: Failed services" =&gt; {"jboss.concurrent.ee.executor.other" =&gt; "org.jboss.msc.service.StartException in service jboss.concurrent.ee.executor.other: Failed to start service
+
+
+
+
+    Caused by: java.lang.IllegalArgumentException"}},
+
+
+
+
+    "rolled-back" =&gt; true,
+
+
+
+
+    "response-headers" =&gt; {"process-state" =&gt; "reload-required"}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+[standalone@localhost:9990 /] /subsystem=ee/managed-executor-service=other:add(jndi-name=java\:jboss\/ee\/executor\/other, core-threads=2, hung-task-threshold=-10
+
+
+
+
+
+
+
+
+
+Resources will be created.
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,2 @@
+Makes ModuleOpsCompletionTestCase more resilient
+Intermittent failure if the modules directory has some leftovers.

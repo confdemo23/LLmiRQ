@@ -1,0 +1,21 @@
+Get rid of Active Record pattern and use Repository & Criteria pattern instead 
+Get rid of Active Record pattern and use Repository &amp; Criteria pattern instead
+Active Record pattern is not useful in big projects because entities have dependencies on persistence. It&amp;apos;s likely that these entities will be serializable or even can be stored in different stores - DB, XML, JMS. Using of ActiveRecord pattern create a lot of unnecessary code and make entities not serializable and dependent only on DB store.
+I do propose to use Repository pattern instead of ActiveRecord. This will dramatically reduce number of generated code. Make entities independent from DB specific.
+Using Criteria pattern eliminate necessity to create finders in entities or on DAO layer.
+As result repository will looks like:
+public interface Repository&lt;T extends Entity&gt; 
+{
+
+	T create(T obj);
+
+	T update(T obj);
+
+	T read(Serializable key);
+
+	void delete(Serializable key);
+
+	List&lt;T&gt; load(IFilter filter);
+
+}
+Where Filter is tree of Criterias

@@ -1,0 +1,1 @@
+Infinispan extension uses deprecated transformer API

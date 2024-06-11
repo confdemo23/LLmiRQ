@@ -1,0 +1,24 @@
+Combining ControllerClassNameHandlerMapping and @RequestMapping with relative value on Controller method  doesn&apos;t work anymore
+The controller beans xml file contains:
+---------------------------------------
+&lt;context:component-scan base-package="org.example.web"/&gt;
+&lt;bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/&gt;
+The Controller class:
+---------------------
+package org.example.web;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+@Controller
+public class ArticlesController {
+  @RequestMapping("all") // all == a relative URL
+  public String findAll() 
+{	
+    return "/WEB-INF/JSP/allArticles.jsp";
+  }
+}
+Spring 2.5
+----------
+A GET request with the URL /articles/all was processed by the function findAll
+Spring 3.0 RC2
+--------------
+A GET request with the URL /articles/all produces HTTP 404 error.

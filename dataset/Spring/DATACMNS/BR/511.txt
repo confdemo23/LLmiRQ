@@ -1,0 +1,117 @@
+AbstractMappingContext.addPersistentEntity causes infinite loop
+After updating from Codd SR2 to Dijkstra I could not run my tests. After debugging the issue I found that the problem lies in AbstractMappingContext.addPersistentEntity. This method is never called in Codd SR2 due to initialize not being triggered.
+We use quite a few abstract MappedSuperclasses that have circular references and apparently this does not work. An example:
+
+
+
+
+
+
+public class User extends AbstractTenantUser&lt;User, Role, Permission, Tenant&gt; {
+
+
+
+
+    ...
+
+
+
+
+}
+
+
+
+
+public abstract class AbstractTenantUser&lt;USER extends AbstractTenantUser&lt;USER, ROLE, PERMISSION, TENANT&gt;, ROLE extends AbstractRole&lt;USER, PERMISSION&gt;, PERMISSION extends AbstractPermission&lt;USER&gt;, TENANT extends AbstractTenant&lt;USER&gt;&gt; extends AbstractUser&lt;USER, ROLE, PERMISSION&gt; implements TenantEntity&lt;TENANT&gt; {
+
+
+
+
+    ...
+
+
+
+
+}
+
+
+
+
+public abstract class AbstractUser&lt;USER extends AbstractUser&lt;USER, ROLE, PERMISSION&gt;, ROLE extends AbstractRole&lt;USER, PERMISSION&gt;, PERMISSION extends AbstractPermission&lt;USER&gt;&gt; extends AuditingDateBaseEntity&lt;USER&gt; {
+
+
+
+
+    ...
+
+
+
+
+}
+
+
+
+
+public abstract class AbstractPermission&lt;USER extends AbstractUser&lt;USER, ?, ?&gt;&gt; extends AuditingDateBaseEntity&lt;USER&gt; {
+
+
+
+
+    ...
+
+
+
+
+}
+
+
+
+
+public abstract class AuditingDateBaseEntity&lt;USER extends AbstractUser&lt;USER, ?, ?&gt;&gt; extends AbstractDateBaseEntity implements AuditingEntity&lt;USER&gt; {
+
+
+
+
+    ...
+
+
+
+
+}
+
+
+
+
+public abstract class AbstractDateBaseEntity extends AbstractBaseEntity implements DateEntity {
+
+
+
+
+    ...
+
+
+
+
+}
+
+
+
+
+public abstract class AbstractBaseEntity implements BaseEntity {
+
+
+
+
+    ...
+
+
+
+
+}
+
+
+
+
+
+
+I hope this gives enough insight into the problem and hopefully you can fix this soon.

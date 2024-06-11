@@ -1,0 +1,26 @@
+NoClassDefFoundError: org/jboss/el/cache/FactoryFinderCache deploying ear with war inside
+I tried to deploy my ear which works in JBoss 7 in wildfly and got the following error on deploy:
+09:59:55,060 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-7) MSC000001: Failed to start service jboss.deployment.subunit."my.ear"."mywar.war".POST_MODULE: org.jboss.msc.service.StartException in service jboss.deployment.subunit."my.ear"."mywar.war".POST_MODULE: JBAS018733: Failed to process phase POST_MODULE of subdeployment "mywar.war" of deployment "my.ear"
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:166) [wildfly-server-8.0.0.Alpha3.jar:8.0.0.Alpha3]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1944) [jboss-msc-1.2.0.Beta2.jar:1.2.0.Beta2]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1877) [jboss-msc-1.2.0.Beta2.jar:1.2.0.Beta2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_25]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_25]
+	at java.lang.Thread.run(Thread.java:724) [rt.jar:1.7.0_25]
+Caused by: java.lang.NoClassDefFoundError: org/jboss/el/cache/FactoryFinderCache
+	at org.wildfly.extension.undertow.deployment.ELExpressionFactoryProcessor.deploy(ELExpressionFactoryProcessor.java:78)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:159) [wildfly-server-8.0.0.Alpha3.jar:8.0.0.Alpha3]
+	... 5 more
+09:59:55,100 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) JBAS014613: Operation ("deploy") failed - address: ([("deployment" =&gt; "my.ear")]) - failure description: {
+    "JBAS014671: Failed services" =&gt; 
+{"jboss.deployment.subunit.\"my.ear\".\"mywar.war\".POST_MODULE" =&gt; "org.jboss.msc.service.StartException in service jboss.deployment.subunit.\"my.ear\".\"mywar.war\".POST_MODULE: JBAS018733: Failed to process phase POST_MODULE of subdeployment \"mywar.war\" of deployment \"my.ear\"
+
+    Caused by: java.lang.NoClassDefFoundError: org/jboss/el/cache/FactoryFinderCache"}
+,
+    "JBAS014771: Services with missing/unavailable dependencies" =&gt; [
+        "jboss.naming.context.java.comp.my-service-ejb-x-SNAPSHOT.MyServiceName.ValidatorFactory is missing [jboss.naming.context.java.comp.my-service-ejb-x-SNAPSHOT.MyServiceName]",
+        "jboss.naming.context.java.comp.my-service-ejb-x-SNAPSHOT.MyServiceName.InstanceName is missing [jboss.naming.context.java.comp.my-service-ejb-x-SNAPSHOT.MyServiceName]",
+        "jboss.naming.context.java.comp.my-service-ejb-x-SNAPSHOT.MyServiceName.Validator is missing [jboss.naming.context.java.comp.my-service-ejb-x-SNAPSHOT.MyServiceName]",
+		&lt;all other services&gt;
+    ]
+}

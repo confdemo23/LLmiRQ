@@ -1,0 +1,14 @@
+EntityArrays typo: {"\u2122", "&minus;"}, // minus sign, U+2212 ISOtech
+EntityArrays typo in HTML40_EXTENDED_ESCAPE: 
+
+      {"\u2122", "&amp;minus;"}, // minus sign, U+2212 ISOtech
+
+
+
+should be
+
+      {"\u2212", "&amp;minus;"}, // minus sign, U+2212 ISOtech
+
+
+
+as is obvious from the comment and the position in the list.

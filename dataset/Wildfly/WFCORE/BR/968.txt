@@ -1,0 +1,2 @@
+WriteAttributeHandler needs to add steps to the top of the queue
+WriteAttributeHandler is adding a bunch of steps that make up elements of its Stage.MODEL execution, but it isn&amp;apos;t adding them with the &amp;apos;addFirst&amp;apos; param set to true. This means the effective order of model changes within a composite op is not going to match the logical order of the steps in the op, and step 2 might not execute with the expected starting state.

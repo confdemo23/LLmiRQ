@@ -1,0 +1,3 @@
+Spring Roo doesn&apos;t start with JDK 1.8
+I am using Spring Roo 1.2.5.RELEASE on OS X 10.9.2 and java version 1.8.0_05.
+When I try to start roo.sh I get a ton of unresolved constraints (log file attached). After searching the web I found this (http://forum.spring.io/forum/spring-projects/roo/106193-error-staring-the-roo-shell) and tried to replace the felix.jar in the Spring Roo distribution (by version 4.4.0) and could start the shell successfully.

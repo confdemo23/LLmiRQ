@@ -1,0 +1,1 @@
+Singleton policy quorum attribute is missing a validator

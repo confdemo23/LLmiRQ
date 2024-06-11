@@ -1,0 +1,18 @@
+absolute paths should be allowed for security:form-login and security:logout attributes.
+absolute paths should be allowed for security:form-login and security:logout attributes.
+For instance, login-page doesn&amp;apos;t work with an absolute path.  But if LoginUrlAuthenticationEntryPoint.buildRedirectUrlToLoginPage&amp;apos;s first lines were changed to:
+protected String buildRedirectUrlToLoginPage(final HttpServletRequest request, final HttpServletResponse response, final AuthenticationException authException) {
+        String loginForm = determineUrlToUseForThisRequest(request, response, authException);
+        /** Allow support for absolute URIs */
+        if(URI.create(loginForm).isAbsolute()) 
+{
+            return loginForm;
+        }
+
+        // continue on with existing logic
+}
+Then comes the inevitable question of why would you want to do this.  Consider that someone is using spring-mvc to build an API on domain api.test.com, but a set of non-java, front-end user pages on ui.test.com.  
+So, api.test.com performs all database/backend logic.  In this circumstance, if someone were to go to api.test.com directly in their browser, I would possibly want to redirect them to ui.test.com to login (where ui.test.com has a form with method=http://api.test.com&amp;apos;s/login.do or equivalent).  
+So in this case, I need to specify:
+&lt;security:form-login login-page=http://ui.test.com/login&gt;,
+which won&amp;apos;t work unless the above patch (or something similiar) is implemented.

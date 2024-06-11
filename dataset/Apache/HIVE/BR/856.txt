@@ -1,0 +1,2 @@
+allow concat to take more than 2 arguments
+mysql&amp;apos;s concat allows concat(&amp;apos;a&amp;apos;, &amp;apos;b&amp;apos;, &amp;apos;c&amp;apos;), but hive&amp;apos;s currently will accept only two arguments.

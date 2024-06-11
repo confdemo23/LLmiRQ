@@ -1,0 +1,2 @@
+AsyncFS WAL doesn&apos;t work with Hadoop 2.8+
+The async wal implementation doesn&amp;apos;t work with Hadoop 2.8+. Fails compilation and will fail running.

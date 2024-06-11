@@ -1,0 +1,3 @@
+camel-swagger - Should use resolved placeholders in output
+See nabble
+http://camel.465427.n5.nabble.com/camel-swagger-java-not-parse-property-tp5778734.html

@@ -1,0 +1,2 @@
+ProviderManager does not properly handle ConcurrentLoginException
+The ProviderManager will incorrectly return an authentication object and fire AuthenticationSuccessEvent when a ConcurrentLoginException is thrown. 

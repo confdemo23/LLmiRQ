@@ -1,0 +1,2 @@
+upgrade script for Hive 13 is missing for Derby
+There&amp;apos;s an upgrade script for all DSes but not for Derby. Nothing needs to be done in that script but I&amp;apos;m being told that some tools might break if there&amp;apos;s no matching file.

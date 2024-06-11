@@ -1,0 +1,6 @@
+Undertow &apos;redirect-port&apos; parameter for HTTPS
+The main aspect of this feature is to allow the redirect-port configuration other than used in &lt;socket-binding name="https" port="$
+{jboss.https.port:8443}
+"/&gt;
+This is very helpful in production since nobody wants to see the local port -&gt; https://domain.net:8443
+see also the the forum reference: https://community.jboss.org/message/848793#848793

@@ -1,0 +1,2 @@
+Multiple RabbitAdmin instances force dubious declarations.
+As stated in thread, the RabbitAdmin class is indiscriminate about the Queue instances it chooses to declare, regardless of their use by connectionfactories.

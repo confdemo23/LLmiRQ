@@ -1,0 +1,2 @@
+useOriginalBody() still appears in fluent API; should be useOriginalMessage()
+The org.apache.camel.model.OnExceptionDefinition class defines useOriginalBody() in the fluent API. This should actually be useOriginalMessage(), in accordance with CAMEL-1820.

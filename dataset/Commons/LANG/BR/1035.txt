@@ -1,0 +1,4 @@
+Javadoc for EqualsBuilder.reflectionEquals() is unclear
+The Javadoc for EqualsBuilder.reflectionEquals() doesn&amp;apos;t explain that .equals() is used to compare non-primitive fields in the class.
+Consequently, readers may assume the method recursively builds .equals() for all fields. We should clarify this.
+Related: LANG-1034

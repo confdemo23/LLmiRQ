@@ -1,0 +1,107 @@
+MaxBytesInputStream to limit size of bytes read
+I wrote an input stream that stops when it reaches a configured size in bytes.  I found it useful for applications that download web pages and images, but want to enforce a max size to avoid memory problems for extremely large pages/images.
+I was thinking that this class is generic and useful enough to include in the commons-io distribution.  Please consider it, and if it isn&amp;apos;t appropriate for inclusion here, please recommend a better place to open source and share it.
+
+
+
+
+
+package org.apache.commons.io.input;
+
+
+
+import java.io.IOException;
+
+import java.io.InputStream;
+
+
+
+/**
+
+ * An input stream that will end when the amount of bytes read reaches
+
+ * the configured amount of maxBytes.
+
+ * This is useful for preventing OutOfMemoryExceptions when downloading
+
+ * very large files in cases where getting partial content is acceptable.
+
+ * @author Ken Weiner
+
+ */
+
+public class MaxBytesInputStream extends CountingInputStream {
+
+    private long maxBytes;
+
+
+
+    public MaxBytesInputStream(InputStream is, long maxBytes) {
+
+        super(is);
+
+        this.maxBytes = maxBytes;
+
+    }
+
+
+
+    @Override
+
+    protected void afterRead(int n) {
+
+        super.afterRead((int) Math.min(n, this.maxBytes - getByteCount()));
+
+    }
+
+
+
+    @Override
+
+    public int read() throws IOException {
+
+        if (getByteCount() &lt; this.maxBytes) {
+
+            return super.read();
+
+        }
+
+        return -1;
+
+    }
+
+
+
+    @Override
+
+    public int read(byte[] b) throws IOException {
+
+        if (getByteCount() &lt; this.maxBytes) {
+
+            return super.read(b);
+
+        }
+
+        return -1;
+
+    }
+
+
+
+    @Override
+
+    public int read(byte[] b, int off, int len) throws IOException {
+
+        if (getByteCount() &lt; this.maxBytes) {
+
+            return super.read(b, off, len);
+
+        }
+
+        return -1;
+
+    }
+
+}
+
+

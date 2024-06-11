@@ -1,0 +1,2 @@
+Contacts Sample does not use AcegiMessageSource
+AcegiSecurityExceptions thrown by the Contacts sample fail to localize, due to a missing messageSource in the middle-tier application context.

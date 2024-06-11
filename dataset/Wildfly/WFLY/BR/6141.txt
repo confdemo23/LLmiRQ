@@ -1,0 +1,4 @@
+[Migration][WebToUndertow] Migrating access log valve results always in migration warning
+When migrating AccessLogValve it results in printing migration warning for attributes which are not even defined with the valve.
+The attributes are: "resolveHosts", "fileDateFormat", "renameOnRotate", "encoding", "locale", "requestAttributesEnabled", "buffered".
+Such warning should only be printed for attributes which were actually used with the valve and not when they are actually not used.

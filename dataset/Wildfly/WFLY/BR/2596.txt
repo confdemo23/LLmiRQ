@@ -1,0 +1,19 @@
+JASPI Web layer problems
+I have found several problems in the current (master, trunk) Wildfly JASPI Web layer implementation
+Undertow related:
+----------------------
+
+It does not support pre-emptive authentication:
+When the ServerAuthenticationModule returns AUTH_SUCCESS and null userPrincipal, it should let the request fall through unathenticated, instead it is rejected.
+
+
+It does not call secureResponse when the authentication was unsuccessful
+
+
+It does not populate the org.jboss.security.SecurityContext, only the undertow Account structure.
+
+
+It does not support the wrapper feature (Spec 3.8.3.5 and B.9)
+
+The attached pull request aims to fix the first three issues.
+Credits: This patch is based on Arjan Tijms&amp;apos; analysis, and suggested patches for the Jboss 7.X valve based authentitactor.

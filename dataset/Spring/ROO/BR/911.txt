@@ -1,0 +1,6 @@
+setup git/svn when building new project
+When a user creates a new project then with an optional switch a local git repo could be created.
+This git repo can be used to store the state of all the actions performed on a roo script. A user could do it by hand as well, but this option would make this best practice of storing things in repo easier. Then with each command if it changes files an git commit could be done with relevant comment
+if when command is : field string blah (git can store adding field blah to entity Blah)
+http://forum.springsource.org/showthread.php?t=90056
+All of this can be done manually with some effort. Doing this can make easy to implement an undo functionality, ie going a few steps back and branching from that step and getting rid of the changes done from there on.

@@ -1,0 +1,4 @@
+Inconsistent results from the Get/Scan if we use the empty FilterList
+RSRpcServices#get() converts the Get to Scan without scan#setLoadColumnFamiliesOnDemand. It causes that the result retrieved from Get and Scan will be different if we use the empty filter. Scan doesn&amp;apos;t return any data but Get does.
+see HBASE-16729 
+Any comments? Thanks.

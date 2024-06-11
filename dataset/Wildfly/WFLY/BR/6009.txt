@@ -1,0 +1,3 @@
+[Migration operation] [Web to Undertow] Migrating non migratable valve doesn&apos;t result in error shown in migration-warnings
+When migration web with custom valve or any valve, which can&amp;apos;t be automatically migrated, there is no error shown in migration-warnings.
+It is necessary to inform that something wasn&amp;apos;t migrated to let user know he needs to migrate it manually.

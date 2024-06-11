@@ -1,0 +1,2 @@
+Invalid parent profile of jboss-fuse-full profile
+"jboss-fuse-medium" profile which is parent of "jboss-fuse-full" profile has as a parent "amq" profile, which doesn&amp;apos;t exists. It should be "mq-amq"

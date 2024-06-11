@@ -1,0 +1,14 @@
+Not possible change the object store type from hornetq to jdbc via cli commands
+When you have set the object store to be type of hornetq and then you change your mind to set it for jdbc object store the jboss-cli permits this operation but no change is propagated to model and XML file.
+How to reproduce:
+
+./bin/standalone.xml (start eap 6.2.0.GA)
+./bin/jboss-cli.sh -c (connect to running eap)
+/subsystem=transactions:write-attribute(name=use-hornetq-store, value=true)
+:reload
+/subsystem=transactions/log-store=log-store:read-attribute(name=type)
+/subsystem=transactions:write-attribute(name=use-jdbc-store, value=true)
+:reload
+/subsystem=transactions/log-store=log-store:read-attribute(name=type)
+
+The object store stays to be set to hornetq and no change happens in the standalone.xml file.

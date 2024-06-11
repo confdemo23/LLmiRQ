@@ -1,0 +1,2 @@
+MapJobInstanceDao.getLastJobInstances ignores jobName parameter
+MapJobInstanceDao.getLastJobInstances ignores jobName parameter and returns  JobInstances for all jobs. 

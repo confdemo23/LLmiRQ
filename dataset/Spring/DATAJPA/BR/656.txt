@@ -1,0 +1,85 @@
+Count query with group by returns wrong result
+The count method of SimpleJpaRepository. 
+
+
+
+
+
+
+public long count(Specification&lt;T&gt; spec) {
+
+
+
+
+	return getCountQuery(spec).getSingleResult();
+
+
+
+
+}
+
+
+
+
+
+
+Gives a wrong result when using a specification having a group by.
+While the method below does this correctly for grouped queries.
+
+
+
+
+
+
+protected Page&lt;T&gt; readPage(TypedQuery&lt;T&gt; query, Pageable pageable, Specification&lt;T&gt; spec) {
+
+
+
+
+
+
+
+
+
+	query.setFirstResult(pageable.getOffset());
+
+
+
+
+	query.setMaxResults(pageable.getPageSize());
+
+
+
+
+
+
+
+
+
+	Long total = QueryUtils.executeCountQuery(getCountQuery(spec));
+
+
+
+
+	List&lt;T&gt; content = total &gt; pageable.getOffset() ? query.getResultList() : Collections.&lt;T&gt; emptyList();
+
+
+
+
+
+
+
+
+
+	return new PageImpl&lt;T&gt;(content, pageable, total);
+
+
+
+
+}
+
+
+
+
+
+

@@ -1,0 +1,3 @@
+Allow configuration of rebalanceConnections activation config property in pooled-connection-factory
+For inbound connections we allow to configure activation config property rebalanceConnections for MDBs which allows to rebalance inbound connection in runtime when underlying Artemis cluster topology changes. 
+Purpose of this RFE is to add it to configuration of inbound connections in pooled-connection-factory so it does not have to be specified in every MDB. Default should be set to false. 

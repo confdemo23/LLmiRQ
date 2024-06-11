@@ -1,0 +1,2 @@
+Push-in refactor of the Mongo Id field does not remove the getter and setter methods from the Mongo ITD
+When the org.springframework.data.annotation.Id field is created in the governor, the accessor/mutator methods are created in the JavaBean ITD, but not removed from the Mongo ITD

@@ -1,0 +1,2 @@
+Roo shell throws exception when an entity is created without a "." in the name if entity was previously created with the same command and then manually deleted
+If an entity was created initially with entity --class Foo (without a period (".") in the name, and then is deleted from the file system, the same command executed again will throw an exception because the JavaType created is not valid.

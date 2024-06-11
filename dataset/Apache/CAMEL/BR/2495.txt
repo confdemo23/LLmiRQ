@@ -1,0 +1,2 @@
+Application SOAP fault support in camel-cxf PAYLOAD mode
+Camel-cxf component does not seem to support application SOAP fault in PAYLOAD mode.

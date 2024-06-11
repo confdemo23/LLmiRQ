@@ -1,0 +1,2 @@
+&apos;perform test&apos; does not run in STS
+on roo shell, when i run &amp;apos;perform test&amp;apos; inside STS(eclipse) i just get back roo shell and maven test is not run. but when i go to console and run &amp;apos;mvn test&amp;apos; i able to run the test

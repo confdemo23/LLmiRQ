@@ -1,0 +1,138 @@
+ejb3 2.0 schema still has clustered-cache-ref but parser throws JBAS014788: Unexpected attribute
+
+
+
+
+
+
+ERROR [org.jboss.as.server] (Controller Boot Thread) JBAS015956: Caught exception during boot: org.jboss.as.controller.persistence.ConfigurationPersistenceException: JBAS014676: Failed to parse configuration
+
+
+
+
+        at org.jboss.as.controller.persistence.XmlConfigurationPersister.load(XmlConfigurationPersister.java:112) [wildfly-controller-8.0.0.Beta2-SNAPSHOT.jar:8.0.0.Beta2-SNAPSHOT]
+
+
+
+
+        at org.jboss.as.server.ServerService.boot(ServerService.java:331) [wildfly-server-8.0.0.Beta2-SNAPSHOT.jar:8.0.0.Beta2-SNAPSHOT]
+
+
+
+
+        at org.jboss.as.controller.AbstractControllerService$1.run(AbstractControllerService.java:256) [wildfly-controller-8.0.0.Beta2-SNAPSHOT.jar:8.0.0.Beta2-SNAPSHOT]
+
+
+
+
+        at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_45]
+
+
+
+
+Caused by: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[224,17]
+
+
+
+
+Message: JBAS014788: Unexpected attribute &amp;apos;clustered-cache-ref&amp;apos; encountered
+
+
+
+
+        at org.jboss.as.controller.parsing.ParseUtils.unexpectedAttribute(ParseUtils.java:104) [wildfly-controller-8.0.0.Beta2-SNAPSHOT.jar:8.0.0.Beta2-SNAPSHOT]
+
+
+
+
+        at org.jboss.as.ejb3.subsystem.EJB3Subsystem20Parser.parseStatefulBean(EJB3Subsystem20Parser.java:126)
+
+
+
+
+        at org.jboss.as.ejb3.subsystem.EJB3Subsystem12Parser.parseSessionBean(EJB3Subsystem12Parser.java:309)
+
+
+
+
+        at org.jboss.as.ejb3.subsystem.EJB3Subsystem12Parser.readElement(EJB3Subsystem12Parser.java:146)
+
+
+
+
+        at org.jboss.as.ejb3.subsystem.EJB3Subsystem13Parser.readElement(EJB3Subsystem13Parser.java:68)
+
+
+
+
+        at org.jboss.as.ejb3.subsystem.EJB3Subsystem14Parser.readElement(EJB3Subsystem14Parser.java:60)
+
+
+
+
+        at org.jboss.as.ejb3.subsystem.EJB3Subsystem20Parser.readElement(EJB3Subsystem20Parser.java:71)
+
+
+
+
+        at org.jboss.as.ejb3.subsystem.EJB3Subsystem12Parser.readElement(EJB3Subsystem12Parser.java:105)
+
+
+
+
+        at org.jboss.as.ejb3.subsystem.EJB3Subsystem12Parser.readElement(EJB3Subsystem12Parser.java:71)
+
+
+
+
+        at org.jboss.staxmapper.XMLMapperImpl.processNested(XMLMapperImpl.java:110) [staxmapper-1.1.0.Final.jar:1.1.0.Final]
+
+
+
+
+        at org.jboss.staxmapper.XMLExtendedStreamReaderImpl.handleAny(XMLExtendedStreamReaderImpl.java:69) [staxmapper-1.1.0.Final.jar:1.1.0.Final]
+
+
+
+
+        at org.jboss.as.server.parsing.StandaloneXml.parseServerProfile(StandaloneXml.java:1131) [wildfly-server-8.0.0.Beta2-SNAPSHOT.jar:8.0.0.Beta2-SNAPSHOT]
+
+
+
+
+        at org.jboss.as.server.parsing.StandaloneXml.readServerElement_1_4(StandaloneXml.java:458) [wildfly-server-8.0.0.Beta2-SNAPSHOT.jar:8.0.0.Beta2-SNAPSHOT]
+
+
+
+
+        at org.jboss.as.server.parsing.StandaloneXml.readElement(StandaloneXml.java:145) [wildfly-server-8.0.0.Beta2-SNAPSHOT.jar:8.0.0.Beta2-SNAPSHOT]
+
+
+
+
+        at org.jboss.as.server.parsing.StandaloneXml.readElement(StandaloneXml.java:107) [wildfly-server-8.0.0.Beta2-SNAPSHOT.jar:8.0.0.Beta2-SNAPSHOT]
+
+
+
+
+        at org.jboss.staxmapper.XMLMapperImpl.processNested(XMLMapperImpl.java:110) [staxmapper-1.1.0.Final.jar:1.1.0.Final]
+
+
+
+
+        at org.jboss.staxmapper.XMLMapperImpl.parseDocument(XMLMapperImpl.java:69) [staxmapper-1.1.0.Final.jar:1.1.0.Final]
+
+
+
+
+        at org.jboss.as.controller.persistence.XmlConfigurationPersister.load(XmlConfigurationPersister.java:104) [wildfly-controller-8.0.0.Beta2-SNAPSHOT.jar:8.0.0.Beta2-SNAPSHOT]
+
+
+
+
+        ... 3 more
+
+
+
+
+

@@ -1,0 +1,53 @@
+[Migration operation] No migration warning for remoting-interceptors
+There is missing warning if following configuration is migrated to messaging-activemq subsystem:
+
+
+
+
+
+
+&lt;remoting-interceptors&gt;
+
+
+
+
+                &lt;class-name&gt;
+
+
+
+
+                    org.jboss.qa.hornetq.apps.interceptors.LargeMessagePacketInterceptorImpl
+
+
+
+
+                &lt;/class-name&gt;
+
+
+
+
+                &lt;class-name&gt;
+
+
+
+
+                    org.jboss.qa.hornetq.apps.interceptors.LargeMessagePacketInterceptorImpl
+
+
+
+
+                &lt;/class-name&gt;
+
+
+
+
+&lt;/remoting-interceptors&gt;
+
+
+
+
+
+
+There should be warning like:
+WFLYMSG0082: Classes providing the remoting-incoming-interceptors are discarded during the migration. To use them in the new messaging-activemq subsystem, you will have to extend the Artemis-based Interceptor.
+as for migration of remoting-incoming-interceptors and remoting-outgoing-interceptors.

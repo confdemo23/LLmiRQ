@@ -1,0 +1,2 @@
+JavaDoc for WebServiceTemplate#setFaultMessageResolver has wrong default class
+The JavaDoc for WebServiceTemplate#setFaultMessageResolver claims that SimpleFaultMessageResolver is the default, whereas it&amp;apos;s actually SoapFaultMessageResolver as listed in WebServiceTemplate.properties. 

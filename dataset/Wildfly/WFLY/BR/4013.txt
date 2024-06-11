@@ -1,0 +1,84 @@
+The value of the bound attribute in socket-binding-group messaging is always false
+The value of bound attribute in messaging socket group is always false.
+
+
+
+
+
+
+/socket-binding-group=standard-sockets/socket-binding=messaging:read-resource(include-runtime=true, recursive=true)
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "success",
+
+
+
+
+    "result" =&gt; {
+
+
+
+
+        "bound" =&gt; false,
+
+
+
+
+        "bound-address" =&gt; undefined,
+
+
+
+
+        "bound-port" =&gt; undefined,
+
+
+
+
+        "client-mappings" =&gt; undefined,
+
+
+
+
+        "fixed-port" =&gt; false,
+
+
+
+
+        "interface" =&gt; undefined,
+
+
+
+
+        "multicast-address" =&gt; undefined,
+
+
+
+
+        "multicast-port" =&gt; undefined,
+
+
+
+
+        "name" =&gt; "messaging",
+
+
+
+
+        "port" =&gt; 5445
+
+
+
+
+    }
+
+
+
+
+

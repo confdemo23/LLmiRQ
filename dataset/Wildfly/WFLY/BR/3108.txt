@@ -1,0 +1,20 @@
+Can&apos;t promote --backup slave HC to master and reload without moving domain.cached-remote.xml
+The prescribed mechanism for converting a slave HC to master is to:
+1) Start the slave with --backup so a local copy of the domain config is maintained (in file domain.cached-remote.xml).
+2) Stop the existing master.
+3) Use the cli to connect to the slave and
+/host=&lt;slavename&gt;:write-local-domain-controller
+4) Then, in the CLI
+reload --host=&lt;slavename&gt;
+Problem is this fails because the HC expects to have a domain config file "domain.xml".
+2014-03-13 09:54:04,829 ERROR [org.jboss.as.host.controller] (Controller Boot Thread) JBAS010932: Caught exception during boot: org.jboss.as.controller.persistence.ConfigurationPersistenceException: JBAS014676: Failed to parse configuration
+	at org.jboss.as.controller.persistence.XmlConfigurationPersister.load(XmlConfigurationPersister.java:112) [wildfly-controller-8.0.1.Final-SNAPSHOT.jar:8.0.1.Final-SNAPSHOT]
+	at org.jboss.as.host.controller.DomainModelControllerService.boot(DomainModelControllerService.java:514) [wildfly-host-controller-8.0.1.Final-SNAPSHOT.jar:8.0.1.Final-SNAPSHOT]
+	at org.jboss.as.controller.AbstractControllerService$1.run(AbstractControllerService.java:256) [wildfly-controller-8.0.1.Final-SNAPSHOT.jar:8.0.1.Final-SNAPSHOT]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_45]
+Caused by: java.io.FileNotFoundException: /Users/bstansberry/tmp/WF801/slave/domain/configuration/domain.xml (No such file or directory)
+	at java.io.FileInputStream.open(Native Method) [rt.jar:1.7.0_45]
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:146) [rt.jar:1.7.0_45]
+	at org.jboss.as.controller.persistence.XmlConfigurationPersister.load(XmlConfigurationPersister.java:100) [wildfly-controller-8.0.1.Final-SNAPSHOT.jar:8.0.1.Final-SNAPSHOT]
+	... 3 more
+Or, MUCH WORSE, there happens to be a random domain.xml in the filesystem, which has content that is out of sync with the correct domain config. This domain.xml config will be used.

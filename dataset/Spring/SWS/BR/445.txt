@@ -1,0 +1,7 @@
+CLONE -JibxMarshaller - marshalSaxHandlers
+JiBX does not support SAX natively, so there is written to a buffer first:
+ByteArrayOutputStream os = new ByteArrayOutputStream();
+marshalOutputStream(graph, os);
+ByteArrayInputStream is = new ByteArrayInputStream(os.toByteArray());
+the character &lt; results in &amp;&lt;; and not in &lt; as expected.
+http://forum.springframework.org/showthread.php?t=55407&amp;highlight=SAXResult

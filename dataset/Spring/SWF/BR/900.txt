@@ -1,0 +1,3 @@
+Obtaining flow context when doing programmatic validation
+Please implement support for obtaining some sort of flow context when doing programmatic validation e.g. it would be very useful to be able to obtain information which transition event has occurred and triggered validator.
+This feature was initial discussed on Spring forum (see thread http://forum.springframework.org/showthread.php?t=59625 )

@@ -1,0 +1,199 @@
+Server fails to boot using locales not using arabic numerals for representation of numbers
+e.g. Hindu (hi_IN) 
+
+
+
+
+
+
+[rhusar@syrah wildfly-10.1.0.Final-SNAPSHOT]$ ./bin/standalone.sh -c standalone-ha.xml -Djboss.node.name=node1
+
+
+
+
+JAVA_OPTS already set in environment; overriding default settings with values:  -Duser.country=IN -Duser.language=hi
+
+
+
+
+=========================================================================
+
+
+
+
+
+
+
+
+
+  JBoss Bootstrap Environment
+
+
+
+
+
+
+
+
+
+  JBOSS_HOME: /Users/rhusar/wildfly/build/target/wildfly-10.1.0.Final-SNAPSHOT
+
+
+
+
+
+
+
+
+
+  JAVA: /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/bin/java
+
+
+
+
+
+
+
+
+
+  JAVA_OPTS:  -server  -Duser.country=IN -Duser.language=hi
+
+
+
+
+
+
+
+
+
+=========================================================================
+
+
+
+
+
+
+
+
+
+::, INFO  [org.jboss.modules] (main) JBoss Modules version 1.5.2.Final
+
+
+
+
+::, INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
+
+
+
+
+::, INFO  [org.jboss.as] (MSC service thread -) WFLYSRV0049: WildFly Core 2.2.0.CR8 "Kenny" starting
+
+
+
+
+::, ERROR [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0055: Caught exception during boot: org.jboss.as.controller.persistence.ConfigurationPersistenceException: WFLYCTL0085: Failed to parse configuration
+
+
+
+
+	at org.jboss.as.controller.persistence.XmlConfigurationPersister.load(XmlConfigurationPersister.java:131)
+
+
+
+
+	at org.jboss.as.server.ServerService.boot(ServerService.java:357)
+
+
+
+
+	at org.jboss.as.controller.AbstractControllerService$1.run(AbstractControllerService.java:299)
+
+
+
+
+	at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+Caused by: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[388,9]
+
+
+
+
+Message: Unexpected element &amp;apos;{urn:jboss:domain:singleton:1.0}subsystem&amp;apos;
+
+
+
+
+	at org.jboss.staxmapper.XMLMapperImpl.processNested(XMLMapperImpl.java:108)
+
+
+
+
+	at org.jboss.staxmapper.XMLExtendedStreamReaderImpl.handleAny(XMLExtendedStreamReaderImpl.java:69)
+
+
+
+
+	at org.jboss.as.server.parsing.StandaloneXml_4.parseServerProfile(StandaloneXml_4.java:546)
+
+
+
+
+	at org.jboss.as.server.parsing.StandaloneXml_4.readServerElement(StandaloneXml_4.java:242)
+
+
+
+
+	at org.jboss.as.server.parsing.StandaloneXml_4.readElement(StandaloneXml_4.java:141)
+
+
+
+
+	at org.jboss.as.server.parsing.StandaloneXml.readElement(StandaloneXml.java:103)
+
+
+
+
+	at org.jboss.as.server.parsing.StandaloneXml.readElement(StandaloneXml.java:49)
+
+
+
+
+	at org.jboss.staxmapper.XMLMapperImpl.processNested(XMLMapperImpl.java:110)
+
+
+
+
+	at org.jboss.staxmapper.XMLMapperImpl.parseDocument(XMLMapperImpl.java:69)
+
+
+
+
+	at org.jboss.as.controller.persistence.XmlConfigurationPersister.load(XmlConfigurationPersister.java:123)
+
+
+
+
+	... 3 more
+
+
+
+
+
+
+
+
+
+::, FATAL [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0056: Server boot has failed in an unrecoverable manner; exiting. See previous messages for details.
+
+
+
+
+::, INFO  [org.jboss.as] (MSC service thread -) WFLYSRV0050: WildFly Core 2.2.0.CR8 "Kenny" stopped in ms
+
+
+
+
+

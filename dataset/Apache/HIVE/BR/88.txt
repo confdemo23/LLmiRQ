@@ -1,0 +1,23 @@
+hadoop doesn&apos;t use conf/hive-log4j.properties
+hadoop-0.20.0-dev-core.jar contains log4j.properties file, and I think that&amp;apos;s the one hadoop is picking up. I modified both conf/hive-log4j.properties and hadoopcore/conf/log4j.properties, but hadoop still printed INFO messages to stderr.
+Pasting relevant posts from the mailing list below:
+Michi Mutsuzaki &lt;michi@cs.stanford.edu&gt; 	Fri, Nov 28, 2008 at 7:14 PM
+To: hive-users@publists.facebook.com
+Hello,
+When I do "ant test" under ql directory, I get many log messages to stderr.
+ [junit] 08/11/28 19:04:14 INFO exec.MapOperator: Got partitions: null
+[junit] 08/11/28 19:04:14 INFO exec.ReduceSinkOperator: Initializing Self
+[junit] 08/11/28 19:04:14 INFO exec.ReduceSinkOperator: Using tag = -1
+[junit] 08/11/28 19:04:14 INFO thrift.TBinarySortableProtocol:
+Sort order is ""
+[junit] 08/11/28 19:04:14 INFO thrift.TBinarySortableProtocol:
+Sort order is ""
+   ....
+I tried setting log level to ERROR in conf/hive-log4j.properties, but these info lines still show up. How can I get rid of them?
+Thanks!
+--Michi
+Joydeep Sen Sarma &lt;jssarma@facebook.com&gt; 	Fri, Nov 28, 2008 at 10:49 PM
+To: "michi@cs.stanford.edu" &lt;michi@cs.stanford.edu&gt;, "hive-users@publists.facebook.com" &lt;hive-users@publists.facebook.com&gt;
+When we run the tests - we run in hadoop &amp;apos;local&amp;apos; mode - and in this mode, we run map-reduce jobs by invoking &amp;apos;hadoop jar ... ExecDriver&amp;apos; cmd line. this was done because we had some issues submitting map-reduce jobs directly (from same jvm) in local mode that we could not resolve.
+The issue is that when we invoke &amp;apos;hadoop jar ... ExecDriver&amp;apos; - we don&amp;apos;t control log4j via hive-log4j. one thing u can try is changing the hadoop&amp;apos;s log4j.properties that hive is picking up (probably hadoopcore/conf/log4j.properties).
+Revisiting this after a long time - I think this can be fixed with some changes to MapRedTask.java (need to add hive-log4j.properties to hadoop classpath here and then reset log4j using this in execdriver). Feel free to file a jira if this is too irritating ..

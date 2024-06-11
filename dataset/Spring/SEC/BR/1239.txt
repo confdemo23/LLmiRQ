@@ -1,0 +1,21 @@
+Special characters in JAAS config file location
+Given a JaasAuthenticationProvider declared like this:
+    &lt;bean id="krb5AuthenticationProvider"
+        class="org.springframework.security.providers.jaas.JaasAuthenticationProvider"&gt;
+        &lt;property name="loginConfig" value="classpath:/jaas.config"/&gt;
+        &lt;property name="loginContextName" value="Krb5LoginModule"/&gt;
+        &lt;property name="callbackHandlers"&gt;
+            &lt;list&gt;
+                &lt;bean class="org.springframework.security.providers.jaas.JaasNameCallbackHandler"/&gt;
+                &lt;bean class="org.springframework.security.providers.jaas.PasswordCallbackHandler"/&gt;
+            &lt;/list&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
+I get the folowing exception:
+java.lang.SecurityException: D:\Tomcat%205.5.23\webapps\myapp\WEB-INF\classes\jaas.config (The system cannot find the path specified) 
+The problem stems from 
+
+the fact that there is a special character (%20 is "space") in my Tomcat location.
+the way Resouce is converted to String in method private void configureJaasUsingLoop():
+    String loginConfigUrl = loginConfig.getURL().toString();
+

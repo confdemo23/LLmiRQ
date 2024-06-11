@@ -1,0 +1,7 @@
+SFSB DistributedCache doesn&apos;t commit when get(...) and release/discard(...) use different threads
+While investigating failures in org.jboss.as.test.manualmode.ejb.client.cluster.EJBClientClusterConfigurationTestCase following the upgrade to JGroups 3.5, I uncovered a number of critical bugs in the DistributedCache logic.
+
+DistributedCache uses a thread-local stack to store the reference to a Batch across invocations of Cache get/release/discard(...).  Consequently, Infinispan&amp;apos;s transaction won&amp;apos;t commit if Cache.get(...) was called from a different thread than Cache.release(...) or Cache.discard(...)
+The implementation of the Batch SPI uses Infinispan&amp;apos;s BatchContainer, which itself relies on thread locals to store references to the Transaction across calls to startBatch()/endBatch().
+Once the above issues were address, I got an NPE in InfinispanBeanEntryExternalizer.writeObject(...) when the lastAccessedTime is null (which is the case following creation).
+

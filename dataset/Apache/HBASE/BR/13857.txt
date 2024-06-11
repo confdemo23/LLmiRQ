@@ -1,0 +1,20 @@
+Slow WAL Append count in ServerMetricsTmpl.jamon is hardcoded to zero
+The template has this:
+
+ &lt;tr&gt;
+
+        ...
+
+        &lt;th&gt;Slow WAL Append Count&lt;/th&gt;
+
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+
+        ....
+
+        &lt;td&gt;&lt;% 0 %&gt;&lt;/td&gt;
+
+    &lt;/tr&gt;
+
+

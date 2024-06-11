@@ -1,0 +1,27 @@
+AjaxTilesView fails for nested tiles-definition in case of an ajaxRequest
+The AjaxTilesView does not resolve nested tiles-definition in case of an ajax request.
+For the following tiles-definition the tiles "form" is not added to the flattenedAttributeMap and hence a partial rendering of the form-tiles is not possible.
+&lt;tiles-definitions&gt;
+    &lt;definition name="index" template="/WEB-INF/jsp/index.jsp"&gt;
+        &lt;put-attribute name="form" value="simpleform" /&gt;
+        &lt;put-attribute name="result" value="/WEB-INF/jsp/result.jsp" /&gt;
+    &lt;/definition&gt;
+   &lt;definition name="simpleform" template="/WEB-INF/jsp/searchForm.jsp"&gt;
+		&lt;put-attribute name="errorform" value="error" /&gt;
+	&lt;/definition&gt;
+	&lt;definition name="base.error" template="/WEB-INF/jsp/base.error.jsp"&gt;
+		&lt;put-attribute name="formobject" value="errorFBO" /&gt;
+	&lt;/definition&gt;
+	&lt;definition name="error" extends="base.error"&gt;
+		&lt;put-attribute name="formobject" value="childErrorFBO" /&gt;
+	&lt;/definition&gt;
+&lt;/tiles-definitions&gt;
+In the attached zip-file I provide a possible fix  - see line 123 in the AjaxTilesView-class. Here I add a nested definition to the result map.
+Additionally I provide a junit-test for testing the changes. To make this work I had to change the signature of the flattenAttributeMap-method from private to protected.
+-------------
+files changed:
+src/main/java/org/springframework/js/ajax/tiles2/AjaxTilesView
+pom.xml
+files added:
+src/test/resources/tiles-views.xml
+src/test/java/org/springframework/js/ajax/tiles2/AjaxTilesViewTest

@@ -1,0 +1,192 @@
+JGroups protocol properties are not applied
+Protocol properties are never applied, the check for applying properties is done on the legacy resource that only registers operation tranformation on old the old property address.
+Original report:
+
+When the JGroups subsystem is configured to use TCPPING, the following error occurs when deploying a distributable app:
+
+
+
+
+
+
+14:50:11,930 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-1) MSC000001: Failed to start service jboss.jgroups.channel.ee: org.jboss.msc.service.StartException in service jboss.jgroups.channel.ee: java.security.PrivilegedActionException: java.lang.Exception: Property assignment of initial_hosts in TCPPING with original property value null and converted to null could not be assigned
+
+
+
+
+	at org.wildfly.clustering.jgroups.spi.service.ChannelBuilder.start(ChannelBuilder.java:79)
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+
+
+
+	at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+Caused by: java.security.PrivilegedActionException: java.lang.Exception: Property assignment of initial_hosts in TCPPING with original property value null and converted to null could not be assigned
+
+
+
+
+	at org.wildfly.security.manager.WildFlySecurityManager.doChecked(WildFlySecurityManager.java:638)
+
+
+
+
+	at org.jboss.as.clustering.jgroups.JChannelFactory.createChannel(JChannelFactory.java:99)
+
+
+
+
+	at org.wildfly.clustering.jgroups.spi.service.ChannelBuilder.start(ChannelBuilder.java:77)
+
+
+
+
+	... 5 more
+
+
+
+
+Caused by: java.lang.Exception: Property assignment of initial_hosts in TCPPING with original property value null and converted to null could not be assigned
+
+
+
+
+	at org.jgroups.stack.Configurator.resolveAndAssignField(Configurator.java:1153)
+
+
+
+
+	at org.jgroups.stack.Configurator.createLayer(Configurator.java:444)
+
+
+
+
+	at org.jgroups.stack.Configurator.createProtocols(Configurator.java:398)
+
+
+
+
+	at org.jgroups.stack.Configurator.setupProtocolStack(Configurator.java:90)
+
+
+
+
+	at org.jgroups.stack.Configurator.setupProtocolStack(Configurator.java:57)
+
+
+
+
+	at org.jgroups.stack.ProtocolStack.setup(ProtocolStack.java:477)
+
+
+
+
+	at org.jgroups.JChannel.init(JChannel.java:854)
+
+
+
+
+	at org.jgroups.JChannel.&lt;init&gt;(JChannel.java:159)
+
+
+
+
+	at org.jboss.as.clustering.jgroups.JChannelFactory$1.run(JChannelFactory.java:96)
+
+
+
+
+	at org.jboss.as.clustering.jgroups.JChannelFactory$1.run(JChannelFactory.java:93)
+
+
+
+
+	at org.wildfly.security.manager.WildFlySecurityManager.doChecked(WildFlySecurityManager.java:634)
+
+
+
+
+	... 7 more
+
+
+
+
+Caused by: java.lang.Exception: Conversion of initial_hosts in TCPPING with original property value null failed
+
+
+
+
+	at org.jgroups.conf.PropertyHelper.getConvertedValue(PropertyHelper.java:84)
+
+
+
+
+	at org.jgroups.stack.Configurator.resolveAndAssignField(Configurator.java:1147)
+
+
+
+
+	... 17 more
+
+
+
+
+Caused by: java.lang.NullPointerException
+
+
+
+
+	at java.util.StringTokenizer.&lt;init&gt;(StringTokenizer.java:199)
+
+
+
+
+	at java.util.StringTokenizer.&lt;init&gt;(StringTokenizer.java:221)
+
+
+
+
+	at org.jgroups.util.Util.parseCommaDelimitedHosts(Util.java:2650)
+
+
+
+
+	at org.jgroups.conf.PropertyConverters$InitialHosts.convert(PropertyConverters.java:67)
+
+
+
+
+	at org.jgroups.conf.PropertyHelper.getConvertedValue(PropertyHelper.java:81)
+
+
+
+
+	... 18 more
+
+
+
+
+

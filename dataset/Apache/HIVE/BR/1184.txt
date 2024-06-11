@@ -1,0 +1,18 @@
+Expression Not In Group By Key error is sometimes masked
+Depending on the order of expressions, the error message for a expression not in group key is not displayed; instead it is null.
+
+
+
+hive&gt; select concat(value, concat(value)) from src group by concat(value);
+
+FAILED: Error in semantic analysis: null
+
+
+
+hive&gt; select concat(concat(value), value) from src group by concat(value);
+
+FAILED: Error in semantic analysis: line 1:29 Expression Not In Group By Key value
+
+
+
+

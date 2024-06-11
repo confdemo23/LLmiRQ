@@ -1,0 +1,2 @@
+GWT ApplicationRequestFactory class does not update when GAE is enabled or disabled unless the Roo shell is restarted
+A shell restart is required when GAE is enabled or disabled after running the persistence setup command

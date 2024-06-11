@@ -1,0 +1,16 @@
+Document/Fix CSRF behavior with pre-auth
+3.2.0.RC1 with &lt;http auto-config="true"&gt;  with &lt;csrf/&gt; and a preauth filter
+When a user first accesses a pre-authed site
+1. the CSRF token is added to the session.
+2. The pre-auth filter creates the Authentication and related security context
+3. The SessionManagementFilter then runs, and since its a new auth and session it calls &amp;apos;CsrfAuthenticationStrategy&amp;apos; which removes the CSRF token from the session.
+4. The return view now has an invalid CSRF token in any forms.
+A 2nd GET creates a new CSRF token, and then everything works normally.
+--------------------------------
+I posted my workaround in the forum, but it would nice to:
+1. Document the behavior/workaround in
+http://docs.spring.io/spring-security/site/docs/3.2.x-SNAPSHOT/reference/html/csrf.html
+so that others don&amp;apos;t have the same issue.
+2. Offer a better way (or workaround) to remove the CsrfAuthenticationStrategy from the session management.
+Is defining my own custom CSRF filter and repository a "cleaner" workaround to defining my own session management filter?
+Or is updating the xsd, and doing something like &lt;csrf auth-strategy="disable"/&gt; a possibility?

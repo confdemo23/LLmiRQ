@@ -1,0 +1,48 @@
+Transformer builders should not check for rejected operation attributes for the &apos;remove&apos; operation
+I came across this while working on WFLY-456 (audit logging) that PR will test for this
+The problem is the audit log transformers for jmx are set up to reject if the &amp;apos;enabled&amp;apos; attribute is undefined.
+When issuing a &amp;apos;remove&amp;apos; it then looks in the operation for the &amp;apos;enabled&amp;apos; attribute which fails since the operation does not contain that attribute, it is simply:
+
+
+
+
+
+
+{
+
+
+
+
+    "operation" =&gt; "remove",
+
+
+
+
+    "address" =&gt; [
+
+
+
+
+        ("subsystem" =&gt; "jmx"),
+
+
+
+
+        ("configuration" =&gt; "audit-log")
+
+
+
+
+    ]
+
+
+
+
+}
+
+
+
+
+
+
+The same is true for &amp;apos;read-attribute&amp;apos;

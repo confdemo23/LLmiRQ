@@ -1,0 +1,4 @@
+JMS resources allows duplicate JNDI entries
+The JMS resources that can be stored in JNDI (connection-factory, pooled-connection-factory, jms-queue, jms-topic) does not check whether their list of JNDI entries contains duplicates.
+At runtime, duplicates are eliminated but this introduces a difference between the resource model with duplicate entries and its runtime state (without duplicates).
+The attribute definitions for their JNDI entries should validate at the MODEL stage that their value does not contain duplicate elements.

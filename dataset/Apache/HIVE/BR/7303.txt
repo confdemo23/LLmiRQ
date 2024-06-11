@@ -1,0 +1,3 @@
+IllegalMonitorStateException when stmtHandle is null in HiveStatement
+From http://www.mail-archive.com/dev@hive.apache.org/msg75617.html
+Unlock can be called even it&amp;apos;s not locked in some situation.

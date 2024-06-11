@@ -1,0 +1,3 @@
+ReadTransformedResourceOperation should set include-defaults=false when calling read-resource
+This needs further investigation, but it seems to mean that we have a lot of ModelFixers used in the wrong situation. i.e. the when transforming resources, attributes that should be undefined reach the transformers as defined with the default value set instead.
+This needs a bit of thinking about Jeff Mesnil mentioned this a few weeks ago as well. I&amp;apos;d like to see if he remembers before fixing

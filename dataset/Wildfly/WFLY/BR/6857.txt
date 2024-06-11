@@ -1,0 +1,2 @@
+Infinispan subsystem writes incorrect xml namespace when system locale is not English
+Running the server under a non-English Locale and using the CLI to create resources, leads to Infinispan writing out a subsystem configuration which doesn&amp;apos;t load on server reload.

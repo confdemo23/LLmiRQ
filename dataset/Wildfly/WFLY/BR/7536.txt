@@ -1,0 +1,143 @@
+RemotingLoginModuleUseNewClientCertTestCase fails on IBM jdk
+testAuthorizedClient and testNotAuthorizedClient tests from RemotingLoginModuleUseNewClientCertTestCase fails on IBM jdk with javax.net.ssl.SSLException: Received fatal alert: handshake_failure)
+reproduce
+
+
+
+
+
+
+$ ./integration-tests.sh -Dts.noSmoke -Dts.basic -Dtest=RemotingLoginModuleUseNewClientCertTestCase
+
+
+
+
+
+
+
+
+
+
+
+
+testNotAuthorizedClient(org.jboss.as.test.integration.security.loginmodules.RemotingLoginModuleUseNewClientCertTestCase)  Time elapsed: 0.079 sec  &lt;&lt;&lt; ERROR!
+
+
+
+
+javax.naming.CommunicationException: Failed to connect to any server. Servers tried: [remote://127.0.0.1:14447 (javax.net.ssl.SSLException: Received fatal alert: handshake_failure)]
+
+
+
+
+	at org.jboss.naming.remote.client.HaRemoteNamingStore.failOverSequence(HaRemoteNamingStore.java:244)
+
+
+
+
+	at org.jboss.naming.remote.client.HaRemoteNamingStore.namingStore(HaRemoteNamingStore.java:149)
+
+
+
+
+	at org.jboss.naming.remote.client.HaRemoteNamingStore.namingOperation(HaRemoteNamingStore.java:130)
+
+
+
+
+	at org.jboss.naming.remote.client.HaRemoteNamingStore.lookup(HaRemoteNamingStore.java:272)
+
+
+
+
+	at org.jboss.naming.remote.client.RemoteContext.lookupInternal(RemoteContext.java:104)
+
+
+
+
+	at org.jboss.naming.remote.client.RemoteContext.lookup(RemoteContext.java:93)
+
+
+
+
+	at org.jboss.naming.remote.client.RemoteContext.lookup(RemoteContext.java:146)
+
+
+
+
+	at javax.naming.InitialContext.lookup(InitialContext.java:428)
+
+
+
+
+	at org.jboss.as.test.integration.security.loginmodules.RemotingLoginModuleUseNewClientCertTestCase.testNotAuthorizedClient(RemotingLoginModuleUseNewClientCertTestCase.java:180)
+
+
+
+
+
+
+
+
+
+testAuthorizedClient(org.jboss.as.test.integration.security.loginmodules.RemotingLoginModuleUseNewClientCertTestCase)  Time elapsed: 0.046 sec  &lt;&lt;&lt; ERROR!
+
+
+
+
+javax.naming.CommunicationException: Failed to connect to any server. Servers tried: [remote://127.0.0.1:14447 (javax.net.ssl.SSLException: Received fatal alert: handshake_failure)]
+
+
+
+
+	at org.jboss.naming.remote.client.HaRemoteNamingStore.failOverSequence(HaRemoteNamingStore.java:244)
+
+
+
+
+	at org.jboss.naming.remote.client.HaRemoteNamingStore.namingStore(HaRemoteNamingStore.java:149)
+
+
+
+
+	at org.jboss.naming.remote.client.HaRemoteNamingStore.namingOperation(HaRemoteNamingStore.java:130)
+
+
+
+
+	at org.jboss.naming.remote.client.HaRemoteNamingStore.lookup(HaRemoteNamingStore.java:272)
+
+
+
+
+	at org.jboss.naming.remote.client.RemoteContext.lookupInternal(RemoteContext.java:104)
+
+
+
+
+	at org.jboss.naming.remote.client.RemoteContext.lookup(RemoteContext.java:93)
+
+
+
+
+	at org.jboss.naming.remote.client.RemoteContext.lookup(RemoteContext.java:146)
+
+
+
+
+	at javax.naming.InitialContext.lookup(InitialContext.java:428)
+
+
+
+
+	at org.jboss.as.test.integration.security.loginmodules.RemotingLoginModuleUseNewClientCertTestCase.testAuthorizedClient(RemotingLoginModuleUseNewClientCertTestCase.java:166)
+
+
+
+
+
+
+
+
+
+

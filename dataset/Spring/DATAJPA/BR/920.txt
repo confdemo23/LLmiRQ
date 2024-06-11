@@ -1,0 +1,2 @@
+Add support for exists projection in repository query derivation
+Add support for exists projection in repository query derivation.

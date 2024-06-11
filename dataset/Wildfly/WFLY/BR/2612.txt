@@ -1,0 +1,18 @@
+The CLI should support property substitution for names of elements and not only for parameters
+My customer is using client side substitution in the CLI
+jboss-cli.xml:
+&lt;resolve-parameter-values&gt;true&lt;/resolve-parameter-values&gt;
+This works fine for example with:
+/subsystem=datasources/data-source=oracleDS:add(connection-url=jdbc:oracle:thin:@server:1521:ora1, jndi-name=java:/jboss/$
+{name}, driver-name=oracle)
+
+The "name" is provided in a property file at the command line for jboss-cli.sh
+
+This request is to extend this behaviour to allow for example:
+
+/subsystem=datasources/data-source=${datasourcename}:add(connection-url=jdbc:oracle:thin:@server:1521:ora1, jndi-name=java:/jboss/${name}
+, driver-name=oracle)
+In other words, have the actual element name be substituted as well based on a property value
+We know the easy workaround is to use bash embedded cli script, so the $
+{datasourcename}
+ can be provided by a bash variable but it would be nice if the CLI could do that. 

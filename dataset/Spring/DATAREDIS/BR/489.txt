@@ -1,0 +1,63 @@
+Store and retrieve type hints for Object type property values even when those are considered as simple types.
+
+
+
+
+
+
+static class Foo {
+
+
+
+
+	Map&lt;String, Object&gt; map = new HashMap&lt;String, Object&gt;();
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+Foo foo = new Foo();
+
+
+
+
+foo.map.put("foo", "bar");
+
+
+
+
+
+
+
+
+
+RedisData rd = write(foo);
+
+
+
+
+
+
+
+
+
+Foo result = converter.read(Foo.class, rd);
+
+
+
+
+assertThat(result.map.get("foo"), instanceof(String.class));
+
+
+
+
+

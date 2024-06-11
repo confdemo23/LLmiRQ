@@ -1,0 +1,81 @@
+activemq-camel - This feature is not listed as installed out of the box in the full-esb
+Run this command
+
+
+
+
+
+
+features:list -i
+
+
+
+
+
+
+To show installed features. Notice that the activemq-camel feature is not installed. Instead there is a camel-activemq which is from SMX
+installed  ] [4.5.0.fuse-71-036 ] camel-activemq           servicemix-4.5.0.fuse-71-036
+Then I install the correct feature
+
+
+
+
+
+
+features:install activemq-camel 
+
+
+
+
+
+
+And list all the features again
+
+
+
+
+
+
+features:list -i
+
+
+
+
+
+
+And now we have both
+
+
+
+
+
+
+[installed  ] [4.5.0.fuse-71-036 ] camel-activemq           servicemix-4.5.0.fuse-71-036       
+
+
+
+
+[installed  ] [5.7.0.fuse-71-036 ] activemq                 activemq-5.7.0.fuse-71-036         
+
+
+
+
+[installed  ] [5.7.0.fuse-71-036 ] activemq-spring          activemq-5.7.0.fuse-71-036         
+
+
+
+
+[installed  ] [5.7.0.fuse-71-036 ] activemq-blueprint       activemq-5.7.0.fuse-71-036         
+
+
+
+
+[installed  ] [5.7.0.fuse-71-036 ] activemq-camel           activemq-5.7.0.fuse-71-036     
+
+
+
+
+
+
+I am not sure if that camel-activemq feature should be installed?
+At least the activemq-camel should be, as that&amp;apos;s the correct feature for integrating ActiveMQ and Camel.

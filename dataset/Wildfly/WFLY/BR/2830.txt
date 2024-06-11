@@ -1,0 +1,3 @@
+Fix org.infinispan.lucene.directory dependencies
+The module is missing a bunch of dependencies,
+proper module.xml looks like this: https://gist.github.com/alesj/8688428

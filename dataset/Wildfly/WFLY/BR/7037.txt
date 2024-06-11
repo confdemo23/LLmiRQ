@@ -1,0 +1,4 @@
+Memory leak when doing deploy/undeploy app using REST and JPA
+It seems that exposing some type (ApplicationUser in attached app) which has enum type as attribute via REST api could cause memory leak (See steps to reproduce). You can observe that person.joey.test.UserType instances are kept in memory when GC happens (metaspace exceeds) and the path to GC root looks:
+
+Note that this map https://github.com/FasterXML/jackson-databind/blob/jackson-databind-2.7.4/src/main/java/com/fasterxml/jackson/databind/util/ClassUtil.java#L366 was not available in 2.5.4 version used in WF 10.0.0.Final

@@ -1,0 +1,5 @@
+new partition files and directories should inherit file permissions from parent partition/table dir
+In HIVE-2936 changes were made for warehouse table sub directories to inherit the permissions from parent directory. But this applies only to directories created by metastore. 
+When directories (in case of dynamic partitioning) or files are created from the MR job, it uses the default 
+But new partition files or directories created from the MR jobs don&amp;apos;t inherit the permissions. 
+This means that even if the permissions have been granted on table directory for a group, the group will not have permissions on the new partitions. 

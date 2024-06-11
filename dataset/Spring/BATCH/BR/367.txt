@@ -1,0 +1,2 @@
+When the samples run, all the execution attributes are of type STRING - this must be wrong.
+When the samples run, all the execution attributes are of type STRING - this must be wrong.  Surely most of them are longs?

@@ -1,0 +1,4 @@
+Batch jobs from installed modules should be detected for non-batch app
+Hibernate Search is creating a batch job which embedded in a WildFly module. Any user of Hibernate Search should be able to the launch this batch job, no matter if they&amp;apos;re using a batch-app. However, it seems that jobs are only resolvable for batch-app. More explicitly, WildFly requires deployed web-app to have the below structure to enable the job resolver:
+    META-INF/batch-jobs
+For those who don&amp;apos;t have this batch folder in their webapp, they cannot use the jobs from installed module. And an error "JBERET000601: Failed to get job xml file for job" will be raised.

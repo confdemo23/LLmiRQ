@@ -1,0 +1,28 @@
+RouteBuilderRef - does not work with injected endpoints
+When using routeBuilderRef instead of package to configure route builder in spring XML then the former does not work if you have eg endpoint defined as well and injected the endpoint using EndpointInjected
+
+    @EndpointInject(name = "data")
+    protected Endpoint data;
+
+    public void configure() throws Exception {
+        // configure a global transacted error handler
+        errorHandler(transactionErrorHandler(required));
+
+        from(data)
+        ...
+}
+
+
+And the Spring DSL
+
+    &lt;bean id="route" class="org.apache.camel.itest.tx.JmsToHttpWithRollbackRoute"/&gt;
+
+    &lt;!-- Camel context --&gt;
+    &lt;camelContext id="camel" xmlns="http://camel.apache.org/schema/spring"&gt;
+        &lt;!-- use our route --&gt;
+        &lt;routeBuilder ref="route"/&gt;
+
+        &lt;!-- define our data endpoint as the activemq queue we send a message to --&gt;
+        &lt;endpoint id="data" uri="activemq:queue:data"/&gt;
+    &lt;/camelContext&gt;
+

@@ -1,0 +1,177 @@
+XNIO001007: A channel event listener threw an exception: java.lang.NullPointerException
+We hit NPE during failback in HA scenario with replicated journal in dedicated HA topology. Http connectors are used.
+Test scenario:
+Start 1st EAP 7 server with Artemis configured as live 
+Start 2nd EAP 7 server with Artemis configured as backup
+Send 2000 messages to in InQueue to live
+Start 3rd EAP 7 server with RA configured to connecto to live and deploy MDB  which receives messages from InQueue and sends a new message to OutQueue
+When MDB is  processing messages then kill live server -&gt; MDB failovers to backup
+After MDB processed all messages receive all messages from OutQueue
+NPE occurs when live is killed on backup server:
+
+
+
+
+
+
+02:48:36,503 ERROR [org.xnio.listener] (default I/O-2) XNIO001007: A channel event listener threw an exception: java.lang.NullPointerException
+
+
+
+
+        at org.wildfly.extension.messaging.activemq.HTTPUpgradeService$2.handleEvent(HTTPUpgradeService.java:154)
+
+
+
+
+        at org.wildfly.extension.messaging.activemq.HTTPUpgradeService$2.handleEvent(HTTPUpgradeService.java:146)
+
+
+
+
+        at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) [xnio-api-3.3.4.Final-redhat-1.jar:3.3.4.Final-redhat-1]
+
+
+
+
+        at io.undertow.server.handlers.ChannelUpgradeHandler$1.handleUpgrade(ChannelUpgradeHandler.java:149)
+
+
+
+
+        at io.undertow.server.protocol.http.HttpReadListener.exchangeComplete(HttpReadListener.java:362)
+
+
+
+
+        at io.undertow.server.protocol.http.HttpServerConnection.exchangeComplete(HttpServerConnection.java:228)
+
+
+
+
+        at io.undertow.server.HttpServerExchange.invokeExchangeCompleteListeners(HttpServerExchange.java:1226)
+
+
+
+
+        at io.undertow.server.HttpServerExchange.terminateResponse(HttpServerExchange.java:1503)
+
+
+
+
+        at io.undertow.server.Connectors.terminateResponse(Connectors.java:99)
+
+
+
+
+        at io.undertow.server.protocol.http.HttpTransferEncoding$3.handleEvent(HttpTransferEncoding.java:197)
+
+
+
+
+        at io.undertow.server.protocol.http.HttpTransferEncoding$3.handleEvent(HttpTransferEncoding.java:195)
+
+
+
+
+        at io.undertow.conduits.HeadStreamSinkConduit.exitFlush(HeadStreamSinkConduit.java:178)
+
+
+
+
+        at io.undertow.conduits.HeadStreamSinkConduit.flush(HeadStreamSinkConduit.java:122)
+
+
+
+
+        at org.xnio.conduits.ConduitStreamSinkChannel.flush(ConduitStreamSinkChannel.java:162) [xnio-api-3.3.4.Final-redhat-1.jar:3.3.4.Final-redhat-1]
+
+
+
+
+        at io.undertow.channels.DetachableStreamSinkChannel.flush(DetachableStreamSinkChannel.java:119)
+
+
+
+
+        at io.undertow.server.HttpServerExchange.closeAndFlushResponse(HttpServerExchange.java:1652)
+
+
+
+
+        at io.undertow.server.HttpServerExchange.endExchange(HttpServerExchange.java:1630)
+
+
+
+
+        at io.undertow.server.handlers.ChannelUpgradeHandler.handleRequest(ChannelUpgradeHandler.java:152)
+
+
+
+
+        at io.undertow.server.Connectors.executeRootHandler(Connectors.java:202)
+
+
+
+
+        at io.undertow.server.protocol.http.HttpReadListener.handleEventWithNoRunningRequest(HttpReadListener.java:233)
+
+
+
+
+        at io.undertow.server.protocol.http.HttpReadListener.handleEvent(HttpReadListener.java:131)
+
+
+
+
+        at io.undertow.server.protocol.http.HttpOpenListener.handleEvent(HttpOpenListener.java:145)
+
+
+
+
+        at io.undertow.server.protocol.http.HttpOpenListener.handleEvent(HttpOpenListener.java:92)
+
+
+
+
+        at io.undertow.server.protocol.http.HttpOpenListener.handleEvent(HttpOpenListener.java:51)
+
+
+
+
+        at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) [xnio-api-3.3.4.Final-redhat-1.jar:3.3.4.Final-redhat-1]
+
+
+
+
+        at org.xnio.ChannelListeners$10.handleEvent(ChannelListeners.java:291) [xnio-api-3.3.4.Final-redhat-1.jar:3.3.4.Final-redhat-1]
+
+
+
+
+        at org.xnio.ChannelListeners$10.handleEvent(ChannelListeners.java:286) [xnio-api-3.3.4.Final-redhat-1.jar:3.3.4.Final-redhat-1]
+
+
+
+
+        at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) [xnio-api-3.3.4.Final-redhat-1.jar:3.3.4.Final-redhat-1]
+
+
+
+
+        at org.xnio.nio.QueuedNioTcpServer$1.run(QueuedNioTcpServer.java:121) [xnio-nio-3.3.4.Final-redhat-1.jar:3.3.4.Final-redhat-1]
+
+
+
+
+        at org.xnio.nio.WorkerThread.safeRun(WorkerThread.java:580) [xnio-nio-3.3.4.Final-redhat-1.jar:3.3.4.Final-redhat-1]
+
+
+
+
+        at org.xnio.nio.WorkerThread.run(WorkerThread.java:464) [xnio-nio-3.3.4.Final-redhat-1.jar:3.3.4.Final-redhat-1]
+
+
+
+
+

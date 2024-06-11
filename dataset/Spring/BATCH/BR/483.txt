@@ -1,0 +1,10 @@
+ExecutionContext does not handle null values correctly
+ExecutionContext still does not handle null values correctly:
+	public void put(String key, Object value) 
+{
+		Assert.isInstanceOf(Serializable.class, value, "Value: [ " + value + "must be serializable.");
+		dirty = true;
+		map.put(key, value);
+	}
+
+since null won&amp;apos;t pass this test, it will throw an error.

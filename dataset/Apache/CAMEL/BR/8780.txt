@@ -1,0 +1,20 @@
+Camel exec component have trouble to load arguments list from message header
+When trying to set the following header:
+
+
+
+            &lt;setHeader headerName="CamelExecCommandArgs" &gt;
+
+                &lt;simple&gt;"--import" "--export"&lt;/simple&gt;
+
+            &lt;/setHeader&gt;
+
+
+
+We receive the following error:
+
+
+
+org.apache.camel.TypeConversionException: Error during type conversion from type: java.lang.String to the required type: java.util.List with value "--import" "--export" due java.lang.NumberFormatException: For input string: ""--import" "--export""
+
+

@@ -1,0 +1,18 @@
+XMLBeanDeclaration.getNestedBeanDeclarations() doesn&apos;t escape the node name when query the child node
+When query the nested bean declaration, the child name may contain the special character. So when call "HierarchicalConfiguration.configurationsAt()", the node name should be escaped by the expression engine first as the following
+
+
+
+getConfiguration().getExpressionEngine().nodeKey(node,"")
+
+
+
+Call sequence to the problem code:
+
+getNestedBeanDeclarations()
+
+-&gt;nested.put(child.getName(), createBeanDeclaration(child));
+
+   -&gt;List&lt;HierarchicalConfiguration&gt; list = getConfiguration().configurationsAt(node.getName());
+
+

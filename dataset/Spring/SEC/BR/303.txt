@@ -1,0 +1,5 @@
+LdapUserDetailsMapper should check that an attribute has actually been retrieved before attempting to map it to a role
+If a particular attribute has not been retrieved from the directory (e.g. because it doesn&amp;apos;t exist, or the user doesn&amp;apos;t have permissions to read it), then in the code
+            Attribute roleAttribute = attributes.get(roleAttributes[i]);
+            NamingEnumeration attributeRoles = roleAttribute.getAll();
+roleAttribute may be null and the second line will cause  a NullPointerException. A check should be made that the value isn&amp;apos;t null and a debug message logged if it is.

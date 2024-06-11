@@ -1,0 +1,8 @@
+Shell tab completion irregularity when default options are used
+(Logged by Ben on behalf of Paul)
+If I run Roo RC3:
+roo&gt; project --[TAB]
+project --java           project --projectName    project --template
+roo&gt; project --t[TAB]
+project --template           project --topLevelPackage
+Why don&amp;apos;t I get ----topLevelPackage appear in the first list, only in the second?  Is this a bug or expected behaviour?

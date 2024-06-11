@@ -1,0 +1,2 @@
+ServletContainerInitializers from jboss-deployment-structure.xml module dependencies are not invoked
+If a module includes a ServletContainerInitializer, that ServletContainerInitializer is not invoked for any applications that include the module in its jboss-deployment-structure.xml module dependencies.  It looks like the ServletContainerInitializerDeploymentProcessor only checks server provided dependencies.

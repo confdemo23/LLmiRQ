@@ -1,0 +1,193 @@
+swarm.http.port and swarm.port.offset do not work with @ArquillianResource URL baseURL
+First Example
+If you set the swarm port using either swarm.http.port or swarm.port.offset via arquillian.xml e.g.
+
+
+
+
+
+
+    &lt;container qualifier="wildfly-swarm" default="true"&gt;
+
+
+
+
+        &lt;configuration&gt;
+
+
+
+
+            &lt;property name="javaVmArguments"&gt;
+
+
+
+
+                -Dswarm.port.offset=1
+
+
+
+
+            &lt;/property&gt;
+
+
+
+
+        &lt;/configuration&gt;
+
+
+
+
+    &lt;/container&gt;
+
+
+
+
+
+
+the arquillian swarm container is correctly started on the specified port/offset.
+The problem is that if you use:
+
+
+
+
+
+
+@ArquillianResource
+
+
+
+
+private URL baseURL;
+
+
+
+
+
+
+to retrieve the url the swarm container is accessible via it always returns http://localhost:8080.
+Second Example
+If you set the port property in arquillian.xml
+
+
+
+
+
+
+    &lt;container qualifier="wildfly-swarm" default="true"&gt;
+
+
+
+
+        &lt;configuration&gt;
+
+
+
+
+            &lt;property name="port"&gt;8081&lt;/property&gt;
+
+
+
+
+        &lt;/configuration&gt;
+
+
+
+
+    &lt;/container&gt;
+
+
+
+
+
+
+it starts the swarm container on 8080 and 
+
+
+
+
+
+
+@ArquillianResource
+
+
+
+
+private URL baseURL;
+
+
+
+
+
+
+returns http://localhost:8081
+Third Example
+Attempting to combine the port property and the offset does not work either e.g. 
+
+
+
+
+
+
+    &lt;container qualifier="wildfly-swarm" default="true"&gt;
+
+
+
+
+        &lt;configuration&gt;
+
+
+
+
+            &lt;property name="javaVmArguments"&gt;
+
+
+
+
+                -Dswarm.port.offset=1
+
+
+
+
+            &lt;/property&gt;
+
+
+
+
+            &lt;property name="port"&gt;8081&lt;/property&gt;
+
+
+
+
+        &lt;/configuration&gt;
+
+
+
+
+    &lt;/container&gt;
+
+
+
+
+
+
+the port/offset is ignored and the container is started on 8080, while
+
+
+
+
+
+
+@ArquillianResource
+
+
+
+
+private URL baseURL;
+
+
+
+
+
+
+returns http:localhost:8081 
+note: while the examples above use swarm.port.offset, the same issue occurs if you use swarm.http.port

@@ -1,0 +1,22 @@
+DBRE multiple schema support
+At the moment we allow only one database schema per project in DBRE.
+What is the problem to support multiple? For instance:
+
+
+
+
+
+
+database reverse engineer --schema SCHEMA_1 --package ~.model.schema1
+
+
+
+
+database reverse engineer --schema SCHEMA_2 --package ~.model.schema2
+
+
+
+
+
+
+At the moment second script command wipes out all generated artifacts created by first command.

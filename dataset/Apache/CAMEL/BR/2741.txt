@@ -1,0 +1,7 @@
+GZIP/ZIP marshal/unmarshal leaves input file open
+Gzip/zip marshal/unmarshal leaves input files open, relying on the garbage collector to close the file. The cause sporadic file deletion exceptions in the following route:
+          from("file:incoming?delete=true")
+            .marshal().gzip()
+            .to("file:outgoing?fileName=$
+{file:name}
+.gz");

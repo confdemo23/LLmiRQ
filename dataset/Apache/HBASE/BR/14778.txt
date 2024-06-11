@@ -1,0 +1,2 @@
+Make block cache hit percentages not integer in the metrics system
+Once you&amp;apos;re close to the 90%+ it&amp;apos;s hard to see a difference because getting a full percent change is rare.

@@ -1,0 +1,3 @@
+CompressorStreamFactory.createCompressorInputStream with explicit compression does not honour decompressConcatenated
+When using CompressorStreamFactory.createCompressorInputStream, the decompressConcatenated property is only used when auto-detecting the compressor format for an input stream. The method with explicit compressor specification ignores the decompressConcatenated property, though.
+The fix is easy: pass the decompressConcatenated property as argument to all constructors.

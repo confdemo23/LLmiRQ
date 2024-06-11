@@ -1,0 +1,98 @@
+Unable to add JGroups protocol at a given index via CLI
+Unable to use this via CLI, tests pass since they use management client which won&amp;apos;t check against  the operation description:
+
+
+
+
+
+
+[standalone@localhost:9990 /] /subsystem=jgroups/stack=tcp/protocol=JDBC_PING:add(add-index=4)
+
+
+
+
+&amp;apos;add-index&amp;apos; is not found among the supported properties: [socket-binding, module, properties, type]
+
+
+
+
+
+
+add index is missing in the description, after the fix:
+
+
+
+
+
+
+[standalone@localhost:9990 /] /subsystem=jgroups/stack=tcp/protocol=MPING:read-operation-description(name=add
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "success",
+
+
+
+
+    "result" =&gt; {
+
+
+
+
+        "operation-name" =&gt; "add",
+
+
+
+
+        "description" =&gt; "Add a protocol to a protocol stack.",
+
+
+
+
+        "request-properties" =&gt; {
+
+
+
+
+            "add-index" =&gt; {
+
+
+
+
+                "type" =&gt; INT,
+
+
+
+
+                "description" =&gt; "If specified inserts the protocol at the given (zero-based) index. If null it will add at the end.",
+
+
+
+
+                "expressions-allowed" =&gt; false,
+
+
+
+
+                "required" =&gt; false,
+
+
+
+
+                "nillable" =&gt; true
+
+
+
+
+            },
+
+
+
+
+

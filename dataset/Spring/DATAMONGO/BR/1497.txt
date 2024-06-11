@@ -1,0 +1,2 @@
+MappingMongoConverter&apos;s check for whether a value is available for a property should use DbObjectAccessor
+MappingMongoConverter&amp;apos;s read method when dealing with remaining properties and associations not already set in the constructor should use a DBObjectAccessor instead of accessing the DBObject directly.

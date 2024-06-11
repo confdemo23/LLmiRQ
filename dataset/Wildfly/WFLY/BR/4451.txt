@@ -1,0 +1,3 @@
+Security ModuleClassLoaderLocator.CombinedClassLoader does not implement getResources
+org.jboss.as.security.plugins.ModuleClassLoaderLocator.CombinedClassLoader does not implement getResources.  This classloader combines a module classloader with the thread context classloader.  It implements loadClass, getResource &amp; getResourceAsStream and checks the module classloader first and if it finds it returns it else checks the TCCL.
+It does not implement getResources which causes custom security login modules to not be able to locate resources via getResources.

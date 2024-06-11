@@ -1,0 +1,2 @@
+Can&apos;t switch to log4j in the camel-cxf component
+Need to make sure we Use CXF LogUtils to get logger , so we can switch the logger from java.utils.Logger to log4j.

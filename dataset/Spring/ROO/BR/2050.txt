@@ -1,0 +1,3 @@
+Advanced add-on doesn&apos;t build
+Advanced add-on doesn&amp;apos;t build. I created it using the command "addon create advanced".
+The class AddonOperationsImpl uses undefined PhysicalTypeMetadata API. See line 78.

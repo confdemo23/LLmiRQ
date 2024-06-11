@@ -1,0 +1,8 @@
+TestRowProcessorEndpoint failing consistently
+Found while evaluating 1.2.4 RC1
+
+  TestRowProcessorEndpoint.testMultipleRows:246 expected:&lt;3&gt; but was:&lt;2&gt;
+
+  TestRowProcessorEndpoint.testReadModifyWrite:184 expected:&lt;101&gt; but was:&lt;91&gt;
+
+

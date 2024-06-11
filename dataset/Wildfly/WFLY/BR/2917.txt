@@ -1,0 +1,83 @@
+Unhelpful logging related to slave HC failover
+In 8.0.0 we introduced the "discovery-options" notion to the HC&amp;apos;s domain-controller config. One expected usage pattern is there will be a master HC and then one or more slaves started with --backup-dc that act as passive failover DC&amp;apos;s. Other slaves will use discovery-options elements to configure all possible masters. If the regular master fails, a backup can be quickly converted to a master with a couple CLI ops.
+This works, except the slave shows some unhelpful logging while waiting for the backup to be promoted:
+
+
+
+
+
+
+[Host Controller] 14:58:13,105 WARN  [org.jboss.as.host.controller] (Remoting "besdev:MANAGEMENT" task-3) JBAS010914: Connection to remote host-controller closed. Trying to reconnect.
+
+
+
+
+[Host Controller] 14:58:13,134 INFO  [org.jboss.as.host.controller] (domain-connection-threads - 1) JBAS010916: Reconnected to master
+
+
+
+
+[Host Controller] 14:58:14,160 INFO  [org.jboss.as.host.controller] (domain-connection-threads - 1) JBAS010916: Reconnected to master
+
+
+
+
+[Host Controller] 14:58:18,180 INFO  [org.jboss.as.host.controller] (domain-connection-threads - 1) JBAS010916: Reconnected to master
+
+
+
+
+[Host Controller] 14:58:27,200 INFO  [org.jboss.as.host.controller] (domain-connection-threads - 1) JBAS010916: Reconnected to master
+
+
+
+
+[Host Controller] 14:58:42,216 INFO  [org.jboss.as.host.controller] (domain-connection-threads - 1) JBAS010916: Reconnected to master
+
+
+
+
+[Host Controller] 14:58:57,232 INFO  [org.jboss.as.host.controller] (domain-connection-threads - 1) JBAS010916: Reconnected to master
+
+
+
+
+[Host Controller] 14:59:12,248 INFO  [org.jboss.as.host.controller] (domain-connection-threads - 1) JBAS010916: Reconnected to master
+
+
+
+
+[Host Controller] 14:59:27,264 INFO  [org.jboss.as.host.controller] (domain-connection-threads - 1) JBAS010916: Reconnected to master
+
+
+
+
+[Host Controller] 14:59:42,280 INFO  [org.jboss.as.host.controller] (domain-connection-threads - 1) JBAS010916: Reconnected to master
+
+
+
+
+[Host Controller] 14:59:57,296 INFO  [org.jboss.as.host.controller] (domain-connection-threads - 1) JBAS010916: Reconnected to master
+
+
+
+
+[Host Controller] 15:00:12,312 INFO  [org.jboss.as.host.controller] (domain-connection-threads - 1) JBAS010916: Reconnected to master
+
+
+
+
+[Host Controller] 15:00:27,328 INFO  [org.jboss.as.host.controller] (domain-connection-threads - 1) JBAS010916: Reconnected to master
+
+
+
+
+[Host Controller] 15:00:42,351 INFO  [org.jboss.as.host.controller] (domain-connection-threads - 1) JBAS010916: Reconnected to master
+
+
+
+
+
+
+What&amp;apos;s happening there is the slave is connecting to the backup but is not being allowed to register as a slave because the backup is not yet a master. The logging should reflect what&amp;apos;s actually happening.
+Also, after the backup is promoted and the slave properly registers, there&amp;apos;s nothing in the slaves logs.

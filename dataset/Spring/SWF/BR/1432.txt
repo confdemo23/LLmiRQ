@@ -1,0 +1,2 @@
+JsfAjaxHandler does not set content type when sending a partial response with a redirect instruction
+After clicking "Find Hotels" in the booking-faces sample, the resulting response (which contains XML) doesn&amp;apos;t have a Content-Type header. As a result the redirect works in some situations but not all. In particular it doesn&amp;apos;t work in MSIE and it doesn&amp;apos;t work if the app is fronted by Apache httpd which adds a stock text/html content-type (apparently browsers won&amp;apos;t recognize this as XML). 

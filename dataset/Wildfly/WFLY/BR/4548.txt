@@ -1,0 +1,91 @@
+Error messages on server shutdown when JTS is used
+During time of shutting down WFLY server when JTS transactions are enabled I experience these two [1] [2] errors/exceptions being shown in server log/console.
+The first one [1] is shown each time when JTS is configured and server is put to be stopped.
+The second one [2] is intermittent and probably it could be shown when JTA is under use as well.
+[1]
+
+
+
+
+
+
+WARNING [javax.enterprise.resource.corba._INITIALIZING_.rpc.presentation] (Thread-84) "IOP01210228: (BAD_OPERATION) This ORB instance has been destroyed, so no operations can be performed on it": org.omg.CORBA.BAD_OPERATION:   vmcid: SUN  minor code: 228  completed: No
+
+
+
+
+ at com.sun.corba.se.impl.logging.ORBUtilSystemException.orbDestroyed(ORBUtilSystemException.java:586)
+
+
+
+
+ at com.sun.corba.se.impl.logging.ORBUtilSystemException.orbDestroyed(ORBUtilSystemException.java:608)
+
+
+
+
+ at com.sun.corba.se.impl.orb.ORBImpl.checkShutdownState(ORBImpl.java:1329)
+
+
+
+
+ at com.sun.corba.se.impl.orb.ORBImpl.isDuringDispatch(ORBImpl.java:1340)
+
+
+
+
+ at com.sun.corba.se.impl.oa.poa.POAImpl.destroy(POAImpl.java:959)
+
+
+
+
+ at com.arjuna.orbportability.internal.orbspecific.oa.implementations.POABase.destroyRootPOA(POABase.java:68)
+
+
+
+
+ at com.arjuna.orbportability.oa.core.OA.destroyRootPOA(OA.java:97)
+
+
+
+
+ at com.arjuna.orbportability.RootOA.destroy(RootOA.java:91)
+
+
+
+
+ at com.arjuna.ats.internal.jts.orbspecific.javaidl.recoverycoordinators.ORBRunner.run(ORBRunner.java:59) 
+
+
+
+
+
+
+[2]
+
+
+
+
+
+
+INFO  [com.arjuna.ats.jbossatx] (MSC service thread 1-5) ARJUNA032018: Destroying TransactionManagerService
+
+
+
+
+INFO  [com.arjuna.ats.jbossatx] (MSC service thread 1-1) ARJUNA032014: Stopping transaction recovery manager
+
+
+
+
+ERROR [stderr] (Thread-98) Exception in thread "Thread-98" java.lang.NullPointerException
+
+
+
+
+ERROR [stderr] (Thread-98)         at com.sun.corba.se.impl.oa.poa.POAImpl$DestroyThread.run(POAImpl.java:566) 
+
+
+
+
+

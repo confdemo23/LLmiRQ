@@ -1,0 +1,58 @@
+Inefficiency in hbase handler when process query including rowkey range scan
+When query hive with hbase rowkey range, hive map tasks do not leverage startrow, endrow information in tablesplit. For example, if the rowkeys fit into 5 hbase files, then where will be 5 map tasks. Ideally, each task will process 1 file. But in current implementation, each task processes 5 files repeatedly. The behavior not only waste network bandwidth, but also worse the lock contention in HBase block cache as each task have to access the same block. The problem code is in HiveHBaseTableInputFormat.convertFilte as below:
+
+    if (tableSplit != null) 
+{
+
+      tableSplit = new TableSplit(
+
+        tableSplit.getTableName(),
+
+        startRow,
+
+        stopRow,
+
+        tableSplit.getRegionLocation());
+
+    }
+    scan.setStartRow(startRow);
+    scan.setStopRow(stopRow);
+
+As tableSplit already include startRow, endRow information of file, the better implementation will be:
+        
+        byte[] splitStart = startRow;
+        byte[] splitStop = stopRow;
+    if (tableSplit != null) {
+           if(tableSplit.getStartRow() != null)
+{
+
+                        splitStart = startRow.length == 0 ||
+
+          Bytes.compareTo(tableSplit.getStartRow(), startRow) &gt;= 0 ?
+
+            tableSplit.getStartRow() : startRow;
+
+                }
+                if(tableSplit.getEndRow() != null)
+{
+
+                        splitStop = (stopRow.length == 0 ||
+
+          Bytes.compareTo(tableSplit.getEndRow(), stopRow) &lt;= 0) &amp;&amp;
+
+          tableSplit.getEndRow().length &gt; 0 ?
+
+            tableSplit.getEndRow() : stopRow;
+
+                }
+ 
+      tableSplit = new TableSplit(
+        tableSplit.getTableName(),
+        splitStart,
+        splitStop,
+        tableSplit.getRegionLocation());
+    }
+    scan.setStartRow(splitStart);
+    scan.setStopRow(splitStop);
+        
+In my test, the changed code will improve performance more than 30%.

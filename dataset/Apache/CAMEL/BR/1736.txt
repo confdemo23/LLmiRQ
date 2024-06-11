@@ -1,0 +1,3 @@
+camel-cxf defaultHeaderFilterStrategy doesn&apos;t filter the Camel releates headers
+Here is the mailing thread[1] which discuss this issue.
+[1] http://www.nabble.com/-camel-cxf--Stripping-headers-td24143323.html

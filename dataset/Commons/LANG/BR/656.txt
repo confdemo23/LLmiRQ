@@ -1,0 +1,17 @@
+Example StringUtils.indexOfAnyBut("zzabyycdxx", &apos;&apos;) = 0 incorrect
+I recognized the following example in class StringUtils:
+
+
+      StringUtils.indexOfAnyBut("zzabyycdxx", &amp;apos;&amp;apos;) = 0
+
+
+
+According to Niall Pembertons answer on the user mailing list (Oct, 27th 2010) I should report an issue on this.
+He suggested the following replacement:
+
+      StringUtils.indexOfAnyBut("zzabyycdxx", "")   = -1
+
+
+
+Regards,
+Dirk

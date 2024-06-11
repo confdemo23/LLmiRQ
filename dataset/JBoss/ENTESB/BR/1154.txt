@@ -1,0 +1,6 @@
+Create dummy patch jars to test patch
+Hi, 
+WE need to create some sort of test jars to test the patching capabilities of 6.1.  The following areas should be covered:
+1. Fabric container
+2. Non-fabric container
+I don&amp;apos;t think this needs to be fancy. I&amp;apos;m thinking of some  jars that when installed/started  print a message to the log which we can grep. Hopefully we can automate part of the test. Probably best to do some checks in Fabric itself, MQ, Camel. 

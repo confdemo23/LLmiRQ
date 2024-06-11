@@ -1,0 +1,2 @@
+camel-web seems a bit borked viewing an endpoint in tomcat
+e.g. try "mvn tomcat:run" then try navigate to an endpoint to try send a message to it.

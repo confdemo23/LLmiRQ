@@ -1,0 +1,31 @@
+Add an option to skip the table names for the column headers
+It would be good to have an option where the beeline output could skip reporting the &lt;table_name&gt;.&lt;column_name&gt; in the headers.
+Eg:
+
+0: jdbc:hive2://:&gt; select * from sample_07 limit 1; 
+
+--------------------------------------------------------------------------------------------------
+
+sample_07.code	sample_07.description	sample_07.total_emp	sample_07.salary
+
+--------------------------------------------------------------------------------------------------
+
+00-0000	Operations	123	12345
+
+--------------------------------------------------------------------------------------------------
+
+
+
+b) After the option is set:
+
+0: jdbc:hive2://:&gt; select * from sample_07 limit 1; 
+
+---------------------------------------------------
+
+code	 description	total_emp	 salary
+
+---------------------------------------------------
+
+00-0000	Operations	123	12345
+
+

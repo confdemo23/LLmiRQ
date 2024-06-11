@@ -1,0 +1,2 @@
+HttpServletRequest.changeSessionId() doesn&apos;t reassociate session ID with distributed SSO
+The distributed SSO implementation stores a map of sessions using the session ID.  If the user changes the session ID, this reference is never changed.  Consequently, subsequent calls to SingleSignOn.getSession(SessionManager) will return null.

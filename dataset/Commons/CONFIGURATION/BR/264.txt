@@ -1,0 +1,8 @@
+SubnodeConfiguration does not see reloads of its parent configuration
+The problem can be reproduced as follows:
+1 config = new XMLConfiguration("c:conf.xml");
+2 config.setReloadingStrategy(new FileChangedReloadingStrategy());
+3 SubnodeConfiguration parentItemConfig = config.configurationAt("parent-item");
+4 String ss2 = parentItemConfig.getString("sub-item");
+5 //Now, &lt;sub-item&gt; node value changes to "new_value"
+6 ss2 = parentItemConfig.getString("sub-item"); // still returns old_value

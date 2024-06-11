@@ -1,0 +1,14 @@
+ApplicationClient container can not use a declarative method to activate EJBClientInterceptors
+With the java services approach it is possible to add a client side interceptor by adding the services file META-INF/services/org.jboss.ejb.client.EJBClientInterceptor to activate the interceptor if the class is accessable.
+The file must be added to the client.jar in case of a simple standalone client.
+And to the ejb.jar if the interceptor is used inside a server application.
+For the appclient I expect that add this file to 
+  EAR/client.jar/META-INF/services
+will do the same.
+Nevertheless adding the file to ear/META_INF ear/ejb.jar/META-INF do not woth either.
+Also adding the class to the client.jar, as ear module or as server module with dependency did not work.
+All theses Interceptors can be used if the client Main method add this with the JBoss API.
+A working example can be found here 
+https://github.com/wfink/jboss-eap-quickstarts/tree/application-client/app-client
+For the example with the services approach try
+https://github.com/wfink/jboss-eap-quickstarts/tree/application-client-withServices/app-client

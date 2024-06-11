@@ -1,0 +1,3 @@
+Cannot find the JdbcMultiUserConnectionRepository.sql mentioned in javadoc for JdbcUsersConnectionRepository
+The version is 1.1.0-BUILD-SNAPSHOT.
+I think it&amp;apos;s just a javadoc bug - shouldn&amp;apos;t it say JdbcUsersConnectionRepository.sql instead?

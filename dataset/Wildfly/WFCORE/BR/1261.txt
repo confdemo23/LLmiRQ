@@ -1,0 +1,11 @@
+Changing the max-history attribute value for configuration-changes fails
+[standalone@localhost:9990 /] /core-service=management/service=configuration-changes:write-attribute(name=max-history,value=20)
+{
+
+"outcome" =&gt; "failed",
+
+"failure-description" =&gt; "WFLYCTL0158: Operation handler failed: java.lang.IllegalStateException: WFLYCTL0188: Stage MODEL is already complete",
+
+"rolled-back" =&gt; true
+
+}

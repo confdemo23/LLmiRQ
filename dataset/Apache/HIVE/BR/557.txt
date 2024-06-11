@@ -1,0 +1,2 @@
+Exception in FileSinkOperator&apos;s close should NOT be ignored
+FileSinkOperator currently ignores all IOExceptions from close() and commit(). We should not ignore them, or the output file can be incomplete or missing.

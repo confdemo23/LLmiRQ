@@ -1,0 +1,3 @@
+JSFViewFactory&apos;s execution of the restore view lifecycle doesn&apos;t appear to match the JSF spec.
+We never call viewHandler.init for one.
+We need to make sure we are conforming to the JSF specification.

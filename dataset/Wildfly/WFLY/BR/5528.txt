@@ -1,0 +1,632 @@
+"WFLYCTL0171: unsatisfied dependencies" when removing a modified XA datasource
+Please note that the present scenario ends with a similar error message and has the same workaround as WFLY-5527.
+Steps to reproduce:
+(1) Create an XA Datasource:
+
+
+
+
+
+
+{
+
+
+
+
+    "operation" =&gt; "composite",
+
+
+
+
+    "address" =&gt; [],
+
+
+
+
+    "steps" =&gt; [
+
+
+
+
+        {
+
+
+
+
+            "operation" =&gt; "add",
+
+
+
+
+            "address" =&gt; [
+
+
+
+
+                ("subsystem" =&gt; "datasources"),
+
+
+
+
+                ("xa-data-source" =&gt; "testXaDs")
+
+
+
+
+            ],
+
+
+
+
+            "jndi-name" =&gt; "java:/testXaDs",
+
+
+
+
+            "driver-name" =&gt; "h2",
+
+
+
+
+            "xa-datasource-class" =&gt; "org.h2.jdbcx.JdbcDataSource",
+
+
+
+
+            "user-name" =&gt; "sa",
+
+
+
+
+            "password" =&gt; "sa",
+
+
+
+
+            "new-connection-sql" =&gt; undefined,
+
+
+
+
+            "url-delimiter" =&gt; undefined,
+
+
+
+
+            "url-selector-strategy-class-name" =&gt; undefined,
+
+
+
+
+            "use-java-context" =&gt; undefined,
+
+
+
+
+            "max-pool-size" =&gt; undefined,
+
+
+
+
+            "min-pool-size" =&gt; undefined,
+
+
+
+
+            "initial-pool-size" =&gt; undefined,
+
+
+
+
+            "pool-prefill" =&gt; undefined,
+
+
+
+
+            "pool-use-strict-min" =&gt; undefined,
+
+
+
+
+            "interleaving" =&gt; undefined,
+
+
+
+
+            "capacity-incrementer-class" =&gt; undefined,
+
+
+
+
+            "capacity-decrementer-class" =&gt; undefined,
+
+
+
+
+            "no-tx-separate-pool" =&gt; undefined,
+
+
+
+
+            "pad-xid" =&gt; undefined,
+
+
+
+
+            "same-rm-override" =&gt; undefined,
+
+
+
+
+            "wrap-xa-resource" =&gt; undefined,
+
+
+
+
+            "security-domain" =&gt; undefined,
+
+
+
+
+            "reauth-plugin-class-name" =&gt; undefined,
+
+
+
+
+            "flush-strategy" =&gt; undefined,
+
+
+
+
+            "allow-multiple-users" =&gt; undefined,
+
+
+
+
+            "connection-listener-class" =&gt; undefined,
+
+
+
+
+            "prepared-statements-cache-size" =&gt; undefined,
+
+
+
+
+            "share-prepared-statements" =&gt; undefined,
+
+
+
+
+            "track-statements" =&gt; undefined,
+
+
+
+
+            "allocation-retry" =&gt; undefined,
+
+
+
+
+            "allocation-retry-wait-millis" =&gt; undefined,
+
+
+
+
+            "blocking-timeout-wait-millis" =&gt; undefined,
+
+
+
+
+            "idle-timeout-minutes" =&gt; undefined,
+
+
+
+
+            "query-timeout" =&gt; undefined,
+
+
+
+
+            "use-try-lock" =&gt; undefined,
+
+
+
+
+            "set-tx-query-timeout" =&gt; undefined,
+
+
+
+
+            "transaction-isolation" =&gt; undefined,
+
+
+
+
+            "check-valid-connection-sql" =&gt; undefined,
+
+
+
+
+            "exception-sorter-class-name" =&gt; undefined,
+
+
+
+
+            "stale-connection-checker-class-name" =&gt; undefined,
+
+
+
+
+            "valid-connection-checker-class-name" =&gt; undefined,
+
+
+
+
+            "background-validation-millis" =&gt; undefined,
+
+
+
+
+            "background-validation" =&gt; undefined,
+
+
+
+
+            "use-fast-fail" =&gt; undefined,
+
+
+
+
+            "validate-on-match" =&gt; undefined,
+
+
+
+
+            "xa-resource-timeout" =&gt; undefined,
+
+
+
+
+            "spy" =&gt; undefined,
+
+
+
+
+            "use-ccm" =&gt; undefined,
+
+
+
+
+            "enabled" =&gt; undefined,
+
+
+
+
+            "connectable" =&gt; undefined,
+
+
+
+
+            "statistics-enabled" =&gt; undefined,
+
+
+
+
+            "tracking" =&gt; undefined,
+
+
+
+
+            "recovery-username" =&gt; undefined,
+
+
+
+
+            "recovery-password" =&gt; undefined,
+
+
+
+
+            "recovery-security-domain" =&gt; undefined,
+
+
+
+
+            "recovery-plugin-class-name" =&gt; undefined,
+
+
+
+
+            "no-recovery" =&gt; undefined,
+
+
+
+
+            "url-property" =&gt; undefined,
+
+
+
+
+            "reauth-plugin-properties" =&gt; undefined,
+
+
+
+
+            "exception-sorter-properties" =&gt; undefined,
+
+
+
+
+            "stale-connection-checker-properties" =&gt; undefined,
+
+
+
+
+            "valid-connection-checker-properties" =&gt; undefined,
+
+
+
+
+            "recovery-plugin-properties" =&gt; undefined,
+
+
+
+
+            "connection-listener-property" =&gt; undefined,
+
+
+
+
+            "capacity-incrementer-properties" =&gt; undefined,
+
+
+
+
+            "capacity-decrementer-properties" =&gt; undefined
+
+
+
+
+        },
+
+
+
+
+        {
+
+
+
+
+            "operation" =&gt; "add",
+
+
+
+
+            "address" =&gt; [
+
+
+
+
+                ("subsystem" =&gt; "datasources"),
+
+
+
+
+                ("xa-data-source" =&gt; "testXaDs"),
+
+
+
+
+                ("xa-datasource-properties" =&gt; "URL")
+
+
+
+
+            ],
+
+
+
+
+            "value" =&gt; "jdbc:h2:mem:test"
+
+
+
+
+        }
+
+
+
+
+    ]
+
+
+
+
+}
+
+
+
+
+
+
+(2) Update its "jndi-name"
+
+
+
+
+
+
+{
+
+
+
+
+    "operation" =&gt; "composite",
+
+
+
+
+    "address" =&gt; [],
+
+
+
+
+    "steps" =&gt; [
+
+
+
+
+        {
+
+
+
+
+            "operation" =&gt; "write-attribute",
+
+
+
+
+            "address" =&gt; [
+
+
+
+
+                ("subsystem" =&gt; "datasources"),
+
+
+
+
+                ("xa-data-source" =&gt; "testXaDs")
+
+
+
+
+            ],
+
+
+
+
+            "name" =&gt; "jndi-name",
+
+
+
+
+            "value" =&gt; "java:/testXaDs_changed"
+
+
+
+
+        }
+
+
+
+
+    ]
+
+
+
+
+}
+
+
+
+
+
+
+This composite operation succeeds.
+(3) Remove the XA Datasource:
+
+
+
+
+
+
+{
+
+
+
+
+    "operation" =&gt; "remove",
+
+
+
+
+    "address" =&gt; [
+
+
+
+
+        ("subsystem" =&gt; "datasources"),
+
+
+
+
+        ("xa-data-source" =&gt; "testXaDs")
+
+
+
+
+    ]
+
+
+
+
+}
+
+
+
+
+
+
+NOT OK: the operation fails: 
+
+
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "failed",
+
+
+
+
+    "failure-description" =&gt; "WFLYCTL0171: Removing services has lead to unsatisfied dependencies:
+
+
+
+
+Service jboss.data-source.reference-factory.testXaDs was depended upon by service jboss.naming.context.java.testXaDs
+
+
+
+
+Service jboss.xa-data-source-config.testXaDs was depended upon by service jboss.data-source.java:/testXaDs",
+
+
+
+
+    "rolled-back" =&gt; true,
+
+
+
+
+    "response-headers" =&gt; {"process-state" =&gt; "reload-required"}
+
+
+
+
+}
+
+
+
+
+
+
+EXPECTED: the operation should succeed
+Workaround: When the same request is sent once again, the second invocation succeeds.

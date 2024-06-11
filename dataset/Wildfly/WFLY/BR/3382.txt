@@ -1,0 +1,2 @@
+JDBC batch repository does not survive a reload operation
+If the batch subsystem job-repository-type is set to jdbc and a :reload operation is executed after a batch job has been executed the JDBC repository will no longer work as it holds on to an old DataSource.

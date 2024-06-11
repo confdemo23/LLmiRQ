@@ -1,0 +1,2 @@
+Web views need to be aware of enums
+The web add-on is not aware of enum concepts. It creates an empty drop-down list for an enum, whereas it should be populated with enum options. Refer to ROO-75 for an example script fragment for wedding.roo to reproduce, then try to create a "Rsvp" via the web UI.

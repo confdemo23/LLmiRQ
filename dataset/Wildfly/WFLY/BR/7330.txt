@@ -1,0 +1,29 @@
+Colocated HA topology with HTTP connectors/acceptors
+I try to configure colocated HA topology with HTTP connectors/acceptors but something goes wrong and I see repeated WARN message [1] on the first node and on the second I see the [2]. Maybe it is misconfiguration, but I have no idea what I do wrong. I attached XML configurations of both nodes, please review it.
+[1]
+
+
+
+
+
+
+12:55:47,789 WARN  [org.apache.activemq.artemis.core.client] (Thread-10 (ActiveMQ-client-global-threads-487873773)) AMQ212006: Waiting 2000 milliseconds before next retry. RetryInterval=2000 and multiplier=1
+
+
+
+
+
+
+[2]
+
+
+
+
+
+
+12:56:39,054 WARN  [org.apache.activemq.artemis.core.client] (Thread-10 (ActiveMQ-server-org.apache.activemq.artemis.core.server.impl.ActiveMQServerImpl$2@4766f9b3-516179796)) AMQ212006: Waiting 500 milliseconds before next retry. RetryInterval=500 and multiplier=1
+
+
+
+
+

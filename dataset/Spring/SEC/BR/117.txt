@@ -1,0 +1,3 @@
+JdbcDaoImpl not properly extensible
+While the javadoc for JdbcDaoImpl suggests that it is possible to override the initMappingSqlQueries() if the default strategy for customizing the SQL queries doesn&amp;apos;t provide enough flexibility, this is in fact impossible because authoritiesByUsernameMapping and usersByUsernameMapping are declared private while they should be protected.
+This as far as I can see prevents using this class against an Oracle database that doesn&amp;apos;t support boolean fields.

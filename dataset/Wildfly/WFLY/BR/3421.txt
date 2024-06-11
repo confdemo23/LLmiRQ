@@ -1,0 +1,11 @@
+Rehashing on view change can result in premature session/ejb expiration
+Session/ejb expiration is scheduled only the the owning node of a given session/ejb. When a node leaves, each node that assumes ownership of the sessions/ejbs that were previously owned by the leaving node schedules expiration of those sessions. However, view change can also lead to ownership changes for any session/ejb. We are currently handling this properly. If a session/ejb changes ownership, the expiration scheduling is never cancelled, and that session/ejb will expire prematurely, unless the node reacquires ownership. When using sticky sessions, this issue is not apparent, since subsequent requests will direct to the previous owner, who will cancel expiration on the old owner and reschedule expiration on the new owner properly. However, this will be a problem for web sessions if sticky sessions is disabled - and for @Stateful EJBs, if the ejb client receives updated affinity information prior to subsequent requests.
+There are at least 2 ways to address this:
+
+When a request arrives for an existing session/ejb, we immediately cancel any scheduled expiration/eviction. This is currently a unicast, which typically results in a local call - but can go remote if the ownership has changed. Making this a cluster-wide broadcast would fix the issue.
+We can allow the scheduler to expose the set of keys that are currently schedule, and, on topology change, cancel those sessions/ejbs for which the current node is no longer the owner - and reschedule on the new owner.
+
+Option 1 adds an additional cluster-wide RPC per request.
+Option 2 adds N*(N-1) unicast RPCs per view change, where N is the cluster size (i.e. each node sends 1 rpc to every other node containing the set of session/ejb IDs to schedule for expiration), 
+Option 2 is the least invasive solution of the two.
+EDIT: There is a 3rd options, i.e. modify the expiration tasks such that they skip expiration if the session/ejb is not owned by the current node. This is prevents the premature expiration issue, but we need some additional strategy to reschedule the session/ejb expiration on the node on the current owner.

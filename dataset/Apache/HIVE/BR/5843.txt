@@ -1,0 +1,2 @@
+Transaction manager for Hive
+As part of the ACID work proposed in HIVE-5317 a transaction manager is required.

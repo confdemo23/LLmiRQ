@@ -1,0 +1,4 @@
+CompareToBuilder.reflectionCompare(Object lhs, Object rhs, boolean compareTransients, Class reflectUpToClass) ignores third parameter
+The parameter "compareTransients" is ignored and false is always used, as a short look in the code shows:
+
+    return reflectionCompare(lhs, rhs, false, reflectUpToClass, null);

@@ -1,0 +1,2 @@
+Predicate pushing down doesn&apos;t work for float type for Parquet
+Predicate builder should use PrimitiveTypeName type in parquet side to construct predicate leaf instead of the type provided by PredicateLeaf.

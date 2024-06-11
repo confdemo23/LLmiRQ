@@ -1,0 +1,19 @@
+HStore::close does not honor config hbase.rs.evictblocksonclose
+I noticed moving regions was slow and due to the wait for the bucket cache to clear.  I tried setting hbase.rs.evictblocksonclose and it did not help.
+I see the HStore::close method has evictonclose hard coded to true instead of letting the config dictate:
+// close each store file in parallel
+CompletionService&lt;Void&gt; completionService =
+   new ExecutorCompletionService&lt;Void&gt;(storeFileCloserThreadPool);
+for (final StoreFile f : result) {
+   completionService.submit(new Callable&lt;Void&gt;() {
+     @Override
+     public Void call() throws IOException 
+{
+
+       f.closeReader(true);
+
+       return null;
+
+     }
+   });
+}

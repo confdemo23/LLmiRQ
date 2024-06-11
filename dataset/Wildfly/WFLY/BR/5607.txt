@@ -1,0 +1,2 @@
+EJB Server side is needlessly closing remoting channel
+When an EJB Bean throws a Runtime exception, it is causing the server side to close the remoting channel.  This causes several issues such as performance issue of having to recreate the channel, channel leak on the client side and some occasional EJBCLIENT...25 - no ejb receiver exceptions on the client side.

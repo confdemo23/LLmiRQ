@@ -1,0 +1,4 @@
+Log component should cache the message body&apos;s InputStream 
+If we put the log between an InputStream consumer and InputStream producer like below 
+from("InputStream Consumer").to("log:ShowMessageBody").to("InputStream Producer");
+The InputStream Producer can&amp;apos;t read the any date from the in message body.

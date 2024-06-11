@@ -1,0 +1,2 @@
+Add integration test for visibility deletes
+Once HBASE-10885 gets checked in, create integration tests to verify the same.  

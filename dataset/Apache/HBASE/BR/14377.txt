@@ -1,0 +1,3 @@
+JavaHBaseContextSuite not being run
+we haven&amp;apos;t been running JavaHBaseContextSuite, because it&amp;apos;s Java (so skipped by the ScalaTest framework) and not named according to the surefire naming rules.
+rename to TestJavaHBaseContext and categorize it as a Medium test.

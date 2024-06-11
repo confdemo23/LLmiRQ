@@ -1,0 +1,10 @@
+File Listener/Monitor
+Commons JCI has a "fam" (file alteration monitor) module[1] which provides a listener for file and directory create/change/delete events. I have done some work refactoring the JCI implementation and propose adding to to Commons IO. There is already an existing request/propsal to add similar functionality in IO-79 from Jim Harrington (which includes code).
+There are IMO two main differences (IMO improvements) in this implementation over exsiting JCI fam module:
+1) It uses a matching array technique to compare previous and current directory contents which minimizes object creation
+2) FileFilters can be specified to monitor only portions of the file system, ignoring files/directories of no interest. This is more efficient and reduces the amount of noise from un-wanted file/directory events
+From a quick look at IO-79, the above also applies to that proposal. Additionally IMO the solution in IO-79 would benefit from been broken out from the two DirectoryPoller and FilePoller artifacts.
+There are also some changes to the API specified in JCI&amp;apos;s fam:
+1) FileObserver (FilesystemAlterationObserver in fam) has additional init() and destroy() methods
+2) FileMonitor (FilesystemAlterationMonitor in fam) has addObserver/removeObserver methods rather than addListener/removeListener methods. The issue (IMO) with fam is that the monitor is fixed to the FilesystemAlterationObserverImpl implementation, rather than any FilesystemAlterationObserver implementation. Also the ability to specify file filters means that there is a need to be able to add more than one observer for the same root directory.
+[1] http://svn.apache.org/repos/asf/commons/proper/jci/trunk/fam/

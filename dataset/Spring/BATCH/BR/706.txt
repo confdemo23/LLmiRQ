@@ -1,0 +1,2 @@
+Commit exception is lost if update fails as well
+http://forum.springframework.org/showthread.php?t=56783

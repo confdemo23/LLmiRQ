@@ -1,0 +1,3 @@
+jboss-cli.sh allows creation of an invalid jsse element within a security-domain
+The jboss-cli.sh allows me to add a security-domain definition which is not valid. Apparently you must have a keystore-password or truststore-password, but this restriction is not enforced in the cli. 
+I do not have too deep an understanding of how the cli decides that a given attribute is required, but I have seen cases where the cli will warn me if I try to do something without all required attributes. Something similar should probably be done here.

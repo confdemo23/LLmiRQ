@@ -1,0 +1,2 @@
+MQTT consumer receives duplicate messages after broker restart
+if clientId is specified, after ActiveMQ broker restart, camel-mqtt consumer starts to receive duplicate messages. Please see the testcase attached.

@@ -1,0 +1,3 @@
+jboss-cli.sh throws IllegalArgumentException when using tab complete
+When using tab complete to try and auto-fill values or get hints as to the allowed values for certain attributes, an IllegalArgumentException is thrown.
+Note: This issue also affects 7.2.0.Final 

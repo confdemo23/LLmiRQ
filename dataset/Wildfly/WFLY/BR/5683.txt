@@ -1,0 +1,2 @@
+Default jgroups thread pool keep-alive times are much too small
+This looks like a unit problem.  e.g. 60 sec instead of 60 msec.

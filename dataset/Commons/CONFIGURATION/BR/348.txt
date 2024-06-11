@@ -1,0 +1,2 @@
+AbstractHierarchicalFileConfiguration does not trigger a reload for the getKeys() method
+In getKeys() the obligatory call to reload() was forgotten.

@@ -1,0 +1,3 @@
+ResourceServlet allows HTTP access to sensitive files
+As described in SWF-604 it&amp;apos;s possible to get sensitive files. This was fixed for the WEB-INF folder, but the persistence.xml for example can still be accessed via HTTP:
+http://richweb.springframework.org/swf-booking-faces/resources/persistence.xml

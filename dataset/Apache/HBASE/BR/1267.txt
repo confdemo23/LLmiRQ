@@ -1,0 +1,7 @@
+binary keys broken in trunk (again).
+Binary keys, specifically ones where the first byte of the key is nul &amp;apos;\0&amp;apos; don&amp;apos;t work:
+
+Splits happen
+Logfile indicates everything normal
+
+But the .META. doesnt list all the regions.  It only lists the &amp;apos;basic&amp;apos; regions: &amp;apos;table,,1234&amp;apos;.  The other regions with the binary keys in the middle just dont seem to be in .META....

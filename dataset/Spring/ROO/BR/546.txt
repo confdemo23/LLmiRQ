@@ -1,0 +1,2 @@
+Comments on field types specified with &apos;--comment&apos; are not utilizied
+When adding comments on fields, the "--comment" attribute is accepted but not used. From the help command, e.g. "help field string", it makes it sound like it should be inserting the comment into the javadoc above the field declaration in the entity class. However, nothing is being placed there nor in the aspect j files.

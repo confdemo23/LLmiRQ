@@ -1,0 +1,8 @@
+"persistence setup" command causes log4j.properties to be truncated
+This works:
+project com.foo.bar
+logging setup --level DEBUG
+This doesn&amp;apos;t:
+project com.foo.bar
+persistence setup --provider HIBERNATE --database HYPERSONIC_PERSISTENT
+logging setup --level DEBUG

@@ -1,0 +1,63 @@
+Swagger requires context name with quotes 
+
+
+
+    &lt;servlet&gt;
+
+        &lt;servlet-name&gt;ApiDeclarationServlet&lt;/servlet-name&gt;
+
+        &lt;servlet-class&gt;org.apache.camel.component.swagger.DefaultCamelSwaggerServlet&lt;/servlet-class&gt;
+
+        &lt;init-param&gt;
+
+            &lt;param-name&gt;base.path&lt;/param-name&gt;
+
+            &lt;param-value&gt;rest&lt;/param-value&gt;
+
+        &lt;/init-param&gt;
+
+        &lt;init-param&gt;
+
+            &lt;param-name&gt;api.path&lt;/param-name&gt;
+
+            &lt;param-value&gt;api-docs&lt;/param-value&gt;
+
+        &lt;/init-param&gt;
+
+        &lt;init-param&gt;
+
+            &lt;param-name&gt;api.version&lt;/param-name&gt;
+
+            &lt;param-value&gt;1.2.3&lt;/param-value&gt;
+
+        &lt;/init-param&gt;
+
+        &lt;init-param&gt;
+
+            &lt;param-name&gt;api.title&lt;/param-name&gt;
+
+            &lt;param-value&gt;User Services&lt;/param-value&gt;
+
+        &lt;/init-param&gt;
+
+        &lt;init-param&gt;
+
+            &lt;param-name&gt;api.description&lt;/param-name&gt;
+
+            &lt;param-value&gt;Camel Rest Example with Swagger that provides an User REST service&lt;/param-value&gt;
+
+        &lt;/init-param&gt;
+
+        &lt;init-param&gt;
+
+            &lt;param-name&gt;camelId&lt;/param-name&gt;
+
+            &lt;param-value&gt;"swagger-test"&lt;/param-value&gt;
+
+        &lt;/init-param&gt;
+
+        &lt;load-on-startup&gt;2&lt;/load-on-startup&gt;
+
+    &lt;/servlet&gt;
+
+

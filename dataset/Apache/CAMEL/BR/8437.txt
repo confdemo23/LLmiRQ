@@ -1,0 +1,62 @@
+Simple bean call doesn&apos;t like parenthesis in parameter values
+The simple language fails calling methods with parameters that contains ")".
+First use case, direct use:
+
+
+
+&lt;route&gt;
+
+    &lt;from uri="timer:foo?repeatCount=1"/&gt;
+
+    &lt;setBody&gt;
+
+        &lt;groovy&gt;[")", 42]&lt;/groovy&gt;
+
+    &lt;/setBody&gt;
+
+    &lt;setHeader headerName="test"&gt;
+
+        &lt;simple&gt;${body.contains(")")}&lt;/simple&gt;
+
+    &lt;/setHeader&gt;
+
+    &lt;log message="Body: ${body}, contains: ${header.test}"/&gt;
+
+&lt;/route&gt;
+
+
+
+It throws an error.
+Second use case, with a usage of a parameter:
+
+
+
+&lt;route&gt;
+
+    &lt;from uri="timer:foo?repeatCount=1"/&gt;
+
+    &lt;setBody&gt;
+
+        &lt;groovy&gt;[")", 42]&lt;/groovy&gt;
+
+    &lt;/setBody&gt;
+
+    &lt;setProperty propertyName="query"&gt;
+
+        &lt;constant&gt;)&lt;/constant&gt;
+
+    &lt;/setProperty&gt;
+
+    &lt;setHeader headerName="test"&gt;
+
+        &lt;simple&gt;${body.contains(${property.query})}&lt;/simple&gt;
+
+    &lt;/setHeader&gt;
+
+    &lt;log message="Body: ${body}, contains: ${header.test}"/&gt;
+
+&lt;/route&gt;
+
+
+
+It doesn&amp;apos;t throw any exception but doesn&amp;apos;t work.

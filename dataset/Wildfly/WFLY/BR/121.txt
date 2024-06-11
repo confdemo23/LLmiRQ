@@ -1,0 +1,2 @@
+Empty directories under "tmp/vfs" keeps on growing between server restarts
+When you have active deployment deployed to the server and you are restarting server for various reasons, the tmp/vfs keeps on growing with empty directories. It deletes the contents under the directory but not the directory itself.

@@ -1,0 +1,2 @@
+Deadlock on startup if configured w/8 transactional Infinispan caches
+CacheConfigurationService should be installed using AsynchronousService wrapper.

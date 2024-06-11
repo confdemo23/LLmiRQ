@@ -1,0 +1,41 @@
+Misleading warning about incorrect redirect URL
+We&amp;apos;ve started using SpEL expressions to avoid duplicating URL patterns between security.xml and our MVC controller mappings.
+E.g.
+
+
+
+
+
+
+&lt;form-login 
+
+
+
+
+    login-page="#{T(com.acme.Sitemap).LOGIN}" 
+
+
+
+
+    authentication-failure-url="#{T(com.acme.Sitemap).AUTH_ERROR}"/&gt;
+
+
+
+
+
+
+Now we keep seeing spurious warnings like
+
+
+
+
+
+
+FailFastProblemReporter - Configuration problem: #{ T(com.acme.Sitemap).AUTH_ERROR} is not a valid redirect URL (must start with &amp;apos;/&amp;apos; or http(s))
+
+
+
+
+
+
+This appears to be caused by WebConfigUtils.validateHttpRedirect() which checks for a &amp;apos;$&amp;apos; placeholder character but not for a &amp;apos;#&amp;apos; SpEL character.

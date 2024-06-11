@@ -1,0 +1,28 @@
+Carriage return &#13; inserted into XML
+The XML that was inserted when creating the DriverManagerDataSource XML has several 
+ characters in it.  Other cases of XML that is managed by ROO do not have this issue.
+ 
+&lt;bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource"&gt;
+        &lt;property name="driverClassName" value="$
+{database.driverClassName}
+"/&gt;
+        &lt;property name="url" value="$
+{database.url}
+"/&gt;
+        &lt;property name="username" value="$
+{database.username}
+"/&gt;
+        &lt;property name="password" value="$
+{database.password}
+"/&gt;
+    &lt;/bean&gt;
+
+	&lt;bean class="org.springframework.orm.jpa.JpaTransactionManager" id="transactionManager"&gt;
+        &lt;property name="entityManagerFactory" ref="entityManagerFactory"/&gt;
+    &lt;/bean&gt;
+
+	&lt;tx:annotation-driven mode="aspectj" transaction-manager="transactionManager"/&gt;
+
+	&lt;bean class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" id="entityManagerFactory"&gt;
+        &lt;property name="dataSource" ref="dataSource"/&gt;
+    &lt;/bean&gt;

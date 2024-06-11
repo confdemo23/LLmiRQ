@@ -1,0 +1,3 @@
+PgpServiceImpl#trustDefaultKeys can&apos;t resolve bundle URLs when run from STS
+This issue was discovered by Steffen Pingel while working on STS-2038.
+The bug is that if the URL of a given OSGi resource can&amp;apos;t be resolved, PgpServiceImpl#trustDefaultKeys throws an IllegalArgumentException (the stacktrace is in the above ticket).

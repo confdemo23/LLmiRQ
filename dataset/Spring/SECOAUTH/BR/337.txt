@@ -1,0 +1,2 @@
+Refresh token is always issued irrespective of client configuration
+Refresh token is always issued irrespective of client configuration.  A refresh token should only be issued on an auth code grant  and only if the client is allowed it.

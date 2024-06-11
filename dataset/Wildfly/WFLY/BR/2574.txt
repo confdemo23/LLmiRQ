@@ -1,0 +1,42 @@
+ CliArgumentsTestCase should not rely on java beeing on path
+If there is no java on path tests fail with 
+
+
+
+
+
+
+java.lang.AssertionError: Failed to start CLI process: Cannot run program "java": error=2, No such file or directory
+
+
+
+
+    at org.junit.Assert.fail(Assert.java:88)
+
+
+
+
+    at org.jboss.as.test.integration.management.cli.CliScriptTestBase.execute(CliScriptTestBase.java:108)
+
+
+
+
+    at org.jboss.as.test.integration.management.cli.CliScriptTestBase.execute(CliScriptTestBase.java:73)
+
+
+
+
+    at org.jboss.as.test.integration.management.cli.CliScriptTestBase.execute(CliScriptTestBase.java:69)
+
+
+
+
+    at org.jboss.as.test.integration.management.cli.CliArgumentsTestCase.testConnectArgument(CliArgumentsTestCase.java:103)
+
+
+
+
+
+
+Test should use JAVA_HOME env variable or java that ran "current" process
+without this fix it is really hard to properly test build with different JDKs as test will always use default java for executing commands instead of build provided/configured one

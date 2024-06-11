@@ -1,0 +1,2 @@
+Cell iteration is broken
+Cell implements Iterable&lt;Cell&gt; but its iteration is broken since it will always go one past the edge and throw an ArrayIndexOutOfBoundsException

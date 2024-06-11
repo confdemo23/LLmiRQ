@@ -1,0 +1,2 @@
+HTD is not fully copyable
+Part of my HBASE-62 patch was not applied. 

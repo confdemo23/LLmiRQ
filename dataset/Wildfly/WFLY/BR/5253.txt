@@ -1,0 +1,2 @@
+[Migration operation] [Web to Undertow] Protocol attribute in ssl configuration of https connector is not properly migrated
+In Web protocol attribute of https ssl configuration is used for defining ssl protocols such as TLSv1.2. This attribute isn&amp;apos;t properly migrated. Migrate operation defines enabled-protocols in https-listener based on Web&amp;apos;s ssl-protocol which is incorrect as ssl-protocol in Web stands for name of custom ssl protocol provider.

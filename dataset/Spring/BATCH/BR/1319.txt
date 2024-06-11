@@ -1,0 +1,2 @@
+Small memory leak in StepSynchronizationManager
+Small memory leak in StepSynchronizationManager: the counts map is not cleaned up at the end of a step execution.

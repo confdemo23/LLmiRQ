@@ -1,0 +1,111 @@
+JASPIAuthenticationMechanism#authenticate doesn&apos;t check if AuthenticatedSession is null
+In org.wildfly.extension.undertow.security.jaspi.JASPIAuthenticationMechanism#authenticate the variable authSession in the fragment below is frequently null, leading to null pointer exceptions:
+
+
+
+
+
+
+  if (sessionManager != null) {
+
+
+
+
+            AuthenticatedSessionManager.AuthenticatedSession authSession = sessionManager.lookupSession(exchange);
+
+
+
+
+            cachedAccount = authSession.getAccount(); // NPE HAPPENS HERE
+
+
+
+
+            // if there is a cached account we set it in the security context so that the principal is available to
+
+
+
+
+            // SAM modules via request.getUserPrincipal().
+
+
+
+
+            if (cachedAccount !=  null) {
+
+
+
+
+                jaspicSecurityContext.setCachedAuthenticatedAccount(cachedAccount);
+
+
+
+
+            }
+
+
+
+
+        }
+
+
+
+
+
+
+At another place in Undertow where AuthenticatedSession is used, there&amp;apos;s an extra null check (See io.undertow.security.impl.CachedAuthenticatedSessionMechanism#runCached).
+I patched the code locally to add an extra null check:
+
+
+
+
+
+
+        if (sessionManager != null) {
+
+
+
+
+            AuthenticatedSessionManager.AuthenticatedSession authSession = sessionManager.lookupSession(exchange);
+
+
+
+
+            cachedAccount = authSession == null? null : authSession.getAccount();
+
+
+
+
+            // if there is a cached account we set it in the security context so that the principal is available to
+
+
+
+
+            // SAM modules via request.getUserPrincipal().
+
+
+
+
+            if (cachedAccount !=  null) {
+
+
+
+
+                jaspicSecurityContext.setCachedAuthenticatedAccount(cachedAccount);
+
+
+
+
+            }
+
+
+
+
+        }
+
+
+
+
+
+
+After a short amount of testing everything seems to be okay with that extra check.

@@ -1,0 +1,4 @@
+Cannot remove fields. Missing flush() in org.springframework.roo.classpath.javaparser.JavaParserMutableClassOrInterfaceTypeDetails.removeField  ?
+I tried to remove a field from a class by calling removeField on MutableClassOrInterfaceTypeDetails.
+But the field does not get deleted at all.
+Maybe the reason is a missing call to flush() in  JavaParserMutableClassOrInterfaceTypeDetails.removeField   ?

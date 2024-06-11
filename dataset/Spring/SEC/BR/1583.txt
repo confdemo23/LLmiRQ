@@ -1,0 +1,8 @@
+wrong info in Docs
+from Docs http://static.springsource.org/spring-security/site/docs/3.0.x/reference/ns-config.html
+@PreAuthorize("hasAuthority(&amp;apos;ROLE_TELLER&amp;apos;)")
+but "hasAuthority" is wrong. work around is to use "hasRole" instead.
+&lt;intercept-url pattern="/login.jsp*" access="IS_AUTHENTICATED_ANONYMOUSLY"/&gt; also is not working.
+java.lang.IllegalArgumentException: Failed to evaluate expression &amp;apos;IS_AUTHENTICATED_ANONYMOUSLY&amp;apos;
+work around is to use:
+&lt;intercept-url pattern="/login.jsp*" access="permitAll" /&gt;

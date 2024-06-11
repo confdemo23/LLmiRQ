@@ -1,0 +1,5 @@
+Method createNumber from NumberUtils doesn&apos;t work for floating point numbers other than Float
+demo:
+ Number n = org.apache.commons.lang3.math.NumberUtils.createNumber("6264583.33");
+        System.out.println("lang3_createNumber_6264583.33----&gt;" + n);
+while n will be 6264583.5. not 6264583.33

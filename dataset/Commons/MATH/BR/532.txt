@@ -1,0 +1,18 @@
+[Math] Clirr report and &apos;org.apache.commons.math.util.MathUtils&apos;
+Clirr report mentions that method &amp;apos;public void checkOrder(double[], org.apache.commons.math.util.MathUtils$OrderDirection, boolean)&amp;apos; has been added, however this doesn&amp;apos;t comply with the javadoc of the very same function (because not "@since 2.2" tag was found). The same thing happens with the methods listed bellow:
+&amp;apos;public void checkOrder(double[])&amp;apos;
+&amp;apos;public boolean equals(float, float, float)&amp;apos;
+&amp;apos;public boolean equals(float, float, int)&amp;apos;
+&amp;apos;public boolean equalsIncludingNaN(float, float)&amp;apos;
+&amp;apos;public boolean equalsIncludingNaN(float, float, float)&amp;apos;
+&amp;apos;public boolean equalsIncludingNaN(float, float, int)&amp;apos;
+&amp;apos;public boolean equalsIncludingNaN(float[], float[])&amp;apos;
+&amp;apos;public boolean equalsIncludingNaN(double, double)&amp;apos;
+&amp;apos;public boolean equalsIncludingNaN(double, double, double)&amp;apos;
+&amp;apos;public boolean equalsIncludingNaN(double, double, int)&amp;apos;
+&amp;apos;public boolean equalsIncludingNaN(double[], double[])&amp;apos;
+&amp;apos;public double safeNorm(double[])&amp;apos;
+In addition to this some functions have been deprecated but neither is it mentioned in the javadoc the version as of which they have been deprecated nor the clirr report refers to these methods. These are:
+Deprecated Methods:
+&amp;apos;public boolean equals(float, float)&amp;apos;
+&amp;apos;public boolean equals(float[], float[])&amp;apos;

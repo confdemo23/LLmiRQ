@@ -1,0 +1,2 @@
+LlapOutputFormatService should have a configurable send buffer size
+Netty channel buffer size is hard-coded 128KB now. It should be made configurable.

@@ -1,0 +1,3 @@
+Unable to access http management interface secured by legacy ldap realm
+When http management interface is secured with legacy security realm using ldap, user is not prompted to provide credentials as should be in case of BASIC http authentication mechanism. Instead 403 http status is returned directly.
+Users won&amp;apos;t be able to migrate their current (6.4, 7.0) configuration to 7.1 without change.

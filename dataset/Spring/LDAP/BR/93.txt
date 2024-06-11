@@ -1,0 +1,14 @@
+SimpleLdapTemplate search method delegates to incorrect LdapOperations method.
+The following method on SimpleLdapTemplate delegates to the wrong LdapOperations method...
+	public &lt;T&gt; List&lt;T&gt; search(String base, String filter, SearchControls controls, ParameterizedContextMapper&lt;T&gt; mapper,
+			DirContextProcessor processor) 
+{
+		return ldapOperations.search(base, filter, controls, mapper);
+	}
+
+should be:
+	public &lt;T&gt; List&lt;T&gt; search(String base, String filter, SearchControls controls, ParameterizedContextMapper&lt;T&gt; mapper,
+			DirContextProcessor processor) 
+{
+		return ldapOperations.search(base, filter, controls, mapper, processor);
+	}

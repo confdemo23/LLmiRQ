@@ -1,0 +1,2 @@
+org.apache.camel.model.dataformat.XmlJsonDataFormat settings assignments are misplaced.
+"elementName" value is assigned to "encoding" field, "arrayName" is assigned to "elementName" field when using XmlJsonDataFormat(Map&lt;String, String&gt; options) constructor.

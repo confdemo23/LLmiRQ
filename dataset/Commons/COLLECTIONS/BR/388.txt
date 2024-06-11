@@ -1,0 +1,20 @@
+Inconsistent Javadoc comment and code for prototypeFactory(T) in org.apache.commons.collections.FactoryUtils
+The Javadoc comment below states that the method "throws IllegalArgumentException if the prototype is null":
+   	    /**	     
+	     ..
+
+@param prototype  the object to clone each time in the factory
+@return the &lt;code&gt;prototype&lt;/code&gt; factory
+@throws IllegalArgumentException if the prototype is null
+@throws IllegalArgumentException if the prototype cannot be cloned
+	     */
+	    public static &lt;T&gt; Factory&lt;T&gt; prototypeFactory(T  prototype) 
+{
+	        return PrototypeFactory.&lt;T&gt;prototypeFactory(prototype);
+	    }
+
+However, the method returns a NULL_INSTANCE object instead of throwing IllegalArgumentException when called with null.
+Suggested Fixes:
+1. Change "@throws IllegalArgumentException if the prototype is null" and "@return" to "@return NULL_INSTANCE if the prototype is null".
+or
+2. Remove the entire "throws IllegalArgumentException if the prototype is null".

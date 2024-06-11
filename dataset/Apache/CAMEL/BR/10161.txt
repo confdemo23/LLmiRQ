@@ -1,0 +1,3 @@
+camel-sql - Does not propagate headers for outputType=StreamList
+All headers are cleared when returning from 
+to("sql:&lt;query&gt;?outputType=StreamList")

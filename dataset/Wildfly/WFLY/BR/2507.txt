@@ -1,0 +1,32 @@
+InflowFlatTestCase and InflowJarTestCase are failing on Windows
+Tests are consisently failing on Windows but not on Linux:
+http://brontes.lab.eng.brq.redhat.com/project.html?projectId=WF&amp;testNameId=-4393166542338832492&amp;tab=testDetails
+Typically that would indicate a problem that manifests when tests are run in a different order; i.e. one test leaving behind something that impacts another.
+I suspect what&amp;apos;s happening here is an RA is getting left behind and these tests are finding the wrong one and making assertions against it.
+Note this in the test is used to find the RA id:
+Set&lt;String&gt; ids = repository.getResourceAdapters();
+
+
+
+
+
+
+		assertNotNull(ids);
+
+
+
+
+		System.out.println("////RA" + ids.toString());
+
+
+
+
+		String piId = getElementContaining(ids,        "MultipleResourceAdapter");
+
+
+
+
+
+
+The test logging shows there are two RAs that would match:
+03:45:54,709 INFO  [stdout] (pool-1-thread-4) ////RAorg.jboss.as.test.integration.jca.rar.MultipleResourceAdapter#27, org.jboss.as.test.integration.jca.rar.MultipleResourceAdapter#28

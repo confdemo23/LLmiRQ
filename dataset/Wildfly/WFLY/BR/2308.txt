@@ -1,0 +1,158 @@
+Leak of WorkManager and BootstrapContext
+There seems to be a leak of WorkManager and BootstrapContext clones. 
+NOTE: The clones are not standalone, for instance WorkManagerImpl.shutdown reference is shared among all clones, if one is shutdown, all of them are.
+The coordinators have an internal map of name/id -&gt; [ BootstrapContext | WorkManager ]. They keep clones of default instance in it. In IJ code, deployers invoke coordinator.remove() method to keep it clean. However this does not happen in WFLY/AS7 ( only create is called ). 
+Here is a step by step scenario( more or less ):
+1. WFLY boots
+2. WorkManagerService is created( along with WorkManager instance, the default used in WMCoordinator )
+3. RA is deployed/activated
+4. IJ checks if there is BootstrapContext/WorkManager under "X", there is none, IJ creates clone of WM from #2 and BootstrapContext,  its stored under "X" in coordinators
+5. Normal operations, msgs exchange, etc.
+6. WFLY reload is called
+7. WM from #2 shutdown() is called, this renders the clone stored under "X" as shutdown as well.
+8. WFLY boots again
+9. new WorkManagerService is created( along with WorkManager instance, the default used in WMCoordinator )
+10. RA is deployed/activate
+11. IJ checks if there is BootstrapContext/WorkManager under "X", there is, this instance is returned. 
+#11 old instance, which is shutdown since #7, is passed as WorkManager. This explodes:
+
+
+
+
+
+
+ERROR [org.jboss.msc.service.fail] (ServerService Thread Pool -- 29) MSC000001: Failed to start service jboss.deployment.unit."mdb.jar".component.MDBLifecycleCallback.START: org.jboss.msc.service.StartException in service jboss.deployment.unit."mdb.jar".component.MDBLifecycleCallback.START: java.lang.RuntimeException: javax.resource.spi.work.WorkRejectedException: IJ000263: WorkManager is shutting down
+
+
+
+
+	at org.jboss.as.ee.component.ComponentStartService$1.run(ComponentStartService.java:57)
+
+
+
+
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471) [rt.jar:1.7.0_25]
+
+
+
+
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334) [rt.jar:1.7.0_25]
+
+
+
+
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166) [rt.jar:1.7.0_25]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_25]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_25]
+
+
+
+
+	at java.lang.Thread.run(Thread.java:724) [rt.jar:1.7.0_25]
+
+
+
+
+	at org.jboss.threads.JBossThread.run(JBossThread.java:122) [jboss-threads-2.1.1.Final.jar:2.1.1.Final]
+
+
+
+
+Caused by: java.lang.RuntimeException: javax.resource.spi.work.WorkRejectedException: IJ000263: WorkManager is shutting down
+
+
+
+
+	at org.jboss.as.ejb3.component.messagedriven.MessageDrivenComponent.activate(MessageDrivenComponent.java:218)
+
+
+
+
+	at org.jboss.as.ejb3.component.messagedriven.MessageDrivenComponent.start(MessageDrivenComponent.java:189)
+
+
+
+
+	at org.jboss.as.ee.component.ComponentStartService$1.run(ComponentStartService.java:54)
+
+
+
+
+	... 7 more
+
+
+
+
+Caused by: javax.resource.spi.work.WorkRejectedException: IJ000263: WorkManager is shutting down
+
+
+
+
+	at org.jboss.jca.core.workmanager.WorkManagerImpl.doFirstChecks(WorkManagerImpl.java:776)
+
+
+
+
+	at org.jboss.jca.core.workmanager.WorkManagerImpl.scheduleWork(WorkManagerImpl.java:617)
+
+
+
+
+	at org.jboss.jca.core.workmanager.WorkManagerImpl.scheduleWork(WorkManagerImpl.java:602)
+
+
+
+
+	at org.hornetq.ra.inflow.HornetQActivation.start(HornetQActivation.java:259)
+
+
+
+
+	at org.hornetq.ra.HornetQResourceAdapter.endpointActivation(HornetQResourceAdapter.java:167)
+
+
+
+
+	at org.jboss.jca.core.rar.EndpointImpl.activate(EndpointImpl.java:191)
+
+
+
+
+	at org.jboss.as.ejb3.component.messagedriven.MessageDrivenComponent.activate(MessageDrivenComponent.java:216)
+
+
+
+
+	... 9 more
+
+
+
+
+
+
+Steps to reproduce:
+1. Setup an adapter deployment
+2. reload
+3. deploy MDB
+The reload OP has small bug, this branch (https://github.com/baranowb/wildfly/tree/WFLY-2217) has it fixed.
+Example test set: 
+
+
+
+
+
+
+mvn clean install -DallTest -Dtest=CustomBootstrapContextTestCase,GetCallerPrincipalTestCase
+
+
+
+
+

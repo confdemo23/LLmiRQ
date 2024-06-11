@@ -1,0 +1,49 @@
+Could not grant javax.xml.ws.WebServicePermission to a deployment
+It&amp;apos;s currently not possible by default to grant the javax.xml.ws.WebServicePermission "publish" permission to a user deployment by adding the proper entry in standalone.xml:
+
+
+
+
+
+
+        &lt;subsystem xmlns="urn:jboss:domain:security-manager:1.0"&gt;
+
+
+
+
+            &lt;deployment-permissions&gt;
+
+
+
+
+                &lt;minimum-set&gt;
+
+
+
+
+                    ...
+
+
+
+
+                    &lt;permission class="javax.xml.ws.WebServicePermission" name="publishEndpoint"/&gt;
+
+
+
+
+                &lt;/minimum-set&gt;
+
+
+
+
+            &lt;/deployment-permissions&gt;
+
+
+
+
+        &lt;/subsystem&gt;
+
+
+
+
+

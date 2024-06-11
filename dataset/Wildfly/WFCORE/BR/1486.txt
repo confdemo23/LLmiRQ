@@ -1,0 +1,49 @@
+PersistanceResourceTestCase fails on some windows machines
+Description of problem:
+PersistanceResourceTestCase from wildfly-core fails on some windows machines.
+Steps to Reproduce:
+
+cd controller
+mvn test -Dtest=PersistanceResourceTestCase
+
+Actual results:
+
+
+
+
+
+
+java.lang.AssertionError: DEV99\hudson:READ_DATA/WRITE_DATA/APPEND_DATA/READ_NAMED_ATTRS/WRITE_NAMED_ATTRS/EXECUTE/DELETE_CHILD/READ_ATTRIBUTES/WRITE_ATTRIBUTES/READ_ACL/SYNCHRONIZE:ALLOW
+
+
+
+
+Expected: a collection containing &lt;WRITE_OWNER&gt;
+
+
+
+
+     but: was &lt;WRITE_ATTRIBUTES&gt;, was &lt;APPEND_DATA&gt;, was &lt;READ_ACL&gt;, was &lt;SYNCHRONIZE&gt;, was &lt;DELETE_CHILD&gt;, was &lt;READ_ATTRIBUTES&gt;, was &lt;WRITE_DATA&gt;, was &lt;WRITE_NAMED_ATTRS&gt;, was &lt;READ_DATA&gt;, was &lt;READ_NAMED_ATTRS&gt;, was &lt;EXECUTE&gt;
+
+
+
+
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+
+
+
+
+	at org.junit.Assert.assertThat(Assert.java:865)
+
+
+
+
+	at org.jboss.as.controller.persistence.PersistanceResourceTestCase.testAclFilePermissions(PersistanceResourceTestCase.java:701)
+
+
+
+
+
+
+Expected results:
+No errors on output

@@ -1,0 +1,19 @@
+Fuse camel-sap SapTransactionalIDocListServerComponentConfigurationAndDocumentationTest test fails
+The SapTransactionalIDocListServerComponentConfigurationAndDocumentationTest is failing on Jenkins with the error below.  I will add an @Ignore to allow the build to proceed for now.
+Stacktrace
+java.lang.AssertionError: null
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at org.fusesource.camel.component.sap.SapTransactionalIDocListServerComponentConfigurationAndDocumentationTest.testComponentConfiguration(SapTransactionalIDocListServerComponentConfigurationAndDocumentationTest.java:45)
+Standard Output
+[                          main] figurationAndDocumentationTest INFO  ********************************************************************************
+[                          main] figurationAndDocumentationTest INFO  Testing: testComponentConfiguration(org.fusesource.camel.component.sap.SapTransactionalIDocListServerComponentConfigurationAndDocumentationTest)
+[                          main] figurationAndDocumentationTest INFO  ********************************************************************************
+[                          main] figurationAndDocumentationTest INFO  ********************************************************************************
+[                          main] figurationAndDocumentationTest INFO  Testing done: testComponentConfiguration(org.fusesource.camel.component.sap.SapTransactionalIDocListServerComponentConfigurationAndDocumentationTest)
+[                          main] figurationAndDocumentationTest INFO  Took: 0.127 seconds (127 millis)
+[                          main] figurationAndDocumentationTest INFO  ********************************************************************************
+[                          main] DefaultCamelContext            INFO  Apache Camel 2.15.1.redhat-620124 (CamelContext: camel-1) is shutting down
+[                          main] DefaultCamelContext            INFO  Apache Camel 2.15.1.redhat-620124 (CamelContext: camel-1) uptime not started
+[                          main] DefaultCamelContext            INFO  Apache Camel 2.15.1.redhat-620124 (CamelContext: camel-1) is shutdown in 0.005 seconds

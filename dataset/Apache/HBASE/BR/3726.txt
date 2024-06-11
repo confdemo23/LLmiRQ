@@ -1,0 +1,4 @@
+Allow coprocessor callback RPC calls to be batched at region server level
+Cuurently the Callback.update() method is called for each Call.call() return value obtained from each region.  Each Call.call() invocation is a separate RPC, so there is currently one RPC per region. So there&amp;apos;s no place at the moment for the region server to be involved in any aggregation across regions.
+There is some preliminary support in HConnectionManager.HConnectionImplementation.processBatch() that would allow doing 1 RPC per region server, same as we do for multi-get and multi-put.
+We should provide ability to batch callback RPC calls.

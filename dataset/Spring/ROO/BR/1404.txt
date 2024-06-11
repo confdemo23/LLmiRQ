@@ -1,0 +1,9 @@
+Roo source code does not compile with Java 5
+
+Compilation failure
+classpath/src/main/java/org/springframework/roo/classpath/operations/HintOperationsImpl.java:[64,44]
+cannot find symbol
+symbol  : method keySet()
+location: class java.util.ResourceBundle
+keySet method is available since 1.6 version
+ http://download.oracle.com/javase/6/docs/api/java/util/ResourceBundle.html

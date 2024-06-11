@@ -1,0 +1,2 @@
+throw a error if the input is larger than a threshold for index input format
+This can hang for ever.

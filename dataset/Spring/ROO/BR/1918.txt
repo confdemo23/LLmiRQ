@@ -1,0 +1,2 @@
+WebScaffoldMetadata should use its MetadataProvider class name to ensure optimal loop detection semantics
+MemberDetailsScanner uses the passed FQCN string to determine whether to skip a request for a particular metadata provider. It is preferable therefore to present a MetadataProvider&amp;apos;s FQCN if that MetadataProvider caused the MemberDetailsScanner invocation, or one of its helper classes within that MetadataProvider&amp;apos;s control flow caused the invocation. A change to WebScaffoldMetadata is required to reflect this.

@@ -1,0 +1,154 @@
+Documented Configuration of Conversion Service with DomainClassConverter Does Not Work
+The Spring Data JPA documentation describes configuring a DomainClassConverter like so:
+
+
+
+
+
+
+&lt;mvc:annotation-driven conversion-service="conversionService" /&gt;
+
+
+
+
+
+
+
+
+
+&lt;bean id="conversionService" class="....context.support.ConversionServiceFactoryBean"&gt;
+
+
+
+
+  &lt;property name="converters"&gt;
+
+
+
+
+    &lt;list&gt;
+
+
+
+
+      &lt;bean class="org.springframework.data.repository.support.DomainClassConverter"&gt;
+
+
+
+
+        &lt;constructor-arg ref="conversionService" /&gt;
+
+
+
+
+      &lt;/bean&gt;
+
+
+
+
+    &lt;/list&gt;
+
+
+
+
+  &lt;/property&gt;
+
+
+
+
+&lt;/bean&gt;
+
+
+
+
+
+
+However, this fails to work from an apparent cyclic instantiation error ("Error creating bean with name &amp;apos;conversionService&amp;apos;: FactoryBean which is currently in creation returned null from getObject").
+This is one workaround for the problem:
+
+
+
+
+
+
+&lt;bean id="conversionService" class="org.springframework.core.convert.support.DefaultConversionService"/&gt;
+
+
+
+
+
+
+
+
+
+&lt;bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean"&gt;
+
+
+
+
+  &lt;property name="targetClass" value="org.springframework.core.convert.support.ConversionServiceFactory"/&gt;
+
+
+
+
+  &lt;property name="targetMethod" value="registerConverters"/&gt;
+
+
+
+
+  &lt;property name="arguments"&gt;
+
+
+
+
+    &lt;util:list&gt;
+
+
+
+
+      &lt;set&gt;
+
+
+
+
+        &lt;bean class="org.springframework.data.repository.support.DomainClassConverter"&gt;
+
+
+
+
+          &lt;constructor-arg ref="conversionService"/&gt;
+
+
+
+
+        &lt;/bean&gt;
+
+
+
+
+      &lt;/set&gt;
+
+
+
+
+      &lt;ref bean="conversionService"/&gt;
+
+
+
+
+    &lt;/util:list&gt;
+
+
+
+
+  &lt;/property&gt;
+
+
+
+
+&lt;/bean&gt;
+
+
+
+
+

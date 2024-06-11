@@ -1,0 +1,2 @@
+Exiting CLI requires stty sane command to be issued on Linux
+The PR https://github.com/wildfly/wildfly-core/pull/1268/ seemed to have introduced a regression where some times (seems to be most in my case) stty sane is required to get a shell back to normal. My guess is it&amp;apos;s the aesh upgrade, but I&amp;apos;m not certain on that so I&amp;apos;ll start the JIRA here and it can be moved to AESH if necessary.

@@ -1,0 +1,2 @@
+Prevent KeyspaceEventMessageListener from starting when no repository detected
+Do not automatically start the KeyspaceEventMessageListener when there&amp;apos;s no repository at hand and check the ConnectionFactory in case there&amp;apos;s no connection returned. 

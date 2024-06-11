@@ -1,0 +1,3 @@
+TestParser cannot marshal empty subsystems
+TestParser (used in subsystem test framework) will only marshal if the subsystem&amp;apos;s ModelNode isDefined(). But for simple subsystems with no attributes it doesn&amp;apos;t have to be defined.
+It should just check for node existence  parentNode.has(subsystemName)  not whether the node is defined.

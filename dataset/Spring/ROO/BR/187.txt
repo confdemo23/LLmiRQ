@@ -1,0 +1,2 @@
+Inconsistency in external JPA implementation causes duplicate entry for key
+See forum topic.

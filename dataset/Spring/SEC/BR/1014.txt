@@ -1,0 +1,11 @@
+minor changes for an easy NTLM / LDAP configuration
+Following changes are needed for an easy NTLM and LDAP (Active Directory) integration :
+LdapAuthenticationProvider :
+Either accept empty password (then LdapAuthenticationProvider can be used as is), or change scope to protected for the private LdapAuthenticator authenticator; : in that case we can easily override the authenticate() method to avoid password length check, without the need to use another LdapAuthenticator in the overriding class.
+Another change is needed for NTLM : AbstractLdapAuthenticator with no password check.
+PasswordComparisonAuthenticator is final and can&amp;apos;t be overrided, despite the only usefull change is to comment last lines in authenticate() to remove password check.
+Because of the class name, it&amp;apos;s not easy to change this...
+So may a new class extending LdapAuthenticationProvider  exists  ( with no password check) ?
+With those 2 changes, we can use NTLM to get username, use it to query LDAP and retrieve user informations (email, name, etc..) then use such informations in a custom UserDetails implementation (via a convenient UserDetailsContextMapper) without any implementation.
+Hope this can help.
+Regards.

@@ -1,0 +1,2 @@
+AuthenticationSimpleHttpInvokerRequestExecutor should use getName() instead of toString()
+http://forum.springframework.org/showthread.php?t=21664

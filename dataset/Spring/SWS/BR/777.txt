@@ -1,0 +1,157 @@
+SoapFaultMappingExceptionResolver not handling exception
+Given the following configuration:
+
+
+
+
+
+
+    &lt;bean class="org.springframework.ws.soap.server.endpoint.SoapFaultMappingExceptionResolver"&gt;
+
+
+
+
+        &lt;property name="exceptionMappings"&gt;
+
+
+
+
+            &lt;value&gt;
+
+
+
+
+                org.springframework.dao.EmptyResultDataAccessException=CLIENT,Entity not found
+
+
+
+
+            &lt;/value&gt;
+
+
+
+
+        &lt;/property&gt;
+
+
+
+
+        &lt;property name="defaultFault" value="SERVER"/&gt;
+
+
+
+
+    &lt;/bean&gt;
+
+
+
+
+
+
+The result in 2.0.5 is correct:
+
+
+
+
+
+
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+
+
+
+
+        &lt;SOAP-ENV:Header/&gt;
+
+
+
+
+        &lt;SOAP-ENV:Body&gt;
+
+
+
+
+            &lt;SOAP-ENV:Fault&gt;
+
+
+
+
+                &lt;faultcode&gt;SOAP-ENV:Client&lt;/faultcode&gt;
+
+
+
+
+                &lt;faultstring xml:lang="en"&gt;Entity not found&lt;/faultstring&gt;
+
+
+
+
+            &lt;/SOAP-ENV:Fault&gt;
+
+
+
+
+        &lt;/SOAP-ENV:Body&gt;
+
+
+
+
+    &lt;/SOAP-ENV:Envelope&gt;
+
+
+
+
+
+
+The result in 2.1.0.RC1 is INCORRECT:
+
+
+
+
+
+
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+
+
+
+
+    &lt;SOAP-ENV:Header/&gt;
+
+
+
+
+    &lt;SOAP-ENV:Body&gt;
+
+
+
+
+        &lt;SOAP-ENV:Fault&gt;
+
+
+
+
+            &lt;faultcode&gt;SOAP-ENV:Server&lt;/faultcode&gt;
+
+
+
+
+            &lt;faultstring xml:lang="en"&gt;Incorrect result size: expected 1, actual 0&lt;/faultstring&gt;
+
+
+
+
+        &lt;/SOAP-ENV:Fault&gt;
+
+
+
+
+    &lt;/SOAP-ENV:Body&gt;
+
+
+
+
+&lt;/SOAP-ENV:Envelope&gt;
+
+
+
+
+

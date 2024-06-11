@@ -1,0 +1,6 @@
+the shell help for the patch:install command is wrong
+The help for patch:install reads: 
+ARGUMENTS
+        PATCH
+                name of the patch to rollback
+It should be name of patch to install

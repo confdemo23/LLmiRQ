@@ -1,0 +1,15 @@
+Missing i18n
+system-jmx/src/main/java/org/jboss/system/ServiceMBeanSupport.java
+379   log.error(e);
+patching/src/main/java/org/jboss/as/patching/validation/PatchArtifact.java
+102   ctx.getErrorHandler().error("Failed to load identity info for patch " + patch.getPatchId(), e);
+116   ctx.getErrorHandler().error("Failed to load previous patch", e);
+patching/src/main/java/org/jboss/as/patching/validation/XmlFileState.java
+51   ctx.getErrorHandler().error("File doesn&amp;apos;t exist: " + file.getAbsolutePath());
+56   ctx.getErrorHandler().error("Failed to parse file: " + file.getAbsolutePath(), e);
+patching/src/main/java/org/jboss/as/patching/validation/PatchElementProviderArtifact.java
+84   ctx.getErrorHandler().error("Layer not found: " + metadata.getName());
+patching/src/main/java/org/jboss/as/patching/runner/IdentityPatchContext.java
+435   PatchLogger.ROOT_LOGGER.warnf(e, "failed to undo change (%s)", modification);
+ejb3/src/main/java/org/jboss/as/ejb3/tx/CMTTxInterceptor.java
+169   EjbLogger.ROOT_LOGGER.error(t);

@@ -1,0 +1,60 @@
+Incorrect exceptions handling from Splitter
+Steps to reproduce:
+1. Create global onException handler
+
+
+
+&lt;onException&gt;
+
+    &lt;exception&gt;java.lang.Exception&lt;/exception&gt;
+
+    &lt;handled&gt;
+
+        &lt;constant&gt;false&lt;/constant&gt;
+
+    &lt;/handled&gt;
+
+    &lt;log message="SOME MESSAGE"/&gt;
+
+&lt;/onException&gt;
+
+
+
+2. Create 2 routes with Splitter (set shareUnitOfWork to TRUE, important)
+
+
+
+&lt;route&gt;
+
+    &lt;from uri="timer://foo?repeatCount=1"/&gt;
+
+
+
+    &lt;!-- Add some value list to body here --&gt;
+
+
+
+    &lt;split shareUnitOfWork="true" stopOnException="true"&gt;
+
+        &lt;simple&gt;${body}&lt;/simple&gt;
+
+        &lt;to uri="direct:handleSplit"/&gt;
+
+    &lt;/split&gt;
+
+&lt;/route&gt;
+
+
+
+&lt;route&gt;
+
+    &lt;from uri="direct:handleSplit"/&gt;
+
+    &lt;throwException ref="myException"/&gt;
+
+&lt;/route&gt;
+
+
+
+Expected: string "SOME MESSAGE" is logged
+Actual:  &lt;log message="SOME MESSAGE"/&gt; is not executed at all 

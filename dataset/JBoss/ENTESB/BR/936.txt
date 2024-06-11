@@ -1,0 +1,6 @@
+Inconsistency of creating fabric from Hawtio and Shell Console
+When creating fabric through shell console the profiles assigned to container are:  fabric, fabric-ensemble-0000-1
+In this case ActiveMQ is stopped
+When creating fabric through Hawtio the profiles assigned to root container are: fabric, fabric-ensemble-0000-1, fabric, hawtio, jboss-fuse-full
+In this case ActiveMQ is still running
+Which behavior is correct?

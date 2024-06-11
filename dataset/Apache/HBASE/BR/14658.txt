@@ -1,0 +1,2 @@
+Allow loading a MonkeyFactory by class name
+Users should be able to define their own chaos monkey that is loaded by class name.

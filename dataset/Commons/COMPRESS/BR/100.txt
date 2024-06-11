@@ -1,0 +1,4 @@
+ZipArchiveInputStream should throw an exception if a data descriptor is used for STORED entries
+There is no reliable way to determine the end of data when the method is STORE and in fact the current code relies on the method to be DEFLATE in that case.
+I propose to make this figure into the canReadEntryData method and to throw an exception if any attempt is made
+to read the data.

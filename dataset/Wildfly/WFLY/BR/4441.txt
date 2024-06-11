@@ -1,0 +1,42 @@
+web.xml parser process cannot handle exception for xml file which does not have the encoding attribute
+Description copied from https://bugzilla.redhat.com/show_bug.cgi?id=1184292
+Description of problem:
+When XMLStreamException occurs by web.xml parser process for xml file which does not have the encoding attribute, e.getLocation()[1] is null. We cannot find cause of exception by NullPointerException.
+[1]
+
+org.jboss.as.web.deployment.WebParsingDeploymentProcessor.java
+#115            } catch (XMLStreamException e) 
+{
+
+-&gt; #116                throw new DeploymentUnitProcessingException(MESSAGES.failToParseXMLDescriptor(webXml, e.getLocation().getLineNumber(), e.getLocation().getColumnNumber()), e);
+
+#117            }
+ catch (IOException e) 
+{
+
+#118                throw new DeploymentUnitProcessingException(MESSAGES.failToParseXMLDescriptor(webXml), e);
+
+#119            }
+ 
+
+Version-Release number of selected component (if applicable):
+EAP 6.3.2
+How reproducible:
+Attached web.xml for reproducing.
+Steps to Reproduce:
+1. Create war application using attached web.xml.
+2. Deploy war to EAP.
+3. Start EAP.
+Actual results:
+You can confirm NullPointerException.
+15:56:23,190 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-2) MSC000001: Failed to start service jboss.deployment.unit."test.war".PARSE: org.jboss.msc.service.StartException in service jboss.deployment.unit."test.war".PARSE: JBAS018733: Failed to process phase PARSE of deployment "test.war"
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:166) [jboss-as-server-7.4.2.Final-redhat-2.jar:7.4.2.Final-redhat-2]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1980) [jboss-msc-1.1.5.Final-redhat-1.jar:1.1.5.Final-redhat-1]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1913) [jboss-msc-1.1.5.Final-redhat-1.jar:1.1.5.Final-redhat-1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_71]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_71]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_71]
+Caused by: java.lang.NullPointerException
+	at org.jboss.as.web.deployment.WebParsingDeploymentProcessor.deploy(WebParsingDeploymentProcessor.java:116)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:159) [jboss-as-server-7.4.2.Final-redhat-2.jar:7.4.2.Final-redhat-2]
+	... 5 more

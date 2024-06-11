@@ -1,0 +1,49 @@
+@RestResource exported=false ignored on methods
+The following will currently fail with duplicate mapping errors.
+
+
+
+
+
+
+public interface CustomerRepository extends PagingAndSortingRepository&lt;Customer, Long&gt; {
+
+
+
+
+
+
+
+
+
+	@RestResource(exported=false)
+
+
+
+
+	List&lt;Customer&gt; findByUserId(Long id);
+
+
+
+
+
+
+
+
+
+	Page&lt;Customer&gt; findByUserId(Long id, Pageable pageable);
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+

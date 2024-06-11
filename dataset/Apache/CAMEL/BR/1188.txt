@@ -1,0 +1,46 @@
+Exceptions thrown from when - methodCall are not caught by onException
+See the route below. beanOne throws ExceptionOneException and beanTwo throws ExceptionTwoException. ExceptionOneException it caught and handled as it&amp;apos;s supposed to.  But ExceptionTwoException goes all the way through, without  being caught and routed to the exceptionTwoQueue. Is it the when tag or the methodCall tag that is the cause of this?
+
+&lt;camelContext id="MyCamelContext xmlns="http://activemq.apache.org/camel/schema/spring"&gt;
+	&lt;endpoint id="myMainQueue" uri="activemq:${my.project.queue.main}"/&gt;
+	&lt;endpoint id="exceptionOneQueue" uri="activemq:${my.project.queue.exceptionOne}"/&gt;
+	&lt;endpoint id="exceptionTwoQueue" uri="activemq:${my.project.queue.exceptionTwo}"/&gt;
+	&lt;route&gt;		
+		&lt;from ref="myMainQueue" /&gt;
+		&lt;onException&gt;
+			&lt;exception&gt;my.project.queue.ExceptionOneException&lt;/exception&gt;
+			&lt;redeliveryPolicy maximumRedeliveries="0" /&gt;
+			&lt;handled&gt;
+				&lt;constant&gt;true&lt;/constant&gt;
+			&lt;/handled&gt;
+			&lt;to ref="exceptionOneQueue"/&gt;
+		&lt;/onException&gt;
+		&lt;onException&gt;
+			&lt;exception&gt;my.project.queue.ExceptionTwoException&lt;/exception&gt;
+			&lt;redeliveryPolicy maximumRedeliveries="0" /&gt;
+			&lt;handled&gt;
+				&lt;constant&gt;true&lt;/constant&gt;
+			&lt;/handled&gt;
+			&lt;to ref="exceptionTwoQueue"/&gt;
+		&lt;/onException&gt;
+		&lt;onException&gt;
+			&lt;exception&gt;java.lang.Exception&lt;/exception&gt;
+			&lt;redeliveryPolicy maximumRedeliveries="0" /&gt;
+			&lt;handled&gt;
+				&lt;constant&gt;false&lt;/constant&gt;
+			&lt;/handled&gt;
+		&lt;/onException&gt;
+		&lt;unmarshal&gt;
+			&lt;jaxb prettyPrint="true" contextPath="my.project.domain" /&gt;
+		&lt;/unmarshal&gt;
+		&lt;choice&gt;
+			&lt;when&gt;
+				&lt;methodCall bean="beanTwo" method="methodFromBeanTwo"/&gt;
+			&lt;/when&gt;
+			&lt;otherwise&gt;
+				&lt;to uri="bean:beanOne?methodName=methodFromBeanOne" /&gt;
+			&lt;/otherwise&gt;
+		&lt;/choice&gt;
+	&lt;/route&gt;
+&lt;/camelContext&gt;
+

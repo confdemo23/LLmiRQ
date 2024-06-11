@@ -1,0 +1,2 @@
+Cleanup HLog binary log output 
+HLog still logs binary region names.

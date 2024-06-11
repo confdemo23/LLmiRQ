@@ -1,0 +1,88 @@
+Creating cache from user code needs to execute in a privileged block
+Description of problem:
+InfinispanResourceRefTestCase causes NameNotFoundException with security manager.
+How reproducible:
+Always
+Steps to Reproduce:
+
+./build.sh -DskipTests -DallTests -Dts.noSmoke
+./integration-tests.sh -fae -Dmaven.test.failure.ignore=true -Dnode0=$MYTESTIP_1 -Dnode1=$MYTESTIP_2  -DfailIfNoTests=false  -Dsecurity.manager -Dts.basic -Dts.noSmoke -Dtest=InfinispanResourceRefTestCase
+
+Actual results:
+
+
+
+
+
+
+javax.naming.NameNotFoundException: infinispan
+
+
+
+
+	at org.jboss.as.ee.component.ViewManagedReferenceFactory.getReference(ViewManagedReferenceFactory.java:58)
+
+
+
+
+	at org.jboss.as.naming.ServiceBasedNamingStore$1.run(ServiceBasedNamingStore.java:138)
+
+
+
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+
+
+
+	at org.jboss.as.naming.ServiceBasedNamingStore.lookup(ServiceBasedNamingStore.java:135)
+
+
+
+
+	at org.jboss.as.naming.ServiceBasedNamingStore.lookup(ServiceBasedNamingStore.java:83)
+
+
+
+
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:207)
+
+
+
+
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:184)
+
+
+
+
+	at org.jboss.as.naming.InitialContext$DefaultInitialContext.lookup(InitialContext.java:237)
+
+
+
+
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:193)
+
+
+
+
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:189)
+
+
+
+
+	at javax.naming.InitialContext.lookup(InitialContext.java:417)
+
+
+
+
+	at javax.naming.InitialContext.lookup(InitialContext.java:417)
+
+
+
+
+	at org.jboss.as.test.integration.ee.injection.resource.infinispan.InfinispanResourceRefTestCase.test(InfinispanResourceRefTestCase.java:64)
+
+
+
+
+

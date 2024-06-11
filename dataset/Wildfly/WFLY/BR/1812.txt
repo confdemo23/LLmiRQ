@@ -1,0 +1,1 @@
+Web session clustering should not require a RegistryService if sessions aren&apos;t being replicated.

@@ -1,0 +1,2 @@
+TestFileChangedReloadingStrategy fails incorrectly in testFromClasspath() 
+testFromClassPath() can fail when it should not because of inconsistent escaping of output from PropertiesConfiguration.getURL() and FileChangedReloadingStrategy.getFile().toURL().

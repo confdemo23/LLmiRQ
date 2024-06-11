@@ -1,0 +1,424 @@
+Duplicated message ids in web, undertow, jsf and osgi subsystems 
+There is a lot of duplicated or different messages in JBossWeb and Undertow subsystems which has the same ids.
+different messages:
+
+
+
+
+
+
+jsf/subsystem/src/main/java/org/jboss/as/jsf/JSFLogger.java:    @Message(id = 12604, value = "JSF version slot &amp;apos;%s&amp;apos; is missing from module %s")
+
+
+
+
+jsf/injection/src/main/java/org/jboss/as/jsf/JSFLogger.java:    @Message(id = 12604, value = "WildFlyConversationAwareViewHandler was improperly initialized. Expected ViewHandler parent.")
+
+
+
+
+
+
+duplicated messages with the same content:
+
+
+
+
+
+
+jsf/subsystem/src/main/java/org/jboss/as/jsf/JSFLogger.java:    @Message(id = 12600, value = "Could not load JSF managed bean class: %s")
+
+
+
+
+jsf/injection/src/main/java/org/jboss/as/jsf/JSFLogger.java:    @Message(id = 12600, value = "Could not load JSF managed bean class: %s")
+
+
+
+
+jsf/subsystem/src/main/java/org/jboss/as/jsf/JSFLogger.java:    @Message(id = 12601, value = "JSF managed bean class %s has no default constructor")
+
+
+
+
+jsf/injection/src/main/java/org/jboss/as/jsf/JSFLogger.java:    @Message(id = 12601, value = "JSF managed bean class %s has no default constructor")
+
+
+
+
+jsf/subsystem/src/main/java/org/jboss/as/jsf/JSFLogger.java:    @Message(id = 12602, value = "Failed to parse %s, managed beans defined in this file will not be available")
+
+
+
+
+jsf/injection/src/main/java/org/jboss/as/jsf/JSFLogger.java:    @Message(id = 12602, value = "Failed to parse %s, managed beans defined in this file will not be available")
+
+
+
+
+jsf/subsystem/src/main/java/org/jboss/as/jsf/JSFLogger.java:    @Message(id = 12603, value = "Unknown JSF version &amp;apos;%s&amp;apos;.  Default version &amp;apos;%s&amp;apos; will be used instead.")
+
+
+
+
+jsf/injection/src/main/java/org/jboss/as/jsf/JSFLogger.java:    @Message(id = 12603, value = "Unknown JSF version %s %s will be used instead")
+
+
+
+
+jsf/subsystem/src/main/java/org/jboss/as/jsf/JSFMessages.java:    @Message(id = 12650, value = "Failed to load annotated class: %s")
+
+
+
+
+jsf/injection/src/main/java/org/jboss/as/jsf/JSFMessages.java:    @Message(id = 12650, value = "Failed to load annotated class: %s")
+
+
+
+
+jsf/subsystem/src/main/java/org/jboss/as/jsf/JSFMessages.java:    @Message(id = 12651, value = "Annotation %s in class %s is only allowed on classes")
+
+
+
+
+jsf/injection/src/main/java/org/jboss/as/jsf/JSFMessages.java:    @Message(id = 12651, value = "Annotation %s in class %s is only allowed on classes")
+
+
+
+
+jsf/subsystem/src/main/java/org/jboss/as/jsf/JSFMessages.java:    @Message(id = 12652, value = "Instance creation failed")
+
+
+
+
+jsf/injection/src/main/java/org/jboss/as/jsf/JSFMessages.java:    @Message(id = 12652, value = "Instance creation failed")
+
+
+
+
+jsf/subsystem/src/main/java/org/jboss/as/jsf/JSFMessages.java:    @Message(id = 12653, value = "Instance destruction failed")
+
+
+
+
+jsf/injection/src/main/java/org/jboss/as/jsf/JSFMessages.java:    @Message(id = 12653, value = "Instance destruction failed")
+
+
+
+
+jsf/subsystem/src/main/java/org/jboss/as/jsf/JSFMessages.java:    @Message(id = 12654, value = "Thread local injection container not set")
+
+
+
+
+jsf/injection/src/main/java/org/jboss/as/jsf/JSFMessages.java:    @Message(id = 12654, value = "Thread local injection container not set")
+
+
+
+
+jsf/subsystem/src/main/java/org/jboss/as/jsf/JSFMessages.java:    @Message(id = 12655, value = "@ManagedBean is only allowed at class level %s")
+
+
+
+
+jsf/injection/src/main/java/org/jboss/as/jsf/JSFMessages.java:    @Message(id = 12655, value = "@ManagedBean is only allowed at class level %s")
+
+
+
+
+
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebMessages.java:    @Message(id = 18039, value = "Failed to create context")
+
+
+
+
+osgi/integration/http/src/main/java/org/jboss/as/osgi/httpservice/WebLogger.java:    @Message(id = 18039, value = "Failed to create context")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebMessages.java:    @Message(id = 18040, value = "Failed to start context")
+
+
+
+
+osgi/integration/http/src/main/java/org/jboss/as/osgi/httpservice/WebLogger.java:    @Message(id = 18040, value = "Failed to start context")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18200, value = "Failed to start welcome context")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18200, value = "Failed to start welcome context")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18201, value = "Failed to destroy welcome context")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18201, value = "Failed to destroy welcome context")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18202, value = "Error calling onStartup for servlet container initializer: %s")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18202, value = "Error calling onStartup for servlet container initializer: %s")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18203, value = "Error instantiating container component: %s")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18203, value = "Error instantiating container component: %s")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18204, value = "Clustering not supported, falling back to non-clustered session manager")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18204, value = "Clustering not supported, falling back to non-clustered session manager")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18205, value = "Cannot setup overlays for [%s] due to custom resources")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18205, value = "Cannot setup overlays for [%s] due to custom resources")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18206, value = "Webapp [%s] is unavailable due to startup errors")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18206, value = "Webapp [%s] is unavailable due to startup errors")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18208, value = "Failed to start context")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18208, value = "Failed to start context")
+
+
+
+
+osgi/integration/http/src/main/java/org/jboss/as/osgi/httpservice/WebLogger.java:    @Message(id = 18208, value = "Failed to start context")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18208, value = "Failed to start context")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18208, value = "Failed to start context")
+
+
+
+
+osgi/integration/http/src/main/java/org/jboss/as/osgi/httpservice/WebLogger.java:    @Message(id = 18208, value = "Failed to start context")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18209, value = "Failed to destroy context")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18209, value = "Failed to destroy context")
+
+
+
+
+osgi/integration/http/src/main/java/org/jboss/as/osgi/httpservice/WebLogger.java:    @Message(id = 18209, value = "Failed to destroy context")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18209, value = "Failed to destroy context")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18209, value = "Failed to destroy context")
+
+
+
+
+osgi/integration/http/src/main/java/org/jboss/as/osgi/httpservice/WebLogger.java:    @Message(id = 18209, value = "Failed to destroy context")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18210, value = "Register web context: %s")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18210, value = "Register web context: %s")
+
+
+
+
+osgi/integration/http/src/main/java/org/jboss/as/osgi/httpservice/WebLogger.java:    @Message(id = 18210, value = "Register web context: %s")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18210, value = "Register web context: %s")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18210, value = "Register web context: %s")
+
+
+
+
+osgi/integration/http/src/main/java/org/jboss/as/osgi/httpservice/WebLogger.java:    @Message(id = 18210, value = "Register web context: %s")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18214, value = "Error during login/password authenticate")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18214, value = "Error during login/password authenticate")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18215, value = "Error during certificate authenticate")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18215, value = "Error during certificate authenticate")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18216, value = "Error during digest authenticate")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18216, value = "Error during digest authenticate")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18217, value = "Error obtaining authorization helper")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18217, value = "Error obtaining authorization helper")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18218, value = "Exception in obtaining server authentication manager")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18218, value = "Exception in obtaining server authentication manager")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18219, value = "JASPI validation for unprotected request context %s failed")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18219, value = "JASPI validation for unprotected request context %s failed")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18220, value = "Caught Exception: %s")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18220, value = "Caught Exception: %s")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18221, value = "Error forwarding to login page: %s")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18221, value = "Error forwarding to login page: %s")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18222, value = "Error forwarding to error page: %s")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18222, value = "Error forwarding to error page: %s")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18224, value = "Unregister web context: %s")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18224, value = "Unregister web context: %s")
+
+
+
+
+undertow/src/main/java/org/wildfly/extension/undertow/UndertowLogger.java:    @Message(id = 18226, value = "Skipped SCI for jar: %s.")
+
+
+
+
+web/src/main/java/org/jboss/as/web/WebLogger.java:    @Message(id = 18226, value = "Skipped SCI for jar: %s.")
+
+
+
+
+

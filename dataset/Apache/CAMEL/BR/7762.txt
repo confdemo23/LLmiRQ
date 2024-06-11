@@ -1,0 +1,3 @@
+Camel CxfPayload issue when using namespace with no prefix (xmlns:xmlns)
+When using Camel CXF in PAYLOAD mode.If the client sends a SOAP request with body having no namespace prefix. The element which get for the Payload body has an attribute "xmlns:xmlns".
+You can find more information in the stack overflow site

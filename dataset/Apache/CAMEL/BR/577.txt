@@ -1,0 +1,6 @@
+ResolverUtil can&apos;t resolve class under osgi enviroment
+in method of 
+protected void find(Test test, String packageName, ClassLoader loader) 
+it try to load class  from directory or jar, it works for standalone mode.
+But if the classloader of the method is osgi bundle class loader, it will fail since the getResource(packgename) return neither directory nor jar
+for example, package name is org/apache/camel/convert, then what returned is /org/apache/camel/convert, so both loadImplementationsInDirectory and loadImplementationsInJar doesn&amp;apos;t work in this case

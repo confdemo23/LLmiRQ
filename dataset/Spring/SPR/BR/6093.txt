@@ -1,0 +1,4 @@
+MVC Annotation Inheritance
+I currently run a patched M4 build to work around problems with @ExceptionHandler methods (and @ResponseStatus on them) not functioning with overridden methods (in my case it&amp;apos;s due to @Transactional CGlib proxies). While patching these issues, I also changed handling of some other annotations which were being queried using Method.getAnnotation/Method.isAnnotationPresent as opposed to AnnotationUtils.findAnnotation.
+I have attached my patch as a starting point. I believe I found all instances where AnnotationUtils.findAnnotation was not being used and fixed them. However, I only updated the tests for AnnotationMethodHandlerExceptionResolver. I did not feel confident with the amount of time I had to update the tests for AnnotationMethodHandlerAdapter.
+I think these changes are in line with a recent checkin (revision 1852) related to inheritance of JMX annotations (SPR-3635 SPR-5039 and SPR-5813).

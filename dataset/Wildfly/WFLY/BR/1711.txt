@@ -1,0 +1,3 @@
+Messaging&apos;s CoreAddressResource is inconsistent re: child types
+CoreAddressResource is a dynamic resource with special logic related to child types. That logic is inconsistent with respect to naming of the child type, in some places calling it "role" in others "security-role". The management metadata says "role" so that&amp;apos;s what it shall be.
+This surfaced in the RBAC work because changes in :read-resource handling caused different code paths to execute that revealed the bug.

@@ -1,0 +1,2 @@
+Upgrade camel-amqp to the latest qpid-jms-client
+We should upgrade camel-amqp to use the latest qpid-jms-client. That would mean that we should also drop support for AMQP &lt; 1.0.

@@ -1,0 +1,62 @@
+APT - Should check inherited class/interface for UriParam when scanning
+For example generation of the file component does not check the super class which has all the options, and therefore we only detect a few options.
+
+
+
+&lt;html&gt;
+
+&lt;header&gt;
+
+&lt;title&gt;&lt;/title&gt;
+
+&lt;/header&gt;
+
+&lt;body&gt;
+
+&lt;h1&gt;file endpoint&lt;/h1&gt;
+
+&lt;p&gt;File endpoint.&lt;/p&gt;
+
+&lt;table class=&amp;apos;table&amp;apos;&gt;
+
+  &lt;tr&gt;
+
+    &lt;th&gt;Name&lt;/th&gt;
+
+    &lt;th&gt;Type&lt;/th&gt;
+
+    &lt;th&gt;Description&lt;/th&gt;
+
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+
+    &lt;td&gt;copyAndDeleteOnRenameFail&lt;/td&gt;
+
+    &lt;td&gt;boolean&lt;/td&gt;
+
+    &lt;td&gt;&lt;/td&gt;
+
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+
+    &lt;td&gt;forceWrites&lt;/td&gt;
+
+    &lt;td&gt;boolean&lt;/td&gt;
+
+    &lt;td&gt;&lt;/td&gt;
+
+  &lt;/tr&gt;
+
+&lt;/table&gt;
+
+&lt;h2&gt;file consumer&lt;/h2&gt;
+
+&lt;p&gt;File consumer.&lt;/p&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+

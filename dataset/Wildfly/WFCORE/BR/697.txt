@@ -1,0 +1,109 @@
+CLI does not handle paths with a value of &apos;/&apos;
+It does not appear to be possible to address nodes with a name of &amp;apos;/&amp;apos; in the CLI. This is used in the default undertow subsystem to serve the welcome content.
+
+
+
+
+
+
+[standalone@localhost:9990 /] /subsystem=undertow/server=default-server/host=default-host/location=*:read-resource
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "success",
+
+
+
+
+    "result" =&gt; [{
+
+
+
+
+        "address" =&gt; [
+
+
+
+
+            ("subsystem" =&gt; "undertow"),
+
+
+
+
+            ("server" =&gt; "default-server"),
+
+
+
+
+            ("host" =&gt; "default-host"),
+
+
+
+
+            ("location" =&gt; "/")
+
+
+
+
+        ],
+
+
+
+
+        "outcome" =&gt; "success",
+
+
+
+
+        "result" =&gt; {
+
+
+
+
+            "handler" =&gt; "welcome-content",
+
+
+
+
+            "filter-ref" =&gt; undefined
+
+
+
+
+        }
+
+
+
+
+    }]
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+[standalone@localhost:9990 /] /subsystem=undertow/server=default-server/host=default-host/location=\/:read-resource
+
+
+
+
+Node type is not complete at index 71
+
+
+
+
+

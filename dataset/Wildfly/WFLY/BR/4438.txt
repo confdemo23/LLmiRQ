@@ -1,0 +1,2 @@
+Singleton EJB constructor called per method invocation
+@Singleton EJB constructor and @PostConstruct method call not once.

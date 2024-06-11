@@ -1,0 +1,4 @@
+EnumUtils.generateBitVector needs a "? extends"
+    public static &lt;E extends Enum&lt;E&gt;&gt; long generateBitVector(Class&lt;E&gt; enumClass, Iterable&lt;E&gt; values) {
+Should be Iterable&lt;? extends E&gt;.
+This is because although no subclasses of E can exist, the "? extends" is a common idiom for marking the collection as readonly, or not "owned" by the current object.

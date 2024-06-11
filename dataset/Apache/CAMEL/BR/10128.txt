@@ -1,0 +1,4 @@
+camel-jt400 - Need to call configure consumer
+See nabble
+http://camel.465427.n5.nabble.com/Problem-with-JT400-DataQueue-tp5784876.html
+When creating the consumer we must remember to call configureConsumer like all other component does.

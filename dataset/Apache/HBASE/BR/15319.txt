@@ -1,0 +1,30 @@
+clearJmxCache does not take effect actually
+When trying to backport HBASE-14166 to 0.98.6, I find JmxCacheBuster::clearJmxCache() does no take effect actually. The related code are listed below:
+org.apache.hadoop.metrics2.impl.JmxCacheBuster.java
+
+
+// fut is initialized to null
+
+private static AtomicReference&lt;ScheduledFuture&gt; fut = new AtomicReference&lt;&gt;(null);
+
+
+
+public static void clearJmxCache() {
+
+    // clearJmxCache return directly when fut is null, which is always true.
+
+    // the actual intent is &amp;apos;if (future != null &amp;&amp; !future.isDone ...)&amp;apos; ?
+
+    ScheduledFuture future = fut.get();
+
+    if ((future == null || (!future.isDone() &amp;&amp; future.getDelay(TimeUnit.MILLISECONDS) &gt; 100))) {
+
+      return;
+
+    }
+
+    ......
+
+}
+
+

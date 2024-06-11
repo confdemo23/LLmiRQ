@@ -1,0 +1,2 @@
+ldap-authentication-provider element parser ignores hash attribute.
+The parser only handles the &lt;password-encoder&gt; child element. Probably the attribute should have been left out of the namespace schema, but since it&amp;apos;s there we need to handle it. The workaround is to use password-encoder.

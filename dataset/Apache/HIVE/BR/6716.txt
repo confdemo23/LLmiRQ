@@ -1,0 +1,14 @@
+ORC struct throws NPE for tables with inner structs having null values 
+ORCStruct should return null when object passed to getStructFieldsDataAsList(Object obj) is null.
+
+
+
+public List&lt;Object&gt; getStructFieldsDataAsList(Object object) {
+
+      OrcStruct struct = (OrcStruct) object;
+
+      List&lt;Object&gt; result = new ArrayList&lt;Object&gt;(struct.fields.length);
+
+
+
+In the above code struct.fields will throw NPE if struct is NULL.

@@ -1,0 +1,2 @@
+Generated Selenium scripts do not comply with new URI conventions
+Generated Selenium scripts do not comply with new URI conventions. &amp;apos;form&amp;apos; is now a param rather than part of the URI itself.

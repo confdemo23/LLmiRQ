@@ -1,0 +1,266 @@
+ Failed to start service due to IllegalStateException: Duplicate key during application deployment 
+EAP 7.0.0.DR9
+Scenario: failover-ejb-ejbremote-undeploy-dist-async
+During application deployment (after failover), perf20 logged this error:
+
+
+
+
+
+
+[JBossINF] [0m[0m15:36:10,604 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 85) WFLYCLINF0002: Started dist cache from ejb container
+
+
+
+
+[JBossINF] [0m[0m15:36:10,608 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 86) WFLYCLINF0002: Started clusterbench-ee7.ear.clusterbench-ee7-web-default.war cache from web container
+
+
+
+
+[JBossINF] [0m[0m15:36:10,611 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 84) WFLYCLINF0002: Started dist cache from web container
+
+
+
+
+[JBossINF] [0m[0m15:36:10,612 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 87) WFLYCLINF0002: Started clusterbench-ee7.ear.clusterbench-ee7-web-passivating.war cache from web container
+
+
+
+
+[JBossINF] [0m[31m15:36:10,613 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-4) MSC000001: Failed to start service jboss.ejb.remoting.connector.client-mappings.installer: org.jboss.msc.service.StartException in service jboss.ejb.remoting.connector.client-mappings.installer: Failed to start service
+
+
+
+
+[JBossINF] 	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1904)
+
+
+
+
+[JBossINF] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+
+
+
+
+[JBossINF] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+
+
+
+[JBossINF] 	at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+[JBossINF] Caused by: java.lang.IllegalStateException: Duplicate key [org.jboss.as.network.ClientMapping@44b990d8]
+
+
+
+
+[JBossINF] 	at java.util.stream.Collectors.lambda$throwingMerger$152(Collectors.java:133)
+
+
+
+
+[JBossINF] 	at java.util.stream.Collectors$$Lambda$58/796953906.apply(Unknown Source)
+
+
+
+
+[JBossINF] 	at java.util.HashMap.merge(HashMap.java:1245)
+
+
+
+
+[JBossINF] 	at java.util.stream.Collectors.lambda$toMap$210(Collectors.java:1320)
+
+
+
+
+[JBossINF] 	at java.util.stream.Collectors$$Lambda$60/415494469.accept(Unknown Source)
+
+
+
+
+[JBossINF] 	at java.util.stream.ReduceOps$3ReducingSink.accept(ReduceOps.java:169)
+
+
+
+
+[JBossINF] 	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+
+
+
+
+[JBossINF] 	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+
+
+
+
+[JBossINF] 	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+
+
+
+
+[JBossINF] 	at org.infinispan.stream.impl.spliterators.IteratorAsSpliterator.forEachRemaining(IteratorAsSpliterator.java:150)
+
+
+
+
+[JBossINF] 	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:512)
+
+
+
+
+[JBossINF] 	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:502)
+
+
+
+
+[JBossINF] 	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+
+
+
+
+[JBossINF] 	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+
+
+
+
+[JBossINF] 	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+
+
+
+
+[JBossINF] 	at org.infinispan.stream.impl.local.AbstractLocalCacheStream.collect(AbstractLocalCacheStream.java:256)
+
+
+
+
+[JBossINF] 	at org.infinispan.stream.impl.TerminalFunctions$CollectorFunction.apply(TerminalFunctions.java:1035)
+
+
+
+
+[JBossINF] 	at org.infinispan.stream.impl.TerminalFunctions$CollectorFunction.apply(TerminalFunctions.java:1025)
+
+
+
+
+[JBossINF] 	at org.infinispan.stream.impl.termop.SegmentRetryingOperation.innerPerformOperation(SegmentRetryingOperation.java:68)
+
+
+
+
+[JBossINF] 	at org.infinispan.stream.impl.termop.SegmentRetryingOperation.performOperation(SegmentRetryingOperation.java:79)
+
+
+
+
+[JBossINF] 	at org.infinispan.stream.impl.AbstractCacheStream.performOperationRehashAware(AbstractCacheStream.java:306)
+
+
+
+
+[JBossINF] 	at org.infinispan.stream.impl.AbstractCacheStream.performOperation(AbstractCacheStream.java:252)
+
+
+
+
+[JBossINF] 	at org.infinispan.stream.impl.DistributedCacheStream.collect(DistributedCacheStream.java:324)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.server.registry.CacheRegistry.getEntries(CacheRegistry.java:110)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ejb3.remote.LocalEjbReceiver.registryAdded(LocalEjbReceiver.java:447)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ejb3.remote.RegistryCollectorService.add(RegistryCollectorService.java:54)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ejb3.remote.RegistryInstallerService.start(RegistryInstallerService.java:60)
+
+
+
+
+[JBossINF] 	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+
+
+
+
+[JBossINF] 	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+
+
+
+
+[JBossINF] 	... 3 more
+
+
+
+
+[JBossINF] 
+
+
+
+
+[JBossINF] [0m[31m15:36:10,625 ERROR [org.jboss.as.controller.management-operation] (management-handler-thread - 2) WFLYCTL0013: Operation ("deploy") failed - address: ([("deployment" =&gt; "clusterbench-ee7.ear")]) - failure description: {"WFLYCTL0180: Services with missing/unavailable dependencies" =&gt; [
+
+
+
+
+[JBossINF]     "jboss.deployment.subunit.\"clusterbench-ee7.ear\".\"clusterbench-ee7-ejb.jar\".component.LocalStatefulSB.START is missing [jboss.deployment.subunit.\"clusterbench-ee7.ear\".\"clusterbench-ee7-ejb.jar\".component.LocalStatefulSB.cache]",
+
+
+
+
+[JBossINF]     "jboss.deployment.subunit.\"clusterbench-ee7.ear\".\"clusterbench-ee7-ejb.jar\".component.RemoteStatefulSBImpl.START is missing [jboss.deployment.subunit.\"clusterbench-ee7.ear\".\"clusterbench-ee7-ejb.jar\".component.RemoteStatefulSBImpl.cache]"
+
+
+
+
+[JBossINF] ]}
+
+
+
+
+[JBossINF] [0m[31m15:36:10,627 ERROR [org.jboss.as.server] (management-handler-thread - 2) WFLYSRV0021: Deploy of deployment "clusterbench-ee7.ear" was rolled back with the following failure message: 
+
+
+
+
+[JBossINF] {"WFLYCTL0180: Services with missing/unavailable dependencies" =&gt; [
+
+
+
+
+[JBossINF]     "jboss.deployment.subunit.\"clusterbench-ee7.ear\".\"clusterbench-ee7-ejb.jar\".component.LocalStatefulSB.START is missing [jboss.deployment.subunit.\"clusterbench-ee7.ear\".\"clusterbench-ee7-ejb.jar\".component.LocalStatefulSB.cache]",
+
+
+
+
+[JBossINF]     "jboss.deployment.subunit.\"clusterbench-ee7.ear\".\"clusterbench-ee7-ejb.jar\".component.RemoteStatefulSBImpl.START is missing [jboss.deployment.subunit.\"clusterbench-ee7.ear\".\"clusterbench-ee7-ejb.jar\".component.RemoteStatefulSBImpl.cache]"
+
+
+
+
+[JBossINF] ]}
+
+
+
+
+
+
+Which ends up with WFLYSRV0021: Deploy of deployment "clusterbench-ee7.ear" was rolled back.
+In this very same testrun, there was another issue with application deployment on perf18, may be related: JBEAP-1041 
+Server log:
+http://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/eap-7x-failover-ejb-ejbremote-undeploy-dist-async/5/console-perf20/

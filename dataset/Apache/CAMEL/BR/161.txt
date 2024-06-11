@@ -1,0 +1,2 @@
+URL link broken in org.apache.camel.Processor API doc
+"Message Transformer" link is broken.

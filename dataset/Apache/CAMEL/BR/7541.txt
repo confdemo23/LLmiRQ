@@ -1,0 +1,2 @@
+RedisIdempotentRepository doesn&apos;t work out of box
+IdempotentRepository need to use contains to check if the message is already there before adding the message. RedisIdempotentRepository doesn&amp;apos;t do that, so RedisComponentSpringIntegrationTest is failed.

@@ -1,0 +1,4 @@
+OSX mvn -e -o org.apache.camel:camel-maven-plugin:dot fails due to the lack of dot.exe
+Though the intent seemed to be there, the DotMojo does not skip conversion of the file if there is no value for &lt;executable/&gt; in the pom.xml.  The parameter was defaulted.
+#. removed the default.
+#. added log message.

@@ -1,0 +1,176 @@
+ApplyRemoteMasterDomainHandler should use values sent from DC for root resource
+This is needed to keep the slave copy of the resource model actually the same, and popped up during mixed domain testing of EAP with a 6.2.0 slave.
+Connect directly to to 6.1.1 slave - gets domain version from master
+
+
+
+
+
+
+[domain@localhost:19999 /] :read-resource
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "success",
+
+
+
+
+    "result" =&gt; {
+
+
+
+
+        "deployment" =&gt; undefined,
+
+
+
+
+        "deployment-overlay" =&gt; undefined,
+
+
+
+
+        "management-major-version" =&gt; 1,
+
+
+
+
+        "management-micro-version" =&gt; 0,
+
+
+
+
+        "management-minor-version" =&gt; 6,
+
+
+
+
+        "name" =&gt; "Unnamed Domain",
+
+
+
+
+        "namespaces" =&gt; [],
+
+
+
+
+        "path" =&gt; undefined,
+
+
+
+
+        "product-name" =&gt; "EAP",
+
+
+
+
+        "product-version" =&gt; "6.3.0.Alpha3",
+
+
+
+
+        "profile" =&gt; undefined,
+
+
+
+
+        "release-codename" =&gt; "Janus",
+
+
+
+
+        "release-version" =&gt; "7.4.0.Final-redhat-SNAPSHOT",
+
+
+
+
+ 
+
+
+
+
+
+
+Connect directly to 6.2.0 slave - does not get domain version from master
+
+
+
+
+
+
+[domain@localhost:19999 /] :read-resource
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "success",
+
+
+
+
+    "result" =&gt; {
+
+
+
+
+        "management-major-version" =&gt; 1,
+
+
+
+
+        "management-micro-version" =&gt; 0,
+
+
+
+
+        "management-minor-version" =&gt; 5,
+
+
+
+
+        "name" =&gt; "Unnamed Domain",
+
+
+
+
+        "namespaces" =&gt; [],
+
+
+
+
+        "product-name" =&gt; "EAP",
+
+
+
+
+        "product-version" =&gt; "6.2.0.GA",
+
+
+
+
+        "release-codename" =&gt; "Janus",
+
+
+
+
+        "release-version" =&gt; "7.3.0.Final-redhat-14",
+
+
+
+
+
+
+The 6.2.0 slave should look the same as the 6.1.1 slave for these attributes. 

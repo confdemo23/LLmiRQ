@@ -1,0 +1,4 @@
+[Migration operation] Provide warning that HornetQ connector/acceptor parameters can not be migrated to the new messaging-subsystem
+The parameters used by remote/http connector/acceptors in HornetQ might not be supported by Artemis.
+During migration, the operation should check if the parameters to migrate are allowed by the Artemis resources.
+If that&amp;apos;s not the case, they will be removed from the migrated resources and warnings will be added to the :migrate operation outcome.

@@ -1,0 +1,105 @@
+Feature dependencies not being installed in Fabric
+When installing the camel-jpa feature into the root ESB container the serp dependency is installed, however if a fabric is created and the camel-jpa feature is added to the root container the serp dependency is not installed.
+From the apache-camel-2.9.0.fuse-70-097-features.xml file:
+
+
+
+
+
+
+&lt;feature name=&amp;apos;camel-jpa&amp;apos; version=&amp;apos;2.9.0.fuse-70-097&amp;apos; resolver=&amp;apos;(obr)&amp;apos; start-level=&amp;apos;50&amp;apos;&gt;
+
+
+
+
+    &lt;bundle dependency=&amp;apos;true&amp;apos;&gt;mvn:org.apache.geronimo.specs/geronimo-annotation_1.0_spec/1.1.1&lt;/bundle&gt;
+
+
+
+
+    &lt;bundle dependency=&amp;apos;true&amp;apos;&gt;mvn:org.apache.geronimo.specs/geronimo-jpa_2.0_spec/1.1&lt;/bundle&gt;
+
+
+
+
+    &lt;feature version=&amp;apos;[3,4)&amp;apos;&gt;spring-tx&lt;/feature&gt;
+
+
+
+
+    &lt;bundle dependency=&amp;apos;true&amp;apos;&gt;mvn:org.apache.geronimo.specs/geronimo-el_1.0_spec/1.0.1&lt;/bundle&gt;
+
+
+
+
+    &lt;bundle dependency=&amp;apos;true&amp;apos;&gt;mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/1.1.1&lt;/bundle&gt;
+
+
+
+
+    &lt;feature version=&amp;apos;[3,4)&amp;apos;&gt;spring-jdbc&lt;/feature&gt;
+
+
+
+
+    &lt;bundle dependency=&amp;apos;true&amp;apos;&gt;mvn:commons-lang/commons-lang/2.6&lt;/bundle&gt;
+
+
+
+
+    &lt;bundle dependency=&amp;apos;true&amp;apos;&gt;mvn:commons-collections/commons-collections/3.2.1&lt;/bundle&gt;
+
+
+
+
+    &lt;bundle dependency=&amp;apos;true&amp;apos;&gt;mvn:commons-pool/commons-pool/1.5.6&lt;/bundle&gt;
+
+
+
+
+    &lt;bundle dependency=&amp;apos;true&amp;apos;&gt;mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.commons-dbcp/1.4_2&lt;/bundle&gt;
+
+
+
+
+    &lt;bundle dependency=&amp;apos;true&amp;apos;&gt;mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.ant/1.7.0_6&lt;/bundle&gt;
+
+
+
+
+    &lt;bundle dependency=&amp;apos;true&amp;apos;&gt;mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.serp/1.13.1_4&lt;/bundle&gt;
+
+
+
+
+    &lt;bundle dependency=&amp;apos;true&amp;apos;&gt;mvn:org.apache.geronimo.specs/geronimo-jms_1.1_spec/1.1.1&lt;/bundle&gt;
+
+
+
+
+    &lt;bundle&gt;mvn:org.apache.openjpa/openjpa/2.1.1&lt;/bundle&gt;	
+
+
+
+
+    &lt;feature version=&amp;apos;[3,4)&amp;apos;&gt;spring-orm&lt;/feature&gt;
+
+
+
+
+    &lt;feature version=&amp;apos;2.9.0.fuse-70-097&amp;apos;&gt;camel-core&lt;/feature&gt;
+
+
+
+
+    &lt;bundle&gt;mvn:org.apache.camel/camel-jpa/2.9.0.fuse-70-097&lt;/bundle&gt;
+
+
+
+
+  &lt;/feature&gt;
+
+
+
+
+

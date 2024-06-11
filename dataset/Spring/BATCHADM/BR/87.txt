@@ -1,0 +1,2 @@
+MySQL timestamps have 1s resolution so no use for pagination in concurrent environment
+The integration tests (ignored) fail in an obvious way for any paged query.  Maybe we could make MySQL a special case (yuck), but even then it&amp;apos;s not clear what the correct field is to order by since ids are not monotonic in a cluster / group of application nodes.  Maybe MySQL will only ever work if jobs are launched non-concurrently and/or from command line?

@@ -1,0 +1,13 @@
+org.wildfly.clustering.web.infinispan.CacheMutatorTestCase failing
+-------------------------------------------------------------------------------
+Test set: org.wildfly.clustering.web.infinispan.CacheMutatorTestCase
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.054 sec &lt;&lt;&lt; FAILURE!
+isMutable(org.wildfly.clustering.web.infinispan.CacheMutatorTestCase)  Time elapsed: 0.034 sec  &lt;&lt;&lt; ERROR!
+java.lang.IllegalArgumentException
+        at java.util.Currency.getInstance(Currency.java:361)
+        at org.wildfly.clustering.web.infinispan.CacheMutatorTestCase.isMutable(CacheMutatorTestCase.java:71)
+        assertFalse(CacheMutator.isMutable(Currency.getInstance(Locale.getDefault())));
+The default locale can be defined by different things. In my case default locale is &amp;apos;en&amp;apos;.
+Currency.getInstance does not like this Locale as this seems not to be linked to a country.
+I think it&amp;apos;s better to use a defined Locale here like Locale.GERMANY.

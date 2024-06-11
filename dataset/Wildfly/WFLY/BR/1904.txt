@@ -1,0 +1,171 @@
+Usage of vault for system-properties throws java.lang.SecurityException
+Steps to Reproduce: 1. add the lines in standalone.xml:-
+
+
+
+
+
+
+    &lt;system-properties&gt;
+
+
+
+
+      &lt;property name="javax.net.ssl.trustStore" value="/dir/truststore.jks"/&gt;
+
+
+
+
+      &lt;property name="javax.net.ssl.trustStorePassword" value="${VAULT::blk::attr::MTBlYWUzNDEtMjI2MC00NWYzLWFiZmUtM2EyYjZkNDgyZWM4TElORV9CUkVBS215YWxpYXM=}" /&gt;
+
+
+
+
+    &lt;/system-properties&gt;
+
+
+
+
+    &lt;vault&gt;
+
+
+
+
+        &lt;vault-option name="KEYSTORE_URL" value="/opt/jboss-eap-6.0/standalone/configuration/vault.jks"/&gt;
+
+
+
+
+        &lt;vault-option name="KEYSTORE_PASSWORD" value="MASK-2gTQPnrWJaqrh0pURMKAOw"/&gt;
+
+
+
+
+        &lt;vault-option name="KEYSTORE_ALIAS" value="myalias"/&gt;
+
+
+
+
+        &lt;vault-option name="SALT" value="12345678"/&gt;
+
+
+
+
+        &lt;vault-option name="ITERATION_COUNT" value="44"/&gt;
+
+
+
+
+        &lt;vault-option name="ENC_FILE_DIR" value="/opt/jboss-eap-6.0/standalone/configuration/"/&gt;
+
+
+
+
+    &lt;/vault&gt;
+
+
+
+
+
+
+2. start EAP6 in standalone mode
+project_key: JBPAPP6
+Usage of vault for system-properties throws java.lang.SecurityException.
+boot.log:-
+
+
+
+
+
+
+20:35:30,267 ERROR [org.jboss.as.controller.management-operation] JBAS014612: Operation ("add") failed - address: ([("system-property" =&gt; "javax.net.ssl.trustStorePassword")]): java.lang.SecurityException: JBAS013322: Vault is not initialized
+
+
+
+
+	at org.jboss.as.security.vault.RuntimeVaultReader.retrieveFromVault(RuntimeVaultReader.java:98) [jboss-as-security-7.1.2.Final-redhat-1.jar:7.1.2.Final-redhat-1]
+
+
+
+
+	at org.jboss.as.server.RuntimeExpressionResolver.resolvePluggableExpression(RuntimeExpressionResolver.java:45) [jboss-as-server-7.1.2.Final-redhat-1.jar:7.1.2.Final-redhat-1]
+
+
+
+
+	at org.jboss.as.controller.ExpressionResolverImpl.resolveExpressionsRecursively(ExpressionResolverImpl.java:58) [jboss-as-controller-7.1.2.Final-redhat-1.jar:7.1.2.Final-redhat-1]
+
+
+
+
+	at org.jboss.as.controller.ExpressionResolverImpl.resolveExpressions(ExpressionResolverImpl.java:40) [jboss-as-controller-7.1.2.Final-redhat-1.jar:7.1.2.Final-redhat-1]
+
+
+
+
+	at org.jboss.as.controller.ModelControllerImpl.resolveExpressions(ModelControllerImpl.java:455) [jboss-as-controller-7.1.2.Final-redhat-1.jar:7.1.2.Final-redhat-1]
+
+
+
+
+	at org.jboss.as.controller.OperationContextImpl.resolveExpressions(OperationContextImpl.java:689) [jboss-as-controller-7.1.2.Final-redhat-1.jar:7.1.2.Final-redhat-1]
+
+
+
+
+	at org.jboss.as.controller.operations.common.SystemPropertyAddHandler.execute(SystemPropertyAddHandler.java:112) [jboss-as-controller-7.1.2.Final-redhat-1.jar:7.1.2.Final-redhat-1]
+
+
+
+
+	at org.jboss.as.controller.AbstractOperationContext.executeStep(AbstractOperationContext.java:397) [jboss-as-controller-7.1.2.Final-redhat-1.jar:7.1.2.Final-redhat-1]
+
+
+
+
+	at org.jboss.as.controller.AbstractOperationContext.doCompleteStep(AbstractOperationContext.java:284) [jboss-as-controller-7.1.2.Final-redhat-1.jar:7.1.2.Final-redhat-1]
+
+
+
+
+	at org.jboss.as.controller.AbstractOperationContext.completeStep(AbstractOperationContext.java:211) [jboss-as-controller-7.1.2.Final-redhat-1.jar:7.1.2.Final-redhat-1]
+
+
+
+
+	at org.jboss.as.controller.ModelControllerImpl.boot(ModelControllerImpl.java:175) [jboss-as-controller-7.1.2.Final-redhat-1.jar:7.1.2.Final-redhat-1]
+
+
+
+
+	at org.jboss.as.controller.AbstractControllerService.boot(AbstractControllerService.java:191) [jboss-as-controller-7.1.2.Final-redhat-1.jar:7.1.2.Final-redhat-1]
+
+
+
+
+	at org.jboss.as.server.ServerService.boot(ServerService.java:295) [jboss-as-server-7.1.2.Final-redhat-1.jar:7.1.2.Final-redhat-1]
+
+
+
+
+	at org.jboss.as.server.ServerService.boot(ServerService.java:270) [jboss-as-server-7.1.2.Final-redhat-1.jar:7.1.2.Final-redhat-1]
+
+
+
+
+	at org.jboss.as.controller.AbstractControllerService$1.run(AbstractControllerService.java:156) [jboss-as-controller-7.1.2.Final-redhat-1.jar:7.1.2.Final-redhat-1]
+
+
+
+
+	at java.lang.Thread.run(Thread.java:662) [rt.jar:1.6.0_37]
+
+
+
+
+
+
+
+
+
+

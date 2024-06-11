@@ -1,0 +1,2 @@
+OAuthProviderProcessingFilter should delegate its error handling to an AuthenticationEntryPoint
+OAuthProviderProcessingFilter.fail uses response.sendError to send the exception to the client. That leads to inability to process exceptions using ExceptionTranslationFilter and therefore exception handling have to be done in several places by overriding provider filter classes. ExceptionTranslationFilter should be supported properly.

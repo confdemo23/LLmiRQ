@@ -1,0 +1,2 @@
+Output erroneous arguments when JavaPackage or JavaType constructor assertions fail
+See spring forum reference.

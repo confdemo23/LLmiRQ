@@ -1,0 +1,4 @@
+restrict creation of partitions with empty partition keys
+create table pc (a int) partitioned by (b string, c string);
+alter table pc add partition (b="f", c=&amp;apos;&amp;apos;);
+above alter cmd fails but actually creates a partition with name &amp;apos;b=f/c=&amp;apos; but describe partition on the same name fails. creation of such partitions should not be allowed.

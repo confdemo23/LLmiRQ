@@ -1,0 +1,3 @@
+GenericOutboundConnectionResourceDefinition doesn&apos;t register the "org.wildfly.remoting.outbound-connection" capability
+Title says it all. This variant of the outbound-connection resources was missed when I added capabilities.
+AbstractOutboundConnectionResourceDefinition can take care of this for all the variants and we can remove the registration from the various add/remove handlers.

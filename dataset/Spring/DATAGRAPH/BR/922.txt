@@ -1,0 +1,2 @@
+Ensure all OGM exceptions are translated to SD Exceptions
+Go through each OGM Exception and make sure it is translated to an appropriate Spring Data exception.

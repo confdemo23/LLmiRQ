@@ -1,0 +1,11 @@
+complex type support in LLAP IO is broken 
+HIVE-13617 is causing MiniLlapCliDriver following test failures
+
+
+
+org.apache.hadoop.hive.cli.TestMiniLlapCliDriver.testCliDriver_vector_complex_all
+
+org.apache.hadoop.hive.cli.TestMiniLlapCliDriver.testCliDriver_vector_complex_join
+
+
+

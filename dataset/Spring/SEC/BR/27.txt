@@ -1,0 +1,27 @@
+RememberMeProcessingFilter should not fire InteractiveAuthenticationSuccesEvent in case of unsucessful authentication
+I have tried to start my application with the latest (from CVS) version of acegi and get following exception:
+java.lang.IllegalArgumentException: null source
+  java.util.EventObject.&lt;init&gt;(EventObject.java:34)
+  org.springframework.context.ApplicationEvent.&lt;init&gt;(ApplicationEvent.java:37)
+  net.sf.acegisecurity.ui.InteractiveAuthenticationSuccesEvent.&lt;init&gt;(InteractiveAuthenticationSuccesEvent.java:45)
+  net.sf.acegisecurity.ui.rememberme.RememberMeProcessingFilter.doFilter(RememberMeProcessingFilter.java:136)
+After some investigation I have found reason. In RememberMeProcessingFilter.java InteractiveAuthenticationSuccesEvent is fired even in case of unsucessful authentication.
+            SecurityContextHolder.getContext().setAuthentication(rememberMeServi
+                .autoLogin(httpRequest, httpResponse));
+            if (logger.isDebugEnabled()) 
+{
+                logger.debug(
+                    "Replaced SecurityContextHolder with remember-me token: &amp;apos;"
+                    + SecurityContextHolder.getContext().getAuthentication()
+                    + "&amp;apos;");
+            }
+
+            // Fire event
+            if (this.context != null) 
+{
+                context.publishEvent(new InteractiveAuthenticationSuccesEvent(
+                        SecurityContextHolder.getContext().getAuthentication(),
+                        this.getClass()));
+            }
+
+Fix would be quite easy: check that after autoLogin authentication in security context is not null.

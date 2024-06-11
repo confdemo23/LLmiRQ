@@ -1,0 +1,653 @@
+HA singleton service shortly unreachable after being started on a node
+Seen in our failover tests, jvmkill scenario with HA singleton service
+Timeline:
+
+perf21 goes down (jvmkill)
+perf18 receives new cluster view
+perf18 is elected as the singleton provider of the service
+the singleton service is started on perf18
+EJB Invocation fails few times - see the stacktrace below
+
+Can you please check if the issue is in the TestingSingletonService implementation or in the EAP server?
+
+
+
+
+
+
+[JBossINF] [0m[0m22:28:23,791 INFO  [org.wildfly.clustering.server] (notification-thread--p1-t1) WFLYCLSV0003: perf18 elected as the singleton provider of the jboss.test.myservice service
+
+
+
+
+[JBossINF] [0m[0m22:28:23,794 INFO  [org.wildfly.clustering.server] (notification-thread--p1-t1) WFLYCLSV0001: This node will now operate as the singleton provider of the jboss.test.myservice service
+
+
+
+
+[JBossINF] [0m[0m22:28:23,797 INFO  [org.jboss.test.singletonservice.TestingSingletonService] (MSC service thread 1-7) Start service &amp;apos;org.jboss.test.singletonservice.TestingSingletonService&amp;apos;
+
+
+
+
+[JBossINF] [0m[0m22:28:23,798 INFO  [org.jboss.test.singletonservice.TestingSingletonService] (MSC service thread 1-7) Service started on perf18
+
+
+
+
+[JBossINF] [0m[31m22:28:23,824 ERROR [org.jboss.as.ejb3.invocation] (EJB default - 2) WFLYEJB0034: EJB Invocation failed on component ServiceAccessBean for method public abstract java.lang.String org.jboss.test.singletonservice.ServiceAccess.getNodeNameOfService(): javax.ejb.EJBException: java.lang.IllegalStateException: java.util.concurrent.ExecutionException: java.lang.reflect.InvocationTargetException
+
+
+
+
+[JBossINF] 	at org.jboss.as.ejb3.tx.CMTTxInterceptor.handleExceptionInOurTx(CMTTxInterceptor.java:187)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ejb3.tx.CMTTxInterceptor.invokeInOurTx(CMTTxInterceptor.java:277)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ejb3.tx.CMTTxInterceptor.required(CMTTxInterceptor.java:327)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ejb3.tx.CMTTxInterceptor.processInvocation(CMTTxInterceptor.java:239)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ejb3.remote.EJBRemoteTransactionPropagatingInterceptor.processInvocation(EJBRemoteTransactionPropagatingInterceptor.java:79)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ejb3.component.interceptors.CurrentInvocationContextInterceptor.processInvocation(CurrentInvocationContextInterceptor.java:41)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ejb3.component.invocationmetrics.WaitTimeInterceptor.processInvocation(WaitTimeInterceptor.java:43)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ejb3.security.SecurityContextInterceptor.processInvocation(SecurityContextInterceptor.java:100)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ejb3.component.interceptors.ShutDownInterceptorFactory$1.processInvocation(ShutDownInterceptorFactory.java:64)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ejb3.deployment.processors.EjbSuspendInterceptor.processInvocation(EjbSuspendInterceptor.java:53)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ejb3.component.interceptors.LoggingInterceptor.processInvocation(LoggingInterceptor.java:66)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ee.component.NamespaceContextInterceptor.processInvocation(NamespaceContextInterceptor.java:50)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ejb3.component.interceptors.AdditionalSetupInterceptor.processInvocation(AdditionalSetupInterceptor.java:54)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.ContextClassLoaderInterceptor.processInvocation(ContextClassLoaderInterceptor.java:64)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.run(InterceptorContext.java:356)
+
+
+
+
+[JBossINF] 	at org.wildfly.security.manager.WildFlySecurityManager.doChecked(WildFlySecurityManager.java:636)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.AccessCheckingInterceptor.processInvocation(AccessCheckingInterceptor.java:61)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.run(InterceptorContext.java:356)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.PrivilegedWithCombinerInterceptor.processInvocation(PrivilegedWithCombinerInterceptor.java:80)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.ChainedInterceptor.processInvocation(ChainedInterceptor.java:61)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ee.component.ViewService$View.invoke(ViewService.java:195)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ejb3.remote.protocol.versionone.MethodInvocationMessageHandler.invokeMethod(MethodInvocationMessageHandler.java:318)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ejb3.remote.protocol.versionone.MethodInvocationMessageHandler.access$100(MethodInvocationMessageHandler.java:68)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ejb3.remote.protocol.versionone.MethodInvocationMessageHandler$1.run(MethodInvocationMessageHandler.java:201)
+
+
+
+
+[JBossINF] 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+
+
+
+
+[JBossINF] 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+
+
+
+
+[JBossINF] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+
+
+
+
+[JBossINF] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+
+
+
+[JBossINF] 	at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+[JBossINF] 	at org.jboss.threads.JBossThread.run(JBossThread.java:320)
+
+
+
+
+[JBossINF] Caused by: java.lang.IllegalStateException: java.util.concurrent.ExecutionException: java.lang.reflect.InvocationTargetException
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.server.singleton.CacheSingletonServiceBuilder.getRemoteValueRef(CacheSingletonServiceBuilder.java:329)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.server.singleton.CacheSingletonServiceBuilder.getValue(CacheSingletonServiceBuilder.java:281)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.service.AsynchronousServiceBuilder.getValue(AsynchronousServiceBuilder.java:92)
+
+
+
+
+[JBossINF] 	at org.jboss.msc.service.ServiceControllerImpl.getValue(ServiceControllerImpl.java:1158)
+
+
+
+
+[JBossINF] 	at org.jboss.test.singletonservice.ServiceAccessBean.getNodeNameOfService(ServiceAccessBean.java:20)
+
+
+
+
+[JBossINF] 	at sun.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+
+
+
+
+[JBossINF] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+
+
+[JBossINF] 	at java.lang.reflect.Method.invoke(Method.java:497)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ee.component.ManagedReferenceMethodInterceptor.processInvocation(ManagedReferenceMethodInterceptor.java:52)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext$Invocation.proceed(InterceptorContext.java:437)
+
+
+
+
+[JBossINF] 	at org.jboss.as.weld.ejb.Jsr299BindingsInterceptor.doMethodInterception(Jsr299BindingsInterceptor.java:82)
+
+
+
+
+[JBossINF] 	at org.jboss.as.weld.ejb.Jsr299BindingsInterceptor.processInvocation(Jsr299BindingsInterceptor.java:93)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ee.component.interceptors.UserInterceptorFactory$1.processInvocation(UserInterceptorFactory.java:63)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ejb3.component.invocationmetrics.ExecutionTimeInterceptor.processInvocation(ExecutionTimeInterceptor.java:43)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.as.jpa.interceptor.SBInvocationInterceptor.processInvocation(SBInvocationInterceptor.java:47)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext$Invocation.proceed(InterceptorContext.java:437)
+
+
+
+
+[JBossINF] 	at org.jboss.weld.ejb.AbstractEJBRequestScopeActivationInterceptor.aroundInvoke(AbstractEJBRequestScopeActivationInterceptor.java:73)
+
+
+
+
+[JBossINF] 	at org.jboss.as.weld.ejb.EjbRequestScopeActivationInterceptor.processInvocation(EjbRequestScopeActivationInterceptor.java:83)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ee.concurrent.ConcurrentContextInterceptor.processInvocation(ConcurrentContextInterceptor.java:45)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InitialInterceptor.processInvocation(InitialInterceptor.java:21)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.ChainedInterceptor.processInvocation(ChainedInterceptor.java:61)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ee.component.interceptors.ComponentDispatcherInterceptor.processInvocation(ComponentDispatcherInterceptor.java:52)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ejb3.component.pool.PooledInstanceInterceptor.processInvocation(PooledInstanceInterceptor.java:51)
+
+
+
+
+[JBossINF] 	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+[JBossINF] 	at org.jboss.as.ejb3.tx.CMTTxInterceptor.invokeInOurTx(CMTTxInterceptor.java:275)
+
+
+
+
+[JBossINF] 	... 41 more
+
+
+
+
+[JBossINF] Caused by: java.util.concurrent.ExecutionException: java.lang.reflect.InvocationTargetException
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.server.dispatcher.SimpleCommandResponse.&lt;init&gt;(SimpleCommandResponse.java:43)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.server.dispatcher.ChannelCommandDispatcher.createCommandResponse(ChannelCommandDispatcher.java:206)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.server.dispatcher.ChannelCommandDispatcher.executeOnCluster(ChannelCommandDispatcher.java:94)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.server.singleton.CacheSingletonServiceBuilder.getRemoteValueRef(CacheSingletonServiceBuilder.java:298)
+
+
+
+
+[JBossINF] 	... 73 more
+
+
+
+
+[JBossINF] Caused by: java.lang.reflect.InvocationTargetException
+
+
+
+
+[JBossINF] 	at org.jgroups.blocks.RequestCorrelator.handleRequest(RequestCorrelator.java:464)
+
+
+
+
+[JBossINF] 	at org.jgroups.blocks.RequestCorrelator.receiveMessage(RequestCorrelator.java:377)
+
+
+
+
+[JBossINF] 	at org.jgroups.blocks.RequestCorrelator.receive(RequestCorrelator.java:250)
+
+
+
+
+[JBossINF] 	at org.jgroups.blocks.MessageDispatcher$ProtocolAdapter.up(MessageDispatcher.java:684)
+
+
+
+
+[JBossINF] 	at org.jgroups.JChannel.up(JChannel.java:738)
+
+
+
+
+[JBossINF] 	at org.jgroups.stack.ProtocolStack.up(ProtocolStack.java:1029)
+
+
+
+
+[JBossINF] 	at org.jgroups.protocols.FORK.up(FORK.java:133)
+
+
+
+
+[JBossINF] 	at org.jgroups.protocols.FRAG2.up(FRAG2.java:165)
+
+
+
+
+[JBossINF] 	at org.jgroups.protocols.FlowControl.up(FlowControl.java:383)
+
+
+
+
+[JBossINF] 	at org.jgroups.protocols.FlowControl.up(FlowControl.java:394)
+
+
+
+
+[JBossINF] 	at org.jgroups.protocols.pbcast.GMS.up(GMS.java:1045)
+
+
+
+
+[JBossINF] 	at org.jgroups.protocols.pbcast.STABLE.up(STABLE.java:234)
+
+
+
+
+[JBossINF] 	at org.jgroups.protocols.UNICAST3.up(UNICAST3.java:435)
+
+
+
+
+[JBossINF] 	at org.jgroups.protocols.pbcast.NAKACK2.deliver(NAKACK2.java:961)
+
+
+
+
+[JBossINF] 	at org.jgroups.protocols.pbcast.NAKACK2.handleMessage(NAKACK2.java:840)
+
+
+
+
+[JBossINF] 	at org.jgroups.protocols.pbcast.NAKACK2.up(NAKACK2.java:618)
+
+
+
+
+[JBossINF] 	at org.jgroups.protocols.VERIFY_SUSPECT.up(VERIFY_SUSPECT.java:155)
+
+
+
+
+[JBossINF] 	at org.jgroups.protocols.FD_ALL.up(FD_ALL.java:200)
+
+
+
+
+[JBossINF] 	at org.jgroups.protocols.FD_SOCK.up(FD_SOCK.java:310)
+
+
+
+
+[JBossINF] 	at org.jgroups.protocols.MERGE3.up(MERGE3.java:285)
+
+
+
+
+[JBossINF] 	at org.jgroups.protocols.Discovery.up(Discovery.java:295)
+
+
+
+
+[JBossINF] 	at org.jgroups.protocols.TP.passMessageUp(TP.java:1577)
+
+
+
+
+[JBossINF] 	at org.jgroups.protocols.TP$3.run(TP.java:1511)
+
+
+
+
+[JBossINF] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+
+
+
+
+[JBossINF] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+
+
+
+[JBossINF] 	at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+[JBossINF] Caused by: java.lang.IllegalStateException
+
+
+
+
+[JBossINF] 	at org.jboss.test.singletonservice.TestingSingletonService.getValue(TestingSingletonService.java:30)
+
+
+
+
+[JBossINF] 	at org.jboss.test.singletonservice.TestingSingletonService.getValue(TestingSingletonService.java:17)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.server.singleton.CacheSingletonServiceBuilder.getValueRef(CacheSingletonServiceBuilder.java:288)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.server.singleton.SingletonValueCommand.execute(SingletonValueCommand.java:31)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.server.singleton.SingletonValueCommand.execute(SingletonValueCommand.java:26)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.server.dispatcher.ChannelCommandDispatcherFactory.handle(ChannelCommandDispatcherFactory.java:120)
+
+
+
+
+[JBossINF] 	at org.jgroups.blocks.MessageDispatcher.handle(MessageDispatcher.java:502)
+
+
+
+
+[JBossINF] 	at org.jgroups.blocks.RequestCorrelator.handleRequest(RequestCorrelator.java:460)
+
+
+
+
+[JBossINF] 	... 25 more
+
+
+
+
+
+
+Link:
+http://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/eap-7x-failover-jvmkill-ha-ss/11/console-perf18/
+Link to source of TestingSingletonService:
+https://github.com/Ladicek/SingletonServiceTest-ejb/blob/master/src/main/java/org/jboss/test/singletonservice/TestingSingletonService.java

@@ -1,0 +1,2 @@
+ODM needs to use DN Attribute index when populating DnAttribute values
+If the same attribute is part of the DN twice (e.g. ou=department,ou=company) the automatic DN calculation in ODM doesn&amp;apos;t seem to work.

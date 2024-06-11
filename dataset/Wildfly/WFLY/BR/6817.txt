@@ -1,0 +1,71 @@
+JASPICSecureResponseHandler.handleRequest throws NullPointerException when redirecting for CONFIDENTIAL transport guarantee
+JASPICSecureResponseHandler.handleRequest can throw a NPE for a redirect from a CONFIDENTIAL transport guarantee:
+
+
+
+
+
+
+java.lang.NullPointerException
+
+
+
+
+        at org.wildfly.extension.undertow.security.jaspi.JASPICSecureResponseHandler.handleRequest(JASPICSecureResponseHandler.java:35)
+
+
+
+
+        at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+
+
+
+
+        at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:285)
+
+
+
+
+        at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:264)
+
+
+
+
+        at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+
+
+
+
+        at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:175)
+
+
+
+
+        at io.undertow.server.Connectors.executeRootHandler(Connectors.java:202)
+
+
+
+
+        at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:792)
+
+
+
+
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+
+
+
+
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+
+
+
+        at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+
+
+This occurs because io.undertow.security.handlers.AbstractConfidentialityHandler generates the redirect before any JASPICContext is placed on the request, so JASPICSecureResponseHandler sees the null.

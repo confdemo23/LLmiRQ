@@ -1,0 +1,11 @@
+In Fabric you can assign same profile to container more than once
+You can assign one profile to one container more than once.
+Steps to reproduce:
+1. fabric:create
+2. First: fabric:container-add-profile root example-mq
+3. Again: fabric:container-add-profile root example-mq
+4. fabric:container-list
+Output:
+[id] [version] [alive] [profiles] [provision status]
+root*                          1.0       true    example-mq, example-mq, fabric, fabric-ensemble-0000-1, jboss-fuse-full success
+There is example-mq profile twice in list.

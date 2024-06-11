@@ -1,0 +1,6 @@
+Jython Expressions always return null/false
+A Jython expression used for example like this always returns null, which is now translated to false:
+from("...").choice().when().jython("some expression").to(...)
+For example, here&amp;apos;s an expression that always evaluates to null/false:
+request.headers['foo'] == &amp;apos;bar&amp;apos;
+To see this, look at the test PythonExpressionTest in the camel-script module.

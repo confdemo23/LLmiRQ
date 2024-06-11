@@ -1,0 +1,40 @@
+Redeploy operation fails on deployments from the deployment scanner
+An application is deployed via deployment scanner.
+On an attempt to redeploy it via jboss-cli the following error is displayed:
+
+
+
+
+
+
+[standalone@localhost:9990 deployment=sample.war] :redeploy
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "failed",
+
+
+
+
+    "failure-description" =&gt; "WFLYCTL0155: runtime-name may not be null",
+
+
+
+
+    "rolled-back" =&gt; true
+
+
+
+
+}
+
+
+
+
+
