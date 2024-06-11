@@ -1,0 +1,4 @@
+Plain JMS clients don&apos;t fallback
+Plain JMS clients don&amp;apos;t fallback when the Live server takes over
+Version-Release number of selected component 
+messaging subsystem 1.4

@@ -1,0 +1,2 @@
+Avoid potential NPE in accessing "shell" in AddOnRooBotOperationsImpl
+Though the shell is injected in by Felix and should not be null, it is checked for null after code which calls methods on it. 

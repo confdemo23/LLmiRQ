@@ -1,0 +1,2 @@
+management authorization throws an exception when an LDAP group contains a slash/backslash character
+management authorization throws an exception when an LDAP group contains a slash/backslash character

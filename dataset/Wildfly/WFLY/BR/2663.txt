@@ -1,0 +1,24 @@
+mod_cluster metric properties are never applied
+Are parsed for but never applied.
+
+
+
+
+
+
+ &lt;load-metric type="busyness"&gt;
+
+
+
+
+                &lt;property name="foo" value="bar"/&gt;
+
+
+
+
+            &lt;/load-metric&gt;
+
+
+
+
+

@@ -1,0 +1,2 @@
+<listener-container concurrency="5"/> blows up
+&lt;listener-container concurrency="5"/&gt; blows up because it uses the wrong property name in SimpleMessageListenerContainer.

@@ -1,0 +1,36 @@
+TokenBasedRememberMeServices calculate expiryTime: explicit cat to long is needed
+
+public class TokenBasedRememberMeServices extends AbstractRememberMeServices {
+  public void onLoginSuccess(HttpServletRequest request,
+      HttpServletResponse response, Authentication successfulAuthentication) {
+    String username = retrieveUserName(successfulAuthentication);
+    String password = retrievePassword(successfulAuthentication);
+    // If unable to find a username and password, just abort as
+    // TokenBasedRememberMeServices is
+    // unable to construct a valid token in this case.
+    if (!StringUtils.hasLength(username) || !StringUtils.hasLength(password)) 
+{
+      return;
+    }
+
+    int tokenLifetime = calculateLoginLifetime(request,
+        successfulAuthentication);
+    long expiryTime = System.currentTimeMillis() + 1000 * tokenLifetime;
+    String signatureValue = makeTokenSignature(expiryTime, username, password);
+    setCookie(new String[] 
+{ username, Long.toString(expiryTime),
+        signatureValue }
+, tokenLifetime, request, response);
+    if (logger.isDebugEnabled()) 
+{
+      logger.debug("Added remember-me cookie for user &amp;apos;" + username
+          + "&amp;apos;, expiry: &amp;apos;" + new Date(expiryTime) + "&amp;apos;");
+    }
+  }
+}
+tokenLifetime is an integer. When the tokenLifetime is 1 month =&gt; value = 2678400 seconds =&gt; 1000 * 2678400 &gt; Integer.MAX_VALUE =&gt; negative integer.
+In the calculation, there should be an explicit cast to long
+So 
+long expiryTime = System.currentTimeMillis() + 1000 * tokenLifetime;
+should be 
+long expiryTime = System.currentTimeMillis() + 1000 * [B](long)[/B] tokenLifetime;

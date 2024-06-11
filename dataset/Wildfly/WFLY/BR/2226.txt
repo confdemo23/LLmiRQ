@@ -1,0 +1,3 @@
+Web Console adds two slashes in the address
+The web console adds two slashes to the address after the port
+http://localhost:9990//console/App.html

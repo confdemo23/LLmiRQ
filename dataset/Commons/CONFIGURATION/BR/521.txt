@@ -1,0 +1,3 @@
+fileFromUrl: decoding of encoded % character does not work
+If ConfigurationUtils.fileFromUrl(URL) should create a file from a URL containing an enoced % sign (%25), then it does not work.
+I saw that the code apache.commons.io now is really different, but seems to work. Why isn&amp;apos;t apache.commons.io directly used?

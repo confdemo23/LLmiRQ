@@ -1,0 +1,2 @@
+SDN 4.0: Allow Credentials to be specified via Context
+SDN 4.0 currently only allows un/pw specified via command line parameters.  In many applications, these are stored in the context in a PropertiesFactoryBean.  These should be configurable in Neo4jConfiguration, and passed through to the CredentialsService

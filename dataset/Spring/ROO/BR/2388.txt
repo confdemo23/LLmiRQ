@@ -1,0 +1,19 @@
+Roo Finder is not correctly generated
+public static TypedQuery&lt;Controlway&gt; Controlway.findControlwaysByGroups(Set&lt;Controlgroup&gt; groups) {
+        if (groups == null) throw new IllegalArgumentException("The groups argument is required");
+        EntityManager em = Controlway.entityManager();
+        StringBuilder queryBuilder = new StringBuilder("SELECT o FROM Controlway AS o WHERE");
+        for (int i = 0; i &lt; groups.size(); i++) 
+{
+            if (i &gt; 0) queryBuilder.append(" AND");
+            queryBuilder.append(" :groups_item").append(i).append(" MEMBER OF controlway.groups"); // here the &amp;apos;controlway&amp;apos; is wrong if i change it to &amp;apos;o&amp;apos; than it works
+        }
+        TypedQuery&lt;Controlway&gt; q = em.createQuery(queryBuilder.toString(), Controlway.class);
+        int groupsIndex = 0;
+        for (Controlgroup _controlgroup: groups) 
+{
+            q.setParameter("groups_item" + groupsIndex++, _controlgroup);
+        }
+        return q;
+    }
+If I start the Roo shell it will override my changes and this is very annoying

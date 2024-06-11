@@ -1,0 +1,24 @@
+TestSplitLogManager.testGetPreviousRecoveryMode is still flaky
+Even with retry failing tests, I&amp;apos;m seeing
+
+org.apache.hadoop.hbase.master.TestSplitLogManager.testGetPreviousRecoveryMode(org.apache.hadoop.hbase.master.TestSplitLogManager)
+
+  Run 1: TestSplitLogManager.testGetPreviousRecoveryMode:661 Mode4=LOG_SPLITTING
+
+  Run 2: TestSplitLogManager.testGetPreviousRecoveryMode:661 Mode4=LOG_SPLITTING
+
+  Run 3: TestSplitLogManager.testGetPreviousRecoveryMode:661 Mode4=LOG_SPLITTING
+
+
+
+java.lang.AssertionError: Mode4=LOG_SPLITTING
+
+	at org.junit.Assert.fail(Assert.java:88)
+
+	at org.junit.Assert.assertTrue(Assert.java:41)
+
+	at org.apache.hadoop.hbase.master.TestSplitLogManager.testGetPreviousRecoveryMode(TestSplitLogManager.java:661)
+
+
+
+Let me give Duo Zhang&amp;apos;s test procedure from HBASE-13136 a spin.

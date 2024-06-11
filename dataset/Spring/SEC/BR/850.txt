@@ -1,0 +1,4 @@
+custom-authentication-provider Registering Separate Bean Definitions in App Context and Providers List
+I&amp;apos;m seeing multiple instances of the LdapAuthenticationProvider bean when using the traditional bean config. In the namespace config I only see one instance. 
+So in the samples-ldap app I&amp;apos;m seeing two instances when using the traditional bean config w/ the namespace config commented out and the scope="singleton" attribute applied to the secondLdapProvider bean definition. 
+In my app I&amp;apos;m seeing three instances of the LdapAuthenticationProvider bean. It&amp;apos;s like the prototype scope is getting applied.  There&amp;apos;s one instance that&amp;apos;s getting used for authentication, a second instance for a dependency injection bean, not sure about the third instance. I only want ONE shared instance of the LdapAuthenticationProvider bean.

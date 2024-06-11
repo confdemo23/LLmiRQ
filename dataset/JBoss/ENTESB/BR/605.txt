@@ -1,0 +1,8 @@
+pax-url does not handle escaped characters in url. 
+Consider a maven repo url like 
+http://user%40domain.org:password@localhost:8081/artifactory/libs-release@id=artifactory
+added to etc/org.ops4j.pax.url.cfg.
+The url contains also sets the username (user@domain.org) and password (password) credentials to be used. user@domain.org is correctly escaped using %40.
+Trying to resolve an artifact from that repository however fails. pax-url simply Base 64 encodes the credentials "user%40domain.org:password", rather than "user@domain.org:password". On the server side the user user%40domain.org is unknown (whereas a user user@domain.org is known) and so a 401 Bad credentials HTTP error is returned. 
+Pax-url should un-escape these characters (%40 and others) before trying to use the url.
+I hope the list at http://www.w3schools.com/tags/ref_urlencode.asp is fairly exhaustive.

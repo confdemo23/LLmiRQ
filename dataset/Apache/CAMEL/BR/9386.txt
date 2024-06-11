@@ -1,0 +1,3 @@
+Camel-git: Support credentials in clone operation
+As noted here: https://github.com/oscerd/camel-git/issues/1
+Currently we don&amp;apos;t support credentials for the clone operation.

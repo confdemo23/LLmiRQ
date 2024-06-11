@@ -1,0 +1,89 @@
+Expired/invalidated session meta-data entries not removed when using optimistic locking or READ_COMMITTED isolation
+When using optimistic locking on the web cache, data from expired sessions is not removed from the web cache by the org.wildfly.clustering.web.infinispan.session.SessionExpirationScheduler and leaks forever.
+Session seems to be invalidated correctly and isn&amp;apos;t accessible anymore.
+After tracing the code, org.wildfly.clustering.web.infinispan.session.InfinispanSessionMetaDataFactory.remove() doesn&amp;apos;t remove the metadata entries when "this.properties.isLockOnWrite()" returns false (which is always the case for optimistic locking). Then in org.wildfly.clustering.web.infinispan.session.InfinispanSessionFactory.remove(), the call to attributesFactory.remove(id) also gets skipped.
+We&amp;apos;ve tried to adjust the code of org.wildfly.clustering.web.infinispan.session.InfinispanSessionMetaDataFactory.remove() to the following:
+
+
+
+
+
+
+    private boolean remove(String id, Cache&lt;SessionCreationMetaDataKey, SessionCreationMetaDataEntry&lt;L&gt;&gt; creationMetaDataCache) {
+
+
+
+
+        SessionCreationMetaDataKey key = new SessionCreationMetaDataKey(id);
+
+
+
+
+        if (this.properties.isLockOnWrite()) {
+
+
+
+
+            if (creationMetaDataCache.getAdvancedCache().withFlags(Flag.ZERO_LOCK_ACQUISITION_TIMEOUT, Flag.FAIL_SILENTLY).lock(key)) {
+
+
+
+
+                creationMetaDataCache.getAdvancedCache().withFlags(Flag.IGNORE_RETURN_VALUES).remove(key);
+
+
+
+
+                this.accessMetaDataCache.getAdvancedCache().withFlags(Flag.IGNORE_RETURN_VALUES).remove(new SessionAccessMetaDataKey(id));
+
+
+
+
+                return true;
+
+
+
+
+            }
+
+
+
+
+            return false;
+
+
+
+
+        } else {
+
+
+
+
+            creationMetaDataCache.getAdvancedCache().withFlags(Flag.IGNORE_RETURN_VALUES).remove(key);
+
+
+
+
+            this.accessMetaDataCache.getAdvancedCache().withFlags(Flag.IGNORE_RETURN_VALUES).remove(new SessionAccessMetaDataKey(id));
+
+
+
+
+            return true;
+
+
+
+
+        }
+
+
+
+
+    }
+
+
+
+
+
+
+With that change, the memory leaks disappears.

@@ -1,0 +1,31 @@
+Several enum types should generate lower case values in camel-linkedin
+Following parameters - types should generate values in lower case:
+
+event_type - org.apache.camel.component.linkedin.api.Eventtype
+category - org.apache.camel.component.linkedin.api.Category
+order - org.apache.camel.component.linkedin.api.Order
+role - org.apache.camel.component.linkedin.api.Role
+postcategorycode - org.apache.camel.component.linkedin.api.model.PostCategoryCode
+
+Also notice that postcategory code should contain &amp;apos;job&amp;apos; and &amp;apos;promotion&amp;apos; values - https://developer-programs.linkedin.com/documents/groups-api.
+I&amp;apos;ve tried to fix that with adding of
+
+
+
+&lt;bindings node="//xs:simpleType[@name=&amp;apos;event-type&amp;apos;]"&gt;
+
+    &lt;typesafeEnumClass name="EventType" /&gt;
+
+&lt;/bindings&gt;
+
+
+
+to linkedin-api-schema.xjb as well as appropriate simpleType to linkedin-api-schema.xsd, but it was without success. I still got:
+
+
+
+Error invoking getCompanyUpdates: Invalid filter {STATUS_UPDATE}
+
+
+
+Names of enum values are used.

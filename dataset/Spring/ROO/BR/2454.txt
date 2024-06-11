@@ -1,0 +1,2 @@
+Roo allows duplicate enum constants in an enumerated type
+Duplicate enum constants cause a compile error and should not be allowed to proceed to be created in the Roo shell

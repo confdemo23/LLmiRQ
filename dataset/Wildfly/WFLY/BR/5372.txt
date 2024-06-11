@@ -1,0 +1,44 @@
+Infinispan&apos;s jdbc store creates incorrect service name for datasource dependency
+fails with
+23:36:38,116 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("deploy") failed - address: ([("deployment" =&gt; "clusterbench-ee7.ear")]) - failure description: {"WFLYCTL0288: One or more services were unable to start due to one or more indirect dependencies not being available." =&gt; {
+    "Services that were unable to start:" =&gt; [
+        "jboss.clustering.web.\"clusterbench-ee7.ear.clusterbench-ee7-web-default.war\"",
+        "jboss.clustering.web.\"clusterbench-ee7.ear.clusterbench-ee7-web-passivating.war\"",
+        "jboss.clustering.web.locator.\"clusterbench-ee7.ear.clusterbench-ee7-web-default.war\"",
+        "jboss.clustering.web.locator.\"clusterbench-ee7.ear.clusterbench-ee7-web-passivating.war\"",
+        "jboss.deployment.subunit.\"clusterbench-ee7.ear\".\"clusterbench-ee7-web-default.war\".deploymentCompleteService",
+        "jboss.deployment.subunit.\"clusterbench-ee7.ear\".\"clusterbench-ee7-web-passivating.war\".deploymentCompleteService",
+        "jboss.deployment.unit.\"clusterbench-ee7.ear\".deploymentCompleteService",
+        "jboss.infinispan.web.\"clusterbench-ee7.ear.clusterbench-ee7-web-default.war\"",
+        "jboss.infinispan.web.\"clusterbench-ee7.ear.clusterbench-ee7-web-default.war\".config",
+        "jboss.infinispan.web.\"clusterbench-ee7.ear.clusterbench-ee7-web-passivating.war\"",
+        "jboss.infinispan.web.\"clusterbench-ee7.ear.clusterbench-ee7-web-passivating.war\".config",
+        "jboss.undertow.deployment.default-server.default-host./clusterbench",
+        "jboss.undertow.deployment.default-server.default-host./clusterbench.UndertowDeploymentInfoService",
+        "jboss.undertow.deployment.default-server.default-host./clusterbench.codec",
+        "jboss.undertow.deployment.default-server.default-host./clusterbench.session",
+        "jboss.undertow.deployment.default-server.default-host./clusterbench-passivating",
+        "jboss.undertow.deployment.default-server.default-host./clusterbench-passivating.UndertowDeploymentInfoService",
+        "jboss.undertow.deployment.default-server.default-host./clusterbench-passivating.codec",
+        "jboss.undertow.deployment.default-server.default-host./clusterbench-passivating.session"
+    ],
+    "Services that may be the cause:" =&gt; ["jboss.data-source.java:jboss/datasources/ExampleDS"]
+}}
+23:36:38,119 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" =&gt; "infinispan"),
+    ("cache-container" =&gt; "web")
+]) - failure description: {"WFLYCTL0288: One or more services were unable to start due to one or more indirect dependencies not being available." =&gt; 
+{
+
+    "Services that were unable to start:" =&gt; [
+
+        "jboss.clustering.registry.web.default",
+
+        "jboss.infinispan.web.default.config"
+
+    ],
+
+    "Services that may be the cause:" =&gt; ["jboss.data-source.java:jboss/datasources/ExampleDS"]
+
+}
+}

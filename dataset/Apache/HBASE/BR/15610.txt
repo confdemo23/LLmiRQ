@@ -1,0 +1,2 @@
+Remove deprecated HConnection for 2.0 thus removing all PB references for 2.0
+This is sub-task for HBASE-15174.

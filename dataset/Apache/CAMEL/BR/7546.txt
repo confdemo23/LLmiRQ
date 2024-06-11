@@ -1,0 +1,4 @@
+Avoid clash of CamelContext managementName in OSGi
+There can be a potential clash in OSGi when there are 2+ camelContext in the same bundle, as they will by default reuse the same managementName in the mbean naming, where it uses the symbolic name of the OSGi bundle.
+We should detect this clash and use the counter to make it unique.
+This is part of CAMEL-6972

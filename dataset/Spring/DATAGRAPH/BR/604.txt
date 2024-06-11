@@ -1,0 +1,12 @@
+Neo4jTemplate.execute() method swallows errors
+Tried to enter invalid statement in neo4jTemplate execute():
+"statements":[{"statement":"cre testnode:TestNode2 
+{uuid: &amp;apos;test_4&amp;apos;}
+ )","parameters":{},"resultDataContents":["row"]}
+In the log we see this error:
+{"commit":"http://localhost:7474/db/data/transaction/88/commit","results":[],"transaction":
+{"expires":"Fri, 10 Apr 2015 13:47:55 +0000"}
+,"errors":[{"code":"Neo.ClientError.Statement.InvalidSyntax","message":"Invalid input &amp;apos; &amp;apos;: expected &amp;apos;a/A&amp;apos; (line 1, column 4 (offset: 3))\n\"cre testnode:TestNode2 
+{uuid: &amp;apos;test_4&amp;apos;}
+ )\"\n    ^"}]}"
+but no exception was thrown, and execute() returns void, so we don&amp;apos;t know the result (without looking at log)

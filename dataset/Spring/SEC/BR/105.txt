@@ -1,0 +1,12 @@
+Mis-named method signature in n.s.a.util.PortMapperImpl
+Forum discussion :
+http://forum.springframework.org/showthread.php?t=19903
+yielded a little problem with PortMappingImpl.  The javadocs state that use the following in a spring config file
+   &lt;property name="httpsPortMapping"&gt;
+     &lt;map&gt;
+       &lt;entry key="80"&gt;&lt;value&gt;443&lt;/value&gt;&lt;/entry&gt;
+       &lt;entry key="8080"&gt;&lt;value&gt;8443&lt;/value&gt;&lt;/entry&gt;
+     &lt;/map&gt;
+   &lt;/property&gt;
+Looking into the source of PortMappingImpl and there&amp;apos;s no corresponding setHttpsPortMapping for spring to inject.  Spring falls over.  
+Solution : either update the javadocs or better in my opinion change the existing method from setPortMapping(Map m) to setHttpsPortMapping(Map m) 

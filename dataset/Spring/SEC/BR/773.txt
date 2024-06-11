@@ -1,0 +1,35 @@
+global-method-security fails with JPA
+Enabling global-method-security with JPA @PersistenceContext annotations will fail on startup.  This is with the recent 2.0.0 release cut. 
+My userDetailsService is a custom implementation that requires access to an @Repository bean with an EntityManager.
+	&lt;sec:http auto-config="true"&gt;
+        &lt;sec:intercept-url pattern="/assets/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/&gt;
+        &lt;sec:intercept-url pattern="/login*" access="IS_AUTHENTICATED_ANONYMOUSLY"/&gt;
+        &lt;sec:intercept-url pattern="/logout*" access="IS_AUTHENTICATED_ANONYMOUSLY"/&gt;
+        &lt;sec:intercept-url pattern="/unsupported*" access="IS_AUTHENTICATED_ANONYMOUSLY"/&gt;        
+        &lt;sec:intercept-url pattern="/password-*" access="IS_AUTHENTICATED_ANONYMOUSLY"/&gt;
+        &lt;sec:intercept-url pattern="/**" access="ROLE_USER,ROLE_ADMIN"/&gt;
+        &lt;sec:form-login login-page="/login.html" default-target-url="/app.html" authentication-failure-url="?login_error=1"/&gt;
+        &lt;sec:logout logout-success-url="/logout.html"/&gt;
+    &lt;/sec:http&gt;
+	&lt;sec:authentication-provider user-service-ref="userDetailsService"&gt;
+		&lt;sec:password-encoder ref="passwordEncoder" /&gt;
+	&lt;/sec:authentication-provider&gt;
+	&lt;sec:global-method-security secured-annotations="enabled" /&gt;
+The exception: 
+2008-04-15 04:50:26,490 ERROR [main] org.springframework.web.context.ContextLoader: Context initialization failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name &amp;apos;_rememberMeServicesInjectionBeanPostProcessor&amp;apos;: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name &amp;apos;org.springframework.transaction.config.internalTransactionAdvisor&amp;apos;: Cannot create inner bean &amp;apos;(inner bean)&amp;apos; of type [org.springframework.transaction.interceptor.TransactionInterceptor] while setting bean property &amp;apos;transactionInterceptor&amp;apos;; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name &amp;apos;(inner bean)&amp;apos;: Cannot resolve reference to bean &amp;apos;transactionManager&amp;apos; while setting bean property &amp;apos;transactionManager&amp;apos;; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name &amp;apos;transactionManager&amp;apos; defined in class path resource [epicenter-webapp-beans.xml]: Cannot resolve reference to bean &amp;apos;entityManagerFactory&amp;apos; while setting bean property &amp;apos;entityManagerFactory&amp;apos;; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name &amp;apos;ehCacheManager&amp;apos; defined in class path resource [epicenter-repository-beans.xml]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name &amp;apos;_methodDefinitionSourceAdvisor&amp;apos;: Cannot create inner bean &amp;apos;(inner bean)&amp;apos; of type [org.springframework.security.intercept.method.aopalliance.MethodSecurityInterceptor] while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name &amp;apos;(inner bean)&amp;apos;: Cannot resolve reference to bean &amp;apos;_authenticationManager&amp;apos; while setting bean property &amp;apos;authenticationManager&amp;apos;; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name &amp;apos;_authenticationManager&amp;apos;: Cannot resolve reference to bean &amp;apos;org.springframework.security.providers.dao.DaoAuthenticationProvider#0&amp;apos; while setting bean property &amp;apos;providers&amp;apos; with key [2]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name &amp;apos;org.springframework.security.providers.dao.DaoAuthenticationProvider#0&amp;apos;: Cannot resolve reference to bean &amp;apos;userDetailsService&amp;apos; while setting bean property &amp;apos;userDetailsService&amp;apos;; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name &amp;apos;userDetailsService&amp;apos;: Injection of resource fields failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name &amp;apos;permissionRepository&amp;apos;: Injection of persistence fields failed; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:478)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:881)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:606)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:366)
+	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:255)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:199)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:45)

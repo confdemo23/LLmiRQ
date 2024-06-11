@@ -1,0 +1,364 @@
+Default certificate is generated on server boot
+There is change of behavior of "SSL out of box" , AFAICT . Certificate is generated on boot, not on first access as intended. 
+
+It slow down server start.
+contradicts WFLYDM0111: Keystore /wildfly-11.0.0.Alpha1-SNAPSHOT/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+
+Steps to reproduce:
+1) build wildfly from master
+2) unzip fresh distro
+3) run ./standalone.sh 
+4) certificate is generated
+full server log
+
+
+
+
+
+
+[mchoma@localhost bin]$ ./standalone.sh 
+
+
+
+
+=========================================================================
+
+
+
+
+
+
+
+
+
+  JBoss Bootstrap Environment
+
+
+
+
+
+
+
+
+
+  JBOSS_HOME: /home/mchoma/workspace/eap-versions/wildfly-11.0.0.Alpha1-SNAPSHOT
+
+
+
+
+
+
+
+
+
+  JAVA: /usr/java/latest/bin/java
+
+
+
+
+
+
+
+
+
+  JAVA_OPTS:  -server -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true
+
+
+
+
+
+
+
+
+
+=========================================================================
+
+
+
+
+
+
+
+
+
+15:01:54,487 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Beta3
+
+
+
+
+15:01:54,680 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.Final
+
+
+
+
+15:01:54,739 INFO  [org.jboss.as] (MSC service thread 1-6) WFLYSRV0049: WildFly Core 3.0.0.Alpha11 "Kenny" starting
+
+
+
+
+15:01:54,857 INFO  [org.jboss.as.domain.management] (MSC service thread 1-2) WFLYDM0136: Registered OpenSSL provider
+
+
+
+
+15:01:55,504 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 11) WFLYCTL0028: Attribute &amp;apos;security-realm&amp;apos; in the resource at address &amp;apos;/subsystem=undertow/server=default-server/https-listener=https&amp;apos; is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+
+
+
+
+15:01:55,562 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+
+
+
+
+15:01:55,575 INFO  [org.xnio] (MSC service thread 1-4) XNIO version 3.4.1.Final
+
+
+
+
+15:01:55,582 INFO  [org.xnio.nio] (MSC service thread 1-4) XNIO NIO Implementation Version 3.4.1.Final
+
+
+
+
+15:01:55,611 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 38) WFLYCLINF0001: Activating Infinispan subsystem.
+
+
+
+
+15:01:55,614 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 46) WFLYNAM0001: Activating Naming Subsystem
+
+
+
+
+15:01:55,619 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 54) WFLYTX0013: Node identifier property is set to the default value. Please make sure it is unique.
+
+
+
+
+15:01:55,628 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 37) WFLYIO001: Worker &amp;apos;default&amp;apos; has auto-configured to 16 core threads with 128 task threads based on your 8 available processors
+
+
+
+
+15:01:55,629 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 44) WFLYJSF0007: Activated the following JSF Implementations: [main]
+
+
+
+
+15:01:55,632 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 53) WFLYSEC0002: Activating Security Subsystem
+
+
+
+
+15:01:55,641 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 56) WFLYWS0002: Activating WebServices Extension
+
+
+
+
+15:01:55,655 INFO  [org.jboss.as.security] (MSC service thread 1-2) WFLYSEC0001: Current PicketBox version=5.0.0.Alpha3
+
+
+
+
+15:01:55,664 INFO  [org.jboss.as.naming] (MSC service thread 1-6) WFLYNAM0003: Starting Naming Service
+
+
+
+
+15:01:55,665 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-3) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+
+
+
+
+15:01:55,668 INFO  [org.jboss.as.connector] (MSC service thread 1-3) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.3.4.Final)
+
+
+
+
+15:01:55,672 INFO  [org.jboss.remoting] (MSC service thread 1-4) JBoss Remoting version 4.0.21.Final
+
+
+
+
+15:01:55,679 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 33) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+
+
+
+
+15:01:55,688 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-5) WFLYJCA0018: Started Driver service with driver-name = h2
+
+
+
+
+15:01:55,719 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0003: Undertow 1.4.4.Final starting
+
+
+
+
+15:01:55,784 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 55) WFLYUT0014: Creating file handler for path &amp;apos;/home/mchoma/workspace/eap-versions/wildfly-11.0.0.Alpha1-SNAPSHOT/welcome-content&amp;apos; with options [directory-listing: &amp;apos;false&amp;apos;, follow-symlink: &amp;apos;false&amp;apos;, case-sensitive: &amp;apos;true&amp;apos;, safe-symlink-paths: &amp;apos;[]&amp;apos;]
+
+
+
+
+15:01:55,826 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0012: Started server default-server.
+
+
+
+
+15:01:55,831 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0018: Host default-host starting
+
+
+
+
+15:01:55,903 INFO  [org.jboss.as.ejb3] (MSC service thread 1-1) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 32 (per class), which is derived from the number of CPUs on this host.
+
+
+
+
+15:01:55,904 INFO  [org.jboss.as.ejb3] (MSC service thread 1-7) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 128 (per class), which is derived from thread worker pool sizing.
+
+
+
+
+15:01:55,909 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
+
+
+
+
+15:01:56,114 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-8) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+
+
+
+
+15:01:56,195 INFO  [org.jboss.as.patching] (MSC service thread 1-4) WFLYPAT0050: WildFly cumulative patch ID is: base, one-off patches include: none
+
+
+
+
+15:01:56,220 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-5) WFLYDM0111: Keystore /home/mchoma/workspace/eap-versions/wildfly-11.0.0.Alpha1-SNAPSHOT/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+
+
+
+
+15:01:56,231 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-7) WFLYDS0013: Started FileSystemDeploymentService for directory /home/mchoma/workspace/eap-versions/wildfly-11.0.0.Alpha1-SNAPSHOT/standalone/deployments
+
+
+
+
+15:01:56,364 INFO  [org.infinispan.factories.GlobalComponentRegistry] (MSC service thread 1-6) ISPN000128: Infinispan version: Infinispan &amp;apos;Chakra&amp;apos; 8.2.4.Final
+
+
+
+
+15:01:56,379 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (MSC service thread 1-2) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+
+
+
+
+15:01:56,380 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (MSC service thread 1-2) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+
+
+
+
+15:01:56,380 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (MSC service thread 1-5) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+
+
+
+
+15:01:56,381 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (MSC service thread 1-4) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+
+
+
+
+15:01:56,381 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (MSC service thread 1-8) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+
+
+
+
+15:01:56,383 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (MSC service thread 1-4) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+
+
+
+
+15:01:56,384 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (MSC service thread 1-5) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+
+
+
+
+15:01:56,385 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (MSC service thread 1-8) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+
+
+
+
+15:01:56,386 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (MSC service thread 1-5) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+
+
+
+
+15:01:56,386 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (MSC service thread 1-2) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+
+
+
+
+15:01:56,386 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (MSC service thread 1-5) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+
+
+
+
+15:01:56,386 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (MSC service thread 1-2) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+
+
+
+
+15:01:56,386 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (MSC service thread 1-8) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+
+
+
+
+15:01:56,387 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (MSC service thread 1-8) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+
+
+
+
+15:01:57,161 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-3) WFLYDM0113: Generated self signed certificate at /home/mchoma/workspace/eap-versions/wildfly-11.0.0.Alpha1-SNAPSHOT/standalone/configuration/application.keystore. Please note that self signed certificates are not secure, and should only be used for testing purposes. Do not use this self signed certificate in production.
+
+
+
+
+SHA-1 fingerprint of the generated key is c7:27:a2:1e:f5:86:77:47:f7:ac:01:f1:d3:54:ef:2c:a0:ed:ff:9c
+
+
+
+
+SHA-256 fingerprint of the generated key is c9:69:8a:0d:3f:45:81:6f:42:be:2e:18:a8:ac:7f:d6:67:ea:60:3d:3e:53:67:f7:04:00:d0:cc:17:c4:94:3c
+
+
+
+
+15:01:57,286 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
+
+
+
+
+15:01:57,339 INFO  [org.jboss.ws.common.management] (MSC service thread 1-5) JBWS022052: Starting JBossWS 5.1.5.Final (Apache CXF 3.1.8) 
+
+
+
+
+15:01:57,439 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+
+
+
+
+15:01:57,440 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+
+
+
+
+15:01:57,440 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Core 3.0.0.Alpha11 "Kenny" started in 3168ms - Started 370 of 613 services (426 services are lazy, passive or on-demand)
+
+
+
+
+

@@ -1,0 +1,2 @@
+Annotation-driven security fails when using Spring > 2.0.6
+The AnnotationDrivenBeanDefinitionParser tests fail when Spring version is upgraded from 2.0.6 to 2.0.7.

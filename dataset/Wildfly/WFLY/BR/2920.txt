@@ -1,0 +1,182 @@
+StackOverflowError when org.jboss.as.jacorb.rmi.InterfaceAnalysis is analyzing javax.ejb.EJBObject
+Depending on when a thread context switch happens, an IIOP enabled EJB fails to be deployed by throwing java.lang.StackOverflowError.  Here is the stack trace from the attached thread dump.
+
+
+
+
+
+
+"MSC service thread 1-7" prio=10 tid=0x00007f52e8001800 nid=0x4d12 at breakpoint[0x00007f534093f000]
+
+
+
+
+   java.lang.Thread.State: RUNNABLE
+
+
+
+
+        at org.jboss.as.jacorb.rmi.WorkCacheManager.getAnalysis(WorkCacheManager.java:105)
+
+
+
+
+        at org.jboss.as.jacorb.rmi.InterfaceAnalysis.getInterfaceAnalysis(InterfaceAnalysis.java:53)
+
+
+
+
+        at org.jboss.as.jacorb.rmi.Util.getTypeIDLName(Util.java:104)
+
+
+
+
+        at org.jboss.as.jacorb.rmi.ParameterAnalysis.&lt;init&gt;(ParameterAnalysis.java:50)
+
+
+
+
+        at org.jboss.as.jacorb.rmi.OperationAnalysis.&lt;init&gt;(OperationAnalysis.java:91)
+
+
+
+
+        at org.jboss.as.jacorb.rmi.InterfaceAnalysis.analyzeOperations(InterfaceAnalysis.java:116)
+
+
+
+
+        at org.jboss.as.jacorb.rmi.ContainerAnalysis.doAnalyze(ContainerAnalysis.java:186)
+
+
+
+
+        at org.jboss.as.jacorb.rmi.InterfaceAnalysis.doAnalyze(InterfaceAnalysis.java:62)
+
+
+
+
+        at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+
+
+
+
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+
+
+        at java.lang.reflect.Method.invoke(Method.java:606)
+
+
+
+
+        at org.jboss.as.jacorb.rmi.WorkCacheManager.doTheWork(WorkCacheManager.java:177)
+
+
+
+
+        at org.jboss.as.jacorb.rmi.WorkCacheManager.getAnalysis(WorkCacheManager.java:105)
+
+
+
+
+        at org.jboss.as.jacorb.rmi.InterfaceAnalysis.getInterfaceAnalysis(InterfaceAnalysis.java:53)
+
+
+
+
+        at org.jboss.as.jacorb.rmi.Util.getTypeIDLName(Util.java:104)
+
+
+
+
+        at org.jboss.as.jacorb.rmi.ParameterAnalysis.&lt;init&gt;(ParameterAnalysis.java:50)
+
+
+
+
+        at org.jboss.as.jacorb.rmi.OperationAnalysis.&lt;init&gt;(OperationAnalysis.java:91)
+
+
+
+
+        at org.jboss.as.jacorb.rmi.InterfaceAnalysis.analyzeOperations(InterfaceAnalysis.java:116)
+
+
+
+
+        at org.jboss.as.jacorb.rmi.ContainerAnalysis.doAnalyze(ContainerAnalysis.java:186)
+
+
+
+
+        at org.jboss.as.jacorb.rmi.InterfaceAnalysis.doAnalyze(InterfaceAnalysis.java:62)
+
+
+
+
+        at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+
+
+
+
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+
+
+        at java.lang.reflect.Method.invoke(Method.java:606)
+
+
+
+
+        ...
+
+
+
+
+        at org.jboss.as.jacorb.rmi.WorkCacheManager.doTheWork(WorkCacheManager.java:177)
+
+
+
+
+        at org.jboss.as.jacorb.rmi.WorkCacheManager.getAnalysis(WorkCacheManager.java:105)
+
+
+
+
+        at org.jboss.as.jacorb.rmi.InterfaceAnalysis.getInterfaceAnalysis(InterfaceAnalysis.java:53)
+
+
+
+
+        at org.jboss.as.jacorb.rmi.Util.getTypeIDLName(Util.java:104)
+
+
+
+
+        at org.jboss.as.jacorb.rmi.ParameterAnalysis.&lt;init&gt;(ParameterAnalysis.java:50)
+
+
+
+
+
+
+
+
+
+   Locked ownable synchronizers:
+
+
+
+
+        - &lt;0x00000000f9698790&gt; (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+
+
+
+
+
+The last part including Util.getTypeIDLName has been repeated as many as possible and the bottom of the stack has been lost.  The same stack has been appeared in a different MSC service thread which is also executing an IIOP enabled EJB deployment.
+The customer identified an improper synchronization in org.jboss.as.jacorb.rmi.WorkCacheManager#getAnalysis().  It is reproducible by manually controlling a thread context switch using a debugger.

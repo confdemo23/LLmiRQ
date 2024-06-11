@@ -1,0 +1,3 @@
+MVC doesn&apos;t generate views for finders
+Addon MVC is not generating views for finders.
+To reproduce try the attached clinic.roo file

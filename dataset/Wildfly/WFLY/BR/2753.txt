@@ -1,0 +1,2 @@
+Workaround for auditlog syslog appName not being configurable
+Use -Dorg.jboss.TEMP.audit.log.appName=customApp where the value is the app-name as mentioned in section 6.2.5 of RFC-5424

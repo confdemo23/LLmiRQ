@@ -1,0 +1,4 @@
+Controller path doesn&apos;t work
+I&amp;apos;m trying to create a controller scalfold into path: "admin/client" but I&amp;apos;m receiving a error:
+controller scaffold --name ~.model.ClientController --entity ~.model.Client --path  admin/client
+error: Illegal name &amp;apos;admin/client&amp;apos; (illegal character)

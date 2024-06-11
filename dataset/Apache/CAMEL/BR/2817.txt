@@ -1,0 +1,21 @@
+renames (to .processed) are sometimes done even if the download failed.
+I have an ftp consumer endpoint URI like: 
+ftp://conaxTest@localhost:2121/autreq/ok?passiveMode=true&amp;amp;password=conaxTest&amp;move=.processed&amp;delay=5000
+From my ftp server logs, I can see files being downloaded, and then renamed...
+
+[org.apache.ftpserver.command.impl.RETR:pool-2-thread-56] - &lt;File downloaded /autreq/ok/vp006331.emm&gt;
+[org.apache.ftpserver.command.impl.RETR:pool-2-thread-56] - &lt;File downloaded /autreq/ok/vp006332.emm&gt;
+[org.apache.ftpserver.impl.DefaultFtpHandler:pool-2-thread-57] - &lt;Session idle, closing&gt;
+[org.apache.ftpserver.command.impl.RNTO:pool-2-thread-56] - &lt;File rename from "/autreq/ok/vp006331.emm" to "/autreq/ok/.processed/vp006331.emm"&gt;
+[org.apache.ftpserver.command.impl.RNTO:pool-2-thread-54] - &lt;File rename from "/autreq/ok/vp006332.emm" to "/autreq/ok/.processed/vp006332.emm"&gt;
+[org.apache.ftpserver.command.impl.RNTO:pool-2-thread-54] - &lt;File rename from "/autreq/ok/vp006333.emm" to "/autreq/ok/.processed/vp006333.emm"&gt;
+Note, that vp006333.emm is renamed, but was never downloaded.  There&amp;apos;s no other mention of the file in my logs.  On the camel ftp consumer side, I see that camel attempted to download the file, but ended up with a null...
+
+[is.vf.conan.conax.FileParser:Camel thread 7: seda://updateOk] - &lt;handling: GenericFile[vp006331.emm]&gt;
+[is.vf.conan.ConanCore:Camel thread 7: seda://updateOk] - &lt;updating operation txid:006331 with the results: OK&gt;
+[is.vf.conan.conax.FileParser:Camel thread 7: seda://updateOk] - &lt;handling: GenericFile[vp006332.emm]&gt;
+[is.vf.conan.ConanCore:Camel thread 7: seda://updateOk] - &lt;updating operation txid:006332 with the results: OK&gt;
+[is.vf.conan.conax.FileParser:Camel thread 7: seda://updateOk] - &lt;handling: GenericFile[vp006333.emm]&gt;
+[is.vf.conan.conax.FileParser:Camel thread 7: seda://updateOk] - &lt;Requested parse of an empty file!&gt;
+The "requested parse of an empty file" is logged when ex.getIn().getBody(String.class) is empty or blank for the file object.
+I had a look through the bugs fixed for 2.3.0, but I don&amp;apos;t see anything that would be related to this at all.

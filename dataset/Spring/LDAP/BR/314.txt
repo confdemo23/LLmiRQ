@@ -1,0 +1,68 @@
+repository methods ignoring @Entity(base=)
+LdapRepository query methods ignore @Entry(base = 
+
+
+
+
+
+
+interface LdapAccountRepository extends LdapRepository&lt;Account&gt;
+
+
+
+
+Account findByAccount(String account);
+
+
+
+
+
+
+
+
+
+@Entry(base = "DC=wims,DC=tijd,DC=intra", objectClasses="user")
+
+
+
+
+public final class Account {
+
+
+
+
+
+
+fix in org.springframework.ldap.repository.query.LdapQueryCreator : 
+
+
+
+
+
+
+protected ContainerCriteria create(Part part, Iterator&lt;Object&gt; iterator) {
+
+
+
+
+        ConditionCriteria criteria = query().base(clazz.getAnnotation(Entry.class).base()).where(getAttribute(part));
+
+
+
+
+
+
+
+
+
+        return appendCondition(part, iterator, criteria);
+
+
+
+
+    }
+
+
+
+
+

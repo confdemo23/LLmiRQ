@@ -1,0 +1,71 @@
+Unexpected non-integer input in vault.sh causes error
+Execute bin/vault.sh, then input a non-integer parameter cause:
+
+
+
+
+
+
+Exception in thread "main" java.util.InputMismatchException
+
+
+
+
+	at java.util.Scanner.throwFor(Scanner.java:909)
+
+
+
+
+	at java.util.Scanner.next(Scanner.java:1530)
+
+
+
+
+	at java.util.Scanner.nextInt(Scanner.java:2160)
+
+
+
+
+	at java.util.Scanner.nextInt(Scanner.java:2119)
+
+
+
+
+	at org.jboss.as.security.vault.VaultTool.main(VaultTool.java:109)
+
+
+
+
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+
+
+
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+
+
+
+
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+
+
+	at java.lang.reflect.Method.invoke(Method.java:606)
+
+
+
+
+	at org.jboss.modules.Module.run(Module.java:292)
+
+
+
+
+	at org.jboss.modules.Main.main(Main.java:455)
+
+
+
+
+
+
+Because VaultTool.main() only scans next token of the input as an int, better catch the InputMismatchException and exit peacefully as default action.

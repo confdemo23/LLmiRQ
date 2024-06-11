@@ -1,0 +1,22 @@
+Manually migrated EAP 6.x profiles fail to boot due to &apos;default-clustered-sfsb-cache&apos; used in runtime
+If you try (curated) EAP 6 standalone-ha.xml configuration on WildFly the server will fail to boot due to an EJB3 subsystem attribute.
+Server boot console log:
+mbp:migration-tests emmartins$ ./default-config-manual-copy/wildfly-10.0.0.CR3-SNAPSHOT/bin/standalone.sh -c standalone-ha.xml
+=========================================================================
+  JBoss Bootstrap Environment
+  JBOSS_HOME: /Users/emmartins/wildfly/migration-tests/default-config-manual-copy/wildfly-10.0.0.CR3-SNAPSHOT
+  JAVA: /Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/bin/java
+  JAVA_OPTS:  -server -Xms64m -Xmx512m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true
+=========================================================================
+11:37:25,583 INFO  [org.jboss.modules] (main) JBoss Modules version 1.4.4.Final
+11:37:25,896 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
+11:37:25,985 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: WildFly Full 10.0.0.CR3-SNAPSHOT (WildFly Core 2.0.0.CR6) starting
+11:37:27,307 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool  7) WFLYCTL0028: Attribute &amp;apos;default-stack&amp;apos; in the resource at address &amp;apos;/subsystem=jgroups&amp;apos; is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+11:37:27,307 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool  15) WFLYCTL0028: Attribute &amp;apos;default-clustered-sfsb-cache&amp;apos; in the resource at address &amp;apos;/subsystem=ejb3&amp;apos; is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+11:37:27,385 ERROR [org.jboss.as.controller.management-operation] (ServerService Thread Pool  15) WFLYCTL0013: Operation ("add") failed - address: ([("subsystem" =&gt; "ejb3")]) - failure description: "WFLYEJB0451: Attribute &amp;apos;default-clustered-sfsb-cache&amp;apos; is not supported on current version servers; it is only allowed if its value matches &amp;apos;default-sfsb-cache&amp;apos;"
+11:37:27,586 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) "WFLYCTL0193: Failed executing subsystem ejb3 boot operations"
+11:37:27,588 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("parallel-subsystem-boot") failed - address: ([]) - failure description: "\"WFLYCTL0193: Failed executing subsystem ejb3 boot operations\""
+11:37:27,591 FATAL [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0056: Server boot has failed in an unrecoverable manner; exiting. See previous messages for details.
+11:37:27,594 INFO  [org.jboss.as.server] (Thread-2) WFLYSRV0220: Server shutdown has been requested.
+11:37:27,603 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0050: WildFly Full 10.0.0.CR3-SNAPSHOT (WildFly Core 2.0.0.CR6) stopped in 6ms
+Attached is the standalone-ha.xml config, with just threads subsystem removed, and web subsystem migrated to undertow, that should be able to boot the server.

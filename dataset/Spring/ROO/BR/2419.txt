@@ -1,0 +1,9 @@
+In @RooWebScaffold &apos;exposeJson = true&apos; should consider &apos;create&apos;, &apos;update&apos; and &apos;delete&apos;
+When an entity is exposed by JSON in a Controller at @RooWebScaffold annotation with &amp;apos;exposeJson = true&amp;apos; attribute, should be considered same annotation attributes:
+
+create
+update
+delete
+
+Else define it own JSON create, update and delete attributes.
+There is a security problem when create, update or delete is disabled on MVC and not allow disabling on JSON either.

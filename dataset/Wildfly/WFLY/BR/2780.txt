@@ -1,0 +1,84 @@
+Decoration of Servlet AsyncListener fails
+I am not sure, whether this should work (maybe it should, when interceptor works) or not, but I think it shouldn&amp;apos;t throw this exception:
+
+
+
+
+
+
+16:08:55,010 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-4) MSC000001: Failed to start service jboss.deployment.unit."asyncServletExample.war".component."org.jboss.asyncServletExamples.MyListenerDecorator".WeldInstantiator: org.jboss.msc.service.StartException in service jboss.deployment.unit."asyncServletExample.war".component."org.jboss.asyncServletExamples.MyListenerDecorator".WeldInstantiator: Failed to start service
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1904) [jboss-msc-1.2.0.CR1.jar:1.2.0.CR1]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_45]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_45]
+
+
+
+
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_45]
+
+
+
+
+Caused by: org.jboss.weld.exceptions.DefinitionException: WELD-000038: Cannot place @Delegate at an injection point which is not on a Decorator: InjectionTarget for [BackedAnnotatedType] public abstract @Decorator class org.jboss.asyncServletExamples.MyListenerDecorator
+
+
+
+
+	at org.jboss.weld.injection.producer.AbstractProducer.checkDelegateInjectionPoints(AbstractProducer.java:31)
+
+
+
+
+	at org.jboss.weld.injection.producer.BasicInjectionTarget.&lt;init&gt;(BasicInjectionTarget.java:72)
+
+
+
+
+	at org.jboss.as.weld.injection.InterceptedNonContextualComponentInjectionTarget.&lt;init&gt;(InterceptedNonContextualComponentInjectionTarget.java:48)
+
+
+
+
+	at org.jboss.as.weld.injection.InjectionTargets.createInjectionTarget(InjectionTargets.java:62)
+
+
+
+
+	at org.jboss.as.weld.injection.WeldComponentService.start(WeldComponentService.java:118)
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948) [jboss-msc-1.2.0.CR1.jar:1.2.0.CR1]
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881) [jboss-msc-1.2.0.CR1.jar:1.2.0.CR1]
+
+
+
+
+	... 3 more
+
+
+
+
+
+
+
+
+
+

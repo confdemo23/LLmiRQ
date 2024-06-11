@@ -1,0 +1,61 @@
+mod_cluster advertise="false" does not disable advertise if there are no proxies configured
+
+
+
+
+
+
+17:05:56,822 INFO  [org.jboss.modcluster] (ServerService Thread Pool -- 64) MODCLUSTER000001: Initializing mod_cluster version 1.3.2.Final
+
+
+
+
+17:05:56,833 INFO  [org.jboss.modcluster] (ServerService Thread Pool -- 64) MODCLUSTER000032: Listening to proxy advertisements on /224.0.1.105:23364
+
+
+
+
+
+
+
+
+
+
+
+
+[standalone@localhost:9990 /] /subsystem=modcluster/mod-cluster-config=configuration:read-resource
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "success",
+
+
+
+
+    "result" =&gt; {
+
+
+
+
+        "advertise" =&gt; false,
+
+
+
+
+        "advertise-security-key" =&gt; undefined,
+
+
+
+
+        "advertise-socket" =&gt; undefined,
+
+
+
+
+

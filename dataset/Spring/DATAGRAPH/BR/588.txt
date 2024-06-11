@@ -1,0 +1,3 @@
+Relationship deletion problems
+Deleting direct relationships (i.e. not mediated via a RelationshipEntity) in 1-&gt;many scenarios only works correctly if a certain path is followed during the entity graph mapping. If a different path is followed, it does not work. The path that is followed is entirely dependent on JVM internals, and cannot be controlled by code.
+Further investigation shows that even when it does work, its because it gets lucky...

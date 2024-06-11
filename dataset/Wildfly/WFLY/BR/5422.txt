@@ -1,0 +1,22 @@
+SSO is not destroyed after session timeout period of <distributable/> app.
+Using &lt;distributable/&gt; application cause SSO doesnt destroy after session timeout period. Base on [1], there is still active session, what is probably cause that SSO is not destroyed.
+Setting similar in EAP6 requires user to login after session timeout period.
+Setting priority to critical because of regression with security impacts.
+[1]
+[standalone@localhost:9990 /] /deployment=secured-webapp.war/subsystem=undertow:read-attribute(name=active-sessions)
+{
+
+    "outcome" =&gt; "success",
+
+    "result" =&gt; 0
+
+}
+[2]
+[standalone@localhost:9990 /] /deployment=secured-webapp.war/subsystem=undertow:read-attribute(name=active-sessions)
+{
+
+    "outcome" =&gt; "success",
+
+    "result" =&gt; 1
+
+}

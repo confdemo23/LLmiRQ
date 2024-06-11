@@ -1,0 +1,2 @@
+FileSystemPathArgument doesn&apos;t translate paths in getValue(args, required)
+FileSystemPathArgument uses its OS-specific tab-completer to resolve absolute paths in its getValue(args) method but not in getValue(args, required).

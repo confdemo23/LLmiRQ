@@ -1,0 +1,3 @@
+Frequent failures in CommandDispatcherTestCase
+Test is failing regularly. See http://lightning.mw.lab.eng.bos.redhat.com/project.html?projectId=WF&amp;testNameId=6046695851152993698&amp;tab=testDetails
+I&amp;apos;m going to @Ignore it.

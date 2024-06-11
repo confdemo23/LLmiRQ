@@ -1,0 +1,122 @@
+Deploying a 2nd WAR file gives VFS000017 for resteasy-spring module
+
+Download the nightly from https://ci.jboss.org/hudson/job/WildFly-latest-master/934/
+Start up in standalone mode
+Have 2 WAR files, and copy each individually into .../standalone/deployments/
+Observe that the 2nd one will always fail.
+
+Sample trace:
+
+
+
+
+
+
+2014-02-05 18:02:17,346 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-4) MSC000001: Failed to start service jboss.deployment.unit."two.war".DEPENDENCIES: org.jboss.msc.service.StartException in service jboss.deployment.unit."two.war".DEPENDENCIES: JBAS018733: Failed to process phase DEPENDENCIES of deployment "two.war"
+
+
+
+
+        at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:166) [wildfly-server-8.0.0.Final-SNAPSHOT.jar:8.0.0.Final-SNAPSHOT]
+
+
+
+
+        at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948) [jboss-msc-1.2.0.Final.jar:1.2.0.Final]
+
+
+
+
+        at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881) [jboss-msc-1.2.0.Final.jar:1.2.0.Final]
+
+
+
+
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [rt.jar:1.8.0]
+
+
+
+
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [rt.jar:1.8.0]
+
+
+
+
+        at java.lang.Thread.run(Thread.java:744) [rt.jar:1.8.0]
+
+
+
+
+Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: java.io.IOException: VFS000017: Filesystem already mounted at mount point ""/opt/jboss/wildfly-8.0.0.Final-SNAPSHOT/modules/system/layers/base/org/jboss/resteasy/resteasy-spring/main/bundled/resteasy-spring.jar""
+
+
+
+
+        at org.jboss.as.jaxrs.deployment.JaxrsSpringProcessor.deploy(JaxrsSpringProcessor.java:126)
+
+
+
+
+        at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:159) [wildfly-server-8.0.0.Final-SNAPSHOT.jar:8.0.0.Final-SNAPSHOT]
+
+
+
+
+        ... 5 more
+
+
+
+
+Caused by: java.io.IOException: VFS000017: Filesystem already mounted at mount point ""/opt/jboss/wildfly-8.0.0.Final-SNAPSHOT/modules/system/layers/base/org/jboss/resteasy/resteasy-spring/main/bundled/resteasy-spring.jar""
+
+
+
+
+        at org.jboss.vfs.VFS.mount(VFS.java:127)
+
+
+
+
+        at org.jboss.vfs.VFS.doMount(VFS.java:336)
+
+
+
+
+        at org.jboss.vfs.VFS.mountZip(VFS.java:360)
+
+
+
+
+        at org.jboss.as.jaxrs.deployment.JaxrsSpringProcessor.deploy(JaxrsSpringProcessor.java:119)
+
+
+
+
+        ... 6 more
+
+
+
+
+
+
+
+
+
+2014-02-05 18:02:17,349 ERROR [org.jboss.as.controller.management-operation] (DeploymentScanner-threads - 1) JBAS014613: Operation ("deploy") failed - address: ([("deployment" =&gt; "two.war")]) - failure description: {"JBAS014671: Failed services" =&gt; {"jboss.deployment.unit.\"two.war\".DEPENDENCIES" =&gt; "org.jboss.msc.service.StartException in service jboss.deployment.unit.\"two.war\".DEPENDENCIES: JBAS018733: Failed to process phase DEPENDENCIES of deployment \"two.war\"
+
+
+
+
+    Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: java.io.IOException: VFS000017: Filesystem already mounted at mount point \"\"/opt/jboss/wildfly-8.0.0.Final-SNAPSHOT/modules/system/layers/base/org/jboss/resteasy/resteasy-spring/main/bundled/resteasy-spring.jar\"\"
+
+
+
+
+    Caused by: java.io.IOException: VFS000017: Filesystem already mounted at mount point \"\"/opt/jboss/wildfly-8.0.0.Final-SNAPSHOT/modules/system/layers/base/org/jboss/resteasy/resteasy-spring/main/bundled/resteasy-spring.jar\"\""}}
+
+
+
+
+
+
+A stackoverflow poster appears to have the same problem: http://stackoverflow.com/questions/21565734/resteasy-spring-module-in-jboss-wildfly-8

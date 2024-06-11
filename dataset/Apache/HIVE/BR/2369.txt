@@ -1,0 +1,9 @@
+Minor typo in error message in HiveConnection.java (JDBC)
+There is a minor typo issue in HiveConnection.java (jdbc) :
+
+throw new SQLException("Could not establish connecton to "
+
+            + uri + ": " + e.getMessage(), "08S01");
+
+It seems like there&amp;apos;s a "i" missing.
+I know it&amp;apos;s a very minor typo but I report it anyway. I won&amp;apos;t attach a patch because it would be too long for me to SVN checkout just for 1 letter.

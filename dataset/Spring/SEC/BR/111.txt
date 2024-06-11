@@ -1,0 +1,3 @@
+ContextPropagatingRemoteInvocation fails to reset the context if an exception is thrown during the invocation
+The context is normally emptied after the invocation but this isn&amp;apos;t done if an exception occurs. So the same context could potentially be used for another call if a thread pool is in use.
+http://acegisecurity.sourceforge.net/multiproject/acegi-security/xref/org/acegisecurity/context/rmi/ContextPropagatingRemoteInvocation.html#120

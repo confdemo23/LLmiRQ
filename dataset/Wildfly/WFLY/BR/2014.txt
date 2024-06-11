@@ -1,0 +1,5 @@
+Intermittent failures in WSTestCase.testManagementDescription
+This pops up quite frequently for a long time now (weeks or months):
+https://github.com/wildfly/wildfly/pull/5009#issuecomment-23898664
+I&amp;apos;m going to send a PR to @Ignore the test.
+Also, IMHO this test method doesn&amp;apos;t belong in smoke.

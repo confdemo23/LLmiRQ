@@ -1,0 +1,2 @@
+There is no way to display success message(s).
+There is no way to display success message(s) like struts&amp;apos; ActionMessage. Spring should provide Messages inteface in a similar way of Errors and related tag libraries.

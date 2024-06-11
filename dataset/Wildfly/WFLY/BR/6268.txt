@@ -1,0 +1,2 @@
+There is no validation of some of messaging server attributes
+There is no validation of some attributes of messaging provider. Setting of these attributes to non valid value causes an error during next reload. Some of these attributes are: journal-file-size or journal-compact-percentage.

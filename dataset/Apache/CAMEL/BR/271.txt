@@ -1,0 +1,15 @@
+CxfEndpointBeanDefinitionParser throws a ClassCastException when definining inner list elements in spring configuration
+In the CxfEndpointBeanDefinitionParser, the list elements being read are cast to com.sun.xml.bind.v2.schemagen.xmlschema.List class which is never true...
+Why don&amp;apos;t we just leave it as a object or atleast cast it to a java.util.List?
+For getting the error just add the following configuration to a cxf endpoint:
+  &lt;cxf:cxfEndpoint id="toEndpoint1" 
+                   address="http://localhost:9091/GreeterContext/GreeterPort" 
+                   serviceClass="demo.router.Greeter"&gt;
+      &lt;cxf:features&gt;
+          &lt;cxfcore:logging/&gt;
+      &lt;/cxf:features&gt;
+  &lt;/cxf:cxfEndpoint&gt;
+cxfcore points to the "http://cxf.apache.org/core" namespace.
+I have attached a patch for this problem &amp; would appreciate if someone applied it.
+Thanks
+Balaji

@@ -1,0 +1,2 @@
+The OSGiIntegrationSpringTest&apos;s setup method is called twice
+After checking the @Before annotation&amp;apos;s java doc, you will find that the methods which are annotated with @Before will be called even it&amp;apos;s in the superclasses.

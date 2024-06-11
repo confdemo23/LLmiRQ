@@ -1,0 +1,5 @@
+approval-handler-ref not being parsed correctly in OAuth2ProviderBeanDefinitionParser
+The attribute "approval-handler-ref" in the &lt;oauth:verification-code&gt; tag is not being parsed correctly in OAuth2ProviderBeanDefinitionParser due to a bug in the following lines:
+String approvalHandlerRef = verificationCodeElement == null ? null : verificationCodeElement.getAttribute("approval-handler-ref");
+String verificationCodeRedirectStrategyRef = verificationCodeElement == null ? null : verificationCodeElement.getAttribute("approval-handler-ref");
+The second line should be looking for the attribute "redirect-strategy-ref", this is most likely just a copy and paste error.

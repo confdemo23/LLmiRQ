@@ -1,0 +1,2 @@
+Add tracing to ReplicationSource and enable it in tests
+We used to have a lot of logging in ReplicationSource but most of it went away, but debugging the big replication tests is still pretty hard. I think we should add that logging back but at the TRACE level, and enable it only for the unit tests.

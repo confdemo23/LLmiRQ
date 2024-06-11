@@ -1,0 +1,115 @@
+StackOverflowError when performing Spring-JS calls
+When executing Spring-Javascript calls, I&amp;apos;m receiving a StackOverflowError:
+java.lang.StackOverflowError
+	at java.util.HashMap.put(HashMap.java:372)
+	at org.springframework.js.ajax.tiles2.AjaxTilesView.flattenAttributeMap(AjaxTilesView.java:126)
+	at org.springframework.js.ajax.tiles2.AjaxTilesView.flattenAttributeMap(AjaxTilesView.java:128)
+	at org.springframework.js.ajax.tiles2.AjaxTilesView.flattenAttributeMap(AjaxTilesView.java:128)
+	at org.springframework.js.ajax.tiles2.AjaxTilesView.flattenAttributeMap(AjaxTilesView.java:128)
+[...]
+This is my tiles definition:
+&lt;!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" "http://tiles.apache.org/dtds/tiles-config_2_0.dtd"&gt;
+&lt;tiles-definitions&gt;
+	&lt;definition name="abstractDefinition"&gt;
+		&lt;put-attribute name="notnull"  value="notnull" /&gt;
+		&lt;put-attribute name="bodyOnLoad"  value="" /&gt;
+	&lt;/definition&gt;
+	&lt;!-- The minimized layout for users which aren&amp;apos;t logged in --&gt;
+	&lt;definition name="simplePageLayout" extends="abstractDefinition" template="/WEB-INF/jsp/views/simplePageLayout.jsp"&gt;
+		&lt;put-attribute name="viewId" type="string" value="not defined!!"/&gt;
+		&lt;put-attribute name="header" value="/WEB-INF/jsp/fragments/header.jsp"/&gt;
+		&lt;put-attribute name="content" value=""/&gt;
+		&lt;put-attribute name="footer" value="/WEB-INF/jsp/fragments/footer.jsp"/&gt;
+		&lt;put-list-attribute name="cssDefinitions"&gt;
+    		&lt;add-attribute type="string" value="/stylesheets/design.css"/&gt;
+  		&lt;/put-list-attribute&gt;
+  		&lt;put-list-attribute name="javascripts"&gt;
+  			&lt;add-attribute type="string" value="/resources/spring/Spring.js"/&gt;
+  			&lt;add-attribute type="string" value="/resources/spring/Spring-Dojo.js"/&gt;
+    		&lt;add-attribute type="string" value="/js/jquery.js"/&gt;
+    		&lt;add-attribute type="string" value="/js/custom.js"/&gt;
+  		&lt;/put-list-attribute&gt;
+	&lt;/definition&gt;
+	&lt;!-- The default page layout which is extended for each view --&gt;
+	&lt;definition name="defaultPageLayout" extends="abstractDefinition" template="/WEB-INF/jsp/views/defaultPageLayout.jsp"&gt;
+		&lt;put-attribute name="viewId" type="string" value="not defined!!"/&gt;
+		&lt;put-attribute name="header" value="/WEB-INF/jsp/fragments/header.jsp"/&gt;
+		&lt;put-attribute name="leftColumn" value="leftColumn"/&gt;
+		&lt;put-attribute name="breadcrumb" value=""/&gt;
+		&lt;put-attribute name="content" value=""/&gt;
+		&lt;put-attribute name="rightColumn" value="rightColumn" /&gt;
+		&lt;put-attribute name="footer" value="/WEB-INF/jsp/fragments/footer.jsp"/&gt;
+		&lt;put-list-attribute name="cssDefinitions"&gt;
+    		&lt;add-attribute type="string" value="/resources/dijit/themes/dijit.css"/&gt;
+    		&lt;add-attribute type="string" value="/stylesheets/design.css"/&gt;
+  		&lt;/put-list-attribute&gt;
+  		&lt;put-list-attribute name="javascripts"&gt;
+  			&lt;add-attribute type="string" value="/resources/spring/Spring.js"/&gt;
+  			&lt;add-attribute type="string" value="/resources/spring/Spring-Dojo.js"/&gt;
+    		&lt;add-attribute type="string" value="/js/jquery.js"/&gt;
+    		&lt;add-attribute type="string" value="/js/custom.js"/&gt;
+  		&lt;/put-list-attribute&gt;
+	&lt;/definition&gt;
+	&lt;!-- Fragments --&gt;
+	&lt;definition name="leftColumn" extends="abstractDefinition" template="/WEB-INF/jsp/fragments/leftColumn.jsp"&gt;
+	&lt;/definition&gt;
+	&lt;definition name="rightColumn" extends="abstractDefinition" template="/WEB-INF/jsp/fragments/rightColumn.jsp"&gt;
+		&lt;put-attribute name="welcome" value="/WEB-INF/jsp/fragments/welcome.jsp"/&gt;
+		&lt;put-attribute name="jobData" value="/WEB-INF/jsp/fragments/jobData.jsp"/&gt;
+		&lt;put-attribute name="userActions" value="/WEB-INF/jsp/fragments/userActions.jsp"/&gt;
+		&lt;put-attribute name="shoppingCart" value="/WEB-INF/jsp/fragments/shoppingCart.jsp"/&gt;
+	&lt;/definition&gt;
+	&lt;!-- Views  --&gt;
+	&lt;definition name="securityTest" extends="simplePageLayout"&gt;
+		&lt;put-attribute name="viewId" type="string"  value="securityTest"/&gt;
+    	&lt;put-attribute name="title" type="string" value="AXI - Login" /&gt;
+    	&lt;put-attribute name="content" value="/WEB-INF/jsp/views/securityTest.jsp" /&gt;
+	&lt;/definition&gt;
+	&lt;definition name="login" extends="simplePageLayout"&gt;
+		&lt;put-attribute name="viewId" type="string"  value="login"/&gt;
+		&lt;!--  put-attribute name="bodyOnLoad"  value="onload=&amp;apos;autologinFunction()&amp;apos;" / --&gt;
+    	&lt;put-attribute name="title" type="string" value="AXI - Login" /&gt;
+    	&lt;put-attribute name="content" value="/WEB-INF/jsp/views/login.jsp" /&gt;
+	&lt;/definition&gt;
+	&lt;definition name="accountSelection" extends="simplePageLayout"&gt;
+		&lt;put-attribute name="viewId" type="string"  value="accountSelection"/&gt;
+		&lt;!--  put-attribute name="bodyOnLoad"  value="onload=&amp;apos;autologinFunction()&amp;apos;" / --&gt;
+    	&lt;put-attribute name="title" type="string" value="AXI - Select your account" /&gt;
+    	&lt;put-attribute name="content" value="/WEB-INF/jsp/views/accountSelection.jsp" /&gt;
+	&lt;/definition&gt;
+	&lt;definition name="logout" extends="simplePageLayout"&gt;
+		&lt;put-attribute name="viewId" type="string"  value="logout"/&gt;
+    	&lt;put-attribute name="title" type="string" value="AXI - Logout" /&gt;
+    	&lt;put-attribute name="content" value="/WEB-INF/jsp/views/logout.jsp" /&gt;
+	&lt;/definition&gt;
+	&lt;definition name="home" extends="defaultPageLayout"&gt;
+		&lt;put-attribute name="viewId" type="string"  value="home"/&gt;
+    	&lt;put-attribute name="title" type="string" value="AXI Home." /&gt;
+    	&lt;put-attribute name="content" value="/WEB-INF/jsp/views/home.jsp" /&gt;
+    	&lt;put-attribute name="breadcrumb" value="/WEB-INF/jsp/fragments/breadcrumb.jsp"/&gt;
+	&lt;/definition&gt;
+	&lt;definition name="productOverview" extends="defaultPageLayout"&gt;
+		&lt;put-attribute name="viewId" type="string"  value="productOverview"/&gt;
+    	&lt;put-attribute name="title" type="string" value="This is productOverview" /&gt;
+    	&lt;put-attribute name="content" value="/WEB-INF/jsp/views/productOverview.jsp" /&gt;
+    	&lt;put-attribute name="breadcrumb" value="/WEB-INF/jsp/fragments/breadcrumb.jsp"/&gt;
+	&lt;/definition&gt;
+	&lt;definition name="serviceOverview" extends="defaultPageLayout"&gt;
+		&lt;put-attribute name="viewId" type="string"  value="serviceOverview"/&gt;
+    	&lt;put-attribute name="title" type="string" value="This is productOverview" /&gt;
+    	&lt;put-attribute name="content" value="/WEB-INF/jsp/views/serviceOverview.jsp" /&gt;
+    	&lt;put-attribute name="breadcrumb" value="/WEB-INF/jsp/fragments/breadcrumb.jsp"/&gt;
+	&lt;/definition&gt;
+	&lt;definition name="cart" extends="defaultPageLayout"&gt;
+		&lt;put-attribute name="title" type="string" value="This is the shopping cart"/&gt;
+    	&lt;put-attribute name="content" value="/WEB-INF/jsp/views/cart.jsp" /&gt;
+    	&lt;put-attribute name="breadcrumb" value="/WEB-INF/jsp/fragments/breadcrumb.jsp"/&gt;
+	&lt;/definition&gt;
+	&lt;definition name="searchResult" extends="defaultPageLayout"&gt;
+		&lt;put-attribute name="viewId" type="string"  value="searchResult"/&gt;
+		&lt;put-attribute name="title" type="string" value="Suchergebnis" /&gt;
+		&lt;put-attribute name="content" value="/WEB-INF/jsp/views/searchResult.jsp" /&gt;
+		&lt;put-attribute name="breadcrumb" value="" /&gt;
+	&lt;/definition&gt;
+&lt;/tiles-definitions&gt;
+Can you reproduce this error?

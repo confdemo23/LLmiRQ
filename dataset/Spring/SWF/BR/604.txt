@@ -1,0 +1,4 @@
+ResourceServlet allows http access to sensitive files
+The ResourceServlet allows access to files that should be protected.
+http://richweb.springframework.org/swf-booking-faces/resources/WEB-INF/web.xml
+Access should be denied to WEB-INF or made configurable.

@@ -1,0 +1,46 @@
+JMSCorrelationID together with Oracle AQ
+In org.springframework.ws.transport.jms.JmsSenderConnection.onReceiveBeforeRead() the following code set the value of messageSelector:
+
+
+
+
+
+
+if (responseDestination instanceof TemporaryQueue || responseDestination instanceof TemporaryTopic) {
+
+
+
+
+       messageConsumer = session.createConsumer(responseDestination);
+
+
+
+
+} else {
+
+
+
+
+       String messageId = requestMessage.getJMSMessageID().replaceAll("&amp;apos;", "&amp;apos;&amp;apos;");
+
+
+
+
+       String messageSelector = "JMSCorrelationID = &amp;apos;" + messageId + "&amp;apos;";
+
+
+
+
+       messageConsumer = session.createConsumer(responseDestination, messageSelector);
+
+
+
+
+}
+
+
+
+
+
+
+If  I&amp;apos;m using Oracle AQ, expression (responseDestination instanceof TemporaryQueue) always returns true (See Oracle Streams Advanced Queuing Java API Reference http://docs.oracle.com/cd/B19306_01/server.102/b14291/oracle/jms/AQjmsDestination.html). Regarding this it is impossible to use JMSCorrelationID together with Oracle AQ. 

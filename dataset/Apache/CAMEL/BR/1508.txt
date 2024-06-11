@@ -1,0 +1,2 @@
+TypeConverter - Can find Object type converter even though there is a more specialized converter to use
+The code travels down the super to fast. And the code that checks for Object and inherited types in the end of the lookup code should be run as last resort.

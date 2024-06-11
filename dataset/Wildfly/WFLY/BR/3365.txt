@@ -1,0 +1,3 @@
+ClassLoader leak in org.jboss.el.cache.FactoryFinderCache
+After deploy/undeploy of a webapp that uses org.jboss.el, a reference to the webapp classloader remains in FactoryFinderCache.
+I currently work around this by calling FactoryFinderCache.clearClassLoader in a ServletContextListener. Uncommenting line 26 in LeakListener makes the reference go away on undeploy.

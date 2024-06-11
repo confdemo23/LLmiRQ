@@ -1,0 +1,16 @@
+RegionLocationFinder should return multiple servernames by top host
+Multiple RS can run on the same host. But in current RegionLocationFinder, mapHostNameToServerName map one host to only one server. This will make LocalityCostFunction get wrong locality about region.
+
+
+
+    // create a mapping from hostname to ServerName for fast lookup
+
+    HashMap&lt;String, ServerName&gt; hostToServerName = new HashMap&lt;String, ServerName&gt;();
+
+    for (ServerName sn : regionServers) {
+
+      hostToServerName.put(sn.getHostname(), sn);
+
+    }
+
+

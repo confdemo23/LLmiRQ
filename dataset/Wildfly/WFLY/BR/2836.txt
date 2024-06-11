@@ -1,0 +1,38 @@
+http-listener requires &apos;https&apos; socket-binding
+Using a http-listener without the redirect-socket attribute requires the configuration to define a socket-binding with name "https".
+The following error is produced attempting to configure wildfly without https:
+
+
+
+
+
+
+ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) JBAS014613: Operation ("add") failed - address: ([
+
+
+
+
+    ("subsystem" =&gt; "undertow"),
+
+
+
+
+    ("server" =&gt; "default-server"),
+
+
+
+
+    ("http-listener" =&gt; "default")
+
+
+
+
+]) - failure description: {"JBAS014771: Services with missing/unavailable dependencies" =&gt; ["jboss.undertow.listener.default is missing [jboss.binding.https]"]}
+
+
+
+
+
+
+I believe this constant is defined in ListenerResourceDefinition on line 80.
+If this is the desired behavior, the undertow schema should probably be updated to make redirect-socket required or at least document the dependency.

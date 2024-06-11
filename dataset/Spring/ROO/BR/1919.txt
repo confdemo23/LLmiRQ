@@ -1,0 +1,2 @@
+SolrOperations, JpaOperations and LoggingOperations not closing OutputStreams
+The above are working with java.util.Properties and failing to close the OutputStream after a Properties.write(..).

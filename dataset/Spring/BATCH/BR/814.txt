@@ -1,0 +1,2 @@
+JobRepository should not require Step or Job (only their names)
+It&amp;apos;s a matter of encapsulation.  The repository responsibility should not intersect with the configuration concerns of Step and Job (or their execution concerns).  THis change is necessary for efficient partitioning of a step (where the name might be overridden for partitions).

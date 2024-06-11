@@ -1,0 +1,72 @@
+Undocumented performance issue in the removeAll method in CollectionUtils
+This bug is analogous to https://issues.apache.org/jira/browse/COLLECTIONS-544
+The method removeAll in CollectionUtils is inefficient when the second parameter collection has a slow containment method.
+The following is the current implementation with its documentation:
+============================
+     /**
+
+Removes the elements in &lt;code&gt;remove&lt;/code&gt; from &lt;code&gt;collection&lt;/code&gt;. That is, this
+method returns a collection containing all the elements in &lt;code&gt;c&lt;/code&gt;
+that are not in &lt;code&gt;remove&lt;/code&gt;. The cardinality of an element &lt;code&gt;e&lt;/code&gt;
+in the returned collection is the same as the cardinality of &lt;code&gt;e&lt;/code&gt;
+in &lt;code&gt;collection&lt;/code&gt; unless &lt;code&gt;remove&lt;/code&gt; contains &lt;code&gt;e&lt;/code&gt;, in which
+case the cardinality is zero. This method is useful if you do not wish to modify
+the collection &lt;code&gt;c&lt;/code&gt; and thus cannot call &lt;code&gt;collection.removeAll(remove);&lt;/code&gt;.
+     *
+@param &lt;E&gt;  the type of object the 
+{@link Collection}
+ contains
+@param collection  the collection from which items are removed (in the returned collection)
+@param remove  the items to be removed from the returned &lt;code&gt;collection&lt;/code&gt;
+@return a &lt;code&gt;Collection&lt;/code&gt; containing all the elements of &lt;code&gt;collection&lt;/code&gt; except
+any elements that also occur in &lt;code&gt;remove&lt;/code&gt;.
+@throws NullPointerException if either parameter is null
+@since 4.0 (method existed in 3.2 but was completely broken)
+     */
+    public static &lt;E&gt; Collection&lt;E&gt; removeAll(final Collection&lt;E&gt; collection, final Collection&lt;?&gt; remove) 
+{
+        return ListUtils.removeAll(collection, remove);
+    }
+
+=======================================
+We can notice the inefficiency by looking at the removeAll method in ListUtils.
+The removeAll method from ListUtils is implemented and documented as follows:
+=======================================
+     /**
+
+Removes the elements in &lt;code&gt;remove&lt;/code&gt; from &lt;code&gt;collection&lt;/code&gt;. That is, this
+method returns a list containing all the elements in &lt;code&gt;collection&lt;/code&gt;
+that are not in &lt;code&gt;remove&lt;/code&gt;. The cardinality of an element &lt;code&gt;e&lt;/code&gt;
+in the returned collection is the same as the cardinality of &lt;code&gt;e&lt;/code&gt;
+in &lt;code&gt;collection&lt;/code&gt; unless &lt;code&gt;remove&lt;/code&gt; contains &lt;code&gt;e&lt;/code&gt;, in which
+case the cardinality is zero. This method is useful if you do not wish to modify
+&lt;code&gt;collection&lt;/code&gt; and thus cannot call &lt;code&gt;collection.removeAll(remove);&lt;/code&gt;.
+&lt;p&gt;
+This implementation iterates over &lt;code&gt;collection&lt;/code&gt;, checking each element in
+turn to see if it&amp;apos;s contained in &lt;code&gt;remove&lt;/code&gt;. If it&amp;apos;s not contained, it&amp;apos;s added
+to the returned list. As a consequence, it is advised to use a collection type for
+&lt;code&gt;remove&lt;/code&gt; that provides a fast (e.g. O(1)) implementation of
+{@link Collection#contains(Object)}
+.
+     *
+@param &lt;E&gt;  the element type
+@param collection  the collection from which items are removed (in the returned collection)
+@param remove  the items to be removed from the returned &lt;code&gt;collection&lt;/code&gt;
+@return a &lt;code&gt;List&lt;/code&gt; containing all the elements of &lt;code&gt;c&lt;/code&gt; except
+any elements that also occur in &lt;code&gt;remove&lt;/code&gt;.
+@throws NullPointerException if either parameter is null
+@since 3.2
+     */
+    public static &lt;E&gt; List&lt;E&gt; removeAll(final Collection&lt;E&gt; collection, final Collection&lt;?&gt; remove) {
+        final List&lt;E&gt; list = new ArrayList&lt;E&gt;();
+        for (final E obj : collection) 
+Unknown macro: {            if (!remove.contains(obj)) {
+                list.add(obj);
+            }        } 
+        return list;
+    }
+
+=======================================
+In the case of ListUtils:removeAll, the inefficiency is properly documented.
+Perhaps the disclaimer about potential inefficiencies depending on the type 
+of the parameter collection in ListUtils:removeAll should also be included in CollectionUtils:removeAll.

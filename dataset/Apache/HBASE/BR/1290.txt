@@ -1,0 +1,2 @@
+table.jsp either 500s out or doesnt list the regions
+The table.jsp page either 500 errors out if you are viewing a .META. or ROOT table, or for user tables it doesn&amp;apos;t list the regions.

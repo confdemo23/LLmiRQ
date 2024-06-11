@@ -1,0 +1,153 @@
+Removing non existent mail server with standard name (via CLI) doesn&apos;t fail even though it should
+Removing non-existent mail server (which is named smtp or pop3 or imap) via CLI operation doesn&amp;apos;t fail even though it should.
+
+
+
+
+
+
+/subsystem=mail/mail-session=java\:jboss\/mail\/test1439373303651:add(jndi-name=java\:jboss\/mail\/test1439373303651)
+
+
+
+
+{"outcome" =&gt; "success"}
+
+
+
+
+
+
+
+
+
+ /subsystem=mail/mail-session=java\:jboss\/mail\/test1439373303651:read-children-names(child-type=server)
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "success",
+
+
+
+
+    "result" =&gt; []
+
+
+
+
+}
+
+
+
+
+[standalone@localhost:9990 /] /subsystem=mail/mail-session=java\:jboss\/mail\/test1439373303651/server=smtp:remove
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "success",
+
+
+
+
+    "response-headers" =&gt; {
+
+
+
+
+        "operation-requires-reload" =&gt; true,
+
+
+
+
+        "process-state" =&gt; "reload-required"
+
+
+
+
+    }
+
+
+
+
+}
+
+
+
+
+
+
+Note: trying to remove non-existent server named e.g. xxx correctly fails see
+
+
+
+
+
+
+/subsystem=mail/mail-session=java\:jboss\/mail\/test1439373303651/server=xxx:remove
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "failed",
+
+
+
+
+    "failure-description" =&gt; "WFLYCTL0030: No resource definition is registered for address [
+
+
+
+
+    (\"subsystem\" =&gt; \"mail\"),
+
+
+
+
+    (\"mail-session\" =&gt; \"java:jboss/mail/test1439373303651\"),
+
+
+
+
+    (\"server\" =&gt; \"xxx\")
+
+
+
+
+]",
+
+
+
+
+    "rolled-back" =&gt; true,
+
+
+
+
+    "response-headers" =&gt; {"process-state" =&gt; "reload-required"}
+
+
+
+
+}
+
+
+
+
+

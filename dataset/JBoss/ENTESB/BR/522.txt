@@ -1,0 +1,83 @@
+Camel Master Component Ignoring parameters
+I have a test case using a simple route inside a fabric:
+
+
+
+
+
+
+  &lt;from uri="master:FD:timer://foo?period=30000"/&gt; or
+
+
+
+
+  &lt;from uri="master:FD:timer:foo?period=30000"/&gt;
+
+
+
+
+
+
+The route kicks off just fine, however, the period option is ignored. This route runs ever second. 
+Dropping the master syntax, I can see the timer work correctly, i.e
+
+
+
+
+
+
+&lt;!--from uri="timer://foo?period=30s"/--&gt;
+
+
+
+
+
+
+Test Case 
+1. Created new fabric - fabric:create --clean
+2. Changed the demo we shipped in 4.4.1 for osgi, attached as it just has one route in it now. 
+3. 2. Used FMC to add camel to root profile and create a new profile.  On the new profile added my bundle:
+mvn:org.apache.servicemix.examples/camel-osgi/4.4.1-fuse-08-15/
+4.  Output of camel-route:display  looks good:
+
+
+
+
+
+
+FuseESB:karaf@root&gt; camel:route-show route1 
+
+
+
+
+&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+
+
+
+
+&lt;route id="route1" xmlns="http://camel.apache.org/schema/spring"&gt;
+
+
+
+
+    &lt;from uri="master:FD:timer://foo?period=30000"/&gt;
+
+
+
+
+    &lt;bean ref="myTransform" method="transform" id="bean3"/&gt;
+
+
+
+
+    &lt;to uri="log:ExampleRouter" id="to3"/&gt;
+
+
+
+
+&lt;/route&gt;
+
+
+
+
+

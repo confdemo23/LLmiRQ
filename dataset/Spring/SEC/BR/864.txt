@@ -1,0 +1,2 @@
+Duplicate OpenID providers being registered by HttpSecurityBeanDefinitionParser
+There should only be the one. Currently a separate instance is being added to the AuthenticationManager and isn&amp;apos;t being injected with a UserDetailsService

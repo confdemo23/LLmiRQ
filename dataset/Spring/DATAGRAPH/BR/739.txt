@@ -1,0 +1,2 @@
+Allow mapping of entities in a @QueryResult
+@QueryResult does not support domain entities as fields and the user has to return either data either at the property level or the ID (which can subsequently be used to hydrate the entity).

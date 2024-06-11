@@ -1,0 +1,2 @@
+findAndModify method does not increment @Version field.
+DATAMONGO-811 addresses this issue for update methods. But findAndModify method still lacks the version increment.

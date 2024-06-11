@@ -1,0 +1,2 @@
+re-enable LZO using hadoop-gpl-compression library
+now that hadoop-gpl-compression has been released, we can add an optional run time dependency to allow LZO compression again.

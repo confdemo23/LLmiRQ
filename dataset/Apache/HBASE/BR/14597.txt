@@ -1,0 +1,2 @@
+Fix Groups cache in multi-threaded env
+UGI doesn&amp;apos;t hash based on the user as expected so since we have lots of ugi potentially created the cache doesn&amp;apos;t do it&amp;apos;s job.

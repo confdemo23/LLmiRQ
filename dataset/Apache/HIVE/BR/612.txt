@@ -1,0 +1,2 @@
+Problem in removing temp files in FileSinkOperator.jobClose
+We are doing double delete for files with _tmp prefix.

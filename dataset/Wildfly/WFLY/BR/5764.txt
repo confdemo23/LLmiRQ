@@ -1,0 +1,61 @@
+Remove mod_cluster excluded-context&apos;s default value with outdated contexts
+The list of current values is useless in the defualt configuration.
+
+
+
+
+
+
+"excluded-contexts" =&gt; "ROOT,invoker,jbossws,juddi,console"
+
+
+
+
+
+
+I am actually marking this as bug, because if you just want to use the root context, if you undefine the value, the default will be used which exludes root context.
+Trying a "" value, results in a failure.
+
+
+
+
+
+
+[standalone@localhost:9990 /] /subsystem=modcluster/mod-cluster-config=configuration/:write-attribute(name=excluded-contexts,value=""
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "failed",
+
+
+
+
+    "failure-description" =&gt; "WFLYCTL0113: &amp;apos;&amp;apos; is an invalid value for parameter excluded-contexts. Values must have a minimum length of 1 characters",
+
+
+
+
+    "rolled-back" =&gt; true,
+
+
+
+
+    "response-headers" =&gt; {"process-state" =&gt; "reload-required"}
+
+
+
+
+}
+
+
+
+
+
+
+This all comes from legacy stuff.

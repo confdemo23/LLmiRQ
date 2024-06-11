@@ -1,0 +1,2 @@
+id counter in MapJobInstanceDao should be declared static
+http://forum.springframework.org/showthread.php?t=60053

@@ -1,0 +1,3 @@
+Reenabling an application prevents it from deployement after a restart
+After disabling and then re-enabling the application, I don&amp;apos;t see Application.war.deployed; I still see Application.war.undeployed.
+That explains why it doesn&amp;apos;t get deployed after restart.

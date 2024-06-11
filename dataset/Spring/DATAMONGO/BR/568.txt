@@ -1,0 +1,4 @@
+MongoTemplate.find(...)  method causes Nullpointer if query parameter is null
+If the Query query parameter is null both find methods cause a NullPointer Exception.
+If query is null an IllegalArgument should be thrown.
+The Assert.notnull(query) is missing

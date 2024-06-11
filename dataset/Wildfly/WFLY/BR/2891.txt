@@ -1,0 +1,2 @@
+Not authorised write operation does not get audit logged if log-read-only="false"
+This is because audit logging uses the controller lock to find out if the model was a write operation. If rbac is enabled and an operation is not authorised, the error happens before the controller lock is taken. So if audit log log-read-only="false" the failed operation does not get logged.

@@ -1,0 +1,20 @@
+Command &apos;help&apos; and &apos;reference guide&apos; not found
+Following the last suggestion shown by the hint command 
+roo&gt; hint
+At this stage of the project, you have a few options:
+
+List all hint topics via &amp;apos;hint topics&amp;apos;
+Create more fields with &amp;apos;hint fields&amp;apos;
+Create more entities with &amp;apos;hint entities&amp;apos;
+Create a web controller with &amp;apos;hint controllers&amp;apos;
+Create dynamic finders with &amp;apos;hint finders&amp;apos;
+Setup your logging levels via &amp;apos;hint logging&amp;apos;
+Run tests via Maven (type &amp;apos;perform tests&amp;apos;)
+Build a deployment artifact (type &amp;apos;perform package&amp;apos;)
+Learn about Eclipse integration by typing &amp;apos;hint eclipse&amp;apos;
+Add support for Google Web Toolkit via &amp;apos;hint gwt&amp;apos;
+Discover all Roo commands by typing &amp;apos;help&amp;apos;
+
+One gets the following error message:
+roo&gt; help
+Command &amp;apos;help&amp;apos; not found (for assistance press TAB or type "hint" then hit ENTER) 

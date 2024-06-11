@@ -1,0 +1,4 @@
+Add facility to EhCacheFactorybean for registering event listeners
+With EhCach you can register event listeners with individual caches. Unfortunately, Spring&amp;apos;s EhCacheFactoryBean does not provide the facility for configuring these.
+We still have the option of configuring the caches in ehcache.xml (see http://ehcache.org/EhcacheUserGuide.html#id.s28), but I much prefer doing this via EhCacheFactoryBean. 
+I suggest being able to inject a List of CacheEventListenerFactory objects into EhCacheFactoryBean, which would then register them with the cache it creates.

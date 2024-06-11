@@ -1,0 +1,163 @@
+[Migration operation] wrong resource address in migration warning
+Say I take EAP 6.4 default standalone-full.xml and add a discovery group like this:
+
+
+
+
+
+
+&lt;subsystem xmlns="urn:jboss:domain:messaging:1.4"&gt;
+
+
+
+
+    &lt;hornetq-server&gt;
+
+
+
+
+        ...
+
+
+
+
+        &lt;discovery-groups&gt;
+
+
+
+
+             &lt;discovery-group name="my-discovery-group"&gt;
+
+
+
+
+                &lt;group-address&gt;224.0.1.105&lt;/group-address&gt;
+
+
+
+
+                &lt;group-port&gt;56789&lt;/group-port&gt;
+
+
+
+
+             &lt;/discovery-group&gt;
+
+
+
+
+        &lt;/discovery-groups&gt;
+
+
+
+
+        ...
+
+
+
+
+    &lt;/hornetq-server&gt;
+
+
+
+
+&lt;/subsystem&gt;
+
+
+
+
+
+
+This is the only change I make to the configuration file. Then I try to migrate the messaging subsystem, expecting a migration warning that I should use the socket-binding attribute.
+The warning appears indeed:
+
+
+
+
+
+
+[standalone@localhost:9999 /] /subsystem=messaging:migrate
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "success",
+
+
+
+
+    "result" =&gt; {"migration-warnings" =&gt; [
+
+
+
+
+        "WFLYMSG0084: Can not migrate attribute group-address from resource [
+
+
+
+
+    (\"subsystem\" =&gt; \"messaging-activemq\"),
+
+
+
+
+    (\"server\" =&gt; \"default\"),
+
+
+
+
+    (\"discovery-group\" =&gt; \"my-discovery-group\")
+
+
+
+
+]. Use instead the socket-binding attribute to configure this discovery-group.",
+
+
+
+
+        "WFLYMSG0084: Can not migrate attribute group-port from resource [
+
+
+
+
+    (\"subsystem\" =&gt; \"messaging-activemq\"),
+
+
+
+
+    (\"server\" =&gt; \"default\"),
+
+
+
+
+    (\"discovery-group\" =&gt; \"my-discovery-group\")
+
+
+
+
+]. Use instead the socket-binding attribute to configure this discovery-group."
+
+
+
+
+    ]}
+
+
+
+
+}
+
+
+
+
+
+
+But the resource addresses in the warning are wrong. They refer to the messaging-activemq subsystem, which clearly isn&amp;apos;t what I&amp;apos;m migrating from, it&amp;apos;s what I&amp;apos;m migrating to.
+I understand from the code that the DMR structure of the old subsystem model is very close to the structure of the new subsystem model, which is why these warning are produced on an already translated structure, but it generates wrong warnings.
+CC Miroslav Novak.

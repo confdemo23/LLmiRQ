@@ -1,0 +1,2 @@
+Change type compatibility methods to use PrimitiveCategory rather than TypeInfo
+The type compatibility methods in the FunctionRegistry (getCommonClass, implicitConvertable) compare TypeInfo objects directly when its doing its type compatibility logic. This won&amp;apos;t work as well with qualified types (varchar, char, decimal), because we will need different TypeInfo objects to represent varchar(5) and varchar(10), and the equality comparisons won&amp;apos;t work anymore. We can change this logic to look at the PrimitiveCategory for the TypeInfo instead.

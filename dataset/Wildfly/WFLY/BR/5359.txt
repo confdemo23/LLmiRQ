@@ -1,0 +1,2 @@
+[Migration operation] [Web to Undertow] Incorectly printed warning for unable to migrate resource in case of migrating ssl configuration
+When migrating https connector with SSL configuration, the SSL configuration is migrated as part of the https connector migration. Still there is migration warning that :migrate operation isn&amp;apos;t able to migrate the ssl configuration even though it was successfully migrated.

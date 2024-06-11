@@ -1,0 +1,23 @@
+roo + gwt + --activeRecord false
+I&amp;apos;m unable to compile a roo gwt project when using jpa repository instead of active record.
+It looks like the generated source code contains some ActiveRecord specific methods that don&amp;apos;t exist when 
+using "--activeRecord false" creating jpa entities (read: using jpa repository):
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;
+@RooGwtRequest("it.rootest.domain.Geeno")
+@ServiceName(value = "it.rootest.repository.GeenoRepository", locator ="it.rootest.server.locator.GwtServiceLocator")
+public interface GeenoRequest extends RequestContext {
+    abstract Request&lt;java.lang.Long&gt; count();
+    abstract Request&lt;java.util.List&lt;it.rootest.gwt.proxy.GeenoProxy&gt;&gt; findAll();
+    abstract Request&lt;java.util.List&lt;it.rootest.gwt.proxy.GeenoProxy&gt;&gt; findEntries(int firstResult, int maxResults);
+    abstract Request&lt;it.rootest.gwt.proxy.GeenoProxy&gt; find(String id);
+    abstract Request&lt;java.lang.Void&gt; save(GeenoProxy proxy);
+    abstract Request&lt;java.lang.Void&gt; delete(GeenoProxy proxy);    
+}
+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+findEntries() method does not exist if you don&amp;apos;t use ActiveRecord. 
+save() method should be declared according to JpaRepository signature:
+    abstract Request&lt;it.rootest.gwt.proxy.GeenoProxy&gt; save(GeenoProxy proxy);
+and so on.
+Moreover &lt;MYMODEL&gt;_EditActivityWrapper_Roo_Gwt.java refer to methods like find&lt;MYMODEL&gt;Entries()
+which don&amp;apos;t exists when you&amp;apos;re not using ActiveRecord.
+I guess GWT + JpaRepository interaction is broken or I&amp;apos;m missing something.

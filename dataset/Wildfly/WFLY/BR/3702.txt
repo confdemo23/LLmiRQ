@@ -1,0 +1,2 @@
+RetryInvoker needs to be aware of transaction status
+RetryInvoker should not retry if a given operation is transactional.  If the operation fails - the status of the current transaction will be rollback-only, which will fail due to invalid transaction status if retried.

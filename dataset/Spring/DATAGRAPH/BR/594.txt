@@ -1,0 +1,3 @@
+Hydrating objects ignores relationship direction between objects of the same type.
+Reported by: shakeelsoogun@outlook.com
+Loading objects that contain objects of the same type does not seem to take into consideration the direction of the relationship when hydrating them, despite the direction being mentioned in the @Relationship annotation above the field (e.g. specifying only OUTGOING on a Person field within the Person class will also load Person&lt;-[:Like]-Person). This may also happen for other types with relationships going in both directions between them, but I have not had the need to test for this.

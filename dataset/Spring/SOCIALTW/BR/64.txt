@@ -1,0 +1,4 @@
+page size for searching users doesn&apos;t work
+page size for searching users doesn&amp;apos;t work , it always queries 20 entities regardless of the parameter. The problem is spring social twitter api execute the url "https://api.twitter.com/1.1/users/search.json?page=1&amp;per_page=1&amp;q=text"
+but the twitter url that should be executed is : "https://api.twitter.com/1.1/users/search.json?count=3&amp;page=1&amp;q=text". The problem is in the class UserTemplate.java the method - "public List&lt;TwitterProfile&gt; searchForUsers(String query, int page, int pageSize)" calls the method in "PagingUtils PagingUtils.buildPagingParametersWithPerPage(...)". It should call the method 
+"PagingUtils.buildPagingParametersWithCount (...)".

@@ -1,0 +1,1 @@
+Following up HIVE-12481, add retry for Zookeeper service discovery

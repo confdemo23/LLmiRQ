@@ -1,0 +1,22 @@
+There are unknown project codes in wildfly core
+ we see unknown project codes in wildfly-core:
+
+
+
+
+
+
+        &amp;apos;&lt;&lt;none&gt;&gt;&amp;apos; - &amp;apos;version/src/main/java/org/jboss/as/version/UsageMessages.java&amp;apos;
+
+
+
+
+        &amp;apos;N/A&amp;apos; - &amp;apos;core-security/implementation/src/main/java/org/jboss/as/core/security/CoreSecurityMessages.java&amp;apos;
+
+
+
+
+
+
+They should be changed to empty string.
+https://issues.jboss.org/browse/EAP7-44?focusedCommentId=13170957&amp;page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-13170957

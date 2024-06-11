@@ -1,0 +1,1 @@
+Fix bridge support for large messages

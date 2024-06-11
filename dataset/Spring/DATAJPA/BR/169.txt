@@ -1,0 +1,101 @@
+JPA Repository can get typing of @Query annotated findXXX methods wrong
+If I have an entity with a getter containing a set (of itself in this case - it&amp;apos;s a tree structure):
+
+
+
+
+
+
+    @ManyToMany(fetch=FetchType.EAGER)
+
+
+
+
+    @JoinTable(
+
+
+
+
+        name="ancestors",
+
+
+
+
+        joinColumns=@JoinColumn(name="entity_id"),
+
+
+
+
+        inverseJoinColumns=@JoinColumn(name="entity_ancestor_id")
+
+
+
+
+    )
+
+
+
+
+    public Set&lt;TreeEntity&gt; getAncestors() {
+
+
+
+
+        return ancestors;
+
+
+
+
+    }
+
+
+
+
+
+
+and I have a method on my repository:
+
+
+
+
+
+
+    @Query("select " +
+
+
+
+
+            "    distinct entity.ancestors " +
+
+
+
+
+            "from " +
+
+
+
+
+            "    example.data.TreeEntity entity " +
+
+
+
+
+            "where " +
+
+
+
+
+            "    entity.id = :entityId")
+
+
+
+
+    public List&lt;TreeEntity&gt; findAncestors(@Param("entityId") Long groupId);
+
+
+
+
+
+
+then in 1.1.0 RC1, when the query is parsed, it believes that the signature of the method should return List&lt;Set&lt;TreeEntity&gt;&gt;, when in fact the query will really return a List&lt;Group&gt;. 1.0.3 got this correct, and so it&amp;apos;s a regression.
+I attach a very basic Maven project which shows the problem. Changing the version back to 1.0.3 gets the query typing correct.

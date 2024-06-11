@@ -1,0 +1,2 @@
+Failing to set manager password on DefaultInitialDirContextFactory causes NullPointerException
+The password should be set to some default value in the class, e.g. "manager_password_not_set"

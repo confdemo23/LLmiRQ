@@ -1,0 +1,9 @@
+XMLConfiguration doesn&apos;t seem to be preserving whitespace for the current node where xml:space="preserve" is set.
+if I give this in the configuration:
+&lt;test xml:space="preserve"&gt; a b c &lt;/test&gt;
+It does not seem to preserve the whitespace on the current node.  However, if I do
+&lt;space xml:space="preserve&gt;
+   &lt;test&gt; a b c &lt;/test&gt;
+&lt;/space&gt;
+it does preserve it. I would like to be able to turn on whitespace preservation on the current node without changing the path to my node.
+I tested my values by printing out values retrieved from getList() method.

@@ -1,0 +1,5 @@
+Username and password for remote server
+
+Add support for two additional constructor parameters
+Add support for extracting both from the auth information of the URL
+

@@ -1,0 +1,12 @@
+WAR_BUNDLES_JSF_IMPL does not work for EAR files
+Hello Learned and Astonishly Charming JBoss Associates,
+I&amp;apos;ve been trying for quite some time now to get my successfully deployed WAR to become a successfully deployed EAR.  Much to my chagrin, this has been my white whale, and it just might kill me.
+In a nutshell, the attached EAR file contains a WAR.  If you deploy that WAR file everything works smooth as butter.  As soon as you put it in an EAR format however, you get the following well placed riposte:
+19:33:57,513 WARN  [org.jboss.as.jsf] (MSC service thread 1-2) JBAS012603: Unknown JSF version &amp;apos;WAR_BUNDLES_JSF_IMPL&amp;apos;.  Default version &amp;apos;main&amp;apos; will be used instead.
+Not cool, JBoss.  Not cool.
+I&amp;apos;ve tried moving the jars to different places in the WAR/EAR.  I&amp;apos;ve tried using Manifest files.  I&amp;apos;ve tried colorfully adorned four letter expletives.  JBoss is unmoved.  Does anyone know why JBoss is rejecting my JSF advances?  Can the relationship be fixed?
+Using EAP 6.1 which I believe is equivalent to AS 7.2.
+Thanks in advance,
+Will
+PS:  The forum didn&amp;apos;t like me attaching a 1.8 meg file so here&amp;apos;s a download link instead
+http://www.williverstravels.com/JDev/Forums/Threads/230850/TestEar.ear

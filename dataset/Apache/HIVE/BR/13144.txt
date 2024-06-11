@@ -1,0 +1,2 @@
+HS2 can leak ZK ACL objects when curator retries to create the persistent ephemeral node
+When the node gets deleted from ZK due to connection loss and curator tries to recreate the node, it might leak ZK ACL.

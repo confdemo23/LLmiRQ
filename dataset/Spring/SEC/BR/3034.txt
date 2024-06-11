@@ -1,0 +1,3 @@
+AclPermissionEvaluator.resolvePermission fails with Turkish Locale
+When a permission name like "write" is passed into AclPermissionEvaluator.resolvePermission method, it first tries to resolve it as is. If not, it then calls permString.toUpperCase() and tries so. However, lowercase "write" is changed into "WRTE" (I with dotted above) when system&amp;apos;s default Locale is tr_TR. Hence, it is not resolved among BasePermissions.
+Obvious solution is calling permString.toUpperCase() with Locale.US input parameter.

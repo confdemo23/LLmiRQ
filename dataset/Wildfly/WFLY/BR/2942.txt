@@ -1,0 +1,2 @@
+Unclear error message when resolving a conflict using the CLI
+The error message when using --override or --preserve without any argument should be more clear.

@@ -1,0 +1,3 @@
+error in select disinct
+ from T a select distinct a.* where a.ds=&amp;apos;2010-05-01&amp;apos;;
+gets a error

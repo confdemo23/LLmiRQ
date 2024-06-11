@@ -1,0 +1,3 @@
+TCCL in constructor of MDB is ModuleClassLoader for Module "org.hornetq.ra:main"
+The spec mandates that the TCCL be the application&amp;apos;s classloader when the component is invoked (even during construction), but I&amp;apos;m getting it as 
+TCCL in constructor of MDB is ModuleClassLoader for Module "org.hornetq.ra:main" from local module loader

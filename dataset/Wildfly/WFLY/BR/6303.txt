@@ -1,0 +1,139 @@
+RemotingLoginModuleTestCase fails with the latest IBM jdk 20160108_01(SR2 FP10)
+org.jboss.as.test.integration.security.loginmodules.RemotingLoginModuleTestCase starts failing with the latest IBM jdk.
+
+
+
+
+
+
+./integration-tests.sh clean test -Dmaven.repo.local=$REPO -Dts.noSmoke -Dts.basic -Dtest=RemotingLoginModuleTestCase
+
+
+
+
+Running org.jboss.as.test.integration.security.loginmodules.RemotingLoginModuleTestCase
+
+
+
+
+Tests run: 3, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.546 sec &lt;&lt;&lt; FAILURE! - in org.jboss.as.test.integration.security.loginmodules.RemotingLoginModuleTestCase
+
+
+
+
+testNotAuthorizedClient(org.jboss.as.test.integration.security.loginmodules.RemotingLoginModuleTestCase)  Time elapsed: 0.031 sec  &lt;&lt;&lt; ERROR!
+
+
+
+
+javax.naming.CommunicationException: Failed to connect to any server. Servers tried: [remote://127.0.0.1:14447 (javax.net.ssl.SSLException: Received fatal alert: handshake_failure)]
+
+
+
+
+        at org.jboss.naming.remote.client.HaRemoteNamingStore.failOverSequence(HaRemoteNamingStore.java:244)
+
+
+
+
+        at org.jboss.naming.remote.client.HaRemoteNamingStore.namingStore(HaRemoteNamingStore.java:149)
+
+
+
+
+        at org.jboss.naming.remote.client.HaRemoteNamingStore.namingOperation(HaRemoteNamingStore.java:130)
+
+
+
+
+        at org.jboss.naming.remote.client.HaRemoteNamingStore.lookup(HaRemoteNamingStore.java:272)
+
+
+
+
+        at org.jboss.naming.remote.client.RemoteContext.lookupInternal(RemoteContext.java:104)
+
+
+
+
+        at org.jboss.naming.remote.client.RemoteContext.lookup(RemoteContext.java:93)
+
+
+
+
+        at org.jboss.naming.remote.client.RemoteContext.lookup(RemoteContext.java:146)
+
+
+
+
+        at javax.naming.InitialContext.lookup(InitialContext.java:428)
+
+
+
+
+        at org.jboss.as.test.integration.security.loginmodules.RemotingLoginModuleTestCase.testNotAuthorizedClient(RemotingLoginModuleTestCase.java:179)
+
+
+
+
+ 
+
+
+
+
+testAuthorizedClient(org.jboss.as.test.integration.security.loginmodules.RemotingLoginModuleTestCase)  Time elapsed: 0.026 sec  &lt;&lt;&lt; ERROR!
+
+
+
+
+javax.naming.CommunicationException: Failed to connect to any server. Servers tried: [remote://127.0.0.1:14447 (javax.net.ssl.SSLException: Received fatal alert: handshake_failure)]
+
+
+
+
+        at org.jboss.naming.remote.client.HaRemoteNamingStore.failOverSequence(HaRemoteNamingStore.java:244)
+
+
+
+
+        at org.jboss.naming.remote.client.HaRemoteNamingStore.namingStore(HaRemoteNamingStore.java:149)
+
+
+
+
+        at org.jboss.naming.remote.client.HaRemoteNamingStore.namingOperation(HaRemoteNamingStore.java:130)
+
+
+
+
+        at org.jboss.naming.remote.client.HaRemoteNamingStore.lookup(HaRemoteNamingStore.java:272)
+
+
+
+
+        at org.jboss.naming.remote.client.RemoteContext.lookupInternal(RemoteContext.java:104)
+
+
+
+
+        at org.jboss.naming.remote.client.RemoteContext.lookup(RemoteContext.java:93)
+
+
+
+
+        at org.jboss.naming.remote.client.RemoteContext.lookup(RemoteContext.java:146)
+
+
+
+
+        at javax.naming.InitialContext.lookup(InitialContext.java:428)
+
+
+
+
+        at org.jboss.as.test.integration.security.loginmodules.RemotingLoginModuleTestCase.testAuthorizedClient(RemotingLoginModuleTestCase.java:165)
+
+
+
+
+

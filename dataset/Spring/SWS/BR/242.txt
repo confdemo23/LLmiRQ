@@ -1,0 +1,36 @@
+Allow for custom ErrorHandler in PayloadValidatingInterceptor
+Validating a SOAP request or response with PayloadValidatingInterceptor or Jaxb2Marshaller fails when using MTOM.
+The spring-ws MTOM sample fails when PayloadValidatingInterceptor is added to the endpoint interceptor chain.
+Schema:
+    &lt;element name="SendRequest" type="tns:SendMessage"/&gt;
+    &lt;complexType name="SendMessage"&gt;
+       	&lt;sequence&gt;
+   		&lt;element name="sender" type="string"/&gt;
+   		&lt;element name="recipient" type="string"/&gt;
+            	&lt;element name="content" type="base64Binary" xmime:expectedContentTypes="/"/&gt;
+       	&lt;/sequence&gt;
+   &lt;/complexType&gt;
+SOAP request:
+&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mail="http://www.enovation.nl/ems/mailwebservice"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;mail:SendRequest&gt;
+         &lt;mail:sender&gt;1&lt;/mail:sender&gt;
+         &lt;mail:recipient&gt;2&lt;/mail:recipient&gt;
+         &lt;mail:content&gt;&lt;inc:Include xmlns:inc="http://www.w3.org/2004/08/xop/include" href="cid:768176637073"/&gt;&lt;/mail:content&gt;
+      &lt;/mail:SendRequest&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+SOAP response:
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+   &lt;SOAP-ENV:Header/&gt;
+   &lt;SOAP-ENV:Body&gt;
+      &lt;SOAP-ENV:Fault&gt;
+         &lt;faultcode&gt;SOAP-ENV:Client&lt;/faultcode&gt;
+         &lt;faultstring xml:lang="en"&gt;Validation error&lt;/faultstring&gt;
+         &lt;detail&gt;
+            &lt;spring-ws:ValidationError xmlns:spring-ws="http://springframework.org/spring-ws"&gt;cvc-type.3.1.2: Element &amp;apos;mail:content&amp;apos; is a simple type, so it must have no element information item [children].&lt;/spring-ws:ValidationError&gt;
+         &lt;/detail&gt;
+      &lt;/SOAP-ENV:Fault&gt;
+   &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;

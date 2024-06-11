@@ -1,0 +1,3 @@
+SchemaLocationsRewriteTestCase is checking implementation details
+Test case is currently checking implementation details, so it&amp;apos;s easy to brake it when implementation changes while still being correct.
+Specifically, the test case shouldn&amp;apos;t make any assumptions about the format of rewritten schema locations. Instead, it should only check that rewritten location is a retrievable URL.

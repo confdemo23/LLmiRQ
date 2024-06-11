@@ -1,0 +1,18 @@
+Periodic flusher only handles hbase:meta, not other system tables
+In HRegion.shouldFlush we have
+
+
+
+    long modifiedFlushCheckInterval = flushCheckInterval;
+
+    if (getRegionInfo().isMetaRegion() &amp;&amp;
+
+        getRegionInfo().getReplicaId() == HRegionInfo.DEFAULT_REPLICA_ID) {
+
+      modifiedFlushCheckInterval = META_CACHE_FLUSH_INTERVAL;
+
+    }
+
+
+
+That method is called by the PeriodicMemstoreFlusher thread, and prefers the hbase:meta only for faster flushing. It should be doing the same for other system tables. I suggest to use HRI.isSystemTable().

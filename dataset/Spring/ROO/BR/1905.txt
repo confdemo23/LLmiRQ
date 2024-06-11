@@ -1,0 +1,2 @@
+database.properties and VMforce config.properties files not written out to disk
+The database.properties and config.properties file in JpaOperationsImpl do not get written out to disk.

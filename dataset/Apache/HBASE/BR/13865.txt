@@ -1,0 +1,2 @@
+Increase the default value for hbase.hregion.memstore.block.multipler from 2 to 4 (part 2)
+Its 4 in the book and 2 in a current master. 

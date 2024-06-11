@@ -1,0 +1,2 @@
+Add support for the bulk operations introduced in MongoDB 2.6.
+Latest version of spring data mongodb have no support for the bulk operations introduced in MongoDB 2.6 and mongodb recommends using the new write protocols and new bulk api for bulk opertations.

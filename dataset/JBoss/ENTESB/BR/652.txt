@@ -1,0 +1,3 @@
+cxf-codefirst archetype has an error
+see 	ECLIPSE-885
+The package declaration inside OrderTest.java is hardcoded to "package camelinaction;" and not affected by package definition when creating the archetype.

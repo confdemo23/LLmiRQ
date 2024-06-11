@@ -1,0 +1,2 @@
+ejb-version in the metadata should be set to the "latest" ejb-jar xsd version if metadata is created solely from annotations
+If a user deployment does not have ejb-jar.xml with the ejb-version set and is based on annotations, then the metadata creators should set the ejb-version to the "latest" version of the ejb-jar xsd.

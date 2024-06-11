@@ -1,0 +1,14 @@
+Test failure TestMetaStoreMetrics.testConnections
+Looks like this test has been failing for the past 84 builds prior to
+https://builds.apache.org/job/PreCommit-HIVE-MASTER-Build/597/testReport/org.apache.hadoop.hive.metastore/TestMetaStoreMetrics/testConnections/
+org.apache.hadoop.hive.metastore.TestMetaStoreMetrics.testConnections
+Failing for the past 84 builds (Since #514 )
+Took 28 ms.
+Error Message
+expected:&lt;[1]&gt; but was:&lt;[2]&gt;
+Stacktrace
+org.junit.ComparisonFailure: expected:&lt;[1]&gt; but was:&lt;[2]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at org.apache.hadoop.hive.common.metrics.MetricsTestUtils.verifyMetricsJson(MetricsTestUtils.java:50)
+	at org.apache.hadoop.hive.metastore.TestMetaStoreMetrics.testConnections(TestMetaStoreMetrics.java:146)

@@ -1,0 +1,4 @@
+Messaging migration does not work in domain mode
+The :migrate operation of the legacy messaging subsystem does not work in domain mode. 
+The addresses returned by the describe handler starts with /subsystem while in domain mode, the subsystem configuration are under /profile=XXX
+The :migrate operation must prepend the operation parent address (EMPTY_ADDRESS in standalone mode, /profile=XXX in domain mode) for the operation to be successful.

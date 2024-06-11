@@ -1,0 +1,2 @@
+Refactor the GWT addon to support changes in GWT 2.1.1
+With the upcoming release of GWT 2.1.1 the addon needs to be updated to support the new release.

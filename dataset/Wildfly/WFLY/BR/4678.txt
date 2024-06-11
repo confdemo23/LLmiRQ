@@ -1,0 +1,174 @@
+IllegalStateException when accessing DistributableCache
+When making invocations on SFSBs in a cluster, the following exception arises:
+
+
+
+
+
+
+[0m[31m17:58:44,853 ERROR [org.infinispan.interceptors.InvocationContextInterceptor] (EJB default - 2) ISPN000136: Execution error: java.lang.IllegalStateException: Transaction DummyTransaction{xid=DummyXid{id=5}, status=3} is not in a valid state to be invoking cache operations on.
+
+
+
+
+        at org.infinispan.interceptors.TxInterceptor.enlist(TxInterceptor.java:389)
+
+
+
+
+        at org.infinispan.interceptors.TxInterceptor.enlistIfNeeded(TxInterceptor.java:351)
+
+
+
+
+        at org.infinispan.interceptors.TxInterceptor.enlistReadAndInvokeNext(TxInterceptor.java:345)
+
+
+
+
+        at org.infinispan.interceptors.TxInterceptor.visitGetKeyValueCommand(TxInterceptor.java:318)
+
+
+
+
+        at org.infinispan.commands.read.GetKeyValueCommand.acceptVisitor(GetKeyValueCommand.java:40)
+
+
+
+
+        at org.infinispan.interceptors.base.CommandInterceptor.invokeNextInterceptor(CommandInterceptor.java:97)
+
+
+
+
+        at org.infinispan.interceptors.base.CommandInterceptor.handleDefault(CommandInterceptor.java:111)
+
+
+
+
+        at org.infinispan.commands.AbstractVisitor.visitGetKeyValueCommand(AbstractVisitor.java:86)
+
+
+
+
+        at org.infinispan.commands.read.GetKeyValueCommand.acceptVisitor(GetKeyValueCommand.java:40)
+
+
+
+
+        at org.infinispan.interceptors.base.CommandInterceptor.invokeNextInterceptor(CommandInterceptor.java:97)
+
+
+
+
+        at org.infinispan.statetransfer.StateTransferInterceptor.handleTopologyAffectedCommand(StateTransferInterceptor.java:369)
+
+
+
+
+        at org.infinispan.statetransfer.StateTransferInterceptor.handleDefault(StateTransferInterceptor.java:354)
+
+
+
+
+        at org.infinispan.commands.AbstractVisitor.visitGetKeyValueCommand(AbstractVisitor.java:86)
+
+
+
+
+        at org.infinispan.commands.read.GetKeyValueCommand.acceptVisitor(GetKeyValueCommand.java:40)
+
+
+
+
+        at org.infinispan.interceptors.base.CommandInterceptor.invokeNextInterceptor(CommandInterceptor.java:97)
+
+
+
+
+        at org.infinispan.interceptors.CacheMgmtInterceptor.visitDataReadCommand(CacheMgmtInterceptor.java:103)
+
+
+
+
+        at org.infinispan.interceptors.CacheMgmtInterceptor.visitGetKeyValueCommand(CacheMgmtInterceptor.java:91)
+
+
+
+
+        at org.infinispan.commands.read.GetKeyValueCommand.acceptVisitor(GetKeyValueCommand.java:40)
+
+
+
+
+        at org.infinispan.interceptors.base.CommandInterceptor.invokeNextInterceptor(CommandInterceptor.java:97)
+
+
+
+
+        at org.infinispan.interceptors.InvocationContextInterceptor.handleAll(InvocationContextInterceptor.java:102)
+
+
+
+
+        at org.infinispan.interceptors.InvocationContextInterceptor.handleDefault(InvocationContextInterceptor.java:71)
+
+
+
+
+        at org.infinispan.commands.AbstractVisitor.visitGetKeyValueCommand(AbstractVisitor.java:86)
+
+
+
+
+        at org.infinispan.commands.read.GetKeyValueCommand.acceptVisitor(GetKeyValueCommand.java:40)
+
+
+
+
+        at org.infinispan.interceptors.InterceptorChain.invoke(InterceptorChain.java:336)
+
+
+
+
+        at org.infinispan.cache.impl.CacheImpl.get(CacheImpl.java:430)
+
+
+
+
+        at org.infinispan.cache.impl.DecoratedCache.get(DecoratedCache.java:427)
+
+
+
+
+        at org.infinispan.cache.impl.AbstractDelegatingCache.get(AbstractDelegatingCache.java:287)
+
+
+
+
+        at org.wildfly.clustering.ejb.infinispan.bean.InfinispanBeanFactory.findValue(InfinispanBeanFactory.java:88)
+
+
+
+
+        at org.wildfly.clustering.ejb.infinispan.bean.InfinispanBeanFactory.findValue(InfinispanBeanFactory.java:51)
+
+
+
+
+        at org.wildfly.clustering.ejb.infinispan.InfinispanBeanManager.findBean(InfinispanBeanManager.java:261)
+
+
+
+
+        at org.jboss.as.ejb3.cache.distributable.DistributableCache.get(DistributableCache.java:115)
+
+
+
+
+
+
+
+
+
+

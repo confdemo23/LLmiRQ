@@ -1,0 +1,3 @@
+Allow output serializations separators to be set for HDFS path as well.
+HIVE-3682 adds functionality for users to set serialization constants for &amp;apos;insert overwrite local directory&amp;apos;. The same functionality should be available for hdfs path as well. The workaround suggested is to create a table with required format and insert into the table, which enforces the users to know the schema of the result and create the table ahead. Though that works, it is good to have the functionality for loading into directory as well.
+I&amp;apos;m planning to add the same functionality in &amp;apos;insert overwrite directory&amp;apos; in this jira.

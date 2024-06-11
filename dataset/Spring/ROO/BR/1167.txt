@@ -1,0 +1,3 @@
+@Column unique and validator
+It would be nice to be able to put different columns as unique with JPA from ROO, and get validators placed which work along with @Valid.
+But it is rather easy even without an addon, I gathered a solution from the forums and documented it for my self at http://hatimonline.com/2010/08/04/spring-roo-and-spring-security-tutorial-0/

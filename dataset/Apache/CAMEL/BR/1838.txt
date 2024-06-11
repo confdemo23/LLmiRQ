@@ -1,0 +1,3 @@
+camel-ftp - Recover from lost connection issue
+See nabble
+http://www.nabble.com/FTP-Component-Network-Failure-Recovery-Problem-td24517828.html

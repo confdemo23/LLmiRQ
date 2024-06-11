@@ -1,0 +1,5 @@
+AS7BindingRegistry does not respect the SPI contract
+The implementation of AS7BindingRegistry#lookup always return null.
+This method is called by HornetQ when JNDI entries for its resources
+are updated using its own management API.
+We advise against using it in WildFly (and use WildFly own management API) but we must still respect the SPI contract for this method.

@@ -1,0 +1,50 @@
+WebExpressionVoter - supported secured object class
+It&amp;apos;s probably a typo - WebExpressionVoter has the following method:
+
+
+
+
+
+
+public boolean supports(Class&lt;?&gt; clazz) {
+
+
+
+
+    return clazz.isAssignableFrom(FilterInvocation.class);
+
+
+
+
+}
+
+
+
+
+
+
+I think it should be:
+
+
+
+
+
+
+public boolean supports(Class&lt;?&gt; clazz) {
+
+
+
+
+    return FilterInvocation.class.isAssignableFrom(clazz);
+
+
+
+
+}
+
+
+
+
+
+
+because WebExpressionVoter should support subclasses of FilterInvocation.

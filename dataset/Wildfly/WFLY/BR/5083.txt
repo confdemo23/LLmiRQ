@@ -1,0 +1,71 @@
+[Migration operation] group-address/group-port/local-bind-address/local-bind-port in broadcast-group are not migrated
+If broadcast group with local-bind-address,local-bind-port, group-address and group-port then those parameters are not migrated properly:
+For example HornetQ configuration:
+
+
+
+
+
+
+ &lt;broadcast-group name="groupA"&gt;
+
+
+
+
+                &lt;local-bind-address&gt;localhost&lt;/local-bind-address&gt;
+
+
+
+
+                &lt;local-bind-port&gt;12345&lt;/local-bind-port&gt;
+
+
+
+
+                &lt;group-address&gt;224.0.1.105&lt;/group-address&gt;
+
+
+
+
+                &lt;group-port&gt;23456&lt;/group-port&gt;
+
+
+
+
+                &lt;broadcast-period&gt;${broadcast.period:2500}&lt;/broadcast-period&gt;
+
+
+
+
+                &lt;connector-ref&gt;netty&lt;/connector-ref&gt;
+
+
+
+
+                &lt;connector-ref&gt;netty-throughput&lt;/connector-ref&gt;
+
+
+
+
+            &lt;/broadcast-group&gt;
+
+
+
+
+
+
+is migrated to Artemis like:
+
+
+
+
+
+
+                &lt;broadcast-group name="groupA" connectors="netty netty-throughput" broadcast-period="${broadcast.period:2500}"/&gt;
+
+
+
+
+
+
+With such a configuration server cannot be started. There is no warning pointing to this problem.

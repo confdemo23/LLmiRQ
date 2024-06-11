@@ -1,0 +1,4 @@
+camel-jetty can&apos;t deal with multiform data rightly
+You can&amp;apos;t get the inputStream from the attachment when camel-jetty handle the request of MultiPartForm.
+Here is the mail thread[1] which discusses about it.
+[1] http://old.nabble.com/Unsupported-data-type-exception-with-Jetty-component-tp28730373p28731758.html

@@ -1,0 +1,2 @@
+Controlled crash of regionserver not hosting meta/root leaves master in spinning state, regions not reassigned
+Testing for HBASE-867 uncovered some nastiness introduced from HBASE-1304 when a regionserver goes down.

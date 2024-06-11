@@ -1,0 +1,36 @@
+Missing Functionality: time to live and entry idle time on a local client region
+In Gemfire it is possible to set &lt;entry-idle-time&gt; and &lt;entry-time-to-live&gt; on a client&amp;apos;s region whereas in Spring Gemfire this functionality seems to be missing. 
+For example In gemfire, I can do the following for a client
+&lt;client-cache&gt;
+	&lt;pool name="client" subscription-enabled="true"&gt;
+		&lt;server host="localhost" port="40404" /&gt;
+	&lt;/pool&gt;
+	&lt;region name="exampleRegion"&gt;
+		&lt;region-attributes refid="CACHING_PROXY"&gt;
+		&lt;entry-idle-time&gt;
+			&lt;expiration-attributes timeout="10" action="destroy" /&gt;
+			&lt;/entry-idle-time&gt;
+		&lt;/region-attributes&gt;
+	&lt;/region&gt;
+&lt;/client-cache&gt;
+When I try to do the similar in Spring Gemfire, the line &lt;gfe:entry-tti timeout="100" action="DESTROY"/&gt;  doesnt seem to be supported by schema.
+  &lt;gfe:client-cache pool-name="client" /&gt;
+&lt;gfe:pool id="client" subscription-enabled="true"&gt;
+&lt;gfe:server host="localhost" port="40404" /&gt;
+&lt;/gfe:pool&gt;
+&lt;gfe:client-region id="Customer" shortcut="CACHING_PROXY"&gt;
+&lt;gfe:entry-tti timeout="100" action="DESTROY"/&gt; 
+&lt;/gfe:client-region&gt;
+&lt;/beans&gt;
+The line   &lt;gfe:entry-tti timeout="100" action="DESTROY"/&gt; is supported for Server cache. For example, the following works fine
+.
+.
+.
+  &lt;gfe:cache-server/&gt;
+    &lt;gfe:replicated-region id="Customer"&gt;
+        &lt;gfe:cache-listener&gt;
+            &lt;bean class="org.springframework.data.gemfire.examples.util.LoggingCacheListener"/&gt;
+        &lt;/gfe:cache-listener&gt;
+        &lt;gfe:entry-tti timeout="100" action="DESTROY"/&gt; 
+    &lt;/gfe:replicated-region&gt;
+&lt;/beans&gt;

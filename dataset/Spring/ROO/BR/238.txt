@@ -1,0 +1,2 @@
+JavaParserUtils.importTypeIfRequired(...) fails to handle primitive JavaType conversion
+JavaParserUtils.importTypeIfRequired(...) fails to handle primitive JavaType conversion

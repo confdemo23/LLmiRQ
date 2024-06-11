@@ -1,0 +1,3 @@
+Support mapping of domain entities in @QueryResults
+There is no support currently to map a domain entity returned by a Cypher query to a field in a @QueryResult. 
+See http://stackoverflow.com/questions/31069679/sdn-4-neo4joperation-convert-deprecated

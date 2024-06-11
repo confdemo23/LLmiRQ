@@ -1,0 +1,9 @@
+AuthenticationConfigBuilder.createAnonymousFilter uses httpElt instead of anonymousElt
+I think lines 378-383 should refer to anonymousElt, not httpElt. As it stands,  &lt;security:anonymous /&gt; namespace attributes are ignored.
+        if (anonymousElt != null) 
+{
+            grantedAuthority = httpElt.getAttribute("granted-authority");
+            username = httpElt.getAttribute("username");
+            key = httpElt.getAttribute("key");
+            source = pc.extractSource(anonymousElt);
+        }

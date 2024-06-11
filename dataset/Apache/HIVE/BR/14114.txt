@@ -1,0 +1,2 @@
+Ensure RecordWriter in streaming API is using the same UserGroupInformation as StreamingConnection
+currently both DelimitedInputWriter and StrictJsonWriter perform some Metastore access operations but without using UGI created by the caller for Metastore operations made by matching StreamingConnection &amp; TransactionBatch

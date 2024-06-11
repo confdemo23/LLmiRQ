@@ -1,0 +1,5 @@
+Injection not working on JAXWS handlers specified with @HandlerChain on service endpoint interfaces
+According to the JavaEE spec JAXWS-handlers should support injection (@Inject, @EJB), @PostConstruct and @PreDestroy.
+In my test case (top-down approach, handler class is defined within *_handler.xml) @PostCunstruct works, but managed beans (CDI, EJB) are not injected via @Inject or @EJB. 
+Possible workaround for EJBs: manual JNDI-lookup within @PostConstruct method. For CDI-managed beans you have to lookup the BeanManager and load the desired bean yourself.
+It seems, that this issue should have been addressed by WFLY-2362. But it is still does not work.

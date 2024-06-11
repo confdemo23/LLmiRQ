@@ -1,0 +1,87 @@
+Access log message fails to be written to recreated access log on Windows
+Undertow fails to write to access-log when the access-log configuration was removed including the access-log file and then the configuration was recreated with [1]. Probably there remains some lock to old file preventing creation of the new one.
+Steps to reproduce:
+1) deploy some simple web application
+2) define access-log =&gt; /subsystem=undertow/server=default-server/host=default-host/setting=access-log:add()
+3) reload server
+4) access the web application
+5) see that the access was logged to access-log
+6) remove the access-log =&gt; /subsystem=undertow/server=default-server/host=default-host/setting=access-log:remove()
+7) reload the server
+8) remove the access-log file
+9) define again the access-log =&gt; /subsystem=undertow/server=default-server/host=default-host/setting=access-log:add()
+10) access again the web application
+11) check both server logs and access-log
+[1]
+
+
+
+
+
+
+05:49:51,448 ERROR [io.undertow] (default task-2) UT005016: Error writing access log: java.nio.file.AccessDeniedException: W:\workspace\eap-7x-undertow-integration-tests\d07ae7a0\manu-eap-1.1.13\out\UnzipEap_1\workspace\jboss-eap-7.0\standalone\log\access_log.log
+
+
+
+
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:83)
+
+
+
+
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:97)
+
+
+
+
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:102)
+
+
+
+
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:230)
+
+
+
+
+	at java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:434)
+
+
+
+
+	at java.nio.file.Files.newOutputStream(Files.java:216)
+
+
+
+
+	at java.nio.file.Files.newBufferedWriter(Files.java:2860)
+
+
+
+
+	at io.undertow.server.handlers.accesslog.DefaultAccessLogReceiver.writeMessage(DefaultAccessLogReceiver.java:224)
+
+
+
+
+	at io.undertow.server.handlers.accesslog.DefaultAccessLogReceiver.run(DefaultAccessLogReceiver.java:180)
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+
+
+
+	at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+

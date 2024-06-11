@@ -1,0 +1,3 @@
+camel-scr-archetype produces invalid package structure
+When generating a project using the camel-archetype-scr archetype, the resulting project produces an invalid packaging structure which cannot be compiled.
+This can occur due to differences between the groupId and package parameters

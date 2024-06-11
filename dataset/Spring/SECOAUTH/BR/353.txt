@@ -1,0 +1,2 @@
+DefaultAccessTokenRequest is not Serializable
+As I explained in the issue https://jira.springsource.org/browse/SECOAUTH-345, the class DefaultOAuth2ClientContext must be serializable. Or it contains a field of type AccessTokenRequest implemented by DefaultAccessTokenRequest, which is not serializable (it doesn&amp;apos;t implements the interface nor extends a class implementing it). Sorry I should have checked this before creating the previous issue.

@@ -1,0 +1,2 @@
+Incomplete null handling in QueryDslJpaRepository 
+In QueryDslJpaRepository, when findAll(Predicate, Pageable) is called with a null Pageable, a NPE is thrown after the code tries to access the offset. However, delegation to the Querydsl helper class has dealt with the null value properly two lines above. 

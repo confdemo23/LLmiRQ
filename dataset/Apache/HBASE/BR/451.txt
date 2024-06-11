@@ -1,0 +1,4 @@
+Remove HTableDescriptor from HRegionInfo
+There is an HRegionInfo for every region in HBase. Currently HRegionInfo also contains the HTableDescriptor (the schema). That means we store the schema n times where n is the number of regions in the table.
+Additionally, for every region of the same table that the region server has open, there is a copy of the schema. Thus it is stored in memory once for each open region.
+If HRegionInfo merely contained the table name the HTableDescriptor could be stored in a separate file and easily found.

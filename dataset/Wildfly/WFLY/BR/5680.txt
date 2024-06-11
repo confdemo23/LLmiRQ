@@ -1,0 +1,17 @@
+InfinispanBatchContext trying to resume committed tx
+When running the test case RemoteFailoverTestCase.testStatefulFailover, the test hangs due to an exception occurring. The exception is the following:
+
+
+
+
+
+
+[31m11:24:05,814 ERROR [org.infinispan.interceptors.InvocationContextInterceptor] (EJB default - 3) ISPN000136: Execution error: java.lang.IllegalStateException: Transaction DummyTransaction{xid=DummyXid{id=47}, status=3} is not in a valid state to be invoking cache operations on.
+
+
+
+
+
+
+This exception arose some time ago and was linked to incorrect suspend/resume of threads by the InfinispanBatching mechanism. This is just a suggestion as to what might be the root cause.
+Attached is a log of the test case run with TRACE logging on DummyTransactionManager which coordinates the suspends and resumes. I have also performed a stack trace dump on every call to suspend and resume to highlight the origin of the call. 

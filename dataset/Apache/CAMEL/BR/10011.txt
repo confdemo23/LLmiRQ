@@ -1,0 +1,2 @@
+Overlap in management name for multiple contexts in OSGi bundle
+Problem is that OsgiManagementNameStrategy uses only the bundle symbolic name for the management name used for each CamelContext. So if you have multiple CamelContexts per bundle this creates overlap in the naming. 

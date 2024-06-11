@@ -1,0 +1,2 @@
+Unable to specify Order Policy for Serial Async Event Queue
+This problem is similar to SGF-231 where the user is unable to set the Order Policy for Serial Gateway Senders.

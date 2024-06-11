@@ -1,0 +1,2 @@
+Client and server APIs to do batch deletes.
+in 880 there is no way to do a batch delete (anymore?).  We should add one back in.

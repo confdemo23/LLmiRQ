@@ -1,0 +1,30 @@
+Describe table from shell no longer shows Table&apos;s attributes, only CF attributes
+When you describe a table with some attributes at the table level, it is not shown from shell any more:
+
+
+
+hbase(main):010:0&gt; create &amp;apos;usertable2&amp;apos;, &amp;apos;family&amp;apos;, {REGION_REPLICATION =&gt; 2, CONFIGURATION =&gt; {&amp;apos;hbase.hregion.scan.loadColumnFamiliesOnDemand&amp;apos; =&gt; &amp;apos;true&amp;apos;}}
+
+hbase(main):011:0&gt; describe &amp;apos;usertable2&amp;apos; 
+
+Table usertable2 is ENABLED                                                                                                                                                                                 
+
+COLUMN FAMILIES DESCRIPTION                                                                                                                                                                                 
+
+{NAME =&gt; &amp;apos;family&amp;apos;, DATA_BLOCK_ENCODING =&gt; &amp;apos;NONE&amp;apos;, BLOOMFILTER =&gt; &amp;apos;ROW&amp;apos;, REPLICATION_SCOPE =&gt; &amp;apos;0&amp;apos;, VERSIONS =&gt; &amp;apos;1&amp;apos;, COMPRESSION =&gt; &amp;apos;NONE&amp;apos;, MIN_VERSIONS =&gt; &amp;apos;0&amp;apos;, TTL =&gt; &amp;apos;FOREVER&amp;apos;, KEEP_DELETED_CELLS =&gt; &amp;apos;FALS
+
+E&amp;apos;, BLOCKSIZE =&gt; &amp;apos;65536&amp;apos;, IN_MEMORY =&gt; &amp;apos;false&amp;apos;, BLOCKCACHE =&gt; &amp;apos;true&amp;apos;}                                                                                                                                       
+
+1 row(s) in 0.0200 seconds
+
+
+
+Master UI shows: 
+
+
+
+&amp;apos;usertable2&amp;apos;, {TABLE_ATTRIBUTES =&gt; {REGION_REPLICATION =&gt; &amp;apos;2&amp;apos;, CONFIGURATION =&gt; {&amp;apos;hbase.hregion.scan.loadColumnFamiliesOnDemand&amp;apos; =&gt; &amp;apos;true&amp;apos;}}, {NAME =&gt; &amp;apos;family&amp;apos;}
+
+
+
+HBASE-10082 changed the formatting from shell for one line per CF. We should add the table level attributes back to the formatting.

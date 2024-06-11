@@ -1,0 +1,14 @@
+Compilation error in clustering/web/infinispan w/ JDK 8u20 and Windows
+In clustering/web/infinispan/src/main/java/org/wildfly/clustering/web/infinispan/session/SimpleImmutableSessionAttributes.java I&amp;apos;m getting the following compilation error which IMHO is also a logical error:
+
+
+
+
+
+
+[ERROR] /C:/temp/wildfly-8.1.0.CR2/clustering/web/infinispan/src/main/java/org/wildfly/clustering/web/infinispan/session/SimpleImmutableSessionAttributes.java:[42,17] variable attributes might not have been initialized
+
+
+
+
+

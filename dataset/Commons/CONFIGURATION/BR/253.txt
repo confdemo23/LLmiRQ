@@ -1,0 +1,55 @@
+FileConfiguration getFile(), getFileName(), getBasePath() are not always consistent
+Taken from the maillinglist:
+&gt; I have a properties configuration which is loaded without a problem.
+&gt; Later in my application I will access the file which is aligned to 
+&gt; this configuration.
+&gt; 
+&gt;  
+&gt; 
+&gt; final IFileConfiguration _productConf = 
+&gt; _conf.getProductConfigurations().get(_productId);
+&gt; 
+&gt; log.debug("product conf file " + _productConf.getFile());
+&gt; 
+&gt; log.debug("product conf filename " + _productConf.getFileName());
+&gt; 
+&gt; log.debug("product conf base path " + _productConf.getBasePath());
+&gt; 
+&gt;  
+&gt; 
+&gt; The methods _productConf.getFile() and _productConf.getFileName() 
+&gt; returning null but the getBasePath() returns a path which is correct 
+&gt; (like file:/C:/Projects/workspace/myProject/project.properties). Seems 
+&gt; for me like a bug because the PropertiesConfiguration is loaded 
+&gt; correct and works.
+&gt; 
+&gt;  
+&gt; 
+&gt; By side: I have also set a file reloading strategy for this 
+&gt; configuration.
+&gt; 
+&gt;  
+&gt; 
+&gt; Any ideas what&amp;apos;s happen in this case or where I can find the problem? 
+&gt; It would be nicer to get the File() instead the BasePath which has to 
+&gt; be converted into a URL before I can access the whole properties file.
+&gt; 
+&gt;  
+&gt; 
+&gt; Thanks in advance,
+&gt; 
+&gt;  
+&gt; 
+&gt; - Thomas Wabner
+&gt; 
+&gt; 
+Thomas,
+you are right, the conversions between a base path, a file name, and a File are not always consistent. How did you load the configuration (this determines, which internal fields are set)?
+I would recommend to work with URLs, i.e. the method getURL(). A file-based configuration&amp;apos;s URL is always defined.
+If you like, you can open a Jira ticket for this problem.
+Thanks.
+Oliver
+The file is loaded in this way:
+_productConf = new ProductConfiguration();
+_productConf.load(FileTools.getPathForList(_propductPathList).getPath());
+means the load method gets an String and not an File.

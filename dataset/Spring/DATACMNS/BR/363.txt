@@ -1,0 +1,50 @@
+Unicode characters not supported in property reference expressions
+I have a class writing with Unicode.
+@Getter @Setter
+class TestEntity {
+	Date ;
+	String ;
+}
+I make repository method for this entity
+List&lt;TestEntity&gt; findByAnd(Date d, String n);
+But this is failed. 
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property And found for type TestEntity
+So I invest spring data source and found a Regex pattern is not valid in org.springframework.data.repository.query.parser.PartTree   KEYWORD_TEMPLATE
+It is 
+KEYWORD_TEMPLATE = "(%s)(?=p
+{Lu})";
+
+This is not for Unicode letter. Some language has no cases(no upper/lower). 
+
+So I reference http://www.regular-expressions.info/unicode.html 
+and Test with 
+
+String KEYWORD_TEMPLATE = "(%s)(?=P{M}p{M}*+)";
+
+It works. 
+
+
+Test code is below. 
+
+
+	@Test
+	public void testFail_Not_Splited() {
+		String KEYWORD_TEMPLATE = "(%s)(?=p{Lu}
+)";
+		Pattern pattern = Pattern.compile(String.format(KEYWORD_TEMPLATE, "And"));
+		String[] res = pattern.split("findByAnd");
+		assertEquals(1, res.length);
+		assertEquals("findByAnd", res[0]);
+	}
+	@Test
+	public void testAlternative() {
+		// Reference: http://www.regular-expressions.info/unicode.html 
+		String KEYWORD_TEMPLATE = "(%s)(?=P
+{M}p{M}
+*+)";
+		Pattern pattern = Pattern.compile(String.format(KEYWORD_TEMPLATE, "And"));
+		String[] res = pattern.split("findByAnd");
+		assertEquals(2, res.length);
+		assertEquals("findBy", res[0]);
+		assertEquals("", res[1]);
+	}

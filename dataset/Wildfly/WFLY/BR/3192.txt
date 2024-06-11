@@ -1,0 +1,7 @@
+AroundInvokeAnnotationParsingProcessor should fail when more methods with @AroundInvoke annotation are found in the class
+
+AroundInvokeAnnotationParsingProcessor should fail when more methods with @AroundInvoke annotation is found in the class.
+The specification says:
+A class must not declare more than one AroundInvoke method.
+The JBoss AS allows more such methods and then it chooses one of them which is used as the interceptor.
+It becomes even more important to check the interceptor validity now with the new feature introduced by AS7-5897 (server side non-EE interceptors for EE invocations).

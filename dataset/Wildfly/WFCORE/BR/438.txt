@@ -1,0 +1,2 @@
+The CLI freezes in phase of requesting username/password
+CLI doesn&amp;apos;t terminate 

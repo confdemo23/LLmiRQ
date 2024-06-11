@@ -1,0 +1,2 @@
+The <gfe:client-region> element is missing the &apos;concurrency-level&apos; attribute, which is supported by GemFire&apos;s ClientRegionFactory API.
+The &lt;gfe:client-region&gt; element is missing an attribute for &amp;apos;concurrency-level&amp;apos;, which is a property of GemFire&amp;apos;s {{CientRegionFactory} API.

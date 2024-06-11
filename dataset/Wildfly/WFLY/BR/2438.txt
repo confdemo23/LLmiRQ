@@ -1,0 +1,4 @@
+Missing/unavailable dependencie jboss.ejb.view-method-security-attributes.foo.bar when deploy ejb type webservice
+Exception is thrown when deploy an ejb webservice without the security domain defined : 
+11:34:18,075 ERROR [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS015870: Deploy of deployment "WSJarDeploy.jar" was rolled back with the following failure message: 
+{"JBAS014771: Services with missing/unavailable dependencies" =&gt; ["jboss.ws.endpoint.\"WSJar.jar\".WSJar is missing [jboss.ejb.view-method-security-attributes.WSJar_component.WSJar_component.WSJar.\"org.jboss.ws.HelloWsBean\"]"]}

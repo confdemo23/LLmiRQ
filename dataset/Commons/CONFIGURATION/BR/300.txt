@@ -1,0 +1,22 @@
+Can not create a PropertiesConfiguration if the filename contains a &apos;#&apos;
+It is not possible to load a properties file if there is a &amp;apos;#&amp;apos; in the filename.
+To reproduce:
+    public static void main(String[] args) throws Exception
+    {
+        File file = new File("myProperties #1.properties");
+        try
+        {
+            file.createNewFile();
+            
+            Configuration configuration = new PropertiesConfiguration(file);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        finally
+        {
+            file.delete();
+        }
+}
+The method that drops the &amp;apos;#&amp;apos; is : ConfigurationUtils.fileFromURL...

@@ -1,0 +1,2 @@
+FastDateFormat formats year differently than SimpleDateFormat in Java 7
+Starting with Java 7 does SimpleDateFormat format a year pattern of &amp;apos;Y&amp;apos; or &amp;apos;YYY&amp;apos; as &amp;apos;2003&amp;apos; instead of &amp;apos;03&amp;apos; as in former Java releases. According Javadoc this pattern should have been always been formatted as number, therefore the new behavior seems to be a bug fix in the JDK. FastDateFormat is adjusted to behave the same.

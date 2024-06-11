@@ -1,0 +1,2 @@
+ProtocolConnectionUtils forces protocol to "remoting" when -Djboss.management.client_socket_bind_address is used
+It needs to take the protocol from the configuration URI.

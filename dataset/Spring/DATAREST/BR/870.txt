@@ -1,0 +1,2 @@
+CustomAcceptHeaderHttpServletRequest doesn&apos;t work as intended with Spring Framework 4.3.2
+CustomAcceptHeaderHttpServletRequest tries to provide a custom view of the request&amp;apos;s Accept header by overriding getHeader(String). It works with Spring Framework 4.2.x but doesn&amp;apos;t work with Spring Framework 4.3.2. As a result of SPR-14506, Spring Framework 4.3.2 now calls getHeaderValues(String) rather than getHeader(String) and the original Accept header is returned.

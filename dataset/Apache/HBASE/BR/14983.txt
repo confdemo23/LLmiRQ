@@ -1,0 +1,2 @@
+Create metrics for per block type hit/miss ratios
+Missing a root index block is worse than missing a data block. We should know the difference

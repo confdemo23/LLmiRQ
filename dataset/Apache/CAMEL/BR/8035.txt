@@ -1,0 +1,2 @@
+CXFRS consumer should set Exchange&apos;s charset name, if content type provides one
+This is the JAXRS counterpart to https://issues.apache.org/jira/browse/CAMEL-6188

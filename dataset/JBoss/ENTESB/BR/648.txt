@@ -1,0 +1,76 @@
+Null Pointer if invalid patch command syntax is used
+The following error messages occur if invalid syntax is used when applying a patch to a standalone ESB container:
+
+
+
+
+
+
+
+
+
+
+
+FuseESB:karaf@root&gt; patch:list
+
+
+
+
+[name]                                   [installed] [description]
+
+
+
+
+fuse-esb-7.1.0.fuse-047-p3               false      null
+
+
+
+
+FuseESB:karaf@root&gt;
+
+
+
+
+
+
+
+
+
+FuseESB:karaf@root&gt; patch:simulate
+
+
+
+
+Error executing command: Patch &amp;apos;null&amp;apos; not found
+
+
+
+
+FuseESB:karaf@root&gt; 
+
+
+
+
+
+
+
+
+
+FuseESB:karaf@root&gt; patch:install
+
+
+
+
+Error executing command: Patch &amp;apos;null&amp;apos; not found
+
+
+
+
+FuseESB:karaf@root&gt;
+
+
+
+
+
+
+A more informative message should be displayed to indicate a patch name should be supplied to the command.

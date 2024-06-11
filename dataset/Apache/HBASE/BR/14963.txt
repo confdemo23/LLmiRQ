@@ -1,0 +1,2 @@
+Remove use of Guava Stopwatch from HBase client code
+We ran into an issue where an application bundled its own Guava (and that happened to be in the classpath first) and HBase&amp;apos;s MetaTableLocator threw an exception due to the fact that Stopwatch&amp;apos;s constructor wasn&amp;apos;t compatible... Might be better to not depend on Stopwatch at all in MetaTableLocator since the functionality is easily doable without.

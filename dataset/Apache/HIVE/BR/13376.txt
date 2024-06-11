@@ -1,0 +1,14 @@
+HoS emits too many logs with application state
+The logs get flooded with something like:
+&gt; Mar 28, 3:12:21.851 PM        INFO    org.apache.hive.spark.client.SparkClientImpl
+&gt; [stderr-redir-1]: 16/03/28 15:12:21 INFO yarn.Client: Application report for application_1458679386200_0161 (state: RUNNING)
+&gt; Mar 28, 3:12:21.912 PM        INFO    org.apache.hive.spark.client.SparkClientImpl
+&gt; [stderr-redir-1]: 16/03/28 15:12:21 INFO yarn.Client: Application report for application_1458679386200_0149 (state: RUNNING)
+&gt; Mar 28, 3:12:22.853 PM        INFO    org.apache.hive.spark.client.SparkClientImpl
+&gt; [stderr-redir-1]: 16/03/28 15:12:22 INFO yarn.Client: Application report for application_1458679386200_0161 (state: RUNNING)
+&gt; Mar 28, 3:12:22.913 PM        INFO    org.apache.hive.spark.client.SparkClientImpl
+&gt; [stderr-redir-1]: 16/03/28 15:12:22 INFO yarn.Client: Application report for application_1458679386200_0149 (state: RUNNING)
+&gt; Mar 28, 3:12:23.855 PM        INFO    org.apache.hive.spark.client.SparkClientImpl
+&gt; [stderr-redir-1]: 16/03/28 15:12:23 INFO yarn.Client: Application report for application_1458679386200_0161 (state: RUNNING)
+While this is good information, it is a bit much.
+Seems like SparkJobMonitor hard-codes its interval to 1 second.  It should be higher and perhaps made configurable.

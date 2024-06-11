@@ -1,0 +1,64 @@
+default maxPermgen is added when jvm isn&apos;t configured 
+Default maxPermgen size is added when jvm element isn&amp;apos;t specified in domain.xml/host.xml and warning is logged. 
+
+
+
+
+
+
+&lt;server-group name="main-server-group" profile="default"&gt;
+
+
+
+
+&lt;!--            
+
+
+
+
+    &lt;jvm name="default"&gt;
+
+
+
+
+        &lt;heap size="64m" max-size="512m"/&gt;
+
+
+
+
+    &lt;/jvm&gt;
+
+
+
+
+--&gt;
+
+
+
+
+    &lt;socket-binding-group ref="standard-sockets"/&gt;
+
+
+
+
+&lt;/server-group&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+WFLYHC0011: Ignoring &lt;permgen&gt; for jvm &amp;apos;SUN&amp;apos; type jvm: null
+
+
+
+
+
+
+It happens because default is defined in JvmElement.java#L76

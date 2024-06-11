@@ -1,0 +1,24 @@
+Register Job twice if beanName property is used to define a job name
+When the "jobConfiguration" bean is defined:
+      	&lt;bean id="jobConfiguration" parent="simpleJob"&gt;
+		&lt;property name="beanName" value="ibSplit"/&gt;
+		&lt;property name="steps"&gt;
+                .... ... ...
+      the framework (org.springframework.batch.execution.configuration.MapJobConfigurationRegistry) registers the job with the "beanName" value, and then re-registers it with the bean&amp;apos;s "id" value due to the BeanAwareness:
+    springframework/batch/core/configuration/JobConfiguration.java:
+    /** 
+
+The callback from 
+{@link BeanNameAware}
+ comes after the setters, so it
+will always overwrite the name with the bean id.
+
+@see org.springframework.beans.factory.BeanNameAware#setBeanName(java.lang.String)
+     */
+    public void setBeanName(String name) 
+{
+        this.name = name;
+    }
+ 
+
+    Hence I commented &lt;!-- &lt;property name="beanName" value="ibSplit"/&gt; --&gt; and changed the "id" to the actual jobname. I guess the way it works right now is the intended behavior, but that is not how it worked before according to the code I picked up.

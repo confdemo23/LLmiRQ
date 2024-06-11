@@ -1,0 +1,94 @@
+PropertiesComponent gets initialized by util:constant
+Using BridgePropertyPlaceholderConfigurer &amp; Spring util constant namespace  to reference a static field, the Properties Component gets initialized with this constant.
+camelContext.xml
+
+
+&lt;util:constant static-field="anypackage.CONSTANT_1"/&gt;
+
+
+
+&lt;bean id="bridgePropertyPlaceHolder" class="org.apache.camel.spring.spi.BridgePropertyPlaceholderConfigurer"&gt;
+
+    &lt;property name="locations"&gt;
+
+      &lt;list&gt;
+
+        &lt;value&gt;classpath:test.properties&lt;/value&gt;
+
+      &lt;/list&gt;
+
+    &lt;/property&gt;
+
+&lt;/bean&gt;
+
+
+
+&lt;camel:camelContext xmlns="http://camel.apache.org/schema/spring"&gt;
+
+    &lt;camel:route&gt;
+
+      &lt;camel:from uri="direct://ignore" /&gt;
+
+      &lt;camel:setBody&gt;
+
+        &lt;camel:simple&gt;{{testProperty}}&lt;/camel:simple&gt;
+
+      &lt;/camel:setBody&gt;
+
+      &lt;camel:to uri="mock://ignore" /&gt;
+
+    &lt;/camel:route&gt;
+
+&lt;/camel:camelContext&gt;   
+
+
+
+Will produce following Stacktrace (constant contained &amp;apos;&gt;&gt;This will be loaded as location; but I am simply a constant&lt;&lt;&amp;apos;):
+
+Caused by: java.io.FileNotFoundException: Properties file &gt;&gt;This will be loaded as location; but I am simply a constant&lt;&lt; not found in classpath
+
+	at org.apache.camel.component.properties.DefaultPropertiesResolver.loadPropertiesFromClasspath(DefaultPropertiesResolver.java:96)
+
+	at org.apache.camel.component.properties.DefaultPropertiesResolver.resolveProperties(DefaultPropertiesResolver.java:55)
+
+	at org.apache.camel.spring.spi.BridgePropertyPlaceholderConfigurer.resolveProperties(BridgePropertyPlaceholderConfigurer.java:118)
+
+	at org.apache.camel.component.properties.PropertiesComponent.parseUri(PropertiesComponent.java:131)
+
+	at org.apache.camel.component.properties.PropertiesComponent.parseUri(PropertiesComponent.java:117)
+
+	at org.apache.camel.impl.DefaultCamelContext.resolvePropertyPlaceholders(DefaultCamelContext.java:1223)
+
+	at org.apache.camel.model.ProcessorDefinition.resolvePropertyPlaceholders(ProcessorDefinition.java:571)
+
+
+
+My current workaround was to specify propertyPlaceholder with empty location in  camelContext ...
+camelContext.xml
+
+
+&lt;!-- same as above --&gt;
+
+&lt;camel:camelContext xmlns="http://camel.apache.org/schema/spring"&gt;
+
+    &lt;!-- location and id are mandatory --&gt;
+
+    &lt;camel:propertyPlaceholder id="stupidMandatoryId" location=""/&gt;
+
+    &lt;camel:route&gt;
+
+      &lt;camel:from uri="direct://ignore" /&gt;
+
+      &lt;camel:setBody&gt;
+
+        &lt;camel:simple&gt;{{testProperty}}&lt;/camel:simple&gt;
+
+      &lt;/camel:setBody&gt;
+
+      &lt;camel:to uri="mock://ignore" /&gt;
+
+    &lt;/camel:route&gt;
+
+&lt;/camel:camelContext&gt;   
+
+

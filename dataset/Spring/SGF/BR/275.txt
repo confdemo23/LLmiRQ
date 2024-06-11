@@ -1,0 +1,2 @@
+The <cq-listener-container> element&apos;s &apos;phase&apos; attribute is ignored.
+The &lt;cq-listener-container&gt; element&amp;apos;s phase attribute is parsed but is unable to be set and used by the SDG ContinuousQueryListenerContainer class.

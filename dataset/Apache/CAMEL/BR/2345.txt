@@ -1,0 +1,10 @@
+One should not have to explicitly provide the service/port for cxf is there&apos;s only one
+This is due to the following code in Client createClient() in CxfEnpoint
+
+        } else {
+            ObjectHelper.notNull(portName, "Please provide endpoint/port name");
+            ObjectHelper.notNull(serviceName, "Please provide service name");
+            ClientFactoryBean factoryBean = createClientFactoryBean();
+
+
+When there&amp;apos;s only one service/port, we should just use it.

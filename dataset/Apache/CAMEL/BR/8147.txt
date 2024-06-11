@@ -1,0 +1,10 @@
+Using @ManagedResource on an Endpoint removes all the default JMX properties
+Using @ManagedResource on an Endpoint removes all the default JMX properties. 
+For example:
+Camel: camelContext
+Camel management name: camelContext
+Endpoint uri: xxxxxxxxxxxx
+Object Name: xxxxxxxxxx
+Singleton: true
+State: Started
+Are present by default for all endpoints, as soon as you have a custom endpoint annotated with @ManagedResource these defaults are no longer present. 

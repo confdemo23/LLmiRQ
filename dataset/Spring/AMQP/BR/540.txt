@@ -1,0 +1,22 @@
+RabbitListenerAnnotationBeanPostProcessor cannot find Class-Level @RabbitListener annotations on beans with @Transactional annotations
+RabbitListenerAnnotationBeanPostProcessor .postProcessAfterInitialization:
+
+
+
+
+
+
+Class&lt;?&gt; targetClass = AopUtils.getTargetClass(bean);
+
+
+
+
+final RabbitListener classLevelListener = AnnotationUtils.findAnnotation(bean.getClass(), RabbitListener.class);
+
+
+
+
+
+
+bean.getClass() in this case refers to proxy. Why not use AnnotationUtils.findAnnotation(targetClass) ? It&amp;apos;s interesting because 2 lines below targetClass is used to find annotations on methods:
+ReflectionUtils.doWithMethods(targetClass, ...)

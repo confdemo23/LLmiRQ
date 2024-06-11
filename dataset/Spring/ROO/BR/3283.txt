@@ -1,0 +1,14 @@
+Reverse engineer disable versions and generated identifiers
+Problem: When "database reverse engineer" the application may not work because there are some behaviors we can&amp;apos;t control:
+
+With all persistence providers, identifier generator fails because sequence not exists in database.
+A table with a column named "version" is configured as concurrency control property when is not (even not numeric).
+
+Solution: Create "database reverse engineer" command new options to control this behaviors:
+
+disableVersionFields (optional, default false): If true, don&amp;apos;t add concurrency control feature to version field and generate field as other fields. All entities will have versionField="" attribute in RooJpaActiveRecord annotation.
+disableGeneratedIdentifiers (optional, default false): If true, don&amp;apos;t add generated value feature to identifier field and add field into create view (required and i18n). All entities will have sequenceName="" attribute in RooJpaActiveRecord annotation. This modification allows to disable generated identifiers into direct engineer setting versionField="" attribute in RooJpaActiveRecord annotation too.
+
+I attach a patch with this solution diffs.
+This solution has been tested.
+See ROO-3281, ROO-3254 and ROO-3255, ROO-2596

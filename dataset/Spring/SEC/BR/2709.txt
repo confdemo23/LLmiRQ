@@ -1,0 +1,3 @@
+WithSecurityContextTestExecutionListener should override getOrder() instead of using @Order
+WithSecurityContextTestExecutionListener currently declares @Order; however, since AbstractTestExecutionListener implements Ordered, providing a default value of Ordered.LOWEST_PRECEDENCE for getOrder(), WithSecurityContextTestExecutionListener&amp;apos;s @Order declaration will be ignored by the AnnotationAwareOrderComparator.
+Thus, WithSecurityContextTestExecutionListener should override getOrder() with an appropriate value in order to ensure proper ordering within the set of all default TestExecutionListeners.

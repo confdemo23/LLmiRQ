@@ -1,0 +1,4 @@
+Fully qualified hbase.rootdir doesn&apos;t work
+Jim was setting up cluster w/ new hbase.  Setting fully qualified hbase.rootdir was failing.  Complaint was that the filesystems didn&amp;apos;t match  i.e. the hdfs of the fully qualified hbase.rootdir didn&amp;apos;t jibe w/ the default hadoop file:///.
+Fix needs to be backported.
+The problem was that because the hadoop config files were not found (because they are in a different directory and not on the classpath) then fs.get(conf) returns file:///

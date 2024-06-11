@@ -1,0 +1,18 @@
+JSP/JSPX tags don&apos;t work with Wildfly CR1
+My app works fine on JBoss AS 7.1. When I migrate to Wildfly 8.0.0 CR1, my JSP tags don&amp;apos;t work as expected. My project is a EAR with WAR module.
+When app starts, in the 1st access to page A, tag file is compiled and the page are rendered fine. But when I access another page (B in example), I got this error: org.apache.jasper.JasperException: java.lang.ClassCastException: org.apache.jsp.tag.web.default_tagx cannot be cast to org.apache.jsp.tag.web.default_tagx
+If I restart Wildfly and try to access page B, works fine. But when I access page A, I got the same error.
+My default.tagx is bellow:
+&lt;jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:html="http://www.w3.org/1999/xhtml" version="2.2"&gt;
+    &lt;jsp:output doctype-root-element="HTML" doctype-system="about:legacy-compat" omit-xml-declaration="yes" /&gt;
+    some code
+    &lt;jsp:doBody /&gt;
+    more code
+&lt;/jsp:root&gt;
+And the pages are somethink like this:
+&lt;tags:default xmlns:tags="urn:jsptagdir:/WEB-INF/tags" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:html="http://www.w3.org/1999/xhtml"&gt;
+    &lt;jsp:output omit-xml-declaration="yes" /&gt;
+    my code here
+&lt;/tags:default&gt;
+I was created a new empty project with two pages and one tagfile. The error don&amp;apos;t occurs. But when I add CDI capabilities, the error occurs. There are something in CDI that confuses Jastow?
+As discussed here: https://community.jboss.org/message/850730

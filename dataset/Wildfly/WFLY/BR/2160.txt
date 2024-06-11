@@ -1,0 +1,4 @@
+Allow Expression for datasource subsystem enabled property
+Currently the datasource sub system does not allow expressions. I would like to be able to do this: &lt;datasource jta="true" jndi-name="java:/ds1DS" pool-name="ds1DS" enabled="$
+{ds1.enabled}
+" use-java-context="true" use-ccm="true"&gt; and set the ds1.enabled property via a properties file.

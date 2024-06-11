@@ -1,0 +1,5 @@
+AbstractTicketValidator should not use LogFactory.getLog(CasProxyTicketValidator.class)
+The first line in org.acegisecurity.providers.cas.ticketvalidator.AbstractTicketValidator contains
+LogFactory.getLog(CasProxyTicketValidator.class) 
+It should probably use
+LogFactory.getLog(AbstractTicketValidator.class).

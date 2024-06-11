@@ -1,0 +1,14 @@
+Wrong parsing of modify-trust-store element in jboss-cli.xml
+The Boolean parsing should be used when configuring modifyTrustStore flag and not reading system property:
+
+
+
+
+
+
+config.setModifyTrustStore(Boolean.getBoolean(reader.getElementText()));
+
+
+
+
+

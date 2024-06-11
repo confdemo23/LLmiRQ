@@ -1,0 +1,15 @@
+Namespace access-denied-page attribute does not work with property placeholders
+Hello,
+I am trying to use a property inside Spring security:
+	&lt;security:http 
+		access-denied-page="$
+{security.errorPage}
+"
+ ...&gt;
+		...
+	&lt;/security:http&gt;
+Where security.errorPage is a property defined in a property file loaded by a org.springframework.beans.factory.config.PropertyPlaceholderConfigurer bean.
+But it is not interpreted.
+Looking at org.springframework.security.config.HttpSecurityBeanDefinitionParser I got the confirmation it is not a case.
+I don&amp;apos;t know if it is a feature but I think it may be useful.
+Philippe.

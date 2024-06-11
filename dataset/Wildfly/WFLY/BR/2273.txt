@@ -1,0 +1,3 @@
+Error message in the log on every click within the console in domain mode.
+While running Wildfly in domain mode (i.e domain.sh) every click within the admin console produces and error message in the server log. 
+[Host Controller] 13:53:38,148 ERROR [org.jboss.as.controller.client] (XNIO-1 task-12) JBAS014781: Step handler org.jboss.as.domain.controller.operations.coordination.DomainFinalResultHandler@576bca9e for operation composite at address [] failed handling operation rollback  null

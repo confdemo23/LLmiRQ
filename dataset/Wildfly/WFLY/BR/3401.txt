@@ -1,0 +1,45 @@
+EJB StatefulTimeoutTestCase fails occasionally in CI environment
+Probably a timing issue in the test.
+http://brontes.lab.eng.brq.redhat.com/viewLog.html?buildId=15982&amp;buildTypeId=WFPR
+
+
+
+
+
+
+java.lang.AssertionError: expected:&lt;0&gt; but was:&lt;2&gt;
+
+
+
+
+    at org.junit.Assert.fail(Assert.java:88)
+
+
+
+
+    at org.junit.Assert.failNotEquals(Assert.java:743)
+
+
+
+
+    at org.junit.Assert.assertEquals(Assert.java:118)
+
+
+
+
+    at org.junit.Assert.assertEquals(Assert.java:555)
+
+
+
+
+    at org.junit.Assert.assertEquals(Assert.java:542)
+
+
+
+
+    at org.jboss.as.test.clustering.cluster.ejb.stateful.StatefulTimeoutTestCase.timeout(StatefulTimeoutTestCase.java:119)
+
+
+
+
+

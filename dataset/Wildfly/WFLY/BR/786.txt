@@ -1,0 +1,43 @@
+NicInterfaceCriteriaUnitTestCase testBasic fails on a host configured with a dual IP stack
+This test fails when we run the test suite with the following IPv6 options:
+
+
+
+
+
+
+    -Djava.net.preferIPv4Stack=false -Djava.net.preferIPv6Addresses=true -Djboss.bind.address=[::1] -Djboss.bind.address.management=[::1] -Djboss.bind.address.unsecure=[::1]
+
+
+
+
+
+
+It appears that the test is expecting an array containing one nic address but instead gets two (IPv4 and IPv6) addresses. The linked JBTM jira is where we initially reported the issue. Test output is:
+
+
+
+
+
+
+Failed tests:
+
+
+
+
+   testBasic(org.jboss.as.controller.interfaces.NicInterfaceCriteriaUnitTestCase): expected:&lt;[/0:0:0:0:0:0:0:1%1]&gt; but was:&lt;[/0:0:0:0:0:0:0:1%1, /127.0.0.1]&gt;
+
+
+
+
+  testMultipleCriteria(org.jboss.as.controller.interfaces.NotInterfaceCriteriaUnitTestCase): expected:&lt;{name:eth0 (eth0)=[/fe80:0:0:0:216:3eff:fe0e:a61c%2]}&gt; but was:&lt;{name:eth0 (eth0)=[/fe80:0:0:0:216:3eff:fe0e:a61c%2, /172.17.131.3]}&gt;
+
+
+
+
+  testMultipleCriteria(org.jboss.as.controller.interfaces.AnyInterfaceCriteriaUnitTestCase): expected:&lt;{name:lo (lo)=[/0:0:0:0:0:0:0:1%1], name:eth0 (eth0)=[/fe80:0:0:0:216:3eff:fe0e:a61c%2]}&gt; but was:&lt;{name:lo (lo)=[/127.0.0.1, /0:0:0:0:0:0:0:1%1], name:eth0 (eth0)=[/fe80:0:0:0:216:3eff:fe0e:a61c%2, /172.17.131.3]}&gt;
+
+
+
+
+

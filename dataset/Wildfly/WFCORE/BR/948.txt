@@ -1,0 +1,284 @@
+Multiprocess wildcard read-resource-description does not work
+
+
+
+
+
+
+[domain@localhost:9990 /] /host=master/server=*/interface=public:read-resource-description
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "failed",
+
+
+
+
+    "result" =&gt; [
+
+
+
+
+        {
+
+
+
+
+            "address" =&gt; [
+
+
+
+
+                ("host" =&gt; "master"),
+
+
+
+
+                ("server" =&gt; "*"),
+
+
+
+
+                ("interface" =&gt; "public")
+
+
+
+
+            ],
+
+
+
+
+            "outcome" =&gt; "failed",
+
+
+
+
+            "failure-description" =&gt; "WFLYCTL0158: Operation handler failed: java.lang.NullPointerException",
+
+
+
+
+            "rolled-back" =&gt; true
+
+
+
+
+        },
+
+
+
+
+        {
+
+
+
+
+            "address" =&gt; [
+
+
+
+
+                ("host" =&gt; "master"),
+
+
+
+
+                ("server" =&gt; "server-one"),
+
+
+
+
+                ("interface" =&gt; "public")
+
+
+
+
+            ],
+
+
+
+
+            "outcome" =&gt; "failed",
+
+
+
+
+            "result" =&gt; undefined,
+
+
+
+
+            "rolled-back" =&gt; true
+
+
+
+
+        },
+
+
+
+
+        {
+
+
+
+
+            "address" =&gt; [
+
+
+
+
+                ("host" =&gt; "master"),
+
+
+
+
+                ("server" =&gt; "server-two"),
+
+
+
+
+                ("interface" =&gt; "public")
+
+
+
+
+            ],
+
+
+
+
+            "outcome" =&gt; "failed",
+
+
+
+
+            "result" =&gt; undefined,
+
+
+
+
+            "rolled-back" =&gt; true
+
+
+
+
+        }
+
+
+
+
+    ],
+
+
+
+
+    "failure-description" =&gt; "WFLYCTL0285: Operation read-resource-description invoked against multiple target addresses failed at address [
+
+
+
+
+    (\"host\" =&gt; \"master\"),
+
+
+
+
+    (\"server\" =&gt; \"*\"),
+
+
+
+
+    (\"interface\" =&gt; \"public\")
+
+
+
+
+] with failure description WFLYCTL0158: Operation handler failed: java.lang.NullPointerException",
+
+
+
+
+    "rolled-back" =&gt; true
+
+
+
+
+}
+
+
+
+
+
+
+In the HC log:
+
+
+
+
+
+
+[Host Controller] 20:37:28,277 ERROR [org.jboss.as.controller.management-operation] (management-handler-thread - 3) WFLYCTL0013: Operation ("read-resource-description") failed - address: ([
+
+
+
+
+[Host Controller]     ("host" =&gt; "master"),
+
+
+
+
+[Host Controller]     ("server" =&gt; "*"),
+
+
+
+
+[Host Controller]     ("interface" =&gt; "public")
+
+
+
+
+[Host Controller] ]): java.lang.NullPointerException
+
+
+
+
+[Host Controller] 	at org.jboss.as.controller.operations.global.ReadResourceDescriptionHandler.getResourceRegistrationCheckForAlias(ReadResourceDescriptionHandler.java:391)
+
+
+
+
+[Host Controller] 	at org.jboss.as.controller.operations.global.ReadResourceDescriptionHandler.doExecuteInternal(ReadResourceDescriptionHandler.java:189)
+
+
+
+
+[Host Controller] 	at org.jboss.as.controller.operations.global.ReadResourceDescriptionHandler.doExecute(ReadResourceDescriptionHandler.java:161)
+
+
+
+
+[Host Controller] 	at org.jboss.as.controller.operations.global.ReadResourceDescriptionHandler.access$300(ReadResourceDescriptionHandler.java:97)
+
+
+
+
+[Host Controller] 	at org.jboss.as.controller.operations.global.ReadResourceDescriptionHandler$2.execute(ReadResourceDescriptionHandler.java:411)
+
+
+
+
+[Host Controller] 	at org.jboss.as.controller.AbstractOperationContext.executeStep(AbstractOperationContext.java:854)
+
+
+
+
+
+
+The handling for this doesn&amp;apos;t have the stuff I did for WFCORE-282.

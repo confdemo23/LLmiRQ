@@ -1,0 +1,33 @@
+@Resource ManagedExecutorService produces a null field
+I compiled the latest WildFly master and tried:
+
+
+
+
+
+
+@Resource
+
+
+
+
+private ManagedExecutorService managedExecutorService
+
+
+
+
+
+
+However, the injected field managedExecutorService is null. This issue is gone when I use:
+
+
+
+
+
+
+@Resource(mappedName = "java:comp/DefaultManagedExecutorService")
+
+
+
+
+

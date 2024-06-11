@@ -1,0 +1,7 @@
+unable to get column names for a specific table that has &apos;_&apos; as part of its table name
+I have a table age_group and I am trying to get list of columns for this table name. As underscore and &amp;apos;%&amp;apos; have special meaning in table search pattern according to JDBC searchPattern string specification, I escape the &amp;apos;_&amp;apos; in my table name when I call getColumns for this single table. But HIVE does not return any columns. My call to getColumns is as follows
+catalog	&lt;null&gt;
+schemaPattern	"%"
+tableNamePattern  "age_group"
+columnNamePattern  "%"
+If I don&amp;apos;t escape the &amp;apos;_&amp;apos; in my tableNamePattern, I am able to get the list of columns.

@@ -1,0 +1,92 @@
+JMSBridge FailureHandler does not load from specified module
+If an error occurs and the JMS bridge tries to reconnect to the JMS provider to look up the JMS resources from its FailureHandler, it fails with the exception:
+Stack trace:
+
+
+
+
+
+
+10:37:02,546 INFO  [org.hornetq.jms.server] (pool-3-thread-3) HQ121000: Failed to set up JMS bridge connections. Most probably the source or target servers are unavailable. Will retry after a pause of 1,000 ms
+
+
+
+
+10:37:03,547 WARN  [org.hornetq.jms.server] (pool-3-thread-3) HQ122010: Failed to connect JMS Bridge: javax.naming.NamingException: JBAS011843: Failed instantiate InitialContextFactory org.apache.qpid.jndi.PropertiesFileInitialContextFactory from classloader ModuleClassLoader for Module "org.hornetq:main" from local module loader @ac44b88 (finder: local module finder @5d3ad33d (roots: /usr/share/jbossas/modules,/usr/share/jbossas/modules/system/layers/base))
+
+
+
+
+    at org.jboss.as.naming.InitialContextFactoryBuilder.createInitialContextFactory(InitialContextFactoryBuilder.java:64)
+
+
+
+
+    at javax.naming.spi.NamingManager.getInitialContext(NamingManager.java:681) [rt.jar:1.6.0_24]
+
+
+
+
+    at javax.naming.InitialContext.getDefaultInitCtx(InitialContext.java:305) [rt.jar:1.6.0_24]
+
+
+
+
+    at javax.naming.InitialContext.init(InitialContext.java:240) [rt.jar:1.6.0_24]
+
+
+
+
+    at javax.naming.InitialContext.&lt;init&gt;(InitialContext.java:214) [rt.jar:1.6.0_24]
+
+
+
+
+    at org.hornetq.jms.bridge.impl.JNDIFactorySupport.createObject(JNDIFactorySupport.java:55) [hornetq-jms-server.jar:]
+
+
+
+
+    at org.hornetq.jms.bridge.impl.JNDIDestinationFactory.createDestination(JNDIDestinationFactory.java:40) [hornetq-jms-server.jar:]
+
+
+
+
+    at org.hornetq.jms.bridge.impl.JMSBridgeImpl.setupJMSObjects(JMSBridgeImpl.java:1222) [hornetq-jms-server.jar:]
+
+
+
+
+    at org.hornetq.jms.bridge.impl.JMSBridgeImpl.setupJMSObjectsWithRetry(JMSBridgeImpl.java:1460) [hornetq-jms-server.jar:]
+
+
+
+
+    at org.hornetq.jms.bridge.impl.JMSBridgeImpl.access$2000(JMSBridgeImpl.java:83) [hornetq-jms-server.jar:]
+
+
+
+
+    at org.hornetq.jms.bridge.impl.JMSBridgeImpl$FailureHandler.run(JMSBridgeImpl.java:2049) [hornetq-jms-server.jar:]
+
+
+
+
+    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146) [rt.jar:1.6.0_24]
+
+
+
+
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.6.0_24]
+
+
+
+
+    at java.lang.Thread.run(Thread.java:679) [rt.jar:1.6.0_24]
+
+
+
+
+
+
+The issue is that the ExecutorService executing the FailureHandler is created when the JMSBridge is instantiated and will not use the ClassLoader from the specified module that gives access to the JMS provider&amp;apos;s classes.

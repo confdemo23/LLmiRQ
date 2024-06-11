@@ -1,0 +1,4 @@
+start-delivery/stop-delivery operations descriptions are missing from MDB deployment in domain mode
+It is possible to start/stop delivery of messages to MDB in standalone mode using operations
+start-delivery() and stop-delivery() on MDB deployment. 
+Those operations are available in domain mode but their descriptions are missing (preventing CLI autocompletion to work as expected).

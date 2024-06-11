@@ -1,0 +1,2 @@
+deployed applications are not distributed to host controller(s)
+when a new HC is brought up into an existing DC/HC environment, it does not receive a copy of all deployed applications (e.g. the "content" folder)

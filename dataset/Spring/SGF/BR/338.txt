@@ -1,0 +1,99 @@
+Both <gfe:custom-entry-ttl> and <gfe:custom-entry-tti> SDG XML namespace elements allow for more than one &apos;CustomExpiry&apos; bean to be set in the Region Expiration Attributes although GemFire only allows one!
+The &amp;apos;&lt;gfe:custom-entry-ttl&gt;&amp;apos; and &amp;apos;&lt;gfe:custom-entry-tti&gt;&amp;apos; SDG XML namespace elements allow for more than one inner, nested bean definition, for example...
+
+
+
+
+
+
+&lt;gfe:replicated-region id="Example" statistics="true"&gt;
+
+
+
+
+  &lt;gfe:custom-entry-tti&gt;
+
+
+
+
+    &lt;bean class=com.example.MyClass"/&gt;
+
+
+
+
+    &lt;bean class=com.example.AnotherClass"/&gt;
+
+
+
+
+    &lt;bean class=com.example.YetAnotherClass"/&gt;
+
+
+
+
+    ...
+
+
+
+
+  &lt;/gfe:custom-entry-tti&gt;
+
+
+
+
+&lt;/gfe:replicated-region&gt;
+
+
+
+
+
+
+However, the GemFire com.gemstone.gemfire.cache.RegionFactory interface only allows one CustomExpiry to be specified for both Region Entry TTL (Time-To-Live) as well as Entry TTI (Idle-Timeout).  
+
+
+
+
+
+
+  RegionFactory&lt;K,V&gt; setCustomEntryTimeToLive(CustomExpiry&lt;K,V&gt; custom);
+
+
+
+
+
+
+
+
+
+  RegionFactory&lt;K,V&gt; setCustomEntryIdleTimeout(CustomExpiry&lt;K,V&gt; custom);
+
+
+
+
+
+
+As well, the com.gemstone.gemfire.cache.RegionAttributes interface only return a single CustomExpiry from...
+
+
+
+
+
+
+  CustomExpiry&lt;K,V&gt; getCustomEntryTimeToLive()
+
+
+
+
+
+
+
+
+
+  CustomExpiry&lt;K,V&gt; getCustomEntryIdleTimeout()
+
+
+
+
+
+
+Therefore, SDG&amp;apos;s XML namespace and schema (XSD) need to be changed.

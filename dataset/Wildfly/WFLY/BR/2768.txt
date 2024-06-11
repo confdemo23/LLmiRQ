@@ -1,0 +1,7 @@
+Redundant code hosted in arquillian directory
+There are two Maven modules that are not part of the codebase since mid 2011. It would be better to remove them.
+These modules are:
+
+arquillian/protocol-servlet
+arquillian/processor-jsfunit
+

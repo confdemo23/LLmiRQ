@@ -1,0 +1,76 @@
+[Migration operation] Do not create legacy connection factory for connection factories with in-vm connector
+If connection factory contains in-vm connector and legacy connection factory is created by migration operation then server won&amp;apos;t start and fails with:
+
+
+
+
+
+
+12:51:16,267 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-1) MSC000001: Failed to start service jboss.messaging-activemq.default.jms.connection-factory.legacy.InVmConnectionFactory: org.jboss.msc.service.StartException in service jboss.messaging-activemq.default.jms.connection-factory.legacy.InVmConnectionFactory: WFLYMSGAMQ0082: Unsupported type of connector factory for legacy resource: java.lang.String
+
+
+
+
+	at org.wildfly.extension.messaging.activemq.jms.legacy.LegacyConnectionFactoryService.translateFactoryClassName(LegacyConnectionFactoryService.java:311)
+
+
+
+
+	at org.wildfly.extension.messaging.activemq.jms.legacy.LegacyConnectionFactoryService.translateTransportGroupConfigurations(LegacyConnectionFactoryService.java:294)
+
+
+
+
+	at org.wildfly.extension.messaging.activemq.jms.legacy.LegacyConnectionFactoryService.start(LegacyConnectionFactoryService.java:183)
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948) [jboss-msc-1.2.6.Final.jar:1.2.6.Final]
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881) [jboss-msc-1.2.6.Final.jar:1.2.6.Final]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [rt.jar:1.8.0_51]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [rt.jar:1.8.0_51]
+
+
+
+
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.8.0_51]
+
+
+
+
+
+
+Configuration of connection factory and in-vm connector:
+
+
+
+
+
+
+&lt;in-vm-connector name="in-vm" server-id="${my.server-id:0}"/&gt;
+
+
+
+
+&lt;legacy-connection-factory name="InVmConnectionFactory" connectors="in-vm" entries="${connection-factory.entries.entry:java:/ConnectionFactory}"/&gt;
+
+
+
+
+
+
+Problem seems to be that HornetQ connection factory does not accept Artemis InVMConnectorFactory class. 
+As legacy connection factories with in-vm connector cannot be used by standalone JMS client (not serializable) then there is no reason to create them by migration operation.

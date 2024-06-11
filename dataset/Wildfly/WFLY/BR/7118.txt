@@ -1,0 +1,9 @@
+Inefficient marshalling of common session attribute types
+e.g.
+
+Duration/Instant/etc.
+Date (java.sql variants)
+Locale
+TimeZone
+Atomic[Boolean|Integer|Long]
+

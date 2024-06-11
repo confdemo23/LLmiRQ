@@ -1,0 +1,3 @@
+Client region location caches redundant HTableDescriptor&apos;s
+While examining the heap of a map task in a MapReduce job that writes directly to HBase, I noticed that the HRegionLocation instances were taking up 90 MB (out of a 700 MB heap for each map task) to cache the locations for 15K regions.  As the number of regions in the cluster continues to grow, this continues to grow as well.
+Of that, it appears that about 80 MB were going to 15K HTableDescriptor instances.  There are only 5 tables that it&amp;apos;s writing to, so it seems to be wasting a great deal of memory with a separate copy of the table descriptor for each region.

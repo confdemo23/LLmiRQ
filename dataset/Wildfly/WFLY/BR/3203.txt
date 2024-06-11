@@ -1,0 +1,221 @@
+Inconsistent handling of @Resource for URL in EJB vs JSF managed bean
+Given a set of simple jndi bindings like the following:
+
+
+
+
+
+
+        &lt;subsystem xmlns="urn:jboss:domain:naming:2.0"&gt;
+
+
+
+
+            &lt;bindings&gt;
+
+
+
+
+                &lt;simple name="java:global/NSPDomain" value="domain" type="java.lang.String"/&gt;
+
+
+
+
+                &lt;simple name="java:global/NSPURL" value="http://red-hat-summit.cloudapp.net:8081/" type="java.net.URL"/&gt;
+
+
+
+
+                &lt;simple name="java:global/NotificationCallbackURL" value="http://dmz.starkinternational.com:8080/iotbof-web/rest/events/send" type="java.net.URL"/&gt;
+
+
+
+
+            &lt;/bindings&gt;
+
+
+
+
+            &lt;remote-naming/&gt;
+
+
+
+
+        &lt;/subsystem&gt;
+
+
+
+
+
+
+The following works from an EJB:
+
+
+
+
+
+
+import javax.ejb.Singleton;
+
+
+
+
+import javax.ejb.Startup;
+
+
+
+
+
+
+
+
+
+@Singleton
+
+
+
+
+@Startup
+
+
+
+
+public class NSPConnector {
+
+
+
+
+...
+
+
+
+
+   @Resource(name = "java:global/NotificationCallbackURL")
+
+
+
+
+   private URL notificationURL;
+
+
+
+
+
+
+but fails with a NameNotFoundException when used from within a JSF managed bean.
+
+
+
+
+
+
+import javax.enterprise.context.ApplicationScoped;
+
+
+
+
+import javax.inject.Named;
+
+
+
+
+
+
+
+
+
+@Named("nspmodel")
+
+
+
+
+@ApplicationScoped
+
+
+
+
+public class NSPModel {
+
+
+
+
+   private static Logger logger = Logger.getLogger(NSPModel.class);
+
+
+
+
+   @Resource(name = "java:global/NotificationCallbackURL")
+
+
+
+
+   private URL notificationURL;
+
+
+
+
+
+
+Has the following error when accessed:
+
+
+
+
+
+
+Caused by: javax.naming.NameNotFoundException: env/java:global/NotificationCallbackURL -- service jboss.naming.context.java.module.iot-ear.iotbof-web.env.java:global.NotificationCallbackURL
+
+
+
+
+	at org.jboss.as.naming.ServiceBasedNamingStore.lookup(ServiceBasedNamingStore.java:104) [wildfly-naming-8.0.0.Final.jar:8.0.0.Final]
+
+
+
+
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:202) [wildfly-naming-8.0.0.Final.jar:8.0.0.Final]
+
+
+
+
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:179) [wildfly-naming-8.0.0.Final.jar:8.0.0.Final]
+
+
+
+
+	at org.jboss.as.naming.InitialContext$DefaultInitialContext.lookup(InitialContext.java:235) [wildfly-naming-8.0.0.Final.jar:8.0.0.Final]
+
+
+
+
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:188) [wildfly-naming-8.0.0.Final.jar:8.0.0.Final]
+
+
+
+
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:184) [wildfly-naming-8.0.0.Final.jar:8.0.0.Final]
+
+
+
+
+	at javax.naming.InitialContext.lookup(InitialContext.java:417) [rt.jar:1.8.0]
+
+
+
+
+	at javax.naming.InitialContext.lookup(InitialContext.java:417) [rt.jar:1.8.0]
+
+
+
+
+	at org.jboss.as.weld.services.bootstrap.WeldResourceInjectionServices.resolveResource(WeldResourceInjectionServices.java:185) [wildfly-weld-8.0.0.Final.jar:8.0.0.Final]
+
+
+
+
+	... 71 more
+
+
+
+
+

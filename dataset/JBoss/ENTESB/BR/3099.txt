@@ -1,0 +1,91 @@
+Quickstarts should build without warnings; most should work without fabric
+The first quickstart that beginners are directed to is camel-log.
+Would it be better if 1st quickstart was one without fabric?
+Running camel-log following instructions in README gives lots of warnings then fails wilth following error
+[INFO] No tests to run.
+[INFO]
+[INFO]  maven-bundle-plugin:2.3.7:bundle (default-bundle) @ beginner-camel-lo
+g 
+[WARNING] Bundle org.jboss.quickstarts.fuse:beginner-camel-log:bundle:6.2.0.redh
+at-109 : Instructions in Export-Package that are never used: io\.fabric8\..*|io\
+.fabric8
+Classpath: Jar:.,Jar:camel-blueprint,Jar:camel-core,Jar:slf4j-api,Jar:camel-core
+-xml,Jar:camel-core-osgi,Jar:jaxb-core,Jar:jaxb-impl
+[WARNING] Bundle org.jboss.quickstarts.fuse:beginner-camel-log:bundle:6.2.0.redh
+at-109 : No translation found for macro: body
+[WARNING] Bundle org.jboss.quickstarts.fuse:beginner-camel-log:bundle:6.2.0.redh
+at-109 : No translation found for macro: sys.runtime.id
+[WARNING] Bundle org.jboss.quickstarts.fuse:beginner-camel-log:bundle:6.2.0.redh
+at-109 : Superfluous export-package instructions: [io.fabric8.*]
+[WARNING] Bundle org.jboss.quickstarts.fuse:beginner-camel-log:bundle:6.2.0.redh
+at-109 : Did not find matching referal for io.fabric8.*
+[WARNING] Bundle org.jboss.quickstarts.fuse:beginner-camel-log:bundle:6.2.0.redh
+at-109 : Did not find matching referal for org.apache.camel.*
+[WARNING] Bundle org.jboss.quickstarts.fuse:beginner-camel-log:bundle:6.2.0.redh
+at-109 : Did not find matching referal for org.apache.commons.logging.*
+[WARNING] Bundle org.jboss.quickstarts.fuse:beginner-camel-log:bundle:6.2.0.redh
+at-109 : Did not find matching referal for org.apache.felix.gogo.commands.*
+[WARNING] Bundle org.jboss.quickstarts.fuse:beginner-camel-log:bundle:6.2.0.redh
+at-109 : Did not find matching referal for org.apache.felix.service.command.*
+[WARNING] Bundle org.jboss.quickstarts.fuse:beginner-camel-log:bundle:6.2.0.redh
+at-109 : Did not find matching referal for org.osgi.service.component.*
+[WARNING] Bundle org.jboss.quickstarts.fuse:beginner-camel-log:bundle:6.2.0.redh
+at-109 : Did not find matching referal for org.springframework.*
+[WARNING] Bundle org.jboss.quickstarts.fuse:beginner-camel-log:bundle:6.2.0.redh
+at-109 : Did not find matching referal for org.springframework.osgi.*
+[WARNING] Bundle org.jboss.quickstarts.fuse:beginner-camel-log:bundle:6.2.0.redh
+at-109 : Did not find matching referal for scala*
+[INFO]
+[INFO]  maven-source-plugin:2.2.1:jar-no-fork (attach-sources) @ beginner-cam
+el-log 
+[INFO]
+[INFO]  maven-install-plugin:2.4:install (default-install) @ beginner-camel-l
+og 
+[INFO] Installing C:\Fuse\jboss-fuse-6.2.0.redhat-109\quickstarts\beginner\camel
+-log\target\shared.jar to C:\Users\aileenc\.m2\repository\org\jboss\quickstarts\
+fuse\beginner-camel-log\6.2.0.redhat-109\beginner-camel-log-6.2.0.redhat-109.jar
+[INFO] Installing C:\Fuse\jboss-fuse-6.2.0.redhat-109\quickstarts\beginner\camel
+-log\pom.xml to C:\Users\aileenc\.m2\repository\org\jboss\quickstarts\fuse\begin
+ner-camel-log\6.2.0.redhat-109\beginner-camel-log-6.2.0.redhat-109.pom
+[INFO] Installing C:\Fuse\jboss-fuse-6.2.0.redhat-109\quickstarts\beginner\camel
+-log\target\shared-sources.jar to C:\Users\aileenc\.m2\repository\org\jboss\quic
+kstarts\fuse\beginner-camel-log\6.2.0.redhat-109\beginner-camel-log-6.2.0.redhat
+-109-sources.jar
+[INFO]
+[INFO]  maven-bundle-plugin:2.3.7:install (default-install) @ beginner-camel-
+log 
+[INFO] Local OBR update disabled (enable with -DobrRepository)
+[INFO]
+[INFO] &lt;&lt;&lt; fabric8-maven-plugin:1.2.0.redhat-109:deploy (default-cli) @ beginner
+-camel-log &lt;&lt;&lt;
+[INFO]
+[INFO]  fabric8-maven-plugin:1.2.0.redhat-109:deploy (default-cli) @ beginner
+-camel-log 
+[INFO] Uploading file C:\Fuse\jboss-fuse-6.2.0.redhat-109\quickstarts\beginner\c
+amel-log\pom.xml
+Uploading: http://samsung_rv511:8181/maven/upload/org/jboss/quickstarts/fuse/beg
+inner-camel-log/6.2.0.redhat-109/beginner-camel-log-6.2.0.redhat-109.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 6.201s
+[INFO] Finished at: Mon Apr 27 12:37:36 BST 2015
+[INFO] Final Memory: 32M/351M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal io.fabric8:fabric8-maven-plugin:1.2.0.redhat-109:
+deploy (default-cli) on project beginner-camel-log: Failed to deploy artifacts:
+Could not transfer artifact org.jboss.quickstarts.fuse:beginner-camel-log:pom:6.
+2.0.redhat-109 from/to fabric8.upload.repo (http://samsung_rv511:8181/maven/uplo
+ad/): Failed to transfer file: http://samsung_rv511:8181/maven/upload/org/jboss/
+quickstarts/fuse/beginner-camel-log/6.2.0.redhat-109/beginner-camel-log-6.2.0.re
+dhat-109.pom. Return code is: 401, ReasonPhrase: Unauthorized. -&gt; [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e swit
+ch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please rea
+d the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionE
+xception
+C:\Fuse\jboss-fuse-6.2.0.redhat-109\quickstarts\beginner\camel-log&gt;

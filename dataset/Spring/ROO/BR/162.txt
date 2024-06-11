@@ -1,0 +1,23 @@
+Parsing fails for types that are sub-subclasses of a type unknown to Roo
+If Roo encounters a class hierarchy nested for at least 2 levels where the super class is unknown to Roo, then its parser barfs:
+roo&gt; create project -topLevelPackage test.sub.types
+
+java.lang.Exception is unknown to Roo, this line is just to show Roo&amp;apos;s error message
+roo&gt; new java file -name test.sub.types.Foo -extends java.lang.Exception
+Unable to locate requested type&amp;apos;java.lang.Exception&amp;apos;
+
+roo&gt; new java file -name test.sub.types.Foo
+
+Manually modify test.sub.types.Foo and let it extend Exception, save it
+
+
+After saving Foo; inheritence from Foo works without problems
+roo&gt; new java file -name test.sub.types.Bar -extends ~.Foo
+Created SRC_MAIN_JAVA\test\sub\types\Bar.java
+
+
+Inheritence from a class that indirectly has Foo as a supertype does not work
+roo&gt; new java file -name foo.bar.baz.Baz -extends ~.Bar
+Type &amp;apos;foo.bar.baz.Bar&amp;apos; exists on disk but cannot be parsed
+
+If metadata trace is at level 1 or 2, its output suggests that Roo enters some recursion that finally aborts once a StackOverflowError is thrown.

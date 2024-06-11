@@ -1,0 +1,302 @@
+Problem with ServiceBasedNamingStore and JNDIView.
+Some of the registered services are bound to the JNDI using the BinderService and the dependency mechanism to run the binder as soon as the main service runs. At this point everything works like a harm; services are registered and started successfully. But there is a little inconsistency, at least from the JNDI point of view which leads to a specific problem.
+Let&amp;apos;s take a look at the following services:
+
+jboss.clustering.group.ejb.dist@a59ab61 State: UP (Uses: BinderService =&gt; JNDI: jboss.naming.context.java.jboss.clustering.group.ejb.dist)
+jboss.clustering.group.ejb@60e172ee State: DOWN (Uses: BinderService =&gt; JNDI: jboss.naming.context.java.jboss.clustering.group.ejb)
+As you can see they share the same path in the naming context (jboss.naming.context.java.jboss.clustering.group.ejb.dist). The second service jboss.naming.context.java.jboss.clustering.group.ejb is a parent naming context to the first one: jboss.naming.context.java.jboss.clustering.group.ejb.dist. To make matters worse they do not depend on themselves, so when jboss.clustering.group.ejb.dist is requested to be started (for instance by jboss.clustering.providers.ejb.dist service) it starts immediately but jboss.clustering.group.ejb is left in the WAITING state (It&amp;apos;s ON_DEMAND service.). It leads to a situation where only the jboss.clustering.group.ejb.dist service is registered in the naming context, but both services exist in the service registry.
+Such naming conflict can be a problem when for example we have to traverse through the naming context using ServiceBasedNamingStore as a naming provider. (JNDIView is a good example here, but I also managed to reproduce the problem when I messed up something with the remoting configuration. I don&amp;apos;t remember details now.) 
+JNDIView uses Context.list("") method in order to get the first level from the naming context. So in case of the jboss.clustering.group.ejb.dist service the traverse path would be as follows:
+context.list("") -&gt; returns "clustering"
+context.lookup( "clustering" ) returns NamingContext("clustering") because there is no service "jboss.clustering".
+NamingContext("clustering").list("") -&gt; returns "group"
+NamingContext("clustering").lookup( "group" ) returns NamingContext("clustering/group") because there is no service "jboss.clustering.group".
+NamingContext("clustering/group").list("") -&gt; returns "ejb"
+NamingContext("clustering/group").lookup("ejb") -&gt; Fails!
+It fails with an NameNotFoundException simply because the first thing the ServiceBasedNamingStore component does is to check if there is the jboss.naming.context.java.jboss.clustering.group.ejb service in the service registry. It is available in the registry so ServiceBasedNamingStore decides to get the destination service instance the BinderService (jboss.naming.context.java.jboss.clustering.group.ejb) should point to. Service jboss.clustering.group.ejb hasn&amp;apos;t been started yet so its dependant the BinderService (jboss.naming.context.java.jboss.clustering.group.ejb.dist) couldn&amp;apos;t resolve the injections and as so the BinderService does not point to the destination jboss.clustering.group.ejb service instance. In the result, it ends with the exception because ServiceBasedNamingStore is not able to return the reference to the service the JNDI name jboss.naming.context.java.jboss.clustering.group.ejb should point to. Notice that everything would be OK if there weren&amp;apos;t running jboss.naming.context.java.jboss.clustering.group.ejb.dist service, because Context.list("") ignores the jboss.naming.context.java.jboss.clustering.group.ejb service as an unbound one.
+Anyway even if the service jboss.naming.context.java.jboss.clustering.group.ejb was started properly and the naming context pointed to the jboss.clustering.group.ejb service, it would lead to a different problem. The name jboss.naming.context.java.jboss.clustering.group.ejb.dist wouldn&amp;apos;t be found at all, because the jboss.naming.context.java.jboss.clustering.group.ejb name would be treated as the end of the path while traversing using the Context.list("") method.
+It&amp;apos;s probably a problem with the service naming convention, but anyway it is not an isolated case. There are a lot of services that follow the same naming rules but fortunately they are not registered in the naming context (yet?). For instance:
+
+jboss.clustering.group.hibernate.entity
+jboss.clustering.group.hibernate.timestamps
+jboss.clustering.group.hibernate
+Introducing something like a value aware NamingContext would also do the trick, but it&amp;apos;s not natural for the JNDI. 
+Anyway, it can be fixed in many ways, so for now I decided just to ignore such problematic services in the JNDIViewOperation just to avoid the exception.
+If anyone needs a workaround:
+Class: org.jboss.as.naming.management.JndiViewOperation
+jar: wildflay-naming-8.0.0.Final.jar
+Before (Line: 134):
+
+
+
+
+
+
+org.jboss.as.naming.management.JndiViewOperation.java
+
+
+
+
+
+
+final Object value;
+
+
+
+
+if(context instanceof NamingContext) {
+
+
+
+
+	value = ((NamingContext)context).lookup(pair.getName(), false);
+
+
+
+
+} else {
+
+
+
+
+	value = context.lookup(pair.getName());
+
+
+
+
+}
+
+
+
+
+
+
+After:
+
+
+
+
+
+
+org.jboss.as.naming.management.JndiViewOperation.java
+
+
+
+
+
+
+Object value;
+
+
+
+
+try {
+
+
+
+
+	if(context instanceof NamingContext) {
+
+
+
+
+		value = ((NamingContext)context).lookup(pair.getName(), false);
+
+
+
+
+	} else {
+
+
+
+
+		value = context.lookup(pair.getName());
+
+
+
+
+	}
+
+
+
+
+} catch( NameNotFoundException exc ) {
+
+
+
+
+	value = null;
+
+
+
+
+}
+
+
+
+
+
+
+It is the original exception:
+
+
+
+
+
+
+23:44:29,133 ERROR [stderr] (XNIO-1 task-8) javax.naming.NameNotFoundException: Error looking up clustering/group/ejb, service service jboss.naming.context.java.jboss.clustering.group.ejb is not started
+
+
+
+
+23:44:29,133 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.naming.ServiceBasedNamingStore.lookup(ServiceBasedNamingStore.java:133)
+
+
+
+
+23:44:29,133 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.naming.ServiceBasedNamingStore.lookup(ServiceBasedNamingStore.java:81)
+
+
+
+
+23:44:29,134 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:202)
+
+
+
+
+23:44:29,134 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:188)
+
+
+
+
+23:44:29,134 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.naming.management.JndiViewOperation.addEntries(JndiViewOperation.java:136)
+
+
+
+
+23:44:29,134 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.naming.management.JndiViewOperation.addEntries(JndiViewOperation.java:144)
+
+
+
+
+23:44:29,135 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.naming.management.JndiViewOperation.addEntries(JndiViewOperation.java:144)
+
+
+
+
+23:44:29,135 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.naming.management.JndiViewOperation.access$0(JndiViewOperation.java:125)
+
+
+
+
+23:44:29,135 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.naming.management.JndiViewOperation$1.execute(JndiViewOperation.java:75)
+
+
+
+
+23:44:29,135 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.controller.AbstractOperationContext.executeStep(AbstractOperationContext.java:591)
+
+
+
+
+23:44:29,136 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.controller.AbstractOperationContext.doCompleteStep(AbstractOperationContext.java:469)
+
+
+
+
+23:44:29,136 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.controller.AbstractOperationContext.completeStepInternal(AbstractOperationContext.java:273)
+
+
+
+
+23:44:29,142 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.controller.AbstractOperationContext.executeOperation(AbstractOperationContext.java:268)
+
+
+
+
+23:44:29,142 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.controller.ModelControllerImpl.internalExecute(ModelControllerImpl.java:272)
+
+
+
+
+23:44:29,143 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.controller.ModelControllerImpl.execute(ModelControllerImpl.java:146)
+
+
+
+
+23:44:29,145 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.domain.http.server.DomainApiHandler.handleRequest(DomainApiHandler.java:169)
+
+
+
+
+23:44:29,147 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.domain.http.server.security.SubjectDoAsHandler$1.run(SubjectDoAsHandler.java:72)
+
+
+
+
+23:44:29,150 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.domain.http.server.security.SubjectDoAsHandler$1.run(SubjectDoAsHandler.java:68)
+
+
+
+
+23:44:29,151 ERROR [stderr] (XNIO-1 task-8)     at java.security.AccessController.doPrivileged(Native Method)
+
+
+
+
+23:44:29,151 ERROR [stderr] (XNIO-1 task-8)     at javax.security.auth.Subject.doAs(Subject.java:422)
+
+
+
+
+23:44:29,151 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.controller.AccessAuditContext.doAs(AccessAuditContext.java:94)
+
+
+
+
+23:44:29,152 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.domain.http.server.security.SubjectDoAsHandler.handleRequest(SubjectDoAsHandler.java:68)
+
+
+
+
+23:44:29,152 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.domain.http.server.security.SubjectDoAsHandler.handleRequest(SubjectDoAsHandler.java:63)
+
+
+
+
+23:44:29,153 ERROR [stderr] (XNIO-1 task-8)     at io.undertow.server.handlers.BlockingHandler.handleRequest(BlockingHandler.java:50)
+
+
+
+
+23:44:29,153 ERROR [stderr] (XNIO-1 task-8)     at org.jboss.as.domain.http.server.DomainApiCheckHandler.handleRequest(DomainApiCheckHandler.java:77)
+
+
+
+
+23:44:29,154 ERROR [stderr] (XNIO-1 task-8)     at io.undertow.security.handlers.AuthenticationCallHandler.handleRequest(AuthenticationCallHandler.java:52)
+
+
+
+
+23:44:29,154 ERROR [stderr] (XNIO-1 task-8)     at io.undertow.server.Connectors.executeRootHandler(Connectors.java:168)
+
+
+
+
+23:44:29,156 ERROR [stderr] (XNIO-1 task-8)     at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:687)
+
+
+
+
+23:44:29,157 ERROR [stderr] (XNIO-1 task-8)     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+
+
+
+
+...
+
+
+
+
+

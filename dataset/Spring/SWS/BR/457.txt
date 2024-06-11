@@ -1,0 +1,157 @@
+AxiomSoapMessageFactory payloadCaching=false causes org.springframework.ws.soap.axiom.AxiomSoapEnvelope.getBody()  to fail
+http://forum.springframework.org/showthread.php?t=64350
+Hello,
+I have problem with AxiomSoapMessageFactory payloadCaching=false.
+Spring config is simple as this:
+
+
+
+
+
+
+&lt;bean id="messageFactory" class="org.springframework.ws.soap.axiom.AxiomSoapMessageFactory"&gt;
+
+
+
+
+  &lt;property name="payloadCaching" value="false"/&gt;
+
+
+
+
+&lt;/bean&gt;
+
+
+
+
+
+
+
+
+
+&lt;bean class="org.springframework.ws.soap.server.endpoint.mapping.SoapActionEndpointMapping"&gt;
+
+
+
+
+  &lt;property name="mappings"&gt;
+
+
+
+
+    &lt;props&gt;
+
+
+
+
+      &lt;prop key="SoapAction1"&gt;endpoint1&lt;/prop&gt;
+
+
+
+
+    &lt;/props&gt;
+
+
+
+
+  &lt;/property&gt;
+
+
+
+
+&lt;/bean&gt;
+
+
+
+
+
+
+
+
+
+&lt;bean id="wsdl" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition"&gt;
+
+
+
+
+  &lt;property name="schema" ref="schema" /&gt;
+
+
+
+
+  &lt;property name="portTypeName" value="resource1" /&gt;
+
+
+
+
+  &lt;property name="locationUri" value="/service1/" /&gt;
+
+
+
+
+  &lt;property name="targetNamespace" value="my.service" /&gt;
+
+
+
+
+  &lt;property name="soapActions"&gt;
+
+
+
+
+    &lt;props&gt;
+
+
+
+
+      &lt;prop key="UploadAddressMaterial"&gt;SoapAction1&lt;/prop&gt;
+
+
+
+
+    &lt;/props&gt;
+
+
+
+
+  &lt;/property&gt;
+
+
+
+
+&lt;/bean&gt;
+
+
+
+
+
+
+
+
+
+&lt;bean id="schema" class="org.springframework.xml.xsd.SimpleXsdSchema "&gt;
+
+
+
+
+  &lt;property name="xsd" value="/WEB-INF/schema.xsd" /&gt;
+
+
+
+
+&lt;/bean&gt;
+
+
+
+
+
+
+I&amp;apos;m not using any kind of interceptors.
+Actual ws end point extends AbstractStaxStreamPayloadEndpoint but the request doesn&amp;apos;t get that far.
+I get exception "com.sun.jdi.InvocationException occurred invoking method." when trying to invoke the web service in method org.springframework.ws.soap.axiom.AxiomSoapEnvelope.getBody().
+Line 59 SOAPBody axiomBody = getAxiomEnvelope().getBody(); fails some how and the OMException on line 71 is catched. This leads to:
+"Nested in org.springframework.ws.soap.axiom.AxiomSoapMessage Exception: Could not write message to OutputStream: problem accessing the parser. Parser already accessed!; nested exception is javax.xml.stream.XMLStreamException: problem accessing the parser. Parser already accessed!:
+java.lang.IllegalStateException: Parser already accessed! "
+I am running spring ws v.1.5.5 and spring core 2.5.6.
+Everything works fine if payloadCaching is true.
+Is this a bug? There is a resolved Jira that looks much the same: id SWS-359 

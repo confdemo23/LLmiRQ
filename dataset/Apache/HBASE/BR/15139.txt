@@ -1,0 +1,1 @@
+Connection manager doesn&apos;t pass client metrics to RpcClient

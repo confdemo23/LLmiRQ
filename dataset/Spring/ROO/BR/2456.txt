@@ -1,0 +1,2 @@
+Finders not created for DBRE fields when any field exists in the governor
+Similar to the issue in ROO-2417, finder methods are not being created for dbre created fields if any field exists in the governor 

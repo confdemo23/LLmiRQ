@@ -1,0 +1,533 @@
+NPE when handling request with fine-granularity and REPL cache settings
+When default cache is set to "repl", after deploying clusterbench and accessing http://localhost:8080/clusterbench-granular/granular, the following NPE is logged:
+
+
+
+
+
+
+12:08:42,201 ERROR [org.infinispan.interceptors.InvocationContextInterceptor] (default task-1) ISPN000136: Error executing command GetKeysInGroupCommand, writing keys []: java.lang.NullPointerException
+
+
+
+
+        at org.infinispan.interceptors.base.BaseStateTransferInterceptor.visitGetKeysInGroupCommand(BaseStateTransferInterceptor.java:50)
+
+
+
+
+        at org.infinispan.commands.remote.GetKeysInGroupCommand.acceptVisitor(GetKeysInGroupCommand.java:95)
+
+
+
+
+        at org.infinispan.interceptors.base.CommandInterceptor.invokeNextInterceptor(CommandInterceptor.java:99)
+
+
+
+
+        at org.infinispan.interceptors.InvocationContextInterceptor.handleAll(InvocationContextInterceptor.java:107)
+
+
+
+
+        at org.infinispan.interceptors.InvocationContextInterceptor.handleDefault(InvocationContextInterceptor.java:76)
+
+
+
+
+        at org.infinispan.commands.AbstractVisitor.visitGetKeysInGroupCommand(AbstractVisitor.java:178)
+
+
+
+
+        at org.infinispan.commands.remote.GetKeysInGroupCommand.acceptVisitor(GetKeysInGroupCommand.java:95)
+
+
+
+
+        at org.infinispan.interceptors.InterceptorChain.invoke(InterceptorChain.java:336)
+
+
+
+
+        at org.infinispan.cache.impl.CacheImpl.internalGetGroup(CacheImpl.java:490)
+
+
+
+
+        at org.infinispan.cache.impl.CacheImpl.getGroup(CacheImpl.java:483)
+
+
+
+
+        at org.infinispan.cache.impl.CacheImpl.getGroup(CacheImpl.java:478)
+
+
+
+
+        at org.infinispan.cache.impl.AbstractDelegatingAdvancedCache.getGroup(AbstractDelegatingAdvancedCache.java:227)
+
+
+
+
+        at org.wildfly.clustering.web.infinispan.session.fine.FineSessionAttributesFactory.createValue(FineSessionAttributesFactory.java:73)
+
+
+
+
+        at org.wildfly.clustering.web.infinispan.session.fine.FineSessionAttributesFactory.createValue(FineSessionAttributesFactory.java:45)
+
+
+
+
+        at org.wildfly.clustering.web.infinispan.session.InfinispanSessionFactory.createValue(InfinispanSessionFactory.java:55)
+
+
+
+
+        at org.wildfly.clustering.web.infinispan.session.InfinispanSessionFactory.createValue(InfinispanSessionFactory.java:40)
+
+
+
+
+        at org.wildfly.clustering.web.infinispan.session.InfinispanSessionManager.createSession(InfinispanSessionManager.java:256)
+
+
+
+
+        at org.wildfly.clustering.web.undertow.session.DistributableSessionManager.createSession(DistributableSessionManager.java:109)
+
+
+
+
+        at io.undertow.servlet.spec.ServletContextImpl.getSession(ServletContextImpl.java:741)
+
+
+
+
+        at io.undertow.servlet.spec.HttpServletRequestImpl.getSession(HttpServletRequestImpl.java:370)
+
+
+
+
+        at org.jboss.test.clusterbench.common.session.CommonGranularHttpSessionServlet.doGet(CommonGranularHttpSessionServlet.java:40)
+
+
+
+
+        at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+
+
+
+
+        at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+
+
+
+
+        at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:85)
+
+
+
+
+        at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+
+
+
+
+        at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+
+
+
+
+        at org.wildfly.extension.undertow.security.SecurityContextAssociationHandler.handleRequest(SecurityContextAssociationHandler.java:78)
+
+
+
+
+        at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+
+
+
+
+        at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131)
+
+
+
+
+        at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+
+
+
+
+        at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+
+
+
+
+        at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+
+
+
+
+        at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+
+
+
+
+        at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+
+
+
+
+        at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+
+
+
+
+        at io.undertow.security.handlers.NotificationReceiverHandler.handleRequest(NotificationReceiverHandler.java:50)
+
+
+
+
+        at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+
+
+
+
+        at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+
+
+
+
+        at org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:61)
+
+
+
+
+        at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+
+
+
+
+        at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+
+
+
+
+        at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:284)
+
+
+
+
+        at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:263)
+
+
+
+
+        at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+
+
+
+
+        at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:174)
+
+
+
+
+        at io.undertow.server.Connectors.executeRootHandler(Connectors.java:202)
+
+
+
+
+        at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:793)
+
+
+
+
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+
+
+
+
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+
+
+
+        at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+
+
+Followed by:
+
+
+
+
+
+
+12:08:42,203 ERROR [io.undertow.request] (default task-1) UT005023: Exception handling request to /clusterbench-granular/granular: java.lang.NullPointerException
+
+
+
+
+        at org.infinispan.interceptors.base.BaseStateTransferInterceptor.visitGetKeysInGroupCommand(BaseStateTransferInterceptor.java:50)
+
+
+
+
+        at org.infinispan.commands.remote.GetKeysInGroupCommand.acceptVisitor(GetKeysInGroupCommand.java:95)
+
+
+
+
+        at org.infinispan.interceptors.base.CommandInterceptor.invokeNextInterceptor(CommandInterceptor.java:99)
+
+
+
+
+        at org.infinispan.interceptors.InvocationContextInterceptor.handleAll(InvocationContextInterceptor.java:107)
+
+
+
+
+        at org.infinispan.interceptors.InvocationContextInterceptor.handleDefault(InvocationContextInterceptor.java:76)
+
+
+
+
+        at org.infinispan.commands.AbstractVisitor.visitGetKeysInGroupCommand(AbstractVisitor.java:178)
+
+
+
+
+        at org.infinispan.commands.remote.GetKeysInGroupCommand.acceptVisitor(GetKeysInGroupCommand.java:95)
+
+
+
+
+        at org.infinispan.interceptors.InterceptorChain.invoke(InterceptorChain.java:336)
+
+
+
+
+        at org.infinispan.cache.impl.CacheImpl.internalGetGroup(CacheImpl.java:490)
+
+
+
+
+        at org.infinispan.cache.impl.CacheImpl.getGroup(CacheImpl.java:483)
+
+
+
+
+        at org.infinispan.cache.impl.CacheImpl.getGroup(CacheImpl.java:478)
+
+
+
+
+        at org.infinispan.cache.impl.AbstractDelegatingAdvancedCache.getGroup(AbstractDelegatingAdvancedCache.java:227)
+
+
+
+
+        at org.wildfly.clustering.web.infinispan.session.fine.FineSessionAttributesFactory.createValue(FineSessionAttributesFactory.java:73)
+
+
+
+
+        at org.wildfly.clustering.web.infinispan.session.fine.FineSessionAttributesFactory.createValue(FineSessionAttributesFactory.java:45)
+
+
+
+
+        at org.wildfly.clustering.web.infinispan.session.InfinispanSessionFactory.createValue(InfinispanSessionFactory.java:55)
+
+
+
+
+        at org.wildfly.clustering.web.infinispan.session.InfinispanSessionFactory.createValue(InfinispanSessionFactory.java:40)
+
+
+
+
+        at org.wildfly.clustering.web.infinispan.session.InfinispanSessionManager.createSession(InfinispanSessionManager.java:256)
+
+
+
+
+        at org.wildfly.clustering.web.undertow.session.DistributableSessionManager.createSession(DistributableSessionManager.java:109)
+
+
+
+
+        at io.undertow.servlet.spec.ServletContextImpl.getSession(ServletContextImpl.java:741)
+
+
+
+
+        at io.undertow.servlet.spec.HttpServletRequestImpl.getSession(HttpServletRequestImpl.java:370)
+
+
+
+
+        at org.jboss.test.clusterbench.common.session.CommonGranularHttpSessionServlet.doGet(CommonGranularHttpSessionServlet.java:40)
+
+
+
+
+        at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+
+
+
+
+        at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+
+
+
+
+        at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:85)
+
+
+
+
+        at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+
+
+
+
+        at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+
+
+
+
+        at org.wildfly.extension.undertow.security.SecurityContextAssociationHandler.handleRequest(SecurityContextAssociationHandler.java:78)
+
+
+
+
+        at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+
+
+
+
+        at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131)
+
+
+
+
+        at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+
+
+
+
+        at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+
+
+
+
+        at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+
+
+
+
+        at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+
+
+
+
+        at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+
+
+
+
+        at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+
+
+
+
+        at io.undertow.security.handlers.NotificationReceiverHandler.handleRequest(NotificationReceiverHandler.java:50)
+
+
+
+
+        at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+
+
+
+
+        at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+
+
+
+
+        at org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:61)
+
+
+
+
+        at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+
+
+
+
+        at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+
+
+
+
+        at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:284)
+
+
+
+
+        at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:263)
+
+
+
+
+        at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+
+
+
+
+        at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:174)
+
+
+
+
+        at io.undertow.server.Connectors.executeRootHandler(Connectors.java:202)
+
+
+
+
+        at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:793)
+
+
+
+
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+
+
+
+
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+
+
+
+        at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+
+
+See Steps to Reproduce.
+This does not happen when using "dist" cache.
+Server log:
+http://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/mvinkler_eap-7x-failover-http-granular-shutdown-repl-sync/1/console-perf18/

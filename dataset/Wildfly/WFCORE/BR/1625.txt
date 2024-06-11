@@ -1,0 +1,181 @@
+Operation description is not complete in :read-resource-description
+The ouput of :read-resource-description is missing some metadata for operations compared to :read-operation-description:
+
+
+
+
+
+
+[domain@localhost:9990 /] /profile=default:read-resource-description(operations=true)
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "success",
+
+
+
+
+    "result" =&gt; {
+
+
+
+
+        "description" =&gt; "A named set of subsystem configurations.",
+
+
+
+
+        ...
+
+
+
+
+        "operations" =&gt; {
+
+
+
+
+            ...
+
+
+
+
+            "read-attribute-group-names" =&gt; {
+
+
+
+
+                "operation-name" =&gt; "read-attribute-group-names",
+
+
+
+
+                "description" =&gt; "Gets the names of all the attribute groups under the selected resource",
+
+
+
+
+                "request-properties" =&gt; {},
+
+
+
+
+                "reply-properties" =&gt; {
+
+
+
+
+                    "type" =&gt; LIST,
+
+
+
+
+                    "value-type" =&gt; STRING
+
+
+
+
+                }
+
+
+
+
+            },
+
+
+
+
+            ...
+
+
+
+
+}
+
+
+
+
+[domain@localhost:9990 /] /profile=default:read-operation-description(name=read-attribute-group-names)
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "success",
+
+
+
+
+    "result" =&gt; {
+
+
+
+
+        "operation-name" =&gt; "read-attribute-group-names",
+
+
+
+
+        "description" =&gt; "Gets the names of all the attribute groups under the selected resource",
+
+
+
+
+        "request-properties" =&gt; {},
+
+
+
+
+        "reply-properties" =&gt; {
+
+
+
+
+            "type" =&gt; LIST,
+
+
+
+
+            "value-type" =&gt; STRING
+
+
+
+
+        },
+
+
+
+
+        "read-only" =&gt; true,
+
+
+
+
+        "runtime-only" =&gt; true
+
+
+
+
+    }
+
+
+
+
+}
+
+
+
+
+
+
+At least read-only and runtime-only metadata are missing (when they are set on the operation).

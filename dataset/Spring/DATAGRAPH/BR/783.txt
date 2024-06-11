@@ -1,0 +1,2 @@
+Argument type mismatch (int to Float) with derived finders
+See https://github.com/neo4j/neo4j-ogm/issues/77

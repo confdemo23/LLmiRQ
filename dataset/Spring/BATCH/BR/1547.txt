@@ -1,0 +1,2 @@
+ExecutionContextPromotionListener strict flag misinterpreted in listener code
+See BATCH-1309 for the original issue.

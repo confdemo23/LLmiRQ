@@ -1,0 +1,11 @@
+ManagedServerBootCmdFactory alters system property values
+When ManagedServerBootCmdFactory iterates through system properties to use in the server launch command it adds a value of "true" for any properties that have no value. This is incorrect. In particular it breaks SecurityManager usage as -Djava.security.manager is a valid setting while -Djava.security.manager=true will result in
+[Host Controller] 15:09:01,758 INFO  [org.jboss.as.host.controller] (Controller Boot Thread) JBAS010922: Starting server server-one
+15:10:55,691 INFO  [org.jboss.as.process.Server:server-one.status] (ProcessController-threads - 3) JBAS012017: Starting process &amp;apos;Server:server-one&amp;apos;
+[Server:server-one] Error occurred during initialization of VM
+[Server:server-one] java.lang.InternalError: Could not create SecurityManager: true
+[Server:server-one] 	at sun.misc.Launcher.&lt;init&gt;(Launcher.java:106)
+[Server:server-one] 	at sun.misc.Launcher.&lt;clinit&gt;(Launcher.java:57)
+[Server:server-one] 	at java.lang.ClassLoader.initSystemClassLoader(ClassLoader.java:1486)
+[Server:server-one] 	at java.lang.ClassLoader.getSystemClassLoader(ClassLoader.java:1468)
+[Server:server-one] 

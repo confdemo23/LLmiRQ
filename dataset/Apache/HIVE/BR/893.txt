@@ -1,0 +1,2 @@
+Thrift serde doesn&apos;t work with the new version of thrift
+The new version of thrift rename the __isset to __isset_bit_vector in the generated Thrift java code. This causes __isset_bit_vector passed as a field in ThriftSerDe. 

@@ -1,0 +1,2 @@
+change plugin model by using Spring Bean XML
+curent pugin use new XML to define commands. It&amp;apos;s better to use standard Spring XML.

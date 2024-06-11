@@ -1,0 +1,2 @@
+Compile errors in camel-sap component
+The camel-sap component gets several compile errors because of the addition of title to the UrlEndpoint annotation in CAMEL-8558.  I will add a temporary fix so we can get perfectus to run and then turn this over to Bill.

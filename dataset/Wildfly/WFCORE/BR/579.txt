@@ -1,0 +1,1 @@
+ProxyMetadataSource does not return JDK8 &apos;default&apos; methods from interfaces

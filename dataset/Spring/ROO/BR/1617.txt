@@ -1,0 +1,2 @@
+NPE in SolrMetadata
+NPE is raised in SolrMetadata because it assumes version fields always exist.

@@ -1,0 +1,157 @@
+Can not parse a wrapped properties attribute inside a group
+Attribute definition is: 
+
+
+
+
+
+
+        static final PropertiesAttributeDefinition WRAPPED_PROPERTIES_IN_GROUP = new PropertiesAttributeDefinition.Builder(
+
+
+
+
+                "wrapped-properties-in-group", true)
+
+
+
+
+                .setWrapXmlElement(true)
+
+
+
+
+                .setWrapperElement("wrapped-properties")
+
+
+
+
+                .setXmlName("property")
+
+
+
+
+                .setAttributeGroup("mygroup")
+
+
+
+
+                .setAllowExpression(true)
+
+
+
+
+                .build();
+
+
+
+
+
+
+Corresponding XML representation is:
+
+
+
+
+
+
+        &lt;mygroup other-attribute-in-group="foo"&gt;
+
+
+
+
+            &lt;wrapped-properties&gt;
+
+
+
+
+                &lt;property name="prop1" value="val1"/&gt;
+
+
+
+
+                &lt;property name="prop2" value="val2"/&gt;
+
+
+
+
+            &lt;/wrapped-properties&gt;
+
+
+
+
+        &lt;/mygroup&gt;
+
+
+
+
+
+
+XML parsing fails with:
+
+
+
+
+
+
+Message: WFLYCTL0198: Unexpected element &amp;apos;{urn:jboss:domain:test:1.0}mygroup&amp;apos; encountered
+
+
+
+
+        at org.jboss.as.controller.parsing.ParseUtils.unexpectedElement(ParseUtils.java:89)
+
+
+
+
+        at org.jboss.as.controller.PersistentResourceXMLDescription.parseChildren(PersistentResourceXMLDescription.java:240)
+
+
+
+
+        at org.jboss.as.controller.PersistentResourceXMLDescription.parse(PersistentResourceXMLDescription.java:159)
+
+
+
+
+        at org.jboss.as.controller.PersistentResourceXMLDescription.parseChildren(PersistentResourceXMLDescription.java:259)
+
+
+
+
+        at org.jboss.as.controller.PersistentResourceXMLDescription.parse(PersistentResourceXMLDescription.java:159)
+
+
+
+
+        at org.jboss.as.controller.PersistentResourceXMLParser.readElement(PersistentResourceXMLParser.java:41)
+
+
+
+
+        at org.jboss.as.controller.PersistentResourceXMLParser.readElement(PersistentResourceXMLParser.java:35)
+
+
+
+
+        at org.jboss.staxmapper.XMLMapperImpl.processNested(XMLMapperImpl.java:110)
+
+
+
+
+        at org.jboss.staxmapper.XMLMapperImpl.parseDocument(XMLMapperImpl.java:69)
+
+
+
+
+        at org.jboss.as.controller.persistence.PersistentResourceXMLParserTestCase.testGroups(PersistentResourceXMLParserTestCas
+
+
+
+
+e.java:147)
+
+
+
+
+

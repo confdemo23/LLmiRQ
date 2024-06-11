@@ -1,0 +1,40 @@
+Property placeholders do not work with camel-blueprint 
+if I have a route that looks like: 
+
+
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+  xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.0.0" xmlns:ext="http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.0.0"
+
+  xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 
+
+                      http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd"&gt;
+
+
+
+  &lt;cm:property-placeholder persistent-id="camel.blueprint" /&gt;
+
+
+
+  &lt;camelContext id="camel" trace="false" xmlns="http://camel.apache.org/schema/blueprint"&gt;
+
+
+
+    &lt;route&gt;
+
+      &lt;from uri="file://${directory.in}/" /&gt;
+
+      &lt;to uri="file://${directory.out}/" /&gt;
+
+    &lt;/route&gt;
+
+  &lt;/camelContext&gt;
+
+&lt;/blueprint&gt;
+
+
+
+The placeholders aren&amp;apos;t replaced by the actual value. 

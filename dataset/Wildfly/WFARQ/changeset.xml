@@ -1,0 +1,6 @@
+<changeset>
+    <id>4
+        <files>org/jboss/as/arquillian/container/ManagementClient.java
+        </files>
+    </id>
+</changeset>

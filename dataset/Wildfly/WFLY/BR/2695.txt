@@ -1,0 +1,10 @@
+Creating named formater patterns for offline servers fail
+After adding and attaching a named formatter to an offline server starting the server fails due to an invalid logging configuration.
+server-one fails with:
+{{
+[Server:server-one] 00:08:00,214 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) JBAS014612: Operation ("add") failed - address: ([
+[Server:server-one]     ("subsystem" =&gt; "logging"),
+[Server:server-one]     ("console-handler" =&gt; "CONSOLE")
+[Server:server-one] ]): java.lang.IllegalArgumentException: Formatter "TESTPATTERN" is not found
+}}
+I assume logging.properties is written too late in LoggingOperations.java

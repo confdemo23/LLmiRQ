@@ -1,0 +1,14 @@
+PatriciaTrie
+ the result of trie tree prefixMap function is inconsistent. it would contain a key but the size is 0;
+some unittest codes as below: 
+  PatriciaTrie&lt;String&gt; aTree =
+        new PatriciaTrie&lt;String&gt; ();
+    aTree.put("", "");
+    aTree.put("", "");
+    assertTrue(aTree.prefixMap("").containsKey("")); //pass
+    assertEquals("", aTree.prefixMap("").get("")); //pass
+    assertFalse(aTree.prefixMap("").isEmpty());                 //fail
+    assertEquals(1, aTree.prefixMap("").size());                 //fail actural 0
+    assertEquals(1, aTree.prefixMap("").keySet().size());   //fail actural 0
+    assertEquals(1, aTree.prefixMap("").entrySet().size()); //fail actural 0
+    assertEquals(1, aTree.prefixMap("").values().size()); //fail actural 0

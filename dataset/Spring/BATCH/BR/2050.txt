@@ -1,0 +1,11 @@
+AbstractItemCountingItemStreamItemReader.read() shouldn&apos;t be final
+when you use FlatfileItemWriter with StepScope (proxyTargetClass=true --&gt; CGLib-Subclassing) the final method read() cannot be proxied correctly. So the AbstractItemCountingItemStreamItemReader.currentItemCount is always persisted as 0 to the jobRepository.
+Code:
+&lt;bean class="org.springframework.batch.core.scope.StepScope" p:proxyTargetClass="true" /&gt;
+&lt;bean id="reader" class="org.springframework.batch.item.file.FlatFileItemReader" scope="step"&gt;
+&lt;property name="resource" value="#
+{jobParameters[pathToFile]}
+"&gt;&lt;/property&gt;
+&lt;property name="lineMapper" ref="lineMapper"/&gt;
+&lt;/bean&gt;
+thx 

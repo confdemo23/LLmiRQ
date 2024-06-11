@@ -1,0 +1,5 @@
+Unable to enable statistics via configuration for resource adapters
+The statistics for  resource adapters are hard-coded to be disabled at startup:
+https://github.com/wildfly/wildfly/blob/47830b44d1bd48c4fcdc2489cecaa3971c45c209/connector/src/main/java/org/jboss/as/connector/deployers/ra/processors/AbstractResourceAdapterDeploymentServiceListener.java#L91
+It&amp;apos;s not possible to enable the statistics in a persistent way - it needs to be done each time the servers starts e.g. via jmx.
+Ideally there&amp;apos;d be a "statistics-enabled" attribute on the "&lt;connection-definition&gt;" element in the configuration file in the same way that there is on "&lt;datasource&gt;".

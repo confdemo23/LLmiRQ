@@ -1,0 +1,32 @@
+ClientConfigurationImpl should not translate IP address to host name
+When creating a ModelControllerClient and passing in an IP address, ClientConfigurationImpl internally translates it to a host name, like here:
+
+
+
+
+
+
+public static ModelControllerClientConfiguration create(final InetAddress address, final int port) {
+
+
+
+
+        return new ClientConfigurationImpl(address.getHostName(), port, null, null, null, createDefaultExecutor(), true, null);
+
+
+
+
+    }
+
+
+
+
+
+
+Later on, when the client connects, it is translated via DNS back to an IP address. This is not only unnecessary, but in some situations, it is wrong.
+Consider a Windows machine having two IP addresses ,A and B, on one network interface, where only A is pointed at by a DNS record. 
+
+Run AS testsuite and pass it the address B as the node0 property, AS will bind itself to this address.
+Now when a test creates a ModelControllerClient using IP address B, the address B will get translated to the host name, even though B is not in the DNS. The resolving works this way on a Windows machine.
+During the connection, the host name will get resolved by DNS to address A and the test will try to connect through address A. The connection will be refused, or worse, might connect to another instance on the same machine.
+

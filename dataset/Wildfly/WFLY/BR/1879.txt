@@ -1,0 +1,3 @@
+Poor error handling in FilesystemDeploymentScanner when a directory cannot be read
+http://paste2.org/1VEUkjbz
+When the scanner reads a directory and File.listFiles() returns null, that means there was a problem doing the list, which should result in an exception. It does, but the exception is an NPE (see stack trace linked above); it should be something more meaningful.

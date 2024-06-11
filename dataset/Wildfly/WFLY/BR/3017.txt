@@ -1,0 +1,5 @@
+OperationContextImpl.readResourceForUpdate assumes all resources represent persistent config
+The readResourceForUpdate impl makes a few assumptions regarding the fact that a given Resource represents persistent config (i.e. Resource.isRuntime() == true):
+1) It calls rejectUserDomainServerUpdates() which means an OSH running on a server could not call this.
+2) It calls authorize(false, READ_WRITE_CONFIG) which means an OSH for an op available to the RBAC Operator role could not call this.
+Places this impacts include LogStoreProbeHandler and LogStoreTransactionDeleteHandler which should be calling readResourceForUpdate but aren&amp;apos;t  and can&amp;apos;t because of this bug.

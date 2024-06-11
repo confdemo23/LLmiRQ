@@ -1,0 +1,74 @@
+Move test(s) with too long name(s) to a better place - prevent  FNFE: File name too long
+I&amp;apos;m getting FileNotFoundException (File name too long) when running AuditJoinTableoverOnetoManyJoinColumnTest. We should refactor the too long test names.
+
+
+
+
+
+
+Running org.jboss.as.test.integration.jpa.hibernate.envers.auditjointableoveronetomanyjoincolumntest.AuditJoinTableoverOnetoManyJoinColumnTest
+
+
+
+
+Exception in thread "ThreadedStreamConsumer" org.apache.maven.surefire.util.NestedRuntimeException: null; nested exception is java.io.FileNotFoundException: /home/jcacek/Java/Projects/wildfly/testsuite/integration/basic/target/surefire-reports/org.jboss.as.test.integration.jpa.hibernate.envers.auditjointableoveronetomanyjoincolumntest.AuditJoinTableoverOnetoManyJoinColumnTest-output.txt (File name too long)
+
+
+
+
+java.io.FileNotFoundException: /home/jcacek/Java/Projects/wildfly/testsuite/integration/basic/target/surefire-reports/org.jboss.as.test.integration.jpa.hibernate.envers.auditjointableoveronetomanyjoincolumntest.AuditJoinTableoverOnetoManyJoinColumnTest-output.txt (File name too long)
+
+
+
+
+	at java.io.FileOutputStream.open(Native Method)
+
+
+
+
+	at java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:212)
+
+
+
+
+	at java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:165)
+
+
+
+
+	at java.io.FileWriter.&lt;init&gt;(FileWriter.java:90)
+
+
+
+
+	at org.apache.maven.surefire.report.ConsoleOutputFileReporter.writeMessage(ConsoleOutputFileReporter.java:89)
+
+
+
+
+	at org.apache.maven.surefire.report.MulticastingReporter.writeMessage(MulticastingReporter.java:101)
+
+
+
+
+	at org.apache.maven.surefire.report.TestSetRunListener.writeTestOutput(TestSetRunListener.java:105)
+
+
+
+
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:132)
+
+
+
+
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:67)
+
+
+
+
+	at java.lang.Thread.run(Thread.java:724)
+
+
+
+
+

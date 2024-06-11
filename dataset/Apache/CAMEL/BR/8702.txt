@@ -1,0 +1,2 @@
+when occurs "Connection reset by peer",netty4 client&apos;s EventLoopGroup select thread won&apos;t shut down
+I used netty4 and netty4http as producer ,when occurs  exception "Connection reset by peer",netty4 client&amp;apos;s EventLoopGroup "Selector" thread and related port won&amp;apos;t shut down.I used thread dump and found ClientChannelHandler&amp;apos;s method exceptionCaught just close channel,it won&amp;apos;t close "Selector" thread and port, and the same to NettyProducer.NettyProducerPoolableObjectFactory.destroyObject.

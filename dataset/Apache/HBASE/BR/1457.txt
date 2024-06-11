@@ -1,0 +1,2 @@
+Taking down ROOT/META regionserver can result in cluster becoming in-operational
+Take down a regionserver via controlled or uncontrolled shutdown, the master doesn&amp;apos;t properly reassign the root/meta regions. 

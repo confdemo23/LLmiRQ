@@ -1,0 +1,3 @@
+Vectorization: fast-path for coalesce if input.noNulls = true
+Coalesce can skip processing other columns, if all the input columns are non-null.
+Possibly retaining, isRepeating=true.

@@ -1,0 +1,9 @@
+Webservice13 tck failures introduced by ejb3 and security change 
+There 2 tck regression failures under webserivice13 directory in EAP 6.2.0.ER6. 
+IT turns out the change[2] introduced this two failures:
+[1]https://jenkins.mw.lab.eng.bos.redhat.com/hudson/view/EAP6/view/TCK6-EAP6/job/tck6-eap6-webservices13/lastCompletedBuild/testReport/unknownTestSuite.0/
+[2][2]https://github.com/jbossas/jboss-eap/commit/72d5cd3f96540519a9747579dd3b85f0f564b64c
+EAP 6.2.0.ER6 sever error message:
+------------------------------------------------------------------------------
+18:32:00,338 ERROR [org.jboss.as.ejb3.invocation] (http-myserver.com/127.0.0.1:8080-1) JBAS014134: EJB Invocation failed on component WSEjbSingletonTest for method public java.lang.String com.sun.ts.tests.webservices13.ejb.annotations.WSEjbSingletonTest.HelloBean.bye(java.lang.String): javax.ejb.EJBException: java.lang.IllegalStateException: JBAS014485: EJB WSEjbSingletonTest is enabled for security but doesn&amp;apos;t have a security domain set
+	at org.jboss.as.ejb3.tx.CMTTxInterceptor.handleExceptionInOurTx(CMTTxInterceptor.java:189) [jboss-as-ejb3-7.3.0.Final-redhat-SNAPSHOT.jar:7.3.0.Final-redhat-SNAPSHOT]

@@ -1,0 +1,8 @@
+HIVE JDBC module won&apos;t compile under JDK1.7 as new methods added in JDBC specification
+jdbc module couldn&amp;apos;t be compiled with jdk7 as it adds some abstract method in the JDBC specification 
+some error info:
+ error: HiveCallableStatement is not abstract and does not override abstract
+method &lt;T&gt;getObject(String,Class&lt;T&gt;) in CallableStatement
+.
+.
+.

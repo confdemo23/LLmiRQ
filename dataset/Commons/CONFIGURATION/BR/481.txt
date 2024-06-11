@@ -1,0 +1,43 @@
+Variable interpolation across files broken in 1.7 & 1.8
+With Commons Configuration 1.6, I was able to declare a variable in a properties file, and then reference it in a XML file using the ${myvar} syntax.
+For example:
+global.properties:
+
+myvar=abc
+
+test.xml:
+
+
+
+&lt;products&gt;
+
+  &lt;product name="abc"&gt;
+
+    &lt;desc&gt;${myvar}-product&lt;/desc&gt;
+
+  &lt;/product&gt;
+
+&lt;/products&gt;
+
+
+
+config.xml:
+
+
+
+&lt;properties fileName="global.properties"/&gt;
+
+&lt;xml fileName="test.xml" config-name="test"&gt;
+
+  &lt;expressionEngine config-class="org.apache.commons.configuration.tree.xpath.XPathExpressionEngine"/&gt;
+
+&lt;/xml&gt;
+
+
+
+When I try to retrieve the value, like so:
+
+combinedConfig.getConfiguration("test").configurationAt("products/product[@name=&amp;apos;abc&amp;apos;]", true).getString("desc")
+
+I get "${myvar}-product" instead of "abc-product".
+This was working in Commons Configuration 1.6, but seems to be broken in 1.7 and 1.8.

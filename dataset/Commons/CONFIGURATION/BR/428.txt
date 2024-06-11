@@ -1,0 +1,52 @@
+The Windows file path cannot be saved correctly as expected in XMLConfiguration
+I want to generate a XML as:
+
+
+
+&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+
+&lt;Test&gt;
+
+    &lt;Cluster&gt;
+
+        &lt;Server location="C:\Server92"/&gt;
+
+    &lt;/Cluster&gt;
+
+&lt;/Test&gt;
+
+
+
+Java Code:
+Test.java
+
+
+XMLConfiguration config = new XMLConfiguration();
+
+config.setRootElementName("Test");
+
+config.addProperty("Cluster.Server[@location]",  "C:\\Server92");
+
+config.save("C:\\NEW.xml");
+
+
+
+BUT after running the Java Code, the generated XML looks like:
+
+
+
+&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+
+&lt;Test&gt;
+
+&lt;Cluster&gt;
+
+&lt;Server location="C:\\Server92"/&gt;
+
+&lt;/Cluster&gt;
+
+&lt;/Test&gt;
+
+
+
+You will find that the location is "C:\ \Server92", BUT what I expected is "C:\Server92".

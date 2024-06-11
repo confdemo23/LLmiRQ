@@ -1,0 +1,225 @@
+Intermittent failure in ModelPersistenceTestCase.testSimpleOperation
+ModelPersistenceTestCase.testSimpleOperation occasionally fails with the following pattern:
+
+
+
+
+
+
+java.lang.AssertionError: null
+
+
+
+
+    at org.junit.Assert.fail(Assert.java:86)
+
+
+
+
+    at org.junit.Assert.assertTrue(Assert.java:41)
+
+
+
+
+    at org.junit.Assert.assertTrue(Assert.java:52)
+
+
+
+
+    at org.jboss.as.test.integration.management.api.ModelPersistenceTestCase.testSimpleOperation(ModelPersistenceTestCase.java:119)
+
+
+
+
+------- Stdout: -------
+
+
+
+
+14:06:18,604 ERROR [org.jboss.as.controller.management-operation] (management-handler-thread - 1) org.jboss.as.controller.persistence.ConfigurationPersistenceException: WFLYCTL0081: Failed to back up C:\BuildAgent\work\a31d203e70e89f90\testsuite\integration\basic\target\jbossas\standalone\configuration\standalone.xml: org.jboss.as.controller.persistence.ConfigurationPersistenceException: WFLYCTL0081: Failed to back up C:\BuildAgent\work\a31d203e70e89f90\testsuite\integration\basic\target\jbossas\standalone\configuration\standalone.xml
+
+
+
+
+    at org.jboss.as.controller.persistence.ConfigurationFile.fileWritten(ConfigurationFile.java:552)
+
+
+
+
+    at org.jboss.as.controller.persistence.ConfigurationFilePersistenceResource.doCommit(ConfigurationFilePersistenceResource.java:65)
+
+
+
+
+    at org.jboss.as.controller.persistence.AbstractFilePersistenceResource.commit(AbstractFilePersistenceResource.java:58)
+
+
+
+
+    at org.jboss.as.controller.ModelControllerImpl$4.commit(ModelControllerImpl.java:780)
+
+
+
+
+    at org.jboss.as.controller.AbstractOperationContext.executeDoneStage(AbstractOperationContext.java:743)
+
+
+
+
+    at org.jboss.as.controller.AbstractOperationContext.processStages(AbstractOperationContext.java:680)
+
+
+
+
+    at org.jboss.as.controller.AbstractOperationContext.executeOperation(AbstractOperationContext.java:370)
+
+
+
+
+    at org.jboss.as.controller.OperationContextImpl.executeOperation(OperationContextImpl.java:1336)
+
+
+
+
+    at org.jboss.as.controller.ModelControllerImpl.internalExecute(ModelControllerImpl.java:391)
+
+
+
+
+    at org.jboss.as.controller.ModelControllerImpl.execute(ModelControllerImpl.java:217)
+
+
+
+
+    at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler.doExecute(ModelControllerClientOperationHandler.java:207)
+
+
+
+
+    at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler.access$300(ModelControllerClientOperationHandler.java:129)
+
+
+
+
+    at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler$1$1.run(ModelControllerClientOperationHandler.java:151)
+
+
+
+
+    at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler$1$1.run(ModelControllerClientOperationHandler.java:147)
+
+
+
+
+    at java.security.AccessController.doPrivileged(Native Method)
+
+
+
+
+    at javax.security.auth.Subject.doAs(Subject.java:422)
+
+
+
+
+    at org.jboss.as.controller.AccessAuditContext.doAs(AccessAuditContext.java:92)
+
+
+
+
+    at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler$1.execute(ModelControllerClientOperationHandler.java:147)
+
+
+
+
+    at org.jboss.as.protocol.mgmt.AbstractMessageHandler$2$1.doExecute(AbstractMessageHandler.java:299)
+
+
+
+
+    at org.jboss.as.protocol.mgmt.AbstractMessageHandler$AsyncTaskRunner.run(AbstractMessageHandler.java:519)
+
+
+
+
+    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+
+
+
+
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+
+
+
+    at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+    at org.jboss.threads.JBossThread.run(JBossThread.java:320)
+
+
+
+
+Caused by: java.nio.file.FileSystemException: C:\BuildAgent\work\a31d203e70e89f90\testsuite\integration\basic\target\jbossas\standalone\configuration\standalone_xml_history\standalone.last.xml: The process cannot access the file because it is being used by another process.
+
+
+
+
+
+
+
+
+
+    at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:86)
+
+
+
+
+    at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:97)
+
+
+
+
+    at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:102)
+
+
+
+
+    at sun.nio.fs.WindowsFileCopy.copy(WindowsFileCopy.java:165)
+
+
+
+
+    at sun.nio.fs.WindowsFileSystemProvider.copy(WindowsFileSystemProvider.java:278)
+
+
+
+
+    at java.nio.file.Files.copy(Files.java:1274)
+
+
+
+
+    at org.jboss.as.controller.persistence.FilePersistenceUtils.copyFile(FilePersistenceUtils.java:73)
+
+
+
+
+    at org.jboss.as.controller.persistence.ConfigurationFile.fileWritten(ConfigurationFile.java:550)
+
+
+
+
+    ... 23 more
+
+
+
+
+
+
+The test fails because the standalone.last.xml file isn&amp;apos;t being updated as expected; the file isn&amp;apos;t  updated due to the "The process cannot access the file because it is being used by another process"  IOException.
+3 generally possibilities come to mind:
+1) There&amp;apos;s some other process on the CI server that really is using the file. Something like antivirus that touches lots of files briefly. (Not suggesting its actually AV.) It&amp;apos;s odd we don&amp;apos;t get other failures though; e.g. failures to persist the main config file.
+2) It&amp;apos;s the test driver process that&amp;apos;s holding the file, conflicting with the server process. This is certainly possible. I&amp;apos;ve looked though and the test driver seems to be correct in terms of how it handles the file, reading it to calculate a CRC and then closing the stream used to do that in a finally block. It&amp;apos;s also odd that this would only happen on Windows CI. Still, since we know we have 2 processes, test driver and server, both touching a file and we are getting an exception about 2 processes conflicting over that file, something in this area seems most likely.
+3) There&amp;apos;s some flaw in ConfigurationFile itself. But it&amp;apos;s odd that a flaw there would produce an exception talking about how the file "is being used by another process".

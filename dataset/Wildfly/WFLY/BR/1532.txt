@@ -1,0 +1,596 @@
+RemoteCallWhileShuttingDownTestCase.testServerShutdownRemoteCall fails intermittently
+RemoteCallWhileShuttingDownTestCase.testServerShutdownRemoteCall is failing intermittently on TeamCity (and possibly other environments). The stacktrace looks like:
+
+
+
+
+
+
+javax.ejb.EJBException: java.io.IOException: Channel Channel ID 997a34b0 (outbound) of Remoting connection 0190b512 to /127.0.0.1:4447 has been closed
+
+
+
+
+    at org.jboss.ejb.client.EJBInvocationHandler.doInvoke(EJBInvocationHandler.java:236)
+
+
+
+
+    at org.jboss.ejb.client.EJBInvocationHandler.doInvoke(EJBInvocationHandler.java:181)
+
+
+
+
+    at org.jboss.ejb.client.EJBInvocationHandler.invoke(EJBInvocationHandler.java:144)
+
+
+
+
+    at sun.proxy.$Proxy20.testDone(Unknown Source)
+
+
+
+
+    at org.jboss.as.test.manualmode.ejb.shutdown.RemoteCallWhileShuttingDownTestCase.testServerShutdownRemoteCall(RemoteCallWhileShuttingDownTestCase.java:138)
+
+
+
+
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+
+
+
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+
+
+
+
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+
+
+    at java.lang.reflect.Method.invoke(Method.java:601)
+
+
+
+
+    at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+
+
+
+
+    at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+
+
+
+
+    at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+
+
+
+
+    at org.jboss.arquillian.junit.Arquillian$6$1.invoke(Arquillian.java:270)
+
+
+
+
+    at org.jboss.arquillian.container.test.impl.execution.LocalTestExecuter.execute(LocalTestExecuter.java:60)
+
+
+
+
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+
+
+
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+
+
+
+
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+
+
+    at java.lang.reflect.Method.invoke(Method.java:601)
+
+
+
+
+    at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:94)
+
+
+
+
+    at org.jboss.arquillian.core.impl.EventContextImpl.invokeObservers(EventContextImpl.java:99)
+
+
+
+
+    at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:81)
+
+
+
+
+    at org.jboss.arquillian.core.impl.ManagerImpl.fire(ManagerImpl.java:135)
+
+
+
+
+    at org.jboss.arquillian.core.impl.ManagerImpl.fire(ManagerImpl.java:115)
+
+
+
+
+    at org.jboss.arquillian.core.impl.EventImpl.fire(EventImpl.java:67)
+
+
+
+
+    at org.jboss.arquillian.container.test.impl.execution.ClientTestExecuter.execute(ClientTestExecuter.java:53)
+
+
+
+
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+
+
+
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+
+
+
+
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+
+
+    at java.lang.reflect.Method.invoke(Method.java:601)
+
+
+
+
+    at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:94)
+
+
+
+
+    at org.jboss.arquillian.core.impl.EventContextImpl.invokeObservers(EventContextImpl.java:99)
+
+
+
+
+    at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:81)
+
+
+
+
+    at org.jboss.arquillian.container.test.impl.client.ContainerEventController.createContext(ContainerEventController.java:142)
+
+
+
+
+    at org.jboss.arquillian.container.test.impl.client.ContainerEventController.createTestContext(ContainerEventController.java:129)
+
+
+
+
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+
+
+
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+
+
+
+
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+
+
+    at java.lang.reflect.Method.invoke(Method.java:601)
+
+
+
+
+    at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:94)
+
+
+
+
+    at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:88)
+
+
+
+
+    at org.jboss.arquillian.test.impl.TestContextHandler.createTestContext(TestContextHandler.java:89)
+
+
+
+
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+
+
+
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+
+
+
+
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+
+
+    at java.lang.reflect.Method.invoke(Method.java:601)
+
+
+
+
+    at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:94)
+
+
+
+
+    at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:88)
+
+
+
+
+    at org.jboss.arquillian.test.impl.TestContextHandler.createClassContext(TestContextHandler.java:75)
+
+
+
+
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+
+
+
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+
+
+
+
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+
+
+    at java.lang.reflect.Method.invoke(Method.java:601)
+
+
+
+
+    at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:94)
+
+
+
+
+    at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:88)
+
+
+
+
+    at org.jboss.arquillian.test.impl.TestContextHandler.createSuiteContext(TestContextHandler.java:60)
+
+
+
+
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+
+
+
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+
+
+
+
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+
+
+    at java.lang.reflect.Method.invoke(Method.java:601)
+
+
+
+
+    at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:94)
+
+
+
+
+    at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:88)
+
+
+
+
+    at org.jboss.arquillian.core.impl.ManagerImpl.fire(ManagerImpl.java:135)
+
+
+
+
+    at org.jboss.arquillian.test.impl.EventTestRunnerAdaptor.test(EventTestRunnerAdaptor.java:111)
+
+
+
+
+    at org.jboss.arquillian.junit.Arquillian$6.evaluate(Arquillian.java:263)
+
+
+
+
+    at org.jboss.arquillian.junit.Arquillian$4.evaluate(Arquillian.java:226)
+
+
+
+
+    at org.jboss.arquillian.junit.Arquillian.multiExecute(Arquillian.java:314)
+
+
+
+
+    at org.jboss.arquillian.junit.Arquillian.access$100(Arquillian.java:46)
+
+
+
+
+    at org.jboss.arquillian.junit.Arquillian$5.evaluate(Arquillian.java:240)
+
+
+
+
+    at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+
+
+
+
+    at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+
+
+
+
+    at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+
+
+
+
+    at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+
+
+
+
+    at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+
+
+
+
+    at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+
+
+
+
+    at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+
+
+
+
+    at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+
+
+
+
+    at org.jboss.arquillian.junit.Arquillian$2.evaluate(Arquillian.java:185)
+
+
+
+
+    at org.jboss.arquillian.junit.Arquillian.multiExecute(Arquillian.java:314)
+
+
+
+
+    at org.jboss.arquillian.junit.Arquillian.access$100(Arquillian.java:46)
+
+
+
+
+    at org.jboss.arquillian.junit.Arquillian$3.evaluate(Arquillian.java:199)
+
+
+
+
+    at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+
+
+
+
+    at org.jboss.arquillian.junit.Arquillian.run(Arquillian.java:147)
+
+
+
+
+    at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:234)
+
+
+
+
+    at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:133)
+
+
+
+
+    at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:114)
+
+
+
+
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+
+
+
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+
+
+
+
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+
+
+    at java.lang.reflect.Method.invoke(Method.java:601)
+
+
+
+
+    at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:188)
+
+
+
+
+    at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:166)
+
+
+
+
+    at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:86)
+
+
+
+
+    at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:101)
+
+
+
+
+    at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:74)
+
+
+
+
+Caused by: java.io.IOException: Channel Channel ID 997a34b0 (outbound) of Remoting connection 0190b512 to /127.0.0.1:4447 has been closed
+
+
+
+
+    at org.jboss.ejb.client.remoting.ChannelAssociation$1.handleClose(ChannelAssociation.java:118)
+
+
+
+
+    at org.jboss.ejb.client.remoting.ChannelAssociation$1.handleClose(ChannelAssociation.java:110)
+
+
+
+
+    at org.jboss.remoting3.spi.SpiUtils.safeHandleClose(SpiUtils.java:54)
+
+
+
+
+    at org.jboss.remoting3.spi.AbstractHandleableCloseable$CloseHandlerTask.run(AbstractHandleableCloseable.java:501)
+
+
+
+
+    at org.jboss.remoting3.spi.AbstractHandleableCloseable.runCloseTask(AbstractHandleableCloseable.java:406)
+
+
+
+
+    at org.jboss.remoting3.spi.AbstractHandleableCloseable.closeComplete(AbstractHandleableCloseable.java:277)
+
+
+
+
+    at org.jboss.remoting3.remote.RemoteConnectionChannel.closeAction(RemoteConnectionChannel.java:531)
+
+
+
+
+    at org.jboss.remoting3.spi.AbstractHandleableCloseable.closeAsync(AbstractHandleableCloseable.java:359)
+
+
+
+
+    at org.jboss.remoting3.remote.RemoteConnectionHandler.closeAllChannels(RemoteConnectionHandler.java:399)
+
+
+
+
+    at org.jboss.remoting3.remote.RemoteConnectionHandler.receiveCloseRequest(RemoteConnectionHandler.java:212)
+
+
+
+
+    at org.jboss.remoting3.remote.RemoteReadListener.handleEvent(RemoteReadListener.java:106)
+
+
+
+
+    at org.jboss.remoting3.remote.RemoteReadListener.handleEvent(RemoteReadListener.java:45)
+
+
+
+
+    at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:91)
+
+
+
+
+    at org.xnio.channels.TranslatingSuspendableChannel.handleReadable(TranslatingSuspendableChannel.java:195)
+
+
+
+
+    at org.xnio.channels.TranslatingSuspendableChannel$1.handleEvent(TranslatingSuspendableChannel.java:109)
+
+
+
+
+    at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:91)
+
+
+
+
+    at org.xnio.ChannelListeners$DelegatingChannelListener.handleEvent(ChannelListeners.java:1052)
+
+
+
+
+    at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:91)
+
+
+
+
+    at org.xnio.conduits.ReadReadyHandler$ChannelListenerHandler.readReady(ReadReadyHandler.java:61)
+
+
+
+
+    at org.xnio.nio.NioSocketConduit.handleReady(NioSocketConduit.java:85)
+
+
+
+
+    at org.xnio.nio.WorkerThread.run(WorkerThread.java:528)
+
+
+
+
+
+
+The run is here http://teamcity.cafe-babe.org/viewLog.html?buildId=5255&amp;buildTypeId=bt13

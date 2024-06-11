@@ -1,0 +1,5 @@
+In Spring soical facebook 2.0.0.M release, though i set the birthdate in facebook and get the age range using the spring social Facebook api it returns only UNKNOW value
+FacebookProfile prof=con.getApi().userOperations().getUserProfile();
+System.out.println(prof.getAgeRange().toString());
+Result:
+The above output generates UNKNOWN as its value, though we set up the birthdate field in facebook.

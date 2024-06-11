@@ -1,0 +1,11 @@
+In HierarchicalConfiguration$Node visits the ConfigurationKey  points to the parent path in visitAfterChildren call
+When visiting a child the key is aggregated to have the child node name, and a call to visitBeforeChildren and grandChildren&amp;apos;s visits are made.
+However, before calling  visitAfterChildren,  the resetting of the key to that of it&amp;apos;s parent&amp;apos;s, seems inconsistent.
+Last lines in visit(NodeVisitor visitor, ConfigurationKey key) 
+            if (key != null)
+            {
+
+                key.setLength(length);
+
+            }
+            visitor.visitAfterChildren(this, key);

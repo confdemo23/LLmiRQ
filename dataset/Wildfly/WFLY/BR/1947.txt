@@ -1,0 +1,2 @@
+Issue with naming subsystem legacy schema
+Even though the &amp;apos;fix&amp;apos; for WFLY-1914 is to bump the naming subsystem version, this should not be necessary. 

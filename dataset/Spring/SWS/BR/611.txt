@@ -1,0 +1,2 @@
+SpringCertificateValidationCallbackHandler.SpringSecurityCertificateValidator.validate(..) . Use PreAuthenticatedAuthenticationToken
+X509AuthenticationProvider/X509AuthenticationToken are deprecated

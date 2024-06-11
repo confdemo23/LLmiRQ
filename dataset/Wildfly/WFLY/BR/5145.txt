@@ -1,0 +1,179 @@
+Jacorb subsystem does not contain operation "describe-migration"
+As part of the migrate functionality for moving from JacORB to IIOP OpenJDK the old subsystem should contain operation describe-migration
+
+
+
+
+
+
+/subsystem=jacorb:describe-migration()
+
+
+
+
+
+
+for user gets information about following steps.
+But JacORB subsystem does not contain any such operation
+
+
+
+
+
+
+/subsystem=jacorb:read-operation-names()
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "success",
+
+
+
+
+    "result" =&gt; [
+
+
+
+
+        "add",
+
+
+
+
+        "list-add",
+
+
+
+
+        "list-clear",
+
+
+
+
+        "list-get",
+
+
+
+
+        "list-remove",
+
+
+
+
+        "map-clear",
+
+
+
+
+        "map-get",
+
+
+
+
+        "map-put",
+
+
+
+
+        "map-remove",
+
+
+
+
+        "migrate",
+
+
+
+
+        "query",
+
+
+
+
+        "read-attribute",
+
+
+
+
+        "read-attribute-group",
+
+
+
+
+        "read-attribute-group-names",
+
+
+
+
+        "read-children-names",
+
+
+
+
+        "read-children-resources",
+
+
+
+
+        "read-children-types",
+
+
+
+
+        "read-operation-description",
+
+
+
+
+        "read-operation-names",
+
+
+
+
+        "read-resource",
+
+
+
+
+        "read-resource-description",
+
+
+
+
+        "remove",
+
+
+
+
+        "undefine-attribute",
+
+
+
+
+        "whoami",
+
+
+
+
+        "write-attribute"
+
+
+
+
+    ]
+
+
+
+
+}
+
+
+
+
+

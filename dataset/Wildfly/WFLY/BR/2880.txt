@@ -1,0 +1,65 @@
+DsXmlDeploymentInstallProcessor passes wrong ManagementResourceRegistration to DataSourceStatisticsListener
+Unlike AbstractDataSourceAdd, which passes an override registration into DataSourceStatisticsListener, DsXmlDeploymentInstallProcessor passes in the main registration.
+I believe this is the cause of the following stuff in the logs Tomaz Cerar saw when messing about with the WildFly quickstarts:
+
+
+
+
+
+
+22:50:05,945 ERROR [org.jboss.msc.service] (MSC service thread 1-4) MSC000002: Invocation of listener "org.jboss.as.connector.subsystems.datasources.DataSourceStatisticsListener@1281d4a" failed: java.lang.IllegalArgumentException:
+
+
+
+
+ JBAS014809: A node is already registered at &amp;apos;(deployment =&gt; *)(subsystem =&gt; datasources)(data-source =&gt; *)(statistics =&gt; jdbc)&amp;apos;
+
+
+
+
+        at org.jboss.as.controller.registry.ConcreteResourceRegistration.registerSubModel(ConcreteResourceRegistration.java:145) [wildfly-controller-8.0.0.Final-SNAPSHOT.jar:8.0.0.Final-SNAPSHOT]
+
+
+
+
+        at org.jboss.as.controller.registry.AbstractResourceRegistration.registerSubModel(AbstractResourceRegistration.java:90) [wildfly-controller-8.0.0.Final-SNAPSHOT.jar:8.0.0.Final-SNAPSHOT]
+
+
+
+
+        at org.jboss.as.connector.subsystems.datasources.DataSourceStatisticsListener.transition(DataSourceStatisticsListener.java:72) [wildfly-connector-8.0.0.Final-SNAPSHOT.jar:8.0.0.Final-SNAPSHOT]
+
+
+
+
+        at org.jboss.msc.service.ServiceControllerImpl.invokeListener(ServiceControllerImpl.java:1533) [jboss-msc-1.2.0.Final.jar:1.2.0.Final]
+
+
+
+
+        at org.jboss.msc.service.ServiceControllerImpl.access$2800(ServiceControllerImpl.java:51) [jboss-msc-1.2.0.Final.jar:1.2.0.Final]
+
+
+
+
+        at org.jboss.msc.service.ServiceControllerImpl$ListenerTask.run(ServiceControllerImpl.java:2099) [jboss-msc-1.2.0.Final.jar:1.2.0.Final]
+
+
+
+
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [rt.jar:1.8.0]
+
+
+
+
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [rt.jar:1.8.0]
+
+
+
+
+        at java.lang.Thread.run(Thread.java:744) [rt.jar:1.8.0]
+
+
+
+
+

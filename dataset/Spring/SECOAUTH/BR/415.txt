@@ -1,0 +1,8 @@
+TokenEndpoint returns error messages that are not according to oauth 2 spec
+The OAuth standard (http://tools.ietf.org/html/rfc6749) defines the following 
+Invalid_Request ==&gt; missing fields
+Invalid_Grant ==&gt; Missing Grant or Invalid Grant
+But Spring reversed the error categories
+It returns an
+Invalid_Grant ==&gt; missing fields
+Invalid_Request ==&gt; Missing Grant or Invalid Grant.

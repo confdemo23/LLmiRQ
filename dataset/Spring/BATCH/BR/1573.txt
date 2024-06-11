@@ -1,0 +1,16 @@
+End transition states will cause the batch job to finish with an Unknown status if the namespace prefix is used.
+If you run the following job:
+&lt;batch:job id="job1"&gt;
+		&lt;batch:step id="noopStep" parent="noopStep1"&gt;
+            &lt;batch:next on="COMPLETED" to="step4" /&gt;
+            &lt;batch:end on="NOOP" /&gt;
+            &lt;batch:fail on="*" /&gt;
+        &lt;/batch:step&gt;
+        &lt;batch:step id="step4" parent="step45" /&gt;
+	&lt;/batch:job&gt;
+    &lt;batch:step id="noopStep1"&gt;
+        &lt;batch:tasklet ref="noopTasklet" /&gt;
+    &lt;/batch:step&gt;
+And the first step returns an exit status of NOOP, the job will finish with a BatchStatus of UNKNOWN, and an ExitStatus of NOOP.  If you remove the batch namespace from the element, it will complete with a BatchStatus of COMPLETED and an Exit status of the same.
+This is because in AbstractFlowParser.getBatchStatusFromEndTransitionName() line 393, the element name is checked to see if it is an &amp;apos;End transition&amp;apos;.  However, this check doesn&amp;apos;t strip out the batch: from the front of the element first.
+I have attached a failing unit test as well.  

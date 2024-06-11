@@ -1,0 +1,2 @@
+HiveServer2: Enable Kerberos with SSL for TCP transport
+Currently, there is a limitation where an HS2 user needs to use the auth-conf SASL qop value to achieve encryption when Kerberos is used as the authentication mechanism and transport is TCP. 

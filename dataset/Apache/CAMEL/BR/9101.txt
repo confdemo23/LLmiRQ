@@ -1,0 +1,31 @@
+RabbitMQ specific message properties are forwarded as message headers
+org.apache.camel.component.rabbitmq.RabbitMQProducer#buildProperties does not remove message headers from exchange after property is set, leading to message header pollution.
+so constructs like 
+
+
+
+final Object contentType = exchange.getIn().getHeader(RabbitMQConstants.CONTENT_TYPE);
+
+        if (contentType != null) {
+
+            properties.contentType(contentType.toString());
+
+        }
+
+
+
+must be rewritten as
+
+
+
+final Object contentType = exchange.getIn().removeHeader(RabbitMQConstants.CONTENT_TYPE);
+
+        if (contentType != null) {
+
+            properties.contentType(contentType.toString());
+
+        }
+
+
+
+I don&amp;apos;t think that these are used in business logic as this is solely transport specific.

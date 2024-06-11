@@ -1,0 +1,9 @@
+Hive JDBC Integration with SQuirrel SQL Client support Enhanced
+Hive JDBC Integration with SQuirrel SQL Client support Enhanced:-
+Hive JDBC Client enhanced to browse hive default schema tables through Squirrel SQL Client.
+This enhancement help to browse the hive table&amp;apos;s structure i.e. table&amp;apos;s column and their data type in the Squirrel SQL client interface and SQL query can be also performed on the tables through Squirrel SQL client.
+To enable this following Hive JDBC Java files are modified and added:-
+1.	Methods of org.apache.hadoop.hive.jdbc.HiveDatabaseMetaData.java are updated.
+2.	Hive org.apache.hadoop.hive.jdbc.ResultSet.java updated and extended (org.apache.hadoop.hive.jdbc.ExtendedHiveResultSet.java) to support additional JDBC metadata 
+3.	Methods of org.apache.hadoop.hive.jdbc. HiveResultSetMetaData are updated.
+4.	Methods of  org.apache.hadoop.hive.jdbc. HiveConnection are updated.

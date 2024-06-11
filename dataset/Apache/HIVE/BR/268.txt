@@ -1,0 +1,9 @@
+"Insert Overwrite Directory" to accept configurable table row format
+There is no way for the users to control the file format when they are outputting the result into a directory.
+We should allow:
+
+INSERT OVERWRITE DIRECTORY "/user/zshao/result"
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY &amp;apos;9&amp;apos;
+SELECT tablea.* from tablea;
+

@@ -1,0 +1,39 @@
+reloadStrategy does not work for files inside <additional> tag using DefaultConfigurationBuilder
+In the configuration file that DefaultConfigurationBuilder reads to build a CombinedConfiguration, it&amp;apos;s possible to include configuration file either inside &lt;override&gt; or &lt;additional&gt; xml elements.
+Each such declaration, of a file, allows a realodStrategy to be specified (see example below). It appears that the reload occurs only for the files inside &lt;override&gt; and not for the ones inside &lt;additional&gt;.
+Example:
+&lt;configuration&gt;
+  &lt;header&gt;
+    &lt;result forceReloadCheck="true"&gt;
+      &lt;expressionEngine config-class="org.apache.commons.configuration.tree.xpath.XPathExpressionEngine"/&gt;
+    &lt;/result&gt;
+  &lt;/header&gt;
+  &lt;override&gt;
+    &lt;properties fileName="user.properties" config-optional="true"&gt;
+      &lt;reloadingStrategy refreshDelay="100"
+                         config-class="org.apache.commons.configuration.reloading.FileChangedReloadingStrategy"/&gt;
+    &lt;/properties&gt;
+  &lt;/override&gt;
+  &lt;additional&gt;
+    &lt;properties fileName="application.properties"&gt;
+      &lt;reloadingStrategy refreshDelay="100"
+                         config-class="org.apache.commons.configuration.reloading.FileChangedReloadingStrategy"/&gt;
+    &lt;/properties&gt;
+  &lt;/additional&gt;
+&lt;/configuration&gt;
+In above example, both user.properties and application.properties are supposed to reload upon change. However, as tested by the following code, one user.properties gets reloaded:
+		DefaultConfigurationBuilder dcb = new DefaultConfigurationBuilder("example.xml");
+		Configuration conf = dcb.getConfiguration();
+		System.out.println("user: " + conf.getBoolean("user"));
+		System.out.println("application: " + conf.getBoolean("application"));
+		System.out.println("Change files and then press  to continue...");
+		System.in.read();
+		System.out.println("user: " + conf.getBoolean("user"));
+		System.out.println("application: " + conf.getBoolean("application"));
+Output from above code:
+user: true
+application: true
+Change files and then press  to continue...
+0 [main] INFO org.apache.commons.configuration.PropertiesConfiguration  - Reloading configuration. URL is file:&lt;snipped&gt;/user.properties
+user: false
+application: true

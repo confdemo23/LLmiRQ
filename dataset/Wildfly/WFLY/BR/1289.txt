@@ -1,0 +1,18 @@
+Spurious warnings about invalid META-INF/services class name
+When an application contains a META-INF/services resource referencing an inner class, JBoss prints a spurious warning
+
+
+
+
+
+
+JBAS015893: Encountered invalid class name &amp;apos;com.acme.Foo$Bar&amp;apos; for service type &amp;apos;com.acme.Service&amp;apos;
+
+
+
+
+
+
+META-INF/services lists classes with their binary name, so dollar characters are likely to occur.
+org.jboss.as.server.deployment.ServiceLoaderProcessor scans all META-INF/services resources but does not accept dollar characters in its validation pattern. 
+(Note: I can&amp;apos;t select any 7.x release for "Affects Version".)

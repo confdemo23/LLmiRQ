@@ -1,0 +1,50 @@
+[Migration operation] Attribute discovery-group in cluster-connection is not migrated
+Attribute discovery-group-ref in cluster-connection is not migrated. For example:
+
+
+
+
+
+
+            &lt;cluster-connection name="cc3"&gt;
+
+
+
+
+                &lt;address&gt;cc3-address&lt;/address&gt;
+
+
+
+
+                &lt;connector-ref&gt;netty&lt;/connector-ref&gt;
+
+
+
+
+                &lt;discovery-group-ref discovery-group-name="groupC"/&gt;
+
+
+
+
+            &lt;/cluster-connection&gt;
+
+
+
+
+
+
+migrates as:
+
+
+
+
+
+
+&lt;cluster-connection name="cc3" connector-name="netty" address="cc3-address"/&gt;
+
+
+
+
+
+
+I&amp;apos;m setting higher priority as discovery group is by default in configuration in EAP 6.

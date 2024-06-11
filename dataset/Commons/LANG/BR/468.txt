@@ -1,0 +1,2 @@
+JDK 1.5 build/runtime failure on LANG-393 (EqualsBuilder)
+See LANG-393

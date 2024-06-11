@@ -1,0 +1,24 @@
+PersistenceUnitService depends on not-yet-available BeanManager
+I am getting
+
+
+
+
+
+
+17:12:25,453 ERROR [org.jboss.as.controller.management-operation] (management-handler-thread - 2) JBAS014613: Operation ("deploy") failed - address: ([("deployment" =&gt; "jpa_txTimeoutTestWithMockProvider.ear")]) - failure description: {"JBAS014771: Services with missing/unavailable dependencies" =&gt; ["jboss.persistenceunit.\"jpa_txTimeoutTestWithMockProvider.ear/ejbjar.jar#mypc\" is missing [jboss.deployment.subunit.\"jpa_txTimeoutTestWithMockProvider.ear\".\"ejbjar.jar\".beanmanager]"]}
+
+
+
+
+17:12:25,459 ERROR [org.jboss.as.server] (management-handler-thread - 2) JBAS015870: Deploy of deployment "jpa_txTimeoutTestWithMockProvider.ear" was rolled back with the following failure message: {"JBAS014771: Services with missing/unavailable dependencies" =&gt; ["jboss.persistenceunit.\"jpa_txTimeoutTestWithMockProvider.ear/ejbjar.jar#mypc\" is missing [jboss.deployment.subunit.\"jpa_txTimeoutTestWithMockProvider.ear\".\"ejbjar.jar\".beanmanager]"]}
+
+
+
+
+
+
+The problem is caused by PersistenceUnitServiceHandler.deployPersistenceUnit() which, if the PU is deployed in a CDI-enabled archive, adds a dependency on the BeanManager service. This happens in PersistenceBeginInstallProcessor which executes in the FIRST_MODULE_USE phase.
+However, the BeanManager service is not installed by the Weld subsystem until the INSTALL phase.
+This can be reproduced easily. Take for example the org.jboss.as.test.integration.jpa.mockprovider.txtimeout.TxTimeoutTestCase and add an empty beans.xml file to the ejb jar (ejbjar.addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml"))
+This issue blocks proper Weld integration (implicit bean archives).

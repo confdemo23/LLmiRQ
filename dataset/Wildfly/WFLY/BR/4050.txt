@@ -1,0 +1,2 @@
+data-source:enable is broken
+Enabling a disabled datasource using the operation :enable() is broken. It remains disabled. 

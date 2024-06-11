@@ -1,0 +1,2 @@
+Spring DSL - tracer is tracing double in some cases
+The tracer is Spring DSL is under some circumstances being registered twice and thus doing double tracing.

@@ -1,0 +1,64 @@
+EmbeddedContainerConfiguration does not validate correctly
+I experimented a bit with arquillian and the embedded wildfly container.
+However, durinng startup I am getting this exception: 
+
+
+
+
+
+
+    java.lang.RuntimeException: JBAS011137: Cannot load module org.jboss.vfs from: local module loader @3a55b9b (finder: local module finder @5d211efb (roots: /home/username/dev/arquillian-tutorial/null/modules))
+
+
+
+
+
+
+So I took a deeper look at class 
+org.jboss.as.arquillian.container.embedded.EmbeddedContainerConfiguration located in "wildfly/arquillian/embedded"
+The validate method there seems to have a validation problem:
+
+
+
+
+
+
+@Override
+
+
+
+
+    public void validate() throws ConfigurationException {
+
+
+
+
+        super.validate();
+
+
+
+
+        Validate.configurationDirectoryExists(jbossHome, "jbossHome &amp;apos;" + jbossHome + "&amp;apos; must exist");
+
+
+
+
+        Validate.configurationDirectoryExists(jbossHome, "modulePath &amp;apos;" + modulePath + "&amp;apos; must exist");
+
+
+
+
+        Validate.configurationDirectoryExists(jbossHome, "bundlePath &amp;apos;" + bundlePath + "&amp;apos; must exist");
+
+
+
+
+    }
+
+
+
+
+
+
+It checks jbossHome three times. But I assume it should check jbossHome, bundleHome and moduleHome instead.
+I am not sure if the Exception and the validation-implementation are associated with each other in any way, but the validate() method looks wrong to me 

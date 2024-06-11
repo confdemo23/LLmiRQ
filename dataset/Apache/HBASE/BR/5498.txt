@@ -1,0 +1,5 @@
+Secure Bulk Load
+Design doc: https://cwiki.apache.org/confluence/display/HCATALOG/HBase+Secure+Bulk+Load
+Short summary:
+Security as it stands does not cover the bulkLoadHFiles() feature. Users calling this method will bypass ACLs. Also loading is made more cumbersome in a secure setting because of hdfs privileges. bulkLoadHFiles() moves the data from user&amp;apos;s directory to the hbase directory, which would require certain write access privileges set.
+Our solution is to create a coprocessor which makes use of AuthManager to verify if a user has write access to the table. If so, launches a MR job as the hbase user to do the importing (ie rewrite from text to hfiles). One tricky part this job will have to do is impersonate the calling user when reading the input files. We can do this by expecting the user to pass an hdfs delegation token as part of the secureBulkLoad() coprocessor call and extend an inputformat to make use of that token. The output is written to a temporary directory accessible only by hbase and then bulkloadHFiles() is called.

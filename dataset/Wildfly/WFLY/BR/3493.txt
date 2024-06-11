@@ -1,0 +1,16 @@
+Messaging subsystem allows you to remove a destination even though it has an attached client
+Currently jboss-cli allows a queue to be removed even though there is a MDB attached to it. The command 
+
+
+
+
+
+
+/subsystem=messaging/hornetq-server=default/jms-queue=testQueue:remove()
+
+
+
+
+
+
+will remove the queue without a warning. This is not desirable since a warning should be given or a reload should be force.  It may also break the dependency injection. 

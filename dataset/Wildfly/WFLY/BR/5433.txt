@@ -1,0 +1,2 @@
+CommandDispatcher can throw InvalidClassException if command class is not available
+When CommandDispatcher is used by a deployment, the command class might not be available if the deployment is not deployed.  Normally, this is prevented by returning a NoSuchService response if the service is unknown, however, this happens after the command is unmarshalled.  This check should happen before we attempt to unmarshall the command, avoiding unnecessary InvalidClassException.

@@ -1,0 +1,64 @@
+JXM PluggableMBeanServerImpl assumes RealmUser principal
+JXM PluggableMBeanServerImpl$LogAction assumes that RealmUser principal is present when Subject is not null. This condition is not always met and results into following exception:
+
+
+
+
+
+
+Caused by: java.util.NoSuchElementException
+
+
+
+
+        at java.util.HashMap$HashIterator.nextEntry(HashMap.java:929)
+
+
+
+
+        at java.util.HashMap$KeyIterator.next(HashMap.java:960)
+
+
+
+
+        at org.jboss.as.jmx.PluggableMBeanServerImpl$LogAction.getCallerUserId(PluggableMBeanServerImpl.java:1250)
+
+
+
+
+        at org.jboss.as.jmx.PluggableMBeanServerImpl$LogAction.doLog(PluggableMBeanServerImpl.java:1233)
+
+
+
+
+        at org.jboss.as.jmx.PluggableMBeanServerImpl.log(PluggableMBeanServerImpl.java:1158)
+
+
+
+
+        at org.jboss.as.jmx.MBeanServerAuditLogRecordFormatter.log(MBeanServerAuditLogRecordFormatter.java:331)
+
+
+
+
+        at org.jboss.as.jmx.MBeanServerAuditLogRecordFormatter.queryNames(MBeanServerAuditLogRecordFormatter.java:170)
+
+
+
+
+        at org.jboss.as.jmx.PluggableMBeanServerImpl.queryNames(PluggableMBeanServerImpl.java:871)
+
+
+
+
+        at org.infinispan.jmx.JmxUtil.findJmxDomain(JmxUtil.java:127)
+
+
+
+
+
+
+
+
+
+

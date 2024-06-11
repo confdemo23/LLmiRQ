@@ -1,0 +1,1 @@
+Fix the unit test failure org.apache.hive.service.cli.session.TestHiveSessionImpl.testLeakOperationHandle

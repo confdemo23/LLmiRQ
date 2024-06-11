@@ -1,0 +1,3 @@
+camel-restlet - Return 405 if method not allowed instead of 404
+See nabble
+http://camel.465427.n5.nabble.com/Camel-Restlet-2-13-1-Consumer-Questions-tp5754698.html

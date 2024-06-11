@@ -1,0 +1,8 @@
+NPE of camel-restlet 
+I&amp;apos;m getting a NullPointerException in Restlet when I use the Restlet component as a client.  I set up a Route that&amp;apos;s something like:
+from(endpointUri).setExchangePattern(ExchangePattern.InOut)
+    .to("restlet:http://localhost:9000/whatever")
+    .process(new SomeProcessor());
+When I hit this route, I gett a NullPointerException at com.noelios.restlet.http.HttpConverter.getLogger().  Ultimately, it&amp;apos;s trying to warn me about some headers that Restlet is going to ignore.  I see that when the RestletProducer creates the Restlet Client, it doesn&amp;apos;t set a context (which is the object that&amp;apos;s null, causing the NPE).  If I simply hack in:
+client.setContext(new Context());
+after the client is instantiated, it works.

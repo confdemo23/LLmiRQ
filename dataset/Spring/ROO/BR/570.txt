@@ -1,0 +1,6 @@
+Outdated DTD on Tiles configuration files
+The generated Tiles configuration files use the following DTD:
+&lt;!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" "http://tiles.apache.org/dtds/tiles-config_2_0.dtd"&gt;
+which is for the 2.0 release and doesn&amp;apos;t contain some features found in the 2.1 release
+should be:
+&lt;!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd"&gt;

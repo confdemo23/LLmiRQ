@@ -1,0 +1,2 @@
+improve the process of finding actual methods for servlet and portlet handlers
+The process of finding the methods to be invoked for each http dispatch could be improved. While it has been already addressed in a previous released, there are still some minor improvements to be made.

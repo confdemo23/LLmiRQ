@@ -1,0 +1,103 @@
+Inconsistent behavior with projections when using @NamedQuery vs @Query
+Queries are interpreted differently when using @NamedQuery and @Query in regard of projections. Having the following as a named query:
+
+
+
+
+
+
+@NamedQueries({    
+
+
+
+
+    @NamedQuery(
+
+
+
+
+	    name = "FoobarEntity.getDateOfFirstRecord1",
+
+
+
+
+	    query
+
+
+
+
+	    = "Select coalesce(min(m.recordedOn), current_date()) as dateOfFirstRecord1 from FoobarEntity m"
+
+
+
+
+    )
+
+
+
+
+})
+
+
+
+
+
+
+and a repository method
+
+
+
+
+
+
+public interface FoobarRepository extends JpaRepository&lt;FoobarEntity, Integer&gt; {
+
+
+
+
+    Calendar getDateOfFirstRecord1();
+
+
+
+
+}
+
+
+
+
+
+
+I get the expected date. If I however put the same query directly on the method like:
+
+
+
+
+
+
+    @Query("Select coalesce(min(m.recordedOn), current_date()) as dateOfFirstRecord2 from FoobarEntity m")
+
+
+
+
+    Calendar getDateOfFirstRecord2();
+
+
+
+
+
+
+I end up with
+
+
+
+
+
+
+org.springframework.dao.InvalidDataAccessApiUsageException: Projection type must be an interface!; nested exception is java.lang.IllegalArgumentException: Projection type must be an interface!
+
+
+
+
+
+
+That used to work in 1.9.5. Attached is a small demo.

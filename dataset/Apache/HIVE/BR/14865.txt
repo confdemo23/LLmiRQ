@@ -1,0 +1,2 @@
+Fix comments after HIVE-14350
+there are still some comments in the code that should&amp;apos;ve been updated in HIVE-14350

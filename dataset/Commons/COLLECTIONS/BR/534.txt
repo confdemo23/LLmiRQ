@@ -1,0 +1,43 @@
+Performance bug in CollectionBag::retainAll
+Hi,
+There seems to be a performance bug in the method retainAll in the CollectionBag class.
+The problem is that the code is checking containment over the parameter collection, which could be expensive for some types of collections like ArrayLists.
+One solution could be to convert the Collection into a HashSet and check containment in the HashSet.
+ If this is done, then running retainAll on a 1,000,000 collection would take less than 2 seconds instead of 27 mins, according to my experiments.
+____________________________________________
+Here&amp;apos;s a function to expose the bug:
+ public static void collectionBagRetainAllTest() 
+{
+
+	ArrayList&lt;Integer&gt; coll=new ArrayList&lt;Integer&gt;();
+	for(int i=0;i&lt;=1000000;++i)
+	    coll.add(new Integer(i));
+
+	TreeBag&lt;Integer&gt; treeBag=new TreeBag&lt;Integer&gt;(coll);
+
+	CollectionBag&lt;Integer&gt; bag = new CollectionBag&lt;Integer&gt;(treeBag);
+
+	bag.retainAll(coll);
+     }
+_____________________________________
+Here&amp;apos;s a proposed patch:
+  public boolean retainAll(final Collection&lt;?&gt; coll) {
+        if (coll != null) {
+            boolean modified = false;
+            final Iterator&lt;E&gt; e = iterator();
+	    HashSet&lt;Object&gt; set=new HashSet&lt;Object&gt;(coll);
+            while (e.hasNext()) {
+                if (!set.contains(e.next())) 
+{
+                    e.remove();
+                    modified = true;
+                }
+            }
+            return modified;
+        } else 
+{
+            // let the decorated bag handle the case of null argument
+            return decorated().retainAll(null);
+        }
+    }
+_____________________________________

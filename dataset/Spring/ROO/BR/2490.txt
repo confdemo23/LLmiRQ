@@ -1,0 +1,16 @@
+NPE in integration test addon when changing name of flush method
+Upon changing the name of an entity&amp;apos;s flush method via the "flushMethod" attribute of its @RooEntity annotation, the Roo shell can display this message:
+
+
+
+
+
+
+NullPointerException at org.springframework.roo.addon.test.IntegrationTestMetadata.getPersistMethodTest(IntegrationTestMetadata.java:449)
+
+
+
+
+
+
+This happens because the getPersistMethodTest() method doesn&amp;apos;t check whether the flush method is null before using it. It might be null because of a timing error whereby the annotation specifies a new flush method name but the entity&amp;apos;s Xxx_Roo_Entity.aj ITD hasn&amp;apos;t been rebuilt yet and therefore still introduces that method using its previous name.

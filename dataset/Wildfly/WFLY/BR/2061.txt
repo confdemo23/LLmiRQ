@@ -1,0 +1,2 @@
+CLI fails to show app status when runtime-name is different from the deployment name
+If an application is deployed with a different "runtime-name" other than the actual EAR "name" then CLI fails to show the Status of the application.

@@ -1,0 +1,2 @@
+Use daemon thread for netty event loop
+As always use daemon thread in rpc implementation.

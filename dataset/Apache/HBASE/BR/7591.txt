@@ -1,0 +1,3 @@
+HColumnDescriptor equals method should not rely on HashCode
+I wanted to change the way this is implemented so that we can accept different orderings of attributes as being the same.
+This was implemented using HashMap equality.

@@ -1,0 +1,3 @@
+mvn test failure following tutorial on blog
+Following the steps in the "roo 2" blog post tutorial. Everything working great until the step where I run "mvn test". At this point I get 9 test failures, due to missing classes on the classpath (javax/annotation types). 
+See attached file for full error log.

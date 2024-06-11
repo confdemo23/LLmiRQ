@@ -1,0 +1,43 @@
+Unknown failure of Roo-Generated MVC app on Google App Enging (GAE)
+OK first off.  Great job on the latest release of roo.  The GAE integration works so well and really hides the idiosyncracies of GAE from the developer.  It lets me concentrate on what is different about my app not what the different environment needs will be.  That being said, My app does not appear to be working on GAE.
+Here is the roo.log
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-12-27 10:47:55
+project --topLevelPackage net.youngdev.services.global --projectName youngdevservices
+persistence setup --provider DATANUCLEUS --database GOOGLE_APP_ENGINE 
+entity --class ~.domain.Faq 
+field string question
+field string answer
+field string context
+json all
+controller all --package ~.controller 
+perform eclipse
+quit
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-12-27 11:00:46
+After that, I updated the appengine-web.xml with a version number and a application id for appengine.  
+Next, I deployed it to GAE via mvn gae:deploy
+When I hit my site, It just sits there.  Eventually, the screen returns but the page is just a blank white page with no style or text.
+When I do a view source, I see this:
+&lt;html xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:tiles="http://tiles.apache.org/tags-tiles" xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" &gt;  
+	&lt;jsp:output doctype-root-element="HTML" doctype-system="about:legacy-compat" /&gt;
+	&lt;jsp:directive.page contentType="text/html;charset=UTF-8" /&gt;  
+	&lt;head&gt;
+		&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+		&lt;meta http-equiv="X-UA-Compatible" content="IE=8" /&gt;	
+		&lt;util:load-scripts /&gt;
+		&lt;spring:message code="application_name" var="app_name"/&gt;
+		&lt;title&gt;&lt;spring:message code="welcome_h3" arguments="$
+{app_name}
+" /&gt;&lt;/title&gt;
+	&lt;/head&gt;
+  	&lt;body class="tundra spring"&gt;
+   		&lt;div id="wrapper"&gt;
+		    &lt;tiles:insertAttribute name="header" ignore="true" /&gt;
+		    &lt;tiles:insertAttribute name="menu" ignore="true" /&gt;   
+		    &lt;div id="main"&gt;
+	    		&lt;tiles:insertAttribute name="body"/&gt; 
+		    	&lt;tiles:insertAttribute name="footer" ignore="true"/&gt;
+		    &lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+Any ideas what is wrong here or when it will be fixed?

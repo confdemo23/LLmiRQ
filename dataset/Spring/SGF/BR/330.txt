@@ -1,0 +1,2 @@
+Add missing &apos;disk-synchronous&apos; attribute to the <gfe:gateway-sender> element in the SDG XML namespace (XSD)
+The Spring Data GemFire XML namespace (XSD) &lt;gfe:gateway-sender&gt; element is missing the &amp;apos;disk-synchronous&amp;apos; attribute.

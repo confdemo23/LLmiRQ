@@ -1,0 +1,13 @@
+Attempting to use eap6.1 jboss-cli.sh to connect to remote wildfly (alpha1 or 2) fails; credentials not accepted
+Using eap6.1 client jars, or the jboss-cli.sh script in a local eap6.1 installation, to connect to a remote wildfly alpha1 or alpha2, seems to work but fails when provided with credentials.  This is most easily replicated as follows:
+1) On remote machine start wildfly alpha1 or alpha2
+2) on local machine, cd eap-6.1/bin
+3) on local machine:
+[rob@rawbdor bin]$ ./jboss-cli.sh 
+You are disconnected at the moment. Type &amp;apos;connect&amp;apos; to connect to the server or &amp;apos;help&amp;apos; for the list of supported commands.
+[disconnected /] connect myhost.net 
+Authenticating against security realm: ManagementRealm
+Username: admin
+ Password: 
+Unable to authenticate against controller at myhost.net:9999: Authentication failed: all available authentication mechanisms failed
+This is an issue for tools as we need a set of jars that communicates correctly with all as7 servers. We currently have a set of jars that communicates with all 7.x / eap 6.x, which is good. If this is merely a bug on the server, then we can hopefully delay having to bundle an additional set of client jars until larger breakages occur. 

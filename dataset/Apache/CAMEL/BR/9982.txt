@@ -1,0 +1,3 @@
+Marshalling fixed length record with links fails
+When a fixed length record contains a "Link" marshalling doesn&amp;apos;t take this field into account while with unmarshalling it is unmarshalled.
+Issue comes from a difference in building the model in BindyCsvDataFormat and BindyFixedLengthDataFormat. In the csv-format all field are taken into account that have the "Link"  annotation.

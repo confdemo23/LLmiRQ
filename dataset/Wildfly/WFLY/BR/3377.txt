@@ -1,0 +1,7 @@
+Infinispan cache container statistics configuration does not propagate to caches
+This is the continuation of the "WFLY-3106 Infinispan cache statistics cannot be enabled/disabled independently of the cache manager statistics" which fixed the problem of independence of this setting for caches and cache container.
+However the side effect is that the cache container settings are now ignored completely and do not propagate to caches.
+Technical:
+Correctly fixed by WFLY-3106 this cannot be set in defineConfiguration(..) (AbstractCacheConfigurationService) because that works as an override. However, with that fix the value is ignored for caches. The cache&amp;apos;s CacheAdd needs to figure this out from the conainer definition model.
+The user reported the issue here:
+https://community.jboss.org/message/873586

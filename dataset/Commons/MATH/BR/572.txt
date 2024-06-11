@@ -1,0 +1,7 @@
+Constructor parameter not used
+the constructor public ArrayFieldVector(Field&lt;T&gt; field, T[] v1, T[] v2)
+sets this
+"this.field = data[0].getField();"
+in the fast line...
+"this.field = field;"
+would be right - field was explicitly provided.

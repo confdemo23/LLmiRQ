@@ -1,0 +1,126 @@
+master reload on windows using bind IP without a reverse DNS entry (or a wrong one)
+When running on windows and the server management port bind IP address does not have a proper reverse DNS entry or an entry in the hosts file, then there is trouble reloading the server. It is possible that same issue may affect other domain server management operations but I didn&amp;apos;t identify any others (and didn&amp;apos;t try).
+Basically the problem is that windows reverse resolves such IPs to the computer name. On reload without restarting the managed servers, they receive as a host to reconnect to the computer name instead of the IP address and connection cannot be established.
+Here is how to reproduce:
+
+on a windows machine add some local IP address without a reverse entry (e.g. 192.0.2.15)
+launch domain server from wildfly, e.g.: bin/domain.sh -bpublic=192.0.2.15 -bmanagement=192.0.2.15
+issue this cli command: reload --restart-servers=false --host=master
+see logs for messages from server-one and server-two (I&amp;apos;ll attach an archive with such logs)
+
+The fix I found for the issue is:
+
+
+
+
+
+diff --git a/host-controller/src/main/java/org/jboss/as/host/controller/ManagedServer.java b/host-controller/src/main/java/org/jboss/as/host/controller/ManagedServer.java
+
+
+
+
+index 308df0e..c6a88e8 100644
+
+
+
+
+--- a/host-controller/src/main/java/org/jboss/as/host/controller/ManagedServer.java
+
+
+
+
++++ b/host-controller/src/main/java/org/jboss/as/host/controller/ManagedServer.java
+
+
+
+
+@@ -30,7 +30,6 @@ import static org.jboss.as.host.controller.HostControllerLogger.ROOT_LOGGER;
+
+
+
+
+ 
+
+
+
+
+ import java.io.IOException;
+
+
+
+
+ import java.io.OutputStream;
+
+
+
+
+-import java.net.InetAddress;
+
+
+
+
+ import java.net.InetSocketAddress;
+
+
+
+
+ import java.util.Collections;
+
+
+
+
+ import java.util.LinkedHashMap;
+
+
+
+
+@@ -769,7 +768,7 @@ class ManagedServer {
+
+
+
+
+         public boolean execute(ManagedServer server) throws Exception {
+
+
+
+
+             assert Thread.holdsLock(ManagedServer.this); // Call under lock
+
+
+
+
+             // Reconnect
+
+
+
+
+-            final String hostName = InetAddress.getByName(managementSocket.getHostName()).getHostName();
+
+
+
+
++            final String hostName = managementSocket.getHostString();
+
+
+
+
+             final int port = managementSocket.getPort();
+
+
+
+
+             processControllerClient.reconnectProcess(serverProcessName, NetworkUtils.formatPossibleIpv6Address(hostName), port, bootConfiguration.isManagementSubsystemEndpoint(), authKey);
+
+
+
+
+             return true;
+
+
+
+
+
+
+I see that the line causing the troubles was committed as part of AS7-3613. I looked at the issue and I don&amp;apos;t see how this altering of hostname can help with getting a good URI. Yes, it can help if it guaranteed that a hostname will always be returned but fact is that on linux, if reverse record is missing or improper, this still returns an IP so this line of code IMO can only cause harm. Am I missing something?
+Moreover it doesn&amp;apos;t seems right to me to change server identification overriding user choice to select an IP instead of a hostname just to fix some URIs.
+IMO if user/administrator used an IP, then server should to use it as an IP, not reverse resolve it to a host and then use it. It simply leads to confusion.

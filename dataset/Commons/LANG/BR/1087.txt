@@ -1,0 +1,4 @@
+NumberUtils#createNumber() returns positive BigDecimal when negative Float is expected
+NumberUtils.createNumber("-0.0") returns BigDecimal with 0 signum.
+Caused by the implementation not checking for sign when extracting mantissa from the input string.
+Expected is that negative Float is returned.

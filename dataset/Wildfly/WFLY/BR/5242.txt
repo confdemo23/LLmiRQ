@@ -1,0 +1,18 @@
+Inconsistent format for IPv6 addresses in server log
+Description of problem:
+When IPv6 is used, square brackets for IPv6 addresses are missed in some of log entries. Specifically, the address format from Undertow logs is different from those "WFLYSRV" logs.
+How reproducible:
+Always
+Steps to Reproduce:
+1. Config IPv6 (example: https://docs.jboss.org/author/display/WFLY10/Interfaces+and+ports)
+2. Start WildFly and check the log
+Actual results:
+----------------------------------------
+2015-08-31 12:51:47,812 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0006: Undertow HTTP listener default listening on /0:0:0:0:0:0:0:1:8080
+......
+2015-08-31 12:51:48,431 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://[::1]:9993/management
+2015-08-31 12:51:48,432 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://[::1]:9993
+----------------------------------------
+In Undertow logs it&amp;apos;s like "/0:0:0:0:0:0:0:1:8080" but in WildFly server logs "http://[::1]:9993/management"
+Expected results:
+Consistent format should be used for IPv6 address across different components and the address is enclosed in square brackets [ ].

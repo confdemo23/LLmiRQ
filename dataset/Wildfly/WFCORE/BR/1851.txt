@@ -1,0 +1,334 @@
+Inconsistent behaviour with browse-content(depth=1) operation between archived and exploded deployments
+/deployment=jboss-kitchensink-ear.ear:browse-content(depth=1) operation returns inconsistent result depending on whether the deployment is exploded or not. Deployment attached.
+Archived:
+
+
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "success",
+
+
+
+
+    "result" =&gt; [
+
+
+
+
+        {
+
+
+
+
+            "path" =&gt; "jboss-kitchensink-ear-web.war",
+
+
+
+
+            "directory" =&gt; false,
+
+
+
+
+            "file-size" =&gt; 63190L
+
+
+
+
+        },
+
+
+
+
+        {
+
+
+
+
+            "path" =&gt; "jboss-kitchensink-ear-ejb.jar",
+
+
+
+
+            "directory" =&gt; false,
+
+
+
+
+            "file-size" =&gt; 12256L
+
+
+
+
+        },
+
+
+
+
+        {
+
+
+
+
+            "path" =&gt; "META-INF/",
+
+
+
+
+            "directory" =&gt; true
+
+
+
+
+        }
+
+
+
+
+    ]
+
+
+
+
+}
+
+
+
+
+
+
+Exploded:
+
+
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "success",
+
+
+
+
+    "result" =&gt; [
+
+
+
+
+        {
+
+
+
+
+            "path" =&gt; "META-INF/",
+
+
+
+
+            "directory" =&gt; true
+
+
+
+
+        },
+
+
+
+
+        {
+
+
+
+
+            "path" =&gt; "META-INF/MANIFEST.MF",
+
+
+
+
+            "directory" =&gt; false,
+
+
+
+
+            "file-size" =&gt; 130L
+
+
+
+
+        },
+
+
+
+
+        {
+
+
+
+
+            "path" =&gt; "jboss-kitchensink-ear-web.war",
+
+
+
+
+            "directory" =&gt; false,
+
+
+
+
+            "file-size" =&gt; 63190L
+
+
+
+
+        },
+
+
+
+
+        {
+
+
+
+
+            "path" =&gt; "jboss-kitchensink-ear-ejb.jar",
+
+
+
+
+            "directory" =&gt; false,
+
+
+
+
+            "file-size" =&gt; 12256L
+
+
+
+
+        },
+
+
+
+
+        {
+
+
+
+
+            "path" =&gt; "META-INF/application.xml",
+
+
+
+
+            "directory" =&gt; false,
+
+
+
+
+            "file-size" =&gt; 802L
+
+
+
+
+        },
+
+
+
+
+        {
+
+
+
+
+            "path" =&gt; "META-INF/kitchensink-ear-quickstart-ds.xml",
+
+
+
+
+            "directory" =&gt; false,
+
+
+
+
+            "file-size" =&gt; 1955L
+
+
+
+
+        },
+
+
+
+
+        {
+
+
+
+
+            "path" =&gt; "META-INF/maven/org.jboss.quickstarts.eap/jboss-kitchensink-ear-ear/pom.xml",
+
+
+
+
+            "directory" =&gt; false,
+
+
+
+
+            "file-size" =&gt; 5582L
+
+
+
+
+        },
+
+
+
+
+        {
+
+
+
+
+            "path" =&gt; "META-INF/maven/org.jboss.quickstarts.eap/jboss-kitchensink-ear-ear/pom.properties",
+
+
+
+
+            "directory" =&gt; false,
+
+
+
+
+            "file-size" =&gt; 143L
+
+
+
+
+        }
+
+
+
+
+    ]
+
+
+
+
+}
+
+
+
+
+

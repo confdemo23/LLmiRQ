@@ -1,0 +1,10 @@
+Make FlowExecutionContinuationFactory implementation used by DefaultFlowExecutionRepository configurable
+The implementation of the interface FlowExecutionContinuationFactory used by DefaultFlowExecutionRepository is currently hardwired in the constructor. The following is an extract from the M3 source code:
+	public DefaultFlowExecutionRepository(ConversationManager conversationManager,
+			FlowExecutionStateRestorer executionStateRestorer) 
+{
+		super(conversationManager, executionStateRestorer, new SerializedFlowExecutionContinuationFactory());
+	}
+
+The SerializedFlowExecutionContinuationFactory is directly instantiated and passed to the constructor of the super class. No setter is provided by DefaultFlowExecutionRepository or it&amp;apos;s parent class to inject another implementation of FlowExecutionContinuationFactory.
+It would be a great increase of flexibility to allow injection for the FlowExecutionContinuationFactory. This allows it to change the serialization mechanism without being required to re-implement the FlowExecutionRepository.

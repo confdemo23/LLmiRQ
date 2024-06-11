@@ -1,0 +1,2 @@
+NPE thrown on bundle.getHeaders().get("Bundle-SymbolicName").toString() 
+The call to the toString() method on bundle.getHeaders().get("Bundle-SymbolicName") throws a NullPointerException if bundle.getHeaders().get("Bundle-SymbolicName") returns null. Not sure why this started happening. 

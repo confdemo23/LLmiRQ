@@ -1,0 +1,2 @@
+TestHiveSessionImpl fails on master
+Presumably broken by HIVE-4924

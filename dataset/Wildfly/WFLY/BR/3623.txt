@@ -1,0 +1,277 @@
+Spurious ":" in @Resource annotation &apos;name&apos; value results in invalid binding but no deployment error
+See attached jar for a reproducer. Just deploy it. The jar includes it&amp;apos;s own source.
+An @Resource annotation with a spurious ":" in the name attribute value results in an incorrect binding but no deployment failure:
+
+
+
+
+
+
+@Resources({
+
+
+
+
+	@Resource(
+
+
+
+
+//			name="java:jboss/ResourceTestEJB", // ==&gt; this works fine 
+
+
+
+
+			name="java:jboss:/ResourceTestEJB",  // ==&gt; this will not bind the JNDI correctly, and there is no error on deploying EJB
+
+
+
+
+			
+
+
+
+
+			type=com.test.ResourceEJB.class,
+
+
+
+
+			lookup="java:global/01134324/ResourceEJBImpl")
+
+
+
+
+})
+
+
+
+
+
+
+There is no error reported in the log.
+Using jndi-view op in the CLI, I see:
+
+
+
+
+
+
+[standalone@localhost:9990 subsystem=naming] :jndi-view
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "success",
+
+
+
+
+    "result" =&gt; {
+
+
+
+
+        "java: contexts" =&gt; {
+
+
+
+
+            .....            
+
+
+
+
+            "java:jboss" =&gt; {
+
+
+
+
+                ....
+
+
+
+
+                "java:jboss:" =&gt; {"class-name" =&gt; "javax.naming.Context"},
+
+
+
+
+             }
+
+
+
+
+    }
+
+
+
+
+    ....
+
+
+
+
+}
+
+
+
+
+
+
+Any time the jndi-view op is run, the following is logged in the server.log:
+
+
+
+
+
+
+10:52:02,985 ERROR [org.jboss.as.naming] (management-handler-thread - 5) WFLYNAM0013: Failed to obtain jndi view value for entry java:jboss:.: javax.naming.NameNotFoundException: jboss: -- service jboss.naming.context.java.jboss.jboss:
+
+
+
+
+	at org.jboss.as.naming.ServiceBasedNamingStore.lookup(ServiceBasedNamingStore.java:106) [wildfly-naming-9.0.0.Alpha1-SNAPSHOT.jar:9.0.0.Alpha1-SNAPSHOT]
+
+
+
+
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:202) [wildfly-naming-9.0.0.Alpha1-SNAPSHOT.jar:9.0.0.Alpha1-SNAPSHOT]
+
+
+
+
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:188) [wildfly-naming-9.0.0.Alpha1-SNAPSHOT.jar:9.0.0.Alpha1-SNAPSHOT]
+
+
+
+
+	at org.jboss.as.naming.management.JndiViewOperation.addEntries(JndiViewOperation.java:132) [wildfly-naming-9.0.0.Alpha1-SNAPSHOT.jar:9.0.0.Alpha1-SNAPSHOT]
+
+
+
+
+	at org.jboss.as.naming.management.JndiViewOperation.access$000(JndiViewOperation.java:47) [wildfly-naming-9.0.0.Alpha1-SNAPSHOT.jar:9.0.0.Alpha1-SNAPSHOT]
+
+
+
+
+	at org.jboss.as.naming.management.JndiViewOperation$1.execute(JndiViewOperation.java:72) [wildfly-naming-9.0.0.Alpha1-SNAPSHOT.jar:9.0.0.Alpha1-SNAPSHOT]
+
+
+
+
+	at org.jboss.as.controller.AbstractOperationContext.executeStep(AbstractOperationContext.java:603) [wildfly-controller-1.0.0.Alpha2.jar:1.0.0.Alpha2]
+
+
+
+
+	at org.jboss.as.controller.AbstractOperationContext.doCompleteStep(AbstractOperationContext.java:481) [wildfly-controller-1.0.0.Alpha2.jar:1.0.0.Alpha2]
+
+
+
+
+	at org.jboss.as.controller.AbstractOperationContext.completeStepInternal(AbstractOperationContext.java:282) [wildfly-controller-1.0.0.Alpha2.jar:1.0.0.Alpha2]
+
+
+
+
+	at org.jboss.as.controller.AbstractOperationContext.executeOperation(AbstractOperationContext.java:277) [wildfly-controller-1.0.0.Alpha2.jar:1.0.0.Alpha2]
+
+
+
+
+	at org.jboss.as.controller.OperationContextImpl.executeOperation(OperationContextImpl.java:1060) [wildfly-controller-1.0.0.Alpha2.jar:1.0.0.Alpha2]
+
+
+
+
+	at org.jboss.as.controller.ModelControllerImpl.internalExecute(ModelControllerImpl.java:296) [wildfly-controller-1.0.0.Alpha2.jar:1.0.0.Alpha2]
+
+
+
+
+	at org.jboss.as.controller.ModelControllerImpl.execute(ModelControllerImpl.java:165) [wildfly-controller-1.0.0.Alpha2.jar:1.0.0.Alpha2]
+
+
+
+
+	at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler.doExecute(ModelControllerClientOperationHandler.java:204) [wildfly-controller-1.0.0.Alpha2.jar:1.0.0.Alpha2]
+
+
+
+
+	at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler.access$300(ModelControllerClientOperationHandler.java:133) [wildfly-controller-1.0.0.Alpha2.jar:1.0.0.Alpha2]
+
+
+
+
+	at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler$1$1.run(ModelControllerClientOperationHandler.java:154) [wildfly-controller-1.0.0.Alpha2.jar:1.0.0.Alpha2]
+
+
+
+
+	at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler$1$1.run(ModelControllerClientOperationHandler.java:150) [wildfly-controller-1.0.0.Alpha2.jar:1.0.0.Alpha2]
+
+
+
+
+	at java.security.AccessController.doPrivileged(Native Method) [rt.jar:1.7.0_45]
+
+
+
+
+	at javax.security.auth.Subject.doAs(Subject.java:415) [rt.jar:1.7.0_45]
+
+
+
+
+	at org.jboss.as.controller.AccessAuditContext.doAs(AccessAuditContext.java:94) [wildfly-controller-1.0.0.Alpha2.jar:1.0.0.Alpha2]
+
+
+
+
+	at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler$1.execute(ModelControllerClientOperationHandler.java:150) [wildfly-controller-1.0.0.Alpha2.jar:1.0.0.Alpha2]
+
+
+
+
+	at org.jboss.as.protocol.mgmt.AbstractMessageHandler$2$1.doExecute(AbstractMessageHandler.java:297)
+
+
+
+
+	at org.jboss.as.protocol.mgmt.AbstractMessageHandler$AsyncTaskRunner.run(AbstractMessageHandler.java:536)
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_45]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_45]
+
+
+
+
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_45]
+
+
+
+
+	at org.jboss.threads.JBossThread.run(JBossThread.java:122) [jboss-threads-2.1.1.Final.jar:2.1.1.Final]
+
+
+
+
+
+
+If a proper binding can&amp;apos;t be done per the annotation value, there should be an exception thrown triggering deployment rollback.
+I&amp;apos;ll attach an MSC service dump in case it&amp;apos;s useful.

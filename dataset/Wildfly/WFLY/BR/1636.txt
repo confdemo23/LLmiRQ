@@ -1,0 +1,162 @@
+Children coming from a ManagementResourceRegistration.registerOverrideModel() override incorrectly appear as attributes in read-resource-description
+The problem is in OverrideDescriptionCombiner adding the overridden children to the attributes rather than to the children. For background, this was my initial mail on the subject.
+-------
+I found this when trying to read the role based access control settings for the whole of WIldFly. I have worked around this with a hack on my https://github.com/kabir/wildfly/commits/rbac-play branch, which is called "Temp commit, work around problems in /subsystem=datasources/data-source=* definition of statistics". The underlying problem seems to be that there is a problem with the resource definition for this attribute/child type. Apart from this there are no other problems when running with standalone-full-ha.xml.
+The &amp;apos;statistics&amp;apos; appears as an attribute when doing a read-resource-description
+[standalone@localhost:9990 /] /subsystem=datasources/data-source=ExampleDS:read-resource-description                     
+{
+   "outcome" =&gt; "success",
+   "result" =&gt; {
+       "description" =&gt; "A JDBC data-source configuration",
+       "attributes" =&gt; {
+           "share-prepared-statements" =&gt; 
+{
+
+               "type" =&gt; BOOLEAN,
+
+               "description" =&gt; "Whether to share prepared statements, i.e. whether asking for same statement twice without closing uses the same underlying prepared statement",
+
+               "expressions-allowed" =&gt; true,
+
+               "nillable" =&gt; true,
+
+               "default" =&gt; false,
+
+               "access-type" =&gt; "read-write",
+
+               "storage" =&gt; "configuration",
+
+               "restart-required" =&gt; "no-services"
+
+           }
+,
+ SNIP
+           "statistics" =&gt; 
+{
+
+               "description" =&gt; "Runtime statistics provided by the resource adapter.",
+
+               "access-type" =&gt; "read-only",
+
+               "storage" =&gt; "configuration"
+
+           }
+       },
+       "operations" =&gt; undefined,
+       "children" =&gt; {"connection-properties" =&gt; {
+           "description" =&gt; "The connection-properties element allows you to pass in arbitrary connection properties to the Driver.connect(url, props) method",
+           "model-description" =&gt; undefined
+       }}
+   }
+}
+However, it does not appears as a child but not as an attribute:
+[standalone@localhost:9990 /] /subsystem=datasources/data-source=ExampleDS:read-children-names(child-type=statistics)
+{
+
+   "outcome" =&gt; "success",
+
+   "result" =&gt; [
+
+       "jdbc",
+
+       "pool"
+
+   ]
+
+}
+[standalone@localhost:9990 /] /subsystem=datasources/data-source=ExampleDS:read-attribute(name=statistics)
+{
+
+   "outcome" =&gt; "failed",
+
+   "failure-description" =&gt; "JBAS014640: &amp;apos;statistics&amp;apos; is a registered child of resource ([
+
+   (\"subsystem\" =&gt; \"datasources\"),
+
+   (\"data-source\" =&gt; \"ExampleDS\")
+
+])",
+
+   "rolled-back" =&gt; true
+
+}
+
+In read-resource it appears as a child:
+[standalone@localhost:9990 /] /subsystem=datasources/data-source=ExampleDS:read-resource(recursive=true, include-runtime=true)
+{
+   "outcome" =&gt; "success",
+   "result" =&gt; {
+---- SNIP ----
+       "statistics" =&gt; {
+           "jdbc" =&gt; 
+{
+
+               "PreparedStatementCacheAccessCount" =&gt; "0",
+
+               "PreparedStatementCacheAddCount" =&gt; "0",
+
+               "PreparedStatementCacheCurrentSize" =&gt; "0",
+
+               "PreparedStatementCacheDeleteCount" =&gt; "0",
+
+               "PreparedStatementCacheHitCount" =&gt; "0",
+
+               "PreparedStatementCacheMissCount" =&gt; "0"
+
+           }
+,
+           "pool" =&gt; 
+{
+
+               "ActiveCount" =&gt; "0",
+
+               "AvailableCount" =&gt; "20",
+
+               "AverageBlockingTime" =&gt; "0",
+
+               "AverageCreationTime" =&gt; "0",
+
+               "CreatedCount" =&gt; "0",
+
+               "DestroyedCount" =&gt; "0",
+
+               "InUseCount" =&gt; "0",
+
+               "MaxCreationTime" =&gt; "0",
+
+               "MaxUsedCount" =&gt; "0",
+
+               "MaxWaitCount" =&gt; "0",
+
+               "MaxWaitTime" =&gt; "0",
+
+               "TimedOut" =&gt; "0",
+
+               "TotalBlockingTime" =&gt; "0",
+
+               "TotalCreationTime" =&gt; "0"
+
+           }
+       }
+   }
+}
+[standalone@localhost:9990 /] /subsystem=datasources/data-source=ExampleDS/statistics=jdbc:read-resource(include-runtime=true)
+{
+   "outcome" =&gt; "success",
+   "result" =&gt; 
+{
+
+       "PreparedStatementCacheAccessCount" =&gt; "0",
+
+       "PreparedStatementCacheAddCount" =&gt; "0",
+
+       "PreparedStatementCacheCurrentSize" =&gt; "0",
+
+       "PreparedStatementCacheDeleteCount" =&gt; "0",
+
+       "PreparedStatementCacheHitCount" =&gt; "0",
+
+       "PreparedStatementCacheMissCount" =&gt; "0"
+
+   }
+}

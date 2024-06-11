@@ -1,0 +1,10 @@
+Fix Date conversion in PlaceholderTargetSource
+Spring doesn&amp;apos;t do type conversion to String very well, and for Date not at all.  This leads to problems for placeholders of type Date.  There are two issues in the current implementation:
+  &lt;property name="foo" value="#
+{jobParameters[runDate]}
+"/&gt;
+fails even if the "foo" property is of type Date because the String conversion is attempted too early; and 
+  &lt;property name="query" value="select ... where start_date &gt; &amp;apos;#
+{jobParameters}
+&amp;apos;"/&gt;
+fails because the placeholder is embedded in a literal and needs to be converted to String (which Spring doesn&amp;apos;t do natively).

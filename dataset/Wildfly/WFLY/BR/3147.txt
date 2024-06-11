@@ -1,0 +1,175 @@
+spec-descriptor-property-replacement causes NPE while parsing exclude element in beans.xml
+A CDI Bean Archive with a beans.xml which contains beans/scan/exclude XML element causes NullPointerExcpetion during deployment on server with enabled &lt;spec-descriptor-property-replacement&gt; parameter in server&amp;apos;s standalone.xml.
+The error stack trace is:
+
+
+
+
+
+
+2014-03-21 11:22:52,455 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-11) MSC000001: Failed to start service jboss.deployment.subunit."example.ear"."example-ejb.jar".PARSE: org.jboss.msc.service.StartException in service jboss.deployment.subunit."example.ear"."example-ejb.jar".PARSE: JBAS018733: Failed to process phase PARSE of subdeployment "example-ejb.jar" of deployment "example.ear"
+
+
+
+
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:166) [wildfly-server-8.0.0.Final.jar:8.0.0.Final]
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948) [jboss-msc-1.2.0.Final.jar:1.2.0.Final]
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881) [jboss-msc-1.2.0.Final.jar:1.2.0.Final]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_45]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_45]
+
+
+
+
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_45]
+
+
+
+
+Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: java.lang.NullPointerException
+
+
+
+
+	at org.jboss.as.weld.deployment.processors.BeansXmlProcessor.parseBeansXml(BeansXmlProcessor.java:140)
+
+
+
+
+	at org.jboss.as.weld.deployment.processors.BeansXmlProcessor.deploy(BeansXmlProcessor.java:117)
+
+
+
+
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:159) [wildfly-server-8.0.0.Final.jar:8.0.0.Final]
+
+
+
+
+	... 5 more
+
+
+
+
+Caused by: java.lang.NullPointerException
+
+
+
+
+	at org.jboss.metadata.property.DefaultPropertyReplacer.replaceProperties(DefaultPropertyReplacer.java:52)
+
+
+
+
+	at org.jboss.as.weld.deployment.PropertyReplacingBeansXmlHandler.interpolate(PropertyReplacingBeansXmlHandler.java:64)
+
+
+
+
+	at org.jboss.weld.xml.BeansXmlHandler$4.processStartChildElement(BeansXmlHandler.java:229)
+
+
+
+
+	at org.jboss.weld.xml.BeansXmlHandler.startElement(BeansXmlHandler.java:297)
+
+
+
+
+	at org.apache.xerces.parsers.AbstractSAXParser.startElement(Unknown Source)
+
+
+
+
+	at org.apache.xerces.parsers.AbstractXMLDocumentParser.emptyElement(Unknown Source)
+
+
+
+
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.emptyElement(Unknown Source)
+
+
+
+
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanStartElement(Unknown Source)
+
+
+
+
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+
+
+
+
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+
+
+
+
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+
+
+
+
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+
+
+
+
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+
+
+
+
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+
+
+
+
+	at org.apache.xerces.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+
+
+
+
+	at org.apache.xerces.jaxp.SAXParserImpl.parse(Unknown Source)
+
+
+
+
+	at org.jboss.weld.xml.BeansXmlParser.parse(BeansXmlParser.java:93)
+
+
+
+
+	at org.jboss.as.weld.deployment.processors.BeansXmlProcessor.parseBeansXml(BeansXmlProcessor.java:136)
+
+
+
+
+	... 7 more
+
+
+
+
+
+
+
+
+
+

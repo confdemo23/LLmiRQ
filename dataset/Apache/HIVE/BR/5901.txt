@@ -1,0 +1,2 @@
+Query cancel should stop running MR tasks
+Currently, query canceling does not stop running MR job immediately.

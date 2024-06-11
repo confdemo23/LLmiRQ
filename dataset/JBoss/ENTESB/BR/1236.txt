@@ -1,0 +1,31 @@
+NPE when installing the first patch on a standalone container
+When installing the first patch created with the script in ENTESB-1154, I noticed this NPE on the console.
+
+
+
+
+
+
+java.lang.NullPointerException
+
+
+
+
+	at java.util.Hashtable.put(Hashtable.java:542)
+
+
+
+
+	at org.fusesource.patch.impl.ServiceImpl.saveResult(ServiceImpl.java:286)
+
+
+
+
+	at org.fusesource.patch.impl.ServiceImpl$1.run(ServiceImpl.java:435)
+
+
+
+
+
+
+This appears to be caused by the fact that there&amp;apos;s no override.properties before installing the first patch, causing this NPE when the null value for the overrides is written to the properties file.

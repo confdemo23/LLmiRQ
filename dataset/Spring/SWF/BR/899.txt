@@ -1,0 +1,2 @@
+FlowResourceELResolver does not work outside of Web Flow environment
+Throws a NPE if the request context is null  resolution using resourceBundle is not possible when a jsf view is rendered by spring mvc directly

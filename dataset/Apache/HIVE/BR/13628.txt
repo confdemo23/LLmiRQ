@@ -1,0 +1,2 @@
+Support for permanent functions - error handling if no restart
+Support for permanent functions - error handling if no restart

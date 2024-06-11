@@ -1,0 +1,195 @@
+Read-attribute on an EJB timer fails if there are no more timeouts
+When a read-attribute operation is invoked on an EJB timer that has no timeouts remaining, the operation fails without returning any useful information to the client:
+
+
+
+
+
+
+ {
+
+
+
+
+    "outcome" : "failed",
+
+
+
+
+    "rolled-back" : true
+
+
+
+
+}
+
+
+
+
+
+
+It is because a NoMoreTimeoutException is thrown from the TimerServiceImpl and this exception is not handled by the read-attribute handler. This occurs in the server log:
+
+
+
+
+
+
+ERROR [org.jboss.as.controller.management-operation] (management-handler-thread - 1) WFLYCTL0013: Operation ("read-attribute") failed - address: ([
+
+
+
+
+    ("deployment" =&gt; "ejb-mgmt-timers.jar"),
+
+
+
+
+    ("subsystem" =&gt; "ejb3"),
+
+
+
+
+    ("stateless-session-bean" =&gt; "TimerBean"),
+
+
+
+
+    ("service" =&gt; "timer-service"),
+
+
+
+
+    ("timer" =&gt; "9a93b559-3526-4b72-95e7-760c5bc50484")
+
+
+
+
+]): javax.ejb.NoMoreTimeoutsException: WFLYEJB0328: No more timeouts for timer [id=9a93b559-3526-4b72-95e7-760c5bc50484 timedObjectId=ejb-mgmt-timers.ejb-mgmt-timers.TimerBean auto-timer?:false persistent?:true timerService=org.jboss.as.ejb3.timerservice.TimerServiceImpl@72e447ae initialExpiration=Mon Aug 24 13:38:37 CEST 2015 intervalDuration(in milli sec)=0 nextExpiration=null timerState=IN_TIMEOUT info=PersistentIntervalTimerCLITestCase]
+
+
+
+
+        at org.jboss.as.ejb3.timerservice.TimerImpl.getNextTimeout(TimerImpl.java:256)
+
+
+
+
+        at org.jboss.as.ejb3.subsystem.deployment.TimerResourceDefinition$6.readAttribute(TimerResourceDefinition.java:240)
+
+
+
+
+        at org.jboss.as.ejb3.subsystem.deployment.TimerResourceDefinition$AbstractReadAttributeHandler.executeRuntime(TimerResourceDefinition.java:376)
+
+
+
+
+        at org.jboss.as.ejb3.subsystem.deployment.TimerResourceDefinition$AbstractTimerHandler$1.execute(TimerResourceDefinition.java:340)
+
+
+
+
+        at org.jboss.as.controller.AbstractOperationContext.executeStep(AbstractOperationContext.java:846)
+
+
+
+
+        at org.jboss.as.controller.AbstractOperationContext.processStages(AbstractOperationContext.java:637)
+
+
+
+
+        at org.jboss.as.controller.AbstractOperationContext.executeOperation(AbstractOperationContext.java:362)
+
+
+
+
+        at org.jboss.as.controller.OperationContextImpl.executeOperation(OperationContextImpl.java:1272)
+
+
+
+
+        at org.jboss.as.controller.ModelControllerImpl.internalExecute(ModelControllerImpl.java:394)
+
+
+
+
+        at org.jboss.as.controller.ModelControllerImpl.execute(ModelControllerImpl.java:225)
+
+
+
+
+        at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler.doExecute(ModelControllerClientOperationHandler.java:207)
+
+
+
+
+        at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler.access$300(ModelControllerClientOperationHandler.java:129)
+
+
+
+
+        at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler$1$1.run(ModelControllerClientOperationHandler.java:151)
+
+
+
+
+        at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler$1$1.run(ModelControllerClientOperationHandler.java:147)
+
+
+
+
+        at java.security.AccessController.doPrivileged(Native Method)
+
+
+
+
+        at javax.security.auth.Subject.doAs(Subject.java:422)
+
+
+
+
+        at org.jboss.as.controller.AccessAuditContext.doAs(AccessAuditContext.java:92)
+
+
+
+
+        at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler$1.execute(ModelControllerClientOperationHandler.java:147)
+
+
+
+
+        at org.jboss.as.protocol.mgmt.AbstractMessageHandler$2$1.doExecute(AbstractMessageHandler.java:298)
+
+
+
+
+        at org.jboss.as.protocol.mgmt.AbstractMessageHandler$AsyncTaskRunner.run(AbstractMessageHandler.java:518)
+
+
+
+
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)                                                                                                                                                   
+
+
+
+
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+
+
+
+        at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+        at org.jboss.threads.JBossThread.run(JBossThread.java:320)
+
+
+
+
+
+
+I think the read-attribute handler should rather catch this exception, log it, and leave the next-timeout and time-remaining attributes undefined in this case.

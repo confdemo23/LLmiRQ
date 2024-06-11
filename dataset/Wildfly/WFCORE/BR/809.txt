@@ -1,0 +1,202 @@
+Can not parse an ObjectListAttributeDefinition of a PersistentResourceDefinition
+My server resource defines an "interceptors" attribute:
+
+
+
+
+
+
+        public static final ObjectTypeAttributeDefinition CLASS = ObjectTypeAttributeDefinition.Builder.of("class",
+
+
+
+
+                create("name", ModelType.STRING, false)
+
+
+
+
+                        .setAllowExpression(false)
+
+
+
+
+                        .build(),
+
+
+
+
+                create("module", ModelType.STRING, false)
+
+
+
+
+                        .setAllowExpression(false)
+
+
+
+
+                        .build())
+
+
+
+
+                .build();
+
+
+
+
+
+
+
+
+
+        public static final ObjectListAttributeDefinition INTERCEPTORS = ObjectListAttributeDefinition.Builder.of("interceptors", CLASS)
+
+
+
+
+                .setAllowNull(true)
+
+
+
+
+                .setAllowExpression(false)
+
+
+
+
+                .setMinSize(1)
+
+
+
+
+                .setMaxSize(Integer.MAX_VALUE)
+
+
+
+
+                .build();
+
+
+
+
+
+
+The "interceptors" is a LIST of "class" attribute which is an OBJECT composed of a "name" and "module" attribute.
+I&amp;apos;m not sure what is the corresponding XML format for this attribute.
+Ideally, I&amp;apos;d like to have this XML format:
+
+
+
+
+
+
+    &lt;server name="default" &gt;
+
+
+
+
+            ...
+
+
+
+
+            &lt;interceptors&gt;
+
+
+
+
+                &lt;class name="org.bar.MyInterceptor"
+
+
+
+
+                       module="org.bar" /&gt;
+
+
+
+
+                &lt;class name="org.baz.MyOtherInterceptor"
+
+
+
+
+                       module="org.baz" /&gt;
+
+
+
+
+            &lt;/interceptors&gt;
+
+
+
+
+            ...
+
+
+
+
+      &lt;/server&gt;
+
+
+
+
+
+
+This XML can not be parsed and I have not found which XML representation can be parsed given my INTERCEPTORS definition.
+The XML parsing fails with:
+
+
+
+
+
+
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[23,27]
+
+
+
+
+Message: WFLYCTL0377: Unexpected element &amp;apos;{urn:jboss:domain:test:1.0}interceptors&amp;apos; encountered. Valid elements are: &amp;apos;buffer-cache&amp;apos;
+
+
+
+
+	at org.jboss.as.controller.parsing.ParseUtils.unexpectedElement(ParseUtils.java:98)
+
+
+
+
+	at org.jboss.as.controller.PersistentResourceXMLDescription.parseChildren(PersistentResourceXMLDescription.java:270)
+
+
+
+
+	at org.jboss.as.controller.PersistentResourceXMLDescription.parse(PersistentResourceXMLDescription.java:166)
+
+
+
+
+	at org.jboss.as.controller.PersistentResourceXMLDescription.parseChildren(PersistentResourceXMLDescription.java:266)
+
+
+
+
+	at org.jboss.as.controller.PersistentResourceXMLDescription.parse(PersistentResourceXMLDescription.java:166)
+
+
+
+
+	at org.jboss.as.controller.PersistentResourceXMLParser.readElement(PersistentResourceXMLParser.java:41)
+
+
+
+
+	at org.jboss.as.controller.PersistentResourceXMLParser.readElement(PersistentResourceXMLParser.java:35)
+
+
+
+
+
+
+Corresponding test case in wildly-core is in my branch at https://github.com/jmesnil/wildfly-core/tree/parse_ObjectListAttributeDefinition

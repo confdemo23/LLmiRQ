@@ -1,0 +1,4 @@
+MultipleClientRemoteJndiTestCase and NestedRemoteContextTestCase failed due to NamingException
+MultipleClientRemoteJndiTestCase and NestedRemoteContextTestCase from EAP 6.1.0 TS fail due to NamingException.
+Both tests use hardcoded address like: env.put(Context.PROVIDER_URL, "remote://localhost:4447"); 
+When Jenkins configures to use other address, they will failed with NamingException.

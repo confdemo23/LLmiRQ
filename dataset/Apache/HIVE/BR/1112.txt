@@ -1,0 +1,2 @@
+Replace instances of StringBuffer/Vector with StringBuilder/ArrayList
+When possible replace instances of StringBuffer and Vector with their non-synchronized counterparts StringBuilder and ArrayList.

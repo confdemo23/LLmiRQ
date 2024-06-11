@@ -1,0 +1,3 @@
+Logging task properties, and environment variables might contain passwords
+Hive MapredLocalTask Can Print Environment Passwords, like -Djavax.net.ssl.trustStorePassword.
+The same could happen, when logging spark properties

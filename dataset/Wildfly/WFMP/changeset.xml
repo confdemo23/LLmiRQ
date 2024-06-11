@@ -1,0 +1,16 @@
+<changeset>
+    <id>14
+        <files>org/wildfly/plugin/server/RunMojo.java
+            org/wildfly/plugin/server/StartMojo.java
+        </files>
+    </id>
+    <id>26
+        <files>org/wildfly/plugin/cli/Commands.java
+        </files>
+    </id>
+    <id>58
+        <files>org/wildfly/plugin/common/AbstractServerConnection.java
+            org/wildfly/plugin/server/ShutdownMojo.java
+        </files>
+    </id>
+</changeset>

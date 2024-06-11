@@ -1,0 +1,42 @@
+JSON Schema reports primitive numbers as object
+A type like this:
+
+{class:java}
+class Sample {
+
+  double foo;
+}{class}
+
+yields a JSON Schema document of:
+
+
+
+
+
+
+{
+
+
+
+
+  "foo" : {
+
+
+
+
+    "type" : "object"
+
+
+
+
+  }
+
+
+
+
+}
+
+
+
+
+

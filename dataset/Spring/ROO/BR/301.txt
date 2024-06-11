@@ -1,0 +1,3 @@
+Choose between data access patterns
+At this time, the Aspect J generated aspects and entity classes follow the Active Record pattern. 
+It would be nice if we could choose between this pattern and Data Access Object, with or without Spring DaoSupport. The way to configure would be "persistence setup ... --databaseAccessPattern ActiveRecord|DAO".

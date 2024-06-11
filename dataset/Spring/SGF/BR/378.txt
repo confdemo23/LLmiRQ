@@ -1,0 +1,2 @@
+SDG completely ignores the &apos;socket-read-timeout&apos; attribute on the Gateway element nested in a GatewayHub.
+The value of the &amp;apos;socket-read-timeout&amp;apos; attribute on the &lt;gfe:gateway&gt; element nested inside the &lt;gfe:gateway-hub&gt; element is read/parsed but ignored and not set on the corresponding, resulting GemFire Gateway that is created by Spring Data GemFire&amp;apos;s GatewayHubFactoryBean.

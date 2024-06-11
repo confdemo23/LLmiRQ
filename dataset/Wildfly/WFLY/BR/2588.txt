@@ -1,0 +1,40 @@
+HC Main.getHostSystemProperties() does not handle additional equals in system properties properly
+-Djava.security.policy==/Users/kabir/tmp/permit.policy (note the extra &amp;apos;=&amp;apos;) is a valid setting to just use that policy file (unlike -Djava.security.policy=/Users/kabir/tmp/permit.policy which adds it to the system wide and user policies)
+Main.getHostSystemProperties() currently handles this in a way that the value becomes null, while it should be &amp;apos;=/Users/kabir/tmp/permit.policy&amp;apos; which causes this problem when starting up the servers 
+
+
+
+
+
+
+[Server:server-one] Exception in thread "main" java.security.AccessControlException: access denied (java.util.PropertyPermission module.path write)
+
+
+
+
+[Server:server-one]     at java.security.AccessControlContext.checkPermission(AccessControlContext.java:376)
+
+
+
+
+[Server:server-one]     at java.security.AccessController.checkPermission(AccessController.java:549)
+
+
+
+
+[Server:server-one]     at java.lang.SecurityManager.checkPermission(SecurityManager.java:532)
+
+
+
+
+[Server:server-one]     at java.lang.System.setProperty(System.java:741)
+
+
+
+
+[Server:server-one]     at org.jboss.modules.Main.main(Main.java:148)
+
+
+
+
+

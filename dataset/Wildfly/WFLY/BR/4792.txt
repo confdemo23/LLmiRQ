@@ -1,0 +1,2 @@
+Undertow deployment-level session statistics not available for distributable webapp
+org.wildfly.clustering.web.infinispan.session.InfinispanSessionManager which is used by default even for non-HA configurations in WildFly 9.0.0.CR2 (e.g. standalone.xml in app server distribution) does not implement io.undertow.server.session.SessionManagerStatistics and so no stats except for activeSessions are available. 

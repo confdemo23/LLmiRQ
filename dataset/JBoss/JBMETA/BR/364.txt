@@ -1,0 +1,8 @@
+message-destination element in assembly-descriptor throws exception for EJB 2.1 ejb-jar.xml
+message-destination is not being parsed for ejb 2.1.
+14:21:01,507 INFO  [org.jboss.as.server] (host-controller-connection-threads - 11) JBAS015870: Deploy of deployment "xxxx-service-impl.ear" was rolled back with failure message {"JBAS014671: Failed services" =&gt; {"jboss.deployment.subunit.\"xxxx-service-impl.ear\".\"xxxx-service-impl.jar\".PARSE" =&gt; "org.jboss.msc.service.StartException in service jboss.deployment.subunit.\"xxxx-service-impl.ear\".\"xxxx-service-impl.jar\".PARSE: JBAS018733: Failed to process phase PARSE of subdeployment \"xxxx-service-impl.jar\" of deployment \"xxxx-service-impl.ear\"
+    Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: JBAS014185: Exception while parsing ejb-jar.xml: /content/xxxx-service-impl.ear/xxxx-service-impl.jar/META-INF/ejb-jar.xml
+    Caused by: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[142,4] 
+Message: Unexpected element &amp;apos;
+{http://java.sun.com/xml/ns/j2ee}
+message-destination&amp;apos; encountered"},"JBAS014771: Services with missing/unavailable dependencies" =&gt; ["jboss.deployment.unit.\"xxxx-service-impl.ear\".DEPENDENCIES Missing[JBAS014861: &lt;one or more transitive dependencies&gt;]"]}

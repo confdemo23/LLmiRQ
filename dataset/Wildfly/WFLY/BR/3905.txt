@@ -1,0 +1,185 @@
+POJO JAX-WS endpoints should not be processed if packaged in EJB-jar
+If a POJO is defined like this in an EJB-jar:
+
+
+
+
+
+
+package com.redhat.gss.ws; 
+
+
+
+
+
+
+
+
+
+@javax.jws.WebService 
+
+
+
+
+public class HelloService { 
+
+
+
+
+  public String sayHello() { 
+
+
+
+
+    return "Hello World!"; 
+
+
+
+
+  } 
+
+
+
+
+}
+
+
+
+
+
+
+Deployment structure:
+
+
+
+
+
+
+klape@localhost ws-java.jar$ tree
+
+
+
+
+.
+
+
+
+
+ com
+
+
+
+
+  redhat
+
+
+
+
+      gss
+
+
+
+
+          ws
+
+
+
+
+              HelloService.java
+
+
+
+
+ META-INF
+
+
+
+
+     MANIFEST.MF
+
+
+
+
+
+
+
+
+
+5 directories, 2 files
+
+
+
+
+klape@localhost ws-java.jar$
+
+
+
+
+
+
+Upon deployment, you get this in the log:
+
+
+
+
+
+
+16:52:51,372 INFO  [org.jboss.ws.cxf.metadata] (MSC service thread 1-7) JBWS024061: Adding service endpoint metadata: id=com.redhat.gss.ws.HelloService
+
+
+
+
+ address=http://localhost:8080/ws-java/HelloService
+
+
+
+
+ implementor=com.redhat.gss.ws.HelloService
+
+
+
+
+ serviceName={http://ws.gss.redhat.com/}HelloServiceService
+
+
+
+
+ portName={http://ws.gss.redhat.com/}HelloServicePort
+
+
+
+
+ annotationWsdlLocation=null
+
+
+
+
+ wsdlLocationOverride=null
+
+
+
+
+ mtomEnabled=false
+
+
+
+
+16:52:51,571 INFO  [org.apache.cxf.service.factory.ReflectionServiceFactoryBean] (MSC service thread 1-7) Creating Service {http://ws.gss.redhat.com/}HelloServiceService from class com.redhat.gss.ws.HelloService
+
+
+
+
+16:52:51,879 INFO  [org.apache.cxf.endpoint.ServerImpl] (MSC service thread 1-7) Setting the server&amp;apos;s publish address to be http://localhost:8080/ws-java/HelloService
+
+
+
+
+16:52:51,925 INFO  [org.jboss.ws.cxf.deployment] (MSC service thread 1-7) JBWS024074: WSDL published to: file:/home/remote/klape/work/archives/wildfly-8.1.0.Final/standalone/data/wsdl/ws-java.jar/HelloServiceService.wsdl
+
+
+
+
+
+
+Yet when you try to get the WSDL at http://localhost:8080/ws-java/HelloService?wsdl (pulled from the metadata in the log), you get a 404 error.
+JBossWS should not be trying to deploy the POJO endpoint from within an EJB-jar.

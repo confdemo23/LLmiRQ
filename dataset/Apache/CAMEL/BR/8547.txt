@@ -1,0 +1,3 @@
+Usage of camel-xmlbeans depends on TCCL
+xmlbeans marshalling and unmarshalling does not respect the ApplicationContextClassLoader
+CrossRef: https://github.com/wildfly-extras/wildfly-camel/issues/457

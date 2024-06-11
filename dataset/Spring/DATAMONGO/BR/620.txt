@@ -1,0 +1,2 @@
+MongoTemplate.doSaveVersioned() does not consider collection handed into the method
+doSaveVersioned() calls updateFirst(query, update, objectToSave.getClass()) in an update case which essentially neglects the collectionName originally handed into the method.

@@ -1,0 +1,3 @@
+ServerUpdateResultHandler does nothing
+The domain op rollout logic&amp;apos;s AbstractServerUpdateTask.ServerUpdateResultHandler interface is serving no purpose and should be removed. It&amp;apos;s cruft left from earlier implementations.
+The only impl stores data in a map that never gets read. 

@@ -1,0 +1,14 @@
+resources for messaging paths are not created in domain&apos;s profile
+Reading or modyfing of journal paths via CLI is not possible in domain. If you list the journal paths via CLI, you get an empty result. Configuring of journal paths is necessary if you want to have more Artemis servers in one EAP.
+
+
+
+
+
+
+ls /profile=full/subsystem=messaging-activemq/server=default/path=
+
+
+
+
+

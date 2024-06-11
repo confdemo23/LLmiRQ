@@ -1,0 +1,2 @@
+Fix failing test org.apache.camel.component.salesforce.RestApiIntegrationTest.testQueryAll
+The test fails since the XmlRestProcessor is missing a case for QUERY_ALL enum in processRequest(). 

@@ -1,0 +1,7 @@
+Problem with the many to many relationship, script line is not closed correct
+When creating a many to many relationship, the following line contains an error
+&lt;script type="text/javascript"&gt;Spring.addDecoration(new Spring.ElementDecoration(
+{elementId : "_tasks", widgetType: "dijit.form.MultiSelect")); &lt;/script&gt;
+
+Right after MultiSelect" a }
+ is missing

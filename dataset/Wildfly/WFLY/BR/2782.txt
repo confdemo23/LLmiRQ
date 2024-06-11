@@ -1,0 +1,2 @@
+Testsuite leaks remoting endpoints by not closing JMXConnector
+Whereever JMXConnectorFactory.connect() is called, the resulting JMXConnector should be closed

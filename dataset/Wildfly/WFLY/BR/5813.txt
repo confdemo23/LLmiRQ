@@ -1,0 +1,5 @@
+Quick redeploy vulnerable to CacheRegistry entry loss
+On deploy, CacheRegistry adds its local entry to the cache, and on undeploy removes it entry.  However, we use a topology change listener to remove entries for crashed members (since these nodes will not have removed their local entry).  However, since the listener is triggered asynchronously, it is possible that the topology change fired in response to an undeploy execute after the redeployed CacheRegistry starts - which would cause erroneous removal of the local entry that was added.
+This manifests itself as an intermittent failure of the RegistryTestCase as seen in this PR:
+https://github.com/wildfly/wildfly/pull/8465
+Not surprisingly, this issue only surfaces in the windoze runs, which, according to Tomaz Cerar, execute faster than the linux runs.

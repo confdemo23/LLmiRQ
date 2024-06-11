@@ -1,0 +1,3 @@
+Potential issue with java 8 and Felix
+There is a potential issue between java 8 and Felix/Roo 1.2.5
+Can someone please confirm that?

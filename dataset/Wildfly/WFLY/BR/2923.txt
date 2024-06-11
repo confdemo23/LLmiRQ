@@ -1,0 +1,2 @@
+org.jboss.as.jacorb.rmi.WorkCacheManager is a class loader leak waiting to happen
+This class should be re-done to not use weak and soft references. As the values in the weak map hold a reference to the key the values will never be released until the soft references expire. 

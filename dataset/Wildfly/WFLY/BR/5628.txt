@@ -1,0 +1,7 @@
+Deploying distributable web application starts an unnecessary cache.
+Deploying a web application should only start 2 caches:
+
+Cache for storing sessions (deployment specific)
+Cache for storing routing information (shared)
+
+However, currently, the default cache is also started, even though it is never used.

@@ -1,0 +1,3 @@
+<mvc:annotation-driven / > should supports the attributes of setting customized HttpMessageConverter bean list
+Currently, the &lt;mvc:annotation-driven / &gt; doesn&amp;apos;t allow the HttpMessageConverters be customizable (It is read-only in AnnotationDrivenBeanDefinitionParser).
+It is recommended to allow the MessageConverters be reference by external HttpMessageConverter beans list.

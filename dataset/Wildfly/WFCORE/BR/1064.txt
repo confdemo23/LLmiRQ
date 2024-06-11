@@ -1,0 +1,2 @@
+Creating named multicast socket doesn&apos;t properly register socket using name
+I&amp;apos;m not sure why this is, but the socket binding manager ignores the name of the multicast socket and registers the socket using the unnamed registry.

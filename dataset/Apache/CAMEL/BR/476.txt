@@ -1,0 +1,1 @@
+Add support for errorHandler in the xml (spring) DSL

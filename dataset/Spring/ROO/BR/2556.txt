@@ -1,0 +1,2 @@
+Calendar fields need to use java.util.Date for Solr indexing
+For indexing purposes the .getTime() method should be called on Calendar field types.

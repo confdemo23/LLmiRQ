@@ -1,0 +1,14 @@
+Incorrect regular expression for extracting task id from filename
+For producing the correct filenames for bucketed tables, there is a method in Utilities.java that extracts out the task id from the filename and replaces it with the bucket number. There is a bug in the regex that is used to extract this value for attempt numbers &gt;= 10:
+
+
+
+&gt;&gt;&gt; re.match("^.*?([0-9]+)(_[0-9])?(\\..*)?$", &amp;apos;attempt_201107090429_64965_m_001210_10&amp;apos;).group(1)
+
+&amp;apos;10&amp;apos;
+
+&gt;&gt;&gt; re.match("^.*?([0-9]+)(_[0-9])?(\\..*)?$", &amp;apos;attempt_201107090429_64965_m_001210_9&amp;apos;).group(1)
+
+&amp;apos;001210&amp;apos;
+
+

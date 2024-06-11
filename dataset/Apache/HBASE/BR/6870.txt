@@ -1,0 +1,3 @@
+HTable#coprocessorExec always scan the whole table 
+In current logic, HTable#coprocessorExec always scans the entire META table, loading it into memory and then filters the keys to return only those that fall in specified range.  The version after the patch only scans the portions of meta that are in the specified key range, and returns them.  Put simply  before we did a load-all-then-filter; afterwards we only-scan-what-is-needed.
+The former has low efficiency and greatly impacts the Regionserver carrying .META. when there are many coprocessorExec requests.

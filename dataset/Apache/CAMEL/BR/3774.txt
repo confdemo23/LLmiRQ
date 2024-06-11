@@ -1,0 +1,18 @@
+camel-manual generation fails during release process
+It works during a regular mvn install, but it fails during release:prepare. The bug is somewhere in the maven-html-to-pdf plugin. I hope a mock release using mvn -X will reveal the problem, but would take a frustrating amount of time. For now the available info is the output:
+
+
+
+[INFO] [INFO] [html-to-pdf:compile {execution: default}]
+
+[INFO] [INFO] Downloading: http://camel.apache.org/book-in-one-page.html
+
+[INFO] ERROR:  &amp;apos;NOT_FOUND_ERR: An attempt is made to reference a node in a context where it does not exist.&amp;apos;
+
+[INFO] [ERROR] Download or validation of &amp;apos;http://camel.apache.org/book-in-one-page.html&amp;apos; failed: org.apache.camel.CamelException: Failed to convert the HTML to tidy Markup
+
+[INFO] [INFO] Stored dummy file: /w1/apache/release/camel270/tooling/camel-manual/target/site/manual/camel-manual-2.7.0.html since download of http://camel.apache.org/book-in-one-page.html failed.
+
+
+
+The error points to a DOM related issue, but since the downloaded manual gets overwritten with the dummy file, I have no idea if the download got interrupted, or in what way the source gets corrupted.

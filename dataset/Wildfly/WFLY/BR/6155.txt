@@ -1,0 +1,3 @@
+[Migration][WebToUndertow] RemoteIpValve - protocolHeaderHttpsValue and proxiesHeader are neither migrated and neither migration warning is shown
+When migrating RemoteIpValve which has defined params proxiesHeader and protocolHeaderHttpsValue these params are neither migrated nor migration warning is shown.
+If those params are not migratable, there should be printed at least migration warning for them.

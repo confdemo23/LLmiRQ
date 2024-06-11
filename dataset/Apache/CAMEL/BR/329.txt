@@ -1,0 +1,4 @@
+Throwing the  IllegalArgumentException if there are already another type bean which name is same with the URI schema
+
+Please see the discussion below
+http://www.nabble.com/%22cxf%22-name-conflict-in-the-spring-context-td15427019s22882.html

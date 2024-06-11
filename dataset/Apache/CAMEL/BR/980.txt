@@ -1,0 +1,5 @@
+File component - can not delete consumed file when processing failed (look into real cause)
+See nabble:
+http://www.nabble.com/Problem-with-FileEndpoint-td19940096s22882.html
+Workaround
+Use .convertBodyTo(String.class) in the route so the file is read into memory, and the java.io.File handler shouldn&amp;apos;t be open/locked when camel attempts to delete it after wards.

@@ -1,0 +1,130 @@
+HTTPS socket-binding definition always needed
+When removing HTTPS socket-binding from the standalone.xml file, the server start&amp;apos;s in errors.
+The errors are the following:
+
+
+
+
+
+
+
+
+
+
+
+    13:55:32,002 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) JBAS014613: Operation ("add") failed - address: ([
+
+
+
+
+        ("subsystem" =&gt; "undertow"),
+
+
+
+
+        ("server" =&gt; "default-server"),
+
+
+
+
+        ("http-listener" =&gt; "default")
+
+
+
+
+    ]) - failure description: {"JBAS014771: Services with missing/unavailable dependencies" =&gt; ["jboss.undertow.listener.default is missing [jboss.binding.https]"]}
+
+
+
+
+    13:55:32,005 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) JBAS014613: Operation ("add") failed - address: ([("subsystem" =&gt; "webservices")]) - failure description: {"JBAS014879: One or more services were unable to start due to one or more indirect dependencies not being available." =&gt; {
+
+
+
+
+        "Services that were unable to start:" =&gt; ["jboss.ws.config"],
+
+
+
+
+        "Services that may be the cause:" =&gt; [
+
+
+
+
+            "jboss.binding.https",
+
+
+
+
+            "jboss.remoting.remotingConnectorInfoService.http-remoting-connector"
+
+
+
+
+        ]
+
+
+
+
+    }}
+
+
+
+
+    13:55:32,007 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) JBAS014613: Operation ("add") failed - address: ([
+
+
+
+
+        ("subsystem" =&gt; "ejb3"),
+
+
+
+
+        ("service" =&gt; "remote")
+
+
+
+
+    ]) - failure description: {"JBAS014771: Services with missing/unavailable dependencies" =&gt; ["jboss.ejb3.connector is missing [jboss.remoting.remotingConnectorInfoService.http-remoting-connector]"]}
+
+
+
+
+    13:55:32,074 INFO  [org.jboss.as.controller] (Controller Boot Thread) JBAS014774: Service status report
+
+
+
+
+    JBAS014775:    New missing/unsatisfied dependencies:
+
+
+
+
+          service jboss.binding.https (missing) dependents: [service jboss.undertow.listener.default]
+
+
+
+
+          service jboss.remoting.remotingConnectorInfoService.http-remoting-connector (missing) dependents: [service jboss.ejb3.connector]
+
+
+
+
+     
+
+
+
+
+    13:55:32,085 ERROR [org.jboss.as] (Controller Boot Thread) JBAS015875: WildFly 8.1.0.Final "Kenny" started (with errors) in 3475ms - Started 197 of 252 services (3 services failed or missing dependencies, 78 services are lazy, passive or on-demand
+
+
+
+
+
+
+
+
+
+

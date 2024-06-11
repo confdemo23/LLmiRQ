@@ -1,0 +1,58 @@
+MBeanServer returns MBean names that do not match filter
+This code
+
+
+
+
+
+
+            MBeanServer server = ManagementFactory.getPlatformMBeanServer();
+
+
+
+
+            for (ObjectName oname : server.queryNames(new ObjectName("*:type=context,*"), null)) {
+
+
+
+
+                System.out.println(oname);
+
+
+
+
+            }
+
+
+
+
+
+
+gives 
+
+
+
+
+
+
+16:51:25,842 INFO  [stdout] (pool-3-thread-1) org.apache.camel:context=swagger-test,type=context,name="swagger-test"
+
+
+
+
+16:51:25,842 INFO  [stdout] (pool-3-thread-1) jboss.jsr77:j2eeType=J2EEServer,name=default
+
+
+
+
+16:51:25,843 INFO  [stdout] (pool-3-thread-1) jboss.jsr77:j2eeType=JVM,name=default,J2EEServer=default
+
+
+
+
+16:51:25,843 INFO  [stdout] (pool-3-thread-1) jboss.jsr77:j2eeType=J2EEDomain,name=jboss.jsr77
+
+
+
+
+

@@ -1,0 +1,8 @@
+Compaction events should be written to HLog
+The sequence for a compaction should look like this:
+
+Compact region to "new" files
+Write a "Compacted Region" entry to the HLog
+Delete "old" files
+
+This deals with a case where the RS has paused between step 1 and 2 and the regions have since been reassigned.

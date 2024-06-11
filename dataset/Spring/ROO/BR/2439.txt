@@ -1,0 +1,16 @@
+Pushin refactoring of Controller methods fails with Exception in Roo Shell
+I created a simple project with one entity "Foo" and one field.
+Then I scaffolded the controller with controller all.
+Now, I did &amp;apos;push-in-refactoring&amp;apos; for the "update" method of the controller. 
+The Roo shell gives following exception then:
+[Spring Roo Process Manager Background Polling Thread] Method &amp;apos;update&amp;apos; already defined in target type &amp;apos;de.controllerpushintest.web.Foo
+Controller&amp;apos; (ITD target &amp;apos;de.controllerpushintest.web.FooController_Roo_Controller&amp;apos;)
+java.lang.IllegalArgumentException: Method &amp;apos;update&amp;apos; already defined in target type de.controllerpushintest.web.FooController&amp;apos; (ITD target &amp;apos;de.controllerpushintest.web.FooController_Roo_Controller&amp;apos;)
+at org.springframework.roo.support.util.Assert.isNull(Assert.java:89)
+at org.springframework.roo.classpath.details.ItdTypeDetailsBuilder.onAddMethod(ItdTypeDetailsBuilder.java:84)
+at org.springframework.roo.classpath.details.AbstractMemberHoldingTypeDetailsBuilder.addMethod(AbstractMemberHoldingTypeDetailsBuilder.java:138)
+at org.springframework.roo.classpath.details.AbstractMemberHoldingTypeDetailsBuilder.addMethod(AbstractMemberHoldingTypeDetailsBuilder.java:156)
+at org.springframework.roo.addon.web.mvc.controller.scaffold.mvc.WebScaffoldMetadata.&lt;init&gt;(WebScaffoldMetadata.java:105)
+...
+Afterwards, the Roo shell seems not to react on changes applied to the controller at all.
+It&amp;apos;s critical, since one cannot customize controllers anymore.

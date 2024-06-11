@@ -1,0 +1,4 @@
+{ssha} is specified in the Spring Security password-encoder schema, but isn&apos;t handled by code
+Pretty minor, but I noticed that the 
+{ssha}
+ option for LDAP SSHA is an allowable value in the schema for password-encoder&amp;apos;s hash attribute, but it isn&amp;apos;t handled by PasswordEncoderParser.

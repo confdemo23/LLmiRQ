@@ -1,0 +1,47 @@
+Derived finders use an incorrect return type and target entity when the finder is defined in a hierarchy
+If a derived finder is defined in this manner:
+
+
+
+
+
+
+public interface CrudGraphRepository&lt;T extends Entity&gt; extends GraphRepository&lt;T&gt; {
+
+
+
+
+    T findById(String id);
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+public interface UserRepository extends CrudGraphRepository&lt;User&gt; {
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+UserRepository.findById assumes that the return type is Entity and the label to match is also based on Entity. It should be User instead.
+Workaround: override the derived finder in UserRepository.

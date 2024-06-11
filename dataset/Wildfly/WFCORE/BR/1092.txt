@@ -1,0 +1,3 @@
+ConfigurationChangeResourceRemoveHandler makes its changes in the constructor not in execute
+ConfigurationChangeResourceRemoveHandler is calling ConfigurationChangesCollector.deactivate() in its constructor. So deactivate gets called at early boot when the ConfigurationChangeResourceDefinition class gets loaded and the maxHistory is still 0, but never thereafter.
+A reload won&amp;apos;t cause it to get called again either, as ConfigurationChangeResourceDefinition is only constructed when the static INSTANCE member is initialized.

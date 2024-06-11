@@ -1,0 +1,50 @@
+Vault tests pollute tmp dir
+SlaveHostControllerAuthenticationTestCase often fails. On inspection this seems to be that the wrong version of the vault file is being used from the tmp directory.
+One way to see this is to clear out the tmp directory, and to run 
+$mvn clean install -pl testsuite/domain/  -DallTests -Dtest=org.jboss.as.test.integration.domain.SlaveHostControllerAuthenticationTestCase
+a few times, most likely from the second time it will fail. This happens during setup of the test, so you can reproduce more easily by adding a simple class
+
+
+
+
+
+
+public class __Throwaway {
+
+
+
+
+   public static void main(String[] args) throws Exception{
+
+
+
+
+       SlaveHostControllerAuthenticationTestCase test = new SlaveHostControllerAuthenticationTestCase();
+
+
+
+
+       test.setupVault();
+
+
+
+
+       test.slaveWithVaultPasswordTest();
+
+
+
+
+   }
+
+
+
+
+}
+
+
+
+
+
+
+and adjusting the visiblity of the SlaveHostControllerAuthenticationTestCase
+methods. There are also other tests using the vault which also seem to pollute the tmp dir.

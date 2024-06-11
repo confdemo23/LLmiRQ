@@ -1,0 +1,49 @@
+XSiteSimpleTestCase fails with -Dnode{0,1}
+Running org.jboss.as.test.clustering.xsite.XSiteSimpleTestCase fails once -Dnode{0,1} are used
+Jenkins job results:
+https://url.corp.redhat.com/0a0bdfe
+
+
+
+
+
+
+./integration-tests.sh -Dtest=XSiteSimpleTestCase  -Dts.noSmoke -Dts.clustering
+
+
+
+
+Running org.jboss.as.test.clustering.xsite.XSiteSimpleTestCase
+
+
+
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 45.535 sec - in org.jboss.as.test.clustering.xsite.XSiteSimpleTestCase
+
+
+
+
+
+
+
+
+
+
+
+
+./integration-tests.sh -Dtest=XSiteSimpleTestCase  -Dts.noSmoke -Dts.clustering -Dnode0=$MYTESTIP_1 -Dnode1=MYTESTIP_2
+
+
+
+
+Running org.jboss.as.test.clustering.xsite.XSiteSimpleTestCase
+
+
+
+
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 132.392 sec &lt;&lt;&lt; FAILURE! - in org.jboss.as.test.clustering.xsite.XSiteSimpleTestCase
+
+
+
+
+

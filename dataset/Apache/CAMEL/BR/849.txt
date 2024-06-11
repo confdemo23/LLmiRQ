@@ -1,0 +1,3 @@
+mina component / endpoint - easier spring configuration
+The camel-mina component and the endpoint should be spring xml firendly for configuration.
+So you can configure the endpoint in the spring xml as a bean and use it in the routing. The configuration in spring should support IDE property completion so can easily see which properties this endpoint supports and set them using simple text values.
