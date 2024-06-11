@@ -1,2 +1,0 @@
-DBRE managed fields do not appear in the generated toString() method if any field exists in the governor
-The toString() accurately shows entries for db-managed fields, however these same fields are removed from the toString() method if a new field is added to the entity&amp;apos;s .java file. Then only the .java file&amp;apos;s fields are displayed in the toString() method.

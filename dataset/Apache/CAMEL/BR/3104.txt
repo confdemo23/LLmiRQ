@@ -1,9 +1,0 @@
-ExchangeBuilder to create messages using fluent builder style
-So you from the Java API using a fluent builder style, can create an Exchange to send, for example with the ProducerTemplate.
-Currently you can use a inlined Processor to do that but its a bit ugly and verbose.
-
-Exchange exchange = ExchangeBuilder("activemq:queue:foo").withBody("Hello World").andHeader("JMSReplyTo", "bar").andHeader("foo", 123).create();
-template.send(exchange);
-
-
-The trick is the Exchange has to be created by the producer and hence we need to know the endpoint uri where to send it.

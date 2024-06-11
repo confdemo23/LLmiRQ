@@ -1,2 +1,0 @@
-Cannot use a cluster name other than "ejb"
-When deploying a clustered session bean the cluster will form only if the cluster name is "ejb".   If the standalone-ha.xml is modified to use a different cluster name then the cluster will not form.

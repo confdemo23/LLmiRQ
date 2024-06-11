@@ -1,1 +1,0 @@
-Handle correctly auto-created Infinispan resources with child redirection 

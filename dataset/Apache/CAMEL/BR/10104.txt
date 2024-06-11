@@ -1,5 +1,0 @@
-Mail consumer does not work with quartz scheduler
-Using the mail consumer with the quartz scheduler like
-imap://myhost?scheduler=quartz2&amp;scheduler.cron=0%2F5+0-23%3F+&amp;scheduler.timeZone=Europe%2FBerlin
-leads to an error:
-"There are 2 scheduler parameters that couldn&amp;apos;t be set on the endpoint. Check the uri if the parameters are spelt correctly and that they are properties of the endpoint."

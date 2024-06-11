@@ -1,2 +1,0 @@
-QueryId can&apos;t be stored in the configuration of the SessionState since multiple queries can run in a single session
-Follow up on HIVE-11488 which stores the queryId in the sessionState conf. If multiple queries run at  the same time, then the logging will get wrong queryId from the sessionState.

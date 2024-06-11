@@ -1,2 +1,0 @@
-Repository methods that return an @QueryResult don&apos;t support paging
-Repository methods that return an @QueryResult don&amp;apos;t support paging. 

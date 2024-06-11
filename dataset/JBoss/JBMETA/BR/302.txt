@@ -1,2 +1,0 @@
-SetDefaultLocalBusinessInterfaceProcessor should not set the default local business interface if the bean exposes a nointerface view
-SetDefaultLocalBusinessInterfaceProcessor currently doesn&amp;apos;t take into account the nointerface view exposed by a bean. As a result, it sets a default business interface even when a bean exposes a no-interface view. This shouldn&amp;apos;t happen.

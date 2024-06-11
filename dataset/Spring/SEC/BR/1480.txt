@@ -1,2 +1,0 @@
-LdapUserDetailsImpl does not override equals/hashCode
-result is that namespace session management config does not work with default LdapUserDetailsImpl.

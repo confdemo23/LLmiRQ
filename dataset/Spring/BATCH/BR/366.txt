@@ -1,5 +1,0 @@
-Do we still need StepInstance?
-StepInstance has lost weight over time to the point where I think it&amp;apos;s mere existence needs to be questioned. 
-Currently the only information StepInstance essentially provides is the step name. The execution count and last execution can be seen as convenience values that can be retrieved by different means - classes asking the step instance for these values (SimpleJob and StepExecutor/ChunkedStep) already have reference to the repository.
-Technically it seems easy to add &amp;apos;stepName&amp;apos; property to StepExecution and live with the pair Step+StepExecution (with already existing link StepExecution -&gt; JobExecution -&gt; JobInstance) rather than triple Step+StepInstance+StepExecution.
-Alternatively it might be StepInstance is missing properties that would logically belong to it and justify its existence, but I can&amp;apos;t think of any candidates.

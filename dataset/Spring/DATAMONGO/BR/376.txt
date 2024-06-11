@@ -1,2 +1,0 @@
-Fix potential NPE in SpringDataMongodbSerializer
-We currently run into a NPE in case no property with the to-string expression is found. This is inevitably the case if an any() expression is used in the predicate because of the way visit() is implemented in the superclass. I&amp;apos;ve opened a ticket against Querydsl to prevent the invocation (as it doesn&amp;apos;t seem necessary) but we should guard against the issue nevertheless.

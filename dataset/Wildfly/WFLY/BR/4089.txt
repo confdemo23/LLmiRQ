@@ -1,4 +1,0 @@
-ServletContainerInitializerDeploymentProcessor does not handle comments
-ServletContainerInitializerDeploymentProcessor.loadSci() has code to read the service file, rather than using the JDK-provided mechanisms, and it does not handle comments.
-The API documentation at https://docs.oracle.com/javase/7/docs/api/java/util/ServiceLoader.html says that the # symbols and all following characters on the line should be ignored. It also notes the file must be UTF-8 encoded, and ServletContainerInitializerDeploymentProcessor does not appear to force that either.
-Log4j 2.1 triggers this bug (https://issues.apache.org/jira/browse/LOG4J2-890)

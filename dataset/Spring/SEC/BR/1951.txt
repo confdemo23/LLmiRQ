@@ -1,5 +1,0 @@
-HttpSessionDestroyedEvent#getSecurityContexts always return empty
-Looking into the source code of HttpSessionDestroyedEvent.java on line 52:
-Object attribute = attributes.nextElement();
-This should be: session.getAttribute(attributes.nextElement())
-Thanks

@@ -1,4 +1,0 @@
-Impossible to generate a GWT app when sources are in the package &apos;shared&apos; or &apos;server&apos;
-Hi,
-I&amp;apos;m pretty surprised with the implementation of GWT : the main blocking point is that I&amp;apos;m obliged to declare my entities in the [B]client[/B] package : if I declare them on the server package, there are dependencies that are hard coded on the entities (instead of the entities proxies). Trying to resolve the problem by making the entities in the &amp;apos;shared&amp;apos; package makes the command &amp;apos;gwt setup&amp;apos; rollback after a &amp;apos;String index out of range: -1&amp;apos; mysterious error. 
-This is really a blocking design issue since I can&amp;apos;t use the GAE core types like com.google.appengine.api.datastore.Text in my entities for example;

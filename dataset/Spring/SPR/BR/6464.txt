@@ -1,2 +1,0 @@
-Flash Scope  for Spring MVC (Without Spring Web Flow)
-Geert Pante submitted the codes for this issue at: MOD-458.

@@ -1,2 +1,0 @@
-JavaBeanMetadata does not consider collections of entities for GAE
-A regression that causes collections of @RooEntity&amp;apos;s being overlooked for GAE.

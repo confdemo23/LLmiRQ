@@ -1,6 +1,0 @@
-HttpSessionContextIntegrationFilter to retain SecurityContext when rendering error pages
-This happens when you want to set up error pages as described in SRV.9.9.2 Error Pages in Java Servlet Specification
-Version 2.4.
-If for example want to display the current user name on an error page, the security context does not contain the authenticated user.
-The reason is believed to be that HttpSessionContextIntegrationFilter is only applied once per request.
-Seehttp://forum.springframework.org/showthread.php?t=21534

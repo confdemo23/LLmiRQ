@@ -1,2 +1,0 @@
-split/flush/compact/major_compact from hbase shell does not work for region key with \x format
-the conversion between bytes and string is incorrect

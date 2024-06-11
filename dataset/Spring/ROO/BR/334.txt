@@ -1,2 +1,0 @@
-ITD source file imported types are not aware of generics
-When calling DefaultItdTypeDetailsBuilder.addImplementsType(JavaType) generics applied to the JavaType are ignored.

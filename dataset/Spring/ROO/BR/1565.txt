@@ -1,2 +1,0 @@
-Data on demand initialization causes integraion tests failures
-The problem appears when one entity has non-optional reference to another entity which has field with unique constraint.

@@ -1,2 +1,0 @@
-Replace SWITCH_USER_GRANTED_AUTHORITY for ROLE_PREVIOUS_ADMINISTRATOR in Javadoc
-SWITCH_USER_GRANTED_AUTHORITY should be replaced in the Javadocs for ROLE_PREVIOUS_ADMINISTRATOR. The code changed long ago but the Javadoc for SwitchUserProcessingFilter has not.

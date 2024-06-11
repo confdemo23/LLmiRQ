@@ -1,6 +1,0 @@
-CellCounter improvements
-Looking at the CellCounter map reduce, it seems like it can be improved in a few areas:
-
-it does not currently support setting scan batching.  This is important when we&amp;apos;re fetching all versions for columns.  Actually, it would be nice to support all of the scan configuration currently provided in TableInputFormat.
-generating job counters containing row keys and column qualifiers is guaranteed to blow up on anything but the smallest table.  This is not usable and doesn&amp;apos;t make any sense when the same counts are in the job output.  The row and qualifier specific counters should be dropped.
-

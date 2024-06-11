@@ -1,2 +1,0 @@
-When using JAXB2, all messages become MTOM
-When using the JAXB2 marshaller, all SaajSoapMessages become MTOM enabled by default. This can be changed by setting the &amp;apos;mtomEnabled&amp;apos; property of the Jaxb2Marshaller to &amp;apos;false&amp;apos;. We really should set the default to false, since it&amp;apos;s currently true.

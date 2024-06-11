@@ -1,3 +1,0 @@
-ExitStatusExceptionClassifier, ExitCodeMapper and simple versions thereof (and others?) incorrectly moved into step.item package
-Interfaces mentioned in summary and their implementations should be under the step package - they are just as relevant to TaskletSteps or ChunkedSteps as they are to ItemOrientedSteps
-I&amp;apos;m also confused as to what the StepExecutionSynchronizer, et al. and StepInterruptionPolicy et al. are doing there. These seem like general step concerns, not item-related step concerns.

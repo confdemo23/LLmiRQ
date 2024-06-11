@@ -1,4 +1,0 @@
-JBoss50MessageDrivenBeanMetaData doesn&apos;t extend JBossMessageDrivenBean31MetaData
-With the introduction of JBossMessageDrivenBean31MetaData in JBMETA-287, some of the tests fail with:
-is in error due to the following reason(s): java.lang.ClassCastException: org.jboss.metadata.ejb.jboss.JBoss50MessageDrivenBeanMetaData cannot be cast to org.jboss.metadata.ejb.jboss.JBossMessageDrivenBean31MetaData
-This needs to be fixed similar to what we did for JBossSessionBean31MetaData.

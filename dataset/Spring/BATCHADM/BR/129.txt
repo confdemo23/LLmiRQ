@@ -1,4 +1,0 @@
-Abandoned job is viewed as a running execution by JdbcSearchableJobExecutionDao 
-When a job is abandoned from the UI it&amp;apos;s status is updated to ABANDONED, but its end time is left open (null).  
-Therefore when JdbcSearchableJobExecutionDao.getRunningJobExecutions() is invoked the ABANDONED jobs are included in the result set, and calling jobExecution.isRunning() will return true for them. 
-Was this what was intended ?

@@ -1,2 +1,0 @@
-Improvements in ResourceProcessorHandlerMethodReturnValueHandler
-ResourceProcessorHandlerMethodReturnValueHandler currently doesn&amp;apos;t invoke ResourceProcessor instances that are typed to Resources if the value returned from the controller is a subtype of Resources (e.g. PagedResources).

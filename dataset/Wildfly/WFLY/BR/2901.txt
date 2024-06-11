@@ -1,2 +1,0 @@
-mod_cluster hot standby worker can&apos;t be configured
-&lt;simple-load-provider factor="0"/&gt; isn&amp;apos;t accepted by the parser.

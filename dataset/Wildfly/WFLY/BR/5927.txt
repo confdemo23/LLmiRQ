@@ -1,2 +1,0 @@
-Transformation tests that were failing due to WFCORE-1210 are still disabled
-Alias addresses tests in org.jboss.as.clustering.infinispan.subsystem.TransformersTestCase#propertiesMapOperationsTest were affected by WFCORE-1210.

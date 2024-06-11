@@ -1,8 +1,0 @@
-enable JPA entity class transformation if any of the new Hibernate enhancer properties are enabled
-See new Hibernate properties at https://github.com/hibernate/hibernate-orm/commit/809e3cf4b9eda5c8922bb8a04292dbd29aa3c793.
-New properties that influence entity class transformation are:
-
-hibernate.enhancer.enableDirtyTracking
-hibernate.enhancer.enableLazyInitialization
-hibernate.enhancer.enableAssociationManagement
-If any of the above properties are true, it is the same as the application setting jboss.as.jpa.classtransformer=true.

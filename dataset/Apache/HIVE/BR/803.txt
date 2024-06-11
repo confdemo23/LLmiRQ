@@ -1,3 +1,0 @@
-Hive Thrift interface code should ignore fields start with __isset
-New versions of Thrift generates a field "_isset_bit_vector" instead of "_isset".
-We should ignore both cases.

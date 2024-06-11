@@ -1,2 +1,0 @@
-tar can not write uid or gid >= 0x80000000
-This is related to COMPRESS-314 - TarArchiveEntry doesn&amp;apos;t allow gid/uid bigger than a signed 32bit int - the POSIX spec does.

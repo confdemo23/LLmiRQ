@@ -1,2 +1,0 @@
-StrBuilder appendFixedWidth does not handle nulls
-Appending a null value with fixed width causes a null pointer exception if getNullText() has not been set.

@@ -1,4 +1,0 @@
-IOException in aesh console initialization results in NPE
-In source file org.jboss.as.cli.impl.Console, method Factory.getConsole:
-if the constructor call "new org.jboss.aesh.console.Console()" leads to an IOException, it is only logged and then ignored, always yielding a NullPointerException just a few lines later (console.addCompletion(new Completion() ...)
-I think the IOException should rather be rethrown wrapped in a CliInitializationException, so the resulting exception will not lose track of why this happened. Allowing a NPE go out of the internals is a wrong approach.

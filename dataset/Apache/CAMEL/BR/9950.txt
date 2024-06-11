@@ -1,2 +1,0 @@
-Camel-Websocket: NPE in case minThreads, maxThreads and getThreadPool equals to null
-We need to manage this situation.

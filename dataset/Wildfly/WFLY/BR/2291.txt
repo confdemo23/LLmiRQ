@@ -1,5 +1,0 @@
-Bump messaging XML namespace to 2.0
-The XML namespace for the messaging subsystem was erroneously bumped from 1.3 to 1.4 for WildFly 8.
-This is an error as the 1.x version must be reserved for AS7 7.x releases.
-WildFly 8 will use a 2.0 namespace. 
-This means that configurations written against WildFly 8.0.0 Alpha and Beta will break once the XML namespace is corrected to 2.0.

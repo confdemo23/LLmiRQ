@@ -1,2 +1,0 @@
-Connector attribute max-save-post-size is neither migrated nor migration writing is shown
-When migrating http connector, which has defined attribute max-save-post-size no warning that it is not possible to migrate the max-save-post-size is printed.

@@ -1,2 +1,0 @@
-persistence.xml with org.hibernate.ejb.HibernatePersistence should deploy with Hibernate ORM 4.3.x
-currently users migrating from earlier app server versions will get http://pastebin.com/4tRk75vh

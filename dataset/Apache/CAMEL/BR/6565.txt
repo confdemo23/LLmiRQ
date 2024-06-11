@@ -1,4 +1,0 @@
-Component for Apache Kafka
-I have written a component for Apache Kafka. 
-If someone makes a blank wiki page I will edit it for documentation.
-Kafka uses Apache license obviously. The other dependencies are https://github.com/sgroschupf/zkclient and https://github.com/codahale/metrics which are both Apache also.

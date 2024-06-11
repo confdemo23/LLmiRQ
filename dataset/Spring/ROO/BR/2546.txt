@@ -1,2 +1,0 @@
-Cloud Foundry preferences not being stored reliably when using Roo on Windows
-Whilst login details are stored on *nix based OSs they aren&amp;apos;t being stored on Windows.

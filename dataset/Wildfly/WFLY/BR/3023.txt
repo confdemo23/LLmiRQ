@@ -1,2 +1,0 @@
-JDR CommandLineMain defaults to port 9999
-If the user doesn&amp;apos;t provide a port, CommandLineMain defaults to 9999, but with protocol http-remoting. That combo won&amp;apos;t work. It should use 9990 since that will be the default management port.

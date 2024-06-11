@@ -1,2 +1,0 @@
-LLAP: Include hadoop-metrics2.properties file LlapServiceDriver
-LlapServiceDriver should package hadoop-metrics2.properties file to support dumping llap daemon metrics to hadoop metric sinks. 

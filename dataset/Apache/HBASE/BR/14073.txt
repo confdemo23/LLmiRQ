@@ -1,8 +1,0 @@
-TestRemoteTable.testDelete failed in the latest trunk code
-TestRemoteTable.testDelete failed in the latest trunk code.
-
-
-
-"excepted null, but was: &lt;B@615c4156&gt;"
-
-

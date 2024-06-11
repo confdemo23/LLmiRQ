@@ -1,2 +1,0 @@
-Add support for "rebalanceConnections" to inbound-config
-ARTEMIS-293 added a new feature which is configured via the "rebalanceConnections" activation configuration property. This should also be available on the inbound-config of the pooled-connection-factory in the XML configuration so that users don&amp;apos;t need to explicitly set the activation configuration property on their MDBs.

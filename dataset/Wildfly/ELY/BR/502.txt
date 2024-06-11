@@ -1,2 +1,0 @@
-Remove operation doesn&apos;t persist the result in KeystorePasswordStore
-Remove operation doesn&amp;apos;t persist the result in KeystorePasswordStore

@@ -1,5 +1,0 @@
-Multiple checkboxes to Collection mapping
-Using Spring&amp;apos;s &lt;form:checkboxes&gt; tag to present multiple checkboxes for the user to choose values of a collection attribute of the model (e.g. Set&lt;T&gt;) WebFlow only offers the first selected value for mapping, and requests it to be mapped as a collection (Set, List, etc). The subsequent values are discarded silently.
-Expected behavior would be convert every individual value to type T and set the attribute as the collection (e.g. Set&lt;T&gt;)
-Spring MVC works this way.
-Reference: http://forum.springframework.org/showthread.php?p=183366

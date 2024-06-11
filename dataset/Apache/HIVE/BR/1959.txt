@@ -1,2 +1,0 @@
-Potential memory leak when same connection used for long time. TaskInfo and QueryInfo objects are getting accumulated on executing more queries on the same connection.
-org.apache.hadoop.hive.ql.history.HiveHistory$TaskInfo and org.apache.hadoop.hive.ql.history.HiveHistory$QueryInfo these two objects are getting accumulated on executing more number of queries on the same connection. These objects are getting released only when the connection is closed.

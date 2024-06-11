@@ -1,5 +1,0 @@
-MapUtils.getNumber sends output to System.out
-MapUtils.getNumber calls "logInfo" on a ParseException and it produces output on the System.out, instead of just returning "null" as the documentation states.
-Since the expected behavior is to return null, not print to System.out.  I recommend we remove the call to logInfo and/or remove the System.out.println inside it.
-At minimum, if that&amp;apos;s not agreed upon, the "side-effect" of writing to System.out should be documented.
-I&amp;apos;m happy to offer code for either of these fixes.

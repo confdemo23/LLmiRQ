@@ -1,2 +1,0 @@
-Java heap space exceeded looping connect/disconnect cycle
-CLIModelControllerClient implementation is not cleaning up something related to connection handling which leads to OOME repeating a cycle of ensureConnected(...) and close(). On my laptop it happens after around 1400 iterations.

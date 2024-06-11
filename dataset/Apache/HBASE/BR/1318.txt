@@ -1,2 +1,0 @@
-Thrift server doesnt know about atomicIncrement
-the thrift server needs the atomicIncrement API implemented

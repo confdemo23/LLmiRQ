@@ -1,2 +1,0 @@
-camel-script - Should try all classloaders before throwing IAE
-Due CAMEL-8338]

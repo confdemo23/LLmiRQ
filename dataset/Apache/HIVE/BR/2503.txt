@@ -1,2 +1,0 @@
-HiveServer should provide per session configuration
-Currently ThriftHiveProcessorFactory returns same HiveConf instance to HiveServerHandler, making impossible to use per sesssion configuration. Just wrapping &amp;apos;conf&amp;apos; -&gt; &amp;apos;new HiveConf(conf)&amp;apos; seemed to solve this problem.

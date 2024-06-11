@@ -1,3 +1,0 @@
-Domain testsuite classes are leaking remoting Endpoints
-DomainControllerClientConfig creates a remoting endpoint. Not all uses of this class are closing it, thus leaking endpoints.
-This is a factor in some of the recent testsuite instability where runs are failing due to reaching user process limits. At the max, the leak results in 68 extra threads.

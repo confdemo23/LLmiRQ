@@ -1,2 +1,0 @@
-slaves cannot reconnect to a restarted master if RBAC is enabled
-Enable RBAC in an Wilfly domain setup. "reload --host=master" and the slaves will no longer be connected to the master

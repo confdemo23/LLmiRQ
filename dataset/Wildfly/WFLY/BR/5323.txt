@@ -1,1 +1,0 @@
-Undertow&apos;s session-id-length setting is ignored in clustered configurations 

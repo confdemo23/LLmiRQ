@@ -1,2 +1,0 @@
-Enable table replication command will fail when parent znode is not default in peer cluster
-Enable table replication command will fail when parent znode is not /hbase(default) in peer cluster and there is only one peer cluster added in the source cluster.

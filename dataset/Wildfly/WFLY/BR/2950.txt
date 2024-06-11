@@ -1,4 +1,0 @@
-jboss-cli using https-remoting: command not executed if certificate is unrecognised
-When using the https management interface from jboss-cli, commands passed with a command line option (such as --command=:shutdown) are not executed if the server certificate is unrecognised - even if accepting the certificate [T]emporarily or [P]ermenantly.
-It appears to be due to the CommandContextImpl.handleSSLFailure() method, which calls error("Unable to connect..."). The error() method sets the exitCode to 1. So, when CliLauncher.processCommands() subsequently runs, it sees that the cmdCtx.exitCode is 1 and ignores any commands.
-I guess the handleSSLFailure needs to reset the exitCode to 0 if the user chooses [T] or [P].

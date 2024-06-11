@@ -1,3 +1,0 @@
-Piecemeal validation in FormAction does not work
-See http://forum.springframework.org/showthread.php?p=175983
-Custom validator methods, specified by the evaluate attribute &amp;apos;validatorMethod&amp;apos; are not invoked.

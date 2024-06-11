@@ -1,3 +1,0 @@
-Recurring Timers are called concurrently
-According to https://docs.jboss.org/author/display/WFLY8/EJB+3+Reference+Guide recurring timers should not be executed concurrently.
-That is not the case. I don&amp;apos;t think the current behavior is actually expected.

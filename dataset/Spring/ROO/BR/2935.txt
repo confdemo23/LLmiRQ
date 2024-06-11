@@ -1,4 +1,0 @@
-Resource Not Found single entity jpa
-Built simple single, 2 string field entity with JPA &amp; no active record. Built application, getting Resource Not Found when navigating to the create entity page.
-See Attached Script: buildme.roo
-See Attached Log Results: logresults.txt

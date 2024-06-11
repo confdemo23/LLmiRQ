@@ -1,4 +1,0 @@
-AxiomSoapMessageFactory does not parse application/xop+xml Content-Type properly
-AxiomSoapMessageFactory#getCharSetEncoding(), when given the following HTTP Content-Type header (which I assume is valid),
-application/xop+xml;type="text/xml; charset=utf-8"
-returns a CharSet of &amp;apos;utf-8"&amp;apos; instead of &amp;apos;utf-8&amp;apos; (i.e. there is an erroneous double quote at the end of the string).

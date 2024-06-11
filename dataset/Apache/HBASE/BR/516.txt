@@ -1,2 +1,0 @@
-HStoreFile.finalKey does not update the final key if it is not the top region of a split region
-HStoreKey.finalKey does not update the key value if the HStoreFile is not a part of the top of a split region.

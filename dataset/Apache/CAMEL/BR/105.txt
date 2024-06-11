@@ -1,2 +1,0 @@
-FileProducer truncates message bodies > 256KB
-Thanks to NIO&amp;apos;s awesomely intuitive behavior, the FileProducer is only writing out the first &amp; last buffers it reads.  Apparently ByteBuffer needs to be cleared after each FileChannel write?

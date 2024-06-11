@@ -1,3 +1,0 @@
-BackOffPolicy is not applied for exceptions that cause rollback
-Retryable exceptions that should cause rollback get re-thrown before BackOffPolicy applies.
-http://forum.springframework.org/showthread.php?t=65811

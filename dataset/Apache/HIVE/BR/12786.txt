@@ -1,2 +1,0 @@
-CBO may fail for recoverable errors
-In some cases, CBO may generate an error from which it may be possible to recover. 

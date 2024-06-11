@@ -1,4 +1,0 @@
-Circuit breaker does not honour halfOpenAfter period
-The CircuitBreakerLoadBalancer will always switch to a half-open state immediately after the first rejected message instead of honouring the halfOpenAfter period.
-It&amp;apos;s due to the failed message count getting reset in the rejectExchange method:
-https://github.com/apache/camel/blob/master/camel-core/src/main/java/org/apache/camel/processor/loadbalancer/CircuitBreakerLoadBalancer.java#L207

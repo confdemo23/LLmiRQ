@@ -1,6 +1,0 @@
-jdr.sh CommandLineMain does not run jdr on the application server
-jdr.sh CommandLineMain does not run jdr on the application server
-JDR run via the CLI / Managemenet API -  runs the JDR report in the Application Server&amp;apos;s JVM
-/subsystem=jdr:generate-jdr-report()
-Running jdr.sh / jdr.bat runs the JDR report in the JDR JVM
-jdr.sh / jdr.bat should run the JDR report in the Application Server&amp;apos;s JVM if it is running.  If it is not running, then it should just collect the files that are available.

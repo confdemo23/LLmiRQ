@@ -1,4 +1,0 @@
-Default connector is hardcoded in JMS connection factory definition
-When JMS connection factory definitions are used to setup connection factory, the messaging subsystem adds the "netty" connector if no connectors are specified in the definition.
-This introduces a problem if users do not define a connector named "netty" in their configuration (as it will be the case when we switch to using the http-connector instead of the remote-connector by default).
-Workaround this is to ask HornetQ for the connectors that can be used and pick one (and logs a warning message telling the user that it should not depend on that behaviour and explicitly specify which connector to use).

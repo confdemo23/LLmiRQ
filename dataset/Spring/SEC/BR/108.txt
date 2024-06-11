@@ -1,2 +1,0 @@
-Change JdbcDaoImpl fields to be protected (not private)
-In the previous version we were able to get to the authoritiesByUsernameMapping via a getter. As of version 0.9.0 this getter is no longer available. We need this in the subclasses of JdbcDaoImpl.

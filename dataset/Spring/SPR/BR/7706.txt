@@ -1,9 +1,0 @@
-304 responses should not have non-0 Content-Length
-ServletWebRequest#checkNotModified will set a 304 response code, but doesn&amp;apos;t set the Content-Length header to 0. This leads to exception on WebLogic, which gets all worked up about the fact that there&amp;apos;s no response body even though the Content-Length headers claims there is:
-&lt;Error&gt; &lt;HTTP&gt; &lt;BEA-101104&gt; &lt;Servlet execution in servlet context "ServletContext@26118573[app:MP24MotorPrototype module:MP24 path:/MP24 spec-version:2.5]" failed, java.net.ProtocolException: Didn&amp;apos;t meet stated Content-Length, wrote: &amp;apos;0&amp;apos; bytes instead of stated: &amp;apos;3291&amp;apos; bytes.. 
-java.net.ProtocolException: Didn&amp;apos;t meet stated Content-Length, wrote: &amp;apos;0&amp;apos; bytes instead of stated: &amp;apos;3291&amp;apos; bytes. 
-        at weblogic.servlet.internal.ServletOutputStreamImpl.ensureContentLength(ServletOutputStreamImpl.java:425) 
-        at weblogic.servlet.internal.ServletResponseImpl.ensureContentLength(ServletResponseImpl.java:1451) 
-        at weblogic.servlet.internal.ServletResponseImpl.send(ServletResponseImpl.java:1494) 
-        at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1441) 
-        at weblogic.work.ExecuteThread.execute(ExecuteThread.java:201)

@@ -1,2 +1,0 @@
-Yammer now uses bearer token for auth
-... which means camel-yammer cannot connect to the yammer API currently.

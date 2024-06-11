@@ -1,2 +1,0 @@
-Fix syntax for kubernetes component
-replace kubernetes:master by kubernetes:masterUrl

@@ -1,2 +1,0 @@
-Spring Faces Dojo validation tags not rendering &apos;propercase&apos; attribute.
-The .tld fspecifies propercase as a valid attribute of the Spring Faces client-side validation tags but the attribute is not rendered when included.

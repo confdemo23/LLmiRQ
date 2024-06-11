@@ -1,2 +1,0 @@
-Tokens available from /token endpoint with grant_type=implicit
-It&amp;apos;s not particularly harmful (since the tokens will have no user-related scopes), but the /token endpoint should not be granting implicit tokens.

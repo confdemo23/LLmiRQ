@@ -1,3 +1,0 @@
-POA_QUEUE_MAX is limited to 200 in EAP 5 a value of 500 was possible
-Description from Bugzilla https://bugzilla.redhat.com/show_bug.cgi?id=1070709 :
-POA_QUEUE_MAX is limited to 200 in EAP 5 a value of 500 was possible

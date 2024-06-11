@@ -1,2 +1,0 @@
-HRegionServer::getThisIP() checks hadoop config var for dns interface name
-The getThisIP() method of the HRegionServer class checks for the hadoop config var "dfs.datanode.dns.interface" rather than an hbase-specific configuration property.  I propose a new config var called "hbase.regionserver.dns.interface" to check instead.  Will attach patch shortly.

@@ -1,2 +1,0 @@
-Adding deployment permissions doesn&apos;t put server in requires reload state
-When adding permissions in the security-manager subsystem, the changes are not used until server reload. But the CLI operation doesn&amp;apos;t require reload.

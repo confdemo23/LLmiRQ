@@ -1,2 +1,0 @@
-ORC BI Split strategy should consider block size instead of file size
-When we force split strategy to use "BI" (using hive.exec.orc.split.strategy), entire file is considered as single split. This might be inefficient when the files are large. Instead, BI should consider splitting at block boundary. 

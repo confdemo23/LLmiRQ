@@ -1,1 +1,0 @@
-Infinispan enables statistics instrumentation even though statistics-enabled is false

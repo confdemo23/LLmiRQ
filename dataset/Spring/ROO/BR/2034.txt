@@ -1,2 +1,0 @@
-perform command --mavenCommand gae:deploy fails if no username/password in settings.xml
-gae:deploy fails because maven prompts for username/passwords for GAE deployment and the prompt doesn&amp;apos;t appear in spring roo console. It appears to get stucked in the "Initiating update" step when in fact it prompts for gae email/password.

@@ -1,2 +1,0 @@
-Better handle channelInactive and close for netty rpc client
-We should pass the event to the next handler in the pipeline as channelInactive and close are usually used as the cleanup method of a ChannelHandler.

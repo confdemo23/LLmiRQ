@@ -1,2 +1,0 @@
-Remove &apos;public&apos; keyword from MasterObserver interface
-Very minor, when I added some new observers, I put &amp;apos;public&amp;apos; is in some new observers in the MasterObserver interface.  The fix is trivial.

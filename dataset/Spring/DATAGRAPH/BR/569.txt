@@ -1,4 +1,0 @@
-Relationship entity not saved when pre existing node entity is saved
-Given pre existing node and relationship entities, for example User and Movie node entities that contain a Set&lt;Rating&gt; where Rating is a @RelationshipEntity, loading them and saving with a new set of ratings does not save the ratings.
-See test case org.neo4j.ogm.defects. RelationshipEntityTest.shouldCreateREWithExistingStartAndEndNodes 
-https://github.com/spring-projects/spring-data-neo4j/blob/4.0/neo4j-ogm/src/test/java/org/neo4j/ogm/defects/RelationshipEntityTest.java#L134

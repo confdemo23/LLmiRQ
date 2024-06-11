@@ -1,9 +1,0 @@
-RedeliveryPolicy does not honor MaximumRedeliveryDelay
-When using exponential retry back-off with a maximumRedeliveryDelay, the delay is not honored.
-The bug is in RedeliveryPolicy.java&amp;apos;s calculateRedeliveryDelay method:
-        if (maximumRedeliveryDelay &gt; 0 &amp;&amp; redeliveryDelay &gt; maximumRedeliveryDelay) 
-{
-            redeliveryDelayResult = maximumRedeliveryDelay;
-        }
-
-redeliveryDelay is the initial delay and never increases, so the max is never applied. It needs to compare against redeliveryDelayResult instead.

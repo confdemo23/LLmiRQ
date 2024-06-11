@@ -1,2 +1,0 @@
-Fix Spring Data GemFire&apos;s MappingPdxSerializer due to the package-private access modifier change on org.springframework.data.mapping.model.BeanWrapper.
-Recently, the BeanWrapper class in Spring Data Commons was changed from a public class to a package-private class, which broke the MappingPdxSerializer in Spring Data GemFire.

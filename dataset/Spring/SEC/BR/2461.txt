@@ -1,2 +1,0 @@
-Multiple WebSecurityConfiguration instances cause null springSecurityFilterChain
-See SpringApplicationHierarchyTests within https://github.com/rwinch/spring-boot/tree/SEC-2461

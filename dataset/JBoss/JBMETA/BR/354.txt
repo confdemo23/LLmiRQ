@@ -1,1 +1,0 @@
-Support EJB 2.0 dtd descriptors

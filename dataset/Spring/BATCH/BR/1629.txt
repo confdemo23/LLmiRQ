@@ -1,8 +1,0 @@
-FaultTolerantChunkProcessor contains dangerous log statements
-I&amp;apos;ve just profiled an application that is making an extensive use of Spring Batch. And believe the biggest performance hog was....... 
-the StringBuilder conversions in FaultTolerantChunkProcessor class. There are couple of log statements there that do this:
-logger.debug("Attempting to write: " + inputs);
-without 
-if(logger.isDebugEnabled()).
-I mean, guys, come on, inputs can be pretty wacky. In this case it was a list of Hibernate entities containing a lot of properties and all of them are in the toString() implementation. This "innocent" logging statement was the biggest performance hog in the app. 
-It probably would make sense to do an audit and see if there are any other places where such debug statement are not safe. I suppose I could do that. Would you take a patch?

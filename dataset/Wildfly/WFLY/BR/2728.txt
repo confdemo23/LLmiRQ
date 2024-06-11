@@ -1,2 +1,0 @@
-JASPIAuthenticationMechanism doesn&apos;t handle wrapped/unwrapped request and response objects
-JASPIAuthenticationMechanims must check if a SAM has wrapped (during validateRequest) or unwrapped (during secureResponse) the HTTP request and response objects and replace the original references by the wrapped/unwrapped ones before continuing with the request processing.

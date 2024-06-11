@@ -1,4 +1,0 @@
-hive log file name in local is ".log"
-In local mode the log is getting written to /tmp/
-{user.name}/.log instead of /tmp/{user.name}
-/hive.log

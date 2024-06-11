@@ -1,8 +1,0 @@
-HornetQ native library(AIO) are loaded by default - for transaction manager using hornetq object store
-The issue cloned for upstream from an EAP6 bugzilla.
-original description:
-
-It seems that in case that of using hornetq for implementation of object store (configuration of transaction subsystem via &lt;use-hornetq-store/&gt; tag) the native library (AIO) is used automatically without necessity of user confirmation.
-For EAP 6.0.1 was decided that native library can&amp;apos;t be used without explicit customer configuration request. Please check discussion on bug #900591.
-The NIO should be used until customer defined otherwise.
-The configuration option is missing in TM and after the adding it the EAP configuration should reflect fact that the default behaviour should be NIO.

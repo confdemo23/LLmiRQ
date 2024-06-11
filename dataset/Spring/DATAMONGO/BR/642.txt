@@ -1,1 +1,0 @@
-MongoChangeSetPersister does not use mapped collection name

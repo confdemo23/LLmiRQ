@@ -1,4 +1,0 @@
-DBRE only generates welcome page
-I have an existing Oracle DB and try the DBRE with Roo Version 1.1.3. It works!
-With version 1.1.4 the command &amp;apos;database reverse engineer --schema ... --includeNonPortableAttributes&amp;apos; creates the domain model but the command
-&amp;apos;controller all --package ~.web&amp;apos; only creates the welcome page. The menu.jspx and the Web UI for the entities are missing.

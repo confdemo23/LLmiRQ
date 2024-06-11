@@ -1,2 +1,0 @@
-Camel ZipIterator should not eat the IOException
-If there are some thing wrong with the Zip file which is split by ZipIterator, we cannot find any warning or exception from the camel route. We should not let ZipIterator eat up the exception without do anything.

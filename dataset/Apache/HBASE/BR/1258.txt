@@ -1,3 +1,0 @@
-ganglia metrics for &apos;requests&apos; is confusing
-the &amp;apos;requests&amp;apos; metric is incremented for every request, but it is reset and published every interval.  Which means the number is actually &amp;apos;requests per interval&amp;apos; which is a config value in hbase.  
-HBase should export &amp;apos;requests/second&amp;apos; instead.

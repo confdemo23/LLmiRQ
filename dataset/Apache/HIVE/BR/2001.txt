@@ -1,2 +1,0 @@
-Add inputs and outputs to authorization DDL commands
-When permissions are changed for a table/partition, the respective object should be present in the read/write entities for hooks to act on.

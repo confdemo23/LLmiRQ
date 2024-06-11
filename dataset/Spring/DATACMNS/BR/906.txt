@@ -1,2 +1,0 @@
-Typo in Javadoc of Page.getTotalPages()
-In the javadoc of org.springframework.data.domain.Page, method getTotalPages, the word total is not written correctly in @return. Thank&amp;apos;s 

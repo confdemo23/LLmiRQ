@@ -1,3 +1,0 @@
-database reverse engineer does not work for table name starts with number
-if Database has Table name i.e. 1On1_x , database does not reverse engineer it, it only generates the .roo-dbre file and then does not create any entity file.
-Attached here is one such .dbre file.

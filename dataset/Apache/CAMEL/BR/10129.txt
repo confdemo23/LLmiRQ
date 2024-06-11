@@ -1,3 +1,0 @@
-do not cache OSGi service by registry
-OsgiServiceRegistry uses cache (serviceCacheMap) for services. If declarative services are provided by several bundles then keeping reference to those objects conflicts OSGi frameworks that support changing them at runtime.
-serviceCacheMap should be removed or a new configuration option (enable/disable) should be added to easily disable caching.

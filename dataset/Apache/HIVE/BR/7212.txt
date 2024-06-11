@@ -1,2 +1,0 @@
-Use resource re-localization instead of restarting sessions in Tez
-scriptfile1.q is failing on Tez because of a recent breakage in localization. On top of that we&amp;apos;re currently restarting sessions if the resources have changed. (add file/add jar/etc). Instead of doing this we should just have tez relocalize these new resources. This way no session/AM restart is required.

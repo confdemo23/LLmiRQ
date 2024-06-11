@@ -1,3 +1,0 @@
-RegionServerMetricsWrapperRunnable will be failure  when disable blockcache.
-When i disable blockcache, the code "cacheStats = blockCache.getStats();" will occur NPE in org.apache.hadoop.hbase.regionserver.MetricsRegionServerWrapperImpl.RegionServerMetricsWrapperRunnable.
-It lead to many regionserver&amp;apos;s metrics&amp;apos; value always equal 0.

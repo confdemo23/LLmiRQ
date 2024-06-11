@@ -1,8 +1,0 @@
-Clustering integration tests fails once -Dnode0 and -Dnode1 are used
-Tests from wildfly-ts-integ-clustering module fails once we change default binding interfaces by -Dnode0 and -Dnode1 properties.
-See https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/eap-7x-as-testsuite-clustering/
-
-build 5 binds to localhost (no -Dnode*)
-build 6 uses -Dnode0=$MYTESTIP_1 -Dnode1=$MYTESTIP_2
-
-Similar failures were addressed for EAP 6 by https://bugzilla.redhat.com/show_bug.cgi?id=1076015

@@ -1,2 +1,0 @@
-Metadata resolves to an abstract class for an interface
-MetadataTest.testInterfaceWithMultipleImplTaxa 

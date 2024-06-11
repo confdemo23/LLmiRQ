@@ -1,4 +1,0 @@
-SRV 7.7.2 non-compliance
-From SRV 7.7.2: Distributed Environments
-Within an application marked as distributable, all requests that are part of a session must be handled by one JVM at a time.
-Our default configuration for the Infinispan cache used for web sessions uses PESSIMISTIC locking.  However, Infinispan only acquires locks on cache write operations.  This only prevents concurrent writes to a session.  Even with REPEATABLE_READ, 2 threads can read a session at the same time.  We need to make sure both reads and writes to a session use cluster exclusive access, by default at least.

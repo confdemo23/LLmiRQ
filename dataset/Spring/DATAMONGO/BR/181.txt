@@ -1,2 +1,0 @@
-MongoFactoryBean does not call Mongo.close() on shutdown
-MongoFactoryBean should call Mongo.close() on created object. Otherwise some resources aren&amp;apos;t properly closed on application shutdown. For instance Tomcat reports two Mongo threads not being closed on shutdown.

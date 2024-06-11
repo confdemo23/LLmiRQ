@@ -1,3 +1,0 @@
-Make mapreduce tests pass on hadoop2
-HBASE-7904 was a first attempt at making this work but it got lost in the weeds.
-This is a new attempt at making hbase mapreduce jobs run on hadoop2 (w/o breaking mapreduce on hadoop1)

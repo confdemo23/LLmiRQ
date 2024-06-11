@@ -1,4 +1,0 @@
-camel-paho - Endpoint should allow a flexible naming.
-If endpoint doesn&amp;apos;t match exactly paho: it fails to publish to the correct topic.
-Once should be able in Spring to @Autowired two different PahoComponent pointing to different Application Context defined PahoComponent bean id&amp;apos;S.
-Currently if bean id is not named exactly paho it fails to publish to the correct topic and for example instead of input/1 publishes to t://input/1 when id is mypaho instead of paho

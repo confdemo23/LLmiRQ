@@ -1,2 +1,0 @@
-Host Controller HttpManagementResourceDefinition doesn&apos;t register "org.wildfly.management.http-interface" capability
-The add/remove handlers register the capability, but it got missed with the MRR.

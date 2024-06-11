@@ -1,6 +1,0 @@
-ChannelInstanceResourceDefinition doesn&apos;t expose non-primitive fields and any of @ManagedAttribute methods
-It seems to me that org.jboss.as.clustering.jgroups.subsystem.ChannelInstanceResourceDefinition#getProtocolMetricResourceDefinition 
-doesnt expose ManagedAttributes that would have to be registred as strings
-org/jboss/as/clustering/jgroups/subsystem/ChannelInstanceResourceDefinition.java:213
-and doesnt expose any of the annotated methods
-org/jboss/as/clustering/jgroups/subsystem/ChannelInstanceResourceDefinition.java:208

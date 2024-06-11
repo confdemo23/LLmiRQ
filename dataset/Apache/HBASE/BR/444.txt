@@ -1,2 +1,0 @@
-hbase is very slow at determining table is not present
-If I misspell a table name, it takes a very long time for hbase to determine that the table doesn&amp;apos;t exist, because there are many levels of retries.  This often causes timeouts, which then obscure the true cause of the problem.

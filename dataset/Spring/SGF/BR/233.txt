@@ -1,2 +1,0 @@
-Cannot specify a Disk Store to be used for overflow on an Async Event Queue without enabling persistence.
-This problem is the same issue as the problem described in SGF-230 and has the same/similar resolution.

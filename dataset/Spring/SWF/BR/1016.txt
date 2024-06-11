@@ -1,4 +1,0 @@
-Richfaces rich:fileUpload transfer error
-Concerning the forum-conversation: http://forum.springframework.org/showthread.php?t=59485. According to this conversation this problem did not occur in SWF version 2.0.0. 
-The rich:fileUpload does not complete properly. It does upload the file but it doesn&amp;apos;t complete correctly at clientside. i.e. the statusupdate in the component always puts a SERVER_TRANSFER_ERROR as message.
-The fileUploadListener method of the backingbean fires correct but afterwards the component does not receive a correct AJAX acknowledge from the server. 

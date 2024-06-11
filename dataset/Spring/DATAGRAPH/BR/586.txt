@@ -1,2 +1,0 @@
-Deleting a relationship entity by id also deletes nodes with the same id
-session.delete(r) where r is a relationship entity with id i deletes the node with id i instead of the relationship with id i.

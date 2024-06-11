@@ -1,3 +1,0 @@
-NullPointerException in ProgressiveCommandButton
-http://forum.springframework.org/showthread.php?t=52558
-Seems like transition is null here.

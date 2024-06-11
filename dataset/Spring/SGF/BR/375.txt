@@ -1,4 +1,0 @@
-The <gfe:gateway-hub> XML namespace element is missing the &apos;max-time-between-pings&apos; attribute.
-The Spring Data GemFire XML namespace (XSD) &lt;gfe:gateway-hub&gt; element is missing the &amp;apos;max-time-between-pings&amp;apos; attribute corresponding to GemFire&amp;apos;s GatewayHub.setMaximumTimeBetweenPings(:int) property.
-This property and configuration attribute has been present since 4.2.3.
-Note, however, the corresponding Spring Data GemFire GatewayHubFactoryBean class currently allows the GemFire GatewayHub &amp;apos;maximumTimeBetweenPings&amp;apos; property to be set using the &amp;apos;setMaximumTimeBetweenPings(:int)&amp;apos; FactoryBean method.

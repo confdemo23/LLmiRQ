@@ -1,2 +1,0 @@
-cxf-jaxrs-security publish url need to be changed to securecrm
-As cxf-jaxrs is using the url crm, cxf-jaxrs-security need to choice other name for it.

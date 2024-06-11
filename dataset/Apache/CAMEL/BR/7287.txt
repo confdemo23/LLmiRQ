@@ -1,2 +1,0 @@
-SJMS: Cannot connect to durable topic because "noLocal" is hardcoded to "true"
-See this thread: http://camel.465427.n5.nabble.com/SJMS-issue-with-noLocal-td5748632.html

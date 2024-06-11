@@ -1,2 +1,0 @@
-SubsetConfiguration ignores local StrLookups
-For an AbstractConfiguration it is normally possible to register local StrLookup instances. These are simply ignored by the SubsetConfiguration.

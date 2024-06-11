@@ -1,7 +1,0 @@
-cross-store=> Define document name using annotation
-In a cross-store configuration, the RelatedDocument is stored in a MongoDB collection using the container&amp;apos;s Entity&amp;apos;s package name.
-It would be nice if the collection name would be either the name of the class (document, not entity) or as specified using annotations(@Document(collection="")).
-This "issue" is caused by the class
-org.springframework.data.mongodb.crossstore.MongoChangeSetPersister
-which gets the name of the collection from the method getCollectionNameForEntity which does:
-return ClassUtils.getQualifiedName(entityClass);

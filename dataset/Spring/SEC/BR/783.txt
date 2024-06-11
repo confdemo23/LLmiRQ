@@ -1,2 +1,0 @@
-GlobalMethodSecurityBeanDefinitionParser should support AfterInvocationProviders
-Even I define an AfterInvocationProviderManager, it can&amp;apos;t be auto-wired into the MethodSecurityInterceptor when I use &lt;global-method-security&gt; to secure methods with @Secured. So the AfterInvocationProviders don&amp;apos;t work with the @Secured annotations. I can only use &lt;security:intercept-methods&gt; to have my AfterInvocationProviders work!

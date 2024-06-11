@@ -1,8 +1,0 @@
-ER1: rest example (and other examples) - wrong resources package
-In "rest" example there is wrong package to resources which are provided with this example. This problem results in NullPointerException in rest Client class:
-This line throws NPE:
-String inputFile = client.getClass().getResource("update_customer.xml").getFile();
-Wrong path:
-rest/src/main/resources/org/fusesource/examples/cxf/jaxrs/client/
-Should be:
-rest/src/main/resources/org/jboss/fuse/examples/cxf/jaxrs/client/

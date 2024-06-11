@@ -1,7 +1,0 @@
-AbstractAuthenticationProcessingFilter is missing space in log message
-I have custom FORM_LOGIN_FILTER class (extends UsernamePasswordAuthenticationFilter). When I have (expected) SessionAuthenticationException I see the following log messages:
-2012-07-19 16:38:50,311 [btpool0-4] DEBUG FormAuthenticationFilter - Authentication request failed: org.springframework.security.web.authentication.session.SessionAuthenticationException: Only concurrent sessions for the same principal are allowed
-2012-07-19 16:38:50,311 [btpool0-4] DEBUG FormAuthenticationFilter - Updated SecurityContextHolder to contain null Authentication
-2012-07-19 16:38:50,311 [btpool0-4] DEBUG FormAuthenticationFilter - Delegating to authentication failure handlerorg.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler@5226e4c9
-As you can see "Delegating to authentication failure handlerorg.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler@5226e4c9" message has no space.
-The missing space is in the AbstractAuthenticationProcessingFilter class (see Reference URL).

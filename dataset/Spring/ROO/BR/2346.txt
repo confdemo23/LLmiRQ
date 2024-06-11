@@ -1,9 +1,0 @@
-Exception being thrown when the method to set an embeded ID is implemented in the governor
-The following Stack trace is output in the Shell when the setEmbeddedId method is implemented in the DataOnDemand java class.
-Method &amp;apos;setEmbeddedId&amp;apos; already defined in target type &amp;apos;com.iquo.igneous.brokersystem.server.domain.working.client.ClientDataOnDemand&amp;apos; (ITD target &amp;apos;com.iquo.igneous.brokersystem.server.domain.working.client.ClientDataOnDemand_Roo_DataOnDemand&amp;apos;)
-    java.lang.IllegalArgumentException: Method &amp;apos;setEmbeddedId&amp;apos; already defined in target type &amp;apos;com.iquo.igneous.brokersystem.server.domain.working.client.ClientDataOnDemand&amp;apos; (ITD target &amp;apos;com.iquo.igneous.brokersystem.server.domain.working.client.ClientDataOnDemand_Roo_DataOnDemand&amp;apos;)
-        at org.springframework.roo.support.util.Assert.isNull(Assert.java:89)
-        at org.springframework.roo.classpath.details.ItdTypeDetailsBuilder.onAddMethod(ItdTypeDetailsBuilder.java:84)
-        at org.springframework.roo.classpath.details.AbstractMemberHoldingTypeDetailsBuilder.addMethod(AbstractMemberHoldingTypeDetailsBuilder.java:138)
-        at org.springframework.roo.classpath.details.AbstractMemberHoldingTypeDetailsBuilder.addMethod(AbstractMemberHoldingTypeDetailsBuilder.java:156)
-        at org.springframework.roo.addon.dod.DataOnDemandMetadata.&lt;init&gt;(DataOnDemandMetadata.java:136)

@@ -1,3 +1,0 @@
-BaseMultiStartMultivariateRealOptimizer.optimize() can generate NPE if starts < 1
-The Javadoc for BaseMultiStartMultivariateRealOptimizer says that starts can be &lt;= 1; however if it is set to 0, then the optimize() method will try to throw a null exception.
-Perhaps starts should be constrained to be at least 1?

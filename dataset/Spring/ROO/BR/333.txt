@@ -1,2 +1,0 @@
-Introduction of new annotation to a JavaType is not flushed to disk
-Invoking MutableClassOrInterfaceTypeDetails.addTypeAnnotation(AnnotationMetadata) does not add the annotation to the physical source code.

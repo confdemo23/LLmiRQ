@@ -1,2 +1,0 @@
-Response should be cleared in case of exception in WS-Security securement
-If an exception occurs while securing an outgoing SOAP message with WS-Security the response is not cleared and an incomplete response is sent sent back to the initiator. The response should be cleared in this case.

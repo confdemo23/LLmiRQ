@@ -1,4 +1,0 @@
-EJBClient message "Unsupported message received with header 0xffffffff" generated when reconnecting to a non-clustered server
-The EJBClient protocol handler on the server side, org.jboss.as.ejb3.remote.protocol.versionone.VersionOneProtocolChannelReceiver, will send out a full cluster topology report to a connecting EJBClient. This will happen in particular when the client reconnects after a server which was initially up went down and came up again.
-If the server is not clustered, the report gets sent out anyway, and erroneously with an empty message body. This message gets processed on the client side by org.jboss.ejb.client.remoting.ChannelAssociation.processResponse() which cannot recognize the message header. The exception results.
-One way to fix this is to only send out the cluster topology message if the node is actually clustered.

@@ -1,7 +1,0 @@
-COUNT syntax error when use scalar select (select a.b ,a.c from ...) with paging
-When use select with scalar &amp; paging in Spring data JPA as below
-@Query("select s.fname,s.lname from Student s") 
-Page&lt;Object&gt; findWithScalarSelect(Pageable pageable);
-Eclipselink generate malform jpql as below
-select count(s.fname,s.lname) from Student s
-I made test on github =&gt; https://github.com/pramoth/springdata-pagingbug

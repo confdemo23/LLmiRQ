@@ -1,2 +1,0 @@
-StatefulRetryStepFactoryBean ignores skip configuration
-StatefulRetryStepFactoryBean ignores skip limit and exceptions

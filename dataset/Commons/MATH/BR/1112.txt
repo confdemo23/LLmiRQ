@@ -1,3 +1,0 @@
-Implementation of Percentile function that does not need to store values
-A new implementation of Percentile calculation based on P Square algorithm( http://www.cse.wustl.edu/~jain/papers/psqr.htm) is being proposed here. This new implementation has key advantage that it doesn&amp;apos;t need to store inputs and needs a constant space to compute the percentile as the input is consumed.
-This advantage is much required when used in computing the percentiles at big-data scale or for in-stream analytics.

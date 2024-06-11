@@ -1,2 +1,0 @@
-Extension observer method doesn&apos;t get invoked if meta-annotations are given as a filter via @WithAnnotations
-An extension observer method with meta-annotations given as a filter via @WithAnnotations only gets invoked if the annotation classes that contain the meta-annotations are added to the deployment. The problem is that if an annotation isn&amp;apos;t part of the deployment, it&amp;apos;s not part of the deployment Jandex index.

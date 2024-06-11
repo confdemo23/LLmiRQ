@@ -1,3 +1,0 @@
-HiveServer2 should allow secure impersonation over LDAP or other non-kerberos connection
-Currently the impersonation on a secure hadoop cluster only works when HS2 connection itself is kerberos. This forces clients to configure kerberos which can be a deployment nightmare.
-We should allow other authentications mechanism to perform secure impersonation.

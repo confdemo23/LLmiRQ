@@ -1,1 +1,0 @@
-GWT 2.1.1 api changes break addon-gwt code gen

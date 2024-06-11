@@ -1,2 +1,0 @@
-Binding to nested model properties does not work
-see http://forum.springframework.org/showthread.php?t=52847

@@ -1,3 +1,0 @@
-ResultProcessor should create approximate collection instead of exact one
-ResultProcessor currently tries to create an instance of the exact collection type encountered when processing collections. This will fail for special collection implementation types that don&amp;apos;t have a default constructor or fail to instantiate for other reasons.
-We should fall back to an approximate collection in that case.

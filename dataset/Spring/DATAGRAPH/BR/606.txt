@@ -1,2 +1,0 @@
-Support for Windows
-SDN 4.0 does not build correctly on Windows

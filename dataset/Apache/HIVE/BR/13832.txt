@@ -1,2 +1,0 @@
-Add missing license header to files
-Preparing to cut the branch for 2.1.0.

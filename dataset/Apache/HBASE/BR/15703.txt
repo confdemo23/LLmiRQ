@@ -1,2 +1,0 @@
-Deadline scheduler needs to return to the client info about skipped calls, not just drop them
-In AdaptiveLifoCodelCallQueue we drop the calls when we think we&amp;apos;re overloaded, we should instead return CallDroppedException to the cleent or something.

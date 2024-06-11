@@ -1,2 +1,0 @@
-[RH-Support] SUPPORT attachement populated only in case of a Fabric environment
-SUPPORT archive is empty in case of not fabric environemnt. I have to verify if it depends on OSGi dependencies and eventually if it&amp;apos;s the case to decouple between fabric and no-fabric

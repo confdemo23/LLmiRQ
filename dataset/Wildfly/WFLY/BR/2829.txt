@@ -1,2 +1,0 @@
-Optimistic locking w/write skew check requires versioning to be enabled
-Without this, the user cannot configure OPTIMISTIC locking.

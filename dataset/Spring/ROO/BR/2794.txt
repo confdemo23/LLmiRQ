@@ -1,4 +1,0 @@
-Empty file - &apos;compilation unit&apos; - genarates an apparent error message
-If you have an empty java file (or a file with the contents commented out) then ROO reports the following
-.    java.lang.IllegalArgumentException: Compilation unit contents required
-AND appears NOT to go on to parse the other files (well - no "updated" messages are produced).  This is NOT the case with 1.1.5. which was happy with empty &amp;apos;compilation units&amp;apos; as is the SUN 1.6.26 compiler. 

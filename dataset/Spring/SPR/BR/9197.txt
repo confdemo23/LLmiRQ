@@ -1,3 +1,0 @@
-HTTP response code 308
-RestTemplate cannot return HTTP response code 308 because it&amp;apos;s not defined in the HttpStatus enumeration.
-It&amp;apos;s required for resumable POST/PUT HTTP requests in HTTP/1.0 (http://code.google.com/p/gears/wiki/ResumableHttpRequestsProposal)

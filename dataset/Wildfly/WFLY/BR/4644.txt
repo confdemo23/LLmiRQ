@@ -1,2 +1,0 @@
-enabling access-log for virtual server is not effective before server reload but CLI does not require that
-When access-log is enabled for virtual host via CLI it does not want to perform server reload. But until server reload is executed logging is not enabled. When server reload is performed then logging works OK.

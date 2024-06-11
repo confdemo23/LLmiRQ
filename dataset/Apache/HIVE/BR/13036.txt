@@ -1,2 +1,0 @@
-Split hive.root.logger separately to make it compatible with log4j1.x (for remaining services)
-Similar to HIVE-12402 but for HS2 and metastore this time.

@@ -1,2 +1,0 @@
-BindAuthenticator should use first successful return from bindWithDn
-Regression issue. Loop should end when first non-null user is returned.

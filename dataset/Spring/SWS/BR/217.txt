@@ -1,4 +1,0 @@
-Booking a flight for non-existent flight should result in NoSuchFlightException
-Submitting an invalid flight number (e.g. KL9999) bubbles up as an EmptyResultDataAccessException instead of NoSuchFlightException. This is because the JpaFlightDao uses query.getSingleResult(), which can throw a NoResultException instead of returning null. Submitting an invalid username has a similar issue. 
-I&amp;apos;ve created a fix in the JPA DAO&amp;apos;s to ensure they catch a NoResultException and re-throw it as a business exception. In the case of an invalid username I added a NoSuchUsernameException business exception.
-See attached patch for a root-level Eclipse project named &amp;apos;airline&amp;apos; created with &amp;apos;mvn eclipse:eclipse&amp;apos; from the samples directory and connected to the Spring-WS SVN repository.

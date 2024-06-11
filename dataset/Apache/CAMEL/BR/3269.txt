@@ -1,3 +1,0 @@
-CXF CamelTransport and "Can&apos;t find input stream in message"
-When using a JaxWS proxy with camel transport, to a route with only one processor, CXF fail with the message "Can&amp;apos;t find input stream in message".
-CamelConduit call CxfMessageHelper.getCxfInMessage which is looking for an Out part in the exchange. If the processor of the route doesn&amp;apos;t use the Out message, or doesn&amp;apos;t copy the in part to the out part (like the Pipeline processor), the call to the JaxWS proxy fail with "Can&amp;apos;t find input stream in message"

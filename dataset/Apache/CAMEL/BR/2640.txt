@@ -1,3 +1,0 @@
-file component - Fix recursive and noop not picking up files with similar name in sibling folders
-See nabble
-http://old.nabble.com/File-consumer-with-noop%3Dtrue-recursive%3Dtrue-ts28229501.html

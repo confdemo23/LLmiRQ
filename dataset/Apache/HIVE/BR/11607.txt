@@ -1,2 +1,0 @@
-Export tables broken for data > 32 MB
-Broken for both hadoop-1 as well as hadoop-2 line

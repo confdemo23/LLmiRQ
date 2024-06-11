@@ -1,2 +1,0 @@
-NullPointer when saving an entity with an undirected relationship 
-See org.neo4j.ogm.integration.ingredients.IngredientsIntegrationTest.shouldBeAbleToAddInterrelatedPairings

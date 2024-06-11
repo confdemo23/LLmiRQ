@@ -1,2 +1,0 @@
-Timestamp type is not copied by ObjectInspectorUtils.copyToStandardObject
-Most of primitive types are non-mutable, so copyToStandardObject retuns input object as-is. But for Timestamp objects, it&amp;apos;s used something like wrapper and inside value changed by hive. copyToStandardObject should return real copy of them.

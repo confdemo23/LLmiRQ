@@ -1,2 +1,0 @@
-Client secret is not stored in unconfirmed authorization code
-Client secret is not stored in unconfirmed authorization code.  The net effect is that tonr/sparklr doesn&amp;apos;t work if there is a client secret.

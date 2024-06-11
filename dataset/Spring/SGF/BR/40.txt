@@ -1,2 +1,0 @@
-AbstractBeanDefinitionParser automatically uses the region name to create bean aliases for regions
-This side-effect is surprising as it pollutes the container with multiple bean names.

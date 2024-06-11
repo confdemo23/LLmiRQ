@@ -1,2 +1,0 @@
-DatabaseMetadata.getColumns() does not return partition column names for a table
-getColumns() method of DatabaseMetadata for HIVE JDBC Driver does not return the partition column names. Where as from HIVE CLI, if you do a &amp;apos;describe tablename&amp;apos; you get all columns including the partition columns. It would be nice if getColumns() method returns all columns.

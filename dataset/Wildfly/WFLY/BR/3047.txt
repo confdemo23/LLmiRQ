@@ -1,2 +1,0 @@
-DomainSlaveHandler and OperationSlaveStepHandler place DOMAIN_CONTROLLER_LOCK_ID in wrong spot
-This field should be part of an op&amp;apos;s operation-headers map, but these classes place it or look for it in the root of the op.

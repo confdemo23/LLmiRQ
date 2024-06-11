@@ -1,3 +1,0 @@
-camel-cxf should not relay on the default Bus
-Sergey reported some bug  recently ,  after digging the code I found current camel-cxf&amp;apos;s get defaultBus code is not safe to use when we deploy the camel route into the JBI container or OSGi container.
-So we need to create the new bus if there is no bus set into the camel-cxf endpoint.

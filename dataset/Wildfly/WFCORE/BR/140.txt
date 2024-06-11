@@ -1,3 +1,0 @@
-The Resource for a deployment whose &apos;persistent&apos; attribute is &apos;false&apos; does not return &apos;true&apos; from isRuntime()
-Scanner managed deployments have the deployment resource&amp;apos;s &amp;apos;persistent&amp;apos; attribute set to &amp;apos;false&amp;apos;. This results in the StandaloneXml not persisting the resource to XML, but that depends on custom logic in StandaloneXml that reads the attribute.
-The Resource for these deployments should return &amp;apos;true&amp;apos; from isRuntime() so callers can decided about this without needing internal knowledge of the resource attributes.

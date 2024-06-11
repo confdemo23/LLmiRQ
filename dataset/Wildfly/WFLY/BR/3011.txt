@@ -1,2 +1,0 @@
-Management audit logging logs mutated operations
-OperationContextImpl caches operation ModelNodes for later logging, but it does not clone them first. As a result, the ModelNodes get mutated during op execution (e.g. headers can be added) and the log record shows that mutated state instead of the original user input. That can be misleading.

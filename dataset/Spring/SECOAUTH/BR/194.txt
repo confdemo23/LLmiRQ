@@ -1,9 +1,0 @@
-Invalid Redirect URI is detected but still redirected anyway
-If you have a client with a registered redirect URI and you specify an invalid redirect when requesting an authorization code, the invalid redirect URI will be detected but the client is redirected to the invalid URI anyway, with an error appended.
-Here&amp;apos;s an example using sparklr: 
-my-client-with-registered-redirect has a registered redirect URI of http://anywhere
-1. Go to http://localhost:8080/sparklr/oauth/authorize?response_type=code&amp;client_id=my-client-with-registered-redirect&amp;scope=trust&amp;redirect_uri=http://www.google.com
-2. Sign in and authorize
-3. Client is redirected to http://www.google.com/?error=redirect_uri_mismatch&amp;error_description=Invalid%20redirect
-The spec says,
-If the request fails due to a missing, invalid, or mismatching redirection URI, or if the client identifier is missing or invalid, the authorization server SHOULD inform the resource owner of the error, and MUST NOT automatically redirect the user-agent to the invalid redirection URI.

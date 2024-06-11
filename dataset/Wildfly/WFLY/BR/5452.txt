@@ -1,2 +1,0 @@
-Sometimes the calling javax.security.auth.login.Configuration.getConfiguration() fails with SecurityException in our tests
-Sometimes the calling javax.security.auth.login.Configuration.getConfiguration() fails with SecurityException in our tests.

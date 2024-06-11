@@ -1,3 +1,0 @@
-Push the Java 5 simplifications in SimpleJdbcTemplate up to JdbcTemplate
-Since Spring 3 targets Java 5, I wouldn&amp;apos;t expect to need SimpleJdbcTemplate anymore.  I&amp;apos;d expect Java 5 functionality to be incorporated in the base JdbcTemplate so I could take advantage of simplifications there without having to bring in another class.  Then I would only ever want to work with JdbcTemplate.
-The most useful feature of SimpleJdbcTemplate not in JdbcTemplate is the ability to specify args using var args.

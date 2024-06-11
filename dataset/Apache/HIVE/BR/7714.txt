@@ -1,5 +1,0 @@
-Implement ACL support for Storage-System Based Authorization
-In the Hive wiki it is stated that:
-Note: Support for HDFS ACL (introduced in Apache Hadoop 2.4) is yet to be added to this model. Which means, that it checks only the traditional rwx style permissions to determine if a user can write to the file system.
-(https://cwiki.apache.org/confluence/display/Hive/HCatalog+Authorization#HCatalogAuthorization-Storage-SystemBasedAuthorizationModel)
-but there is no JIRA associated (not in the wiki and I didn&amp;apos;t find any on the JIRA too).

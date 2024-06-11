@@ -1,2 +1,0 @@
-ModelController JMX integration doesn&apos;t filter out bogus attributes from resource descriptions
-If the resource description provided by a resource includes a bogus attribute that is actually a child type, the JMX integration produces an MBeanAttributeInfo for it. MBeanInfoFactory can detect this situation and should do so.

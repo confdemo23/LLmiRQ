@@ -1,6 +1,0 @@
-Dates are displayed in GMT instead of using the locale of the jvm
-Version 1.0.0.CI-SNAPSHOT
-The timezone is hardcoded in the org.springframework.batch.admin.web.JobExecutionController class. 
-In this class you see the following hardcoding of timezone to GMT all over the place...
-model.addAttribute(new JobExecutionInfo(jobExecution, TimeZone.getTimeZone("GMT"))); 
-I think it would be better to default the timezone to the users locale and make it possible to override it using a configuration setting.  I&amp;apos;m in a GMT+10 timezone so displaying GMT times makes times appear way off and there is no indication on the web page that the time is displayed in GMT.  

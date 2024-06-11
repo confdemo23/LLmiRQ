@@ -1,3 +1,0 @@
-DeploySingleServerGroupTestCase regularly fails on Windows
-See http://brontes.lab.eng.brq.redhat.com/viewLog.html?buildId=15206&amp;tab=buildResultsDiv&amp;buildTypeId=WF_MasterIgnoreWindows for an example  this fails repeatedly in the windows runs.
-The @After method in the test asserts that the deployment file the test creates is successfully deleted. That may just be a bogus/unnecessary assertion, but rather than just removing it I thought it was better to check a bit first whether the CLI process is holding the file open. It shouldn&amp;apos;t need to once upload of the deployment to the server is complete.

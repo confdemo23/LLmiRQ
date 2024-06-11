@@ -1,1 +1,0 @@
-jms-bridge source and target context properties can not be parsed

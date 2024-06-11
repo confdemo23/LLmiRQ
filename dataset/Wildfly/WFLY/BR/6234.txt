@@ -1,2 +1,0 @@
-Undertow mod_cluster should use multicast port from socket binding
-Currently uses org.jboss.as.network.SocketBinding#getPort

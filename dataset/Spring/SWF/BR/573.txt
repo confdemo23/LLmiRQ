@@ -1,2 +1,0 @@
-flow-execution-repository type attribute should be optional
-given DefaultFlowExecutionRepository.

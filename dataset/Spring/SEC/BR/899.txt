@@ -1,2 +1,0 @@
-GrantedAuthorityImpl.compareTo should handle null roles
-when mixing GrantedAuthorityImpl with other more specialized implementations that return null from getAuthority, GrantedAuthorityImpl.compareTo fails with an NPE.

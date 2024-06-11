@@ -1,5 +1,0 @@
-Few code improvements in the ql and serde packages.
-Few code improvements in the ql and serde packages.
-1) Little performance Improvements 
-2) Null checks to avoid NPEs
-3) Effective varaible management.

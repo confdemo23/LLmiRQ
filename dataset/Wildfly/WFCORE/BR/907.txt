@@ -1,2 +1,0 @@
-CLI&apos;s embed-host-controller command does not work in a non-modular CLI
-EmbedHostControllerHandler assumes that ModuleLoader.forClass(getClass()) will return a classloader, but it only will if the CLI process is running in a modular environment. If it isn&amp;apos;t, EmbedHostControllerHandler must take responsibility for setting up the modular classloading environment.

@@ -1,2 +1,0 @@
-Passivity DefaultWebSecurityExpressionHandler no longer implements WebSecurityExpressionHandler
-The DefaultWebSecurityExpressionHandler no longer implements WebSecurityExpressionHandler which causes issues when using spring-webflow&amp;apos;s AbstractAuthorizeTag which looks up the WebExpressionHandler for authorize statements. We should probably also look into getting webflow to use the provided AbstractAuthorizeTag (I haven&amp;apos;t had time to investigate why they might have their own copy of this tag).

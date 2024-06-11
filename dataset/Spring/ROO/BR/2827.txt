@@ -1,2 +1,0 @@
-&apos;hint&apos; continues to prompt for &apos;jpa setup&apos; after &apos;mongo setup&apos;
-I was attempting to follow the tutorial at http://static.springsource.org/spring-roo/reference/html/beginning.html and incorporating the MongoDB as per http://static.springsource.org/spring-roo/reference/html/base-layers.html instead of a JPA source. There is not a &amp;apos;jpa setup --provider&amp;apos; parameter to specify MongoDB, nor does invoking &amp;apos;mongo setup&amp;apos; satisfy Roo&amp;apos;s requirements, so it keeps prompting to call &amp;apos;jpa setup&amp;apos;.

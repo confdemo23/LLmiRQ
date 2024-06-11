@@ -1,4 +1,0 @@
-form@login-processing-url and logout@logout-url produce warnings
-On upgrading to 3.2.0 RELEASE, we encountered this warning in the &lt;http&gt; block in the namespace configuration. 
-&lt;form-login&gt; and &lt;logout&gt;
-The warning says that setFilterProcessesUrl (which is inherited from AbstractAuthenticationProcessingFilter whose subclass be used by http@form-login and http@logout) is deprecated. Did we miss on replacing the deprecated method with the new method to be used? Can we remove this method altogether? Or is this warning here to stay? What does this warning mean?

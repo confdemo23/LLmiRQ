@@ -1,2 +1,0 @@
-Invalid context set up for batch threads
-Batch tasks incorrectly set-up the contexts needed for the executed tasks. The task needs to be set-up outside the new thread.

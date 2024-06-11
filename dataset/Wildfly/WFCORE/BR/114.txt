@@ -1,3 +1,0 @@
-Get RuntimeVaultReader into WildFly Core
-The only real implementation of AbstractVaultReader isn&amp;apos;t in wildfly-core; it&amp;apos;s in the wildfly-full security subsystem module.
-This means WildFly Core currently doesn&amp;apos;t really support vault expressions.

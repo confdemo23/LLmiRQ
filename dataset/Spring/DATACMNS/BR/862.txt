@@ -1,1 +1,0 @@
-ReturnedInterface should not consider super interfaces of domain type projecting

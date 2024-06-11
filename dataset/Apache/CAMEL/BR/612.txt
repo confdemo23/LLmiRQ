@@ -1,9 +1,0 @@
-Exchange should end in error when no choice in a ChoiceType matches
-When you define a route with a choice() and no matching when() clause is found, the Exchange just ends successfully without doing anything.  In my mind, it should fail by default in this case (or we should at least have an easy way to get this behavior).
-
-from(DIRECT_ROUTER).choice()
-  .when(xpath("/oc:order_confirmation/oc:order/oc:customer/@category = &amp;apos;140&amp;apos;"))
-    .to(DIRECT_CUSTOMER1)
-  .when(xpath("/oc:order_confirmation/oc:order/oc:customer/@category = &amp;apos;116&amp;apos;"))
-    .to(DIRECT_CUSTOMER2);
-

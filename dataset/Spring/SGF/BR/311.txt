@@ -1,2 +1,0 @@
-ClientRegionFactoryBean does not properly set the &apos;concurrency-checks-enabled&apos; attribute and property of GemFire&apos;s ClientRegionFactory class.
-The Spring Data GemFire ClientRegionFactoryBean does not properly set the &amp;apos;concurrencyChecksEnabled&amp;apos; property (corresponding to the &amp;apos;concurrency-checks-enabled&amp;apos; attribute of the &lt;gfe:client-region&gt; element in the SDG XSD) of GemFire&amp;apos;s ClientRegionFactory class.

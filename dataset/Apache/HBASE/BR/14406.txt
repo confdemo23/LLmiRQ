@@ -1,4 +1,0 @@
-The dataframe datasource filter is wrong, and will result in data loss or unexpected behavior
-Following condition will result in the same filter. It will have data loss with the current filter construction.
-col1 &gt; 4 &amp;&amp; col2 &lt; 3
-col1 &gt; 4 || col2 &lt; 3

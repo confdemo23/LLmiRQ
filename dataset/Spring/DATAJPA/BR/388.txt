@@ -1,3 +1,0 @@
-Spring Data ignores alternative EntityManager Producer in CDI environment
-I have made a alternative producer(@Alternative) to create a EntityManager for test purposes.
-The injection of this EntityManager works like expected, but Spring Data still get the default one.

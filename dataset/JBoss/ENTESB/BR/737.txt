@@ -1,1 +1,0 @@
-fab ignore the proxy configuration in settings.xml

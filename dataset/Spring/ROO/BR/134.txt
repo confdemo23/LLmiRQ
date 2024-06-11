@@ -1,2 +1,0 @@
-MS SQL driver class definition incorrect
-install jpa -database MSSQL currently yields: database.driverClassName=com.microsoft.jdbc.sqlserver.SQLServerDriver when it should be database.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver

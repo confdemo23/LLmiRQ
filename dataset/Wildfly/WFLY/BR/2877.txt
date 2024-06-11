@@ -1,2 +1,0 @@
-mod_cluster doesn&apos;t honor overridden session cookie name 
-This logic was not in place when the initial implementation was done, so needs to be adjusted to take that overridden value into consideration.

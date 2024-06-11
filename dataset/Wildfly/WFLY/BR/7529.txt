@@ -1,2 +1,0 @@
-Singleton subsystem remove operation must require reload
-Since the add operation registers deployment unit processors, the remove operation must require a server reload.

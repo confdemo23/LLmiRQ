@@ -1,3 +1,0 @@
-Get the Jetty component&apos;s &apos;httpClient.&apos; options to work with indeed apache http client
-Current Jetty component just set the &amp;apos;httpClient.&amp;apos; parameter to a useless Jetty http client, and using the apache common http client indeed.
-We need to pass the parameters into the apache common http client and remove the useless Jetty http client.

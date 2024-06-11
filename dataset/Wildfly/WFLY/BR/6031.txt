@@ -1,2 +1,0 @@
-WeldProvider.containerShutDown() not invoked if the deployment fails
-We&amp;apos;ve run into this problem when executing Weld and CDI TCK test suites on a specific HP-UX machine. Both test suites contain a lot of scenarios where the deployment fails. HP-UX jvm cannot handle this load and the test suite fails with OutOfMemoryError.

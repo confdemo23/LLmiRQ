@@ -1,2 +1,0 @@
-org.apache.hadoop.hbase.master.procedure.TestWALProcedureStoreOnHDFS is super duper flaky
-As seen in Jenkins, this test has been super flaky and we should probably address it.

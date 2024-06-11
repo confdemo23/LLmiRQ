@@ -1,3 +1,0 @@
-HttpManagementRemoveHandler does not remove all added services
-You can&amp;apos;t remove the http-interface and then re-add it.
-Looks like the rollback behavior in HttpManagementAddHandler is broken as well.

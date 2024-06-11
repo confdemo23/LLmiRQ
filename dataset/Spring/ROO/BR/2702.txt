@@ -1,2 +1,0 @@
-DoD not updating on changes to related DoD
-If an entity, the owning entity, has a relationship with another entity, the owned entity) when the owned entity&amp;apos;s DoD is updated or comes into existence sometimes the owning entity&amp;apos;s DoD needs to be updated. This is currently not happening in all circumstances and requires a shell restart for the owning entity&amp;apos;s DoD to be updated to reflect the change or creation of the owned entity&amp;apos;s DoD.

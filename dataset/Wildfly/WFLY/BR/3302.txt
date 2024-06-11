@@ -1,3 +1,0 @@
-TLSSyslog server remove BC provider, does not add it back if it was present
-Syslog test kills BC provider, this may cause( and did ) random failures.
-Offending code: https://github.com/wildfly/wildfly/blob/master/testsuite/integration/basic/src/test/java/org/jboss/as/test/integration/logging/syslogserver/TLSSyslogServer.java#L64

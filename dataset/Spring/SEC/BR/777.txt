@@ -1,2 +1,0 @@
-The disabled status cannot be set in <user-service>
-UserServiceBeanDefinitionParser does parse the "disabled" attribute, but this attribute is not valid in spring-security-2.0.xsd.

@@ -1,2 +1,0 @@
-The SDG XML namespace <partitioned-region> element is missing the &apos;data-policy&apos; attribute.
-The &lt;gfe:partitioned-region/&gt; element in the Spring Data GemFire XML namespace is missing the data-policy attribute, which should be added for  consistency with the &lt;gfe:local-region/&gt; and &lt;gfe:replicated-region/&gt; XML namespace peer Cache Region types.

@@ -1,6 +1,0 @@
-ModelControllerClient.Factory lacks some variants
-In the ModelControllerClient.Factory class, each factory method in fact has two varians: with a protocol as a first parameter, and without it. There are two exceptions  two methods are lacking a protocol-less variant:
-
-ModelControllerClient create(final String protocol, final String hostName, final int port, final CallbackHandler handler, final SSLContext sslContext, final int connectionTimeout, final Map&lt;String, String&gt; saslOptions)
-ModelControllerClient create(final String protocol, final String hostName, final int port, final CallbackHandler handler, final SSLContext sslContext, final int connectionTimeout, final Map&lt;String, String&gt; saslOptions, final String clientBindAddress)
-

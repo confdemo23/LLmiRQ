@@ -1,2 +1,0 @@
-Singleton backup service cannot be overridden
-Currently, singleton services are started on the primary node only - no service is started on the backup nodes.  We can generalize this use case by building a singleton service using 2 services: one to be started on the primary node, and the other to be installed on backup nodes.  When a node is elected as the primary provider, we stop the backup service, and start the primary service.  Conversely, when a primary node loses a re-election, it stops its primary service and starts its backup service.

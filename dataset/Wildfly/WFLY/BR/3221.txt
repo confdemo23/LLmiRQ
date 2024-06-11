@@ -1,3 +1,0 @@
-flushOnSessionInvalidation attribute in jboss-web.xml does not flush user credentials
-The attribute flushOnSessionInvalidation  does not flush the user credentials when the session is invalidated or when it times out. If the password or roles change for the user, the only way to get the new changes is by restarting the server.
-I tried removing "cache-type=default" from the standalone-full.xml and it works, but for every action made on the site, the login method in the authentication module is called.

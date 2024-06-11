@@ -1,5 +1,0 @@
-add support for datanucleus.connectionPoolingType=None in TxnHandler.setupJdbcConnectionPool()
-"None" is a valid option for datanucleus.connectionPoolingType
-http://www.datanucleus.org/products/accessplatform_2_2/rdbms/connection_pooling.html#Manual.
-TxnHandler.setupJdbcConnectionPool() doesn&amp;apos;t support it.
-If nothing else, this is useful for debugging.

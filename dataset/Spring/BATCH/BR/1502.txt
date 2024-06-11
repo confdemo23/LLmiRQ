@@ -1,3 +1,0 @@
-HibernatePagingItemReader doesn&apos;t close sessions
-HibernatePagingItemReader is exhausting DB connections by never closing sessions.
-It appears to open a new session for each chunk in &amp;apos;createQuery&amp;apos;, overwriting the previous in &amp;apos;statefulSession&amp;apos;, but never closes it.

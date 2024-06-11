@@ -1,3 +1,0 @@
-hfile meta block handling bugs
-HFile doesn&amp;apos;t handle &amp;apos;get meta block&amp;apos; when there are no meta blocks.  It throws an unhelpful exception "meta index not loaded", which is not the case.  No meta blocks = no meta index.  It should return null instead.
-Additionally, hfile doesn&amp;apos;t even get all meta names properly, due to the incorrect use of the file&amp;apos;s comparator, instead of using just a bytes comparator in the index.  This is manifested by NPEs in some tests.

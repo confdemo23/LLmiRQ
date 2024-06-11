@@ -1,4 +1,0 @@
-add a storeless version of Percentile
-The Percentile class can handle only in-memory data.
-It would be interesting to use an on-line algorithm to estimate quantiles as a storeless statistic.
-An example of such an algorithm is the exponentially weighted stochastic approximation  described in a 2000 paper by Fei Chen ,  Diane Lambert  and Jos C. Pinheiro "Incremental Quantile Estimation for Massive Tracking" which can be retrieved from CiteSeerX at http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.105.1580.

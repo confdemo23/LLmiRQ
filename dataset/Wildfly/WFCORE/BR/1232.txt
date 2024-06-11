@@ -1,2 +1,0 @@
-Adjust patching tests to use merged patches
-WFCORE-838 introduced a new way of joining multiple patches together - merging them into one. This needs some test coverage in patching TS.

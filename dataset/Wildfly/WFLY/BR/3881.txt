@@ -1,4 +1,0 @@
-User shouldn&apos;t be able to use empty JNDI name (&apos;java:/&apos; or &apos;java:jboss/&apos;)
-https://bugzilla.redhat.com/show_bug.cgi?id=1019260
-Description of problem:
- Currently the only validation for JNDI names is: JNDI name has to start with &amp;apos;java:/&amp;apos; or &amp;apos;java:jboss/&amp;apos;. But user is able to enter just &amp;apos;java:/&amp;apos; or &amp;apos;java:jboss/&amp;apos; as JNDI name. Using this JNDI name for eg. data-source will lead to java.lang.IllegalArgumentException: Empty name segment is not allowed for jboss. 

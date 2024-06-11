@@ -1,2 +1,0 @@
-Class-level @Asynchronous should only apply to the declared methods on the class
-Currently we&amp;apos;re employing a "*" strategy applying to every business method of the bean.

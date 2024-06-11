@@ -1,3 +1,0 @@
-RepositoryRestMvcConfiguration causes eager initialization of beans
-RepositoryRestMvcConfiguration declares a bean of type AnnotatedHandlerBeanPostProcessor which is a BeanPostProcessor and thus will get initialized very early in the container lifecycle. This however means that the configuration class will be populated and thus trigger the creation of all beans that need to be autowired into the container.
-We should make the bean definition method static as it doesn&amp;apos;t actually require any dependencies be present in the first place.

@@ -1,2 +1,0 @@
-Missing grant type in TokenEnpoint results in default container (no HTML) error
-The response status is correct (400) but the rendering is done by the container because Spring can&amp;apos;t find a handler method for a token request with no grant type.  The fix is easy.

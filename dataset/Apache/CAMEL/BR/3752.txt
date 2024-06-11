@@ -1,9 +1,0 @@
-ExchangeBuilder
-We should add an ExchangeBuilder so you can use the builder pattern to create an Exchange and set message body, headers etc.
-Something along the lines like this. Maybe there is a shorter and nicer API to do it:
-
-
-
-Exchange exchange = ExchangeBuilder(context).withBody("Hello World).andHeader("foo", 123).build("activemq:queue:foo");
-
-

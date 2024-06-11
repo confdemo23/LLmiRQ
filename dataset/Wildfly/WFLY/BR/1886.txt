@@ -1,1 +1,0 @@
-Naming store can be shut down before components

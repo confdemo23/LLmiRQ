@@ -1,8 +1,0 @@
-Bucketing column names in create table should be case-insensitive
-This create table fails because &amp;apos;userId&amp;apos; != &amp;apos;userid&amp;apos;
-
-
-
-CREATE TABLE tmp_pyang_bucket3 (userId INT) CLUSTERED BY (userid) INTO 32 BUCKETS;
-
-

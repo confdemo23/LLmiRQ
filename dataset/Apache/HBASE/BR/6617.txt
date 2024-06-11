@@ -1,3 +1,0 @@
-ReplicationSourceManager should be able to track multiple WAL paths
-Currently ReplicationSourceManager uses logRolled() to receive notification about new HLog and remembers it in latestPath.
-When region server has multiple WAL support, we need to keep track of multiple Path&amp;apos;s in ReplicationSourceManager

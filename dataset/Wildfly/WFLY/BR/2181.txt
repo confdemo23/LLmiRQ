@@ -1,2 +1,0 @@
-TempFileProviderService creates a static, non-daemon thread pool
-This can prevent the server from shutting down

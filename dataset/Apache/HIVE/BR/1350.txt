@@ -1,2 +1,0 @@
-hive.query.id is not unique 
-if commands are executed by the same user within a second

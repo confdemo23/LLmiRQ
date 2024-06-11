@@ -1,1 +1,0 @@
-Hibernate Scanner implementation class shouldn&apos;t leak application entity classes

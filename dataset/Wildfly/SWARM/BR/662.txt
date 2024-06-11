@@ -1,2 +1,0 @@
-NPE when calling addAllDependencies()
-See https://groups.google.com/forum/?utm_medium=email&amp;utm_source=footer#!msg/wildfly-swarm/jwiBt6zIGh8/pTwmLsj_CAAJ

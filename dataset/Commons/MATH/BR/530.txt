@@ -1,2 +1,0 @@
-[Math] Clirr report and &apos;org.apache.commons.math.stat.regression.GLSMultipleLinearRegression
-Clirr report mentions that method &amp;apos;protected double calculateErrorVariance()&amp;apos; has been added... However this addition isn&amp;apos;t reflected to the javadoc with the "@since 2.2" clause.

@@ -1,3 +1,0 @@
-Transactional scans do not see newest put.
-In a transaction, if I do a put, then a put, then a scan. I will not see the latest put.
-The fix is to set the timestamp at put time.

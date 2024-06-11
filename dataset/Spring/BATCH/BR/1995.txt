@@ -1,1 +1,0 @@
-Line ending in multiline delimiter not being processed correctly

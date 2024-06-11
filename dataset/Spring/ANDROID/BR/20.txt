@@ -1,4 +1,0 @@
-Using the SyndFeed, RSS, or ATOM message converters requires workaround on older Android
-The Android port of ROME requires a workaround on Android versions before Level 8 (2.2).
-You have to set the Java context class loader or else you get a NullPointerException in older Android versions.  The new Android releases do this automatically
-Thread.currentThread().setContextClassLoader(getClass().getClassLoader());

@@ -1,4 +1,0 @@
-Weld EL resolver is not registered in a JSP environment
-It seems the org.jboss.as.weld.webtier.jsp.JspInitializationListener or some other integration code is not working properly.
-See also TCK test:
-https://github.com/jboss/cdi-tck/blob/master/impl/src/main/java/org/jboss/cdi/tck/tests/lookup/el/integration/IntegrationWithUnifiedELTest.java

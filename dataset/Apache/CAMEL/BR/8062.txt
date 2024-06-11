@@ -1,2 +1,0 @@
-camel-rx - EndpointSubscriber does not call unsubscribe to stop the consumer
-When rx is done with the subscription it does not trigger the unsubscribe callback so we can stop the consumer.

@@ -1,2 +1,0 @@
-json.pretty on REST management has no effect
-Appending &amp;json.pretty or ?json.pretty to a REST request no longer produces pretty printed JSON output.

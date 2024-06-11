@@ -1,2 +1,0 @@
-It&apos;s not possible to change ACL owner
-MutableAcl interface doesn&amp;apos;t have a method to change ACL owner (although AclImpl has an appropriate implementation)

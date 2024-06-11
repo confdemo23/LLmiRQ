@@ -1,2 +1,0 @@
-undo feature for roo
-example, we just created scaffold of controllers.. can we rollback so none of controllers are created?  would be nice if we can have rollback feature in ROO

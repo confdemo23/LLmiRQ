@@ -1,2 +1,0 @@
-Camel Stringtemplate : lose all fields properties
-the component Camel-stringtemplate loses all fields properties after the generation of Result.

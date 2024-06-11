@@ -1,8 +1,0 @@
-Add maven compile-protobuf profile
-Ad a maven profile to compile protobufs instead of the dev-support script which is only for hbase-protocol module. 
-
-
-
-mvn test-compile -Dcompile-protobuf 
-
-

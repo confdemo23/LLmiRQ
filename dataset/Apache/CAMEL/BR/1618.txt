@@ -1,3 +1,0 @@
-DSL doesn&apos;t support the bean expression without registry
-Here is the mail thread of it
-[1] http://www.nabble.com/Non-registry-beans-td20088181.html

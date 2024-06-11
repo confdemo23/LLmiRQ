@@ -1,2 +1,0 @@
-Rule to transform OR clauses into IN clauses in CBO
-We create a rule that will transform OR clauses into IN clauses (when possible).

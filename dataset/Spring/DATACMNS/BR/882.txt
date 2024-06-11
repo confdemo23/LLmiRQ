@@ -1,5 +1,0 @@
-Allow to filter value inside list of object via query URL
-Create a support for query inside list of object, see issue in this link.
-I&amp;apos;m trying to implement by myself, see code here but I also hit a roadblock with issue of querydsl itself (here issue).
-If you think that the issue of querydsl is not important, I can improve code quality and then create a pull request to your repo.
-I think my code quality is not as good as yours, please give me an advice.

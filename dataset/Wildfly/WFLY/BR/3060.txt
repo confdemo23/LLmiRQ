@@ -1,4 +1,0 @@
-Rare KrbException: Request is a replay issue in negotiation tests
-The failures happend while sending second TGS-REQ ticket from client to kerberos KDC server.
-The cause seems to be a limitation of ApacheDS kerberos server used in the test case. The ApacheDS employs simple replay detection mechanism based on in-memory ticket cache service. The cache stores client and server credentials and ticket timestamp. Specificaly, the cache do not store ticket content.
-During GSS SecContext establishment, there are 2 TGS-REQ tickets sent from the client (sun.security.jgss.krb5.GSSContextSpi). First to acquire service credentials ticket and second to get SecContext ticket. The second ticket is being send immediatelly after the fisrt one. If the second (valid) ticket is sent with the same timestamp as the first one, the ApacheDS treats the second one as a false positive and throw Request is a replay kerberos exception.

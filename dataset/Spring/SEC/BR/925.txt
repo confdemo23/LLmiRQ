@@ -1,3 +1,0 @@
-BasicLookupStrategy - support for schema qualifier
-The current impl of this class works great - I would like to avoid writing my own custom strategy wherever possible.  The JavaDocs for BasicLookupStrategy state that it&amp;apos;s not design for extension which I understand.
-It would be great, however, if a property could be set in the bean config that would allow the referenced tables in the SQL to be qualified by a schema.  Projects often run into such requirements based on the conventions used by a DBA group.  In our particular case, we&amp;apos;re using DB2 and the ACL tables are being created in a schema that is not the default schema.

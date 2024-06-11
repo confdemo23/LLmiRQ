@@ -1,6 +1,0 @@
-The default encoding is not set to UTF-8 for JibxMarshaller
-In the class "org.springframework.oxm.jibx.JibxMarshaller" the default encoding is not set to UTF-8 as specified in the Java-Doc of the method &amp;apos;setEncoding()&amp;apos;.
-Therefore, when we marshal an object with "org.springframework.oxm.jibx.JibxMarshaller", the output XML does not contain the encoding attribute:
-&lt;?xml version="1.0"?&gt;
-instead of
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;

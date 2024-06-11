@@ -1,2 +1,0 @@
-Javadoc
-The ROO generated methods and attributes should have Javadoc, once it&amp;apos;s not recommended to developer change the ROO files.

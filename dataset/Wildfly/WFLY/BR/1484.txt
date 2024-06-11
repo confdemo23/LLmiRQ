@@ -1,6 +1,0 @@
-WF8/Undertow: JBAS014788: Unexpected attribute &apos;security-realm&apos; encountered?
-Undertow-Subsystem throws
-Caused by: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[402,17]
-Message: JBAS014788: Unexpected attribute &amp;apos;security-realm&amp;apos; encountered
-after latest update.
-But my standalone.xml file has not changed and wildfly-undertow_1_0.xsd also not at this point.

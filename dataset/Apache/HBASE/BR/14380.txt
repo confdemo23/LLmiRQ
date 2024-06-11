@@ -1,8 +1,0 @@
-Correct data gets skipped along with bad data in importTsv bulk load thru TsvImporterTextMapper
-Cosider the input data is as below 
-ROWKEY, TIEMSTAMP, Col_Value
-r1,1,v1	&gt;&gt; Correct line
-r1	         &gt;&gt; Bad line
-r1,3,v3	&gt;&gt; Correct line
-r1,4,v4	&gt;&gt; Correct line
-When data is bulk loaded using importTsv with mapper as TsvImporterTextMapper ,  All the lines are getting ignored even though skipBadLines is set to true. 

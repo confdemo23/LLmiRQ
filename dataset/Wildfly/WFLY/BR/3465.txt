@@ -1,5 +1,0 @@
-Using Infinispan eviction manager can cause ConcurrentModificationException during web session access
-Because wildfly stores web session using multiple cache entries, it makes liberal use of Flag.SKIP_LOCKING when locks are already held on the primary cache entry for a given session.
-Infinispan&amp;apos;s eviction manager, however, treats all cache entries the same.  Thus it may try to evict a cache entry that belongs to a session that is currently locked for use by the application - since it will have no trouble locking it - because our code assumes that all session access will first lock the primary cache entry of a session.  This manifests as a mysterious ConcurrentModificationException.
-Thus, we can improve the compatibility of our code with Infinispan&amp;apos;s eviction manager by simply removing the use of the SKIP_LOCKING flag.  Given that the only possible source of contention is the eviction manager - the cost of doing so is fairly minimal.
-I should note that our default configuration does not use Infinispan eviction.  Web session passivation is instead handled by the web session clustering code.

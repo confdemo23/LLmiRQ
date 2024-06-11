@@ -1,6 +1,0 @@
-LineIterator should implement Iterable 
-org.apache.commons.io.LineIterator does not implement Iterable.  This makes
-it impossible to use in certain stylized ways, such as in a new-style for
-statement.  Such use is not always desirable (it might temporarily leak a
-file descriptor, until the finalizer is called), but should be possible in
-situations where it is known to be acceptable.

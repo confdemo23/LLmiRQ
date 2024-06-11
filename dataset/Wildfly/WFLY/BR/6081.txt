@@ -1,2 +1,0 @@
-Undertow migration operation doesn&apos;t migrate Access log valves
-Access log valves are not automatically migrated, it should be either printed warning for them to be migrated automatically or migrated automatically.

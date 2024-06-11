@@ -1,9 +1,0 @@
-Two textareas which are decorated with dijit.form.SimpleTextarea in the same page will sumit as a single parameter for POST submits
-Currently, you cannot have two dijit.form.SimpleTextarea fields in the same page. Both fields (field &amp;apos;a&amp;apos; and field &amp;apos;b&amp;apos;) will end up being submitted as a single param (&amp;apos;a&amp;apos;) and the text entered in both will be merged under parameter &amp;apos;a&amp;apos;
-field definitions to reproduce:
-add field string -class ~.domain.Test -fieldName a -sizeMax 70
-add field string -class ~.domain.Test -fieldName b -sizeMax 70
-Firebug shows that a is submitted twice with different values (once the value from textarea &amp;apos;a&amp;apos; and once from &amp;apos;b&amp;apos;):
-a TestA
-a TestB
-This results in field &amp;apos;b&amp;apos; not being populated in AbstractPerson and field &amp;apos;a&amp;apos; containing: &amp;apos;TestA TestB&amp;apos;

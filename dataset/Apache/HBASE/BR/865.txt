@@ -1,2 +1,0 @@
-Fix javadoc warnings
-There are javadoc warnings in both the 0.2 branch and in trunk. They must be fixed before 0.2.2 or 0.18.0 are released.

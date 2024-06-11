@@ -1,2 +1,0 @@
-When inserting ACE&apos;s in a parent ACL it&apos;s possible to end up with a child ACL that has a stale reference to its parent
-The JdbcMutableAclService in its updateAcl method evicts the ObjectIdentity from the cache. However, it should probably evict child ObjectIdentities too whose parent ACL now is no longer in cache.

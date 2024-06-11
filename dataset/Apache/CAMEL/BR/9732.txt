@@ -1,3 +1,0 @@
-camel-swagger-java - Issue in appendModels in the reader
-See nabble
-http://camel.465427.n5.nabble.com/Re-Bug-in-RestSwaggerReader-appendModels-need-confirmation-td5779271.html

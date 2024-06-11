@@ -1,2 +1,0 @@
-Multiple registration of some URLS
-E.g. /files/** is mapped to GET, POST and DELETE (where only GET was requested).  (Actually it probably shouldn&amp;apos;t be on the home page at all.)

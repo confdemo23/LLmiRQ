@@ -1,2 +1,0 @@
-list-add operation doesn&apos;t work on login-modules attribute
-Executing list-add operation on login-modules results in the modules being replaced instead of appending new module.

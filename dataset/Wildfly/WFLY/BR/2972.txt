@@ -1,4 +1,0 @@
-Load vault impls from modules other than org.jboss.security
-The vault resources in our management model have a "code" attribute that specifies the classname of a custom Vault impl. But there is no "module" attribute to specify the name of the module to load that class from. This means users would have to modify the org.jboss.security module&amp;apos;s module.xml to statically declare their module as a dependency.
-There should be a "module" attribute and org.jboss.security.vault.SecurityVaultFactory should expose a "get" variant that takes a ClassLoader so the appropriate module classloader can be used.
-I only looked at the core model but I suspect the security subsystem has the same issue.

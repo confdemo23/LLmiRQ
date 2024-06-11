@@ -1,2 +1,0 @@
-Implicit EE component attached to a root implicit bean archive recognized as implicit bean
-This is no longer necessary (see also WELD-1612).  Furhtermore, it&amp;apos;s producing confusing results. For example, an ProcessBeanAttributes event is fired for com.sun.faces.config.ConfigureListener, org.jboss.weld.servlet.WeldInitialListener and other implicitly added EE components for a WAR deployment with bean-discovery-mode="annotated".

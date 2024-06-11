@@ -1,2 +1,0 @@
-Implement "show create table"
-SHOW CREATE TABLE would be very useful in cases where you are trying to figure out the partitioning and/or bucketing scheme for a table. Perhaps this could be implemented by having new tables automatically SET PROPERTIES (create_command=&amp;apos;raw text of the create statement&amp;apos;)?

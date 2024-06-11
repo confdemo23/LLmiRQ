@@ -1,2 +1,0 @@
-LLAP: don&apos;t use IO elevator for ACID tables 
-Until HIVE-12631 is fixed, we need to avoid ACID tables in IO elevator. Right now, a FileNotFound error is thrown.

@@ -1,1 +1,0 @@
-ProjectMetadata should be able handle snapshot=true for repositories

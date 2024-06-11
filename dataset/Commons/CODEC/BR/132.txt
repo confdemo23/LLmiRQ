@@ -1,9 +1,0 @@
-BeiderMorseEncoder OOM issues
-In Lucene/Solr, we integrated this encoder into the latest release.
-Our tests use a variety of random strings, and we have recent jenkins failures
-from some input streams (of length &lt;= 10), using huge amounts of memory (e.g. &gt; 64MB),
-resulting in OOM.
-I&amp;apos;ve created a test case (length is 30 here) that will OOM with -Xmx256M. 
-I haven&amp;apos;t dug into this much as to what&amp;apos;s causing it, but I suspect there might be a bug
-revolving around certain punctuation characters: we didn&amp;apos;t see this happening until
-we beefed up our random string generation to start producing "html-like" strings.

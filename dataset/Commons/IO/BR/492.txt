@@ -1,2 +1,0 @@
-Typo: In an IOUtils.java comment it says "focussed" instead of "focused"
-See here: https://github.com/apache/commons-io/blob/trunk/src/main/java/org/apache/commons/io/IOUtils.java#L101

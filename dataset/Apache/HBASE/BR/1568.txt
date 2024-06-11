@@ -1,3 +1,0 @@
-Client doesnt consult old row filter interface in filterSaysStop() - could result in NPE or excessive scanning
-The implementation of HTable.ClientScanner.filterSaysStop() doesnt refer to the old filter, which could result in an NPE if you use an old-style filter.
-It also ignores the old style filter, so if you want to use old filters only, you dont get the effect you need.

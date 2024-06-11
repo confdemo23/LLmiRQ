@@ -1,3 +1,0 @@
-HealthCheck endpoint doesn&apos;t work when JAX-RS  javax.ws.rs.core.Application @ApplicationPath defined
-Issue described here along with Heko&amp;apos;s initial analysis:
-https://groups.google.com/forum/#!topic/wildfly-swarm/balKuovlnAY

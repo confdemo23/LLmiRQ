@@ -1,2 +1,0 @@
-Hibernate Job  blocks on flush
-Hibernate Job  blocks on flush (using real database).  The driving query input source is putting a range lock on the Customer objects.

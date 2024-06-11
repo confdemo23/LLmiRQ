@@ -1,9 +1,0 @@
-Basic client pushback mechanism
-The current blocking we do when we are close to some limits (memstores over the multiplier factor, too many store files, global memstore memory) is bad, too coarse and confusing. After hitting HBASE-5161, it really becomes obvious that we need something better.
-I did a little brainstorm with Stack, we came up quickly with two solutions:
-
-Send some exception to the client, like OverloadedException, that&amp;apos;s thrown when some situation happens like getting past the low memory barrier. It would be thrown when the client gets a handler and does some check while putting or deleting. The client would treat this a retryable exception but ideally wouldn&amp;apos;t check .META. for a new location. It could be fancy and have multiple levels of pushback, like send the exception to 25% of the clients, and then go up if the situation persists. Should be "easy" to implement but we&amp;apos;ll be using a lot more IO to send the payload over and over again (but at least it wouldn&amp;apos;t sit in the RS&amp;apos;s memory).
-Send a message alongside a successful put or delete to tell the client to slow down a little, this way we don&amp;apos;t have to do back and forth with the payload between the client and the server. It&amp;apos;s a cleaner (I think) but more involved solution.
-
-In every case the RS should do very obvious things to notify the operators of this situation, through logs, web UI, metrics, etc.
-Other ideas?

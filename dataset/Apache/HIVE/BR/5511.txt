@@ -1,2 +1,0 @@
-percentComplete returned by job status from WebHCat is null
-In hadoop1 the logging from MR is sent to stderr.  In H2, by default, to syslog.  templeton.tool.LaunchMapper expects to see the output on stderr to produce &amp;apos;percentComplete&amp;apos; in job status.

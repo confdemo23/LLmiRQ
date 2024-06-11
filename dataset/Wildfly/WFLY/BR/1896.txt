@@ -1,5 +1,0 @@
- The CLI command "module remove" fails to delete non-empty folders
-The "module remove" command fails when it deletes non-empty folder.
-For instance a resource adapter module contains META-INF/ra.xml file in the module. When I choose to delete the module, it fails:
-[standalone@localhost:9999 /] module remove --name=org.jboss.ironjacamar.ra16out 
-Failed to delete /home/jcacek/Testing/jboss-eap-6.1.1.ER4/modules/org/jboss/ironjacamar/ra16out/main/META-INF

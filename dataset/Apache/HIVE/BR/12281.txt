@@ -1,2 +1,0 @@
-Vectorized MapJoin - use Operator::isLogDebugEnabled
-

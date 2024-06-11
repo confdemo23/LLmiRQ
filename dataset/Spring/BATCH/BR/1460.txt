@@ -1,2 +1,0 @@
-Rownum clauses are illegal in DerbyPagingQueryProvider (plus additional fix to Oracle)
-Rownum clauses are illegal in DerbyPagingQueryProvider (plus additional fix to Oracle)

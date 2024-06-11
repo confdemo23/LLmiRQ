@@ -1,2 +1,0 @@
-JavaConfig and boot properties missing for container allocator
-This is needed to be able to configure container resource(mem,cpu) settings for allocator.

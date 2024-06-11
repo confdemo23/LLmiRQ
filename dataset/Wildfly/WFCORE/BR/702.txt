@@ -1,2 +1,0 @@
-periodic-size-rotating-file-handler is missing from logging profiles
-The periodic-size-rotating-file-handler was introduced in WildFly Core 1.x, but is missing from logging profiles.

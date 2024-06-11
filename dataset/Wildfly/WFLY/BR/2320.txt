@@ -1,2 +1,0 @@
-EJB should not be remotely accessible until all of its dependencies have been started
-If an EJB injects or depends on a resource such as an @Singleton which has not been started, the EJB&amp;apos;s remote interface java:jboss/exported/* is already bound and this allows remote EJB clients to try to invoke it.  This causes the EJB clients to hang because the EJB will not be started until its dependencies have been started.

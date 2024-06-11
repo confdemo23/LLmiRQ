@@ -1,5 +1,0 @@
-DefaultPropertyReplacer + PropertyResolver is broken for vault expressions
-The DefaultPropertyReplacer + PropertyResolver algorithm is broken for vault expressions. It&amp;apos;s based on the assumption that the contents of the expression string between "$
-{" and "}
-" have a fixed format a la the old JBoss AS system properties (e.g. propertyname[: default value]) and then the PropertyResolver tries to resolve "propertyname".
-This is incorrect in the case of vault expressions, which do not follow this format. In particular the ":" char appears multiple places in a vault expression and does not serve as a delimiter between "propertyname" and "default value".

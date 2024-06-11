@@ -1,2 +1,0 @@
-PageableHandlerMethodArgumentResolver should replace pagination parameters not add them
-PageableHandlerMethodArgumentResolver.enhance() currently uses UriComponentsBuilder.queryParam() to add pagination parameters. In case the base URI already contains these parameters they&amp;apos;ll add up eventually and produce invalid results.

@@ -1,3 +1,0 @@
-File upload doesn&apos;t work
-In the previous version it worked, but in Beta 1 stopped worked file uploading with PF4 and Mojarra 2.2.3 (neither simple upload didn&amp;apos;t work - tested on blank project, only with PF4 and Apache libs and configured web.xml file)
-I get no error in IDE or JS console.

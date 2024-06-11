@@ -1,6 +1,0 @@
-Allow ScriptOperator to consume not all input data
-The ScriptOperator (SELECT TRANSFORM(a, b, c) USING &amp;apos;myscript&amp;apos; AS (d, e, f) ...) has a problem:
-If the user script exits without consuming all data from standard input, then we will report an error even if the exit code from the user script is 0.
-We want to have an option, when enabled, ScriptOperator will return successfully in that case.
-If the option is not enabled, then we should stick to the current behavior.
-The option can be called: "hive.exec.script.allow.partial.consumption ".

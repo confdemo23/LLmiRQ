@@ -1,3 +1,0 @@
-Auto-paging does not work when @Query ends with &apos;;&apos; 
-Auto-paging was added in 4.1.2, however an error occurs when the specified @Query ends with &amp;apos;;&amp;apos; 
-Arguably this should not be the case. 

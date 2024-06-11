@@ -1,4 +1,0 @@
-getRequest() / getResponse() is not public in org.springframework.security.web.context.HttpRequestResponseHolder
-Custom SecurityContextRepository implementation relies on HttpRequestResponseHolder parameter in method  
-public SecurityContext loadContext(HttpRequestResponseHolder requestResponseHolder).
-Since getters and setters of HttpRequestResponseHolder properties are not public, pluggable repository mechanism is broken. 

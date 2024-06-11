@@ -1,3 +1,0 @@
-DBRE across multiple schemas
-Is common in large organizations to have DB schemas where tables have relations with tables in other schemas or catalogs.
-Would be great that Roo DBRE supports this kind of scenarios. We&amp;apos;re trying to evangelize Roo and a workaround making reverse engineering in several steps (pushing all the fields in the _DBManaged ITD to the java file in each step) is not the best solution.

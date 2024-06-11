@@ -1,1 +1,0 @@
-Camel-Apt: Check for empty lines in parseAsMap method of EndpointAnnotationProcessor

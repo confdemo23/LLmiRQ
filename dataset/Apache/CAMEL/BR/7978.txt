@@ -1,3 +1,0 @@
-QuartzEndpoint should share the same camel context name when it working in cluster mode
-It could cause some trouble when camel-quartz endpoints is  share different camel context name.
-We can add an option in the QuartzEndpoint to use CamelContext Name instead of management name.

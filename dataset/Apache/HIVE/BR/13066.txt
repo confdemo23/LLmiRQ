@@ -1,2 +1,0 @@
-Hive on Spark gives incorrect results when speculation is on
-The issue is reported by users. One possible reason is that we always append 0 as the attempt ID for each task so that hive won&amp;apos;t be able to distinguish between speculative tasks and original ones.

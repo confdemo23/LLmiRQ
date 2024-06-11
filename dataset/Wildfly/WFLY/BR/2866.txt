@@ -1,4 +1,0 @@
-PersistentResourceXMLDescription does not marshal default attribute values
-When PersistentResourceXMLDescription marshals a resource&amp;apos;s attributes, it will not marshal a value stored in the model if it matches the attribute&amp;apos;s default value.
-We should marshal the value provided by the user. Otherwise we will change the config file from what the user provided for reasons unrelated to management actions initiated by the user.
-DefaultAttributeMarshaller marshals default values.

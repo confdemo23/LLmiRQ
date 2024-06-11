@@ -1,3 +1,0 @@
-Pass build.dir.hive and other properties to subant
-Currently we are not passing properties like "build.dir.hive" etc to subant.
-We should do that, otherwise setting "build.dir.hive" is not useful.

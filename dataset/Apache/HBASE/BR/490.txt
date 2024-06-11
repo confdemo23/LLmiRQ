@@ -1,3 +1,0 @@
-Doubly-assigned .META.; master uses one and clients another
-Internal cluster has two .META.,,1 regions up (Its possible for a region to be added twice to the unassigned map if meta scans run close together).  Worse is that the master is working with one .META. but when clients come in, they&amp;apos;re being give the other.  Makes for odd results.
-Made it a blocker.  Still trying to track down how master doesn&amp;apos;t see subsequent update of .META. info in ROOT.....

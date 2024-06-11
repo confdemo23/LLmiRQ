@@ -1,2 +1,0 @@
-camel-restlet - Should be InOut exchange pattern
-camel-restlet creates exchanges that are inOnly. But they should be InOut.

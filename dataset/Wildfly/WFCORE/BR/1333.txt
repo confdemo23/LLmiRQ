@@ -1,2 +1,0 @@
-Editing of default deployment scanner&apos;s relative-to attribute can cause server crash
-Setting value of relative-to attribute of default deployment scanner on standalone server to a path which does not exists in file system causes server crash.

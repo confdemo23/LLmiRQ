@@ -1,3 +1,0 @@
-WebVirtualHostDefinition isn&apos;t validating enable-welcome-root vs default-web-module
-The validation of the relationship between enable-welcome-root and default-web-module was dropped during the conversion of the legacy web module to model-only mode.
-This is no big deal as any legacy slave (without which the subsystem is pointless) will reject a problem. But I want to fix it anyway as the fix will help illustrate how to do a patch for EAP.

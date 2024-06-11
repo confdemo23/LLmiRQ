@@ -1,3 +1,0 @@
-UndertowDeploymentService starts web components in MSC thread
-The UndertowDeploymentService triggers web components&amp;apos; start and stop lifecycle within the MSC thread which can lead to the server blocking during deployment. This was an issue with the older JBoss Web version of the Service too which was fixed as part of https://issues.jboss.org/browse/AS7-5969 (https://github.com/wildfly/wildfly/pull/3455). The same needs to be ported to this UndertowDeploymentService.
-Here&amp;apos;s an example where a user deployment ends up being blocked https://developer.jboss.org/message/932681#932681

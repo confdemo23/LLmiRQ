@@ -1,4 +1,0 @@
-HIVE-11826 makes hive unusable in properly secured cluster
-HIVE-11826 makes a change to restrict connections to metastore to users who belong to groups under &amp;apos;hadoop.proxyuser.hive.groups&amp;apos;.
-That property was only a meant to be a hadoop property, which controls what users the hive user can impersonate. What this change is doing is to enable use of that to also restrict who can connect to metastore server. This is new functionality, not a bug fix. There is value to this functionality.
-However, this change makes hive unusable in a properly secured cluster. If &amp;apos;hadoop.proxyuser.hive.hosts&amp;apos; is set to the proper set of hosts that run Metastore and Hiveserver2 (instead of a very open "*"), then users will be able to connect to metastore only from those hosts.

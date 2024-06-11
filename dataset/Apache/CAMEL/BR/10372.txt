@@ -1,2 +1,0 @@
-camel-stream - Component doc issue
-A little mistake

@@ -1,3 +1,0 @@
-Chrome/safari: cookie not set AbstractRememberMeServices should have a setter for cookie version
-RememberMe cookie is not set in chrome and safari because only Expires field is set, not max age and they both ignore cookies.
-MaxAge is only set in jetty when version is &gt;= 1.

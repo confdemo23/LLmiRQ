@@ -1,2 +1,0 @@
-The GWT Add-On requires a second launch of Roo to create a valid application
-A timing issue with the creation of Proxies requires Roo be launched second time, after running gwt setup, in order to create a valid application.

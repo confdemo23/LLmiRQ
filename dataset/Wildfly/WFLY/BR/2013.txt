@@ -1,2 +1,0 @@
-SecurityContextInterceptor always uses doPrivilidged even when a security manager is not present
-This is slow. 

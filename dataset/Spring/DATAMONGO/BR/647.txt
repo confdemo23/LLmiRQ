@@ -1,7 +1,0 @@
-Using "OrderBy" in "query by method name" ignores the @Field annotation for field alias.
-I created a method using the "query by method name" approach:
-Inside my Answer object, I have a field called "Score" that is annotated with
-@Field("sr")
-int Score
-List&lt;Answer&gt; findByQuestionIdOrderByScoreDesc(String questionId)
-When the query is run, the database attempts to sort the results by "score" rather than my "sr" field name.

@@ -1,1 +1,0 @@
-CDI beans in static modules cannot see each other

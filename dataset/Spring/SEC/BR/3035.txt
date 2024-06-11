@@ -1,3 +1,0 @@
-SecurityContextHolderAwareRequestWrapper#isUserInRole adds role prefix to already prefixed role
-SecurityContextHolderAwareRequestWrapper#isUserInRole adds role prefix even if passed role already has one.
-Currently calling request.isUserInRole("ROLE_ADMIN") fails because ROLE_ADMIN becomes ROLE_ROLE_ADMIN in SecurityContextHolderAwareRequestWrapper#isGranted method.

@@ -1,4 +1,0 @@
-fix clustered attribute transformation warning
-The code in MessagingTransformers#registerTransformers_1_2_0 to check whether there is a conflict between the clustered state of hornetq-server and the attribute value is not correct and the user is not warned in case of conflict.
-context.readResource(PathAddress.EMPTY_ADDRESS) corresponds to the root of the server  and there is never any "cluster-connection" children there.
-Correct path to read the hornetq-server resource is contex.readResource(address)

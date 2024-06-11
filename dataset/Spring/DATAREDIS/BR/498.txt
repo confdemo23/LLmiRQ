@@ -1,1 +1,0 @@
-MappingRedisConverter uses List.sort which requires Java 8.

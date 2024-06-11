@@ -1,3 +1,0 @@
-Add cleanup stages for UDFs
-In some cases, we bind values at last stage of big SQL from other sources, especially from memcached. I made that kind of UDFs for internal-use.
-I found &amp;apos;initialize&amp;apos; method of GenericUDF class is good place for making connections to memcached cluster, but failed to find  somewhere to close/cleanup the connections. If there is cleaup method in GenericUDF class, things can be more neat. If initializing entity like map/reduce/fetch could be also providable to life-cycles(init/close), that makes perfect.

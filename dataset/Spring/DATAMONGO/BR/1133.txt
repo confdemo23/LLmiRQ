@@ -1,2 +1,0 @@
-Field aliasing is not honored in Aggregation operations
-the aggretation uses the property name of a class rather than the name designated in @Field.

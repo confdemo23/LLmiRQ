@@ -1,7 +1,0 @@
-FastDateParser_TimeZoneStrategyTest#testTimeZoneStrategyPattern fails on Windows with German Locale
-FastDateParser_TimeZoneStrategyTest#testTimeZoneStrategyPattern() on current master fails:
-java.lang.AssertionError: Franzsisch:Heure d&amp;apos;Europe de l&amp;apos;Est UTC+3
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at org.apache.commons.lang3.time.FastDateParser_TimeZoneStrategyTest.testTimeZoneStrategyPattern(FastDateParser_TimeZoneStrategyTest.java:39)
-I&amp;apos;m unsure why. I guess it has something to do with my German Locale and maybe Windows too.

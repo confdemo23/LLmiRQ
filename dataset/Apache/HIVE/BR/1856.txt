@@ -1,7 +1,0 @@
-Implement DROP TABLE/VIEW ... IF EXISTS 
-This issue combines issues HIVE-1550/1165/1542/1551:
-
-augment DROP TABLE/VIEW with IF EXISTS
-signal an error if the table/view doesn&amp;apos;t exist and IF EXISTS wasn&amp;apos;t specified
-introduce a flag in the configuration that allows you to turn off the new behavior
-

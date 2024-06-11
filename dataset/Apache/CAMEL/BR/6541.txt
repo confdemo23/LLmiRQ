@@ -1,4 +1,0 @@
-DefaultUnitOfWork&apos;s headers for the original message are the same object as the in message headers
-For jms messages, the useOriginalMessage does not work when headers are changed during the route because the DefaultUnitOfWork&amp;apos;s headers are the same object as the in message&amp;apos;s headers.
-In DefaultUnitOfWork, this.originalInMessage.setHeaders(exchange.getIn().getHeaders()); should be changed to create a copy of the headers instead of directly assigning.
-Maybe changed to this.originalInMessage.setHeaders((Map&lt;String,Object&gt;) new CaseInsensitiveMap(exchange.getIn().getHeaders()));

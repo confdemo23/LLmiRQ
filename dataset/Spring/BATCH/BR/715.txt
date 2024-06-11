@@ -1,2 +1,0 @@
-Default value of saveState flag should be true
-Default value of saveState flag should be true - restartable should be the default.  Assigning to Robert because he did the original abstraction so he might know why the default isn&amp;apos;t already true.

@@ -1,3 +1,0 @@
-camel-sql - Setting SQL_ROW_COUNT header is not updated if the header already exists
-See nabble
-http://camel.465427.n5.nabble.com/bug-sql-SQL-Component-cannot-change-SQL-ROW-COUNT-header-value-tp5744350.html

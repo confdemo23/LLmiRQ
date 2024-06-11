@@ -1,4 +1,0 @@
-master logs showing byte[] in place of string on logging
-
-2008-08-12 17:39:48,586 INFO org.apache.hadoop.hbase.master.RegionManager: Skipping region [B@6a63d3 because it is already closing.
-

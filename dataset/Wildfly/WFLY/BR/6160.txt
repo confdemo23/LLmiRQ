@@ -1,3 +1,0 @@
-Failing RemoteFailoverTestCase#testStatefulFailover when transaction run under JTS
-I can see failing test RemoteFailoverTestCase#testStatefulFailover when transactions are set to run under JTS. I&amp;apos;m not sure if this is a trouble of clustering component or only a testsuite issue.
-This could be connected with JBEAP-1954.

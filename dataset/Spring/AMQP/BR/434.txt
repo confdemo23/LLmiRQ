@@ -1,2 +1,0 @@
-convertAndSend() methods can throw MessageConversionException but that&apos;s not documented
-This exception should be either added to the throws clause OR caught and wrapped in convertMessageIfNecessary()

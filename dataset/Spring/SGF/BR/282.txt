@@ -1,2 +1,0 @@
-The Eviction &apos;action&apos;, other than the default, for a PARTITION Region is not properly passed to the GemFire EvictionAttributes.createLRUEntryAttributes(..) factory method when the &apos;threshold&apos; is not set.
-When specifying LRU Entry Count Eviction attributes on a PARTITION Region, the value for the action attribute is ignored if the threshold attribute (corresponding to the GemFire EvictionAttributes class&amp;apos;s maximum property) is not also set.

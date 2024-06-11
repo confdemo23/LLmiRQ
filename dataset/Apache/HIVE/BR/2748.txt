@@ -1,2 +1,0 @@
-Upgrade Hbase and ZK dependcies
-Both softwares have moved forward with significant improvements. Lets bump compile time dependency to keep up

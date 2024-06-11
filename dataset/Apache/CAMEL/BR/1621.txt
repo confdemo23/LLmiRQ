@@ -1,2 +1,0 @@
-StickyLoadBalancer - Not possible to configure easily from Spring DSL
-The correlation expression is not easy to set from Spring DSL.

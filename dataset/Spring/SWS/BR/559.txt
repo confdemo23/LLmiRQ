@@ -1,2 +1,0 @@
-Upgrade Spring Security to 3.0.2
-I&amp;apos;d like to upgrade to spring security 3.0.0.M1, but spring ws security does not have support for it yet.

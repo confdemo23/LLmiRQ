@@ -1,2 +1,0 @@
-Dojo DateTextBox locale-specific formatting is not progressive
-A date field renders in the standard format YYYY-MM-DD when ajax is not enabled, not the locale-specific format.

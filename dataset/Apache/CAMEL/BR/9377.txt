@@ -1,1 +1,0 @@
-[test-blueprint] support configadmin as source of initial properties for BP camel context
