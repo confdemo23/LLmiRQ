@@ -1,2 +1,0 @@
-Collection should be optional for getDbStats
-Collection should be optional for getDbStats on route description

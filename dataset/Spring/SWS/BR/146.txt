@@ -1,2 +1,0 @@
-MessageDispatcherServlet does not search servlet context for a WsdlDefinitionHandlerAdapter instance
-The servlet should look in it&amp;apos;s application context for an instance of WsdlDefinitionHandlerAdapter to use. I believe this is the standard set by the DispatcherServlet for all pluggable logic modules. I&amp;apos;ll open another issue for the MessageReceiverHandlerAdapter.

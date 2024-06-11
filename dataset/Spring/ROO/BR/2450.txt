@@ -1,3 +1,0 @@
-tilesViewResolver bean missing in web flow creation
-After creating a new roo project and running &amp;apos;web flow&amp;apos;, I tried to deploy to tomcat but I receive the following Error:
-Error creating bean with name &amp;apos;mvcViewFactoryCreator&amp;apos; defined in ServletContext resource [/WEB-INF/spring/webflow-config.xml]: Cannot resolve reference to bean &amp;apos;tilesViewResolver&amp;apos; while setting bean property &amp;apos;viewResolvers&amp;apos;; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named &amp;apos;tilesViewResolver&amp;apos; is defined

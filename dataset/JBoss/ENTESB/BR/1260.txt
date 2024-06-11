@@ -1,2 +1,0 @@
-HTTP/FTP Deployment URL&apos;s for Libraries are not supported
-HTTP/FTP deployment URL&amp;apos;s for libraries do not resolve when placed in profiles; file deployment URL&amp;apos;s for libraries however do resolve. A network deployment URL will be required in order to support deployment of libraries across the distributed fabric environment. 

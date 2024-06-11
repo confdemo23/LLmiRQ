@@ -1,1 +1,0 @@
-Infinispan cache store properties are not applied

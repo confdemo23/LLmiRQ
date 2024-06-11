@@ -1,2 +1,0 @@
-View-state programming model needs to be consistent between MVC and JSF
-Currently JSF doesn&amp;apos;t do anything with the "model" attribute, but it should be consistency with what MVC does: invoke model validation logic if it exits.

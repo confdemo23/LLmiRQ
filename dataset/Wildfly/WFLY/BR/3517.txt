@@ -1,2 +1,0 @@
-DeploymentMountProvider leaks thread pools
-DeploymentMountProvider.start() calls Executors.newScheduledThreadPool but stop() does not shutdown the pool. The effect is the reload command results in a slow thread leak that will eventually result in OOM.

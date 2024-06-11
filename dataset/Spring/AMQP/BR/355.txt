@@ -1,3 +1,0 @@
-Fix Race Condition in Test Case
-The ErrorHandler is not called unless the container is active; the container is stopped as soon as the 3rd message is received (on exit from the onMessage method).
-So there is a (small) possibility that the container is not active when it&amp;apos;s time to invoke the ErrorHandler and the verify fails because it was only called twice.

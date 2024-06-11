@@ -1,9 +1,0 @@
-Domain controller fails to restart due to an inconsistent rollback of a redeploy
-Osamu Nagano reports:
-When you try to redeploy (or deploy with --force option) the same application which has the same contents hash, and a necessary dependency like a datasource beeing injected in the application is lost by some reason, the redeploy operation will delete the contents under $JBOSS_HOME/domain/data/content directory but won&amp;apos;t delete entries in domain.xml. Then the domain controller fails to start up because no contents found in the directory. This likely happens when you frequently changes settings during other servers shutting down.
-The domain controller fails to restart with the following log messages.
-
-12:04:10,623 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) JBAS014613: Operation ("add") failed - address: ([("deployment" =&gt; "exampleapp.war")]) - failure description: "JBAS010876: No deployment content with hash c1306bc4855f4ed9914c9616f2b999c5c62a79d3 is available in the deployment content repository for deployment &amp;apos;exampleapp.war&amp;apos;. This is a fatal boot error. To correct the problem, either restart with the --admin-only switch set and use the CLI to install the missing content or remove it from the configuration, or remove the deployment from the xml configuraiton file and restart."
-12:04:10,628 FATAL [org.jboss.as.host.controller] (Controller Boot Thread) JBAS010933: Host Controller boot has failed in an unrecoverable manner; exiting. See previous messages for details.
-
-The domain controller should be independent from such a server specific issue and there should be a way to fix this via CLI or Console, not by a manual editing of domain.xml.

@@ -1,3 +1,0 @@
-Scanning for Type Converters doesn&apos;t work in OSGi
-Even the core type converters could not be loaded:
-18:26:04,982 | ERROR | ExtenderThread-4 | ResolverUtil | g.apache.camel.util.ResolverUtil  364 | Could not search jar file &amp;apos;/org/apache/camel/converter&amp;apos; for classes matching criteria: annotated with @Converterdue to an IOException: /org/apache/camel/converter (No such file or directory) 

@@ -1,2 +1,0 @@
-Corrupt characters appearing in Roo shell in OS X Lion 10.7
-Since changing to OS X Lion, the Roo shell is displaying extraneous characters

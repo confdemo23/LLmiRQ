@@ -1,4 +1,0 @@
-Posting a status with a star symbol (*) fails authentication
-Any attempt to call timelineOperations().updateStatus with a star symbol in the message fails with a NotAuthorizedException.  Exception message is "Could not authenticate you".
-I suspect the problem is in the oauth signature when a * exists in the additionalParameters map, but I don&amp;apos;t know enough about OAuth to figure out a fix.
-Example failing message: "* Test"

@@ -1,3 +1,0 @@
-RunAs in servlet doesn&apos;t work
-RunAs for servlets doesn&amp;apos;t work in Undertow. 
-I have unprotected @RunAs-annotated servlet which calls protected EJB method. The call should succeed, but it throws javax.ejb.EJBAccessException.

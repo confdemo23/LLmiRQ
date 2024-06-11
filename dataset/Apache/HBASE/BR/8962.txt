@@ -1,2 +1,0 @@
-Clean up code and remove regular log splitting
-Distributed log splitting has been out there for a while and it is kind of stable. It&amp;apos;s about time to get rid of the regular log splitting and clean up the code a little bit.

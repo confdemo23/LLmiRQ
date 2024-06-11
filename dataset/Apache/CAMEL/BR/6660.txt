@@ -1,4 +1,0 @@
-JMX - Using custom @ManagedResource and extending default components can cause some attributes to be unavailable
-Related to CAMEL-6586
-Its when you use a custom @ManagedResource such as in a custom component, then some of the out of the box attributes such as camelId, state, etc may be shown as Unavailable in JMX consoles.
-Its the MBean assembler and JMX in general that needs to find some way of being able to mixin the custom attributes/operations with the out of the box ones. So you dont have to copy the out of the box attributes to your custom classes.

@@ -1,3 +1,0 @@
-Remove debug interceptor as it was newer implemented
-See nabble
-http://www.nabble.com/Missing-debug.xml-in-2.0-M2-td24400032.html

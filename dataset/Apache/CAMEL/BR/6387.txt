@@ -1,2 +1,0 @@
-Implement JndiRegistry.findByTypeWithName() and findByType() using javax.naming.Context.list("")
-Implement JndiRegistry.findByTypeWithName() and findByType() using javax.naming.Context.list("").

@@ -1,2 +1,0 @@
-Temporarily disable TestSSL#testSSLVersion 
-Looks like it&amp;apos;s only run on Linux and failing after HIVE-11720.

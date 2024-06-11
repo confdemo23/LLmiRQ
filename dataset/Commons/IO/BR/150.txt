@@ -1,6 +1,0 @@
-Add a RegexpFilenameFilter
-It&amp;apos;d be nice to have a filter like this:
-RegexpFileFilter reff = new RegexpFileFilter("^did
-{1,3}
-,+");
-WildcardFilter is nice but insufficent.

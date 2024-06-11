@@ -1,2 +1,0 @@
-[patch] Make sure streams get closed
-a couple places streams are opened and are not closed. patch fixes this.

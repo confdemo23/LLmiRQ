@@ -1,3 +1,0 @@
-addon-dbre & OneToOne
-addon-dbre generated entities with one-to-one relationship established have circular reference via toString aspects.
-Let&amp;apos;s say you have entity A and B with @OneToOne on A.refB and B.refA. Then you call A.toString() it will call A.refB.toString() who in is&amp;apos;s turn will call B.refA.toString() -&gt; loop. Need to be fixed. We should exclude those from toString at all or include it only at identifying side

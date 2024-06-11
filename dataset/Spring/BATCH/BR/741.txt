@@ -1,2 +1,0 @@
-DefaultFieldSet should clone the tokens before exposing them in getValues()
-DefaultFieldSet should clone the tokens before exposing them in getValues()

@@ -1,5 +1,0 @@
-NPE might occur when a null object is returned from the aesh Console
-In cli/src/main/java/org/jboss/as/cli/impl/Console.java
-177	 	 -                        return console.read(prompt).getBuffer();
-178	 +                        ConsoleOutput output = console.read(prompt);
-179	 +                        return output != null ? output.getBuffer() : null;

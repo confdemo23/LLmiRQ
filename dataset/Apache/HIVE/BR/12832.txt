@@ -1,1 +1,0 @@
-RDBMS schema changes for HIVE-11388

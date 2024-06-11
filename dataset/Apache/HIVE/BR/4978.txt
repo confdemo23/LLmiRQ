@@ -1,2 +1,0 @@
-[WebHCat] Close the PrintWriter after writing data
-We are not closing the PrintWriter after writing data into it. I haven&amp;apos;t seen any problems so far, but it is good to close the PrintWriter so that resources are released properly.

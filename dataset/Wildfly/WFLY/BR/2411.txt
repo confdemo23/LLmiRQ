@@ -1,2 +1,0 @@
-SecurityRealm authentication does not get marshalled when empty
-The /core-service=management/security-realm=ManagementRealm/authentication=users resource does not get persisted in case it does not contain any users. This causes problems since the resource is not restored after a reload or restart of the server.

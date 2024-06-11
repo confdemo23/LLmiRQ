@@ -1,2 +1,0 @@
-Anonymous FTP doesn&apos;t work without username
-The web site for the FTP modules says you can use a URL like ftp://publicftpserver.com/download for anonymous FTP, but this doesn&amp;apos;t work unless you specify a username.

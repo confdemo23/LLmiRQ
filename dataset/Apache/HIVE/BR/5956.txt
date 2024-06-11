@@ -1,2 +1,0 @@
-SHOW TBLPROPERTIES doesn&apos;t take db name
-Identified in HIVE-5912.

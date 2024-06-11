@@ -1,2 +1,0 @@
-CLI &apos;module add&apos; command fail if a drive letter is specified in its resource path
-If a drive letter is specified in the resource path the module add command fails on MS Windows. It cannot locate such a resource because of doubled drive letter in the translated path.

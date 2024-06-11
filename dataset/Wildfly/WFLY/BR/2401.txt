@@ -1,3 +1,0 @@
-org.jboss.as.test.smoke.mgmt.BasicOperationsUnitTestCase fails
-Running a build of current sources with complete testsuite this test is failing with
-testReadAttributeWildcards(org.jboss.as.test.smoke.mgmt.BasicOperationsUnitTestCase)

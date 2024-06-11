@@ -1,4 +1,0 @@
-BroadcastGroupAdd model population fails on JDK8
-http://brontes.lab.eng.brq.redhat.com/viewLog.html?buildId=4515
-All messaging subsystem tests passes on JDK7 but fails with JDK8 because BroadcastGroupAdd#populateModel falsely assumes that the connector resources have been populated before the current broadcast-group.
-There is no such guarantee, the connector-refs validations must be done in a separate OperationStepHandler after all the MODEL&amp;apos;s OSHs instead.

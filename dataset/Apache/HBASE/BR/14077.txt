@@ -1,2 +1,0 @@
-Add package to hbase-protocol protobuf files.
-c++ generated code is currently in the default namespace. That&amp;apos;s bad practice; so lets fix it

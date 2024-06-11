@@ -1,3 +1,0 @@
-Inheriting from parent step with skip-limit/retry-limit causes IllegalArgumentException when the inheriting bean doesn&apos;t define exception-classes.
-The error for the supplied example job (needs infrastructure) is: 
-"IllegalArgumentException: The field &amp;apos;skip-limit&amp;apos; is not permitted on the step [myStep] because there is no &amp;apos;skippable-exception-classes&amp;apos;"

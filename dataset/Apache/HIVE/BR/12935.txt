@@ -1,2 +1,0 @@
-LLAP: Replace Yarn registry with Zookeeper registry
-Existing YARN registry service for cluster membership has to depend on refresh intervals to get the list of instances/daemons that are running in the cluster. Better approach would be replace it with zookeeper based registry service so that custom listeners can be added to update healthiness of daemons in the cluster.  

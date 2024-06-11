@@ -1,9 +1,0 @@
-Support JPAs @Enumerated
-Using the javax.persistence.Enumerated annotation does currently not work.
-class Person {
-@Enumerated(EnumType.ORDINAL)
-private Gender gender;
-}
-public enum Gender {
-FEMALE, MALE;
-}

@@ -1,3 +1,0 @@
-For self describing InputFormat don&apos;t replicate schema information in partitions
-Since self describing Input Formats don&amp;apos;t use individual partition schemas for schema resolution, there is no need to send that info to tasks.
-Doing this should cut down plan size.

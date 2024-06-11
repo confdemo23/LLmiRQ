@@ -1,3 +1,0 @@
-NoClassDefFoundError due to javax/annotation/PostConstruct when executing on Java 5
-Reported on Twitter: the tests didn&amp;apos;t fly on OS X - NoClassDefFoundError: javax/annotation/PostConstruct
-This is presumably related to Java 5.

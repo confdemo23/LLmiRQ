@@ -1,1 +1,0 @@
-AnnotatedTypeScanner does not use context classloader for loading found types

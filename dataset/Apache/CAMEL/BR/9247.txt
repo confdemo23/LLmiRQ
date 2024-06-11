@@ -1,4 +1,0 @@
-rest-dsl with api-doc should allow multiple rest&apos;s
-See SO
-http://stackoverflow.com/questions/33291657/how-to-have-multiple-camel-rest-dsl-definitions-with-swagger
-The api-doc endpoint should merge multiple rest&amp;apos;s together.

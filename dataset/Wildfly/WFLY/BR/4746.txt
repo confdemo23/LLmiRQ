@@ -1,1 +1,0 @@
-SSO cookie-name attribute is ignored

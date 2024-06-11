@@ -1,2 +1,0 @@
-Pre-materializing complex CTE queries
-Currently, hive regards CTE clauses as a simple alias to the query block, which makes redundant works if it&amp;apos;s used multiple times in a query. This introduces a reference threshold for pre-materializing the CTE clause as a volatile table (which is not exists in any form of metastore and just accessible from QB).

@@ -1,2 +1,0 @@
-Aggregrator Batch Processor can sometimes ignore batchExpiry timeout that result in a hang/delay in processing, with jms
-The Batch processor behind the Aggregrator has a batch expiry timeout that governs the delivery of messages.  If the timeout expires during aggregration the resulting timeout value passed to PollingConsumer.receive will be negative. In the jms consumer case with the spring templates, a negative timeout != -1 is considered infinite/blocking.

@@ -1,2 +1,0 @@
-Child contexts created by AutomaticJobRegistrar cannot easily use PropertyPlaceholderConfigurer
-See also BATCHADM-110.  ClassPathXmlApplicationContextFactory registers the parent PPC as a singleton (internal) BFPP using addBeanFactoryPostProcessor(), and those BFPP take precedence over those defined using bean definitions.   A workaround is to use SpEL instead of PPC in the child context.

@@ -1,2 +1,0 @@
-Blueprint bug ARIES-1544 causes issues in Olingo2 configuration
-Due to Blueprint bug ARIES-1544, the setConfiguration() method overridden in Olingo2Component for Camel documentation, MUST have a matching getConfiguration() method. 

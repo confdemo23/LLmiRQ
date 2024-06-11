@@ -1,4 +1,0 @@
-SimpleTypeHolder does not consider complex enum values as simple
-If an enum implements abstract methods of some kind the Class object returned by {{$
-{ENUM}
-.getClass()}} does not return true for an isEnum() call anymore. This is why the call to SimpleTypeHolder.isSimpleType(Class&lt;?&gt; type) will return false in such cases. We should rather enlist Enum into the set of default simple types so that the ....isAssignableFrom(...) check discovers enums already.

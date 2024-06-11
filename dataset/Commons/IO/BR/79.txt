@@ -1,4 +1,0 @@
-[IO][PATCH] - file and directory pollers
-Add classes that will monitor a file/directory and notify registered observers 
-creation, deletion and content change events occur.  Source is in the 
-attachement file_directory_poller.jar as they are all new files.

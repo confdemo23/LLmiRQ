@@ -1,2 +1,0 @@
-space- and comma-separated attribute marshaller are broken
-The AttributeMarshaller&amp;apos;s STRING_LIST and COMMA_STRING_LIST are broken as they override marshallAsElement while it&amp;apos;s their marshallAsAttribute method (inherited from DefaultAttributeMarshaller) that is called.

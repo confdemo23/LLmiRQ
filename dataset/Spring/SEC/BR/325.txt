@@ -1,4 +1,0 @@
-Add support for Groups
-http://forum.springframework.org/showthread.php?p=53307
-&lt;quote from="raible"&gt;I attended a BOF at The Spring Experience where there was much debate about having a "Groups" concept in Acegi. Colin was for it, Ben against. However, in the end, I believe Ben said it&amp;apos;d only take 10 minutes to add - so he&amp;apos;d do it.&lt;/quote&gt;
-&lt;quote from="alex"&gt;It&amp;apos;s a semantic thing. People who want an "administrative" / "management" interface for security would like to see groups etc. I would not modify the GrantedAuthority concept to not recognise groups - I would merely add a GROUP table which the out-of-the-box DAOs would recognise and then generate additional GrantedAuthority[]s accordingly.&lt;/quote&gt;

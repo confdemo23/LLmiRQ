@@ -1,2 +1,0 @@
-HBaseClient can get stuck in an infinite loop while attempting to contact a failed regionserver
-While using HBase Thrift server, if a regionserver goes down due to shutdown or failure clients will timeout because the thrift server cannot contact the dead regionserver.

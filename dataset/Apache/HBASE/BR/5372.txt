@@ -1,2 +1,0 @@
-Table mutation operations should check table level rights, not global rights 
-drop/modify/disable/enable etc table operations should not check for global CREATE/ADMIN rights, but table CREATE/ADMIN rights. Since we check for global permissions first for table permissions, configuring table access using global permissions will continue to work. 

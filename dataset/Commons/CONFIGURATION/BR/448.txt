@@ -1,5 +1,0 @@
-INI config can&apos;t have = in the value when using : seperators
-If I load an INI file with these values:
-username: identity
-password: abc=123
-It actually considers the second line to have the key "password: abc" and the value "123:G". 

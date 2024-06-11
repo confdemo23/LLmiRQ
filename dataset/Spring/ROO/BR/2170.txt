@@ -1,2 +1,0 @@
-GWT Add-On creates applications using invalid types
-There are number of types that RequestFactory can&amp;apos;t handle, such as java.util.Calendar, but the GWT Add-On still attempts to scaffolds them which ultimately leads to an invalid application. This shouldn&amp;apos;t be happening and default behaviour should be to ignore invalid types.

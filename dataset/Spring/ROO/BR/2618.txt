@@ -1,8 +1,0 @@
-Entity integration tests fail to compile with Database.com (VMFORCE) database
-Database.com (VMFORCE) entities have special requirements for the version field which is coded into the Entity Addon.  Unfortunately, the Test Addon doesn&amp;apos;t account for these:
-[INFO] Compiler errors : 
-error at org.junit.Assert.assertTrue("Version for &amp;apos;Visit&amp;apos; failed to increment on flush directive", (currentVersion != null &amp;&amp; obj.getLastModifiedDate() &gt; currentVersion) || !modified);
-                                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-/home/tkral/dev/samples/roo-clinic/src/test/java/com/springsource/petclinic/domain/VisitIntegrationTest_Roo_IntegrationTest.aj:74:0::0 The operator &gt; is undefined for the argument type(s) java.util.Calendar, java.util.Calendar
-error at org.junit.Assert.assertTrue("Version for &amp;apos;Visit&amp;apos; failed to increment on merge and flush directive", (currentVersion != null &amp;&amp; obj.getLastModifiedDate() &gt; currentVersion) || !modified);
-                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

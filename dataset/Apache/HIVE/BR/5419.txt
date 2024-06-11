@@ -1,2 +1,0 @@
-Fix schema tool issues with Oracle metastore 
-Address oracle schema upgrade script issue in 0.12 and trunk (0.13)

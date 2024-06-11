@@ -1,2 +1,0 @@
-Intermittent failure of FaultTolerantStepFactoryBean in multi-threaded test
-Intermittent failure of FaultTolerantStepFactoryBean in multi-threaded test.  Could be nothing (because the test FaultTolerantStepFactoryBeanRollbackTests uses a MapJobRepositoryFactoryBean).

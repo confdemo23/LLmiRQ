@@ -1,2 +1,0 @@
-&apos;web mvc all&apos; seems to have broken availability check
-I just noticed when doing a &amp;apos;help&amp;apos; that &amp;apos;controller all&amp;apos; has been deprecated in favor of &amp;apos;web mvc all&amp;apos;. However, when trying that command on a project that has persistency set up and an entity defined I&amp;apos;m getting an error message stating that the command is not currently available. &amp;apos;controller all&amp;apos; works though, so it seems like there&amp;apos;s a broken availability check for the new spring mvc version of the command. 

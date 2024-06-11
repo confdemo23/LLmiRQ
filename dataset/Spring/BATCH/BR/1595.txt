@@ -1,2 +1,0 @@
-OraclePagingQueryProvider has inconsistent names for columns in jumpToItemQuery
-OraclePagingQueryProvider has inconsistent namesfor columns in jumpToItemQuery.  It only matters if you use the column names (e.g. queryForLong() which is more common wouldn&amp;apos;t be affected), but all the other query providers have "SORT_KEY" as a column name alias, whereas the Oracle version doesn&amp;apos;t use an alias.

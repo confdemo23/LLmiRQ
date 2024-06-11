@@ -1,2 +1,0 @@
-Clear Command should use system.out
-Current clear command doesn&amp;apos;t work, It should use system.out

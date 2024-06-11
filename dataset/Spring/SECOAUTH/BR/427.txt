@@ -1,2 +1,0 @@
-Clients with registered redirect-uri shouldn&apos;t need to specify a one explicitly
-SECOAUTH-253 was supposed to fix this, but it looks like it didn&amp;apos;t or else there was a reversion.

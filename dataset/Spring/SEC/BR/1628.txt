@@ -1,4 +1,0 @@
-add authentication-success-handler to <remember-me> tag
-We are using an AuthenticationSuccessHandler to post-process login information to cache attributes into the HttpSession (we&amp;apos;re using a third-party servlet that can handle some database queries by itself but needs the appropriate keys, etc.).  However, after a remember-me login, there is no way to insert a success handler to perform the appropriate initialization for the new session.
-It would be helpful to have an authentication-success-handler-ref attribute on the &lt;remember-me&gt; tag analogous to the attribute on the &lt;*-login&gt; tags, triggered after the RememberMeServices handles a persistent login.
-(The forum link is not my post, but there appears to be a significant desire for this feature.)

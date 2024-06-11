@@ -1,3 +1,0 @@
-OrderedComposite cannot register two items with the same order
-We have added a custom listener that extends StepListener and OrderedComposite is very handy to use when multiple listeners are involved. Unfortunately, it&amp;apos;s not public. 
-Can you make it public or part of the API?

@@ -1,1 +1,0 @@
-Component upgrade Hibernate Validator to 5.2.4.Final

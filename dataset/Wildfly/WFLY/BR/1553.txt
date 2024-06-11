@@ -1,3 +1,0 @@
-Infinispan subsystem ignores cluster name
-The Infinispan subsystem uses the name of the cache container as the cluster name, instead of the name configured in &lt;transport cluster="foo"/&gt;.
-This is a critical issue when using a gossip router, as only the cluster name determines what nodes form a cluster.

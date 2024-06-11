@@ -1,5 +1,0 @@
-Content type not set accouring to Http specification, RFC 2616
-the AxiomSoapMessage and the SaajSoapMessage set the content-type  character-set incorrectly. 
-The character set is surrounded by double quotes i.e "ISO-8859-1". the specification however states, $14.17 and $3.7 clearly state that this is not allowed. Although most servers do not complain about it, the one i use does 
-Since the implementation is not confirming to specifications, i would say it&amp;apos;s a bug.
-Pieter

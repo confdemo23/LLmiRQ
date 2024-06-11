@@ -1,2 +1,0 @@
-SAP Camel Server Components needs to stop and release JCo Servers
-SAP Camel Server Components needs to stop and release JCo Servers when application bundle is uninstalled. If not subsequent installs of application bundles will not install/reinstall.

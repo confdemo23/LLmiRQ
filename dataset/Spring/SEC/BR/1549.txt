@@ -1,2 +1,0 @@
-AclPermissionCacheOptimizer should not attempt to load Acls for empty object list
-BasicLookupStrategy will raise an exception if passed an empty OID list, so we shouldn&amp;apos;t call it if the optimizer is passed an empty collection of objects.

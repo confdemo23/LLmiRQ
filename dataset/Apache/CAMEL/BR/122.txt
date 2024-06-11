@@ -1,1 +1,0 @@
-port the error handler / dead letter channel / redelivery policy over to JAXB2 so you can fully customize it via XML

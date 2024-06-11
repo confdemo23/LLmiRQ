@@ -1,2 +1,0 @@
-BaseMasterAndRegionObserver doesn&apos;t implement all the methods
-It&amp;apos;s supposed to be a class that allows someone to derive from that class and only need to implement the desired methods. However two methods aren&amp;apos;t implemented.

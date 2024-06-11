@@ -1,1 +1,0 @@
-NPE during serialization of HttpSession metadata when using <transaction mode="NONE"/>

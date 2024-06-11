@@ -1,2 +1,0 @@
-Support for JPA PersistenceContext annotation broken
-When Spring Security is used, JPA annotations auto-wiring is not supported : the @PersistenceContext EntityManager is not injected in the DAO layer, which results in NullPointerExceptions

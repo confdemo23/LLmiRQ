@@ -1,5 +1,0 @@
-using Scan(startRow,stopRow) will cause you to iterate the entire table
-Right now the only way for the client scanner to know that we are at the &amp;apos;end&amp;apos; of a scan is to client-side-wise use the filter to figure this out. 
-This is not easy to fix because the server is unable to indicate the difference between &amp;apos;done with this region&amp;apos;, and &amp;apos;you&amp;apos;re at the end of your scan&amp;apos;.  In both cases we return 0 results, and the client can&amp;apos;t figure out what it means.
-Right now the best solution is to use filters, which is tricky since there is no StopRowFilter because that functionality is built in 
-We might have to hack the &amp;apos;stop row&amp;apos; functionality as a filter until we can improve the client-server API/RPC.

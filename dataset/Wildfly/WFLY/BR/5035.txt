@@ -1,3 +1,0 @@
-ClusteredMessagingTestCase.testClusteredQueue fails intermittently
-Originally opened as https://issues.jboss.org/browse/WFLY-4936 but these failures are also to be seen on Linux thus we can rule out ttl problems.
-The problem indeed is in using udp stack in CI, we can get reliable results using the tcp stack.

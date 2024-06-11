@@ -1,2 +1,0 @@
-JobExecutionListener.onInterrupt() is never called by spring batch framework
-The onInterrupt() callback method of JobExecutionListener should be called by SimpleJob once JobInterruptedException is caught

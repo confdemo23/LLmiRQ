@@ -1,7 +1,0 @@
-predicate pushdown fails if all columns are not selected
-predicate pushdown seems to fail in some scenarios... it is ok if all the columns are selected.
-create table ppda(a string, b string);
-select a from ppda where ppda.a &gt; 10; --&gt; fails
-select b from ppda where ppda.a &gt; 10; --&gt; ok
-select * from ppda where ppda.a &gt; 10; --&gt; ok
-select b from appd where appd.b &gt; 10 and appd.a &gt; 20; --&gt; ok

@@ -1,4 +1,0 @@
-RolloutPlanTestCase makes invalid assumptions about test execution
-RolloutPlanTestCase.testMaxFailServersRolloutPlan() assumes that the final op it sends (to remove the http-listener) will be executed on servers main-two and main-three. This is invalid, because if main-one executes before either main-two or main-three, there will be two failed servers in the rollout and the 3rd server will never get called.
-This is why the test fails on JDK 8. There is some impl difference (probably in some collection class) that causes the server ops to be executed in different order.
-This is just a matter of correcting some test assertions.

@@ -1,2 +1,0 @@
-Small inconsistency in the "Example API Usage"
-The example uses "myLittleRow" but refers to "myRow" in one of the comments.

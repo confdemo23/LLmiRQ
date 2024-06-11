@@ -1,2 +1,0 @@
-DefaultProducerTemplate.extractResultBody() should throw an exception if there was a failure rather than returning the input message
-we should throw an exception if there was a Fault or the exchange contains an Exception

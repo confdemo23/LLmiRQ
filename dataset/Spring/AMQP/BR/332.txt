@@ -1,2 +1,0 @@
-Adding multiple listeners inside a single listener-container element is not working
-If I am adding multiple listener classes inside a single &lt;listener-container&gt; element, only one of them is working i.e. the listener class which is defined at the last in XML e.g Please refer to the stackoverflow link above

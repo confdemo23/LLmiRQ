@@ -1,3 +1,0 @@
-gwt setup giving String index out of range:-1
-On doing "gwt setup" get a "String index out of range:-1"
-I have seen the same bug in closed status  for 1.0.3

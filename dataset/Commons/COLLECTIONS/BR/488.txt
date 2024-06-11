@@ -1,3 +1,0 @@
-Satisfies utility method
-I recently needed to use something like the CollectionUtils.exists method, but I wanted to know if a given predicate was true for ALL members of a collection, rather than just one.  I cooked up a quick method called satisfies (help would be appreciated on the name - it&amp;apos;s the best that I could come up with) that determines whether a given predicate is true for all members of a collection.
-Been using this library a good deal recently - hoping to get involved in its development!

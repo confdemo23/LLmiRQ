@@ -1,1 +1,0 @@
-GWT Add-On adds a method to a proxy type twice in some cases

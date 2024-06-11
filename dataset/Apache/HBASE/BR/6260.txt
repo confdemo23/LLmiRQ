@@ -1,4 +1,0 @@
-balancer state should be stored in ZK
-See: https://issues.apache.org/jira/browse/HBASE-5953?focusedCommentId=13270200&amp;page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-13270200
-And: https://issues.apache.org/jira/browse/HBASE-5630?focusedCommentId=13399225&amp;page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-13399225
-In short, we need to move the balancer state to ZK so that it won&amp;apos;t have to be restarted if the master dies.

@@ -1,2 +1,0 @@
-Fix Infinispan subsystem cache store properties transformations and improve testing
-Similar to what is done in jgroups, related fixes and move code to common module, etc.

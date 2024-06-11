@@ -1,2 +1,0 @@
-camel-cxf producer should copy the inMessage headers to the outMessage
-If we try to chain some different endponit together in the camel route, we need to make sure the in message header be copied to the out message. 

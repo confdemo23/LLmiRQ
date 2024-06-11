@@ -1,4 +1,0 @@
-camel-jms - wrong defaults causes message listener to use new thread when receiving a message
-JmsConfiguratiuon have a bad default
-maxMessagesPerTask=1
-It should be -1 as we do not want to strict the DefaultMessageListenerContainer to only handle 1 message per thread.

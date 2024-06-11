@@ -1,7 +1,0 @@
-Builders for AttributeDefinitions don&apos;t all pass in all settings to the AD
-While working on WFLY-3184 I discovered that ObjectListAttributeDefinition.Builder does not pass any configured ParameterCorrector into the AD. I believe this is a problem common to a number of the builders.
-The way the AD constructors work is also very problematic. When we add a new field to a class deep in the hierarchy, like AD itself, we then add a new constructor with a new param and then need to expose that param all the way up the hierarchy by doing the same thing in the subclasses. Very fragile.
-I intend to deal with both these issues:
-1) Deprecate the public or protected AD constructors except for the simple ones in SimpleAttributeDefinition, which are potentially more commonly used.
-2) Add getters for all the fields in AbstactAttributeDefinitionBuilder and subclasses.
-3) Add a protected constructor to AD and all subclasses (private where possible) that takes the relevant Builder as its param and then populates its fields from the getters. The build() method in the builders will call this constructor.

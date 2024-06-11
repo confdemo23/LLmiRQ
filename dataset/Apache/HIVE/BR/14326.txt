@@ -1,2 +1,0 @@
-Merging outer joins without conditions can lead to wrong results
-HIVE-13069 enabled cartesian product merging. However, merge should only be performed between INNER joins.

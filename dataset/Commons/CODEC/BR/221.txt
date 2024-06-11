@@ -1,6 +1,0 @@
-HmacUtils.updateHmac calls reset() unnecessarily
-The HmacUtils.updateHmac() methods call reset().
-This means that it&amp;apos;s not possible to build up a digest using multiple such calls.
-The only useful operation that can be performed afterwards is to call one of the Mac.doFinal() methods.
-Unfortunately it&amp;apos;s probably too late to change this.
-However it should at least be documented.

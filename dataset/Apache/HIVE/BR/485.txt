@@ -1,2 +1,0 @@
-join assumes all columns are strings
-join assumes all columns are string - pass the objectinspector from execreducer and use that

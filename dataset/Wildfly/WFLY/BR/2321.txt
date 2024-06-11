@@ -1,2 +1,0 @@
-Add user configuration loading broken if executed from any folder other than bin
-Also should remove the system property reading and just rely on the location being bin.

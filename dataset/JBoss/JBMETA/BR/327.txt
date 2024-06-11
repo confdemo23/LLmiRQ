@@ -1,2 +1,0 @@
-Class-level @Asynchronous processor has inconsistent application of async methods
-AsyncMethodMetaData needs to be created inside the loop, not out.

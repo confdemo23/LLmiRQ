@@ -1,2 +1,0 @@
-Incomplete parsing of oauth:verification-code element
-xsd scheme for oauth:verification-code contains the parameter "redirect-strategy-ref", but it is not parsed in OAuth2ProviderBeanDefinitionParser.parse

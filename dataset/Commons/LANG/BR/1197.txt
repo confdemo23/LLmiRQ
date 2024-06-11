@@ -1,7 +1,0 @@
-Prepare Java 9 detection
-In anticipation of Java 9 and JEP 223, the versioning scheme will change completely. We need to reflect that in SystemUtils, JavaVersion, etc.:
-
-SystemUtils: Deprecate IS_JAVA_1_9 and replace with IS_JAVA_9
-JavaVersion: Deprecate JAVA_1_9 in JavaVersion and replace with JAVA_9
-
-and other places in the library.

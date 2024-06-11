@@ -1,1 +1,0 @@
-Static fields should be disregarded by ODM

@@ -1,4 +1,0 @@
-Roo fails to create DataOnDemand metadata
-Roo throws:
-roo&gt; java.lang.IllegalStateException: java.lang.IllegalStateException: java.lang.IllegalArgumentException: Invalid dependency between upstream &amp;apos;MID:org.springframework.roo.addon.dod.DataOnDemandMetadata#SRC_TEST_JAVA?org.internna.ossmoney.model.security.UserDetailsDataOnDemand&amp;apos; and downstream &amp;apos;MID:org.springframework.roo.addon.dod.DataOnDemandMetadata#SRC_TEST_JAVA?org.internna.ossmoney.model.budget.BudgetDataOnDemand&amp;apos;
-I&amp;apos;m attaching the involved files though they won&amp;apos;t compile due to other dependencies, of course. I&amp;apos;ll commit everything to Google Code once it reaches a stable state (in a day or two)

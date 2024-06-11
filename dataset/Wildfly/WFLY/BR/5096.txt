@@ -1,3 +1,0 @@
-Example configuration standalone-activemq-colocated.xml is not in server distribution
-In EAP 6.4.x, example configuration "standalone-hornetq-colocated.xml" is in ${JBOSS_HOME}/docs/examples/configs/
-Similar activemq alternative is missing in EAP7

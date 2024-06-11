@@ -1,2 +1,0 @@
-@Schedules annotation isn&apos;t being processed
-JBMETA-287 was supposed to include support for @Schedules too. But the code didn&amp;apos;t make it into 2.0.0-alpha-15. Introduce the processor for handle @Schedules and its xml counterpart.

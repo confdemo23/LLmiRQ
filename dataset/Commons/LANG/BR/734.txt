@@ -1,2 +1,0 @@
-The CHAR_ARRAY cache in CharUtils duplicates the cache in java.lang.Character
-The CHAR_ARRAY cache in CharUtils duplicates the cache in java.lang.Character.

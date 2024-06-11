@@ -1,6 +1,0 @@
-JBoss 7 - EJB Remote Transaction Timeout
-I have a remote call that allow to run a process that takes more than 5 minutes, after passing this time the transaction was canceled and the global transaction was rollbacked at the commit phase.
-The problem is that i can&amp;apos;t modify the timeout value.
-Note: After consulting the method createOrResumeXidTransaction of the EJBRemoteTransactionPropagatingInterceptor class, I found that the timeout value is always 300 seconds (it seems that this value is hardcoded)
-You can refer to my discussion with jaikiran pai: https://community.jboss.org/thread/236493
-Thanks,

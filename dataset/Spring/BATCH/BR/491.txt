@@ -1,2 +1,0 @@
-checked exception handling
-Specifying exception types for stepOperations&amp;apos; exception handler doesn&amp;apos;t work properly for checked exceptions. This is because chunkOperations&amp;apos; exception handler is called first and wraps the checked exception into runtime RepeatException.

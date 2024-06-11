@@ -1,1 +1,0 @@
-Patched state is missing the updated resulting version

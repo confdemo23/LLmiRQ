@@ -1,2 +1,0 @@
-mod_cluster extension uses deprecated transformer API
- The deprecated APIs used are org.jboss.as.controller.ExtensionContext#isRegisterTransformers and org.jboss.as.controller.transform.description.TransformationDescription.Tools#register(...).

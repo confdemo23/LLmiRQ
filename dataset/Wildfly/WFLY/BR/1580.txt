@@ -1,1 +1,0 @@
-PersistentResourceXMLDescription does not persist empty subsystems

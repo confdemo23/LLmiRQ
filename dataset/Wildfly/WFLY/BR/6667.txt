@@ -1,1 +1,0 @@
-Servlet attributes are not availble in undertow-handlers.conf as it runs too early

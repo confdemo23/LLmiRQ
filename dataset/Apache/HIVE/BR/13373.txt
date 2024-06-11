@@ -1,2 +1,0 @@
-Use most specific type for numerical constants
-tinyint &amp; shortint are currently inferred as ints, if they are without postfix.

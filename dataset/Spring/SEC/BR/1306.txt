@@ -1,4 +1,0 @@
-OpenIDAttribute class is not marked as Serializable
-SEC-935 adds the OpenIDAttribute class. Because the OpenIDAuthenticationToken class (which is Serializable) has a List&lt;OpenIDAttribute&gt;, OpenIDAttribute should be Serializable too.
-This interface should be no problem to add to the OpenIDAttribute class, because all its members are primitives or Strings and therefore already Serializable themselves.
-P.S. while you&amp;apos;re at it, OpenIDAttribute#toString() should probably be annotated with @Override (and in OpenIDAuthenticationStatus too).

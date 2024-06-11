@@ -1,2 +1,0 @@
-delete-cookies should trim cookie names
-If multiple cookie names are supplied, with spaces in the string, then spaces won&amp;apos;t be trimmed , resulting in incorrect cookie names.

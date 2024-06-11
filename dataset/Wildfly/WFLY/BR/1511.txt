@@ -1,4 +1,0 @@
-RemoteDomainConnection.close() will block forever if the master HC is not running 
-RemoteDomainConnection.close() overrides FutureManagementChannel.close() to first send a "unregister" message to the master HC before calling the superclass functionality.
-Problem is this call tries to open a connection to the master and will block forever waiting for it to connect if the master isn&amp;apos;t available, as seen at http://fpaste.org/18232/37105700/
-That example was from AutoIgnoredResourcesDomainTestCase which is concurrently shutting down the hosts in the domain, meaning the master can be shutting down in the middle of or prior to slave shutdown.

@@ -1,3 +1,0 @@
-Improve SimpleJpaRepository.delete(ID id) by removing superfluous call to exists().
-SimpleJpaRepository.delete(ID id) calls exists() to detect whether an entity with the given identifier exists. If that&amp;apos;s the case it loads the entity and passes it on.
-The exists call is superfluous as we can simply check the result of findOne() for null and thus avoid the additional SQL statement to be executed.

@@ -1,2 +1,0 @@
-Incorrect service teardown order
-The MSC service order in the consul topology was incorrect, which lead to an NPE when trying to deregister services when the VM terminated.

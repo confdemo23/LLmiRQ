@@ -1,3 +1,0 @@
-RepositoryRestExceptionHandler throws IllegalArgumentException
-The RepositoryRestExceptionHandler throws an IllegalArgumentException if a DataIntegrityViolationException or OptimisticLockingFailureException occurs causing a wrong server response: 500 Internal ServerError.
-Have a look at the handleConflict() Method. The errorResponse() method get&amp;apos;s accidentally called with a null argument for the HttpHeaders.

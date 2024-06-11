@@ -1,3 +1,0 @@
-Remove OSGi bundle related patching tests
-OSGi is no longer supported, there&amp;apos;s no point in keeping these tests.
-This affects unit tests in the &amp;apos;patching&amp;apos; module and the patching module of integration TS.

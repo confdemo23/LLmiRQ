@@ -1,2 +1,0 @@
-Insert overwrite directory doesn&apos;t overwrite existing files
-Can be easily reproduced by running INSERT OVERWRITE DIRECTORY to the same dir twice.

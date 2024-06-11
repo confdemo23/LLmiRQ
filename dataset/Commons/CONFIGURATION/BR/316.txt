@@ -1,3 +1,0 @@
-Constructor XMLConfiguration(HierarchicalConfiguration) invalidates text in singular top element
-When using the XMLConfiguration(HierarchicalConfiguration) constructor for copying an XMLConfiguration e.g. originally read from the XML string &lt;e a="v"&gt;example&lt;/e&gt;, the "example" text can still be retrieved from the copy using getString(""). When saving the copy to an XML file, however, the text is not written; the resulting XML string is just &lt;configuration a="v"/&gt;. I will attach sample code that illustrates this.
-Whether it is intended that the name of the top-level element gets lost as well, I don&amp;apos;t know (but that is not my focus here).

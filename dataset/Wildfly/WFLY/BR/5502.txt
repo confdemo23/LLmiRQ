@@ -1,2 +1,0 @@
-Don&apos;t require marshallable session attributes if the cache does not require it
-The distributed session manager implementation requires its session attributes to be marshallable.  However, if the cache is not clustered or persistent, this enforcement is unnecessary and puts unreasonable constraints on an application.

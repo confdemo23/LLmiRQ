@@ -1,2 +1,0 @@
-SAP Camel Component needs to unregister its Data Providers in OSGi environment
-The SAP Camel Component must register a pair of Data Providers with the JCo3 runtime&amp;apos;s &amp;apos;Environment&amp;apos; singleton object in order to provide connection configurations. Only one pair of Data Provider objects can be registered in a JVM at one time. To enable reinstalling the SAP Camel Component bundle, the component bundle must unregister its data provider objects when being uninstalled s.t. component bundle can reinstall new data provider objects when it is reinstalled. 

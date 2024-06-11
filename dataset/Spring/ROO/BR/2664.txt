@@ -1,2 +1,0 @@
-GwtOperationsImpl not forcing found types to be evicted from the cache prior to retrieval
-As part of running "gwt setup" all types are re-requested to ensure that the gwt-addon has a chance to react to the types in the system. To make sure a notify is performed and a cached type isn&amp;apos;t returned the requested type needs to be explicitly evicted from the cache when retrieving it. This explicit eviction isn&amp;apos;t currently being performed.

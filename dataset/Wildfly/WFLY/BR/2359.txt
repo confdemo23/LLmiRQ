@@ -1,2 +1,0 @@
-Clustering AsynchronousService should stop asynchronously by default
-By default, org.jboss.as.clustering.msc.AsynchronousService stops its service synchronously.  This was done to workaround MSC ordering issues with stopping of dependent services.  This no longer appears to be an issue.

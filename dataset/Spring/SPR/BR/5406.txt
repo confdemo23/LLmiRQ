@@ -1,6 +1,0 @@
-Make Tiles 2 easier to configure in Spring MVC
-Simple thing we can do:
-
-Provide a TilesViewResolver subclass of UrlBasedViewResolver that configures the viewClass to be TilesView as a convenience
-
-First noticed this when explaining configuring you need to configure a URL resolver for Tiles view proved quite complex.  It&amp;apos;s simpler to just say configure a Tiles view resolver.

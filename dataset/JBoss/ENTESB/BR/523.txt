@@ -1,2 +1,0 @@
-Camel Fabric component doesn&apos;t take the parameters into consideration
-camel fabric component doesn&amp;apos;t pass the parameters to the client endpoint which is same with the CAMEL-522.

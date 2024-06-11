@@ -1,2 +1,0 @@
-Add sample for new AMQPItemReader & Writer
-Part of updating some spring-batch-samples.

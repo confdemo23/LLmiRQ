@@ -1,4 +1,0 @@
-Create table bug causes the row format property lost when serde is specified.
-An example:
-create table src_rc_serde_yongqiang(key string, value string) ROW FORMAT  DELIMITED FIELDS TERMINATED BY &amp;apos;0&amp;apos; stored as rcfile; 
-will lost the row format information.

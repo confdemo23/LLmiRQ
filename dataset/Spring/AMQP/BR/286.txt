@@ -1,4 +1,0 @@
-Specify which connection factory to use when creating exchanges and queues
-Add attributes to &lt;rabbit:queue&gt; and &lt;rabbit:exchange&gt; to specify which connection factory to use or admin to use.
-This is required systems which &amp;apos;straddles&amp;apos; two different application environments each of which have their own RabbitMQ brokers. You can&amp;apos;t run both environments on the same broker as there will be name clashing and messages going to the wrong system.
-One work around for this is to use the code configuration instead of XML application context configuration.

@@ -1,1 +1,0 @@
-Upgrade IronJacamar to 1.1.1.[CR1|Final]

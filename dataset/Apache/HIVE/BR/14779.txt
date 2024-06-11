@@ -1,3 +1,0 @@
-make DbTxnManager.HeartbeaterThread a daemon
-setDaemon(true);
-make heartbeaterThreadPoolSize static 

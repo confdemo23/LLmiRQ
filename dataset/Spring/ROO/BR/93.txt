@@ -1,3 +1,0 @@
-Need to fix alignment issues in JSP forms
-There are a number of form alignment issues that need to be fixed:
-For example show.jsp: line alignments between labels and text

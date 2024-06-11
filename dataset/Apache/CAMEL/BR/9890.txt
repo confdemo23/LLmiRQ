@@ -1,2 +1,0 @@
-Migrate Camel-websocket to Jetty9
-I guess it&amp;apos;s time to switch to Jetty 9.

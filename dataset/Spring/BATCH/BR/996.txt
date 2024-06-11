@@ -1,2 +1,0 @@
-use default retryLimit  == 1 (not 0) in *StepFactoryBean
-Per SimpleRetryPolicy&amp;apos;s javadoc the retryLimit includes the initial try as well, therefore it only makes sense to use value &gt;=1.

@@ -1,2 +1,0 @@
-Rename ExecutionAttributes to ExecutionContext
-Rename ExecutionAttributes to ExecutionContext.  Arjen in particular thought that "context" was much more descriptive (he even suggested "state", but we all voted him down on that).

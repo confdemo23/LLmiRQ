@@ -1,1 +1,0 @@
-FormAuthenticationWebFailoverTestCase fails against Undertow 1.3.6.Final

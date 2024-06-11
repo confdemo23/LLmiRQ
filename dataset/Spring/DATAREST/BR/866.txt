@@ -1,2 +1,0 @@
-NullPointerException from RepositoryRestConfiguration if you inject mvcValidator into RepositoryRestConfigurer
-Hopper release throws a null-pointer exception when you inject "mvcValidator" in your RepositoryRestConfigurer.

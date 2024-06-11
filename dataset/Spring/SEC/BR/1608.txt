@@ -1,1 +1,0 @@
-FirewalledRequest.reset() is not called for a resource with no filters

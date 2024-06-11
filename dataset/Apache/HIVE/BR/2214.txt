@@ -1,2 +1,0 @@
-CommandNeedRetryException.java is missing ASF header
-Please add one.

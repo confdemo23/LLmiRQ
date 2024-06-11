@@ -1,2 +1,0 @@
-StatefulRetryStepFactoryBean still uses a local variable that refers to item provider
-Local variable itemProviderRetryPolicy should be itemWriterRetryPolicy. No biggie.

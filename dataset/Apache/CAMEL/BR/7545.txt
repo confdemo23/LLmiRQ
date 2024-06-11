@@ -1,3 +1,0 @@
-Having multiple camelContext in same blueprint bundle may only register the 1st in the OSGi service registry
-But its correct in JMX etc.
-But the osgi service registry is used by the Camel Karaf commands so they can only see the 1st CamelContext

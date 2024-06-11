@@ -1,2 +1,0 @@
-Allow thrift to start wih the server type specified in config
-Currently the thrift server type must be specified on the command line.  If it&amp;apos;s already in config it shouldn&amp;apos;t be needed.

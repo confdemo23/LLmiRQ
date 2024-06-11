@@ -1,3 +1,0 @@
-The "properties" attribute of the <user-service> element doesn&apos;t do anything
-The properties attribute of the user-service element is included in the XML schema, but UserServiceBeanDefinitionParser never looks at it.
-The attached patch implements this; as implemented, the properties attribute takes precedence over nested &lt;user&gt; elements.

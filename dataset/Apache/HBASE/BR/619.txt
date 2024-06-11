@@ -1,2 +1,0 @@
-Fix &apos;logs&apos; link in UI
-Clicking on the &amp;apos;local logs&amp;apos; link in UI gives 404

@@ -1,2 +1,0 @@
-composite operation containing a host op does not get rolled out to all hosts
-If a composite operation contains an operation targeting the domain as well as a single host, it will only get rolled out to the host specified rather than to the complete domain.

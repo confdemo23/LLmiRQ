@@ -1,3 +1,0 @@
-embed-server .cli script - data source enable no longer work
-First time I report a problem, not sure if the specified the correct components....
-Seems like a regression from Version 9; I have a .cli script to configure wildfly using embed-server, and enabling a datasource doesn&amp;apos;t work anymore.

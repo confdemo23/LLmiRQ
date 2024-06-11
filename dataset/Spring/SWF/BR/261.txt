@@ -1,3 +1,0 @@
-InvocationTargetException when second Exception is thrown
-Reported on the forums:
-http://forum.springframework.org/showthread.php?t=35874

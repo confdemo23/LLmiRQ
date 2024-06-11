@@ -1,2 +1,0 @@
-Add a maven command to generate protobuf files
-We can add a maven target / profile to generate the protofiles for us. 

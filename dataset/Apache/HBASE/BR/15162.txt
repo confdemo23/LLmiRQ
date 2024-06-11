@@ -1,3 +1,0 @@
-Add separate metrics for meta/data block hit ratio in cache
-Currently we already have a metrics in name of blockCacheExpressHitPercent to indicate the cache hit ratio. However, since meta block is small and often cached in memory with a high hit ratio, this "mixed" metrics could not show the real data block hit ratio which is more concerned.
-We propose to add two new metrics to show meta and data block cache hit ratio separately, while reserving the old metrics for backward compatibility.

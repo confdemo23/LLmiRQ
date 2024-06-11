@@ -1,1 +1,0 @@
-Make Vectorized Decimal query results match Non-Vectorized query results with respect to trailing zeroes... .0000

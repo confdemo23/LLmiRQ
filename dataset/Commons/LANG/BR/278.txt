@@ -1,4 +1,0 @@
-javadoc for StringUtils.removeEnd is incorrect
-The javadoc for StringUtils.removeEnd(String, String) lists a number of examples, one of which is wrong:
-StringUtils.removeEnd("www.domain.com", ".com.")  = "www,domain"
-The actual result of this is just "www.domain.com"

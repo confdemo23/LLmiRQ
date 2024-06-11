@@ -1,8 +1,0 @@
-Soap headers with whitespace cause java.lang.ClassCastException: com.sun.xml.messaging.saaj.soap.impl.TextImpl - Part II
-This bug is related to: http://jira.springframework.org/browse/SWS-244.  If white space appears in the header then a class cast exception is thrown.   Sun&amp;apos;s SAAJ impl returns these whitespace nodes as TextImpl.  The class cast happens when the TextImpl&amp;apos;s are cast as SOAPHeaderElement.  I&amp;apos;ve verified that this is a problem with Spring WS 1.0.3 as well even though I&amp;apos;m currently using 1.0.2.
-org.springframework.ws.soap.saaj.SaajSoapHeader
-        public Object next() 
-{
-            SOAPHeaderElement saajHeaderElement = (SOAPHeaderElement) iterator.next();   &lt;-- class cast happens here.
-            return new SaajSoapHeaderElement(saajHeaderElement);
-        }

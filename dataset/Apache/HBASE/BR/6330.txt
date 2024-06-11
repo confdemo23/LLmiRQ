@@ -1,4 +1,0 @@
-TestImportExport has been failing against hadoop 0.23/2.0 profile
-See HBASE-5876.  I&amp;apos;m going to commit the v3 patches under this name since there has been two months (my bad) since the first half was committed and found to be incomplte.
-
-4/9/13 Updated - this will take the patch from HBASE-8258 to fix this specific problem.  The umbrella that used to be HBASE-8258 is now handled with HBASE-6891.

@@ -1,2 +1,0 @@
-Ignore HandlerChain configuration with improper leading namespace prefix
-For more information see JBWS-3050

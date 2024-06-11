@@ -1,1 +1,0 @@
-JASPIAuthenticationMechanism does not perform the is auth required check correctly

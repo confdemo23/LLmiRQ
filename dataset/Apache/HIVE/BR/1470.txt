@@ -1,2 +1,0 @@
-percentile_approx() fails with more than 1 reducer
-The larger issue is that a UDAF that has variable return types needs two inner Evaluator classes. This patch fixes a NullPointerException bug that is only encountered when partial aggregations are invoked.

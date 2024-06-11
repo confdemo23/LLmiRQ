@@ -1,8 +1,0 @@
-DefaultTransactionAttribute is inappropriate for TaskletStep
-The DefaultTransactionAttributes use in TaskletStep should not be used.  The problem is how it determines what should be rolledback:
-	public boolean rollbackOn(Throwable ex) 
-{
-		return (ex instanceof RuntimeException || ex instanceof Error);
-	}
-
-This means that any checked exceptions will not cause a rollback.  This was fine in 1.1 given how way it was structured, it wouldn&amp;apos;t be possible to get a checked exception, since it would have been wrapped first.  However, the Tasklet interface declares that it throws exception, so anyone using the TaskletStep for the same reasons they would have done so in 1.1 will get into an infinite loop if they throw a checked exception from their Tasklet.

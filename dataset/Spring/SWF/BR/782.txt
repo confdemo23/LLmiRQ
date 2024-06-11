@@ -1,2 +1,0 @@
-ResourceServlet returns wrong 404 page
-The ResourceServlet returns the server default error page even when custom 404 page defined.

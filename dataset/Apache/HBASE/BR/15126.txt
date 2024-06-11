@@ -1,5 +1,0 @@
-HBaseFsck&apos;s checkRegionBoundaries function sets incorrect &apos;storesFirstKey&apos;
-HBaseFsck&amp;apos;s checkRegionBoundaries function set the &amp;apos;currentRegionBoundariesInformation.storesFirstKey&amp;apos;  was incorrect.I think it should be set like below,
-currentRegionBoundariesInformation.storesFirstKey = keyOnly(storeFirstKey);
-but current the &amp;apos;currentRegionBoundariesInformation.storesFirstKey &amp;apos; is just set to &amp;apos;storeFirstKey&amp;apos;,which will cause to comparator.compare(currentRegionBoundariesInformation.storesFirstKey,
-            currentRegionBoundariesInformation.metaFirstKey)  get a wrong result.  Because it just compared the rowkey&amp;apos;s length.

@@ -1,2 +1,0 @@
-Remove open-jpa bundle from camel-jpa feature
-The camel-jpa component uses open-jpa for testing, but it does not require the bundle in the feature, and could be used with other JPA implementations, such as Hibernate. 

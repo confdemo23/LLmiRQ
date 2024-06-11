@@ -1,2 +1,0 @@
-Need to add token_type to JSON for access token response
-Need to add token_type to JSON for access token response.  Version 20 of the spec (possibly earlier) mandates the token_type key and we don&amp;apos;t send it by default.

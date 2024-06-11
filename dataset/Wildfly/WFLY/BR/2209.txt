@@ -1,2 +1,0 @@
-short versions of command arguments (e.g. -h) are not recognized
-The validation of command arguments doesn&amp;apos;t take into account their short versions leading rejecting the command in case the short versions are used (e.g. -h for --help).

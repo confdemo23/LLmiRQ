@@ -1,2 +1,0 @@
-FetchSize not accessible in HibernateCursorItemReader
-In 2.1.0.RC1, &amp;apos;setFetchSize&amp;apos; is no longer an accessible property on &amp;apos;HibernateCursorItemReader&amp;apos;.  Appears to now be a private variable (defaulting to 0) encapsulated on &amp;apos;HibernateItemReaderHelper&amp;apos;.

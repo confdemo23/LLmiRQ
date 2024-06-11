@@ -1,4 +1,0 @@
-Topology ProxyService&apos;s are never started
-Running the booker demo results in the UI being unable to access the store, or any, service because it can&amp;apos;t find the location of the proxy.
-Debugging showed that the TopologyProxyService is not being activated, resulting in the Undertow Reverse Proxy pointing to a URL location that doesn&amp;apos;t exist so the service on topology is never called.
-Have been able to reproduce with local JGroups and OpenShift

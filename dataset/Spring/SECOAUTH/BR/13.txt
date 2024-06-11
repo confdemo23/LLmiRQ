@@ -1,3 +1,0 @@
-Fix OAuth timing vulnerability
-See:
-http://groups.google.com/group/oauth/browse_thread/thread/f3e9ec6c3aa0fe1a/12c4140f2cf4fc13?lnk=gst&amp;q=vulnerability#12c4140f2cf4fc13

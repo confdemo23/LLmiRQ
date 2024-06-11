@@ -1,5 +1,0 @@
-HTTP upgrade does not accept multiple acceptors
-The http-acceptors are multiplexed over the HTTP port.
-If there are multiple http-acceptors registered, a http-connector that uses the HTTP upgrade mechanism will use the first whose handshake is successful and can not chose a given http-acceptor.
-With native messaging ports, the solution was to use different ports for different acceptors but with HTTP upgrade, everything goes through the HTTP port.
-HornetQ connectors must pass "http-upgrade-endpoint" when the HTTP upgrade is initiated so that we ensure the handshake is successful only for the matching acceptor corresponding to the "http-upgrade-endpoint" value.

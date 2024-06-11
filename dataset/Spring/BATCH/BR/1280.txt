@@ -1,2 +1,0 @@
-JobParserJobFactoryBean should be a singleton
-JobParserJobFactoryBean should be a singleton.  This will cause issues with the JobRegistry - e.g. multiple registrations of the same job in integration tests.

@@ -1,2 +1,0 @@
-Spelling Mistake in AuthenticationPrincipalArgumentResolver
-In AuthenticationPrincipalArgumentResolver, line 109, assignable is misspelled as "assiable" in the Exception reason.

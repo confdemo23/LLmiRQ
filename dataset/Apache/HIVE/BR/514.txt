@@ -1,4 +1,0 @@
-partition key names should be case insensitive in alter table add partition statement.
-create table testpc(a int) partitioned by (ds string, hr string);
-alter table testpc add partition (ds="1", hr="1"); --&gt; works
-alter table testpc add partition (ds="1", Hr="1"); --&gt; doesn&amp;apos;t work

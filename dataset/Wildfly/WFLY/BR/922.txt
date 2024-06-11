@@ -1,3 +1,0 @@
-<vault> does not have module option
-The &lt;vault&gt; element in standalone/domain.xml takes a &amp;apos;code&amp;apos; attribute specifying the class to use as the implementation. It does not let you specify a &amp;apos;module&amp;apos; option like most similar elements have, and instead always loads the class from the org.picketbox module.
-The &lt;vault&gt; element should take a module option too.

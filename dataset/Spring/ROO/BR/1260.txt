@@ -1,1 +1,0 @@
-addon-gwt cannot handle enums or booleans

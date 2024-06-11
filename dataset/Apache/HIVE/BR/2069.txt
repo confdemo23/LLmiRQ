@@ -1,2 +1,0 @@
-NullPointerException on getSchemas
-Calling getSchemas will cause a nullpointerexception

@@ -1,2 +1,0 @@
-When updating an element or attribute that contains the list delimiter the character is escaped even if delimiting is disabled.
-When updating an attribute or element using an XMLConfiguration, if the new value contains a delimiter the delimiter will be escaped with a &amp;apos;\&amp;apos; even if delimiters have been disabled.

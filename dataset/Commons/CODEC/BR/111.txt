@@ -1,2 +1,0 @@
-org.apache.commons.codec.net.URLCodec.ESCAPE_CHAR isn&apos;t final but should be
-org.apache.commons.codec.net.URLCodec.ESCAPE_CHAR isn&amp;apos;t final but should be

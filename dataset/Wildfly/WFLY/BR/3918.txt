@@ -1,4 +1,0 @@
-Cannot disable ConsoleRedirectService
-Wildfly Undertow (via org.wildfly.extension.undertow.HostAdd and org.wildfly.extension.undertow.ConsoleRedirectService) redirects all /console/... URL requests (on port 8080/8443) to /console on port 9990.  
-This prevents developing or porting applications that themselves need to serve /console/... URLs.
-There needs to be a way to disable (in the undertow subsystem configuration) the adding of ConsoleRedirectService by HostAdd.

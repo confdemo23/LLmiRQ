@@ -1,2 +1,0 @@
-TestRowFilterAfterWrite erroneously sets master address to 0.0.0.0:60100 rather than relying on conf
-TestRowFilterAfterWrite sets HConstants.MASTER_ADDRESS to 0.0.0.0:60100 rather than relying on the setting being in the configuration. Until the latest revision of hadoop-trunk this mysteriously worked. Removing this setting makes it work again.

@@ -1,4 +1,0 @@
-RedisCacheManagers getCache method does not match the logical of CompositeCacheManager
-RedisCacheManager&amp;apos;s getCache(name) always return RedisCache, that doesn&amp;apos;t match the CompositeCacheManager&amp;apos;s getCache(name) logic, so hardly combined with each other.
-Maybe RedisCacheManager should provide allowed cache names, and getCache(name) should return null if absent.
-Thanks.

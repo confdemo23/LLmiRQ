@@ -1,3 +1,0 @@
-BooleanUtils.xor(boolean...) produces wrong results
-BooleanUtils.xor(true, true, false, true) returns false, although 
-true ^ true ^ false ^ true is true. This is because the implementation only checks the count of true in the provided array.

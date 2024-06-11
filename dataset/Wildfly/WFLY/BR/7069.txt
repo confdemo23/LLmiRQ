@@ -1,2 +1,0 @@
-EJBs accessible too early (spec violation) - deployment marked started before ready
-Follow up of WFLY-6402, the deployment is being marked started in the deployment repository before it is ready, resulting in requests being accepted.

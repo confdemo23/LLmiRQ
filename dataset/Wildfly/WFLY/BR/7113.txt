@@ -1,2 +1,0 @@
-Naming subsystem does not expose a proper capability contract
-Subsystems that currently use JNDI bindings require that the naming subsystem be present.  The naming subsystem should expose capabilities for which other subsystems can test for the presence, so they can function in the absence of the naming subsystem.

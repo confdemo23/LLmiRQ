@@ -1,4 +1,0 @@
-JDBC driver module-slot is not persisted in domain mode
-The module-slot of jdbc-driver is NOT persisted in domain mode, but it is persisted in standalone mode.
-After debugging, I found that the performRuntime() method of JdbcDriverAdd.java is not called in domain mode, but is called in standalone mode.
-For more information about the issue, please refer to the thread: https://developer.jboss.org/thread/253654

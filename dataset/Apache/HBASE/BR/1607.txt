@@ -1,3 +1,0 @@
-Redo MemStore heap sizing to be accurate, testable, and more like new LruBlockCache
-MemStore sizing is inaccurate and does not include all overhead.
-I&amp;apos;m going to make it look like the LruBlockCache does.  Will provide a MemStore.heapSize() method that includes ALL overhead of the MemStore itself.

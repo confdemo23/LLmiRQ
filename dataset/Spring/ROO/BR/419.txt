@@ -1,2 +1,0 @@
-Controller ITDs do not adjust when a referenced type changes plural
-Currently when an entity&amp;apos;s plural name is changed the relevant controller ITD is updated correctly, however, the controller ITD also needs to be updated when a type referenced by that entity changes.

@@ -1,2 +1,0 @@
-Refactor HCatalog code to org.apache.hive.hcatalog
-Currently HCatalog code is in packages org.apache.hcatalog.  It needs to now move to org.apache.hive.hcatalog.  Shell classes/interface need to be created for public facing classes so that user&amp;apos;s code does not break.

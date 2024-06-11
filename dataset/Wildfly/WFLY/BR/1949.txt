@@ -1,2 +1,0 @@
-SimpleScheduleSecondTestCase fails
-org.jboss.as.test.integration.ejb.timerservice.schedule.SimpleScheduleSecondTestCase fails.

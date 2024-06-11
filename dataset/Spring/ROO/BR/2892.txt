@@ -1,1 +1,0 @@
-Repository Mongo ITD not refreshed when there is a change to the domain type&apos;s identifier type

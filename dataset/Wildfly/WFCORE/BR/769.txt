@@ -1,2 +1,0 @@
-Boot errors should hide the failure description if the failing operation is not accessible
-The boot error collector reports whatever failure-description it was passed. Those can include pretty random info, and there&amp;apos;s no good way to know what,so it could leak some sensitive information.

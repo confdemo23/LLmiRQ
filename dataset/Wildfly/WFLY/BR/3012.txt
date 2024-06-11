@@ -1,2 +1,0 @@
-better handle ptaching conflicts for missing files
-In case a updated misc file missing when applying a patch reports a conflict when rolling back. This should not require any user interaction.

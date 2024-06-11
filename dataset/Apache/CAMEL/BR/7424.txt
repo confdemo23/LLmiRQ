@@ -1,2 +1,0 @@
-StaxSource doesn&apos;t produce correct SAX events with default namespace
-See full description here: CXF-5733

@@ -1,2 +1,0 @@
-UDF UUID() should be non-deterministic
-The UUID() function should be non-deterministic.

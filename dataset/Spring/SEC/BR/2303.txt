@@ -1,2 +1,0 @@
-WebSecurity&apos;s default expression handler does not have the bean resolver set
-Similar to SEC-2301

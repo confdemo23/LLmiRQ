@@ -1,2 +1,0 @@
-Update AvroSerde to determine schema of new tables
-Currently when writing tables to Avro one must manually provide an Avro schema that matches what is being delivered by Hive. It&amp;apos;d be better to have the serde infer this schema by converting the table&amp;apos;s TypeInfo into an appropriate AvroSchema.

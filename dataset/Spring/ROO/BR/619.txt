@@ -1,2 +1,0 @@
-@RooJavaBean does not allow for final fields when settersByDefault is set to false
-@RooJavaBean has a "settersByDefault" attribute that you can set to false to only generate getters for all your properties.  As a user, I was expecting to also be able to mark such properties final.  However, once I did that Roo no longer managed those fields.

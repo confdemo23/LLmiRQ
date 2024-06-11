@@ -1,3 +1,0 @@
-Cache UGI groups
-Right now every call gets a new User object.
-We should keep the same user for the life of a connection. We should also cache the group names. However we can&amp;apos;t cache the groups for forever as that would mean groups don&amp;apos;t get refreshed every 5 mins.

@@ -1,3 +1,0 @@
-DiffBuilder.append(String, Object left, Object right) does not do a left.equals(right) check
-Only testing == without testing equals() seems wrong.
-Should an equals() test be added after determining that the parameters are not arrays?

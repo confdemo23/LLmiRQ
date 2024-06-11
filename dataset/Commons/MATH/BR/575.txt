@@ -1,2 +1,0 @@
-Exceptions in genetics package or not consistent with the rest of [math]
-InvalidRepresentationException is checked and non-localized.  This exception should be placed in the [math] hierarchy.  The AbstractListChromosome constructor also throws a non-localised IAE, which should be replaced by an appropriate [math] exception.

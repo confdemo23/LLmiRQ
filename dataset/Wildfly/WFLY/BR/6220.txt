@@ -1,4 +1,0 @@
-Duplicate WFLYUT0003 message in boot log
-Boot log noise:
-18:06:49,739 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool  55) WFLYUT0003: Undertow 1.3.16.Final starting
-18:06:49,739 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0003: Undertow 1.3.16.Final starting

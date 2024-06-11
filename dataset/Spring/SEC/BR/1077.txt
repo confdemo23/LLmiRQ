@@ -1,2 +1,0 @@
-AuthenticationProcessingFilter doesn&apos;t redirect to target url in case of session-fixation "newSession".
-When session-fixation-protection="newSession" is used then AbstractProcessingFilter processing filter doesn&amp;apos;t redirect to target url. It is because of saved request clearing in session (2.0.4, trunk).

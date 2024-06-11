@@ -1,3 +1,0 @@
-AbstractEndpointExceptionResolver.resolveException() does not let subclasses have full access to the MethodEndpoint that raised an exception
-In resolveException(), the MethodEndpoint gets replaced with it&amp;apos;s bean name. As a consequence, subclasses can no longer inspect the MethodEndpoint.
-Discussion in this thread: http://forum.springframework.org/showthread.php?p=200392.

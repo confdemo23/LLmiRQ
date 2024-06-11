@@ -1,9 +1,0 @@
-Bad markup in Javadoc for UsernamePasswordAuthenticationFilter
-In the class description of clasa
-org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter
-at
-http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/org/springframework/security/web/authentication/UsernamePasswordAuthenticationFilter.html
-The first &lt;tt&gt; tag is not well-balanced and the rest of the text shows up in monospace font.
-"&lt;tt&gt;AuthenticationProcessingFilter&lt;tt&gt;"
-should be
-"&lt;tt&gt;AuthenticationProcessingFilter&lt;/tt&gt;"

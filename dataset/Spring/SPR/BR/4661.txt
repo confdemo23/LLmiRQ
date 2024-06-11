@@ -1,3 +1,0 @@
-Improve context-property-placeholder configurablity
-I was replacing our current PropertiesPlaceHolderConfigurer with a &lt;context:property-placeholder but couldn&amp;apos;t do that (whilst recommended by STS). 
-I need the &amp;apos;ignoreResourceNotFound&amp;apos; property to be settable from the tag. Maybe some more options also depending on the tag (property-placholder or property-override).

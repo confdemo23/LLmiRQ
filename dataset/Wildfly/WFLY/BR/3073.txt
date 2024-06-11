@@ -1,7 +1,0 @@
-MBeanServer.createMBean methods that take a classloader don&apos;t work
-The MBeanServer.createMBean methods that take an "ObjectName loaderName" argument are completely broken in EAP 6.
-These methods call findDelegate to make sure there is already an existing MBean registered with the given name passed in for the new MBean, or else it throws an exception.
-This is obviously wrong, as there&amp;apos;d be no point in calling createMBean if it already existed.
-javax.management.InstanceNotFoundException: test:service=Test
-at org.jboss.as.jmx.PluggableMBeanServerImpl.findDelegate(PluggableMBeanServerImpl.java:1083)
-at org.jboss.as.jmx.PluggableMBeanServerImpl.createMBean(PluggableMBeanServerImpl.java:253)

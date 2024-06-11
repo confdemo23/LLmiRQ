@@ -1,6 +1,0 @@
-Server side EJB Handler not compression response
-When compression is enabled for request/response, the jboss-ejb-client is sending a compressed request, but the application server is responding with an uncompressed response.
-On the server enabling TRACE on org.jboss.as.ejb3, we can see the server receives a compressed request
-TRACE [org.jboss.as.ejb3] (default task-5) Got message with header 0x1b on channel Channel ID 56b01772 (inbound) of Remoting connection TRACE [org.jboss.as.ejb3.invocation] (default task-5) Received a compressed message stream
-Client side, Enabling TRACE on the client side for org.jboss.ejb.client we see it is 0x5 where it should be 0x1b
-TRACE org.jboss.ejb.client.remoting.ChannelAssociation - Received message with header 0x5

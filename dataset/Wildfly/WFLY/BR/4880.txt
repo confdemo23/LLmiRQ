@@ -1,4 +1,0 @@
-Permission names are not persisted in the domain model
-Permission names used in the security-manager subsystem model are not persisted. It can simply lead to non-bootable server configuration.
-Expected behavior:
-The names used for permission model nodes are persisted in the model (e.g. in an alias attribute).

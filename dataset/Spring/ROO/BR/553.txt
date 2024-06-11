@@ -1,2 +1,0 @@
-create.jspx and update.jspx voilates DRY
-I&amp;apos;ve compared the generated files create.jspx and update.jspx for the input mask of an entity. They are nearly identical and this voilates for my understanding the principle of DRY. In particular the tags for the input fields are all the same. So I suggest to use a common file form.jspx and include this in both files like this: &lt;jsp:include page="form.jspx" /&gt;

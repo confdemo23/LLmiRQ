@@ -1,2 +1,0 @@
-doing a read-only operation with the CLI sets a server in "restart-required" mode
-In domain mode, doing a read-only operation with the CLI on a remote HC, sets the remote server in "restart-required" mode

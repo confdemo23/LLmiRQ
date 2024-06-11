@@ -1,2 +1,0 @@
-Silence "ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated."
-Integrate MANUAL eviction strategy introduced in ISPN-6911.

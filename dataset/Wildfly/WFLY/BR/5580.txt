@@ -1,3 +1,0 @@
-[Migration operation] [Web to Undertow] attribute proxy-binding on connector is neither migrated and neither is migration warning shown.
-when migrating connector with defined proxy-binding, the proxy-binding is not migrated and neither is warning printed.
-Marking as critical as information that one particular attribute wasn&amp;apos;t migrated without notifying user (e.g. via migration-warning) could lead to unpredicted configuration from user&amp;apos;s PoV.

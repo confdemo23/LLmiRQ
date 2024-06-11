@@ -1,2 +1,0 @@
-Outdated comments for GenericUDTF.close()
-In a GenericUDTF, rows can be forward()&amp;apos;ed on close(), contrary to what the comment says.

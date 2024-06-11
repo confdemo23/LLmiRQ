@@ -1,2 +1,0 @@
-The RemotingLoginModule should first check if there is already a RealmUser
-The reason is because the realm may have actually already substituted in a different name for the user.

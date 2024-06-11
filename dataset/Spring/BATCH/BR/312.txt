@@ -1,2 +1,0 @@
-Fix JMX demo now that JobIdentifier has been replaced with JobParameters
-Fix JMX demo now that JobIdentifier has been replaced with JobParameters

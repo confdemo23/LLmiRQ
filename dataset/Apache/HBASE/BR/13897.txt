@@ -1,2 +1,0 @@
-OOM may occur when Import imports a row with too many KeyValues
-When importing a row with too many KeyValues (may have too many columns or versions)KeyValueReducer will incur OOM.

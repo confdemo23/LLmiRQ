@@ -1,2 +1,0 @@
-SDR Schema follows json-schema?
-The schema (/schema) output of SDR follows the specification (http://json-schema.org/documentation.html )? If so what version?

@@ -1,2 +1,0 @@
-Make thrift and DB changes for HIVE-11444
-This JIRA tracks the Thrift and DB schema changes for HIVE-11444.  It depends on HIVE-12807.

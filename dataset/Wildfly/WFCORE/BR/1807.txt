@@ -1,8 +1,0 @@
-CLI config (jboss-cli.xml) is trimming vault-options when it should pass them on as is
-Vault option is calling trim which is causing issues with custom vault implementation.  
-The implementation of the vault config parser in the normal EAP config (i.e. in standalone.xml) does not do this.
-To provide more details why this is an issue, the custom impl is prepending a string to an executable command.  By trimming the command is being mangled:
-        &lt;vault code="com.example.CommandVault" module="com.example"&gt;
-            &lt;vault-option name="prependToValue" value="perform_encryption.sh -value "/&gt;
-            &lt;vault-option name="allowEmptyPassword" value="false"/&gt;
-        &lt;/vault&gt;

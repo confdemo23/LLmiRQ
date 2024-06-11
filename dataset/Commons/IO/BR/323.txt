@@ -1,2 +1,0 @@
-What should happen in FileUtils.sizeOf[Directory] when an overflow takes place?
-FileUtils.sizeOf[Directory] adds longs. What should happen when an overflow happens?

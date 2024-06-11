@@ -1,4 +1,0 @@
-Exception from lifecycle callback interceptor method intercepting a session bean gets suppressed without log message
-From EJB spec., "9.3.3 Exceptions from AroundConstruct, PostConstruct and PreDestroy Lifecycle Callbacks", "Table 11" it follows that the container should log the exception or error thrown by a lifecycle callback interceptor method of a session bean or a message-driven bean.
-The thrown throwable gets suppressed. However, I cannot find any sign of it in the server log (using default settings - debug level).
-I&amp;apos;m not a spec. expert, but I think if the exception is not logged, it should at least not get suppressed. I made some tests that might be of help (available at https://github.com/bafco/wildfly/commits/WFLY-2281) - according to the spec., they probably don&amp;apos;t have to pass.

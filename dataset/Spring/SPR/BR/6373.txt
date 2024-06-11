@@ -1,9 +1,0 @@
-Support for validation groups in @Valid used by spring MVC
-It would be useful to be able to use validation groups in spring MVC as specified by JSR-303. With the improvement it should be possible to write something like: 
-@RequestMapping("/foo", method=RequestMethod.POST)
-public void processFoo(@Valid(groups=
-{Default.class, MyValidationGroup.class}
-) Foo foo) 
-{ ... }
-
-

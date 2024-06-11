@@ -1,2 +1,0 @@
-Update Thymeleaf to use Spring 4 variants in samples
-The update to Spring 4 caused failures in Thymeleaf&amp;apos;s automatic inclusion of Spring Security&amp;apos;s CSRF. We should update the Thymeleaf dependencies to match the Spring version. 

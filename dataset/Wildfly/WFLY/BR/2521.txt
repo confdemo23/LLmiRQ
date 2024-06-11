@@ -1,5 +1,0 @@
-EJB backing cache&apos;s can generate large retention from cancelled tasks in its scheduled executor&apos;s DelayedWorkQueue
-EJB backing cache&amp;apos;s frequently cancel remove and passivation tasks with each access and replace them with new ones.  Per http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ScheduledThreadPoolExecutor.html cancelled tasks are not removed from queue until their scheduled delay passes.
-So due to the java ScheduledThreadPoolExecutor&amp;apos;s lazy cancelled task removal, this scheduled task cancellation and recreation model can potentially churn up quite a number of queued cancelled tasks sitting in the executor&amp;apos;s DelayedWorkQueue.  With longer timeouts and frequent ejb access, this can generate substantial heap overhead.
-It should be pretty easy to help limit any such build up by calling purge() [1] on the scheduled executor.  Likely don&amp;apos;t want to purge with each cancel, so perhaps a purge() could be called on a configurable time delay or after a configurable amount of cancels?
-[1] http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/ThreadPoolExecutor.html#purge%28%29

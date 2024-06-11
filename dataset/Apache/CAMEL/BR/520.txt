@@ -1,2 +1,0 @@
-Enable stream caching on DeadLetterChannel by default
-The dead letter channel will retry to send the same message multiple times, so the message content should be stream-cached before trying to process it the first time.

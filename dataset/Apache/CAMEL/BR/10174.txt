@@ -1,3 +1,0 @@
-weaveByToString throws UnsupportedOperationException on CBR
-weaveByToString throws UnsupportedOperationException on CBR.
-See the attached test case.

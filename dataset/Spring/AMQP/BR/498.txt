@@ -1,1 +1,0 @@
-Dynamic Consumer Adjustment Does Not Work when Channel is Transacted

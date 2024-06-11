@@ -1,3 +1,0 @@
-API to inspect cell deletions
-If a cell gets deleted, I&amp;apos;d like to have some API that gives me the deletion timestamp, as well as any versions that predate the deletion.  
-One possibility might be to add a boolean flag to HTable.get

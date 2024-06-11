@@ -1,4 +1,0 @@
-Retire non distributed log splitting related code
-I think we only use distributed log splitting now and the legacy code before distributed log splitting should be retired. Any objections?
-Thanks,
--Jeffrey

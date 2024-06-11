@@ -1,2 +1,0 @@
-CLI local mode hit NPE when exiting by ^D
-CLI gets an NPE when running in local mode and hit an ^D to exit it. 

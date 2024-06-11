@@ -1,2 +1,0 @@
-StatefulRetryStepFactoryBean causes item count to be lost in database
-StatefulRetryStepFactoryBean causes item count to be lost in database

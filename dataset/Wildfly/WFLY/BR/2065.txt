@@ -1,3 +1,0 @@
-Update jboss-transaction-spi
-The JPA integration test suite tests that the afterCompletion synchonization callback for timed out transactions is called from the TM transaction reaper thread by hard coding the reaper thread name. The latest SPI jar includes an interface method that does the same job. I&amp;apos;d like to update the test suite to use the new SPI method.
-I have marked the jira as a bug since testing against the reaper thread name is brittle.

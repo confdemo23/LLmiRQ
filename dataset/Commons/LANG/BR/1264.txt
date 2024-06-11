@@ -1,3 +1,0 @@
-JavaVersion does not correctly handle Java 9
-See http://markmail.org/message/bgrhxr6ef2axubcf
-JavaVersion assumes that the version String for Java 9 will be "1.9".

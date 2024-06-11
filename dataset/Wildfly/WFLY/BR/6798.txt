@@ -1,2 +1,0 @@
-Distributed single sign-on manager created twice per host
-While fixing an unrelated bug, I discovered that the distributable SSOManager is actually created twice per host - one is created for use with the single sign-on authentication mechanism, and a separate instance is created to handle session identifier changes.  I&amp;apos;m not entirely certain of the consequence of this (as the managers will share the same underlying infinispan cache), but it is definitely wrong and unintentional.

@@ -1,4 +1,0 @@
-Classloader leak in JBossCachedAuthenticationManager
-When using a security domain with cache-type="default", then the ModuleClassLoader instances related to deployments leak through JBossCachedAuthenticationManager.
-The problematic piece of code is the domainCache member variable which in the DomainInfo value holds a LoginContext instance. This LoginContext has member contextClassLoader which causes the leak. (It points to the ModuleClassLoader of the deployment).
-One option to solve this issue could be to remove the cache entries which are related to the undeployed application.

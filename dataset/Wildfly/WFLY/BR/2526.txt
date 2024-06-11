@@ -1,5 +1,0 @@
-mod_cluster doesn&apos;t pick up port offset
-So clearly the problem is that the listener is correctly listening on the shifted port:
-[Server:server-two] 20:11:35,674 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-13) JBAS017519: Undertow AJP listener ajp listening on /10.19.222.52:8159
-but the offet is not picked up by the LB:
-[Wed Oct 09 16:03:40 2013] [debug] proxy_util.c(2193): proxy: connected ajp://10.19.222.52:8009/ to 10.19.222.52:8009

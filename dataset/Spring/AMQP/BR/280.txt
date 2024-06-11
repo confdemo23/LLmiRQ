@@ -1,2 +1,0 @@
-Fix Race Condition in Test
-Container is stopped before testing mocki to ensure close() wasn&amp;apos;t called on the channel.

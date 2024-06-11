@@ -1,6 +1,0 @@
-do not revertReloadRequired unless reload was required
-HornetQReloadRequiredHandlers will call context.reloadRequired() if there performRuntime method is called and a HornetQ server service is installed.
-In turn, it calls context.revertReloadRequired() in their rollbackRuntime if a HornetQ server service is installed.
-However it is possible that at boot time, there is not HornetQ server installed when the performRuntime is installed (so context.reloadRequired is not called).
-Then if an operation fails at boot time and the HornetQReloadRequiredHandlers op is rolled back, there will then be an installed HornetQ server and  context.revertReloadRequired() will be called.
-This generated a NPE before  WFCORE-591 but it is also a programming error to call context.revertReloadRequired() in a OSH if context.reloadRequired() has not been called beforehands

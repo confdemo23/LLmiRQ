@@ -1,2 +1,0 @@
-Close BufferedMutator and connection in MultiTableOutputFormat
-Close BufferedMutator and connection in MultiTableRecordWriter of MultiTableOutputFormat.

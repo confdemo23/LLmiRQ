@@ -1,2 +1,0 @@
-Add switch to control BloomFilter in Hybrid grace hash join and make the FPP adjustable
-When row count exceeds certain limit, it doesn&amp;apos;t make sense to generate a bloom filter, since its size will be a few hundred MB or even a few GB.

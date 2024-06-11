@@ -1,2 +1,0 @@
-Add --scope to maven dependency command
-Add --scope to the options for the dependency add command for installing pom.xml dependencies, so you can install things like the Selenium Java Driver into the test scope only.  Should be optional, could have scopes of test, runtime, provided, compile (the default if none picked).

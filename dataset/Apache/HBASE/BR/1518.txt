@@ -1,2 +1,0 @@
-Delete Trackers using compareRow, should just use raw binary comparator
-Doesn&amp;apos;t matter when using a normal table, but this is using a special comparator on columns for the catalog tables.  Replace comparator.compareRows with Bytes.compareTo

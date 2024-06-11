@@ -1,5 +1,0 @@
-AuditProvider mentions "[Success]" even if username/password is invalid
-Description of problem:
-AuditProvider in security-domain mentions "[Success]" as follow:-
-11:37:26,835 TRACE [org.jboss.security.audit] (HttpManagementService-threads - 3) [Success]Source=org.jboss.as.security.service.SimpleSecurityManager;Action=authentication;principal=admin;
-even if a username/password is wrong.

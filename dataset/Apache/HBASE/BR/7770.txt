@@ -1,5 +1,0 @@
-minor integration test framework fixes
-
-made FileSystem on HBaseTestingUtil.createMulti() not expect mini cluster
-added check if server is not running before deciding to restore a server
-

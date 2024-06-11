@@ -1,2 +1,0 @@
-Order of foreign keys in .roo-dbre xml file determines @ManyToOne and @OneToOne field generation
-The order of the foreign keys in the .roo-dbre xml file should not affect the generation of @ManyToOne and @OneToOne fields. This is due to finding foreign keys based on the table&amp;apos;s column names and stopping on the first match of a column instead of simply iterating through the foreign keys themselves and obtaining the local column from the foreign key&amp;apos;s reference elements.

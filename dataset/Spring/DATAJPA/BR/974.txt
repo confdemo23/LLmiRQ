@@ -1,9 +1,0 @@
-Projections referring to collection attributes don&apos;t create a proper selection (missing joins)
-I have model entity as below
-Document &lt;-1-----M--&gt; Document
-and repository method is "public List&lt;DocumentWithoutParent&gt; findByParentIsNull()"
-where &amp;apos;DocumentWithoutParent&amp;apos; is projection
-sql that hibernate generate is incorrect. but when I change List&lt;DocumentWithoutParent&gt; to List&lt;Document&gt; it is OK.
-So I think problem come from spring data jpa.
-Below is  a test project on this problem.
-https://github.com/pramoth/hibernate-generate-wrong-sql-with-projection

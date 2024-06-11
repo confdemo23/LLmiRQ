@@ -1,2 +1,0 @@
-Enable https port override for Undertow
-At the moment the http to https redirect automatically discovers the port to redirect to - for situations where automatic discovery is not reliable e.g. port forwarding a config options should be provided to specify the redirect port to use.

@@ -1,2 +1,0 @@
-MultiResourceItemReader doesn&apos;t restart correctly after multi-resource rollback
-MultiResourceItemReader needs to track the last marked resource and delegates position within that resource to restart correctly after multi-resource rollback. After rollback it also needs to handle possible shortening of the commit interval.

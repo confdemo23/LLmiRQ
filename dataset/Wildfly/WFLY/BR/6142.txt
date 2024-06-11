@@ -1,2 +1,0 @@
-[Migration] StuckThreadDetectionValve is not automatically migrated
-org.apache.catalina.valves.StuckThreadDetectionValve is not automatically migrated even though there exists equivalent handler in EAP7 (io.undertow.server.handlers.StuckThreadDetectionHandler).

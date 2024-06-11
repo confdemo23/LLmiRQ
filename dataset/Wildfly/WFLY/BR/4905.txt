@@ -1,4 +1,0 @@
-CacheRemoveHandler can&apos;t run in same op as remove of parent cache-container
-CacheRemoveHandler tries to read its parent resource in Stage.RUNTIME, which means it can&amp;apos;t run in the same op (say a composite) with a remove of the parent, as the parent resource will be gone by RUNTIME.
-This will also interfere with the WFCORE-808 improvement.
-Easy fix, as the read of the parent resource looks to be cruft; the data is never used.

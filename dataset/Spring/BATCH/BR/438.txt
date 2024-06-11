@@ -1,2 +1,0 @@
-ExitStatus constants cleanup
-ExitStatus constants need to be reviewed and cleaned up - some of them are not used anymore (outside tests)

@@ -1,3 +1,0 @@
-[Hive] rand() should be ignored by input pruning
-select * from T where rand() &lt; 0.5
-may return 0 rows because all partitions may simply be eliminated by partition pruning if rand() &lt; 0.5 happens to be false

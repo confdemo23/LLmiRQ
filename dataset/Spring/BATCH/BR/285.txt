@@ -1,8 +1,0 @@
-Problem with DelimitedLineTokenizer and whitespace after quote
-The DelimitedLineTokenizer doesn&amp;apos;t seem to gracefully handle lines that end with a quoted value that also has extra whitespaces after the closing quote. ie:
-(whitespace replaced by _)
-a,b,"c"_
-returns c" as the string value at index 2.
-a,b,"c"__
-returns "c" as the string value at index 2.
-I&amp;apos;ll attach a patch that adds both test cases to the DelimitedLineTokenizerTests class.

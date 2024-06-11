@@ -1,9 +1,0 @@
-ListOrderedSet#remove(int) should return E instead of Object
-Since List#remove(int) returns E the implementation in ListOrderedSet should also return E.
-Minimal example that fails to compile:
-
-
-ListOrderedSet&lt;String&gt; los = new ListOrderedSet&lt;String&gt;();
-los.add("foo");
-String s = los.remove(0);
-

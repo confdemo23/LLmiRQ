@@ -1,2 +1,0 @@
-convenience functions in Scan and the thrift API along with a few other bug fixes
-a number of handy things i&amp;apos;ve added to my own repo recently

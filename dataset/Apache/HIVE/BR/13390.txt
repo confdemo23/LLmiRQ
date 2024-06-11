@@ -1,1 +1,0 @@
-HiveServer2: Add more test to ZK service discovery using MiniHS2

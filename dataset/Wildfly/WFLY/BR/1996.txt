@@ -1,1 +1,0 @@
-Application client will not start if run against a standalone client jar

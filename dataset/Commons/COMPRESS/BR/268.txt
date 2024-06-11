@@ -1,7 +1,0 @@
-Buffer not read first time for entries with STORED compression method
-Trying to extract a ZIP archive that contains entries with STORED compression method, the ZipArchiveInputStream.readStored(byte[], int, int) method is called. At this point, because the buf array has not had a chance to be populated with values from the underlying input stream and because there&amp;apos;s no condition to detect this, the resulting content is prefixed with the buffer&amp;apos;s length (512) of 0 bytes.
-I&amp;apos;ve found that chancing:
-if (buf.position() &gt;= buf.limit()) {
-with
-if (buf.position() &gt;= buf.limit() || current.bytesReadFromStream == 0) {
-solves the issue.

@@ -1,1 +1,0 @@
-JDBCStoreResourceDefinition.DeprecatedAttribute.DATASOURCE is not transformed

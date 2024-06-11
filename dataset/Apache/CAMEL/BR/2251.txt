@@ -1,2 +1,0 @@
-CXFBean should not call the BusFactory.getDefaultBus() 
-The defaultBus could be polluted in the container like ServceMix.

@@ -1,2 +1,0 @@
-Unable to use @EnableMongoAuditing annotation in Java config
-When declaring an @EnableMongoAuditing annotation on a configuration, application startup fails due to an exception: NoSuchBeanDefinitionException: No bean named &amp;apos;mappingContext&amp;apos; is defined.   This error only occurs if auditing is enabled.

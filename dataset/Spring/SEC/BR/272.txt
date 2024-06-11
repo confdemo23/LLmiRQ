@@ -1,2 +1,0 @@
-Provide user group support
-As discussed at The Spring Experience in December 2005, the community would like a way of grouping users together and assigning those groups roles. We&amp;apos;ll add this feature - which will involve an extra table.

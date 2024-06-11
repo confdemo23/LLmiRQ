@@ -1,2 +1,0 @@
-Stop logic a bit off in ServiceSupport.java
-With the current logic, during stop the service is both started and stopped.

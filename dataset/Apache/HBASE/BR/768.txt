@@ -1,2 +1,0 @@
-[Migration] This message &apos;java.io.IOException: Install 0.1.x of hbase and run its migration first&apos; is useless
-You&amp;apos;ll see above message after you&amp;apos;ve committed to a new version of hadoop.  You won&amp;apos;t be able to go back.

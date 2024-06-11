@@ -1,4 +1,0 @@
-LdapTemplate logs message at INFO level instead of DEBUG when authentication exception is captured
-When there is an authentication exception in the method below, a full stack trace is logged at info level; this is polluting the logs whenever a user cannot authenticate. Since the exception is added to the callback object it seems logical that the caller should decide what to do with this exception. Even a DEBUG message seems useless here. 
-public boolean authenticate(Name base, String filter, String password,
-			final AuthenticatedLdapEntryContextCallback callback, final AuthenticationErrorCallback errorCallback)

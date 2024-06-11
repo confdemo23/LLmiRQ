@@ -1,3 +1,0 @@
-CLI GUI doesn&apos;t show dialog for add operation if there are no params in the op description
-Example is /subsystem=webservices/client-config=*/:add
-If you right-click on client-config=* and choose the &amp;apos;add&amp;apos; operation you will not get a dialog.  This is because there are no params in the operation description.  However, for &amp;apos;add&amp;apos; operations there is an implicit &amp;apos;name&amp;apos; param that becomes part of the address.  So CLI GUI should still prompt for the name.

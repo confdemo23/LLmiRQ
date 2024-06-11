@@ -1,2 +1,0 @@
-Socket binding resources do not register a requirement for their interface
-BindingAddHandler doesn&amp;apos;t pass it&amp;apos;s attributes into the superclass constructor, so the capability references don&amp;apos;t get registered by the default AbstractAddStepHandler.recordCapabilitiesAndRequirements. And BindingAddHandler also doesn&amp;apos;t override recordCapabilitiesAndRequirements to do the registration itself.

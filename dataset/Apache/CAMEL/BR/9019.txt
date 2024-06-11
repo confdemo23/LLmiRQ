@@ -1,2 +1,0 @@
-ManagedRuntimeEndpointRegistry was not enlisted in JMX
-This is not enlisted as ManagedRuntimeEndpointRegistry but as event notifier because its also that instance.

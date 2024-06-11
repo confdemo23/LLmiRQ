@@ -1,5 +1,0 @@
-findAll(Iterable<ID>)  : Invalid comparation Exception  thrown
-I am developping a web application which uses Spring and JPA. My aim is to get the content of a table called Product with a filter on the table identifier (use of the SQL syntax &amp;apos;IN&amp;apos;). For that, I use the method findAll(Iterable&lt;ID&gt;) of an interface which extends of CrudRepository.
-On the call of the method findAll, I catch an exception which tell me that Spring can&amp;apos;t compare an Integer object to an Iterable object. But, I don&amp;apos;t understand why Spring try to compare an Integer object to an Iterable object.
-Please find in attachment a simple project which reproduces the exception
-The URL of the exception: http://localhost:8080/myshop/product/list

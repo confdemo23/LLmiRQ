@@ -1,2 +1,0 @@
-TypeLocationService is not providing a consistent type cache
-The type cache maintained by TypeLocationService isn&amp;apos;t in-step with the on-disk type representation, this is largely to do with the fact that the filesystem changes can&amp;apos;t be reliably interpreted.

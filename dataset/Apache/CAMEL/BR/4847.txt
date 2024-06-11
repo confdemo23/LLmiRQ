@@ -1,4 +1,0 @@
-Upgrade org.ops4j.pax.exam 1.2.4 -> 2.3.0
-Pax Exam 2.3.0 is releases. At present we use 1.2.4. We should consider to upgrade to this version.
-They fixed 104 issues since 1.2.4 was released.
-Query: project = PAXEXAM AND fixVersion &gt; &amp;apos;1.2.4&amp;apos; AND fixVersion &lt;= &amp;apos;2.3.0&amp;apos;

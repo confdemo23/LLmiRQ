@@ -1,4 +1,0 @@
-Remoting login module&apos;s certificate propagation uses the old certificate API but should be using the new API instead
-RemotingLoginModule propagates javax.security.cert.X509Certificate but should use the newer API java.security.cert.X509Certificate. 
-David proposed the following:
-The problem is at org.jboss.as.security.remoting.RemotingLoginModule line 126: session.getPeerCertificateChain() is called where session.getPeerCertificates() should be.

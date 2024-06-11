@@ -1,1 +1,0 @@
-ResultProcessor doesn&apos;t handle Stream instances correctly

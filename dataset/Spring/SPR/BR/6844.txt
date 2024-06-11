@@ -1,2 +1,0 @@
-improve annotation based invocations
-The code path for annotation-based servlet and portlet controllers has some "hot spots" that could be improved.

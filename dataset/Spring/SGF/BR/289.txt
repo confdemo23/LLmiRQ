@@ -1,2 +1,0 @@
-Enumeration restrictions (xsd:enumeration) should be avoided in the XML schema.
-Enumeration restrictions (xsd:enumeration) should be avoided in the XML schema. Otherwise validation fails when placeholders are used.

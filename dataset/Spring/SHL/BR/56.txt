@@ -1,4 +1,0 @@
-SHL contains a lot of duplicated classes from Spring
-Based on the Spring Roo import, SHL ended up with a lot of utility classes coopied from Spring Framework (because Spring wasn&amp;apos;t a dependency of Spring Roo).
-This not only adds a lot of untested baggage but it also creates confusion between what class to use.
-Since the utility classes in Spring are maintained and provide the same functionality, a lot of the util classes can be safely removed.

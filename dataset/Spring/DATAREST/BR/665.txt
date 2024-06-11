@@ -1,1 +1,0 @@
-Use consistent scheme for property titles in JSON Schema

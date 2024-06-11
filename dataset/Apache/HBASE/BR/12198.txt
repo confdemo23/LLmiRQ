@@ -1,3 +1,0 @@
-Fix the bug of not updating location cache
-Fix the bug of not updating location cache.
-Add a testcase for it.

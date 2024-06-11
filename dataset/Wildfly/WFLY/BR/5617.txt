@@ -1,3 +1,0 @@
-JGroups thread pool properties are never applied
-Introduced by
-fc4c9b37391ac3eec51420b38b5f2a479d3a6a1e

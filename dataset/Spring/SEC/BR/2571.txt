@@ -1,1 +1,0 @@
-Failures in UserDetailsService should produce errors in the console

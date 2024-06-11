@@ -1,2 +1,0 @@
-Estimated size for constant nulls is 0
-since type is incorrectly assumed as void.

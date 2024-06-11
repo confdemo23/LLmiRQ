@@ -1,3 +1,0 @@
-Add camel-kafka component
-See thread request pull from github fork:
-http://camel.465427.n5.nabble.com/camel-pull-request-Added-Apache-Kafka-component-td5745174.html

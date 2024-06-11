@@ -1,2 +1,0 @@
-org.apache.camel.spring.Main can&apos;t take -o output and -d duration operations
-The added -d Debugger option broke the  org.apache.camel.spring.Main&amp;apos;s parameters consumption. 

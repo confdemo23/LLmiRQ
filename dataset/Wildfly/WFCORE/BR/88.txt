@@ -1,8 +1,0 @@
-Management interface to track (timestamp) when an application was last deployed.
-
-When an application is Deployed/Undeployed or Enabled/Disabled then there should be some mechanism in order to track the timestamp of these events  using some CLI commands.
-
-
-This will help in tracking when last time the application was enabled/disabled/deployed/undeployed.
-
-I have some reservations about this as it&amp;apos;s not clear why these management resources should be treated differently from other resources in terms of showing this kind of information about their history. But there&amp;apos;s user demand for it and Claudio Miranda is doing good work on implementing it, so I&amp;apos;m fine with it.

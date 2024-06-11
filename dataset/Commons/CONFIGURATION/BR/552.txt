@@ -1,2 +1,0 @@
-save() causes trailing comments to be deleted
-If there are comments at the end of a properties file, they are dropped when save is called.

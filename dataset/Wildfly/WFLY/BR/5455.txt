@@ -1,6 +1,0 @@
-[Migration operation] [Web to Undertow] migration of access-log prefix attribute doesn&apos;t take into account default value resulting in incosistent result.
-Access log prefix in web subsystem is by default access-log., in Undertow subsystem it is access-log. Note the difference, there is "." at the end in case of Web.
-There is inconsistency of migrate operation when migrating prefix attribute. When prefix is not explicitly defined in Web (=&gt; default is used =&gt; access-log., note the dot at the end. It is migrated to default Undertow prefix, which is access-log (missing "." at the end). 
-In case of having explicitely set prefix="access-log.", it is the same value as the default value in Web and in this case this is migrated to access-log. (the "." is there).
-=&gt; two equivalent Web subsystem configuration of access-log result in two different configurations in Undertow, which is not expected behaviour.
-As this impacts only access-log naming, I am considering this only as minor issue.

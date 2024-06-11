@@ -1,3 +1,0 @@
-current the consumer template does&apos;t not work if define it out side of the camel context
-Here is the mail thread which discuss about it[1]
-[1] http://www.nabble.com/Cannot-Autowire-consumerTemplate-for-client-test-td24781739.html

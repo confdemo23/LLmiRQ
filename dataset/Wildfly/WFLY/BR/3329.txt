@@ -1,6 +1,0 @@
-EJBs with same Java class name not intercepted by CDI interceptors
-Given
-Two or more EJBs with the same Java class name but from different Java deployments.
-Problem
-Interceptor intercepts method calls to only one of the EJBs.
-An EJB to be intercepted seems to be chosen randomly after each redeployment.

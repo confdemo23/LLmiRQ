@@ -1,3 +1,0 @@
-Infinispan cache statistics cannot be enabled/disabled independently of the cache manager statistics    
-The Infinispan subsystem allows enabling and disabling the collection of statistics for cache managers and caches via the "statistics-enabled" management API attribute.
-It is possible to set statistics-enabled attributes independently for cache managers and caches in the management API, but when checking the Infinispan MBeans, we see that statistics are either enabled for cache managers and their caches, or disabled for cache managers and caches.  

@@ -1,2 +1,0 @@
-Unmarshalling of IDoc Document List does not initialize root segment class
-When unmarshaling IDoc Document List the internal filed rootSegmentClass is not initialized resulting in Null Pointer exception when attempting to send list through SAP IDoc Document List endpoint. 

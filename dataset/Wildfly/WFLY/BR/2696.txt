@@ -1,4 +1,0 @@
-management audit settings: syslog protocol is lowercase while uppercase is expected
-Add a syslog handler to the audit settings of the management service of the domain controller, then start  an instance. It fails to start with:
-JBAS014612: Operation ("register-server") failed - address: ([]): java.lang.IllegalArgumentException: No enum const class org.jboss.as.controller.audit.SyslogAuditLogHandler$Transport.udp
-	at java.lang.Enum.valueOf(Enum.java:214)

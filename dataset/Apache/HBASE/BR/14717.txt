@@ -1,6 +1,0 @@
-enable_table_replication command should only create specified table for a peer cluster
-For a peer only user specified tables should be created but enable_table_replication command is not honouring that.
-eg:
-like peer1 : t1:cf1, t2
-create &amp;apos;t3&amp;apos;, &amp;apos;d&amp;apos;
-enable_table_replication &amp;apos;t3&amp;apos; &gt; should not create t3 in peer1

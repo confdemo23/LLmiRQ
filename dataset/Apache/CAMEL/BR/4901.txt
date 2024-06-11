@@ -1,2 +1,0 @@
-SEDA/VM component doesn&apos;t remove the exchange from the producer BlockingQueue if the consumer timeout
-The fix has been made on trunk (Camel 2.9.1), but I raise this Jira to track it and merge it to 2.8.x branch.

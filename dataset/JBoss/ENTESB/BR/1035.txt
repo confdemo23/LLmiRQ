@@ -1,5 +1,0 @@
-Error when installing jpa-hibernate
-When I try:
-features:install jpa-hibernate
-I get:
-Error executing command: Jar is not a bundle, no Bundle-SymbolicName mvn:org.springframework/spring-jdbc/3.2.4.RELEASE

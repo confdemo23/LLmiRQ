@@ -1,5 +1,0 @@
-Subsystem testing framework uses incorrect subsystem dependencies for old versions
-When upgrading to Infinispan 6.0, I had to @Ignore the following test:
-org.jboss.as.clustering.infinispan.subsystem.InfinispanSubsystemTransformerTestCase
-The subsystem test framework attempt to run old versions of the infinispan subsystem against the dependencies of the current subsystem version.
-On another note - I find this framework very cumbersome to debug when things go wrong since there is no output from starting the server.  So, all I know is it failed, without any indication why.  In my case, I add debug logging to the add operation handler and find that the add operation handlers throw NoClassDefFoundErrors and NoSuchMethodErrors, due to the framework attempting to use the 7.2 and 7.1.x versions of the subsystem with the dependencies from 8.0.  In the case of Infinispan 6.0, there are API changes that render it incompatible with the 7.2 and 7.1.x versions of the subsystem.

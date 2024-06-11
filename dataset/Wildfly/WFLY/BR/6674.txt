@@ -1,8 +1,0 @@
-Infinispan subsystem cache configuration is lost when cache is created
-Infinispan subsystem configuration is lost when cache is created.
-If it is helpful, I made a simple test project to validate the problem. It is prepared to run with Wildfly 8 and 10.
-https://github.com/arielcarrera/test-infinispan-wildfly10
-After startup and created the cache, it is not configured with the specified settings in Wildfly&amp;apos;s Infinispan Subsystem. 
-This can be verified by monitoring the jboss.infinispan nodes with JConsole retrieving the cache settings or running my simple test project.
-Entities never expire/invalidate. The lifespan/max-entries are set to -1.
-I found an old issue (https://issues.jboss.org/browse/WFLY-3858) about wildfly 8 but this problem talks about a security config problem and is a little different. It is a problem about wildfly 10 configuration and it is working OK on wildfly 8.2.

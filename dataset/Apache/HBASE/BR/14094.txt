@@ -1,2 +1,0 @@
-Procedure.proto can&apos;t be compiled to C++
-EOF is a defined symbol in c and C++.

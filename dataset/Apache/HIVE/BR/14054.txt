@@ -1,1 +1,0 @@
-TestHiveMetaStoreChecker fails on master 

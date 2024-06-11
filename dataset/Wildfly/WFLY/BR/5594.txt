@@ -1,2 +1,0 @@
-ISE when configuring web/ejb clustering with invalidation cache
-Both the web and ejb clustering modules use a key affinity service to generate session IDs for replication and distribution mode - however, they currently attempt to use a key affinity service with invalidation mode as well, which throws an ISE.  Neither LOCAL nor INVALIDATION caches should attempt to use a key affinity service.

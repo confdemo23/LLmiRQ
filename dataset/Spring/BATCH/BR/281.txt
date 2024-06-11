@@ -1,2 +1,0 @@
-Null fields cause problems in Oracle and Derby
-Null fields cause problems in Oracle and Derby.  See forum (http://forum.springframework.org/showthread.php?t=46821) for more information.

@@ -1,2 +1,0 @@
-The SecurityRealmService should only perform a generic mapping to RealmUser if really required.
-If there is a more accurate way to calculate the RealmUser then use it.

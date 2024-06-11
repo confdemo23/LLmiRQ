@@ -1,3 +1,0 @@
-Rework on HIVE-5193 to enhance the column oriented table access
-Add the support of column pruning for column oriented table access which was done in HIVE-5193 but was reverted due to the join issue in HIVE-10720.
-In 1.3.0, the patch posted by Viray didn&amp;apos;t work, probably due to some jar reference. That seems to get fixed and that patch works in 2.0.0 now.

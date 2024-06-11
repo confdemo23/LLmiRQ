@@ -1,2 +1,0 @@
-Form for finders with enum type are not generated correctly
-Form for finders with enum types are not generated correctly

@@ -1,8 +1,0 @@
-cast ( <string type> as bigint) returning null values
-select rnum, c1, cast(c1 as bigint) from cert.tsdchar tsdchar where rnum in (0,1,2)
-create table if not exists CERT.TSDCHAR ( RNUM int , C1 string)
-row format sequencefile
-rnum	c1	_c2
-0	-1                         	&lt;null&gt;
-1	0                          	&lt;null&gt;
-2	10                         	&lt;null&gt;

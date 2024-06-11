@@ -1,6 +1,0 @@
-Integration test is failing for @EmbeddedId field
-1. Create a table with composite primary key, having two fields with none of the field is having any auto generated value.
-2. Reverse engineer with "database reverse engineer"
-3. Create integration test by "Test Integration" (Ideally there should be option in database reverse engineer to create test also ).
-4. test by running as Junit.
-Second test case failing with org.springframework.orm.jpa.JpaSystemException: org.hibernate.id.IdentifierGenerationException: null id generated for:class .....

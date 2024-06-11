@@ -1,2 +1,0 @@
-PTFOperator.PTFInvocation didn&apos;t properly reset the input partition
-There is an issue with PTFOperator.PTFInvocation where the inputPart is not reset properly. The inputPart has been closed and its content (member variables) has been cleaned up, but since itself is not nullified, it&amp;apos;s reused in the next round and caused NPE issue.

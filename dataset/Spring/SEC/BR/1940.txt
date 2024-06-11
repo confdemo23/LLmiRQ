@@ -1,2 +1,0 @@
-ProviderManager does not publish AccountStatusException
-When using a simple configuration, an authentication provider throwing a LockedException doesn&amp;apos;t cause an AuthenticationFailureLockedEvent to be published. The writeup&amp;apos;s in the Spring forum reference. I can&amp;apos;t be sure this is a bug, but it seems too weird to be expected behavior.

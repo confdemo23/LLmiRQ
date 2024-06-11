@@ -1,3 +1,0 @@
-camel:dot - spring xml files located in different folder 
-camel:dot doesn&amp;apos;t support loading spring .xml files using the configuration option to the plugin. Currently it loads from META-INF/spring/*.xml
-The other two: run and embedded has this feature.

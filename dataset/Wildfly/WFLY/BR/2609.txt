@@ -1,6 +1,0 @@
-Inconsistent handling of ManagementResourceRegistrations for the deployment=* tree
-The intended behavior where any modification to the ManagementResourceRegistration tree rooted in deployment=* also gets written to to the deployment=/subdeployment= tree is not being consistently applied.
-This behavior is implemented by using an MRR implementation class called DeploymentManagementResourceRegistration for the tree rooted in deployment=*. But there are two problems with this:
-1) DMRR is only used as a wrapper exposed to callers of Extension.initiatilize(). However, that isn&amp;apos;t the only place extensions register deployment MRRs. Some also do it inside DeploymentUnitProcessors or DUP initialized services. These callers are not getting a DMRR, so their modifications are not applied to both trees.
-2) DeploymentManagementResourceRegistration.getSubModel() and getOverrideModel() are not returning another DeploymentManagementResourceRegistration. Instead they are returning the normal ManagementResourceRegistration in the "deployments" tree. So, if a caller invokes those methods and then makes modifications, the modifications are not applied to both trees.
-This is showing up as an issue in the JPA subsystem, which defers registration of part of its model to DUPs.

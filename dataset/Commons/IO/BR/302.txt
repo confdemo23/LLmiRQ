@@ -1,3 +1,0 @@
-ArrayIndexOutOfBoundsException in BOMInputStream when reading a file without BOM multiple times
-Resetting the BOMInputStream doesn&amp;apos;t reset the fbLength member variable. This causes fbLength to grow bigger than the firstBytes array (when the file doesn&amp;apos;t contain a BOM), which leads to an ArrayIndexOutOfBoundsException in the readFirstBytes method.
-The attached test case reveals the problem.

@@ -1,3 +1,0 @@
-camel-test.jar - jndi.properties is required, should be optional
-See nabble:
-http://www.nabble.com/Unit-Tests-without-jndi.properties-td23428533s22882.html

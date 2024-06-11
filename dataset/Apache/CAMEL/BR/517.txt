@@ -1,3 +1,0 @@
-Javadoc - improve summaries etc
-The javadoc could use to be polished for eg. summaries statis the Apache license instead of a short brief summary what the class/package does etc.
-It&amp;apos;s all the javadoc also for the components.

@@ -1,2 +1,0 @@
-Dynamicity flag on Mongodb endpoint run a dropIndex() command on specified collection
-Using "dynamicity=true" on MongoDb endpoint is running a dropIndex command on the specified collection (CamelMongoDbCollection header), for each exchange going through. 

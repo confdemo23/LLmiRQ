@@ -1,3 +1,0 @@
-MappingModuleDefinition is incorrectly constructing the write-attribute handler
-MappingModuleDefinition.registerAttribute is creating a write-attribute handler but is not passing in the correct list of AttributeDefinitions to its constructor.
-See https://github.com/wildfly/wildfly/blob/master/security/src/main/java/org/jboss/as/security/MappingModuleDefinition.java#L85  it should be using the ADs returned by getAttributes(), same as L86.

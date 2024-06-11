@@ -1,1 +1,0 @@
-SimpleOperationDefinitionBuilder.withFlags discards existing flags

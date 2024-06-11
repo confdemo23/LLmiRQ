@@ -1,5 +1,0 @@
-wss4j-1.5.4.jar not in repository
-The Spring-WS project:
-http://repo1.maven.org/maven2/org/springframework/ws/spring-ws-parent/1.5.2/spring-ws-parent-1.5.2.pom
-has a reference to wss4j-1.5.4.jar
-This jar doesn&amp;apos;t exist in the maven repo&amp;apos;s. The only way i&amp;apos;ve found to get it is from the manual "all dependencies" download of spring-ws.

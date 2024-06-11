@@ -1,8 +1,0 @@
-CXFRS Routing in 2.2.0 does not behave like in 2.0.0
-CXFRS Routing in Camel 2.0.0 works  well with these endPoints:
-&lt;cxf:rsServer id="restRouter" address="/restRouter/"	
-      serviceClass="com.project.service.impl.ServiceManagerImpl"   /&gt;
-     &lt;cxf:rsClient id="restEndpoint" address="http://localhost:8080/services/rest"
-      serviceClass="com.project.service.impl.ServiceManagerImpl" /&gt;
-In Camel 2.2.0, Routing fails with error causing the CXF Client to invoke a 404 not found Rest Service which is &amp;apos;http://localhost:8080/services/rest/restRouter/Path&amp;apos;.
-The address of cxf:rsClient is being appended by the cxf:rsServer&amp;apos;s address

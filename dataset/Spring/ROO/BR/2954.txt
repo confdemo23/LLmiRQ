@@ -1,1 +1,0 @@
-Ansi chars should not display in STS Roo shell

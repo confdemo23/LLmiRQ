@@ -1,2 +1,0 @@
-TaskExecutor configuration ignored in 2.1 namespace for <tasklet/> with no <chunk/>
-The task-executor attribute moved in the schema and the factory bean didn&amp;apos;t accommodate the change.

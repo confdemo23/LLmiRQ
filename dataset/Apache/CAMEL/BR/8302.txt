@@ -1,4 +1,0 @@
-Rabbitmq shouldn&apos;t require/bind queue if not specified 
-Current implementation is declaring both exchange and queue on any init (producer or consumer). In case of producer one don&amp;apos;t need queue and may not know who going to be client. 
-We can add flag skipQueueDeclare  so that it won&amp;apos;t genrate uuid queue. 
-i can provide PR if it helps. 

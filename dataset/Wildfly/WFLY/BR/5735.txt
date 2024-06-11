@@ -1,6 +1,0 @@
-Load balancing does not work when deploy app with root-context &apos;/&apos;
-Everything work fine follow Stuart&amp;apos;s instruction here https://github.com/stuartwdouglas/modcluster-example
-but when I changed the root context of the app to "/"  the load balancing did not work any more, but still you can access to individual server.
-I experimented with different root context like "/test", "/root" and I found that, setting any root context for app is OK except "/" (blank)
-Best Regards,
-Chanras

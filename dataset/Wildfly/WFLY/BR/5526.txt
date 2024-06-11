@@ -1,4 +1,0 @@
-[Migration operation] Attribute forward-when-no-consumers is not migrated properly
-Attribute forward-when-no-consumers should be migrated to message-load-balancing-type in the following way:
-STRICT is like setting the legacy forward-when-no-consumers parameter to true
-ON_DEMAND is like setting the legacy forward-when-no-consumers parameter to false

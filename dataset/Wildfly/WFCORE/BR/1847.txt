@@ -1,3 +1,0 @@
-PatchMerger overrides submodule&apos;s content merging the outer module
-PatchMerger merges two CPs into one. In case the first CP includes updates for modules like org.outermodule and org.outermodule.innermodule. And the second CP including an update for org.outermodule.innermodule only, the merge may not happen correctly in case the modification for the innermodule will appear before the modification for the outermodule in the first CP.
-The merger will copy the innermodule&amp;apos;s content first and then override it copying the outermodule&amp;apos;s content (including the previous version of the innermodule).

@@ -1,2 +1,0 @@
-write- and undefine-attribute operations are registered as runtime-only
-The write-attribute and undefine-attribute operation are registered as runtime-only, which is not correct and was probably done unintentionally.

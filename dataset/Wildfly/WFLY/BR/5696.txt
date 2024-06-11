@@ -1,4 +1,0 @@
-Mixed domain test launches a broken server from the DC
-The host.xml used by the DC in the testsuite/mixed-domain tests is launching a server. This server fails to launch because the profiles being used include stuff that won&amp;apos;t work on current version servers (i.e. legacy subsystems like web).
-The failure to launch the server isn&amp;apos;t affecting the test results, proving the existence of the server is not relevant to the test assertions.
-However, WildcardReadsTestCase is asserting that the wildcard reads are able to read this server, so we need to decide how to proceed. Simply dropping the "server" element from host.xml doesn&amp;apos;t work.

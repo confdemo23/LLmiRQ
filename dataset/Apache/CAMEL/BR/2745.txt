@@ -1,7 +1,0 @@
-ExpressionDefinition toString  print the expression and expression value at the same time
-When I running the test which need to call the ExpressionDefinition toString method, I found the expression is
-
-    simple{bodyAs(java.lang.String.class)bodyAs[java.lang.String]}
-
-
-We need to avoid adding the expression when the ExpressionDefinition has the expression value.

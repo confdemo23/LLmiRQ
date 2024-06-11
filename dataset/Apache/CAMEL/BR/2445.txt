@@ -1,3 +1,0 @@
-BatchProcesser.processExchange needs to catch Throwable
-If an aggregator sends an exchange to a processor that throws an Error this causes the thread started by BatchProcessor to exit, exchanges will then accumulate in the aggregator until an OutOfMemoryError occurs.
-This patch sorts that out and adds a unit test, however there&amp;apos;s another problem that I&amp;apos;m still looking into, namely that BatchProcessor just uses an instance of LoggingErrorHandler as it&amp;apos;s exception handler, so any exceptions/errors caught by this processor will just get logged and not follow the normal Camel error handling.

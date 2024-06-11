@@ -1,3 +1,0 @@
-sort_array doesn&apos;t work with LazyPrimitive
-The sort_array function doesn&amp;apos;t work against data that&amp;apos;s actually come out of a table. The test suite only covers constants given in the query.
-If you try and use sort_array on an array from a table, then you get a ClassCastException that you can&amp;apos;t convert LazyX to Comparable.

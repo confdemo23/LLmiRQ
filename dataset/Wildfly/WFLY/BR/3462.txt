@@ -1,2 +1,0 @@
-wildfly host controller reading the host.xml from namespace version 1.5 will fail
-current wildfly fails to load host.xml with namespace 1.5

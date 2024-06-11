@@ -1,4 +1,0 @@
-review output of jboss-cli for batches
-jboss-cli displays lines of input file, although they are not executed.
-If not executed hey should not be printed.
-It might be useful to introduce a command line option "--verbose" an to print everything to stdout, if / command / end-if. Maybe even the output of the commands executed (read-resource, add).

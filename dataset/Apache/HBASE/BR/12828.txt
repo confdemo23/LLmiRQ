@@ -1,2 +1,0 @@
-Add getTableAttributes API to HBaseAdmin class. 
-At present, there is no api/function to get table attributes. It would be nice to have a function that returns table attributes given the table name.

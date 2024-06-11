@@ -1,4 +1,0 @@
-[lang] Refactor Entities methods
-The pairs of escape and unescape methods in Entities need to be modified so that
-they call each other (one escape to the other escape etc). Otherwise there&amp;apos;s a
-large chunk of repeated code that gives us a high chance of errors.

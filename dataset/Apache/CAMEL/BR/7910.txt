@@ -1,4 +1,0 @@
-Netty {Client|Server}ChannelHandler need to pass the close and open event around
-If add other handler interesting about close and open event and they are set behind the netty  
-{Client|Server}ChannelHandler, they cannot not get the event as current netty  {Client|Server}
-ChannelHandler  doesn&amp;apos;t pass these event around.

@@ -1,2 +1,0 @@
-CBO: Push Semi Join through, Project/Filter/Join
-CLEAR LIBRARY CACHE

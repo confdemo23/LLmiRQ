@@ -1,3 +1,0 @@
-Intermittent failure in BasicOperationsUnitTestCase.testPathInfo
-This test is failing intermittently. I&amp;apos;m going to @Ignore it.
-This one should be a bit higher priority than the typical intermittent test failure as the stuff being tested is pretty new, so there&amp;apos;s a higher chance this is a bug in the code instead of just a test issue.

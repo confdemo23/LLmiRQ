@@ -1,2 +1,0 @@
-[Regression] Unable to delete a row in the future
-Deleting in the future doesn&amp;apos;t work because KV resets everything to now.

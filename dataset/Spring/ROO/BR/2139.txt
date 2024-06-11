@@ -1,2 +1,0 @@
-Solr add-on not produce stable aspects
-The Solr add-on is producing aspects that change upon each launch of Roo, despite there being no material change to the governor, this causes the *_Roo_SolrSearch aspect to be needlessly rewritten to disk.

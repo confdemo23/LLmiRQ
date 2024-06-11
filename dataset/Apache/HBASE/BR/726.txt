@@ -1,4 +1,0 @@
-Unit tests won&apos;t run because of a typo
-I had to modify line#101 in HBaseTestCase.java in order to run the unit tests: 
-(conf.get("fs.default.name", "file:///").compareTo("file::///") == 0);
-I removed the second ":" in compareTo() so it becomes "file:///"

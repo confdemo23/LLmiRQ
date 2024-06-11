@@ -1,3 +1,0 @@
-Enumeration finder doesn&apos;t work
-I&amp;apos;ve created a finder for a entity&amp;apos;s enumeration field.
-In the view, when I try to search using this with a valid value I get an exception &amp;apos;Internal Error: A xxx is required.&amp;apos;.

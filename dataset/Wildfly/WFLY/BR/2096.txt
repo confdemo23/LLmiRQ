@@ -1,4 +1,0 @@
-WeldApplicationFactory doesn&apos;t implement setApplication() correctly
-The problem is described in WELD-913. The fix was only applied to Weld servlet support [1] and not AS7/WildFly8 integration code (most probably because the target environment of the issue was Tomcat).
-[1]
-https://github.com/weld/core/blob/master/environments/servlet/core/src/main/java/org/jboss/weld/environment/servlet/jsf/WeldApplicationFactory.java

@@ -1,4 +1,0 @@
-ER1: Error when creating child container with "default" profile (-007 kit)
-There is NullPointerException and other Exceptions are thrown when you try to create child container with "default" profile and with some profiles which extend it. 
-Basically it&amp;apos;s not possible to create the child container with almost every profile (jboss-fuse-* profiles are working ok).
-Attaching log file.

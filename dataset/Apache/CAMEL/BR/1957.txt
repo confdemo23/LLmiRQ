@@ -1,9 +1,0 @@
-The construction method of SourceCache is wrong  
-The construction of SourceCache is wrong , it will cause the NPE when you enable the stream cache.
-
-  public SourceCache(String data) {
-        new StringSource(data);
-        // It should be changed to 
-        // super(data);
-    }
-

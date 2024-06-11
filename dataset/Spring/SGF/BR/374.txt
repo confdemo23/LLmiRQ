@@ -1,3 +1,0 @@
-Specifying a disk-store on a GatewayHub forces the GatewayHub to be persistent.
-Currently, SDG&amp;apos;s GatewayHubFactoryBean class is forcing the GemFire Gateway Queue to be &amp;apos;persistent&amp;apos; if a DiskStore was explicitly referenced (named).
-However, this behavior fails to take into account the fact that a GemFire Gateway Queue can overflow it&amp;apos;s contents to disk in order to reduce memory pressure.

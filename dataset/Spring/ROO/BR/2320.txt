@@ -1,2 +1,0 @@
-Background thread names incorrectly displayed when shell starts up with developmentMode=false system property
-"[Spring Roo Process Manager Background Polling Thread]" incorrectly displays when development mode is false at startup time (eg as per roo.sh startup script).

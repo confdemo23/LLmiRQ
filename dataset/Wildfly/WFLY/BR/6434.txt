@@ -1,4 +1,0 @@
-System property &apos;org.jboss.as.security.jacc-module&apos; not always used
-JaccService of security subsystem does not use the system property &amp;apos;org.jboss.as.security.jacc-module&amp;apos; for class loader.
-Due to this "not using", the custom JACC module is not used.
-This property was introduced by WFLY-5340
