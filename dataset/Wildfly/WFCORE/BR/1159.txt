@@ -1,0 +1,2 @@
+Add a runtime operation which shows filesystem usage and availability for known server locations
+For management purposes it would be very useful to report runtime metrics for filesystem usage and availability for known server locations (data, tmp, logs, etc).

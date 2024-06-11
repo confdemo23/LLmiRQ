@@ -1,0 +1,29 @@
+Camel SAP - Spring container - Could not initialize class org.eclipse.emf.ecore.xml.type.XMLTypePackage
+It is not possible to convert SAP request from String object to org.fusesource.camel.component.sap.model.rfc.Structure object.
+
+
+
+
+
+
+Error during type conversion from type: java.lang.String to the required type: org.fusesource.camel.component.sap.model.rfc.Structure
+
+
+
+
+...
+
+
+
+
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.eclipse.emf.ecore.xml.type.XMLTypePackage
+
+
+
+
+        at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.&lt;init&gt;(XMLHelperImpl.java:85)
+
+
+
+
+

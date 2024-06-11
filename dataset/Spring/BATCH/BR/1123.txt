@@ -1,0 +1,2 @@
+ExecutionContextPromotionListener may perform promotion multiple times
+The ExecutionContextPromotionListener  currently performs the promotion for every matched pattern.  Instead, it should break out of the loop after finding a match.  

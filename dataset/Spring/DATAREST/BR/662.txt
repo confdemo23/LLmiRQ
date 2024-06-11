@@ -1,0 +1,60 @@
+Unable to post entity with subclassed property (JPA)
+Given these entities:
+
+
+
+
+
+
+static class PetOwner {
+
+
+
+
+    private Pet pet;
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+@JsonTypeInfo(include = JsonTypeInfo.As.PROPERTY, use = JsonTypeInfo.Id.MINIMAL_CLASS)
+
+
+
+
+static class Pet {}
+
+
+
+
+static class Cat extends Pet {}
+
+
+
+
+
+
+Submitting a post like
+
+
+
+
+
+
+curl -d &amp;apos;{"pet" : "http://localhost:8080/pets/1"}&amp;apos; -H &amp;apos;Content-Type: application/json&amp;apos; &amp;apos;http://localhost:8080/petOwners/&amp;apos;
+
+
+
+
+
+
+fails, because Jackson will try and deserialize "with type".

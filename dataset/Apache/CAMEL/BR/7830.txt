@@ -1,0 +1,2 @@
+RestLetHeaderFilterStrategy should filter the header of "Transfer-Encoding"
+As we don&amp;apos;t set the transfer_encoding protocol header for the restlet service, we need to remove the transfer_encoding header which could let the client wait forever.

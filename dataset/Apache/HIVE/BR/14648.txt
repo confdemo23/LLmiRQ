@@ -1,0 +1,2 @@
+LLAP: Avoid private pages in the SSD cache
+There&amp;apos;s no reason for the SSD cache to have private mappings to the cache file, there&amp;apos;s only one reader and the memory overheads aren&amp;apos;t worth it.

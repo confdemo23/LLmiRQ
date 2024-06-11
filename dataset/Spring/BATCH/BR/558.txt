@@ -1,0 +1,2 @@
+TaskletAdapter still maps to CONTINUABLE by default
+Summary says it all.

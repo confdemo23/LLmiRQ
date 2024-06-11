@@ -1,0 +1,3 @@
+Subsystem ordering is lost during marshalling
+When standalone.xml gets persisted following some post-boot change, the original ordering of subsystems is lost. We don&amp;apos;t want to change config files in this way.
+I don&amp;apos;t recall how we retained the original subsystem ordering with parallel boot, but something there has broken.

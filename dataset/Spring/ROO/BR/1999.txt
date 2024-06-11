@@ -1,0 +1,88 @@
+Composite primary key support in MVC scaffolding
+table relation in db
+HOLE Table oneToMany -&gt; TEE Table
+TEE_SET Table OneToMany -&gt;TEE Table
+CREATE TABLE `TEE` (
+  `HOLE_ID` bigint(20) NOT NULL,
+  `TEE_SET_ID` bigint(20) NOT NULL,
+   ...
+  PRIMARY KEY (`HOLE_ID`,`TEE_SET_ID`),
+  KEY `FK143F4FF05EDBE` (`TEE_SET_ID`),
+  KEY `FK143F4F8F88267` (`HOLE_ID`),
+  CONSTRAINT `FK143F4F8F88267` FOREIGN KEY (`HOLE_ID`) REFERENCES `HOLE` (`ID`),
+  CONSTRAINT `FK143F4FF05EDBE` FOREIGN KEY (`TEE_SET_ID`) REFERENCES `TEE_SET` (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+1. i build roo from git ok then show Spring Roo 1.1.2.BUILD-SNAPSHOT
+2. mvn tomcat:run it run ok
+3. i show in web list other entity table ok, but tee table error!
+//////
+http://localhost:8080/stan/tees?page=1&amp;size=10
+show
+Data access failure
+Sorry, a problem occurred while accessing the database.
+Exception Message
+org.hibernate.exception.DataException: could not execute query; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.DataException: could not execute query
+Exception Stack Trace
+org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:311)
+org.springframework.orm.jpa.aspectj.JpaExceptionTranslatorAspect.ajc$afterThrowing$org_springframework_orm_jpa_aspectj_JpaExceptionTranslatorAspect$1$18a1ac9(JpaExceptionTranslatorAspect.aj:15)
+com.stan.domain.Tee_Roo_Entity.countTees_aroundBody2(Tee_Roo_Entity.aj:74)
+com.stan.domain.Tee_Roo_Entity.ajc$interMethod$com_stan_domain_Tee_Roo_Entity$com_stan_domain_Tee$countTees(Tee_Roo_Entity.aj:1)
+com.stan.domain.Tee.countTees(Tee.java:1)
+com.stan.domain.Tee_Roo_Entity.ajc$interMethodDispatch1$com_stan_domain_Tee_Roo_Entity$com_stan_domain_Tee$countTees(Tee_Roo_Entity.aj)
+com.stan.web.TeeController_Roo_Controller.ajc$interMethod$com_stan_web_TeeController_Roo_Controller$com_stan_web_TeeController$list(TeeController_Roo_Controller.aj:56)
+com.stan.web.TeeController.list(TeeController.java:1)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+java.lang.reflect.Method.invoke(Method.java:597)
+org.springframework.web.bind.annotation.support.HandlerMethodInvoker.invokeHandlerMethod(HandlerMethodInvoker.java:176)
+org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.invokeHandlerMethod(AnnotationMethodHandlerAdapter.java:426)
+org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter.handle(AnnotationMethodHandlerAdapter.java:414)
+org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:790)
+org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:719)
+org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:644)
+org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:549)
+javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter.doFilterInternal(OpenEntityManagerInViewFilter.java:113)
+org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)
+org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+java.lang.Thread.run(Thread.java:619)
+4. roo.LOg
+// Spring Roo 1.1.2.BUILD-SNAPSHOT [rev 9625210] log opened at 2011-01-18 13:34:18
+hint
+project --topLevelPackage com.stan
+hint
+persistence setup --provider HIBERNATE --database MYSQL
+database properties list
+database properties set --key database.username --value open18
+database properties set --key database.password --value tiger
+database properties set --key database.url --value jdbc:mysql://localhost:3306/open18
+database properties list
+database reverse engineer --schema open18 --package ~.domain
+controller all --package ~.web
+perform test
+perform package
+quit
+// Spring Roo 1.1.2.BUILD-SNAPSHOT [rev 9625210] log closed at 2011-01-18 13:40:35
+5, my database struct in attachment open18.sql.

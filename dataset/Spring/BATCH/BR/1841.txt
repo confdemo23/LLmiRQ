@@ -1,0 +1,173 @@
+Upgrading to spring batch 2.1.8 causes error in processing xml configuration
+We are just upgrading to 2.1.8 and our existing xml batch configuration will no longer load.  
+Here is a snippet of the configuration that is failing:
+
+
+
+
+
+
+    &lt;bean id="simpleStep" class="org.springframework.batch.core.step.item.FaultTolerantStepFactoryBean"
+
+
+
+
+          abstract="true"&gt;
+
+
+
+
+        &lt;property name="transactionManager" ref="transactionManager"/&gt;
+
+
+
+
+        &lt;property name="jobRepository" ref="jobRepository"/&gt;
+
+
+
+
+        &lt;property name="startLimit" value="100"/&gt;
+
+
+
+
+        &lt;property name="commitInterval" value="1"/&gt;
+
+
+
+
+        &lt;property name="backOffPolicy"&gt;
+
+
+
+
+            &lt;bean class="org.springframework.batch.retry.backoff.ExponentialBackOffPolicy"&gt;
+
+
+
+
+                &lt;property name="initialInterval" value="1000"/&gt;
+
+
+
+
+            &lt;/bean&gt;
+
+
+
+
+        &lt;/property&gt;
+
+
+
+
+        &lt;property name="retryLimit" value="5"/&gt;
+
+
+
+
+        &lt;property name="retryableExceptionClasses"&gt;
+
+
+
+
+            &lt;map&gt;
+
+
+
+
+                &lt;entry key="org.springframework.dao.ConcurrencyFailureException" value="true"/&gt;
+
+
+
+
+            &lt;/map&gt;
+
+
+
+
+        &lt;/property&gt;
+
+
+
+
+    &lt;/bean&gt;
+
+
+
+
+
+
+
+
+
+    &lt;step id="createCatalogueValidateStep" parent="simpleStep" next="createCataloguePostValidateStep"&gt;
+
+
+
+
+         &lt;tasklet transaction-manager="transactionManager"&gt;
+
+
+
+
+             &lt;chunk reader="csvStagedProductReader" writer="hibernateStagedProductWriter" commit-interval="10"/&gt;
+
+
+
+
+             &lt;listeners&gt;
+
+
+
+
+                 &lt;listener ref="createCatalogueValidateItemListener"/&gt;
+
+
+
+
+             &lt;/listeners&gt;
+
+
+
+
+         &lt;/tasklet&gt;
+
+
+
+
+    &lt;/step&gt;
+
+
+
+
+
+
+And we are getting the error:
+The field &amp;apos;retry-limit&amp;apos; is not permitted on the step [createCatalogueValidateStep] because there is no &amp;apos;retryable-exception-classes&amp;apos;.
+When I debug the code, I can see that the StepParserStepFactoryBean has a retryLimit which it got from the parent bean but no retryableExceptionClasses.  Further investigation lead me to this code in ChunkElementParser:
+
+
+
+
+
+
+	// Even if there is no retryLimit, we can still accept exception
+
+
+
+
+	// classes for an abstract parent bean definition
+
+
+
+
+	propertyValues.addPropertyValue("retryableExceptionClasses", retryableExceptions);
+
+
+
+
+
+
+The problem is that this always sets the retryableExceptionClasses property even if it is not provided.  When the bean definitions are merged, the parent bean&amp;apos;s definition of retryableExceptionClasses is overridden by an empty definition.

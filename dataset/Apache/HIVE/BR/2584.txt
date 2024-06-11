@@ -1,0 +1,8 @@
+Alter table should accept database name
+It would be nice if alter table accepts database name.
+For example:
+This would be more useful in certain usecases:
+alter table DB.Tbl set location &lt;location&gt;;
+rather than 2 statements.
+use DB;
+alter table Tbl set location &lt;location&gt;;

@@ -1,0 +1,3 @@
+Prefetch count = 0 after passive declare failure in BlockingQueueConsumer
+When using the SimpleMessageListenerContainer and consuming from multiple passively declared queues and one of the queues does not exist.
+Prefetch count for the channel remains at 0, which is not correct.

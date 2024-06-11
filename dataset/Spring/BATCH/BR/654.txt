@@ -1,0 +1,4 @@
+Ensure best efforts are made to commit StepExecution when commit fails
+When the commit operation fails in an ItemOrientedStep, the writing of the Spring Batch metadata fails (trying to write the rollback information). 
+When trying to commit the transaction, SB has already set the information it&amp;apos;s about to persist in the StepExecutionContext. Then, in another transaction, SB wants to store that a rollback ocurred. Nevertheless, SB hasn&amp;apos;t read the current persisted state from the database, so it still has the Version it read when trying to commit. That&amp;apos;s why we think it fails.
+Furthermore, even if it succeeded, the persisted information wouldn&amp;apos;t be accurate, because, as I&amp;apos;ve pointed out, the StepExecutionContext hasn&amp;apos;t been reset.

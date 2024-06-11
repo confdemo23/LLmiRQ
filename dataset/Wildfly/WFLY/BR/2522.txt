@@ -1,0 +1,122 @@
+Error when invoking @Remove method for stateful bean in transaction
+I&amp;apos;m invoking method annotated with @Remove
+
+
+
+
+
+
+@Remove
+
+
+
+
+
+
+
+
+
+public void remove() {
+
+
+
+
+
+
+
+
+
+...
+
+
+
+
+
+
+On invocation inside active transaction I&amp;apos;m getting following error :
+
+
+
+
+
+
+Caused by: java.lang.IllegalStateException: ARJUNA016082: Synchronizations are not allowed! Transaction status isActionStatus.RUNNING
+
+
+
+
+at com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple.registerSynchronizationImple(TransactionImple.java:374)
+
+
+
+
+at com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple.registerSynchronization(TransactionImple.java:351)
+
+
+
+
+at org.jboss.as.ejb3.cache.TransactionAwareObjectFactory.destroyInstance(TransactionAwareObjectFactory.java:66) [jboss-as-ejb3-7.1.3.Final.jar:7.1.3.Final]
+
+
+
+
+at org.jboss.as.ejb3.cache.impl.backing.NonPassivatingBackingCacheImpl.remove(NonPassivatingBackingCacheImpl.java:165) [jboss-as-ejb3-7.1.3.Final.jar:7.1.3.Final]
+
+
+
+
+at org.jboss.as.ejb3.cache.impl.backing.NonPassivatingBackingCacheImpl.remove(NonPassivatingBackingCacheImpl.java:57) [jboss-as-ejb3-7.1.3.Final.jar:7.1.3.Final]
+
+
+
+
+at org.jboss.as.ejb3.cache.spi.impl.AbstractCache.remove(AbstractCache.java:100) [jboss-as-ejb3-7.1.3.Final.jar:7.1.3.Final]
+
+
+
+
+at org.jboss.as.ejb3.cache.spi.impl.AbstractCache.remove(AbstractCache.java:39) [jboss-as-ejb3-7.1.3.Final.jar:7.1.3.Final]
+
+
+
+
+at org.jboss.as.ejb3.component.stateful.StatefulSessionComponent.removeSession(StatefulSessionComponent.java:283) [jboss-as-ejb3-7.1.3.Final.jar:7.1.3.Final]
+
+
+
+
+at org.jboss.as.ejb3.component.stateful.StatefulRemoveInterceptor.processInvocation(StatefulRemoveInterceptor.java:100) [jboss-as-ejb3-7.1.3.Final.jar:7.1.3.Final]
+
+
+
+
+at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:288) [jboss-invocation-1.1.1.Final.jar:1.1.1.Final]
+
+
+
+
+at org.jboss.as.ejb3.component.stateful.StatefulComponentInstanceInterceptor.processInvocation(StatefulComponentInstanceInterceptor.java:67) [jboss-as-ejb3-7.1.3.Final.jar:7.1.3.Final]
+
+
+
+
+at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:288) [jboss-invocation-1.1.1.Final.jar:1.1.1.Final]
+
+
+
+
+at org.jboss.as.ejb3.tx.CMTTxInterceptor.invokeInCallerTx(CMTTxInterceptor.java:200) [jboss-as-ejb3-7.1.3.Final.jar:7.1.3.Final]
+
+
+
+
+... 140 more
+
+
+
+
+
+
+EJB Spec paragraphe 4.6.4 states:
+
+If a session bean instance is participating in a transaction, it is an error for a client to invoke the remove method on the session objects home or component interface object. The container must detect such an attempt and throw the javax.ejb.RemoveException to the client. The container should not mark the clients transaction for rollback, thus allowing the client to recover. Note that this restriction only applies to the remove method on the session objects home or component interface, not to the invocation of @Remove methods.

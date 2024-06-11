@@ -1,0 +1,18 @@
+Inconsistent Javadoc comment and code for toProperties(final Map<K, V>) in org.apache.commons.collections.MapUtils
+The Javadoc comment below states that the parameter map "..., may not be null":
+   	   /**
+	    ..
+
+@param map  the map to convert to a Properties object, may not be null
+@return the properties object
+	     */
+	    public static &lt;K, V&gt; Properties toProperties(final Map&lt;K, V&gt; map) 
+Unknown macro: {	        Properties answer = new Properties();	        if (map != null) {
+	            ...
+	        }	        return answer;	    } 
+However, the method return normally without throwing any exception when called with null.
+
+Suggested Fixes:
+1. Change "@param map  the map to convert to a Properties object, may not be null" to "@param map  the map to convert to a Properties object, may be null"
+or
+2. Remove "may not be null" from @param.

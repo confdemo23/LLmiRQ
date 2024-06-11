@@ -1,0 +1,2 @@
+Clean up MapJoinOperator properly to avoid object cache reuse with unintentional states
+For a given job, one task may reuse other task&amp;apos;s object cache (plan cache) such as MapJoinOperator. This is fine. But if we have some dirty states left over, it may cause issue like wrong results.

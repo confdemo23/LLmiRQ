@@ -1,0 +1,52 @@
+Unique Index on DBRef
+I&amp;apos;m not able to uniquely index a property if it&amp;apos;s a reference.
+For example: 
+
+
+
+
+
+
+
+
+
+
+
+@DBRef
+
+
+
+
+@Indexed(unique = true) // This does not work because of @DBRef
+
+
+
+
+private User user1;
+
+
+
+
+
+
+
+
+
+@Indexed(unique = true) // This works fine
+
+
+
+
+private User user1;
+
+
+
+
+
+
+
+
+
+
+
+I know that it&amp;apos;s possible to unique index a DBRef, so I&amp;apos;m not sure why this doesn&amp;apos;t work. It seems like a pretty important piece of functionality. 

@@ -1,0 +1,2 @@
+MDBs should use the full identifier of the resource adapter
+The .rar suffix shouldn&amp;apos;t be stripped anymore, as the resource adapters are registered under their full name.

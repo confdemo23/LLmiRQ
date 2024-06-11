@@ -1,0 +1,28 @@
+Some Entitys like &Ouml; are not matched properly against its ISO8859-1 representation
+In EntityArrays 
+In
+ private static final String[][] ISO8859_1_ESCAPE 
+some matching is wrong, for example
+
+ 
+
+        {"\u00D7", "&amp;Ouml;"}, //  - uppercase O, umlaut
+
+        {"\u00D8", "&amp;times;"}, // multiplication sign
+
+
+
+but this must be   
+
+ 
+
+       {"\u00D6", "&amp;Ouml;"}, //  - uppercase O, umlaut
+
+        {"\u00D7", "&amp;times;"}, // multiplication sign
+
+
+
+according to http://www.fileformat.info/info/unicode/block/latin_supplement/list.htm
+First look:
+u00CA is missing in the array and all following entries are matched wrong by an offset of 1.
+Found on http://stackoverflow.com/questions/4172784/bug-in-apache-commons-stringescapeutil/4172915#4172915

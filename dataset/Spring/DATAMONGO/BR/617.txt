@@ -1,0 +1,29 @@
+NullPointerException in MongoTemplate.initializeVersionProperty()
+If mongoPersistentEntity is null, NullPointerException is thrown (line 671).
+Write this (ligne 669) : 
+
+
+
+
+
+
+if (mongoPersistentEntity != null &amp;&amp; mongoPersistentEntity.hasVersionProperty()) 
+
+
+
+
+
+
+Instead of : 
+
+
+
+
+
+
+if (mongoPersistentEntity == null || mongoPersistentEntity.hasVersionProperty())
+
+
+
+
+

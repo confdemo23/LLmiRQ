@@ -1,0 +1,2 @@
+camel-jetty  can&apos;t config the temp directory for the multi part form support rightly
+You will get a ClassCastException if you try to set the temp directory from the camel property.

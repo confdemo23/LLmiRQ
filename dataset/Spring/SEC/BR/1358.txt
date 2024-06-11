@@ -1,0 +1,2 @@
+DefaultWebInvocationPrivilegeEvaluator fails with empty context path
+There is currently an assertion which checks that the context path has a length &gt; 0, when in fact this is unnecessary.

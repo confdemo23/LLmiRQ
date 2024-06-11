@@ -1,0 +1,18 @@
+NPE in DelegatingServerInventory
+http://brontes.lab.eng.brq.redhat.com/viewLog.html?buildId=4738&amp;tab=buildResultsDiv&amp;buildTypeId=WF_MasterIgnoreWindowsDomainOnly
+Test failure:
+java.lang.AssertionError
+    at org.junit.Assert.fail(Assert.java:86)
+    at org.junit.Assert.assertTrue(Assert.java:41)
+    at org.junit.Assert.assertTrue(Assert.java:52)
+    at org.jboss.as.test.integration.domain.DomainControllerMigrationTestCase.testDCFailover(DomainControllerMigrationTestCase.java:223)
+This appears in the log:
+[Host Controller] 03:26:38,028 ERROR [org.jboss.as.controller.management-operation] (management-handler-thread - 4) JBAS014612: Operation ("read-attribute") failed - address: ([
+[Host Controller]     ("host" =&gt; "failover-h1"),
+[Host Controller]     ("server-config" =&gt; "failover-one")
+[Host Controller] ]): java.lang.NullPointerException
+[Host Controller]     at org.jboss.as.host.controller.DomainModelControllerService$DelegatingServerInventory.determineServerStatus(DomainModelControllerService.java:788)
+[Host Controller]     at org.jboss.as.host.controller.operations.ServerStatusHandler.execute(ServerStatusHandler.java:66)
+[Host Controller]     at org.jboss.as.controller.operations.global.ReadAttributeHandler.doExecuteInternal(ReadAttributeHandler.java:177) [wildfly-controller-8.0.0.Beta2-SNAPSHOT.jar:8.0.0.Beta2-SNAPSHOT]
+[Host Controller]     at org.jboss.as.controller.operations.global.ReadAttributeHandler.doExecute(ReadAttributeHandler.java:97) [wildfly-controller-8.0.0.Beta2-SNAPSHOT.jar:8.0.0.Beta2-SNAPSHOT]
+[Host Controller]     at org.jboss.as.controller.operations.global.GlobalOperationHandlers$AbstractMultiTargetHandler.execute(GlobalOperationHandlers.java:151) [wildfly-controller-8.0.0.Beta2-SNAPSHOT.jar:8.0.0.Beta2-SNAPSHOT]

@@ -1,0 +1,2 @@
+Finder add-on creates incorrect JQL queries when joining conditions
+Finder add-on creates incorrect JQL queries when joining conditions

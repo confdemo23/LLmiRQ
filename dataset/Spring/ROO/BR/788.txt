@@ -1,0 +1,21 @@
+Project Addon Template out of date
+I create an Add-on project with the roo shell command:
+
+
+
+
+
+
+ 
+
+
+
+
+  project --topLevelPackage org.organization.roo.addon --template ROO_ADDON_SIMPLE
+
+
+
+
+
+
+This project doesn&amp;apos;t compile.

@@ -1,0 +1,4 @@
+create project foo, followed by "mvn package" causes a build failure because there is no web.xml file
+This problem was reported by Adrian Colyer in ROO-138.
+Essentially we have changed the initial project generation to start without any Web artifacts (see ROO-26). This allows users to create a simple Spring project without any persistence or Web artefacts.
+However, the project maven pom file still refers to packaging type &amp;apos;war&amp;apos; which causes &amp;apos;mvn package&amp;apos; to fail due to a missing web.xml which is expected in Web projects. 

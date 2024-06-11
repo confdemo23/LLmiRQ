@@ -1,0 +1,4 @@
+Fix internal constant text in ReplicationManager.java
+ReplicationAdmin.java:  
+public static final String CFNAME = "columnFamlyName; (sic)
+Fix.

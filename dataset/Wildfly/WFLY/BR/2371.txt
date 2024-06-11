@@ -1,0 +1,5 @@
+SizeRotatingHandlerTestCase.rotationTest fails with "the file is bigger than allowed size"
+The test org.jboss.as.test.integration.logging.operations.SizeRotatingHandlerTestCase.rotationTest consistently fails with:
+java.lang.AssertionError: This file is bigger than allowed rotate-size: size-rotating-reload-rotationTest.log.1
+Link to job:
+https://jenkins.mw.lab.eng.bos.redhat.com/job/eap-6x-manu-acceptance-as-ts-RHEL6_x86-oracleJDK6-srczip/25/testReport/junit/org.jboss.as.test.integration.logging.operations/SizeRotatingHandlerTestCase/rotationTest/

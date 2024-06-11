@@ -1,0 +1,25 @@
+jboss-as-infinispan_1_X.xsd schema has incorrect default value for flush-lock-timeout in write-behind
+Description of problem:
+In org.infinispan.loaders.decorators.AsyncStoreConfig, the default flushLockTimeout is set to 5000. However, the default in the JBoss Infinispan schema ($JBOSS_HOME/docs/schema/jboss-as-infinispan_1_X.xsd) is set to 1. Because of this, if the thread-pool-size for write-behind is increased, then it is likely that one of the threads will not be able to obtain the state map lock within the 1 millisecond time provided by the schema default. This results in the following error:
+ERROR o.i.loaders.decorators.AsyncStore.run - ISPN000051: Unexpected error
+org.infinispan.CacheException: Unable to acquire lock on update map
+          at org.infinispan.loaders.decorators.AsyncStore.acquireLock(AsyncStore.java:293) ~[infinispan-core-5.1.3.FINAL.jar:5.1.3.FINAL]
+          at org.infinispan.loaders.decorators.AsyncStore.access$900(AsyncStore.java:86) ~[infinispan-core-5.1.3.FINAL.jar:5.1.3.FINAL]
+          at org.infinispan.loaders.decorators.AsyncStore$AsyncProcessor.innerRun(AsyncStore.java:336) ~[infinispan-core-5.1.3.FINAL.jar:5.1.3.FINAL]
+          at org.infinispan.loaders.decorators.AsyncStore$AsyncProcessor.run(AsyncStore.java:312) ~[infinispan-core-5.1.3.FINAL.jar:5.1.3.FINAL]
+          at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886) ~[na:1.6.0_31]
+          at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908) ~[na:1.6.0_31]
+          at java.lang.Thread.run(Thread.java:662) ~[na:1.6.0_31]
+Version-Release number of selected component (if applicable):
+Infinispan version 5.1.8
+How reproducible:
+Code inspection
+Steps to Reproduce:
+1. Check the default value for flush-lock-timeout in $JBOSS_HOME/docs/schema/jboss-as-infinispan_1_3.xsd
+2. Check the default value for flushLockTimeout in the org.infinispan.loaders.decorators.AsyncStoreConfig class
+3. Note the disparity
+Actual results:
+Default in schema is 1
+Expected results:
+Default in schema is 5000
+Additional info:

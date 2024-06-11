@@ -1,0 +1,13 @@
+ActiveDirectoryLdapAuthenticationProvider should use bindPrincipal not username
+Shouldn&amp;apos;t the lines
+return SpringSecurityLdapTemplate.searchForSingleEntryInternal(context, searchControls,
+                   searchRoot, searchFilter, new Object[]
+{username}
+);
+actually be
+return SpringSecurityLdapTemplate.searchForSingleEntryInternal(context, searchControls,
+                   searchRoot, searchFilter, new Object[]
+{bindPrincipal}
+);
+?
+This currently breaks our authentication.

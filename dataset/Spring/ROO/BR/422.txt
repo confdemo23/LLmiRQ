@@ -1,0 +1,4 @@
+scaffold does not allow "/" in "path" option
+For a project contains hundreds of pages, it&amp;apos;ll be better if ROO allow more than one level for path of views.
+e.g. I want to put all reference data maintenance pages under /reference/[resource_name]/[pages]
+It works in RC2, though I notice there&amp;apos;s a minor bug in generated menu.jspx which uses "/" in element id.

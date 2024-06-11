@@ -1,0 +1,2 @@
+Lots of work on the POM to enhance Javadocs, Xrefs
+If we disable the timestamps (which are in HTML comments), then every Javadoc file won&amp;apos;t show up as different every time we rebuild the site.

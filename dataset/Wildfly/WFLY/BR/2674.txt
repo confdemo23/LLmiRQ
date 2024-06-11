@@ -1,0 +1,7 @@
+Criteria for triggering @TopologyChanged logic in RegistryFactoryService is wrong
+There are 2 issues:
+1. In the fast-fail criteria:
+if (event.isPre() &amp;&amp; event.getCache().getCacheManager().isCoordinator()) return;
+This should be an OR not an AND.
+2. The channel coordinator may not have this registry service running!  Determine the "coordinator" based on the value of event.getConsistentHashAtEnd().
+This is bug is probably the root cause for a number of a large number of transient failures in the clustering testsuite.

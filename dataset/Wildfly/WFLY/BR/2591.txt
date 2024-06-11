@@ -1,0 +1,60 @@
+CLI can not connect to the server started with port-offset
+If a standalone server is started with a binding port-offset it is not possible to connect to the native management interface.
+To reproduce start a WildFly Beta server (Alpha3 has the same problem)
+  bin/standalone.sh -Djboss.socket.binding.port-offset=100
+and a cli client:
+  bin/jboss-cli.sh -c --controller=localhost:10099
+It makes no difference whether the port is changed by port-offset or configuration.
+All other ports (i.e. 10090 8180) can be used correct for http-management or ejb invocation.
+The server log an ERROR message:
+ERROR [org.jboss.remoting.remote.connection] (Remoting "home:MANAGEMENT" I/O-1) JBREM000200: Remote connection failed: java.io.IOException: XNIO000804: Received an invalid message length of 1195725856
+The jboss-cli.sh client show:
+org.jboss.as.cli.CliInitializationException: Failed to connect to the controller
+	at org.jboss.as.cli.impl.CliLauncher.initCommandContext(CliLauncher.java:240)
+	at org.jboss.as.cli.impl.CliLauncher.main(CliLauncher.java:218)
+	at org.jboss.as.cli.CommandLineMain.main(CommandLineMain.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.modules.Module.run(Module.java:292)
+	at org.jboss.modules.Main.main(Main.java:455)
+Caused by: org.jboss.as.cli.CommandLineException: The controller is not available at localhost:10099
+	at org.jboss.as.cli.impl.CommandContextImpl.tryConnection(CommandContextImpl.java:960)
+	at org.jboss.as.cli.impl.CommandContextImpl.connectController(CommandContextImpl.java:790)
+	at org.jboss.as.cli.impl.CommandContextImpl.connectController(CommandContextImpl.java:772)
+	at org.jboss.as.cli.impl.CliLauncher.initCommandContext(CliLauncher.java:238)
+	... 8 more
+Caused by: java.io.IOException: java.net.ConnectException: JBAS012174: Could not connect to http-remoting://localhost:10099. The connection failed
+	at org.jboss.as.controller.client.impl.AbstractModelControllerClient.executeForResult(AbstractModelControllerClient.java:129)
+	at org.jboss.as.controller.client.impl.AbstractModelControllerClient.execute(AbstractModelControllerClient.java:71)
+	at org.jboss.as.cli.impl.CommandContextImpl.tryConnection(CommandContextImpl.java:938)
+	... 11 more
+Caused by: java.net.ConnectException: JBAS012174: Could not connect to http-remoting://localhost:10099. The connection failed
+	at org.jboss.as.protocol.ProtocolConnectionUtils.connectSync(ProtocolConnectionUtils.java:129)
+	at org.jboss.as.protocol.ProtocolConnectionManager$EstablishingConnection.connect(ProtocolConnectionManager.java:256)
+	at org.jboss.as.protocol.ProtocolConnectionManager.connect(ProtocolConnectionManager.java:70)
+	at org.jboss.as.protocol.mgmt.FutureManagementChannel$Establishing.getChannel(FutureManagementChannel.java:204)
+	at org.jboss.as.cli.impl.CLIModelControllerClient.getOrCreateChannel(CLIModelControllerClient.java:166)
+	at org.jboss.as.cli.impl.CLIModelControllerClient$2.getChannel(CLIModelControllerClient.java:127)
+	at org.jboss.as.protocol.mgmt.ManagementChannelHandler.executeRequest(ManagementChannelHandler.java:117)
+	at org.jboss.as.protocol.mgmt.ManagementChannelHandler.executeRequest(ManagementChannelHandler.java:92)
+	at org.jboss.as.controller.client.impl.AbstractModelControllerClient.executeRequest(AbstractModelControllerClient.java:236)
+	at org.jboss.as.controller.client.impl.AbstractModelControllerClient.execute(AbstractModelControllerClient.java:141)
+	at org.jboss.as.controller.client.impl.AbstractModelControllerClient.executeForResult(AbstractModelControllerClient.java:127)
+	... 13 more
+Caused by: java.io.EOFException: XNIO000812: Connection closed unexpectedly
+	at org.xnio.http.HttpUpgrade$HttpUpgradeState$UpgradeResultListener.handleEvent(HttpUpgrade.java:283)
+	at org.xnio.http.HttpUpgrade$HttpUpgradeState$UpgradeResultListener.handleEvent(HttpUpgrade.java:266)
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92)
+	at org.xnio.conduits.ReadReadyHandler$ChannelListenerHandler.readReady(ReadReadyHandler.java:66)
+	at org.xnio.nio.NioSocketConduit.handleReady(NioSocketConduit.java:87)
+	at org.xnio.nio.WorkerThread.run(WorkerThread.java:528)
+	at ...asynchronous invocation...(Unknown Source)
+	at org.jboss.remoting3.EndpointImpl.doConnect(EndpointImpl.java:272)
+	at org.jboss.remoting3.EndpointImpl.doConnect(EndpointImpl.java:253)
+	at org.jboss.remoting3.EndpointImpl.connect(EndpointImpl.java:351)
+	at org.jboss.remoting3.EndpointImpl.connect(EndpointImpl.java:339)
+	at org.jboss.as.protocol.ProtocolConnectionUtils.connect(ProtocolConnectionUtils.java:80)
+	at org.jboss.as.protocol.ProtocolConnectionUtils.connectSync(ProtocolConnectionUtils.java:99)
+	... 23 more

@@ -1,0 +1,15 @@
+Beeline gives bogus error message if an unaccepted command line option is given
+
+
+
+$ beeline -o
+
+-o (No such file or directory)
+
+Beeline version 0.13.0-SNAPSHOT by Apache Hive
+
+beeline&gt; 
+
+
+
+The message suggests that beeline accepts a file (without -f option) while it enters interactive mode any way.

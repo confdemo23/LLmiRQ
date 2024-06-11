@@ -1,0 +1,13 @@
+CombinedConfiguration: java.util.NoSuchElementException after reload of enclosed SubnodeConfiguration/XMLConfiguration
+Steps to repeat:
+
+create a XMLConfiguration based on a XML config file (xml file content e.g.:  &lt;config&gt;&lt;foo&gt;&lt;bar&gt;0&lt;/bar&gt;&lt;/for&gt;&lt;/config&gt;)
+assign file reloading strategy to the XMLConfiguration
+create a SubnodeConfiguration based on this XMLConfiguration (prefix e.g.: &amp;apos;foor&amp;apos;)
+create a CombinedConfiguration
+add the SubnodeConfiguration to this CombinedConfiguration
+get a configuration value from the CombinedConfiguration (e.g. &amp;apos;bar&amp;apos;) -&gt; OK, this works
+touch the underlying xml configuration
+try to get a configuration value from the CombinedConfiguration again (e.g. &amp;apos;bar&amp;apos;) -&gt;  java.util.NoSuchElementException
+
+See also attached TestCase.

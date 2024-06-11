@@ -1,0 +1,22 @@
+Restlet Rest Component properties are ignored
+Rest properties for RestletComponent are not picked up by the component because it&amp;apos;s incorrectly looking for "restle" properties instead of "restlet".
+
+
+
+        // configure component options
+
+        RestConfiguration config = getCamelContext().getRestConfiguration();
+
+        if (config != null &amp;&amp; (config.getComponent() == null || config.getComponent().equals("restle"))) {
+
+            // configure additional options on spark configuration
+
+            if (config.getComponentProperties() != null &amp;&amp; !config.getComponentProperties().isEmpty()) {
+
+                setProperties(this, config.getComponentProperties());
+
+            }
+
+        }
+
+

@@ -1,0 +1,10 @@
+NPE in StepParserStepFactoryBean#configureTaskletStep() #289 when omitting "isolation" for <transaction-attributes>
+this is changed behaviour compared to 2.0.0, where the following job definition worked fine:
+ &lt;batch:job id="indexUpdater"&gt;
+        &lt;batch:step id="updateIndexes"&gt;
+            &lt;batch:tasklet ref="indexUpdaterTasklet"&gt;
+                &lt;batch:transaction-attributes propagation="NEVER"/&gt;
+            &lt;/batch:tasklet&gt;
+        &lt;/batch:step&gt;
+    &lt;/batch:job&gt;
+after changing to   &lt;batch:transaction-attributes isolation="DEFAULT" propagation="NEVER"/&gt; it worked again

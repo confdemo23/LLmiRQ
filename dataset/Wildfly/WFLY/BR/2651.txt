@@ -1,0 +1,44 @@
+ JBAS014160: Wrong tx on thread when calling async EJB method from async servlet 
+When trying to execute asynchronous EJB bean from asynchronous servlet, the following exception is thrown (testcase is available at https://github.com/eyusupov/async-testcase/):
+2013-12-13 00:42:03,489 ERROR [org.jboss.as.txn] (EJB default - 1) JBAS010152: APPLICATION ERROR: transaction still active in request with status 0
+2013-12-13 00:42:03,494 ERROR [org.jboss.as.ejb3.invocation] (EJB default - 1) JBAS014134: EJB Invocation failed on component AsyncBean for method public void com.okasamastarr.web.AsyncBean.count(javax.servlet.AsyncContext) throws java.io.IOException: java.lang.IllegalStateException: JBAS014160: Wrong tx on thread: expected TransactionImple &lt; ac, BasicAction: 0:ffffac1e0f02:-40b55bbb:52aa1f96:8 status: ActionStatus.ABORTED &gt;, actual null
+    at org.jboss.as.ejb3.tx.CMTTxInterceptor.endTransaction(CMTTxInterceptor.java:85) [wildfly-ejb3-8.0.0.Beta1.jar:8.0.0.Beta1]
+    at org.jboss.as.ejb3.tx.CMTTxInterceptor.invokeInOurTx(CMTTxInterceptor.java:277) [wildfly-ejb3-8.0.0.Beta1.jar:8.0.0.Beta1]
+    at org.jboss.as.ejb3.tx.CMTTxInterceptor.required(CMTTxInterceptor.java:340) [wildfly-ejb3-8.0.0.Beta1.jar:8.0.0.Beta1]
+    at org.jboss.as.ejb3.tx.CMTTxInterceptor.processInvocation(CMTTxInterceptor.java:239) [wildfly-ejb3-8.0.0.Beta1.jar:8.0.0.Beta1]
+    at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:309)
+    at org.jboss.as.ejb3.component.interceptors.CurrentInvocationContextInterceptor.processInvocation(CurrentInvocationContextInterceptor.java:41) [wildfly-ejb3-8.0.0.Beta1.jar:8.0.0.Beta1]
+    at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:309)
+    at org.jboss.as.ejb3.component.invocationmetrics.WaitTimeInterceptor.processInvocation(WaitTimeInterceptor.java:43) [wildfly-ejb3-8.0.0.Beta1.jar:8.0.0.Beta1]
+    at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:309)
+    at org.jboss.as.ejb3.security.SecurityContextInterceptor.processInvocation(SecurityContextInterceptor.java:95) [wildfly-ejb3-8.0.0.Beta1.jar:8.0.0.Beta1]
+    at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:309)
+    at org.jboss.as.ejb3.component.interceptors.ShutDownInterceptorFactory$1.processInvocation(ShutDownInterceptorFactory.java:64) [wildfly-ejb3-8.0.0.Beta1.jar:8.0.0.Beta1]
+    at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:309)
+    at org.jboss.as.ejb3.component.interceptors.LoggingInterceptor.processInvocation(LoggingInterceptor.java:59) [wildfly-ejb3-8.0.0.Beta1.jar:8.0.0.Beta1]
+    at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:309)
+    at org.jboss.as.ee.component.NamespaceContextInterceptor.processInvocation(NamespaceContextInterceptor.java:50)
+    at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:309)
+    at org.jboss.as.ejb3.component.interceptors.AdditionalSetupInterceptor.processInvocation(AdditionalSetupInterceptor.java:55) [wildfly-ejb3-8.0.0.Beta1.jar:8.0.0.Beta1]
+    at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:309)
+    at org.jboss.invocation.ContextClassLoaderInterceptor.processInvocation(ContextClassLoaderInterceptor.java:64)
+    at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:309)
+    at org.jboss.invocation.InterceptorContext.run(InterceptorContext.java:325)
+    at org.wildfly.security.manager.WildFlySecurityManager.doChecked(WildFlySecurityManager.java:437)
+    at org.jboss.invocation.AccessCheckingInterceptor.processInvocation(AccessCheckingInterceptor.java:61)
+    at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:309)
+    at org.jboss.invocation.InterceptorContext.run(InterceptorContext.java:325)
+    at org.jboss.invocation.PrivilegedWithCombinerInterceptor.processInvocation(PrivilegedWithCombinerInterceptor.java:80)
+    at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:309)
+    at org.jboss.invocation.ChainedInterceptor.processInvocation(ChainedInterceptor.java:61)
+    at org.jboss.as.ee.component.ViewService$View.invoke(ViewService.java:165)
+    at org.jboss.as.ee.component.ViewDescription$1.processInvocation(ViewDescription.java:182)
+    at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:309)
+    at org.jboss.as.ejb3.component.interceptors.LogDiagnosticContextRecoveryInterceptor.processInvocation(LogDiagnosticContextRecoveryInterceptor.java:79) [wildfly-ejb3-8.0.0.Beta1.jar:8.0.0.Beta1]
+    at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:309)
+    at org.jboss.as.ejb3.component.interceptors.AsyncFutureInterceptorFactory$1$1.runInvocation(AsyncFutureInterceptorFactory.java:87) [wildfly-ejb3-8.0.0.Beta1.jar:8.0.0.Beta1]
+    at org.jboss.as.ejb3.component.interceptors.AsyncInvocationTask.run(AsyncInvocationTask.java:73) [wildfly-ejb3-8.0.0.Beta1.jar:8.0.0.Beta1]
+    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_25]
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_25]
+    at java.lang.Thread.run(Thread.java:724) [rt.jar:1.7.0_25]
+    at org.jboss.threads.JBossThread.run(JBossThread.java:122)

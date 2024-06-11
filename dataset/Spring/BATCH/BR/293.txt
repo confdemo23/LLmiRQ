@@ -1,0 +1,15 @@
+ResourceLineReader eats newlines within a record&apos;s field
+Considering the lines:
+1,2,"3
+4"
+5,6,7
+The expected return value of two consecutive calls to the read() method of ResourceLineReader are (without &lt; and &gt;):
+call 1:
+&lt;1,2,"3
+4"&gt;
+call 2:
+&lt;5,6,7&gt;
+But currently, call 1 returns 
+&lt;1,2,"34"
+&gt;
+(notice that the newline is misplaced...)

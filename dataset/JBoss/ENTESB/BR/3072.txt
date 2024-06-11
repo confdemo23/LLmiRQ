@@ -1,0 +1,2 @@
+SAP Camel Server Components do not return responses
+The server components do not return responses to SAP caller.

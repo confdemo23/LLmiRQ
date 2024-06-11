@@ -1,0 +1,2 @@
+select * from partitioned table via JDBC does not return partition columns
+select * from partitioned table via JDBC does not return partition columns. This behavior is different from via CLI.

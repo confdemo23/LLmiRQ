@@ -1,0 +1,36 @@
+Improve error message for missing @Param annotations for query methods with named parameters
+Assume you have a repository declaration like this:
+
+
+
+
+
+
+public PeopleRepository extends Repository&lt;Person, Long&gt; {
+
+
+
+
+
+
+
+
+
+  @Query("select p from Person p where p.lastname = :lastname")
+
+
+
+
+  List&lt;Person&gt; findByLastname(String lastname);
+
+
+
+
+}
+
+
+
+
+
+
+On method invocation you get a "Name must not be null or empty!" from StringQuery which doesn&amp;apos;t make too obvious that you&amp;apos;re missing @Param annotations on the lastname parameter. We should improve the exception message to guide users a bit more.

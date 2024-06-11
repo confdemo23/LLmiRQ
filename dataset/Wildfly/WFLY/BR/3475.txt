@@ -1,0 +1,29 @@
+Support vaulted properties for JMSContext annotation
+It is possible to annotate an injected JMSContext with a @JMSPasswordCredential. The userName &amp; password attributes of this annotation should support to be vaulted so no user credentials would appear in clear text in the source file:
+
+
+
+
+
+
+    @Inject
+
+
+
+
+    @JMSConnectionFactory("java:jboss/exported/jms/RemoteConnectionFactory")
+
+
+
+
+    @JMSPasswordCredential(userName = "${VAULT::messaging::userName::1}", password = "${VAULT::messaging::password::1}")
+
+
+
+
+    private JMSContext context;
+
+
+
+
+

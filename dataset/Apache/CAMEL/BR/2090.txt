@@ -1,0 +1,2 @@
+camel-jms - Option autoStartup does not work
+It does in fact auto startup it anyway.

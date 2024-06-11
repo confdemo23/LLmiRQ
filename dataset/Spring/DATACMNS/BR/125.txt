@@ -1,0 +1,2 @@
+QueryExecutorMethodInterceptor does not reject interfaces with query methods if no QueryLookupStrategy defined
+The constructor of QueryExecutorMethodInterceptor tries to reject interfaces containing query methods if no QueryLookupStrategy is defined. Unfortunately it doesn&amp;apos;t as it checks for custom methods instead of query methods.

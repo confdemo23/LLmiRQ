@@ -1,0 +1,2 @@
+Listener Container Does Not Set Interrupted Bit
+While waiting for the subscription task to start, the container catches InterruptedException but does not re-set the interrupted bit. Needs Thread.currentThread.interrupt().

@@ -1,0 +1,2 @@
+Merge JdbcTemplate and SimpleJdbcTemplate, deprecate SimpleJdbcTemplate
+Now that RowMapper offers parameterized types can we please abandon SimpleJdbcTemplate? It still lacks some functionality (e.g. fetch size) over JdbcTemplate so sometimes both are used.

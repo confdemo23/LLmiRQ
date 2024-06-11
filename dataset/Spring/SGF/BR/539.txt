@@ -1,0 +1,3 @@
+Change GemfireCache.evict(key) to call Region.remove(key).
+Currently, the GemfireCache.evict(key:Object) method calls Pivotal GemFire&amp;apos;s (Apache Geode&amp;apos;s) Region.destroy(key:Object) method, which can throw a EntryNotFoundException causing an application @Sevice component operation annotated with the @CacheEvict annotation to fail.
+See StackOverflow post (question... "Gemfire EntryNotFoundException for @CacheEvict") for more details.

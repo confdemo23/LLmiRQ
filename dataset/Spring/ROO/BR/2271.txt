@@ -1,0 +1,36 @@
+Incorrect variable generated in findEntity method when GAE is used and the identifierField attribute on @RooEntity is specified
+When the GOOGLE_APP_ENGINE database is configured for use in a Roo project and the user has specified a value in the &amp;apos;identifierField&amp;apos; attribute of @RooEntity, the find method has incorrect code generated. For example, if identifierField is set to &amp;apos;tid&amp;apos;, ie @RooEntity(identifierField = &amp;apos;tid&amp;apos;) the generated find method looks like:
+
+
+
+
+
+
+    @Transactional
+
+
+
+
+    public static Document Document.findDocument(Long id) {
+
+
+
+
+        if (id == null) return null;
+
+
+
+
+        Query query = entityManager().createQuery("select o from Document o where o.tid = :id").setParameter("id",tid);
+
+
+
+
+    ...
+
+
+
+
+
+
+resulting in a compile error.

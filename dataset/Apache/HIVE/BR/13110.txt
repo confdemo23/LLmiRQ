@@ -1,0 +1,2 @@
+LLAP: Package log4j2 jars into Slider pkg
+This forms the alternative path for HIVE-13015 (reverted), so that HIVE-13027 can pick up the right logger impl always.

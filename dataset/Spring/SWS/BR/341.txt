@@ -1,0 +1,66 @@
+Wss4jSecurityInterceptor and AcegiDigestPasswordValidationCallbackHandler do not correctly work together to update the Acegi security context.
+I am trying to hook up digest password handling and acegi authorization. I have managed to do this successfully with the plain text equivalent. I think I&amp;apos;ve managed to get close to the problem. When you configure the plain text acegi handler you wire in a ProviderManager. 
+&lt;bean id="acegiHandler"
+          class="org.springframework.ws.soap.security.wss4j.callback.acegi.AcegiPlainTextPasswordValidationCallbackHandler"&gt;
+        &lt;property name="authenticationManager" ref="authenticationManager"/&gt;
+    &lt;/bean&gt;
+    &lt;bean id="authenticationManager" class="org.acegisecurity.providers.ProviderManager"&gt;
+        &lt;property name="providers"&gt;
+            &lt;bean class="org.acegisecurity.providers.dao.DaoAuthenticationProvider"&gt;
+                &lt;property name="userDetailsService" ref="inMemoryDaoImpl"/&gt;
+            &lt;/bean&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
+    &lt;bean id="wsSecurityInterceptor" class="org.springframework.ws.soap.security.wss4j.Wss4jSecurityInterceptor"&gt;
+        &lt;property name="validationActions" value="UsernameToken"/&gt;
+        &lt;property name="validationCallbackHandler"&gt;
+            &lt;!-&lt;ref local="acegiDigestPasswordHandler"/&gt;-&gt;
+            &lt;ref local="acegiHandler"/&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
+    &lt;bean id="inMemoryDaoImpl" class="org.acegisecurity.userdetails.memory.InMemoryDaoImpl"&gt;
+        &lt;property name="userMap"&gt;
+            &lt;value&gt;
+                Ernie=Bert,ROLE_SUPERVISOR
+            &lt;/value&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
+It is the AbstractUserDetailsAuthenticationProvider (called by the AuthenticationManager) which, upon successful authentication, that actually sets the setAuthenticated(true) on the UsernamePasswordAuthenticationToken (see UsernamePasswordAuthenticationToken(principal,  authentication.getCredentials(), user.getAuthorities()); ).
+protected Authentication createSuccessAuthentication(Object principal, Authentication authentication,
+        UserDetails user) 
+{
+        // Ensure we return the original credentials the user supplied,
+        // so subsequent attempts are successful even with encoded passwords.
+        // Also ensure we return the original getDetails(), so that future
+        // authentication events after cache expiry contain the details
+
+// IB this constructor sets &amp;apos;authenticated&amp;apos; to true
+        UsernamePasswordAuthenticationToken result = new UsernamePasswordAuthenticationToken(principal,
+                authentication.getCredentials(), user.getAuthorities());
+        result.setDetails(authentication.getDetails());
+
+        return result;
+    }
+
+
+In the case of AcegiDigestPasswordValidationCallbackHandler you don&amp;apos;t wire in a AuthenticationManager so even thought the credentials are valid it is never set to authentication in acegi SecurityContext. So the authorization fails even though the Principal has the correct GrantedAuthorities.
+&lt;bean id="wsSecurityInterceptor" class="org.springframework.ws.soap.security.wss4j.Wss4jSecurityInterceptor"&gt;
+        &lt;property name="validationActions" value="UsernameToken"/&gt;
+        &lt;property name="validationCallbackHandler"&gt;
+            &lt;ref local="acegiDigestPasswordHandler"/&gt;
+            &lt;!-&lt;ref local="acegiHandler"/&gt;-&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
+    &lt;bean id="inMemoryDaoImpl" class="org.acegisecurity.userdetails.memory.InMemoryDaoImpl"&gt;
+        &lt;property name="userMap"&gt;
+            &lt;value&gt;
+                Ernie=Bert,ROLE_SUPERVISOR
+            &lt;/value&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
+    &lt;bean id="acegiDigestPasswordHandler"
+          class="org.springframework.ws.soap.security.wss4j.callback.acegi.AcegiDigestPasswordValidationCallbackHandler"&gt;
+        &lt;property name="userDetailsService"&gt;
+            &lt;ref local="inMemoryDaoImpl"/&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;

@@ -1,0 +1,3 @@
+add-user utility reports "No java.io.Console available to interact with user." when used silently with su and piped to a file.
+Running add-user.sh in silent mode and redirecting the output to a file results in an exception:
+Exception in thread "main" java.lang.IllegalStateException: JBAS015232: No java.io.Console available to interact with user.

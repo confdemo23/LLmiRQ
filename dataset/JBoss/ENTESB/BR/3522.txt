@@ -1,0 +1,2 @@
+Move Repository Data Stores to SAP Configuration to support Blueprint
+The repository data stores for SAP components do not properly initialize in Blueprint containers and should be moved into the central SAP Configuration object where connection configurations are maintained. 

@@ -1,0 +1,57 @@
+Can not deploy a @ConnectionFactoryDefinition if the RA has more <connection-definitions>
+Steps to reproduce:
+
+add a 2nd connection-defintion to testsuite/integration/basic/src/test/java/org/jboss/as/test/integration/jca/deployment/ra.xml:
+
+
+
+
+
+
+         &lt;connection-definition&gt;
+
+
+
+
+            &lt;managedconnectionfactory-class&gt;org.jboss.as.test.integration.jca.rar.MultipleManagedConnectionFactory2&lt;/managedconnectionfactory-class&gt;
+
+
+
+
+            &lt;connectionfactory-interface&gt;org.jboss.as.test.integration.jca.rar.MultipleConnectionFactory2&lt;/connectionfactory-interface&gt;
+
+
+
+
+            &lt;connectionfactory-impl-class&gt;org.jboss.as.test.integration.jca.rar.MultipleConnectionFactory2Impl&lt;/connectionfactory-impl-class&gt;
+
+
+
+
+            &lt;connection-interface&gt;org.jboss.as.test.integration.jca.rar.MultipleConnection2&lt;/connection-interface&gt;
+
+
+
+
+            &lt;connection-impl-class&gt;org.jboss.as.test.integration.jca.rar.MultipleConnection2Impl&lt;/connection-impl-class&gt;
+
+
+
+
+         &lt;/connection-definition&gt;
+
+
+
+
+
+
+Run the WarServletDeploymentTestCase test
+=&gt; it fails because the ConnectionFactoryDefinition objects are no longer deployed.
+
+After debugging, the test fails because the deployed connection definitions are not activated.
+The code at org/jboss/as/connector/services/resourceadapters/ResourceAdapterActivatorService.java:232 is preventing the activation and looks suspicious.
+It expects that all the MCF in the RA (raMcfClasses) must all be in the activation (ijMcfClasses). 
+With a 2nd &lt;connection-definition&gt; in the RA, it is no longer the case (as the activation only contains a single MCF (MultipleManagedConnectionFactory1).
+If I change the code so that it checks that all the MCF in the activations are in the RA, the test passes again.
+This issue is preventing me to reuse the code handling the @ConnectionFactoryDefinition to support the @JMSConnectionFactoryDefinition (my JMS RA defines 3 MCF for generic/queue/topic CFs but my activation only defines a single MCF per @JMSConnectionFactoryDefinition).
+I&amp;apos;ve not run it but the same issue is likely for admin objects too (the code in checkActivation is similar)

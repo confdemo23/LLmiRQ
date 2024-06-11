@@ -1,0 +1,22 @@
+Database prefix does not work properly if table has same name
+If you do the following it will fail: 
+
+
+
+0: jdbc:hive2://cdh54-1.test.com:10000/defaul&gt; create database test4; 
+
+No rows affected (0.881 seconds) 
+
+0: jdbc:hive2://cdh54-1.test.com:10000/defaul&gt; use test4; 
+
+No rows affected (0.1 seconds) 
+
+0: jdbc:hive2://cdh54-1.test.com:10000/defaul&gt; create table test4 (c1 char(200)); 
+
+No rows affected (0.306 seconds) 
+
+0: jdbc:hive2://cdh54-1.test.com:10000/defaul&gt; desc test4.test4; 
+
+Error: Error while processing statement: FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.DDLTask. cannot find field test4 from [0:c1] (state=08S01,code=1)
+
+

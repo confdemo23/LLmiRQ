@@ -1,0 +1,940 @@
+Singleton deployment fails to automatically start on second node
+After stopping the node on which the singleton deployment is active, the deployment will fail to automatically start on another node under these conditions:
+1. Simple election policy with applied name preferences is used:
+
+
+
+
+
+
+&lt;simple-election-policy&gt;
+
+
+
+
+    &lt;name-preferences&gt;node1 node2&lt;/name-preferences&gt;
+
+
+
+
+&lt;/simple-election-policy&gt;
+
+
+
+
+
+
+2. The server named "node2" starts first, so that singleton deployment is active for a while on this node, then server named "node1" is started.
+3. The server named "node1" stops.
+Server "node1" stops without error, however server "node2" gets NPE during the automatic re-deployment. 
+The same issue occurs when trying with latest wildfly upstream/master bits. 
+Server logs:
+
+
+
+
+
+
+Server 1 log
+
+
+
+
+
+
+[mvinkler@localhost jboss-eap-7.0_1]$ ./bin/standalone.sh -c standalone-ha.xml -Djboss.node.name=node1
+
+
+
+
+=========================================================================
+
+
+
+
+
+
+
+
+
+  JBoss Bootstrap Environment
+
+
+
+
+
+
+
+
+
+  JBOSS_HOME: /usr/work/eap/tmp2/jboss-eap-7.0_1
+
+
+
+
+
+
+
+
+
+  JAVA: /usr/work/java/jdk1.8.0_45/bin/java
+
+
+
+
+
+
+
+
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/usr/work/eap/tmp2/jboss-eap-7.0_1/standalone/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms64m -Xmx512m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true
+
+
+
+
+
+
+
+
+
+=========================================================================
+
+
+
+
+
+
+
+
+
+15:24:51,402 INFO  [org.jboss.modules] (main) JBoss Modules version 1.4.3.Final
+
+
+
+
+15:24:51,667 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
+
+
+
+
+15:24:51,718 INFO  [org.jboss.as] (MSC service thread 1-6) WFLYSRV0049: EAP 7.0.0.Alpha1 (WildFly Core 2.0.0.Beta4) starting
+
+
+
+
+15:24:52,542 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 16) WFLYCTL0028: Attribute &amp;apos;enabled&amp;apos; in the resource at address &amp;apos;/subsystem=datasources/data-source=ExampleDS&amp;apos; is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+
+
+
+
+15:24:52,574 INFO  [org.jboss.as.repository] (ServerService Thread Pool -- 21) WFLYDR0001: Content added at location /usr/work/eap/tmp2/jboss-eap-7.0_1/standalone/data/content/bd/6880bc84b90171ef3d37078e2c222b47647c13/content
+
+
+
+
+15:24:52,643 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+
+
+
+
+15:24:52,659 INFO  [org.xnio] (MSC service thread 1-7) XNIO version 3.4.0.Beta1
+
+
+
+
+15:24:52,670 INFO  [org.xnio.nio] (MSC service thread 1-7) XNIO NIO Implementation Version 3.4.0.Beta1
+
+
+
+
+15:24:52,694 INFO  [org.jboss.remoting] (MSC service thread 1-7) JBoss Remoting version 4.0.9.Final
+
+
+
+
+15:24:52,791 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 45) WFLYCLJG0001: Activating JGroups subsystem.
+
+
+
+
+15:24:52,795 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 48) WFLYJSF0007: Activated the following JSF Implementations: [main]
+
+
+
+
+15:24:52,799 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 41) WFLYCLINF0001: Activating Infinispan subsystem.
+
+
+
+
+15:24:52,812 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 40) WFLYIO001: Worker &amp;apos;default&amp;apos; has auto-configured to 16 core threads with 128 task threads based on your 8 available processors
+
+
+
+
+15:24:52,817 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 58) WFLYSEC0002: Activating Security Subsystem
+
+
+
+
+15:24:52,823 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 60) WFLYTX0013: Node identifier property is set to the default value. Please make sure it is unique.
+
+
+
+
+15:24:52,826 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 51) WFLYNAM0001: Activating Naming Subsystem
+
+
+
+
+15:24:52,834 INFO  [org.jboss.as.security] (MSC service thread 1-7) WFLYSEC0001: Current PicketBox version=4.9.3.Final
+
+
+
+
+15:24:52,857 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 62) WFLYWS0002: Activating WebServices Extension
+
+
+
+
+15:24:52,867 INFO  [org.jboss.as.connector] (MSC service thread 1-4) WFLYJCA0009: Starting JCA Subsystem (IronJacamar 1.2.5.Final)
+
+
+
+
+15:24:52,869 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 36) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+
+
+
+
+15:24:52,872 INFO  [org.jboss.as.naming] (MSC service thread 1-8) WFLYNAM0003: Starting Naming Service
+
+
+
+
+15:24:52,873 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-2) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+
+
+
+
+15:24:52,874 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-8) WFLYJCA0018: Started Driver service with driver-name = h2
+
+
+
+
+15:24:52,880 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0003: Undertow 1.3.0.Beta9 starting
+
+
+
+
+15:24:52,883 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 61) WFLYUT0003: Undertow 1.3.0.Beta9 starting
+
+
+
+
+15:24:53,014 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 61) WFLYUT0014: Creating file handler for path &amp;apos;/usr/work/eap/tmp2/jboss-eap-7.0_1/welcome-content&amp;apos; with options [directory-listing: &amp;apos;false&amp;apos;, follow-symlink: &amp;apos;false&amp;apos;, case-sensitive: &amp;apos;true&amp;apos;, safe-symlink-paths: &amp;apos;[]&amp;apos;]
+
+
+
+
+15:24:53,019 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0012: Started server default-server.
+
+
+
+
+15:24:53,025 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0018: Host default-host starting
+
+
+
+
+15:24:53,083 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0006: Undertow AJP listener ajp listening on /127.0.0.1:8009
+
+
+
+
+15:24:53,083 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0006: Undertow HTTP listener default listening on /127.0.0.1:8080
+
+
+
+
+15:24:53,087 INFO  [org.jboss.modcluster] (ServerService Thread Pool -- 63) MODCLUSTER000001: Initializing mod_cluster version 1.3.1.Final
+
+
+
+
+15:24:53,104 INFO  [org.jboss.modcluster] (ServerService Thread Pool -- 63) MODCLUSTER000032: Listening to proxy advertisements on /224.0.1.105:23364
+
+
+
+
+15:24:53,192 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+
+
+
+
+15:24:53,233 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0027: Starting deployment of "singleton-deployment-descriptor.war" (runtime-name: "singleton-deployment-descriptor.war")
+
+
+
+
+15:24:53,241 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-3) WFLYDS0013: Started FileSystemDeploymentService for directory /usr/work/eap/tmp2/jboss-eap-7.0_1/standalone/deployments
+
+
+
+
+15:24:53,350 INFO  [org.jboss.ws.common.management] (MSC service thread 1-6) JBWS022052: Starting JBoss Web Services - Stack CXF Server 5.1.0.Beta1
+
+
+
+
+15:24:53,683 WARNING [org.jgroups.protocols.UDP] (MSC service thread 1-6) JGRP000015: the send buffer of socket DatagramSocket was set to 1MB, but the OS only allocated 212.99KB. This might lead to performance problems. Please set your max send buffer in the OS correctly (e.g. net.core.wmem_max on Linux)
+
+
+
+
+15:24:53,684 WARNING [org.jgroups.protocols.UDP] (MSC service thread 1-6) JGRP000015: the receive buffer of socket DatagramSocket was set to 20MB, but the OS only allocated 212.99KB. This might lead to performance problems. Please set your max receive buffer in the OS correctly (e.g. net.core.rmem_max on Linux)
+
+
+
+
+15:24:53,684 WARNING [org.jgroups.protocols.UDP] (MSC service thread 1-6) JGRP000015: the send buffer of socket MulticastSocket was set to 1MB, but the OS only allocated 212.99KB. This might lead to performance problems. Please set your max send buffer in the OS correctly (e.g. net.core.wmem_max on Linux)
+
+
+
+
+15:24:53,684 WARNING [org.jgroups.protocols.UDP] (MSC service thread 1-6) JGRP000015: the receive buffer of socket MulticastSocket was set to 25MB, but the OS only allocated 212.99KB. This might lead to performance problems. Please set your max receive buffer in the OS correctly (e.g. net.core.rmem_max on Linux)
+
+
+
+
+15:24:54,079 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (ServerService Thread Pool -- 63) ISPN000078: Starting JGroups channel server
+
+
+
+
+15:24:54,088 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (ServerService Thread Pool -- 63) ISPN000094: Received new cluster view for channel server: [node2|1] (2) [node2, node1]
+
+
+
+
+15:24:54,091 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (ServerService Thread Pool -- 63) ISPN000079: Channel server local address is node1, physical addresses are [127.0.0.1:55200]
+
+
+
+
+15:24:54,140 INFO  [org.infinispan.factories.GlobalComponentRegistry] (ServerService Thread Pool -- 63) ISPN000128: Infinispan version: Infinispan &amp;apos;Infinite Darkness&amp;apos; 8.0.0.CR1
+
+
+
+
+15:24:54,315 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 63) WFLYCLINF0002: Started default cache from server container
+
+
+
+
+15:24:54,618 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 66) WFLYUT0021: Registered web context: /singleton-deployment-descriptor
+
+
+
+
+15:24:54,657 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 37) WFLYSRV0010: Deployed "singleton-deployment-descriptor.war" (runtime-name : "singleton-deployment-descriptor.war")
+
+
+
+
+15:24:54,743 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+
+
+
+
+15:24:54,743 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+
+
+
+
+15:24:54,744 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: EAP 7.0.0.Alpha1 (WildFly Core 2.0.0.Beta4) started in 3611ms - Started 353 of 608 services (366 services are lazy, passive or on-demand)
+
+
+
+
+^C15:25:04,667 INFO  [org.jboss.as.server] (Thread-2) WFLYSRV0220: Server shutdown has been requested.
+
+
+
+
+15:25:04,680 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 21) WFLYUT0022: Unregistered web context: /singleton-deployment-descriptor
+
+
+
+
+15:25:04,686 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0019: Host default-host stopping
+
+
+
+
+15:25:04,686 INFO  [org.jboss.modcluster] (ServerService Thread Pool -- 23) MODCLUSTER000002: Initiating mod_cluster shutdown
+
+
+
+
+15:25:04,687 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-6) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+
+
+
+
+15:25:04,689 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0019: Stopped Driver service with driver-name = h2
+
+
+
+
+15:25:04,698 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-2) HV000001: Hibernate Validator 5.2.1.Final
+
+
+
+
+15:25:04,739 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0008: Undertow HTTP listener default suspending
+
+
+
+
+15:25:04,739 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0028: Stopped deployment singleton-deployment-descriptor.war (runtime-name: singleton-deployment-descriptor.war) in 69ms
+
+
+
+
+15:25:04,739 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0008: Undertow AJP listener ajp suspending
+
+
+
+
+15:25:04,740 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0007: Undertow HTTP listener default stopped, was bound to /127.0.0.1:8080
+
+
+
+
+15:25:04,740 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0007: Undertow AJP listener ajp stopped, was bound to /127.0.0.1:8009
+
+
+
+
+15:25:04,741 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0004: Undertow 1.3.0.Beta9 stopping
+
+
+
+
+15:25:04,744 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 63) WFLYCLINF0003: Stopped default cache from server container
+
+
+
+
+15:25:04,745 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (MSC service thread 1-6) ISPN000080: Disconnecting JGroups channel server
+
+
+
+
+15:25:04,746 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (MSC service thread 1-6) ISPN000082: Stopping the RpcDispatcher for channel server
+
+
+
+
+15:25:04,810 INFO  [org.jboss.as] (MSC service thread 1-5) WFLYSRV0050: EAP 7.0.0.Alpha1 (WildFly Core 2.0.0.Beta4) stopped in 138ms
+
+
+
+
+
+
+
+
+
+
+
+
+Server 2 log
+
+
+
+
+
+
+[mvinkler@localhost jboss-eap-7.0_2]$ ./bin/standalone.sh -c standalone-ha.xml -Djboss.node.name=node2 -Djboss.socket.binding.port-offset=100
+
+
+
+
+=========================================================================
+
+
+
+
+
+
+
+
+
+  JBoss Bootstrap Environment
+
+
+
+
+
+
+
+
+
+  JBOSS_HOME: /usr/work/eap/tmp2/jboss-eap-7.0_2
+
+
+
+
+
+
+
+
+
+  JAVA: /usr/work/java/jdk1.8.0_45/bin/java
+
+
+
+
+
+
+
+
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/usr/work/eap/tmp2/jboss-eap-7.0_2/standalone/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms64m -Xmx512m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true
+
+
+
+
+
+
+
+
+
+=========================================================================
+
+
+
+
+
+
+
+
+
+15:24:45,219 INFO  [org.jboss.modules] (main) JBoss Modules version 1.4.3.Final
+
+
+
+
+15:24:45,386 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
+
+
+
+
+15:24:45,435 INFO  [org.jboss.as] (MSC service thread 1-6) WFLYSRV0049: EAP 7.0.0.Alpha1 (WildFly Core 2.0.0.Beta4) starting
+
+
+
+
+15:24:46,261 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 25) WFLYCTL0028: Attribute &amp;apos;enabled&amp;apos; in the resource at address &amp;apos;/subsystem=datasources/data-source=ExampleDS&amp;apos; is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+
+
+
+
+15:24:46,296 INFO  [org.jboss.as.repository] (ServerService Thread Pool -- 23) WFLYDR0001: Content added at location /usr/work/eap/tmp2/jboss-eap-7.0_2/standalone/data/content/bd/6880bc84b90171ef3d37078e2c222b47647c13/content
+
+
+
+
+15:24:46,373 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+
+
+
+
+15:24:46,388 INFO  [org.xnio] (MSC service thread 1-6) XNIO version 3.4.0.Beta1
+
+
+
+
+15:24:46,396 INFO  [org.xnio.nio] (MSC service thread 1-6) XNIO NIO Implementation Version 3.4.0.Beta1
+
+
+
+
+15:24:46,431 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 41) WFLYCLINF0001: Activating Infinispan subsystem.
+
+
+
+
+15:24:46,431 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 40) WFLYIO001: Worker &amp;apos;default&amp;apos; has auto-configured to 16 core threads with 128 task threads based on your 8 available processors
+
+
+
+
+15:24:46,456 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 45) WFLYCLJG0001: Activating JGroups subsystem.
+
+
+
+
+15:24:46,458 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 48) WFLYJSF0007: Activated the following JSF Implementations: [main]
+
+
+
+
+15:24:46,531 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 51) WFLYNAM0001: Activating Naming Subsystem
+
+
+
+
+15:24:46,535 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 60) WFLYTX0013: Node identifier property is set to the default value. Please make sure it is unique.
+
+
+
+
+15:24:46,545 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 36) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+
+
+
+
+15:24:46,576 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 62) WFLYWS0002: Activating WebServices Extension
+
+
+
+
+15:24:46,579 INFO  [org.jboss.as.connector] (MSC service thread 1-3) WFLYJCA0009: Starting JCA Subsystem (IronJacamar 1.2.5.Final)
+
+
+
+
+15:24:46,580 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) WFLYJCA0018: Started Driver service with driver-name = h2
+
+
+
+
+15:24:46,586 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 58) WFLYSEC0002: Activating Security Subsystem
+
+
+
+
+15:24:46,590 INFO  [org.jboss.remoting] (MSC service thread 1-6) JBoss Remoting version 4.0.9.Final
+
+
+
+
+15:24:46,599 INFO  [org.jboss.as.naming] (MSC service thread 1-1) WFLYNAM0003: Starting Naming Service
+
+
+
+
+15:24:46,602 INFO  [org.jboss.as.security] (MSC service thread 1-3) WFLYSEC0001: Current PicketBox version=4.9.3.Final
+
+
+
+
+15:24:46,605 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-7) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+
+
+
+
+15:24:46,642 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0003: Undertow 1.3.0.Beta9 starting
+
+
+
+
+15:24:46,642 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 61) WFLYUT0003: Undertow 1.3.0.Beta9 starting
+
+
+
+
+15:24:46,767 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 61) WFLYUT0014: Creating file handler for path &amp;apos;/usr/work/eap/tmp2/jboss-eap-7.0_2/welcome-content&amp;apos; with options [directory-listing: &amp;apos;false&amp;apos;, follow-symlink: &amp;apos;false&amp;apos;, case-sensitive: &amp;apos;true&amp;apos;, safe-symlink-paths: &amp;apos;[]&amp;apos;]
+
+
+
+
+15:24:46,785 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0012: Started server default-server.
+
+
+
+
+15:24:46,788 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0018: Host default-host starting
+
+
+
+
+15:24:46,832 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0006: Undertow HTTP listener default listening on /127.0.0.1:8180
+
+
+
+
+15:24:46,835 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0006: Undertow AJP listener ajp listening on /127.0.0.1:8109
+
+
+
+
+15:24:46,838 INFO  [org.jboss.modcluster] (ServerService Thread Pool -- 64) MODCLUSTER000001: Initializing mod_cluster version 1.3.1.Final
+
+
+
+
+15:24:46,846 INFO  [org.jboss.modcluster] (ServerService Thread Pool -- 64) MODCLUSTER000032: Listening to proxy advertisements on /224.0.1.105:23364
+
+
+
+
+15:24:46,966 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-7) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+
+
+
+
+15:24:46,980 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-8) WFLYDS0013: Started FileSystemDeploymentService for directory /usr/work/eap/tmp2/jboss-eap-7.0_2/standalone/deployments
+
+
+
+
+15:24:47,001 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0027: Starting deployment of "singleton-deployment-descriptor.war" (runtime-name: "singleton-deployment-descriptor.war")
+
+
+
+
+15:24:47,128 INFO  [org.jboss.ws.common.management] (MSC service thread 1-2) JBWS022052: Starting JBoss Web Services - Stack CXF Server 5.1.0.Beta1
+
+
+
+
+15:24:47,436 WARNING [org.jgroups.protocols.UDP] (MSC service thread 1-2) JGRP000015: the send buffer of socket DatagramSocket was set to 1MB, but the OS only allocated 212.99KB. This might lead to performance problems. Please set your max send buffer in the OS correctly (e.g. net.core.wmem_max on Linux)
+
+
+
+
+15:24:47,437 WARNING [org.jgroups.protocols.UDP] (MSC service thread 1-2) JGRP000015: the receive buffer of socket DatagramSocket was set to 20MB, but the OS only allocated 212.99KB. This might lead to performance problems. Please set your max receive buffer in the OS correctly (e.g. net.core.rmem_max on Linux)
+
+
+
+
+15:24:47,437 WARNING [org.jgroups.protocols.UDP] (MSC service thread 1-2) JGRP000015: the send buffer of socket MulticastSocket was set to 1MB, but the OS only allocated 212.99KB. This might lead to performance problems. Please set your max send buffer in the OS correctly (e.g. net.core.wmem_max on Linux)
+
+
+
+
+15:24:47,437 WARNING [org.jgroups.protocols.UDP] (MSC service thread 1-2) JGRP000015: the receive buffer of socket MulticastSocket was set to 25MB, but the OS only allocated 212.99KB. This might lead to performance problems. Please set your max receive buffer in the OS correctly (e.g. net.core.rmem_max on Linux)
+
+
+
+
+15:24:50,836 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (ServerService Thread Pool -- 64) ISPN000078: Starting JGroups channel server
+
+
+
+
+15:24:50,848 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (ServerService Thread Pool -- 64) ISPN000094: Received new cluster view for channel server: [node2|0] (1) [node2]
+
+
+
+
+15:24:50,851 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (ServerService Thread Pool -- 64) ISPN000079: Channel server local address is node2, physical addresses are [127.0.0.1:55300]
+
+
+
+
+15:24:50,854 INFO  [org.infinispan.factories.GlobalComponentRegistry] (ServerService Thread Pool -- 64) ISPN000128: Infinispan version: Infinispan &amp;apos;Infinite Darkness&amp;apos; 8.0.0.CR1
+
+
+
+
+15:24:50,967 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 64) WFLYCLINF0002: Started default cache from server container
+
+
+
+
+15:24:50,999 INFO  [org.wildfly.clustering.server] (ServerService Thread Pool -- 64) WFLYCLSV0003: node2 elected as the singleton provider of the jboss.deployment.unit."singleton-deployment-descriptor.war".FIRST_MODULE_USE service
+
+
+
+
+15:24:51,286 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 68) WFLYUT0021: Registered web context: /singleton-deployment-descriptor
+
+
+
+
+15:24:51,326 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 37) WFLYSRV0010: Deployed "singleton-deployment-descriptor.war" (runtime-name : "singleton-deployment-descriptor.war")
+
+
+
+
+15:24:51,423 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:10090/management
+
+
+
+
+15:24:51,423 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:10090
+
+
+
+
+15:24:51,424 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: EAP 7.0.0.Alpha1 (WildFly Core 2.0.0.Beta4) started in 6404ms - Started 353 of 608 services (366 services are lazy, passive or on-demand)
+
+
+
+
+15:24:53,753 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (Incoming-2,ee,node2) ISPN000094: Received new cluster view for channel server: [node2|1] (2) [node2, node1]
+
+
+
+
+15:24:54,251 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t1) ISPN000310: Starting cluster-wide rebalance for cache default, topology CacheTopology{id=1, rebalanceId=1, currentCH=ReplicatedConsistentHash{ns = 60, owners = (1)[node2: 60]}, pendingCH=ReplicatedConsistentHash{ns = 60, owners = (2)[node2: 30, node1: 30]}, unionCH=null, actualMembers=[node2, node1]}
+
+
+
+
+15:24:54,312 INFO  [org.infinispan.CLUSTER] (remote-thread--p2-t1) ISPN000336: Finished cluster-wide rebalance for cache default, topology id = 1
+
+
+
+
+15:24:54,347 INFO  [org.wildfly.clustering.server] (remote-thread--p2-t1) WFLYCLSV0003: node1 elected as the singleton provider of the jboss.deployment.unit."singleton-deployment-descriptor.war".FIRST_MODULE_USE service
+
+
+
+
+15:24:54,376 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 64) WFLYUT0022: Unregistered web context: /singleton-deployment-descriptor
+
+
+
+
+15:24:54,393 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-4) HV000001: Hibernate Validator 5.2.1.Final
+
+
+
+
+15:25:04,674 INFO  [org.wildfly.clustering.server] (remote-thread--p2-t1) WFLYCLSV0003: node2 elected as the singleton provider of the jboss.deployment.unit."singleton-deployment-descriptor.war".FIRST_MODULE_USE service
+
+
+
+
+15:25:04,733 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-7) MSC000001: Failed to start service jboss.deployment.unit."singleton-deployment-descriptor.war".FIRST_MODULE_USE.service: org.jboss.msc.service.StartException in service jboss.deployment.unit."singleton-deployment-descriptor.war".FIRST_MODULE_USE.service: WFLYSRV0153: Failed to process phase FIRST_MODULE_USE of deployment "singleton-deployment-descriptor.war"
+
+
+
+
+        at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:154)
+
+
+
+
+        at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+
+
+
+
+        at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+
+
+
+
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+
+
+
+
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+
+
+
+        at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+Caused by: java.lang.NullPointerException
+
+
+
+
+        at org.jboss.as.jpa.processor.JPAInterceptorProcessor.deploy(JPAInterceptorProcessor.java:52)
+
+
+
+
+        at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:147)
+
+
+
+
+        ... 5 more
+
+
+
+
+
+
+
+
+
+15:25:04,735 ERROR [org.wildfly.clustering.server] (remote-thread--p2-t1) WFLYCLSV0005: Failed to start jboss.deployment.unit."singleton-deployment-descriptor.war".FIRST_MODULE_USE.service service: org.jboss.msc.service.StartException in service jboss.deployment.unit."singleton-deployment-descriptor.war".FIRST_MODULE_USE.service: WFLYSRV0153: Failed to process phase FIRST_MODULE_USE of deployment "singleton-deployment-descriptor.war"
+
+
+
+
+        at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:154)
+
+
+
+
+        at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+
+
+
+
+        at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+
+
+
+
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+
+
+
+
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+
+
+
+        at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+Caused by: java.lang.NullPointerException
+
+
+
+
+        at org.jboss.as.jpa.processor.JPAInterceptorProcessor.deploy(JPAInterceptorProcessor.java:52)
+
+
+
+
+        at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:147)
+
+
+
+
+        ... 5 more
+
+
+
+
+
+
+
+
+
+15:25:04,807 INFO  [org.infinispan.remoting.transport.jgroups.JGroupsTransport] (Incoming-1,ee,node2) ISPN000094: Received new cluster view for channel server: [node2|2] (1) [node2]
+
+
+
+
+

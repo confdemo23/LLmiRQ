@@ -1,0 +1,2 @@
+Add missing &apos;hostname-for-senders&apos; attribute on the <gfe:gateway-receiver> element in the SDG XML namespace (XSD).
+Currently, the Spring Data GemFire XML namespace (XSD) &lt;gfe:gateway-receiver/&gt; element is missing the &amp;apos;hostname-for-senders&amp;apos; attribute, which allows developers to set the hostname the GatewaySenders will use to connect to the remote host (cluster) on the receiving side of the WAN Gateway.

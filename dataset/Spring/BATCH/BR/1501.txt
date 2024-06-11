@@ -1,0 +1,100 @@
+JdbcPagingItemReader failing with order key other than first column in select
+When I made tests on JdbcPagingItemReader, I face the following problems: I throws an exception while I process an item returned by JdbcPagingItemReader. The jobs is in failure. When I restart the job, JdbcPagingItemReader becomes unstable and infinitely returns objects (objects rightly extracted from the database).
+This problems appears when I sort items by something else than the identifier (the account balance for example).
+
+
+
+
+
+
+	&lt;bean id="queryProvider" class="org.springframework.batch.item.database.support.SqlPagingQueryProviderFactoryBean" scope="step"&gt;
+
+
+
+
+		&lt;property name="dataSource" ref="dataSource" /&gt;
+
+
+
+
+		&lt;property name="selectClause" value="select OBJECTID, VERSION, ACCOUNTID, BALANCE" /&gt;
+
+
+
+
+		&lt;property name="fromClause" value="from Account" /&gt;
+
+
+
+
+		&lt;property name="whereClause" value="#{jobParameters[query.where]}" /&gt;
+
+
+
+
+		&lt;property name="sortKey" value="Balance" /&gt;
+
+
+
+
+	&lt;/bean&gt;	
+
+
+
+
+
+
+
+
+
+	&lt;bean id="jdbcPagingItemReader"
+
+
+
+
+		class="org.springframework.batch.item.database.JdbcPagingItemReader" scope="step"&gt;
+
+
+
+
+		&lt;property name="dataSource" ref="dataSource" /&gt;
+
+
+
+
+		&lt;property name="queryProvider" ref="queryProvider" /&gt;
+
+
+
+
+		&lt;property name="rowMapper"&gt;
+
+
+
+
+			&lt;bean class="com.bsb.sf.incubator.batch.model.AccountRowMapper" /&gt;
+
+
+
+
+		&lt;/property&gt;
+
+
+
+
+		&lt;property name="pageSize" value="5"/&gt;				
+
+
+
+
+		&lt;property name="saveState" value="true" /&gt;
+
+
+
+
+	&lt;/bean&gt;
+
+
+
+
+

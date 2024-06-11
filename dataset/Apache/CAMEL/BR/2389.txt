@@ -1,0 +1,2 @@
+Split camel transport for cxf out of camel-cxf module
+As camel-transport for cxf independents from the cxf-rs and cxf component, we need to put it into other module to avoid unnecessary third party dependency.

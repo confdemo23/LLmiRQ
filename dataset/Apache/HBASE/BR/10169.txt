@@ -1,0 +1,4 @@
+Batch coprocessor
+This is designed to improve the coprocessor invocation in the client side. 
+Currently the coprocessor invocation is to send a call to each region. If theres one region server, and 100 regions are located in this server, each coprocessor invocation will send 100 calls, each call uses a single thread in the client side. The threads will run out soon when the coprocessor invocations are heavy. 
+In this design, all the calls to the same region server will be grouped into one in a single coprocessor invocation. This call will be spread into each region in the server side.

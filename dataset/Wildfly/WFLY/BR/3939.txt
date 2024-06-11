@@ -1,0 +1,2 @@
+jndiView operation from JConsole returns void
+When I press "jndiView" operation button (navigate jboss.as / naming / Operations in MBeans tab of JConsole), an info dialog box returns with message "Method successfully invoked".  The contents of JNDI view is not printed anywhere.  It should return that as String or dump the contents into stdout.

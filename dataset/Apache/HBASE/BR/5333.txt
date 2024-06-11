@@ -1,0 +1,5 @@
+Introduce Memstore "backpressure" for writes
+Currently if the memstore/flush/compaction cannot keep up with the writeload, we block writers up to hbase.hstore.blockingWaitTime milliseconds (default is 90000).
+Would be nice if there was a concept of a soft "backpressure" that slows writing clients gracefully before we reach this condition.
+From the log:
+"2012-02-04 00:00:06,963 WARN org.apache.hadoop.hbase.regionserver.MemStoreFlusher: Region &lt;table&gt;,,1328313512779.c2761757621ddf8fb78baf5288d71271. has too many store files; delaying flush up to 90000ms"

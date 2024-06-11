@@ -1,0 +1,234 @@
+MailSessionDefinitionAnnotationParser throws NullPointerException
+Having a @MailSessionDefinition annotation with properties, MailSessionDefinitionAnnotationParser throws a NullPointerException
+
+
+
+
+
+
+@MailSessionDefinition(
+
+
+
+
+		name = "java:comp/devMailSession",
+
+
+
+
+		host = "mymailserver",
+
+
+
+
+		transportProtocol = "smtp",
+
+
+
+
+		user = "myuser",
+
+
+
+
+		password = "mypassword",
+
+
+
+
+		from = "my@email.com",
+
+
+
+
+		properties = {
+
+
+
+
+				"mail.debug=true"
+
+
+
+
+		})
+
+
+
+
+
+
+Stacktrace while starting wildfly:
+
+
+
+
+
+
+ERROR [org.jboss.msc.service.fail] (MSC service thread 1-6) MSC000001: Failed to start service jboss.deployment.unit."test.war".PARSE: org.jboss.msc.service.StartException in service jboss.deployment.unit."test.war".PARSE: JBAS018733: Failed to process phase PARSE of deployment "test.war"
+
+
+
+
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:166) [wildfly-server-8.0.0.CR1.jar:8.0.0.CR1]
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948) [jboss-msc-1.2.0.CR1.jar:1.2.0.CR1]
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881) [jboss-msc-1.2.0.CR1.jar:1.2.0.CR1]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_45]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_45]
+
+
+
+
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_45]
+
+
+
+
+Caused by: java.lang.NullPointerException
+
+
+
+
+	at org.jboss.as.mail.extension.MailSessionDefinitionAnnotationParser.getBindingConfiguration(MailSessionDefinitionAnnotationParser.java:143)
+
+
+
+
+	at org.jboss.as.mail.extension.MailSessionDefinitionAnnotationParser.processMailSession(MailSessionDefinitionAnnotationParser.java:107)
+
+
+
+
+	at org.jboss.as.mail.extension.MailSessionDefinitionAnnotationParser.deploy(MailSessionDefinitionAnnotationParser.java:96)
+
+
+
+
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:159) [wildfly-server-8.0.0.CR1.jar:8.0.0.CR1]
+
+
+
+
+	... 5 more
+
+
+
+
+
+
+Related code:
+
+
+
+
+
+
+        MailSessionMetaData metaData = new MailSessionMetaData();
+
+
+
+
+        metaData.setTransportProtocol(asString(annotationInstance, "transportProtocol"));
+
+
+
+
+        metaData.setStoreProtocol(asString(annotationInstance, "storeProtocol"));
+
+
+
+
+        metaData.setHost(asString(annotationInstance, "host"));
+
+
+
+
+        metaData.setUser(asString(annotationInstance, "user"));
+
+
+
+
+        metaData.setPassword(asString(annotationInstance, "password"));
+
+
+
+
+        metaData.setFrom(asString(annotationInstance, "from"));
+
+
+
+
+        metaData.setName(nameValue.asString());
+
+
+
+
+        String jndiName = MailSessionAdd.getJndiName(nameValue.asString());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        for (String fullProp : asArray(annotationInstance, "properties")) {
+
+
+
+
+            PropertyMetaData p = new PropertyMetaData();
+
+
+
+
+            String[] prop = fullProp.split("=", 2);
+
+
+
+
+            p.setName(prop[0]);
+
+
+
+
+            p.setValue(prop[1]);
+
+
+
+
+            metaData.getProperties().add(p); // thrown NPE
+
+
+
+
+        }
+
+
+
+
+
+
+After looking at MailSessionMetaData the properties property is not initialized so getProperties() returns null

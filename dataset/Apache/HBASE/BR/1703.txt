@@ -1,0 +1,3 @@
+ICVs across /during a flush can cause multiple keys with the same TS (bad)
+We noticed a bug whereby the value in a hbase ICV&amp;apos;ed counter was lower, and the bug turned out to be that during a flush, the ICV will grab the KeyValue from &amp;apos;memcache&amp;apos; and reuse the timestamp... if we grab the KeyValue from the snapshot we end up with 2 key values, one in memcache, one in a hfile, both with the same timestamp, but one with a lower value than the other.
+The fix is to not reuse timestamps if they come out of the snapshot.

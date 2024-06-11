@@ -1,0 +1,2 @@
+Upgrade SpringIntegration to 2.0.0.RELEASE
+Spring Integration 2.0 just became GA. The camel-spring-integration component should be upgraded. I think it is best to do this in Camel 3.0 since Spring Integration 2.0 requires Spring 3.0.

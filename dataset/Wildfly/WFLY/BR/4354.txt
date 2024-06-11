@@ -1,0 +1,14 @@
+EJBs can&apos;t inherit a JDK8 default method
+If an EJB bean inherits a default method from an interface and doesn&amp;apos;t override it, attempt to call this method fails with:
+
+
+
+
+
+
+org.jboss.invocation.CannotProceedException: INV000002: Invocation cannot proceed (end of interceptor chain has been hit)
+
+
+
+
+

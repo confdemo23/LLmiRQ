@@ -1,0 +1,2 @@
+org.jboss.as.server.deployment.RegisteredDeploymentUnitProcessor has unstable compareTo()
+As the description says, org.jboss.as.server.deployment.RegisteredDeploymentUnitProcessor&amp;apos;s compareTo is wrong.

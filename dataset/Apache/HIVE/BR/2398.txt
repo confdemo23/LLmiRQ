@@ -1,0 +1,2 @@
+Hive server doesn&apos;t return schema for &apos;set&apos; command
+The Hive server does process the CLI commands like &amp;apos;set&amp;apos;, &amp;apos;set -v&amp;apos; sent by ODBC or JDBC clients. But currently only the data is returned to client but not schema for that resultset. This makes it unusable for a ODBC or JDBC client to use this option.

@@ -1,0 +1,2 @@
+Metastore client doesn&apos;t log properly in case of connection failure to server
+LOG.error(e.getStackTrace()) in current code prints memory location of StackTraceElement[] instead of message.

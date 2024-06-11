@@ -1,0 +1,15 @@
+BeanValidationCdiIntegrationTestCase fails on non-English system
+When running the testsuite I get this failure:
+-------------------------------------------------------------------------------
+Test set: org.jboss.as.test.integration.jpa.beanvalidation.cdi.BeanValidationCdiIntegrationTestCase
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.264 sec &lt;&lt;&lt; FAILURE! - in org.jboss.as.test.integration.jpa.beanvalidation.cdi.BeanValidationCdiIntegrationTestCase
+testFailingBeanValidation(org.jboss.as.test.integration.jpa.beanvalidation.cdi.BeanValidationCdiIntegrationTestCase)  Time elapsed: 0.437 sec  &lt;&lt;&lt; FAILURE!
+java.lang.AssertionError: expected:&lt;[Not enough people for a reservation, may not be null]&gt; but was:&lt;[Not enough people for a reservation, darf nicht null sein]&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at org.jboss.as.test.integration.jpa.beanvalidation.cdi.BeanValidationCdiIntegrationTestCase.testFailingBeanValidation(BeanValidationCdiIntegrationTestCase.java:107)
+Cause is, that the second part of the message is coming from the @NotNull contraint in Reservation.java and is in German, because it&amp;apos;s a German Windows system.
+Adding the expected English message to the NotNull constraint should solve this problem. I&amp;apos;ll try and send a pull request later.

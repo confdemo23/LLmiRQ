@@ -1,0 +1,2 @@
+web.xml parsing deployment unit processor doesn&apos;t show the original parsing error in the deployment exception
+If a deployment fails due to web.xml running into parsing problems, then the original cause of the exception is lost and isn&amp;apos;t contained in the DeploymentUnitProcessingException which gets thrown. See referenced forum thread for more details.

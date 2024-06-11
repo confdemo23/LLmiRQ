@@ -1,0 +1,31 @@
+undertow claims already registered
+I&amp;apos;ve downloaded wildfly beta, attempted to add a vhost using the undertow configuration (can&amp;apos;t find documentation btw) but when it starts, it says:
+org.jboss.msc.service.DuplicateServiceException: Service jboss.web.common.host./ is already registered 
+I originally posted the question here:
+https://community.jboss.org/message/842352
+The relevant config section (standalone.xml) is the following:
+&lt;subsystem xmlns="urn:jboss:domain:undertow:1.0"&gt;
+	&lt;buffer-caches&gt;
+		&lt;buffer-cache name="default" buffer-size="1024" buffers-per-region="1024" max-regions="10"/&gt;
+	&lt;/buffer-caches&gt;
+	&lt;server name="default-server"&gt;
+		&lt;http-listener name="default" socket-binding="http" max-post-size="10485760"/&gt;
+		&lt;host name="default-host" alias="localhost"&gt;
+			&lt;location name="/" handler="welcome-content"/&gt;
+		&lt;/host&gt;
+		&lt;host name="other-host" alias="www.mysite.com" default-web-module="something.war"&gt;
+			&lt;location name="/" handler="welcome-content"&gt;
+				&lt;filter-ref name="connection-limit"/&gt;
+			&lt;/location&gt;
+		&lt;/host&gt;
+	&lt;/server&gt;
+	&lt;servlet-container name="default" default-buffer-cache="default" stack-trace-on-error="local-only"&gt;
+		&lt;jsp-config/&gt;
+		&lt;persistent-sessions path="persistent-web-sessions" relative-to="jboss.server.data.dir"/&gt;
+	&lt;/servlet-container&gt;
+	&lt;handlers&gt;
+		&lt;file name="welcome-content" path="$
+{jboss.home.dir}
+/welcome-content" directory-listing="true"/&gt;
+	&lt;/handlers&gt;
+&lt;/subsystem&gt;

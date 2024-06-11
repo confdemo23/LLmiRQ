@@ -1,0 +1,6 @@
+Error in an example in the javadoc of the StringUtils.splitPreserveAllTokens() method
+There is an error in the javadoc of the org.apache.commons.lang.StringUtils.splitPreserveAllTokens(String str,char separatorChar) method.
+Here the original line :
+StringUtils.splitPreserveAllTokens("a..b.c", &amp;apos;.&amp;apos;)   = ["a", "b", "c"]
+But it should be :
+StringUtils.splitPreserveAllTokens("a..b.c", &amp;apos;.&amp;apos;)   = ["a", "", "b", "c"]

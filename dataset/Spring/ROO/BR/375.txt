@@ -1,0 +1,3 @@
+Custom path controller on the existing project (Reference bug ROO-364)
+Bug ROO-364 has been fixed per my request as of build 415.  However the fix only worked for a brand new project.  I have an existing project with custom path controllers(data/...), and when I ran the latest roo build (419) on it, I get the error message:
+[timerFactory] Illegal name &amp;apos;data/site&amp;apos; (illegal character)

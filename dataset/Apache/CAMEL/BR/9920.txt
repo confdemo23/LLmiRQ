@@ -1,0 +1,2 @@
+Handle SocketTimeoutException on accept
+The MLLP receiver logs and error when a SocketTimeoutException is encountered while waiting for a connection.  It will not successfully accept connections after that.

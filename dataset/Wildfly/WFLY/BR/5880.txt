@@ -1,0 +1,427 @@
+org.infinispan.util.concurrent.TimeoutException: Timed out waiting for topology after failover
+Seen in these scenarios in ER3:
+
+http-session-jvmkill-dist-async-3owners
+ejb-ejbservlet-shutdown-dist-async
+
+Immediately after perf18 was killed (jvmkill), perf19 and perf20 logged JBEAP-794 and then this error:
+
+
+
+
+
+
+[0m[31m04:21:28,668 ERROR [org.infinispan.interceptors.InvocationContextInterceptor] (default task-127) ISPN000136: Error executing command LockControlCommand, writing keys []: org.infinispan.util.concurrent.TimeoutException: Timed out waiting for topology 9
+
+
+
+
+[JBossINF] 	at org.infinispan.statetransfer.StateTransferLockImpl.waitForTransactionData(StateTransferLockImpl.java:92)
+
+
+
+
+[JBossINF] 	at org.infinispan.interceptors.base.BaseStateTransferInterceptor.waitForTransactionData(BaseStateTransferInterceptor.java:96)
+
+
+
+
+[JBossINF] 	at org.infinispan.statetransfer.StateTransferInterceptor.handleTxCommand(StateTransferInterceptor.java:259)
+
+
+
+
+[JBossINF] 	at org.infinispan.statetransfer.StateTransferInterceptor.visitLockControlCommand(StateTransferInterceptor.java:103)
+
+
+
+
+[JBossINF] 	at org.infinispan.commands.control.LockControlCommand.acceptVisitor(LockControlCommand.java:110)
+
+
+
+
+[JBossINF] 	at org.infinispan.interceptors.base.CommandInterceptor.invokeNextInterceptor(CommandInterceptor.java:99)
+
+
+
+
+[JBossINF] 	at org.infinispan.interceptors.InvocationContextInterceptor.handleAll(InvocationContextInterceptor.java:107)
+
+
+
+
+[JBossINF] 	at org.infinispan.interceptors.InvocationContextInterceptor.visitLockControlCommand(InvocationContextInterceptor.java:81)
+
+
+
+
+[JBossINF] 	at org.infinispan.commands.control.LockControlCommand.acceptVisitor(LockControlCommand.java:110)
+
+
+
+
+[JBossINF] 	at org.infinispan.interceptors.base.CommandInterceptor.invokeNextInterceptor(CommandInterceptor.java:99)
+
+
+
+
+[JBossINF] 	at org.infinispan.interceptors.base.CommandInterceptor.handleDefault(CommandInterceptor.java:113)
+
+
+
+
+[JBossINF] 	at org.infinispan.commands.AbstractVisitor.visitLockControlCommand(AbstractVisitor.java:163)
+
+
+
+
+[JBossINF] 	at org.infinispan.commands.control.LockControlCommand.acceptVisitor(LockControlCommand.java:110)
+
+
+
+
+[JBossINF] 	at org.infinispan.interceptors.InterceptorChain.invoke(InterceptorChain.java:336)
+
+
+
+
+[JBossINF] 	at org.infinispan.cache.impl.CacheImpl.lock(CacheImpl.java:828)
+
+
+
+
+[JBossINF] 	at org.infinispan.cache.impl.CacheImpl.lock(CacheImpl.java:810)
+
+
+
+
+[JBossINF] 	at org.infinispan.cache.impl.AbstractDelegatingAdvancedCache.lock(AbstractDelegatingAdvancedCache.java:177)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.web.infinispan.session.InfinispanSessionMetaDataFactory.getValue(InfinispanSessionMetaDataFactory.java:82)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.web.infinispan.session.InfinispanSessionMetaDataFactory.findValue(InfinispanSessionMetaDataFactory.java:67)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.web.infinispan.session.InfinispanSessionMetaDataFactory.findValue(InfinispanSessionMetaDataFactory.java:39)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.web.infinispan.session.InfinispanSessionFactory.findValue(InfinispanSessionFactory.java:61)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.web.infinispan.session.InfinispanSessionFactory.findValue(InfinispanSessionFactory.java:40)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.web.infinispan.session.InfinispanSessionManager.findSession(InfinispanSessionManager.java:234)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.web.undertow.session.DistributableSessionManager.getSession(DistributableSessionManager.java:140)
+
+
+
+
+[JBossINF] 	at io.undertow.servlet.spec.ServletContextImpl.getSession(ServletContextImpl.java:726)
+
+
+
+
+[JBossINF] 	at io.undertow.servlet.spec.HttpServletRequestImpl.getSession(HttpServletRequestImpl.java:370)
+
+
+
+
+[JBossINF] 	at org.jboss.weld.servlet.SessionHolder.requestInitialized(SessionHolder.java:47)
+
+
+
+
+[JBossINF] 	at org.jboss.weld.servlet.HttpContextLifecycle.requestInitialized(HttpContextLifecycle.java:231)
+
+
+
+
+[JBossINF] 	at org.jboss.weld.servlet.WeldInitialListener.requestInitialized(WeldInitialListener.java:152)
+
+
+
+
+[JBossINF] 	at io.undertow.servlet.core.ApplicationListeners.requestInitialized(ApplicationListeners.java:245)
+
+
+
+
+[JBossINF] 	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:283)
+
+
+
+
+[JBossINF] 	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:263)
+
+
+
+
+[JBossINF] 	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+
+
+
+
+[JBossINF] 	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:174)
+
+
+
+
+[JBossINF] 	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:202)
+
+
+
+
+[JBossINF] 	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:793)
+
+
+
+
+[JBossINF] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+
+
+
+
+[JBossINF] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+
+
+
+[JBossINF] 	at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+
+
+This one followed right after:
+
+
+
+
+
+
+[JBossINF] [0m[31m04:21:28,717 ERROR [io.undertow.request] (default task-127) UT005023: Exception handling request to /clusterbench/session: org.infinispan.util.concurrent.TimeoutException: Timed out waiting for topology 9
+
+
+
+
+[JBossINF] 	at org.infinispan.statetransfer.StateTransferLockImpl.waitForTransactionData(StateTransferLockImpl.java:92)
+
+
+
+
+[JBossINF] 	at org.infinispan.interceptors.base.BaseStateTransferInterceptor.waitForTransactionData(BaseStateTransferInterceptor.java:96)
+
+
+
+
+[JBossINF] 	at org.infinispan.statetransfer.StateTransferInterceptor.handleTxCommand(StateTransferInterceptor.java:259)
+
+
+
+
+[JBossINF] 	at org.infinispan.statetransfer.StateTransferInterceptor.visitLockControlCommand(StateTransferInterceptor.java:103)
+
+
+
+
+[JBossINF] 	at org.infinispan.commands.control.LockControlCommand.acceptVisitor(LockControlCommand.java:110)
+
+
+
+
+[JBossINF] 	at org.infinispan.interceptors.base.CommandInterceptor.invokeNextInterceptor(CommandInterceptor.java:99)
+
+
+
+
+[JBossINF] 	at org.infinispan.interceptors.InvocationContextInterceptor.handleAll(InvocationContextInterceptor.java:107)
+
+
+
+
+[JBossINF] 	at org.infinispan.interceptors.InvocationContextInterceptor.visitLockControlCommand(InvocationContextInterceptor.java:81)
+
+
+
+
+[JBossINF] 	at org.infinispan.commands.control.LockControlCommand.acceptVisitor(LockControlCommand.java:110)
+
+
+
+
+[JBossINF] 	at org.infinispan.interceptors.base.CommandInterceptor.invokeNextInterceptor(CommandInterceptor.java:99)
+
+
+
+
+[JBossINF] 	at org.infinispan.interceptors.base.CommandInterceptor.handleDefault(CommandInterceptor.java:113)
+
+
+
+
+[JBossINF] 	at org.infinispan.commands.AbstractVisitor.visitLockControlCommand(AbstractVisitor.java:163)
+
+
+
+
+[JBossINF] 	at org.infinispan.commands.control.LockControlCommand.acceptVisitor(LockControlCommand.java:110)
+
+
+
+
+[JBossINF] 	at org.infinispan.interceptors.InterceptorChain.invoke(InterceptorChain.java:336)
+
+
+
+
+[JBossINF] 	at org.infinispan.cache.impl.CacheImpl.lock(CacheImpl.java:828)
+
+
+
+
+[JBossINF] 	at org.infinispan.cache.impl.CacheImpl.lock(CacheImpl.java:810)
+
+
+
+
+[JBossINF] 	at org.infinispan.cache.impl.AbstractDelegatingAdvancedCache.lock(AbstractDelegatingAdvancedCache.java:177)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.web.infinispan.session.InfinispanSessionMetaDataFactory.getValue(InfinispanSessionMetaDataFactory.java:82)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.web.infinispan.session.InfinispanSessionMetaDataFactory.findValue(InfinispanSessionMetaDataFactory.java:67)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.web.infinispan.session.InfinispanSessionMetaDataFactory.findValue(InfinispanSessionMetaDataFactory.java:39)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.web.infinispan.session.InfinispanSessionFactory.findValue(InfinispanSessionFactory.java:61)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.web.infinispan.session.InfinispanSessionFactory.findValue(InfinispanSessionFactory.java:40)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.web.infinispan.session.InfinispanSessionManager.findSession(InfinispanSessionManager.java:234)
+
+
+
+
+[JBossINF] 	at org.wildfly.clustering.web.undertow.session.DistributableSessionManager.getSession(DistributableSessionManager.java:140)
+
+
+
+
+[JBossINF] 	at io.undertow.servlet.spec.ServletContextImpl.getSession(ServletContextImpl.java:726)
+
+
+
+
+[JBossINF] 	at io.undertow.servlet.spec.HttpServletRequestImpl.getSession(HttpServletRequestImpl.java:370)
+
+
+
+
+[JBossINF] 	at org.jboss.weld.servlet.SessionHolder.requestInitialized(SessionHolder.java:47)
+
+
+
+
+[JBossINF] 	at org.jboss.weld.servlet.HttpContextLifecycle.requestInitialized(HttpContextLifecycle.java:231)
+
+
+
+
+[JBossINF] 	at org.jboss.weld.servlet.WeldInitialListener.requestInitialized(WeldInitialListener.java:152)
+
+
+
+
+[JBossINF] 	at io.undertow.servlet.core.ApplicationListeners.requestInitialized(ApplicationListeners.java:245)
+
+
+
+
+[JBossINF] 	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:283)
+
+
+
+
+[JBossINF] 	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:263)
+
+
+
+
+[JBossINF] 	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+
+
+
+
+[JBossINF] 	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:174)
+
+
+
+
+[JBossINF] 	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:202)
+
+
+
+
+[JBossINF] 	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:793)
+
+
+
+
+[JBossINF] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+
+
+
+
+[JBossINF] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+
+
+
+[JBossINF] 	at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+
+
+The stacktrace is different from JBEAP-735 although it can be related.
+Link: 
+http://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/eap-7x-failover-http-session-jvmkill-dist-async-3owners/15/console-perf19/

@@ -1,0 +1,3 @@
+Implicitly added resources (no transport, thread pools, etc) should be added by parent add operation instead of the parser
+It looks like in the infinispan subsystem parser some thread pools are explicitly added. This means these resources are not added if adding the subsystem via the add operation. These resources should be added like any other child resource of the subsystem.
+If the resources can&amp;apos;t be added like that, e.g. they are truly defaults, the add handler for the parent can add a step to check for children and add any missing ones. This would result in the same behavior, but allow the add operation to work correctly.

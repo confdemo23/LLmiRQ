@@ -1,0 +1,9 @@
+Command &apos;help&apos; not found
+~.dto.SubCategory roo&gt; hint
+At this stage of the project, you have a few options:
+....
+
+Discover all Roo commands by typing &amp;apos;help&amp;apos;
+~.dto.SubCategory roo&gt; help
+Command &amp;apos;help&amp;apos; not found (for assistance press TAB or type "hint" then hit ENTER)
+

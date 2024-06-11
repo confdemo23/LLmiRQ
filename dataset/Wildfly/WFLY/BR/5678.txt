@@ -1,0 +1,190 @@
+[Migration operation] :migrate operation should return outcome success when migrating expressions jgroup stack in discovery group
+If configuration for jgroups stack in discovery group contains expression:
+
+
+
+
+
+
+            &lt;discovery-group name="groupU"&gt;
+
+
+
+
+                &lt;jgroups-stack&gt;${jgroups.stack:udp}&lt;/jgroups-stack&gt;
+
+
+
+
+                &lt;jgroups-channel&gt;${jgroups.channel:udp}&lt;/jgroups-channel&gt;
+
+
+
+
+            &lt;/discovery-group&gt;
+
+
+
+
+
+
+ then :migrate operation has outcome =&gt; failed:
+
+
+
+
+
+
+[standalone@127.0.0.1:9999 /] /subsystem=messaging:migrate
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "failed",
+
+
+
+
+    "result" =&gt; {
+
+
+
+
+        "migration-warnings" =&gt; [],
+
+
+
+
+        "migration-error" =&gt; {
+
+
+
+
+            "operation" =&gt; {
+
+
+
+
+                "jgroups-stack" =&gt; expression "${jgroups.stack:udp}",
+
+
+
+
+                "jgroups-channel" =&gt; expression "${jgroups.channel:udp}",
+
+
+
+
+                "operation" =&gt; "add",
+
+
+
+
+                "address" =&gt; [
+
+
+
+
+                    ("subsystem" =&gt; "messaging-activemq"),
+
+
+
+
+                    ("server" =&gt; "default"),
+
+
+
+
+                    ("discovery-group" =&gt; "groupU")
+
+
+
+
+                ],
+
+
+
+
+                "operation-headers" =&gt; {
+
+
+
+
+                    "caller-type" =&gt; "user",
+
+
+
+
+                    "access-mechanism" =&gt; "NATIVE"
+
+
+
+
+                }
+
+
+
+
+            },
+
+
+
+
+            "result" =&gt; {
+
+
+
+
+                "outcome" =&gt; "failed",
+
+
+
+
+                "failure-description" =&gt; "WFLYCTL0264: jgroups-stack may not be ModelType.EXPRESSION",
+
+
+
+
+                "rolled-back" =&gt; true
+
+
+
+
+            }
+
+
+
+
+        }
+
+
+
+
+    },
+
+
+
+
+    "failure-description" =&gt; "WFLYMSG0081: Migration failed, see results for more details.",
+
+
+
+
+    "rolled-back" =&gt; true
+
+
+
+
+}
+
+
+
+
+
+
+Based on my understanding there should be outcome success with warning.

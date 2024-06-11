@@ -1,0 +1,11 @@
+loading into a partition with more than one partition column fails if the partition is not created before.
+Following test fails on HDFS cluster but not on local file system.
+drop table hive_test_src;
+drop table hive_test_dst;
+create table hive_test_src ( col1 string ) stored as textfile ;
+load data local inpath &amp;apos;../data/files/test.dat&amp;apos; overwrite into table hive_test_src ;
+create table hive_test_dst ( col1 string ) partitioned by ( pcol1 string , pcol2 string) stored as sequencefile;
+insert overwrite table hive_test_dst partition ( pcol1=&amp;apos;test_part&amp;apos;, pcol2=&amp;apos;test_part&amp;apos;) select col1 from hive_test_src ;
+select * from hive_test_dst where pcol1=&amp;apos;test_part&amp;apos; and pcol2=&amp;apos;test_part&amp;apos;;  returns zero rows.
+drop table hive_test_src;
+drop table hive_test_dst;

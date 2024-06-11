@@ -1,0 +1,154 @@
+Missing <uri> in the tld files causes NullPointerException during deployment on WildFly
+
+If The TLD file has missing &lt;uri&gt; tag in it then rather than validating WildFly throws NullPointerException.
+
+WEB-INF/custom.tld
+
+
+
+
+
+
+&lt;taglib&gt;
+
+
+
+
+  &lt;tlib-version&gt;1.0&lt;/tlib-version&gt;
+
+
+
+
+  &lt;jsp-version&gt;2.0&lt;/jsp-version&gt;
+
+
+
+
+  &lt;!--uri&gt;test&lt;/uri--&gt;
+
+
+
+
+  &lt;short-name&gt;Example TLD with Body&lt;/short-name&gt;
+
+
+
+
+  &lt;tag&gt;
+
+
+
+
+    &lt;name&gt;Hello&lt;/name&gt;
+
+
+
+
+    &lt;tag-class&gt;tags.HelloTag&lt;/tag-class&gt;
+
+
+
+
+    &lt;body-content&gt;scriptless&lt;/body-content&gt;
+
+
+
+
+  &lt;/tag&gt;
+
+
+
+
+&lt;/taglib&gt;
+
+
+
+
+
+
+
+During deployment of a war containing above TLD causes following NullPointerException on WildFly:
+
+
+
+
+
+
+13:15:25,857 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-2) MSC000001: Failed to start service jboss.undertow.deployment.default-server.default-host./TagClassDemo.UndertowDeploymentInfoService: org.jboss.msc.service.StartException in service jboss.undertow.deployment.default-server.default-host./TagClassDemo.UndertowDeploymentInfoService: Failed to start service
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1904) [jboss-msc-1.2.2.Final.jar:1.2.2.Final]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_51]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_51]
+
+
+
+
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_51]
+
+
+
+
+Caused by: java.lang.NullPointerException
+
+
+
+
+	at org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService.createTldsInfo(UndertowDeploymentInfoService.java:1028)
+
+
+
+
+	at org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService.createServletConfig(UndertowDeploymentInfoService.java:552)
+
+
+
+
+	at org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService.start(UndertowDeploymentInfoService.java:252)
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948) [jboss-msc-1.2.2.Final.jar:1.2.2.Final]
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881) [jboss-msc-1.2.2.Final.jar:1.2.2.Final]
+
+
+
+
+	... 3 more
+
+
+
+
+
+
+
+
+
+13:15:25,865 ERROR [org.jboss.as.controller.management-operation] (DeploymentScanner-threads - 1) WFLYCTL0013: Operation ("full-replace-deployment") failed - address: ([]) - failure description: {"WFLYCTL0080: Failed services" =&gt; {"jboss.undertow.deployment.default-server.default-host./TagClassDemo.UndertowDeploymentInfoService" =&gt; "org.jboss.msc.service.StartException in service jboss.undertow.deployment.default-server.default-host./TagClassDemo.UndertowDeploymentInfoService: Failed to start service
+
+
+
+
+    Caused by: java.lang.NullPointerException"}}
+
+
+
+
+
+
+

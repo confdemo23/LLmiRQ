@@ -1,0 +1,39 @@
+Cannot remove JGroups subsystem from managed domain via CLI
+Osamu Nagano reports:
+"Description of problem:
+In EAP 6.1 domain mode, try to create a new profile from scratch in CLI.  You can add jgroups subsystem but you cannot remove it with an error message.
+In standalone mode and both modes of EAP 6.0.1, you can successfully remove it.
+Steps to Reproduce:
+1. Start EAP 6.1 in domain mode.  The default domain.xml is sufficient.
+2. Connect to the DC by CLI.
+3. Execute the following commands in CLI.
+
+[domain@localhost:9999 /] /profile=test:add()
+[domain@localhost:9999 /] /profile=test/subsystem=jgroups:add(default-stack=udp)
+[domain@localhost:9999 /] /profile=test/subsystem=jgroups:remove()
+
+Actual results:
+{
+    "outcome" =&gt; "failed",
+    "failure-description" =&gt; 
+{"domain-failure-description" =&gt; "JBAS014807: Management resource &amp;apos;[(\"subsystem\" =&gt; \"jgroups\")]&amp;apos; not found"}
+,
+    "rolled-back" =&gt; true
+}
+Expected results:
+{
+
+    "outcome" =&gt; "success",
+
+    "result" =&gt; undefined,
+
+    "server-groups" =&gt; undefined
+
+}
+"
+I see that the problem exists in WildFly as well.
+The problem is in JGroupsSubsystemRemove:
+ModelNode removeSubsystem = Util.createOperation(REMOVE, PathAddress.pathAddress(JGroupsExtension.SUBSYSTEM_PATH));
+        context.addStep(removeSubsystem, new OriginalSubsystemRemoveHandler(), OperationContext.Stage.MODEL, true);
+That PathAddress.pathAddress(JGroupsExtension.SUBSYSTEM_PATH) is incorrect in a managed domain, as it doesn&amp;apos;t include the profile element. It&amp;apos;s correct in a standalone server.
+Easy fix.

@@ -1,0 +1,66 @@
+SimpleApplicationClientTestCase should not use java on path
+Test should use java that is set by JAVA_HOME and not rely on java being set avalible on path.
+This way we can properly run testsuite against diffrent JDKs
+currently this is the result:
+
+
+
+
+
+
+java.io.IOException: Cannot run program "java": error=2, No such file or directory
+
+
+
+
+    at java.lang.UNIXProcess.forkAndExec(Native Method)
+
+
+
+
+    at java.lang.UNIXProcess.&lt;init&gt;(UNIXProcess.java:187)
+
+
+
+
+    at java.lang.ProcessImpl.start(ProcessImpl.java:134)
+
+
+
+
+    at java.lang.ProcessBuilder.start(ProcessBuilder.java:1023)
+
+
+
+
+    at java.lang.Runtime.exec(Runtime.java:620)
+
+
+
+
+    at java.lang.Runtime.exec(Runtime.java:450)
+
+
+
+
+    at java.lang.Runtime.exec(Runtime.java:347)
+
+
+
+
+    at org.jboss.as.test.integration.ee.appclient.util.AppClientWrapper.init(AppClientWrapper.java:152)
+
+
+
+
+    at org.jboss.as.test.integration.ee.appclient.util.AppClientWrapper.&lt;init&gt;(AppClientWrapper.java:78)
+
+
+
+
+    at org.jboss.as.test.integration.ee.appclient.basic.SimpleApplicationClientTestCase.descriptorBasedAppClientTest(SimpleApplicationClientTestCase.java:128)
+
+
+
+
+

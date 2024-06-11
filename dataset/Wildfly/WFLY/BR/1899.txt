@@ -1,0 +1,57 @@
+Conversation timeout is broken
+When I&amp;apos;m already logged in in a JSF web app and get a CDI/Weld conversation timeout, then an error page should be shown.
+However, I&amp;apos;m getting the stacktrace below, and a blank page instead of the error page is shown.
+The error page is configured in web.xml:
+
+
+
+
+
+
+  &lt;error-page&gt;
+
+
+
+
+    &lt;exception-type&gt;org.jboss.weld.context.NonexistentConversationException&lt;/exception-type&gt;
+
+
+
+
+    &lt;location&gt;/error/conversationTimeout.xhtml?nocid=true&lt;/location&gt;
+
+
+
+
+  &lt;/error-page&gt;
+
+
+
+
+
+
+Stacktrace with the current snapshot of WildFly using Undertow 1.0.0.Beta8 in the WildFly console:
+16:20:12,466 ERROR [io.undertow.request] Exception while generating error page /error/conversationTimeout.xhtml?nocid=true: java.lang.RuntimeException: java.lang.IllegalStateException: JBAS017329: No security context found
+	at io.undertow.servlet.spec.RequestDispatcherImpl.error(RequestDispatcherImpl.java:394) [undertow-servlet-1.0.0.Beta8.jar:1.0.0.Beta8]
+	at io.undertow.servlet.spec.RequestDispatcherImpl.error(RequestDispatcherImpl.java:315) [undertow-servlet-1.0.0.Beta8.jar:1.0.0.Beta8]
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:222) [undertow-servlet-1.0.0.Beta8.jar:1.0.0.Beta8]
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:194) [undertow-servlet-1.0.0.Beta8.jar:1.0.0.Beta8]
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:72) [undertow-servlet-1.0.0.Beta8.jar:1.0.0.Beta8]
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:128) [undertow-servlet-1.0.0.Beta8.jar:1.0.0.Beta8]
+	at io.undertow.server.HttpHandlers.executeRootHandler(HttpHandlers.java:36) [undertow-core-1.0.0.Beta8.jar:1.0.0.Beta8]
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:623) [undertow-core-1.0.0.Beta8.jar:1.0.0.Beta8]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_25]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_25]
+	at java.lang.Thread.run(Thread.java:724) [rt.jar:1.7.0_25]
+Caused by: java.lang.IllegalStateException: JBAS017329: No security context found
+	at org.wildfly.extension.undertow.security.SecurityActions$5.run(SecurityActions.java:119)
+	at org.wildfly.extension.undertow.security.SecurityActions$5.run(SecurityActions.java:114)
+	at java.security.AccessController.doPrivileged(Native Method) [rt.jar:1.7.0_25]
+	at org.wildfly.extension.undertow.security.SecurityActions.pushRunAsIdentity(SecurityActions.java:114)
+	at org.wildfly.extension.undertow.security.SecurityContextAssociationHandler.handleRequest(SecurityContextAssociationHandler.java:88)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:25) [undertow-core-1.0.0.Beta8.jar:1.0.0.Beta8]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:25) [undertow-core-1.0.0.Beta8.jar:1.0.0.Beta8]
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:196) [undertow-servlet-1.0.0.Beta8.jar:1.0.0.Beta8]
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchToPath(ServletInitialHandler.java:139) [undertow-servlet-1.0.0.Beta8.jar:1.0.0.Beta8]
+	at io.undertow.servlet.spec.RequestDispatcherImpl.error(RequestDispatcherImpl.java:388) [undertow-servlet-1.0.0.Beta8.jar:1.0.0.Beta8]
+	... 10 more

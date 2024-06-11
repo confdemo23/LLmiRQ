@@ -1,0 +1,5 @@
+Spring Shell does not support "help"
+Currently, when user type "help" in Spring shell,  no help message is displayed (as following):
+spring&gt;help
+Command &amp;apos;help&amp;apos; not found (for assistance press TAB or type "hint" then hit ENTER)
+The expected resut is that all available commands should be listed.

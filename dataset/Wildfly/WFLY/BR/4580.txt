@@ -1,0 +1,4 @@
+Lifecycle interceptors do not work
+I&amp;apos;ve been trying to use lifecycle interceptors (intercepting PostConstruct and PreDestroy, see https://issues.jboss.org/browse/WELD-1346 for reference) in my project and those do not seem to work at all (nor on enterprise managed beans nor on regular CDI managed beans).
+I tried on both JBoss AS 7.1.1 and Wildfly 8.2.0 but lifecycle interceptors are never called while other interceptors (AroundInvoke) are.
+I tested the same code on OpenEJB and it works.

@@ -1,0 +1,7 @@
+Tiles view definitions not deleted when create or update are disabled in controller
+Found this while investigating ROO-2806. To replicate:
+
+Generate a project with an MVC layer (e.g. run "script vote.roo")
+Edit an entity controller&amp;apos;s @RooWebScaffold annotation to contain "create = false" and "update = false"
+Roo does not remove the corresponding view definitions from the entity&amp;apos;s views.xml file
+

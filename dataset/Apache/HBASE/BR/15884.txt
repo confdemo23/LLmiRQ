@@ -1,0 +1,20 @@
+NPE in StoreFileScanner#skipKVsNewerThanReadpoint during reverse scan
+Here is a part of skipKVsNewerThanReadpoint method:
+
+      hfs.next();
+
+      setCurrentCell(hfs.getKeyValue());
+
+      if (this.stopSkippingKVsIfNextRow
+
+          &amp;&amp; getComparator().compareRows(cur.getRowArray(), cur.getRowOffset(),
+
+              cur.getRowLength(), startKV.getRowArray(), startKV.getRowOffset(),
+
+              startKV.getRowLength()) &gt; 0) {
+
+
+
+
+
+If hfs has no more KVs, cur will be set to Null and on on the next step will throw NPE. 

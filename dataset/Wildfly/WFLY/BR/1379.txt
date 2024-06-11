@@ -1,0 +1,326 @@
+log4j appenders force initialization of the appender/handler on reboot
+Adding a log4j appender works until the server is rebooted. The difference in the class names, org.apache.log4j.SomeAppender and manually added org.jboss.as.logging.logmanager.Log4jAppenderHandler, results in the handler being reconfigured.
+This also hits a bug (LOGMGR-58) in the logmanager where null references are can be retrieved before a full commit is invoked.
+Stack trace:
+
+
+
+
+
+
+10:53:44,909 ERROR [stderr] (Controller Boot Thread) java.lang.NullPointerException
+
+
+
+
+10:53:44,909 ERROR [stderr] (Controller Boot Thread)    at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+
+
+
+
+10:53:44,912 ERROR [stderr] (Controller Boot Thread)    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+
+
+10:53:44,912 ERROR [stderr] (Controller Boot Thread)    at java.lang.reflect.Method.invoke(Method.java:601)
+
+
+
+
+10:53:44,915 ERROR [stderr] (Controller Boot Thread)    at org.jboss.logmanager.config.AbstractPropertyConfiguration$1.applyPostCreate(AbstractPropertyConfiguration.java:218)
+
+
+
+
+10:53:44,915 ERROR [stderr] (Controller Boot Thread)    at org.jboss.logmanager.config.AbstractPropertyConfiguration$1.applyPostCreate(AbstractPropertyConfiguration.java:198)
+
+
+
+
+10:53:44,916 ERROR [stderr] (Controller Boot Thread)    at org.jboss.logmanager.config.LogContextConfigurationImpl.doApplyPostCreate(LogContextConfigurationImpl.java:316)
+
+
+
+
+10:53:44,916 ERROR [stderr] (Controller Boot Thread)    at org.jboss.logmanager.config.LogContextConfigurationImpl.doPrepare(LogContextConfigurationImpl.java:341)
+
+
+
+
+10:53:44,916 ERROR [stderr] (Controller Boot Thread)    at org.jboss.logmanager.config.LogContextConfigurationImpl.prepare(LogContextConfigurationImpl.java:290)
+
+
+
+
+10:53:44,917 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.logging.logmanager.ConfigurationPersistence.prepare(ConfigurationPersistence.java:282)
+
+
+
+
+10:53:44,917 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.logging.LoggingOperations$CommitOperationStepHandler.execute(LoggingOperations.java:97)
+
+
+
+
+10:53:44,917 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.controller.AbstractOperationContext.executeStep(AbstractOperationContext.java:440)
+
+
+
+
+10:53:44,917 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.controller.AbstractOperationContext.doCompleteStep(AbstractOperationContext.java:322)
+
+
+
+
+10:53:44,918 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.controller.AbstractOperationContext.completeStepInternal(AbstractOperationContext.java:229)
+
+
+
+
+10:53:44,918 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.controller.AbstractOperationContext.executeOperation(AbstractOperationContext.java:224)
+
+
+
+
+10:53:44,918 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.controller.ModelControllerImpl.boot(ModelControllerImpl.java:296)
+
+
+
+
+10:53:44,919 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.controller.AbstractControllerService.boot(AbstractControllerService.java:226)
+
+
+
+
+10:53:44,919 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.server.ServerService.boot(ServerService.java:342)
+
+
+
+
+10:53:44,919 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.server.ServerService.boot(ServerService.java:317)
+
+
+
+
+10:53:44,919 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.controller.AbstractControllerService$1.run(AbstractControllerService.java:189)
+
+
+
+
+10:53:44,920 ERROR [stderr] (Controller Boot Thread)    at java.lang.Thread.run(Thread.java:722)
+
+
+
+
+10:53:44,920 ERROR [stderr] (Controller Boot Thread) java.lang.NullPointerException
+
+
+
+
+10:53:44,921 ERROR [stderr] (Controller Boot Thread)    at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+
+
+
+
+10:53:44,921 ERROR [stderr] (Controller Boot Thread)    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+
+
+10:53:44,922 ERROR [stderr] (Controller Boot Thread)    at java.lang.reflect.Method.invoke(Method.java:601)
+
+
+
+
+10:53:44,922 ERROR [stderr] (Controller Boot Thread)    at org.jboss.logmanager.config.AbstractPropertyConfiguration$1.applyPostCreate(AbstractPropertyConfiguration.java:218)
+
+
+
+
+10:53:44,923 ERROR [stderr] (Controller Boot Thread)    at org.jboss.logmanager.config.AbstractPropertyConfiguration$1.applyPostCreate(AbstractPropertyConfiguration.java:198)
+
+
+
+
+10:53:44,923 ERROR [stderr] (Controller Boot Thread)    at org.jboss.logmanager.config.LogContextConfigurationImpl.doApplyPostCreate(LogContextConfigurationImpl.java:316)
+
+
+
+
+10:53:44,923 ERROR [stderr] (Controller Boot Thread)    at org.jboss.logmanager.config.LogContextConfigurationImpl.doPrepare(LogContextConfigurationImpl.java:341)
+
+
+
+
+10:53:44,924 ERROR [stderr] (Controller Boot Thread)    at org.jboss.logmanager.config.LogContextConfigurationImpl.prepare(LogContextConfigurationImpl.java:290)
+
+
+
+
+10:53:44,925 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.logging.logmanager.ConfigurationPersistence.prepare(ConfigurationPersistence.java:282)
+
+
+
+
+10:53:44,925 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.logging.LoggingOperations$CommitOperationStepHandler.execute(LoggingOperations.java:97)
+
+
+
+
+10:53:44,926 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.controller.AbstractOperationContext.executeStep(AbstractOperationContext.java:440)
+
+
+
+
+10:53:44,926 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.controller.AbstractOperationContext.doCompleteStep(AbstractOperationContext.java:322)
+
+
+
+
+10:53:44,926 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.controller.AbstractOperationContext.completeStepInternal(AbstractOperationContext.java:229)
+
+
+
+
+10:53:44,927 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.controller.AbstractOperationContext.executeOperation(AbstractOperationContext.java:224)
+
+
+
+
+10:53:44,927 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.controller.ModelControllerImpl.boot(ModelControllerImpl.java:296)
+
+
+
+
+10:53:44,928 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.controller.AbstractControllerService.boot(AbstractControllerService.java:226)
+
+
+
+
+10:53:44,928 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.server.ServerService.boot(ServerService.java:342)
+
+
+
+
+10:53:44,928 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.server.ServerService.boot(ServerService.java:317)
+
+
+
+
+10:53:44,929 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.controller.AbstractControllerService$1.run(AbstractControllerService.java:189)
+
+
+
+
+10:53:44,929 ERROR [stderr] (Controller Boot Thread)    at java.lang.Thread.run(Thread.java:722)
+
+
+
+
+10:53:44,930 ERROR [stderr] (Controller Boot Thread) java.lang.NullPointerException
+
+
+
+
+10:53:44,931 ERROR [stderr] (Controller Boot Thread)    at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+
+
+
+
+10:53:44,931 ERROR [stderr] (Controller Boot Thread)    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+
+
+10:53:44,931 ERROR [stderr] (Controller Boot Thread)    at java.lang.reflect.Method.invoke(Method.java:601)
+
+
+
+
+10:53:44,932 ERROR [stderr] (Controller Boot Thread)    at org.jboss.logmanager.config.AbstractPropertyConfiguration$1.applyPostCreate(AbstractPropertyConfiguration.java:218)
+
+
+
+
+10:53:44,932 ERROR [stderr] (Controller Boot Thread)    at org.jboss.logmanager.config.AbstractPropertyConfiguration$1.applyPostCreate(AbstractPropertyConfiguration.java:198)
+
+
+
+
+10:53:44,933 ERROR [stderr] (Controller Boot Thread)    at org.jboss.logmanager.config.LogContextConfigurationImpl.doApplyPostCreate(LogContextConfigurationImpl.java:316)
+
+
+
+
+10:53:44,933 ERROR [stderr] (Controller Boot Thread)    at org.jboss.logmanager.config.LogContextConfigurationImpl.doPrepare(LogContextConfigurationImpl.java:341)
+
+
+
+
+10:53:44,933 ERROR [stderr] (Controller Boot Thread)    at org.jboss.logmanager.config.LogContextConfigurationImpl.prepare(LogContextConfigurationImpl.java:290)
+
+
+
+
+10:53:44,934 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.logging.logmanager.ConfigurationPersistence.prepare(ConfigurationPersistence.java:282)
+
+
+
+
+10:53:44,934 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.logging.LoggingOperations$CommitOperationStepHandler.execute(LoggingOperations.java:97)
+
+
+
+
+10:53:44,934 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.controller.AbstractOperationContext.executeStep(AbstractOperationContext.java:440)
+
+
+
+
+10:53:44,935 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.controller.AbstractOperationContext.doCompleteStep(AbstractOperationContext.java:322)
+
+
+
+
+10:53:44,935 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.controller.AbstractOperationContext.completeStepInternal(AbstractOperationContext.java:229)
+
+
+
+
+10:53:44,936 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.controller.AbstractOperationContext.executeOperation(AbstractOperationContext.java:224)
+
+
+
+
+10:53:44,936 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.controller.ModelControllerImpl.boot(ModelControllerImpl.java:296)
+
+
+
+
+10:53:44,937 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.controller.AbstractControllerService.boot(AbstractControllerService.java:226)
+
+
+
+
+10:53:44,937 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.server.ServerService.boot(ServerService.java:342)
+
+
+
+
+10:53:44,937 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.server.ServerService.boot(ServerService.java:317)
+
+
+
+
+10:53:44,938 ERROR [stderr] (Controller Boot Thread)    at org.jboss.as.controller.AbstractControllerService$1.run(AbstractControllerService.java:189)
+
+
+
+
+10:53:44,938 ERROR [stderr] (Controller Boot Thread)    at java.lang.Thread.run(Thread.java:722)
+
+
+
+
+

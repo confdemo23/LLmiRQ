@@ -1,0 +1,6 @@
+RBAC: Silent failure of run-as role mapping
+RunAsRoleMapper.mapRoles(Caller caller, Set&lt;String&gt; currentRoles, Set&lt;String&gt; runAsRoles, boolean sanitized) ignores false results from realRoleMapper.canRunAs(currentRoles, requestedRole) and just leaves the user running in their regular roles. Some sort of failure condition seems more appropriate.
+I noticed this when I was investigating WFLY-2318 caused by WFLY-2583. The improperly parsed role list was resulting in realRoleMapper.canRunAs(currentRoles, requestedRole) returning false so the call would just execute as SuperUser.
+Same thing would happen with a simple typo like 
+{roles=Mnitor}
+.

@@ -1,0 +1,2 @@
+RemoteDomainConnectionService.fetchDomainWideConfiguration() isn&apos;t properly implemented
+The WFLY-2043 implementation is not working correctly because fetching the config from the master without fully registering is not properly implemented.

@@ -1,0 +1,36 @@
+Beeline should accept -i option to Initializing a SQL file
+Hive CLI has -i option. From Hive CLI help:
+
+
+
+...
+
+ -i &lt;filename&gt;                    Initialization SQL file
+
+...
+
+
+
+However, Beeline has no such option:
+
+
+
+xzhang@xzlt:~/apa/hive3$ ./packaging/target/apache-hive-0.14.0-SNAPSHOT-bin/apache-hive-0.14.0-SNAPSHOT-bin/bin/beeline -u jdbc:hive2:// -i hive.rc
+
+...
+
+Connected to: Apache Hive (version 0.14.0-SNAPSHOT)
+
+Driver: Hive JDBC (version 0.14.0-SNAPSHOT)
+
+Transaction isolation: TRANSACTION_REPEATABLE_READ
+
+-i (No such file or directory)
+
+Property "url" is required
+
+Beeline version 0.14.0-SNAPSHOT by Apache Hive
+
+...
+
+

@@ -1,0 +1,1 @@
+PersistentEntityResourceHandlerMethodArgumentResolver&apos;s read() methods swallow exceptions

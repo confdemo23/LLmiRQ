@@ -1,0 +1,8 @@
+jboss-cli.sh throws NPE in batch mode with certain commands
+When the jboss-cli.sh (and by extension, the CommandContext API in java) is given certain commands while not connected to the client, an unhandled NPE is thrown from org.jboss.as.cli.handlers.GenericTypeOperationHandler.getOperationDescription(GenericTypeOperationHandler.java:886)
+Certain other commands succeed: 
+[disconnected / #] /subsystem=datasources/jdbc-driver=ibmdb2:add(driver-name=ibmdb2,driver-module-name=com.ibm.db2)
+#1 /subsystem=datasources/jdbc-driver=ibmdb2:add(driver-name=ibmdb2,driver-module-name=com.ibm.db2)
+The line in question is here, in org.jboss.as.cli.handlers.GenericTypeOperationHandler:
+result = ctx.getModelControllerClient().execute(request);
+At the time of this call, the client field of the context is null; therefore, calling the execute method results in this NPE. This code is not hit with the /subsystem command because of some logic I see in CommandContextImpl.

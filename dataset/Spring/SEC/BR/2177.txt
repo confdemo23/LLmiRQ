@@ -1,0 +1,92 @@
+DefaultRedirectStrategy could be less vulnerable to open redirect phishing attacks
+We have the the following configuration of the
+org.springframework.security.web.authentication.AuthenticationSuccessHandler
+
+
+
+
+
+
+  &lt;bean id="simpleUrlAuthenticationSuccessHandler"
+
+
+
+
+        class="org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler"&gt;
+
+
+
+
+    &lt;property name="targetUrlParameter" value="continue"/&gt;
+
+
+
+
+    &lt;property name="defaultTargetUrl" value="/"/&gt;
+
+
+
+
+    &lt;property name="redirectStrategy"&gt;
+
+
+
+
+      &lt;bean class="org.springframework.security.web.DefaultRedirectStrategy"&gt;
+
+
+
+
+        &lt;property name="contextRelative" value="true"/&gt;
+
+
+
+
+      &lt;/bean&gt;
+
+
+
+
+    &lt;/property&gt;
+
+
+
+
+  &lt;/bean&gt;
+
+
+
+
+
+
+We were hoping that setting redirectStrategy to be context relative would help us deal with open redirect vulnerability. It works fine for forged URLs like:
+http://example.com/login?continue=http://unsecure.com
+because user wont leave our service. Unfortunately, it works only for one occurrence of scheme declaration. The following URL
+http://example.com/login?continue=http://http://unsecure.com
+will still perform a redirect request to the outer service. This behaviour could be easily extended by changing the following line of org.springframework.security.web.DefaultRedirectStrategy
+
+
+
+
+
+
+url = url.substring(url.indexOf("://") + 3); // strip off scheme
+
+
+
+
+
+
+to 
+
+
+
+
+
+
+url = url.substring(url.lastIndexOf("://") + 3); // strip off scheme
+
+
+
+
+

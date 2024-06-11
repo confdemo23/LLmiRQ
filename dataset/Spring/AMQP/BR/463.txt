@@ -1,0 +1,34 @@
+PublisherCallbackChannelImpl Incompatible with JRockit
+JRockit&amp;apos;s TreeMap doesn&amp;apos;t allow getValue() after remove on an Iterator.
+
+
+
+
+
+
+						while (iterator.hasNext()) {
+
+
+
+
+							Entry&lt;Long, PendingConfirm&gt; entry = iterator.next();
+
+
+
+
+							iterator.remove();
+
+
+
+
+							doHandleConfirm(ack, involvedListener, entry.getValue());
+
+
+
+
+						}
+
+
+
+
+

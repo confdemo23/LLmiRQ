@@ -1,0 +1,2 @@
+The start time for Steps are displayed with hard coded GMT time zone
+The StepExecutionController uses a hard coded value of &amp;apos;GMT&amp;apos; when creating a new StepExecutionInfo in a couple of places (three). Fix for JobExecutionInfo is already implemented (https://jira.springsource.org/browse/BATCHADM-29). 

@@ -1,0 +1,2 @@
+LLAP: AM should get notifications on daemons going down or restarting
+There&amp;apos;s lost state otherwise, which can cause queries to hang.

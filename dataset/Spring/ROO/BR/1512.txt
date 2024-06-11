@@ -1,0 +1,2 @@
+Remove web.xml welcome file handling from GWT addon
+Remove web.xml welcome file handling from GWT addon

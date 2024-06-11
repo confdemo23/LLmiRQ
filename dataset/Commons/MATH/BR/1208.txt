@@ -1,0 +1,2 @@
+EmpiricalDistribution cumulativeProbability can return NaN when evaluated within a constant bin
+If x belongs to a bin with no variance or to which a ConstantRealDistribution kernel has been assigned, cumulativeProbability can return NaN.

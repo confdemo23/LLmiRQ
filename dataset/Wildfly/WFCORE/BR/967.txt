@@ -1,0 +1,236 @@
+list-xxx and map-xxx do not work in a composite
+When running e.g. a series of map-add operations in a composite, only the last step takes effect. e.g.:
+
+
+
+
+
+
+Model Before: {
+
+
+
+
+    "deployment" =&gt; undefined,
+
+
+
+
+    "subsystem" =&gt; {"test-subsystem" =&gt; {
+
+
+
+
+        "properties" =&gt; {
+
+
+
+
+            "one" =&gt; "A",
+
+
+
+
+            "two" =&gt; "B",
+
+
+
+
+            "three" =&gt; "C"
+
+
+
+
+        },
+
+
+
+
+        "test" =&gt; "Hello"
+
+
+
+
+    }}
+
+
+
+
+}
+
+
+
+
+{
+
+
+
+
+    "operation" =&gt; "composite",
+
+
+
+
+    "address" =&gt; [],
+
+
+
+
+    "steps" =&gt; [
+
+
+
+
+        {
+
+
+
+
+            "operation" =&gt; "map-remove",
+
+
+
+
+            "address" =&gt; [("subsystem" =&gt; "test-subsystem")],
+
+
+
+
+            "name" =&gt; "properties",
+
+
+
+
+            "key" =&gt; "one"
+
+
+
+
+        },
+
+
+
+
+        {
+
+
+
+
+            "operation" =&gt; "map-remove",
+
+
+
+
+            "address" =&gt; [("subsystem" =&gt; "test-subsystem")],
+
+
+
+
+            "name" =&gt; "properties",
+
+
+
+
+            "key" =&gt; "two"
+
+
+
+
+        },
+
+
+
+
+        {
+
+
+
+
+            "operation" =&gt; "map-remove",
+
+
+
+
+            "address" =&gt; [("subsystem" =&gt; "test-subsystem")],
+
+
+
+
+            "name" =&gt; "properties",
+
+
+
+
+            "key" =&gt; "three"
+
+
+
+
+        }
+
+
+
+
+    ]
+
+
+
+
+}
+
+
+
+
+Model After: {
+
+
+
+
+    "deployment" =&gt; undefined,
+
+
+
+
+    "subsystem" =&gt; {"test-subsystem" =&gt; {
+
+
+
+
+        "properties" =&gt; {
+
+
+
+
+            "one" =&gt; "A",
+
+
+
+
+            "two" =&gt; "B"
+
+
+
+
+        },
+
+
+
+
+        "test" =&gt; "Hello"
+
+
+
+
+    }}
+
+
+
+
+}
+
+
+
+
+
+
+The same happens with map-put, map-remove, list-add and list-remove when used in a composite. I have added some more tests to https://github.com/kabir/wildfly-core/blob/map-operation-composite/controller/src/test/java/org/jboss/as/controller/operation/global/CollectionOperationsTestCase.java to demonstrate the problem. These tests should be expanded to cover more of the map operations when used in a composite.

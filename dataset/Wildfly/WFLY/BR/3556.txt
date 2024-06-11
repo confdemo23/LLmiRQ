@@ -1,0 +1,36 @@
+Timer persistence and restore
+Browsing through the log file of a build including run of testsuite I found a couple of reported erros like this one:
+Running org.jboss.as.test.integration.ejb.interceptor.invocationcontext.InvocationContextTestCase
+22:15:56,939 INFO  [org.jboss.as.test.integration.ejb.interceptor.invocationcontext.DefaultInterceptor] (pool-2-thread-1) PostConstruct on DefaultInterceptor calledorg.jboss.as.test.integration.ejb.interceptor.invocationcontext.TimeoutBean
+22:15:57,048 INFO  [org.jboss.as.test.integration.ejb.interceptor.invocationcontext.DefaultInterceptor] (EJB default - 10) PostConstruct on DefaultInterceptor calledorg.jboss.as.test.integration.ejb.interceptor.invocationcontext.TimeoutBean
+22:15:57,048 INFO  [org.jboss.as.test.integration.ejb.interceptor.invocationcontext.InvocationContextChecker] (EJB default - 10) Checking timeout interceptor on: Default
+22:15:57,048 INFO  [org.jboss.as.test.integration.ejb.interceptor.invocationcontext.InvocationContextChecker] (EJB default - 10) Checking timeout interceptor on: Class
+22:15:57,048 INFO  [org.jboss.as.test.integration.ejb.interceptor.invocationcontext.InvocationContextChecker] (EJB default - 10) Checking timeout interceptor on: Method
+22:15:57,048 INFO  [org.jboss.as.test.integration.ejb.interceptor.invocationcontext.InvocationContextChecker] (EJB default - 10) Checking timeout interceptor on: Bean
+22:15:57,048 ERROR [org.jboss.as.ejb3] (EJB default - 10) WFLYEJB0029: Could not restore timer from C:\Users\frank.LANGFR.000\Documents\GitHub\wildfly\testsuite\integration\basic\target\jbossas\standalone\data\timer-service-data\invocation-context.invocation-context.TimeoutBean\4f0c586c-06d3-4f35-9bf9-7bd451800482.xml: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[4,5]
+Message: WFLYCTL0133: Missing required attribute(s): next-date
+	at org.jboss.as.controller.parsing.ParseUtils.missingRequired(ParseUtils.java:135) [wildfly-controller-9.0.0.Alpha1-SNAPSHOT.jar:9.0.0.Alpha1-SNAPSHOT]
+	at org.jboss.as.ejb3.timerservice.persistence.filestore.EjbTimerXmlParser_1_0.parseTimer(EjbTimerXmlParser_1_0.java:146)
+	at org.jboss.as.ejb3.timerservice.persistence.filestore.EjbTimerXmlParser_1_0.readElement(EjbTimerXmlParser_1_0.java:112)
+	at org.jboss.as.ejb3.timerservice.persistence.filestore.EjbTimerXmlParser_1_0.readElement(EjbTimerXmlParser_1_0.java:86)
+	at org.jboss.staxmapper.XMLMapperImpl.processNested(XMLMapperImpl.java:110) [staxmapper-1.1.0.Final.jar:1.1.0.Final]
+	at org.jboss.staxmapper.XMLMapperImpl.parseDocument(XMLMapperImpl.java:69) [staxmapper-1.1.0.Final.jar:1.1.0.Final]
+	at org.jboss.as.ejb3.timerservice.persistence.filestore.FileTimerPersistence.loadTimersFromFile(FileTimerPersistence.java:353)
+	at org.jboss.as.ejb3.timerservice.persistence.filestore.FileTimerPersistence.getTimers(FileTimerPersistence.java:316)
+	at org.jboss.as.ejb3.timerservice.persistence.filestore.FileTimerPersistence.persistTimer(FileTimerPersistence.java:198)
+	at org.jboss.as.ejb3.timerservice.persistence.filestore.FileTimerPersistence.persistTimer(FileTimerPersistence.java:175)
+	at org.jboss.as.ejb3.timerservice.TimerServiceImpl.persistTimer(TimerServiceImpl.java:611)
+	at org.jboss.as.ejb3.timerservice.task.TimerTask.run(TimerTask.java:193)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [rt.jar:1.8.0]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [rt.jar:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [rt.jar:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [rt.jar:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.8.0]
+	at org.jboss.threads.JBossThread.run(JBossThread.java:122)
+This does not stop the testsuite but obviously is an error.
+I compared the schema definition, the Persister and the Parser and found some incompatibilities. I&amp;apos;ll attach a spreadsheet with the outcome soon.
+The red lines show the inconsitencies. The cells with underline those to be changed.
+The only relevant change is, that the Parser will not see "next-date" as a required element.
+Other changes only touch the schema document.
+Along with this I renamed it from .xml to xsd.
+Pull request will follow soon.

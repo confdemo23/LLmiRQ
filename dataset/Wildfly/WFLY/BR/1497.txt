@@ -1,0 +1,3 @@
+Log4jCustomHandlerTestCase.disabledLoggerTest does not re-enable the handler
+Log4jCustomHandlerTestCase.disabledLoggerTest does not bring the setup back in the original state. This means that whenever defaultLoggingTest is run after disabledLoggerTest, the test fails.
+disabledLoggerTest must reset the enabled flag.

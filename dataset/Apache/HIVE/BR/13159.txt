@@ -1,0 +1,2 @@
+TxnHandler should support datanucleus.connectionPoolingType = None
+Right now, one has to choose bonecp or dbcp.

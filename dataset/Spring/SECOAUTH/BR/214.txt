@@ -1,0 +1,2 @@
+token-id-param not passed to UserAuthorizationSuccessfulAuthenticationHandler by OAuthProviderBeanDefinitionParser
+setting token-id-param is ignored by the authorizationsuccessful handler. 

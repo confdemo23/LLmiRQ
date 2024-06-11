@@ -1,0 +1,14 @@
+Messaging subsystem runtime-queue resource is not registered as "runtime-only"
+The runtime-queue resource only exists at runtime but isn&amp;apos;t registered as such. I noticed this as ManagementClient does a recursive read-resource of the entire tree, but with include-runtime=false, but a CI run showed a failure reading one of these resources anyway:
+```
+21:01:01,754 ERROR [org.jboss.as.controller.management-operation] (management-handler-thread - 4) JBAS014613: Operation ("read-attribute") failed - address: ([
+    ("subsystem" =&gt; "messaging"),
+    ("hornetq-server" =&gt; "default"),
+    ("runtime-queue" =&gt; "jms.tempqueue.661a6b15-7863-4d6c-b4b1-f8d62d294ea5")
+]) - failure description: "JBAS011676: No resource exists at address [
+    (\"subsystem\" =&gt; \"messaging\"),
+    (\"hornetq-server\" =&gt; \"default\"),
+    (\"runtime-queue\" =&gt; \"jms.tempqueue.661a6b15-7863-4d6c-b4b1-f8d62d294ea5\")
+]"
+```
+Doing read-resource with these is a bit problematic in any case, since a bunch of read-attribute calls get executed as steps (that&amp;apos;s what the above was) but the resource can disappear in the middle. But that&amp;apos;s a separate problem. 

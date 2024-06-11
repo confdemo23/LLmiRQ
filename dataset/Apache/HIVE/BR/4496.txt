@@ -1,0 +1,2 @@
+JDBC2 won&apos;t compile with JDK7
+HiveServer2 related JDBC does not compile with JDK7. Related to HIVE-3384.

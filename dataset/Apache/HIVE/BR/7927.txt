@@ -1,0 +1,2 @@
+Checking sticky bit needs shim
+Hive cannot be built on hadoop-1 after HIVE-7895, which checks sticky bit in FsPermission.

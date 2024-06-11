@@ -1,0 +1,2 @@
+The GWT Add-On fails on updating the ui.xml file when a field is declared in the governor
+The message that is returned is "NOT_FOUND_ERR: An attempt is made to reference a node in a context where it does not exist."

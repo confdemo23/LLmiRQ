@@ -1,0 +1,2 @@
+Conflicts if both <step/> and <tasklet/> have a "parent" attribute
+Both &lt;step/&gt; and &lt;tasklet/&gt; affect the step factory bean  If both elements have a "parent" attribute, then one will override the other, causing the first to be ignored.  A solution must be found that allows two parents to be specified. 

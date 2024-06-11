@@ -1,0 +1,11 @@
+Authentication for ThriftServer clients
+The current implementation of HBase client authentication only works with the Java API.  Alternate access gateways, like Thrift and REST are left out and will not work.
+For the ThriftServer to be able to fully interoperate with the security implementation:
+
+the ThriftServer should be able to login from a keytab file with it&amp;apos;s own server principal on startup
+thrift clients should be able to authenticate securely when connecting to the server
+the ThriftServer should be able to act as a proxy for those clients so that the RPCs it issues will be correctly authorized as the original client identities
+
+There is already some support for step 3 in UserGroupInformation and related classes.
+For step #2, we really need to look at what thrift itself supports.
+At a bare minimum, we need to implement step #1.  If we do this, even without steps 2 &amp; 3, this would at least allow deployments to use a ThriftServer per application user, and have the server login as that user on startup.  Thrift clients may not be directly authenticated, but authorization checks for HBase could still be handled correctly this way.

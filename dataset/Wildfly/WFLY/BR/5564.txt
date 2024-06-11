@@ -1,0 +1,2 @@
+Unable to set use-journal-store if use-jdbc-store was set to true before
+It is impossible to set use-journal-store or use-jdbc-store after other was set. The other has to have its default value, although setting it back to its default value won&amp;apos;t help.

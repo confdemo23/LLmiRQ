@@ -1,0 +1,2 @@
+Unable to start JBoss server after issuing kill -9
+After manually killing a server it fails on subsequent start attempt using the management console or CLI.

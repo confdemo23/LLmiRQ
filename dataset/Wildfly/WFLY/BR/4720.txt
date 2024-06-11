@@ -1,0 +1,40 @@
+DuplicateServiceException when adding a new FORK channel
+
+
+
+
+
+
+[standalone@localhost:9990 /] /subsystem=jgroups/channel=ee/fork=myfork:add
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "failed",
+
+
+
+
+    "failure-description" =&gt; "WFLYCTL0158: Operation handler failed: org.jboss.msc.service.DuplicateServiceException: Service jboss.jgroups.factory.ee is already registered",
+
+
+
+
+    "rolled-back" =&gt; true
+
+
+
+
+}
+
+
+
+
+
+
+the problem is fixed in org.jboss.as.clustering.jgroups.subsystem.ForkAddHandler#installRuntimeServices

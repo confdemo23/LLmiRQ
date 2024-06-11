@@ -1,0 +1,5 @@
+Ability to update counters and status from TRANSFORM scripts
+Hadoop Streaming supports the ability to update counters and status by writing specially coded messages to the script&amp;apos;s stderr stream.
+A streaming process can use the stderr to emit counter information. reporter:counter:&lt;group&gt;,&lt;counter&gt;,&lt;amount&gt; should be sent to stderr to update the counter.
+A streaming process can use the stderr to emit status information. To set a status, reporter:status:&lt;message&gt; should be sent to stderr.
+Hive should support these same features with its TRANSFORM mechanism.

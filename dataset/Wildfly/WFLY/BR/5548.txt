@@ -1,0 +1,28 @@
+[Migration operation] Attribute backup-group-name is not migrated
+If server is configured with HA policy for replicated journal and messaging subsystem contains attribute:
+
+
+
+
+
+
+        &lt;backup-group-name&gt;firstPair&lt;/backup-group-name&gt;
+
+
+
+
+
+
+then new messaging-activemq subsytem should contain something like:
+
+
+
+
+
+
+        &lt;replication-master ... group-name="firstPair" /&gt;
+
+
+
+
+

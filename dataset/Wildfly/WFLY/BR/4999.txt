@@ -1,0 +1,2 @@
+XSiteBackupForTestCase tests fail on Windows with IPv6
+See http://brontes.lab.eng.brq.redhat.com/project.html?projectId=WF_PullRequest&amp;testNameId=1140899232324454378&amp;tab=testDetails

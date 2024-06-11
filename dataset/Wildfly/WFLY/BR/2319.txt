@@ -1,0 +1,194 @@
+LDAP Search containing URL - InvalidNameException: ldap:: [LDAP: error code 34 - Invalid root Dn given
+The following code: -
+
+
+
+
+
+
+        Hashtable env = new Hashtable();
+
+
+
+
+        env.put("java.naming.factory.initial", "com.sun.jndi.ldap.LdapCtxFactory");
+
+
+
+
+        env.put("java.naming.security.authentication", "simple");
+
+
+
+
+        env.put("java.naming.provider.url", "ldap://localhost:10389");
+
+
+
+
+        env.put(InitialDirContext.SECURITY_PRINCIPAL, "uid=admin,ou=system");
+
+
+
+
+        env.put(InitialDirContext.SECURITY_CREDENTIALS, "secret");
+
+
+
+
+        SearchControls ctl = null;
+
+
+
+
+        String attrArr[] = new String[1];
+
+
+
+
+        attrArr[0] = "sn";
+
+
+
+
+        ctl = new SearchControls(2, 0L, 0, attrArr, false, false);
+
+
+
+
+
+
+
+
+
+        String base = "ldap://localhost:10389/dc=simple,dc=wildfly,dc=org";
+
+
+
+
+        String filter = "(uid=UserOne)";
+
+
+
+
+
+
+
+
+
+        NamingEnumeration nenum = null;
+
+
+
+
+        DirContext ictx = null;
+
+
+
+
+
+
+
+
+
+            ictx = new InitialDirContext(env);
+
+
+
+
+            nenum = ictx.search(base, filter, ctl);
+
+
+
+
+
+
+Results in the following exception: -
+
+{noquote}
+13:03:45,598 ERROR [stderr] (default task-1) javax.naming.InvalidNameException: ldap:: [LDAP: error code 34 - Invalid root Dn given : ldap: (0x6C 0x64 0x61 0x70 0x3A ) is invalid]; remaining name &amp;apos;ldap://localhost:10389/dc=simple,dc=wildfly,dc=org&amp;apos;
+13:03:45,599 ERROR [stderr] (default task-1) 	at com.sun.jndi.ldap.LdapCtx.processReturnCode(LdapCtx.java:3025)
+13:03:45,600 ERROR [stderr] (default task-1) 	at com.sun.jndi.ldap.LdapCtx.processReturnCode(LdapCtx.java:2840)
+13:03:45,600 ERROR [stderr] (default task-1) 	at com.sun.jndi.ldap.LdapCtx.c_lookup(LdapCtx.java:1034){noquote}
+
+Switching to a base that does not begin with a URL and the search works, executing this code outside of WildFly also works.
+The underlying issue is that the default InitialContext implementation contains the following method: -
+
+
+
+
+
+
+    protected Context getURLOrDefaultInitCtx(String name)
+
+
+
+
+        throws NamingException {
+
+
+
+
+        if (NamingManager.hasInitialContextFactoryBuilder()) {
+
+
+
+
+            return getDefaultInitCtx();
+
+
+
+
+        }
+
+
+
+
+        String scheme = getURLScheme(name);
+
+
+
+
+        if (scheme != null) {
+
+
+
+
+            Context ctx = NamingManager.getURLContext(scheme, myProps);
+
+
+
+
+            if (ctx != null) {
+
+
+
+
+                return ctx;
+
+
+
+
+            }
+
+
+
+
+        }
+
+
+
+
+        return getDefaultInitCtx();
+
+
+
+
+    }
+
+
+
+
+
+
+As the naming subsystem has registered a InitialContextFactoryBuilder this code will never fall down to the scheme specific section.

@@ -1,0 +1,3 @@
+exception clause doesn&apos;t proceed with pipeline
+Problem is very similar to CAMEL-191 but this time with exception clause.
+As exceptions are not cleared pipeline doesn&amp;apos;t proceed.

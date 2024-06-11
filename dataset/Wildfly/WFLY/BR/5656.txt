@@ -1,0 +1,5 @@
+No warning is shown when deploying web application with defined valves
+There is currently not shown any warning when trying to deploy web application having defined valves which are not available. There should be shown warning in the logs during deployment for customer to know that not all features defined in deployment are working.
+Marking as critical as this behaviour hides that some features are not enabled and the features might be important for customer (e.g. some address filtering). resulting in thinking that everything is defined correctly instead of showing warning to let customer know that this part of logic requires migration to handlers.
+Steps to reproduce:
+deploy attached application and see whether there occurs warning in logs during deployment.

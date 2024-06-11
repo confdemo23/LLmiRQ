@@ -1,0 +1,7 @@
+Minor help error displayed after &apos;download privacy level&apos; command is used
+roo&gt; download privacy level --privacyLevel DISABLE_UAA
+UAA privacy level updated Tue Feb 08 11:08:25 CET 2011 (use &amp;apos;uaa view&amp;apos; to view the new data)
+roo&gt; uaa view
+Command &amp;apos;uaa view&amp;apos; not found (for assistance press TAB or type "hint" then hit ENTER)
+addon search --requiresCommand "uaa view" found no matches
+roo&gt;

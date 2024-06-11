@@ -1,0 +1,268 @@
+Incorrect interface definition in ejb-jar.xml for entity beans shows just NullPointer exception
+
+
+
+
+
+
+In case that you specify interface type for entity bean in ejb-jar.xml that does not correspond with definition in the class of the bean then just Null Pointer exception is shown without any other info what&amp;apos;s happening.
+
+
+
+
+
+
+
+
+
+I mean when you define bean through interface as remote and the ejb-jar.xml describes bean interfaces as local
+
+
+
+
+{code}
+
+
+
+
+public interface SomeBean extends EJBObject {
+
+
+
+
+...
+
+
+
+
+}
+
+
+
+
+public interface SomeBeanHome extends EJBHome {
+
+
+
+
+...
+
+
+
+
+}
+
+
+
+
+{code}
+
+
+
+
+and the ejb-jar.xml looks like
+
+
+
+
+{code}
+
+
+
+
+&lt;ejb-jar xmlns="http://java.sun.com/xml/ns/javaee"
+
+
+
+
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+
+
+
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/ejb-jar_3_1.xsd" version="3.1"&gt;
+
+
+
+
+  &lt;enterprise-beans&gt;
+
+
+
+
+    &lt;entity&gt;
+
+
+
+
+      &lt;ejb-name&gt;SomeBean&lt;/ejb-name&gt;
+
+
+
+
+      &lt;local-home&gt;package.SomeBeanHome&lt;/local-home&gt;
+
+
+
+
+      &lt;local&gt;package.SomeBean&lt;/local&gt;
+
+
+
+
+      &lt;ejb-class&gt;package.SomeBeanBean&lt;/ejb-class&gt;
+
+
+
+
+      &lt;persistence-type&gt;Bean&lt;/persistence-type&gt;
+
+
+
+
+      &lt;prim-key-class&gt;java.lang.Integer&lt;/prim-key-class&gt;
+
+
+
+
+      &lt;reentrant&gt;true&lt;/reentrant&gt;
+
+
+
+
+    &lt;/entity&gt;
+
+
+
+
+  &lt;/enterprise-beans&gt;
+
+
+
+
+&lt;/ejb-jar&gt;
+
+
+
+
+{code}
+
+
+
+
+
+
+
+
+
+then NullPointerException is thrown
+
+
+
+
+{code}
+
+
+
+
+ERROR [org.jboss.msc.service.fail] (MSC service thread 1-5) MSC00001: Failed to start service jboss.deployment.unit."entitybeanbmp.jar".INSTALL: org.jboss.msc.service.StartException in service jboss.deployment.unit."entitybeanbmp.jar".INSTALL: JBAS018733: Failed to process phase INSTALL of deployment "entitybeanbmp.jar"                                      
+
+
+
+
+  at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:123) [jboss-as-server-7.2.0.Alpha1-SNAPSHOT.jar:7.2.0.Alpha1-SNAPSHOT]                  
+
+
+
+
+  at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]                           
+
+
+
+
+  at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]                              
+
+
+
+
+  at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886) [rt.jar:1.6.0_23]                                   
+
+
+
+
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908) [rt.jar:1.6.0_23]                                       
+
+
+
+
+  at java.lang.Thread.run(Thread.java:662) [rt.jar:1.6.0_23]                                             
+
+
+
+
+Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: JBAS011058: Failed to install component SimpleBMPBean                             
+
+
+
+
+  at org.jboss.as.ee.component.deployers.ComponentInstallProcessor.deploy(ComponentInstallProcessor.java:102)                                
+
+
+
+
+  at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:116) [jboss-as-server-7.2.0.Alpha1-SNAPSHOT.jar:7.2.0.Alpha1-SNAPSHOT]                  
+
+
+
+
+  ... 5 more
+
+
+
+
+Caused by: java.lang.NullPointerException                                                    
+
+
+
+
+  at org.jboss.as.ejb3.component.entity.EntityBeanObjectViewConfigurator$2.configureDependency(EntityBeanObjectViewConfigurator.java:108)                            
+
+
+
+
+  at org.jboss.as.ejb3.component.entity.EntityBeanObjectViewConfigurator$2.configureDependency(EntityBeanObjectViewConfigurator.java:105)                            
+
+
+
+
+  at org.jboss.as.ee.component.deployers.ComponentInstallProcessor.deployComponent(ComponentInstallProcessor.java:139)                                   
+
+
+
+
+  at org.jboss.as.ee.component.deployers.ComponentInstallProcessor.deploy(ComponentInstallProcessor.java:95)                                 
+
+
+
+
+  ... 6 more 
+
+
+
+
+{code}
+
+
+
+
+
+
+
+
+
+instead of some informative one.
+
+
+
+
+

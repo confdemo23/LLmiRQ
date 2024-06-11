@@ -1,0 +1,3 @@
+Distributable SessionManager.getSession(String) implementation is wrong.
+During the upgrade to Undertow 1.0.0.Beta2, a new method was added to the clustered SessionManager implementation, but was implemented incorrectly.
+Luckily, I don&amp;apos;t think this method is used yet by Undertow.

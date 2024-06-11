@@ -1,0 +1,5 @@
+XTSSubsystemDefinition says HOST attribute doesn&apos;t allow null, but it should
+The xsd for the xts subsystem says the "host" element is not required, and the parser behaves accordingly, but the HOST attribute in XTSSubsystemDefinition says the attribute doesn&amp;apos;t allow null, while simultaneously configuring a default value for it.
+Setting a default value for an attribute is pointless if it doesn&amp;apos;t allow null; the default value is what the runtime services will use if the persistent config value is null.
+This situation prevents booting of legacy xml configs using schema versions that predate the "host element. (Specifically, EAP 6 configs.) The boot validates the entire config to ensure that required attributes are configured, and that validation fails. Booting configs that conform to the current schema would fail too if "host" was not present.
+This should be a simple one line change.

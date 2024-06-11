@@ -1,0 +1,24 @@
+Boot failure when domain-controller/remote element does not specify port attribute
+The 2.0 xsd says that the "host" and "port" attributes for host.xml domain-controller/remote element are optional. But if port is not specified boot fails:
+
+
+
+
+
+
+[Host Controller] 14:55:37,300 INFO  [org.jboss.as] (MSC service thread 1-6) JBAS015899: WildFly 8.0.0.Final "WildFly" starting
+
+
+
+
+[Host Controller] 14:55:38,060 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) JBAS014613: Operation ("write-remote-domain-controller") failed - address: ([("host" =&gt; "slave")]) - failure description: "JBAS014746: port may not be null"
+
+
+
+
+[Host Controller] 14:55:38,062 FATAL [org.jboss.as.host.controller] (Controller Boot Thread) JBAS010933: Host Controller boot has failed in an unrecoverable manner; exiting. See previous messages for details.
+
+
+
+
+

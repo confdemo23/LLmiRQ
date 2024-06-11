@@ -1,0 +1,11 @@
+AjaxTilesView does not handle cascaded attributes properly
+i have one cascaded attribute in my view:
+&lt;definition name="specifyPhone" extends="template"&gt;
+		&lt;put-attribute name="handsetTable" value="/WEB-INF/templates/handsets.ftl" cascade="true"/&gt;
+		&lt;put-attribute name="body" value="/WEB-INF/templates/specifyPhone.ftl"/&gt;
+&lt;/definition&gt;
+template contains "body" attribute
+body template contains "handsetTable" attribute
+the first time i render the full page everything is ok
+when i try to specify &amp;apos;handsetTable&amp;apos; as render fragment, nothing gets rendered because of exception: javax.servlet.ServletException: No tiles attribute with a name of &amp;apos;handsetTable&amp;apos; could be found for the current view: org.springframework.js.ajax.tiles2.AjaxTilesView: name &amp;apos;specifyPhone&amp;apos;
+when i try to specify &amp;apos;body&amp;apos; as render fragment, body attribute gets rendered, but without handsetTable attribute. I can see the exception in the log: org.apache.tiles.jsp.taglib.NoSuchAttributeException: Attribute &amp;apos;handsetTable&amp;apos; not found.

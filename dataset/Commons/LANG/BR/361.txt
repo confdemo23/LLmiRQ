@@ -1,0 +1,2 @@
+BooleanUtils toBooleanObject javadoc does not match implementation
+The javadoc description for the BooleanUtils method toBooleanObject(String, String, String, String) states that it returns null if the input string does not match the true, false, or null string values.  However, the implementation throws and IllegalArgumentException when the input string does not match the other string values.

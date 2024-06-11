@@ -1,0 +1,3 @@
+UnionOperator fails when different inputs have different ObjectInspector (but the same TypeInfo)
+The current UnionOperator code assumes the ObjectInspectors from all parents are the same.
+But in reality, they can be different, and UnionOperator needs to do conversion if necessary.

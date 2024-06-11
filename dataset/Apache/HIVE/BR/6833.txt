@@ -1,0 +1,7 @@
+when output hive table query to HDFS file,users should have a separator of their own choice
+HIVE-3682 allows user to store output of Hive query to a local file along with delimiters and separators of their choice.
+e.g. insert overwrite local directory &amp;apos;/users/home/XYZ&amp;apos; row format delimited FIELDS TERMINATED BY &amp;apos;,&amp;apos; SELECT * from table_name;
+Storing query output with default separator(\001) to HDFS is possible.
+e.g. insert overwrite directory &amp;apos;/user/xYZ/security&amp;apos; SELECT * from table_name;
+But user can not store output of Hive query to a HDFS directory with delimiters and separators of their choice. 
+e.g. insert overwrite directory &amp;apos;/user/xYZ/security&amp;apos;  row format delimited FIELDS TERMINATED BY &amp;apos;,&amp;apos; SELECT * from table_name; (Gives ERROR)

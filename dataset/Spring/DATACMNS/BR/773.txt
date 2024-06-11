@@ -1,0 +1,17 @@
+Add support for persisting ZoneId instances out of the box
+The JSR-310 mapping support can read a simple string (e.g., "US/Central") into a ZoneId field, but when it&amp;apos;s saved, it&amp;apos;s saved as a complex serialized object, with _class: "java.time.ZoneRegion" and all the internal state.
+However, the mapper can&amp;apos;t read this saved object, presumably because of the lack of a cooperative constructor; the exception message is
+
+
+
+
+
+
+org.springframework.data.mapping.model.MappingException: No property null found on entity class java.time.ZoneRegion to bind constructor parameter to!
+
+
+
+
+
+
+I suggest that the ZoneId should be saved as the simple string identifier.

@@ -1,0 +1,16 @@
+Provide a mechanism to have a class implement an interface via the roo shell.  &apos;inheritance&apos; command
+Can be run on the current entity/class
+inheritance --extends ~.ParentClass
+Extends the current class
+inheritance --implements ~.MyInterface
+Implements an interface to the current class.  Stubs all non-implemented methods. Maybe adds @RooStub annotation to top of class?
+Also add --implements to &amp;apos;entity&amp;apos; command.
+Obviously there is great value in this, but my specific use case would be to create service methods for addons without providing the entity implementations.  
+For instance, let&amp;apos;s say I wanted to create an add-on that has a UserService
+userService.doSomething(User user) {
+   // changes user object
+   // calls user.persist();
+}
+takes interface User 
+I don&amp;apos;t want to provide an entity here because I don&amp;apos;t want to couple to a persistence type.  So instead I expect the user to install the UserService addon and then create a MyUser object that implements the User interface.
+entity --class ~.MyUser --implements User 

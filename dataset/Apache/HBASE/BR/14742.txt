@@ -1,0 +1,12 @@
+TestHeapMemoryManager is flakey
+On our internal build system we&amp;apos;ve seen TestHeapMemoryManager fail twice.
+
+
+
+Failed tests: 
+
+  TestHeapMemoryManager.testWhenClusterIsReadHeavy:174-&gt;assertHeapSpaceDelta:317 null
+
+  TestHeapMemoryManager.testWhenClusterIsWriteHeavy:136-&gt;assertHeapSpaceDelta:317 null
+
+

@@ -1,0 +1,2 @@
+IIOP: SSL configuration inconsistence
+If user configures IOR settings so that SSL connections are required, but there security is not configured properly, then normal socket is opened on iiop-ssl port. In described scenario error should be printed and iiop subsystem should fail to start.

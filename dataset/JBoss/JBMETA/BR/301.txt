@@ -1,0 +1,2 @@
+Session bean and message driven bean metadata does not merge (auto) timer metadata correctly
+MessageDrivenBean31MetaData, JBossMessageDrivenBean31MetaData, JBossSessionBean31MetaData, SessionBean31MetaData don&amp;apos;t merge timer metadata correctly leading to incorrect timer information when a deployment contains both xml dd and annotations for the bean.

@@ -1,0 +1,2 @@
+Patch upload in console does not work
+The domain http upload handler behaves a bit different than the version in EAP and the way the console uploads streams does not work in upstream. We probably should just change it to the way EAP processes requests.

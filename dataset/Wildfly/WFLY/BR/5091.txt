@@ -1,0 +1,9 @@
+User supplied externalizers are ignored by web/ejb clustering code
+Several users were surprised to find that their custom Infinispan externalizers are not used when marshalling of objects placed in the web session or used as fields in their SFSB.  Without this functionality, users cannot use non-serializable objects in their web session or SFSB.
+There are a few reasons why this does not currently work:
+
+The cache in which user objects is placed does not scan the application classloader for externalizers.
+In both the web and ejb case, user objects are stored within a MarshalledValue - the serialization of which is done by JBoss Marshalling directly, not via Infinispan&amp;apos;s marshaller.
+Neither the org.infinispan.commons (containing org.infinispan.commons.marshall.AdvancedExternalizer) nor org.jboss.marshalling (containing org.jboss.marshalling.Externalizer) modules are exported to the application classpath.
+
+Clearly, we need a common, public mechanism that bridges these two APIs so that users can register custom externalizers without needing to know the specific marshalling framework to which to adhere.

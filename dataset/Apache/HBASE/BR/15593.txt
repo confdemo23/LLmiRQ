@@ -1,0 +1,2 @@
+Time limit of scanning should be offered by client
+In RSRpcServices.scan, we will set a time limit equaling to Math.min(scannerLeaseTimeoutPeriod, rpcTimeout) / 2, and will response heartbeat message if we reach this limit. However, two timeout settings (hbase.client.scanner.timeout.period and hbase.rpc.timeout) are read from RS&amp;apos;s configure, which may be different from client&amp;apos;s. If client&amp;apos;s setting is much less than server&amp;apos;s, there may still be timeout at client side.

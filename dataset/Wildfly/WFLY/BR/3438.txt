@@ -1,0 +1,7 @@
+Eliminate use of optional dependencies for LocalEJBReceiver
+This issue was initially raised on stackoverflow (see below).
+When the EJB subsystem starts, it starts instances of LocalEJBReceiver which have optional dependencies on the Remoting Endpoint as well as the EJBRemoteConnectorService. I assume that these were marked as optional as remote invocations on EJBs is not required by the spec for the web profile. 
+As stated in the forum post, the issue is that the LocalEJBReceiver gets started before its dependency EJBRemoteConnectorService and so the optional dependency does not get resolved correctly - effectively turning off the LocalEJBReceiver&amp;apos;s ability to add cluster nodes to cluster contexts for the clusters it belongs to.
+This results in the exception
+.java.lang.IllegalStateException: EJBCLIENT000029: No cluster context available for cluster named ejb
+The solution described in the forum post works to ensure that the dependencies are established correctly, but we need to factor into this what the spec says about the web profile and the possibility that some components (e.g. the EJBRemoteConnector) may be optionally removed.

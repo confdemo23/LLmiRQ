@@ -1,0 +1,117 @@
+camel-cxf proxy with MTOM does not get attachment back when RPC/literal style WSDL used
+I have a camel-cxf proxy test case with MTOM enabled. The WSDL used in the project is RPC/Literal style. However, I was unable to get attachment back via response. Please take a look at the test case for more detail.
+After some debugging, it looks like that camel-cxf producer did get attachment back. However, there were two attachment related parts. One part had no attachment (empty) but had correct "Content-ID". The other part did contain entire attachment but had a rather different "Content-ID". For instance:
+
+
+
+19:30:47,110 | INFO  | qtp565617691-367 | IMtomExample                     | 118 - org.apache.cxf.cxf-core - 3.0.4.redhat-620133 | Outbound Message
+
+---------------------------
+
+ID: 63
+
+Response-Code: 200
+
+Encoding: UTF-8
+
+Content-Type: multipart/related; type="application/xop+xml"; boundary="uuid:f108bc3f-549a-4baa-ab00-757ff837aacf"; start="&lt;root.message@cxf.apache.org&gt;"; start-info="text/xml"
+
+Headers: {accept-encoding=[gzip,deflate], breadcrumbId=[ID-jluomac-52985-1445511717614-11-8], Host=[localhost:7777], Server=[Jetty(8.1.15.v20140411)], User-Agent=[Apache-HttpClient/4.1.1 (java 1.5)]}
+
+Payload: --uuid:f108bc3f-549a-4baa-ab00-757ff837aacf
+
+Content-Type: application/xop+xml; charset=UTF-8; type="text/xml"
+
+Content-Transfer-Encoding: binary
+
+Content-ID: &lt;root.message@cxf.apache.org&gt;
+
+
+
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;soap:Body&gt;&lt;ns1:doMtomResponse xmlns:ns1="http://cxf.example.com/"&gt;&lt;parameters xmlns:ns2="http://cxf.example.com/"&gt;&lt;output&gt;soapui-splash.png&lt;/output&gt;&lt;dataLength&gt;27186&lt;/dataLength&gt;&lt;data&gt;&lt;xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href="cid:15839364-d75d-4cbe-a163-40838bca762a-31@cxf.apache.org"/&gt;&lt;/data&gt;&lt;/parameters&gt;&lt;/ns1:doMtomResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;
+
+--uuid:f108bc3f-549a-4baa-ab00-757ff837aacf
+
+Content-Type: image/png
+
+Content-Transfer-Encoding: binary
+
+Content-ID: &lt;e4b4a36a-b07a-481d-8bf8-82df5b57f40b-1@cxf.apache.org&gt;
+
+Content-Disposition: attachment;name="soapui-splash.png"
+
+
+
+&lt;-- soapui-splash.png binary attachment starts here --&gt;
+
+...
+
+...
+
+&lt;-- soapui-splash.png binary attachment ends here --&gt;
+
+
+
+--uuid:f108bc3f-549a-4baa-ab00-757ff837aacf
+
+Content-Type: image/png
+
+Content-Transfer-Encoding: binary
+
+Content-ID: &lt;15839364-d75d-4cbe-a163-40838bca762a-31@cxf.apache.org&gt;
+
+Content-Disposition: attachment;name="soapui-splash.png"
+
+
+
+&lt;-- no binary attachment here. empty --&gt;
+
+
+
+--uuid:f108bc3f-549a-4baa-ab00-757ff837aacf--
+
+--------------------------------------
+
+
+
+And the response message returned was:
+
+
+
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+
+   &lt;soap:Body&gt;
+
+      &lt;ns1:doMtomResponse xmlns:ns1="http://cxf.example.com/"&gt;
+
+         &lt;parameters xmlns:ns2="http://cxf.example.com/"&gt;
+
+            &lt;output&gt;soapui-splash.png&lt;/output&gt;
+
+            &lt;dataLength&gt;27186&lt;/dataLength&gt;
+
+            &lt;data&gt;
+
+               &lt;xop:Include href="cid:15839364-d75d-4cbe-a163-40838bca762a-31@cxf.apache.org" xmlns:xop="http://www.w3.org/2004/08/xop/include"/&gt;
+
+            &lt;/data&gt;
+
+         &lt;/parameters&gt;
+
+      &lt;/ns1:doMtomResponse&gt;
+
+   &lt;/soap:Body&gt;
+
+&lt;/soap:Envelope&gt;
+
+
+
+Because the response pointed to the "Content-ID" of 
+
+
+
+&lt;xop:Include href="cid:15839364-d75d-4cbe-a163-40838bca762a-31@cxf.apache.org" xmlns:xop="http://www.w3.org/2004/08/xop/include"/&gt;
+
+
+
+and the parts identified by the "Content-ID: &lt;15839364-d75d-4cbe-a163-40838bca762a-31@cxf.apache.org&gt;" was actually empty. Therefore, client can not get the attachment back.

@@ -1,0 +1,82 @@
+selectDistinctStar.q results differ with jdk 1.7 vs jdk 1.8
+Encountered this issue when analysing test failures of HIVE-12609. selectDistinctStar.q produces the following diff when I ran with java version "1.7.0_55" and java version "1.8.0_60"
+
+
+
+&lt; 128   val_128 128     
+
+---
+
+&gt; 128           128     val_128
+
+1770c1770
+
+&lt; 224   val_224 224     
+
+---
+
+&gt; 224           224     val_224
+
+1776c1776
+
+&lt; 369   val_369 369     
+
+---
+
+&gt; 369           369     val_369
+
+1799,1810c1799,1810
+
+&lt; 146   val_146 146     val_146 146     val_146 2008-04-08      11
+
+&lt; 150   val_150 150     val_150 150     val_150 2008-04-08      11
+
+&lt; 213   val_213 213     val_213 213     val_213 2008-04-08      11
+
+&lt; 238   val_238 238     val_238 238     val_238 2008-04-08      11
+
+&lt; 255   val_255 255     val_255 255     val_255 2008-04-08      11
+
+&lt; 273   val_273 273     val_273 273     val_273 2008-04-08      11
+
+&lt; 278   val_278 278     val_278 278     val_278 2008-04-08      11
+
+&lt; 311   val_311 311     val_311 311     val_311 2008-04-08      11
+
+&lt; 401   val_401 401     val_401 401     val_401 2008-04-08      11
+
+&lt; 406   val_406 406     val_406 406     val_406 2008-04-08      11
+
+&lt; 66    val_66  66      val_66  66      val_66  2008-04-08      11
+
+&lt; 98    val_98  98      val_98  98      val_98  2008-04-08      11
+
+---
+
+&gt; 146   val_146 2008-04-08      11      146     val_146 146     val_146
+
+&gt; 150   val_150 2008-04-08      11      150     val_150 150     val_150
+
+&gt; 213   val_213 2008-04-08      11      213     val_213 213     val_213
+
+&gt; 238   val_238 2008-04-08      11      238     val_238 238     val_238
+
+&gt; 255   val_255 2008-04-08      11      255     val_255 255     val_255
+
+&gt; 273   val_273 2008-04-08      11      273     val_273 273     val_273
+
+&gt; 278   val_278 2008-04-08      11      278     val_278 278     val_278
+
+&gt; 311   val_311 2008-04-08      11      311     val_311 311     val_311
+
+&gt; 401   val_401 2008-04-08      11      401     val_401 401     val_401
+
+&gt; 406   val_406 2008-04-08      11      406     val_406 406     val_406
+
+&gt; 66    val_66  2008-04-08      11      66      val_66  66      val_66
+
+&gt; 98    val_98  2008-04-08      11      98      val_98  98      val_98
+
+4212c4212
+
+

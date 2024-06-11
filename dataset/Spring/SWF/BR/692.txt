@@ -1,0 +1,4 @@
+Link in header of dataTable
+A commandLink or a commandButton inside a &lt;f:facet name="header"&gt; of dataTable do not work. An IllegalArgumentException is thrown.
+See this forum thread:
+http://forum.springframework.org/showthread.php?t=54479

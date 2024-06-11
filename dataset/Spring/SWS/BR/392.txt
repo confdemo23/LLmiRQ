@@ -1,0 +1,40 @@
+AbstractMarshallingPayloadEndpoint and XStreamMarshaller produces malformed response body
+Marshalling and unmarshalling of objects to XML payloads using AbstractMarshallingPayloadEndpoint and XStreamMarshaller seems to generated malformed SOAP Message when using XStream 1.2.1 or newer (XStream 1.2 works without problems).
+The fundamental method of my endpoint looks like this:
+Code:
+  protected Object invokeInternal(Object object) throws Exception {
+    MovieReservation movieReservationRequest = (MovieReservation) object;
+    ReservationConfirmation confirmation = new ReservationConfirmation();
+    confirmation.setId(new Date().getDate());
+    confirmation.setSeatIds(new int[] 
+{1, 2, 3, 4}
+);
+    return confirmation;
+  }
+The SOAP response, which is malformed, looks as follows:
+Code:
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="..../"&gt;
+  &lt;SOAP-ENV:Header/&gt;
+  &lt;SOAP-ENV:Body/&gt;
+  &lt;ReservationConfirmation&gt;
+    &lt;id&gt;23&lt;/id&gt;
+    &lt;seatIds&gt;
+      &lt;int&gt;1&lt;/int&gt;
+      &lt;int&gt;2&lt;/int&gt;
+      &lt;int&gt;3&lt;/int&gt;
+      &lt;int&gt;4&lt;/int&gt;
+    &lt;/seatIds&gt;
+  &lt;/ReservationConfirmation&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+Notice the empty header and empty body and the ReservationConfirmation element following the body element (which is incorrect, since this element should be within the body).
+I suspect the Spring org.s.x.oxm.XStreamWriter and its method marshalDomDone which contains the following lines
+Code:
+        else if (node instanceof Element) 
+{
+            streamWriter = new DomWriter((Element) node);
+        }
+
+However, sometimes between XStream 1.2 and XStream 1.3 the functionality of DomWriter has changed. This is described on the XStream mailing list in the "DOMWriter uses root element for marshalling instead of specified element" topic [1]
+The suggested change is described in that post:"To write into an arbitrary node you have to use the constructor DomWriter(Element, Document, XmlFriendlyReplacer)."
+Shouldn&amp;apos;t the XStreamMarshall use the suggested three-param constructor instead of the default?
+[1] http://www.nabble.com/DOMWriter-uses-root-element-for-marshalling-instead-of-specified-element-td16088975.html#a16088975

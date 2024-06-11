@@ -1,0 +1,2 @@
+Valid XML Documents for IDocs and SAP Structures failing to unmarshal
+XML Documents containing the serialized contents of SAP IDocs and Structure are failing to unmarshal. This occurs only when a Data Layer Run time object of given type has never been created before.

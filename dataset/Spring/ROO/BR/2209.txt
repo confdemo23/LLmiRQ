@@ -1,0 +1,2 @@
+JavaBean doesn&apos;t use an entity&apos;s custom identifier field when using GAE
+getId() has been hardcoded in the JavaBean add-on which causes custom identifier fields to be ignored when GAE is being used in a project.

@@ -1,0 +1,2 @@
+Cannot get exception as pass-by-reference
+Despite of &lt;in-vm-remote-interface-invocation pass-by-value="false"/&gt;, an exception is not thrown by reference, which results in java.io.NotSerializableException if the exception doesn&amp;apos;t implement Serializable.  This is a blocker of a large migration project from WebLogic because it throws by reference even if that doesn&amp;apos;t implement Serializable.

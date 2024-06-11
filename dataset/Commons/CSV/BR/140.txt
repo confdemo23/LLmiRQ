@@ -1,0 +1,3 @@
+QuoteMode.NON_NUMERIC doesn&apos;t work with CSVPrinter.printRecords(ResultSet)
+ CSVPrinter.printRecords(final ResultSet resultSet) retrieves all fields from the ResultSet using ResultSet.getString(), which makes QuoteMode.NON_NUMERIC unnecessarily quote numbers.
+ResultSet.getObject() could be used instead. Any reason why it wasn&amp;apos;t?

@@ -1,0 +1,133 @@
+NPE when calling count Queries in SD MongoDB Repositories
+I created the following query:
+
+
+
+
+
+
+@Query(value = "{&amp;apos;requestId&amp;apos;: ?0}", count = true)
+
+
+
+
+public Long countByRequestId(@Param("id") String id);
+
+
+
+
+
+
+Trying to access this query via SD REST, results in a NPE. This NPE is thrown in the AbstractRepositoryRestController. The throwing method is:
+
+
+
+
+
+
+@SuppressWarnings({ "unchecked" })
+
+
+
+
+	protected Resources resultToResources(Object result) {
+
+
+
+
+
+
+
+
+
+		if (result instanceof Page) {
+
+
+
+
+			Page&lt;Object&gt; page = (Page&lt;Object&gt;) result;
+
+
+
+
+			return entitiesToResources(page, assembler);
+
+
+
+
+		} else if (result instanceof Iterable) {
+
+
+
+
+			return entitiesToResources((Iterable&lt;Object&gt;) result);
+
+
+
+
+		} else if (null == result) {
+
+
+
+
+			return new Resources(EMPTY_RESOURCE_LIST);
+
+
+
+
+		} else {
+
+
+
+
+			Resource&lt;Object&gt; resource = perAssembler.toResource(result);
+
+
+
+
+			return new Resources(Collections.singletonList(resource));
+
+
+
+
+		}
+
+
+
+
+	}
+
+
+
+
+
+
+As the query returns Long the method steps into:
+
+
+
+
+
+
+Resource&lt;Object&gt; resource = perAssembler.toResource(result);
+
+
+
+
+
+
+which results in a Null instance for entity in:
+
+
+
+
+
+
+PersistentEntity&lt;?, ?&gt; entity = repositories.getPersistentEntity(instance.getClass());
+
+
+
+
+
+
+and then leads to the NPE.

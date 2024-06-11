@@ -1,0 +1,4 @@
+cli adds a new line at the beginning of every query
+this results in error messages always specify a line which is one more than the actual error.
+hive&gt; select count* from abc; 
+FAILED: Parse Error: line 2:14 cannot recognize input &amp;apos;from&amp;apos; in expression specification

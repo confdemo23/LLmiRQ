@@ -1,0 +1,19 @@
+sparklr2 admin endpoints restricted to POST
+After doing the OAuth dance in tonr/sparklr with "marissa", a GET request to the admin endpoints passing the correct access token fails.
+&gt;
+GET http://localhost:8080/sparklr2/oauth/users/marissa/tokens
+Authorization: Bearer (token)
+&lt;
+403 Forbidden
+{"error":"access_denied","error_description":"Access is denied"}
+
+However, a POST request works.
+&lt;
+200 OK
+[
+{"access_token":"(access-token)","token_type":"bearer","refresh_token":"(refresh-token)","expires_in":26603,"scope":"read","client_id":"client1"}
+]
+This appears to conflict with sparklr2&amp;apos;s configuration:
+&lt;intercept-url pattern="/oauth/users/.*"
+access="#oauth2.clientHasRole(&amp;apos;ROLE_CLIENT&amp;apos;) and (hasRole(&amp;apos;ROLE_USER&amp;apos;) or #oauth2.isClient()) and #oauth2.hasScope(&amp;apos;read&amp;apos;)"
+method="GET" /&gt;

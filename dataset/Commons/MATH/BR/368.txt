@@ -1,0 +1,2 @@
+OpenMapRealVector.getSparcity should be getSparsity
+The term for describing the ratio of nonzero elements to zero elements in a matrix/vector is sparsity, not sparcity.  Suggest renaming getSparcity() to getSparsity()

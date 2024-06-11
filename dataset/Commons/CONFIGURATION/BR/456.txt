@@ -1,0 +1,4 @@
+AbstractConfiguration.getKeys(String prefix) docs doesn&apos;t say about the point (&apos;.&apos;)
+For the method org.apache.commons.configuration.AbstractConfiguration.getKeys(String prefix) the documentation doesn&amp;apos;t say that to the prefix will be added a point character (&amp;apos;.&amp;apos;) to filter the keys list (http://commons.apache.org/configuration/apidocs/org/apache/commons/configuration/AbstractConfiguration.html#getKeys%28java.lang.String%29). I discovered it only reading the source.
+Maybe I should have known this behaviour, but I think a lot of occasional users could face this unpredictable behaviour. Specifying this would be very helpfull.
+Many thanks for your wonderful libraries!

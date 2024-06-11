@@ -1,0 +1,2 @@
+Deployment scanner runtime-failure-causes-rollback attribute is not stored to the model
+The runtime-failure-causes-rollback is never stored to the model in the add op.

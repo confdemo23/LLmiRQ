@@ -1,0 +1,9 @@
+addNodes() doesn&apos;t trigger auto saving
+When I add nodes the XMLConfiguration with autoSave enabled the file doen&amp;apos;t change to reflect new nodes. Here is an example
+XMLConfiguration config = new XMLConfiguration("c:conf.xml"); 
+config.setAutoSave(true) ;
+ConfigurationNode childNode = new HierarchicalConfiguration.Node("ChildNodeName","ChildNodeValue");
+List nodes = new ArrayList();
+nodes.add(childNode);
+config.addNodes(null,nodes);
+config.xml didn&amp;apos;t change to include child node.

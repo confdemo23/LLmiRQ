@@ -1,0 +1,42 @@
+@Local and @Remote annotation processors should not pick up interfaces of super class of bean class
+Consider these EJBs:
+@Stateless
+public class BaseBean implements A
+{
+
+...
+
+}
+
+@Local
+public interface A
+{...
+
+}
+
+@Stateless
+public class ChildBean extends BaseBean implements B{
+...
+}
+
+@Local
+public interface B
+{
+
+...
+
+}
+
+In this case, the ChildBean is expected to expose just B as the local business view. It should not expose A as the local business view. 
+However, our current annotation processors currently don&amp;apos;t handle this scenario which breaks the EJB3.1 spec which says:
+"4.9.2.1 Session Bean Superclasses:
+A session bean class is permitted to have superclasses that are themselves session bean classes. However, there are no special rules that apply to the processing of annotations or the deployment descriptor for this case. For the purposes of processing a particular session bean class, all superclass processing is identical regardless of whether the superclasses are themselves session bean classes. In this regard, the use of session bean classes as superclasses merely represents a convenient use of implementation inheritance, but does not have component inheritance semantics.
+As an example, the client views exposed by a particular session bean are not inherited by a subclass that also happens to define a session bean.
+@Stateless
+public class A implements Foo 
+{ ... }
+
+@Stateless
+public class B extends A implements Bar { ... }
+
+Assuming Foo and Bar are local business interfaces and there is no associated deployment descriptor, session bean A exposes local business interface Foo and session bean B exposes local business interface Bar, but not Foo."

@@ -1,0 +1,2 @@
+Enhance ORC FileDump utility to handle flush_length files and recovery
+ORC file dump utility currently does not handle delta directories that contain *_flush_length files. These files contains offsets to footer in the corresponding delta file.

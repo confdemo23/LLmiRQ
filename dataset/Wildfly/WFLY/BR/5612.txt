@@ -1,0 +1,51 @@
+UnsupportedOperationException on SingletonService.getValue()
+
+
+
+
+
+
+java.lang.IllegalStateException: java.lang.UnsupportedOperationException
+
+
+
+
+	at java.util.Collections$1.remove(Collections.java:4684)
+
+
+
+
+	at org.wildfly.clustering.server.singleton.SingletonService$SingletonDispatcher.getValueRef(SingletonService.java:266)
+
+
+
+
+	at org.wildfly.clustering.server.singleton.SingletonService.getValue(SingletonService.java:225)
+
+
+
+
+	at org.wildfly.clustering.server.singleton.SingletonService.getValue(SingletonService.java:69)
+
+
+
+
+	at org.wildfly.clustering.service.AsynchronousServiceBuilder.getValue(AsynchronousServiceBuilder.java:92)
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl.awaitValue(ServiceControllerImpl.java:1166)
+
+
+
+
+	at org.wildfly.camel.test.singleton.SingletonRouteTest.testSingletonService(SingletonRouteTest.java:138)
+
+
+
+
+
+
+This is happening when I try to provide a code example for a singleton service like this
+CrossRef: https://github.com/wildfly-extras/wildfly-camel/issues/77

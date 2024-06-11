@@ -1,0 +1,5 @@
+Set dbname at JDBC URL or properties
+The current Hive implementation ignores a database name at JDBC URL, 
+though we can set it by executing "use &lt;DBNAME&gt;" statement.
+I think it is better to also specify a database name at JDBC URL or database properties.
+Therefore, I&amp;apos;ll attach the patch.

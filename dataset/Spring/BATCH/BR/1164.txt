@@ -1,0 +1,8 @@
+Putting scope="step" on a listener causes failure
+The configuration below fails because the framework is unable to set properties onto the StepListenerFactoryBean:
+  &lt;step-listener id="l2" ref="myListener"/&gt;
+  &lt;beans:bean id="myListener" class="MyListener" scope="step"&gt;
+      &lt;beans:property name="runId" value="#
+{jobParameters[my.param]}
+"/&gt;
+  &lt;/beans:bean&gt;

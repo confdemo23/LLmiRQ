@@ -1,0 +1,2 @@
+[Migration operation] [Web to Undertow] Migrating https connector in domain fails
+When trying to migrate https connector in domain, it fails during creation of security realm, as the operation assumes that security realms are set in domain also under /core-service=management/ but they are set specifically for host =&gt; in case of host master it is /host=master/core-service=management/

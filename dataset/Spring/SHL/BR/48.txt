@@ -1,0 +1,3 @@
+Remove duplicated classes from Spring Framework and old Roo code base in util package
+There are many classes that were copied and pasted from Spring Framework placed into the &amp;apos;util&amp;apos; package, e.g. ObjectUtils, CollectionUtils, etc.  (Look for Juergen, Arjen, Rob, etc for author tags).
+As we now depend on Spring there is no need for this duplication. 

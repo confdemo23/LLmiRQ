@@ -1,0 +1,52 @@
+String @id field is not mapped to ObjectId when using QueryDSL .id.in(Collection<String>)
+This is similar to DATAMONGO-467 which was resolved a while back.
+But in this case instead of .eq() I am using .in().
+
+
+
+
+
+
+@Document
+
+
+
+
+public class User {
+
+
+
+
+    @Id String id;
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+Collection&lt;String&gt; collection = new ArrayList&lt;&gt;();
+
+
+
+
+collection.add("abcdef.....");
+
+
+
+
+Iterable&lt;User&gt; user = userRepository.findAll(QUser.user.id.in(collection));
+
+
+
+
+
+
+This is translating to $in clause with empty collection

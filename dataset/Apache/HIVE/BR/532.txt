@@ -1,0 +1,3 @@
+predicate clause with limit should not be pushed down.
+in queries like below , &amp;apos;v.c2 &gt; 20&amp;apos; shouldn&amp;apos;t be pushed up.
+select * from (select * from t where t.c &gt; 20 limit 20) v where v.c2 &gt; 20

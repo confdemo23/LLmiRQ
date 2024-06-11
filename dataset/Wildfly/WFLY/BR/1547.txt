@@ -1,0 +1,12 @@
+deploy directories not cleaned up
+JBoss EAP 6.0.0 (and 6.0.1.ER3) doesn&amp;apos;t clean up it&amp;apos;s tmp/vfs directories.
+The following reproduces this -
+i) ensure run.conf has the -Xrs set
+ii) ensure deployments has a deployable .ear in it
+iii) ./run standalone.sh and allow the deployments to deploy
+iv) stop the EAP process ie kill &lt;process_id&gt;
+v) observe content tmp/vfs
+(The -Xrs parameter is used to "-Xrs" to prevent possible interference when JVM is running as a service and receives CTRL_LOGOFF_EVENT or SIGHUP)
+This will eventually cause problems with lack of disk space.
+Note if the -Xrs parameter content is removed but the tmp/vfs dirs stills exist. This could potentially cause inode problems.
+It would be better if there were any additional code so the temp dirs are cleaned up on start up. That would resolve both the -Xrs problem and the excessive dir creation.

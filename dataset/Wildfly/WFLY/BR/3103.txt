@@ -1,0 +1,3 @@
+PrimitiveListAttributeDefinition.Builder does not preserve the validator
+Using PrimitiveListAttributeDefinition.Builder#Builder(PrimitiveListAttributeDefinition)
+to build an new attribute definition from a basis does not preserve the basis&amp;apos; elementValidator and the valid operation can not be validated against the copied definition.

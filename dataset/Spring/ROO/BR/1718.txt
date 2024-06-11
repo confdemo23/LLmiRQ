@@ -1,0 +1,2 @@
+FileConverter uses Unix-specific check for absolute path names, breaking Windows behavior
+Current code checks if String denoting file name starts with File.separator to treat the name as an absolute path, but Windows doesn&amp;apos;t work like that as it uses drive letters for absolute paths. 

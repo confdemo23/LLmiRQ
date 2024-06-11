@@ -1,0 +1,16 @@
+MemoryLeak in the DatagramPacketObjectEncoder
+Just found a memory leak in the camel-netty4 UDP encoding when working on CAMEL-10409. 
+
+
+
+Failed tests:
+
+  NettyUDPAsyncTest&gt;BaseNettyTest.verifyNoLeaks:89 Leaks detected while running tests: [org.apache.logging.log4j.core.impl.MutableLogEvent@7c96c85]
+
+  NettyUDPMessageLargerThanDefaultBufferSizeTest&gt;BaseNettyTest.verifyNoLeaks:89 Leaks detected while running tests: [org.apache.logging.log4j.core.impl.MutableLogEvent@73bb1337]
+
+  NettyUDPObjectSyncTest&gt;BaseNettyTest.verifyNoLeaks:89 Leaks detected while running tests: [org.apache.logging.log4j.core.impl.MutableLogEvent@5eed6dfb, org.apache.logging.log4j.core.impl.MutableLogEvent@7c96c85, org.apache.logging.log4j.core.impl.MutableLogEvent@7c96c85]
+
+  NettyUDPSyncTest&gt;BaseNettyTest.verifyNoLeaks:89 Leaks detected while running tests: [org.apache.logging.log4j.core.impl.MutableLogEvent@7c96c85, org.apache.logging.log4j.core.impl.MutableLogEvent@7c96c85]
+
+

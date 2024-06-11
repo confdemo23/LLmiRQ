@@ -1,0 +1,90 @@
+HBase Handler doesn&apos;t handle NULLs properly
+We found a quite severe issue in the HBase Handler which actually means that Hive potentially returns incorrect data if a column has NULL values in HBase (which means the cell doesn&amp;apos;t even exist)
+In HBase Shell:
+
+create &amp;apos;hive_hbase_test&amp;apos;, &amp;apos;test&amp;apos;
+
+put &amp;apos;hive_hbase_test&amp;apos;, &amp;apos;1&amp;apos;, &amp;apos;test:c1&amp;apos;, &amp;apos;c1-1&amp;apos;
+
+put &amp;apos;hive_hbase_test&amp;apos;, &amp;apos;1&amp;apos;, &amp;apos;test:c2&amp;apos;, &amp;apos;c2-1&amp;apos;
+
+put &amp;apos;hive_hbase_test&amp;apos;, &amp;apos;1&amp;apos;, &amp;apos;test:c3&amp;apos;, &amp;apos;c3-1&amp;apos;
+
+put &amp;apos;hive_hbase_test&amp;apos;, &amp;apos;2&amp;apos;, &amp;apos;test:c1&amp;apos;, &amp;apos;c1-2&amp;apos;
+
+
+
+In Hive:
+
+DROP TABLE IF EXISTS hive_hbase_test;
+
+CREATE EXTERNAL TABLE hive_hbase_test (
+
+  id int,
+
+  c1 string,
+
+  c2 string,
+
+  c3 string
+
+)
+
+STORED BY &amp;apos;org.apache.hadoop.hive.hbase.HBaseStorageHandler&amp;apos;
+
+WITH SERDEPROPERTIES ("hbase.columns.mapping" =
+
+":key#s,test:c1#s,test:c2#s,test:c3#s")
+
+TBLPROPERTIES("hbase.table.name" = "hive_hbase_test");
+
+
+
+hive&gt; select * from hive_hbase_test;
+
+OK
+
+1	c1-1	c2-1	c3-1
+
+2	c1-2	NULL	NULL
+
+
+
+hive&gt; select c1 from hive_hbase_test;
+
+c1-1
+
+c1-2
+
+
+
+hive&gt; select c1, c2 from hive_hbase_test;
+
+c1-1	c2-1
+
+c1-2	NULL
+
+
+
+So far everything is correct but now:
+
+hive&gt; select c1, c2, c2 from hive_hbase_test;
+
+c1-1	c2-1	c2-1
+
+c1-2	NULL	c2-1
+
+
+
+Selecting c2 twice works the first time but the second time we
+actually get the value from the previous row.
+
+hive&gt; select c1, c3, c2, c2, c3, c3, c1 from hive_hbase_test;
+
+c1-1	c3-1	c2-1	c2-1	c3-1	c3-1	c1-1
+
+c1-2	NULL	NULL	c2-1	c3-1	c3-1	c1-2
+
+
+
+We&amp;apos;ve narrowed this down to an early initialization of fieldsInited[fieldID] = true in LazyHBaseRow#uncheckedGetField and we&amp;apos;ll try to provide a patch which surely needs review.

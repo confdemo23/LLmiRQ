@@ -1,0 +1,2 @@
+Executing queries using Hive Server is not logging to the log file specified in hive-log4j.properties
+Start Hive Server by specifying the log details ( filelocation , appender , loglevel ) in hive-log4j.properties, but logging is not happening as per the details provided in the hive-log4j.properties.

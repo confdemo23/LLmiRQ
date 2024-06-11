@@ -1,0 +1,3 @@
+HiveServer2 doAs should be session aware both for secured and unsecured session implementation.
+Currently in unsecured case, the doAs is performed by decorating TProcessor.process method. This has been causing cleanup issues as we end up creating a new clientUgi for each request rather than for each session. This also cleans up the code.
+Thejas M Nair Probably you can add more if you&amp;apos;ve seen other issues related to this.

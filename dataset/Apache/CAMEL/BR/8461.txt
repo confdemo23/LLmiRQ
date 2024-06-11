@@ -1,0 +1,32 @@
+camel-netty-http does not respect client&apos;s keep-alive setting
+If we have the camel route which remove the all the header after the netty-http consumer, netty doesn&amp;apos;t  close the connection even the client send the http header connection as closed.
+
+
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0" default-activation="eager"&gt;
+
+  &lt;camelContext xmlns="http://camel.apache.org/schema/blueprint"&gt;
+
+    &lt;route&gt;
+
+      &lt;from id="t1" uri="netty-http:http://localhost:9000/test"/&gt;
+
+      &lt;removeHeaders pattern="*"/&gt;
+
+      &lt;setBody&gt;
+
+        &lt;constant&gt;Hello, World!&lt;/constant&gt;
+
+      &lt;/setBody&gt;
+
+      &lt;to uri="log:XXX?level=ERROR"/&gt;
+
+    &lt;/route&gt;
+
+  &lt;/camelContext&gt;
+
+&lt;/blueprint&gt;
+
+

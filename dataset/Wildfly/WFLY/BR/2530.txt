@@ -1,0 +1,66 @@
+If a transformer removes the headers from an operation it fails on the target host
+This gives errors like:
+
+
+
+
+
+
+[domain@localhost:9999 /] /profile=full-ha-7.1.x/subsystem=security/security-domain=jboss-web-policy/authorization=classic/policy-module=Delegating:write-attribute(name=module-options,value={a=&gt;b})
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "failed",
+
+
+
+
+    "failure-description" =&gt; {"host-failure-descriptions" =&gt; {"slave" =&gt; "JBAS010849: Operation write-attribute for address [
+
+
+
+
+    (\"profile\" =&gt; \"full-ha-7.1.x\"),
+
+
+
+
+    (\"subsystem\" =&gt; \"security\"),
+
+
+
+
+    (\"security-domain\" =&gt; \"jboss-web-policy\"),
+
+
+
+
+    (\"authorization\" =&gt; \"classic\")
+
+
+
+
+] can only be handled by the master Domain Controller; this host is not the master Domain Controller"}},
+
+
+
+
+    "rolled-back" =&gt; true
+
+
+
+
+}
+
+
+
+
+
+
+This should probably be handled somewhere in the communication layer 

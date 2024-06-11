@@ -1,0 +1,6 @@
+Apply the fix from site/ to remove the forrest dependency on java5 
+Fix forrest with:
+
+forrest.validate=false
+
+

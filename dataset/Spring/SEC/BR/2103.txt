@@ -1,0 +1,36 @@
+Querying token for series: thread dump for info level 
+In case of empty remember me tokens JdbcTokenRepositoryImpl writes thread dump to log file that is not required because it&amp;apos;s clear from context:
+
+
+
+
+
+
+        catch(EmptyResultDataAccessException zeroResults) {
+
+
+
+
+            if(logger.isInfoEnabled()) {
+
+
+
+
+                logger.info("Querying token for series &amp;apos;" + seriesId + "&amp;apos; returned no results.", zeroResults);
+
+
+
+
+            }
+
+
+
+
+        }
+
+
+
+
+
+
+Is it possible to change level to debug or remove thread dump (better for me)?

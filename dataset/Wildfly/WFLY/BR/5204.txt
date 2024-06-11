@@ -1,0 +1,1 @@
+Setting mod_cluster advertise frequency to zero does not disable advertise

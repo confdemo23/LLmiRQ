@@ -1,0 +1,9 @@
+Broken parsing of core 1.4 xml schema security realm authorization elements
+The WFLY-455 patch broke parsing for the parsing of security-realm/authorization from a 1.4 namespace doc:
+Caused by: java.lang.IllegalArgumentException
+	at org.jboss.dmr.ModelValue.getChild(ModelValue.java:112)
+	at org.jboss.dmr.ModelNode.get(ModelNode.java:856)
+	at org.jboss.as.domain.management.parsing.ManagementXml.parseAuthorization_1_3(ManagementXml.java:1708)
+	at org.jboss.as.domain.management.parsing.ManagementXml.parseSecurityRealm_1_4(ManagementXml.java:827)
+	at org.jboss.as.domain.management.parsing.ManagementXml.parseSecurityRealms(ManagementXml.java:672)
+Problem is the wrong ModelNode is passed to ManagementXml.parseAuthorization_1_3.

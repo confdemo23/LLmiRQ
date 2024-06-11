@@ -1,0 +1,18 @@
+AuthenticationTokenSecretManager is never stopped in RPCServer
+AuthenticationTokenSecretManager is never stopped in RPCServer.
+
+
+
+    AuthenticationTokenSecretManager mgr = createSecretManager();
+
+    if (mgr != null) {
+
+      setSecretManager(mgr);
+
+      mgr.start();
+
+    }
+
+
+
+It should be stopped during exit.

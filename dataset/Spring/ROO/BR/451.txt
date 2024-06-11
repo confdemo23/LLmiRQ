@@ -1,0 +1,3 @@
+Roo auto-generated finder has sql error when fiinding based on two fields
+The Roo-generated finder for my researcher findResearchersBySkillsAndInterests is missing an AND between the interests and the skills
+org.hibernate.hql.ast.QuerySyntaxException: unexpected token: : near line 1, column 123 [SELECT Researcher FROM edu.drexel.goodwin.domain.Researcher AS researcher WHERE :skills_item0 MEMBER OF researcher.skills :interests_item0 MEMBER OF researcher.interests]

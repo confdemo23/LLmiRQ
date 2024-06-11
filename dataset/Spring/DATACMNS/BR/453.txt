@@ -1,0 +1,2 @@
+NullPointerException at listing non-CRUD repositories in RepositoryMetadata.isPageableRepository()
+Listing repositories if one repository has no pageable finders leads to a NullPointerException.

@@ -1,0 +1,129 @@
+Fabric Karaf Help command does not display something
+fabric:create --help don&amp;apos;t display anymore the description, syntax and options  of the command
+
+
+
+
+
+
+100% [========================================================================]
+
+
+
+
+
+
+
+
+
+      _ ____                  ______
+
+
+
+
+     | |  _ \                |  ____|
+
+
+
+
+     | | |_) | ___  ___ ___  | |__ _   _ ___  ___
+
+
+
+
+ _   | |  _ &lt; / _ \/ __/ __| |  __| | | / __|/ _ \
+
+
+
+
+| |__| | |_) | (_) \__ \__ \ | |  | |_| \__ \  __/
+
+
+
+
+ \____/|____/ \___/|___/___/ |_|   \__,_|___/\___|
+
+
+
+
+
+
+
+
+
+  JBoss Fuse (6.1.0.redhat-346)
+
+
+
+
+  http://www.redhat.com/products/jbossenterprisemiddleware/fuse/
+
+
+
+
+
+
+
+
+
+Hit &amp;apos;&lt;tab&gt;&amp;apos; for a list of available commands
+
+
+
+
+and &amp;apos;[cmd] --help&amp;apos; for help on a specific command.
+
+
+
+
+
+
+
+
+
+Open a browser to http://localhost:8181 to access the management console
+
+
+
+
+
+
+
+
+
+Create a new Fabric via &amp;apos;fabric:create&amp;apos;
+
+
+
+
+or join an existing Fabric via &amp;apos;fabric:join [someUrls]&amp;apos;
+
+
+
+
+
+
+
+
+
+Hit &amp;apos;&lt;ctrl-d&gt;&amp;apos; or &amp;apos;osgi:shutdown&amp;apos; to shutdown JBoss Fuse.
+
+
+
+
+
+
+
+
+
+JBossFuse:karaf@root&gt; fabric:create --help
+
+
+
+
+JBossFuse:karaf@root&gt;
+
+
+
+
+

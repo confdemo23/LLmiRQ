@@ -1,0 +1,3 @@
+Fix WSTestCase
+Package org.jboss.as.test.smoke.webservices contains SimpleStatelessSessionBean with several @WebServiceRef injection points.
+SimpleStatelessSessionBean is injected into SimpleServlet. However, SimpleServlet is never initialized and an instance of SimpleStatelessSessionBean is never created. Therefore, no @WebServiceRef injection is tested here.

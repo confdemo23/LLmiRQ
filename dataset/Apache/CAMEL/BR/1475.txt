@@ -1,0 +1,8 @@
+Easier transacted configuration of routes
+See TransactionalClientWithRollbackTest in camel-spring
+The .policy(required) is needed in the routes even though we have a global transaction error handler with a default policy set:
+
+                 errorHandler(transactionErrorHandler(required));
+
+
+So Camel should fallback and use the global policy if the route itself does not have a policy defined.

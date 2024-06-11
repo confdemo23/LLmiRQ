@@ -1,0 +1,12 @@
+Allow additional environment properties to be set for outbound LDAP connections used by security realms.
+LDAP security realm needs to have configurable timeouts.
+The default LDAP connection timeout appears to be 2 minutes.  If the ldap server is down, it could take 2 minutes for the connection to timeout.  This can cause unneeded delay if you have configured multiple ldap servers for  failover / redundancy.
+The following hack appears to work:
++++ domain-management/src/main/java/org/jboss/as/domain/management/connections/ldap/LdapConnectionManagerService.java
+@@ -132,6 +132,7 @@ public class LdapConnectionManagerService implements Service&lt;LdapConnectionManag
+         result.put(Context.INITIAL_CONTEXT_FACTORY,initialContextFactory);
+         String url = config.require(URL).asString();
+         result.put(Context.PROVIDER_URL,url);
++        result.put("com.sun.jndi.ldap.connect.timeout", "500");
+         return result;
+     }

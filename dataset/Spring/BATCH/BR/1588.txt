@@ -1,0 +1,19 @@
+Job Excecution Listener - XML Namespace parsing fails for methods named different to "beforeJob", "afterJob"
+The following XML configuration for a job listener does not work as the two configured methods are not called:
+-------- XML - Configuration --------
+&lt;job id="..."&gt;
+  ...
+  &lt;listener ref="pojoListener" before-job-method="before" after-job-method="after"/&gt;
+&lt;/job&gt;
+&lt;bean id="pojoListener" class="com.example.MyListener"/&gt;
+--------
+MyListener is a simple POJO and does not implement JobExecutionListener and has no annotated methods either.
+I&amp;apos;ve debugged the problem and it seems the offending code is in the private method
+AbstractListenerParser#getMethodNameAttributes
+That method returns 
+{"beforeJob", "afterJob"}
+ instead of the XML attribute names 
+{"before-job-method", "after-job-method"}
+.
+The unit test "JobExecutionListenerParserTests" does not seem to test this case.
+I suspect that the same problem exists for Step Listeners as they share the same code base.

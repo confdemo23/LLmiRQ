@@ -1,0 +1,26 @@
+NPE in AbstractPollingMessageListenerContainer when committing transaction after message receive timeout
+We use AbstractPollingMessageListenerContainer with default receiveTimeout. When timeout expires the following code executes:
+
+
+
+
+
+
+noMessageReceived(invoker, sessionToUse);
+
+
+
+
+// Nevertheless call commit, in order to reset the transaction timeout (if any).
+
+
+
+
+commitIfNecessary(session, message);
+
+
+
+
+
+
+but session is null, causing NPE in commitIfNecessary(). Shouldn&amp;apos;t it be commitIfNecessary(sessionToUse, message) instead?

@@ -1,0 +1,24 @@
+Increase version for update does not traverse DBObject correctly in order to find version property.
+Version property is nested and therefore not resolved correctly.
+
+
+
+
+
+
+{
+
+
+
+
+  $inc : {version : 1}
+
+
+
+
+}
+
+
+
+
+

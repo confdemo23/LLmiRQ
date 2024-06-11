@@ -1,0 +1,46 @@
+[Migration operation] [Web to Undertow] SSL configuration - verify client attribute value is not properly migrated
+In web there exists different options for verify-client attribute of ssl configuration [1] than values which are allowed to be defined as part of https-listener (REQUIRED, REQUESTED, NOT_REQUESTED).
+Currently the migration operation fails as the value isn&amp;apos;t converted to equivalent value accepted by Undertow.
+[1]
+
+
+
+
+
+
+ &lt;xs:attribute name="verify-client" default="none"&gt;
+
+
+
+
+            &lt;xs:annotation&gt;
+
+
+
+
+                &lt;xs:documentation&gt;
+
+
+
+
+                    that is OpenSSL SSLVerifyClient (optional,require,optionalNoCA,none) and clientAuth (true=require/false=none)
+
+
+
+
+                &lt;/xs:documentation&gt;
+
+
+
+
+            &lt;/xs:annotation&gt;
+
+
+
+
+        &lt;/xs:attribute&gt;
+
+
+
+
+

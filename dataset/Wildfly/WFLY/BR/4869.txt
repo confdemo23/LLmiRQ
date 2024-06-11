@@ -1,0 +1,15 @@
+Failed to start statistics service for datasources
+11:45:40,471 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-7) WFLYJCA0001: Bound data source [java:jboss/datasources/rmclientdb]
+11:45:40,472 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-6) MSC000001: Failed to start service jboss.data-source.java:jboss/datasources/rmclientdb.statistics: org.jboss.msc.service.StartException in service jboss.data-source.java:jboss/datasources/rmclientdb.statistics: Failed to start service
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1904)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: WFLYCTL0218: A node is already registered at &amp;apos;/deployment=/subsystem=datasources/data-source=/statistics=jdbc&amp;apos;
+	at org.jboss.as.controller.registry.NodeSubregistry.register(NodeSubregistry.java:86)
+	at org.jboss.as.controller.registry.ConcreteResourceRegistration.registerSubModel(ConcreteResourceRegistration.java:176)
+	at org.jboss.as.connector.services.datasources.statistics.DataSourceStatisticsService.start(DataSourceStatisticsService.java:83)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	... 3 more
+reproducible w/ attached deployment

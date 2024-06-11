@@ -1,0 +1,4 @@
+Missing security domain dependency
+Only DataSourceEnable appears to have a dependency defined against the security domain used (SecurityDomainService).
+Also any security domain used in recovery needs a dependency.
+Likewise for resource adapter deployments.

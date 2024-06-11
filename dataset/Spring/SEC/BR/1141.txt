@@ -1,0 +1,9 @@
+ObjectIdentityImpl has incorrect hashCode implementation
+The ObjectIdentityImpl class contains a bug in it&amp;apos;s hashCode implementation. 2 objects which are equal to each other using the &amp;apos;.equals()&amp;apos; method do not neccesarily produce the same hashcode. Consider the following code:
+ObjectIdentityImpl oi1 = new ObjectIdentityImpl("java.lang.String", "10");
+ObjectIdentityImpl oi2 = new ObjectIdentityImpl("java.lang.String", 10);
+System.out.println(oi1.equals(oi2));					//true
+System.out.println(oi1.hashCode() == oi2.hashCode());	//false
+System.out.println(oi1.hashCode());						//25246124
+System.out.println(oi2.hashCode());						//25247673
+This is due to the use of &amp;apos;this.identifier.hashCode()&amp;apos; (line 146 ObjectIdentityImpl), while the equals method uses &amp;apos;this.getIdentifier().toString().equals(other.getIdentifier().toString()&amp;apos; (line 123 ObjectIdentityImpl)

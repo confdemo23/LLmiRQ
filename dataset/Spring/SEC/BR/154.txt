@@ -1,0 +1,3 @@
+NamedEntityObjectIdentity must support CGLIB (Hibernate) modified domain objects
+CGLIB-generated classes have names such as foo.DomainObject$$EnhancerByCGLIB, which are incompatible with the NamedEntityObjectIdentity&amp;apos;s internal representation of the classname as a String.
+A workaround is to use BasicAclProvider.defaultAclObjectIdentityClass to provide a new instance of AclObjectIdentity which can correctly handle the names. Another workaround is for your domain objects to implement AclObjectIdentityAware and return the AclObjectIdentity that represents the instance.

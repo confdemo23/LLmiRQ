@@ -1,0 +1,6 @@
+Investigate optimizing the query compilation of long or-list in where statement 
+The following query will take long time to compile if the where statement has a long list of &amp;apos;or&amp;apos;. Investigate if we can optimize it.
+select * from src 
+where key = 1
+or key =2
+or ....

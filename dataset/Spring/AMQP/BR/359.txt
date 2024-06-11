@@ -1,0 +1,3 @@
+AmqpAppenderIntegrationTests should revert to default log4j.properties after its work
+CI build logs (see Reference URL) show that DEBUG logging level for org.springframework.amqp.rabbit is switched by log4j-amqp.properties and isn&amp;apos;t returned back to INFO.
+It causes very slow test results parsing process on Bamboo.

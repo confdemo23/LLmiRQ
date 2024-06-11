@@ -1,0 +1,60 @@
+DummyTable map joins mix up columns between tables
+
+
+
+SELECT
+
+  a.key,
+
+  a.a_one,
+
+  b.b_one,
+
+  a.a_zero,
+
+  b.b_zero
+
+FROM
+
+(
+
+    SELECT
+
+      11 key,
+
+      0 confuse_you,
+
+      1 a_one,
+
+      0 a_zero
+
+) a
+
+LEFT JOIN
+
+(
+
+    SELECT
+
+      11 key,
+
+      0 confuse_you,
+
+      1 b_one,
+
+      0 b_zero
+
+) b
+
+ON a.key = b.key
+
+;
+
+
+
+11      1       0       0       1
+
+
+
+This should be 11, 1, 1, 0, 0 instead. 
+Disabling map-joins &amp; using shuffle-joins returns the right result.

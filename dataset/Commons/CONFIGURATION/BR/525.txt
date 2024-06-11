@@ -1,0 +1,5 @@
+PropertiesConfigurationLayout does not preserve comments at bottom of a file
+Example:
+helloWorld.properties
+hello = world
+#this comments would not be preserved

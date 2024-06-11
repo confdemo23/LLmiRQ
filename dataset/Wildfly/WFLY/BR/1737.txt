@@ -1,0 +1,74 @@
+org.jboss.as.model.test.ModelTestUtils String[] is incompatible with expected argument type String
+children is a Set&lt;String&gt;, but pe.getKeyValuePair() is String[], so it will always return false.
+
+
+
+
+
+
+} else {
+
+
+
+
+                if (children.contains(pe.getKeyValuePair())) {
+
+
+
+
+                    String name = pe.getValue();
+
+
+
+
+                    ModelNode value = model.get(pe.getKeyValuePair());
+
+
+
+
+                    ManagementResourceRegistration sub = rr.getSubModel(PathAddress.pathAddress(pe));
+
+
+
+
+                    Assert.assertNotNull(getComparePathAsString(stack) + " Child with name &amp;apos;" + name + "&amp;apos; not found", sub);
+
+
+
+
+                    if (value.isDefined()) {
+
+
+
+
+                        stack.push(pe);
+
+
+
+
+                        checkModelAgainstDefinition(value, sub, stack);
+
+
+
+
+                        stack.pop();
+
+
+
+
+                    }
+
+
+
+
+                }
+
+
+
+
+            }
+
+
+
+
+

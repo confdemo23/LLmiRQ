@@ -1,0 +1,476 @@
+Undertow mod_cluster CLI: IllegalArgumentException: value is null on modcluster:read-resource
+Undertow 1.3.0.Beta3, EAP 7.0.0.DR6 worked perfectly with modcluster:read-resource recursive operations:
+Setup
+
+Add socker binding: /socket-binding-group=standard-sockets/socket-binding=mod-cluster-adv:add(multicast-address=224.0.1.105,port=65530)
+Configure mod_cluster proxy: /subsystem=undertow/configuration=filter/mod-cluster=modcluster:add(advertise-frequency=10000,advertise-path=/,advertise-protocol=http,advertise-socket-binding=mod-cluster-adv,management-socket-binding=http,management-access-predicate=undefined,broken-node-timeout=10,cached-connections-per-thread=5,connection-idle-timeout=60,connections-per-thread=10,health-check-interval=10000,max-request-time=-1,request-queue-size=10,security-key=undefined,security-realm=undefined,worker=default)
+Add mod_cluster filter: /subsystem=undertow/server=default-server/host=default-host/filter-ref=modcluster:add()
+As soon as worker connects: 
+
+
+
+
+
+UT005053: Registering node localhost, connection: ajp://karm.brq.redhat.com:8019/?#
+
+
+
+
+UT005045: Registering context /clusterbench, for node localhost
+
+
+
+
+
+, we try to list the configuration:
+List configuration including runtime recursively: /subsystem=undertow/configuration=filter/mod-cluster=modcluster:read-resource(include-runtime=true, recursive=true, recursive-depth=100)
+
+Error
+The output of the last aforementioned command with EAP 7.0.0.DR6, Undertow 1.3.0.Beta3 is:
+
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "success",
+
+
+
+
+    "result" =&gt; {
+
+
+
+
+        "advertise-frequency" =&gt; 10000,
+
+
+
+
+        "advertise-path" =&gt; "/",
+
+
+
+
+        "advertise-protocol" =&gt; "http",
+
+
+
+
+        "advertise-socket-binding" =&gt; "mod-cluster-adv",
+
+
+
+
+        "broken-node-timeout" =&gt; 10,
+
+
+
+
+        "cached-connections-per-thread" =&gt; 5,
+
+
+
+
+        "connection-idle-timeout" =&gt; 60,
+
+
+
+
+        "connections-per-thread" =&gt; 10,
+
+
+
+
+        "health-check-interval" =&gt; 10000,
+
+
+
+
+        "management-access-predicate" =&gt; undefined,
+
+
+
+
+        "management-socket-binding" =&gt; "http",
+
+
+
+
+        "max-request-time" =&gt; -1,
+
+
+
+
+        "request-queue-size" =&gt; 10,
+
+
+
+
+        "security-key" =&gt; undefined,
+
+
+
+
+        "security-realm" =&gt; undefined,
+
+
+
+
+        "worker" =&gt; "default",
+
+
+
+
+        "balancer" =&gt; {"mycluster" =&gt; {"node" =&gt; {"localhost" =&gt; {
+
+
+
+
+            "load" =&gt; 81,
+
+
+
+
+            "status" =&gt; "NODE_UP",
+
+
+
+
+            "context" =&gt; {"/clusterbench" =&gt; {
+
+
+
+
+                "requests" =&gt; 0,
+
+
+
+
+                "status" =&gt; "enabled"
+
+
+
+
+            }}
+
+
+
+
+        }}}}
+
+
+
+
+    }
+
+
+
+
+}
+
+
+
+
+
+ whereas with EAP 7.0.0.DR7, Undertow 1.3.0.Beta4; it is: 
+
+
+
+
+
+ERROR [org.jboss.as.controller.management-operation] (management-handler-thread - 6) WFLYCTL0013: Operation ("read-attribute") failed - address: ([
+
+
+
+
+    ("subsystem" =&gt; "undertow"),
+
+
+
+
+    ("configuration" =&gt; "filter"),
+
+
+
+
+    ("mod-cluster" =&gt; "modcluster"),
+
+
+
+
+    ("balancer" =&gt; "mycluster")
+
+
+
+
+]): java.lang.IllegalArgumentException: value is null
+
+
+
+
+    at org.jboss.dmr.ModelNode.&lt;init&gt;(ModelNode.java:162)
+
+
+
+
+    at org.wildfly.extension.undertow.filters.ModClusterBalancerDefinition$3.handleNode(ModClusterBalancerDefinition.java:117)
+
+
+
+
+    at org.wildfly.extension.undertow.filters.ModClusterBalancerDefinition$AbstractBalancerOperation.execute(ModClusterBalancerDefinition.java:173)
+
+
+
+
+    at org.jboss.as.controller.operations.global.ReadAttributeHandler.doExecuteInternal(ReadAttributeHandler.java:174)
+
+
+
+
+    at org.jboss.as.controller.operations.global.ReadAttributeHandler.doExecute(ReadAttributeHandler.java:137)
+
+
+
+
+    at org.jboss.as.controller.operations.global.GlobalOperationHandlers$AbstractMultiTargetHandler.execute(GlobalOperationHandlers.java:248)
+
+
+
+
+    at org.jboss.as.controller.operations.global.GlobalOperationHandlers$AvailableResponseWrapper.execute(GlobalOperationHandlers.java:701)
+
+
+
+
+    at org.jboss.as.controller.AbstractOperationContext.executeStep(AbstractOperationContext.java:841)
+
+
+
+
+    at org.jboss.as.controller.AbstractOperationContext.processStages(AbstractOperationContext.java:632)
+
+
+
+
+    at org.jboss.as.controller.AbstractOperationContext.executeOperation(AbstractOperationContext.java:357)
+
+
+
+
+    at org.jboss.as.controller.OperationContextImpl.executeOperation(OperationContextImpl.java:1235)
+
+
+
+
+    at org.jboss.as.controller.ModelControllerImpl.internalExecute(ModelControllerImpl.java:392)
+
+
+
+
+    at org.jboss.as.controller.ModelControllerImpl.execute(ModelControllerImpl.java:223)
+
+
+
+
+    at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler.doExecute(ModelControllerClientOperationHandler.java:207)
+
+
+
+
+    at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler.access$300(ModelControllerClientOperationHandler.java:129)
+
+
+
+
+    at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler$1$1.run(ModelControllerClientOperationHandler.java:151)
+
+
+
+
+    at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler$1$1.run(ModelControllerClientOperationHandler.java:147)
+
+
+
+
+    at java.security.AccessController.doPrivileged(Native Method)
+
+
+
+
+    at javax.security.auth.Subject.doAs(Subject.java:422)
+
+
+
+
+    at org.jboss.as.controller.AccessAuditContext.doAs(AccessAuditContext.java:92)
+
+
+
+
+    at org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler$1.execute(ModelControllerClientOperationHandler.java:147)
+
+
+
+
+    at org.jboss.as.protocol.mgmt.AbstractMessageHandler$2$1.doExecute(AbstractMessageHandler.java:298)
+
+
+
+
+    at org.jboss.as.protocol.mgmt.AbstractMessageHandler$AsyncTaskRunner.run(AbstractMessageHandler.java:518)
+
+
+
+
+    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+
+
+
+
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+
+
+
+    at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+    at org.jboss.threads.JBossThread.run(JBossThread.java:320)
+
+
+
+
+
+It is noteworthy that until any worker joins the balancer, the operation works just fine (DR7, Beta4): 
+
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "success",
+
+
+
+
+    "result" =&gt; {
+
+
+
+
+        "advertise-frequency" =&gt; 10000,
+
+
+
+
+        "advertise-path" =&gt; "/",
+
+
+
+
+        "advertise-protocol" =&gt; "http",
+
+
+
+
+        "advertise-socket-binding" =&gt; "mod-cluster-adv",
+
+
+
+
+        "broken-node-timeout" =&gt; 10,
+
+
+
+
+        "cached-connections-per-thread" =&gt; 5,
+
+
+
+
+        "connection-idle-timeout" =&gt; 60,
+
+
+
+
+        "connections-per-thread" =&gt; 10,
+
+
+
+
+        "health-check-interval" =&gt; 10000,
+
+
+
+
+        "management-access-predicate" =&gt; undefined,
+
+
+
+
+        "management-socket-binding" =&gt; "http",
+
+
+
+
+        "max-request-time" =&gt; -1,
+
+
+
+
+        "request-queue-size" =&gt; 10,
+
+
+
+
+        "security-key" =&gt; undefined,
+
+
+
+
+        "security-realm" =&gt; undefined,
+
+
+
+
+        "use-alias" =&gt; true,
+
+
+
+
+        "worker" =&gt; "default",
+
+
+
+
+        "balancer" =&gt; undefined
+
+
+
+
+    }
+
+
+
+
+}
+
+
+
+
+
+
+I see this issue as a Blocker, because it not only breaks all current test automation but also renders the Undertow mod_cluster proxy CLI hardly usable for any administration.

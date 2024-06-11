@@ -1,0 +1,4 @@
+DefaultJmsMessageListenerContainer leaks threads
+Threads created by DefaultTaskExecutorType.ThreadPool at
+org.apache.camel.component.jms.DefaultJmsMessageListenerContainer.createDefaultTaskExecutor()
+are never stopped, as destroy method is never called on the ThreadPoolTaskExecutor

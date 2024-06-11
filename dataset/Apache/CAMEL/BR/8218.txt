@@ -1,0 +1,4 @@
+REST DSL with RestletComponent doesn&apos;t support servelet container
+"I&amp;apos;m trying out the REST DSL in 2.14.1 and I&amp;apos;m not able to get it to work 
+with restlet within a servlet container."
+Here is the mail thread about it.

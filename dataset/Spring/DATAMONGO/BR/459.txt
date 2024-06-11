@@ -1,0 +1,115 @@
+Using Update.set in nested arrays does not save the _class attribute
+I have a service method like that:
+
+
+
+
+
+
+	public Goal save(Goal goal) {
+
+
+
+
+		Match match = this.mongoTemplate.findAndModify(
+
+
+
+
+				query(where("goals").elemMatch(where("id").is(goal.getId()))),
+
+
+
+
+				new Update().set("goals.$", goal), Match.class);
+
+
+
+
+		return match.findGoalById(goal.getId());
+
+
+
+
+	}
+
+
+
+
+
+
+classes:
+
+
+
+
+
+
+class Match {
+
+
+
+
+     List&lt;Goal&gt; goals;
+
+
+
+
+}
+
+
+
+
+class Goal {
+
+
+
+
+     Player player;
+
+
+
+
+}
+
+
+
+
+abstract class Player {}
+
+
+
+
+class Forward extends Player {}
+
+
+
+
+class Defender extends Player{}
+
+
+
+
+
+
+When running the method above, the _class information for the Player object in the Goal class does not get saved in the database. This makes the saved document unloadable by Spring MongoDB.
+Doing like that however will work:
+
+
+
+
+
+
+Goal g = match.getGoal(&lt;id&gt;);
+
+
+
+
+g.setPlayer(&lt;a player&gt;);
+
+
+
+
+
+
+matchRepository.save(match);

@@ -1,0 +1,12 @@
+Spring component scanning does not work within JBoss EJB container
+The spring scanner functionality do not work when I create my ApplicationContext from a EJB managed by JBoss. I do test the same spring application context on diferents enviroments. Just on a managed EJB on a JBoos it is not workin.
+EJB code
+        appContext = new GenericApplicationContext();
+        ClassPathBeanDefinitionScanner scanner = new ClassPathBeanDefinitionScanner(appContext);
+        scanner.scan("com");
+        appContext.refresh();
+Annotated class
+       @Service
+        public class TransactionService {
+Exception
+        ERROR: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named &amp;apos;transactionService&amp;apos; is defined

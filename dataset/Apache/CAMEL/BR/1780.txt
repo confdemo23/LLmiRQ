@@ -1,0 +1,3 @@
+Allow for templated/common routes
+This is a follow-up from my exchange with Claus on the user-forum. If the camel routes are spread across multiple files, it&amp;apos;d be very useful to allow for a templating or hierarchical mechanism that&amp;apos;d allow for common routes (in my case Exception processing) to be re-used without copy-pasting in the different files.
+http://www.nabble.com/Multiple-camelContext-elements-in-camel-2.0.m2-Spring-DSL-td24293351.html

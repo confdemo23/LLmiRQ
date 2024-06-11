@@ -1,0 +1,246 @@
+jacorb migration does not work in standalone mode
+I was checking the messaging migration (for WFLY-5004) and I was wondering whether the jacorb migration was also working in domain mode.
+It fails with an error but it also happens in standalone mode.
+Steps to reproduce:
+1. edit the wildfly standalone-full.xml and replace the iiop-openjdk configuration from the template in legacy/jacorb resources (with the socket-bindings too):
+
+
+
+
+
+
+   &lt;subsystem xmlns="urn:jboss:domain:jacorb:2.0"&gt;
+
+
+
+
+       &lt;orb persistent-server-id="1" socket-binding="jacorb" ssl-socket-binding="jacorb-ssl"&gt;
+
+
+
+
+           &lt;initializers transactions="spec" security="identity"/&gt;
+
+
+
+
+       &lt;/orb&gt;
+
+
+
+
+       &lt;naming root-context="JBoss/Naming/root" export-corbaloc="on"/&gt;
+
+
+
+
+   &lt;/subsystem&gt;
+
+
+
+
+
+
+2. start the server in admin-only
+3.  perform the migration 
+
+
+
+
+
+
+/subsystem=jacorb:migrate
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "success",
+
+
+
+
+    "result" =&gt; [("iiop-openjdk" =&gt; "1.0.0")]
+
+
+
+
+}
+
+
+
+
+
+
+4. reload the server in normal mode. 
+=&gt; it fails with the error:
+
+
+
+
+
+
+12:09:24,138 INFO  [org.wildfly.iiop.openjdk] (ServerService Thread Pool -- 63) WFLYIIOP0001: Activating IIOP Subsystem
+
+
+
+
+12:09:24,138 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0003: Undertow 1.3.0.Beta4 starting
+
+
+
+
+12:09:24,144 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-4) MSC000001: Failed to start service jboss.iiop-openjdk.orb-service: org.jboss.msc.service.StartException in service jboss.iiop-openjdk.orb-service: java.lang.NumberFormatException: For input string: "undefined"
+
+
+
+
+        at org.wildfly.iiop.openjdk.service.CorbaORBService.start(CorbaORBService.java:142)
+
+
+
+
+        at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+
+
+
+
+        at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+
+
+
+
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+
+
+
+
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+
+
+
+        at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+Caused by: java.lang.NumberFormatException: For input string: "undefined"
+
+
+
+
+        at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+
+
+
+
+        at java.lang.Integer.parseInt(Integer.java:580)
+
+
+
+
+        at java.lang.Integer.&lt;init&gt;(Integer.java:867)
+
+
+
+
+        at com.sun.corba.se.spi.orb.OperationFactory$IntegerAction.operate(OperationFactory.java:224)
+
+
+
+
+        at com.sun.corba.se.spi.orb.OperationFactory$ListAction.operate(OperationFactory.java:397)
+
+
+
+
+        at com.sun.corba.se.spi.orb.OperationFactory$ComposeAction.operate(OperationFactory.java:475)
+
+
+
+
+        at com.sun.corba.se.impl.orb.NormalParserAction.apply(NormalParserAction.java:47)
+
+
+
+
+        at com.sun.corba.se.spi.orb.PropertyParser.parse(PropertyParser.java:70)
+
+
+
+
+        at com.sun.corba.se.spi.orb.ParserImplBase.init(ParserImplBase.java:74)
+
+
+
+
+        at com.sun.corba.se.impl.orb.ORBDataParserImpl.&lt;init&gt;(ORBDataParserImpl.java:408)
+
+
+
+
+        at com.sun.corba.se.impl.orb.ORBImpl.postInit(ORBImpl.java:456)
+
+
+
+
+        at com.sun.corba.se.impl.orb.ORBImpl.set_parameters(ORBImpl.java:543)
+
+
+
+
+        at org.omg.CORBA.ORB.init(ORB.java:353)
+
+
+
+
+        at org.wildfly.iiop.openjdk.service.CorbaORBService.start(CorbaORBService.java:126)
+
+
+
+
+        ... 5 more
+
+
+
+
+
+
+The giop-version in  XML configuration after migration looks indeed wrong:
+
+
+
+
+
+
+        &lt;subsystem xmlns="urn:jboss:domain:iiop-openjdk:1.0"&gt;
+
+
+
+
+            &lt;orb ssl-socket-binding="jacorb-ssl" socket-binding="jacorb" giop-version="1.undefined"/&gt;
+
+
+
+
+            &lt;initializers transactions="spec" security="identity"/&gt;
+
+
+
+
+            &lt;security add-component-via-interceptor="false"/&gt;
+
+
+
+
+        &lt;/subsystem&gt;
+
+
+
+
+

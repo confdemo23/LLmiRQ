@@ -1,0 +1,2 @@
+Put the balancer switch in ZK
+Currently the balancer switch lives only in the master&amp;apos;s memory. Yesterday we had one master that died (in a strange way) and the one we restarted started balancing again. It&amp;apos;s only a test cluster so it really wasn&amp;apos;t a big deal, but I can imagine ways this could screw people&amp;apos;s life.

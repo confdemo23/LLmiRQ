@@ -1,0 +1,5 @@
+ORC SARG evaluation fails with NPE for UDFs or expressions in predicate condition
+
+select s from orctable where length(substr(s, 1, 2)) &lt;= 2 and s like &amp;apos;%&amp;apos;;
+
+ kind of queries generate empty child expressions for the operator (AND in this case). When child expressions are empty evaluate(TruthValue[] leaves) functions returns null which results in NPE during orc split elimination or row group elimination. 

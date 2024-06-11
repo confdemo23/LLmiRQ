@@ -1,0 +1,13 @@
+Namespace parser should validate that there are no orphaned steps
+Per the discussion over at BATCH-1283 it would be nice if the namespace parser validated that all steps defined for a job config are reachable by some permutation of the job--formally, that the defined step flow represents a weakly connected rooted digraph.
+For example in the following (currently valid) configuration stepB is never run:
+&lt;job id="job"&gt;
+    &lt;step id="stepA" /&gt;
+    &lt;step id="stepB" /&gt;
+&lt;/job&gt;
+For stepB to be run the config would have to be like:
+&lt;job id="job"&gt;
+    &lt;step id="stepA" next="stepB" /&gt;
+    &lt;step id="stepB" /&gt;
+&lt;/job&gt;
+For prior art see http://www.jgrapht.org/javadoc/org/jgrapht/alg/ConnectivityInspector.html, with source viewable at http://jgrapht.svn.sourceforge.net/viewvc/jgrapht/.  In fact JGraphT adapts readily to existing object models, and might be a handy way to implement this and potentially other validations (cycles that require an exception to break out of?) if the dependency and it&amp;apos;s LGPL license were acceptable.

@@ -1,0 +1,4 @@
+LinkedIn consumer endpoints have to specify an empty &apos;fields&apos; parameter
+LinkedIn consumer endpoints that take a &amp;apos;fields&amp;apos; parameter should not have to specify an empty value for the optional field. 
+This field is handled for producer endpoints as its default value is set in LinkedInEndpoint.interceptProperties().
+This field should be automatically set to null if the api method requires it in LinkedInConsumer.interceptPropertyNames(). 

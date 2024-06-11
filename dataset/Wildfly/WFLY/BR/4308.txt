@@ -1,0 +1,5 @@
+Proxies created via ContextService.createContextualProxy(...) are not Serializable
+Setting priority to critical since, I believe, this is a matter of compliance with the concurrency utilities specification.
+Section 3.3.4 of the specification states that:
+"All invocation handlers for the contextual proxy implementation must implement java.io.Serializable."
+While the invocation handler of the generated proxy does indeed implement Serializable, it contains a reference to org.jboss.as.server.moduleservice.ServiceModuleLoader (among others), which is not serializable, thus attempts to serialize the proxies generated via ContextService.createContextualProxy(...) via JBoss Marshalling throw a org.infinispan.commons.marshall.NotSerializableException: org.jboss.as.server.moduleservice.ServiceModuleLoader

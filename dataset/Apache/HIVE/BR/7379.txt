@@ -1,0 +1,4 @@
+Beeline to fetch full stack trace for job (task) failures 
+When a query submitted via Beeline fails, Beeline displays a generic error message as below:
+FAILED: Execution Error, return code 1 from 
+This is expected, as Beeline is basically a regular JDBC client and is hence limited by JDBC&amp;apos;s capabilities today. But it would be useful if Beeline can return the full remote stack trace and task diagnostics or job ID.

@@ -1,0 +1,16 @@
+Transaction subsystem attribute &apos;hornetq-store-enable-async-io&apos; should be renamed for journal
+If hornetq/artemismq journal should be used for saving txn log then transaction subsystem defines if async io libraries (if available) should be used. By default the native libraries are not used and user needs to switch for it by setting it in xml or via cli.
+
+
+
+
+
+
+/subsystem=transactions:write-attribute(name=hornetq-store-enable-async-io, value=true)
+
+
+
+
+
+
+For EAP7 the hornetq is going to be replaced with ActiveMQ Artemis and so artemis object store will be used instead. The attribute name should be renamed appropriately.

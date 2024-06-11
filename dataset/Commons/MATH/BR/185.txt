@@ -1,0 +1,4 @@
+using an empty file to ValueServer in REPLAY_MODE triggers a NULL_POINTER_EXCEPTION
+when the URL provided to ValueServer.setValuesFileURL() contains no data,
+subsequent calls to ValueServer.getNext() in replay mode triggers an exception at the
+end of the private method getNextReplay.

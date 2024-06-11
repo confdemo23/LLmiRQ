@@ -1,0 +1,5 @@
+Undertow subsystem is misleading about listener capabilities
+ListenerResourceDefinition registers the LISTENER_CAPABILITY regardless of the value of the &amp;apos;enabled&amp;apos; attribute. But the contract provided by that capability is only fulfilled if the attribute is &amp;apos;true&amp;apos;.
+Even worse, the attribute supports expressions, which can only be reliably resolved in Stage.RUNTIME, which is too late for recording a capability.
+Fortunately, it&amp;apos;s vault resolution that makes it necessary to resolve in RUNTIME and reality is people are highly unlikely to use the vault for this expression, so we can try and resolve and hope for the best.
+This enabled stuff is just the worst. DON&amp;apos;T USE THIS CONCEPT IN YOUR MODEL!

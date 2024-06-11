@@ -1,0 +1,2 @@
+Capability resolution does not properly deal with &apos;included&apos; profiles and socket-binding-groups
+Resolution of capabilities declared in the domain &amp;apos;profile&amp;apos; and &amp;apos;socket-binding-group&amp;apos; resource tree works properly when the resources don&amp;apos;t include others. But once &amp;apos;includes&amp;apos; are declared, the capability resolution won&amp;apos;t understand the relationship between the including resource and the included ones, and capabilities declared in the included ones will not be resolvable.

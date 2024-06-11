@@ -1,0 +1,2 @@
+Ensure HiveConf includes all properties defined in hive-default.xml
+There are a bunch of properties that are defined in hive-default.xml but not in HiveConf.

@@ -1,0 +1,2 @@
+Specifying "--database DB2400" on the pers s command and pressing tab changes DB2400 to DB2
+While performing the command "pers s --database DB2400" if I tab to get the provider option, Roo changes DB2400 to DB2.

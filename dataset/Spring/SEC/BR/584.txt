@@ -1,0 +1,4 @@
+ConcurrentSessionControllerImpl shouldn&apos;t have a default sessionRegistry set internally
+It contains the code
+    private SessionRegistry sessionRegistry = new SessionRegistryImpl();
+which is a bad idea, since SessionRegistryImpl must be registered through the application context in order to receive "session destroyed" events. If the user fails to set the sessionRegistry property then things won&amp;apos;t work properly. The ConcurrentSessionFilter may also be using a different session registry instance.

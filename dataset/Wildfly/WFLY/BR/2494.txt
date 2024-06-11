@@ -1,0 +1,90 @@
+@EJB not injected in JAX-RS Resource (unless CDI is enabled)
+
+
+
+
+
+
+@Path("persons")
+
+
+
+
+public class MyResource {
+
+
+
+
+    // Ideally this state should be stored in a database
+
+
+
+
+    @EJB PersonSessionBean bean; // Not injected unless beans.xml in War
+
+
+
+
+ ..
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+@Singleton
+
+
+
+
+public class PersonSessionBean {
+
+
+
+
+    private final List&lt;Person&gt; list;
+
+
+
+
+
+
+
+
+
+    public PersonSessionBean() {
+
+
+
+
+        list = new ArrayList&lt;&gt;();
+
+
+
+
+    }
+
+
+
+
+ ..
+
+
+
+
+}
+
+
+
+
+
+
+Sample: https://github.com/arun-gupta/javaee7-samples/tree/master/jaxrs/jaxrs-client/src/main/java/org/javaee7/jaxrs/client

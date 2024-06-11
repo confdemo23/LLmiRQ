@@ -1,0 +1,2 @@
+Mutated AtomicInteger/Long session attributes are not replicated
+The logic in CacheMutator treats all Number subclasses as immutable.  However, AtomicInteger and AtomicLong both extend Number, but are mutable.

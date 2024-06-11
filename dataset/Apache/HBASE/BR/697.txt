@@ -1,0 +1,2 @@
+thrift idl needs update/edit to match new 0.2 API (and to fix bugs)
+Talking w/ Bryan, moving this out of the way of the 0.2.0 release.

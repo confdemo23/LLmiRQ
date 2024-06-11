@@ -1,0 +1,30 @@
+Incorrect help text for "finder add" command when invalid finder name entered
+For any entity, enter this command:
+
+
+
+
+
+
+finder add --finderName f
+
+
+
+
+
+
+Roo will respond with:
+
+
+
+
+
+
+required --finderName: The finder string as generated with &amp;apos;list finders for&amp;apos;; no default value
+
+
+
+
+
+
+The problem is that there is no "list finders for" command; it&amp;apos;s actually the "finder list" command.

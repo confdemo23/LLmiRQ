@@ -1,0 +1,3 @@
+camel-mail - Alternative Body Header is included in mail as a header, it should be skipped
+See nabble
+http://www.nabble.com/Camel-Mail%3A-Alternate-body-is-included-twice-td24049547.html

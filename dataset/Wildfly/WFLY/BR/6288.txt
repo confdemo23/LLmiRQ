@@ -1,0 +1,177 @@
+java.lang.IllegalStateException: AMQ119116: Netty Acceptor unavailable
+There is regression against ER5 in failover tests during failback.
+During failback backup server logs lots of errors like:
+
+
+
+
+
+
+17:57:37,163 ERROR [org.xnio.listener] (default I/O-7) XNIO001007: A channel event listener threw an exception: java.lang.IllegalStateException: AMQ119116: Netty Acceptor unavailable
+
+
+
+
+        at org.apache.activemq.artemis.core.remoting.impl.netty.NettyAcceptor.transfer(NettyAcceptor.java:426)
+
+
+
+
+        at org.wildfly.extension.messaging.activemq.HTTPUpgradeService$2.handleEvent(HTTPUpgradeService.java:159)
+
+
+
+
+        at org.wildfly.extension.messaging.activemq.HTTPUpgradeService$2.handleEvent(HTTPUpgradeService.java:147)
+
+
+
+
+        at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) [xnio-api-3.3.4.Final-redhat-1.jar:3.3.4.Final-redhat-1]
+
+
+
+
+        at io.undertow.server.handlers.ChannelUpgradeHandler$1.handleUpgrade(ChannelUpgradeHandler.java:149)
+
+
+
+
+        at io.undertow.server.protocol.http.HttpReadListener.exchangeComplete(HttpReadListener.java:362)
+
+
+
+
+        at io.undertow.server.protocol.http.HttpServerConnection.exchangeComplete(HttpServerConnection.java:228)
+
+
+
+
+        at io.undertow.server.HttpServerExchange.invokeExchangeCompleteListeners(HttpServerExchange.java:1226)
+
+
+
+
+        at io.undertow.server.HttpServerExchange.terminateResponse(HttpServerExchange.java:1503)
+
+
+
+
+        at io.undertow.server.Connectors.terminateResponse(Connectors.java:99)
+
+
+
+
+        at io.undertow.server.protocol.http.HttpTransferEncoding$3.handleEvent(HttpTransferEncoding.java:197)
+
+
+
+
+        at io.undertow.server.protocol.http.HttpTransferEncoding$3.handleEvent(HttpTransferEncoding.java:195)
+
+
+
+
+        at io.undertow.conduits.HeadStreamSinkConduit.exitFlush(HeadStreamSinkConduit.java:178)
+
+
+
+
+        at io.undertow.conduits.HeadStreamSinkConduit.flush(HeadStreamSinkConduit.java:122)
+
+
+
+
+        at org.xnio.conduits.ConduitStreamSinkChannel.flush(ConduitStreamSinkChannel.java:162) [xnio-api-3.3.4.Final-redhat-1.jar:3.3.4.Final-redhat-1]
+
+
+
+
+        at io.undertow.channels.DetachableStreamSinkChannel.flush(DetachableStreamSinkChannel.java:119)
+
+
+
+
+        at io.undertow.server.HttpServerExchange.closeAndFlushResponse(HttpServerExchange.java:1652)
+
+
+
+
+        at io.undertow.server.HttpServerExchange.endExchange(HttpServerExchange.java:1630)
+
+
+
+
+        at io.undertow.server.handlers.ChannelUpgradeHandler.handleRequest(ChannelUpgradeHandler.java:152)
+
+
+
+
+        at io.undertow.server.Connectors.executeRootHandler(Connectors.java:202)
+
+
+
+
+        at io.undertow.server.protocol.http.HttpReadListener.handleEventWithNoRunningRequest(HttpReadListener.java:233)
+
+
+
+
+        at io.undertow.server.protocol.http.HttpReadListener.handleEvent(HttpReadListener.java:131)
+
+
+
+
+        at io.undertow.server.protocol.http.HttpOpenListener.handleEvent(HttpOpenListener.java:145)
+
+
+
+
+        at io.undertow.server.protocol.http.HttpOpenListener.handleEvent(HttpOpenListener.java:92)
+
+
+
+
+        at io.undertow.server.protocol.http.HttpOpenListener.handleEvent(HttpOpenListener.java:51)
+
+
+
+
+        at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) [xnio-api-3.3.4.Final-redhat-1.jar:3.3.4.Final-redhat-1]
+
+
+
+
+        at org.xnio.ChannelListeners$10.handleEvent(ChannelListeners.java:291) [xnio-api-3.3.4.Final-redhat-1.jar:3.3.4.Final-redhat-1]
+
+
+
+
+        at org.xnio.ChannelListeners$10.handleEvent(ChannelListeners.java:286) [xnio-api-3.3.4.Final-redhat-1.jar:3.3.4.Final-redhat-1]
+
+
+
+
+        at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) [xnio-api-3.3.4.Final-redhat-1.jar:3.3.4.Final-redhat-1]
+
+
+
+
+        at org.xnio.nio.QueuedNioTcpServer$1.run(QueuedNioTcpServer.java:121) [xnio-nio-3.3.4.Final-redhat-1.jar:3.3.4.Final-redhat-1]
+
+
+
+
+        at org.xnio.nio.WorkerThread.safeRun(WorkerThread.java:580) [xnio-nio-3.3.4.Final-redhat-1.jar:3.3.4.Final-redhat-1]
+
+
+
+
+        at org.xnio.nio.WorkerThread.run(WorkerThread.java:464) [xnio-nio-3.3.4.Final-redhat-1.jar:3.3.4.Final-redhat-1]
+
+
+
+
+
+
+This issue might be related to fix for JBEAP-1527. 

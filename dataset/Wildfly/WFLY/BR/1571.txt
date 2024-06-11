@@ -1,0 +1,639 @@
+Seam 2 applications can&apos;t deploy on WildFly
+Seam 2 applications currently can&amp;apos;t be deployed to WildFly due to errors in deployment scanning.
+
+
+
+
+
+
+08:51:55,656 INFO  [javax.servlet.ServletContextListener] (MSC service thread 1-10) Welcome to Seam 2.3.1.CR1
+
+
+
+
+08:51:55,673 WARN  [org.jboss.seam.util.Resources] (MSC service thread 1-10) Unable to determine real path from servlet context for "/WEB-INF/dev" path does not exist.
+
+
+
+
+08:51:55,688 WARN  [org.jboss.seam.deployment.URLScanner] (MSC service thread 1-10) could not read entries: java.io.FileNotFoundException: /content/seam-blog.ear/jboss-seam.jar (No such file or directory)
+
+
+
+
+	at java.util.zip.ZipFile.open(Native Method) [rt.jar:1.7.0_17]
+
+
+
+
+	at java.util.zip.ZipFile.&lt;init&gt;(ZipFile.java:214) [rt.jar:1.7.0_17]
+
+
+
+
+	at java.util.zip.ZipFile.&lt;init&gt;(ZipFile.java:144) [rt.jar:1.7.0_17]
+
+
+
+
+	at java.util.zip.ZipFile.&lt;init&gt;(ZipFile.java:158) [rt.jar:1.7.0_17]
+
+
+
+
+	at org.jboss.seam.deployment.URLScanner.handleArchiveByFile(URLScanner.java:123) [jboss-seam.jar:2.3.1.CR1]
+
+
+
+
+	at org.jboss.seam.deployment.URLScanner.handle(URLScanner.java:107) [jboss-seam.jar:2.3.1.CR1]
+
+
+
+
+	at org.jboss.seam.deployment.URLScanner.scanResources(URLScanner.java:90) [jboss-seam.jar:2.3.1.CR1]
+
+
+
+
+	at org.jboss.seam.deployment.StandardDeploymentStrategy.scan(StandardDeploymentStrategy.java:119) [jboss-seam.jar:2.3.1.CR1]
+
+
+
+
+	at org.jboss.seam.init.Initialization.create(Initialization.java:131) [jboss-seam.jar:2.3.1.CR1]
+
+
+
+
+	at org.jboss.seam.servlet.SeamListener.contextInitialized(SeamListener.java:36) [jboss-seam.jar:2.3.1.CR1]
+
+
+
+
+	at io.undertow.servlet.core.ApplicationListeners.contextInitialized(ApplicationListeners.java:127) [undertow-servlet-1.0.0.Alpha15.jar:1.0.0.Alpha15]
+
+
+
+
+	at io.undertow.servlet.core.DeploymentManagerImpl.deploy(DeploymentManagerImpl.java:172) [undertow-servlet-1.0.0.Alpha15.jar:1.0.0.Alpha15]
+
+
+
+
+	at org.wildfly.extension.undertow.deployment.UndertowDeploymentService.start(UndertowDeploymentService.java:75)
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1974)
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1907)
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_17]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_17]
+
+
+
+
+	at java.lang.Thread.run(Thread.java:722) [rt.jar:1.7.0_17]
+
+
+
+
+
+
+
+
+
+08:51:55,690 WARN  [org.jboss.seam.deployment.URLScanner] (MSC service thread 1-10) could not read entries: java.io.FileNotFoundException: /content/seam-blog.ear/blog-ejb.jar (No such file or directory)
+
+
+
+
+	at java.util.zip.ZipFile.open(Native Method) [rt.jar:1.7.0_17]
+
+
+
+
+	at java.util.zip.ZipFile.&lt;init&gt;(ZipFile.java:214) [rt.jar:1.7.0_17]
+
+
+
+
+	at java.util.zip.ZipFile.&lt;init&gt;(ZipFile.java:144) [rt.jar:1.7.0_17]
+
+
+
+
+	at java.util.zip.ZipFile.&lt;init&gt;(ZipFile.java:158) [rt.jar:1.7.0_17]
+
+
+
+
+	at org.jboss.seam.deployment.URLScanner.handleArchiveByFile(URLScanner.java:123) [jboss-seam.jar:2.3.1.CR1]
+
+
+
+
+	at org.jboss.seam.deployment.URLScanner.handle(URLScanner.java:107) [jboss-seam.jar:2.3.1.CR1]
+
+
+
+
+	at org.jboss.seam.deployment.URLScanner.scanResources(URLScanner.java:90) [jboss-seam.jar:2.3.1.CR1]
+
+
+
+
+	at org.jboss.seam.deployment.StandardDeploymentStrategy.scan(StandardDeploymentStrategy.java:119) [jboss-seam.jar:2.3.1.CR1]
+
+
+
+
+	at org.jboss.seam.init.Initialization.create(Initialization.java:131) [jboss-seam.jar:2.3.1.CR1]
+
+
+
+
+	at org.jboss.seam.servlet.SeamListener.contextInitialized(SeamListener.java:36) [jboss-seam.jar:2.3.1.CR1]
+
+
+
+
+	at io.undertow.servlet.core.ApplicationListeners.contextInitialized(ApplicationListeners.java:127) [undertow-servlet-1.0.0.Alpha15.jar:1.0.0.Alpha15]
+
+
+
+
+	at io.undertow.servlet.core.DeploymentManagerImpl.deploy(DeploymentManagerImpl.java:172) [undertow-servlet-1.0.0.Alpha15.jar:1.0.0.Alpha15]
+
+
+
+
+	at org.wildfly.extension.undertow.deployment.UndertowDeploymentService.start(UndertowDeploymentService.java:75)
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1974)
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1907)
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_17]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_17]
+
+
+
+
+	at java.lang.Thread.run(Thread.java:722) [rt.jar:1.7.0_17]
+
+
+
+
+
+
+
+
+
+08:51:55,692 WARN  [org.jboss.seam.deployment.URLScanner] (MSC service thread 1-10) could not read entries: java.io.FileNotFoundException: /content/seam-blog.ear/blog-web.war/WEB-INF/lib/jboss-seam-ui-2.3.1.CR1.jar (No such file or directory)
+
+
+
+
+	at java.util.zip.ZipFile.open(Native Method) [rt.jar:1.7.0_17]
+
+
+
+
+	at java.util.zip.ZipFile.&lt;init&gt;(ZipFile.java:214) [rt.jar:1.7.0_17]
+
+
+
+
+	at java.util.zip.ZipFile.&lt;init&gt;(ZipFile.java:144) [rt.jar:1.7.0_17]
+
+
+
+
+	at java.util.zip.ZipFile.&lt;init&gt;(ZipFile.java:158) [rt.jar:1.7.0_17]
+
+
+
+
+	at org.jboss.seam.deployment.URLScanner.handleArchiveByFile(URLScanner.java:123) [jboss-seam.jar:2.3.1.CR1]
+
+
+
+
+	at org.jboss.seam.deployment.URLScanner.handle(URLScanner.java:107) [jboss-seam.jar:2.3.1.CR1]
+
+
+
+
+	at org.jboss.seam.deployment.URLScanner.scanResources(URLScanner.java:90) [jboss-seam.jar:2.3.1.CR1]
+
+
+
+
+	at org.jboss.seam.deployment.StandardDeploymentStrategy.scan(StandardDeploymentStrategy.java:119) [jboss-seam.jar:2.3.1.CR1]
+
+
+
+
+	at org.jboss.seam.init.Initialization.create(Initialization.java:131) [jboss-seam.jar:2.3.1.CR1]
+
+
+
+
+	at org.jboss.seam.servlet.SeamListener.contextInitialized(SeamListener.java:36) [jboss-seam.jar:2.3.1.CR1]
+
+
+
+
+	at io.undertow.servlet.core.ApplicationListeners.contextInitialized(ApplicationListeners.java:127) [undertow-servlet-1.0.0.Alpha15.jar:1.0.0.Alpha15]
+
+
+
+
+	at io.undertow.servlet.core.DeploymentManagerImpl.deploy(DeploymentManagerImpl.java:172) [undertow-servlet-1.0.0.Alpha15.jar:1.0.0.Alpha15]
+
+
+
+
+	at org.wildfly.extension.undertow.deployment.UndertowDeploymentService.start(UndertowDeploymentService.java:75)
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1974)
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1907)
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_17]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_17]
+
+
+
+
+	at java.lang.Thread.run(Thread.java:722) [rt.jar:1.7.0_17]
+
+
+
+
+
+
+
+
+
+08:51:55,694 INFO  [org.jboss.seam.init.Initialization] (MSC service thread 1-10) reading /WEB-INF/components.xml
+
+
+
+
+08:51:55,727 INFO  [org.jboss.seam.init.Initialization] (MSC service thread 1-10) reading properties from: /seam.properties
+
+
+
+
+08:51:55,749 INFO  [org.jboss.seam.Component] (MSC service thread 1-10) Component: org.jboss.seam.core.init, scope: APPLICATION, type: JAVA_BEAN, class: org.jboss.seam.core.Init
+
+
+
+
+08:51:55,766 INFO  [org.jboss.seam.Component] (MSC service thread 1-10) Component: org.jboss.seam.async.dispatcher, scope: STATELESS, type: STATELESS_SESSION_BEAN, class: org.jboss.seam.async.TimerServiceDispatcher, JNDI: java:app/jboss-seam/TimerServiceDispatcher
+
+
+
+
+08:51:55,789 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-10) MSC000001: Failed to start service jboss.undertow.deployment.default-host./seam-blog: org.jboss.msc.service.StartException in service jboss.undertow.deployment.default-host./seam-blog: Failed to start service
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1930) [jboss-msc-1.1.2.Final.jar:1.1.2.Final]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_17]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_17]
+
+
+
+
+	at java.lang.Thread.run(Thread.java:722) [rt.jar:1.7.0_17]
+
+
+
+
+Caused by: java.lang.RuntimeException: java.lang.NullPointerException
+
+
+
+
+	at io.undertow.servlet.core.DeploymentManagerImpl.deploy(DeploymentManagerImpl.java:194)
+
+
+
+
+	at org.wildfly.extension.undertow.deployment.UndertowDeploymentService.start(UndertowDeploymentService.java:75)
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1974) [jboss-msc-1.1.2.Final.jar:1.1.2.Final]
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1907) [jboss-msc-1.1.2.Final.jar:1.1.2.Final]
+
+
+
+
+	... 3 more
+
+
+
+
+Caused by: java.lang.NullPointerException
+
+
+
+
+	at org.jboss.seam.contexts.ServletLifecycle.endInitialization(ServletLifecycle.java:145)
+
+
+
+
+	at org.jboss.seam.init.Initialization.init(Initialization.java:813)
+
+
+
+
+	at org.jboss.seam.servlet.SeamListener.contextInitialized(SeamListener.java:36)
+
+
+
+
+	at io.undertow.servlet.core.ApplicationListeners.contextInitialized(ApplicationListeners.java:127)
+
+
+
+
+	at io.undertow.servlet.core.DeploymentManagerImpl.deploy(DeploymentManagerImpl.java:172)
+
+
+
+
+	... 6 more
+
+
+
+
+
+
+
+
+
+08:51:55,798 ERROR [org.jboss.as.controller.management-operation] (management-handler-thread - 1) JBAS014613: Operation ("deploy") failed - address: ({"deployment" =&gt; "seam-blog.ear"}) - failure description: {
+
+
+
+
+    "JBAS014671: Failed services" =&gt; {"jboss.undertow.deployment.default-host./seam-blog" =&gt; "org.jboss.msc.service.StartException in service jboss.undertow.deployment.default-host./seam-blog: Failed to start service
+
+
+
+
+    Caused by: java.lang.RuntimeException: java.lang.NullPointerException
+
+
+
+
+    Caused by: java.lang.NullPointerException"},
+
+
+
+
+    "JBAS014771: Services with missing/unavailable dependencies" =&gt; [
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher.InstanceName is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher.ORB is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher.InAppClientContainer is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher.Validator is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations.HandleDelegate is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations.InAppClientContainer is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher.ValidatorFactory is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher]",
+
+
+
+
+        "jboss.deployment.unit.\"seam-blog.ear\".deploymentCompleteService is missing [jboss.deployment.subunit.\"seam-blog.ear\".\"jboss-seam.jar\".deploymentCompleteService]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations.ValidatorFactory is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher.HandleDelegate is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations.ORB is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations.InstanceName is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations.Validator is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations]"
+
+
+
+
+    ]
+
+
+
+
+}
+
+
+
+
+08:51:55,810 ERROR [org.jboss.as.server] (management-handler-thread - 1) JBAS015870: Deploy of deployment "seam-blog.ear" was rolled back with the following failure message: 
+
+
+
+
+{
+
+
+
+
+    "JBAS014671: Failed services" =&gt; {"jboss.undertow.deployment.default-host./seam-blog" =&gt; "org.jboss.msc.service.StartException in service jboss.undertow.deployment.default-host./seam-blog: Failed to start service
+
+
+
+
+    Caused by: java.lang.RuntimeException: java.lang.NullPointerException
+
+
+
+
+    Caused by: java.lang.NullPointerException"},
+
+
+
+
+    "JBAS014771: Services with missing/unavailable dependencies" =&gt; [
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher.InstanceName is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher.ORB is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher.InAppClientContainer is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher.Validator is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations.HandleDelegate is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations.InAppClientContainer is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher.ValidatorFactory is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher]",
+
+
+
+
+        "jboss.deployment.unit.\"seam-blog.ear\".deploymentCompleteService is missing [jboss.deployment.subunit.\"seam-blog.ear\".\"jboss-seam.jar\".deploymentCompleteService]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations.ValidatorFactory is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher.HandleDelegate is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.TimerServiceDispatcher]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations.ORB is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations.InstanceName is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations]",
+
+
+
+
+        "jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations.Validator is missing [jboss.naming.context.java.comp.seam-blog.jboss-seam.EjbSynchronizations]"
+
+
+
+
+    ]
+
+
+
+
+}
+
+
+
+
+

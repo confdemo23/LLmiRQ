@@ -1,0 +1,3 @@
+Add Group Class support to JSR-303 Validation using @Valid
+Would like a replacement for @Valid that could take group classes for JSR-303 validation. Right now only the default group class of JSR-303 Constraints is run for the @Valid.  
+Please refer to this forum thread for more detail: http://forum.springsource.org/showthread.php?p=292566 

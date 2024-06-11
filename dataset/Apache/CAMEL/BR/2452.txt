@@ -1,0 +1,2 @@
+HttpHeaderFilterStrategy dosn&apos;t filters out &apos;Cache-Control&apos;, &apos;Connection&apos;, &apos;Pragma&apos;, &apos;Trailer&apos;, &apos;Transfer-Encoding&apos;, &apos;Upgrade&apos;, &apos;Via&apos; and &apos;Warning&apos; in method applyFilterToCamelHeaders
+HttpHeaderFilterStrategy uses the HTTP headers with upper case characters on the beginning (e. g. &amp;apos;Transfer-Encoding&amp;apos; instead of &amp;apos;transfer-encoding&amp;apos;).

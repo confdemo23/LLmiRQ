@@ -1,0 +1,2 @@
+Potential NullPointerException in MongoQueryCreator.nextAsArray()
+A null value is handed to a contains-clause of a repository query method will cause a NullPointerException rather than being treated like a single element object array.

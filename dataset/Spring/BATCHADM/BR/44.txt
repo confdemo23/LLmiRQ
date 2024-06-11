@@ -1,0 +1,2 @@
+Restart button on Job execution screen generates incorrect url
+I currently have over a thousand executions and when I press the Restart button on the Job execution screen it seems to generate a url with a thousand separator comma in it: /admin/batch/jobs/myJob/1,459/executions

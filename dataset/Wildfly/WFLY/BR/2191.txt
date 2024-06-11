@@ -1,0 +1,4 @@
+Intermittent fail of AdvancedLdapLoginModuleTestCase and SPNEGOLoginModuleTestCase due to java.nio.BufferOverflowException
+org.jboss.as.test.integration.security.loginmodules.negotiation.AdvancedLdapLoginModuleTestCase and
+org.jboss.as.test.integration.security.loginmodules.negotiation.SPNEGOLoginModuleTestCase 
+fail intermittently after java.nio.BufferOverflowException in Apache directory server. 

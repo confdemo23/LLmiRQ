@@ -1,0 +1,2 @@
+Can&apos;t send asterisks in tweets
+See GREENHOUSE-471. May also be related to SOCIAL-52.

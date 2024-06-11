@@ -1,0 +1,2 @@
+POJO objects are not removed from logging.properties when manually removing them from JBoss Config XML
+If I remove a custom Log4J appender from my standalone.xml and restart JBoss, I can still see the POJO definition for the removed appender in my logging.properties file.

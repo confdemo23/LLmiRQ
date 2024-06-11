@@ -1,0 +1,21 @@
+Certificate acceptance causing command entered on starting the CLI to be skipped.
+e.g.
+
+
+
+
+
+
+./jboss-cli.sh -c shutdown
+
+
+
+
+Accept certificate? [N]o, [T]emporarily, [P]ermenantly : T
+
+
+
+
+
+
+The shutdown command is not executed.

@@ -1,0 +1,3 @@
+ApplicationContext not closed when using @ContextConfiguration to implement integration tests
+I am seeing side-effects in an integration test that initializes a Spring ApplicationContext using @ContextConfiguration.  Specifically, close() on the context does not appear to be being called, ever.  I noticed this because one of my DispoableBeans is not receiving a destroy() callback and that is what is causing the side-effect [which pops up when a @Test runs in another, unrelated TestCase class].
+I understand a test ApplicationContext is cached between test methods, but I would still expect the context to be closed after all tests have run, before moving on to the next test class in the suite.

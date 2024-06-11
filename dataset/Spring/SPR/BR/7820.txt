@@ -1,0 +1,39 @@
+Add support for @Request-/@ResponseBody to @ExceptionHandler methods
+During a consultancy gig this came up: customer wants to be able to throw a custom exception from @Controller methods where the exception will contain an object that needs to be marshalled back to the client as JSON, since these methods respond to AJAX requests and thus the response will not be rendered directly by the browser.
+I tried to do this by adding a method to an abstract parent class of the relevant controllers that looked like this:
+
+
+
+
+
+
+@ExceptionHandler(MyCustomValidationErrorsException.class)
+
+
+
+
+@ResponseBody
+
+
+
+
+public MyCustomValidationErrors handleValidationErrors(MyCustomValidationErrorsException e) {
+
+
+
+
+    return e.getValidationErrors();
+
+
+
+
+}
+
+
+
+
+
+
+This prevents regular methods from having to specify Object as the return type, since they would otherwise need to return either a regular domain object or a MyCustomValidationErrors instance in the case of validation errors.
+However, at the moment @ResponseBody is not supported for @ExceptionHandler methods, so this will simply ignore the annotation and render a view using the default view name resolution algorithm. I think this would be a very useful addition for the sketched use case, so I was wondering if this support could be added to the framework. 
+I understand that there are other ways to achieve the desired functionality, but AFAICT it would require a relatively large amount of custom code that would duplicate much of the Spring MVC-provided functionality.

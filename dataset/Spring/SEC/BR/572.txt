@@ -1,0 +1,3 @@
+Cannot set ACL&apos;s parent to null
+The setParent() method in AclImpl throws an exception if I try to set the parent to null. I cannot see why I shouldn&amp;apos;t be able to do this. After all, the constructor allows me to set parent to null. 
+In our app we have a tree like structure of objects which are secured using Acegi&amp;apos;s ACL package (the new implementation). Permissions are inherited throughout the tree. Nodes in the tree can be moved around and can become top level nodes. This is why we would like to be able to set parent to null. The work around is to use an invisible super root node for all top level nodes. We would prefer not to have to do that.

@@ -1,0 +1,2 @@
+Remove the "bundle" notion from WildFly Core embedded module
+The EmbeddedServerFactory create API includes the bundle path notion copied over from AS7. I don&amp;apos;t want this in the WildFly Core API as we have no real support for the concept.

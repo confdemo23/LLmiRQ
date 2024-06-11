@@ -1,0 +1,30 @@
+Cannot use bean configuration to configure a FilterSecurityMetadataSource with SpEL expressions due to hard-coded "false" value in code
+I ran into this as I was trying to configure a Spring Sec stack without the security namespace in place. In 3.0.0M2 there is a hard-coded "false" for useExpressions in the FilterInvocationSecurityMetadataSourceBeanDefinitionParser, at the following line (on or about line 47):
+        LinkedHashMap&lt;RequestKey, List&lt;ConfigAttribute&gt;&gt; requestMap =
+        HttpSecurityBeanDefinitionParser.parseInterceptUrlsForFilterInvocationRequestMap(interceptUrls,
+                convertPathsToLowerCase, false, parserContext);
+I believe this code should be augmented to look for the "use-expressions" attribute on the &lt;sec:filter-security-metadata-source&gt; element. The resultant code would look something like the following (note, I haven&amp;apos;t been able to get a compilable version of Spring Sec from source, otherwise I&amp;apos;d supply a patch  ):
+        boolean useExpressions = false;
+        if(StringUtils.hasLength(element.getAttribute(HttpSecurityBeanDefinitionParser.ATT_USE_EXPRESSIONS))) 
+{
+        	useExpressions = Boolean.parseBoolean(element.getAttribute(HttpSecurityBeanDefinitionParser.ATT_USE_EXPRESSIONS));
+        }
+        LinkedHashMap&lt;RequestKey, List&lt;ConfigAttribute&gt;&gt; requestMap =
+        HttpSecurityBeanDefinitionParser.parseInterceptUrlsForFilterInvocationRequestMap(interceptUrls,
+                convertPathsToLowerCase, useExpressions, parserContext);
+Note also that in order to use this code patch you&amp;apos;ll have to expand the visibility of the constant reference ATT_USE_EXPRESSIONS.
+Since I can&amp;apos;t verify that SpEL access declarations work with this fix (although they should), I can&amp;apos;t guarantee this is all-inclusive, but hopefully it&amp;apos;ll be close!
+Sample bean definition (although you probably don&amp;apos;t need it):
+	&lt;bean id="filterSecurityInterceptor" class="org.springframework.security.web.access.intercept.FilterSecurityInterceptor"&gt;
+	  &lt;property name="authenticationManager" ref="customAuthenticationManager"/&gt;
+	  &lt;property name="accessDecisionManager" ref="affirmativeBased"/&gt;
+	  &lt;property name="securityMetadataSource"&gt;
+	    &lt;security:filter-security-metadata-source use-expressions="true"&gt;
+			&lt;security:intercept-url pattern="/login.do" access="permitAll"/&gt;
+			&lt;security:intercept-url pattern="/home.do" access="permitAll"/&gt;
+			&lt;security:intercept-url pattern="/account/*.do" access="hasRole(&amp;apos;ROLE_USER&amp;apos;) and fullyAuthenticated"/&gt;
+			&lt;security:intercept-url pattern="/*" access="hasRole(&amp;apos;ROLE_USER&amp;apos;)"/&gt;
+	    &lt;/security:filter-security-metadata-source&gt;
+	  &lt;/property&gt;
+	&lt;/bean&gt;
+You needn&amp;apos;t worry about analyzing the expressions for correctness - I&amp;apos;ve verified they work already using the standard &lt;http use-expressions="true"&gt; format. Thanks for reviewing the bug!

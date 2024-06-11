@@ -1,0 +1,111 @@
+JDBC_PING can&apos;t use a JNDI database connection because it is closed on shutdown
+If you configure the JDBC_PING protocol in JGroups to use a datasource provided by WildFly via the datasource_jndi_name setting, you&amp;apos;ll get the following exception when WildFly is shutdown:
+
+
+
+
+
+
+[Server:main-server] 2016-05-10 11:05:45+1000 ERROR [[org.jgroups.protocols.JDBC_PING]] [[MSC service thread 1-4]] Could not open connection to database: java.sql.SQLException: javax.resource.ResourceException: IJ000470: You are trying to use a connection factory that has been shut down: java:/comp/env/jdbc/jgroups
+
+
+
+
+[Server:main-server]    at org.jboss.jca.adapters.jdbc.WrapperDataSource.getConnection(WrapperDataSource.java:146)
+
+
+
+
+[Server:main-server]    at org.jboss.as.connector.subsystems.datasources.WildFlyDataSource.getConnection(WildFlyDataSource.java:66)
+
+
+
+
+[Server:main-server]    at org.jgroups.protocols.JDBC_PING.getConnection(JDBC_PING.java:348)
+
+
+
+
+[Server:main-server]    at org.jgroups.protocols.JDBC_PING.delete(JDBC_PING.java:379)
+
+
+
+
+[Server:main-server]    at org.jgroups.protocols.JDBC_PING.deleteSelf(JDBC_PING.java:395)
+
+
+
+
+[Server:main-server]    at org.jgroups.protocols.JDBC_PING.stop(JDBC_PING.java:144)
+
+
+
+
+[Server:main-server]    at org.jgroups.stack.ProtocolStack.stopStack(ProtocolStack.java:1015)
+
+
+
+
+[Server:main-server]    at org.jgroups.JChannel.stopStack(JChannel.java:1002)
+
+
+
+
+[Server:main-server]    at org.jgroups.JChannel.disconnect(JChannel.java:373)
+
+
+
+
+[Server:main-server]    at org.wildfly.clustering.jgroups.spi.service.ChannelConnectorBuilder.stop(ChannelConnectorBuilder.java:103)
+
+
+
+
+[Server:main-server]    at org.jboss.msc.service.ServiceControllerImpl$StopTask.stopService(ServiceControllerImpl.java:2056)
+
+
+
+
+[Server:main-server]    at org.jboss.msc.service.ServiceControllerImpl$StopTask.run(ServiceControllerImpl.java:2017)
+
+
+
+
+[Server:main-server]    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+
+
+
+
+[Server:main-server]    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+
+
+
+[Server:main-server]    at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+[Server:main-server] Caused by: javax.resource.ResourceException: IJ000470: You are trying to use a connection factory that has been shut down: java:/comp/env/jdbc/jgroups
+
+
+
+
+[Server:main-server]    at org.jboss.jca.core.connectionmanager.AbstractConnectionManager.allocateConnection(AbstractConnectionManager.java:735)
+
+
+
+
+[Server:main-server]    at org.jboss.jca.adapters.jdbc.WrapperDataSource.getConnection(WrapperDataSource.java:138)
+
+
+
+
+[Server:main-server]    ... 14 more
+
+
+
+
+
+
+The solution is to configure the database connection directly, but then it seems that you loose the ability to use features like database connection validation, reconnection and the other settings provided by a WildFly datasource the improve the reliability of a database connection.

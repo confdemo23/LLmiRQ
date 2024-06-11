@@ -1,0 +1,6 @@
+GAE One-to-many code does not import HashSet
+In the Roo-generated *_Roo_JavaBean.aj files, there are 2 problems with the code generated for @OneToMany fields:
+
+HashSet is used in the Set&lt;Key&gt; declarations but not imported.
+The getters and setters try to create (instanciate) new Set&lt;...&gt;() rather than new HashSet&lt;...&gt;().
+

@@ -1,0 +1,2 @@
+Implement HiveDatabaseMetaData.getFunctions() to retrieve registered UDFs. 
+Hive JDBC support currently throws UnsupportedException when getFunctions() is called. Hive CL provides a SHOW FUNCTIONS command to return the names of all registered UDFs. By getting a SQL Statement from the connection, getFunctions can execute( "SHOW FUNCTIONS") to retrieve all the registered functions (including those registered through create temporary function).

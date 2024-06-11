@@ -1,0 +1,2 @@
+jgroups-stack & jgroups-channel attributes should not allow expressions
+This attribute is a model reference, and therefore should not allow expressions.

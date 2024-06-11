@@ -1,0 +1,7 @@
+Support "field lob" for entities
+It would be nice to have the ability to create @Lob annotated fields from within the Roo shell.
+Command:
+field lob -fieldName myField
+Creates: 
+@Lob
+private String myField;

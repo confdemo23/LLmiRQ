@@ -1,0 +1,2 @@
+Authentication cache is not flushed on logout
+This means that if a users details are changed even if they log in and out then these details will not be reflected when the user logs in again.

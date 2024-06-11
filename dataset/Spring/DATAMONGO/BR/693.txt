@@ -1,0 +1,4 @@
+MongoFactoryBean should create a mongo instance with host/port if replicaset is null or empty
+I&amp;apos;m initializing mongo with a spring xml. I&amp;apos;m using propertyPlaceHolderConfigurer to inject parameters that are coming from jndi.
+I can configure my application with a replicatset or not (a simple host). 
+The only workaround to distinct the two cases is to inject a empty string for replicaset when i&amp;apos;m using a simple host. But MongoFactoryBean should ignore this property in this case.

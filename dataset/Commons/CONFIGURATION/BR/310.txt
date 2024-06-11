@@ -1,0 +1,2 @@
+Remove ConfigurationFactory
+ConfigurationBuilder provides an equivalent alternative to ConfigurationFactory and can be removed. Without this class we no longer depend on Digester.

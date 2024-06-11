@@ -1,0 +1,2 @@
+Wrong DB Schema for DB2 for z/OS
+The batch tables defnied in the schema definition for DB2 do not work out of the box with the framework DAOs when they are created on DB2 for z/OS. There&amp;apos;s a problem with the SCHEDULE_DATE column.

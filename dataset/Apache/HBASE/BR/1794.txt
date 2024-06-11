@@ -1,0 +1,2 @@
+recovered log files are not inserted into the storefile map
+after a log recovery, the resulting flushed file is not introduced into the store.storefiles map. The new data isnt available until the region is closed or compacted.

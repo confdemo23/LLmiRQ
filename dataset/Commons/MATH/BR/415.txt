@@ -1,0 +1,3 @@
+MathRuntimeException#createInternalError() method loosing the exception "cause"
+The MathRuntimeException#createInternalError(Throwable cause) method doesn&amp;apos;t store the exception "cause".
+Is this intentionally?

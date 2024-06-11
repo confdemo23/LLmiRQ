@@ -1,0 +1,5 @@
+Add missing cache statistics in EJB3 deployment metrics
+EJB3 deployment metrics is missing from EJB3 subsystem, part of them have been added in https://issues.jboss.org/browse/WFLY-38, we also need to provide the missing cache statistics:
+Cache Size - Cache Size
+Passivated Count - Passivated Count
+Total Size - Total Size

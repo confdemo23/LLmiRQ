@@ -1,0 +1,1 @@
+Thrift changes for HIVE-12686

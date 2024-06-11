@@ -1,0 +1,2 @@
+Fix jdbc to compile under openjdk 7
+The newer Linux distros are shipping with just openjdk 7. Currently, the jdbc module doesn&amp;apos;t compile because some new methods aren&amp;apos;t implemented.

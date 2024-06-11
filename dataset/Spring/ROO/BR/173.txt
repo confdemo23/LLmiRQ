@@ -1,0 +1,6 @@
+Add ability to define field uniqueness constraints
+I think it would be a useful feature for Roo to provide a way to define a field, or set of fields, as unique. For example, when adding a new field to a class:
+add field string -fieldName myField -unique ....
+That would then create a database column with a uniqueness constraint? Otherwise I will have to go in and manually add this constraint to all the columns that need it in the db.
+Also, it would be nice to be able to define multiple-column uniqueness constraints such as in MySql:
+UNIQUE KEY &amp;apos;userId_2&amp;apos; (&amp;apos;userId&amp;apos;,&amp;apos;customerId&amp;apos;)

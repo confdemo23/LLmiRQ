@@ -1,0 +1,65 @@
+Parameter used in % LIKE expression is changed for whole query
+
+
+
+
+
+
+@Query("SELECT e FROM Example e WHERE e.one = ?1 OR e.two LIKE %?1")
+
+
+
+
+List&lt;Example&gt; findByOneOrTwo(String query);
+
+
+
+
+
+
+will result in the following SQL query being executed (parameter &amp;apos;QUERY&amp;apos;):
+
+
+
+
+
+
+SELECT e.one, e.two FROM examples e WHERE e.one = &amp;apos;%QUERY&amp;apos; OR e.two LIKE &amp;apos;%QUERY&amp;apos;
+
+
+
+
+
+
+but it should look like this:
+
+
+
+
+
+
+SELECT e.one, e.two FROM examples e WHERE e.one = &amp;apos;QUERY&amp;apos; OR e.two LIKE &amp;apos;%QUERY&amp;apos;
+
+
+
+
+
+
+A workaround is to use a separate parameter for the LIKE expression:
+
+
+
+
+
+
+@Query("SELECT e FROM Example e WHERE e.one = ?1 OR e.two LIKE %?2")
+
+
+
+
+List&lt;Example&gt; findByOneOrTwo(String query, String queryTwo);
+
+
+
+
+

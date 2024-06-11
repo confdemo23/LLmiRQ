@@ -1,0 +1,55 @@
+CXFRS: InInterceptor defined in Spring is ignored
+A CXF InInterceptor added to the rsServer via Spring is not added to the interceptor chain and therefore is not executed.
+
+
+
+&lt;cxf:rsServer id="service" address="/exampleService"
+
+              serviceClass="com.example.service.ExampleService"
+
+              loggingFeatureEnabled="true"
+
+              xmlns:cxf="http://camel.apache.org/schema/cxf"&gt;
+
+    &lt;cxf:providers&gt;
+
+        &lt;bean class="com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider"/&gt;
+
+    &lt;/cxf:providers&gt;
+
+    &lt;cxf:inInterceptors&gt;
+
+        &lt;bean class="com.example.service.ExampleInInterceptor"/&gt;
+
+    &lt;/cxf:inInterceptors&gt;
+
+&lt;/cxf:rsServer&gt;
+
+
+
+
+
+
+public class ExampleInInterceptor extends AbstractPhaseInterceptor&lt;Message&gt; {
+
+    public ExampleInInterceptor() {
+
+        super(Phase.RECEIVE);
+
+    }
+
+
+
+    @Override
+
+    public void handleMessage(Message message) throws Fault {
+
+        ...
+
+    }
+
+}
+
+
+
+The same configuration works with Camel Version 2.12.2.

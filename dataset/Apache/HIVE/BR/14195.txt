@@ -1,0 +1,2 @@
+HiveMetaStoreClient getFunction() does not throw NoSuchObjectException
+HiveMetaStoreClient getFunction(dbName, funcName) does not throw NoSuchObjectException when no function with funcName exists in the db. Instead, I need to search the MetaException message for &amp;apos;NoSuchObjectException&amp;apos;.

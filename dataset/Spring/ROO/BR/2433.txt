@@ -1,0 +1,53 @@
+DBCP connection pool is not aware when a database connection is unavailable
+You can reproduce the issue restarting the database server while application running.
+See problem explanation and possible resolution:
+
+http://sacharya.com/grails-dbcp-stale-connections/
+
+DBCP configuration properties:
+
+http://commons.apache.org/dbcp/configuration.html
+
+Configuration properties summary that solves the problem:
+
+
+
+
+
+
+        &lt;property name="validationQuery" value="SELECT 1"/&gt;
+
+
+
+
+        &lt;property name="testOnBorrow" value="true"/&gt;
+
+
+
+
+        &lt;property name="testOnReturn" value="true"/&gt;
+
+
+
+
+        &lt;property name="testWhileIdle" value="true"/&gt;
+
+
+
+
+        &lt;property name="timeBetweenEvictionRunsMillis" value="1800000"/&gt;
+
+
+
+
+        &lt;property name="numTestsPerEvictionRun" value="3"/&gt;
+
+
+
+
+        &lt;property name="minEvictableIdleTimeMillis" value="1800000"/&gt;
+
+
+
+
+

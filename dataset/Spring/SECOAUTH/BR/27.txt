@@ -1,0 +1,2 @@
+Invalid error handling in OAuth2ErrorHandler
+The line 28 of OAuth2ErrorHandler.java parser authenticationHeader ignoring that it starts with "OAuth ", so resulting map contains key "OAuth error" instead of just "error"

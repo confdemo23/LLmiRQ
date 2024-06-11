@@ -1,0 +1,2 @@
+Roo running jdk 1.6 update 18 can&apos;t display messages of green color.
+Roo running jdk 1.6 update 18 can&amp;apos;t display messages of green color.

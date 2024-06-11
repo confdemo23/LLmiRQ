@@ -1,0 +1,3 @@
+FilenameUtils.directoryContains assumes separator at end of parent path
+FilenameUtils.directoryContains("/abc", "/abcd") returns true, while FilenameUtils.directoryContains("/abc/", "/abcd") returns false.
+The implementation does a simple checkStartsWith() without taking the separator into consideration.

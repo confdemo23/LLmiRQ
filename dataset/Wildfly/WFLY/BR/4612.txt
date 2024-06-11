@@ -1,0 +1,16 @@
+EjbJndiBindingsDeploymentUnitProcessor logs non-i18n message at INFO
+ejb3/src/main/java/org/jboss/as/ejb3/deployment/processors/EjbJndiBindingsDeploymentUnitProcessor.java
+
+
+
+
+
+
+jndiBindingsLogMessage.append("JNDI bindings for session bean named " + sessionBean.getEJBName() + " in deployment unit " + deploymentUnit + " are as follows:\n\n");
+
+
+
+
+
+
+That eventually gets logged at INFO.

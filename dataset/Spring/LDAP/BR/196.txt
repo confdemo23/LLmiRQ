@@ -1,0 +1,2 @@
+DefaultDirContextFactory uses Java5 IllegalArgumentException constructor
+DefaultDirObjectFactory calls the IllegalArgumentException constructor that takes a message and an exception, but that was added in Java5.

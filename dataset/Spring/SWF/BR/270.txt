@@ -1,0 +1,3 @@
+Url encoding problems with ClientContinuationFlowExecutionRepository
+See forum:
+http://forum.springframework.org/showthread.php?t=36225

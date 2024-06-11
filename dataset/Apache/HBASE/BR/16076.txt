@@ -1,0 +1,40 @@
+Cannot configure split policy in HBase shell
+The reference guide explains how to configure split policy in HBase shell(link).
+
+Configuring the Split Policy On a Table Using HBase Shell
+
+hbase&gt; create &amp;apos;test&amp;apos;, {METHOD =&gt; &amp;apos;table_att&amp;apos;, CONFIG =&gt; {&amp;apos;SPLIT_POLICY&amp;apos; =&gt; &amp;apos;org.apache.hadoop.hbase.regionserver.ConstantSizeRegionSplitPolicy&amp;apos;}},
+
+{NAME =&gt; &amp;apos;cf1&amp;apos;}
+
+
+
+But if run that command, shell complains &amp;apos;An argument ignored (unknown or overridden): CONFIG&amp;apos;, and the table description has no split policy.
+
+hbase(main):067:0* create &amp;apos;test&amp;apos;, {METHOD =&gt; &amp;apos;table_att&amp;apos;, CONFIG =&gt; {&amp;apos;SPLIT_POLICY&amp;apos; =&gt; &amp;apos;org.apache.hadoop.hbase.regionserver.ConstantSizeRegionSplitPolicy&amp;apos;}}, {NAME =&gt; &amp;apos;cf1&amp;apos;}
+
+An argument ignored (unknown or overridden): CONFIG
+
+Created table test
+
+Took 1.2180 seconds
+
+
+
+hbase(main):068:0&gt; describe &amp;apos;test&amp;apos;
+
+Table test is ENABLED
+
+test
+
+COLUMN FAMILIES DESCRIPTION
+
+{NAME =&gt; &amp;apos;cf1&amp;apos;, DATA_BLOCK_ENCODING =&gt; &amp;apos;NONE&amp;apos;, BLOOMFILTER =&gt; &amp;apos;ROW&amp;apos;, REPLICATION_SCOPE =&gt; &amp;apos;0&amp;apos;, COMPRESSION =&gt; &amp;apos;NONE&amp;apos;, VERSIONS =&gt; &amp;apos;1&amp;apos;, TTL =&gt; &amp;apos;FOREVER&amp;apos;, MIN_VERSIONS =&gt; &amp;apos;0&amp;apos;, IN_MEMORY_COMPACTION =&gt; &amp;apos;false&amp;apos;, KEEP_DELETED_CELLS =&gt; &amp;apos;FALSE&amp;apos;, BLOCKSIZE =&gt; &amp;apos;65536&amp;apos;, IN_MEMORY =&gt; &amp;apos;
+
+false&amp;apos;, BLOCKCACHE =&gt; &amp;apos;true&amp;apos;}
+
+1 row(s)
+
+Took 0.0200 seconds
+
+

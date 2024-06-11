@@ -1,0 +1,6 @@
+CSVFormat.MYSQL nullString should be "\N"
+CSVFormat.MYSQL&amp;apos;s nullString should be:
+
+"\N"
+
+

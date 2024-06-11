@@ -1,0 +1,6 @@
+New Acl package not compatible with Mysql Db
+The sql statements JdbcAclService and JdbcMutableAclService are only compatible with hsqlDb but not with other DBs e.g. mysql. the "call identity()" for example query must be "SELECT LAST_INSERT_ID()" in mysql dialect.
+So it would be great if you could access the ...Query properties via setter-methods and configure JdbcMutableAclService via spring beans xml.
+also have a look at this thread please:
+http://forum.springframework.org/archive/index.php/t-34222.html
+thank you

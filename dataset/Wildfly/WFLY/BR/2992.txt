@@ -1,0 +1,2 @@
+HttpServerLogger.errorContextModuleNotFound() is skipped
+HttpServerLogger.errorContextModuleNotFound(String slot) was added but the code that should call it doesn&amp;apos;t, it just calls logger.error(slot).

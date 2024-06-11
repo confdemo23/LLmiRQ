@@ -1,0 +1,2 @@
+JavaSecureRandom should throw Exception if it cannot create the instance
+JavaSecureRandom should throw Exception if it cannot create the instance - there&amp;apos;s no point in continuing as the main method nextBytes() will just throw NPE.

@@ -1,0 +1,56 @@
+Merging Transitions doens&apos;t consider on-exceptions
+Suppose we have a flow called FLOW_A containing a global transition like the following: 
+    &lt;global-transitions&gt;
+        &lt;transition on="something" to="somewhere"&gt;
+            &lt;evaluate expression="myHandler.doSomething()"/&gt;
+        &lt;/transition&gt;  
+    &lt;/global-transitions&gt;
+Suppose FLOW_A has a parent abstract flow FLOW_B also containing some global transitions containing on-exceptions like the following:
+    &lt;global-transitions&gt;
+        &lt;transition on-exception="Exception1" to="somewhere"&gt;
+            &lt;evaluate expression="exceptionHandler.handleException1(rootCauseException)"/&gt;
+        &lt;/transition&gt;
+        &lt;transition on-exception="Exception2" to="somewhere"&gt;
+            &lt;evaluate expression="exceptionHandler.handleException2(rootCauseException)"/&gt;
+        &lt;/transition&gt;
+    &lt;/global-transitions&gt;
+During the merge of both global transitions the result will be something like:
+    &lt;global-transitions&gt;
+        &lt;transition on="something" to="somewhere"&gt;
+            &lt;evaluate expression="myHandler.doSomething()"/&gt;
+        &lt;/transition&gt;  
+        &lt;transition on-exception="Exception1" to="somewhere"&gt;
+            &lt;evaluate expression="exceptionHandler.handleException2(rootCauseException)"/&gt;
+            &lt;evaluate expression="exceptionHandler.handleException1(rootCauseException)"/&gt;
+        &lt;/transition&gt;
+    &lt;/global-transitions&gt;
+instead of 
+    &lt;global-transitions&gt;
+        &lt;transition on="something" to="somewhere"&gt;
+            &lt;evaluate expression="myHandler.doSomething()"/&gt;
+        &lt;/transition&gt;  
+        &lt;transition on-exception="Exception1" to="somewhere"&gt;
+            &lt;evaluate expression="exceptionHandler.handleException1(rootCauseException)"/&gt;
+        &lt;/transition&gt;
+        &lt;transition on-exception="Exception2" to="somewhere"&gt;
+            &lt;evaluate expression="exceptionHandler.handleException2(rootCauseException)"/&gt;
+        &lt;/transition&gt;
+    &lt;/global-transitions&gt;
+This is because in the org.springframework.webflow.engine.model.TransitionModel.isMergeableWith(Model model) method only the "on" is considered and not "on-exception": 
+    public boolean isMergeableWith(Model model) {
+        if (!(model instanceof TransitionModel)) 
+{
+            return false;
+        }
+        TransitionModel transition = (TransitionModel) model;
+        return ObjectUtils.nullSafeEquals(getOn(), transition.getOn());
+    }
+
+instead of 
+
+    public boolean isMergeableWith(Model model) {
+        if (!(model instanceof TransitionModel)) {            return false;        }
+        TransitionModel transition = (TransitionModel) model;
+        return ObjectUtils.nullSafeEquals(getOn(), transition.getOn())
+                &amp;&amp; ObjectUtils.nullSafeEquals(getOnException(), transition.getOnException());
+    }

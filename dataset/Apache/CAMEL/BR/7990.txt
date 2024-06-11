@@ -1,0 +1,4 @@
+IdempotentConsumer - If no messageId should allow Camel error handler to react
+See SO
+http://stackoverflow.com/questions/26453348/camel-onexception-doesnt-catch-nomessageidexception-of-idempotentconsumer
+The idempotent consumer should set the exchange on the exchange and invoke the callback, that is an internal routing engine bug in the implementation of that eip.

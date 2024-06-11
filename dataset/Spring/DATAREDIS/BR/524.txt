@@ -1,0 +1,2 @@
+NOAUTH Authentication required when connecting to Redis Sentinel with LettuceConnectionFactory
+Using LettuceConnectionFactory with Redis Sentinel and password-protected Redis nodes causes NOAUTH errors because the configured password is not set in RedisURI.

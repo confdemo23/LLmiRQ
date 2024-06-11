@@ -1,0 +1,2 @@
+Mutable session variables do not replicate correctly using non-tx session cache
+Currently, mutable session attributes require a transactional cache configuration in order to replicate properly.  To support non-tx caches, we can record which mutable session attributes were accessed on a given session and re-set them at the end of the request.

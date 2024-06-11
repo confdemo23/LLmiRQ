@@ -1,0 +1,2 @@
+Write failures don&apos;t fail immediately.
+When using the FaultTolerantStepFactoryBean, without configuring any exception lists, an exception thrown in the writer will cause failure.  However, it appears to be trying to determine which item failed before actually failing, which is somewhat confusing.

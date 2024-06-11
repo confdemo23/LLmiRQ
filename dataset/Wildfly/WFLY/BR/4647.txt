@@ -1,0 +1,12 @@
+RemoteOutboundConnectionReconnectTestCase, EJBClientReconnectionTestCase configured as clustered test cases
+In the Wildfly integration testsuite,  manual mode section, there are two test cases which are running in a clustered environment when they should not be:
+
+RemoteOutboundConnectionReconnectTestCase
+EJBClientReconnectionTestCase
+
+These two cases test outbound connections from one server A to another server B, and connection from a client to a server A when the server is stopped and started. There is no clustering functionality being tested.
+Two problems with this situation:
+
+exceptions are generated in the logs which result from the fact that the test cases are not being run in the correct environment
+the fact that the environment is incorrectly configured may also be preventing real bugs from otherwise being detected
+

@@ -1,0 +1,2 @@
+current http component producer don&apos;t support the https protocol
+http://www.nabble.com/Is-there-an-HTTPS-producer-endpoint--td19635772s22882.html
