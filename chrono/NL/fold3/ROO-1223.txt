@@ -1,5 +1,0 @@
-Addon that allows the user to create constructors
-
-empty constructors
-ones setting all fields and/or selected fields
-

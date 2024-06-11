@@ -1,7 +1,0 @@
-Spring Data for MongoDb doesn&apos;t save null values when @Version is added to domain class 
-Scenario:
-1. Domain class is loaded from mongodb using CrudRepository.findOne() method.
-2. The loaded instances any non id nor @Version annotated field is set to null. 
-3. The loaded instance is saved to same mongodb using CrudRepository.save() method.
-4. The field that has been set to null doesnt write to database, its unchanged.
-Important: The problem doesnt occur when @Version annotation is not used in the domain class definition.

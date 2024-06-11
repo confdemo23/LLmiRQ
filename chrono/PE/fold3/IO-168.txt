@@ -1,6 +1,0 @@
-Symbolic links (symlinks) followed when deleting directory.
-If &amp;apos;dlink&amp;apos; is a symbolic link to a directory &amp;apos;dir&amp;apos;, and FileUtils.forceDelete is called on dlink, then here is what happens:
-1) the contents of &amp;apos;dir&amp;apos; are emptied (the link is followed).
-2) &amp;apos;dir&amp;apos; continues to exist (but is empty).
-3) &amp;apos;dlink&amp;apos; is removed.
-The correct behavior is to simply remove &amp;apos;dlink&amp;apos; without following it and thus without altering the contents of &amp;apos;dir&amp;apos; (or &amp;apos;dir&amp;apos; itself).

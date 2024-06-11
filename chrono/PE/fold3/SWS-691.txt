@@ -1,6 +1,0 @@
-Annotation-driven tag does not support ws-addressing @Action
-Objects annotated with @Action should be picked up by the sws:annotation-driven tag (triggered with AnnotationActionEndpointMapping), but this fails because the AnnotationDrivenBeanDefinitionParser does not register all possible endpoint mappings in the registerEndpointMappings method.
-Ws-addressing support is not working without explicit adding the AnnotationActionEndpointMapping in the Spring context.
-Workaround:
-Add the following line to the Spring context xml:
-&lt;bean class="org.springframework.ws.soap.addressing.server.AnnotationActionEndpointMapping" /&gt;

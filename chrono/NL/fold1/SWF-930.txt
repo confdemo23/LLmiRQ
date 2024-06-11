@@ -1,2 +1,0 @@
-Development mode flag not set for flows registered using flow-location-pattern
-Factory method needs to be added to flow definition resource factory that applies attributes to all flow resources and invoked by createResource.

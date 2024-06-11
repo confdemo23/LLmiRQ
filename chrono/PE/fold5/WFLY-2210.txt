@@ -1,2 +1,0 @@
-fix message endpoint isDeliveryTransacted
-The org.jboss.as.ejb3.inflow.MessageEndpointService#isDeliveryTransacted method is checking the transaction attribute of the method using the MethodIntf.BEAN while it should use the MethodIntf.MESSAGE_ENDPOINT type.

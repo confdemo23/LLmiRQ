@@ -1,7 +1,0 @@
-AbstractLinkedMap firstKey/lastKey JavaDoc reversed
-According to the Javadoc on AbstractLinkedMap#firstKey and AbstractLinkedMap#lastKey the following test shouldn&amp;apos;t fail:
-    LinkedMap map = new LinkedMap();
-    map.put("one", "one");
-    map.put("two", "two");
-    assertEquals("one", map.lastKey());
-    assertEquals("two", map.firstKey());

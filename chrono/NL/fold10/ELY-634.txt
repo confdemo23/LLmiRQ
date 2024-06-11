@@ -1,2 +1,0 @@
-No log messages comming from Elytron - group assignment
-Elytron is missing any log messages related to group assignment. These log messages should be added. See JBEAP-6041 for more details.

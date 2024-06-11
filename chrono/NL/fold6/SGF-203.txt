@@ -1,2 +1,0 @@
-The treatment of &apos;persistence&apos; is wrong.
-The treatment of &amp;apos;persistence&amp;apos; is wrong.  Overflow is not persistence, it only stores the data that won&amp;apos;t fit in memory.  The assumption that turning on persistence could result in storing all the data would be in error if the other settings result in overflow.  The Gemfire settings, data policy and the shortcut should be passed to Gemfire without modification to prevent this from happening.

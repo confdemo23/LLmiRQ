@@ -1,2 +1,0 @@
-JobRegistryBeanPostProcessor skips jobs in XML namespace unless they are injected as dependency
-The factory bean JobParserJobFactoryBean is not a SmartFactoryBean, so its instances do not get instantiated eagerly by default.  Not many use cases need this, but the JobRegistry is a special case as Job instances typically are not dependencies for anything.

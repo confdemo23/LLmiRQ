@@ -1,2 +1,0 @@
-load inpath fails throwing org.apache.hadoop.security.AccessControlException
-Similar to HIVE-13857

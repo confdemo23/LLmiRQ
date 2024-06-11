@@ -1,4 +1,0 @@
-Cxf Endpoint String bean properites are not merged
-CxfEndpointBeanDefinitionParser maintains a property map that can be overridden by user provided property map.  They should be merged.
-Please see the email thread. 
-http://www.nabble.com/camel-cxf---dataformat-tp22332652p22332652.html

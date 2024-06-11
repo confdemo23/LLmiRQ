@@ -1,2 +1,0 @@
-DOC is incorrectly recognized as TAR
-Empty DOC is autodetected as TAR by ArchiveStreamFactory.createArchiveInputStream(InputStream).

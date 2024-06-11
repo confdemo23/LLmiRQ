@@ -1,2 +1,0 @@
-TestDefaultCompactSelection.testCompactionRatio is flaky
-The aged major compaction condition is not stable.

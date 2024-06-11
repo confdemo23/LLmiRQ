@@ -1,7 +1,0 @@
-Tab complete doesn&apos;t work for JPA_TIMESTAMP
-For some reason, tab completion works on JPA_TIME but not JPA_TIMESTAMP. The following will happen:
-field date...  --persistenceType JPA_TI&lt;TAB&gt;
-JPA_TIME          JPA_TIMESTAMP
-field date...  --persistenceType JPA_TIMEST&lt;TAB&gt;
-field date...  --persistenceType JPA_TIME (here it deleted the "ST" off the end instead of completing the option)
-JPA_TIME          JPA_TIMESTAMP

@@ -1,3 +1,0 @@
-spring-test allows you to reference configuration classes that aren&apos;t annotated with @Configuration
-When a @ContextConfiguration test class references a config class missing a @Configuration annotation, @Bean dependencies are wired successfully but the bean lifecycle is not applied (no init methods are invoked, for example). Adding the missing @Configuration annotation solves the problem, however the problem and solution isn&amp;apos;t obvious since wiring/injection appeared to work.
-It would be better if an integration test failed-fast if you reference a config class with no @Configuration annotation.

@@ -1,2 +1,0 @@
-camel-http component should skip reading the form body if it is bridgeEndpoint
-When the camel http related component gets the post request of from, it always parsers the request body to get the from parameter. This feature could cause some trouble when the camel route proxy the request to other endpoint.

@@ -1,2 +1,0 @@
-eventId value in ActionExecutingView is retrived only by the attribute name &apos;_eventId&apos; (should use the same logic as MvcView.findParameter(String logicalParameterName, ParameterMap parameters))
-See http://forum.springframework.org/showthread.php?t=53019

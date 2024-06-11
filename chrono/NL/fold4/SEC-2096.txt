@@ -1,2 +1,0 @@
-Dependency on spring-*-SNAPSHOT
-The 3.2 release&amp;apos;s poms point to spring-*SNAPSHOT jars

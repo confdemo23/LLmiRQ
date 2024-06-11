@@ -1,4 +1,0 @@
-CommandLineJobRunner should close the spring context
-In CommandLineJobRunner.start (), you create a new Spring context but don&amp;apos;t close it at the end.
-That means that if any spring bean is expecting some close method to be called (for flushing generated file for example), it won&amp;apos;t work.
-Grard COLLIN

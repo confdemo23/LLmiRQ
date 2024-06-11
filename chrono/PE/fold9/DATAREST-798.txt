@@ -1,2 +1,0 @@
-Nested validation errors reported as top level ones 
-ValidationErrors doesn&amp;apos;t consider the nested path of fields correctly.

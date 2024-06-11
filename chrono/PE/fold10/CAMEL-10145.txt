@@ -1,3 +1,0 @@
-Camel-Git: Pull and Push operations require the remote Name and not the remote Path to git repository
-Using the remote Path to git Repository is causing errors during Pull and Push operations.
-I&amp;apos;ll add a new option remoteName in GitEndpoint to avoid this situation.

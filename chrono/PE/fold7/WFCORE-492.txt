@@ -1,4 +1,0 @@
-fix JMX ObjectNameAddressUtil#toPathAddress
-The code in ObjectNameAddressUtil#toPathAddress is wrong: it must look for the childAddress&amp;apos;s submodel, not the address of the registry itself.
-The current code fails with the exception:
-org.jboss.as.controller._private.OperationFailedRuntimeException: WFLYCTL0071: Duplicate path element &amp;apos;subsystem&amp;apos; found [ "WFLYCTL0071: Duplicate path element &amp;apos;subsystem&amp;apos; found" ]

@@ -1,5 +1,0 @@
-controller client has a small memory leak as it&apos;s not cleaning up the ThreadGroup object
-org.jboss.as.controller.client.impl.ClientConfigurationImpl
-052     static ExecutorService createDefaultExecutor() {
-053         final ThreadGroup group = new ThreadGroup("management-client-thread");
-The ThreadGroup is never cleaned up and creates a memory leak

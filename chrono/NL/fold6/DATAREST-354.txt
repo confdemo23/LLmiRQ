@@ -1,3 +1,0 @@
-Revamp JSON Schema support to current draft of the spec
-Similarly to the support for ALPS we added in Evans M1, we should expose API meta-data in JSON Schema and JSON Hyper-Schema format.
-[0] http://json-schema.org

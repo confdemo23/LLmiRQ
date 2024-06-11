@@ -1,4 +1,0 @@
-Document SecurityExpressionRoot
-None of the methods in SecurityExpressionRoot have any API documentation. Without reading the code, it&amp;apos;s not clear what some of them do. For example, it&amp;apos;s not clear that hasRole and hasAuthority are just synonyms and don&amp;apos;t do anything different.
-Normally I&amp;apos;d look for help in the reference documentation for the root expressions, but it&amp;apos;s missing most of the methods (probably hasn&amp;apos;t been updated since 3.0, and maybe earlier).
-The documentation for this class (Javadoc) and the expressions (reference) could be improved a good deal.

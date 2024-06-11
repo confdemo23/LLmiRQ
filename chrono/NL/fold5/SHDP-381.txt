@@ -1,2 +1,0 @@
-Boot should support launch context args as list
-As of now we can&amp;apos;t define container arguments as list because &amp;apos;launchcontext.arguments&amp;apos; is a map. Introduce new key &amp;apos;launchcontext.argumentsList&amp;apos; which takes a simple list values which keeps the order if that in necessary.

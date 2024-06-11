@@ -1,3 +1,0 @@
-Invalid &apos;authentication-failure-url&apos; attribute results in assertion failure
-If I set the &amp;apos;authentication-failure-url&amp;apos; attribute of a &lt;openid-login&gt; or &lt;form-login&gt; element to something like "XXX/secure/login.html".  I get a bean wiring failure whose message says "java.lang.IllegalArgumentException: [Assertion failed] - this expression must be true".
-Stacktrace attached.

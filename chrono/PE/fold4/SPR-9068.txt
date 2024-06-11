@@ -1,3 +1,0 @@
-Implementation of HttpStatus as an enumeration precludes other status codes
-I&amp;apos;m trying to implement RFC 2324 but cannot return HTTP response code 418 because it&amp;apos;s not defined in the HttpStatus enumeration.
-More generally, the enumeration of specific status values precludes the use of any others.

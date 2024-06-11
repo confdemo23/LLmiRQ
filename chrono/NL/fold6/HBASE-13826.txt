@@ -1,8 +1,0 @@
-Unable to create table when group acls are appropriately set.
-Steps for reproducing the issue.
-
-Create user &amp;apos;test&amp;apos; and group &amp;apos;hbase-admin&amp;apos;.
-Grant global create permissions to &amp;apos;hbase-admin&amp;apos;.
-Add user &amp;apos;test&amp;apos; to &amp;apos;hbase-admin&amp;apos; group.
-Create table operation for &amp;apos;test&amp;apos; user will throw ADE.
-

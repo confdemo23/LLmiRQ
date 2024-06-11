@@ -1,2 +1,0 @@
-Implement/Enable constant related optimization rules in Calcite
-Right now, Hive optimizer (Calcite) is short of the constant related optimization rules. For example, constant folding, constant propagation and constant transitive rules. Although Hive later provides those rules in the logical optimizer, we would like to implement those inside Calcite. This will benefit the current optimization as well as the optimization based on return path that we are planning to use in the future. This JIRA is the umbrella JIRA to implement/enable those rules.

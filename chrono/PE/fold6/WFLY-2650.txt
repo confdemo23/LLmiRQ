@@ -1,6 +1,0 @@
-EE7-defined scopes not recognized as bean defining annotations
-The following EE7-defines scope annotations:
-ViewScoped
-FlowScoped
-TransactionScoped
-are packaged within WildFly and therefore not found in the Jandex index.

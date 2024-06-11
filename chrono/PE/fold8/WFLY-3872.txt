@@ -1,3 +1,0 @@
-Recurring failure of EJBSignEncryptMultipleClientsTestCase.encryptedAndSignedRequestFromJohn
-Since https://github.com/wildfly/wildfly/pull/6660 was submitted, EJBSignEncryptMultipleClientsTestCase.encryptedAndSignedRequestFromJohn is failing regularly. Not every time but very often.
-Alessio, you mentioned seeing some error logging from XAResourceRecoveryImpl, but that&amp;apos;s in the logs on successful runs as well, and occurs prior to the test as well. That&amp;apos;s a period background task from the transaction manager trying to perform recovery of some previous transaction. I don&amp;apos;t see why it would have any impact on this test.

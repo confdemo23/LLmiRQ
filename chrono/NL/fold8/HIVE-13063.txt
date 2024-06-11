@@ -1,6 +1,0 @@
-Create UDFs for CHR and REPLACE 
-Create UDFS for these functions.
-CHR: convert n where n : [0, 256) into the ascii equivalent as a varchar. If n is less than 0 or greater than 255, return the empty string. If n is 0, return null.
-REPLACE: replace all substrings of &amp;apos;str&amp;apos; that match &amp;apos;search&amp;apos; with &amp;apos;rep&amp;apos;.
-Example. SELECT REPLACE(&amp;apos;Hack and Hue&amp;apos;, &amp;apos;H&amp;apos;, &amp;apos;BL&amp;apos;);
-Equals &amp;apos;BLack and BLue&amp;apos;"

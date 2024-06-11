@@ -1,3 +1,0 @@
-Default value on jmxAgent createConnector should be &apos;false&apos;
-The defalult value is set to true. Should have been false
-see http://camel.465427.n5.nabble.com/disabeling-loadStatistics-td5746709.html

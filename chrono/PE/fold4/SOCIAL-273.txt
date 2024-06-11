@@ -1,7 +1,0 @@
-wrong method definition in documentation
-Spring social 1.0.0.RELEASE documentation at:
-http://static.springsource.org/spring-social/docs/1.0.x/reference/html/signin.html
-There is a wrong return value specified for method:
-void signIn(String userId, Connection&lt;?&gt; connection, NativeWebRequest request);
-It should be:
-String signIn(String userId, Connection&lt;?&gt; connection, NativeWebRequest request);

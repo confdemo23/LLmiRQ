@@ -1,1 +1,0 @@
-RepositorySchemaController must not depend on javax.validation

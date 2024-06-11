@@ -1,2 +1,0 @@
-CustomConversions complains about built-in converters
-When registering any custom converters for MongoDB, the CustomConversions constructor adds a whole slew of hard-coded converters to the list. These include NumberToNumberConverterFactory, which apparently converts java.lang.Number-&gt;java.lang.Number and causes warnings to be logged.

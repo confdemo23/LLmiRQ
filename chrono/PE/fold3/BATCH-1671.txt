@@ -1,4 +1,0 @@
-static methods are not public in ExecutionContextTestUtils
-Currently all methods in org.springframework.batch.test.ExecutionContextTestUtils are not public(default/package scope now).
-Can you make them public, so that test class can have access to them.
-Thanks,

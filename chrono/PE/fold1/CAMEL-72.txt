@@ -1,5 +1,0 @@
-FileConfigureTest can&apos;t pass in Windows box
-Because of the File.separator is different between the unix and windows system. 
-So the test can&amp;apos;t pass in windows box.
-I just attached a patch for it.  
-Please have a look at it, I tested it in windows box.

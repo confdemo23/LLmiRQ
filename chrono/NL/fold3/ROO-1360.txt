@@ -1,7 +1,0 @@
-Selenium error reports are delivered in target/target rather than just in target
-It looks like the Selenium test output is placed one extra directory deep, in target/target rather than just in target.  The problem is due to the generated selenium configuration:
-&lt;results&gt;$
-{project.build.directory}/target/selenium.txt&lt;/results&gt;
-should be
-&lt;results&gt;${project.build.directory}
-/selenium.txt&lt;/results&gt;

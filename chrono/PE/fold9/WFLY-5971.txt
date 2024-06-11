@@ -1,7 +1,0 @@
-Weld&apos;s ProxyServicesImpl#getClassLoader has reversed security manager check
-Introduced by 
-9362aab078aa0b61144b27f9a0ae9b233bcde9ca
-Method
-org.jboss.as.weld.services.bootstrap.ProxyServicesImpl#getClassLoader
-Stack trace 
-https://gist.github.com/rhusar/2db92caf6e3bd182331f

@@ -1,2 +1,0 @@
-Filter counter not incremented whenever there&apos;s a skip
-The filterCount in StepExecution is not incremented properly whenever a skip (Exception) happens in the same chuck. See the forum link for details.

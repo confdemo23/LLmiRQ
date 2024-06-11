@@ -1,2 +1,0 @@
-AnnotationMethodHandlerAdapter and AnnotationMethodHandlerExceptionResolver should supports MappingJacksonHttpMessageConverter by default
-The AnnotationMethodHandlerAdapter and AnnotationMethodHandlerExceptionResolver should supports MappingJacksonHttpMessageConverter (and other HttpMessageConverter, such as Jaxb2RootElementHttpMessageConverter etc if the libraries are found in classpath) by default, to make it consistent with the class AnnotationDrivenBeanDefinitionParser that used internally for mvc:annotation-driven / &gt;

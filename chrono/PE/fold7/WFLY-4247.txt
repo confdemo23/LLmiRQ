@@ -1,3 +1,0 @@
-Deployment fails if a web-fragment.xml references fragment name that&apos;s not present
-If you deploy a web application which has a web fragment with a relative ordering referring to a non-existent fragment, it will fail. This was reported for old JBossAS as JBAS-8767, Remy said the spec was not clear so he would ask, and them it was fixed for AS 6.0.
-The reproducer WAR from JBAS-8767 fails to deploy on WildFly as well. I am unsure as to the result of the spec clarification on whether it should work, but since we fixed it for AS 6 it should probably be fixed in WF too.

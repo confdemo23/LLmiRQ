@@ -1,2 +1,0 @@
-Module org.wildfly.naming does not export JndiPermission
-The new module org.wildfly.naming which contains JndiPermission does not export it. Hence, the module is efficiently useless. Deployments still have to depend on the private org.jboss.as.naming module to get the JndiPermission to work.

@@ -1,6 +1,0 @@
-Support for &apos;groups&apos; in addition to @Valid for @MVC Controllers
-I want to be able to specify the JSR303 validation group when specifying @Valid in @Controller-s.
-I don&amp;apos;t want the validation to be run against the default group every time.
-I guess currently I can inject a javax.validation.Validator reference in the @Controller and handle this programmatically. Would be nice if this can be driven through an annotation as well.
-But @Valid doesn&amp;apos;t support a "group" attribute though.
-What do you guys think?

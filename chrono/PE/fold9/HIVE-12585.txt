@@ -1,2 +1,0 @@
-fix TxnHandler connection leak
-checkLock(CheckLockRequest rqst) is leaking connection

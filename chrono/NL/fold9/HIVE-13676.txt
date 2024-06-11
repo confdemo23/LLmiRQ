@@ -1,2 +1,0 @@
-Tests failing because metastore doesn&apos;t come up
-In 5-6 test classes, metastore is required to be up for tests to run. The metastore is started in setup Phase asynchronously. But there&amp;apos;s no logic to wait till the metastore comes up. Hence, sometimes tests run even when metastore isn&amp;apos;t up and fail. 

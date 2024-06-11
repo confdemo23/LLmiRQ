@@ -1,2 +1,0 @@
-PGPDataFormat unmarshal doesn&apos;t close the stream correctly
-The PGPDataFormat does not close some streams during unmarshaling.

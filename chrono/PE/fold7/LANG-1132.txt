@@ -1,4 +1,0 @@
-ReflectionToStringBuilder doesn&apos;t throw IllegalArgumentException when the constructor&apos;s object param is null
-Placeholder for https://github.com/apache/commons-lang/pull/85
-
-As described in it&amp;apos;s javadoc, ReflectionToStringBuilder constructor will throw IllegalArgumentException if the Object to build a toStringfor is null, while in fact it won&amp;apos;t.

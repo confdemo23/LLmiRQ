@@ -1,7 +1,0 @@
-Failing HttpURLConnection tests on Jelly Bean 4.2
-The following tests are failing on Jelly Bean 4.2. It&amp;apos;s the same test run under different circumstances, all on the HttpURLConnection.
-
-org.springframework.http.client.SimpleStreamingHttpRequestFactoryTests#testGetAcceptEncodingNone
-org.springframework.http.client.SimpleBufferingHttpRequestFactoryTests#testGetAcceptEncodingNone
-org.springframework.http.client.BufferingSimpleClientHttpRequestFactoryTests#testGetAcceptEncodingNone
-

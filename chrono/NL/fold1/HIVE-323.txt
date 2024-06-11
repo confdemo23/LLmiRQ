@@ -1,7 +1,0 @@
-row counts for one query are being in printed subsequent queries
-when executing multiple queries from the cli - i am seeing the row count state being maintained/printed across queries:
-&gt;q1
-N1 rows
-&gt;q2
-N1 rows inserted
-N2 rows inserted

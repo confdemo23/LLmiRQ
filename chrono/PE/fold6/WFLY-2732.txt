@@ -1,3 +1,0 @@
-Injected EJB not available to MDB @PreDestroy methods
-MDB with method annotated with @PreDestroy and injected EJB. In this method we are calling an EJB. When the application is undeployed the PreDestroy method is called but it fails on the call to the injected EJB as it&amp;apos;s already been undeployed.
-This was fixed in an RFE for Session Beans but does not seem to work for MDB.

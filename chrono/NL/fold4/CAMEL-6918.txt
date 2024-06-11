@@ -1,2 +1,0 @@
-Error handler for SEDA producer doesn&apos;t work
-Exceptions thrown by seda producer bypass exception handling and bubble up to original caller. 

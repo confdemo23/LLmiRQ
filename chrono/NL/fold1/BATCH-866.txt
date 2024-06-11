@@ -1,2 +1,0 @@
-Reference manual has invalid references to org.springframework.batch.io.file package
-The org.springframework.batch.io.file package doesn&amp;apos;t exists - should reference org.springframework.batch.item.file instead

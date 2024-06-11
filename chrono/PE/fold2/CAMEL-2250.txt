@@ -1,2 +1,0 @@
-InterceptSendToEndpoint - Should stop sending to intercepted endpoint in case of Exchange failure
-We had a similar issue recently with the routing slip. The same goes for intercept send to endpoint.

@@ -1,2 +1,0 @@
-NPE in SessionManagerStatsHandler
-Mathieu Lachance reports an NPE when SessionManagerStatsHandler tries to use the ServiceController for a no-longer present deployment. See https://github.com/wildfly/wildfly/pull/9189

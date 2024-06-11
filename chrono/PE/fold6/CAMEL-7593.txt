@@ -1,4 +1,0 @@
-camel-netty-http consumer uses a fixed 1mb chunked frame size
-The option to configure the setting was only exposed on the shared netty http server config. We should also expose it for the non shared out of the box netty http consumer.
-People today will run into this problem
-When sending an HTTP request bigger than 1MB, netty HTTP throws an exception - org.jboss.netty.handler.codec.frame.TooLongFrameException: HTTP content length exceeded 1048576 bytes .

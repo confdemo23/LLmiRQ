@@ -1,4 +1,0 @@
-Reinvestigate HIVE-337 induced limit on number of separator characters in LazySerDe
-HIVE-337 added support for complex data structures and also oddly added in a limit of the # of separator characters required to make that happen.
-When using an Avro-based table that has more than 8-10 levels of nesting in records, this limit gets hit and such tables can&amp;apos;t be queried.
-We either need to remove such a limit or raise it to a high-enough value to support such nested data structures.

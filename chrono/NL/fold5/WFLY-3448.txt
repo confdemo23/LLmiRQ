@@ -1,6 +1,0 @@
-Session ID change with sub-directories using "/" context (virtual host)
-I used a virtual host in Wildfly like this :
-&lt;host name="toto" alias="www.toto.com"&gt;
-  &lt;location name="/" handler="welcome-content"/&gt;
-&lt;/host&gt;
-When I try to access www.toto.com/sub/, a new cookie is created. It would be great with a "/sub" context but it is not for a "/" context.

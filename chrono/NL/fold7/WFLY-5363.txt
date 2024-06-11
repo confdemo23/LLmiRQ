@@ -1,3 +1,0 @@
-[Migration operation] [Web to Undertow] Default value for access-log extended attribute differs
-When migrating access-log without defined extended attribute results in undertow without defined extended attribute, but the default values differ causing that even though in Web subsystem extended format wasn&amp;apos;t used, in Undertow it is expected logging to use extended format.
-Ideally the defaults should be the same or the migrate operation needs to define the extended attribute to false if it wasn&amp;apos;t defined in Web.

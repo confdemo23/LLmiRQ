@@ -1,3 +1,0 @@
-Jackson2JsonRedisSerializer should allow to customise the JavaType for deserialization via getJavaType()
-The Jackson2JsonRedisSerializer has an overridable `getJavaType(Class&lt;?&gt; class)` method, but it does not delegate to this method to determine the `javaType` used by the object mapper when deserializing.
-The fix is simple. Instead of setting the private field `JavaType javaType` to the `Class&lt;T&gt; type` passed in from the constructor, it should be set to the type returned by `getJavaType(Class&lt;?&gt; class)`.

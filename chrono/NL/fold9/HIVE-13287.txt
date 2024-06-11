@@ -1,2 +1,0 @@
-Add logic to estimate stats for IN operator
-Currently, IN operator is considered in the default case: reduces the input rows to the half. This may lead to wrong estimates for the number of rows produced by Filter operators.

@@ -1,3 +1,0 @@
-MapAccessor does not correctly handle null values
-See the following forum thread:
-http://forum.springframework.org/showthread.php?t=40620

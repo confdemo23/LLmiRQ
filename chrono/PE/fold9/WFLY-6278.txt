@@ -1,3 +1,0 @@
-Requesting a session with an unexpected character causes request to fail
-The root cause of the problem is that the distributed web session code optimizes the marshalling of the session identifier, by using a URL safe Base64 codec.  Because this marshalling happens transparently, when Cache.get(...) goes remote (since the session ID containing an invalid character will never be found locally), the resulting IllegalArgumentException goes undetected - and propagates back to the client.
-To prevent this, we need to validate that the requested session ID can be serialized - and if not, respond as if the session was not found.

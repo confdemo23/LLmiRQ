@@ -1,5 +1,0 @@
-org.jboss.as.ejb3.timer.schedule.CalendarBasedTimeoutTestCase#testCalendarBasedTimeout
-Running build with smoke tests on current github sources I get failure in this test case.
-HOUR_OF_DAY is not 0 as expected but 1.
-I changed the Assert in the test case to print out firstTimeout.toString() instead of only timeZoneDisplayName.
-See attached files for more.

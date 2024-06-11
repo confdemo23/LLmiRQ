@@ -1,2 +1,0 @@
-Deploying @Stateless EJB causes default ejb cache to start unnecessarily.
-This cache isn&amp;apos;t used for anything.

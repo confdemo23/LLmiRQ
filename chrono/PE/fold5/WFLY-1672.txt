@@ -1,6 +1,0 @@
-Test added module directories remain in JBOSS_HOME/modules
-integration/basic/src/test/java/org/jboss/as/test/integration/jca/moduledeployment/AbstractModuleDeploymentTestCaseSetup.java
-integration/basic/src/test/java/org/jboss/as/test/integration/weld/multideployment/WeldModuleDeploymentTestCase
-integration/basic/src/test/java/org/jboss/as/test/integration/ee/globalmodules/GlobalModulesTestCase.java
-For the tests above, method deleteRecursively() does not delete test module directories properly, part of module directory remain in JBOSS_HOME/modules after test completion.
-Example: JBOSS_HOME/modules/org/jboss/test is left behind for WeldModuleDeploymentTestCase, in that case the testModuleRoot is org/jboss/test/weldModule

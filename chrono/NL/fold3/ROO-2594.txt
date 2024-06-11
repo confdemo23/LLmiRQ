@@ -1,2 +1,0 @@
-Inner type field annotations are not written out to ITDs
-Unlike the annotations of inner-type methods, field annotations are not written out.

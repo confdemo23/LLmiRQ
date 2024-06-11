@@ -1,2 +1,0 @@
-BloomFilter serialization/deserialization broken
-BloomFilter serialization/deserialization is broken.Deserializing a serialized BloomFilter appears to work, but running the same tests against the pre-serialized filter returns false negatives against the deserialized filter.

@@ -1,2 +1,0 @@
-Module for MySQL JDBC driver with version 5.1.30+ needs <driver-class> in standalone.xml
-See forum thread https://community.jboss.org/message/866635

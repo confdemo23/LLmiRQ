@@ -1,2 +1,0 @@
-ConcurrentModificationException on RabbitTemplate.getUnconfirmed()
-Although we&amp;apos;re synchronized on pendingConfirms, the values are maps and we fail to synchronize on those while iterating/removing.

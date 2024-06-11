@@ -1,2 +1,0 @@
-camel-api-component-maven-plugin doesn&apos;t handle inner class names in Javadoc
-ApiMethodParser.forName() doesn&amp;apos;t handle inner class names of the format package.OutClass.InnerClass from camel-api-component-maven-plugin&amp;apos;s Javadoc parser. It needs to convert class names in this human readable format to package.OutClass$InnerClass form as expected by Class.forName().

@@ -1,3 +1,0 @@
-RetryingMetaStoreClient retries non retriable embedded metastore client 
-Embedded metastore clients can&amp;apos;t be retried, they throw an exception - "For direct MetaStore DB connections, we don&amp;apos;t support retries at the client level."
-This tends to mask the real error that caused the attempts to retry. RetryingMetaStoreClient shouldn&amp;apos;t even attempt to reconnect when direct/embedded metastore client is used.

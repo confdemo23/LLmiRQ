@@ -1,2 +1,0 @@
-ServletContext.getResourcePaths() does&apos;nt meet Spec
-Undertow ServletContext.getResourcePaths() does&amp;apos;nt meet the Spec Servlet 2.3. Please see attched Test Web Project resource-test.zip, Undertow does&amp;apos;nt resolve the resources in Child Dependencies located under WEB-INF/lib Folder

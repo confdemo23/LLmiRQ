@@ -1,2 +1,0 @@
-Splitter with streaming - GenericFile is not detected when creating the java.util.Scanner
-getScanner should recognize GenericFile as type so we can leverage the underlying java.io.File handle.

@@ -1,2 +1,0 @@
-Attempt to remove cache container with default-cache defined throws NPE
-When I create a local cache as a child of some cache container and then set it to that cache container as its default cache, it is impossible to remove that cache container.

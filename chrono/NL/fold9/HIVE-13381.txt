@@ -1,2 +1,0 @@
-Timestamp & date should have precedence in type hierarchy than string group
-Both sql server &amp; oracle treats date/timestamp higher in hierarchy than varchars

@@ -1,6 +1,0 @@
-provide option to run hive in local mode
-this is a little bit more than just mapred.job.tracker=local
-when run in this mode - multiple jobs are an issue since writing to same tmp directories is an issue. the following options:
-hadoop.tmp.dir
-mapred.local.dir
-need to be randomized (perhaps based on queryid). 

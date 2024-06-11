@@ -1,2 +1,0 @@
-Fix test failure in TestOpenTableInCoprocessor
-This is after HBASE-12295 went in

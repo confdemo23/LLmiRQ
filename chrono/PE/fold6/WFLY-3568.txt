@@ -1,4 +1,0 @@
-Not possible to use wrapped injectionTarget for some EE components
-Using custom wrapped InjectionTarget should be available also for:
-WS endpoint
-EJB interceptor

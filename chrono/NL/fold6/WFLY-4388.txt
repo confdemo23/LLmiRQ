@@ -1,2 +1,0 @@
-Weld starts also for deployments with "bean-discovery-mode=none".
-This seems to me at least unneccessary.

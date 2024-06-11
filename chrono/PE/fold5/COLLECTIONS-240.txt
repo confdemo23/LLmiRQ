@@ -1,2 +1,0 @@
-MultiValueMap should implement Serializable
-Collection classes should be serializable as they are frequently used in model classes which need to be serializable, for example in a HttpSession object within a servlet container cluster.

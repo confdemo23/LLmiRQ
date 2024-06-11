@@ -1,3 +1,0 @@
-Update the hash table entry before flushing in Group By hash aggregation
-This is a newly introduced bug from r796133.
-We should first update the aggregation, and then we can flush the hash table. Otherwise the entry that we update might be already out of the hash table.

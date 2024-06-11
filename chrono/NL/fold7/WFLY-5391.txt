@@ -1,3 +1,0 @@
-Access logging doesn&apos;t recognize common pattern
-When having defined default access logging (just changing extended attribute to false), instead of logging according to common pattern (the default pattern), only the word "common" is logged per each request.
-Marking as critical as this is behaviour with default access-log configuration.

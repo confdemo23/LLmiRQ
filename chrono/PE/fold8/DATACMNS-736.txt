@@ -1,2 +1,0 @@
-Invalid error message in PointFormatter
-It reports it&amp;apos;s expecting a semicolon but actually expects a comma.

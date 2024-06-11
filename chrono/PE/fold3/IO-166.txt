@@ -1,2 +1,0 @@
-Fix URL decoding in FileUtils.toFile()
-The sequence "%2520" should decode to "%20".

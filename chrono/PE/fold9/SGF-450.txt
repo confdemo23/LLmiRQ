@@ -1,2 +1,0 @@
-GemfireRepositoryFactoryBean needs to explicitly register a "default" GemfireMappingContext when not explicitly defined as a bean in the application&apos;s Spring context.
-Refer to the comments in the gs-accessing-gemfire-data-rest Spring Getting Started Guide issue 1.

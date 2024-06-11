@@ -1,3 +1,0 @@
-JaasAuthenticationProvider can not find jaas realm defined inside service archive
-Fix for SEC-760 causes another bug. If you deploy JAAS login module (application policy) with application, as a service archive, JaasAuthenticationProvider does not see it because of an config reset, which was a fix in SEC-760.
-If line "Configuration.getConfiguration().refresh();" is removed everything works ok.

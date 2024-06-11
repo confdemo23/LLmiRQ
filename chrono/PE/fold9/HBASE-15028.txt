@@ -1,2 +1,0 @@
-Minor fix on RegionGroupingProvider
-Currently in RegionGroupingProvider#getWAL(String) we&amp;apos;re trying to get a WAL instance from the cache using walCacheLock as the key (a typo when fixing HBASE-14306, my fault...), while actually we should have used group name. This won&amp;apos;t cause any fatal error but will slightly affect the perf since it will always run into the succeeding synchronized code. Will get this fixed in this JIRA

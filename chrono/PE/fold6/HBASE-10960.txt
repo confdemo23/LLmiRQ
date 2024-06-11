@@ -1,2 +1,0 @@
-Enhance HBase Thrift 1 to include "append" and "checkAndPut" operations
-Both append, and checkAndPut functionalities are available in Thrift 2 interface, but not in Thrift. So, adding the support for these functionalities in Thrift1 too.

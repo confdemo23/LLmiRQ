@@ -1,3 +1,0 @@
-ZiparchiveInputStream and ZiparchiveOutputStream don&apos;t clean up Inflater/Deflater instances
-This is similar to COMPRESS-139
-The Inflater and Deflater instances kept by the streams should be cleaned up by calling end() inside the close method so native resources get freed.

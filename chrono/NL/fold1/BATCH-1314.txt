@@ -1,1 +1,0 @@
-FFIW in tradeJob is pointing to classpath instead of the target

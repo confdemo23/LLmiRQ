@@ -1,3 +1,0 @@
- Intermittent failure of ExternalContextBindingTestCase
-The server setup task sometimes fails to start the ApacheDS server instance because for some reason, BouncyCastle security provider doesn&amp;apos;t get registered (it is added through a maven dependency rather than added to the JDK). This leads to a "connection refused" error during the test when it is trying to connect to the LDAP instance.
-It worked for us if we just programatically forced registration of the BouncyCastleProvider before the initialization of ApacheDS.

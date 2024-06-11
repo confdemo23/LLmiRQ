@@ -1,2 +1,0 @@
-java primitive type for binary datatype should be byte[]
-PrimitiveObjectInspector.getPrimitiveJavaObject is supposed to return a java object. But in case of binary datatype, it returns ByteArrayRef (not java standard type). The suitable java object for it would be byte[]. 

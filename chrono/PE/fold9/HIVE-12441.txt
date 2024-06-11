@@ -1,2 +1,0 @@
-Driver.acquireLocksAndOpenTxn() should only call recordValidTxns() when needed
-recordValidTxns() is only needed if ACID tables are part of the query.  Otherwise it&amp;apos;s just overhead.

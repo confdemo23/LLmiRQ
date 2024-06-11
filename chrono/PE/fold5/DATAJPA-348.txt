@@ -1,2 +1,0 @@
-@IdClass of @MappedSuperclass is not supported
-org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.IdMetadata#getType does not support MappedSuperclass annotation, i.e. if I have @IdClass at superclass with MappedSuperclass this code does not resolve it and returns null. 

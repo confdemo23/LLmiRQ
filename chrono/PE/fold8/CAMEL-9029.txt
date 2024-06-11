@@ -1,2 +1,0 @@
-JGroups managed routes can be started too early
-JGroupsFilters#dropNonCoordinatorViews doesn&amp;apos;t filter non-view messages properly which can cause the wrong route to be started. This issue was not so easy to detect, as usually the channels used for cluster management doesn&amp;apos;t send any other messages, than view ones.

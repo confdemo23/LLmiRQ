@@ -1,1 +1,0 @@
-Set HIVE_TRANSACTIONAL_TABLE_SCAN to the correct job conf for FetchOperator

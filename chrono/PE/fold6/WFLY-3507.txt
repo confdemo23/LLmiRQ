@@ -1,3 +1,0 @@
-REGRESSION: JSP servlet cannot be mapped to different extensions
-When migrating an app from JBoss 7.1.1.Final to WildFly 8.1.0.Final, one can no longer remap the default JSP servlet to different extensions.
-This is useful when you want some lightweight server-side processing of, say, JavaScript or CSS files.

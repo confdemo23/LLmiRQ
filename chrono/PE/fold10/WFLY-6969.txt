@@ -1,2 +1,0 @@
-Intermittent failures in Concurrent*WebFailoverTestCase following change to default consistent hash
-See: https://ci.wildfly.org/project.html?tab=testDetails&amp;projectId=WF_PullRequest&amp;testNameId=2516785978928573613

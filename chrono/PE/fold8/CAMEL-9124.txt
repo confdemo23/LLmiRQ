@@ -1,3 +1,0 @@
-RedeliveryPattern should support property placeholders
-See nabble
-http://camel.465427.n5.nabble.com/Can-t-configure-delayPattern-with-property-placeholders-tp5771356.html

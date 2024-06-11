@@ -1,6 +1,0 @@
-SimpleMongoRepository fails if used with customized collection name
-SimpleMongoRepository fails if MongoEntityInformation is passed to initialize the repository which customized collection name for entity.
-It fails with 
-SimpleMongoRepository#findOne(id)
-SimpleMongoRepository#delete(id)
-SimpleMongoRepository#delete(entity)

@@ -1,9 +1,0 @@
-IIOP Subsystem: Invalid logger category creation
-Frank Langelage wrote:
-
-Now with wildfly.iiop in place, I see DEBUG messages, although category "org.wildfly" is set to INFO. To get rid of the debug messages a category with name "package org.wildfly.iiop" needs to be defined.
-I think the Logger creation
-IIOPLogger ROOT_LOGGER = Logger.getMessageLogger(IIOPLogger.class, IIOPLogger.class.getPackage().toString());
-in
-iiop-openjdk/src/main/java/org/wildfly/iiop/openjdk/logging/IIOPLogger.java
-should be changed, aligned with those in other subsystems.

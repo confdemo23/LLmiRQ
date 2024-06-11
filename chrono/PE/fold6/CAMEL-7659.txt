@@ -1,4 +1,0 @@
-camel-atom filter always returns the last consumed entry from feed more than once
-I have problem with camel setup to consume feeds atom://atomUri?splitEntries=true&amp;filter=true&amp;throttleEntries=false, feed processor does not skip last consumed entry.
-The source of problem is in UpdateDateFilter class, it filters only entries older than last update and entries of same pubdate are once more
-consumed.

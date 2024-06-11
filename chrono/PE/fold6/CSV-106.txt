@@ -1,6 +1,0 @@
-CSVFormat.format allways append null
-When I now call
-CSVFormat.newFormat(&amp;apos;;&amp;apos;).withSkipHeaderRecord(true).withHeader("H1","H2").format("A","B")
-I get the output A;Bnull
-The expected output would be 
-A;B

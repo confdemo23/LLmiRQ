@@ -1,3 +1,0 @@
-CREATE TABLE should support STORED AS AVRO
-Avro is well established and widely used within Hive, however creating Avro-backed tables requires the messy listing of the SerDe, InputFormat and OutputFormat classes.
-Similarly to HIVE-5783 for Parquet, Hive would be easier to use if it had native Avro support.

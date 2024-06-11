@@ -1,2 +1,0 @@
-Add StringUtils.containsAny(CharSequence, CharSequence... ) method
-Presently there is a: public static boolean containsAny(CharSequence cs, char... searchChars). It would be useful to have the: public static boolean containsAny(CharSequence cs, CharSequence... searchCharSequences) which will return true if any of the searchCharSequences are contained within the cs. If you decide to implement it, it would be nice to have an alias method for collections, e.g., public static boolean containsAny(CharSequence cs, Collection&lt;CharSequence&gt; searchCharSequences)

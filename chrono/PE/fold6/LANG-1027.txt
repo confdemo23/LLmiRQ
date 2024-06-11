@@ -1,4 +1,0 @@
-org.apache.commons.lang3.SystemUtils#isJavaVersionAtLeast should return true by default
-Hi
-last [lang] release doesn&amp;apos;t support java 9 (not in JavaVersion enum). However it shouldn&amp;apos;t break the org.apache.commons.lang3.SystemUtils#isJavaVersionAtLeast method which should return true when java version is not known (not known = older)
-My proposal is to add UNKNOWN to the enum and override atLeast for this particular value to return true.

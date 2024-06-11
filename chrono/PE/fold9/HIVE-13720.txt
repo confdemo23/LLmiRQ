@@ -1,2 +1,0 @@
-TestLlapTaskCommunicator fails on master
-Can be reproduced locally as well

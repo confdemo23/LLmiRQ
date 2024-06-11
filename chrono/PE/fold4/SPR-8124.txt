@@ -1,2 +1,0 @@
-@ExceptionHandler doesn&apos;t handle exceptions from other controllers
-The fact that a method annotated with @ExceptionHandler can only handle exceptions from the same controller is a restrictive issue. The better behavior would be if the annotated method would be able to handle all exceptions of that particular type, regardless of their source. 

@@ -1,5 +1,0 @@
-wildfly 8cr1 doesn&apos;t respect welcome-file-list for resources inside jar files
-The welcome-file-list is not respected for web resources inside jar.
-If you call directly the welcome-file it works correctly, but if you call the folder where the welcome-file is located, you receive an Error.
-My simple maven project to see the problem:
-https://github.com/fiorenzino/wildfly8-welcome-file-list

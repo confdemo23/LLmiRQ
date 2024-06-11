@@ -1,5 +1,0 @@
-Resteasy+Spring integration can result in double VFS mount if deployment fails
-I have a spring MVC war that failed during deployment because of some external resource missing ( a cassandra keyspace).
-When I tried to deploy the war again after fixing the issue (through the web console) I got :
-Caused by: java.io.IOException: VFS000017: Filesystem already mounted at mount point \"\"/wildfly/modules/system/layers/base/org/jboss/resteasy/resteasy-spring/main/bundled/resteasy-spring-jar/resteasy-spring-3.0.11.Final.jar
-It looks like we are trying to mount the file again while the service managing the mounthandle hasn&amp;apos;t stopped.

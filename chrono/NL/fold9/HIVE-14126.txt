@@ -1,1 +1,0 @@
-With ranger enabled, partitioned columns is returned first when you execute select star

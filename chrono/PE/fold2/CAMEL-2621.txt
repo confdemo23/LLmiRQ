@@ -1,6 +1,0 @@
-File consumer - Polling from network share on Windows may regard files as not a file
-
-file.isFile()
-
-
-May return false on Windows if consuming from a network share etc. So we should just regard anything that is not a directory as a file.

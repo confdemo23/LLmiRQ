@@ -1,2 +1,0 @@
-Throw exception in a save operation if the POJO&apos;s ID field is null and field type is not String, BigInteger or ObjectId.
-findById with int type id returns null.

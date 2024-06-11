@@ -1,2 +1,0 @@
-Empty string JobParameter would be re-hydrated as null by Oracle
-Empty string JobParameter would be re-hydrated as null by Oracle.  Probably not a very common scenario, but it&amp;apos;s a feature of Oracle that isn&amp;apos;t taken into account in the JdbcJobInstanceDao.

@@ -1,2 +1,0 @@
-fix LockHandle TxnHandler.acquireLock(String key) retry logic
-stupid bug: return statement is missing.  See patch.

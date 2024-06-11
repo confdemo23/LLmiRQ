@@ -1,2 +1,0 @@
-Binding a Date to a manually defined repository query fails
-See this StackOverflow question for details.

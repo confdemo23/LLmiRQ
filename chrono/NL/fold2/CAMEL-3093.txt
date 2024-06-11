@@ -1,2 +1,0 @@
-camel-smpp shoud honor the configured encoding
-Currently camel-smpp doesn&amp;apos;t honor the encoding option by creating the consumer/producer.

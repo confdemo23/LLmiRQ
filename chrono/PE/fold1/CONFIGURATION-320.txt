@@ -1,2 +1,0 @@
-XMLPropertyListConfiguration is limited to 32 bits integers
-XMLPropertyListConfiguration parses integers as 32 bits values, but the plist spec doesn&amp;apos;t limit the size of the integers. It should at least support Long values, and maybe BigIntegers.

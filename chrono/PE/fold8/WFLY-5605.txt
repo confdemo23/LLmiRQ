@@ -1,4 +1,0 @@
-DataSourceDefinition is registering capabilities for deployment tree resources
-The same DataSourceDefinition class is used for registering the MRR for the subsystem=data-sources/(xa-)data-source=* resources and for their equivalents in the /deployment=* tree. In both cases the registerCapabilities() method is recording the datasource capability.
-The deployment resources are not actually able to provide the capability[1], so it shouldn&amp;apos;t be registered in that case. I believe the DataSourceDefinition.deployed field can be used to turn this off.
-[1] Capabilities are management model concepts and can&amp;apos;t be provided by services and runtime-only resources. The /deployment=/subsystem= resources are runtime-only.

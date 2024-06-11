@@ -1,3 +1,0 @@
-JPA&apos;s persistence.xml is deployed before datasources are created through application.xml
-Please refer to discussion
-https://developer.jboss.org/thread/267371

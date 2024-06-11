@@ -1,8 +1,0 @@
-Roo rejects entity names containing "Test" even with --permitReservedWords
-It it currently not possible to define entities whose names contain the reserved word "Test"
-roo&gt; 
-entity --class ~.model.TestCase
-Entity name rejected as conflicts with test execution defaults; please remove &amp;apos;Test&amp;apos; and/or &amp;apos;TestCase&amp;apos; 
-This is even true if reserved words are explicitly allowed:
-~.TestCase roo&gt; entity --class ~.TestCase --permitReservedWords
-Entity name rejected as conflicts with test execution defaults; please remove &amp;apos;Test&amp;apos; and/or &amp;apos;TestCase&amp;apos;

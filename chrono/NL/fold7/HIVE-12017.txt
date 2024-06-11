@@ -1,2 +1,0 @@
-Do not disable CBO by default when number of joins in a query is equal or less than 1
-Instead, we could disable some parts of CBO that are not relevant if the query contains 1 or 0 joins. Implementation should be able to define easily other query patterns for which we might disable some parts of CBO (in case we want to do it in the future).

@@ -1,2 +1,0 @@
-MiniHBaseCluster#getServerWith() does not ignore stopped RSs
-MiniHBaseCluster#getServerWith() does not ignore stopped RSs 

@@ -1,2 +1,0 @@
-Chunk is not serializable but is wrapped by a Serializable ChunkRequest
-The Chunk class is not serializable. This is particularly useful when sending chunks via JMS.

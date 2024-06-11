@@ -1,2 +1,0 @@
-Imposible to fix wrong PicketLink Federation identity provider&apos;s security domain after reload
-If you do typo when editing security domain of identity provider it&amp;apos;s impossible to fix it by writing correct value to attribute but you have to remove the whole identity provider and create it again.

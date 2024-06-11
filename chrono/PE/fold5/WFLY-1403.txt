@@ -1,3 +1,0 @@
-RolloutPlanTestCase#testMaxFailServersPercentageRolloutPlan incorrectly refers to a rollout plan from different test method
-The RolloutPlanTestCase#testMaxFailServersPercentageRolloutPlan in the domain mode testsuite contains a bug as it refers to &amp;apos;maxFailOnePlan&amp;apos; plan instead of &amp;apos;maxFailPercPlan&amp;apos;. Hence, if the test methods are not run in alphabetical order they will fail due to this bug.
-This has been somewhat fixed by adding an explicit ordering of test methods in that class, but this is a workaround rather than a fix.

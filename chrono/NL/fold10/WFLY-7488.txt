@@ -1,2 +1,0 @@
-JGroups subsystem resource registers default-channel capabilities even when undefined
-Analog of WFLY-7487, but for the optional default channel attribute of the JGroups subsystem.

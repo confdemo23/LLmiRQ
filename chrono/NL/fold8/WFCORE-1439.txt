@@ -1,2 +1,0 @@
-Allow for testsuite to pass on French OS
-Some tests are checking failure message or exception message as if the Locale is always English. Fixing those

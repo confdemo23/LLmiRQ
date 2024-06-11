@@ -1,4 +1,0 @@
-JAXBDataFormatter should using Spring ApplicationContext&apos;s classLoader explicitly
-JAXBDataFormatter now using JAXBContext.newInstance(path) to create JAXBContext,
-but this will using Thread&amp;apos;s context classLoader.
-this may causing un-expected class or resource not found exceptions;

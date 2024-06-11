@@ -1,3 +1,0 @@
-NotPresentFilter does not define equals()
-The class NotPresentFilter does not define equals() method, although its interface Filter explicitly declares equals() with a javadoc &amp;apos;All filters must implement equals.&amp;apos;.
-Affects also the trunk.

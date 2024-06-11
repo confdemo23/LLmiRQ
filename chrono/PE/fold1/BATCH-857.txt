@@ -1,3 +1,0 @@
-map daos need to be truly transactional for correct restart
-Map daos keep references to mutable entities therefore they aren&amp;apos;t truly transactional, regardless of using transactional maps. This leads to incorrect restart since the values stored in ExecutionContext don&amp;apos;t reflect the rollback that preceded step failure.
-The solution should be to clone the values before storing them, together with using the transactional collection wrappers.

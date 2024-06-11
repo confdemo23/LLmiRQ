@@ -1,2 +1,0 @@
-ObjectStore does not close Query objects in some calls, causing a potential leak in some metastore db resources
-During testing, we&amp;apos;ve noticed Oracle db running out of cursors. Might be related to this.

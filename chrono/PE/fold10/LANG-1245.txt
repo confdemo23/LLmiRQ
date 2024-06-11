@@ -1,3 +1,0 @@
-signature change of applyRules(java.util.Calendar, java.lang.StringBuffer) is not binary compatible
-add back method
- java.lang.StringBuffer applyRules(java.util.Calendar, java.lang.StringBuffer)

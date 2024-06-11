@@ -1,2 +1,0 @@
-Allow &apos;@&apos; in usernames.
-Many servers use &amp;apos;username&amp;apos;@&amp;apos;servername&amp;apos; as a login name. Camel-mail doesn&amp;apos;t allow this.
