@@ -1,0 +1,2 @@
+SnapshotManifestV1 too verbose when there are no regions
+swap the INFO for DEBUG in SnapshotManifestV1.loadRegionManifests() otherwise the cleaner will spam everyone for no reason

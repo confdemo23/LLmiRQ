@@ -1,0 +1,134 @@
+NPE when deployment contains a *-ds.xml in domain
+If you build the kitchen-sink quickstart and attempt to deploy to domain servers you&amp;apos;ll see the following error. Same deployment works fine in standalone.
+
+
+
+
+
+
+[Server:server-one] 09:25:06,563 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-14) MSC000001: Failed to start service jboss.data-source.java:jboss/datasources/KitchensinkQuickstartDS: org.jboss.msc.service.StartException in service jboss.data-source.java:jboss/datasources/KitchensinkQuickstartDS: WFLYJCA0033: Error during the deployment of java:jboss/datasources/KitchensinkQuickstartDS
+
+
+
+
+[Server:server-one] 	at org.jboss.as.connector.subsystems.datasources.AbstractDataSourceService.start(AbstractDataSourceService.java:142)
+
+
+
+
+[Server:server-two] 09:25:06,563 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-7) MSC000001: Failed to start service jboss.data-source.java:jboss/datasources/KitchensinkQuickstartDS: org.jboss.msc.service.StartException in service jboss.data-source.java:jboss/datasources/KitchensinkQuickstartDS: WFLYJCA0033: Error during the deployment of java:jboss/datasources/KitchensinkQuickstartDS
+
+
+
+
+[Server:server-two] 	at org.jboss.as.connector.subsystems.datasources.AbstractDataSourceService.start(AbstractDataSourceService.java:142)
+
+
+
+
+[Server:server-two] 	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+
+
+
+
+[Server:server-two] 	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+
+
+
+
+[Server:server-two] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+
+
+
+
+[Server:server-two] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+
+
+
+[Server:server-two] 	at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+[Server:server-two] Caused by: java.lang.NullPointerException
+
+
+
+
+[Server:server-two] 	at org.jboss.as.connector.services.driver.registry.DriverRegistryImpl.getInstalledDriver(DriverRegistryImpl.java:93)
+
+
+
+
+[Server:server-two] 	at org.jboss.as.connector.subsystems.datasources.AbstractDataSourceService$AS7DataSourceDeployer.deploy(AbstractDataSourceService.java:324)
+
+
+
+
+[Server:server-two] 	at org.jboss.as.connector.subsystems.datasources.AbstractDataSourceService.start(AbstractDataSourceService.java:135)
+
+
+
+
+[Server:server-two] 	... 5 more
+
+
+
+
+[Server:server-two] 
+
+
+
+
+[Server:server-one] 	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+
+
+
+
+[Server:server-one] 	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+
+
+
+
+[Server:server-one] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+
+
+
+
+[Server:server-one] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+
+
+
+[Server:server-one] 	at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+[Server:server-one] Caused by: java.lang.NullPointerException
+
+
+
+
+[Server:server-one] 	at org.jboss.as.connector.services.driver.registry.DriverRegistryImpl.getInstalledDriver(DriverRegistryImpl.java:93)
+
+
+
+
+[Server:server-one] 	at org.jboss.as.connector.subsystems.datasources.AbstractDataSourceService$AS7DataSourceDeployer.deploy(AbstractDataSourceService.java:324)
+
+
+
+
+[Server:server-one] 	at org.jboss.as.connector.subsystems.datasources.AbstractDataSourceService.start(AbstractDataSourceService.java:135)
+
+
+
+
+[Server:server-one] 	... 5 more
+
+
+
+
+

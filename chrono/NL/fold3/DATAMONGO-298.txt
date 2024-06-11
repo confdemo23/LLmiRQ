@@ -1,0 +1,3 @@
+Spring custom converters do not work for subclasses of java.lang.Number
+The detail description can be found in here
+http://forum.springsource.org/showthread.php?115419-Custom-convertor-from-a-non-primitive-class-to-Integer

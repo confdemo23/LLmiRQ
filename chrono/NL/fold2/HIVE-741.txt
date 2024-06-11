@@ -1,0 +1,18 @@
+NULL is not handled correctly in join
+With the following data in table input4_cb:
+Key        Value
+------       --------
+NULL     325
+18          NULL
+The following query:
+
+
+
+select * from input4_cb a join input4_cb b on a.key = b.value;
+
+
+
+returns the following result:
+NULL    325    18   NULL
+The correct result should be empty set.
+When &amp;apos;null&amp;apos; is replaced by &amp;apos;&amp;apos; it works.

@@ -1,0 +1,18 @@
+Partial/Conditional Validation
+I am working with SWF 2.0 and Spring MVC and I&amp;apos;m facing a problem when I have to conditionally validate a subset of fields of my model object depending on the transition that triggered validation. That is, if the user clicked on button A, then transition T1 is triggered and a particular subset of the model object fields have to be validated. But if the user clicked on button B, then T2 is triggered and then I have to validate a different subset of fields.
+I am aware of 3 ways of performing programmatic validation, namely:
+1) Implementing org.springframework.validation.Validator
+public void validate(Object obj, Errors errors)
+2) Implementing a model validate method
+public void validate$
+{state}(MessageContext context)
+
+3) Create a class that defines a public method with the name validate${state}
+, where state is the id of your view-state
+public void validate$
+{state}
+(yourModelObject, MessageContext context)
+The problem is that none of these 3 ways let me figure out which transition triggered the validation and thus I am not able to determine which subset of fields I have to validate.
+*************
+Answer to this post by Keith Donald:
+Interesting use case. Yes, this is currently not supported, though we can certainly support it by allowing the id of the user event that occurred to be an argument to the validation method. Would you mind creating a New Feature JIRA to track this? It&amp;apos;s a minor new feature, so we can look at introducing it in a maintenance revision (most likely 2.0.3, as 2.0.2 is about to go out).

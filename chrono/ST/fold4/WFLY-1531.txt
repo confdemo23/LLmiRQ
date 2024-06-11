@@ -1,0 +1,181 @@
+NullPointerException in InfinispanRegionFactory.applyConfiguration
+An intermittent test failure on TeamCity has shown a NPE in the logs:
+
+
+
+
+
+
+06:53:52,011 ERROR [org.jboss.msc.service.fail] (ServerService Thread Pool -- 56) MSC000001: Failed to start service jboss.persistenceunit."stateful.war#mypc": org.jboss.msc.service.StartException in service jboss.persistenceunit."stateful.war#mypc": org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.spi.CacheImplementor]
+
+
+
+
+    at org.jboss.as.jpa.service.PersistenceUnitServiceImpl$1.run(PersistenceUnitServiceImpl.java:112) [wildfly-jpa-8.0.0.Alpha2-SNAPSHOT.jar:8.0.0.Alpha2-SNAPSHOT]
+
+
+
+
+    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_15]
+
+
+
+
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_15]
+
+
+
+
+    at java.lang.Thread.run(Thread.java:722) [rt.jar:1.7.0_15]
+
+
+
+
+    at org.jboss.threads.JBossThread.run(JBossThread.java:122) [jboss-threads-2.1.0.Final.jar:2.1.0.Final]
+
+
+
+
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.spi.CacheImplementor]
+
+
+
+
+    at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:186)
+
+
+
+
+    at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:150)
+
+
+
+
+    at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:131)
+
+
+
+
+    at org.hibernate.internal.SessionFactoryImpl.&lt;init&gt;(SessionFactoryImpl.java:270)
+
+
+
+
+    at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1816)
+
+
+
+
+    at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:844)
+
+
+
+
+    at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:836)
+
+
+
+
+    at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.withTccl(ClassLoaderServiceImpl.java:368)
+
+
+
+
+    at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:835)
+
+
+
+
+    at org.hibernate.jpa.HibernatePersistenceProvider.createContainerEntityManagerFactory(HibernatePersistenceProvider.java:142)
+
+
+
+
+    at org.jboss.as.jpa.service.PersistenceUnitServiceImpl.createContainerEntityManagerFactory(PersistenceUnitServiceImpl.java:214) [wildfly-jpa-8.0.0.Alpha2-SNAPSHOT.jar:8.0.0.Alpha2-SNAPSHOT]
+
+
+
+
+    at org.jboss.as.jpa.service.PersistenceUnitServiceImpl.access$800(PersistenceUnitServiceImpl.java:59) [wildfly-jpa-8.0.0.Alpha2-SNAPSHOT.jar:8.0.0.Alpha2-SNAPSHOT]
+
+
+
+
+    at org.jboss.as.jpa.service.PersistenceUnitServiceImpl$1.run(PersistenceUnitServiceImpl.java:108) [wildfly-jpa-8.0.0.Alpha2-SNAPSHOT.jar:8.0.0.Alpha2-SNAPSHOT]
+
+
+
+
+    ... 4 more
+
+
+
+
+Caused by: org.hibernate.cache.CacheException: Unable to start region factory
+
+
+
+
+    at org.hibernate.cache.infinispan.InfinispanRegionFactory.start(InfinispanRegionFactory.java:340)
+
+
+
+
+    at org.hibernate.internal.CacheImpl.&lt;init&gt;(CacheImpl.java:70)
+
+
+
+
+    at org.hibernate.engine.spi.CacheInitiator.initiateService(CacheInitiator.java:40)
+
+
+
+
+    at org.hibernate.engine.spi.CacheInitiator.initiateService(CacheInitiator.java:35)
+
+
+
+
+    at org.hibernate.service.internal.SessionFactoryServiceRegistryImpl.initiateService(SessionFactoryServiceRegistryImpl.java:91)
+
+
+
+
+    at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:176)
+
+
+
+
+    ... 16 more
+
+
+
+
+Caused by: java.lang.NullPointerException
+
+
+
+
+    at org.hibernate.cache.infinispan.InfinispanRegionFactory.applyConfiguration(InfinispanRegionFactory.java:574)
+
+
+
+
+    at org.hibernate.cache.infinispan.InfinispanRegionFactory.defineGenericDataTypeCacheConfigurations(InfinispanRegionFactory.java:512)
+
+
+
+
+    at org.hibernate.cache.infinispan.InfinispanRegionFactory.start(InfinispanRegionFactory.java:333)
+
+
+
+
+    ... 21 more
+
+
+
+
+
+
+Complete test run here teamcity.cafe-babe.org/viewLog.html?buildId=5251&amp;tab=buildResultsDiv&amp;buildTypeId=bt27#testNameId7970967843579505173

@@ -1,0 +1,24 @@
+BeanCurrentlyInCreationException when injecting async-event-queue to a Gemfire replicated region
+Getting BeanCurrentlyInCreationException when injecting a async-event-queue to a region such as the following.
+Error:
+org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name &amp;apos;async-event-queue&amp;apos;: Requested bean is currently in creation: Is there an unresolvable circular reference?
+Gemfire region configuration:
+&lt;gfe:async-event-queue id="async-event-queue" 
+    batch-size="10" 
+    persistent="true" 
+    disk-store-ref="gemfirePersistenceStore" 
+    maximum-queue-memory="50" 
+    parallel="true"
+    batch-conflation-enabled="true"
+    batch-time-interval="3"
+    dispatcher-threads="4"
+    disk-synchronous="true"
+    order-policy="KEY"&gt;
+        &lt;gfe:async-event-listener&gt;
+          &lt;bean class="some.AsyncCacheEventListener"/&gt;
+        &lt;/gfe:async-event-listener&gt;
+    &lt;/gfe:async-event-queue&gt;
+&lt;gfe:partitioned-region id="policy" persistent="true" disk-store-ref="gemfirePersistenceStore" disk-synchronous="true"
+recovery-delay="6000"&gt;
+&lt;gfe:async-event-queue-ref bean="async-event-queue"/&gt;
+&lt;/gfe:partitioned-region&gt;

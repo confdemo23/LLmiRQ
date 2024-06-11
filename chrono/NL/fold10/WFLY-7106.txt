@@ -1,0 +1,2 @@
+Reject distributed web sessions with missing attribute cache entries
+If we detect cache entry integrity constraint violations, then the session is invalid, and we should report it as not found and purge the orphaned entries.

@@ -1,0 +1,4 @@
+Eliminate possible security concerns in RS web UI&apos;s store file metrics
+More from static code analysis: it warns about the invoking of a separate command ("hbase hfile -s -f ...") as a possible security issue in hbase-server/src/main/resources/hbase-webapps/regionserver/storeFile.jsp.
+It looks to me like one cannot inject arbitrary shell script or even arbitrary arguments: ProcessBuilder makes that fairly safe and only allows the user to specify the argument that comes after -f. However that does potentially allow them to have the daemon&amp;apos;s user access files they shouldn&amp;apos;t be able to touch, albeit only for reading.
+To more explicitly eliminate any threats here, we should add some validation that the file is at least within HBase&amp;apos;s root directory and use the Java API directly instead of invoking a separate executable.

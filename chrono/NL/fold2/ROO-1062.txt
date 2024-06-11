@@ -1,0 +1,2 @@
+help command (instead of hint)
+This was brought up in a recent Java Posee discussion. I don&amp;apos;t necessarily like their coverage of ROO so far in Java Posee, but I do agree that help is a better command than hint.

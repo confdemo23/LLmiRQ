@@ -1,0 +1,4 @@
+camel-avro throws SAXParseException when used from spring or blueprint
+Getting this exception when using avro dataformat from spring:
+org.xml.sax.SAXParseException; lineNumber: 27; columnNumber: 88; cvc-complex-type.3.2.2: Attribute &amp;apos;instanceClass&amp;apos; is not allowed to appear in element &amp;apos;avro&amp;apos;.
+Don&amp;apos;t think this has ever worked from spring.

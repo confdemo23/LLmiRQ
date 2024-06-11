@@ -1,0 +1,3 @@
+Enable Columnar Pushdown for RC/ORC File for HCatLoader
+This initially enabled by HIVE-5193. However, HIVE-10752 reverted it since there is issue in original implementation.
+We shall fix the issue an reenable it.

@@ -1,0 +1,2 @@
+QueryString parameters not honored when redirecting
+See forum reference for details.

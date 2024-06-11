@@ -1,0 +1,463 @@
+First HTTPS / SSL request after startup of Wildfly 8.0.0.Final is blocked for many seconds
+The first HTTPS / SSL request after startup of Wildfly 8.0.0.Final is blocked for many seconds.
+Please note that subsequent requests perform normally. HTTP requests also perform fine.
+We use curl to call a JAX-RS service (just in case this matters).
+My first thought was, that we had hit the following bug:
+https://issues.jboss.org/browse/XNIO-226?jql=
+However, I can also reproduce the problem with xnio-3.2.2.Final (which contains a fix for bug XNIO-226).
+So I inserted some logging statements in
+
+
+
+
+
+
+AbstractAcceptingSslChannel.java
+
+
+
+
+
+
+        System.out.println("calling createSSLEngine...");
+
+
+
+
+        long t1 = System.currentTimeMillis();
+
+
+
+
+        final SSLEngine engine = sslContext.createSSLEngine(JsseSslUtils.getHostNameNoResolve(peerAddress), peerAddress.getPort());
+
+
+
+
+        long t2 = System.currentTimeMillis();
+
+
+
+
+        long duration = t2 - t1;
+
+
+
+
+        System.out.println("createSSLEngine took "+duration+" ms. ");
+
+
+
+
+
+
+and in
+
+
+
+
+
+
+JsseSslConduitEngine.java
+
+
+
+
+
+
+                case NEED_TASK: {
+
+
+
+
+                    Runnable task;
+
+
+
+
+                    synchronized (engine) {
+
+
+
+
+                        // run the tasks needed for handshaking
+
+
+
+
+                        while ((task = engine.getDelegatedTask()) != null) {
+
+
+
+
+                            try {
+
+
+
+
+                                System.out.println("calling task.run() in handleHandshake...");
+
+
+
+
+                                long t1 = System.currentTimeMillis();
+
+
+
+
+                                task.run();
+
+
+
+
+                                long t2 = System.currentTimeMillis();
+
+
+
+
+                                long duration = t2 - t1;
+
+
+
+
+                                System.out.println("task.run() in handleHandshake took "+duration+" ms. ");
+
+
+
+
+                            } catch (Exception e) {
+
+
+
+
+                                throw new IOException(e);
+
+
+
+
+                            }
+
+
+
+
+                        }
+
+
+
+
+                    }
+
+
+
+
+                    // caller should try to wrap/unwrap again
+
+
+
+
+                    return true;
+
+
+
+
+                }
+
+
+
+
+
+
+I found out, that sslContext.createSSLEngine in AbstractAcceptingSslChannel.java is quite slow (468ms) but it is not the cause
+for the blocking request. Instead org.xnio.ssl.JsseSslConduitEngine.handleHandshake(JsseSslConduitEngine.java:512) needs
+95 seconds to return!!!
+Here is the relevant part from my log file:
+
+
+
+
+
+
+INFO ; 2014-04-11 18:29:52,115; [Controller Boot Thread              ]; JBAS015874: WildFly 8.0.0.Final "WildFly" started in 6477ms - Started 334 of 386 services (107 services are lazy, passive or on-demand); [org.jboss.as.server.BootstrapListener.done(BootstrapListener.java:93)]; ; 
+
+
+
+
+INFO ; 2014-04-11 18:30:05,566; [default I/O-3                       ]; calling createSSLEngine...
+
+
+
+
+; [org.jboss.stdio.AbstractLoggingWriter.write(AbstractLoggingWriter.java:71)]; ; 
+
+
+
+
+INFO ; 2014-04-11 18:30:06,035; [default I/O-3                       ]; createSSLEngine took 468 ms. 
+
+
+
+
+; [org.jboss.stdio.AbstractLoggingWriter.write(AbstractLoggingWriter.java:71)]; ; 
+
+
+
+
+INFO ; 2014-04-11 18:30:06,066; [default I/O-3                       ]; calling task.run() in handleHandshake...
+
+
+
+
+; [org.jboss.stdio.AbstractLoggingWriter.write(AbstractLoggingWriter.java:71)]; ; 
+
+
+
+
+INFO ; 2014-04-11 18:31:41,128; [default I/O-3                       ]; task.run() in handleHandshake took 95061 ms. 
+
+
+
+
+; [org.jboss.stdio.AbstractLoggingWriter.write(AbstractLoggingWriter.java:71)]; ; 
+
+
+
+
+INFO ; 2014-04-11 18:31:41,133; [default I/O-3                       ]; calling task.run() in handleHandshake...
+
+
+
+
+; [org.jboss.stdio.AbstractLoggingWriter.write(AbstractLoggingWriter.java:71)]; ; 
+
+
+
+
+INFO ; 2014-04-11 18:31:41,145; [default I/O-3                       ]; task.run() in handleHandshake took 10 ms. 
+
+
+
+
+; [org.jboss.stdio.AbstractLoggingWriter.write(AbstractLoggingWriter.java:71)]; ; 
+
+
+
+
+INFO ; 2014-04-11 18:31:41,573; [default task-1                      ]; SecurityFilter received request. ; [de.head.vetsone.rest_ifc.SecurityFilter.filter(SecurityFilter.java:62)]; ; 
+
+
+
+
+
+
+Using JConsole I could extract the full stacktrace:
+Name: default I/O-2
+State: RUNNABLE
+Total blocked: 0  Total waited: 2
+Stack trace: 
+
+
+
+
+
+
+java.math.BigInteger.oddModPow(BigInteger.java:2700)
+
+
+
+
+java.math.BigInteger.modPow(BigInteger.java:2443)
+
+
+
+
+java.math.BigInteger.passesMillerRabin(BigInteger.java:1019)
+
+
+
+
+java.math.BigInteger.primeToCertainty(BigInteger.java:875)
+
+
+
+
+java.math.BitSieve.retrieve(BitSieve.java:203)
+
+
+
+
+java.math.BigInteger.largePrime(BigInteger.java:744)
+
+
+
+
+java.math.BigInteger.&lt;init&gt;(BigInteger.java:650)
+
+
+
+
+org.bouncycastle.crypto.generators.DHParametersHelper.generateSafePrimes(Unknown Source)
+
+
+
+
+org.bouncycastle.crypto.generators.DHParametersGenerator.generateParameters(Unknown Source)
+
+
+
+
+org.bouncycastle.jce.provider.JDKKeyPairGenerator$DH.generateKeyPair(Unknown Source)
+
+
+
+
+sun.security.ssl.DHCrypt.generateDHPublicKeySpec(DHCrypt.java:225)
+
+
+
+
+sun.security.ssl.DHCrypt.&lt;init&gt;(DHCrypt.java:101)
+
+
+
+
+sun.security.ssl.ServerHandshaker.setupEphemeralDHKeys(ServerHandshaker.java:1350)
+
+
+
+
+sun.security.ssl.ServerHandshaker.trySetCipherSuite(ServerHandshaker.java:1194)
+
+
+
+
+sun.security.ssl.ServerHandshaker.chooseCipherSuite(ServerHandshaker.java:1002)
+
+
+
+
+sun.security.ssl.ServerHandshaker.clientHello(ServerHandshaker.java:724)
+
+
+
+
+sun.security.ssl.ServerHandshaker.processMessage(ServerHandshaker.java:213)
+
+
+
+
+sun.security.ssl.Handshaker.processLoop(Handshaker.java:925)
+
+
+
+
+sun.security.ssl.Handshaker$1.run(Handshaker.java:865)
+
+
+
+
+sun.security.ssl.Handshaker$1.run(Handshaker.java:862)
+
+
+
+
+java.security.AccessController.doPrivileged(Native Method)
+
+
+
+
+sun.security.ssl.Handshaker$DelegatedTask.run(Handshaker.java:1302)
+
+
+
+
+   - locked sun.security.ssl.SSLEngineImpl@3f3d2d55
+
+
+
+
+org.xnio.ssl.JsseSslConduitEngine.handleHandshake(JsseSslConduitEngine.java:512)
+
+
+
+
+   - locked sun.security.ssl.SSLEngineImpl@3f3d2d55
+
+
+
+
+org.xnio.ssl.JsseSslConduitEngine.unwrap(JsseSslConduitEngine.java:595)
+
+
+
+
+org.xnio.ssl.JsseSslConduitEngine.unwrap(JsseSslConduitEngine.java:543)
+
+
+
+
+org.xnio.ssl.JsseSslStreamSourceConduit.read(JsseSslStreamSourceConduit.java:89)
+
+
+
+
+org.xnio.conduits.ConduitStreamSourceChannel.read(ConduitStreamSourceChannel.java:127)
+
+
+
+
+io.undertow.server.protocol.http.HttpReadListener.handleEvent(HttpReadListener.java:111)
+
+
+
+
+io.undertow.server.protocol.http.HttpOpenListener.handleEvent(HttpOpenListener.java:69)
+
+
+
+
+io.undertow.server.protocol.http.HttpOpenListener.handleEvent(HttpOpenListener.java:38)
+
+
+
+
+org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92)
+
+
+
+
+org.xnio.ChannelListeners$10.handleEvent(ChannelListeners.java:291)
+
+
+
+
+org.xnio.ChannelListeners$10.handleEvent(ChannelListeners.java:286)
+
+
+
+
+org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92)
+
+
+
+
+org.xnio.ChannelListeners$DelegatingChannelListener.handleEvent(ChannelListeners.java:1092)
+
+
+
+
+org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92)
+
+
+
+
+org.xnio.nio.NioTcpServerHandle.handleReady(NioTcpServerHandle.java:53)
+
+
+
+
+org.xnio.nio.WorkerThread.run(WorkerThread.java:531)
+
+
+
+
+

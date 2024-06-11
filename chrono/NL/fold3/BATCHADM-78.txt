@@ -1,0 +1,3 @@
+period (&apos;.&apos;), in jobName seems to confuse SBA UI when displaying Job Instances.
+After an execution of mycom.myJob  I can see the job in the Jobs Tab. If I click on that job I get &amp;apos;There are no job instances for this job.&amp;apos;  on the Job Instances Page
+If I run the  same job  but using &amp;apos;-&amp;apos;  instead of &amp;apos;.&amp;apos; in the jobName ie mycom-myJob  then I can see the job Instances as expected.  

@@ -1,0 +1,4 @@
+default writer implementations need public setter for name
+The default spring batch writer implementations need a public setter for the name. The name is used to prefix the execution context keys. In spring batch 2.1.x the setter for the name was available in FlatFileItemWriter, StaxEventItemWriter, MultiResourceItemWriter, ... because they extended from ExecutionContextUserSupport. In 2.2.x they extend from ItemStreamSupport where the setExecutionContextName method is protected.
+This means that currently in spring batch 2.2.x it&amp;apos;s no longer possible to write to multiple StaxEventItemWriters in the same step, because they would share the same execution context.
+edit: FlatFileItemWriter has a setName() method. StaxEventItemWriter and MultiResourceItemWriter don&amp;apos;t.

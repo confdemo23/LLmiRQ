@@ -1,0 +1,2 @@
+Adding <debug/> causes NoSuchMethodException when FilterChainProxy&apos;s relies on beans that have Autowired Constructors
+An example would be if a configuration used &lt;debug/&gt; and a custom AuthenticationProvider or UserDetailsService which had an Autowired constructor one might get an exception similar to NoSuchMethodException MyCustomAuthenticationProvider.&lt;init&gt;()

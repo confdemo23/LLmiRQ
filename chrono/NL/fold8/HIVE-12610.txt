@@ -1,0 +1,2 @@
+Hybrid Grace Hash Join should fail task faster if processing first batch fails, instead of continuing processing the rest
+During processing the spilled partitions, if there&amp;apos;s any fatal error, such as Kryo exception, then we should exit early, instead of moving on to process the rest of spilled partitions.

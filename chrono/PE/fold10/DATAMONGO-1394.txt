@@ -1,0 +1,174 @@
+References not handled correctly when using QueryDSL
+Trying to use eq on reference&amp;apos;s $id, with no luck. 
+This is an example code:
+
+
+
+
+
+
+Book.java
+
+
+
+
+
+
+public class Book {
+
+
+
+
+     @DBRef
+
+
+
+
+     private Library library;
+
+
+
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+Library.java
+
+
+
+
+
+
+public class Library {
+
+
+
+
+     @Id
+
+
+
+
+     private String id;
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+BookService.java
+
+
+
+
+
+
+String library_id = [SOME_ID];
+
+
+
+
+QBook book = QBook.book;
+
+
+
+
+BooleanExpression exp = book.library.id.eq(library_id);
+
+
+
+
+    
+
+
+
+
+List&lt;Book&gt; list = bookRepository.findAll(exp);  // EMPTY
+
+
+
+
+
+
+Doing:
+
+
+
+
+
+
+BookService.java
+
+
+
+
+
+
+Library library = libraryRepository.findById(library_id);
+
+
+
+
+QBook book = QBook.book;
+
+
+
+
+BooleanExpression exp = book.library.eq(library);
+
+
+
+
+
+
+
+
+
+List&lt;Book&gt; list = bookRepository.findAll(exp);  // EXPECTED ITEMS
+
+
+
+
+
+
+or:
+
+
+
+
+
+
+BookService.java
+
+
+
+
+
+
+List&lt;Book&gt; list = bookRepository.findByLibraryId(library_id) // EXPECTED ITEMS
+
+
+
+
+

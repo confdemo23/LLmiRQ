@@ -1,0 +1,92 @@
+Missing param-name in a web.xml  causes NullPointerException during deployment
+
+While deploying a WAR, If the web.xml file is used which has context &lt;param-value&gt; defined, However it has missing &lt;param-name&gt; then it causes NullPointerException as following:
+
+
+
+
+
+
+
+00:12:09,583 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0027: Starting deployment of "ContextParamNullDemo.war" (runtime-name: "ContextParamNullDemo.war")
+
+
+
+
+00:12:09,591 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-7) MSC000001: Failed to start service jboss.deployment.unit."ContextParamNullDemo.war".PARSE: org.jboss.msc.service.StartException in service jboss.deployment.unit."ContextParamNullDemo.war".PARSE: WFLYSRV0153: Failed to process phase PARSE of deployment "ContextParamNullDemo.war"
+
+
+
+
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:163) [wildfly-server-9.0.0.Alpha1-SNAPSHOT.jar:9.0.0.Alpha1-SNAPSHOT]
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948) [jboss-msc-1.2.2.Final.jar:1.2.2.Final]
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881) [jboss-msc-1.2.2.Final.jar:1.2.2.Final]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_51]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_51]
+
+
+
+
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_51]
+
+
+
+
+Caused by: java.lang.NullPointerException
+
+
+
+
+	at org.jboss.as.jsf.deployment.JSFVersionProcessor.deploy(JSFVersionProcessor.java:91)
+
+
+
+
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156) [wildfly-server-9.0.0.Alpha1-SNAPSHOT.jar:9.0.0.Alpha1-SNAPSHOT]
+
+
+
+
+	... 5 more
+
+
+
+
+
+
+
+
+
+00:12:09,598 ERROR [org.jboss.as.controller.management-operation] (DeploymentScanner-threads - 1) WFLYCTL0013: Operation ("deploy") failed - address: ([("deployment" =&gt; "ContextParamNullDemo.war")]) - failure description: {"WFLYCTL0080: Failed services" =&gt; {"jboss.deployment.unit.\"ContextParamNullDemo.war\".PARSE" =&gt; "org.jboss.msc.service.StartException in service jboss.deployment.unit.\"ContextParamNullDemo.war\".PARSE: WFLYSRV0153: Failed to process phase PARSE of deployment \"ContextParamNullDemo.war\"
+
+
+
+
+    Caused by: java.lang.NullPointerException"}}
+
+
+
+
+
+
+
+
+
+
+

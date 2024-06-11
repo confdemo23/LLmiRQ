@@ -1,0 +1,15 @@
+Web deployment metrics missing
+The following web deployment metrics are missing from AS7 when compared to AS5 exposed metrics:
+Clustered - True if this web application context is clustered
+Virtual Host - the virtual host with which this context is associated
+Response Time - the minimum, maximum, and average response times for requests serviced by this webapp
+Currently Active Sessions - the number of sessions that are currently active for this WAR
+Maximum Active Sessions	- the maximum number of sessions that have been active for this WAR
+Created Sessions - the number of sessions created for this WAR
+Created Sessions per Minute - the number of sessions created for this WAR
+Expired Sessions - the number of expired sessions for this WAR
+Expired Sessions per Minute - the number of expired sessions for this WAR
+Rejected Sessions - the number of sessions rejected for this WAR
+Rejected Sessions per Minute - the number of sessions rejected for this WAR
+Average Session Alive Time - the average alive time of sessions for this WAR
+Max Session Alive Time - the maximum alive time of sessions for this WAR

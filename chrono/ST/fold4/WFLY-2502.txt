@@ -1,0 +1,89 @@
+Naming context read-only during ResourceAdapter#stop()
+When the ResourceAdapter#stop() method is invoked on an annotation based 1.6 JCR resource adapter the naming context is read only. Unbinding values results in the following exception:
+
+
+
+
+
+
+09:56:31,908 WARN  [org.jboss.msc.service.fail] (MSC service thread 1-15) MSC000004: Failure during stop of service jboss.ra.deployer."rar-exposure-ear-1.0-SNAPSHOT.ear#rar-exposure-rar-1.0-SNAPSHOT": java.lang.UnsupportedOperationException: JBAS011859: Naming context is read-only
+
+
+
+
+	at org.jboss.as.naming.WritableServiceBasedNamingStore.requireOwner(WritableServiceBasedNamingStore.java:147)
+
+
+
+
+	at org.jboss.as.naming.WritableServiceBasedNamingStore.unbind(WritableServiceBasedNamingStore.java:113)
+
+
+
+
+	at org.jboss.as.naming.NamingContext.unbind(NamingContext.java:291)
+
+
+
+
+	at org.jboss.as.naming.InitialContext.unbind(InitialContext.java:167)
+
+
+
+
+	at org.jboss.as.naming.NamingContext.unbind(NamingContext.java:299)
+
+
+
+
+	at javax.naming.InitialContext.unbind(InitialContext.java:441) [rt.jar:1.8.0-ea]
+
+
+
+
+	at com.github.marschall.eeclassloadingissues.rarexposure.ra.ExposureAdapter.stop(ExposureAdapter.java:32)
+
+
+
+
+	at org.jboss.as.connector.services.resourceadapters.deployment.AbstractResourceAdapterDeploymentService.unregisterAll(AbstractResourceAdapterDeploymentService.java:182)
+
+
+
+
+	at org.jboss.as.connector.services.resourceadapters.deployment.ResourceAdapterDeploymentService.unregisterAll(ResourceAdapterDeploymentService.java:158)
+
+
+
+
+	at org.jboss.as.connector.services.resourceadapters.deployment.ResourceAdapterDeploymentService.stop(ResourceAdapterDeploymentService.java:149)
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StopTask.stopService(ServiceControllerImpl.java:2052) [jboss-msc-1.2.0.Beta2.jar:1.2.0.Beta2]
+
+
+
+
+	at org.jboss.msc.service.ServiceControllerImpl$StopTask.run(ServiceControllerImpl.java:2013) [jboss-msc-1.2.0.Beta2.jar:1.2.0.Beta2]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [rt.jar:1.8.0-ea]
+
+
+
+
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [rt.jar:1.8.0-ea]
+
+
+
+
+	at java.lang.Thread.run(Thread.java:724) [rt.jar:1.8.0-ea]
+
+
+
+
+

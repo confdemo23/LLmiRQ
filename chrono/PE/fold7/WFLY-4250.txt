@@ -1,0 +1,24 @@
+Manually created CDI producer methods in the Extension are not injected
+Issue description:
+During migration from Wildfly 8.1 to 8.2 (Weld 2.1.2.Final -&gt; 2.2.6.Final) in Infinispan we discovered a problem with injecting beans created programmatically in Infinispan-cdi integration module. The problem appeared in GreetingServiceIT and GreetingCacheManagerIT test. Both those tests use the following modules integrated into Wildfly:
+
+org.infinispan.cdi (slot: ispn-7.1, which has dependency to "org.infinispan" slot="ispn-7.1" export="true")
+org.infinispan.jcache (slot: ispn-7.1, which has dependency to "org.infinispan" slot="ispn-7.1" and "org.infinispan.cdi" slot="ispn-7.1" services="import")
+
+Infinispan&amp;apos;s CDI Extension invokes embeddedExtension.registerCacheBeans(event, beanManager), which registers custom Cache and AdvancedCache producer beans. Those beans are being successfully added to BeanManager but are never chosen for injection. All tests fail because of unsatisfied dependencies for Cache&lt;CacheKey, String&gt; with qualifiers @GreetingCache.
+Steps to reproduce:
+
+Download and unzip https://github.com/slaskawi/infinispan/archive/upgrade_to_wf_8_2_failed_test.zip
+Run ./build.sh clean install -pl cdi,as-modules/embedded,integrationtests/as-integration-embedded -am -DskipTests
+Modify Arquillian xml if breakpoint is needed ./integrationtests/as-integration-embedded/src/test/resources/arquillian.xml
+Run test (using IDE or Maven: ./build.sh test -pl integrationtests/as-integration-embedded -Dtest=GreetingServiceIT)
+
+Finding during debugging:
+At first I would suggest creating conditional breakpoints:
+
+org.jboss.weld.bootstrap.Validator line 370 (WF 8.2) or 366 (WF 8.1), condition "[BackedAnnotatedField] @Inject @GreetingCache private org.infinispan.test.integration.as.cdi.GreetingServiceIT.greetingCache".equals(ij.toString()) - this will stop debugger when validating injection points for {GreetingCache.
+org.jboss.weld.resolution.TypeSafeResolver.ResolvableToBeanCollection line 51, condition from.toString().startsWith("Types: [org.infinispan.Cache&lt;javax.cache.annotation.CacheKey, java.lang.String&gt;]") || from.toString().contains("org.infinispan.Cache") - this stops debugger on loading Cache producer methods (created in Infinispan CDI Extension) to resolved Loading Cache in Wildfly 8.1.
+
+During debugging session we discovered that the beans from Infinispan&amp;apos;s CDI Extension are created but never used for injection. This is because beanManager.getBeans(ij) in Validator.java always return empty list. In Wildfly 8.1 beans are properly resolved using ResolvableToBeanCollection#load method, but for some reason it never happens in Wildfly 8.2, because those beans are already preset in resolved Loading Cache with empty collection value. Unfortunately we couldn&amp;apos;t find answer why.
+Workaround:
+In order to fix CDI Producer Beans accessibility we need to add a new dependency to our test: META-INF/MANIFEST.MF: Dependencies: org.infinispan:ispn-7.1.

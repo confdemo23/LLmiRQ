@@ -1,0 +1,2 @@
+Container Doesn&apos;t Stop Consuming
+When the container is stopped, it should stop consuming from the queue, while allowing the prefetched messages to be processed (until the shutdown timeout).

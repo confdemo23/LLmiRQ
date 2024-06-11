@@ -1,0 +1,4 @@
+LockModeType.PESSIMISTIC_WRITE reported as NONE in the logs
+The method getLockModeAsString reports lock mode  
+LockModeType.PESSIMISTIC_WRITE as "none".
+This of course is a cosmetic issue, but highly misleading, considering PESSIMISTIC_WRITE is pretty much on the opposite end of the spectrum from NONE. Ie. looking at the logs it&amp;apos;s not possible to know if there was the strictest possible lock or no lock at all.

@@ -1,0 +1,52 @@
+Pagination broken after introduction of the support for top/first
+When using MongoRepository and doing a query with pagination support, something like:
+
+
+
+
+
+
+@Query(...)
+
+
+
+
+Page&lt;Event&gt; findByWeekday(int weekday, Pageable pageable);
+
+
+
+
+
+
+Only the first page is displayed (when page=0 in the Pageable object), all other pages return empty result.
+The logic in org.springframework.data.mongodb.repository.query.AbstractMongoQuery$PagedExecution&amp;apos;s execute() method seems having an error.
+When I change the line
+
+
+
+
+
+
+  boolean pageableOutOfScope = pageable.getOffset() &gt; query.getLimit();
+
+
+
+
+
+
+to
+
+
+
+
+
+
+  boolean pageableOutOfScope = pageable.getOffset() &gt; count;
+
+
+
+
+
+
+everything seems to work fine.
+(Note that query.getLimit() defaults to 0, in that case pageableOutOfScope is always true when the page number is greather than 0, and subsequently the method returns an empty list, which is what this issue about)

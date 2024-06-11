@@ -1,0 +1,2 @@
+RegionMover uses hardcoded, Unix-style tmp folder - breaks Windows
+The issue exists in all branches.

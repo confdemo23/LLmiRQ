@@ -1,0 +1,1 @@
+HIVE-12075 didn&apos;t update operation type for plugins

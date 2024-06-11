@@ -1,0 +1,8 @@
+Throttle log messages for missing peer cluster
+If the replication peer is not available, then RS logs get flooded by messages similar to the following:
+2013-07-19 11:55:27,964 INFO org.apache.hadoop.hbase.replication.regionserver.ReplicationSource: Getting 0 rs from peer cluster # Indexer_hbaseIndexer
+2013-07-19 11:55:28,670 INFO org.apache.hadoop.hbase.replication.regionserver.ReplicationSource: Getting 0 rs from peer cluster # Indexer_hbaseIndexer
+2013-07-19 11:55:28,966 INFO org.apache.hadoop.hbase.replication.regionserver.ReplicationSource: Getting 0 rs from peer cluster # Indexer_hbaseIndexer
+2013-07-19 11:55:29,672 INFO org.apache.hadoop.hbase.replication.regionserver.ReplicationSource: Getting 0 rs from peer cluster # Indexer_hbaseIndexer
+2013-07-19 11:55:29,969 INFO org.apache.hadoop.hbase.replication.regionserver.ReplicationSource: Getting 0 rs from peer cluster # Indexer_hbaseIndexer
+It would be better to change the log level to DEBUG in order to avoid these messages showing up in the default case.

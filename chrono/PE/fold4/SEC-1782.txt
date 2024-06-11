@@ -1,0 +1,8 @@
+Incorrect Javadoc in LdapAuthenticationProvider
+This page:
+http://static.springsource.org/spring-security/site/docs/3.0.x/apidocs/org/springframework/security/ldap/authentication/LdapAuthenticationProvider.html
+Has instructions for wiring up a BindAuthenticator. But the package name of the BindAuthenticator has changed recently. So the package name is now wrong.
+In the text BindAuthenticator is here:
+org.springframework.security.authentication.ldap.authenticator.BindAuthenticator
+But in the latest version it&amp;apos;s actually here:
+org.springframework.security.ldap.authentication.BindAuthenticator

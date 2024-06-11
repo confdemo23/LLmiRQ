@@ -1,0 +1,2 @@
+BucketingSortingReduceSinkOptimizer may still throw IOB exception for duplicate columns
+HIVE-12332 didn&amp;apos;t fix the issue completely.

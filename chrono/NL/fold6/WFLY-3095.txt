@@ -1,0 +1,5 @@
+Weld subsystem exposes way too much dependancies to user deployment
+module org.jboss.as.weld should not be added as dependency to user deployment.
+It has way too much dependencies and some of them export their dependencies which than end up in user deployment.
+We should probably have extra module for stuff that is exposed to deployment.
+Also lots of dependencies that weld subsystem has should be optional as we shouldn&amp;apos;t be required to have dependency to almost every single subsystem we have as required.

@@ -1,0 +1,3 @@
+the jars in hive.aux.jar.paths are not added to session classpath 
+The jars in hive.reloadable.aux.jar.paths are being added to HiveServer2 classpath while hive.aux.jar.paths is not. 
+Then the local task like &amp;apos;select udf from src&amp;apos; will fail to find needed udf class.

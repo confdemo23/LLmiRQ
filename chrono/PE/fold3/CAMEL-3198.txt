@@ -1,0 +1,10 @@
+ DefaultCamelContext throws NPE in getRoute(String id)
+ DefaultCamelContext throws NPE in getRoute(String id) if no routes are deployed.
+This happens because the "route LinkedHashSet" is not initialized.
+Fix:
+ don&amp;apos;t do Lazy init of route  or add this to getRoute(String id):
+ if (routes == null) 
+{
+	routes = new LinkedHashSet&lt;Route&gt;();
+ }
+ 

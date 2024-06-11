@@ -1,0 +1,3 @@
+Support non-MR fetching for simple queries with select/limit/filter operations only
+It&amp;apos;s trivial but frequently asked by end-users. Currently, select queries with simple conditions or limit should run MR job which takes some time especially for big tables, making the people irritated.
+For that kind of simple queries, using fetch task would make them happy.

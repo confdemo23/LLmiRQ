@@ -1,0 +1,3 @@
+InterceptSendToEndpoint should check for if stop DSL has been used
+See nabble
+http://camel.465427.n5.nabble.com/InterceptSendToEndpoint-Http-Component-tp3296620p3296620.html

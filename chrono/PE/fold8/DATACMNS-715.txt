@@ -1,0 +1,75 @@
+@Transactional customizations not applied correctly on redeclared methods
+
+
+
+
+
+
+public interface RepositoryExample extends JpaRepository&lt;User, String&gt;{
+
+
+
+
+	
+
+
+
+
+        // This Query&amp;apos;s timeout just works 
+
+
+
+
+	@Query("FROM User")
+
+
+
+
+	@Transactional(timeout = 10,propagation = Propagation.REQUIRED)
+
+
+
+
+	public List&lt;User&gt; findAll2();
+
+
+
+
+	
+
+
+
+
+        //The query below - timeout doesn&amp;apos;t work , the @Transactional timeout is not being applied
+
+
+
+
+        // Although in the documentation it shows it suppose to work exactly as below 
+
+
+
+
+        @Override	
+
+
+
+
+	@Transactional(timeout = 10,propagation = Propagation.REQUIRED)
+
+
+
+
+	public List&lt;User&gt; findAll();
+
+
+
+
+}
+
+
+
+
+
+
+Recommendation: In order to debug it put breakpoint in  EntityManagerFactoryUtils.applyTransactionTimeout

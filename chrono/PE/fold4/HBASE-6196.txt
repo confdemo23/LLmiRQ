@@ -1,0 +1,2 @@
+MR testcases TestImportExport does not run in Trunk with hadoop2.0
+TEstImportExport test cases does not run in trunk when compiled with hadoop 2.0

@@ -1,0 +1,2 @@
+The <cq-listener-container> element is missing the &apos;error-handler&apos; attribute.
+The SDG XSD &lt;cq-listener-container element is missing the error-handler attribute, thus making it impossible to set a Spring ErrorHandler on CQ execution failures and errors.

@@ -1,0 +1,10 @@
+RabbitAdmin warnings for autodeclaring anonymous queue
+As I see it - these warnings just waste some disk space.
+
+Auto-declaring an exclusive Queue ...
+Auto-declaring an auto-delete Queue ...
+Auto-declaring a non-durable Queue ...
+
+1. if queue is anonymous then always 3 warnings are logged, makes no sense.
+2. it makes no sense logging this in production, only as a hint during development
+If these warnings are considered useful, then I would suggest adding a property "boolean enableHints", so I can disable them on production.

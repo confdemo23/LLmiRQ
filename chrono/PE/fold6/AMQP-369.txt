@@ -1,0 +1,1 @@
+AmqpAdmin <-> Declarable classes tangle

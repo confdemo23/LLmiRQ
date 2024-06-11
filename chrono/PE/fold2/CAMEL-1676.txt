@@ -1,0 +1,8 @@
+Endpoint.getParticipant should return Endpoint.getUser() if participant is null.
+The participant should default to the user  if the participant is null.
+
+    public String getParticipant() {
+        return participant != null ? participant : getUser();
+    }
+
+

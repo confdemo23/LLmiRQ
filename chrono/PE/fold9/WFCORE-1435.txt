@@ -1,0 +1,199 @@
+Users with low privileges can see logged operations they shouldn&apos;t be able to see
+If a SuperUser performs for example this:
+
+
+
+
+
+
+/core-service=management/access=audit/in-memory-handler=y:add   
+
+
+
+
+/core-service=management/access=audit/in-memory-handler=y:write-attribute(name=max-history,value=50)
+
+
+
+
+
+
+then a Monitor user shouldn&amp;apos;t be able to see this in the configuration change log (as decided in EAP7-89), because he doesn&amp;apos;t even have the permission to "read" the manipulated resource.. But actually he can see it:
+
+
+
+
+
+
+/core-service=management/service=configuration-changes:list-changes
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "success",
+
+
+
+
+    "result" =&gt; [
+
+
+
+
+        {
+
+
+
+
+            "operation-date" =&gt; "2016-03-15T08:40:25.807Z",
+
+
+
+
+            "access-mechanism" =&gt; "NATIVE",
+
+
+
+
+            "remote-address" =&gt; "127.0.0.1/127.0.0.1",
+
+
+
+
+            "outcome" =&gt; "success",
+
+
+
+
+            "operations" =&gt; [{
+
+
+
+
+                "operation" =&gt; "write-attribute",
+
+
+
+
+                "address" =&gt; [
+
+
+
+
+                    ("core-service" =&gt; "management"),
+
+
+
+
+                    ("access" =&gt; "audit"),
+
+
+
+
+                    ("in-memory-handler" =&gt; "y")
+
+
+
+
+                ]
+
+
+
+
+            }]
+
+
+
+
+        },
+
+
+
+
+        {
+
+
+
+
+            "operation-date" =&gt; "2016-03-15T08:40:25.809Z",
+
+
+
+
+            "access-mechanism" =&gt; "NATIVE",
+
+
+
+
+            "remote-address" =&gt; "127.0.0.1/127.0.0.1",
+
+
+
+
+            "outcome" =&gt; "success",
+
+
+
+
+            "operations" =&gt; [{
+
+
+
+
+                "operation" =&gt; "add",
+
+
+
+
+                "address" =&gt; [
+
+
+
+
+                    ("core-service" =&gt; "management"),
+
+
+
+
+                    ("access" =&gt; "audit"),
+
+
+
+
+                    ("in-memory-handler" =&gt; "y")
+
+
+
+
+                ]
+
+
+
+
+            }]
+
+
+
+
+        }
+
+
+
+
+    ]
+
+
+
+
+}
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+Unable to drop a default partition with "int" type
+
+CREATE TABLE test (col1 string) PARTITIONED BY (p1 int) ROW FORMAT DELIMITED FIELDS TERMINATED BY &amp;apos;\001&amp;apos; STORED AS TEXTFILE;
+
+INSERT OVERWRITE TABLE test PARTITION (p1) SELECT code, IF(salary &gt; 60000, 100, null) as p1 FROM default.sample_07;
+
+hive&gt; SHOW PARTITIONS test;
+
+OK
+
+p1=100
+
+p1=__HIVE_DEFAULT_PARTITION__
+
+Time taken: 0.124 seconds, Fetched: 2 row(s)
+
+
+
+hive&gt; ALTER TABLE test DROP partition (p1 = &amp;apos;__HIVE_DEFAULT_PARTITION__&amp;apos;);
+
+FAILED: SemanticException Unexpected unknown partitions for (p1 = null)
+
+
+
+The default partition name &amp;apos;_HIVE_DEFAULT_PARTITION_&amp;apos; cannot be deleted.

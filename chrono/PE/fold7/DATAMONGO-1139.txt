@@ -1,0 +1,2 @@
+MongoQueryCreator must not create $nearSphere query for neutral Distance
+MongoQueryCreator.from() compares the Distance&amp;apos;s metric against null which will never result in true as {8Distance}} returns Metric.NEUTRAl by default.

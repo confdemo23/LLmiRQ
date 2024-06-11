@@ -1,0 +1,2 @@
+Some threads are not interrupted when Workers did not finish before shutdownTimeout
+Please see http://stackoverflow.com/questions/30124537/spring-amqp-with-rabbitmq-does-not-shutdown-properly for details

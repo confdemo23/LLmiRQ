@@ -1,0 +1,2 @@
+Remove yarn dependencies on -common and -client
+They aren&amp;apos;t really needed since MR can&amp;apos;t be used without server.

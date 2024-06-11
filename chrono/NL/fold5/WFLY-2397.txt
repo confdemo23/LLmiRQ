@@ -1,0 +1,2 @@
+When using weld resource injection happens twice
+When using CDI to inject non-EJB components such as Servlets it appears both Weld and WF are performing resource injections.

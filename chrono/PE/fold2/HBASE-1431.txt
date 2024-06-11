@@ -1,0 +1,2 @@
+NPE in HTable.checkAndSave when row doesn&apos;t exist
+To reproduce, just invoke htable.checkAndSave(batchUpdate, expectedValues, lock) using a batchUpdate of a row that doesn&amp;apos;t exist. 

@@ -1,0 +1,3 @@
+Spring Data REST throws NPE when exposing JSON Schema for a Groovy domai object
+While looking up the JSON Schema for a Groovy domain object-based repository, Spring Data REST threw an NPE. It was trying to parse Groovy&amp;apos;s "metaClass" attribute, which doesn&amp;apos;t exist in a pure Java-based domain object definition.
+Need to add groovy-all as a test dependency and then craft some Groovy-based test cases so we can then patch whatever is needed inside PersistentEntityToJsonSchemaConverter to make this work.

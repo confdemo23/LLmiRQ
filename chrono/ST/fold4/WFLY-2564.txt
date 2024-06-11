@@ -1,0 +1,19 @@
+No secure listeners defined.
+Normally the following in web.xml
+    &lt;security-constraint&gt;  
+            &lt;web-resource-collection&gt;  
+                &lt;web-resource-name&gt;webapp&lt;/web-resource-name&gt;  
+                &lt;url-pattern&gt;/*&lt;/url-pattern&gt;  
+            &lt;/web-resource-collection&gt;  
+            &lt;user-data-constraint&gt;  
+                &lt;transport-guarantee&gt;CONFIDENTIAL&lt;/transport-guarantee&gt;  
+            &lt;/user-data-constraint&gt;  
+    &lt;/security-constraint&gt;  
+would make your web application to redirect from http to https. This is the case of JBoss EAP 6.1. Just tried out WIldFly. Undertow gives me the following instead (via AJP listener):
+    07:57:57,233 ERROR [io.undertow.request] (default task-6) UT005023: Exception handling request to /dss/index.jsf: java.lang.IllegalStateException: No secure listeners defined.  
+        at org.wildfly.extension.undertow.ServletContainerService.lookupSecurePort(ServletContainerService.java:107)  
+Directly navigating to the web application over SSL does work.
+Tomaz Cerar:
+This is a bug.
+it tries to find ajp connector with ssl enabled which is useless for AJP as SSL can be end pointed on apache.
+It needs this info to know to what port to redirect to, as ssl can be on any port.

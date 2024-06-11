@@ -1,0 +1,198 @@
+Intermittent javax.ejb.EJBException: Do not call non-public methods on EJB&apos;s
+It&amp;apos;s intermittently failing in CDI TCK in org.jboss.cdi.tck.interceptors.tests.contract.lifecycleCallback.LifecycleCallbackInterceptorTest. There is:
+
+
+
+
+
+
+@Stateful
+
+
+
+
+@Interceptors(CatInterceptor.class)
+
+
+
+
+public class Cat extends Animal {
+
+
+
+
+ ...
+
+
+
+
+
+
+
+
+
+    @Override
+
+
+
+
+    public void foo() {
+
+
+
+
+    }
+
+
+
+
+ ...
+
+
+
+
+}
+
+
+
+
+
+
+and:
+
+
+
+
+
+
+public abstract class Animal {
+
+
+
+
+ 
+
+
+
+
+ ...
+
+
+
+
+    void foo() {
+
+
+
+
+    }
+
+
+
+
+ ....
+
+
+
+
+}
+
+
+
+
+
+
+There is check in org.jboss.as.ejb3.component.session.SessionBeanComponentDescription#addNoInterfaceView whether method is public. This check is sometimes called for Animal.foo() and sometimes for Cat.foo(). I think only Cat.foo() should be checked. 
+Stacktrace is:
+
+
+
+
+
+
+javax.ejb.EJBException: WFLYEJB0224: Not a business method void org.jboss.cdi.tck.interceptors.tests.contract.lifecycleCallback.Animal.foo(). Do not call non-public methods on EJB&amp;apos;s
+
+
+
+
+	at org.jboss.as.ejb3.component.session.NotBusinessMethodInterceptor.processInvocation(NotBusinessMethodInterceptor.java:43)
+
+
+
+
+	at org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:340)
+
+
+
+
+	at org.jboss.invocation.ChainedInterceptor.processInvocation(ChainedInterceptor.java:61)
+
+
+
+
+	at org.jboss.as.ee.component.ProxyInvocationHandler.invoke(ProxyInvocationHandler.java:73)
+
+
+
+
+	at org.jboss.cdi.tck.interceptors.tests.contract.lifecycleCallback.Cat$$$view2.foo(Unknown Source)
+
+
+
+
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+
+
+
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+
+
+
+
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+
+
+	at java.lang.reflect.Method.invoke(Method.java:483)
+
+
+
+
+	at org.jboss.weld.util.reflection.Reflections.invokeAndUnwrap(Reflections.java:436)
+
+
+
+
+	at org.jboss.weld.bean.proxy.EnterpriseBeanProxyMethodHandler.invoke(EnterpriseBeanProxyMethodHandler.java:127)
+
+
+
+
+	at org.jboss.weld.bean.proxy.EnterpriseTargetBeanInstance.invoke(EnterpriseTargetBeanInstance.java:56)
+
+
+
+
+	at org.jboss.weld.bean.proxy.ProxyMethodHandler.invoke(ProxyMethodHandler.java:100)
+
+
+
+
+	at org.jboss.cdi.tck.interceptors.tests.contract.lifecycleCallback.Cat$Proxy$_$$_Weld$EnterpriseProxy$.foo(Unknown Source)
+
+
+
+
+	at org.jboss.cdi.tck.interceptors.tests.contract.lifecycleCallback.LifecycleCallbackInterceptorTest.createAndDestroyInstance(LifecycleCallbackInterceptorTest.java:87)
+
+
+
+
+	at org.jboss.cdi.tck.interceptors.tests.contract.lifecycleCallback.LifecycleCallbackInterceptorTest.testLifecycleCallbackInterceptorTransactionContext(LifecycleCallbackInterceptorTest.java:137)
+
+
+
+
+

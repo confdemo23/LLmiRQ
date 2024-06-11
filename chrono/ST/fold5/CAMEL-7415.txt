@@ -1,0 +1,75 @@
+lazyLoad with CSV blows up on last line
+
+
+
+
+
+CsvDataFormat csv = new CsvDataFormat() 
+
+csv.setDelimiter(&amp;apos; &amp;apos;) 
+
+csv.setSkipFirstLine(false) 
+
+csv.setLazyLoad(true) 
+
+
+
+CamelContext camelContext = new DefaultCamelContext() 
+
+camelContext.addRoutes(new RouteBuilder() { 
+
+def void configure() { 
+
+from(&amp;apos;direct:start&amp;apos;) 
+
+.unmarshal(csv) 
+
+.split(body()).streaming() 
+
+.log(&amp;apos;row: ${body}&amp;apos;) 
+
+} 
+
+}) 
+
+camelContext.start() 
+
+
+
+ProducerTemplate t = camelContext.createProducerTemplate() 
+
+t.sendBody(&amp;apos;direct:start&amp;apos;, new File(&amp;apos;/Users/timbo/data/test.txt&amp;apos;)) 
+
+
+
+camelContext.stop() 
+
+
+
+
+
+Here is the exception when camel try to access the last line of the file.
+
+
+
+
+
+java.lang.IllegalStateException: java.io.IOException: Stream closed 
+
+at 
+
+org.apache.camel.dataformat.csv.CsvIterator.next(CsvIterator.java:61) 
+
+at 
+
+org.apache.camel.processor.Splitter$SplitterIterable$1.next(Splitter.java:170) 
+
+at 
+
+org.apache.camel.processor.Splitter$SplitterIterable$1.next(Splitter.java:146) 
+
+at 
+
+org.apache.camel.processor.MulticastProcessor.doProcessSequential(MulticastProcessor.java:502) 
+
+

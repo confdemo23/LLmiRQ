@@ -1,0 +1,50 @@
+RpcServer#getRemoteAddress always returns null
+RpcServer.getRemoteAddress always returns null, because Call object is getting initialized with null.This seems to be happening because of using RpcServer.getRemoteIp() in  Call object constructor before RpcServer thread local &amp;apos;CurCall&amp;apos; being set in CallRunner.run method:
+
+// --- RpcServer.java ---
+
+protected void processRequest(byte[] buf) throws IOException, InterruptedException {
+
+ .................................
+
+// Call object getting initialized here with address 
+
+// obtained from RpcServer.getRemoteIp()
+
+Call call = new Call(id, this.service, md, header, param, cellScanner, this, responder,
+
+              totalRequestSize, traceInfo, RpcServer.getRemoteIp());
+
+  scheduler.dispatch(new CallRunner(RpcServer.this, call));
+
+ }
+
+
+
+// getRemoteIp method gets address from threadlocal &amp;apos;CurCall&amp;apos; which 
+
+// gets set in CallRunner.run and calling it before this as in above case, will return null
+
+// --- CallRunner.java ---
+
+public void run() {
+
+  .........................   
+
+  Pair&lt;Message, CellScanner&gt; resultPair = null;
+
+  RpcServer.CurCall.set(call);
+
+  ..............................
+
+}
+
+
+
+// Using &amp;apos;this.addr&amp;apos; in place of getRemoteIp method in RpcServer.java seems to be fixing this issue
+
+Call call = new Call(id, this.service, md, header, param, cellScanner, this, responder,
+
+              totalRequestSize, traceInfo, this.addr);
+
+

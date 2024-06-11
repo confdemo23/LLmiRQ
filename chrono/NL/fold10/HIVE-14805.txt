@@ -1,0 +1,15 @@
+Subquery inside a view will have the object in the subquery as the direct input 
+Here is the repro steps.
+
+create table t1(col string);
+
+create view v1 as select * from t1;
+
+create view dataview as select * from  (select * from v1) v2;
+
+select * from dataview;
+
+
+
+If hive is configured with authorization hook like Sentry, it will require the access not only for dataview but also for v1, which should not be required.
+The subquery seems to not carry insideview property from the parent query.

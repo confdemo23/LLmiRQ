@@ -1,0 +1,31 @@
+Create table with column names ROW__ID, INPUT__FILE__NAME, BLOCK__OFFSET__INSIDE__FILE sucess but query fails
+
+
+
+0: jdbc:hive2://189.39.151.74:21066/&gt; create table foo1(ROW__ID string);
+
+No rows affected (0.281 seconds)
+
+0: jdbc:hive2://189.39.151.74:21066/&gt; create table foo2(BLOCK__OFFSET__INSIDE__FILE string);
+
+No rows affected (0.323 seconds)
+
+0: jdbc:hive2://189.39.151.74:21066/&gt; create table foo3(INPUT__FILE__NAME string);
+
+No rows affected (0.307 seconds)
+
+0: jdbc:hive2://189.39.151.74:21066/&gt; select * from foo1;
+
+Error: Error while compiling statement: FAILED: SemanticException Line 0:-1 Invalid column reference &amp;apos;TOK_ALLCOLREF&amp;apos; (state=42000,code=40000)
+
+0: jdbc:hive2://189.39.151.74:21066/&gt; select * from foo2;
+
+Error: Error while compiling statement: FAILED: SemanticException Line 0:-1 Invalid column reference &amp;apos;TOK_ALLCOLREF&amp;apos; (state=42000,code=40000)
+
+0: jdbc:hive2://189.39.151.74:21066/&gt; select * from foo3;
+
+Error: Error while compiling statement: FAILED: SemanticException Line 0:-1 Invalid column reference &amp;apos;TOK_ALLCOLREF&amp;apos; (state=42000,code=40000)
+
+
+
+We should prevent user from creating table with column names the same as Virtual Column names

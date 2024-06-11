@@ -1,0 +1,3 @@
+Intermittent &apos;AssertionError: expected:<200> but was:<500>&apos; in org.jboss.as.test.manualmode.ws.ReloadWSDLPublisherTestCase.testHelloStringAfterReload
+http://brontes.lab.eng.brq.redhat.com/project.html?projectId=WF&amp;testNameId=-3843551226685549253&amp;tab=testDetails
+The issue is due to the fact that the jvm is reusing the same connection because it has a keep-alive set to true with a timeout of 5 s.

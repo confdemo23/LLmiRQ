@@ -1,0 +1,13 @@
+Tests from XTS module fails with security manager
+Description of problem:
+Tests from XTS module fails with security manager. BAParticipantCompletionTestCase fails on maven timeout [ERROR] There was a timeout or other error in the fork
+How reproducible:
+Always
+Steps to Reproduce:
+
+./integration-tests.sh -Dmaven.repo.local=$MAVEN_REPO_LOCAL -fae -Dmaven.test.failure.ignore=true -Dnode0=$MYTESTIP_1 -Dnode1=$MYTESTIP_2 -Dmcast=$MCAST_ADDR -Djboss.dist=$JBOSS_DIST -Dsecurity.manager -Dts.xts
+
+Actual results:
+See attached file
+Expected results:
+No errors

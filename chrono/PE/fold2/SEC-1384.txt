@@ -1,0 +1,54 @@
+DefaultWebInvocationPrivilegeEvaluator bypass the accessDecisionManager when authorities are empty
+defaultWebInvocationPrivilegeEvaluator.isAllowed(...) always return false when authorities are empty.
+Here is the simple security configuration used:
+	&lt;http access-decision-manager-ref="accessDecisionManager"&gt;
+		&lt;intercept-url pattern="/images/**" filters="none" /&gt;
+		&lt;intercept-url pattern="/scripts/**" filters="none" /&gt;
+		&lt;intercept-url pattern="/styles/**" filters="none" /&gt;
+		&lt;intercept-url pattern="/csmprobe.html*" filters="none" /&gt;
+		&lt;intercept-url pattern="/login.htm*" access="ROLE_ANONYMOUS" /&gt;
+		&lt;intercept-url pattern="/**" access="IS_AUTHENTICATED_FULLY" /&gt;
+		&lt;form-login login-page="/login.htm"
+			always-use-default-target="true"
+			default-target-url="/siteSelection.htm"
+			authentication-failure-url="/login.htm?login_error=1" /&gt;
+		&lt;logout /&gt;
+	&lt;/http&gt;
+	&lt;ldap-server
+		url="$
+{ldap.url}
+/$
+{ldap.base}
+"
+		manager-dn="$
+{ldap.managerDn}
+"
+		manager-password="$
+{ldap.managerPassword}
+" /&gt;
+	&lt;authentication-manager alias="authenticationManager"&gt;
+		&lt;ldap-authentication-provider user-search-filter="(uid=
+{0}
+)"
+			user-search-base="$
+{ldap.userSearchBase}
+"
+			group-search-base="$
+{ldap.groups}
+" /&gt;
+	&lt;/authentication-manager&gt;
+	&lt;beans:bean id="accessDecisionManager" class="org.springframework.security.access.vote.AffirmativeBased"&gt;
+		&lt;beans:property name="decisionVoters"&gt;
+			&lt;beans:list&gt;
+				&lt;beans:bean class="org.springframework.security.access.vote.AuthenticatedVoter" /&gt;
+				&lt;beans:bean class="org.springframework.security.access.vote.RoleVoter" /&gt;
+			&lt;/beans:list&gt;
+		&lt;/beans:property&gt;
+	&lt;/beans:bean&gt;
+Users with no authorities have access to all pages (IS_AUTHENTICATED_FULLY) according to the filter configuration but defaultWebInvocationPrivilegeEvaluator.isAllowed(...) says the opposite. The implementation has this check: 
+        if (authentication == null || authentication.getAuthorities().isEmpty()) 
+{
+            return false;
+        }
+
+authentication.getAuthorities().isEmpty() should be removed to allow decision voters do their work.

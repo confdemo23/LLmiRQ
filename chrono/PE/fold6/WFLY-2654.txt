@@ -1,0 +1,116 @@
+The run-as identity does NOT apply to the timeout callback method of an enterprise bean
+EJB 3.2 spec., 12.3.4.1 Run-as:
+The run-as identity applies ... to the timeout callback methods of an enterprise bean;
+Assume the following classes:
+
+
+
+
+
+
+@Stateless
+
+
+
+
+@RunAs("alarm")
+
+
+
+
+public class Alarm {
+
+
+
+
+    @EJB
+
+
+
+
+    private Bell bell;
+
+
+
+
+// some more logic
+
+
+
+
+    @Timeout
+
+
+
+
+    public void ejbTimeout(Timer timer) {
+
+
+
+
+        bell.ring();
+
+
+
+
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@Stateless
+
+
+
+
+@RolesAllowed("alarm")
+
+
+
+
+public class Bell {
+
+
+
+
+    public void ring() {}
+
+
+
+
+}
+
+
+
+
+
+
+When the Alarm&amp;apos;s timeout callback method is invoked due to timer expiration, bell.ring(); results in
+
+
+
+
+
+
+ERROR [org.jboss.as.ejb3.invocation] (EJB default - 1) JBAS014134: EJB Invocation failed on component Bell for method public void org.jboss.as.test.integration.ejb.security.timeout.Bell.ring(): javax.ejb.EJBAccessException: JBAS014502: Invocation on method: public void org.jboss.as.test.integration.ejb.security.timeout.Bell.ring() of bean: Bell is not allowed 
+
+
+
+
+
+
+Calling bell.ring(); from Alarm&amp;apos;s business methods works as expected (no error).
+Simple test case available at: https://github.com/bafco/wildfly/tree/timeoutSecurity

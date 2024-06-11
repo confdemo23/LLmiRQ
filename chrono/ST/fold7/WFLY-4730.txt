@@ -1,0 +1,159 @@
+Undertow mod_cluster proxy does not offer any Client HTTPS configuration
+Undertow mod_cluster proxy acts both as a server and as a client in relation to its workers.
+While the server configuration is quite straightforward:
+
+
+
+
+
+
++++
+
+
+
+
+&lt;system-properties&gt;
+
+
+
+
+    &lt;property name="javax.net.ssl.trustStore" value="/vault/ca-cert.jks"/&gt;
+
+
+
+
+    &lt;property name="javax.net.ssl.trustStorePassword" value="tomcat"/&gt;
+
+
+
+
+&lt;/system-properties&gt;
+
+
+
+
++++
+
+
+
+
+&lt;security-realm name="UndertowRealm"&gt;
+
+
+
+
+    &lt;server-identities&gt;
+
+
+
+
+        &lt;ssl&gt;
+
+
+
+
+            &lt;keystore path="/vault/server-cert-key.jks"  keystore-password="tomcat" alias="javaserver" key-password="tomcat"/&gt;
+
+
+
+
+        &lt;/ssl&gt;
+
+
+
+
+    &lt;/server-identities&gt;
+
+
+
+
+&lt;/security-realm&gt;
+
+
+
+
++++
+
+
+
+
+&lt;https-listener name="https" socket-binding="https" security-realm="UndertowRealm"/&gt;
+
+
+
+
++++
+
+
+
+
+
+
+with having management-socket-binding="https" and advertise-protocol="https" set; it seems there is no way to configure certs and keys for the client role of the Undertow mod_cluster proxy implementation.
+With the current implementation, worker can connect to the Undertow mod_cluster proxy, i.e. it can send CONFIG and STATUS MCMP messages, but when the Undertow mod_cluster proxy needs to act as a client, sending STATUS-RSP message to the worker, it does not have the necessary HTTPS setup:
+
+
+
+
+
+
+DEBUG [io.undertow] (default I/O-5) UT005055: HttpClientPingTask run for connection: https://192.168.0.122:8544/?#
+
+
+
+
+DEBUG [io.undertow.server.handlers.proxy.ProxyHandler] (default I/O-5) No proxy target for request to https://192.168.0.122:8443/
+
+
+
+
+DEBUG [io.undertow] (default task-7) UT005056: Received node load in STATUS message, node jvmRoute: worker-1, load: 80
+
+
+
+
+DEBUG [io.undertow.request] (default I/O-5) Failed to connect: java.io.IOException: UT000065: SSL must be specified to connect to a https URL
+
+
+
+
+    at io.undertow.client.http.HttpClientProvider.connect(HttpClientProvider.java:93)
+
+
+
+
+    at io.undertow.client.UndertowClient.connect(UndertowClient.java:158)
+
+
+
+
+    at io.undertow.server.handlers.proxy.ProxyConnectionPool.openConnection(ProxyConnectionPool.java:233)
+
+
+
+
+    at io.undertow.server.handlers.proxy.ProxyConnectionPool.connect(ProxyConnectionPool.java:446)
+
+
+
+
+    at io.undertow.server.handlers.proxy.mod_cluster.NodePingUtil$1.run(NodePingUtil.java:140)
+
+
+
+
+    at org.xnio.nio.WorkerThread.safeRun(WorkerThread.java:560)
+
+
+
+
+    at org.xnio.nio.WorkerThread.run(WorkerThread.java:462)
+
+
+
+
+
+
+The HTTPS communication between Undertow mod_cluster proxy and its workers needs to be bidirectional.
+If I&amp;apos;m just missing any obvious configuration option, please, shout, throw rocks and close this JIRA 
+Thank you for your time looking into it.

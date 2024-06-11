@@ -1,0 +1,2 @@
+Resource Adapters subsystem transformers for model version 2.0.0 are not registered
+Due to a typo the transformers of ResourceAdapters subsystem for the model version 2.0.0 are not registered.

@@ -1,0 +1,2 @@
+Ownership shouldn&apos;t be checked if external table location doesn&apos;t exist
+When creating external table with SQL authorization, we require RWX permission + ownership of the table location. If the location doesn&amp;apos;t exist, we check on parent dir (recursively), which means we require the user owns everything under parent dir. I think this is not necessary - we don&amp;apos;t have to check ownership of parent dir, or we just check non-recursively.

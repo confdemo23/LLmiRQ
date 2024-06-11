@@ -1,0 +1,2 @@
+The configuration returned by HierarchicalConfiguration.subset() does not globally interpolate
+Interpolation is only performed in the subset configuration itself. If the referenced property is not in the subset (but somewhere else in the parent configuration), it cannot be resolved. Interpolation should take all properties of the parent configuration into account.

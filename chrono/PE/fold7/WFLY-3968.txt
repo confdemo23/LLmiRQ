@@ -1,0 +1,31 @@
+access log doesn&apos;t support %{r,xxx}
+AccessLogHandler&amp;apos;s javadoc mentions:
+
+%{r,xxx} xxx is an attribute in the ServletRequest
+But adding the following to access log pattern
+
+
+
+
+
+
+%{r,javax.servlet.error.status_code}
+
+
+
+
+
+
+results in a server log message:
+
+
+
+
+
+
+19:55:55,432 ERROR [undertow] (MSC service thread 1-6) UT005017: Unknown variable %{r,javax.servlet.error.status_code}
+
+
+
+
+

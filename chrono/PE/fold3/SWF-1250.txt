@@ -1,0 +1,2 @@
+Using history="invalidate" results in ConversionExecutorNotFoundException where target class is org.springframework.webflow.engine.History
+This would have been handled previously by the StringToLabeledEnum converter.

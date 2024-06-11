@@ -1,0 +1,2 @@
+Binding to <any-address/> will make mod_cluster advertise host as 0.0.0.0
+Needs to be handled in org.wildfly.mod_cluster.undertow.UndertowConnector#setAddress.

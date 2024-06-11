@@ -1,0 +1,2 @@
+Support group by on struct type
+Currently group by on struct and union types are not supported. This issue will enable support for those.

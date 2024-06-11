@@ -1,0 +1,310 @@
+CompositeTransformer does not transform addresses
+If /some=where has a child redirection for the child=* child resource to new-child=*, then
+
+
+
+
+
+
+{
+
+
+
+
+    "operation" =&gt; "add",
+
+
+
+
+    "address" =&gt; [
+
+
+
+
+        ("some" =&gt; "where"),
+
+
+
+
+        ("child" =&gt; "*")
+
+
+
+
+    ]
+
+
+
+
+}
+
+
+
+
+
+
+gets correctly transformed to 
+
+
+
+
+
+
+{
+
+
+
+
+    "operation" =&gt; "add",
+
+
+
+
+    "address" =&gt; [
+
+
+
+
+        ("some" =&gt; "where"),
+
+
+
+
+        ("new-child" =&gt; "*")
+
+
+
+
+    ]
+
+
+
+
+}
+
+
+
+
+
+
+But if wrapped in a composite, e.g.:
+
+
+
+
+
+
+{
+
+
+
+
+    "operation" =&gt; "composite",
+
+
+
+
+    "address" =&gt; [],
+
+
+
+
+    "steps" =&gt; [
+
+
+
+
+        {
+
+
+
+
+            "operation" =&gt; "add",
+
+
+
+
+            "address" =&gt; [
+
+
+
+
+                ("some" =&gt; "where"),
+
+
+
+
+                ("child" =&gt; "*")
+
+
+
+
+            ]
+
+
+
+
+        }
+
+
+
+
+    ]
+
+
+
+
+}
+
+
+
+
+
+
+the redirection does not happen in the transformed composite, so we have the original
+
+
+
+
+
+
+{
+
+
+
+
+    "operation" =&gt; "composite",
+
+
+
+
+    "address" =&gt; [],
+
+
+
+
+    "steps" =&gt; [
+
+
+
+
+        {
+
+
+
+
+            "operation" =&gt; "add",
+
+
+
+
+            "address" =&gt; [
+
+
+
+
+                ("some" =&gt; "where"),
+
+
+
+
+                ("child" =&gt; "*")
+
+
+
+
+            ]
+
+
+
+
+        }
+
+
+
+
+    ]
+
+
+
+
+}
+
+
+
+
+
+
+rather than the expected
+
+
+
+
+
+
+{
+
+
+
+
+    "operation" =&gt; "composite",
+
+
+
+
+    "address" =&gt; [],
+
+
+
+
+    "steps" =&gt; [
+
+
+
+
+        {
+
+
+
+
+            "operation" =&gt; "add",
+
+
+
+
+            "address" =&gt; [
+
+
+
+
+                ("some" =&gt; "where"),
+
+
+
+
+                ("new-child" =&gt; "*")
+
+
+
+
+            ]
+
+
+
+
+        }
+
+
+
+
+    ]
+
+
+
+
+}
+
+
+
+
+

@@ -1,0 +1,2 @@
+Fix syntax for crypto component
+replace crypto:cryptoOperation:name by crypto:cryptoOperation

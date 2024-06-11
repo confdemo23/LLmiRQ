@@ -1,0 +1,24 @@
+pop3 mail session throws a NoSuchProviderException
+When configuring a pop3 server in standalone.xml as, the following exception is thrown when reading the mailbox:
+
+
+
+
+
+
+Caused by: javax.mail.NoSuchProviderException: Invalid protocol: null
+
+
+
+
+	at javax.mail.Session.getProvider(Session.java:440) [mail-1.4.5-redhat-1.jar:1.4.5-redhat-1]
+
+
+
+
+	at javax.mail.Session.getStore(Session.java:539) [mail-1.4.5-redhat-1.jar:1.4.5-redhat-1] 
+
+
+
+
+

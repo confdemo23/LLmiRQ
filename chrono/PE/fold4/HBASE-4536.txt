@@ -1,0 +1,9 @@
+Allow CF to retain deleted rows
+Parent allows for a cluster to retain rows for a TTL or keep a minimum number of versions.
+However, if a client deletes a row all version older than the delete tomb stone will be remove at the next major compaction (and even at memstore flush - see HBASE-4241).
+There should be a way to retain those version to guard against software error.
+I see two options here:
+1. Add a new flag HColumnDescriptor. Something like "RETAIN_DELETED".
+2. Folds this into the parent change. I.e. keep minimum-number-of-versions of versions even past the delete marker.
+#1 would allow for more flexibility. #2 comes somewhat naturally with parent (from a user viewpoint)
+Comments? Any other options?

@@ -1,0 +1,4 @@
+Stop storing default ConfVars in temp file
+To work around issues with Hadoop&amp;apos;s Configuration object, specifically it&amp;apos;s addResource(InputStream), default configurations are written to a temp file (I think HIVE-2362 introduced this).
+This, however, introduces the problem that once that file is deleted from /tmp the client crashes.  This is particularly problematic for long running services like the metastore server.
+Writing a custom InputStream to deal with the problems in the Configuration object should provide a work around, which does not introduce a time bomb into Hive.

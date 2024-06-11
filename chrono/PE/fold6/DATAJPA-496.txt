@@ -1,0 +1,48 @@
+Query derivation doesn&apos;t create joins for in-clauses on element collections
+We currently don&amp;apos;t support finderQueries for ElementCollection since we don&amp;apos;t generate the necessary joins.
+E.g.: The following use case dosen&amp;apos;t work at the moment:
+
+
+
+
+
+
+...
+
+
+
+
+@ElementCollection private Set&lt;String&gt; attributes;
+
+
+
+
+...
+
+
+
+
+
+
+
+
+
+
+
+
+...
+
+
+
+
+List&lt;User&gt; findByAttributesIn(Set&lt;String&gt; attributes);
+
+
+
+
+...
+
+
+
+
+

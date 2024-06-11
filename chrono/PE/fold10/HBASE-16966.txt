@@ -1,0 +1,3 @@
+Re-enable TestSimpleRpcScheduler#testCoDelScheduling  in master branch
+see HBASE-16743. Creating separate jira so we don&amp;apos;t forget. This test been flaky for a while. Need to make sure it&amp;apos;s fixed.
+it&amp;apos;s already enabled on branch-1 and branch-1.3 (rather, never was disabled)

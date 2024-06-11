@@ -1,0 +1,50 @@
+Facebook consumer throws IllegalArgumentException with reading parameters
+I&amp;apos;ve configured a polling Facebook consumer with nearly default Spring configuration as follows:
+
+
+
+&lt;camel:from uri="facebook://getFeed?
+
+    reading.since=2016-01-01T00:00:00Z&amp;amp;
+
+    userId=myUserId&amp;amp;
+
+    consumer.delay=60000&amp;amp;
+
+    oAuthAppId=[s]&amp;amp;
+
+    oAuthAppSecret=[s]&amp;amp;
+
+    oAuthAccessToken=[s]
+
+    "/&gt;
+
+
+
+However, an IllegalArgument is thrown with any reading.* parameter regardless of endpoint:
+
+
+
+java.lang.IllegalArgumentException: No matching operation for getFeed, with arguments [readingOptions, reading, userId]
+
+
+
+On debugging, the method FacebookEndpoint.configureProperties sets two properties on the configuration object: (readingOptions, reading).
+
+
+
+FacebookPropertiesHelper.configureReadingProperties(configuration, options);
+
+
+
+readingOptions is a Map which is finally size 0 after all the relevant properties are extracted into the reading parameter. However, it isn&amp;apos;t nullified.
+In the subsequent method initState(), it tries to look for a method in FacebookMethodTypes with the signature:
+
+
+
+getFeed(String userId, Reading reading)
+
+
+
+Because readingOptions is non null, it looks for a readingOptions parameter as well which doesn&amp;apos;t exist, throwing the Exception.
+Is there a workaround I can use for the moment? Thanks!

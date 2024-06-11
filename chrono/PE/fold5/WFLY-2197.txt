@@ -1,0 +1,2 @@
+ClientCompatibilityUnitTestCase is broken in an IPv6 environment
+ClientCompatibilityUnitTestCase has "localhost" hard coded as the address it tries to connect to. This fails when IPv6 is configured for testsuite runs, as the server is not listening on 127.0.0.1 but rather ::1.

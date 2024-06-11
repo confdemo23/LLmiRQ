@@ -1,0 +1,2 @@
+Repository count() returns the incorrect value for client regions. 
+Should use OQL select count from /region to return consistent results

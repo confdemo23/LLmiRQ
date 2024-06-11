@@ -1,0 +1,2 @@
+@WebServlet.loadOnStartup=0 doesn&apos;t startup the servlet
+Servlet is autostarted only with loadOnStartup value &gt; 0. Specification says value can be &gt;= 0.

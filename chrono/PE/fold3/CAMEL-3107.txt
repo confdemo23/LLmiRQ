@@ -1,0 +1,2 @@
+SmppBinding set the destination address npi instead of the source address npi
+See discussion on the user@list

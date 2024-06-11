@@ -1,0 +1,16 @@
+XMLConfiguration drops attributes if a property value is a list
+When the following test is run with the following xml the second assertEquals statement fails:
+XML:
+&lt;?xml version="1.0" encoding="ISO-8859-1" ?&gt;
+&lt;test&gt;
+&lt;a name="X"&gt;ABC&lt;/a&gt;
+&lt;a name="Y"&gt;1,2,3&lt;/a&gt;
+&lt;/test
+TEST:
+public void testXMLConfig() throws Exception {
+  File file = new File("/xml/xmlConfigTest.xml");
+  XMLConfiguration xmlConfig = new XMLConfiguration(file);
+  xmlConfig.load();
+  assertEquals("X",xmlConfig.getProperty("a(0)[@name]"));
+  assertEquals("Y",xmlConfig.getProperty("a(1)[@name]"));
+}

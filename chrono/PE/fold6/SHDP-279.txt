@@ -1,0 +1,2 @@
+Allow more precise control of container localized files
+In boot app model client copies and distributes files. Container whether it&amp;apos;s YarnAppmaster or YarnContainer gets all files. This is not optimal and wrong in a sense that master files should not go in containers and vice versa. 

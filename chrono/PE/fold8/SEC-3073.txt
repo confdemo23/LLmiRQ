@@ -1,0 +1,13 @@
+JSPAuthorizeTag authorizeUsingUrlCheck only compares against first WebInvocationPrivilegeEvaluator
+In AbstractAuthorizeTag, authorizeUsingUrlCheck calls getPrivilegeEvaluator which on line 347 returns the first WebInvocationPrivilegeEvaluator ignoring others. 
+An application might have multiple WebInvocationPrivilegeEvaluators for instance if there is one &lt;http&gt; config for the main ui of the application and one for a built in REST service. 
+Example REST &lt;http&gt; config:
+ &lt;http pattern="/api/**" create-session="stateless" use-expressions="true"&gt;
+    	&lt;intercept-url pattern="/api/**" access="hasRole(&amp;apos;ROLE_REST&amp;apos;)"/&gt;
+    	&lt;http-basic/&gt;
+    &lt;/http&gt; 
+Thus a JSP authorize url check such as:
+&lt;sec:authorize url="/secureAction"&gt;
+will only be evaluated against the first &lt;http&gt; config.
+In some cases, such as when the main &lt;http&gt; config contains a catchall (&lt;intercept-url pattern="/**" access="isAuthenticated()" /&gt;), the order of the &lt;http&gt; configs can not be changed yielding no way to conduct url evaluations.
+It seems like all WebInvocationPrivilegeEvaluators should be considered.

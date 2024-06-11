@@ -1,0 +1,18 @@
+Spel parser is not able to resolve bean id variable when it is passed as parameter to a static method.
+&lt;bean id="A" class="..."&gt;
+   &lt;property name="a" value="4"/&gt;
+&lt;/bean&gt;
+&lt;bean id="B" class="..."&gt;
+   &lt;property name="b" value=" #
+{T(Math).sqrt(4)}
+"/&gt;
+&lt;/bean&gt;
+The above bean definition works as expected resolving value of the property "b" to 2.
+However, the following definition fails on expression parsing:
+&lt;bean id="B" class="..."&gt;
+   &lt;property name="b" value=" #
+{T(Math).sqrt(A.a)}
+"/&gt;
+&lt;/bean&gt;
+The error is:
+Field or property &amp;apos;A&amp;apos; cannot be found on object of type &amp;apos;java.lang.Math&amp;apos; 

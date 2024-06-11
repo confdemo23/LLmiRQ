@@ -1,0 +1,213 @@
+Build fail due to CalendarBasedTimeoutTestCase on OSX 7u51
+Cannot build from master (d7d7a1f) on OSX due to following failure
+
+
+
+
+
+
+-------------------------------------------------------
+
+
+
+
+ T E S T S
+
+
+
+
+-------------------------------------------------------
+
+
+
+
+Running org.jboss.as.ejb3.component.stateful.StatefulSessionSynchronizationInterceptorTestCase
+
+
+
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.316 sec - in org.jboss.as.ejb3.component.stateful.StatefulSessionSynchronizationInterceptorTestCase
+
+
+
+
+Running org.jboss.as.ejb3.concurrency.EJBReadWriteLockTest
+
+
+
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.012 sec - in org.jboss.as.ejb3.concurrency.EJBReadWriteLockTest
+
+
+
+
+Running org.jboss.as.ejb3.deployment.processors.ViewInterfacesTestCase
+
+
+
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec - in org.jboss.as.ejb3.deployment.processors.ViewInterfacesTestCase
+
+
+
+
+Running org.jboss.as.ejb3.subsystem.Ejb3SubsystemUnitTestCase
+
+
+
+
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 7, Time elapsed: 3.227 sec - in org.jboss.as.ejb3.subsystem.Ejb3SubsystemUnitTestCase
+
+
+
+
+Running org.jboss.as.ejb3.timer.schedule.CalendarBasedTimeoutTestCase
+
+
+
+
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.786 sec &lt;&lt;&lt; FAILURE! - in org.jboss.as.ejb3.timer.schedule.CalendarBasedTimeoutTestCase
+
+
+
+
+testCalendarBasedTimeout(org.jboss.as.ejb3.timer.schedule.CalendarBasedTimeoutTestCase)  Time elapsed: 0.785 sec  &lt;&lt;&lt; FAILURE!
+
+
+
+
+java.lang.AssertionError: Cuba Standard Time
+
+
+
+
+	at org.junit.Assert.fail(Assert.java:88)
+
+
+
+
+	at org.jboss.as.ejb3.timer.schedule.CalendarBasedTimeoutTestCase.testWithStartInThePast(CalendarBasedTimeoutTestCase.java:496)
+
+
+
+
+	at org.jboss.as.ejb3.timer.schedule.CalendarBasedTimeoutTestCase.testCalendarBasedTimeout(CalendarBasedTimeoutTestCase.java:95)
+
+
+
+
+
+
+
+
+
+Running org.jboss.as.ejb3.timer.schedule.CalendarBasedTimeoutWithDifferentTimeZoneTestCase
+
+
+
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in org.jboss.as.ejb3.timer.schedule.CalendarBasedTimeoutWithDifferentTimeZoneTestCase
+
+
+
+
+Running org.jboss.as.ejb3.timer.schedule.CalendarUtilTestCase
+
+
+
+
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.jboss.as.ejb3.timer.schedule.CalendarUtilTestCase
+
+
+
+
+Running org.jboss.as.ejb3.timer.schedule.RangeValueTestCase
+
+
+
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.jboss.as.ejb3.timer.schedule.RangeValueTestCase
+
+
+
+
+
+
+
+
+
+Results :
+
+
+
+
+
+
+
+
+
+Failed tests: 
+
+
+
+
+  CalendarBasedTimeoutTestCase.testCalendarBasedTimeout:95-&gt;testWithStartInThePast:496 Cuba Standard Time
+
+
+
+
+
+
+
+
+
+Tests run: 31, Failures: 1, Errors: 0, Skipped: 7
+
+
+
+
+
+
+Environment
+
+
+
+
+
+
+mbp:jboss-as codylerum$ mvn install -rf :wildfly-ejb3 -XX
+
+
+
+
+Apache Maven 3.1.1 (0728685237757ffbf44136acec0402957f723d9a; 2013-09-17 09:22:22-0600)
+
+
+
+
+Maven home: /usr/local/Cellar/maven/3.1.1/libexec
+
+
+
+
+Java version: 1.7.0_51, vendor: Oracle Corporation
+
+
+
+
+Java home: /Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre
+
+
+
+
+Default locale: en_US, platform encoding: UTF-8
+
+
+
+
+OS name: "mac os x", version: "10.9.1", arch: "x86_64", family: "mac"
+
+
+
+
+

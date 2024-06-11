@@ -1,0 +1,4 @@
+support for extended persistence context with SynchronizationType.UNSYNCHRONIZED
+org.jboss.as.jpa.injectors.PersistenceContextInjectionSource handles injection of a persistence context into EE components.  PersistenceContextInjectionSource is not properly handling SynchronizationType.UNSYNCHRONIZED when injecting an extended persistence context.  I&amp;apos;m not sure why this failure only appeared with Hibernate ORM 5.
+If SynchronizationType is UNSYNCHRONIZED, we should call 
+EntityManagerFactory.createEntityManager(SynchronizationType synchronizationType, Map map), instead of EntityManagerFactory.createEntityManager(Map map).

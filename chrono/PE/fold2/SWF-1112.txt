@@ -1,0 +1,3 @@
+JSF 1.2-specific call to StateManager.saveView should be replaced with saveSerializedView for JSF 1.1 compatibiliy
+See SWF-1096 for the reason this call was introduced in 2.0.7. Jeremy suggests to use saveSerializedView instead of saveView; the latter doesn&amp;apos;t exist in JSF 1.1 apparently. Currently, this causes a NoSuchMethodError for
+javax/faces/application/StateManager.saveView(Ljavax/faces/context/FacesContext;)Ljava/lang/Object; 

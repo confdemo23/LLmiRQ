@@ -1,0 +1,4 @@
+camel-jms - Reply manager during timeout must use a catch to ensure onEviction can return correclty
+Got a tidbit of a problem
+&lt;raul&gt;	 2014-07-24 02:12:02,250 | WARN  | CorrelationTimeoutMap | 123 - org.apache.camel.camel-core - 2.13.1 | Exception happened during eviction of entry ID org.apache.camel.component.jms.reply.TemporaryQueueReplyHandler@7f3a3f81, won&amp;apos;t evict and will continue trying: java.lang.NullPointerException
+This could lead to endless retry if processing the timeout keeps causing the same exception.

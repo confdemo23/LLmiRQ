@@ -1,0 +1,13 @@
+resource-adapter id attribute is forced to match rar name
+If the id of the resource adapter element does not match the name of the
+RAR file, the CLI will throw the following error on RA activation:
+
+{
+
+    "outcome" =&gt; "failed",
+
+    "failure-description" =&gt; "rar not yet deployed",
+
+    "rolled-back" =&gt; true
+
+}

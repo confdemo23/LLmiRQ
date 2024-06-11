@@ -1,0 +1,2 @@
+GNU Tar sometimes uses binary encoding for UID and GID
+Some tar files have UID and GID fields that start with the binary marker 0x80. The TarArchiveEntry is unable to cope with that since it assumes that UID and GID are always ASCII.

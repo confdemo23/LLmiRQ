@@ -1,0 +1,12 @@
+Hive does not expand the DOWNLOADED_RESOURCES_DIR path
+The downloaded scratch dir is specified in HiveConf as:
+
+
+
+DOWNLOADED_RESOURCES_DIR("hive.downloaded.resources.dir", System.getProperty("java.io.tmpdir") + File.separator  + "${hive.session.id}_resources"),
+
+
+
+
+
+However, hive.session.id  does not get expanded.

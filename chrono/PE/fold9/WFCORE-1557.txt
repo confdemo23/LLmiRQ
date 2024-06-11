@@ -1,0 +1,3 @@
+PropertiesAttributeDefinition unwrap does not properly handle undefined values
+The unwrap method resolves the value of the map entries but does not check if they are defined before calling asString(). So an undefined value will store as string "undefined" instead of null.
+The class doesn&amp;apos;t any way to configure or check whether null is ok; perhaps I&amp;apos;ll improve that as well. &lt;--- was incorrect

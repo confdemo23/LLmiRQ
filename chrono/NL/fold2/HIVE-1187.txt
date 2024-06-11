@@ -1,0 +1,8 @@
+Implement ddldump utility for Hive Metastore
+Implement a ddldump utility for the Hive metastore that will generate the QL DDL necessary to recreate the state of the current metastore on another metastore instance.
+A major use case for this utility is migrating a metastore from one database to another database, e.g. from an embedded Derby instanced to a MySQL instance.
+The ddldump utility should support the following features:
+
+Ability to generate DDL for specific tables or all tables.
+Ability to specify a table name prefix for the generated DDL, which will be useful for resolving table name conflicts.
+

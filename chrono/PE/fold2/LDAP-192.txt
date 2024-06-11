@@ -1,0 +1,10 @@
+Add authentication methods that provide authentication exception
+I realize that the AuthenticationException is logged, but I need to return this information to the caller so that they can seek remedy.
+For example, if error is:
+52e then user will know to re-enter password
+530 then user will know to try later
+532 then user will know password has expired
+533 then user will know that account is disabled
+etc....
+If I have to use "plain old" JNDI for authentication purposes just to capture the AuthenticationException, then SPRING LDAP is useless to me.
+Please make the ldaptemplate.authenticate throwable or somehow able to return the exception message instead of just FALSE.

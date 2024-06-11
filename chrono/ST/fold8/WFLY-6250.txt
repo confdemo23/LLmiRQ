@@ -1,0 +1,61 @@
+JMX inefficiently handles resource adapters
+If you connect to JBoss over JMX when it has many rars deployed (over 500), long running high CPU is seen in the following calls:
+
+
+
+
+
+
+        at org.jboss.as.controller.ModelControllerImpl.execute(ModelControllerImpl.java:188)
+
+
+
+
+        at org.jboss.as.jmx.model.ResourceAccessControlUtil.getResourceAccess(ResourceAccessControlUtil.java:85)
+
+
+
+
+        at org.jboss.as.jmx.model.RootResourceIterator.doIterate(RootResourceIterator.java:51)
+
+
+
+
+        at org.jboss.as.jmx.model.RootResourceIterator.doIterate(RootResourceIterator.java:61)
+
+
+
+
+        at org.jboss.as.jmx.model.RootResourceIterator.doIterate(RootResourceIterator.java:61)
+
+
+
+
+        at org.jboss.as.jmx.model.RootResourceIterator.doIterate(RootResourceIterator.java:61)
+
+
+
+
+        at org.jboss.as.jmx.model.RootResourceIterator.doIterate(RootResourceIterator.java:61)
+
+
+
+
+        at org.jboss.as.jmx.model.RootResourceIterator.doIterate(RootResourceIterator.java:61)
+
+
+
+
+        at org.jboss.as.jmx.model.RootResourceIterator.doIterate(RootResourceIterator.java:61)
+
+
+
+
+        at org.jboss.as.jmx.model.RootResourceIterator.iterate(RootResourceIterator.java:43)
+
+
+
+
+
+
+It&amp;apos;s evident that it is iterating over each deployment (each resource adapter counting as a deployment), but for each deployment, it is also iterating over all resource adapter&amp;apos;s and their config properties.  So it would iterate over all 500+ resource adapters once for each deployment, so it iterates over all 500 adapters at least 500 times.  Is there anyway we could avoid that n^2 iteration for deployed rars?

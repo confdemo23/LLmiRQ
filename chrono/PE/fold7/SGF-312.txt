@@ -1,0 +1,2 @@
+The <gfe:partitioned-region> element in the SDG XSD does not properly support multiple PartitionListener bean definitions or references.
+The &amp;apos;&lt;gfe:partitioned-region&gt;&amp;apos; element in the SDG XSD does not properly support and register multiple PartitionListener bean definitions on a PARTITION Region.

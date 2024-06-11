@@ -1,0 +1,3 @@
+Unable to inject Web Service Context into CDI Interceptor
+CDI Interceptor cannot inject Web Service context.
+When trying to inject WebServiceContext in CDI Interceptor using @Resource annotation but it fails with: NameNotFoundException: env/org.example.MyInterceptor/webServiceContext

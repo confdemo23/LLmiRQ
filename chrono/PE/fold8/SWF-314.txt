@@ -1,0 +1,6 @@
+Add a convenient config option for plugging in a custom FlowExecutionContinuationFactory
+I would like to use continuation flow but I&amp;apos;m using classes that can&amp;apos;t be serialized.
+Using &lt;bean&gt; definitions I can define a custom FlowExecutionContinuationFactoryr to do this but it
+makes for a very wordy xml file.
+By adding an option to &lt;flow:executor&gt; this would be vastly simplified
+   George

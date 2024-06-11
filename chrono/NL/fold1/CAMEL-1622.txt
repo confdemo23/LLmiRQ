@@ -1,0 +1,4 @@
+camel-osgi doesn&apos;t support to look up the fallback converter
+camel-osgi module doesn&amp;apos;t support to lookup the fallback coverter from the active bundles.
+And I got the user complain in the support forums
+http://fusesource.com/forums/message.jspa?messageID=2787#2787 

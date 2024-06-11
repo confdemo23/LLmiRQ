@@ -1,0 +1,2 @@
+add an &apos;on commit / on rollback&apos; hook so that non-transactional components can do things like delete files when the processing has completed
+e.g. file / FTP should only delete the file after successful processing has occurred etc

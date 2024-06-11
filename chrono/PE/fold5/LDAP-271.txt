@@ -1,0 +1,29 @@
+ODM: nullable attributes are not removed from LDAP if OdmManagerImpl#update(Object) is used
+Hi. I&amp;apos;ve faced with a problem using ODM.
+Preconditions:
+ a. There is an attributetype in ldap schema - e.g. &amp;apos;someAttribute&amp;apos;.
+ b. The type is mentioned in the MAY list of an objectClass  - e.g. &amp;apos;someClass&amp;apos;.
+ c. There is an ODM entry class mapped to the objectClass. 
+Steps to reproduce:
+ 1. Create an entry and fill it in including a value for &amp;apos;someAttribute&amp;apos;.
+ 2. Save it - odmManager.create(entry);
+    Result: the entry is in DIT, &amp;apos;someAttribute&amp;apos; exists and filled.
+ 3. Update the entry: set null as a new value for &amp;apos;someAttribute&amp;apos; property.
+ 4. Save it - odmManager.update(entry);
+Actual Result: the entry is in DIT, &amp;apos;someAttribute&amp;apos; exists and its value the same as in p.2.
+Expected Result: the entry is in DIT but without &amp;apos;someAttribute&amp;apos;.
+Note:
+ I&amp;apos;ve looked through OdmManagerImpl source code and found out that before actual update is executed the method OdmManagerImpl#mapToContext(Object,DirContextOperations) is invoked. The method converts Java representation of an Ldap Entry. During the conversion only non-nullable properties of an entry are considered, null field values are ignored at all:
+                    if (!attributeInfo.isList()) {
+                        // Single valued - get the value of the field
+                        Object fieldValue = field.get(entry);
+                        // Ignore null field values
+                        if (fieldValue != null) 
+{
+                            // Convert the field value to the required type and write it into the JNDI context
+                            context.setAttributeValue(attributeInfo.getName().toString(), converterManager.convert(fieldValue,
+                                    attributeInfo.getSyntax(), targetClass));
+                        }
+                    } 
+Many Thanks,
+Vadzim

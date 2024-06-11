@@ -1,0 +1,5 @@
+java.lang.IllegalAccessError: class org.springframework.security.config.annotation.authentication.configuration.$Proxy90 cannot access its superinterface <omitted>.AuthenticationConfiguration$LazyBean
+Is it possible to change the visibility of LazyBean marker interface to `public`?
+We are planning to pull up spring dependencies as JBoss EAP "module" (shared libraries) to be shared among all of our applications.
+Each "module" has its own isolated ClassLoader, and is parallel to the war "module" ClassLoader, so we have to emulate the class loading hierarchy ourselves for compatibility.
+The problem is that the aggregated ClassLoader (delegates to "module" classLoader and then the applications&amp;apos;s ClassLoader) cannot sees the private LazyBean marker.

@@ -1,0 +1,30 @@
+The passed durability of Append/Increment isn&apos;t used in wal sync
+We should pass the effectiveDurability to the doWALAppend() metohd.
+HRegion.java
+
+
+private Result doDelta(...) {
+
+        Durability effectiveDurability = getEffectiveDurability(mutation.getDurability());
+
+        Map&lt;Store, List&lt;Cell&gt;&gt; forMemStore =
+
+            new HashMap&lt;Store, List&lt;Cell&gt;&gt;(mutation.getFamilyCellMap().size());
+
+        // Reckon Cells to apply to WAL --  in returned walEdit -- and what to add to memstore and
+
+        // what to return back to the client (in &amp;apos;forMemStore&amp;apos; and &amp;apos;results&amp;apos; respectively).
+
+        WALEdit walEdit = reckonDeltas(op, mutation, effectiveDurability, forMemStore, results);
+
+        // Actually write to WAL now if a walEdit to apply.
+
+        if (walEdit != null &amp;&amp; !walEdit.isEmpty()) {
+
+          writeEntry = doWALAppend(walEdit, durability, nonceGroup, nonce);
+
+        } else {
+
+}
+
+

@@ -1,0 +1,25 @@
+NULL values produced by left outer join do not behave as NULL
+Consider the following setup:
+
+
+
+create table tbl (n bigint, t string); 
+
+
+
+insert into tbl values (1, &amp;apos;one&amp;apos;); 
+
+insert into tbl values(2, &amp;apos;two&amp;apos;);
+
+
+
+select a.n, a.t, isnull(b.n), isnull(b.t) from (select * from tbl where n = 1) a  left outer join  (select * from tbl where 1 = 2) b on a.n = b.n;
+
+
+
+1    one    false    true
+
+
+
+The query should return true for isnull(b.n).
+I&amp;apos;ve tested by inserting a row with null value for the bigint column into tbl, and isnull returns true in that case. 

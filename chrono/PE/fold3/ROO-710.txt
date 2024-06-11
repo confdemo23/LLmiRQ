@@ -1,0 +1,16 @@
+[patch] ItdSourceFileComposer isn&apos;t appending type parameters in appendExtendsTypes()
+ItdSourceFileComposer correctly takes type parameters in appendImplementsTypes() by means of calling extendsType.getNameIncludingTypeParameters() but in appendExtendsTypes() calls getFullyQualifiedTypeName() and getSimpleTypeName().
+We have an addon that triggers on @RooRepository annotation on interfaces and classes (the interface&amp;apos;s implementation). For the interface it creates an aspect file that should look like this:
+privileged aspect UserRepository_Roo_Repository {    
+    declare parents: UserRepository extends Repository&lt;User, Long&gt;;
+}
+For the implementation it looks like this:
+privileged aspect UserRepositoryImpl_Roo_Repository {    
+    declare parents: UserRepositoryImpl extends RepositoryImpl&lt;User, Long&gt;;    
+    declare @type: UserRepositoryImpl: @Repository("userRepository");
+}
+With ItdSourceFileComposer unmodified the interface&amp;apos;s aspect file looks like this:
+privileged aspect UserRepository_Roo_Repository {    
+    declare parents: UserRepository extends Repository;
+}
+Replacing the code in appendExtendsTypes() with the code in appendImplementsTypes() solves the problem.

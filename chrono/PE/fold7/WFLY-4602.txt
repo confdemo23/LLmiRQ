@@ -1,0 +1,184 @@
+HttpServletRequest#logout doesn&apos;t fully clear security context
+After having authenticated (via JASPIC or otherwise), calling HttpServletRequest#logout and then requesting the caller/user principal (all within the same request), Undertow (via e.g. WildFly 8.2 or 9.0rc1) will correctly clear out the principal for the web context, but will NOT clear out the principal for the EJB context.
+The problem seems to be that io.undertow.security.impl.SecurityContextImpl.logout() doesn&amp;apos;t do anything with the security context that is used by the EJB container among others.
+It now just contains the following:
+
+
+
+
+
+
+this.account = null;
+
+
+
+
+this.mechanismName = null;
+
+
+
+
+this.authenticationState = AuthenticationState.NOT_ATTEMPTED;
+
+
+
+
+
+
+Added the following code just before this seems to work:
+
+
+
+
+
+
+// Clear old context
+
+
+
+
+SecurityContextAssociation.clearSecurityContext();
+
+
+
+
+SecurityRolesAssociation.setSecurityRoles(null);
+
+
+
+
+	            		
+
+
+
+
+// Set a new one in case re-authentication is done within the same thread
+
+
+
+
+SecurityContext securityContext = SecurityContextFactory.createSecurityContext("other");
+
+
+
+
+exchange.putAttachment(SECURITY_CONTEXT_ATTACHMENT, securityContext);
+
+
+
+
+
+
+
+
+
+SecurityContextAssociation.setSecurityContext(securityContext);
+
+
+
+
+
+
+
+
+
+// (existing clearing code)
+
+
+
+
+this.account = null;
+
+
+
+
+this.mechanismName = null;
+
+
+
+
+this.authenticationState = AuthenticationState.NOT_ATTEMPTED;
+
+
+
+
+
+
+Do note that this code uses the hardcoded domain "other". Except by using reflection I couldn&amp;apos;t obtain the actual domain name at this point. The reflective code I used was:
+
+
+
+
+
+
+String securityDomain = "other";
+
+
+
+
+
+
+
+
+
+if (identityManager instanceof JAASIdentityManagerImpl) {
+
+
+
+
+    try {
+
+
+
+
+        Field securityDomainContextField = JAASIdentityManagerImpl.class.getDeclaredField("securityDomainContext");
+
+
+
+
+        securityDomainContextField.setAccessible(true);
+
+
+
+
+        SecurityDomainContext securityDomainContext = (SecurityDomainContext) securityDomainContextField.get(identityManager);
+
+
+
+
+
+
+
+
+
+        securityDomain = securityDomainContext.getAuthenticationManager().getSecurityDomain();
+
+
+
+
+
+
+
+
+
+    } catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
+
+
+
+
+        logger.log(Level.SEVERE, "Can&amp;apos;t obtain name of security domain, using &amp;apos;other&amp;apos; now", e);
+
+
+
+
+    }
+
+
+
+
+}
+
+
+
+
+

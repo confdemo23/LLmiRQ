@@ -1,0 +1,2 @@
+Typo in doc section A.4.2
+--entity The entity which /will/ this data on demand class will create and modify as required

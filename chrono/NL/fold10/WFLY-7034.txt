@@ -1,0 +1,7 @@
+JDR is not collecting the file .overlays, layer.conf, version.txt config files
+The JDR report when collecting files should be collecting
+$JBOSS_HOME/modules/system/layers/base/.overlays/.overlays
+$JBOSS_HOME/.installation/identity.conf
+$JBOSS_HOME/.installation/layers/base/layer.conf
+$JBOSS_HOME/.installation/patches/*/misc/version.txt
+This file is needed to confirm overlay priority and other layer configurations to make sure the installation is not corrupted.

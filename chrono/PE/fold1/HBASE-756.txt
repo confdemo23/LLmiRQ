@@ -1,0 +1,9 @@
+In HBase shell, the put command doesn&apos;t process the timestamp
+
+      if timestamp
+        bu = BatchUpdate.new(row)
+      else
+        bu = BatchUpdate.new(row)
+
+
+Something is wrong here.

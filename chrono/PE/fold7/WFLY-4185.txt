@@ -1,0 +1,23 @@
+Using annotated servlet listeners from modules
+PicketLink provides support for Http Security. Basically, it consists of an API to define security policies to the paths or resources of an application and a security filter (servlet filter) that is responsible to enforce those policies for every single request.
+The security filter is installed from a specific ServletContextListener (org.picketlink.http.internal.PicketLinkServletContextListener) that checks if the application has defined any security policy in order to decide if the filter must be installed or not.
+PicketLink also defines a ServletRequestListener (org.picketlink.http.internal.HttpServletRequestListener) that is used to produce a decorated HttpServletRequest instance. This decorated instance provides full integration between PL and the HttpServletRequest security methods plus some other goodies for PL users such as URL rewriting, etc.
+Both listeners (servletcontext and request) are CDI beans with injection points and/or producer methods. 
+When using PL from modules, the producer method of org.picketlink.http.internal.HttpServletRequestListener#produce is not being recognized. And that makes impossible to use PL from modules.
+The same code works if you use PL jars inside the deployment.
+Another interesting behavior is that EAP and WildFly are behaving differently. In EAP (latest build), the ServletContextListener is only recognized as a CDI bean if you define it in the web.xml. While in WildFly this is not necessary.
+Also, in EAP the producer method of HttpServletRequestListener is properly recognized and everything works fine.
+I&amp;apos;ve created a branch [1] to test this issue. The test case is 
+
+
+
+
+
+org.wildfly.test.integration.security.picketlink.core.http.ServletListenerFromModuleTestCase
+
+
+
+
+
+.
+[1] https://github.com/pedroigor/wildfly/tree/WFLY-4185

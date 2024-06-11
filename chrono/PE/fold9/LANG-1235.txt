@@ -1,0 +1,8 @@
+Add decrementAndGet/incrementAndGet to MutableInt class
+Frequently when incrementing or decrementing a number, one needs to compare it to a limit. For example in loops.
+At present that requires two calls:
+MutableInt.decrement()
+MutableInt.getValue()
+It would be convenient to have a method that combined the two.
+c.f. AtomicInteger.decrementAndGet()
+There is less likelihood of needing these methods for other Mutable Number types as they are not often used in loops.

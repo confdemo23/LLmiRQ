@@ -1,0 +1,2 @@
+The command line parser fails when there is more than a single space after the command
+If you have more than a single space after the command (for example "project.." instead of "project."), then the parser doesn&amp;apos;t recognize the command anymore and TAB completion will fail.

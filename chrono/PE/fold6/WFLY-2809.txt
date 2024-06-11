@@ -1,0 +1,17 @@
+JACC PolicyContext.getContext("javax.servlet.http.HttpServletRequest")
+Calling
+
+
+
+
+
+
+PolicyContext.getContext("javax.servlet.http.HttpServletRequest");
+
+
+
+
+
+
+within a @Stateless session bean gives an exception.
+I&amp;apos;ve created an integration test to reproduce this issue.

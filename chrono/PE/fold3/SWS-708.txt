@@ -1,0 +1,169 @@
+PayloadValidatingInterceptor errors not clearing SecurityContextHolder 
+I have Validtion Interecptor first and SecurityInterceptor Later in the sequence. 
+When response has validation errors some how SecurityConextHolder has old previous authenticated user Information. 
+When there are NO response validation errors SecurityContextHolder is clean.
+I am guessing that when PayloadValidatingInterceptor has errors which is causing not to clean up thread local ?
+Once the request is complete all thread context should be nulled out and give back to pool. It does that there are no reponse validation errors but doesn&amp;apos;t do that when there are response validation errors. I tried to debug the code , all the way to MessageDispatcherServlet but didn&amp;apos;t find any clue.
+Here is my configuration
+
+
+
+
+
+
+&lt;sws:interceptors&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        &lt;bean id="wsSecurityInterceptor" class="com.mycompancy.MyXwsSecurityInterceptor"&gt;
+
+
+
+
+            
+
+
+
+
+            &lt;property name="secureResponse" value="false"/&gt;
+
+
+
+
+            &lt;property name="policyConfiguration"
+
+
+
+
+                      value="/WEB-INF/spring/securityPolicy.xml"/&gt;
+
+
+
+
+            &lt;property name="callbackHandlers"&gt;
+
+
+
+
+                &lt;list&gt;
+
+
+
+
+                    &lt;bean class="com.mycompancy.security.MySpringDigestPasswordValidationCallbackHandler"&gt;
+
+
+
+
+                        &lt;property name="userDetailsService" ref="securityService"/&gt;
+
+
+
+
+                        &lt;property name="userCache" ref="userCache"/&gt;
+
+
+
+
+                    &lt;/bean&gt;
+
+
+
+
+                &lt;/list&gt;
+
+
+
+
+            &lt;/property&gt;
+
+
+
+
+        &lt;/bean&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        &lt;bean class="com.mycompancy.util.MyLoggingInterceptor"/&gt;
+
+
+
+
+        &lt;bean class="org.springframework.ws.soap.server.endpoint.interceptor.PayloadValidatingInterceptor"
+
+
+
+
+              p:validateRequest="true" p:validateResponse="true"&gt;
+
+
+
+
+            &lt;property name="schemas"&gt;
+
+
+
+
+                &lt;list&gt;
+
+
+
+
+                    &lt;value&gt;/WEB-INF/schema/customer.xsd&lt;/value&gt;
+
+
+
+
+                    &lt;value&gt;/WEB-INF/schema/users.xsd&lt;/value&gt;
+
+
+
+
+                    &lt;value&gt;/WEB-INF/schema/userDetails.xsd&lt;/value&gt;
+
+
+
+
+                &lt;/list&gt;
+
+
+
+
+            &lt;/property&gt;
+
+
+
+
+        &lt;/bean&gt;
+
+
+
+
+    &lt;/sws:interceptors&gt;
+
+
+
+
+

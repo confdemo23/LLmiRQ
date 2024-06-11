@@ -1,0 +1,1 @@
+Set basic stats as inaccurate for all ACID tables

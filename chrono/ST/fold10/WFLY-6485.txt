@@ -1,0 +1,9 @@
+add JPA dependency in subdeployments to avoid NPE 
+WeldDeploymentProcessor only processes top level deployments (jpa dependencies for subdeployments are skipped). This means that subdeployments that CDI inject a persistence unit/context, will not add a dependency on the JPA PersistenceUnitService. As a result, the PersistenceUnitService is referenced before it is started (which leads to PersistenceUnitService.entityManagerFactory being null).
+We should avoid the following NPE by ensuring that dependencies on the JPA persistence unit are added for all sub-deployments.
+
+Caused by: java.lang.NullPointerException
+at org.jboss.as.jpa.container.TransactionScopedEntityManager.createEntityManager(TransactionScopedEntityManager.java:186)
+at org.jboss.as.jpa.container.TransactionScopedEntityManager.getEntityManager(TransactionScopedEntityManager.java:91)
+at org.jboss.as.jpa.container.AbstractEntityManager.find(AbstractEntityManager.java:212)
+Potential fix is at https://github.com/scottmarlow/wildfly/tree/jpaNPE

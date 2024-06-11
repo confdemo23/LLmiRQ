@@ -1,0 +1,6 @@
+cumulativeProbability((double)n, (double)n) returns 0 for integer distributions
+cumulativeProbability((double)n, (double)n) returns 0 for
+discrete/integer distributions
+I suppose AbstractIntegerDistribution.cumulativeProbability(double,
+double) should be overridden to call its (int, int) version instead of
+using default one from AbstractDistribution

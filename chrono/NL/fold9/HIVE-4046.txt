@@ -1,0 +1,2 @@
+Column masking
+Sometimes data in a table needs to be kept around but made inaccessible. Right now it is possible to offline a table or a partition, but not a specific column of a partition. Also, accessing an offlined table results in an error. With this change, it will be possible to mask a column at the partition level, causing all further queries to that column to return null.

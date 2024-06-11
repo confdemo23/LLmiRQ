@@ -1,0 +1,59 @@
+Multiple params not working properly in webservices tag
+I configured webservices to use a rewrite of the soap endpoint.  The following attributes don&amp;apos;t seem to work correctly
+1. Adding this entry does not work.  I need the value for protocol to be configurable
+
+
+
+
+
+
+&lt;wsdl-uri-scheme&gt;${wsdl.protocol:http}&lt;/wsdl-uri-scheme&gt;
+
+
+
+
+
+
+With error
+
+Message: "WFLYCTL0248: Invalid value ${wsdl.protocol:http} for wsdl-uri-scheme; legal values are [http, https]"
+2. wsdl-port is not leveraged properly.  I manually changed to https, based on the above limitation.  I set this:
+
+
+
+
+
+
+&lt;wsdl-uri-scheme&gt;https&lt;/wsdl-uri-scheme&gt;
+
+
+
+
+&lt;wsdl-port&gt;${wsdl.port:443}&lt;/wsdl-port&gt;
+
+
+
+
+
+
+However, the reported URL includes 8443 not my configured 443 value.
+In addition, if I manually set the values
+
+
+
+
+
+
+            &lt;wsdl-uri-scheme&gt;https&lt;/wsdl-uri-scheme&gt;
+
+
+
+
+            &lt;wsdl-port&gt;443&lt;/wsdl-port&gt;
+
+
+
+
+
+
+I still get 8443.

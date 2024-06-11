@@ -1,0 +1,3 @@
+With Clause should cache data & reuse 
+Hive supports with clause. However Hive don&amp;apos;t cache the result set of with clause and reuse it.
+Instead we inline the query definition of the with clause. This results in re execution of with clause query every where it is referenced.

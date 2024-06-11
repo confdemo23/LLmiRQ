@@ -1,0 +1,2 @@
+Fix TestCodahaleMetrics#testFileReporting
+Codahale Metrics file reporter is time based, hence test is as well.  On slow machines, sometimes the file is not written fast enough to be read.

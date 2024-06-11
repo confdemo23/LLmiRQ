@@ -1,0 +1,40 @@
+Can not drop a default partition __HIVE_DEFAULT_PARTITION__ which is not a "string" type
+When partition is not a string type, for example, if it is a int type, when drop the default partition _HIVE_DEFAULT_PARTITION_, you will get:
+SemanticException Unexpected unknown partitions
+Reproduce:
+
+SET hive.exec.dynamic.partition=true;
+
+SET hive.exec.dynamic.partition.mode=nonstrict;
+
+set hive.exec.max.dynamic.partitions.pernode=10000;
+
+
+
+DROP TABLE IF EXISTS test;
+
+CREATE TABLE test (col1 string) PARTITIONED BY (p1 int) ROW FORMAT DELIMITED FIELDS TERMINATED BY &amp;apos;\001&amp;apos; STORED AS TEXTFILE;
+
+INSERT OVERWRITE TABLE test PARTITION (p1) SELECT code, IF(salary &gt; 600, 100, null) as p1 FROM jsmall;
+
+
+
+hive&gt; SHOW PARTITIONS test;
+
+OK
+
+p1=100
+
+p1=__HIVE_DEFAULT_PARTITION__
+
+Time taken: 0.124 seconds, Fetched: 2 row(s)
+
+
+
+hive&gt; ALTER TABLE test DROP partition (p1 = &amp;apos;__HIVE_DEFAULT_PARTITION__&amp;apos;);
+
+FAILED: SemanticException Unexpected unknown partitions for (p1 = null)
+
+
+
+

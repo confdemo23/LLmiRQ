@@ -1,0 +1,2 @@
+JdbcPagingItemReader does not apply parameter values correctly on restart
+JdbcPagingItemReader does not apply parameter values correctly on restart

@@ -1,0 +1,133 @@
+&apos;chunk-completion-policy&apos; or &apos;commit-interval&apos; with &apos;#{jobParameters[...]}&apos; is ignored when &apos;retry-limit&apos; exists.
+When &amp;apos;retry-limit&amp;apos; is configured and  &amp;apos;commit-interval&amp;apos; is extracted from jobParameters, commit-interval is always recognized to be &amp;apos;1&amp;apos; regardless of jobParameters.
+
+
+
+
+
+
+&lt;batch:job id="retryJob"&gt;
+
+
+
+
+  &lt;batch:step id="step1"&gt;
+
+
+
+
+    &lt;batch:tasklet&gt;
+
+
+
+
+      &lt;batch:chunk reader="reader" writer="writer" commit-interval="#{jobParameters[&amp;apos;commit.interval&amp;apos;]}" retry-limit="5" &gt; 
+
+
+
+
+      &lt;batch:retryable-exception-classes&gt;
+
+
+
+
+        &lt;batch:include class="java.lang.Exception" /&gt;
+
+
+
+
+       &lt;/batch:retryable-exception-classes&gt;
+
+
+
+
+    &lt;/batch:chunk&gt;
+
+
+
+
+  &lt;/batch:tasklet&gt;
+
+
+
+
+&lt;/batch:step&gt;
+
+
+
+
+&lt;/batch:job&gt;
+
+
+
+
+
+
+And &amp;apos;chunk-completion-policy&amp;apos; also ignored when &amp;apos;retry-limit&amp;apos; exists.
+These flows are fundamentally same after parsing the XML, because SimpleCompletionPolicy is registered when &amp;apos;commit-interval&amp;apos; starts with &amp;apos;#". it is processed in  &amp;apos;org.springframework.batch.core.configuration.xml.ChunkElementParser.prase()&amp;apos;
+
+
+
+
+
+
+if (StringUtils.hasText(commitInterval)) {
+
+
+
+
+  if (commitInterval.startsWith("#")) {
+
+
+
+
+    // It&amp;apos;s a late binding expression, so we need step scope...
+
+
+
+
+    BeanDefinitionBuilder completionPolicy = BeanDefinitionBuilder.genericBeanDefinition(SimpleCompletionPolicy.class);
+
+
+
+
+    completionPolicy.addConstructorArgValue(commitInterval);
+
+
+
+
+    completionPolicy.setScope("step");
+
+
+
+
+    propertyValues.addPropertyValue("chunkCompletionPolicy", completionPolicy.getBeanDefinition());
+
+
+
+
+  } else {
+
+
+
+
+    propertyValues.addPropertyValue("commitInterval", commitInterval);
+
+
+
+
+  }
+
+
+
+
+}
+
+
+
+
+
+
+The cause is that StepParserStepFactoryBean omits to set ChunkCompletionPolicy when creating FaultTolerantStep.  &amp;apos;builder.chunk(chunkCompletionPolicy);&amp;apos; is called in &amp;apos;StepParserStepFactoryBean.createSimpleStep()&amp;apos;,
+ but it is not in &amp;apos;createFaultTolerantStep()&amp;apos;.
+I reproduced the problem at https://github.com/benelog/batch-experiments/tree/master/batch-retry-test

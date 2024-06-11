@@ -1,0 +1,77 @@
+XMLPropertyListConfiguration cannot save arrays in the correct plist form
+
+
+
+groovy&gt; import org.apache.commons.configuration.plist.* 
+
+groovy&gt; def config = new XMLPropertyListConfiguration() 
+
+groovy&gt; config.addProperty("things", [&amp;apos;chair&amp;apos;, &amp;apos;hat&amp;apos;, &amp;apos;door&amp;apos;])  
+
+groovy&gt; config.save(System.out) 
+
+
+
+results in
+
+
+
+&lt;?xml version="1.0"?&gt;
+
+&lt;!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd"&gt;
+
+&lt;plist version="1.0"&gt;
+
+    &lt;dict&gt;
+
+        &lt;key&gt;things&lt;/key&gt;
+
+        &lt;string&gt;chair&lt;/string&gt;
+
+
+
+        &lt;key&gt;things&lt;/key&gt;
+
+        &lt;string&gt;hat&lt;/string&gt;
+
+
+
+        &lt;key&gt;things&lt;/key&gt;
+
+        &lt;string&gt;door&lt;/string&gt;
+
+    &lt;/dict&gt;
+
+&lt;/plist&gt;
+
+
+
+expecting
+
+
+
+&lt;?xml version="1.0"?&gt;
+
+&lt;!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd"&gt;
+
+&lt;plist version="1.0"&gt;
+
+    &lt;dict&gt;
+
+        &lt;key&gt;things&lt;/key&gt;
+
+        &lt;array&gt;
+
+          &lt;string&gt;chair&lt;/string&gt;
+
+          &lt;string&gt;hat&lt;/string&gt;
+
+          &lt;string&gt;door&lt;/string&gt;
+
+      &lt;/array&gt;
+
+    &lt;/dict&gt;
+
+&lt;/plist&gt;
+
+

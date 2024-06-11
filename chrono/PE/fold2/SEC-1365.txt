@@ -1,0 +1,4 @@
+Missing markup in the reference documentation section 8.4.1
+http://static.springsource.org/spring-security/site/docs/3.0.x/reference/core-web-filters.html#form-login-flow-handling
+In the 2nd paragraph:
+AuthenticationSuccessHandler should be wrapped within &lt;tt&gt;&lt;/tt&gt; tags

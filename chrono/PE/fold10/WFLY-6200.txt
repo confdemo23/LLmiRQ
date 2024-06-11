@@ -1,0 +1,29 @@
+connection-url is required even when not used
+Per the comments on WFLY-6157 and WFLY-6198, connection-url is ignored in a datasource if datasource-class is defined. However, connection-url is currently mandatory. If it is not present, WildFly fails to start:
+
+
+
+
+
+
+09:51:18,216 ERROR [org.jboss.as.controller.management-operation] (ServerService Thread Pool -- 8) WFLYCTL0013: Operation ("add") failed - address: ([
+
+
+
+
+    ("subsystem" =&gt; "datasources"),
+
+
+
+
+    ("data-source" =&gt; "GamingPortalDS")
+
+
+
+
+]) - failure description: "WFLYCTL0155: connection-url may not be null"
+
+
+
+
+

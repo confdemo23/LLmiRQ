@@ -1,0 +1,7 @@
+entity fields and ITD&apos;s methods javadoc 
+It would be great feature If there will be possibility to set javadoc text for ITDs methods and fields.
+For complex methods created in Metadata classes (for example org.springframework.roo.addon.jsf.managedbean.JsfManagedBeanMetadata)
+it is very important to attach some javadoc commets for them.
+I suggest simply way to add method for 
+org.springframework.roo.classpath.details.MethodMetadataBuilder
+named like "setJavadoc".

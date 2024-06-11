@@ -1,0 +1,7 @@
+Fix failing test in ServerAddressPropertyEditorUnitTests.
+The test rejectsAddressConfigWithoutASingleParsableServerAddress fails because the supposedly non-existing hostname "bar" "now" resolves to a real host-address: 
+```
+tom@gauss ~/Documents/dev/repos/spring/spring-data-mongodb (master)$ ping bar
+PING bar (127.0.53.53): 56 data bytes
+Request timeout for icmp_seq 0
+```

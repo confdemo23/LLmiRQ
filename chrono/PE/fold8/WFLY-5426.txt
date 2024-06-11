@@ -1,0 +1,194 @@
+Data sources other than h2 cannot be added to domain servers
+This seems to work okay with the h2 driver, but adding a postgres driver add operations fail.
+The driver is deployed and is on the main-server-group which defaults to the full profile.
+
+
+
+
+
+
+[domain@localhost:9990 /] /server-group=main-server-group:read-children-resources(child-type=deployment,recursive=true,include-runtime=true)
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "success",
+
+
+
+
+    "result" =&gt; {"postgresql-9.4-1201.jdbc41.jar" =&gt; {
+
+
+
+
+        "enabled" =&gt; true,
+
+
+
+
+        "name" =&gt; "postgresql-9.4-1201.jdbc41.jar",
+
+
+
+
+        "runtime-name" =&gt; "postgresql-9.4-1201.jdbc41.jar"
+
+
+
+
+    }}
+
+
+
+
+}
+
+
+
+
+
+
+Attempting to add the data source results in the following error:
+
+
+
+
+
+
+[domain@localhost:9990 /] /profile=full/subsystem=datasources/data-source=test-pg:add(driver-name=postgresql-9.4-1201.jdbc41.jar, connection-url=jdbc:postgresql://localhost:test,user-name=user,password=password, jndi-name=java:jboss/datasources/test-pg)
+
+
+
+
+{
+
+
+
+
+    "outcome" =&gt; "failed",
+
+
+
+
+    "result" =&gt; undefined,
+
+
+
+
+    "failure-description" =&gt; {"WFLYDC0074: Operation failed or was rolled back on all servers. Server failures:" =&gt; {"server-group" =&gt; {"main-server-group" =&gt; {"host" =&gt; {"master" =&gt; {
+
+
+
+
+        "server-one" =&gt; {"WFLYCTL0080: Failed services" =&gt; {"jboss.data-source.java:jboss/datasources/test-pg" =&gt; "org.jboss.msc.service.StartException in service jboss.data-source.java:jboss/datasources/test-pg: WFLYJCA0033: Error during the deployment of test-pg
+
+
+
+
+    Caused by: org.jboss.msc.service.StartException in anonymous service: WFLYJCA0032: Unable to start the ds because it generated more than one cf"}},
+
+
+
+
+        "server-two" =&gt; {"WFLYCTL0080: Failed services" =&gt; {"jboss.data-source.java:jboss/datasources/test-pg" =&gt; "org.jboss.msc.service.StartException in service jboss.data-source.java:jboss/datasources/test-pg: WFLYJCA0033: Error during the deployment of test-pg
+
+
+
+
+    Caused by: org.jboss.msc.service.StartException in anonymous service: WFLYJCA0032: Unable to start the ds because it generated more than one cf"}}
+
+
+
+
+    }}}}}},
+
+
+
+
+    "rolled-back" =&gt; true,
+
+
+
+
+    "server-groups" =&gt; {"main-server-group" =&gt; {"host" =&gt; {"master" =&gt; {
+
+
+
+
+        "server-one" =&gt; {"response" =&gt; {
+
+
+
+
+            "outcome" =&gt; "failed",
+
+
+
+
+            "failure-description" =&gt; {"WFLYCTL0080: Failed services" =&gt; {"jboss.data-source.java:jboss/datasources/test-pg" =&gt; "org.jboss.msc.service.StartException in service jboss.data-source.java:jboss/datasources/test-pg: WFLYJCA0033: Error during the deployment of test-pg
+
+
+
+
+    Caused by: org.jboss.msc.service.StartException in anonymous service: WFLYJCA0032: Unable to start the ds because it generated more than one cf"}},
+
+
+
+
+            "rolled-back" =&gt; true
+
+
+
+
+        }},
+
+
+
+
+        "server-two" =&gt; {"response" =&gt; {
+
+
+
+
+            "outcome" =&gt; "failed",
+
+
+
+
+            "failure-description" =&gt; {"WFLYCTL0080: Failed services" =&gt; {"jboss.data-source.java:jboss/datasources/test-pg" =&gt; "org.jboss.msc.service.StartException in service jboss.data-source.java:jboss/datasources/test-pg: WFLYJCA0033: Error during the deployment of test-pg
+
+
+
+
+    Caused by: org.jboss.msc.service.StartException in anonymous service: WFLYJCA0032: Unable to start the ds because it generated more than one cf"}},
+
+
+
+
+            "rolled-back" =&gt; true
+
+
+
+
+        }}
+
+
+
+
+    }}}}
+
+
+
+
+}
+
+
+
+
+

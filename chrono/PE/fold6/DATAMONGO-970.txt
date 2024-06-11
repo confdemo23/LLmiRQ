@@ -1,0 +1,190 @@
+Id query cannot be created if object to remove is DBObject
+If we in insert DBObject in database used method:
+
+
+
+
+
+
+protected void populateIdIfNecessary(Object savedObject, Object id) {
+
+
+
+
+  if (id == null) {
+
+
+
+
+    return;
+
+
+
+
+  }
+
+
+
+
+  if (savedObject instanceof BasicDBObject) {
+
+
+
+
+    DBObject dbObject = (DBObject) savedObject;
+
+
+
+
+    dbObject.put(ID_FIELD, id);
+
+
+
+
+    return;
+
+
+
+
+  }
+
+
+
+
+  MongoPersistentProperty idProp = getIdPropertyFor(savedObject.getClass());
+
+
+
+
+  if (idProp == null) {
+
+
+
+
+    return;
+
+
+
+
+  }
+
+
+
+
+  ConversionService conversionService = mongoConverter.getConversionService();
+
+
+
+
+  BeanWrapper&lt;PersistentEntity&lt;Object, ?&gt;, Object&gt; wrapper = BeanWrapper.create(savedObject, conversionService);
+
+
+
+
+  Object idValue = wrapper.getProperty(idProp, idProp.getType(), true);
+
+
+
+
+  if (idValue != null) {
+
+
+
+
+    return;
+
+
+
+
+  }
+
+
+
+
+  wrapper.setProperty(idProp, id);
+
+
+
+
+}
+
+
+
+
+
+
+where checked: &amp;apos;savedObject instanceof BasicDBObject&amp;apos; and not store property with &amp;apos;_id&amp;apos;. Then if we remove DBObject from database for create query used:
+
+
+
+
+
+
+private Query getIdQueryFor(Object object) {
+
+
+
+
+  Assert.notNull(object);
+
+
+
+
+  Class&lt;?&gt; objectType = object.getClass();
+
+
+
+
+  MongoPersistentEntity&lt;?&gt; entity = mappingContext.getPersistentEntity(objectType);
+
+
+
+
+  MongoPersistentProperty idProp = entity == null ? null : entity.getIdProperty();
+
+
+
+
+  if (idProp == null) {
+
+
+
+
+    throw new MappingException("No id property found for object of type " + objectType);
+
+
+
+
+  }
+
+
+
+
+  ConversionService service = mongoConverter.getConversionService();
+
+
+
+
+  Object idProperty = null;
+
+
+
+
+  idProperty = BeanWrapper.create(object, service).getProperty(idProp, Object.class, true);
+
+
+
+
+  return new Query(where(idProp.getFieldName()).is(idProperty));
+
+
+
+
+}
+
+
+
+
+
+
+Where not checked:  &amp;apos;savedObject instanceof BasicDBObject&amp;apos; and throw exception. Why not checked removing object on &amp;apos;savedObject instanceof BasicDBObject&amp;apos; if we insert BAsicDBObject and after remove then.

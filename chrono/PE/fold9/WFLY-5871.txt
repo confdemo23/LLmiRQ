@@ -1,0 +1,3 @@
+post-binding attribute of PicketLink Federation service provider should be of type Boolean not String
+Currently type of this attribute is String despite it&amp;apos;s description "Indicate if this service provider uses a HTTP POST(true) or REDIRECT(false) binding."
+If user tries to write other value than "true" or "false" to this attribute IllegalArgumentException is thrown.

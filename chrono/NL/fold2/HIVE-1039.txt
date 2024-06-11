@@ -1,0 +1,7 @@
+multi-insert doesn&apos;t work for local directories
+As wd pointed out in hive-user, the following query only load data to the first local directory. Multi-insert to tables works fine. 
+hive&gt; from test
+    &gt; INSERT OVERWRITE LOCAL DIRECTORY &amp;apos;/home/stefdong/tmp/0&amp;apos; select *
+where a = 1
+    &gt; INSERT OVERWRITE LOCAL DIRECTORY &amp;apos;/home/stefdong/tmp/1&amp;apos; select *
+where a = 3;

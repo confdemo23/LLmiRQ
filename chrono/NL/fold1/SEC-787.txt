@@ -1,0 +1,2 @@
+ACL SQL statements have inconsistent use of case (mixed upper and  lower).
+SQL statements in ACL package have mixed upper and lower case table names.  This causes problems on case sensitive systems such as linux.

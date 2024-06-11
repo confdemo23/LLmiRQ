@@ -1,0 +1,63 @@
+ClasspathScanningPersistenceUnitPostProcessor does not resolve mapping files properly
+Using the postprocessor to scan the classpath for mapping orm.xml files using a wildcard pattern. Although the mapping files are discovered, they are added to the PersistenceUnitInfo as URLs. As a result they cannot be resolved by hibernate because it expects them in qualified package resource form:
+
+
+
+
+
+
+INFO  org.hibernate.ejb.Ejb3Configuration - HHH000360: Unable to resolve mapping file [file:/Users/dev/Documents/eclipse-workspaces/workspace/project1/target/classes/com/example/model/Mapping.orm.xml]
+
+
+
+
+
+
+The property on LocalContainerEntityManagerFactoryBean:
+
+
+
+
+
+
+&lt;property name="persistenceUnitPostProcessors"&gt;
+
+
+
+
+	&lt;list&gt;
+
+
+
+
+		&lt;bean class="org.springframework.data.jpa.support.ClasspathScanningPersistenceUnitPostProcessor"&gt;
+
+
+
+
+			&lt;constructor-arg value="com.example.model" /&gt;
+
+
+
+
+			&lt;property name="mappingFileNamePattern" value="**/*orm.xml" /&gt;
+
+
+
+
+		&lt;/bean&gt;
+
+
+
+
+	&lt;/list&gt;
+
+
+
+
+&lt;/property&gt;
+
+
+
+
+
