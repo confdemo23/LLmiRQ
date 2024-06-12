@@ -1,0 +1,142 @@
+296	query order alias sort function correctly expression prefix Sort support insensitive sorting Sort findAll method returned sensitive names sorted returned order Dave Oliver kevin amp apos proposing sorting properties Strings sort insensitive returned Dave kevin Oliver
+375	ASC clause ORDER clause query ORDER clause Query SELECT Admin firstname CONCAT amp apos amp apos searchTerm amp apos amp apos lastname CONCAT amp apos amp apos searchTerm amp apos amp apos email CONCAT amp apos amp apos searchTerm amp apos amp apos login CONCAT amp apos amp apos searchTerm amp apos amp apos ORDER lastname firstname Admin search Param searchTerm String searchTerm Pageable ORDER clause ASC DESC clause assuming ASC clause generated query SELECT thalasoft learnintouch core jpa domain Admin firstname CONCAT amp apos amp apos searchTerm amp apos amp apos lastname CONCAT amp apos amp apos searchTerm amp apos amp apos email CONCAT amp apos amp apos searchTerm amp apos amp apos login CONCAT amp apos amp apos searchTerm amp apos amp apos ORDER lastname firstname order lastname asc firstname asc ORDER clauses explicitly add ASC clause query fine
+512	parameter query expression exception parser parameters success temporal Improve error message parameter
+593	repository custom bean method object checked runtime jpa Custom repository implementations picked CDI
+617	find parameter query firstname lastname named user age Named query lookups transaction rolled execution paged repository method backed JPA named query running transaction named count query mitigate lookup failure failing lookup transaction marked rollback required JPA specification revisit named query validation execution manually defined queries Query DATAJPA
+629	query parameter expression jpa count create type join SPEL expression work entityName Query
+815	order qualifyReference property joinAlias property joinAlias order clause incorrectly assigns qualifyReference query problem assumes Cat created Dog created exist Sort column created Cat join Dog tables created column property created joinAlias qualifyReference set order created order created column reference created ambiguous attached patch resolves issue
+909	Count query breaks pagination projections functionality stack overflow requiring keyword projection support doesn amp apos documented helpful mention included main documentation http stackoverflow questions projections pageable spring data
+920	Add support exists projection repository query derivation Add support exists projection repository query derivation
+965	Mapping Sort instances ORDER expressions restricted fields manually defined queries
+23	null case queries lines root creator null isnull null names topredicate predicate creating method isnull null isnotnull null broken
+58	isnew persistable entity abstractentityinformation abstract entity jpapersistableentityinformation jpa persistable entity abstract behavior jpa persistableentityinformation persistable entity repository
+68	entity pre isnew prepersist pre persist update amp preupdate pre update returns library hades auditingentitylistener auditing entity listener auditing entity listener problem determining
+77	pagination query query count namedquery named query count simplejpaquery simple jpa query forum binder boil manually declared queries named applied app lied
+94	pageable sort user direction queries getcontent content gettotalelements total elements repository user order respected parttree tree tree generated
+96	getproperty property creator dot jpaquerycreator jpa query creator todotpath dot path property input query attributes graphs invalid path jpa
+110	numbers queryutils query utils error apos string data utils query entities names error identifying ide ntifying alias entity
+111	deleteall delete springbook spring book repository book jpa spring simplejparepository simple jpa repository delete impl apos call clear simple
+120	abstractauditable abstract auditable abstract manytoone mappings onetoone auditable map pings
+138	unit persistence persistence msg string append spring getpersistenceunitrooturl persistence unit root url defaultpersistenceunitmanager default persistence unit manager merging mergingpersistenceunitmanager merging persistence unit manager manager doesnt doesn work default
+141	type amp metamodel identitifiedtype identitified type superclasses interfaces class superclass entity managedtype managed type jpametamodelentityinformation jpa metamodel entity jpa entity deal mapped super classes
+142	query order count query hibernate test apos test amp findquery find query invalid generated pageable namedquery named query named existing
+148	order query builder sum sort aggregate data statement session query properties invalid alias generated
+177	entity exception jpa findone find delete simplejparepository simple jpa repository exception situation invalid impl repository validate record existance prior issue command simple
+186	message pageable userrepository user repository method pageble repository repository namedquery named query string jpa typos log named query
+189	url puis classes manager times amp urls unit merging mergingpersistenceunitmanager merging persistence unit manager persistence adds multiple
+243	query querydsl order sort return order class dto specification sorting paginated working
+253	specification specifications spec predicate negation topredicate predicate return select result produces wrong combined
+257	count query entity jpa repository link call pageable flag parameters calls alls methods fail horizontal partitioning itioning eclipselink eclipse link eclipse
+266	entity string jpa match key dao java idattributename attribute data getname simplejparepository simple jpa repository impl repository exists fails composite simple
+287	query count predicate root number children apos issue count doesn account distinct property target
+348	superclass class mappedsuperclass mapped superclass idmetadata metadata resolve org metamodel mapped type idclass class supported
+350	method query entity manager exception query target entitymanager entity manager factory improve validation creating explicit instance
+352	count break jpa query datajpa query validation queries simple joins simplejpaquery simple jpa query impl validates valid ates aggressively
+353	unit persistence package orm xml org post classpathscanningpersistenceunitpostprocessor classpath scanning persistence unit post processor classpath ejb scanning processor resolve mapping files properly
+363	entity simplejparepository simple jpa repository jpa statement findone find result case sql loads call improve impl repository delete removing superfluous super fluous exists simple
+403	jpa query collection specification field entitiesb elementcollection element collection entity utils element unnecessary outer join generated sorting
+407	basepackagepathcomponent base package path component windows component path base package path indexoutofboundsexception bounds exception exception separator classpathscanningpersistenceunitpostprocessor classpath scanning persistence unit post processor classpath scanning persistence unit post processor throws
+413	entity entity class property class jpametamodelentityinformation jpa metamodel entity itemid item item site entities nested classes fail populate jpa metamodel
+415	status userstatus user status query entityname entity param user org user integer set springframework data jpa repository supported varargs
+430	class type idtype type type hibernate version illegalstateexception illegal exception behaviour exception incompatibilities ompatibilities latest
+454	byte array certificate integer query dao server method jpa search fails
+496	amp elementcollection element collection apos collection string derivation element clauses query doesn create joins element collections
+499	release syntax dsl querydsl query dsl query null handling microsoft querydsl specifier paginate generate nulls illegal mssql
+513	message lastname annotations query repository string guide param amp invocation improve error missing query methods named parameters
+517	dependency metadata crudmethodmetadata crud method metadata repository method simplejparepository simple jpa repository checks setter amp guard defensively check null optional crud impl jpa simple
+523	specification specifications domain jpa jpaspecificationexecutor jpa specification executor springframework executor jpa spring data implement serializable
+545	pattern frenchword french word parameter string matcher word characters binding java special allowed named
+568	entity version mis method amp jpametamodelentityinformation jpa metamodel entity metamodel jpa version record update inserted
+590	isnew version return implementation versionvalue version versionattribute version attribute objects default getpropertyvalue property jpa version breaking change doesn apos sense
+605	isversionproperty version property persistent hasversionproperty version property impl jpa entity jpapersistentpropertyimpl jpa persistent property impl return version persistententity persistent entity property override method
+611	key primarykey primary key table jpa integer data works class jpa repository simplejparepository simple jpa repository impl findall find find iterable ids working composite primary simple
+620	loop method thread map amp hashmap hash map hash util metadata infinite unsynchronized crudmethodmetadatapostprocessor crud method metadata post processor crud method post processor
+627	jpa definition mapping bean context string context jpa typo beandefinitionnames bean definition names ames names
+652	parameter procedure query cursor procedure java list proc result support provide parametermode parameter mode mode
+656	query result query count list spec total group returns wrong result
+712	query string param query repository long bug binding clause parameters spel
+736	names entity count string query ascii count query pattern queryutils query utils creation fails characters
+805	context persistence amp typo clearautomatically clear automatically description modifying javadoc documentation query typo
+848	class class obj employee getclass class proxy code entity hibernateproxyhelper hibernate proxy helper returns abstractpersistable abstract persistable abstract persistable equals false target
+937	class predicate format formattier system string conversion jpa formatting jpasystemexception jpa system exception broken placeholder place holder exception message created querybyexamplepredicatebuilder query predicate builder query builder getpredicate predicate
+1000	query string query authority request org fetch utils user pagerequest request pageable fetch returning alias
+64	parameter query method types queries criteria interface jpa list automatically generated bind variables numeric num eric parameters
+86	group count query specification result count dao list find method throws exception clause
+121	parameter parent tree null model parent table query property tree equals compare
+137	entity amp findall find bulk cascade query dependency apos purpose delete deleteall delete generated queries respect
+169	ancestors typing entity query query ancestors method columns jpa repository annotated findxxx find xxx methods wrong find xxx
+226	query foo bar distict exception repository lang method illegalargumentexception illegal argument exception illegal misleading valid
+252	person entities query property sort addresses table address address pageable sorting join excludes null matches
+277	datajpa sorting issue case findall find specifications amp jpaspecficationexecutor jpa specfication executor property specfication pageable join excludes null matches
+327	amp apos item sort case status spring status property clients case insensitive ins ensitive sorting pageable
+330	spring translation packages data jpa exception basepackages base packages base enablejparepositories enable jpa repositories enable repositories activates exception repository classes
+342	user genre query select query media total number genres clause wrong calculation elements distinct
+346	property order user assignedto assigned apos left type default objects preapprova sort object doesn work join outer join sorting
+359	lock method findone find annotation apos integer issue crud lockmodetype lock mode type doesn work find
+362	query parameter query expression query apos examples amp parameter changed
+373	queries nullpointerexception null pointer exception pointer null exception named multiple expressions manually defined
+388	data manager entitymanager entity manager test alternative entity spring injection producer producer ignores cdi environment
+396	thread query criteria object jpa criteriaquery criteria query query spring call data caching problems hibernate apos alias generation multithreaded environments
+397	alias type parameters period generatedalias generated alias payrollparameters payroll parameters payroll price processperiod process period calculation generated incrementing rementing correctly query
+401	spring jpa order table execution time patch data attachment unnecessary outer join generated querying single
+420	github student select pageable paging syntax fname lname pramoth count error scalar select
+424	order order query query orderstate order alias select entity orderdate order entityname entity spel match regex detecting
+427	property object implementation test querydsl query dsl case custom query hibernate jpa sort generates join left dsl
+429	parameter amp vararg query property binding dao property data entity pass var arg
+442	exception query jpa spring data entity createnamedquery create named query illegalargumentexception illegal argument exception argument repository initialization transaction rollback cdi environments
+492	spring amp exception findall find method product web crudrepository crud repository comparation object find iterable invalid comp aration exception thrown
+494	spring data auditing package spring factory bundle jar data jpa missing imports auditing
+505	data blob param spring entitywithblobfield entity blob field query bytes blob byte entity query result returns
+510	column jpa order property versions issue version siteuser release regression sort object doesn apos work join outer join sorting
+561	release style data test list spring entities children version entity primitive property invalidly considered
+567	entity optimistic lock dao test work myentity entity version test column optimisticlock optimistic lock
+597	version spring code amp jpa tests entity database apos data saving detatched breaks moving
+606	exception parameter list result sql mysqlsyntaxerrorexception sqlsyntax error exception category avatar list sqlgrammarexception sqlgrammar exception sqlg ram mar clause empty collection sqlgrammar
+608	actual type map getactualtype actual type persistent collection jpa entity amp jpapersistentproperty jpa persistent property jpapersistententityimpl jpa persistent entity impl impl isentity entity actual
+681	parameters parameter procedures spring examples stored data output adhoc position execution derived stored proc edures fails named
+684	query query association findall find queryexception query exception entitygraph entity graph spring graph entity dsl querydslpredicateexecutor query dsl predicate executor predicate executor rap find
+758	parameter names jpa parameters amp role permission member case named java prevents positional pos itional query binding
+763	query clause method specification sort org exception jpa lead association executing fetch joins leads wrong hql
+790	exception annotation table class exception org queryexception query exception appointmen method hibernate query applying app lying entitygraph entity graph entity rap querydsl findall find find predicate pageable graph
+798	query query key breaks acc toacc acc file mov txt account repository method fails sorting pageable
+820	field version mapped class bug entity callbacks post update entity merged persisted sisted generated mappedsuperclass mapped super class super class
+830	query apos doesn methods string properties work notcontaining
+851	query data convenience support stackoverflow support jpa existsby exists exists spring repository
+858	class leaf collection property roles role binding findbyrolesnamecontaining find roles roles inspects ins pects collections
+903	res query orm stream streaming offer list object repo missing result attributes hibernate
+913	query namedquery named query entity foobarentity foobar entity query queries record getdateoffirstrecord record calendar method inconsistent behavior projections project ions named
+951	type repository string authentication converter user converternotfoundexception converter exception springframework object return projections handled correctly optional wrapping
+960	sort prodotto apos amp cerca query query param order clause created correctly manually defined alias
+974	document problem documentwithoutparent document parent parent pramoth apos projection attributes projections referring erring collection don create proper selection missing joins
+984	jpa query projection error amp case apos test type spring project ion returning single standard aliases result tuple
+1023	notification repository stream push logger service pool connection times reject stream executions exec utions executed transaction
+1024	time local jpa null excepion illegalstateexcepion illegal excepion localdate local table illegal type querrying empty standard message aliases result tuple
+44	Using named queries fails for methods not returning an entity IllegalArgumentException init Property buildTree create from PartTree OrPart Tree Part build
+201	JpaQueryExecution started to throw NullPointerException if pageable is null NullPointerException PersistenceException RepositoryFactorySupport QueryExecutorMethodInterceptor JpaQueryExecution PagedExecution AbstractJpaQuery ReflectiveMethodInvocation doExecute PersistenceExceptionTranslationInterceptor Query execute invoke
+232	Parameter binding in SimpleJpaRepository findAll Iterable ID  ids  fails for non Lists PersistenceException IllegalArgumentException RepositoryFactorySupport QueryExecutorMethodInterceptor CriteriaQueryCompiler resolveExplicitCriteriaParameterName setParameter SimpleJpaRepository invoke Method NativeMethodAccessorImpl DelegatingMethodAccessorImpl executeMethodOn
+269	Composite Primary Key Class With Foreign Key using IdClass results in TypeMismatchException TypeMismatchException IllegalArgumentException JpaMetamodelEntityInformation DirectFieldAccessFallbackBeanWrapper BeanWrapperImpl setPropertyValue convertForProperty convertIfNecessary SimpleJpaRepository convert Entity Jpa Bean
+280	NullPointerException in unit test NullPointerException EntityCallbackHandler AuditingEntityListener touchForCreate invoke NativeMethodAccessorImpl DelegatingMethodAccessorImpl preCreate EJB3PersistEventListener Listener ListenerCallback saveWithGeneratedId
+341	New LIKE expression handling breaks backward compatibility IllegalArgumentException init RepositoryFactorySupport QueryExecutorMethodInterceptor StringQuery Query resolveQuery JpaQueryLookupStrategy DeclaredQueryLookupStrategy CreateIfNotFoundQueryLookupStrategy parseLikeBindings SimpleJpaQuery
+476	IllegalStateException caused by QueryUtils toExpressionRecursively IllegalStateException AbstractPathImpl illegalDereference toExpressionRecursively QueryUtils get illegal Dereference Path Impl Query Utils
+483	Parameter binding detection for in clause broken for parameters surrounded with parentheses PersistenceException IllegalArgumentException validateArrayValuedParameterBinding BaseQueryImpl QueryImpl ParameterRegistrationImpl setParameter validateBinding access 000 Parameter Query StringQueryParameterBinder
+497	Sorting for a field in a composite primary key throws  Can apos t cast to EntityPath ClassCastException adjustOrderSpecifierIfNecessary addOrderByFrom Querydsl applySorting QueryDslJpaRepository Order findAll Specifier adjust add apply
+519	ClasspathScanningPersistenceUnitPostProcessor throws NPE NullPointerException ClasspathScanningPersistenceUnitPostProcessor scanForMappingFileLocations postProcessPersistenceUnitInfo Unit Persistence scan Locations Mapping File Scanning Processor
+527	CrudRepository exists ID id  fails for entity with  IdClass IllegalArgumentException registerParameterBinding AbstractQueryImpl validateBinding QueryImpl setParameter SimpleJpaRepository Binding Impl Query Parameter validate
+582	JpaMetamodelEntityInformation isNew  throws ClassCastException for  Version of type Calendar ClassCastException PersistenceException RepositoryFactorySupport QueryExecutorMethodInterceptor JpaMetamodelEntityInformation SimpleJpaRepository invoke Method NativeMethodAccessorImpl executeMethodOn DelegatingMethodAccessorImpl Jpa isNew
+622	Hibernate thinks AbstractPersistable isNew  is a property PropertyNotFoundException BasicPropertyAccessor getSetter createSetter buildPropertySetter init PojoEntityTuplizer Property Setter AbstractEntityTuplizer create Entity
+742	Java   Stream support broken NotReadablePropertyException PersistenceException AbstractNestablePropertyAccessor PersistenceProvider HibernateScrollableResultsIterator getPropertyValue extractHibernateQueryFromQueryImpl init Property executeQueryWithResultStream extractHibernate4Query JpaQueryExecution StreamExecution
+759	Log names of Class and Mapping Files found during scan to DEBUG level in ClasspathScanningPersistenceUnitPostProcessor ClasspathScanningPersistenceUnitPostProcessor Persistence Scanning Processor Post Classpath Unit support
+904	Potential NullPointerException in JpaPersistentPropertyImpl isEntity BeanCreationException NullPointerException Bean AbstractAutowireCapableBeanFactory preInstantiateSingletons finishBeanFactoryInitialization AbstractBeanFactory DefaultSingletonBeanRegistry initializeBean Factory DefaultListableBeanFactory doCreateBean createBean
+929	NullPointerException in AbstractStringBasedJpaQuery isJpaManaged NullPointerException PersistenceException RepositoryFactorySupport QueryExecutorMethodInterceptor AbstractStringBasedJpaQuery Query Jpa JpaQueryExecution CollectionExecution AbstractJpaQuery createJpaQuery isJpaManaged doCreateQuery
+970	Ensure JDK   compatibility of regular expression used in QueryUtils PatternSyntaxException Pattern init assertParameterNamesInAnnotatedQuery clinit JpaQueryMethod QueryUtils compile error group0 sequence Query
+377	Count queries should be issued without ORDER BY clause JdbcSQLException getResultSet AbstractBatcher Batcher Set Result
+405	Custom repository method doesn apos t parse OrderBy clause properly PropertyReferenceException init PropertyPath create from PartTree OrPart Part Path Property Tree
+473	When used  LIKE expression  and  other expression  at the same time  occurred the QuerySyntaxException of Hibernate QuerySyntaxException IllegalArgumentException AutowiredAnnotationBeanPostProcessor AutowiredFieldElement RepositoryFactorySupport QueryExecutorMethodInterceptor DefaultListableBeanFactory init Query resolveDependency resolveQuery SimpleJpaQuery JpaQueryLookupStrategy DeclaredQueryLookupStrategy CreateIfNotFoundQueryLookupStrategy AbstractQueryLookupStrategy validateQuery fromQueryAnnotation Factory Jpa Bean resolve Lookup Strategy inject Repository Annotation Dependency Listable Support getRepository Processor Element Field Autowired Post validate Executor Interceptor Method Simple Declared Create
+504	Error on QueryDSL after upgrade PersistenceException HqlBaseParser negatedExpression queryRule orderByClause orderElement selectStatement logicalOrExpression logicalAndExpression Expression QueryTranslatorImpl order
+509	Entity name used in  apos count apos  queries ignores the entity name set in ORM mapping file QuerySyntaxException IllegalArgumentException AbstractEntityManagerImpl convert createQuery Entity Impl Manager Query create
+581	Can no longer call save  with a  Version apos ed detached entity in JpaSystemException translateException convertJpaAccessException PersistenceException PersistentObjectException ChainedPersistenceException CrudMethodMetadataPostProcessor CrudMethodMetadataPopulatingMethodIntercceptor convertJpaAccessExceptionIfPossible EntityManagerFactoryUtils AbstractEntityManagerFactoryBean ChainedPersistenceExceptionTranslator translateExceptionIfPossible PersistenceExceptionTranslationInterceptor DataAccessUtils ReflectiveMethodInvocation Exception
+813	Error creating DefaultJpaContext bean in test cases UnsatisfiedDependencyException NoSuchBeanDefinitionException raiseNoSuchBeanDefinitionException AbstractAutowireCapableBeanFactory createArgumentArray autowireConstructor Bean ConstructorResolver createBeanInstance AbstractBeanFactory DefaultSingletonBeanRegistry createBean doCreateBean create
+885	No aliases found in result tuple IllegalStateException PersistenceException RepositoryFactorySupport QueryExecutorMethodInterceptor ResultProcessor ChainingConverter AbstractJpaQuery TupleConverter convert processResult Result doExecute ReflectiveMethodInvocation
+905	Count queries should be issued without ORDER BY clause SQLSyntaxErrorException sqlException sqlException init JDBCUtil JDBCPreparedStatement Exception sql Statement JDBCPrepared
+938	Complex select clauses in manually declared query using constructor expressions fail QueryException PersistenceException IllegalArgumentException AbstractEntityManagerImpl RepositoryFactorySupport QueryExecutorMethodInterceptor convert JpaQueryExecution CollectionExecution Query AbstractJpaQuery getResultList QueryImpl doExecute
+956	Error creating DefaultJpaContext bean with a non EntityManagerFactory JndiObjectFactoryBean defined via JavaConfig AbstractAutowireCapableBeanFactory instantiateUsingFactoryMethod createArgumentArray ConstructorResolver Bean createBeanInstance AbstractBeanFactory DefaultSingletonBeanRegistry createBean doCreateBean create

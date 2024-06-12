@@ -1,0 +1,109 @@
+64	 ArchiveOutputStream ArchiveOutputStream
+70	 ZipArchiveInputStream
+73	 ZipArchiveInputStream
+74	 ZipArchiveInputStream
+75	 ZipArchiveInputStream ExtraFieldUtils.parse
+85	 CpioArchiveOutputStream CpioArchiveEntry
+86	 TarArchiveEntry TarArchiveOutputStream TarConstants
+87	 ZipArchiveInputStream
+94	 ZipOutputStream ZipArchiveEntry
+96	 ZipArchiveInputStream ArchiveEntry
+100	 ZipArchiveInputStream
+101	 ZipArchiveInputStream
+105	 ZipArchiveOutputStream ArchiveTest ArchiveStreamFactory
+107	 ArchiveStreamFactory
+110	 TarArchiveEntry TarArchiveInputStream TarArchiveOutputStream TarConstants
+113	 TarArchiveEntry parseTarHeader
+114	 TarUtils
+117	 ArchiveStreamFactory TarArchiveInputStream matches
+125	 BZip2CompressorInputStream
+129	 ZipArchiveInputStream ZipArchiveEntry
+131	 recvDecodingTables
+139	 InflaterInputStream ZipFile
+146	 BZip2CompressorInputStream
+152	 ZiparchiveInputStream ZiparchiveOutputStream
+159	 ChangeSetPerformer ZipArchiveInputStream ZipFile ArchiveInputStream ArchiveOutputStream ArchiveEntry ZipArchiveEntry
+160	 TarArchiveOutputStream
+162	 BZip2CompressorInputStream bzip2
+163	 TarArchiveInputStream TarArchiveEntry PosixPaxParser IllegalArgumentException
+164	 ZipFile ZipArchiveEntry
+169	 ZipFile TikaIndexerHardenerTest ZipContainerDetector AutoDetectParser Tika
+171	 ArchiveStreamFactory TarArchiveInputStream
+173	 ArchiveStreamFactory TarArchiveInputStream
+175	 TarArchiveEntry
+176	 ArchiveInputStream getNextEntry ArchiveEntry ArchiveStreamFactory ZipArchiveInputStream
+177	 TarArchiveInputStream TarUtils TarArchiveEntry
+178	 TarArchiveInputStream TarUtils TarArchiveEntry
+181	 TarArchiveInputStream TarUtils TarArchiveEntry
+184	 PaxHeaders TarArchiveInputStream TarArchiveEntry CharsetDecoder
+185	 BZip2CompressorInputStream  BufferedInputStream BufferedOutputStream
+187	 ZipArchiveInputStream ZipArchiveEntry ZipFile
+189	 ZipFile ZipArchiveEntry InputStream BufferedInputStream ZipArchiveInputStream IOUtils
+191	 ArchiveStreamFactory TarArchiveInputStream
+197	 TarUtils TarArchiveEntry
+200	 TarArchiveOutputStream TarArchiveInputStream
+201	 TarArchiveEntry
+203	 TarArchiveOutputStream TarUtilities TileCacheSetExporter
+205	 CompressorInputStream getStreamFor
+209	 ArchiveStreamFactory createArchiveInputStream
+212	 TarArchiveEntry TarArchiveInputStream  BufferedInputStream
+218	 CompressorStreamFactory
+219	 ZipArchiveInputStream
+221	 CompressorStreamFactory ZipContainerDetector TikaResourceMetadataFactory XZCompressorInputStream
+224	 App BZip2CompressorInputStream
+227	 ZipFile ZipArchiveEntry
+228	 ZipFile
+229	 Apache commons-compress
+236	 CPIO IllegalArgumentException
+237	 TarArchiveOutputStream PaxHeaders
+239	 ArchiveStreamFactory ZipArchiveInputStream InputStream
+240	 ZipEncodingHelper
+241	 LZMA2OutputStream LZMA2Decoder SevenZOutputFile
+244	 SevenZFile SevenZArchiveEntry DataInputStream ByteBuffer
+245	 TarArchiveInputStream TarArchiveEntry GZIPInputStream
+249	 TarArchiveInputStream
+252	 SevenZOutputFile SevenZArchiveEntry ArchiveOutputStream SevenZFile ArchiveEntry ArchiveInputStream
+253	 BZip2CompressorInputStream test_bz2
+256	 LZMAInputStream Coders LZMADecoder SevenZFile
+259	 CompressorStreamFactory
+262	 TarArchiveInputStream TarArchiveEntry TarUtils
+264	 ZipArchiveEntry ZipArchiveInputStream ByteArrayInputStream App
+265	 TarArchiveEntry
+267	 ArchiveStreamFactory ArchiveInputStream ArchiveException
+268	 ZipArchiveInputStream ByteBuffer
+270	 TarArchiveInputStream TarArchiveEntry
+272	 CompressorStreamFactory CompressorDetectInputStream
+273	 UnicodeCommentExtraField getLocalFileDataLength
+274	 ChangeSet deleteDir
+276	 ZipArchiveOutputStream ByteArrayOutputStream JarArchiveOutputStream write
+277	 IOUtils TarInputStream CipherInputStream
+278	 TarArchiveInputStream TarArchiveEntry TarUtils
+279	 TarArchiveInputStream BZip2CompressorInputStream GoogleFile ArchiveEntry ByteStreams
+286	 Un7z SevenZFile LZMADecoder
+287	 PackageParser SevenZFile CompositeParser AutoDetectParser Tika
+289	 TarArchiveOutputStream TarArchiveEntry
+297	 TCommonCompressZipFileConstructor ZipFile
+302	 ArchiveStreamFactory
+303	 CompressorStreamFactory
+306	 ArchiveStreamFactory ArjArchiveInputStream CpioArchiveInputStream DumpArchiveInputStream JarArchiveInputStream JarArchiveOutputStream
+309	 BZip2CompressorInputStream BZip2CompressorOutputStream ByteArrayOutputStream ByteArrayInputStream
+312	 TarArchiveEntry
+314	 TarArchiveInputStream TarArchiveEntry
+315	 TarArchiveEntry
+316	 CompressorStreamFactory CompressorException
+321	 X7875_NewUnix ZipContainerDetector Tika ZipFile ExtraFieldUtils ZipArchiveEntry
+330	 TarArchiveInputStream
+331	 ArchiveStreamFactory TarUtils
+332	 FramedSnappyCompressorInputStream SnappyCompressorInputStream
+334	 ArArchiveInputStream IOUtils
+335	 TarArchiveInputStream TarArchiveEntry TarUtils
+336	 TarUtils parseName
+343	 Coders DeflateDecoder Deflater Inflater
+344	 ArArchiveInputStream
+348	 SevenZFile SevenZArchiveEntry
+351	 ZipFile ZipArchiveInputStream ZipArchiveEntry EOFException
+355	 TarArchiveInputStream
+356	 TarArchiveEntry TarArchiveInputStream
+357	 BZip2CompressorOutputStream
+363	 BitInputStream
+366	 TarArchiveEntry TarArchiveInputStream

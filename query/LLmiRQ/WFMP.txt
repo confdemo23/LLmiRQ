@@ -1,0 +1,2 @@
+14	 Wildfly Maven Plugin Hawkular Metrics start-wildfly deploy-artifact shutdown
+58	 WildFly plugin shutdown goal deploy-artifact goal

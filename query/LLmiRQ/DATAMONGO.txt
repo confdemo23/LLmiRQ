@@ -1,0 +1,239 @@
+199	 Field AccessibleObject AnnotationBasedPersistentProperty BasicPersistentEntity MappingMongoConverter MongoTemplate
+260	 MappingMongoConverter MongoTemplate BasicPersistentEntity
+298	 CustomConversions MongoCustomConversions Number Integer ConverterFactory GenericConverter ConversionService MongoTemplate
+306	 SimpleMongoDbFactory
+309	 MyPojo MongoTemplate
+312	 Entity ImAnEnum MappingMongoConverter MongoTemplate MongoTestEnum
+315	 MongoTemplate Query Ad
+318	 MongoTemplate
+321	 MongoTemplate MongoRepository BasicDBObjectBuilder MongoDataIntegrityViolationException MappingMongoConverter
+322	 save findById
+325	 MongoTemplate MapReduceOptions MapReduceResults replaceWithResourceIfNecessary
+329	 A HashMap BasicDBObject converter write
+331	 spring-mongo-1 0 xsd com mongodb WriteConcern
+333	 AbstractMongoEventListener onApplicationEvent
+336	 GeoSpatialTest GeoNear
+346	 MongoTemplate remove MongoOperations
+354	 MongoTemplate Update push Update pushAll
+358	 Document Item Attribute setKey setValue
+359	 QueryDslMongoRepository
+360	 MongoTemplate IndexOperations DefaultIndexOperations GeospatialIndex
+367	 ParentDoc ChildDoc
+368	 MappingMongoConverter writeCollectionInternal Test
+376	 SpringDataMongodbSerializer visit
+378	 MapReduceResults MapReduceCounts ModemService DocsisCapabilityServiceImpl
+380	 MyDataObject DBCollection MongoTemplate SimpleMongoRepository MappingMongoConverter KeyEscapingMongoConverter
+382	 MappingMongoConverter QueryMapper MongoTemplate PersonService
+385	 TestRepository MongoRepository TestEntity
+387	 GeoPage GeoResults
+392	 MappingMongoConverter writeInternal addCustomTypeIfNecessary convertToMongoType removeTypeInfoRecursively
+398	 DBCollection MongoTemplate PolicyDb Activator
+401	 StringBasedMongoQuery SampleRepository findByLastname getParameterWithIndex replacePlaceholders
+402	 EnclosingClass InsideClass PropertyPath MappedConstructor MappingMongoConverter MongoTemplate InnerClassTest
+404	 Update pull
+407	 TestThatWorks TestThatFails mongoOps
+410	 TestConverterThatFails MongoTemplate JSON MyNested
+411	 MongoPersistentEntityIndexCreator ApplicationEvent
+412	 AbstractMongoConfiguration getUserCredentials SimpleMongoDbFactory UserCredentials
+420	 MongoTemplate Query StringBasedMongoQuery MongoQueryMethod MappingMongoConverter MongoPersistentEntity MongoPersistentProperty SpelExpressionParser QueryMapper MongoDbFactory
+422	 UUIDToBinaryConverter BasicBSONDecoder putUUID
+423	 MongoException DBApiLayer DBCursor DBCollection BasicDBObject Pattern
+424	 MongoTemplate MappingMongoConverter MongoDataIntegrityViolationException Query BasicQuery DBRef MongoRepository MongoDbFactory SimpleMongoRepository MongoConverter
+425	 Date repository query
+428	 MapReduceOptions MapReduceResults MongoTemplate
+429	 QueryMapper UncategorizedMongoDbException MongoException
+447	 MongoTemplate JSON BasicDBObject BeanWrapper myclass.ChannelId
+450	 MongoTemplate JSON BasicDBObject
+454	 ServerAddressPropertyEditor RobustServerAddressPropertyEditor ServerAddress PropertyEditorSupport Logger LoggerFactory StringUtils
+458	 Collections emptySet HashSet
+459	 save Match Goal Player Forward Defender mongoTemplate findAndModify query Update set match findGoalById match getGoal matchRepository save
+462	 ReflectionEntityInstantiator MappingMongoConverter BasicPersistentEntity MongoTemplate InstituteRepository ReaperApp
+467	 User QUser id eq
+469	 MongoTemplate Member MemberRepository MongoQueryCreatorUnitTests
+471	 org springframework data mongodb core query Update
+472	 MongoQueryCreator InvalidMongoDbApiUsageException
+474	 ConverterNotFoundException GenericConversionService BeanWrapper MongoTemplate SimpleMongoRepository
+475	 CarRepositoryCustomImpl MongoTemplate BasicDBObject JSON ClassMapBasedObjectSerializer
+480	 insertDBObject insertDBObjectList saveDBObject doInsert doUpdate
+481	 Account findByUsernameAndConfirmedIsTrue
+483	 User Indexed Field MongoPersistentEntityIndexCreator
+489	 MappingMongoConverter SolrQuery Collection List String
+493	 QueryMapper Criteria ne
+494	 Query Criteria QueryMapper MyEntity
+495	 MongoTemplate JSON BasicDBObject ComponentRepository
+497	 MappingMongoConverter ReflectionEntityInstantiator Transaction Product Operation AbstractRepositoryCustomMongo TransactionRepositoryCustomMongo TransactionRepositoryTest
+505	 Entity Property EntityRepository findByPropertyIn ConvertingIterator
+508	 MappingMongoConverter DBRef PersistentProperty PersistentEntity
+517	 QueryMapper
+521	 PersonRepository findOneByFirstnameAndLastname
+523	 AbstractMongoConfiguration afterMappingMongoConverterCreation SimpleTypeInformationMapper
+527	 Criteria
+530	 MongoMappingContext AbstractMappingContext
+534	 GridFsOperations GridFsTemplate Query Criteria Order GridFSDBFile DBObject
+539	 mongoOperations save mongoOperations remove mongoOperations findAll Item
+540	 MongoTemplate upsert findOne
+549	 MongoTemplate
+550	 MongoTemplate BasicDBObject
+551	 MongoTemplate save
+562	 PersonWithVersionPropertyOfTypeInteger template save
+568	 MongoTemplate find
+570	 Tree TreeRepository MappingMongoConverter QueryMapper MongoTemplate AbstractMongoQuery RepositoryFactorySupport
+571	 CrudRepository findOne save
+583	 DBCursor hasNext
+588	 MongoTemplate
+592	 MappingInstantiationException PersistenceConstructor Field Value
+602	 QProfileDocument profileDocument id in profileRepository findAll
+603	 PersonRepository findByLocationNear Distance Metrics GeoResults getAverageDistance
+617	 MongoTemplate mongoPersistentEntity
+620	 MongoTemplate doSaveVersioned
+621	 MongoTemplate initializeVersionProperty ConversionService MongoConverter BeanWrapper
+622	 MongoTemplate doSaveVersioned doSave doInsert
+629	 QueryMapper mongoTemplate find mongoTemplate count
+633	 MongoTemplate QuerydslPredicateExecutor MongoQuery SpringDataMongodbQuery PathBuilder MongoRepository SimpleMongoRepository QueryDslRepositorySupport MongoOperations QuerydslUtils
+646	 MongoTemplate AnITCase initializeVersionProperty doInsert insert
+647	 Answer findByQuestionIdOrderByScoreDesc
+663	 Field Query
+669	 PathMetadata SpringDataMongodbSerializer MongodbSerializer QueryDslMongoRepository PersonRepositoryTest
+675	 MongoTemplate doFindAndModify doUpdate Field
+676	 SimpleMongoRepository MongoEntityInformation
+679	 MongoTemplate MappingMongoConvertor JSONParseException MappingException BeforeSaveEvent BasicDBObject saveDBObject
+683	 QueryMapper MappingMetadata
+686	 QueryMapper MongoTemplate Criteria Query
+688	 MongoMappingContext MongoPersistentEntityImpl MongoPersistentPropertyImpl BasicMongoPersistentEntity MappingMongoConverter @Id annotation
+702	 Model Field MongoTemplate
+706	 QueryMapper
+717	 MongoMappingContext BasicMongoPersistentEntity setApplicationContext createPersistentEntity AbstractMongoConfiguration mongoMappingContext initialize
+721	 ParentClass ChildClass MongoTemplate updateFirst
+741	 Aggregation GroupOperation MongoTemplate Field Fields BasicDBObjectBuilder
+745	 MongoRepository Query findBySnapshotIdAndDefects
+746	 DefaultIndexOperations IndexInfo
+752	 QueryMapper mongoTemplate
+753	 ExposedFieldsAggregationOperationContext GroupOperation Aggregation
+761	 SpringDataMongodbSerializer PathMetadata ObjectA QueryDslPredicateExecutor
+788	 ProjectionOperation GroupOperation AggregationOperationContext MongoTemplate
+804	 EnableMongoRepositories repositoryImplementationPostfix
+805	 MappingMongoConverter CollectionNameProvidedMongoConverter QueryMapper MongoTemplate ExcludeDBRefFieldTest
+806	 User Aggregation PropertyReferenceException
+807	 IUser User UserWrapper findAndModify
+816	 MongoTemplate BasicBSONEncoder DefaultDBEncoder DBCursor
+821	 MappingMongoConverter QueryMapper MongoTemplate AbstractMongoQuery RepositoryFactorySupport
+828	 MongoTemplate OptimisticLockingFailureException VersionedPerson Update
+829	 NearQuery Query Criteria GeoResults MyObject
+833	 EnumSet MappingMongoConverter BasicPersistentEntity MongoTemplate CollectionFactory
+852	 DBObject MongoTemplate Query Update VersioningEventListener MongoMappingContext MongoPersistentEntity MongoPersistentProperty
+862	 Query Update
+863	 QueryMapper UpdateMapper BasicDBObject MongoProduct
+868	 findAndModify Version
+880	 Template Message
+884	 DefaultDbRefResolver LazyLoadingInterceptor ReflectionUtils A B
+887	 SourceRepository MyEntity MyClass ParameterizedTypeInformation
+888	 Sort find
+892	 ConfigurableMongoDbMessageStore MappingMongoConverterParser ConfigurableMongoDbMessageGroupStoreTests$MessageReadConverter
+893	 Foo EmbeddedClass IFooRepository MappingMongoConverter
+897	 MongoTemplate findAndModify DbRef
+901	 MongoRepositoryConfigurationExtension registerBeansForRoot BeanPostProcessor
+908	 ExposedFieldsAggregationOperationContext GroupOperation Aggregation MongoTemplate DomainKnowledgeReportServiceImpl
+909	 CompoundIndexes
+912	 Aggregation MongoTemplate MatchAfterProjectIssue BasicBSONEncoder DefaultDBEncoder AggregationOperationContext ExposedFieldsAggregationOperationContext TypeBasedAggregationOperationContext
+913	 MappingMongoConverter A B
+914	 LazyLoading proxies equals hashcode
+917	 DefaultDbRefResolver SpringVersion
+924	 Aggregation MongoTemplate GroupOperation ExposedFieldsAggregationOperationContext MongoTemplateTest Person Descriptors CarDescriptor
+926	 ConcurrentReferenceHashMap GenericTypeResolver ClassTypeInformation TypeDiscoverer AbstractPersistentProperty MongoPersistentEntityIndexResolver BasicPersistentEntity
+928	 BeanDefinitionParsingException
+938	 Criteria Box within
+948	 MongoTemplate QueryCursorPreparer getMappedSortObject executeQuery
+949	 MongoPersistentEntityIndexResolver MongoPersistentEntityIndexCreator MongoRepositoryFactory RepositoryFactorySupport RepositoryFactoryBeanSupport MongoRepositoryFactoryBean AbstractAutowireCapableBeanFactory LocationMaster DispositionCode
+952	 Query findByEmail
+962	 MongoPersistentEntityIndexResolver CyclicPropertyReferenceException Rule Filter
+963	 CompoundIndex expireAfterSeconds
+969	 User QUser user id in
+970	 populateIdIfNecessary BasicDBObject DBObject MongoPersistentProperty ConversionService BeanWrapper getIdQueryFor Query MongoPersistentEntity
+978	 AbstractMongoQuery DeleteExecution MongoEntityMetadata WriteResult
+987	 Parent Child mongoTemplate save mongoTemplate findOne
+995	 StringBasedMongoQuery
+996	 AbstractMongoQuery PagedExecution MongoRepository Pageable
+1001	 Child Parent mongoTemplate save mongoTemplate findOne mongoTemplate findById
+1002	 Update BasicDBObject JSON ClassMapBasedObjectSerializer
+1008	 DefaultIndexOperations MongoTemplate IndexOperations MyModel PersistenceConfig
+1025	 TimeRead TimeReadChip
+1027	 Books Author
+1030	 UserRepository findSummaryByLastnameLike SingleEntityExecution
+1040	 AbstractMongoQuery MongoEntityMetadata Query WriteResult
+1043	 AbstractMongoQuery MongoQueryMethod MongoEntityMetadata SingleEntityExecution BasicMongoPersistentEntity
+1049	 MongoPersistentEntityIndexResolver MongoRepositoryFactory TextIndexDefinition BasicPersistentEntity MongoPersistentEntityIndexCreator
+1050	 SimpleMongoRepository findById A B
+1053	 Foobar MappingMongoConverter BasicMongoPersistentEntity MongoPersistentProperty
+1057	 AbstractMongoQuery SlicedExecution
+1058	 Model Foo ModelDao FooDao setMapOfFoos save findOne
+1062	 ServerAddressPropertyEditorUnitTests rejectsAddressConfigWithoutASingleParsableServerAddress
+1063	 PathMetadata SpringDataMongodbSerializer MongodbSerializer OperationImpl MongodbQuery QueryDslMongoRepository
+1068	 Room Criteria
+1070	 Query ObjectId JSONCallback JSONParser StringBasedMongoQuery
+1072	 Query findAllByKeyValue
+1076	 DefaultDbRefResolver LazyLoadingInterceptor People
+1077	 Update UpdateMapperUnitTests DocumentWithDBRefCollection
+1078	 StringBasedMongoQuery findByUserIds
+1080	 AbstractMongoQuery ConversionService
+1087	 CycleExample MongoPersistentEntityIndexResolver MongoPersistentEntityIndexCreator
+1088	 Query findByEmbeddedIn2
+1094	 BasicMongoPersistentEntity
+1096	 MongoTemplate SerializationUtils serializeToJsonSafely
+1118	 MappingMongoConverter MyEnum
+1120	 Page Pageable findByActiveIsTrue findByUserId
+1121	 MongoPersistentEntityIndexResolver NormalizedProfile MongoPersistentEntityIndexCreator MongoTemplate
+1123	 findByTypeAndLocationNear NearQuery geoNear
+1126	 Item ItemRepository findByIdIn findByTypeIn testPageableIdIn
+1133	 MongoTemplate AggregationOperationContext Field Aggregation ProjectionOperation MappingMongoConverter QueryMapper MongoPersistentEntity MongoPersistentProperty FieldAliasAccessor
+1139	 MongoQueryCreator Distance
+1166	 MongoTemplate Mongo
+1180	 PartTreeMongoQuery JSONParseException IllegalStateException
+1204	 ObjectPath ObjectPathItem ObjectId equals
+1208	 MongoTemplate Query Criteria PageRequest Sort TimeUnit
+1210	 findAndModify save addToSet forEach
+1229	 MongoQueryCreator Doc foo bar
+1232	 IgnoreCase MongoDB
+1236	 MongoOperations findAndModify updateFirst
+1244	 StringBasedMongoQuery PersonRepository
+1250	 MyPersistantObject CustomConversions mongoTemplate updateMulti mongoTemplate save mongoTemplate findOne query update
+1251	 TestEntity MongoTemplate UpdateMapper QueryMapper
+1254	 Aggregation GroupOperation ProjectionOperation Field MongoTemplate
+1257	 MongoCredentialPropertyEditor
+1263	 Book AbstractProduct ProductWrapper Catalog
+1269	 QueryMapper SomeContent SO31799474
+1276	 MongoTemplate CloseableIterableCusorAdapter PersistenceExceptionTranslator MongoExceptionTranslator MappingException
+1288	 org springframework data mongodb core query Update inc
+1289	 save method
+1290	 SampleDomainObject findBySampleData findBySampleDateWithAnnotation
+1293	 MongoDbFactoryParser FailFastProblemReporter ReaderContext
+1295	 MongoTemplate CloseableIterableCusorAdapter MappingException MongoExceptionTranslator ExtractorApplication
+1297	 MongoTemplate MappingMongoConverter MongoPersistentEntity MongoPersistentProperty IndexOperations MongoMappingContext BasicMongoPersistentEntity SimpleMongoRepository MongoDataIntegrityViolationException AbstractMongoEventListener
+1307	 MongoTemplate MongoExceptionTranslator
+1334	 MapReduceOptions
+1342	 MongoQueryCreator
+1360	 BasicBSONEncoder
+1361	 MongoTemplate NearQuery
+1368	 MongoTemplate findOneByIdAndNameIgnoreCase
+1387	 BasicQuery Query MongoOps
+1394	 Book Library BookService QBook BooleanExpression bookRepository findAll libraryRepository findById bookRepository findByLibraryId
+1397	 MongoTemplate LOGGER
+1401	 GeoJsonPoint AbstractMappingContext QueryMapper UpdateMapper MongoTemplate
+1406	 MongoTemplate Computer Monitor queryMapper getMappedObject
+1416	 org springframework data mongodb core convert CustomConversions
+1423	 Video VideoMetadata ThumbnailType Query query Criteria where Update set mongoOps updateFirst mongoOps getConverter converter write
+1425	 MongoTemplate Query Criteria StringQuery MongoQueryCreator MongoOperations QueryMapper MappingMongoConverter MongoPersistentEntityIndexResolver MongoDataIntegrityViolationException
+1436	 CustomConversions NumberToNumberConverterFactory
+1437	 DefaultDbRefResolver
+1438	 MappingMongoConverter MongoCustomConversions AbstractMongoConfiguration MongoTemplate SimpleMongoClientDatabaseFactory MongoMappingContext BasicMongoPersistentEntity MongoPersistentProperty QueryMapper MongoDataIntegrityViolationException
+1453	 GeoJsonPoint BasicDBObject
+1465	 DefaultScriptOperations convertScriptArgs execute call
+1476	 MongoTemplate StreamOperation ReadCallback MongoCollection MongoDbFactory
+1485	 MongodbSerializer visit ConnectionTypeReadConverter convert ConnectionTypeWriteConverter
+1486	 MappingMongoConverter ProductStorageDaoImpl ProductStorageDaoIT DBObjectCodec
+1497	 MappingMongoConverter DbObjectAccessor
+1498	 MongoMappingContext CustomConversions PersistentEntityJackson2Module AbstractMappingContext
+1500	 ClassMapBasedObjectSerializer JSONSerializers PartTreeMongoQuery AbstractMongoQuery RepositoryFactorySupport
+1513	 BaseEntity DBObject MongoEventListener onBeforeSave insertDBObject insertDBObjectList
+1521	 SkipOperation Aggregation
+1534	 mongoTemplate BulkOperations insert
+1565	 MyCollection findByApplicationIdAndName

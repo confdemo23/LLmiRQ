@@ -1,0 +1,45 @@
+248	 SwarmExecutor DependencyManager ClassPathConfigurator JBossModulesClassLoader SwarmPlugin ApplicationArtifactResolver ModuleIdentifier ServiceLoader ArtifactResolvingHelper WildFlySwarmApplicationRunner
+249	 DepsMojo WarArchivePreparer AppDeployment DependencyManager ArtifactResolvingHelper
+276	 StopMojo DefaultBuildPluginManager MojoExecutor
+309	 SetupActions InitialContext context.lookup
+337	 undertow-handlers conf
+385	 WildFlySwarmDefaultJAXRSApplication SegmentNode RootNode
+394	 WildFlySwarmPlugin MavenEmbedder EmbeddedMaven ProcessController SwarmProcess SwarmExecutor MavenProcessFactory ProcessDestroyer SwarmRuntime MavenInvoker
+445	 Swarm start() Container
+479	 JAXRSArchive StaticContentServlet DeploymentManager WebDeploymentService ArchiveDeployment FileSystemDeployment HotSwapContext ResourceChangeTracker ServletContainer StaticContentHandler
+485	 JacksonJaxbJsonProvider
+493	 ConsulTopologyFraction
+497	 TempFileManager
+516	 FractionDetector DependencyScanner WildFlySwarmPlugin FractionList AutoDetectionProcessor FractionUsageAnalyzer ArtifactResolver DependencyGraphBuilder AdditionalFractionAnalyzer TransitiveDependencyCollector
+522	 WildFlySwarmPluginConfiguration ProcessConfig JvmArgumentsConfig MultiStartMojo SwarmProcessFactory SwarmExecutor ArtifactResolvingHelper SwarmArtifact DependencyResolution ProcessController
+543	 MessagingFraction server deployment deployment
+551	 DefaultCacheContainer EmbeddedCacheManager
+553	 LoggingFraction PeriodicSizeRotatingFileHandler
+564	 Wildfly Swarm Wildfly 10
+571	 Arquillian RunWith
+574	 Shrinkwrap MemoryMapArchiveImpl ServiceExtensionLoader ArchiveBase AssignableBase SwarmApp NativeConstructorAccessorImpl DelegatingConstructorAccessorImpl SecuredImpl
+575	 swarmtool
+586	 monitor fraction IllegalStateException
+587	 WildFly Swarm JMS ConnectionFactory
+588	 Application ApplicationPath
+611	 RuntimeServer stageConfig() client()
+635	 ExplodedImporter main
+657	 ArquillianTest ServiceControllerImpl DaemonServiceActivator DaemonService
+662	 N/A
+667	 UberjarSimpleContainer pom.xml
+669	 maven-war-plugin wildfly-swarm-plugin
+671	 PackageMojo BuildTool ArtifactAsset WebInfLibFilteringArchiveAsset ArchiveFactory ShrinkWrap
+681	 HealthCheckService SecurityConstraint EndpointInvoker WebSecurityConfiguration HttpSecurityConfigurer RedirectStrategy HealthEndpoint SecurityFilter AccessDecisionManager UrlRewriteFilter
+691	 Archive as ParseError
+697	 GradleArtifactResolvingHelper fullTree ResolutionStrategy
+700	 DefaultSocketBindingGroupProducer SocketBindingGroup SwarmProperties.propertyVar
+705	 PackageMojo BuildTool FileSystemException
+710	 BeanManagerImpl ContextualInstanceStrategy ContextualInstance InstanceImpl RuntimeServer
+751	 WildFly Swarm Maven Plugin swarm http port swarm https port swarm https certificate generate
+757	 PersistenceUnitServiceImpl EntityManagerFactoryBuilderImpl TwoPhaseBootstrapImpl InfinispanRegionFactory CacheImpl
+762	 MavenArtifactResolvingHelper settings.xml mirrorOf wildfly-swarm-plugin
+793	 WildFly Swarm module xml resource-root artifact JBOSS_MODULEPATH
+846	 TopologyProxyService Undertow Reverse Proxy
+863	 org wildfly swarm Swarm container start() container stop() org wildfly swarm bootstrap Main
+879	 org eclipse aether resolution ArtifactResolutionException
+884	 ApplicationModuleFinder

@@ -1,0 +1,8 @@
+6	 JLineShellComponent SimpleParser HelpCommand CommandCatalog MethodTargetResolver ReflectionHelper Shell CommandRegistry AnnotationCommandRegistrar StandardEvaluationContext
+48	 ObjectUtils CollectionUtils
+56	 ReflectionUtils StringUtils ObjectUtils CollectionUtils AopUtils ClassUtils FileCopyUtils JdbcUtils SerializationUtils WebUtils
+98	 ShellComponent JLineShellComponent SimpleParser Converters MethodTarget ParameterResolver CommandMarker OptionContext AnnotationCliOptionContext HelpCommand
+146	 Shell CommandRunner FlashScope Terminal LineReader PromptProvider JLineShellComponent ConsoleOutput AnsiOutput ShellCommand
+153	 DateCommand LocalizationContext UserPreferences LocaleResolver DateFormatUtils DateTimeFormatter
+158	 CommandLineParser JLineShellComponent SimpleParser ParameterResolver
+187	 BorderStyle BorderFactoryTest testFullBorder

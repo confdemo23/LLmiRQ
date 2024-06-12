@@ -1,0 +1,4 @@
+4622	test camel command distribution esb quickstart install child update file jboss fuse full jboss fuse karaf meant happen correct
+5213	Bump licence headers
+3040	EsbProfileRedeployTest fails with java lang SecurityException  Insufficient credentials SecurityException GuardProxyCatalog ProxyInvocationListener preInvoke execute ProxyHandler Proxy ContainerConnect1559360197 CommandProxy executeCmd invoke executeStatement
+2202	connector features does not install ObrResolver FeaturesServiceImpl resolve doInstallFeature doInstallFeatures ThreadPoolExecutor Worker run Features Obr Resolver

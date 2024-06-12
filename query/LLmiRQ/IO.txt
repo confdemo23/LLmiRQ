@@ -1,0 +1,81 @@
+83	 FileSystemUtils Commons-IO
+84	 IOUtils
+90	 FileSystemUtils
+91	 FileSystemUtils
+93	 FileSystemUtils
+99	 FileCleaner FileCleaningTracker
+100	 FileUtils
+101	 EndianUtils
+112	 FileUtils
+113	 FileUtils
+117	 EndianUtils
+136	 HexDump
+141	 FileUtils
+147	 FileUtils
+160	 FileSystemUtils FileSystemUtilsTestCase
+161	 FileCleaningTrackerTestCase
+163	 FileUtils
+166	 FileUtils
+168	 FileUtils
+179	 FilenameUtils
+180	 LineIterator FileUtils
+181	 LineIterator
+185	 FileSystemUtils
+187	 FileSystemUtils FileNameUtils
+190	 FileUtils
+197	 BoundedInputStream BoundedInputStream BoundedInputStream
+201	 CountingInputStream CountingOutputStream
+202	 NotFileFilter
+206	 ProxyInputStream
+207	 forceMkdir
+209	 FileSystemUtils NTFSFileSystem WindowsFileSystem
+212	 ProxyInputStream
+216	 LockableFileWriter
+217	 FileUtils
+220	 FileCleaningTracker
+223	 IOUtils
+231	 FileUtils
+243	 SwappedDataInputStream
+246	 FilenameUtils
+248	 FilenameUtils
+257	 BOMInputStream
+258	 XmlStreamReader
+260	 ClassLoaderObjectInputStream Proxy
+263	 FileSystemUtils
+264	 FileUtils
+266	 FileUtils
+272	 LineIterator
+274	 Tailer
+277	 ReaderInputStream CharsetEncoder CoderResult Reader CodingErrorAction WriterOutputStream
+298	 FileUtils
+299	 FilenameUtils
+302	 BOMInputStream readFirstBytes
+303	 TeeOutputStream ProxyOutputStream
+304	 Tailer
+306	 ReaderInputStream
+307	 ReaderInputStream
+319	 FileUtils
+323	 FileUtils
+329	 FileUtils IOUtils
+331	 BOMInputStream ByteOrderMark
+336	 FileUtils
+339	 MaxBytesInputStream CountingInputStream afterRead read
+343	 NameFileComparator
+354	 Tailer
+355	 IOUtils
+356	 CharSequenceInputStream
+362	 IOUtils
+368	 ClassLoaderObjectInputStream
+374	 WildcardFileFilter
+383	 FileUtils
+390	 FileUtils
+428	 BOMInputStream BomTest
+436	 FilenameUtils
+453	 FileUtils IOUtils
+462	 IOExceptionWithCause
+481	 FileUtils
+484	 FilenameUtils
+492	 IOUtils
+494	 DirectoryWalker
+502	 FileUtils FileInputStream FileOutputStream FileChannel IOException
+512	 DeferredFileOutputStream

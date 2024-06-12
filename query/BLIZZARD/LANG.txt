@@ -1,0 +1,166 @@
+1001	escape test code locale unescape format numeric utils ISO misspelled Javadocs Javadocs ISO correct format ISO Note space patch
+428	numeric utils string isnumeric numeric parameter stringutils string utils string return true empty
+481	code classes hashcode hash code hash range int math methods range long race conditions
+521	return decimal apos amp number hasdecpoint dec point digit point exp hasexp exp numberutils number utils number utils isnumber number return true valid trailing place
+538	time format format test calendar datetime time zone timezone time zone utils gmt dateformatutils format utils correctly change situations
+552	string list case replacement utils test replaceeach replace org import stringutils string utils replace bug missing documentation
+575	string fields list collection code excludefields exclude fields copy implementation event hashcodebuilder hash code builder hash builder reflectionappend reflection append reflect ion append creates unnecessary exclude reflection
+581	removeendignorecase remove ignore case stringutils string utils utils case release string removeend remove java lang javadoc bug org apache commons remove ignore
+584	names method removecausemethodname remove method amp locks addcausemethodname add method exception target utils lock exceptionutils exception utils mutable
+587	array class element object toclass class npe utils null summary throws classutils class utils
+593	jdk format lang amp hasn fastdateformattest fast format test note time versions testing
+596	string properties class org map str substitutor doesnotwork properties system strsubstitutor str substitutor handle default java util
+602	exception amp contextedruntimeexception contexted runtime exception contexted exception apos lang runtime contextedexception contexted exception purpose longer unchecked
+606	testobjectreference test object reference builder object equalsbuilder equals builder test reference testobject test object exception stack obj equals stackoverflowexception stack overflow exception overflow
+613	class apos amp constructor constructorutils constructor utils enclosing accessible accessibility utils checks getaccessibleconstructor accessible constructor check classes
+631	string utils lastindexof stringutils string utils org doc html java javadoc java doc searchstr search str erroneous err oneous examples
+635	class reflectioncompare reflection compare reflection reflectuptoclass reflect class lhs transients parameter builder comparetransients compare transients compare comparetobuilder compare builder reflect ion object rhs boolean compare ignores
+638	string exponent indicators number exception numberutils number utils utils createnumber create number format stringindexoutofboundsexception string bounds exception create throws bounds argument passed
+643	string len stringutils string utils utils stringutilstest string utils test characters input java org left javadoc claims throw negative doesn apos
+645	format locale fastdateformat fast format week locale amp format week println simple fast outputs puts incorrect year isn apos respected
+646	escape unicode string java string java println system http code stringescapeutils string escape utils utils unescapejava unescape java unescape doesn apos handle octal escapes extra
+656	zzabyycdxx apos string report stringutils string utils indexofanybut mailing utils list oct incorrect
+658	array ouml entries bug entityarrays entity arrays questions iso arrays amp info entitys matched properly representation
+659	isotech amp sign arrays escape comment extended html position typo entityarrays entity arrays entity min iso tech
+662	fraction min integer test case method void getreducedfraction reduced fraction numerator getnumerator numerator org apache commons lang math reduce
+672	return bug datetime copy dateutils utils mar dates hour utils truncate doc ceiling
+693	createnumber create number number method bigdecimal big decimal utils point numbers big numberutils number utils string create doesn apos work floating float
+705	util entity output stringescapeutil string escape util entities commons iso arrays string class escape generate wrong
+719	pattern format amp java number bug apos simpledateformat simple format year fastdateformat fast format fast formats form ats differently impl simple
+720	input loop characters str string escape char supplementary xml escapexml escape xml stringescapeutils string escape utils escape utils outputs puts wrong planes
+727	list test array test arraylist array list null builder hierarchy tostringbuildertest string builder test string testreflectionhierarchyarraylist test reflection hierarchy array list reflection fails ibm jdk
+733	chars charsequence char sequence stringutils string utils string utils sequence boolean containsany char add searchchars search chars search
+734	character char charutils char utils utils java lang array char cache duplicates
+736	array char string int code string strings share oracle lang charutils char utils char utils static final array needed compute
+746	number case utils numberformatexception number format exception integer format upper numberutils number utils exception work handle hex
+764	builder str serialversionuid serial version uid serial version serializable serializable uid supposed add strbuilder str builder inconsistent
+772	separator class garbage description package separator utils string text javadoc classutils class utils
+773	text thread doc pair safe nonsense class immutable threadsafe thread safe objects immutablepair immutable pair sense
+775	type class string report arguments utils assertequals assert equals equals code typeutils type utils type gettypearguments type arguments misses arguments partially ially assigned classes
+776	type class type utils typeutilstest type utils test test assertion test incorrect assignability assign ability lost skipped variable decision dec ision process
+783	string utils stringutils string utils int documentation bug split
+788	class exception class utils loader classnotfoundexception class exception input serialization serializationutils serialization utils clone throws cloning primitive classes
+794	windows vista systemutils system utils version flag match instance amp windows rackspace system utils incorrect
+799	locale parsedate parse locale simpledateformat simple format format utils instances issues german dateutils utils parse default add support
+800	calendar return ceiling object copy method dateutils utils bug dates utils javadoc versions
+802	syncavoid sync avoid locale locale avoid utils method localeutils locale utils availablelocalelist locale list class code unnecessary recursive call sync
+805	array start gap lang commons pass nextint int size exception array randomstringutils random string utils random string utils random count false universe throws java arrayindexoutofboundsexception array bounds exception bounds
+807	utils int nextint int source lang string argument illegalargumentexception illegal argument exception random illegal randomstringutils random string utils throws confusing iae start
+810	endindex utils string loop sign start sources startindex start lines stringutils string utils join bugged bug ged
+813	equality versions string case sequences strings utils equalsignorecase equals ignore case char stringutils string utils equals ignore doesn apos check string reference
+817	system windows systemutils system utils utils commons check lang version apache add org
+819	class collection enum generatebitvector generate bit vector bit idiom enum object enumutils enum utils utils generate vector extends
+822	big behaviour number bigdecimal big decimal versions decimal work checks exception create numberutils number utils utils createnumber create number bad leading
+826	digits parser class locales numbers match fastdateparser fast parser isnd fast handle ascii correctly
+828	calendars solution parser docs format fall fastdateparser fast parser conversions doc fast handle gregorian properly
+838	array clone methods arrays indices method removeelements remove elements application int type arrayutils array utils array utils remove elements temporary unnecessarily
+849	format return printer printer fastdateprinter fast printer override object format fast millis fastdateformat fast format generates objects wastefully tefully
+865	locale string tostring string patch localeutils locale utils utils method language tolocale locale parse strings starting underscore score
+881	numberutils number utils number createnumber create number assertequals assert equals values work apos numbers amp utils create javadoc octal
+882	string sequence char charsequence char sequence work map charbuffer char buffer buffer utils instances lookuptranslator lookup translator lookup translator accepts input fails implementations impl ementations
+883	sequence containsany char charsequence char sequence method collections sequences chars searchchars search chars add stringutils string utils string utils
+901	case endswithany ends type documentation prefixes response sequence type string stringutils string utils ends sensitive documented insensitive ins ensitive
+902	numbers implementation character letters docs string random utils bug randomstringutils random string utils string random count true number numerics num erics
+915	locale char locales bcp localeutils locale utils locale utils strings tolocale locale valid wrong handling
+916	time format calendar format zone dateformatutils format utils test timezone time zone java datetime time clone utils correctly change situations
+920	class reflection lang amp method array array nulltoempty null empty arrayutils array utils utils add null empty
+921	xor boolean implementation booleanutils boolean utils checks utils true boolean wrong array produces
+936	threshold max levenshtein max target string strings integer amp min stringutils string utils string utils getlevenshteindistance levenshtein distance distance big returns wrong result
+943	jdk test test duration locale brst lang apos durationformatutilstest duration format utils test format utils testedgeduration test edge duration edge fails time zone
+946	initializer test cktec jrg constantinitializertest constant initializer test markmail jdk building string constant fails ibm
+951	fragment year calendar fragments month day calendar utils class millis wrong
+957	spaces string utils word int javadoc java doc wordutils word utils doc java lines wrap doesn apos behave
+961	field removefinalmodifier remove final modifier field forceaccess force access force modifier set fieldutils field utils lang access org apache commons reflect utils remove final clean
+969	charset exception string byte utils encoded toencodedstring encoded string unsupported encoding throws stringutils string utils needlessly lessly unsupportedencodingexception unsupported encoding exception
+971	string number format numberutils number utils utils isnumber number exception octal createinteger create integer true fails reject invalid numbers
+972	xabcd abcd number xabcd abcd isnumber number createnumber create number utils create hex numberutils number utils
+977	amp issue string point characters escaper apos code char charsequencetranslator char sequence translator numericentityescaper numeric entity escaper numeric entity incorrectly encodes enc odes supplementary
+987	calendar fragment month utils days method amp break dateutils utils returns getfragmentindays fragment days days wrong
+995	bug utils apache github word wordutils word utils https spaces commons stripping str ipping wrap
+1002	amp format time formats iso time times apos dateformatutils format utils markus predefined fastdateformats fast formats fast format utils incorrect
+1003	format duration illegalargumentexception illegal argument exception format duration periods illegal utils argument durationformatutils duration format utils handle negative durations iods
+1004	method javadoc hms format duration iso time pattern durationformatutils duration format utils format utils formatdurationhms format duration hms implementation correspond vice versa
+1018	number str point number float amp float decimals return accuracy numberutils number utils utils createnumber create number create final string precision lost
+1027	java amp return version system apos apache utils default java org commons lang systemutils system utils isjavaversionatleast java version true
+1035	fields reflection reflectionequals reflection equals amp readers method equalsbuilder equals builder builder javadoc equals reflect ion unclear
+1041	method placeholder https apache pull test utils commons method methodutilstest method utils test depend jdk ordering
+1055	system test properties str substitutor org strsubstitutor str substitutor class props println replacesystemproperties replace system properties replace work consistently
+1068	java systemutils system utils jmeter npe isjavaversionatleast java version version utils system testing throws
+1069	instance otherlettershere character question getinstance instance amp charset char set apos documentation stack char set explain include negation set
+1071	number markup org examples arguments string src amp stringutils string utils svn wrong javadoc java doc java doc utils replaceeachrepeatedly replace repeatedly replace repeatedly replaceeach replace
+1072	utils numberutils number utils pos number commons check createbiginteger create big integer typo hex startswith starts duplicated create big integer
+1073	class array type arrayutils array utils apache utils element org read wrong component add array
+1081	arrays object check builder diff diffbuilder diff builder parameters testing test equals append string left
+1087	number float implementation mantissa bigdecimal big decimal string decimal numberutils number utils createnumber create number input utils create returns positive pos itive big negative expected
+1092	test timezones time zone string test timezone time zone zone time expectedvalue expected wrong formating form ating zones daylight day light saving fastdateprinter fast printer fast printer
+1104	america test java format test parser maven version time fastdateparsertest fast parser test fast testparses test parses parses fails timezone time zone time zone sao paulo
+1112	recursive style class string scope multiline amp package recursivetostringstyle recursive string style multilinerecursivetostringstyle multiline recursive string style unusable private
+1120	accents string strip stripaccents strip accents import apache org void utils stringutils string utils
+1132	apos placeholder https exception apache pull amp constructor javadoc reflectiontostringbuilder reflection string builder reflection string builder doesn throw illegalargumentexception illegal argument exception illegal argument object param null
+1141	system properties change lang lookup method snapshot lang background str strlookup str lookup systempropertieslookup system properties lookup properties longer reacts
+1142	character case title case title javadoc upper istitlecase title case totitlecase title case code stringutils string utils string utils capitalize touppercase upper case
+1144	test object initializer return lazy exception code test lazyinit concurrentexception concurrent exception multiple calls org apache commons lang concurrent lazyinitializer lazy initializer initialize
+1147	mask int enum apache bit operation vector bitvector bit vector https enumutils enum utils utils issue values
+1162	string utils regionmatches region matches char amp apos mailing prefix input stringutils string utils equals fails oobe strings identical ide ntical leading
+1163	char string charsequenceutils char sequence utils charsequences char sequences region version regionmatches region matches sequences oobe utils tests sequence matches
+1178	array indices implementation bit method callers sort bitset bit set utils int arrayutils array utils array removeall remove remove object clone call ers
+1181	style modifier string multiline multilinerecursivetostringstyle multiline recursive string style class public recursive access missing
+1182	containsany stringutils string utils utils charsequence char sequence char string characters sequence javadoc clarify javadoc java doc java doc
+1187	number createnumber create number utils numbers numberutils number utils lang point demo method create doesn apos work floating float
+1188	type string heap utils vararg src apache stringutils string utils pollution join warning unchecked poll ution parameterized var arg
+1190	type exception class method class fromtype type workingtotype working type import somemethod method typeutils type utils utils isassignable assignable assignable throws nullpointerexception null pointer exception null pointer type variables totype
+1191	stringutils string utils char containsany utils javadoc apache string sequence org incorrect charsequence char sequence
+1193	bug lang commons length search ordinalindexof ordinal abc answer searchstr search str observation ordinal incorrect correct
+1197	java javaversion java version systemutils system utils scheme utils version java change anticipation system prepare detection
+1199	distance implementation jaro ingeborg winkler esser stringutils string utils computation jarowinklerdistance jaro winkler distance contribution string utils getjarowinklerdistance jaro winkler distance
+1200	github javadoc java doc doc ordinalindexof ordinal apache parenthesis java commons string utils stringutils string utils ordinal add missing parent hesis
+1205	number numberutils number utils method createnumber create number isnumber number utils case returns num create behaves inconsistently onsistently
+1207	string sequence utils method char charsequenceutils char sequence utils length return amp stringutils string utils equals charsequence char sequence indexoutofboundsexception bounds exception bounds exception
+1209	pattern illegal support fastdateformat fast format argument illegalargumentexception illegal argument exception lang format element apos fast
+1214	class maps utils map classutils class utils classnotfoundexception class exception array loader string abbreviations getclass class classloader class loader fails void
+1215	number numberutils number utils utils math createnumber create number bug class org valueof package create method lost precision
+1219	format calendar zone daylight apos time fastdateformat fast format gmt amp fast doesn respect summer sum mer day light localized local ized strings
+1226	string control utils normalizespace normalize space work stringutils string utils string java space doc normalize trim
+1229	builder amp cycles hashcodebuilder hash code builder trunk methods code append hashcode hash code cycle performance regression cyclic hash guard
+1230	builder code thread thread version lookup calls hashcodebuilder hash code builder access threadlocals thread locals remove unnecessary synchronization registry equalsbuilder equals builder equals hash
+1232	fieldname field diff apache exception object illegalargumentexception illegal argument exception illegal https field argument diffbuilder diff builder builder add null check appending app
+1235	decrement mutable decrementandget decrement mutableint mutable int types incrementandget increment methods likelihood number int add dec rement increment class
+1239	string buffer exception stringindexoutofboundsexception string bounds exception stringbuffer string buffer foo bounds stringutils string utils utils throws equals
+1242	apache mapping https arrays html commons entity escape github lang nsub missing entityarrays entity arrays extended
+1248	array work digits appendfulldigits append full digits amp buffer source char char printer fastdateprinter fast printer fast memory allocation regression
+1251	thread stream hashmap hash map util object serializationutils serialization utils classloaderawareobjectinputstream class loader aware object input stream safety loader class serialization utils war input static initializer initialize primitivetypes primitive types
+1252	number createnumber create number isnumber number numberutils number utils lang times input java utils inconsistency create resolve inconsistently onsistently
+1261	parent array class child arrayutils array utils object type object childrens classes array utils returns false instances subtypes types
+1262	append builder comparetobuilder compare builder method comparator object arrays threshold inlining object compare big inlined inline
+1264	version org java string message version bgrhxr markmail axubcf javaversion java version correctly handle
+1269	methods distance utils distance option stringutils string utils string bugs winkler risk wrong result getjarowinklerdistance jaro winkler distance jaro
+1278	java https pointer null nullpointerexception null pointer exception boolean exception booleanutils boolean utils lang utils javadoc issues
+1281	string utils string stringutils string utils matches length match increment ordinalindexof ordinal case javadoc ordinal contradictory
+1287	parameter numbers tests morozov github apache infinite function random ivan randomstringutils random string utils string utils random enter inf init loop small
+617	apos code writer string amp char xml escapexml escape xml escape class stringescapeutils string escape utils escape utils process utf supplementary characters
+728	str xml utils org firefox questions escape web international code stringescapeutils string escape utils string escape escapexml escape xml support supplemental characters
+754	string class amp style tostring string mystyle style instance array apos buffer embedded objects top level
+814	constructor values args object variants utils npe invoke throws handle method var iants null
+978	java test version format org locale parser apache parse failing tests
+1000	utc iso parseexception parse exception parse text dateformatutils format utils exception wikipedia zone format parse dates designator utils datetime time zone format
+1152	format format string simple void fastdateformat fast format test dateasstring string test import fast behave differently large dates simple
+1189	decrementandget decrement increment getanddecrement decrement methods addandget add getandadd add increment getandincrement increment decrement add decrement incrementandget increment rement dec add mutable classes
+1202	leniency locale method amp parsedatestrictly parse strictly support parse apos parsedatewithleniency parse leniency lang strictly pass
+1216	parameter method number isnumber number numberutils number utils time code tuning commons math utils bug
+1245	applyrules apply rules buffer stringbuffer string buffer change lang calendar method string java signature apply rules util binary compatible
+530	parseDate cannot parse ISO  dates produced by FastDateFormat ParseException parseDate DateUtils SOLRSearchService Utils parse Service execute SOLRSearch
+624	SystemUtils getJavaVersionAsFloat throws StringIndexOutOfBoundsException on Android runtime Dalvik VM StringIndexOutOfBoundsException clinit init String ToStringStyle MultiLineToStringStyle ToStringBuilder getJavaVersionAsFloat SystemUtils substring Style Builder
+710	StringIndexOutOfBoundsException when calling unescapeHtml StringIndexOutOfBoundsException StringEscapeUtils NumericEntityUnescaper String translate CharSequenceTranslator AggregateTranslator charAt unescapeHtml4 Translator Escape Utils
+744	StringUtils throws java security AccessControlException on Google App Engine AccessControlException DevAppServerFactory CustomSecurityManager checkPermission AccessControlContext SecurityManager checkMemberAccess AccessController Access checkPackageAccess clinit check
+857	StringIndexOutOfBoundsException in CharSequenceTranslator StringIndexOutOfBoundsException IOException StringEscapeUtils String CharSequenceTranslator codePointAt charAt escapeCsv translate Character Escape Utils code
+862	CharSequenceTranslator causes StringIndexOutOfBoundsException during translation of unicode codepoints with length     character StringIndexOutOfBoundsException StringEscapeUtils String CharSequenceTranslator codePointAt charAt escapeCsv translate Character Escape Utils code
+879	LocaleUtils test fails with new Locale  ja JP JP u ca japanese  of JDK assertThat MatcherAssert LocaleStringConverterTest TestNGDirectoryTestSuite testStringToLocale ReflectionUtils invokeMethodWithArray testAllLocales TestNGExecutor TestNGProvider ProviderFactory ProviderProxy Test Matcher executeMulti invoke execute test Locale String run Reflection Utils Method Array Locales NGExecutor Suite NGDirectory NGProvider Converter Multi Factory Proxy Provider
+917	Exception when combining custom and choice format in ExtendedMessageFormat IndexOutOfBoundsException ArrayList rangeCheck ExtendedMessageFormat insertFormats applyPattern init get Check range Array List
+948	Exception while using ExtendedMessageFormat and escaping braces IllegalArgumentException ExtendedMessageFormat readArgumentIndex init applyPattern TestExtendedMessageFormat read Argument Message Extended Format Pattern
+954	uncaught PatternSyntaxException in FastDateFormat on Android PatternSyntaxException init Pattern compile compileImpl FastDateParser FastDateFormat createInstance Fast Format FormatCache Impl
+1061	FastDateParser error   timezones not handled correctly ParseException FastDateParser parse FastDateFormat Fast Parser Format
+1116	DateUtilsTest testLang  fails for some timezones ParseException parseDateWithLeniency DateUtils parseDate parse DateUtilsTest testLang530 Utils Leniency Test test Lang530
+1133	FastDateParser TimeZoneStrategyTest testTimeZoneStrategyPattern fails on Windows with German Locale Assert FastDateParser TimeZoneStrategyTest fail testTimeZoneStrategyPattern assertTrue Zone Time Strategy Parser Test
+1192	FastDateFormat does not support the week year component  uppercase  apos Y apos IllegalArgumentException init FastDatePrinter parsePattern FastDateFormat createInstance Fast getInstance FormatCache Format Pattern parse
+1276	StrBuilder replaceAll ArrayIndexOutOfBoundsException ArrayIndexOutOfBoundsException StrMatcher StringMatcher isMatch StrBuilder Str replaceImpl Match replace Matcher String replaceAll
+1285	NullPointerException in FastDateParser TimeZoneStrategy NullPointerException init FastDateParser TimeZoneStrategy StrategyParser getLocaleSpecificStrategy Strategy access 100 letterPattern Fast FastDateFormat

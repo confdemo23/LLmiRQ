@@ -1,0 +1,13 @@
+222	 ProviderSignInController ConnectionData
+224	 ConnectController
+258	 ConnectController DispatcherServlet connectionStatusRedirect
+273	 signIn Connection NativeWebRequest
+282	 AbstractConnection
+283	 JdbcConnectionRepository
+318	 JdbcMultiUserConnectionRepository JdbcUsersConnectionRepository
+356	 AccessGrant
+409	 ReconnectFilter
+426	 ApiException
+427	 Spring Social getProviderIdFromRequest
+430	 OAuth2Template ApplicationController PreemptiveBasicAuthClientHttpRequestInterceptor
+432	 ProviderSignInController ConnectSupport

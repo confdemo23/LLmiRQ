@@ -1,0 +1,350 @@
+693	test set start indicator rad item domain object Refactor samples domain contours bugged samples technical packaging hard isolate individual domains football
+706	Commit exception lost update fails http forum springframework org showthread php
+715	set item callback file writer resource query object saveState flag saveState flag restartable Assigning Robert original abstraction isn amp apos
+853	item chunk builder step imum set customer listener broken transactional item processing processing buffered transactions write failure causing rollback items don amp apos processed processing transactional wrong behavior document limitation
+866	test attr manager processor context worker exception skippable Reference manual invalid references org springframework batch file org springframework batch file doesn amp apos exists reference org springframework batch item file
+939	scope proxy context test bean set destruction step step scope work aop auto proxy
+979	test restart header writer write callback namespace job Insert Apache license header Java sources missing Insert Apache license header Java sources missing started headers correct slipped
+1002	step job build set status parameters execution transaction behavior Job failure step fails attribute step job configuration namespace step step step step step interpretation step step step step step step behavior confusing users step execute step fails correct behavior step step FAILED status FAILED step step step step
+1082	test item skip exception read reader set job file reader lenient resource existing startup check closed file reader lenient resource existing startup check closed forum post http forum springframework org showthread php
+1091	set fragment item chunk callback factory step event Add strict flag file readers flat XML file reader lenient resource existing startup check closed forum post http forum springframework org showthread php
+1112	job transaction test parameters data source names step Remove cycle infrastructure database support Remove cycle infrastructure database support
+1130	listener set data add chunk ordered read write Ensure Ordered respected generated listeners
+1131	set step transaction create job execution test chunk set transaction attributes tasklet step creating chunk oriented step transaction attribute configured tasklet element tasklet steps tasklet element amp apos tasklet amp apos attribute place configure transaction attribute user Spring amp apos namespace provide transaction advice mentioned documentation
+1143	set step test transaction job tasklet chunk exception Standalone step allowed tasklet attribute tasklet Standalone step allowed tasklet attribute tasklet logic check inline step standalone
+1145	set step exception chunk transaction item job test Conflicts step tasklet parent attribute step tasklet affect step factory bean elements parent attribute override causing solution parents
+1165	test step chunk execution listener listeners item write apos apos apos apos exist listener amp apos amp apos amp apos amp apos exist listener
+1171	step test set chunk transaction job execution create Interrupted step fail job Interrupted step fail job wrong amp apos restart
+1205	set step item create job transaction skip retry readCount commitInterval commitCount readCount commitInterval commitCount
+1256	set skip test chunk item exception step retry Processor called committed times items Writer skips Processor called committed times items Writer skips Assume commit interval Reader reads items Writer fails represents items passed Processor processed items committed Processor receiving items processed item committed
+1285	set step retry chunk create job item transaction Raise exception step reached job defined step reached flow job exception raised parser raise exception stepB executed job job step stepA step stepB job
+1314	test transactional record execution invoker mongo message context FFIW tradeJob pointing classpath target
+1318	set method job target bean context exception handle Ensure exception classes behaving correctly problems exception classes handled BATCH exception registered skippable step skip limit treated registered fatal processing chunk rolling reprocessing failing BATCH Exceptions registered retryable fatal retried BATCH Skippable Rollback exceptions inconsistent rollback behavior rollback occurs initial writing chunk rollback occur scanning BATCH Fatal Rollback exceptions causing chunk reprocessed leading commits valid records BATCH Skippable Rollback exceptions treated skippable
+1345	set test chunk transaction step write callback error error message tasklet chunk
+1351	set item context list bean application exception handle empty exception classes list override parent apos list empty exception classes list override parent amp apos list applies lists listeners streams prevents step job inherit parent remove registered exception classes step java lang Exception registered skippable specifies skippable exception classes merge step tasklet chunk skippable exception classes java lang Exception skippable exception classes chunk tasklet step step parent tasklet chunk skippable exception classes chunk tasklet step
+1362	set step context test item multiple custom editor Threads spinning multi threaded Step Threads spinning multi threaded Step multi threaded step waiting chunk process wait threads FINISHED spinning work visible large disparity commit count read count step user reported infinite loop JVM scheduler priority real worker thread
+1476	set skip chunk write process processor job count Filter counts high write skips happen Filter counts high write skips happen
+1477	set exception step retry skip chunk test skippable excludes includes retryable exceptions excludes includes retryable exceptions
+1546	test data sql clause query generate transaction database issues pagination Oracle issues pagination Oracle reported forum raised JIRA ticket track investigation http forum springsource org showthread php
+1670	step test flow bean set status job split Nested splits lead invalid flow definition
+1724	set retry skip chunk exception step create write Multithreaded step processing chunk skip retry limit sort understand amp apos amusing bug irritating doubt critical outcome step failure multi threaded step check failure thread time time checked failed chunk queue processing Oddly single background thread fails special cases
+1744	set exception step retry chunk skip test create Revert retry limit skip limit BATCH BATCH retry limit skip limit caused problems step inheritance parent step task track release version reverts late binding values injecting retry policy skip policy
+1761	skip retry set test exception write chunk process item chunk processed retry failed write http forum springsource org showthread php itemprocessor recalled item chunk retryable exception items eventually processed chunk fails deterministically retry skip
+1837	step job set connection close log properties start Spring Compatibility Tests Failing Compile errors tests
+1995	set item callback reader builder included skip test multiline delimiter processed correctly
+2035	application execution step bean factory context task handler Create parallel simple cli pure Java configuration Coding pure Java configuration Spring Batch Thought fit spring cli archetypes
+2151	skip exception set write item process chunk read Skip issues restart attached test project
+212	recovery itemprovider item provider marker provider inputsource input source item interface complication merge replacing input source
+304	launcher command job amp ways cat skin preferences application simplecommandlinejobdispatcher simple command job dispatcher batchcommandlinelauncher batch command launcher batch simplified rename
+347	interceptor retry repeat advisor operations aop interceptor retryoperationsadvisor retry operations advisor repeatinterceptor repeat interceptor class template names ambiguous
+362	context execution arjen executioncontext execution context context executionattributes execution attributes suggested rename thought descriptive attributes
+364	scope step step case context application issues web writers service stepscope step scope scope responsibilities res ponsibilities assumed applicationcontext application context
+366	step job instance execution values execution stepinstance step instance instance apos chunkedstep chunked step
+371	item lineaggregators aggregators itemtransformer item transformer aggregator lineaggregator aggregator string file writer item tokenizers flatfileitemwriter flat file item writer flat longer
+385	attributes context stepcontext step context executioncontext execution context execution developers apos user feature easy merge step
+444	amp null apos execution string context context jdbc list item remove check executioncontext execution context execution putstring string string
+448	event apos enddocument document amp xml org stax characters document staxeventitemwriter stax event item writer event item writer creates invalid row documents doc uments
+457	job exception rethrow error errors apos simplejob simple job memory runtimeexception runtime exception runtime handling broken impl simple
+459	values methods stepcontribution step contribution count execution step contribution incrementer unused stepexecution step execution
+461	stepcontribution step contribution items result number stepexecution step execution step count fibonacci contribution execution skip counting
+465	exit exit code commandlinejobrunner command job runner getexitcode exit code command runner string confusion term overloaded loaded
+468	versions exitcodemapper exit code mapper execution interfaces mapper itemorientedsteps item oriented steps stepexecutionsynchronizer step execution synchronizer exception oriented exitstatusexceptionclassifier exit status exception classifier exit status classifier code simple incorrectly moved
+478	afterpropertiesset properties set npe properties message launcher executor custom job taskexecutor task executor simplejoblauncher simple job launcher incorrect logged impl task set simple
+483	amp class execution serializable executioncontext execution context map error isinstanceof instance instance object context handle null values correctly
+489	job jobexecutionexception job execution exception execution javadoc hierarchy root exception empty job exception undocumented undo cumented
+492	amp spring apos file context method command runner bean job commandlinejobrunner command job runner close
+495	buffers mark readers aftercommit commit item event transaction historically staxeventitemreader stax event item reader stax read ers clear buf fers
+498	method api context executioncontext execution context argument execution steplistener step listener vote readers step skip
+507	execution job writer batch output parameters item job flat flatfileitemwriter flat file item writer file outputsource output source source initialised initial ised flatfileitemreader flat file item reader reader open
+511	exception handler exception item reader handler limit getitemreader item reader item read failures rollback
+513	listener chunk isn listeners item amp list type cast write compositeitemreadlistener composite item read listener composite read compositeitemwritelistener composite item write listener chunklisteners chunk listeners
+523	break mark logic flat step reader item file enclosing flatfileitemreader flat file item reader calls
+532	status exit execution step step complete listener stepexecutionlistener step execution listener amp codes influence inf luence execution
+533	incrementer factory batch job incrementer execution databasetype database type execution seq sequences prefix jobrepositoryfactorybean job repository factory bean repository bean apply
+538	context usestatelesssession stateless session currentprocessedrow current processed row execution void hibernate amp session item hibernatecursoritemreader hibernate cursor item reader cursor reader close doesn apos statefull full sessions correctly
+549	result buffered reader returns records bufferedresultsetreader buffered result set reader item jdbc cursor test jdbccursoritemreader jdbc cursor item reader handle restart
+560	stepexecutionresourceproxy step execution resource proxy flat execution step flatfileitemwriter flat file item writer file proxy resource properties writer item
+561	reader item summary close method itemreaderadapter item reader adapter adapter unnecessary implements
+564	execution composite stepexecutionlistener step execution listener method step listener removed compositeskiplistener composite skip listener skip called
+571	entity amp step instance step execution doesn reference jobinstance job instance job remove stepexecution step execution
+589	resource npe resource tostring string path length reader item flat setresource set resource stepexecutionresourceproxy step execution resource proxy step execution proxy apos string leads
+590	rollback result reader cursor set item reader jdbc buffer items broken buffering buf fering jdbccursoritemreader jdbc cursor item reader cursor
+595	insert insertparameter insert parameter int table type values job jdbc parameter jdbcjobinstancedao jdbc job instance dao incorrect jdbc job parameters long
+603	execution jobexecution job execution thread job modified fields volatile
+604	apos object getobject object amp usage objects step jdbc execution object jdbcstepexecutiondao jdbc step execution dao dao isn deserializing correctly
+608	interrupt job method framework batch jobexecutionlistener job execution listener interrupted oninterrupt interrupt callback listener execution called spring
+610	resultset reader jdbc method jdbccursoritemreader jdbc cursor item reader item amp cursor check null reopened closed
+613	xmlevents stax xml buffers reader document staxeventitemreader stax event item reader items memory event item
+618	default support job parameters defaultjobparametersconverter default job parameters converter converter jobparameters job parameters parameters jobparametersbuilder job parameters builder builder parse type double
+625	item times onskipinwrite skip write listener listener time error skiplistener skip listener called case skip write multiple rollback
+650	cursor scroll session row statelesssession stateless session implementation statefulsession stateful session query factory driver mode hibernatecursoritemreader hibernate cursor item reader hibernate cursor item reader
+654	step amp execution itemorientedstep item oriented step spring apos rollback oriented item ensure efforts commit stepexecution step execution fails
+660	handler factory step setexceptionhandler set exception handler exception item itemorientedstep item oriented step showthread simplestepfactorybean simple step factory bean oriented impl bean set working simple
+698	item machines failures stax windows writer staxeventitemwriter stax event item writer event staxitemwritertests stax item writer tests test
+703	job job instance jdbc key null dao repository feature empty jdbcjobinstancedao jdbc job instance dao instance doesn apos locate oracle
+705	tests rows order order data amp job queries tradejobfunctionaltests trade job functional tests apos rad functional ests fail verification don clause trade
+713	test output writer writer context item file void exception buffered flatfileitemwriter flat file item writer flat initialization file deletion
+723	dao table jdbc job ecdao dao execution prefix batch jdbcjobexecutiondao jdbc job execution dao tableprefix table prefix prefix property injected jbdcexecutioncontextdao jbdc execution context dao jbdc context
+732	flag file account reader issue flat item flatfileitemreader flat file item reader file apos doesn firstlineisheader header header restarting
+734	resources initialization bean item itemstream item stream showthread org stream php properties itemreaders item readers readers itemwriters item writers writers resource check file open
+737	row cursor move rows resultset movecursortorow move cursor row method row step execution jdbccursoritemreader jdbc cursor item reader jdbc item reader spin entire result set numberofprocessrows number process rows number
+744	item file flatfileitemwriter flat file item writer count flat writer restart
+752	item file record record recordseparatorpolicy record separator policy overriden flat reader simple int flatfileitemreader flat file item reader restart broken default separator policy
+761	writer event document woodstox document stream item apos staxeventitemwriter stax event item writer wstx stax writes extra tag
+776	item type stax staxeventitemwriter stax event item writer writer headers event writer marshaller parameterised parameter ised
+778	bean class repository job manager mapjobrepositoryfactorybean map job repository factory bean illegalargumentexception illegal argument exception lang argument illegal map factory shouldn apos require transactionmanager transaction manager transaction
+795	order job amp dao bug apos instance execution executions bacwards jdbcjobexecutiondao jdbc job execution dao jdbc output sorting
+807	execution step executions serialization field version jobexecution job execution stepexecutions step executions transient bug job
+814	job overridden intersect step responsibility configuration names concerns step execution jobrepository job repository repository require
+830	reader delegating item amp logic delegatingitemreader delegating item reader field delegate apos returns removed
+832	taskletstep tasklet step tasklet step exception wouldn amp loop rollbackon rollback rolledback instanceof defaulttransactionattribute default transaction attribute default transaction attribute inappropriate
+835	job oracle query instance version jdbcjobinstancedao jdbc job instance dao addition job sql error column ambiguously defined jdbc instance dao
+836	bean writer stream itemstream item stream methods composite stepfactorybean step factory bean item streams reader compositeitemwriter composite item writer implement
+838	policy file returns methods iscompleted completed eof timeoutterminationpolicy timeout termination policy time completed code timeout termination terminate encountered
+843	failure chunk strings ffiw map aggregator file writer item flat flatfileitemwriter flat file item writer handling lineaggregator aggregator aggregator
+847	exception exceptions failure item statement oriented reader chunk fault chunk faulttolerantchunkorientedtasklet fault tolerant chunk oriented tasklet tolerant tasklet loses chunks skippable skip pable thrown read phase
+865	compositeitemprocessor composite item processor chain composite item processor processor item itemprocessor item processor null returns handle properly
+870	exception execution trace jobexecution job execution description exit job stack thrown step add empty exitstatus exit status status
+892	visibility org keywords resultholder result holder holder implementation taskexecutorrepeattemplate task executor repeat template springframework executor task thread issues repeat template
+912	amp list thread errors apos arraylist array list issues jobregistrybackgroundjobrunner job registry background job runner safety visibility thread issue job registry background runner
+948	instances job jobname job jobs job jobinstances job instances dao map mapjobinstancedao map job instance dao parameter instance getlastjobinstances job instances ignores
+951	job instances apos map instances instance mapjobinstancedao map job instance dao instance job dao getlastjobinstances job instances doesn return
+952	time stagingitemreader staging item reader item record item reader process method reader itemreader item reader staging restartable restart
+954	execution failure version job optimistic job apos match optimisticlockingfailureexception optimistic locking failure exception amp
+963	method context executioncontext execution context failure execution values semantics resources case shouldn execution modifications itemstream item stream item stream close persisted
+969	amp showthread org flat compositeitemwriter composite item writer writer file clue resource item flatfileitemwriters flat file item writers writers interference int erference composite
+1001	job default spring list attribute xsd spring abstractjob abstract job batch class jobs restartable restart
+1021	file test batch patches assertfileequals assert file equals method order parameters assertfile assert file spring assert assert equals wrong
+1022	chunks jms chunkrequest chunk request chunk request serializable class serializable wrapped sending
+1030	execution job job transition status jobexecution job execution statetransition transition exception step transitions flowjob flow job flow replays failed steps restart failure fail
+1031	flat string resource reader warning input item debugging flatfileitemreader flat file item reader identify file ide ntify missing
+1053	job abstract getstep step string steps step abstractjobtests abstract job tests interface simplejob simple job chat add
+1059	parameters string job map string entry parameters job apos batch instance key ignores milliseconds
+1061	execution step result stepexecution step execution islater job flowjob flow job step backup exit flow getlaststepexecution step execution puts arguments wrong order
+1086	jobname job job getrunningjobexecutions running job executions jdbc jdbcjobexecutiondao jdbc job execution dao execution dao job executions ignores running
+1106	paging bean provider defaults property sqlpagingqueryproviderfactorybean sql paging query provider factory bean factory query sql bean query ascending default true
+1119	write chunk chunk exception dowrite write recovery kick simplechunkprocessor simple chunk processor procedure simple afterwrite write called raised throttling
+1123	promotion promotion context listener executioncontextpromotionlistener execution context promotion listener execution loop finding match times perform multiple
+1124	class error type method tradewriter trade writer lang argument illegalargumentexception illegal argument exception method illegal message occurs annotation
+1125	step listener status exception afterstep step work noworkfoundstepexecutionlistener work step execution listener step method exitstatus exit status execution doesn apos fail
+1146	jdbcjobinstancedao jdbc job instance dao dao jobparameters job parameters jdbc job parameters instance key
+1155	reader defaultlinemapper default mapper mapper ffir package default cycle
+1178	step step attribute parser attributes inlinestepparser inline step parser inline errors silently ignores
+1180	definition beandefinition bean definition step tasket inline bean hierarchy parsetasklet parse tasklet tasklet error occurs parent attribute appears
+1197	job job instances order instance parameters jobinstance job instance fact key query rerunning creates instance
+1210	custom default abstractstep abstract step abstract result step exit overwrites status stopped writes steps
+1218	stream item reader mergingreader merging reader reader register method step itemstream item stream faulttolerantstepfactorybean fault tolerant step factory bean item streams won apos registered
+1225	position file chunk item writer filechannels file channels file flat flatfileitemwriter flat file item writer method staxeventitemwriter stax event item writer stax event restart place
+1232	context type sybase jdbcexecutioncontextdao jdbc execution context dao execution dao jdbc compatiblity context sybase comp atiblity writing spring batch context tables tab les
+1245	batch case issue test apos patch event writer stax staxeventitemwriter stax event item writer item writes extra document tag woodstox
+1255	null exceptions target step bean proxy method invoker listener pointer analysed analyse listener interfaces
+1264	tasklet transaction bean batch propagation updater indexes job npe stepparserstepfactorybean step parser step factory bean step parser factory configuretaskletstep configure tasklet step configure omitting isolation attributes
+1272	skips multi processor faulttolerantchunkprocessor fault tolerant chunk processor step tolerant chunk fault fault multiple write work threaded
+1278	threads template repeat repeattemplate repeat template throw multiple batch exceptions ignorable underlying aborts early
+1280	job registrations job factory integration parser jobparserjobfactorybean job parser job factory bean registry bean tests singleton single ton
+1282	instances job registry dependency namespace xml bean bean default processor jobregistrybeanpostprocessor job registry bean post processor post skips jobs injected
+1289	custom property corenamespaceutils core namespace utils editor namespace exception defined pointer null utils core rangearrayeditoralreadydefined range array editor defined range array
+1311	execution job stepexecution step execution simplejobexplorer simple job explorer return check step sending null explorer impl simple
+1313	loop decider sample complete limit flow limitdecider limit decider returns loopflowsample loop flow sample apos completed
+1319	step manager memory execution step counts small synchronization leak map stepsynchronizationmanager step synchronization manager
+1330	job parameters path jobpath job path doc java javadoc java doc jobparameters job parameters comment commandlinejobrunner command job runner wrong command job runner
+1341	destroyscript destroy script scripts data arrayoutofboundexception array bound exception initializer datasourceinitializer data source initializer exception array source script throws bound destroy
+1363	splitstate split exceptions split simpleflow simple flow post flow executions simple isn amp job stopped finish status stopped
+1390	context check executioncontextpromotionlistener execution context promotion listener existence listener execution promotion previous key promting erases step
+1401	job types jdbc dao jdbcjobinstancedao jdbc job instance dao inserts instance sql jobid ins erts jobid job bigint
+1417	policy amp readline read reader record record recordseparatorpolicy record separator policy item flatfileitemreader flat file item reader string error flat file recordseparatorpolicy record separator policy separator preprocess pre process pre
+1418	point classes reader file exceptions job flatfileitemreader flat file item reader mapper tokenizer linetokenizer tokenizer restart step flat file item reader doesn apos honor skippable skip pable exception
+1422	item reader case jumptoitem jump item sets outofmemoryerror memory error error itemindex item row implementation hibernatecursoritemreader hibernate cursor item reader hibernate cursor memory skipping large data
+1423	point classes reader step exceptions job reader file flatfileitemreader flat file item reader item restart flat file doesn apos honor skippable skip pable exception
+1427	spring exception abstractstep abstract step step reference fatalexception fatal exception batch exception abstract amp simpleretryexceptionhandler simple retry exception handler impl retry handler treats fatal fatal simple
+1444	stream data stream composite chunkmonitor chunk monitor user itemstream item stream checks monitor item chunk warning message inaccurate
+1460	query derby provider paging derbypagingqueryprovider derby paging query provider rownum oracle clauses additional illegal
+1473	beans child class context copies aware job loader xml infrastructure components create application contexts war inf rastructure
+1490	stax data xml event writer testcase item problem file showthread staxeventitemwriter stax event item writer outputs puts invalid step handling failed retried chunk
+1494	amp reader item hibernate apos hibernatecursoritemreader hibernate cursor item reader cursor size hibernateitemreaderhelper hibernate item reader helper fetch fetchsize fetch size accessible
+1497	server sql query paging query sqlserverpagingqueryprovider sql server paging query provider jump item provider alias
+1498	item paging jdbcpagingitemreader jdbc paging item reader reader jdbc parameter correctly apply restart values
+1499	server query sql sqlserverpagingqueryprovider sql server paging query provider paging subquery jump provider alias query
+1501	jdbcpagingitemreader jdbc paging item reader reader paging item job database queryprovider query provider property jdbc item failing order key column select
+1506	refcursorposition cursor position cursor position parameter property culprit reader procedure item length problem refcursor cursor storedprocedureitemreader stored procedure item reader stored
+1507	namespace tests step irony interface job steplocator step locator flow xml locator flowjob flow job getstep step names step
+1510	job list flow flows flow flowjob flow job function job steps list stepnames step names incomplete nested
+1513	provider query queryprovider query provider hibernate query abstracthibernatequeryprovider abstract hibernate query provider myqueryprovider query provider instance provider field hibernateitemreaderhelper hibernate item reader helper item reader helper requires abstract
+1522	factory fault bean mapjobrepositoryfactorybean map job repository factory bean map tolerant job test tests failure intermittent faulttolerantstepfactorybean fault tolerant step factory bean step multi threaded
+1525	string exit exitcode exit code description status assertion description exitstatus exit status lang null exit hyrated oracle
+1526	tomcat apos monitor web chunkmonitor chunk monitor leak thread fixes chunk threadlocal thread local memory deployments deploy ments local nulled
+1528	transaction manager batch manager bean processor processor partition namespace abstract context ition element requires transactionmanager transaction manager
+1542	job execution stepexecution step execution concurrency jobexecution job execution map batch copy thread safety step collections
+1543	listeners custom listener steplistener step listener orderedcomposite ordered composite composite register apos order ordered items
+1545	writer maven logs log file org database patch batch trunk flatfileitemwriter flat file item writer flat file item jdbcbatchitemwriter jdbc batch item writer jdbc
+1547	code listener execution executioncontextpromotionlistener execution context promotion listener context listener issue batch original promotion strict flag misinterpreted
+1551	paging batch problem pagingqueryprovider paging query provider query subquery jump provider alias query
+1569	resource currentresource current resource getcurrentresource current resource current array exception multi multiresourceitemreader multi resource item reader item reader java lang arrayindexoutofboundsexception array bounds exception bounds read called
+1571	sql query limit limitclause limit clause jump clause pagesize size org size code postgrespagingqueryprovider postgres paging query provider postgres paging provider generatejumptoitemquery generate jump item query generate item generates bad
+1573	batch job element step unit noop amp status status batch transition finish unknown namespace space prefix
+1582	executions validation implementation execution defaultstepexecutionaggregator default step execution aggregator namespace framework deal aggregator partitions default step aggregator simply ignore null empty input
+1587	format fieldset field set field numberformat number format field dateformat format setdateformat set format number factory setting defaultfieldsetfactory default field set factory default set enhance call
+1588	listener job method xml job code parser test excecution namespace parsing fails methods named beforejob job afterjob job
+1590	item query sort input jump count paging order context jdbcpagingitemreader jdbc paging item reader oraclepagingqueryprovider oracle paging query provider oracle query provider generatejumptoitemquery generate jump item query generate generates incorrect
+1594	listener step steplistenersupport step listener support stepexecutionlistener step execution listener support method developers interfaces javadoc execution implements onerrorinstep error step error declared implemented impl emented
+1595	oracle column names amp query apos jumptoitemquery jump item query key jump long oraclepagingqueryprovider oracle paging query provider paging query provider inconsistent columns item
+1597	timeout direct amp poller directpoller direct poller batch millisecs apos doesn milliseconds works
+1598	job instance test utils repository jobrepositorytestutils job repository test utils execution job delete fails
+1600	job job execution execution executions command status springframework batch launch commandlinejobrunner command job runner runner restarted
+1601	initializer shouldn springframework org test source data batch apos datasourceinitializer data source initializer initialized field static
+1602	job oracle amp parameter instance isn jdbcjobinstancedao jdbc job instance dao jdbc scenario dao empty string jobparameter job parameter hydrated null
+1603	resource reader item resource loop input mrir exception data delegate multiresourceitemreader multi resource item reader multi infinite inf init read failed open skip policy lax
+1605	method writer arguments firstname method mywriter writer doit candidate class object hippymethodinvoker hippy method invoker hippy invoker didate repeated
+1618	file resource item number limit count itemcountlimitperresource item count limit resource resource writer method multiresourceitemwriter multi resource item writer multi item creates empty write multiple
+1620	flow step flowstep flow step fails
+1623	amp apos processor validation restriction error syer joris policy chunk configured transactional true shouldn require retry skip limit
+1629	statement log processor string inputs isdebugenabled debug enabled hog logger performance tolerant faulttolerantchunkprocessor fault tolerant chunk processor fault chunk dangerous statements
+1632	numberformatexception number format exception big indexof readbigdecimal read big decimal decimal defaultvalue default format bigdecimal big decimal exception getmessage message defaultfieldset default field set default field set read string number
+1635	template problem hibernate proxy initialization hibernatetemplate hibernate template search lazyinitializationexception lazy initialization exception lazy spring batch search work
+1640	file transaction writer amp apos item rollback rolls data xml writers write behave correctly
+1643	property unit field property beanwrapperfieldsetmapper bean wrapper field set mapper distancelimit distance limit bean match test exception unpredictable binding wrapper set mapper fuzzy matching
+1652	batch process job input spring runner commandlinejobrunner command job runner command processes hangs
+1671	test package batch context scope utils methods execution executioncontexttestutils execution context test utils test static public
+1681	xml writer structure implementation property woodstox wstx output root stax restarting job generates staxeventitemwriter stax event item writer event item fails
+1703	execution collection job jobexecution job execution executions mapstepexecutiondao map step execution dao map step overwrite add step dao stepexecutions step executions correctly
+1707	job list start nbjobs jobs getjobinstances job instances jobs count class instance jobname job mapjobinstancedao map job instance dao map dao instances string job int work
+1709	mapper names messages limit distance column bean caching setting wrapper beanwrapperfieldsetmapper bean wrapper field set mapper field set race condition cache
+1738	fragment reader fragment amp issue apos event reader stax mark staxeventitemreader stax event item reader item stops reading exception occurs unmarshalling
+1742	treeset tree set illegal foo list https method method test adapter item hippymethodinvoker hippy method invoker hippy invoker fails target overloading loading exact match arguments
+1756	parameters job jobparameters job parameters amp format parameter parameters string jms trip properties work double
+1757	range min max minmaxpartitioner min max partitioner max min partitioner partitioner int incorrect sets
+1813	properties bean map amp concurrenthashmap concurrent hash map bottom batch cache field property beanwrapperfieldsetmapper bean wrapper field set mapper wrapper set mapper caching broken
+1841	property bean batch retryableexceptionclasses retryable exception classes configuration step amp limit parent step upgrading spring error processing xml
+1847	bean scope spring batch child project arguments error context amp step inheritance parent definitions odd effects
+1848	column key class sortkey sort key table field paging provider alias jdbcpagingitemreader jdbc paging item reader jdbc item reader support table aliases sort clause order retrieval result set
+1849	job property batch item reader item map configuration picked restarting failed
+1853	npe job test void string key getdate assertnull assert null doesnt scenario jobparamters job paramters paramters throws exists
+1860	amp row apos rows paging derby number sort jdbcpagingitemreader jdbc paging item reader jdbc item reader skip sqlserver sql server sql server sybase paging occuring ordering
+1863	bean bean job flow factory org application definition parser method batch namespace allowbeandefinitionoverriding bean definition overriding overriding false
+1865	afterread read listener file read doread read chunk method amp simplechunkprovider simple chunk provider simple impl provider calls finished
+1903	execution query compatibility job batch sql hsqldb issues spring job breakage break age hsql
+1916	reader policy record record input file flatfileitemreader flat file item reader separator recordseparatorpolicy record separator policy amp isendofrecord record wrong javadoc
+2011	exit someexitstatus exit status compareto compare exitstatus exit status test status codes exitstatuses exit statuses pass status compare delivers result range
+2019	spring property default configurer bean child processors propertysourcesplaceholderconfigurer property sources placeholder configurer placeholder contexts support sources delegation job
+2023	flatfileitemreader flat file item reader mode proxy scope reader target stepscope step scope bean item proxymode proxy mode step default scopedproxymode scoped proxy mode cope proxy class scoped
+2038	version access invalid work exception provider usage derby data query derbypagingqueryprovider derby paging query provider paging
+2045	batch xsd spring job parser message spring batch job jobparser job parser version incremented remented xsd schema check warning
+2050	item reader stepscope step scope target proxy scope step class abstractitemcountingitemstreamitemreader abstract item counting item stream item reader abstract counting stream read shouldn apos final
+2086	item batch execution context setter support writer stax method execution default writer implementations impl ementations public set ter
+2096	amp apos batch step chunk policy commitinterval commit interval simple job completionpolicy completion policy completion policy commit interval int erval jobparameters job parameters parameters retry limit exists
+2126	task format converter taskexecutor task executor thread executor operator setup job instance defaultjobparametersconverter default job parameters converter default parameters safe simplejoboperator simple job operator impl simple
+2141	reader amp attribute repositoryitemreader repository item reader dopageread read increment repository item partition springframework reads partitions itions
+2172	database jdbc product driver detection autodetect code frommetadata meta data batch spring fails auto detect database type zos
+2179	flag parameters getproperties properties jobparameters job parameters converter job properties identifying defaultjobparametersconverter default job parameters converter prepended default ignores
+2189	batch configurer annotation exception postconstruct post construct construct docs default catch time defaultbatchconfigurer default batch configurer violates post rules
+2204	property queue reader fault chunk bean work tolerant org problem transactional
+2206	collection work type mongo reader return property iterator json mongoitemreader mongo item reader mongo item set
+2212	job exception class amp bean jobpath job path path context console command runner swallowing exception details
+2235	executing checks status implementation isrunning running exit status return running exitstatus exit status running true
+2257	execution result count step stepexecution step execution skipcount skip count org aggregate status default defaultstepexecutionaggregator default step execution aggregator step aggregator aggregation processor skip missing
+2311	job job execution execution unknown status executions instance exception status joblauncher job launcher launcher restart
+2347	defaultjobloader default job loader apos job amp jobs batch leak contexttojobnames context job names load garbage memory default loader
+2352	names notnull null fragmentrootelementnames fragment root element names root element fragmentrootelementnames fragment root element names fragment notempty empty message staxeventitemreader stax event item reader assertion errors stax event item reader
+2359	job file foo runner commandlinejobrunner command job runner pipe jobname job command job core content defined empty mechanism
+2380	delimiter string null tokenizer set delimited situations pointer length nullpointerexception null pointer exception delimitedlinetokenizer delimited tokenizer empty delimiters
+252	job amp block hibernatefailurejob hibernate failure job fact catch hibernate job check doesn failure fail expected
+268	retry item rollback default policy matter itemreaderretrypolicy item reader retry policy configure retrypolicy retry policy operations retry configuration itemorientedtasklet item oriented tasklet oriented tasklet
+368	columns status data stepexecution step execution ddl job overflow table execution unknown step attributes spurious optimisticlockingexception optimistic locking exception optimistic locking exception
+383	java plan features builder samples bamboo source stringbuilder string builder compatibility string remove
+398	step factory executor setters factory bean amp prototype implementation isn stateful stat eful stateless
+454	step start isallowedstartifcomplete allowed start complete context execution allowed property job complete restarting broken apos tar
+491	amp handler operations exception apos repeat runtime exception stepoperations step operations step checked handling
+537	amp limit place showthread strategy key org bug apos lead bad itemkeygenerator item key generator item generator infinite inf init loop retry
+548	buffereditemreader buffered item reader batch chunk mark buffered reader reader resourceitemreader resource item reader item items skipping lead invalidated invalid ated resource
+552	java samples server mbean mbeanserver mbean server build created automatically ean
+579	ite flatfileitereader flat file ite reader declaration reader flat ioexception remove file throws redundant ioe xception
+616	overflow description exit exception oriented exitstatus exit status item doexecute execute insert step stream open throws
+651	item readers logic batch buffer update mark batch rollback apos buffered read ers don handle volatile commit interval int erval
+661	flag job step interruption tasklet apos itemorientedstep item oriented step taskletsteps tasklet steps item jobexecution job execution broken interrupt ion logic
+722	framework codes exitstatus exit status batch batchstatus batch status status logic exit set users depend
+751	execution springframework http php org context showthread stepexecution step execution executioncontext execution context forum ensure step saved save
+833	rollback transaction transaction apos exception exception amp operations stepoperations step operations transactionattributes transaction attributes attributes swallows exceptions
+857	values amp step context clone executioncontext execution context failure map execution apos map daos transactional correct restart
+897	version execution jobinstance job instance jobexecution job execution database job instance rehydrated
+921	context execution executioncontext execution context components prepend partition unique thought class ition
+1004	step job step skipjob skip job amp bean tasklet namespace define store
+1005	limit allowstartifcomplete start complete namespace step abstractstep abstract step abstract bean simplestepfactorybean simple step factory bean factory start startlimit start limit start tar complete set
+1007	job string jobrepository job repository attribute repositoryattribute repository attribute repository step documentation utils repository jobrepository job repository job default inconsistent step
+1075	step tasklet taskletstep tasklet step start step limit tasklet namespace complete task
+1111	showthread chunk chunklistener chunk listener org listener php writelistener write listener forum http write called
+1122	document method writer item batch startdocument start document root springframework tag xml staxeventwriter stax event writer stax event start protected
+1128	records file item record forum count post rollback flat correctly write updated
+1129	org complications springframework exception apos amp transaction exception classifications form problems class ifications
+1147	test faulttolerantstepfactorybean fault tolerant step factory bean fault test tolerant itemprocessor item processor factory springbatch spring batch snapshot bean stepexecution step execution step execution getfiltercount filter count filter count return
+1159	exception database problem amp data execution processskipcount process skip count skip apos stepexecution step execution process count written
+1160	steptype step type batch flwo step flow xsd type flwosteptype flwo step type step unordered flowsteptype flow step type
+1164	listener mylistener listener beans step jobparameters job parameters parameters runid job listener putting scope failure
+1172	editor array rangearraypropertyeditor range array property editor range register automatically configuration namespace property registered
+1174	amp binding job resource parameters apos jobparameters job parameters illegal string lang late work late expression preceded trailed
+1181	step taskletstep tasklet step tasklet element step namespace properties flow implementation assumes
+1185	job player file scope step reader item reader csv football job slows
+1196	execution jdbc executioncontext execution context jdbcjobexecutiondao jdbc job execution dao context dao hydrated job
+1198	items filter processor step counter instance count fiddle afterstep step amp processskipcount process skip count process skip filtercount filter count mixed
+1201	parameters listener method subtypes afterprocess process object afterprocess process apos void step annotations don types expected
+1213	xsd defaults transaction jobrepository job repository overridden step attribute factorybean factory bean bean set defaults override parent attributes
+1284	step forum partition batch status reference batchstatus batch status incorrectly setting refer completed
+1291	step job config license exception adapts validations lgpl cycles namespace parser validate orphaned steps
+1301	reader item reader job step property file writer itemstream item stream stream opened correctly multi threaded step scope
+1304	link execution count exception step filtercount filter count filter stepexecution step execution skip incremented counter remented apos
+1326	start step start doesn steps system job restart apos work previous allowstartifcomplete start complete tar complete true
+1354	error loop itemwriter item writer step jmock mock infinite skiplimit skip limit item expectationerror expectation error skip caused throwing writer skippable pable
+1383	command step method batch listener listener class rollback onskipinprocess skip process skip process called exception marked
+1392	throttle property throttlelimit throttle limit element parser limit limit string chunk hastext text throttle parsed parse chunkelementparser chunk element parser element
+1420	execution steps sample partitioner access executioncontexts execution contexts method variables bean time late binding definition collection property
+1453	query paging provider rownum oracle queries select generates oraclepagingqueryprovider oracle paging query provider wrong
+1502	apos amp session hibernatepagingitemreader hibernate paging item reader item chunk sessions hibernate reader statefulsession stateful session paging doesn close
+1503	writer complete step context job job failure change metadata message jobexecution job execution execution marked save execution
+1539	writer stream exception writernotopenexception writer open exception honour springframework interface org writer item composite
+1567	job error execution executioncontext execution context job context unknown signal jobrepository job repository status step encounters saving fails
+1572	exception step transaction reader chunk handler org springframework exception throwable step failing unexpectedrollbackexception unexpected rollback exception unexpected rollback
+1574	executor didn task configuration factory amp bean taskexecutor task executor tasklet namespace task chunk
+1616	partition partitioner string batch prefix partitions start regression spring custom itioner longer restart job properly failure
+1619	time client number row column amp tmp exception sql badsqlgrammarexception bad sql grammar exception bad sql grammar exception accessing executions apache derby datasource data source
+1633	step injection jane apos innerbeanstepscopedtest bean step scoped test bean test batch scope dependency problem scoped anonymous
+1639	oracle amp item query jump apos batch jump batchadm oraclepagingqueryprovider oracle paging query provider jumptoitemquery jump item query tweak
+1656	exception fine writer loop java skiplimit skip limit limit itemprocessor item processor infinite lang rollback skip reached item processor
+1739	step amp limit apos exception argument illegalargumentexception illegal argument exception exception job illegal inheriting parent skip retry inheriting bean doesn define classes
+1743	gridsize grid size job partitionhandler partition handler size grid jira scope springsource parameter batch step partition handler broken
+1745	step bit start workaround xsd flow allowstartifcomplete start complete bean inconsistency onsistency start complete allowed tasklet task
+1753	file application execution txt apos input amp error output property problems flatfileitemwriter flat file item writer flat file item writer restart
+1775	file file job test mapper input output parameter beans type chunk elements scope step leads mistaken override bean definitions
+1783	job issue files spring exitstatus exit status exception sts chunk exit batch throwing exceptions chunklistener chunk listener listener endless loop
+1804	processor writer work batch chunk test deadlock maven item limit retry additional exception occurs itemwriter item writer item writer scan failure
+1822	job execution batch job terminate transaction taskletstep tasklet step stepexecution step execution execution setterminateonly set terminate marked stopped exception occurs committing commit ting step
+1908	partitions execution inserts records contexts partition storage context partitionstep partition step job inefficient stepexecutioncontexts step execution contexts step partitioning itioning
+1920	amqpitemreader amqpitem reader batch writer sample reader amqpitem spring updating samples add amqpi tem
+1924	job step gist xmloutputwriter xml output writer output xml writer restarting stopped completed prevents progress
+1946	hibernate item hibernateitemwrite hibernate item write failed signs merge write
+1959	file size maven bytes writer flatfileitemwriter flat file item writer byte caracters method file problem flat item restart multi encoding
+2040	tmp execution generatejumptoitemquery generate jump item query batch query provider string error sql pagingqueryprovider paging query provider paging creates erroneous err oneous statement generate jump item
+2153	exception threadsafe map nullpointerexception null pointer exception hashmap hash map org manager util case null stepsynchronizationmanager step synchronization manager step synchronization static hash pointer multiple threads
+2205	arguments class bean properties afterpropertiesset properties set override works spring object tasklet methodinvokingtaskletadaper method invoking tasklet adaper method invoking adaper support primitive
+2242	job job version exception attempt simplejobservice simple job service failure starting optimisticlockingfailureexception optimistic locking failure exception service stopping throws optimistic locking
+577	JdbcCursorItemReader doesn apos t work with Derby newEmbedSQLException SQLException getSQLException SQLExceptionFactory JdbcCursorItemReader BufferredResultSetReader newEmbedSQLException SQLException getSQLException EmbedResultSet checkScrollCursor DelegatingResultSet getRow Set
+766	Insufficient error handling in case of a missing resource for a org springframework batch item xml StaxEventItemWriter NullPointerException UnexpectedJobExecutionException StaxEventItemWriter CompositeItemStream close SimpleJobLauncher ItemOrientedStep SyncTaskExecutor execute Item Job testLaunchJob SimpleJob
+946	NullPointerException in MapStepExecutionDao getStepExecutions NullPointerException MapStepExecutionDao SimpleJobExplorer getStepExecutions getJobExecutionDependencies findJobExecutions Step Job Executions Execution StartupTest Dao
+1113	query for JdbcJobExecutionDao findRunningJobExecutions is broken SQLStateSQLException MySQLIntegrityConstraintViolationException SQLErrorCodeSQLException DataIntegrityViolationException SQLErrorCodeSQLExceptionTranslator SQLStateSQLExceptionTranslator translate findRunningJobExecutions JdbcJobExecutionDao JdbcTemplate SimpleJobExplorer SQLException Translator query Job
+1214	CoreNamespaceUtils addRangePropertyEditor fails with Spring IllegalArgumentException TypeConverterDelegate convertToTypedMap convertIfNecessary BeanWrapperImpl convert convertForProperty Type Delegate Converter Typed Map
+1230	scope  step  does not work together with Annotation  BeforeStep IllegalArgumentException JdkDynamicAopProxy SimpleMethodInvoker ReflectiveMethodInvocation MethodInvokerMethodInterceptor CompositeStepExecutionListener invoke Method invokeMethod beforeStep Step access 100 handleStep FlowJob JobFlowExecutor Invoker proceed AbstractJob AbstractStep execute Job executeStep Proxy18 Simple Flow Dynamic Jdk Proxy Aop Invocation Reflective Interceptor Listener Execution Composite handle Executor
+1452	Stream closed exception when combining MultiResourceItemWriter and FlatFileItemWriter with footer callback IOException FlushFailedException TransactionAwareBufferedWriter AbstractPlatformTransactionManager invokeAfterCompletion TransactionSynchronizationUtils StepContextRepeatCallback TaskletStep triggerAfterCompletion processCommit doInChunkContext Completion afterCompletion
+1615	MultiResourceItemReader infinite read exception loop after NonTransientDataAccessResourceException NonTransientDataAccessResourceException XMLStreamException DataAccessResourceFailureException DataAccessResourceException StaxEventItemReader moveCursorToNextFragment AbstractItemCountingItemStreamItemReader MultiResourceItemReader Item doRead Reader read readNextItem move Cursor
+1659	FileUtils setUpOutputFile fails on NAS from linux IOException InvocationTargetException NativeMethodAccessorImpl DelegatingMethodAccessorImpl invoke createFileExclusively Method UnixFileSystem File createNewFile invoke0 TestNAS Impl
+1705	CommandLineJobRunner and lack of standard input exception handling IOException FileInputStream BufferedInputStream available Input Stream File Buffered
+1780	Code exception is masked by a batch exception FlatFileParseException NonUniqueResultException StepListenerFailedException RuntimeException IncorrectResultSizeDataAccessException onReadError IllegalArgumentException MulticasterBatchListener onReadError SimpleChunkProvider RepeatTemplate TaskletStep ChunkTransactionCallback ChunkOrientedTasklet executeInternal doRead Read doInIteration
+1798	MultiResourceItemReader fails on Restart if read  method was not called RuntimeException ArrayIndexOutOfBoundsException MultiResourceItemReader Item Resource Reader Multi open
+1826	Null pointer exception if optional parameter of type DATE is null IllegalArgumentException format Format DateFormat init JobInstanceInfo JobController Job Instance Info Controller details
+1884	JobLauncherIntegrationTests failing BadSqlGrammarException SQLException SQLErrorCodeSQLException AbstractFallbackSQLException sqlException SQLErrorCodeSQLExceptionTranslator AbstractFallbackSQLExceptionTranslator JdbcTemplate doTranslate JobLauncherIntegrationTests queryForObject SimpleJdbcTemplate testLaunchAndRelaunch queryForInt query SQLException
+2031	Incorrect delimiter detection in DelimitedLineTokenizer StringIndexOutOfBoundsException init FrameworkMethod DelimitedLineTokenizer NativeMethodAccessorImpl String BatchTest DelegatingMethodAccessorImpl invoke runReflectiveCall doTokenize Method
+2034	apos Job cannot be null apos  exception when starting FlowStep remotely with org springframework batch integration partition StepExecutionRequestHandler IllegalArgumentException notNull Assert JdbcJobExecutionDao findJobExecutions getStepExecutionCount SimpleJobRepository invokeJoinpointUsingReflection invoke NativeMethodAccessorImpl AopUtils DelegatingMethodAccessorImpl
+2054	StaxEventItemWriter fails on a NullPointerException with Spring OXM     x NullPointerException writeStartElement BaseNsStreamWriter BufferingXmlWriter Writer SimpleNsStreamWriter NoStartEndDocumentStreamWriter Stax2EventWriterImpl writeStartTagStart writeStartOrEmpty XMLEventStreamWriter doWriteStartTag
+2156	ConcurrencyFailureException when multithreaded tasklet updates  PREFIX STEP EXECUTION CONTEXT table SQLStateSQLException FatalStepExecutionException JDBCException ConcurrencyFailureException AbstractFallbackSQLException TaskExecutorRepeatTemplate ExecutingRunnable TaskletStep ChunkTransactionCallback StepContextRepeatCallback TransactionTemplate doInChunkContext Transaction SQLStateSQLExceptionTranslator doInTransaction run
+2313	Possible race condition leading to NullPointerException in SynchronizationManagerSupport JobExecutionException NullPointerException FlowExecutionException SimpleJobLauncher AutomarkBatchCommandLineRunner SyncTaskExecutor FlowJob Job CommandLineJobRunner doExecute SimpleFlow main run execute
+813	SingleColumnJdbcKeyGeneratorIntegrationTests fails in Eclipse IllegalStateException bindResource TransactionSynchronizationManager Transaction DataSourceTransactionManager TransactionalTestExecutionListener TransactionContext AbstractPlatformTransactionManager Manager beforeTestMethod startTransaction startNewTransaction
+950	Exception during rollback hides root cause fatalException DatabaseError FatalException SQLException newSQLException rollbackException TransactionSystemException throwSqlException ItemOrientedStep processRollback RepeatTemplate access 1000 executeInternal SimpleJobLauncher execute doInIteration doExecute getNextResult
+1240	ItemStream is not registered when defined in step scope ReaderNotOpenException FlatFileItemReader AbstractItemCountingItemStreamItemReader invokeJoinpointUsingReflection invoke doRead NativeMethodAccessorImpl readLine AopUtils DelegatingMethodAccessorImpl read ReflectiveMethodInvocation
+1774	NullPointerException on RepeatTemplate NullPointerException RepeatTemplate executeInternal Step SimpleStepHandler execute JobFlowExecutor SimpleFlow executeStep TaskletStep doExecute handleStep

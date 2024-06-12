@@ -1,0 +1,15 @@
+33	 PostMixin
+42	 FacebookErrorHandler DefaultResponseErrorHandler HttpClientErrorException UncategorizedApiException SocialException ResourceNotFoundException
+75	 FqlResult FbStreamItemMapper FqlTemplate
+80	 FacebookErrorHandler InsufficientPermissionException OperationNotPermittedException
+92	 Page FacebookTemplate PageOperations JsonDeserializer MappingJackson2HttpMessageConverter GraphApi UserOperations ProfilePictureSource SocialApiBinding FacebookApi
+97	 FacebookTemplate
+128	 CanvasSignInController
+138	 Location JsonParser DeserializationContext JsonProcessingException
+141	 LikesOperations getPagesLiked
+153	 FeedTemplate Post Privacy JsonMappingException
+163	 FeedTemplate Post Privacy JsonMappingException
+165	 FacebookProfile UserOperations getUserProfile getAgeRange
+168	 PagingParameters feedOperations getPosts
+169	 UserOperations PROFILE_FIELDS
+189	 AchievementPointsDeserializer getNullValue

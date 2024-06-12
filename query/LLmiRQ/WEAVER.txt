@@ -1,0 +1,2 @@
+11	 Reflection Executable ClassLoader Method Field Constructor JavaCompiler ToolProvider BytecodeProcessor ClassVisitor
+15	 MavenProject MavenSession BuildPluginManager ArtifactResolver DependencyResolver LifecycleExecutor MojoExecution EclipseProject ClasspathManager MavenLifecycleParticipant

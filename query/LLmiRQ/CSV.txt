@@ -1,0 +1,14 @@
+96	 CSVRecord CSVParser CSVFormat
+106	 CSVFormat newFormat withSkipHeaderRecord withHeader format
+112	 CSVFormat HeaderMap
+118	 CSVRecord CSVFormat
+128	 CSVParser
+132	 CSVFormat
+140	 QuoteMode CSVPrinter ResultSet
+145	 CSVFormat
+156	 QuoteMode CSVFormat
+161	 CSVFormat class Javadoc class
+167	 CSVParser CSVRecord CSVFormat
+168	 CsvPrinter CsvFormat
+169	 String.equalsIgnoreCase() equals()
+170	 CSVFormat

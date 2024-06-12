@@ -1,0 +1,21 @@
+256	 ChannelBindingSaslClient ChannelBindingSaslServerFactory TLSServerEndPointChannelBindingSaslClientFactory ChannelBindingCallback FastUnsupportedCallbackException
+385	 WildflySecurity MSCServiceThread MechanismDatabase
+395	 Undertow HTTPS listener CipherSuiteSelector fromString
+401	 CipherSuiteSelector MechanismDatabase AliasFilter CipherSuiteExploder CipherSuiteConverter
+538	 ElytronPermissionCollection readResolve
+542	 ProtocolSelector RemovingProtocolSelector applyFilter method
+543	 AbstractDigestMechanism messageDigestAlgorithm MessageDigest getInstance
+546	 SecurityDomain mapName
+589	 RawClearPassword Destroyable interface destroy method
+610	 X509CertificateBuilder build ASN1 oidFromSignatureAlgorithm derEncoder encodeObjectIdentifier
+611	 LongNameSetPermissionCollection getBitsForName
+612	 AbstractDigestMechanism getSaltedPasswordFromTwoWay userRealmPasswordDigest
+614	 AbstractPermission equals
+627	 Elytron SSLContext
+634	 ElytronSecurityManager SecurityDomain RoleMapper PrincipalDecoder SecurityIdentity AuditLogger PermissionMapper IdentityCredentials SecurityEvent RoleDecoder
+637	 ElytronLogger PermissionMapper SimplePermissionMapper LoggingPermissionChecker AuditLogger SecurityDomain ConfigurableSecurityDomain PermissionMapping RoleMapper SecurityIdentity
+654	 SSLSessionContext setSessionCacheSize setSessionTimeout
+691	 LegacyPropertiesSecurityRealm properties-realm
+692	 LegacyPropertiesSecurityRealm
+757	 String toUpperCase String toLowerCase
+808	 andThenOp with withCredential createRaw

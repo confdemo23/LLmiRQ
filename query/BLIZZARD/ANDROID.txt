@@ -1,0 +1,9 @@
+55	Crash HTC Mytouch issue http code google google gson issues detail Essentially HTC bundled broken copy gson builds HTC Sense exposed classpath result client sees classpath attempts load crashes
+59	test set servlet connection request content http type Issues sending gzip apos requests outputMessage body properly closed forum reference
+109	test http type expand path uri request match Failing Template tests Jelly Bean formatting formatting appears changed broken Jelly Bean format EEE MMM yyyy zzz Android versions prior Jelly Bean format Thu Dec GMT Jelly Bean Thu Dec GMT tests verifying format isn amp apos testing tests modified add equality comparisons work change
+22	canwrite write simplexmlhttpmessageconverter simple xml http message converter http converter object read message write read canread read checks impl xml write simple
+85	library base android authentication devices http eclair api device httpbasicauthentication http basic authentication basic utilizes util izes unsupported
+110	http httpurlconnection http urlconnection test bufferingsimpleclienthttprequestfactorytests buffering simple client http request factory tests client org urlconnection client simple http failing tests jelly bean
+129	spr code httpstatuscodeexception http status code exception http exception status merge serialized
+76	Bad Request HttpClientErrorException DefaultResponseErrorHandler handleError handleResponseError Error handle Response RestTemplate Handler Template
+102	SimpleClientHttpResponse throws null pointer exception NullPointerException IOException SimpleClientHttpResponse getStatusCode DefaultResponseErrorHandler Response hasError RestTemplate Status Code doExecute Http Simple

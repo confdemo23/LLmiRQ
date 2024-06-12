@@ -1,0 +1,281 @@
+8	test type ent jpa data entity java custom Review templating approach flexible custom branding generated applications generated view artifacts customization generated application CSS header jsp footer jsp opportunities simplify user branding
+34	key path add file ent ant set separator Automatic deletion operating ITDs automatically delete governor removed happening Linux machine issue support Windows Ant paths matching modified point
+141	add create file xml context url element expected create project foo mvn build failure web xml file problem reported Adrian Colyer ROO Essentially changed initial project generation start Web artifacts ROO users create simple Spring project persistence Web artefacts project maven pom file refers packaging type amp apos war amp apos amp apos mvn amp apos fail missing web xml expected Web projects
+171	test text file monitoring receiver visible sender directory Incorrect text integration test shell command type roo prompt displayed text includes lines dod Creates data demand entity integration test Creates data demand entity message unintended duplicate
+186	field type visible controller column jpa parameter set apos list finders apos command working ambigious command rev Spring Roo assistance press TAB type hint hit ENTER roo list finders Foo Ambigious command amp apos list finders Foo amp apos assistance press TAB type hint hit ENTER command hint roo list finders list finders List finders target entity java jms listener Create type asynchronous JMS consumer
+187	field visible type set column key file add Inconsistency external JPA implementation duplicate entry key forum topic
+288	path file create addon add url install context Backup include empty directories src main resources backup command include empty directories problems people backup command ZIP file person attempt Eclipse mvn eclipse eclipse Eclipse reports missing src main resources directory
+354	dependency plugin add module element create remove path Dependencies incorrectly parsed unexpected type element appearing pom xml amp apos changed pom xml Eclipse editor add Plugin properties Tabbed dependencies putting format create Controller pom xml include repeated dependencies
+374	field add view entity visible type details file Typo doc entity entity data demand create modify required
+539	add log normalise redraw message driver jdbc search Console produce output jdk Console produce output running Sun JDK install Sun JDK order working Note problem reported http forum springsource org showthread php Sun JDK
+541	add log message set prompt command flow shell Roo running jdk update apos display messages green color Roo running jdk update amp apos display messages green color
+546	field type visible method append metadata set create Comments field types apos comment apos utilizied adding comments fields comment attribute accepted command field string sound inserting comment javadoc field declaration entity aspect files
+548	module dependency plugin path pom project remove add Plugins pom xml missing groupId result error message pom order encode sources UTF plugin artifactId maven resources plugin artifactId version version configuration encoding UTF encoding configuration plugin start Roo error Depenency XML format supported missing mandatory node amp apos plugin amp apos
+553	path install operations embed metadata url file http create jspx update jspx voilates DRY amp apos compared generated files create jspx update jspx input mask entity identical voilates understanding principle DRY tags input fields common file form jspx include files jsp include form jspx
+679	command type set parameter tailor context complete execution command parser fails single space command single space command project project parser doesn amp apos recognize command TAB completion fail
+712	create add file element module remove dependency repository Unable required element apos apos element apos repository apos repository pom include element repository spring json url http spring json sourceforge net repository url repository started Roo error Unable required element amp apos amp apos element amp apos repository amp apos add element repository definition problem wanted log issue error message condition element repository definition result error affect
+716	command path set test field word type bundle Generated Selenium scripts comply URI conventions Generated Selenium scripts comply URI conventions amp apos form amp apos param URI
+872	field type create visible declared file column mat Support field lob entities nice ability create Lob annotated fields Roo shell Command field lob fieldName myField Creates Lob String myField
+879	test add language context set type update create unit tests applications running Google App Engine Unit tests pass applications running Google App Engine STS Eclipse running mvn gae mvn gae deploy
+975	file menu path create install view embed operations addon web mvc jsp incorrect web MVC JSP add top level org springframework roo addon mvc jsp org springframework roo addon web mvc jsp order consistent artifactId correctly org springframework roo addon web mvc jsp add directory correctly addon web mvc jsp
+994	type operators command set property context availability java Add keyword command command supports extend add developer productivity add parameter creating driven Spring Beans automate creation implementing
+1045	add roo repository repos installed shell addon manager Big performance problems roo shell project entities big integration tests controllers roo shell hang minutes starting CPU created basic roo script creating entities fields relations creates controllers integration tests script exit roo start shell start consuming CPU hanging type amp apos hint amp apos amp apos prompt roo enable manual entities roo trouble identifying applying decided roo develop application issue amp apos resolved lease workaround amp apos roo
+1049	command add property module context web type input Command apos apos apos reference guide apos suggestion hint command roo hint stage project options List hint topics amp apos hint topics amp apos Create fields amp apos hint fields amp apos Create entities amp apos hint entities amp apos Create web controller amp apos hint controllers amp apos Create dynamic finders amp apos hint finders amp apos Setup logging levels amp apos hint logging amp apos tests Maven type amp apos perform tests amp apos Build deployment artifact type amp apos perform amp apos Learn Eclipse integration typing amp apos hint eclipse amp apos Add support Google Web Toolkit amp apos hint gwt amp apos Discover Roo commands typing amp apos amp apos error message roo Command amp apos amp apos assistance press TAB type hint hit ENTER
+1062	add bundle normalise context param complete info spaces command hint brought Java Posee discussion don amp apos coverage ROO Java Posee agree command hint
+1083	add controller view detail type entity metadata operations view controller command doesn apos work properly wrong generation generated amp apos jspx amp apos execution result command title generated result spring message app code application spring message title code titlepane arguments app title title title Controller
+1189	embed path notify install provider http view module formatting JSPX files JSPX files managed ROO arbitrary blank spaces lines good formatting JSPX artifacts
+1206	type entity controller detail metadata fields view operations Suppress generation labels entity identifier version fields Web MVC scaffolding Suppress generation labels entity identifier version fields Web MVC scaffolding
+1223	add addon create roo file install packaging url Addon user create constructors empty constructors setting fields selected fields
+1351	type database path context update relation metadata dependency Maven dependency project apos pom xml jdbc driver database executing persistence setup command maven dependency selected database removed JDBC driver database provider SQL Sybase driver jTDS
+1353	add command bundle roo execution list prompt comment Stale sha info Roo shell STS Set STS Build roo built source roo project note sha shell starts Close shell Commit change git rebuild roo spring roo bootstrap target osgi roo dev open roo shell Note amp apos reporting sha amp apos pretty clear amp apos running bits built code displays sha pulling stale cached location minor bug bit wild goose chase
+1360	method field exception log target context ant handler Selenium error reports delivered target target target Selenium test output extra directory deep target target target problem generated selenium configuration project build directory target selenium txt project build directory selenium txt
+1385	addon create roo file install repos bundle command Exception creating roo addon create simple addon script roo zip error locate amp apos org springframework roo addon creator simple roo addon simple template xml amp apos classloader Script execution aborted solve problem
+1510	field type visible entity parameter detail file column Entity command honor modifier creating entity Roo shell entity modifier type keyword
+1559	dependency module set add remove plugin path pom Version reported UNKOWN VERSION installing path spaces
+1581	type operations detail controller install menu parameter embed Web MVC JSP views updated domain Web MVC JSP views updated domain removal field domain object views updated
+1662	operations type detail file path controller create embed Documentation web mvc install language wrong documentation web mvc install language Create manual Controller write methods wrong adds specificied language
+1667	set context param complete config vars option command Quoted single arguments Roo shell terminate current argument buffer space argument surrounding argument quotes space argument quote option displayed TAB pressed entity Foo TAB displayed Multiple valued arguments hypothetical command works echo message foo bar TAB message displayed echo message foo ENTER prompts message
+1756	field type visible module dependency add remove plugin scope option dependency add command simple obvious feature request apply standard maven dependency configuration Add optional scope parameter dependency add command roo shell compile optional values test runtime manually set scope test libraries pom
+1903	test add module type convert path flow instance Selenium test work jetty web container created selenium test cases application created Spring Roo tests jetty container tests fails test works tomcat launch jetty tomcat maven plugins
+1927	dependency add module plugin remove database update pom pluginRepository elements pom xml file repository elements pluginRepository pom xml pluginRepository pluginRepositories add repository pluginRepositories
+1929	database type command version jpa visible entity add database pers command pressing tab performing command pers database tab provider option Roo
+1938	roo command shell execution prompt process comment set Roo quit commands random shutdown exceptions Roo commands shell
+1977	file path metadata scan status notify process set Intermittent Process Manager lock People loading Roo intermittently experience lock Roo reports loading ROO problem reproduced files current working directory logging separate bug address specifics ROO separately
+2005	key type jpa context field add details service Tab complete doesn apos work JPA TIMESTAMP reason tab completion works JPA TIME JPA TIMESTAMP happen field persistenceType JPA TAB JPA TIME JPA TIMESTAMP field persistenceType JPA TIMEST TAB field persistenceType JPA TIME deleted completing option JPA TIME JPA TIMESTAMP
+2040	database type managed identifier entity log redraw message database reverse engineer doesn apos create artefacts database tables views Command database reverse engineer schema domain testAutomatically enableViews creates table alphabetic order exiting executing Roo artefacts tables
+2070	test entity type ent create jpa data context Data demand integration tests support composite primary ticket combine existing tickets
+2082	type managed embed operations entity view delete service Composite primary support MVC scaffolding Add composite primary support MVC scaffolding integration tests
+2102	method file key metadata set ant type info times Usign command times roo execute finder list Keyword finder list Description List finders target entity Keyword controller entity finders generated Mandatory amp apos amp apos unspecified amp apos amp apos Keyword Keyword depth depth attribute combinations generated finders Mandatory amp apos amp apos unspecified amp apos amp apos Keyword filter comma separated list strings filter included Mandatory amp apos amp apos unspecified amp apos amp apos Keyword finder list Description List finders target entity Keyword controller entity finders generated Mandatory amp apos amp apos unspecified amp apos amp apos Keyword Keyword depth depth attribute combinations generated finders Mandatory amp apos amp apos unspecified amp apos amp apos Keyword filter comma separated list strings filter included Mandatory amp apos amp apos unspecified amp apos amp apos finder list List finders target entity Type amp apos hint amp apos quotes hit ENTER step step guidance
+2105	type field visible module repository add roo file Roo shell ignores entities packages manually create Roo annotated entity IDE text editor opposed Roo shell amp apos entity command upper characters Roo shell quietly ignores ITDs created don amp apos intended behaviour bug helpful Roo shell output warning Ignoring entity fooBar Employee Roo didn amp apos care casing Roo ifying large legacy project large number mixed names
+2108	controller detail type entity metadata parameter operations service MVC doesn apos generate views finders Addon MVC generating views finders reproduce attached clinic roo file
+2157	utils path type child identification option text find code prevent NPEs
+2210	operators set java extract order reserved property valid Missing keyword blocks
+2226	type metadata file text monitoring java details subsystem Adding tag attributes starting apos apos work expected deleted generation add custom attribute multipart form create tag Roo documentation attributes leading included hashcode attribute expected intefering Roo code generation attribute Roo mangaed view form create multipart time view regenerated attribute removed worse content form tag field customization rendered lost form element content generated
+2232	controller detail operations type path menu entity install Calendar properties mvc list views displayed dateformats List views generated mvc addon formatters java util Calendar Items displayed
+2236	entity view add details metadata type field managed DBRE updating Managed fields removed entity apos composite
+2238	type path module context types user param complete Code completion packages broken Roo shell code completions packages classes broken assume entitie subpackage domain entering controller scaffold code completion offers enter domain hand code completion
+2320	set log shell prompt scan command project message Background thread names incorrectly displayed shell starts developmentMode system property Spring Roo Process Manager Background Polling Thread incorrectly displays development mode startup time roo startup script
+2328	dependency add module type plugin dependencies pom project ROO add dependency pom pom change jstl dependency scope pom ROO add dependency time controller scaffold command result jstl defined pom scope happen dependency specific addon web mvc controller happen add ons ROO
+2417	entity field view add metadata details method type DBRE managed fields generated toString method field exists governor toString accurately entries managed fields fields removed toString method field entity amp apos java file java file amp apos fields displayed toString method
+2449	dependency module add plugin remove path dependencies entity Add scope maven dependency command Add scope options dependency add command installing pom xml dependencies install Selenium Java Driver test scope optional scopes test runtime compile picked
+2508	visible type field add entity view jpa details Rooplural annotation prevents list entity option showing menu Rooplural entity list entity option navigation menu app isn amp apos displayed item menu jspx list item isn amp apos Roo issue created projects configuration file changed manually original thread forum reported issue version confirmed version problem don amp apos usage Rooplural changed versions documentation don amp apos
+2551	command undo add set execution process info test executing script STS issue STS Stefan verified issue nightly replicate Set Roo instance STS latest snapshot Create Roo project STS Load Roo shell STS script expenses roo clinic roo vote roo
+2554	type metadata create context details dependency unit service Unnecessary rewriting DoD member push pushing member watched entity DoD rewritten material change
+2562	embed provider component search context term hot ide Stock ticker chart doesn apos script script clinic roo web mvc embed finances stockSymbol VMW URL http localhost petclinic embed finances displays empty collapsible pane VMware stock price chart embedded form
+2563	type test metadata context unit integration module filename Integration test updated switching GAE relational DBs persistence changed relational store GAE GWT projects integration test refreshed vice versa
+2584	type path roo command user project parameter context Arrow working Windows Roo create project Roo noticed arrow longer work command shell Windows laptop Haven amp apos checked sources changed JLine Roo shell code amp apos annoying key BTW Roo problem didn amp apos exist
+2585	detail menu type parameter operations controller embed file apos web mvc apos broken availability check noticed amp apos amp apos amp apos controller amp apos deprecated favor amp apos web mvc amp apos command project persistency set entity defined amp apos error message stating command amp apos controller amp apos works amp apos broken availability check spring mvc version command
+2594	field type declared set annotations metadata details fields type field annotations written ITDs annotations type methods field annotations written
+2610	shell command roo execution comment log info prompt Corrupt characters appearing Roo shell Lion changing Lion Roo shell displaying extraneous characters
+2816	path file view menu install test metadata type views text WEB INF views foo bar jspx JSP apos contents investigating ROO views generated commands text WEB INF views foo bar jspx JSP amp apos contents controller web mvc embed
+2827	type normalise version visible message provider receiver jpa apos hint apos continues prompt apos jpa setup apos apos mongo setup apos attempting follow tutorial http springsource org spring roo reference html html incorporating MongoDB http springsource org spring roo reference html base layers html JPA source amp apos jpa setup provider amp apos parameter MongoDB invoking amp apos mongo setup amp apos satisfy Roo amp apos requirements prompting call amp apos jpa setup amp apos
+2850	key context type set jms param add complete Tab completion ignores commands commands word offered shell type word press TAB commands time metadata metadata type metadata status metadata trace type metadata press TAB shell responds metadata trace offer choices type metadata press TAB metadata choice metadata type workaround backspace unwanted completion enter letters desired completion metadata correctly metadata type approach practical command defeats purpose tab completion
+2856	type detail create module command parameter add controller Vote application broken multi module maven ROO code Roo vote application stopped workking
+2866	plugin test dependency metadata registered constructor expected physical GAE specific version gwt maven plugin GAE selected database appears regression bug web gwt gae update command selecting GAE database GAE database GWT version plugin removed expected GAE version plugin pom
+2872	path command file execution prompt info comment set String range launching roo empty directory consistently create String range exception launching roo shell empty directory java file Attached output commands consistently recreate BUILD SNAPSHOT rev babe
+2891	type entity field metadata identifier context dependency repository Repository JPA refreshed change domain type apos identifier type
+2895	field type visible entity detail embed operations managed MVC forms display serialVersionUID field composite primary key classes Appears regression bug serialVersionUID field input create edit forms composite primary key field displayed
+2920	test type metadata mid path field instance ent Selenium test generation broken correct generation Selenium test files broken Git commit
+2930	operations controller menu type detail install parameter path web mvc setup adds reference existing menu jspx command web mvc setup executed WEB INF layouts layouts xml file created reference existing file WEB INF views menu jspx
+2954	add command roo ansi shell execution prompt comment Ansi chars display STS Roo shell
+3358	method type append field java add set metadata Javadoc ROO generated methods attributes Javadoc amp apos recommended developer change ROO files
+3489	add type module level details types path action Potential issue java Felix potential issue java Felix Roo confirm
+3505	add system roo repository log filename search count Spring Roo doesn apos start JDK Spring Roo RELEASE java version start roo ton unresolved constraints log file attached searching web http forum spring forum spring projects roo error staring roo shell replace felix jar Spring Roo distribution version start shell
+3787	controller type field metadata finder entity service details publish finders controller layer compatible finder commands architecture web mvc finder command updated compatible finder commands controller layer
+19	method memberfindingutils member finding utils comparison method utils getdeclaredmethod declared method declared instances annotatedjavatype annotated java type java member finding getdeclaredconstructor declared constructor constructor fail return correct methods
+205	javatype java type boolean assertion java check type type test primitive void equals object fails account data
+343	exception file classcastexception class cast exception monitoringrequest monitoring request class polling monitor service monitoring request cast
+505	node edge return code targetnodeid target node edgeid edge sourcenodeid source node entity void edgetype edge type support embeddedid embedded embedded rooentity roo entity roo
+558	entity roo column class rooentity roo entity project string idclass class release support
+618	roo pizza array braces auto findpizzasbyname find pizzas pizzas input annotations rooentity roo entity autopopulationutils auto population utils population utils fails set autopopulate auto populate populate fields annotation form
+707	dependency exclusion multiple type detects defined
+710	repository types apos user aspect appendextendstypes append extends types itdsourcefilecomposer source file composer roo composer userrepositoryimpl user repository impl patch source file isn appending app type parameters append extends
+741	class roo amp type problem start apos rule copy user underscore incorrectly rejected character javatype java type java
+794	file project directory shell file service polling monitor roo pollingfilemonitorservice polling file monitor service publishes notified ified notification unmonitored path
+831	transformer doctype xml output dtd factory xmlutils xml utils xformer operation public define xml
+838	method converter service service code servicereference service reference amp time field reference roo components activated deactivated multiple times
+864	roo message assertion code process load bug assert java commands details error entire package lowercase
+898	forum arguments javapackage java package java type reference package javatype java type spring constructor output erroneous err oneous assertions assert ions fail
+969	governor metadata provider abstractitdmetadataprovider abstract metadata provider governorphysicaltypemetadata governor physical type metadata processing amp abstract isvalid valid type skip apos metadata invalid
+1022	java info package type amp project springframework org path letter fails apos ter type portion port ion uppercase
+1098	values annotation types columns nestedannotationattributevalue nested annotation attribute nested bar metadata attribute annotationmetadatautils annotation metadata utils utils support computing attribute
+1156	osgi service org roo reference startlevel activator exceptions shutdown module caused springframework roo start level
+1172	field view web manager mvc jsp message jspviewmanager jsp view manager codes integer invalid generated scaffolding
+1404	java keyset key set method code java source compilation classpath springframework impl roo compile
+1555	temp project files error roo roo post command functionality file undo functionality clean
+1718	file path apos code file checks treat amp windows paths fileconverter file converter converter unix specific check absolute names breaking behavior
+1763	method status shellstatus shell status shell message implementation field hashcode hash code omits code valid hash code equals
+1952	jspviewmanager jsp view manager metadata web manager jsp field version view finder npe webscaffoldmetadata web scaffold metadata scaffold removed
+1988	class package artifactid artifact types dash artifact javasymbolname java symbol group java symbol dependency
+1990	java groupid group javapackage java package dash group package dependency package xml character
+2041	annotation details field type addfieldannotation add field annotation objects method java checks memberfindingutils member finding utils list declaredfieldannotationdetails declared field annotation details declared passed add itdtypedetailsbuilder type details builder builder
+2266	method metadata method return builder member holding field declaredmethods declared methods customdata custom data custom data tags lost supplied fields methods pushed java sources
+2315	impl member metadata abstractmemberdiscoveringitdmetadataprovider abstract member discovering metadata provider webscaffoldmetadataproviderimpl web scaffold metadata provider impl abstract scaffold provider web discovering
+2481	boolean unresponsiveness roo lock synchronisation classes file memberdetailsscannerimpl member details scanner impl class file unrelated synchronise synch ronise constant
+2506	builder method body developers method methodmetadatabuilder method metadata builder metadata methods bug details itdtypedetailsbuilder type details builder type requires abstract
+2531	abstract abstractshell abstract shell completion ctrl sts shell custom tab completion space clients override
+2658	configuration plugin execution roo xml apos details helper maven execution scoped configurations loading maven
+2659	typelocationservice type location service location cache service fact disk amp type filesystem isn type providing consistent
+2662	governor amp case target matcher match apos type layer itds layertypematcher layer type matcher type incorrectly implemented impl emented
+2663	mechanism locators system order locator cache impl interface member persistencememberlocatorimpl persistence member locator impl caching don apos work properly
+2690	versions dependency pom roo persistence version apos clinic amp bug
+2701	plugins artifactid artifact plugin groupid group plugin version methods pom group apos mavenprojectmetadataprovider maven project metadata provider maven project metadata provider removal inappropriate criteria
+2705	member entity metadata places service jpaentitymetadata jpa entity metadata jpa interface behaviour serviceinterfacemetadata service interface metadata items checking existing created
+2709	sts apos default impl service pgp pgpserviceimpl pgp service impl stacktrace resource osgi trustdefaultkeys trust default trust resolve bundle urls url
+2717	close resource closeable amp ioexception apache commons attempt resources left open
+2722	annotation metadata convenience ability passing npe identifiable attributestodeleteifpresent attributes delete abstract builder errors abstractidentifiableannotatedjavastructurebuilder abstract identifiable annotated java structure builder annotated java structure updatetypeannotation update type annotation update type
+2746	emptylist empty list service returns roo pgp startup pgpserviceimpl pgp service impl usage pgp roo impl fails
+2747	builder exception list unsupportedoperationexception unsupported operation exception builder abstractmemberholdingtypedetailsbuilder abstract member holding type details builder foos member details type unsupported operation adding items abstract holding unmodifiable set
+2754	ons download input roo url addon http stream stream service unable add install command
+2899	constructor dependency java impact javadoc java doc behaviour dependencytype dependency type developer jars project ignores type
+2904	sts method list signature version roo auto compatibility source santos nightly builds broken complete console
+2925	request roo java gwtbug service interface service thingproxy proxy gwt updated invoked invoke deleted
+7	type support persistence gender male person gender javax work enum jpas jpa enumerated
+23	command amp roo press package hint shell level toplevelpackage top level package error parsing roo
+49	bean java list foo list type package code invalid javabean java bean generation generic parameters
+53	yyyy test widget spring amp decoration rsvp format generated field validation doesn apos properly account
+78	array foo java aspect string roo bar bar jls types support parser
+86	metadata arrays annotation type foo annot parameters annotation amp javaparserannotationmetadata java parser annotation metadata attributes initialized parsed parse correctly
+95	package class roo declaration default string classes rootostring roo string org resources invalid generated
+106	dom xpath script namespace exception log project roo resolve unable create petclinic sample xpath ath
+122	foo type error configurable rooconfigurable roo configurable springframework factory org roo produces errornous nous parameterized types
+142	class roo org class roo someclass class web domain controller springframework problem automatic
+156	compact domain controller server compactdisc compact disc disc web roo resource field generated app work correctly tomcat
+266	setters class constructor constructors roo setting switch java entities initialise create
+301	pattern access record patterns data classes spring databaseaccesspattern database access pattern aspect dao choose access
+316	entity demand class reference null roo notnull null data test member dataondemand data demand references existing abstract
+321	integration entity entity test abstract model tld abstractentity abstract entity domain automatic creation abstract classes running command explicitly
+334	javatype java type types addimplementstype add implements type details defaultitdtypedetailsbuilder default type details builder builder default file generics type source imported aware
+339	entities pattern serializable code repository obj tree rid active record criteria
+357	jvm files windows bat solution amp jars java work roo workdir dir removed addon add uninstall
+376	backup empdetails emp details roo employee topic amp hint field entity details create existing
+379	project package paul tab roo default roo bug tab irregularity shell completion options
+394	roo ddd repository interface domain aggregate concepts root aggregateroot aggregate root classes facilitate creation objects
+420	classpath addons roo dev load start java roo roo djava fails windows installed addon add
+513	textarea lob roo column weblogs min string title bean description generate fields
+633	java type format notnull null lang max util amp exception entity finder wrong
+666	entity case test testcase test case permitreservedwords permit reserved names reserved entity amp test roo rejects mit permit
+803	views generator spam jspx user subcategories categories start src felix active managed
+826	timer spel evaluation minutes controller package exception mvn tenminutes jetty spelevaluationexception spel evaluation exception apos unexpected exception occurred accessing object implicit impl icit variable
+832	roo exception amp project web persistent persistence persistentobjectexception persistent object exception aplicacion domain object updating entity
+839	felix roo file read issues lang https execution thread content executing commands cli argument classloading class loading failure
+857	body apos xxrm lloww byh enpffjg npf fjg dependencies form create jspx jsp doesn
+1027	finder fields likeandnombrelikeandtipopersona nombre tipo persona apellido custom documento findterceroesbydocumentoidentificacionlikeandapellido find terceroes documento identificacion apellido error persona tipo custom file long
+1056	hint press amp category project apos assistance roo subcategory category command
+1071	client identifier amp roo domain tomcat error entity sizemax size max web property apos listing entities
+1086	view title label menu mvc application properties jspx wrong generation controller command
+1135	entity application base user split capital code entries properties names menu generated camelcase camel case camel case labels
+1148	files properties script inf src application timer amp web main open controller generation
+1258	dependency travel roo package gateway groupid group group demo legacy interfaces adding apos add command roo resets toplevelpackage top level package top level
+1415	addon test roo springframework windows creator amp level xml addon create fails platform
+1421	sts dbre memory roo relationship roo dbmanaged managed limit amount aspectj aspect spec slow stsm running aspect
+1479	dbre datasource jdbcdriver roo dependency driver org illegalargumentexception illegal argument exception bundle ibm data source throwing illegal argument exception jdbc apos access river
+1652	roo mapping log bean access column notices javabean java bean server dbre repeated entity
+1686	roo class entity myenum enum myentity entity import enum type string imports adds unnecessary types
+1714	number list clinic pagination menu case application guess result doesn apos reset
+1787	findallmethod find method post entity entity methods method controller controller requirement list setting find removes
+1836	properties application propfileoperations prop file operations operations folder code view lcviewname view file generated sorted
+1840	produttore articolo articolo produttore fieldname field entity produttores controller testautomatically test automatically path view wrong
+1857	test field engineer exception database org identifier integration table generation failing embeddedid embedded embedded
+1919	util output operations streams solr properties logging solroperations solr operations outputstreams output streams outputstream output stream jpaoperations jpa operations jpa loggingoperations logging operations closing
+1954	shell object version visit clinic workaround roo versionfield version field field form update jspx jsp updated field removed scaffolded backing
+2030	sources roo imports rev code mixedcase lang roo bytesources byte sources argument exception mixed case
+2050	addon command advanced amp metadata physical addon addonoperationsimpl addon operations impl api doesn add apos build
+2085	graphic file icons flag link addon path messagebundle message bundle famfamfam broken zip
+2104	requestmapping request mapping request post controller mapping class map controller command request invested methods
+2132	album class entity artist entity query field finder abstractentity abstract entity fieldname field finders wrong table extends abstract base
+2191	entity interface class user user methods object inheritance apos amp provide mechanism implement roo shell command
+2208	hashset hash set hash setters roo files bean fields javabean java bean onetomany gae code import set
+2218	exception roo template illegalstateexception illegal exception jspx div xpath exception expression illegal thrown searching existent element jsp
+2225	converters bean service application classes roo conversion applicationconversionservicefactorybean application conversion service factory bean factory copy set
+2265	controller stuff class work scaffold entity commands controller path web invalid valid hang carried
+2270	roo roo log project script domain roosongs roo songs database task hibernate quit command scripts hangs
+2311	javatypepersistencemetadatadetails java type persistence metadata details type metadata details java loop accessor creation persistence behaviour infinite dependent entities created
+2327	tag release list files jspx web views roo addon web upgrading updated automatically application longer working
+2357	policy project roo list dataondemand data demand class aspects test error generated code controller data demand integrationtest integration test integration entity extends entiy
+2368	athlete method method shell model apos uimodel model amp technique athletecontroller athlete controller overriding defined target type
+2371	roodbmanaged roo managed exception roo type amp isn table apos message removing managed annotation type running loading
+2381	behavior class classes data package classname script environment pairs generated source code extending abstract instantiates ins tantiates superclass subclass test demand depending top level
+2396	method amp problem roo methods controller apos shell roo file pushing breaks
+2404	resolver type java list import types importregistrationresolver import registration resolver import registration fqn genric
+2409	composite converter jspx evaluator expression field tag spring sets file converternotfoundexception converter exception exception relationship
+2431	shell conversion service bean service roo factory application time bean jspx jsp conversion needlessly lessly updated starts
+2445	gwt roo release engine server module entity app setup level gwt apos xml file continue
+2450	bean amp view apos servletcontext servlet context bean webflow resolver resource error tilesviewresolver tiles view resolver tiles missing web flow creation
+2465	amp apos command web dbre oracle roo menu domain generates
+2467	field files roo controller package script governor entity class package jspx jsp updated adding
+2473	field size form null apos min annotation email mvc addresses fields marked sizemin size min don required prompt
+2487	foo java itds entity roo project test level hibernate apos existing deleted metadata providers return null
+2543	shell persistmethod persist method method java constructor javasymbolname java symbol roo entity message attribute informative info rmative hangs sist rooentity roo entity set null persist
+2545	springsource domain selenium apos amp clinic script record owner recordfailure record failure roo generated fails roo
+2550	documentation views mapping controller login roo controller mvc web request custom mapping
+2570	script roo project issues log directory directories files match expenses recursiveantmatch recursive ant match recursive ant recurses
+2588	types service file filemonitorservice file monitor service type annotation dirty monitor memberfindingutils member finding utils location typelocationservice type location service detect annotations project eager caching
+2597	phone key roo getid list person apos entity java doesn hande hand types long
+2603	level forum apos amp domain objects org showthread springsource outcome sets integers appearing app earing views
+2661	item metadata metadataitem metadata item provider flag metadataprovider metadata provider metadata roo foundation system conventions adhered
+2671	roo gwt annotation bean piece project functionality roogwtmirroredbean roo gwt mirrored bean mirrored type add standard conventions
+2707	set roo file change infrastructure getwhatsdirty dirty mutable polling mechanism type file detected apos update changed
+2727	service typelocationservice type location service type attributes location type annotations npe cleared subsequent previous caching
+2751	pom project command datanucleus data nucleus plugins setup nucleus reports data datanucleus incorrect repeating persistence
+2755	source gwt request proxy package entry command web doesn apos create
+2786	governor java bean javabean java bean shell roo fields deleted deleting restart
+2806	controller menu view mapping tiles views case attribute class command incorrect preferredmapping preferred mapping pref erred uppercase characters preferred
+2819	definitions controller apos roo entity layer scaffold tiles edit roowebscaffold roo web scaffold view deleted create update disabled
+2863	tab press amp type hint roo setup apos main org hint fails mongo
+2867	roo spring roo hint escape sequence press ngurenyaga enter illegal unsupported
+2893	web mvc context pizzashop xml servlet updates copies setup creates servlets trunk
+2929	entity instance controller class tactic error error workaround code swotweaknesscontroller swotweakness controller unexpected capitalization variable compiler entity types start multiple capital letters
+2932	entity error test org field java integer default errors types resolved
+2941	tag operation amp mvc scaffold disallowedoperations disallowed operations menu operations apos link web disallowed create remove tags
+2948	jpa roo cartorder cart order order dbre database cart entity domain repository shell command hangs
+2957	validationmessagecode validation message code checkbox yrekgszqx yre kgsz field yre validation files message kgsz email code erroneously err ously boolean attributes jspx jsp
+2978	web module sample dependency error apos amp snapshot core script cyclic multi project business focussed focus sed scaffold
+3106	roo java int future parser println file list stream spring doesn apos support language lang uage features
+3160	methods metadata roo classes jsf possibility itds bean feature javadoc entity fields apos
+3281	column version version patch entity solution roo property store disableversionfields disable version fields reverse engineering engine ering database table
+3283	engineer version solution control sequence attribute behaviors database apos amp reverse disable versions generated identifiers ide ntifiers
+3315	catch exception code roo list array multi illegalaccessexception illegal access exception access handle block
+3447	builder builder metadata comments comment structure methodbuilder method builder structures commentstructure comment structure classes written
+3518	roo check amp error rates syntax exchange exchangemultiplerates exchange multiple rates apos java working
+2	NullPointerException in Roo Tab completion chException NullPointerException startsWith SimpleParser JLineCompletorAdapter String locateTargets starts complete isMatch ConsoleReader readLine Match
+104	Selenium add on should report clear error message instead of NPE if web scaffold metadata is unavailable NullPointerException SeleniumOperations generateTest Test Selenium Operations generate
+192	Very long startup times ASTParser GTToken jjFillToken ASTParserTokenManager Token ntk Expression PrimaryPrefix AllocationExpression newToken PostfixExpression
+277	backup  command does not work under Windows IOException WinNTFileSystem getCanonicalPath Win32FileSystem System canonicalize0 FileDetails BackupOperations NTFile Win BackupCommands File
+836	CTRL D renders NPE in JLine Shell IllegalStateException NullPointerException onShellStatusChange FelixDelegator setShellStatus AbstractShellStatusPublisher JLineShell promptLoop Shell run Status Delegator Felix
+1037	Exceptions when Roo ends IllegalStateException logException NullPointerException ensureOpen ZipFile getEntry JarFileX findClassOrResourceByDelegation ModuleImpl ModuleClassLoader getEntryAsBytes JarFile JarContent access 100 File Jar findClass loadClass Open ensure Entry find Zip Impl Module ClassLoader Loader Bytes Resource Delegation Content load
+1158	ProcessManagerHostedExecutionStrategy gives NullPointerException intermittently NullPointerException ProcessManagerHostedExecutionStrategy isReadyForCommands executeCommand JLineShell promptLoop AbstractShell Ready Commands Hosted Process Manager
+1344	AutomaticProjectUpgradeService gives NPE if another bundle is missing NullPointerException AutomaticProjectUpgradeService invoke Method BaseMethod NativeMethodAccessorImpl access 500 Resolved DelegatingMethodAccessorImpl activate invokeMethod
+1582	Roo Internationalization add on not working IllegalArgumentException notNull Assert ProcessManagerHostedExecutionStrategy JspOperationsImpl NativeMethodAccessorImpl ReflectionUtils installI18n Method DelegatingMethodAccessorImpl invoke JspCommands
+1594	parameterTypes collection from MethodMetadata is not well formed when has annotations defined NullPointerException InvocationException AnnotationMetadataUtils computeAttributeValue toSourceForm AnnotatedJavaType DefaultToStringStyler String style Attribute compute toString Metadata
+1599	IllegalStateException when using CTRL C to shutdown Roo IllegalStateException ApplicationShutdownHooks addShutdownHook JLineShell JdkDelegatingLogListener initializeTerminal ConsoleReader Terminal doAnsiFlash add Shutdown setupTerminal
+1624	Assertion fails when adding annotation to ItdTypeDetailsBuilder IllegalArgumentException isTrue Assert addFieldAnnotation ItdTypeDetailsBuilder MemberDetailsScannerImpl init BeanInfoMetadataProviderImpl Metadata GaeMetadataProvider DefaultMetadataService GaeMetadata
+1734	Type names starting with lowercase should be acceptable to Roo IllegalArgumentException init JavaParserMutableClassOrInterfaceTypeDetails JavaType getEnclosingType JavaParserMetadataProvider JavaParserClassMetadata Java Type DefaultMetadataService Metadata Parser
+1888	Plural error for java lang String in MVC scaffold IllegalArgumentException Assert notNull JspViewManager getPlural Jsp Manager View Plural
+1966	roo controller add  NullPointerException in org springframework roo addon web mvc jsp JspViewManager NullPointerException JspViewManager addCommonAttributes add Jsp Attributes Manager View Common
+1982	UnsupportedOperationException with composite primary key UnsupportedOperationException Collections UnmodifiableCollection JspViewM anager JspMetad ataListener DefaultMetadataSe rvice getCreateDocument add Unmodifiable
+2150	BUILD SNAPSHOT   java lang NoClassDefFoundError  org springframework roo project ProcessManagerHostedExecutionStrategy AnalyticsOperationsImpl isInstallAnalyticsAvailable NativeMethodAccessorImpl ReflectionUtils DelegatingMethodAccessorImpl AnalyticsCommands Analytics analyticsInfo Method invoke
+2276	pushing in  Id triggers exception  Identifier accessor method required IllegalArgumentException notNull Assert init Metadata DefaultMetadataService DefaultMetadataDependencyRegistry DataOnDemandMetadataProvider DataOnDemandMetadata JavaParserMetadataProvider notifyDownstream AbstractItdMetadataProvider
+2282	GwtMetadataProviderImpl onFileEvent triggers GwtConfigService incorrectly on project command IllegalArgumentException isTrue Assert PollingFileMonitorService GwtConfigServiceImpl GwtMetadataProviderImpl updateWebXml createProject MavenOperationsImpl DefaultFileManager updateConfiguration onFileEvent
+2439	Pushin refactoring of Controller methods fails with Exception in Roo Shell IllegalArgumentException isNull Assert AbstractMemberHoldingTypeDetailsBuilder ItdTypeDetailsBuilder addMethod onAddMethod init WebScaffoldMetadata Method Builder Type
+2555	Pushing in a member into an entity which is monitored by DoD causes an exception IllegalStateException IllegalArgumentException IntegrationTestMetadataProviderImpl DefaultMetadataService get Metadata AbstractItdMetadataProvider DefaultMetadataDependencyRegistry getInternal notify getMetadata notifyDownstream Provider
+2784	Support for both MongoDB and a relational datasource at the same time NullPointerException updateDatabaseProperties JpaOperationsImpl Impl Database update Jpa Properties Operations
+2814	Stack overflow error when certain  Roo annotations exist together on a class with no fields UTF Encoder encode StringCoding StringEncoder UnixFileSystem CharsetEncoder encodeLoop DefaultFileManager String getBytes
+2834	Can apos t embed Screenr videos IllegalStateException SAXParseException readXml XmlUtils VideoEmbeddedProvider EmbeddedOperationsImpl NativeMethodAccessorImpl Xml DelegatingMethodAccessorImpl embedVideo EmbeddedCommands install invoke
+2846	NPE starting Roo when subdirectory contains non module POM NullPointerException MavenPathResolvingStrategy getRoot PomManagementServiceImpl DelegatePathResolver DefaultMetadataDependencyRegistry ProjectPathMonitoringInitializer updatePomCache getFocusedModuleName notifyDownstream Path AbstractProjectOperations
+2847	NPE in JLineShellComponent when starting Roo with no wired or wireless network NullPointerException JLineShell run Shell JLine Thread
+2851	NPE creating a project in a directory with only non root POMs IllegalStateException NullPointerException MavenPathResolvingStrategy DelegatePathResolver getIdentifier MavenOperationsImpl createProject createMavenPom Path Maven getPathInformation NativeMethodAccessorImpl MavenCommands
+2862	mongo setup fails after jpa setup in new project NullPointerException updateDatabaseProperties JpaOperationsImpl Impl Jpa Operations Database update Properties
+2869	Path dependent unit tests fail on Windows StringIndexOutOfBoundsException substring String testGetFirstDirectoryOfExistingFile FileUtilsTest NativeMethodAccessorImpl FileUtils FrameworkMethod DelegatingMethodAccessorImpl invoke Directory runReflectiveCall
+3111	NPE  NullPOinterException  while starting Roo logException NullPointerException NullPOinterException DefaultProcessManager logException completeStartup access 100 EventDispatcher frameworkEvent 000 run fireEventImmediately Event
+3138	npe on roo shell startup logException NullPointerException logException completeStartup access 100 frameworkEvent log Exception complete Startup framework Event
+50	Data on demand generation throws NPE for target classes without fields BlockJUnit4ClassRunner validateInstanceMethods collectInitializationErrors ParentRunner init validate Runner Instance Methods JUnit4Class Block
+1041	Roo Spring MVC scaffolding support for JPA custom primary keys PropertyNotFoundException BeanELResolver BeanProperties getValue access 400 AstDynamicExpression AstCompositeExpression CompositeELResolver ELResolver get ValueExpressionImpl
+1105	javax el PropertyNotFoundException  Property  apos id apos  not found PropertyNotFoundException BeanELResolver BeanProperties getValue CompositeELResolver list tagx ELResolver access doTag HttpJspBase Bean
+1770	ConcurrentModificationException in project creation with IBM JDK ConcurrentModificationException NullPointerException HashMap AbstractMapIterator checkConcurrentMod AbstractItdMetadataProvider Iterator Hash Map Mod Concurrent check Metadata
+1999	Composite primary key support in MVC scaffolding DataException convertJpaAccessException PersistenceException JpaException convertJpaAccessExceptionIfPossible EntityManagerFactoryUtils invokeHandlerMethod AnnotationMethodHandlerAdapter countTees HandlerMethodInvoker Method TeeController NativeMethodAccessorImpl DelegatingMethodAccessorImpl invoke
+2443	NPE in GwtOperationsImpl   when certain key sequence completed at Roo shell launch time NullPointerException PollingFileMonitorService GwtOperationsImpl DefaultMetadataDependencyRegistry MavenProjectMetadataProvider notifyDownstream createProject MavenOperationsImpl DefaultFileManager onFileEvent NativeMethodAccessorImpl MavenCommands
+2626	No converter found capable of converting from  apos java util Set apos  to  apos java lang String apos    Roo issue   continued ConverterNotFoundException GenericConversionService StandardTypeConverter convert convertValue Service Conversion Type Converter Standard
+2627	Unneeded dependencies breaking Spring ROO on GAE since JspException list tagx jspx meth 005fif 005f0 005fchoose util 005fpanel 005fwhen Helper
+2909	Creating a wrapper addon causes exception in Roo shell IllegalArgumentException isTrue Assert PomManagementServiceImpl init parseUnparsedPoms PomFactoryImpl updatePomCache getFocusedModuleName Pom getInstance getFocusedModule
+3496	Spring Roo command line does not start on Java setActiveStartLevel resolveBundle startBundle StartLevelImpl Felix run Bundle Start Level resolve start

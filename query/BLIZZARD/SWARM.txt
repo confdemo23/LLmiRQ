@@ -1,0 +1,47 @@
+248	path archive json app loader module war classes Classpath wildfly swarm includes jars WEB INF lib running amp apos mvn wildfly swarm amp apos execute Swarm application Jar dependency project classpath execution consequences META INF services files detected JBoss Modules visible sun jdk module problem service entry unable exception limit contents classpath running plugin jars Application
+249	path web classes test war archive dir build Deps required app shadowed swarm apos deps removed wars WEB INF lib
+394	file test properties project check pom config cert mvn wildfly swarm destroy process executed embedded maven environment
+472	context reporter manager service setup advertise topology client Incorrect service teardown order MSC service order consul topology incorrect lead NPE deregister services terminated
+479	path test resource archive token resources jar access Hot Swap content JAXRSArchive doesn apos work content hot swap fails JAXRSArchive type
+516	set dependency dependencies swarm fraction project driver artifact Auto detection scans transitive dependencies fractions additionalFractions plugin ends scanning transitive dependencies fractions auto detection lot fractions detected required
+522	set json path archive process keycloak file find pass jvmArguments multistart process configuration experimenting multistart option wildfly swarm plugin realized amp apos pass jvmArguments process configuration execution multistart phase pre integration test phase goals goal multistart goal goals configuration processes process artifactId booker web client artifactId process process artifactId booker store artifactId properties swarm http port swarm http port properties jvmArguments jvmArgument agentlib jdwp transport socket address server suspend jvmArgument jvmArguments process
+681	health context http client meta timeout service response health endpoints original paths secured health endpoint defined path app health amp apos health app health amp apos unsecured amp apos original path app health amp apos secured original path app health returns amp apos inconsistent counter intuitive original paths redirect health security constraints
+309	context deployment protocol bean jndi swarm cdi wildfly wild fly nnfe stuff arq ignores setup actions
+445	swarm return container swarm start superclass returns methods war
+493	configuration consul topology consultopologyfraction consul topology fraction default url fraction include default
+527	deployment web context class myapp arquillian root pool health container jboss defined health check resources
+543	info activemq server org deployment pool activemq active thread rar thread send jms message external configured ironjacamar active
+611	bean org backed backedannotatedmethod backed annotated method warn producer default runtime annotated weld weld warnings displayed starting swarmed app
+667	dependencies project xml simple uberjar maven container swarm uberjarsimplecontainer uberjar simple container jar arquillian container fails find active profile
+697	gradle apos amp dependencies helper configuration error resolving error method stackoverflowerror stack overflow error stack overflow artifactresolving artifact resolving
+700	property group socket apos binding swarmproperties swarm properties defaultsocketbindinggroupproducer default socket binding group producer system swarm runtime port offset working
+762	artifact host org mirror plugin mirrorof mirror swarm https constructor settings resolution wildfly wild fly ignores xml
+846	location proxy topology service amp service open openshift open shift apos proxyservice proxy service started
+884	module modules applicationmodulefinder application module finder finder application artifact output artifacts classifier spi classifiers class ifiers
+337	amp apos rules services http react event deployment frontend xml ribbon running
+485	java jackson jacksonjaxbjsonprovider jackson jaxb json provider provider json issue error jackson link class jax extends jaxb provider throws lang noclassdeffounderror class def error def
+551	container defaultcachecontainer default cache container infinispan cache default amp access classes class apos infinispan default classcastexception class cast exception class cast exception
+553	file wflyctl address server github periodic pool cliente description org error logging fraction periodicsizerotatingfilehandler periodic size rotating file handler size rotating file handler
+564	amp datasource postgre postgresql postgre sql sql class apos classnotfoundexception class exception connection database underlying data source
+571	src modules runwith java module driver class config jdbc datasource arquillian include main resource
+575	jar org swarm swarmtool http content groups plugin javaee ejb fails stateless
+586	exception endpoints data groups health illegalstateexception illegal exception monitoring illegal accessing points
+587	factory queues access remote client topics wild jms project connection unable connect
+588	groups balkuovlnay bal kuovln path health endpoint core applicationpath application path javax healthcheck health check check doesn apos work jax application defined
+635	explodedimporter exploded importer importer exploded main
+662	lsj dependencies addalldependencies add dependencies jwibt jwi groups npe ptwmlsj twm lsj jwi zigh igh amp calling add
+669	info war demo nkg target maven swarm prozess process application building simple fails windows file locked
+691	xml web parseerror parse error times config login class parse error archive multiple secured executions exec utions occur
+751	certificate https work swarm system port maven dependencies http group wildfly wild fly wild fly swarm war properties generate
+793	xml module driver modules jar directory oracle custom add wildfly wild fly wild fly swarm war resource root artifact
+863	service testing shutdown swarm tab windows start swarm java procrun version doesn apos properly custom main class
+879	plugin maven phrase authentication settings unauthorized xml resolution wildfly aether missing mirrors
+276	wildfly swarm stop throws NullPointerException LifecycleExecutionException NullPointerException PluginExecutionException execute SingleThreadedBuilder MojoExecutor LifecycleModuleBuilder buildProject LifecycleStarter DefaultMaven doExecute build MavenCli Builder
+497	NPE when closing TempFileManager NullPointerException deleteRecursively TempFileManager Recursively delete Temp Manager close File
+574	Keycloak Fraction fails because of ClassCastException when web xml is added via Shrinkwrap ExtensionLoadingException ClassCastException InvocationTargetException ServiceExtensionLoader createFromLoadExtension createExtension Extension ArchiveBase AssignableBase SwarmApp NativeConstructorAccessorImpl DelegatingConstructorAccessorImpl newInstance create
+657	can apos t run tests using the Arquillian Daemon when another application listens on port BindException StartException ServiceControllerImpl StartTask run Impl Task Start Service Controller bind0 Net
+671	mvn wildfly swarm package fails with  File must be specified LifecycleExecutionException MojoFailureException ArchiveExportException IllegalArgumentException SingleThreadedBuilder execute MojoExecutor LifecycleModuleBuilder buildProject LifecycleStarter doExecute build DefaultMaven Builder Lifecycle
+705	Sporadic build failure on wildfly swarm plugin package   Unable to create  swarm jar FileSystemException LifecycleExecutionException MojoFailureException rethrowAsIOException translateToIOException WindowsException SingleThreadedBuilder execute MojoExecutor LifecycleModuleBuilder buildProject LifecycleStarter doExecute build DefaultMaven Builder Lifecycle
+710	ContextNotActiveException   No active contexts for scope type javax inject Singleton on shutdown ContextNotActiveException BeanManagerImpl ContextualInstanceStrategy ApplicationScopedContextualInstanceStrategy get getContext InstanceImpl RuntimeServer DefaultContextualInstanceStrategy Instance getReference getBeanInstance
+385	Generated JAX RS application should not take precedence NotFoundException SegmentNode match RootNode Node Segment Root
+757	javax persistence PersistenceException   PersistenceUnit  primary  Unable to build Hibernate SessionFactory when using Infinispan as  nd level cache for hibernate persistenceException ServiceException CacheException PersistenceException StartException run PersistenceUnitServiceImpl WildFlySecurityManager EntityManagerFactoryBuilderImpl ThreadPoolExecutor Worker JBossThread Thread persistenceException doChecked Impl

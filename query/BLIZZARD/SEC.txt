@@ -1,0 +1,350 @@
+272	set user context group authorities mapper username sql Provide user group support discussed Spring Experience December community grouping users assigning groups roles amp apos add feature involve extra table
+787	set acl matches object method create identity sid ACL SQL statements inconsistent mixed upper SQL statements ACL mixed upper table names problems sensitive systems linux
+1269	login authentication filter create logout milestone custom remember Combining form login open fails find entry point
+1359	grant request token client set pkce builder jwt Typo Reference doc appendix http springsource org spring security site docs reference appendix namespace html realm proerty read property
+1364	customizer configurer request authentication spec policy client server Missing markup reference documentation http springsource org spring security site docs reference core web filters html form login filter paragraph form login wrapped monospace font
+1366	customizer configurer authentication spec request policy token client Typo reference documentation http springsource org spring security site docs reference core web filters html form login flow handling paragraph approprate read
+1380	request url set security behavior context access config access attribute intercept url trim whitespace attributes ROLE ROLE map attributes ROLE Whitespace trimmed
+1607	milestone version customize pom release security valid url Spring Security version checking reports Spring Version Spring Security version
+1633	set filter expression context access pointcut search authorization jsp loop wanted upgrade Spring Security Spring Security upgrade minor version struts replaced jar files started strange error messages Struts action path jars replace versions spring security acl RELEASE jar spring security core RELEASE jar spring security core tiger RELEASE jar spring security taglibs RELEASE jar unsuccessfully decided create bare bones functional project upgrade discovered appears problems dealing jsp work fine loop running Eclipse Tomcat create fresh Eclipse Dynamic Web project add jsp perform jsp jsp tested Spring works expected introduce Spring Security Spring mix work expected jsp intercept url filters replace mentioned files versions navigate jsp browser Fire Fox tomcat server loop spewing large stack trace amp apos attaching eclipse project tomcat log file main reason wanted upgrade reason access denied attribute work http element
+1661	context search ldap set attribute password provider authentication LDAP search base require JNDI escaping addition LDAP escaping special characters quotes base search base work base valid work Admin Users TEST TESTCustomers
+1679	cookie set request redirect token add parameter saved delete cookies trim cookie names multiple cookie names supplied spaces string spaces won amp apos trimmed incorrect cookie names
+1768	method test filter decision request set behavior context wildcard intercept method include implemented interfaces Created behalf client Bean secured intercept methods tag method attributed protect tag set Bean annotated Transactional methods explicitly defined method attribute methods bean secured method feel addition methods declared bean implemented methods secured method Attached sample test illustrating behavior
+1998	set authentication user request url servlet details context Support Servlet asynchronous request processing SPR Spring Security support Asynch Servlet request processing Note sample application validated fixing issue
+2022	permission attribute search authorize returns object options servlet accesscontrollist hasPermission longer supports list values
+2023	permission port acl context authorize object permissions set accesscontrollist hasPermission longer supports integer bitmasks
+2096	valid release version set properties cors create matches Dependency spring SNAPSHOT release amp apos poms point spring SNAPSHOT jars
+2306	session set authentication context event concurrency strategy fixation Session Fixation protection improperly log warning
+2511	header policy request disabled options responds headers origin Remove Frame Options header
+2949	authentication logout custom request set security login handler Custom Login working Spring created simple spring mvc project custom login custom login works fine custom login work upgrade Release
+2960	request exception path encoded header security parameter schema Bad Spring Security XSD Version Error Message applicationContext xml includes Spring Security XSD error message misleading indicating version Reference URL erroneous Note problem https jira spring browse amp apos worth dynamically created error message
+3147	login set authentication url user client filter request Include error parameter authentication failure url login customized XML Config parameter error include authentication failure url XML Config login loginForm authentication failure url loginForm Java Config login loginForm authentication failure url loginForm error include error parameter error authentication failure url
+99	getdeclaredmethods declared methods superclasses transaction methods methoddefinitionmap method definition map default map method definition methods method support superclass declared
+353	method class class method interfaces definition invocation attributes map definition acegi checks current rules
+422	dot acl sql computerepeatingsql compute repeating sql lookup comma strategy object basic repeating basiclookupstrategy basic lookup strategy compute bad sql
+424	methods java method map acegisecurity org method methods file array methoddefinitionmap method definition map definition apos access inherited
+467	acl jdbc jdbcmutableaclservice jdbc mutable acl service access identity org insert mysql mutable package compatible mysql
+525	tag access url access tag url accesscheckertag access checker tag resource showthread org patch add cce checker based permissions missions
+527	acl cache acls impl amp apos disk identity strategy authorization serialization error acl cacheing packages
+530	list ace insert behaviour method user functionality acl order precedence acls acl ace position
+547	connection lookup acl result database processresultset process result set apos parent acls basiclookupstrategy basic lookup strategy basic strategy user databasse data basse connections
+572	tree acl apos amp level parent nodes package aclimpl acl impl acl set null
+589	acl object objects acls identity object iswarnenabled warn enabled log projects warn basiclookupstrategy basic lookup strategy basic lookup strategy readaclsbyid read acls read objectidentity object identity identity sid throws exception
+590	acl cache objects identity amp objectidentity object identity object sids acls acl basiclookupstrategy basic lookup strategy basic lookup strategy readaclsbyid read acls read sid loop terminates prematurely
+597	directory acl parent parent strategy newparent parent authorization change null structure aclimpl acl impl impl setparent set parent set throws exception changing
+630	user properties schema user precedence bean xml service definition service attribute element doesn apos
+655	object acl acl child parent cache identity objectidentity object identity mutable jdbc inserting ins erting ace apos stale reference
+670	identity table row object acl amp deadlocks apos object deleting object identity dead locks load test
+676	acl cache domain children children service method jdbc identity jdbcaclservice jdbc acl service acls removed parent deleted
+783	providers invocation security amp apos afterinvocationproviders invocation providers method security globalmethodsecuritybeandefinitionparser global method security bean definition parser global bean definition parser support
+792	namespace custom filter proxy filters filter list chain org springframework filters default stack labelled label led
+831	acl acl query object postgres aliasing class identity jdbcaclservice jdbc acl service service jdbc incompatible post gres
+837	context formattedfilter formatted filter filter controls amp ldap string security code springsecurityldaptemplate spring security ldap template spring security template searchforsingleattributevalues search single attribute values search single attribute values string escape
+925	schema dba tables requirements conventions basic amp docs bean config basiclookupstrategy basic lookup strategy lookup strategy support qualifier
+951	acl impl aclimpl acl impl map acls parent class field identity aces serialization errors cohere child structure acls
+992	obj method flag returningobjflag returning obj flag controls template ldap searchcontrols search controls return springsecurityldaptemplate spring security ldap template spring security clearing returning search contradicts contract ldaptemplate ldap template
+1006	strategy tag sid accesscontrollisttag access control list tag retrieval access sidretrievalstrategy sid retrieval strategy beans impl list cce control class javadoc incorrect
+1014	authenticator ldap change ldap password class ntlm check ldapauthenticator ldap authenticator details minor easy configuration
+1038	object object org class identity problem method acl database postgres error jdbcmutableaclservice jdbc mutable acl service jdbc mutable service
+1078	provider proposal credentials authentication web authenticated sphere pre request stuff websphere web sphere springsecuritypropagationinterceptor spring security propagation interceptor spring security propagation interceptor creates token null rejected pre
+1081	validity seconds int token tokenvalidityseconds token validity seconds services remembermeauthenticationexception remember authentication exception days exception persistent persistenttokenbasedremembermeservices persistent token based remember services based remember overflow
+1084	authentication details provider ldapauthenticationprovider ldap authentication provider authenticationproviders authentication providers suggestion providers property attached ldap retain authenticating enticating
+1104	amp shutdown server apacheds apache apache apos context dscontainer socket listener server created apachedscontainer apache dscontainer causing hang
+1117	ldap password problem provider thread authenticator user post ntlmawareldapauthenticator ntlm aware ldap authenticator authentication unable ntlm war ldapauthenticationprovider ldap authentication provider authentication checking null aware
+1121	inmemoryresource memory resource memory method source return util code resource org springframework equals wrong
+1151	list impl bounds ace impl control java acl aceindex ace check correct
+1154	user authentication authentication details usernamepasswordauthenticationtoken username password authentication token password useauthenticationrequestcredentials authentication request credentials password credentials createsuccessfulauthentication create successful authentication ldapauthenticationprovider ldap authentication provider ldap provider create successful returned object
+1156	methods setenableauthorities set enable authorities access authorities createuser create user updateuser update user details enable jdbc manager jdbcuserdetailsmanager jdbc user details manager user ignores set false
+1187	authentication amp user apos checks usernamepasswordauthenticationtoken username password authentication token preauthenticationchecks pre authentication checks user provider username abstractuserdetailsauthenticationprovider abstract user details authentication provider abstract details login disabled locked expired users
+1201	pattern apos amp access configurer property propertyplaceholderconfigurer property placeholder configurer security url placeholder work intercept int ercept attributes
+1223	regression authenticator bindauthenticator bind authenticator user return loop null bind bind successful bindwithdn bind
+1224	database classes catalog acl objects basic jdbc service catalogs strategy basiclookupstrategy basic lookup strategy lookup jdbcaclservice jdbc acl service jdbcmutableaclservice jdbc mutable acl service mutable support catalog schema
+1236	map method version http method access security default http specific intercept int ercept urls patterns
+1239	jaas login config config string loginconfig login config security lang characters location special jaas file
+1240	isn code password ldap encoder amp pretty parser passwordencoderparser password encoder parser encoder ssha spring security password schema apos handled
+1241	form user post request request url security aware methods authentication savedrequest saved request saved destroyed successful
+1256	amp apos security map code security filter expressions bean configuration configure filtersecuritymetadatasource filter security metadata source metadata source spel hard coded false
+1272	events event publisher namespace default authentication authentication providermanager provider manager configuration manager manager register event handler defaultauthenticationeventpublisher default authentication event publisher default
+1282	unanimousbased unanimous based bug grants security api grant votes access unanimous guys bug based incorrectly grants absension
+1283	elt anonymouselt anonymous elt httpelt http elt config builder createanonymousfilter create anonymous filter authentication http namespace authenticationconfigbuilder authentication config builder create anonymous filter anonymous
+1287	permissions amp strategy methods constructor versions basiclookupstrategy basic lookup strategy base permission basic regression register custom missions lookup
+1289	event amp authentication authentication apos default security application event strategy successful registration
+1295	security class roo aspect target signature configuration class target aspects placing aspected methods fails
+1308	acl sql statements amp service map acl defaultaclsqlsource default acl sqlsource sqlsource jdbc mutable aclservice acl service configured
+1317	element provider http manager exception providers providermanager provider manager authentication http configuration internal authenticationproviders authentication providers
+1320	service archive configuration refresh provider jaas jaasauthenticationprovider jaas authentication provider authentication module jaas find jaas realm defined
+1328	url redirect hope len protocol strip spring int request security redirectutils redirect utils utils defaultredirectstrategy default redirect strategy default strategy contextrelative context relative context relative redirect doesn apos account http
+1353	session redirect filter methods sendredirect send redirect sessionmanagementfilter session management filter strategy redirectstrategy redirect strategy annotation filter management invoke filters sending redirect
+1358	default web context evaluator length privilege invocation path assertion defaultwebinvocationprivilegeevaluator default web invocation privilege evaluator fails empty
+1360	url class lang docs html java parameter handler authentication springsource typo javadoc abstractauthenticationtargeturlrequesthandler abstract authentication target url request handler abstract authentication target request
+1361	filter authentication usernamepasswordauthenticationfilter username password authentication filter docs javadoc password security web bad markup username
+1372	sessions return registry session org specification getallsessions sessions security lists session sessionregistryimpl session registry impl impl sessions returns null interface shouldn apos
+1384	authentication access default decision manager filters configuration web filter defaultwebinvocationprivilegeevaluator default web invocation privilege evaluator default invocation privilege evaluator bypass accessdecisionmanager access decision manager decision authorities orities empty
+1385	http entry context point url namespace problem proxy defaultredirectstrategy default redirect strategy yourdomain abstractretryentrypoint abstract retry entry point abstract retry default redirect strategy redirects support proxies
+1392	evaluator security amp configuration permissionevaluator permission evaluator method permission access custom
+1410	openid open https case compatibility cookie decodecookie decode cookie open usernames apos urls remember doesn work contatining
+1413	supply url cases entry redirect patch strategy point abstractretryentrypoint abstract retry entry point abstract retry redirectstrategy redirect strategy
+1418	implementation impl granted isn admin authority grantedauthorityimpl granted authority impl role edition amp equals apos symmetric
+1425	cookie services tokens org security invalid web invalidcookieexception invalid cookie exception abstractremembermeservices abstract remember services length abstract remember handling properly empty
+1432	user case usermap user map sense map map supplied lookup convert converts maps
+1439	response holder httprequestresponseholder http request response holder setters http web org method securitycontext security context context getrequest request request getresponse response public springframework security
+1443	authority authentication access attribute authorities authority access vote attribute return jsr voter denied allowed roles
+1444	user string userdn user fulldn full characters encoder getattributes attributes authentiator directory bindauthentiator bind authentiator bind fails active special chars
+1446	base authentication header string check security org runtimeexception runtime exception filter basic malformed basicauthenticationfilter basic authentication filter throw runtime exception
+1450	method method utils handler abstract methods foo classutils class utils springframework definition pointcuts incorrectly evaluated eval uated case generic
+1454	target case method aopproxy method object class utils class aopproxy preautorize pre autorize pre autorize username principal issues aopp roxy
+1458	log listener configuration jconfiglistener config listener listener config event session static publisher httpsessioneventpublisher http session event publisher http log happen
+1480	user default code session management ldap hash ldapuserdetailsimpl ldap user details impl work hashcode hash code details impl override equals
+1500	url issue rfc bug foo urlutils url utils becaus encoded characters special target switching secure insecure ins ecure channel
+1501	security userdetailsservice user details service authentication org package springframework switch web filter documention incorrect bean definition
+1520	naming rtn return context dir searchresult search result class result default enumerator closed fully enumerated enum erated
+1545	amp apos bug properties message messages overview security html assignee missing
+1549	load cache permission acl optimizer amp objects acls list lookup aclpermissioncacheoptimizer acl permission cache optimizer optimizer attempt empty object
+1553	serializable details webauthenticationdetails web authentication details web authentication
+1578	spring context jdk thread threadlocal thread local jira org local threadlocalsecuritycontextholderstrategy thread local security context holder strategy security holder strategy clearcontext clear context clear remove
+1587	context context http filter session repository amp anonymous security httpsessionsecuritycontextrepository http session security context repository clear session current anonmous empty
+1590	dopopulateadditionalinformation populate additional class grantedauthority granted authority details webauthenticationdetails web authentication details granted authority web security argument webauthenticatondetails web authenticaton details authenticaton populate additional removed
+1606	http path jsp request proxy filter password filterchainproxy filter chain proxy servletpath servlet path login firewalledrequest firewalled request firewalled reset called filters chain complete filterchain filter chain
+1614	path tiles info servlet login error request amp spring custom status apache
+1639	request filter wrapper firewalledrequest firewalled request filter chain reset servlet void virtualfilterchain virtual filter chain virtual resetwrapper reset wrapper handle nested filterchainproxy filter chain proxy proxy apos
+1670	composite compositename composite constructor amp returns characters ldap security spring template springsecurityldaptemplate spring security ldap template ldap remove jndi escaping searchresult search result search result getname
+1683	org typo javadoc java doc exceptionifheadermissing exception header missing filter header requestheaderauthenticationfilter request header authentication filter request authentication documentation
+1699	object filter web filterinvocation filter invocation access vote validator manager lang java defaultfilterchainvalidator default filter chain validator default chain apos check login isn protected broken
+1722	event springsource security session http api site doc publisher org httpsession http session destroyed created confusion
+1735	session log request context context http login browser amp httpsession http session logged logging browsers
+1750	context permissions context security possibility replacement manager interceptor abstract securitycontext security context abstractsecurityinterceptor abstract security interceptor replace runas authentication
+1751	time encryptor test text textencryptor text encryptor encryptor case storage encryptors request queryabletext queryable text query text string useable queryable
+1771	amp apos token tokenbasedremembermeservices token based remember services manager providermanager provider manager provider password object userdetailsservice user details service based remember services won work erased credentials
+1782	bindauthenticator bind authenticator authenticator security ldap ldapauthenticationprovider ldap authentication provider org authentication authentication springframework provider incorrect javadoc ldap
+1792	string pointer authentication null null originalauthentication original authentication tostring string runasusertoken user token exception original nullpointerexception null pointer exception user token
+1795	acl impl aclimpl acl impl childacl child acl mockauthzstrategy mock authz strategy audit npe strategy objectidentity object identity authz changing acl parent
+1802	schemes url url rfc util digits checks web springframework utils compliant recognized valid
+1804	user password org security authentication failure details erasecredentials erase credentials load userdetails immutable erase credentials remove userdetailsmanager user details manager manager side
+1833	context http javadoc generatenewcontext generate context setter security repository httpsessionsecuritycontextrepository http session security context repository session missing set ter securitycontextclass security context class security class
+1838	request filter chain chain filters servlet list dofilter filter spring request firewalledrequest firewalled request firewalled reset called matching
+1848	ldap authenticator nameencode encode fomatting format getuserdns user dns encoder user abstract abstractldapauthenticator abstract ldap authenticator escape username
+1868	error log securitynamespacehandler security namespace handler classes catch handler namespace security web proxy
+1870	security context strings code session attribute securitycontext security context contexts names httpsessiondestroyedevent http session destroyed event http session destroyed event getsecuritycontexts security contexts broken
+1880	logout bean handler mistake logoutbeandefinitionparser logout bean definition parser security handler success logout definition mislead exception text log url success
+1911	bean bean custombasedauthenticationprovider custom based authentication provider authentication autowiredbean autowired bean annotationbean annotation bean config security debug enables securitydebugbeanfactorypostprocessor security debug bean factory post processor security debug factory post processor
+1917	authentication manager security org authentication accountstatusexception account status exception exception publisher springframework defaultauthenticationeventpublisher default authentication event publisher default event account status thrown
+1919	level authenticationserviceexception authentication service exception debug authentication error ldap service server logged exception
+1927	session space amp session log entries requested debug idbd sessionmanagementfilter session management filter management filter add
+1934	module web config error handler security spring proxy logs filter namspacehandler namspace handler namspace
+1939	error authentication user switchuserfilter switch user filter exception attemptexituser attempt exit user authenticationcredentialsnotfoundexception authentication credentials exception filter exception user switch outputting output ting false logging
+1940	apos amp exception provider manager provider configuration event authentication failure providermanager provider manager publish accountstatusexception account status exception account status
+1951	event httpsessiondestroyedevent http session destroyed event attribute nextelement element getattribute attribute element attribute security source http session destroyed getsecuritycontexts security contexts contexts return empty
+1958	filter principal authenticated request authentication authenticate authentication debug logger check successful apos abstractpreauthenticatedprocessingfilter abstract pre authenticated processing filter abstract pre processing
+1964	token series cookie exception amp services apos persistenttokenbasedremembermeservices persistent token based remember services series user persistent based remember improper error message existent
+1965	tag abstractauthorizetag abstract authorize tag web amp webflow abstract expression apos issues copy passivity defaultwebsecurityexpressionhandler default web security expression handler default security handler longer implements websecurityexpressionhandler web security expression handler
+1968	user security amp session context abstract null filter principal authenticated preauthenticatedprocessingfilter pre authenticated processing filter pre processing clear causing unintentionally remain authenticated
+1980	amp url sitemap error webconfigutils web config utils utils spel redirect config misleading warning incorrect
+2011	session registry session strategy http javadoc security authentication fixation servlet sessionfixationprotectionstrategy session fixation protection strategy protection inject sessionregistry session registry field
+2012	user password userdetails user details org userdetails null core credentials springframework security javadoc details getpassword password password
+2013	authentication filter authentication space debug message springframework handler url sessionauthenticationexception session authentication exception abstractauthenticationprocessingfilter abstract authentication processing filter abstract processing missing log
+2020	manager bean authentication authentication sample authmanager manager element string http manager prevents erase credential working
+2027	context authentication chain session model filter application security view dofilter filter filterchainproxy filter chain proxy chain proxy clearing forwards war clear
+2031	invocation checks method preinvocationauthorizationadvicevoter pre invocation authorization advice voter class voter advice methodinvocation method invocation class pre authorization support super child
+2036	cookie apos context cookie cookiename cookie request context hash default getcontextpath context path cookieclearinglogouthandler cookie clearing logout handler clearing logout handler doesn work
+2038	bean initfilterbean init filter bean method properties abstractpreauthenticatedprocessingfilter abstract pre authenticated processing filter pre filter afterpropertiesset properties set generic genericfilterbean generic filter bean init called abstract authenticated processing
+2045	evaluator http tag attribute privilege abstractauthorizetag abstract authorize tag abstract webinvocationprivilegeevaluator web invocation privilege evaluator invocation authorize web
+2056	authentication user encoder password provider password passwordencoder password encoder provider daoauthenticationprovider dao authentication provider dao cve reveal usernames names valid
+2067	security context context security bug response class servlet resp method incorrectly removed session asynchronous servlet
+2078	string code authentication principal class return getname type security pre fails check principal change principals
+2101	webinvocationprivilegeevaluator web invocation privilege evaluator evaluator web access data authentication method manager abstractauthorizetag abstract authorize tag abstract authorize tag getprivilegeevaluator privilege evaluator privilege returns invocation
+2103	level zeroresults info dump thread amp apos data emptyresultdataaccessexception empty result data access exception tokens querying token series
+2111	context security session amp securitycontext security context thread org timeout request filter disable auto save response committed startasync start async start async invoked invoke
+2137	session session strategy control protection system fixation bug disabled concurrent enabled
+2140	acl list strategy authorization order aclauthorizationstrategyimpl acl authorization strategy impl impl correct actions javadoc
+2143	message namespace security xsd spring error handler version version method mentioning
+2177	http strategy url web org handler authentication context security scheme defaultredirectstrategy default redirect strategy default redirect vulnerable open redirect phishing attacks
+2191	manager authentication builder authenticationmanagerbuilder authentication manager builder post authenticationmanager authentication manager security inmemoryauthentication memory authentication enableglobalmethodsecurity enable global method security enable requires objectpostprocessor object post processor object processor
+2222	amp web websecurityconfigureradapter web security configurer adapter register registerauthentication register authentication security enable error adapter configurer javadoc authentication enablewebsecurity enable web security refer wrong parameter
+2237	security infrastructure request documentation implementation setence firewalledrequest firewalled request request piece incomplete api firewalled reset
+2246	request method interface savedrequest saved request implementation saved getrequest request defaultsavedrequest default saved request form security httpsessionrequestcache http session request cache http session cache performs cast concrete default
+2272	org jira support springsource processor csrfrequestdatavalueprocessor csrf request data processor request csrf data spring
+2276	request token session http delay servlet session httpsession http session csrftoken csrf token csrf delay storing csrf accessed
+2295	error version gradle spring check security error security jar tickets remove log embedded uberjar uber jar uber jar
+2301	security beanresolver bean resolver configuration java resolver service handler web mycustomservice custom service defaultwebsecurityexpressionhandler default web security expression handler globalmethodsecurityconfiguration global method security configuration global method apos default expression null
+2302	security initializer web place spring front springsecurityfilterchain spring security filter chain abstract register chain filters filter
+2303	resolver bean default websecurity web security security web expression handler set apos
+2304	handler global configuration globalmethodsecurityconfiguration global method security configuration method expression security methods
+2308	base base string url basedn base source trimmedbasedn trimmed base trimmedurl trimmed url list defaultspringsecuritycontextsource default spring security context source default spring security context accept empty dns
+2327	documentation amp apos expressions methods hasauthority authority synonyms hasrole role authority securityexpressionroot security expression root document security expression root
+2367	exception provider authentication internal internalauthenticationserviceexception internal authentication service exception manager providermanager provider manager service provider accountstatusexception account status exception doesn apos report internalauthenticationserviceexceptions internal authentication service exceptions exceptions
+2392	string number hex bits random method token randomizedbits randomized bits generatepseudorandomnumber generate pseudo random number allocatetoken allocate token unexpectedly long key created keybasedpersistencetokenservice key based persistence token service key based
+2410	string integer binary exception sign print diff return argument front aclformattingutils acl formatting utils acl formatting utils printbinary print binary handle negative
+2418	authorities impl details user method print prints string ldapuserdetailsimpl ldap user details impl ldap patch tostring string granted orities
+2439	parametername parameter parameter setheadername set header bug csrf httpsessioncsrftokenrepository http session csrf token repository length param header http session token repository set
+2461	https github spring instances web security configuration springapplicationhierarchytests spring application hierarchy tests websecurityconfiguration web security configuration hierarchy multiple null springsecurityfilterchain spring security filter chain spring filter chain
+2472	encoder interface password authenticator org bcryptpasswordencoder bcrypt password encoder passwordencoder password encoder ldap authentication crypto apos recommended rypt passwordcomparisonauthenticator password comparison authenticator comparison bcrypt
+2492	expression intercepturl intercept url method configurer comment garbage javadoc url authorization chained expressionurlauthorizationconfigurer expression url authorization configurer int ercept incorrect intercept
+2493	security defaultldapauthoritiespopulator default ldap authorities populator property authorities case tree class bean userdetails javadoc default ldap populator lists wrong incorrect
+2497	currentuser current user string processing method abstract principal authentication filter requiresauthentication requires authentication pre checkforprincipalchanges check principal check limited
+2507	class voter clazz filterinvocation filter invocation webexpressionvoter web expression voter expression isassignablefrom assignable web supported secured secure object
+2533	security authentication configuration roles erasecredentials erase credentials user credentials openid login builder global authenticationmanagerbuilder authentication manager builder manager erase false work
+2549	class module lazybean lazy bean classloader class loader loader bean pull marker access illegal java lang illegalaccesserror illegal access error cce error org springframework security config annotation authentication configuration proxy
+2570	request matcher configurer csrf logout post suppresswarnings suppress warnings requestmatcher request matcher logoutconfigurer logout configurer url supports default enabled
+2574	registry session configurer sessionregistryimpl session registry impl work control events data maximumsessions maximum sessions login default javaconfig java config java config impl receive sessiondestroyedevents session destroyed events destroyed
+2578	servlet context response session httpservletresponsewrapper http servlet response wrapper http repository httpsessionsecuritycontextrepository http session security context repository wrapper security traverse
+2606	dsserver port apache apachedsserverintegrationtests apache dsserver integration tests integration scan tests server ests
+2683	resolver mistake spelling argument exception authentication principal authenticationprincipalargumentresolver authentication principal argument resolver assiable misspelled
+2697	release amp spring apos startup compareto compare security string springframework version invalid warning logged
+2698	security mode configuration handler class aspectj aspectj method global security enableglobalmethodsecurity enable global method security enable respecting res pecting advicemode advice mode advice mode
+2709	execution order test security listener getorder order withsecuritycontexttestexecutionlistener security context test execution listener context default testexecutionlisteners test execution listeners override
+2751	user code problem instance filter pre abstract userdetails user details form abstractpreauthenticatedprocessingfilter abstract pre authenticated processing filter authenticated processing assumes principal string
+2768	permission default handler security message permissionevaluator permission evaluator evaluator expression set defaultmessagesecurityexpressionhandler default message security expression handler
+2769	default hierarchy expression security rolehierarchy role hierarchy message role handler set defaultmessagesecurityexpressionhandler default message security expression handler
+2791	version max abstractremembermeservices abstract remember services expires age cookies maxage max age max setter chrome safari cookie set abstract remember services ter
+2794	method principal request return pre authenticated string getname user code abstractpreauthenticatedprocessingfilter abstract pre authenticated processing filter abstract processing filter requires authentication check failure
+2819	param simpdestinationmessagematcher simp destination message matcher pattern antpathmatcher ant path matcher matcher type parameter ant constructor string simp destination message simpmessagetype simp message type type passes
+2832	csrf request form request filter authentication csrf token strategy authentication attributes updated
+2845	security authentication channel security org authentication message context securitycontext security context abstract exception abstractsecuritywebsocketmessagebrokerconfigurer abstract security web socket message broker configurer web socket message broker configurer anonymous
+2879	repository impl jdbc jdbctokenrepositoryimpl jdbc token repository impl updatetoken update token token lastused arg update
+2882	login login foo security filter request permitall permit hasrole role contents path defaultloginpagegeneratingfilter default login generating filter default generating grabs
+2895	amp directory manager security config exception apos myldapdomain activedirectoryldapauthenticationprovider active directory ldap authentication provider ldap active based configuration longer works
+2897	bindprincipal bind principal spring ldap directory springsecurityldaptemplate spring security ldap template controls authentication searchroot search root template object activedirectoryldapauthenticationprovider active directory ldap authentication provider active authentication provider bind principal username
+2900	authentication authentication provider service import user org details address springframework active directory based login stopped working
+2908	security filter web request matchers matcher authentication request exception apos javadoc doesn work
+2930	authority hasrole role hasauthority authority methods security expression operations role review documentation securityexpressionoperations security expression operations
+2931	csrf csrftokenrepository csrf token repository token session implementation cookie web sentence javadoc java doc repository csrffilter csrf filter filter java doc incomplete token repository appreciated app reciated
+2956	method parameter parameter annotations string factory method time findannotationsat find annotations improve annotationparameternamediscoverer annotation parameter discoverer annotation discoverer performance
+2964	snippet restcontroller rest controller resolver code csrftokenargumentresolver csrf token argument resolver token method org controller source csrf argument improperly formatted matted javadoc
+2973	call context response context method writer save amp class savecontextprintwriter save context print writer securitycontext security context security persisted sisted body reaches content length
+2990	security context schema application springframework exception security message org spring securitynamespacehandler security namespace handler namespace handler
+3034	locale touppercase upper case case string upper wrte permissions permission perm aclpermissionevaluator acl permission evaluator acl evaluator resolvepermission resolve permission resolve fails turkish
+3035	role holder user admin securitycontextholderawarerequestwrapper security context holder aware request wrapper request wrapper role security aware context war isuserinrole user role role adds prefix prefixed
+3045	security methodsecuritymetadatasourceadvisor method security metadata source advisor advisor spring method aspectj infrastructureadvisorautoproxycreator infrastructure advisor auto proxy creator metadata source enable enableglobalmethodsecurity enable global method security global mode creates proxies infrastructure
+3055	role security user request request isuserinrole user role holder isgranted granted test aware role add extra
+3056	java security spring crypto javadoc password java element javadoc java doc doc errors jdk
+3073	url rest http privilege web evaluator access application jspauthorizetag jspauthorize tag jspa uthorize tag authorizeusingurlcheck authorize url check orize url check compares webinvocationprivilegeevaluator web invocation privilege evaluator invocation jspauthorize authorize
+3082	case default web request names saved bceab java treemap tree map defaultsavedrequest default saved request savedrequest saved request parameters treated insensitive ins ensitive
+3108	authentication security user digest user context authentication request object securitycontext security context digestauthenticationfilter digest authentication filter filter securitycontextholder security context holder holder createemptycontext create empty context create empty
+3109	security context delegating thread method spring executor pool security scheduler concurrent threadpooltaskscheduler thread pool task scheduler thread task don apos work delegatingsecuritycontextexecutor delegating security context executor
+3122	context context executor thread scheduled securitycontext security context authority executions service security delegatingsecuritycontextscheduledexecutorservice delegating security context scheduled executor service delegating sets scheduled task subsequent runs set
+3158	context abstractauthorizetag abstract authorize tag findrequiredwebapplicationcontext find required web application context master spring webapplicationcontextutils web application context utils tag application turn abstract find required web requires
+3159	security java httpsecurity http security http doc headers inaccurate
+3170	logout handler logout logouthandler logout handler configurer logouthandler logout handler services remembermeservices remember services logoutconfigurer logout configurer httpsecurity http security custom remember implement fails
+325	concept quote grantedauthority granted authority amp groups ben management spring add support groups
+750	jpa context nullpointerexceptions null pointer exceptions persistencecontext persistence context security auto manager pointer spring persistence support annotation broken
+826	case test user usersecurityservice user security service post service persistence dao security form support jpa persistencecontext persistence context context annotation broken
+832	exception result string search hasmore base naming namingexception naming exception dir namingenumeration naming enumeration enumeration fails partialresultexception partial result exception partial
+905	method pointcut definition methods user parameter mapbaseddefinitionsource map based definition source source role javatype java type protect point cut pointcuts cuts respect arguments
+943	uri space urls source default url getpath path context string security defaultspringsecuritycontextsource default spring security context source spring support escaped spaces
+1133	namespace authentication authenticationdetailssource authentication details source login url source details form setting
+1143	session registry sessionregistry session registry session namespace login security form manager online namespace won apos set
+1145	ldap password user authentication usersearch user search source amp shouldn permissions connecting login
+1277	roles security del del tag href role authorization libraries totally wrong
+1281	services provider default rememberme property authentication details org remembermeauthenticationprovider remember authentication provider remember created key parameter
+1286	acl authorization audit logger springframework null parent authenticated strategy amp tostring string string misformatting java
+1333	failure login url assertion illegalargumentexception illegal argument exception expression attribute illegal argument invalid apos authentication assertion
+1357	web class discussion classes loader namespace classutils class utils classloader context context reader class loader checking handler
+1363	provider reference docs core paragraph security reference site org documentation type
+1365	handler markup authentication flow docs reference org login missing documentation
+1367	reference org docs documentation paragraph springsource websecurityexpressionhandler web security expression handler http expression websecurityexpressionhandlder web security expression handlder type
+1369	problem spring register module patch context release beans registerwithgeneratedname register generated occurrences springbeans registered
+1388	login authentication form url custom username tag authenticationdetailssource authentication details source loginformurl login form url support details source
+1396	request session processing http filter user context web httpsession http session session race condition httpsessioncontextintegrationfilter http session context integration filter integration sessionfixationprotectionfilter session fixation protection filter fixation protection
+1404	security pattern login url url amp admin springframework form store expression expanded intercept int ercept
+1412	login web spring security war filter shallowetagheaderfilter shallow etag header filter display access login redisplays red isplays apos shallow etag header
+1462	session session browser tomcat filter jsessionid return chain sessionfixationprotectionfilter session fixation protection filter investigation fixation protection creates requested null invalid
+1540	order securitymetadatasource security metadata source method source work works test metadata scope master namespace improperly handles attribute populating pop ulating channelprocessingfilter channel processing filter channel processing filter security
+1561	session context context security securitycontext security context httpsecuritycontextrepository http security context repository http attribute authentication store security repository fails newly authenticated
+1583	amp access apos reference login pattern docs security illegalargumentexception illegal argument exception lang wrong info docs
+1584	path parameter parameters pattern servlet values path match url admin stripped pathinfo path info info servletpath servlet path matching
+1592	proxy url cas cas pgt request validation server parameter grails receptor requests pass filter chain
+1603	user web developers tag session target curve success add authentication handler attribute remember
+1608	firewalled request resource firewalledrequest firewalled request called filters reset
+1628	login post success tag attribute authentication desire success remembermeservices remember services add handler remember
+1653	war security import bean spring projects namespacehandlers space handlers xsds config load sample remember fails properly register requested
+1674	login test amp url loginform login form security authentication form apos api absolute paths allowed logout log attributes
+1705	filter idauthentication namespace openidauthenticationfilter open idauthentication filter creates spurious bean open
+1752	byte encryptor encryptor test test textencryptor text encryptor string apos amp password null character appended app ended text decrypt dec rypt
+1764	encoding security org string java password return springframework hash error
+1770	session refreshlastrequest refresh request wasn session request amp string custom minutes registry sessionregistry session registry refresh
+1772	referer handler urls url breaks simpleurllogoutsuccesshandler simple url logout success handler url utf isusereferer referer authentication unneeded decode impl logout success simple
+1790	http content custom response somecustominjectedheader custom injected header url default wvs location input url spring security redirect parameters vulnerable crlf injection
+1850	handler config session sessions handlers logout max user concurrentsessionfilter concurrent session filter concurrent filter default injected logout log logoutfilter logout filter namespace space
+1885	autowired nosuchmethodexception method exception exception apos method beans proxy filterchainproxy filter chain proxy provider adding debug filter chain relies constructors
+1893	port port url mappings default integer https login default mappings map pings redirection redirect ion
+1900	granted authority impl work grantedauthorityimpl granted authority impl tostring string user ifallgranted granted userdetails user details class authorize orize authorities deprecated
+1948	dao userdao user dao user user xml work custom abstractuserdetailsauthenticationprovider abstract user details authentication provider beans autowired custom abstract details authentication provider process annotations
+2005	security context client request response security http spring context login securitycontext security context persisted committed
+2025	session authentication http security filter framework jsf amp server processing httpsessionsecuritycontextrepository http session security context repository session context repository restores rest ores invalidated invalid ated thread
+2055	stream savecontextservletoutputstream save context servlet output stream closing output flush delegate stream close servlet save context output methods wrapped servletoutputstream servlet output stream
+2057	org filter authentication security location holder spring concurrentsessionfilter concurrent session filter docs session concurrent documentation incorrectly doesn apos rely securitycontextholder security context holder security context null logout log handlers object
+2072	apos release amp roles authority role values getauthorities authorities invitado security anonymous longer supports multiple authories author ies
+2136	permission permission class map string type permissiontype permission type domain post context injecting bean custom permissionevaluator permission evaluator evaluator leads nosuchbeandefinitionexception bean definition exception definition exception
+2198	point entry httpsecurity http security basicauthentrypoint basic entry point http authorizeurls authorize urls request configure http handling httpbasic http basic basic properly default authenticationentrypoint authentication entry point authentication
+2215	security manager authentication context request http exception servletapi servlet api antmatchers ant matchers session injecting authenticationmanager authentication manager securitycontextholderawarerequestfilter security context holder aware request filter holder war filter aware
+2223	firewallrequest firewall request request firewall javadoc incomplete reset
+2280	file javadoc git session newline configurer request change changesessionid change session source sessionfixationconfigurer session fixation configurer fixation
+2296	java servlet login string api http javaee http lang request httpservletrequest http servlet request throw servletexception servlet exception exception authenticated
+2328	access authority hasanyauthority authority hasanyrole role configuration hasauthority authority uri role work java missing
+2376	csrf workaround session csrf authentication security filter site behavior document pre
+2422	session csrf timeout error post practice settings strategy authentication session detected enable protection
+2455	login http form logout url abstractauthenticationprocessingfilter abstract authentication processing filter processes filter processing url log produce warnings
+2457	amp url method logout security apos target login url warning setfilterprocessesurl set filter processes url set filter processes marked deprecated http log tag
+2543	csrf security authentication user logout user logout antmatchers ant matchers configuration http require post enabled
+2571	details userdetailsservice user details service failures service user errors produce console
+2595	config annotationsecurityaspect annotation security aspect security aspect project mode jdk aspectj aspect gradle annotation enableglobalmethodsecurity enable global method security enable global method creates dynamic proxies spec advices
+2615	haspermission permission tag permission permissions user domain reference amp versions apos accesscontrollist access control list documentation incorrectly
+2688	cas proxy service control upgrade authentication users restrictions ticket versions cve impersonate tickets
+2719	void exception usuario pagina test user withroles roles roles logado fulano authenticated oles order sensitive roles
+2727	version version springversion spring version min spring version spring check spring security reports incorrectly
+2793	boot websecurityconfigureradapter web security configurer adapter configure spring classes class adapter leverage security annotations requires extends web configurer
+2815	security afbdd source database extension problem ebeb gist github enableglobalmethodsecurity enable global method security enable global method prevents postprocessing post processing datasource data source data bean
+2913	amp security event spring strategy authentication session javaconfig java config javaconfig changesessionidauthenticationstrategy change session authentication strategy default java config fixation authenticationstrategy authentication strategy nulleventpublisher null event publisher null publisher
+2919	definition bean bean filter processor springframework login defaultloginpagegeneratingfilter default login generating filter factory defaultlogingeneratingfilter default login generating filter default login generating incorrectly url
+2935	mvc security amp permission apos tests context requests context test held multiple
+2941	andexpect expect request user security default status abc mvc username requestpostprocessor request post processor default post processor overrides additional defaultrequestpostprocessor default request post processor
+2948	schema xml context security org spring xsd instance message error incorrect upgrading wrong declarations
+3019	filter configuration spring authentication basic rememberme remember authentication post services docs basicauthenticationfilter basic authentication filter ignores remember
+3020	spring isuserinrole user role returns change request request servlet http role user httpservletrequest http servlet request role false defaults
+3135	hasanyrole role ant url matchers userdetailsservice user details service authorizerequests authorize requests service admin http requests orize antmatchers ant matchers method authenticated fails authorize
+632	unable to use non security related Filters defined in applicationContext xml SecurityConfigurationException HttpSecurityConfigPostProcessor invokeBeanFactoryPostProcessors orderFilters postProcessBeanFactory configureFilterChain createWebApplicationContext AbstractApplicationContext initWebApplicationContext ContextLoader Context Post
+819	Integer IDs are not supported despite documentation ensures they are IllegalArgumentException isInstanceOf Assert BasicLookupStrategy lookupObjectIdentities Instance setValues JdbcTemplate doInPreparedStatement readAclsById JdbcAclService query
+896	Authentication tag throws NPE if custom principal property evaluates to null NullPointerException AuthenticationTag Tag doEndTag Authentication
+908	BasePermission buildFromName name  does not find static permission in class IllegalArgumentException isTrue Assert
+933	global method security and aop aspectj autoproxy throws NullPointerException in some situations BeanCreationException NullPointerException BeanDefinitionValueResolver AbstractAutowireCapableBeanFactory Bean resolveReference applyPropertyValues AccessController resolveValueIfNecessary AbstractBeanFactory doCreateBean populateBean createBean
+1111	DefaultLoginPageGeneratingFilter does not work with messages ko KR properties CharConversionException ServletOutputStream print Output Servlet Stream
+1199	JdbcMutableAclService can apos t create acl object identity entry in PostgreSQL BadSqlGrammarException PSQLException SQLErrorCodeSQLException SQLErrorCodeSQLExceptionTranslator JdbcMutableAclService JdbcTemplate createObjectIdentity translate SQLException Code Translator SQLError update createAcl
+1280	NullPointerException in PersistentTokenBasedRememberMeServices when logging out twice NullPointerException PersistentTokenBasedRememberMeServices doFilter SecurityContextPersistenceFilter Filter FilterChainProxy VirtualFilterChain ChannelProcessingFilter DelegatingFilterProxy invokeDelegate LogoutFilter logout
+1300	ArrayIndex out of bounds in AclImpl IndexOutOfBoundsException NotFoundException ArrayList RangeCheck deleteAce AclImpl remove Check Range Array List Impl Ace
+1346	SessionManagementFilter  should  return  after  redirectStrategy sendRedirect request  response  invalidSessionUrl IllegalStateException handleException Request getSession HttpServletRequestWrapper HttpSessionRequestCache ExceptionTranslationFilter sendStartAuthentication RequestFacade saveRequest FilterChainProxy VirtualFilterChain Session
+1448	LocalVariableTableParameterNameDiscoverer doesn apos t find Generic method parameters NullPointerException MethodSecurityEvaluationContext addArgumentsAsVariables lookupVariable ExpressionBasedPreInvocationAdvice SpelNodeImpl getValueInternal PreInvocationAuthorizationAdviceVoter MethodReference VariableReference ExpressionUtils getValue
+1455	SecurityNamespaceHandler problems in OSGi environment  need to import spring security web packages BeanDefinitionParsingException FailFastProblemReporter reportMissingWebClasses fatal SecurityNamespaceHandler BeanDefinitionParserDelegate ReaderContext decorateBeanDefinitionIfRequired DefaultBeanDefinitionDocumentReader processBeanDefinition decorateIfRequired Bean
+1507	NullPointerException in RoleVoter if original UserDetails getAuthorities  is empty and if RoleHierarchy is enabled NullPointerException RoleVoter AuthenticatedVetoableDecisionManager FilterChainProxy VirtualFilterChain vote checkOtherVoters FilterSecurityInterceptor doFilter ExceptionTranslationFilter Voter Role
+1521	NullPointerException in SecurityContextPersistenceFilter with null SecurityContextRepository NullPointerException doFilter SecurityContextPersistenceFilter Filter DelegatingFilterProxy FilterChainProxy VirtualFilterChain ApplicationFilterChain StandardWrapperValve internalDoFilter StandardContextValve invoke
+1532	ProtectPointcutPostProcessor should not re attempt to match the pointcuts against methods when used with prototype beans URLClassLoader ReflectionBasedReferenceTypeDelegateFactory loadClass Launcher AppClassLoader findClass Loader WebappClassLoader ClassLoader createDelegate forName0
+1577	NPE in AuthorityUtils in combination with RoleHierarchy and User with empty authorities collection NullPointerException authorityListToSet AuthorityUtils SecurityExpressionRoot ReflectiveMethodExecutor getAuthoritySet NativeMethodAccessorImpl Method invoke DelegatingMethodAccessorImpl MethodReference Authority
+1662	NPE when when defining two  http  elements during registerFilterChainProxy NullPointerException HttpSecurityBeanDefinitionParser registerFilterChainProxy parseCustomElement BeanDefinitionParserDelegate DefaultBeanDefinitionDocumentReader SecurityNamespaceHandler Bean registerBeanDefinitions parse XmlBeanDefinitionReader parseBeanDefinitions
+1700	IOException in JaasAuthenticationProvider when loginConfig is a classpath resource in JBoss       GA BeanCreationException IOException SingletonBeanFactoryLocator useBeanFactory Factory Bean Locator Singleton
+1836	NPE when authorizing using JspAuthorizeTag NullPointerException valueOf HttpMethod DefaultFilterInvocationSecurityMetadataSource AntPathRequestMatcher DefaultWebInvocationPrivilegeEvaluator Enum TagTransformModel TagWriter AbstractAuthorizeTag JspAuthorizeTag authorizeUsingUrlCheck
+1878	DefaultFilterChainValidator throws UnsupportedOperationException BeanCreationException SpelEvaluationException AccessException IllegalArgumentException InvocationTargetException UnsupportedOperationException Bean AbstractAutowireCapableBeanFactory preInstantiateSingletons finishBeanFactoryInitialization AbstractBeanFactory DefaultSingletonBeanRegistry initializeBean Factory DefaultListableBeanFactory doCreateBean createBean
+1886	UnsupportedOperationException is thrown by DefaultFilterChainValidator if voter invokes an unsupported method UnsupportedOperationException DummyRequest getRemoteAddr IPRestrictionAccessVoter DefaultFilterChainValidator checkLoginPageIsntProtected AbstractAutowireCapableBeanFactory FilterChainProxy UnanimousBased invokeInitMethods afterPropertiesSet vote
+1890	BCryptPasswordEncoder throws IllegalArgumentException  Encoded password cannot be null or empty if password is empty  i e  not encoded IllegalArgumentException BCryptPasswordEncoder AbstractUserDetailsAuthenticationProvider Authentication DaoAuthenticationProvider UsernamePasswordAuthenticationFilter additionalAuthenticationChecks isPasswordValid Password ProviderManager Provider authenticate
+2017	ActiveDirectoryLdapAuthenticationProvider doAuthentication  does not catch IncorrectResultSizeException IncorrectResultSizeException IncorrectResultSizeDataAccessException NamingException searchForSingleEntryInternal SpringSecurityLdapTemplate ActiveDirectoryLdapAuthenticationProvider searchForUser AbstractLdapAuthenticationProvider Ldap search Authentication doAuthentication Internal Entry
+2066	ConcurrentModificationException when intercepting method pointcut ConcurrentModificationException ReflectionBasedResolvedMemberImpl checkConcurrentMod NonCachingClassLoaderRepository SoftHashMap HashMap AbstractMapIterator KeyIterator JoinPointSignature Java15AnnotationFinder ExactAnnotationTypePattern unpackAnnotations
+2087	GlobalMethodSecurityBeanDefinitionParser AuthenticationManagerDelegator attempts to get a bean using the concrete implementation NoSuchBeanDefinitionException BeanNotOfRequiredTypeException GlobalMethodSecurityBeanDefinitionParser AuthenticationManagerDelegator AbstractBeanFactory Bean doGetBean getBean Factory authenticate Definition Method Security
+2190	Support WebApplicationContext in any ServletContext attribute JspException IllegalStateException getRequiredWebApplicationContext WebApplicationContextUtils jspx meth sec 005fauthorize 005f0 AbstractAuthorizeTag JspAuthorizeTag access authorizeUsingAccessExpression
+2350	Warning when using       RC  with Spring Framework SpringSecurityCoreVersion performVersionChecks Version Checks perform Spring Security Core
+2382	AutowireBeanFactoryObjectPostProcessor does not work with BeanNameAutoProxyCreator BeanCreationException BeanDefinitionStoreException IllegalArgumentException instantiateUsingFactoryMethod AbstractAutowireCapableBeanFactory Bean ConstructorResolver createBeanInstance AbstractBeanFactory Factory DefaultSingletonBeanRegistry preInstantiateSingletons doCreateBean createBean
+2386	DEBUG statement with Failed to perform build and stacktrace should be stated as OK IllegalArgumentException ProviderManager init checkState AuthenticationManagerBuilder performBuild check Manager Provider Builder Authentication perform
+2499	GlobalMethodSecurityBeanDefinitionParser cannot refer to expressionHandler in parent context NoSuchBeanDefinitionException GlobalMethodSecurityBeanDefinitionParser LazyInitBeanDefinitionRegistryPostProcessor DefaultListableBeanFactory postProcessBeanDefinitionRegistry Bean getBeanDefinition Definition Registry Factory Listable Processor
+2515	Stackoverflow with  Bean AuthenticationManager isDebugEnabled WebSecurityConfigurerAdapter AuthenticationManagerDelegator SLF4JLocationAwareLog Logger ProviderManager authenticate Enabled Debug Manager Log
+2531	IllegalAccessError   Proxy  cannot access its superinterface AuthenticationConfiguration LazyBean JdkDynamicAopProxy Proxy ProxyFactoryBean defineClass0 getProxy getSingletonInstance getAuthenticationMangerBean AuthenticationConfiguration getProxyClass0 lazyBean newProxyInstance
+2604	Spring Security not working with configurations in Parent Application Contect JdkDynamicAopProxy Proxy ProxyFactoryBean defineClass0 getProxy getSingletonInstance getAuthenticationMangerBean AuthenticationConfiguration getProxyClass0 lazyBean newProxyInstance
+2656	Exception on using  sec frame options  with strategy whitelist BeanCreationException BeanDefinitionValueResolver AbstractAutowireCapableBeanFactory resolveManagedList Bean resolveReference applyPropertyValues resolveValueIfNecessary AbstractBeanFactory resolve populateBean doCreateBean
+2705	ExpressionBasedMessageSecurityMetadataSourceFactory configures null TrustResolver on DefaultMessageSecurityExpressionHandler SpelEvaluationException AccessException NullPointerException MessageDeliveryException IllegalArgumentException InvocationTargetException handleMessage AbstractMessageChannel WebSocketServerSockJsSession send ExceptionWebSocketHandlerDecorator LoggingWebSocketHandlerDecorator handleMessageFromClient Message StompSubProtocolHandler SubProtocolWebSocketHandler delegateMessages
+2757	AD attribute  apos sn apos  required when creating LdapUserDetails IllegalArgumentException hasLength InetOrgPersonContextMapper createUserDetails mapUserFromContext Assert RequestHolderAuthenticationFilter UsernamePasswordAuthenticationFilter Person Essence AbstractLdapAuthenticationProvider attemptAuthentication
+2831	RegexRequestMatcher AntPathRequestMatcher should not throw exception with invalid HTTP method in the request IllegalArgumentException valueOf HttpMethod AntPathRequestMatcher Enum requiresLogout LogoutFilter Http Method matches Logout doFilter
+3128	RoleVoter throws NPE with null Authentication AccessDeniedException NullPointerException RoleVoter extractAuthorities extract Authorities AffirmativeBased vote Role Voter Affirmative decide Based
+3132	securityBuilder cannot be null BeanCreationException IllegalStateException BeanInstantiationException instantiateUsingFactoryMethod AbstractAutowireCapableBeanFactory Bean ConstructorResolver createBeanInstance AbstractBeanFactory DefaultSingletonBeanRegistry Factory doCreateBean createBean getObject
+3160	Invalid HTTP verb throws   not IllegalArgumentException valueOf HttpMethod AntPathRequestMatcher DefaultFilterInvocationSecurityMetadataSource Enum getAttributes AbstractSecurityInterceptor matches Http Method Security
+1342	intercept url EL expressions are parsed or validated incorrectly IllegalArgumentException ExpressionBasedFilterInvocationSecurityMetadataSource isTrue Assert init processMap NativeConstructorAccessorImpl newInstance DelegatingConstructorAccessorImpl Constructor newInstance0 BeanUtils
+1395	intercept url access attribute should support spaces when specifying a list of authorized roles BeanCreationException IllegalArgumentException afterPropertiesSet AbstractSecurityInterceptor AbstractAutowireCapableBeanFactory Bean invokeInitMethods AbstractBeanFactory DefaultSingletonBeanRegistry preInstantiateSingletons createBean doCreateBean initializeBean
+2016	LDAP based unit tests for spring security config project fail NameNotFoundException LdapException embeddedServerCreationC ontainsExpectedContextSourceAndData LdapServe rBeanDefinitionParserTests convert LdapException LdapTemplate LdapUtils Ldap runRefle ctiveCall
+2165	Can not parameterize remember me  token validity seconds createSAXParseException SAXParseException createSAXParseException ErrorHandlerWrapper XMLSchemaValidator reportError XSIErrorReporter reportSchemaError handleStartElement XMLErrorReporter processOneAttribute processAttributes Error
+2822	IllegalStateException  Cannot apply DaoAuthenticationConfigurer to already built object IllegalStateException BeanCreationException Bean postProcessPropertyValues AutowiredAnnotationBeanPostProcessor AbstractAutowireCapableBeanFactory preInstantiateSingletons DefaultSingletonBeanRegistry AbstractBeanFactory DefaultListableBeanFactory finishBeanFactoryInitialization Factory createBean
+2851	java lang NoClassDefFoundError  org springframework dao DataAccessException on configuring http rememberMe NoClassDefFoundError DataAccessException RememberMeConfigurer createPersistentRememberMeServices createRememberMeServices AbstractConfiguredSecurityBuilder Remember getRememberMeServices init Services AbstractSecurityBuilder performBuild doBuild

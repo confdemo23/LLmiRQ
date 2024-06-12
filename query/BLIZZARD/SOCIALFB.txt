@@ -1,0 +1,15 @@
+92	operations friends facebook argument request data connection parameter pictures property API binding Facebook API changed pictures property objects longer string object existing API binding deserialize picture property mid August Facebook applied breaking change apps reconfigured temporarily opt change https developers facebook roadmap october details Spring Social Facebook API binding fixed address change time October change
+33	count data post mixin references postmixin post mixin post people npe sends likes
+42	exception error uncategorized handler amp httpclienterrorexception http client error exception facebook org http springframework facebookerrorhandler facebook error handler handle social resourcenotfoundexception resource exception resource
+80	facebook facebookerrorhandler facebook error handler exception case errors application post handler user cases operationnotpermittedexception operation permitted exception operation permitted thrown insufficientpermissionexception insufficient permission exception insufficient permission
+97	accesstoken access token facebooktemplate facebook template access facebook applicationnamespace application namespace application template namespace token initialize called constructing
+128	error canvassignincontroller canvas sign controller apps sign user credential facebook canvas controller steps
+138	location exception return location context checkinposts processing deserialization json jackson map check inposts
+168	facebook paging post posts parameters pagingparameters paging parameters vxs dqgcblfdirt blfdirt ioor paging token
+169	property operations time profile useroperations user operations updated user fields add
+141	friends explorer fields link operations image photos likesoperations likes operations graph likeoperations operations getpagesliked ages doesn apos cover obj
+165	prof facebook birthdate profile useroperations user operations facebook range getuserprofile user profile operations unknow spring soical release set birt hdate age range spring social api returns
+189	custom field deserializers jackson achievement achievementpointsdeserializer achievement points deserializer points primitives null null error deserializing
+75	FqlResult getList String fieldName  FqlResultMapper T  mapper  throws null pointer when field value is null NullPointerException FqlResult FbStreamItemMapper getList mapObject FqlTemplate Fql List Result Item Mapper Stream
+153	V  API   FeedOperations getFeed  throws exception deserializing photo post JsonMappingException UncategorizedApiException FeedTemplate deserialize deserializePost StdValueInstantiator createFromStringFallbacks deserializeList getFeed BeanDeserializerBase BeanDeserializer SettableBeanProperty createFromString
+163	JsonMappingException Upon FeedOperations getPost  contentId   Invocation JsonMappingException StdValueInstantiator createFromStringFallbacks deserialize createFromString BeanDeserializer SettableBeanProperty BeanDeserializerBase String deserializeAndSet deserializeFromString FieldProperty

@@ -1,0 +1,45 @@
+74	set option test application app system context config options namespace attributes parsed properly option type libs archives files parsed properly namespace incomplete configurations
+181	test option path list application output transaction data Add Spring option compile test Add build option Dspring compile test latest Spring release
+184	hive script test set context server client execute Hive tests Hive Cascading tests working properly attention
+197	set application hive client staging yarn distribute resource File distribution fails client localizer multiple submits client localizer submit multiple app instances localizer distribution problem staging dir appmaster clears files
+269	application preserve set execution store ist res yarn Update Boot breaking causing compile errors major boot classes moved renamed
+276	set config yarn manager bean container application configurer incontinencies boot config properties props named badly reflect settings framework duplicates basically leftovers
+280	classpath set add environment system parse properties mixed Add missing boot props classpath Reflect existing settings javaconfig xml boot config props tweak auto configurers
+381	job set application launch yarn report configuration launcher Boot support launch context args list amp apos define container arguments list amp apos launchcontext arguments amp apos map Introduce key amp apos launchcontext argumentsList amp apos takes simple list values order
+390	step request set container exit service message job Remote batch step exit code updated remote batch steps executed yarn containers exit code field updated database exit code left amp apos executing amp apos amp apos completed amp apos depending step failed STEP EXECUTION STEP STATUS EXIT CODE master COMPLETED COMPLETED remoteStep partition COMPLETED EXECUTING remoteStep partition COMPLETED EXECUTING master FAILED FAILED remoteStep partition FAILED EXECUTING remoteStep partition FAILED EXECUTING master COMPLETED COMPLETED remoteStep partition COMPLETED COMPLETED remoteStep partition COMPLETED COMPLETED
+515	set container allocate priority containers allocation count options Support dots yarn container group names group foo jee request yarn containercluster foo jee fails Spring MVC bindings remove jee assuming file delimiter
+532	container cluster grid option launch task member set Container cluster start wrong member Defining groups starting result allocated container matched group running effectively starting wrong container caused fact grid projection attached projected grid cluster created allowing projection matched handle attach doesn amp apos happen group started
+562	yarn app application master parse client container set Missing trailing slash spring yarn applicationDir path fails localize trailing slash included spring yarn applicationDir property relevant files distributed HDFS localized appmaster container minor issues automatically handled files localized correctly error launch container fails Error Unable access jarfile identifying issue
+96	file shell text exception fsshell shell passed uri throws
+130	distributedcachefactorybean distributed cache factory bean instance hadoop filesystem bean factory cache loader hdfsresourceloader hdfs resource loader properties distributed closes files ystem causing oop app fail
+246	streamsholder streams holder flush stream writer output null holder getstream stream logic incorrect outputstreamwriter output stream writer
+247	yarn uri factory configuration config configurationfactorybean configuration factory bean address property resource bean sets wrong
+325	keepcontextalive context alive amp alive appmaster appmaster yarn exit batch apos context batchappmaster batch appmaster
+335	flush streamsholder streams holder textfilewriter text file writer npe data void file writer holder override text class
+349	point view amp source boot application spring push yarninfoapplication yarn info application yarnpushapplication yarn push application yarn info wrong
+350	values doesn bucket modulo hash amp java method apos size hashmethodexecutor hash method executor executor work negative
+365	lifecycle store hdfs directory object start support output outputstoreobjectsupport output store object support writer fail
+373	failures shdp test builds failure mind random mindintegrationrawtests mind integration raw tests test integration raw ests tests
+394	mapreduce release job cfg job configuration utils springframework jobutils job utils getrunningjob running job apos map reduce local mode
+408	lease template dfs exception org client dataset connection dataset data datasettemplate dataset template doesn apos close writer thrown
+423	writers partition partition writer resources writer partitions store data apos doesn clean
+427	partition strategy defaultpartitionstrategy default partition strategy default enhancements compiler tests message messagepartitionstrategy message partition strategy doesn apos spel
+430	requestmapping request mapping mvc request boot yarn endpoint mvc endpoints cluster container yarncontainerclustermvcendpoint yarn container cluster mvc endpoint yarn registered
+436	writer partition support pollingtasksupport polling task support timeout amp idletimeout idle timeout task data file partitiontextfilewriter partition text file writer text leave prefix suffix
+447	writer textfilewriter text file writer partition writers amp trouble path timeout method configuration partitiontextfilewriter partition text file writer partition text file doesn apos
+460	output command yarnpushcommand yarn push command push instance info handleoutput handle output yarn handle wrong typo
+469	exit container component container methods return user yarncomponent yarn component yarn method defaultyarncontainer default yarn container default
+476	strategy partition configuration bean config partitionstrategy partition strategy resolver override string annotation doesn apos beans
+482	settings trouble writer rollover textfilewriter text file writer datanode dies errors file normal text unable continue close
+531	method runner shutdown block exit machine status hooks launcher appmaster appmasterlauncherrunner appmaster launcher runner call causing jvm
+187	yarn examples batchpartitiontests batch partition tests batch partition batch yarn mac tests cluster miniyarncluster mini yarn cluster mini tests fails
+278	allocator config settings java mem cpu resource container boot javaconfig java config properties missing ocator
+279	files client control app sense container model yarnappmaster yarn appmaster yarn boot precise container localized local ized
+356	lzo splittablecompressioncodec splittable compression codec codec record split level twitter stream interface lzop remove unsupported codecs code
+385	node staticeventingappmasters static eventing appmasters containers status exit static manager appmasters eventing nodemanager node manager staticeventingappmaster static eventing appmaster appmaster hangs container
+409	file exception path error hadoop functionality debugging sort min times cdh awkward recreate failure
+245	Using the Dataset support get NPE when saving POJOs containing null values in some fields AppendWriteException NullPointerException HdfsWritingMessageHandler write FileSystemDatasetWriter DataFileWriter Writer ReflectDatumWriter DatasetTemplate AvroWriter doWrite GenericDatumWriter File
+374	Race condition for overwrite FileNotFoundException INodeId checkId checkLease analyzeFileState check FSNamesystem NameNodeRpcServer getAdditionalBlock INode addBlock Block
+375	RollingFileNamingStrategy gets into trouble with certain filenames NumberFormatException NumberFormatException forInputString Input String Format Number Exception
+510	Append reopen may fail ChecksumException verifyChunkedSums read DataChecksum RemoteBlockReader2 DFSInputStream ByteArrayStrategy DataInputStream readBuffer fillBuffer Data readNextPacket
+572	FsShell chgrp fires a chmod operation on hadoop instead of chgrp IllegalArgumentException FsShellPermissions Chmod processOptions NativeMethodAccessorImpl ReflectionUtils DelegatingMethodAccessorImpl Method invoke invokeMethod changePermissions Permissions

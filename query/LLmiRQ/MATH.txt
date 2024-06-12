@@ -1,0 +1,205 @@
+42	 Fraction FractionFormat parse
+60	 ProperFractionFormat Fraction ParsePosition
+85	 SimpleRegression
+151	 MathUtils
+153	 RandomDataImpl MathUtils
+166	 Gamma Beta
+175	 ChiSquareTestImpl ChiSquareTestTest
+184	 AbstractIntegerDistribution AbstractDistribution
+191	 SummaryStatistics SumOfLogs
+197	 RandomDataImpl
+198	 ComplexFormat AbstractFormatter JTextFied
+204	 BrentSolver
+205	 FastCosineTransformer
+207	 GeneticAlgorithm Chromosome
+214	 RungeKuttaIntegrator FixedStepIntegrator StepHandler DiscreteEventsHandler
+226	 CorrelatedRandomVectorGenerator GaussianRandomGenerator JDKRandomGenerator RealMatrixImpl TestMath
+238	 MathUtils
+240	 MathUtils MathUtilsTest
+241	 MathUtils MathUtilsTest
+252	 Fraction
+260	 Frequency
+272	 SimplexSolver LinearObjectiveFunction PivotSelectionRule AbstractLinearOptimizer SimplexTableau SimplexSolverEvent SimplexPhase1Solver SimplexPhase2Solver NonLinearConjugateGradientOptimizer RealPointValuePair
+273	 SimplexTableau
+282	 ChiSquaredDistributionImpl cumulativeProbability
+286	 SimplexSolver LinearObjectiveFunction LinearConstraint RealPointValuePair
+288	 SimplexSolver LinearObjectiveFunction LinearConstraint
+290	 SimplexTableau SimplexSolver LinearObjectiveFunction LinearConstraint
+292	 TestUtils AssertionFailedError
+293	 SimplexSolver SimplexTableau Array2DRowRealMatrix
+294	 RandomDataImpl MathUtils MathRuntimeException
+305	 KMeansPlusPlusClusterer ClusterAnalysisTest assignPointsToClusters
+306	 Complex
+307	 BigReal FieldElement FieldMatrix
+309	 RandomDataImpl
+322	 ContinuousOutputModel EmbeddedRungeKuttaIntegrator EventState FirstOrderIntegrator GraggBulirschStoerIntegrator HighamHall54Integrator SwitchingFunction SwitchingFunctionsHandler
+338	 AdaptiveStepsizeIntegrator DormandPrince853Integrator EmbeddedRungeKuttaIntegrator GraggBulirschStoerIntegrator
+341	 PolynomialFunction testfirstDerivativeComparisonFullPower
+343	 UnivariateRealFunction BrentSolver
+344	 UnivariateRealFunction BrentSolver
+347	 UnivariateRealFunction BrentSolver
+352	 LevenbergMarquardtOptimizer
+358	 FirstOrderDifferentialEquations computeDerivatives DormandPrince853Integrator integrate
+362	 LevenbergMarquardtOptimizer VectorialConvergenceChecker
+368	 OpenMapRealVector
+369	 BisectionSolver UnivariateRealSolverImpl UnivariateRealFunction
+371	 PearsonsCorrelation TTestImpl TDistribution
+373	 StatUtils sum
+382	 MicrosphereInterpolator
+391	 ArrayRealVector
+392	 OLSMultipleLinearRegression GLSMultipleLinearRegression
+398	 MathUtilsTest
+405	 LevenbergMarquardtOptimizer VectorialPointValuePair
+406	 LevenbergMarquardtOptimizer WeightedObservedPoints AbstractCurveFitter MultivariateVectorOptimizer
+408	 GLSMultipleLinearRegressionTest
+409	 MultipleRegression OLSMultipleLinearRegression GLSMultipleLinearRegression RealMatrix
+411	 MultipleRegression newSampleData
+418	 Percentile
+429	 KMeansPlusPlusClusterer
+465	 SingularValueDecompositionImpl getRank Array2DRowRealMatrix
+479	 FastMath
+480	 FastMath
+482	 FastMath
+483	 FastMath
+486	 FastMath
+489	 FastMath
+493	 FastMath
+494	 FastMath StrictMath
+505	 TestUtils
+519	 GaussianFitter LevenbergMarquardtOptimizer Gaussian
+529	 ClirrReport AbstractMultipleLinearRegression
+530	 GLSMultipleLinearRegression
+531	 OLSMultipleLinearRegression
+532	 MathUtils
+533	 ResizableDoubleArray
+540	 AbstractIntegerDistribution
+546	 KMeansPlusPlusClusterer EmptyClusterStrategy
+552	 MultidimensionalCounter
+555	 MathUtils
+572	 ArrayFieldVector
+575	 InvalidRepresentationException AbstractListChromosome
+578	 DescriptiveStatistics
+582	 StatUtils Percentile
+588	 MeanTest UnivariateStatisticAbstractTest TestUtils
+619	 globalFitInfo
+640	 AbstractRandomGenerator nextInt() nextLong()
+644	 HypergeometricDistributionImpl
+645	 DemoBugOpenMapRealVector OpenMapRealVector MathRuntimeException
+648	 SimpleRegression
+691	 SummaryStatistics Variance FastMath
+699	 inverseCumulativeDistribution
+704	 Variance.evaluate() Mean
+718	 BinomialDistributionImpl inverseCumulativeProbability cumulativeProbability checkedCumulativeProbability
+722	 Complex
+723	 BitStreamGenerators MersenneTwister Well generators setSeed nextGaussian
+728	 BOBYQAOptimizer BOBYQAOptimizerTest
+744	 BigFraction BigInteger
+760	 DescriptiveStatistics ListUnivariateImpl
+770	 SymmLQ SymmLQTest ConjugateGradient
+775	 ListPopulation
+776	 ElitisticListPopulation
+778	 Dfp
+779	 ListPopulation
+781	 SimplexSolver optimize
+782	 BrentOptimizer
+789	 CorrelatedRandomVectorGenerator RectangularCholeskyDecomposition Array2DRowRealMatrix
+790	 MannWhitneyUTest calculateAsymptoticPValue
+798	 PolynomialFitter
+802	 OpenMapRealVector RealVector ArrayRealVector
+803	 RealVector OpenMapRealVector
+805	 Percentile
+812	 RealVector RealMatrix
+813	 SimplexSolver LinearObjectiveFunction LinearConstraint PointValuePair GoalType SimplexSolver.optimize
+821	 SparseRealVectorTest OpenMapRealVector
+825	 LaguerreSolver
+828	 SimplexSolver LinearConstraintSet LinearObjectiveFunction NonNegativeConstraint OptimizationData PointValuePair
+835	 Fraction
+836	 Fraction FractionTestByAxiom FractionConversionException
+843	 Precision
+844	 HarmonicFitter ParameterGuesser
+848	 EigenDecomposition SchurTransformer RealMatrix MatrixUtils
+855	 BrentOptimizer
+859	 RealDistribution
+864	 CMAESOptimizer BaseAbstractScalarOptimizer BaseOptimizer
+865	 CMAESOptimizer FitnessFunction
+879	 CMAESOptimizer
+880	 PolygonsSet
+881	 MultivariateRealDistribution getSupportLowerBound getSupportUpperBound isSupportLowerBoundInclusive isSupportUpperBoundInclusive isSupportConnected
+891	 T SpearmansCorrelation NaturalRanking NaNStrategy
+899	 MersenneTwister
+900	 LocalizedFormatsTest
+904	 FastMath
+905	 FastMath
+914	 BaseMultiStartMultivariateOptimizer
+927	 GammaDistribution AbstractRealDistribution AbstractWell BitsStreamGenerator
+929	 MultivariateNormalDistribution
+930	 SimplexSolver LinearConstraint LinearObjectiveFunction LinearConstraintSet PointValuePair MaxIter NonNegativeConstraint
+949	 LevenbergMarquardtOptimizer BaseOptimizer SimplexOptimizer
+962	 Vector3DFormat
+985	 BicubicSplineInterpolator BicubicSplineInterpolatingFunction
+993	 GaussNewtonOptimizer ConvergenceException SingularMatrixException LocalizedFormats
+996	 Fraction
+1005	 MathArrays
+1022	 Logistic Sigmoid
+1033	 KalmanFilter
+1037	 IntegerDistributionAbstractTest GeometricDistributionTest
+1045	 EigenDecomposition
+1051	 EigenDecomposition MaxCountExceededException
+1056	 PoissonDistribution FastMath
+1058	 Beta LogNormalDistribution WeibullDistribution FastMath
+1059	 Math FastMath
+1065	 EnumeratedRealDistribution
+1067	 Beta
+1068	 KendallsCorrelation
+1070	 Precision
+1088	 TMultidimensionalCounter MultidimensionalCounter
+1096	 WelzlEncloser2DTest WelzlEncloser3DTest
+1110	 OLSMultipleLinearRegression QRDecomposition
+1111	 org.apache.commons.math3.fitting
+1112	 Percentile P Square algorithm
+1116	 LevenbergMarquardtOptimizer getWeight MultivariateVectorOptimizer
+1118	 Complex MathUtils
+1129	 DescriptiveStatistics Bar
+1131	 KolmogorovSmirnovTest NormalDistribution
+1134	 BicubicSplineInterpolatingFunction BivariateFunction
+1135	 MonotoneChain ConvexHullGenerator2DAbstractTest
+1138	 BicubicSplineInterpolator BicubicSplineInterpolatingFunction
+1145	 MannWhitneyUTest
+1146	 Mean SummaryStatistics
+1148	 MonotoneChain AbstractConvexHullGenerator2D
+1149	 DummyStepInterpolator NordsieckStepInterpolator
+1152	 EnumeratedDistribution
+1154	 BinomialTest ChiSquareTest RandomGenerator
+1165	 FuzzyKMeansClusterer
+1167	 OLSMultipleLinearRegression QRDecomposition
+1174	 PolygonsSet
+1192	 DescriptiveStatistics setWindowSize
+1197	 KolmogorovSmirnovTest
+1203	 EmpiricalDistribution NormalDistribution ConstantRealDistribution
+1204	 UnivariateSolverUtils
+1205	 AbstractStorelessUnivariateStatistic AbstractUnivariateStatistic Mean
+1206	 AbstractEvaluation
+1208	 EmpiricalDistribution ConstantRealDistribution
+1209	 PoissonDistribution
+1214	 SolutionCallback
+1224	 oHighamHall54Integrator SpearmansCorrelation
+1229	 ResizableDoubleArray
+1230	 SimplexSolver
+1231	 MicrosphereInterpolator
+1234	 EmpiricalDistribution SummaryStatistics NormalDistribution
+1241	 Gamma
+1251	 KohonenUpdateAction
+1255	 KohonenUpdateAction
+1257	 NormalDistribution
+1269	 FastMath
+1277	 KendallsCorrelation
+1283	 Gamma FastMath Lanczos
+1294	 PolynomialUtils PolynomialUtilsTest
+1295	 NonLinearConjugateGradientOptimizer BracketFinder
+1296	 DescriptiveStatistics GeometricMean
+1300	 BitsStreamGenerator MersenneTwister
+1310	 KolmogorovSmirnovTest ExactP
+1356	 HypergeometricDistribution probability
+1376	 SimplexOptimizer
+1384	 HypergeometricDistribution BinomialDistribution SaddlePointExpansion
+1396	 UniformIntegerDistribution

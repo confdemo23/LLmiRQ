@@ -1,0 +1,84 @@
+217	 Flat3Map
+219	 CollectionUtils ListUtils
+221	 CompositeCollection CompositeMap CompositeSet
+222	 CollectionUtils ListUtils
+228	 MultiValueMap MultiHashMap
+237	 MultiValueMap
+240	 MultiValueMap
+249	 SetUniqueList
+261	 Flat3Map
+262	 AbstractLinkedMap
+265	 TreeBag
+266	 MultiKey
+279	 LRUMap put get firstKey
+284	 CollectionUtils ListUtils
+288	 ListUtils
+294	 CaseInsensitiveMap
+304	 SetUniqueList
+307	 SetUniqueList
+315	 CollectionUtils ListUtils
+316	 LRUMap
+323	 CaseInsensitiveMap
+331	 CollatingIterator
+349	 CollectionUtils ListUtils
+350	 MapUtils ParseException
+353	 AbstractLinkedMap LinkedMap
+357	 CollectionUtils ListUtils
+358	 CollectionUtils ListUtils
+359	 ListUtils
+360	 FilterListIterator GrowthList PredicateUtils
+363	 TransformedMap HashMap NOPTransformer.getInstance ByteArrayOutputStream ObjectOutputStream.writeObject
+371	 CollectionUtils ListUtils
+372	 ComparatorUtils TransformerUtils Comparator Transformer
+379	 CollectionUtils
+384	 MapUtils
+386	 CollectionUtils ListUtils
+388	 FactoryUtils  PrototypeFactory
+389	 TransformerUtils
+391	 MapUtils
+400	 CollectionUtils
+406	 ListUtils HashBag
+407	 ListOrderedSet Collection
+409	 ListOrderedSet
+413	 DualHashBidiMap DualHashBidiMap.EntrySet DualHashBidiMap.View DualHashBidiMap.View.removeAll(Collection<?> coll) EntrySet<K V> KeySet<K> Values<V>
+415	 AbstractLinkedList
+424	 CompositeCollection CompositeSet TreeBag
+426	 ListOrderedSet AbstractCollection
+427	 SetUniqueList ListOrderedSet AbstractCollection
+435	 CollectionUtils ListUtils
+437	 CollectionUtils ListUtils
+444	 SetUniqueList
+453	 SwitchTransformer
+454	 Flat3Map
+470	 TransformedMap TransformedMap
+472	 AbstractMapBag
+474	 ListOrderedMap
+475	 PassiveExpiringMap ConstantTimeToLiveExpirationPolicy
+487	 CollectionUtils
+488	 CollectionUtils PredicatePlease
+493	 CollectionUtils
+495	 UnmodifiableTrie Trie
+496	 UnmodifiableBoundedCollection
+500	 MultiMap
+501	 MultiKeyMap
+506	 CollectionUtils CollectionUtils
+507	 ComparatorUtils
+512	 HashCodeBuilder EqualsBuilder CollectionUtils AbstractCollectionDecorator AbstractMapDecorator
+516	 MapUtils
+524	 ListOrderedSet
+525	 PatriciaTrie prefixMap
+531	 CollectionUtils IntegerEquator
+534	 CollectionBag TreeBag
+536	 MapUtils ConcurrentHashMap ConcurrentSkipListMap
+537	 PredicateUtils anyPredicate Collection
+543	 AbstractCollectionDecorator AbstractListDecorator
+544	 CollectionUtils ListUtils
+545	 CollectionUtils ListUtils
+555	 TreeBag TransformedCollection
+558	 ListOrderedSet
+566	 IteratorUtils
+570	 NullPointerException IllegalArgumentException
+576	 MultiKey MultiKeySerializationTest MultiKey2
+577	 AbstractPatriciaTrie prefixMap
+586	 AbstractPatriciaTrie
+597	 CatchAndRethrowClosure

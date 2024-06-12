@@ -1,0 +1,116 @@
+38	repository resource set link collection entity configuration custom Listing relations Accept application spring data compact json link loading relation http localhost entity relation application spring data compact json Accept Type result link application json Accept Type worked works http localhost entity
+45	access object link http resource patch path mvc IDs href objects displayed Browsing http localhost sla gist
+143	property resource entity serializer link type deserializer association entity links fails Github Author jhiemer Github Updated issue automatically imported github Jon link embedded links error remove links putting element desired behaviour Sample description adasdadsasdads Customer Corp links rel href http localhost web api customer rel customer customer users href http localhost web api customer users rel customer customer credentials href http localhost web api customer credentials rel customer customer addresses href http localhost web api customer addresses rel customer customer sector href http localhost web api customer sector response javascript message Property amp apos links amp apos entity model customer Customer additional note embedded entities http stackoverflow questions spring data uri entity POST fails remove links exporter find customer database
+163	nested http properties methods type resource json property relations embedded Mongo Documents rendered documents subdocuments relation ship render correctly accept POST
+213	repository set resource handler http configuration hal converter presentation smooth migration HAL people bit longer migration HAL time people opportunity smooth migration enabling representation bugfixes SDF filed sorting bug
+244	repository schema controller resources resource root headers link SDR Schema json schema schema schema output SDR specification http json schema org documentation html version
+276	set configuration resource repository body http entity mapping returned URL ends works fine access http localhost product http localhost product response exception log response body amp apos testing SNAPSHOT
+340	property properties type serializer deserializer bean entity http persistent properties rendered Boot issue reference
+354	resource type repository patch resources property controller schema Revamp JSON Schema support current draft spec support ALPS Evans expose API meta data JSON Schema JSON Hyper Schema format http json schema org
+381	repository uri configuration set mapping resource request controller Controllers Alps repository listing listed root base URI configured
+492	repository patch controller resources object schema resource root JSON Schema reports primitive numbers object type java Sample foo yields JSON Schema document foo type object
+617	set json configuration http repository alps link body Requests Accept header application json compact representation controller methods handling compact representation explicit produces clause request mapping favored client sends Accept application json tweak mappings implicitly match situation
+665	repository schema controller resources resource root property headers consistent scheme property titles JSON Schema
+705	set resource property repository link configuration custom entity versioned entity returned spring data expect execute simply supplying fields returned broken consequence DATAREST entity exposed API list amp apos returned version property operation performed version property required entity persisted opposed PATCH logic changed fields supplied JPA check version refuse updating version missing API client expected send property received fact client aware property exists amp apos called
+883	property resource properties parameter sort find link pageable Sort mapping Jackson customizations field names Sort instance derived HTTP request fields forwarded repository Jackson customizations field customizations applied customized field representation request parameter sort expose underlying property names
+953	empties nested collection scenario Parent Child entities Item Embeddable Entity Parent repository exported Posting structure works fine empties Item collection Child project reproduce issue https github mduesterhoeft sdr nested list scenario working Hopper started broken Hopper requests issuing Create parent POST parents child items test update parent parents child items test items collection empty
+200	items lineitems items class order associations rendered items lineitems items embedded
+222	reference match path escape matches
+238	rel href links entity data workload postcode post code jackson json persistent overwritten written values
+246	repositories instance proxy factory lookup listener doesn amp access repository validatingrepositoryeventlistener validating repository event listener validating event lenient len ient
+254	category builder data module npe spring long persistentproperty persistent property property rest org springframework data webmvc web mvc json persistententityjackson persistent entity jackson persistent entity jackson properly handle jpa transient
+261	rel provider rels api contrast amp root resource apos components repositoryrelprovider repository rel provider repository registered
+288	repository repositoryschemacontroller repository schema controller validation schema javax controller depend
+301	repository entity method url resource httpmethod http method character org object springframework illegal apos projection project ion request
+311	issue argument compact request browser header json method repositorysearchcontroller repository search controller values executesearchcompact execute search compact execute search mismatch path variable
+320	property jsonproperty json property request amp builder updatebuilder update builder jackson serialization property problem fields json
+327	associations merger domain object collections domainobjectmerger domain object merger root references aggregate patch collection removed defaulted def aulted empty
+329	bean beans container amp method bean apos class creation trigger repositoryrestmvcconfiguration repository rest mvc configuration repository rest mvc configuration eager initialization
+424	hal default converter media hal json httpmessageconverter http message converter types resource configuration http message ordered standard
+434	apos methods argument resolver persistent resource persistententityresourcehandlermethodargumentresolver persistent entity resource handler method argument resolver method entity handler read swallow exceptions
+445	metadata mapping collection constructor type resource domain types repository repositorymetadata repository metadata repositorycollectionresourcemapping repository collection resource mapping
+446	utils domain type interface customizations metadata repository breaks resourcemetadata resource metadata repositoriesutils repositories utils remove usage repositories custom izations resource
+448	regression mapping repository lookup datarest repositoryresthandlermapping repository rest handler mapping place repository path handler rest handling requests
+460	methods bean subtype configuration callbacks amp management configuration bean repository repositoryrestmvcconfiguration repository rest mvc configuration rest mvc called proxied
+485	method payload property amp object request reference spring case rejection repositorypropertyreferencecontroller repository property reference controller repository controller createpropertyreference create property reference create work empty content supplied
+498	type json request patch charset amp parameters incomingrequest incoming request request incoming recognized content header media type
+507	exception conflict argument http illegalargumentexception illegal argument exception apos method integrity error httpheaders http headers repositoryrestexceptionhandler repository rest exception handler repository rest handler throws illegal argument
+519	uris resource entity repository links pageable repositoryentitylinks repository entity links sorts search populate uri
+537	array element patch apos replaceoperation replace operation replace object objects json elements remove json request
+556	mapper property objectmapper object mapper data strategy rest patch custom case object jackson field naming
+582	handler event pre handlenewuser handle user handler method enhancerbyspringcglib enhancer spring cglib preauthorize pre authorize user amp secured event invoked invoke
+594	class object mapper springbootrepositoryrestmvcconfiguration spring boot repository rest mvc configuration configuration jacksonobjectmapper jackson object mapper objectmapper object mapper bean mvc boot extending spring repository rest removes jackson
+605	patch entities request map check json json pointer domerge merge property nullpointerexceptions null pointer exceptions null exceptions issuing requests properties
+655	parametermetadata parameter metadata parameter message parameter exception typo metadata checks
+699	java sort variable templates repository resources mapping repositorymethodresourcemapping repository method resource mapping methods resource link search pagination pageable
+747	doesn projections projection amp definition selection configuration projection hierarchy projectiondefinitionconfiguration projection definition configuration select project ion concrete type
+754	groovy object schema test domain amp persistententitytojsonschemaconverter persistent entity json schema converter metaclass meta class json meta spring data rest throws npe exposing domai dom
+798	path errors fields level amp validation validationerrors validation errors errors validation nested nested reported top
+805	type photo string dob invalidvalue invalid givenname nationalid national familyname family message constraint repositoryconstraintviolationexceptionmessage repository constraint violation exception message repository constraint violation exception produces inaccurate output
+847	object event method case domain object aftersaveevent save event savedobject saved object invokesave invoke save saveandreturn save return repositoryentitycontroller repository entity controller repository entity controller save return calls save wrong
+864	entity persistent entity springframework http localized map serializer nestedentityserializer nested entity serializer nested support maps
+872	data type rest springframework json serializer jackson http info java apos jsontypeinfo json type info supported
+885	json gtin data type rest operation patch entity string class patch object
+887	custom local modules object result json evaluator money deserialize jackson jsonlateobjectevaluator json late object evaluator late hard coded code objectmapper object mapper mapper
+889	patch json patchexception patch exception statements cases evaluator json property implementation values silently nullifies null ifies
+898	entitylookupconfiguration entity lookup configuration lookup message configuration entity assertion typo
+906	default resolver argument pageable spring hopper mapping fixes boot mappingawarepageableargumentresolver mapping aware pageable argument resolver war accidentally drops returned delegate pageablehandlermethodargumentresolver pageable handler method argument resolver handler method aware
+919	patch map json attributes object child entity rest persons array object silently dropping drop ping elements
+21	nsn prev nsn info loaninfo loan info loan findbynsn find nsn findby find loaninfo paging parameters
+48	json entity rest search http entity findentitybyid find entity application links spring executing find data compact return
+50	method values framework property content converter property links entity entitytoresourceconverter entity resource converter properties null json
+83	controller mapping rest spring uri rrhm request classes case precedence implementations impl ementations annotated
+107	resource customer restresource rest resource methods findbyuserid find user paging customerrepository customer repository user rest exported false
+217	findall find method restresource rest resource person entites pagingandsorting paging sorting resource paging crud json sorting based repository listed find apos exported false
+247	resources npe resource object entity apos return repository query calling count queries mongodb mongo repositories mongo
+250	product manufacturer string product list attributes arraylist array list repository embedded associations rendered
+253	properties nullpointerexception null pointer exception exception checks null modifier pointer clauses property associations associationomittingserializermodifier association omitting serializer modifier association omitting serializer suffers potential
+307	tomcat handler method controller repositorycontroller repository controller uri repository returns mapping lookup root discovered
+316	deserializer uri uristringdeserializer uri string deserializer client string uri guard tempalte template variables templates submitted mitted
+328	application post serialization sample entities properties property auditing auditoraware auditor aware enablemongoauditing enable mongo auditing serialization errors type renamed
+384	sort interface findbylastname find lastname sort trigger repository lastname lastname query method parameters
+388	exception exception spring handler controller illegalstateexception illegal exception rest trace patch event apos advices annotation based handling
+411	controller base url list baseuri base uri boot repositoryrestconfiguration repository rest configuration uri repository baseurl base url mapping workig work
+423	user converter service rest business user beans conversion controller method spring data registered conversionservice conversion service overriding individual resources
+461	json requests properties entities jsonignored json ignore existing jsonignore json ignore updated nulled
+490	rest amp resources spring apos representations resource controller fact html repository controllers control lers invoked invoke handled manually dedicated media type
+500	property persistent entity category property accessor persistententity persistent entity proxy rendering lazy loading proxies fails
+502	links organisation tag entity tags organisation repository idea case attempt convenient search repository
+514	service service services path data instance restresource rest resource instances href apos custom rest resource link doesn load
+523	post content data amp method apos request artifact string collector unable augment collection association
+581	version entity bean type server projection projections isinstance instance projection basicpersistententity basic persistent entity etag getversioninformation version fails proxied entities project ions
+597	alps alpscontroller alps controller spring controller working
+599	param rest relationship query github interface pagingandsortingrepository paging sorting repository param findby find find expects visible
+662	apos amp jackson post pet json jpa info entity type unable subclassed classed property
+683	jackson profile translation github type enum enableenumtranslation enable enum translation otrosien text alps reflect customization enable true
+690	type schema properties title spring json owner items association uniqueitems unique items invalid pointing resources
+697	projection projection person test class sdr person resource test projectionserializer projection serializer serializer doesn apos react unwrapping mode correctly
+716	rest endpoints stack cases request overflow exception start application httpmessagenotwritableexception http message writable exception rest produce http message writable restarts arts
+743	info servlet exception httpmessagenotwritableexception http message writable exception jan bio spring catalina http apache rest endpoints produce message writable restarts rest arts
+791	user person lookup asterix content entity username olivergierke fine findbyusername find username repository entitylookup entity lookup resolving post association ressource
+863	spring hal browser api projects data html rest header browser calls redirect accept
+866	mvc pointer exception repository mvcvalidator mvc validator pointer configurer repositoryrestconfigurer repository rest configurer release null nullpointerexception null pointer exception repositoryrestconfiguration repository rest configuration rest configuration inject validator
+870	framework spring amp getheader header header apos doesn request accept view customacceptheaderhttpservletrequest custom accept header http servlet request custom header http servlet request work intended int ended
+880	spring unwrapped order data jsonunwrapped json unwrapped restbucks rest bucks check restbucks bucks branch json annotation
+925	person address projection links projection addresses person link persons issue resourceprocessor resource processor resource processor nested
+931	type creationdate creation creation entity phone column patch class apos phones resource associations doesn work expected
+937	patch data object json temp persistence domain request fields string transient properties included merge
+938	patch outer instances json string objects entities object data json nested replaced updated merging
+956	parent items test collection issue parent mduesterhoeft embeddable item apply nested
+958	hopper timtebeek https java github list array element datarest document fails add entries post
+23	Searches which returns null gives NPE NullPointerException RepositoryRestController Cglib2AopProxy CglibMethodInvocation Method MethodInvocationProceedingJoinPoint invoke ReflectiveMethodInvocation invokeAdviceMethodWithGivenArgs NativeMethodAccessorImpl DelegatingMethodAccessorImpl invokeJoinpoint
+188	Spring data rest wrongly handles jpa collection attributes IllegalArgumentException PersistentEntityJackson2Module ResourceDeserializer NativeMethodAccessorImpl invoke Method DelegatingMethodAccessorImpl ReflectionUtils BeanWrapper setProperty readMapAndClose invokeMethod
+199	Collection Object conversion broken in PersistentEntityJackson Module IllegalArgumentException PersistentEntityJackson2Module ResourceDeserializer NativeMethodAccessorImpl invoke Method DelegatingMethodAccessorImpl ReflectionUtils BeanWrapper setProperty readMapAndClose invokeMethod
+353	Deleting a non existing resource leads to NullPointerException in RepositoryEntityController NullPointerException IllegalArgumentException init EventObject deleteItemResource Event RepositoryEntityController ApplicationEvent BeforeDeleteEvent RepositoryEvent NativeMethodAccessorImpl DelegatingMethodAccessorImpl InvocableHandlerMethod
+377	UriStringDeserializer fails with  Could not read JSON  Template must not be null or empty HttpMessageNotReadableException JsonMappingException IllegalArgumentException MappingJackson2HttpMessageConverter PersistentEntityResourceHandlerMethodArgumentResolver readJavaType AbstractHttpMessageConverter HandlerMethodArgumentResolverComposite resolveArgument RequestMappingHandlerAdapter ServletInvocableHandlerMethod InvocableHandlerMethod Method read
+427	NullPointerException when POST PUT entities with rels in DomainClassConverter ServletException HttpMessageNotReadableException NullPointerException JsonMappingException PersistentEntityResourceHandlerMethodArgumentResolver AbstractJackson2HttpMessageConverter readJavaType read AbstractHttpMessageConverter HandlerMethodArgumentResolverComposite readInternal resolveArgument Message Converter Argument
+491	PersistentEntityResourceHandlerMethodArgumentResolver dump in PUT requests with HashMap HttpMessageNotReadableException NullPointerException PersistentEntityResourceHandlerMethodArgumentResolver HandlerMethodArgumentResolverComposite resolveArgument Method RequestMappingHandlerAdapter ServletInvocableHandlerMethod InvocableHandlerMethod Handler readPutForUpdate getMethodArgumentValues invokeHandleMethod
+575	Insufficient check for the presence of a PersistentProperty in MappedProperties HttpMessageNotReadableException NullPointerException PersistentEntityResourceHandlerMethodArgumentResolver HandlerMethodArgumentResolverComposite resolveArgument Method RequestMappingHandlerAdapter ServletInvocableHandlerMethod InvocableHandlerMethod Handler readPutForUpdate getMethodArgumentValues invokeHandleMethod
+606	Non public  RepositoryEventHandler are not made accessible prior to reflective invocation IllegalStateException handleReflectionException handleReflectionException ReflectionUtils invokeMethod AnnotatedEventHandlerInvoker Reflection onApplicationEvent handle Exception Utils Event invoke
+701	NPE when updating resource via PUT HttpMessageNotReadableException NullPointerException PersistentEntityResourceHandlerMethodArgumentResolver DomainObjectReader readPutForUpdate TaskThread WrappingRunnable JsonPatchHandler run getJacksonProperties doMergeNestedMap applyPut readPut
+712	Search a repository that implements QueryDslPredicateExecutor by a related Entity doesn apos t work anymore ConversionFailedException NumberFormatException IllegalArgumentException convertToPropertyPathSpecificType QuerydslAwareRootResourceInformationHandlerMethodArgumentResolver convert QuerydslPredicateBuilder DomainClassConverter ToEntityConverter ConversionUtils invokeConverter GenericConversionService RootResourceInformationHandlerMethodArgumentResolver postProcess
+723	ConcurrentModificationException ConcurrentModificationException HashMap HashIterator ValueIterator RepositoryPropertyReferenceController MappingResourceMetadata PropertyMappings nextNode RepositoryAwareResourceMetadata DelegatingMethodAccessorImpl GeneratedMethodAccessor427 followPropertyReference
+198	NullPointerException when accessing OneToMany Relationship NullPointerException ResourceProcessorHandlerMethodReturnValueHandler RequestMappingHandlerAdapter handleReturnValue ServletInvocableHandlerMethod HandlerMethodReturnValueHandlerComposite AbstractHandlerMethodAdapter Handler Method DispatcherServlet invokeHandleMethod handle
+204	Collection References not working with SF     due to generics changes NullPointerException ResourceProcessorHandlerMethodReturnValueHandler RequestMappingHandlerAdapter handleReturnValue ServletInvocableHandlerMethod HandlerMethodReturnValueHandlerComposite AbstractHandlerMethodAdapter Handler Method DispatcherServlet invokeHandleMethod handle
+298	rel  attribute of  RestResource should be optional IllegalArgumentException hasText init Assert RepositorySearchController Text getSearchLinks listSearches NativeMethodAccessorImpl DelegatingMethodAccessorImpl invoke Link
+792	PUT request for item resource with customized entity lookup fails ConversionFailedException NumberFormatException ConversionUtils invokeConverter Utils Converter invoke Conversion

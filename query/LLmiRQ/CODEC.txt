@@ -1,0 +1,41 @@
+58	 Base64
+61	 Base64
+68	 Base64 isBase64
+73	 DigestUtils Surefire Plugin
+80	 Base64 encode
+84	 DoubleMetaphone handleG handleL conditionL0 contains
+89	 Base64
+96	 Base64
+97	 Base64 Base64Test
+98	 Base64InputStream Base64
+99	 Base64 StringUtils
+101	 Base64InputStream InputStreamReader
+105	 Base64
+111	 URLCodec
+112	 Base64
+113	 RefinedSoundex
+114	 Soundex
+115	 DoubleMetaphone
+117	 Caverphone encode
+121	 QuotedPrintableCodec
+123	 ColognePhonetic
+127	 ColognePhoneticTest DoubleMetaphoneTest SoundexTest
+130	 Base64InputStream BaseNCodecInputStream
+132	 BeiderMorseEncoder
+152	 DigestUtils
+155	 DigestUtils
+156	 DigestUtils
+170	 Metaphone
+183	 BaseNCodecOutputStream Base64OutputStream BaseNCodec
+184	 DoubleMetaphone
+185	 Base64 URLSafe
+187	 BeiderMorseEncoder PhoneticEngine Rule NamePhonetics StringEncoder StringEncoderAbstractTest
+191	 Base64OutputStream Base64InputStream
+199	 Soundex
+200	 Base32
+201	 Base32
+207	 Charsets
+209	 DigestUtils
+219	 Charsets StandardCharsets
+221	 HmacUtils Mac
+225	 DaitchMokotoffSoundex Rule

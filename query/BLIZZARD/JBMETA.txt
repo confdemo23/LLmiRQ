@@ -1,0 +1,18 @@
+228	test set meta session ejb jar tre process ejb version metadata set latest ejb jar xsd version metadata created solely annotations user deployment ejb jar xml ejb version set based annotations metadata creators set ejb version latest version ejb jar xsd
+290	set meta ejb merge resource jar mapping annotation Schedules annotation isn apos processed JBMETA supposed include support Schedules code didn amp apos alpha Introduce processor handle Schedules xml counterpart
+320	set meta bean session type merge timeout message Methods access timeout metadata apply matched
+324	set meta merge type bean session timeout message Lock annotation bean account processing Lock annotation EJB spec specific rules Lock annotation bean bean superclasses additional rules apply concurrency locking attribute superclass appplies business methods defined level concurrency attribute equivalent specification Lock WRITE concurrency locking attribute business method defined override method concurrency locking attribute explicitly implicitly method overrides business method defined superclass concurrency locking attribute determined rules applied rules account creating metadata runtime bean invocation
+336	test meta client distinct data jar oss cache jboss ejb xml ignores metadata complete
+351	meta test config container boss binding bean resource Missing parser support replication config passivation config
+291	jbossmessagedrivenbean jboss message driven bean meta data bean message tests lang classcastexception class cast exception jboss metadata meta data oss messagedrivenbeanmetadata message driven bean meta data driven doesn apos extend
+301	timer metadata annotations bean data amp bean xml auto sessionbean session bean session message driven merge time correctly
+302	amp bean business default interface view apos business interface default setdefaultlocalbusinessinterfaceprocessor set default local business interface processor set local processor set local exposes nointerface
+315	bindings apos default jbossmetadata jboss meta data jboss meta data getinterceptors interceptors bean beanname bean oss interceptors string jbossmetadata jboss meta data jboss doesn return interceptors int erceptors
+317	data bean interceptor jbossmetadata jboss meta data order jboss binding meta interceptors return oss getinterceptors interceptors string beanname bean jbossmetadata jboss meta data jboss doesn apos account
+348	web java case unit validation webapp web app sun validationunittestcase validation unit test case test app connect
+371	expression propertyname resolver propertyresolver property resolver format apos property system delimiter char defaultpropertyreplacer default property replacer default replacer broken vault expressions
+355	getelementtext element text exception element xml class application parsers super parser text trimmed
+364	xml exception jbas deployment service jboss message jar xxxx impl destination element assembly descriptor throws exception ejb ejb
+377	issues param wfly issue exception https context null nullpointerexception null pointer exception pointer occurs parsing web xml missing
+386	eap websockets web sockets xml web element instance web http jboss deployment fails enable websockets sockets true
+379	Missing param name in a web xml causes NullPointerException during deployment NullPointerException StartException ServiceControllerImpl StartTask DeploymentUnitPhaseService run ThreadPoolExecutor Worker startService Service Thread JSFVersionProcessor start
