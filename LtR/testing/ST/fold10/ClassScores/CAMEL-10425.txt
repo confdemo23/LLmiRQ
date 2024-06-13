@@ -1,0 +1,6 @@
+ApplicationTest:0.3158
+CamelInternalProcessor:0.5000
+CamelServlet:0.2368
+HttpMessage:0.2105
+Pipeline:0.1316
+RedeliveryErrorHandler:0.5000

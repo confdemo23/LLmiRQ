@@ -1,0 +1,10 @@
+Cell:0.0186
+CellComparator:0.0075
+ColumnFamilyDescriptor:0.0067
+CompactionRequestImpl:0.0146
+HFileScanner:0.0531
+HStore:0.0233
+HStoreFile:0.0223
+PrivateCellUtil:0.0255
+Scan:0.0075
+StoreFileReader:0.0583

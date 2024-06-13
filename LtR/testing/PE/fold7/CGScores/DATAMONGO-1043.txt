@@ -1,0 +1,10 @@
+BasicMongoPersistentEntity:0.0069
+DBRef:0.0069
+Document:0.0150
+Meta:0.0739
+MongoCollectionUtils:0.0069
+MongoOperations:0.0044
+MongoParameterAccessor:0.0157
+MongoPersistentProperty:0.1779
+MongoQueryMethod:0.0721
+Query:0.0044

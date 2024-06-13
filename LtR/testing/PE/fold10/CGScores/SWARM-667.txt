@@ -1,0 +1,10 @@
+BootstrapProperties:0.0032
+BuildTool:0.0327
+DeclaredDependencies:0.0032
+DependenciesContainer:0.0106
+DependencyDeclarationFactory:0.0069
+FileSystemLayout:0.0032
+MainSpecifier:0.0069
+ShrinkwrapArtifactResolvingHelper:0.0032
+SwarmExecutor:0.0363
+SwarmProcess:0.0216

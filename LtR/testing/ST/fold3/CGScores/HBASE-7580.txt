@@ -1,0 +1,10 @@
+AccessControlClient:0.0495
+Builder:0.0946
+Bytes:0.1722
+Connection:0.0889
+HRegionLocation:0.0467
+HTableDescriptor:0.0833
+Table:0.0777
+TableName:0.1959
+User:0.6181
+UserPermission:0.0495

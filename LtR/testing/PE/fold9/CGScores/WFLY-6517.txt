@@ -1,0 +1,2 @@
+JndiPermission:0.0069
+JndiPermissionNameParser:0.0069

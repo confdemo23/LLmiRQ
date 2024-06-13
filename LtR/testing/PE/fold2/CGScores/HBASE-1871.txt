@@ -1,0 +1,10 @@
+Bytes:0.0254
+Connection:0.0513
+ConnectionFactory:0.0340
+HBaseConfiguration:0.0894
+ImmutableBytesWritable:0.0315
+MetaTableAccessor:0.0254
+TableName:0.0432
+TableSnapshotInputFormat:0.0163
+TokenUtil:0.0254
+UserProvider:0.0620

@@ -1,0 +1,1 @@
+AbstractAddressingEndpointMapping:0.6667

@@ -1,0 +1,10 @@
+CalcitePlanner:0.2895
+GenMRSkewJoinProcessor:0.5000
+MapReduceCompiler:0.3684
+PhysicalOptimizer:0.3684
+SemanticAnalyzer:0.3421
+SkewJoinProcFactory:0.4211
+SkewJoinResolver:0.3421
+TaskCompiler:0.2368
+TypeInfoFactory:0.3158
+TypeInfoUtils:0.2632

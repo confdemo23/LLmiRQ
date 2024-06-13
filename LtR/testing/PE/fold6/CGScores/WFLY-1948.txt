@@ -1,0 +1,2 @@
+DefaultConfiguration:0.0105
+JMXPropertyEditorsTestCase:0.0105

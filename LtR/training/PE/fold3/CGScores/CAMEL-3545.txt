@@ -1,0 +1,10 @@
+Animal:0.0096
+BeanHolder:0.0073
+CamelContext:0.0098
+Exchange:0.0218
+Expression:0.0165
+ObjectHelper:0.0131
+RuntimeBeanExpressionException:0.0070
+SimpleLanguage:0.0168
+StringHelper:0.0098
+TypeConverter:0.0090

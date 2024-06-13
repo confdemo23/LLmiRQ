@@ -1,0 +1,5 @@
+NettyHttpBinding:0.3023
+NettyHttpConsumer:0.3256
+NettyHttpEndpoint:0.3256
+NettyHttpMessage:0.3023
+NettyHttpProducer:0.3256

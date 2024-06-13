@@ -1,0 +1,4 @@
+CxfPayload:0.0313
+ObjectHelper:0.0028
+TypeConverter:0.0281
+TypeConverterRegistry:0.0313

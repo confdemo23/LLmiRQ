@@ -1,0 +1,10 @@
+ChoreService:0.0453
+ColumnFamilyDescriptor:0.0442
+ExecutorService:0.0446
+HRegion:0.1417
+HRegionServer:0.0430
+MasterCoprocessorHost:0.0968
+RegionInfo:0.1487
+RegionStateNode:0.1363
+ServerName:0.0710
+TableName:0.0500

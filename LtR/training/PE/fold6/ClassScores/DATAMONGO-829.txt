@@ -1,0 +1,3 @@
+Criteria:0.1087
+NearQuery:0.1304
+Query:0.0435

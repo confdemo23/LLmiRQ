@@ -1,0 +1,10 @@
+Admin:0.0067
+Bytes:0.0295
+Connection:0.0209
+FSUtils:0.0067
+HRegionInfo:0.0053
+HRegionLocation:0.0096
+Pair:0.0352
+RegionLocator:0.0096
+SplitAlgorithm:0.0394
+TableDescriptorBuilder:0.0039

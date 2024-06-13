@@ -1,0 +1,10 @@
+Address:0.0103
+ConnectionFactoryUtils:0.0216
+Delivery:0.0188
+DirectReplyToMessageListenerContainer:0.0160
+Message:0.0584
+MessagePostProcessor:0.0103
+MessageProperties:0.0726
+MessagePropertiesConverter:0.0103
+PendingReply:0.0216
+RabbitTemplate:0.0443

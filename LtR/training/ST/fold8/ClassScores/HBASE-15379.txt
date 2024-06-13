@@ -1,0 +1,5 @@
+CellUtil:0.0806
+HRegion:0.0645
+HStore:0.0484
+StoreFileScanner:0.2097
+StoreScanner:0.1452

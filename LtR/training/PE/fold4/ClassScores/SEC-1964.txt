@@ -1,0 +1,2 @@
+JdbcTokenRepositoryImpl:0.4222
+PersistentTokenBasedRememberMeServices:0.7556

@@ -1,0 +1,3 @@
+Bean:0.0222
+MessageEndpointService:0.4222
+MethodIntf:0.1556

@@ -1,0 +1,9 @@
+BeeLine:0.0009
+BeelineParser:0.0009
+HadoopShims:0.0020
+HiveServer2:0.0274
+ServerOptionsExecutor:0.0020
+ServerOptionsProcessor:0.0052
+ServerOptionsProcessorResponse:0.0020
+ShimLoader:0.0020
+Utils:0.0020

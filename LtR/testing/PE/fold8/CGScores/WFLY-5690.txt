@@ -1,0 +1,6 @@
+Attribute:0.0426
+DeprecatedAttribute:0.0154
+InfinispanModel:0.0317
+ResourceDescriptor:0.0044
+StoreResourceDefinition:0.0044
+TableAttributeTransformation:0.0044

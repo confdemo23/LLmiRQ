@@ -1,0 +1,9 @@
+AnnotationTypeConverterLoader:0.7027
+BaseTypeConverterRegistry:0.5946
+CamelContext:0.2432
+DefaultTypeConverter:0.4595
+Exchange:0.1351
+Message:0.1081
+SimpleRegistry:0.2973
+TypeConverterLoader:0.4324
+TypeConverterRegistry:0.4865

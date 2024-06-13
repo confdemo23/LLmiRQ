@@ -1,0 +1,10 @@
+AttributeDefinition:0.1494
+ControlledProcessState:0.0376
+ImmutableManagementResourceRegistration:0.0381
+OperationContext:0.1452
+ParallelBootTransactionControl:0.0357
+PathAddress:0.0714
+PathElement:0.0451
+Resource:0.0338
+Stage:0.0320
+Step:0.0489

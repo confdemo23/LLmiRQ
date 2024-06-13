@@ -1,0 +1,10 @@
+CamelContext:0.0514
+ClassResolver:0.0128
+DefaultNamespaceContext:0.0175
+Exchange:0.0965
+IOHelper:0.0063
+Message:0.0551
+NamespaceAwareExpression:0.0175
+ObjectHelper:0.0984
+TypeConverter:0.0251
+XPathBuilder:0.0382

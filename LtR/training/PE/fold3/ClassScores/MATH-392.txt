@@ -1,0 +1,2 @@
+GLSMultipleLinearRegression:0.6486
+OLSMultipleLinearRegression:0.6486

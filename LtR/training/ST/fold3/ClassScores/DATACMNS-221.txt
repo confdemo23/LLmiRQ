@@ -1,0 +1,5 @@
+Part:0.0238
+PartTree:0.1190
+PropertyPath:0.2143
+PropertyReferenceException:0.5476
+Repository:0.1667

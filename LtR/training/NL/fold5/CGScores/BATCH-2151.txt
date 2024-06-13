@@ -1,0 +1,10 @@
+AbstractTaskletStepBuilder:0.0150
+BatchStatus:0.0490
+Entity:0.0235
+ExitStatus:0.0175
+FaultTolerantStepBuilder:0.2222
+JobExecution:0.1136
+ReflectionUtils:0.0746
+StepContribution:0.0435
+StepExecution:0.0295
+StepListenerFactoryBean:0.0320

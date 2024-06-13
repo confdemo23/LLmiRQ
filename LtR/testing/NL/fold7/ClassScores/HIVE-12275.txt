@@ -1,0 +1,7 @@
+ExecDriver:0.2051
+FetchTask:0.1795
+HiveConf:0.1538
+HiveDriver:0.2051
+HiveQueryResultSet:0.4103
+MapRedTask:0.2051
+SemanticAnalyzer:0.3590

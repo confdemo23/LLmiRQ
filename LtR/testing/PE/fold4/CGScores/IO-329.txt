@@ -1,0 +1,8 @@
+ByteArrayOutputStream:0.0012
+Charsets:0.0127
+FileFilterUtils:0.0021
+FileUtils:0.0003
+FilenameUtils:0.0007
+IOUtils:0.0139
+Java7Support:0.0007
+StringBuilderWriter:0.0009

@@ -1,0 +1,10 @@
+AccessTimeoutDetails:0.0140
+ConcurrentContext:0.0045
+CurrentSynchronizationCallback:0.0164
+OwnableReentrantLock:0.0068
+SecurityActions:0.0054
+SessionBeanComponentInstance:0.0052
+StatefulSessionComponent:0.0641
+StatefulSessionComponentInstance:0.0971
+StatefulTransactionMarker:0.0068
+TestHttpClientUtils:0.0050

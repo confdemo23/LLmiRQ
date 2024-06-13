@@ -1,0 +1,9 @@
+CompositeStepExecutionListener:0.0018
+ExitStatus:0.0191
+JobExecution:0.0141
+JobInstance:0.0141
+JobRepository:0.0068
+RepeatException:0.0018
+StepExecution:0.0707
+StepExecutionListener:0.0043
+StepSynchronizationManager:0.0043

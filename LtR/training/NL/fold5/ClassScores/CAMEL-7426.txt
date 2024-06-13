@@ -1,0 +1,4 @@
+HttpComponent:0.2727
+HttpEndpoint:0.2424
+HttpMessage:0.2121
+HttpProducer:0.2424

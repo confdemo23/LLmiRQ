@@ -1,0 +1,4 @@
+ModuleGroupSingletonProvider:0.0022
+WeldBootstrapService:0.0216
+WeldDeployment:0.0055
+WeldProvider:0.0022

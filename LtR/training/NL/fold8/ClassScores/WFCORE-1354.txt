@@ -1,0 +1,5 @@
+CapabilityRegistry:0.5000
+CapabilityServiceSupport:0.6875
+IOSubsystemAdd:0.3750
+ManagementResourceRegistration:0.8750
+RemotingSubsystemAdd:0.5625

@@ -1,0 +1,10 @@
+ASTNode:0.0542
+CTEClause:0.0264
+ExprNodeColumnDesc:0.0113
+ExprNodeDesc:0.0113
+ExprNodeGenericFuncDesc:0.0384
+GroupByOperator:0.0144
+HdfsEncryptionShim:0.0099
+SemanticAnalyzer:0.0703
+SortBucketRSCtx:0.0429
+TypeCheckProcFactory:0.1224

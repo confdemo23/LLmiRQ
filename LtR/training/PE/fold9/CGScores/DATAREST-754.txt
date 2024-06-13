@@ -1,0 +1,10 @@
+Associations:0.0181
+Definitions:0.0181
+JacksonMetadata:0.0243
+JacksonProperty:0.0119
+JsonSchemaProperty:0.0677
+JsonSchemaPropertyRegistrar:0.0553
+MessageResolver:0.0305
+MetadataConfiguration:0.0181
+RepositoryRestConfiguration:0.0367
+ResourceMetadata:0.0119

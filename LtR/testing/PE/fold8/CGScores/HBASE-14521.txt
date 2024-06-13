@@ -1,0 +1,10 @@
+AsyncRegistry:0.0281
+BufferedMutatorParams:0.0572
+Bytes:0.0281
+ConnectionConfiguration:0.0281
+MetaCache:0.0572
+RegionInfo:0.0766
+RegionLocations:0.0620
+RetryingCallable:0.0329
+RpcClient:0.0281
+Scan:0.0378

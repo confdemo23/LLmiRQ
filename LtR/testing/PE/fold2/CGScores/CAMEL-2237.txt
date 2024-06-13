@@ -1,0 +1,6 @@
+CamelContext:0.0376
+ExecutorServiceManager:0.0376
+MinaConfiguration:0.2490
+MinaEndpoint:0.1829
+ObjectHelper:0.0046
+TextLineCodecFactory:0.0244

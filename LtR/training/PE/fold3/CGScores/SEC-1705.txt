@@ -1,0 +1,5 @@
+AbstractAuthenticationProcessingFilter:0.0011
+AbstractRememberMeServices:0.0011
+OpenIDAuthenticationFilter:0.0011
+OpenIDAuthenticationToken:0.0011
+OpenIDConsumer:0.0025

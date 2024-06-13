@@ -1,0 +1,8 @@
+AjpListenerService:0.4242
+Host:0.0000
+HttpListenerService:0.4545
+HttpsListenerAdd:0.3636
+ListenerResourceDefinition:0.6667
+SecurityRealm:0.2727
+Server:0.0606
+UndertowService:0.3333

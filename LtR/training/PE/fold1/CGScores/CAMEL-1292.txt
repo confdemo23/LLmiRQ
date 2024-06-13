@@ -1,0 +1,5 @@
+CamelContext:0.0041
+CamelContextHelper:0.0041
+IntrospectionSupport:0.0102
+Registry:0.0041
+SqlEndpoint:0.0467

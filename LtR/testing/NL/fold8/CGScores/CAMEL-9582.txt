@@ -1,0 +1,10 @@
+ObjectHelper:0.1181
+RestApiResponseAdapter:0.0784
+RestBindingDefinition:0.0648
+RestConfiguration:0.0465
+RestDefinition:0.0589
+RestOperationParamDefinition:0.1950
+RestOperationResponseHeaderDefinition:0.1340
+RestOperationResponseMsgDefinition:0.0389
+RouteDefinition:0.0566
+VerbDefinition:0.4221

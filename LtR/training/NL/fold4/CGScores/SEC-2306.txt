@@ -1,0 +1,10 @@
+HttpRequestResponseHolder:0.0922
+HttpSessionSecurityContextRepository:0.0391
+RememberMeServices:0.0250
+SaveContextOnUpdateOrErrorResponseWrapper:0.0484
+SecurityContext:0.0569
+SecurityContextHolder:0.0905
+SessionInformation:0.0778
+SessionManagementFilter:0.0267
+SessionRegistry:0.0305
+SpringSecurityMessageSource:0.0278

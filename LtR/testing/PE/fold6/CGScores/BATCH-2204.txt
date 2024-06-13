@@ -1,0 +1,10 @@
+AbstractTaskletStepBuilder:0.0669
+ChunkListener:0.0533
+FaultTolerantChunkProcessor:0.0860
+FaultTolerantStepBuilder:0.2604
+PartitionStepBuilder:0.0669
+ReflectionUtils:0.0642
+SimpleStepBuilder:0.1775
+StepBuilder:0.0555
+StepBuilderHelper:0.0669
+StepListenerFactoryBean:0.0642

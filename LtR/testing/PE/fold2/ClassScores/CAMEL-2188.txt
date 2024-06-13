@@ -1,0 +1,2 @@
+JcrConstants:0.2000
+JcrProducer:0.1778

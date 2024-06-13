@@ -1,0 +1,6 @@
+MongoOperations:0.2927
+MongoRepository:0.2927
+MongoTemplate:0.2439
+QuerydslRepositorySupport:0.5366
+SimpleMongoRepository:0.4390
+SpringDataMongodbQuery:0.4634

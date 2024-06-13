@@ -1,0 +1,7 @@
+Authentication:0.0269
+BCrypt:0.0464
+LdapEncoder:0.0100
+PasswordEncoder:0.0551
+SpringSecurityLdapTemplate:0.0269
+SpringSecurityMessageSource:0.0100
+Utf8:0.0127

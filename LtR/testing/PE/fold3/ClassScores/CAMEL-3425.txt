@@ -1,0 +1,3 @@
+BlueprintCamelContext:0.4186
+CamelContext:0.2093
+OsgiDefaultCamelContext:0.4651

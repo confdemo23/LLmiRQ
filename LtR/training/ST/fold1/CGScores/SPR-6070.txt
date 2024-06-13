@@ -1,0 +1,10 @@
+AbstractBeanDefinition:0.0641
+BeanDefinition:0.0423
+BeanUtils:0.0532
+BeanWrapper:0.1949
+ClassUtils:0.1077
+InstantiationStrategy:0.0423
+MutablePropertyValues:0.0609
+PropertyValue:0.0686
+PropertyValues:0.0609
+RootBeanDefinition:0.6746

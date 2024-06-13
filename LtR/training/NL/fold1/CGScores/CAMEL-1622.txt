@@ -1,0 +1,10 @@
+BundleContextUtils:0.0126
+CamelContext:0.0236
+DefaultCamelContext:0.0608
+DefaultClassResolver:0.0142
+Exchange:0.0246
+FileUtil:0.0142
+ObjectHelper:0.0668
+OsgiCamelContextHelper:0.0198
+StaxConverter:0.0246
+TypeConverter:0.0378

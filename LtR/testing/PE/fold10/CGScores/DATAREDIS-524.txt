@@ -1,0 +1,3 @@
+LettuceConnection:0.0035
+LettuceConverters:0.0075
+RedisNode:0.0075

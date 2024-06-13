@@ -1,0 +1,3 @@
+CachingConnectionFactory:0.4444
+RabbitTransactionManager:0.4444
+SimpleMessageListenerContainer:0.5778

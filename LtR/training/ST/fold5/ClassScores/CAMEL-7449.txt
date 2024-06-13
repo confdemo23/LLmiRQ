@@ -1,0 +1,2 @@
+JmsBinding:0.1277
+JmsMessage:0.1277

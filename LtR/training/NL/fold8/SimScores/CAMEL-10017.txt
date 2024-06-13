@@ -1,0 +1,9 @@
+CamelIronmqTest:0.5341
+FromQueueToQueueTest:0.5250
+IronMQComponentAutoConfiguration:0.3535
+IronMQComponentConfiguration:0.4733
+IronMQEndpoint:0.3477
+IronMQPreserveHeadersTest:0.3706
+IronmqSpanDecorator:0.4768
+IronmqSpanDecoratorTest:0.5799
+KestrelEndpointTest:0.5218

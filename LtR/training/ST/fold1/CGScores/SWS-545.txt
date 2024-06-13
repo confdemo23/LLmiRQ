@@ -1,0 +1,10 @@
+AxiomUtils:0.0131
+DefaultStrategiesHelper:0.0305
+EndpointInterceptor:0.0205
+EndpointInvocationChain:0.0805
+MessageContext:0.0814
+SoapBody:0.0269
+SoapFaultDefinition:0.1539
+WebServiceMessageReceiverHandlerAdapter:0.0295
+WsdlDefinitionHandlerAdapter:0.0372
+XsdSchemaHandlerAdapter:0.0295

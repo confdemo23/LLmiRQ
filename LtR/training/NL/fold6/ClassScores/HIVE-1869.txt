@@ -1,0 +1,10 @@
+Driver:0.1026
+HiveConf:0.1538
+HiveMetaStoreClient:0.4359
+HiveSQLException:0.3590
+HiveServer2:0.2308
+OperationManager:0.3590
+QueryState:0.2051
+SessionManager:0.3077
+SessionState:0.2564
+TestMTQueries:0.2821

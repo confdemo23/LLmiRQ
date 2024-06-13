@@ -1,0 +1,7 @@
+ArrayUtils:0.0042
+ClassUtils:0.0017
+EqualsBuilder:0.0561
+HashCodeBuilder:0.0045
+Pair:0.0082
+ReflectionToStringBuilder:0.0042
+Validate:0.0070

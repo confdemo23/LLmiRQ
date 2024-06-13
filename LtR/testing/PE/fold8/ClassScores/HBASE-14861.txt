@@ -1,0 +1,2 @@
+HRegionServer:0.2000
+ZNodeClearer:0.1800

@@ -1,0 +1,2 @@
+DeepParquetHiveMapInspector:0.5217
+StandardParquetHiveMapInspector:0.6087

@@ -1,0 +1,10 @@
+Bytes:0.3628
+Cell:0.1862
+ColumnFamilyDescriptor:0.1283
+HRegion:0.5988
+HStore:0.3426
+MonitoredTask:0.1379
+Pair:0.1872
+RegionCoprocessorHost:0.1324
+RegionInfo:0.4623
+Writer:0.1481

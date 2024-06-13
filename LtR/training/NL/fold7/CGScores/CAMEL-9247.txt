@@ -1,0 +1,10 @@
+CamelContext:0.0795
+CamelContextHelper:0.1340
+ObjectHelper:0.0754
+RestApiResponseAdapter:0.0784
+RestBindingDefinition:0.0648
+RestConfiguration:0.2807
+RestOperationParamDefinition:0.1950
+RestOperationResponseHeaderDefinition:0.1340
+RestPropertyDefinition:0.1897
+VerbDefinition:0.4221

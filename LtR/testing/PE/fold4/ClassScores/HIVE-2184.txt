@@ -1,0 +1,2 @@
+Hive:0.0270
+HiveMetaStoreClient:0.4324

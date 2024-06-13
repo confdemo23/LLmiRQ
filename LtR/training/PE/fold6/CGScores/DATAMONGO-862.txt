@@ -1,0 +1,10 @@
+BitwiseOperator:0.0006
+CriteriaDefinition:0.0050
+Field:0.0003
+Meta:0.0128
+Modifier:0.0006
+Modifiers:0.0100
+Position:0.0006
+PushOperatorBuilder:0.0006
+SerializationUtils:0.0006
+Update:0.0175

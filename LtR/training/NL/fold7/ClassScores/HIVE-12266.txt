@@ -1,0 +1,10 @@
+DbLockManager:0.2564
+DbTxnManager:0.2308
+HiveLock:0.1282
+HiveLockManager:0.3077
+HiveLockObject:0.2821
+HiveMetaStoreClient:0.4103
+HiveTxnManager:0.2821
+IMetaStoreClient:0.3333
+LockComponent:0.2564
+SQLStdHiveAccessController:0.5897

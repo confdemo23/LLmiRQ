@@ -1,0 +1,3 @@
+AbstractConfiguration:0.4865
+HierarchicalConfiguration:0.5946
+SubnodeConfiguration:0.4595

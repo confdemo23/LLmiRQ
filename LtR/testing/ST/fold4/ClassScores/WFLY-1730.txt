@@ -1,0 +1,7 @@
+InitialContext:0.2619
+LazyValidatorFactory:0.4048
+ModuleGroupSingletonProvider:0.5952
+NamingContext:0.2381
+ServiceBasedNamingStore:0.4762
+SimpleServlet:0.2381
+ValidatorJndiInjectable:0.4762

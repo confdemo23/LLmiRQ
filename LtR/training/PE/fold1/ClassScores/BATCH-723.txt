@@ -1,0 +1,5 @@
+JdbcExecutionContextDao:0.4444
+JdbcJobExecutionDao:0.3556
+JdbcJobInstanceDao:0.3333
+JdbcStepExecutionDao:0.3778
+JobRepositoryFactoryBean:0.4667

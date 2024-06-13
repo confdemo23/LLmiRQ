@@ -1,0 +1,10 @@
+ETLSplitStrategy:0.0070
+FooterCache:0.0164
+HadoopShims:0.0284
+HdfsFileStatusWithId:0.0471
+HiveIOExceptionHandler:0.0157
+HiveIOExceptionHandlerChain:0.0327
+HiveIOExceptionNextHandleResult:0.0157
+HiveInputSplit:0.0277
+OrcInputFormat:0.0164
+ParsedDelta:0.0247

@@ -1,0 +1,6 @@
+FastMath:0.0051
+Iterator:0.0666
+OpenIntToDoubleHashMap:0.0341
+OpenMapRealVector:0.0288
+RealVector:0.0147
+SparseRealVector:0.0042

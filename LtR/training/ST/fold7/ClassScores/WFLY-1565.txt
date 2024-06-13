@@ -1,0 +1,9 @@
+AdditionalSetupInterceptor:0.4792
+CMTTxInterceptor:0.2708
+CurrentInvocationContextInterceptor:0.6667
+EJBClientClusterConfigurationTestCase:0.7083
+EJBRemoteTransactionPropagatingInterceptor:0.8125
+LoggingInterceptor:0.3125
+NamespaceContextInterceptor:0.5000
+SecurityContextInterceptor:0.4792
+WaitTimeInterceptor:0.3333

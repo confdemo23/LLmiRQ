@@ -1,0 +1,4 @@
+AbstractValidatingInterceptor:0.5102
+Jaxp13ValidatorFactory:0.3673
+SimpleNamespaceContext:0.3673
+WebServiceTemplate:0.2857

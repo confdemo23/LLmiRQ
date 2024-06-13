@@ -1,0 +1,3 @@
+HiveConf:0.1875
+HiveDriver:0.2500
+HiveMetaStoreClient:0.5313

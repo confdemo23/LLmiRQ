@@ -1,0 +1,5 @@
+ExecMapper:0.1277
+GenericUDAFMin:0.2128
+GroupByOperator:0.2340
+JavaByteObjectInspector:0.4043
+MapOperator:0.1489

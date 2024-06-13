@@ -1,0 +1,10 @@
+BeanHolder:0.0469
+CamelContext:0.0393
+CastUtils:0.0274
+DefaultClassResolver:0.0171
+Exchange:0.1470
+InvokeProcessor:0.0191
+Message:0.0246
+ObjectHelper:0.1422
+OgnlHelper:0.0358
+TypeConverter:0.0246

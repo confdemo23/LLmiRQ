@@ -1,0 +1,5 @@
+HFileBlock:0.1842
+HRegion:0.1053
+HRegionServer:0.2632
+StoreFileScanner:0.3421
+StoreScanner:0.2368

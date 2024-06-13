@@ -1,0 +1,5 @@
+HiveConf:0.1875
+HiveMetaStore:0.3438
+HiveMetaStoreClient:0.5313
+MetaStoreUtils:0.3750
+TestHiveMetaStore:0.4688

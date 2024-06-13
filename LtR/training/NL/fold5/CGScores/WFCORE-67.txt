@@ -1,0 +1,10 @@
+Builder:0.1241
+DomainSlaveHostRegistrations:0.1802
+HostControllerEnvironment:0.2097
+LocalHostControllerInfo:0.1286
+LocalHostControllerInfoImpl:0.6286
+ManagementResourceRegistration:0.1381
+OperationContext:0.1411
+PathAddress:0.1386
+PathElement:0.2087
+ServerInventory:0.4745

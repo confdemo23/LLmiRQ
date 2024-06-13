@@ -1,0 +1,4 @@
+AbstractStreamingConsumer:0.0069
+Processor:0.0032
+ScheduledPollConsumer:0.0069
+TwitterConsumer:0.0032

@@ -1,0 +1,5 @@
+CompositeItemWriter:0.3721
+ItemReader:0.1628
+ItemStream:0.1628
+ItemWriter:0.1628
+StepFactoryBean:0.2791

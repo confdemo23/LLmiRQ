@@ -1,0 +1,2 @@
+HBaseConfiguration:0.0017
+TableMapReduceUtil:0.0017

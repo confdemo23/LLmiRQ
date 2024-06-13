@@ -1,0 +1,4 @@
+OSGiUtils:0.0010
+PgpKeyId:0.0024
+SignatureDecision:0.0010
+UrlInputStreamService:0.0010

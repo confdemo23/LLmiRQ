@@ -1,0 +1,6 @@
+CamelLogger:0.0091
+Exchange:0.0401
+GenericFile:0.0504
+IOHelper:0.0401
+MarkerFileExclusiveReadLockStrategy:0.0298
+StopWatch:0.0091

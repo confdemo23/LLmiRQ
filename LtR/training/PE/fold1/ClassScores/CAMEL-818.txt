@@ -1,0 +1,3 @@
+DefaultExchange:0.2667
+InOut:0.0444
+RoutingSlip:0.1778

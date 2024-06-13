@@ -1,0 +1,7 @@
+Expression:0.0096
+ExpressionBuilder:0.0915
+ExpressionToPredicateAdapter:0.0096
+NamespaceAware:0.0041
+Namespaces:0.0041
+Predicate:0.0041
+PredicateBuilder:0.1024

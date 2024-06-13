@@ -1,0 +1,10 @@
+Client:0.0213
+ConfVars:0.0426
+GetHelper:0.0182
+HiveConf:0.0927
+HiveInputSplit:0.0539
+MetaStoreUtils:0.0677
+ObjectStore:0.3076
+QueryWrapper:0.1491
+ShimLoader:0.0426
+Utils:0.0263

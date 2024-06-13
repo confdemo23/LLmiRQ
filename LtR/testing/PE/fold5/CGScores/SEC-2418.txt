@@ -1,0 +1,3 @@
+GrantedAuthority:0.0015
+LdapUserDetails:0.0150
+LdapUserDetailsImpl:0.0073

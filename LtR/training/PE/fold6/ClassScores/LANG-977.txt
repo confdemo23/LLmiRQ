@@ -1,0 +1,2 @@
+CharSequenceTranslator:0.4130
+NumericEntityEscaper:0.3696

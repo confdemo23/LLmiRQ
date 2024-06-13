@@ -1,0 +1,8 @@
+ConnectionFactoryDefinition:0.5217
+MultipleConnection2:0.3478
+MultipleConnection2Impl:0.4348
+MultipleConnectionFactory2:0.5000
+MultipleConnectionFactory2Impl:0.5870
+MultipleManagedConnectionFactory2:0.6522
+ResourceAdapterActivatorService:0.6087
+WarServletDeploymentTestCase:0.5435

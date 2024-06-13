@@ -1,0 +1,8 @@
+DDLTask:0.1563
+FieldSchema:0.2813
+Hive:0.0625
+HiveDatabaseMetaData:0.5625
+HiveMetaStoreClient:0.5313
+HiveStringUtils:0.4063
+MetaStoreUtils:0.3750
+ObjectStore:0.2813

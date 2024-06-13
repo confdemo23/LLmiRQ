@@ -1,0 +1,10 @@
+BeanInfoUtils:0.0120
+ClasspathOperations:0.0053
+DataOnDemandOperations:0.0110
+IntegrationTestOperations:0.0130
+JavaType:0.0043
+ProjectOperations:0.0053
+ReservedWords:0.0120
+ServiceInstaceManager:0.0130
+ShellContext:0.0053
+TypeLocationService:0.0206

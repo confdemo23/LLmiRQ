@@ -1,0 +1,5 @@
+AnnotationAttributeValue:0.0046
+AnnotationMetadata:0.0444
+AnnotationMetadataBuilder:0.0245
+IdentifiableAnnotatedJavaStructure:0.0046
+JavaType:0.0096

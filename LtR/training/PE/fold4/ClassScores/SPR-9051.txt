@@ -1,0 +1,3 @@
+Bean:0.0000
+Configuration:0.2000
+ContextConfiguration:0.3556

@@ -1,0 +1,10 @@
+ConfVars:0.0200
+EncoderDecoder:0.0035
+HiveConf:0.0436
+HiveIOExceptionHandlerUtil:0.0032
+HiveInputFormat:0.0032
+HiveInputSplit:0.0253
+SerDeUtils:0.0018
+TableScanOperator:0.0189
+Utils:0.0012
+VarType:0.0059

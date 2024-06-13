@@ -1,0 +1,5 @@
+CamelTestSupport:0.2727
+CxfConsumer:0.1591
+CxfEndpoint:0.1591
+DefaultCamelContext:0.3409
+ServiceSupport:0.2273

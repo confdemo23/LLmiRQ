@@ -1,0 +1,10 @@
+AsyncCallback:0.0213
+ClientFactoryBeanCache:0.0257
+CxfEndpointUtils:0.0168
+CxfHeaderHelper:0.0185
+CxfRsBinding:0.0569
+CxfRsEndpoint:0.1505
+Exchange:0.2644
+ExchangePattern:0.0233
+InterceptorHolder:0.0703
+Message:0.3018

@@ -1,0 +1,10 @@
+Authentication:0.0014
+AuthenticationFailureHandler:0.0006
+AuthenticationSuccessHandler:0.0014
+SecurityContext:0.0039
+SecurityContextHolder:0.0039
+SwitchUserAuthorityChanger:0.0006
+UrlUtils:0.0023
+UserDetails:0.0014
+UserDetailsChecker:0.0006
+UsernamePasswordAuthenticationToken:0.0006

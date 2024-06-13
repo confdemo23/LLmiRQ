@@ -1,0 +1,10 @@
+AggregationExprCheck:0.0082
+CTEClause:0.0224
+CalcitePlanner:0.0236
+CalcitePlannerAction:0.1803
+ConstantExprCheck:0.0082
+HdfsEncryptionShim:0.0082
+PTFTranslator:0.0333
+RexTransformIntoInClause:0.0071
+SemanticAnalyzer:0.0601
+SortBucketRSCtx:0.0365

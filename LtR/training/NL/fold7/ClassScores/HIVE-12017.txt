@@ -1,0 +1,5 @@
+CalcitePlanner:0.2821
+HiveCalciteUtil:0.3077
+HiveConf:0.1282
+HivePlannerContext:0.3846
+JoinOperator:0.2308

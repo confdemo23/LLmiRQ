@@ -1,0 +1,8 @@
+AbstractJdbcBatchMetadataDao:0.0168
+BatchStatus:0.0366
+ExitStatus:0.0366
+JobExecution:0.4705
+JobInstance:0.0544
+JobKeyGenerator:0.0163
+JobParameter:0.0269
+JobParameters:0.0076

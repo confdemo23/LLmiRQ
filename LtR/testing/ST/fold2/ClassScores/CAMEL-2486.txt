@@ -1,0 +1,3 @@
+CamelTestSupport:0.2727
+DefaultCamelContext:0.3409
+RouteBuilder:0.1818

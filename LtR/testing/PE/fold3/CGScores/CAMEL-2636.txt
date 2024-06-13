@@ -1,0 +1,10 @@
+CamelContext:0.0031
+CipherPair:0.0076
+Exchange:0.0113
+FileInputStreamCache:0.0035
+FileUtil:0.0076
+IOHelper:0.0076
+ObjectHelper:0.0035
+StreamCachingStrategy:0.0301
+TempFileManager:0.0342
+UnitOfWork:0.0035

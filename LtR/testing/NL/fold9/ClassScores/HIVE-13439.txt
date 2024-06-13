@@ -1,0 +1,5 @@
+HiveQueryResultSet:0.5000
+HiveSession:0.2813
+OperationHandle:0.4063
+SessionManager:0.3750
+ThriftCLIService:0.4375

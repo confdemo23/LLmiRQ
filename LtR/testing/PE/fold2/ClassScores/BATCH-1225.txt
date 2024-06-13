@@ -1,0 +1,2 @@
+FlatFileItemWriter:0.3333
+StaxEventItemWriter:0.3556

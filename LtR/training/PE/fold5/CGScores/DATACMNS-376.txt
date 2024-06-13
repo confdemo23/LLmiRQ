@@ -1,0 +1,3 @@
+RepositoryFactoryInformation:0.0314
+RepositoryInformation:0.0096
+Streamable:0.0082

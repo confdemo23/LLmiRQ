@@ -1,0 +1,3 @@
+BasePermission:0.2444
+BasicLookupStrategy:0.3556
+PermissionFactory:0.3111

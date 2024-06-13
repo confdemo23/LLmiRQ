@@ -1,0 +1,9 @@
+FileComponent:0.2683
+FileConsumer:0.2439
+FileEndpoint:0.2439
+GenericFileConsumer:0.4146
+GenericFileEndpoint:0.4146
+GenericFileFilter:0.3659
+GenericFileOperations:0.4634
+GenericFileProcessStrategy:0.5854
+GenericFileProducer:0.4146

@@ -1,0 +1,3 @@
+CriteriaDefinition:0.0050
+Field:0.0003
+Meta:0.0128

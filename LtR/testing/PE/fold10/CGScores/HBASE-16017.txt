@@ -1,0 +1,4 @@
+BufferedMutator:0.0052
+Connection:0.0080
+ConnectionFactory:0.0023
+TableName:0.0023

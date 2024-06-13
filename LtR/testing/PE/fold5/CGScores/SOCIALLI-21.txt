@@ -1,0 +1,3 @@
+LinkedInNetworkUpdates:0.0017
+NetworkUpdateParameters:0.0295
+UpdateTypeInput:0.0017

@@ -1,0 +1,10 @@
+GenericUDFMask:0.5320
+GenericUDFMaskFirstN:0.3669
+GenericUDFMaskHash:0.3301
+GenericUDFMaskLastN:0.3336
+GenericUDFMaskShowFirstN:0.3313
+GenericUDFMaskShowLastN:0.3211
+GenericUDFOPPlus:0.3524
+SettableHiveIntervalYearMonthObjectInspector:0.3432
+VectorUDFDayOfMonthDate:0.3854
+VectorUDFMonthDate:0.3498

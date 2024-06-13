@@ -1,0 +1,7 @@
+AcidUtils:0.2188
+CompactionInfo:0.3750
+CompactionRequest:0.4688
+HiveConf:0.1875
+HiveMetaStoreClient:0.5313
+ObjectStore:0.2813
+TxnHandler:0.2500

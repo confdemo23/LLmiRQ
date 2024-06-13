@@ -1,0 +1,3 @@
+Jackson2JsonMessageConverter:0.5814
+RabbitMessagingTemplate:0.4651
+RabbitTemplate:0.2558

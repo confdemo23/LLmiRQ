@@ -1,0 +1,8 @@
+BalancerChore:0.2821
+ClusterStatus:0.2821
+HBaseAdmin:0.2051
+HBaseCluster:0.2564
+HBaseConfiguration:0.4103
+HBaseFsck:0.1795
+HMaster:0.1282
+LockManager:0.2308

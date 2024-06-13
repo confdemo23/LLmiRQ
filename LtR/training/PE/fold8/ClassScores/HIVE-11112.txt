@@ -1,0 +1,2 @@
+LazySimpleSerDe:0.2609
+Table:0.0435

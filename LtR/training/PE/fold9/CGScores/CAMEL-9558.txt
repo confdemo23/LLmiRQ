@@ -1,0 +1,10 @@
+ManagedCamelContextMBean:0.0102
+ModelCamelContext:0.0933
+ProcessorDefinition:0.0102
+ProducerTemplate:0.0102
+PropertiesComponent:0.0109
+RestsDefinition:0.0156
+Route:0.0102
+RouteBuilder:0.0176
+RouteDefinition:0.0082
+RoutesDefinition:0.0739

@@ -1,0 +1,3 @@
+AggregationStrategyBeanAdapter:0.0251
+ExpressionBuilder:0.0495
+XsltAggregationStrategy:0.0053

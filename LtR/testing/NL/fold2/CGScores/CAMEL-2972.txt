@@ -1,0 +1,10 @@
+CamelContextHelper:0.1250
+CollectionStringBuffer:0.2913
+ManagementStrategy:0.0699
+ObjectHelper:0.1654
+RedeliveryPolicyDefinition:0.2825
+Route:0.1597
+RouteContext:0.1313
+RouteDefinition:0.1575
+RouteService:0.2794
+RoutesDefinition:0.1569

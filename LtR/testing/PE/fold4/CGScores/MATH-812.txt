@@ -1,0 +1,9 @@
+Entry:0.0179
+FastMath:0.0039
+FunctionUtils:0.0013
+RealMatrix:0.0003
+RealVector:0.0298
+RealVectorChangingVisitor:0.0029
+RealVectorPreservingVisitor:0.0029
+UnivariateFunction:0.0003
+UnmodifiableEntry:0.0008

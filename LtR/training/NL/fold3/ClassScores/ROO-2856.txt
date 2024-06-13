@@ -1,0 +1,7 @@
+FileManager:0.1951
+MavenOperations:0.2927
+ModuleFeature:0.2439
+PathResolver:0.2195
+PomManagementService:0.4146
+ProjectOperations:0.3415
+XmlRoundTripFileManager:0.4878

@@ -1,0 +1,5 @@
+AbstractConnectionFactory:0.3548
+AmqpAppender:0.1452
+ConnectionFactoryUtils:0.3065
+RabbitAdmin:0.1290
+RabbitTemplate:0.1774

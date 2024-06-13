@@ -1,0 +1,6 @@
+CoreOAuthConsumerSupport:0.5000
+OAuthClientHttpRequestFactory:0.6190
+OAuthConsumerToken:0.3571
+OAuthRestTemplate:0.3333
+OAuthSecurityContext:0.4048
+OAuthSecurityContextHolder:0.5476

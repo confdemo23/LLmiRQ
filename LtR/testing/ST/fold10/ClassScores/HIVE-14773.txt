@@ -1,0 +1,3 @@
+AnnotateWithStatistics:0.5000
+ColumnStatisticsData:0.4474
+StatsUtils:0.1842

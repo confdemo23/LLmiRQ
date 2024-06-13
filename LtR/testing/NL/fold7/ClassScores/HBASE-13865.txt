@@ -1,0 +1,4 @@
+HBaseConfiguration:0.4103
+HConstants:0.2051
+HRegion:0.1282
+MemStore:0.1538

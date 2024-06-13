@@ -1,0 +1,2 @@
+FlatFileItemWriter:0.3333
+LineAggregator:0.2444

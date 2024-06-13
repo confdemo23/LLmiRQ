@@ -1,0 +1,7 @@
+Client:0.0027
+ConnectionImpl:0.0004
+HCatUtil:0.0004
+HadoopThriftAuthBridge:0.0010
+HiveEndPoint:0.0015
+ShimLoader:0.0010
+Utils:0.0027

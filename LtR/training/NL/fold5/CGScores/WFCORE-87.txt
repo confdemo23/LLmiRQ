@@ -1,0 +1,10 @@
+AttachedDependency:0.0891
+AttachmentKey:0.0485
+DeploymentUnit:0.4224
+Factory:0.0556
+PathAddress:0.1557
+PathElement:0.1206
+RegisteredDeploymentUnitProcessor:0.0501
+Resource:0.2833
+ResourceDefinition:0.0581
+SimpleAttributeDefinition:0.0581

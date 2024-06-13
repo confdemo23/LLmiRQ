@@ -1,0 +1,9 @@
+CachingConnectionFactory:0.5122
+ChannelProxy:0.2195
+DirectMessageListenerContainer:0.6585
+MessageListenerAdapter:0.4634
+Queue:0.0488
+RabbitAdmin:0.1951
+RabbitListenerTestHarness:0.5366
+RabbitTemplate:0.2683
+SimpleMessageListenerContainer:0.6585

@@ -1,0 +1,6 @@
+HttpClientConfigurer:0.4595
+HttpProxyTest:0.2703
+ProxyHttpClientConfigurer:0.5946
+SalesforceComponent:0.4324
+SalesforceEndpoint:0.4054
+SalesforceHttpClient:0.4595

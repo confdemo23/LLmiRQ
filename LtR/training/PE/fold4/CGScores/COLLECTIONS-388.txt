@@ -1,0 +1,4 @@
+ConstantFactory:0.0037
+ExceptionFactory:0.0008
+InstantiateFactory:0.0020
+PrototypeFactory:0.0008

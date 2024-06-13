@@ -1,0 +1,8 @@
+AclAuthorizationStrategy:0.4884
+AclImpl:0.0930
+AclPermissionEvaluator:0.4419
+AclService:0.1628
+JdbcMutableAclService:0.4186
+MutableAclService:0.3256
+PermissionEvaluator:0.3721
+SidRetrievalStrategy:0.3953

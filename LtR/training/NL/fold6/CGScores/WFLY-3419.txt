@@ -1,0 +1,5 @@
+BeanDeploymentArchiveImpl:0.1549
+BeanDeploymentModule:0.0095
+Reflections:0.0191
+ServiceLoaders:0.0082
+WeldDeployment:0.0035

@@ -1,0 +1,8 @@
+DelimitedJSONSerDe:0.3846
+HiveConf:0.1282
+HiveInputFormat:0.3077
+LazySimpleSerDe:0.3077
+OpenCSVSerde:0.2308
+RecordReader:0.2308
+SerDeUtils:0.1795
+TableScanOperator:0.3590

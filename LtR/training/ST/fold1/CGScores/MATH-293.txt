@@ -1,0 +1,10 @@
+Array2DRowRealMatrix:0.1109
+LinearConstraint:0.0660
+LinearObjectiveFunction:0.0391
+MatrixUtils:0.0782
+Precision:0.0292
+RealMatrix:0.0660
+RealMatrixChangingVisitor:0.0757
+RealMatrixPreservingVisitor:0.0757
+RealVector:0.0346
+SimplexTableau:0.1196

@@ -1,0 +1,9 @@
+Array2DRowRealMatrix:0.0936
+ArrayRealVector:0.3674
+BOBYQAOptimizer:0.0025
+Basis:0.0008
+DiffPow:0.0008
+Elli:0.0008
+FastMath:0.0702
+PointValuePair:0.0037
+RealVector:0.0013

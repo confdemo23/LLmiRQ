@@ -1,0 +1,5 @@
+JGroupsSubsystemXMLReader:0.5641
+JGroupsSubsystemXMLWriter:0.5641
+ProtocolResourceDefinition:0.5897
+ThreadPoolResourceDefinition:0.6410
+TransportResourceDefinition:0.6154

@@ -1,0 +1,1 @@
+GatewayReceiverFactoryBean:0.5000

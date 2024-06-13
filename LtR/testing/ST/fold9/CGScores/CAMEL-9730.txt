@@ -1,0 +1,10 @@
+CamelBlueprintHelper:0.1062
+CollectionStringBuffer:0.3087
+DefaultTypeConverter:0.1283
+ManagementStrategy:0.0809
+ObjectHelper:0.1978
+Route:0.1691
+RouteDefinition:0.1056
+RouteService:0.2960
+Statistics:0.1377
+TypeConverter:0.1149

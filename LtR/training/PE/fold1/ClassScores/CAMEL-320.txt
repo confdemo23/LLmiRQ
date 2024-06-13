@@ -1,0 +1,4 @@
+BeanProcessor:0.2222
+DefaultParameterMappingStrategy:0.6222
+Exchange:0.1111
+Message:0.0889

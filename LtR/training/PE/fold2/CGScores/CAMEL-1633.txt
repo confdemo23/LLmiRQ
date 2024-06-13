@@ -1,0 +1,10 @@
+CamelContext:0.0043
+DefaultConsumer:0.0043
+Endpoint:0.0043
+ExceptionHandler:0.0018
+Exchange:0.0043
+ExecutorServiceManager:0.0043
+Message:0.0018
+Processor:0.0018
+URISupport:0.0018
+XmppEndpoint:0.0486

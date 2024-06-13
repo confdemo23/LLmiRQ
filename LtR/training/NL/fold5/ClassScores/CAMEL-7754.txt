@@ -1,0 +1,3 @@
+QuartzComponent:0.3333
+QuartzConsumer:0.3030
+QuartzEndpoint:0.3030

@@ -1,0 +1,6 @@
+Authentication:0.0556
+AuthenticationTrustResolver:0.0071
+GrantedAuthority:0.0071
+SecurityContext:0.0071
+SecurityContextHolder:0.0071
+UserDetails:0.0071

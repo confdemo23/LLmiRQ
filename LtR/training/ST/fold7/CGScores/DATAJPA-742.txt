@@ -1,0 +1,9 @@
+AbstractJpaQuery:0.0175
+HibernateUtils:0.0012
+Jpa21Utils:0.0010
+JpaEntityMetadata:0.0010
+JpaQueryExecution:0.0010
+JpaQueryMethod:0.0279
+PersistenceProvider:0.0025
+QueryHints:0.0023
+StoredProcedureJpaQuery:0.0025

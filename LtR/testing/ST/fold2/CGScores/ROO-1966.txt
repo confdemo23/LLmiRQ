@@ -1,0 +1,10 @@
+AnnotationAttributeValue:0.0346
+AnnotationMetadata:0.0346
+CustomData:0.0571
+FieldMetadata:0.2995
+JavaSymbolName:0.0975
+JavaType:0.2276
+MemberFindingUtils:0.0436
+XmlElementBuilder:0.4341
+XmlRoundTripUtils:0.0481
+XmlUtils:0.0705

@@ -1,0 +1,2 @@
+HiveServer2:0.1860
+MiniHS2:0.0930

@@ -1,0 +1,5 @@
+SmppCommandType:0.0009
+SmppConfiguration:0.0004
+SmppMessage:0.0288
+SmppMessageType:0.0021
+SmppUtils:0.0004

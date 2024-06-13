@@ -1,0 +1,10 @@
+BindyAbstractFactory:0.0232
+BindyCsvFactory:0.0814
+BindyKeyValuePairFactory:0.0515
+CamelContext:0.0186
+ConverterUtils:0.0126
+Exchange:0.0186
+FormatFactory:0.0130
+IOHelper:0.0276
+ObjectHelper:0.0545
+TypeConverter:0.0186

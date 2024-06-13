@@ -1,0 +1,10 @@
+Binding:0.0237
+ConnectionFactoryUtils:0.0113
+Exchange:0.0189
+Message:0.0254
+MessageProperties:0.0420
+Queue:0.0140
+RabbitConnectionFactoryBean:0.0164
+RabbitResourceHolder:0.0290
+RabbitTemplate:0.0309
+RabbitUtils:0.0103

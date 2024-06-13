@@ -1,0 +1,10 @@
+DomainHostConnection:0.0164
+DomainSlaveHostRegistrations:0.0310
+HostControllerEnvironment:0.0286
+HostRunningModeControl:0.0116
+LocalHostControllerInfoImpl:0.1089
+ManagementResourceRegistration:0.0237
+PathAddress:0.0213
+PathElement:0.0335
+ServerInventory:0.0822
+SystemExiter:0.0116

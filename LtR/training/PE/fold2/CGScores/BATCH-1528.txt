@@ -1,0 +1,7 @@
+BeanDefinitionUtils:0.0100
+CoreNamespaceUtils:0.0141
+JobParserJobFactoryBean:0.0100
+StepListenerMetaData:0.0031
+StepListenerParser:0.0031
+StepParserStepFactoryBean:0.0260
+TaskletParser:0.0031

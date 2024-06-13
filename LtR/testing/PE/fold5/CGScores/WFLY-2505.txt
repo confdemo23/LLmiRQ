@@ -1,0 +1,2 @@
+JGroupsModel:0.0012
+JGroupsSubsystemResourceDefinition:0.0012

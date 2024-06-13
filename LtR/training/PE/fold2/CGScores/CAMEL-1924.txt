@@ -1,0 +1,10 @@
+CachedOutputStream:0.0715
+ChoiceDefinition:0.0342
+Exchange:0.0309
+GenericFile:0.0141
+GenericFileDeleteProcessStrategy:0.0141
+GenericFileEndpoint:0.0141
+IOHelper:0.0400
+StreamCache:0.0174
+TryDefinition:0.0168
+UnitOfWork:0.0264

@@ -1,0 +1,5 @@
+AdviceWithRouteBuilder:0.3800
+AdviceWithTypeTest:0.3000
+ChoiceDefinition:0.2600
+ContextTestSupport:0.3000
+RouteBuilder:0.1800

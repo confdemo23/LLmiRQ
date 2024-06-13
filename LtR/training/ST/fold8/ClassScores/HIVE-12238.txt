@@ -1,0 +1,3 @@
+VectorSelectOperator:0.2742
+VectorUDFAdaptor:0.2097
+VectorUDFDateString:0.2581

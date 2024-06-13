@@ -1,0 +1,2 @@
+AuthenticationManagerBuilder:0.4615
+ProviderManager:0.2115

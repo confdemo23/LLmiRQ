@@ -1,0 +1,10 @@
+Bytes:0.3177
+ColumnFamilyDescriptor:0.1584
+HRegion:0.3468
+HStore:0.2101
+MasterCoprocessorHost:0.1797
+MonitoredTask:0.2374
+Pair:0.2040
+RegionInfo:0.5000
+RegionStateNode:0.2526
+SplitAlgorithm:0.1675

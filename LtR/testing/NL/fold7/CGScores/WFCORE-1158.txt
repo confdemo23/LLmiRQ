@@ -1,0 +1,2 @@
+Factory:0.0365
+ResourceDefinition:0.0495

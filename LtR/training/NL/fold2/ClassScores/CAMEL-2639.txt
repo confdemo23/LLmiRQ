@@ -1,0 +1,3 @@
+CamelContext:0.2439
+Main:0.0488
+RouteBuilder:0.2439

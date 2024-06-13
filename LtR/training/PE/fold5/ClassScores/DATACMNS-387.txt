@@ -1,0 +1,3 @@
+Part:0.0222
+PartTree:0.1111
+PropertyPath:0.2000

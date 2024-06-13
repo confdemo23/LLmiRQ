@@ -1,0 +1,10 @@
+Builder:0.1603
+EntityDescriptorProto:0.0799
+FragmentRuntimeInfo:0.0317
+GetTokenResponseProto:0.0236
+IOSpecProto:0.0236
+QueryIdentifierProto:0.1040
+SignableVertexSpec:0.0317
+TaskWrapper:0.2032
+UserPayloadProto:0.0317
+VertexOrBinary:0.0317

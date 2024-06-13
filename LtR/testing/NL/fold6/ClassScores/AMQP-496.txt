@@ -1,0 +1,8 @@
+BlockingQueueConsumer:0.5152
+CachingConnectionFactory:0.6061
+DirectReplyToMessageListenerContainer:1.0000
+MessageListenerAdapter:0.5455
+RabbitAdmin:0.2121
+RabbitListenerContainerFactory:0.7879
+RabbitTemplate:0.3030
+SimpleMessageListenerContainer:0.7879

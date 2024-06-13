@@ -1,0 +1,10 @@
+AsyncCallback:0.0154
+CamelLogger:0.0020
+DefaultAsyncProducer:0.0074
+Exchange:0.0207
+Message:0.0047
+NettyConfiguration:0.1405
+NettyEndpoint:0.0074
+NettyHelper:0.0074
+NettyPayloadHelper:0.0020
+NettyWorkerPoolBuilder:0.0074

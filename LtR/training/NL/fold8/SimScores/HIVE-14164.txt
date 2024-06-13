@@ -1,0 +1,10 @@
+FakeDerby:0.2864
+HiveConnection:0.2857
+RetrySemantics:0.3505
+TestMiniHS2:0.4062
+TestObjectStoreInitRetry:0.2710
+TestServiceDiscovery:0.2792
+TestServiceDiscoveryWithMiniHS2:0.4220
+TestZooKeeperTokenStore:0.2893
+ZooKeeperHiveClientHelper:0.2647
+ZooKeeperStorage:0.2960

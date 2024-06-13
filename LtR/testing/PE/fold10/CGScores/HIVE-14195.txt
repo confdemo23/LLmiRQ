@@ -1,0 +1,7 @@
+Client:0.0059
+HadoopThriftAuthBridge:0.0027
+MetaException:0.0256
+NoSuchObjectException:0.0417
+ShimLoader:0.0027
+Utils:0.0059
+_Fields:0.0109

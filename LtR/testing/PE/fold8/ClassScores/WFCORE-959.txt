@@ -1,0 +1,2 @@
+NodeSubregistry:0.2400
+ResourceDefinition:0.3000

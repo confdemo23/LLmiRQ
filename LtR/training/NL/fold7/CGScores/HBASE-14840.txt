@@ -1,0 +1,10 @@
+Builder:0.0872
+Bytes:0.0822
+Context:0.0730
+Entry:0.0748
+HBaseInterClusterReplicationEndpoint:0.0412
+ReplicationEndpoint:0.0589
+ReplicationSinkManager:0.1049
+ReplicationSourceShipper:0.0539
+TableName:0.0748
+WALKeyImpl:0.0518

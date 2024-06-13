@@ -1,0 +1,3 @@
+DefaultComponentViewConfigurator:0.6042
+EEModuleConfigurationProcessor:0.5625
+EJBSecurityViewConfigurator:0.5000

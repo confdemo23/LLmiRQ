@@ -1,0 +1,10 @@
+ApplyFunc:0.0023
+Batchable:0.0150
+FilterType:0.0066
+GetDbHelper:0.0007
+GetHelper:0.0059
+GetStatHelper:0.0007
+ObjectStore:0.1144
+PartitionFilterGenerator:0.0023
+QueryWrapper:0.0550
+ShimLoader:0.0007

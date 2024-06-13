@@ -1,0 +1,6 @@
+CamelContext:0.0005
+Exchange:0.0005
+IOHelper:0.0058
+Message:0.0051
+OutputStreamBuilder:0.0017
+TypeConverter:0.0005

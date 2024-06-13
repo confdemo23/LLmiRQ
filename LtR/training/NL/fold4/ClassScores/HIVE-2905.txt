@@ -1,0 +1,6 @@
+HiveConnection:0.2558
+HiveDatabaseMetaData:0.3953
+HiveMetaStoreClient:0.3721
+HiveStatement:0.2326
+MetaDataFormatUtils:0.3721
+ObjectStore:0.1860

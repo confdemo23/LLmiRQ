@@ -1,0 +1,10 @@
+HMSHandler:0.0452
+HdfsUtils:0.0083
+Hive:0.0189
+HiveDelegationTokenManager:0.0193
+HiveMetaStore:0.0106
+HiveMetastoreCli:0.0193
+MoveTask:0.0083
+Server:0.0193
+ShimLoader:0.0046
+StorageDescriptorKey:0.0063

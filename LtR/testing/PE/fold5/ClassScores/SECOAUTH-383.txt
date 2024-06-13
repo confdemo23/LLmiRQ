@@ -1,0 +1,2 @@
+HMAC_SHA1SignatureMethod:0.4444
+OAuthRestTemplate:0.2889

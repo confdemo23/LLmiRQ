@@ -1,0 +1,4 @@
+ExtensionAddHandler:0.4103
+ExtensionRegistry:0.3590
+ExtensionRemoveHandler:0.4872
+ManagementResourceRegistration:0.6923

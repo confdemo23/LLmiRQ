@@ -1,0 +1,9 @@
+BlockCache:0.2051
+BucketCache:0.2308
+CacheConfig:0.2308
+CompactedHFilesDischarger:0.5897
+HFile:0.0769
+HRegion:0.1282
+HStore:0.1026
+StoreFile:0.1795
+StoreFileScanner:0.3590

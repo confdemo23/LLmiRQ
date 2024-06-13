@@ -1,0 +1,2 @@
+Query:0.0435
+StringQuery:0.1739

@@ -1,0 +1,10 @@
+Base64:0.0027
+Bytes:0.0043
+Connection:0.0043
+ConnectionFactory:0.0043
+HBaseConfiguration:0.0154
+MetaTableAccessor:0.0043
+TableName:0.0059
+TableSnapshotInputFormat:0.0027
+TokenUtil:0.0043
+UserProvider:0.0106

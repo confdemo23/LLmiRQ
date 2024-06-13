@@ -1,0 +1,5 @@
+AbstractOperationContext:0.4255
+AttributeAccess:0.2340
+DomainApiHandler:0.2553
+ModelControllerImpl:0.3191
+ReadResourceDescriptionHandler:0.5532

@@ -1,0 +1,2 @@
+CrudRepository:0.3030
+TransactionalRepositoryProxyPostProcessor:1.0000

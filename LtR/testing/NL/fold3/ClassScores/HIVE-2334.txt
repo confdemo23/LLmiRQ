@@ -1,0 +1,5 @@
+CliDriver:0.1707
+HiveCommand:0.2195
+HiveConf:0.1463
+HiveSQLException:0.3415
+Table:0.0732

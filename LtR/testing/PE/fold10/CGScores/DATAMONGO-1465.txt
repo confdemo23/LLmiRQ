@@ -1,0 +1,5 @@
+Criteria:0.0034
+ExecutableMongoScript:0.0034
+MongoConverter:0.0034
+MongoOperations:0.0226
+NamedMongoScript:0.0034

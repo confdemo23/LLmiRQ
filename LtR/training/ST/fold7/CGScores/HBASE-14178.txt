@@ -1,0 +1,10 @@
+Bytes:0.0348
+HRegion:0.1259
+HStore:0.0733
+KeyValueHeap:0.0380
+KeyValueScanner:0.0370
+MonitoredTask:0.0346
+RegionInfo:0.1065
+Scan:0.0323
+ScanQueryMatcher:0.0259
+ScannerContext:0.0546

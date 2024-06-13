@@ -1,0 +1,10 @@
+Exchange:0.0396
+HeaderFilterStrategy:0.0066
+HttpCommonEndpoint:0.0169
+HttpConsumer:0.0234
+HttpHelper:0.0126
+HttpMessage:0.0306
+IOHelper:0.0051
+JettyHttpEndpoint:0.0055
+Message:0.0241
+ObjectHelper:0.0051

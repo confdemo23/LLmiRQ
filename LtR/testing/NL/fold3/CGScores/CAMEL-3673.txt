@@ -1,0 +1,10 @@
+CollectionStringBuffer:0.3069
+DefaultRouteStartupOrder:0.0734
+EndpointRegistry:0.0734
+EventHelper:0.0734
+ManagementStrategy:0.0804
+ObjectHelper:0.1777
+PropertiesComponent:0.0930
+Route:0.1681
+RouteDefinition:0.1049
+RouteService:0.2943

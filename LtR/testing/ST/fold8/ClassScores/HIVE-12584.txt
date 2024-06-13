@@ -1,0 +1,4 @@
+HashTableLoader:0.2500
+HybridHashTableContainer:0.4375
+MapJoinBytesTableContainer:0.4792
+MapJoinOperator:0.2500

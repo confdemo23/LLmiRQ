@@ -1,0 +1,8 @@
+ConfigurationEvent:0.0226
+EventType:0.0098
+IOFactory:0.0047
+PropertiesConfiguration:0.0175
+PropertiesConfigurationLayout:0.0073
+PropertiesReader:0.0327
+PropertiesWriter:0.0226
+PropertyLayoutData:0.0404

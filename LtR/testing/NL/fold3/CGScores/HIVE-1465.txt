@@ -1,0 +1,10 @@
+Client:0.0103
+ConfVars:0.0216
+HMSHandler:0.0452
+HiveConf:0.0482
+HiveDelegationTokenManager:0.0193
+HiveMetaStore:0.0106
+HiveMetastoreCli:0.0193
+Server:0.0193
+ShimLoader:0.0083
+Utils:0.0173

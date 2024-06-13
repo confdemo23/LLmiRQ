@@ -1,0 +1,5 @@
+AbstractBeanDefinition:0.5135
+BeanDefinition:0.2973
+BeanFactory:0.2162
+DefaultListableBeanFactory:0.6216
+XmlBeanDefinitionReader:0.5405

@@ -1,0 +1,6 @@
+Chunk:0.1098
+ChunkIterator:0.0285
+ItemProcessor:0.0081
+ItemWriter:0.0081
+MulticasterBatchListener:0.0691
+StepContribution:0.0183

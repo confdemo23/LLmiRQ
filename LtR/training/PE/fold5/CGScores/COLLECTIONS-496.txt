@@ -1,0 +1,4 @@
+AbstractCollectionDecorator:0.0250
+BoundedCollection:0.0382
+SynchronizedCollection:0.0118
+UnmodifiableIterator:0.0118

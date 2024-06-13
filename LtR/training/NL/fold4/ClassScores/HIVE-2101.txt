@@ -1,0 +1,4 @@
+ExprNodeDesc:0.2093
+FilterOperator:0.2558
+JoinDesc:0.1163
+MapJoinOperator:0.2791

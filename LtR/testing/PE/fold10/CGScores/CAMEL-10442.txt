@@ -1,0 +1,10 @@
+AsyncCallback:0.0082
+AsyncProcessor:0.0039
+Endpoint:0.0147
+EndpointHelper:0.0017
+EventHelper:0.0039
+Exchange:0.0213
+ObjectHelper:0.0060
+ProducerCache:0.0060
+ServiceHelper:0.0082
+URISupport:0.0060

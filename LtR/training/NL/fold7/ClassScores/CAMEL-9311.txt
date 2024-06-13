@@ -1,0 +1,7 @@
+DynamicRouter:0.2564
+Exchange:0.1282
+HttpComponent:0.2564
+HttpConsumer:0.2308
+HttpEndpoint:0.2308
+HttpProducer:0.2308
+Processor:0.1538

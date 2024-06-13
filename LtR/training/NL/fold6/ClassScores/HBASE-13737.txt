@@ -1,0 +1,8 @@
+CloneSnapshotProcedure:0.5128
+DeleteTableProcedure:0.4615
+HBaseAdmin:0.2051
+HTable:0.1026
+MobStoreScanner:0.3333
+MobUtils:0.1538
+Scan:0.0513
+SnapshotManager:0.3333

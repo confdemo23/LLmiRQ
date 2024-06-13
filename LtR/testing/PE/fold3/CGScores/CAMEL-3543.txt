@@ -1,0 +1,10 @@
+CamelContext:0.0148
+CamelContextHelper:0.0301
+InputTypeDefinition:0.0240
+ModelCamelContext:0.0148
+ObjectHelper:0.0086
+OutputTypeDefinition:0.0240
+RouteBuilder:0.0117
+RouteContext:0.0516
+RouteDefinition:0.0209
+RoutesDefinition:0.0117

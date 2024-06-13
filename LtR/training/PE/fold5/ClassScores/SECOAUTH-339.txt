@@ -1,0 +1,2 @@
+AuthorizationEndpoint:0.4000
+OAuth2Exception:0.2667

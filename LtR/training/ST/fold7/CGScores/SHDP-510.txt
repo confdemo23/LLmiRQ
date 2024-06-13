@@ -1,0 +1,4 @@
+InputContext:0.0008
+PartitionTextFileWriter:0.0101
+TextFileReader:0.0059
+TextFileWriter:0.0122

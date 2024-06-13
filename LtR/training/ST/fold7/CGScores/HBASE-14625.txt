@@ -1,0 +1,6 @@
+AbstractHBaseTool:0.0012
+AuthUtil:0.0012
+ChoreService:0.0029
+HBaseConfiguration:0.0012
+IntegrationTestBase:0.0029
+Pair:0.0054

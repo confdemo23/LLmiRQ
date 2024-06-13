@@ -1,0 +1,10 @@
+Admin:0.0246
+ClusterMetrics:0.0095
+ColumnFamilyDescriptor:0.0085
+Connection:0.0106
+HTableDescriptor:0.0106
+RegionInfo:0.0186
+RegionStdOutSink:0.0136
+Scan:0.0116
+Table:0.0136
+TableName:0.0095

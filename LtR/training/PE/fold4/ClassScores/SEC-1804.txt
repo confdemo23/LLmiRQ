@@ -1,0 +1,4 @@
+AuthenticationException:0.4222
+User:0.0000
+UserDetailsManager:0.3111
+UserDetailsService:0.3111

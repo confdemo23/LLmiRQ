@@ -1,0 +1,10 @@
+FastMath:0.0059
+GeometricMean:0.0059
+MathUtils:0.0384
+Mean:0.0040
+Precision:0.0265
+SecondMoment:0.0127
+StorelessUnivariateStatistic:0.1089
+Sum:0.0049
+SummaryStatistics:0.0333
+Variance:0.0093

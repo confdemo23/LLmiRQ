@@ -1,0 +1,10 @@
+AsyncCallback:0.0028
+CamelContext:0.0062
+ExceptionHandler:0.0028
+Exchange:0.0197
+KafkaComponent:0.0028
+KafkaConfiguration:0.0389
+KafkaEndpoint:0.0503
+KafkaProducerCallBack:0.0017
+Message:0.0096
+TypeConverter:0.0039

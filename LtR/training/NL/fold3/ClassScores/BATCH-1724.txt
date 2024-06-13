@@ -1,0 +1,9 @@
+ChunkOrientedTasklet:0.4146
+CompositeItemProcessor:0.4634
+CompositeItemWriter:0.3902
+FaultTolerantStepFactoryBean:0.6098
+RepeatTemplate:0.2683
+SimpleStepExecutionSplitter:0.5854
+SkipPolicy:0.1707
+StepExecutionListenerSupport:0.6098
+TaskletStep:0.1951

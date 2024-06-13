@@ -1,0 +1,2 @@
+ChannelAwareMessageListener:0.5581
+SimpleMessageListenerContainer:0.6279

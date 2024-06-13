@@ -1,0 +1,10 @@
+CTEClause:0.0238
+DDLSemanticAnalyzer:0.0224
+HiveInputSplit:0.0271
+MetaStoreUtils:0.0343
+QualifiedNameUtil:0.0287
+SemanticAnalyzer:0.0660
+ShimLoader:0.0175
+SortBucketRSCtx:0.0396
+Table:0.1541
+Utils:0.0152

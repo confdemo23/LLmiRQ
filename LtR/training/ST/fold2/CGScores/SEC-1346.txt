@@ -1,0 +1,10 @@
+AuthenticationFailureHandler:0.0160
+HttpRequestResponseHolder:0.0349
+HttpServlet3RequestFactory:0.0428
+RememberMeServices:0.0203
+RequestMatcher:0.0194
+SecurityContext:0.0667
+SecurityContextHolder:0.1219
+SecurityContextRepository:0.0298
+SessionAuthenticationStrategy:0.0160
+ThrowableAnalyzer:0.0355

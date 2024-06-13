@@ -1,0 +1,9 @@
+AsyncProcessor:0.2821
+CamelContext:0.2308
+DefaultErrorHandler:0.4103
+Exchange:0.1282
+ExchangeHelper:0.2821
+Pipeline:0.1282
+Processor:0.1538
+RedeliveryPolicy:0.3333
+Route:0.0513

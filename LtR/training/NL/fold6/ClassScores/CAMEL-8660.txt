@@ -1,0 +1,9 @@
+Exchange:0.1538
+FtpConsumer:0.2308
+FtpEndpoint:0.2308
+FtpOperations:0.2821
+GenericFileConsumer:0.4359
+GenericFileProducer:0.4359
+PollingConsumer:0.3333
+RemoteFileConsumer:0.4103
+UnitOfWork:0.2051

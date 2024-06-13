@@ -1,0 +1,10 @@
+AuthenticationManagerBuilder:0.1281
+HttpSecurity:0.1101
+PasswordEncoder:0.0606
+ProviderManager:0.0400
+RedirectUrlBuilder:0.2543
+RememberMeServices:0.0360
+SecurityContextHolder:0.0360
+SecurityContextHolderStrategy:0.0400
+UrlUtils:0.0460
+UsernamePasswordAuthenticationToken:0.0661

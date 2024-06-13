@@ -1,0 +1,2 @@
+PropertiesConfiguration:0.4222
+PropertiesConfigurationLayout:0.5556

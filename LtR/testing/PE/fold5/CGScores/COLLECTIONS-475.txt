@@ -1,0 +1,2 @@
+AbstractMapDecorator:0.0215
+ExpirationPolicy:0.0014

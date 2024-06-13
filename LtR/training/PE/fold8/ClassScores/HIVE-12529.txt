@@ -1,0 +1,2 @@
+DbTxnManager:0.1957
+HiveTxnManager:0.2391

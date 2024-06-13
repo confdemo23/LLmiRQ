@@ -1,0 +1,10 @@
+Builder:0.0612
+CapabilityId:0.0306
+CapabilityRegistration:0.0635
+ImmutableCapabilityRegistry:0.0508
+ManagementResourceRegistration:0.0508
+PathAddress:0.0300
+ServerDescriptions:0.0404
+SimpleAttributeDefinition:0.1132
+SimpleAttributeDefinitionBuilder:0.0300
+SimpleOperationDefinitionBuilder:0.1548

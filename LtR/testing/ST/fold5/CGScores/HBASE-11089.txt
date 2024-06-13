@@ -1,0 +1,3 @@
+CryptoAES:0.0225
+EncryptionUtil:0.0098
+IntegrationTestFilter:0.0126

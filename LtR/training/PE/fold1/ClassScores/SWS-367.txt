@@ -1,0 +1,5 @@
+AbstractWebServiceConnection:0.5556
+BytesMessageOutputStream:0.4667
+JmsReceiverConnection:0.4000
+JmsTransportException:0.4000
+WebServiceMessage:0.3111

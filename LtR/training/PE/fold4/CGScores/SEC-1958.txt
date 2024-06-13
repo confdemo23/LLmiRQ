@@ -1,0 +1,8 @@
+AbstractPreAuthenticatedProcessingFilter:0.0037
+Authentication:0.0077
+AuthenticationFailureHandler:0.0037
+AuthenticationManager:0.0037
+AuthenticationSuccessHandler:0.0037
+PreAuthenticatedAuthenticationToken:0.0037
+SecurityContext:0.0118
+SecurityContextHolder:0.0199

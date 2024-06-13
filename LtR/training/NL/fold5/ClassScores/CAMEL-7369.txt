@@ -1,0 +1,3 @@
+MongoDbComponent:0.3636
+MongoDbEndpoint:0.3333
+MongoDbProducer:0.3333

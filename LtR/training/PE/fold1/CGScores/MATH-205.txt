@@ -1,0 +1,6 @@
+ArithmeticUtils:0.0086
+Complex:0.0407
+FastFourierTransformer:0.0086
+FastMath:0.0407
+FunctionUtils:0.0086
+TransformUtils:0.0193

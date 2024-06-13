@@ -1,0 +1,10 @@
+BindInfo:0.2219
+BinderService:0.2184
+ConnectorServices:0.1039
+ConnectorXmlDescriptor:0.0871
+NamingContext:0.0941
+ParsedName:0.1840
+ResourceAdapterDeployment:0.8567
+WildFLyRaDeployer:0.1320
+WorkManagerSecurity:0.2219
+WritableServiceBasedNamingStore:0.1994

@@ -1,0 +1,10 @@
+Builder:0.5990
+EntityDescriptorProto:0.2982
+FragmentRuntimeInfo:0.1178
+NodeInfo:0.5990
+QueryIdentifierProto:0.3885
+SignableVertexSpec:0.1178
+StatsPerDag:0.1028
+TaskInfo:0.2531
+UserPayloadProto:0.1178
+VertexOrBinary:0.1178

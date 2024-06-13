@@ -1,0 +1,2 @@
+AbstractStringBasedJpaQuery:0.6316
+CrudMethodMetadataPostProcessor:0.7368

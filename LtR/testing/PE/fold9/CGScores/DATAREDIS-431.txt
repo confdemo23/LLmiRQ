@@ -1,0 +1,10 @@
+BinaryRedisCacheElement:0.0364
+CacheValueAccessor:0.0133
+RedisCacheElement:0.0595
+RedisCacheMetadata:0.0595
+RedisConnection:0.2527
+RedisConnectionUtils:0.0289
+RedisOperations:0.0422
+RedisSerializer:0.0300
+SerializationUtils:0.0139
+StringRedisSerializer:0.0104

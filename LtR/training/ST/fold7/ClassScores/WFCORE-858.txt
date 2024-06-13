@@ -1,0 +1,4 @@
+CommandCompleter:0.2708
+CommandLineMain:0.2500
+Console:0.0833
+LsHandler:0.1250

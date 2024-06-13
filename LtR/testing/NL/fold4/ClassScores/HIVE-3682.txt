@@ -1,0 +1,7 @@
+CreateTableDesc:0.2927
+FileSinkOperator:0.3171
+HiveConf:0.1220
+HiveFileFormatUtils:0.3902
+HiveOutputFormat:0.3171
+SemanticAnalyzer:0.3171
+Table:0.0488

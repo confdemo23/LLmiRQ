@@ -1,0 +1,10 @@
+Exchange:0.0439
+HttpPrincipal:0.0288
+NettyConsumer:0.0307
+NettyHttpBinding:0.0138
+NettyHttpConfiguration:0.0244
+NettyHttpConsumer:0.1190
+NettyHttpEndpoint:0.0739
+NettyHttpSecurityConfiguration:0.0589
+ObjectHelper:0.0492
+SecurityAuthenticator:0.0138

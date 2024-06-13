@@ -1,0 +1,9 @@
+CamelContext:0.0024
+Exchange:0.0038
+JavaMailSender:0.0368
+MailConfiguration:0.0184
+MailConsumer:0.0063
+MailUtils:0.0024
+ObjectHelper:0.0059
+SSLContextParameters:0.0024
+ScheduledPollEndpoint:0.0038

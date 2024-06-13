@@ -1,0 +1,3 @@
+QueryExecutionConverters:0.4375
+RepositoryFactorySupport:0.4375
+Version:0.0833

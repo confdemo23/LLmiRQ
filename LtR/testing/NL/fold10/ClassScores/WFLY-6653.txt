@@ -1,0 +1,3 @@
+DataSourceConfigService:0.5405
+DataSourceDefinition:0.4595
+JcaSubsystemConfiguration:0.5946

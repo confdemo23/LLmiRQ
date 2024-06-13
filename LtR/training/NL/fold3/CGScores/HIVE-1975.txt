@@ -1,0 +1,10 @@
+CTEClause:0.0238
+ConfVars:0.0211
+FSPaths:0.0396
+FileChecker:0.0601
+FileSinkOperator:0.0185
+HdfsEncryptionShim:0.0079
+HiveConf:0.0475
+RecordWriter:0.0185
+SemanticAnalyzer:0.0660
+SortBucketRSCtx:0.0396

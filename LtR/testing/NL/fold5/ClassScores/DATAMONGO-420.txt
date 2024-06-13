@@ -1,0 +1,9 @@
+MappingMongoConverter:0.4186
+MongoDbFactory:0.2558
+MongoPersistentEntity:0.4186
+MongoPersistentProperty:0.4651
+MongoQueryMethod:0.3023
+MongoTemplate:0.2326
+Query:0.0465
+QueryMapper:0.1860
+StringBasedMongoQuery:0.4186

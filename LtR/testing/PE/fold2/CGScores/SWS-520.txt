@@ -1,0 +1,10 @@
+ClientInterceptor:0.0346
+DefaultStrategiesHelper:0.0254
+FaultAwareWebServiceConnection:0.0163
+MessageContext:0.1809
+SoapVersion:0.0213
+TransportContextHolder:0.0254
+WebServiceConnection:0.0346
+WebServiceMessage:0.0437
+WebServiceMessageCallback:0.0346
+WebServiceTemplate:0.0346

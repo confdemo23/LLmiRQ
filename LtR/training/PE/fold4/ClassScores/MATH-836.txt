@@ -1,0 +1,2 @@
+Fraction:0.0889
+FractionConversionException:0.5111

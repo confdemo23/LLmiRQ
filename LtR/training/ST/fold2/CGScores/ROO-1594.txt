@@ -1,0 +1,10 @@
+AnnotationMetadata:0.0766
+AnsiEscapeCode:0.0186
+DoubleAttributeValue:0.0183
+ImportRegistrationResolver:0.0248
+JLineLogHandler:0.0186
+JavaSymbolName:0.0312
+JavaType:0.0619
+ParseResult:0.0301
+ProcessManager:0.0301
+UndoManager:0.0284

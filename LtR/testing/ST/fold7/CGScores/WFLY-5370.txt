@@ -1,0 +1,5 @@
+Batcher:0.0134
+CacheRegistry:0.0348
+CacheRegistryConfiguration:0.0103
+Group:0.0073
+Listener:0.0012

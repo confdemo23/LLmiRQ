@@ -1,0 +1,10 @@
+BindInfo:0.1030
+BinderService:0.0502
+ConnectorServices:0.0475
+ConnectorXmlDescriptor:0.0396
+Injection:0.0238
+IronJacamarActivationResourceService:0.0185
+ResourceAdapterDeployment:0.4013
+WildFLyRaDeployer:0.0607
+WorkManagerSecurity:0.1030
+WritableServiceBasedNamingStore:0.0924

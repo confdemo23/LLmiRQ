@@ -1,0 +1,7 @@
+TCLIService:0.2051
+TExecuteStatementReq:0.4359
+TExecuteStatementResp:0.4615
+TGetOperationStatusReq:0.4872
+TGetOperationStatusResp:0.5128
+TOperationHandle:0.3333
+TSessionHandle:0.2821

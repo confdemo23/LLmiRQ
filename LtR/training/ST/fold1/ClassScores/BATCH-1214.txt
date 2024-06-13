@@ -1,0 +1,2 @@
+CoreNamespaceUtils:0.3182
+RangeArrayPropertyEditor:0.4545

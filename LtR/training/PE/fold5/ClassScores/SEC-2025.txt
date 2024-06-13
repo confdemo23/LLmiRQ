@@ -1,0 +1,2 @@
+HttpSessionSecurityContextRepository:0.7333
+SecurityContextPersistenceFilter:0.6444

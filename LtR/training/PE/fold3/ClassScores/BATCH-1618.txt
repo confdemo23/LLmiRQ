@@ -1,0 +1,1 @@
+MultiResourceItemWriter:0.5405

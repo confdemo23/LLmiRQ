@@ -1,0 +1,7 @@
+BaseSemanticAnalyzer:0.4359
+ExprNodeGenericFuncEvaluator:0.6410
+FunctionRegistry:0.3333
+GenericUDFMacro:0.3077
+HiveMetaStoreClient:0.4103
+ObjectInspectorUtils:0.4359
+SemanticAnalyzer:0.3333

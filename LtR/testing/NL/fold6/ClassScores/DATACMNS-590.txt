@@ -1,0 +1,3 @@
+AbstractMappingContext:0.5455
+PersistentPropertyAccessor:0.6667
+TypeInformationMapper:0.5152

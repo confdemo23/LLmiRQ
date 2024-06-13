@@ -1,0 +1,4 @@
+Exchange:0.1351
+FileComponent:0.2703
+FtpComponent:0.2432
+Processor:0.1622

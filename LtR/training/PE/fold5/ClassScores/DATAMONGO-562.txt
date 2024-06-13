@@ -1,0 +1,1 @@
+PersonWithVersionPropertyOfTypeInteger:0.7778

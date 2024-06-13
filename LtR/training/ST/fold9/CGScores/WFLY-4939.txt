@@ -1,0 +1,10 @@
+Component:0.0023
+ComponentClientInstance:0.0002
+DescriptorUtils:0.0002
+EJBComponent:0.0068
+EJBComponentUnavailableException:0.0007
+EJBSuspendHandlerService:0.0022
+NamespaceContextSelector:0.0029
+View:0.0009
+ViewConfiguration:0.0071
+WritableServiceBasedNamingStore:0.0029

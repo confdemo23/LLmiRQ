@@ -1,0 +1,7 @@
+AccessConstraintDefinition:0.6216
+AttributeAccess:0.3243
+AttributeDefinition:0.4324
+ManagementModel:0.3243
+OperationContext:0.3514
+ResourceDescriptionResolver:0.6486
+WriteAttributeHandler:0.4865

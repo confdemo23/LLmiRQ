@@ -1,0 +1,10 @@
+AsyncRequestFuture:0.0620
+Builder:0.1504
+Bytes:0.1108
+HRegionInfo:0.0437
+HRegionLocation:0.0742
+Pair:0.1596
+Result:0.0462
+Scan:0.1682
+ScannerCallableWithReplicas:0.1103
+TableSplit:0.1809

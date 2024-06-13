@@ -1,0 +1,8 @@
+HiveAuthorizer:0.3750
+HiveAuthzSessionContext:0.6563
+HiveConf:0.1875
+HiveMetaStoreClient:0.5313
+HiveOperationType:0.4688
+HivePrivilegeObject:0.5313
+SQLStdHiveAccessController:0.7500
+StorageBasedAuthorizationProvider:0.9688

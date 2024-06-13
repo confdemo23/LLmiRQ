@@ -1,0 +1,5 @@
+CamelConduit:0.0026
+CamelContext:0.0064
+Endpoint:0.0026
+ObjectHelper:0.0026
+Producer:0.0064

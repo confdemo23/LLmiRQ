@@ -1,0 +1,10 @@
+AxiomSoapMessageFactory:0.5405
+EndpointAdapter:0.3243
+MessageDispatcher:0.3784
+PayloadValidatingInterceptor:0.6757
+SaajSoapMessageFactory:0.5135
+SoapEnvelope:0.2432
+SoapMessage:0.2162
+SoapMessageDispatcher:0.4865
+WebServiceMessage:0.3784
+WebServiceMessageExtractor:0.6216

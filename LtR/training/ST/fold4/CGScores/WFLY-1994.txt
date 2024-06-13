@@ -1,0 +1,4 @@
+DeploymentDescriptorEnvironment:0.0779
+PersistenceRefProcessor:0.0295
+PersistenceUnitSearch:0.0295
+PersistenceUnitServiceImpl:0.0133

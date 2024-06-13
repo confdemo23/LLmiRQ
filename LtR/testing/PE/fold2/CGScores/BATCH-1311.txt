@@ -1,0 +1,10 @@
+BatchStatus:0.0107
+Entity:0.0239
+ExecutionContextDao:0.0152
+ExitStatus:0.0178
+JobExecution:0.1585
+JobExecutionDao:0.0325
+JobInstanceDao:0.0498
+StepContribution:0.0442
+StepExecution:0.0386
+StepExecutionDao:0.0152

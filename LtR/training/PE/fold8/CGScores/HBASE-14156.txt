@@ -1,0 +1,10 @@
+Admin:0.0139
+Connection:0.0139
+HTableDescriptor:0.0214
+ObserverContext:0.0139
+Put:0.0139
+RegionCoprocessorEnvironment:0.0139
+ResultScanner:0.0064
+Table:0.0439
+TableName:0.0214
+Threads:0.0064

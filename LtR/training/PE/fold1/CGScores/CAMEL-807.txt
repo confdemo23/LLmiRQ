@@ -1,0 +1,10 @@
+CamelContext:0.0102
+CookieHandler:0.0163
+DefaultMessage:0.0437
+Exchange:0.0772
+HttpEndpoint:0.1687
+HttpHelper:0.0589
+HttpMethods:0.0102
+IOHelper:0.0285
+Message:0.1311
+ObjectHelper:0.0152

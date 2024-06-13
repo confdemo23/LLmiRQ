@@ -1,0 +1,4 @@
+ChannelResourceDefinition:0.5946
+JGroupsSubsystemXMLReader:0.5946
+JGroupsSubsystemXMLWriter:0.5946
+ProtocolResourceDefinition:0.6216

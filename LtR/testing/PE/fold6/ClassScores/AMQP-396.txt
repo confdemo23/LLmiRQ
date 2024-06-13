@@ -1,0 +1,2 @@
+BlockingQueueConsumer:0.4000
+SimpleMessageListenerContainer:0.6000

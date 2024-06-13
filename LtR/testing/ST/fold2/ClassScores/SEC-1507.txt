@@ -1,0 +1,4 @@
+RoleHierarchyImpl:0.2955
+RoleVoter:0.1136
+UserDetails:0.1591
+UserDetailsService:0.3182

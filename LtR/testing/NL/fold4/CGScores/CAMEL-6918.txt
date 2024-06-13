@@ -1,0 +1,10 @@
+CamelContext:0.0172
+DefaultEndpoint:0.0132
+ExceptionHandler:0.0132
+Exchange:0.0924
+ExchangeHelper:0.0132
+ExecutorServiceManager:0.0132
+ObjectHelper:0.0211
+QueueReference:0.0330
+SedaComponent:0.0290
+SedaEndpoint:0.1201

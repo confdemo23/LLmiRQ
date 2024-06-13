@@ -1,0 +1,8 @@
+HBaseSerDe:0.1951
+HBaseStorageHandler:0.4146
+HiveHBaseTableInputFormat:0.5610
+HiveHBaseTableOutputFormat:0.5854
+HiveMetaStoreClient:0.4146
+StatsAggregator:0.3171
+StatsSetupConst:0.3171
+StatsWork:0.1707

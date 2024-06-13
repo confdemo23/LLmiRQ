@@ -1,0 +1,9 @@
+Column:0.1250
+DDLSemanticAnalyzer:0.5313
+DDLTask:0.1563
+HiveAlterHandler:0.4375
+HiveMetaStore:0.3438
+OrcInputFormat:0.3750
+OrcSerde:0.1875
+OrcStruct:0.2188
+Table:0.0938

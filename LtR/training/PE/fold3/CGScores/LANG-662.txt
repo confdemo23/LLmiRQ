@@ -1,0 +1,2 @@
+Fraction:0.4343
+Validate:0.0014

@@ -1,0 +1,10 @@
+ConfVars:0.0200
+HadoopShims:0.0130
+HiveConf:0.0436
+HiveInputSplit:0.0253
+LogHelper:0.0236
+ResourceMaps:0.0306
+ResourceType:0.0130
+SessionState:0.1296
+ShimLoader:0.0130
+Task:0.0660

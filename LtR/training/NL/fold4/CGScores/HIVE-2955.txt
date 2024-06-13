@@ -1,0 +1,10 @@
+CTEClause:0.0264
+Client:0.0120
+HdfsEncryptionShim:0.0141
+Hive:0.0209
+ObjectStore:0.1687
+QueryWrapper:0.0820
+SemanticAnalyzer:0.0703
+ShimLoader:0.0120
+SortBucketRSCtx:0.0429
+Utils:0.0175

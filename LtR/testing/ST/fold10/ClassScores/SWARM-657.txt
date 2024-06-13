@@ -1,0 +1,3 @@
+ArquillianTest:0.2895
+DaemonService:0.2632
+DaemonServiceActivator:0.5000

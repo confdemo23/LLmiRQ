@@ -1,0 +1,7 @@
+Hive:0.0488
+HiveConf:0.1463
+HiveFileFormatUtils:0.4146
+HiveMetaStoreClient:0.4146
+IMetaStoreClient:0.3415
+SessionState:0.2439
+Utilities:0.1707

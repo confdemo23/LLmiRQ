@@ -1,0 +1,5 @@
+AbstractConfiguration:0.4000
+BaseHierarchicalConfiguration:0.5778
+ConfigurationInterpolator:0.4889
+DefaultListDelimiterHandler:0.5333
+XMLConfiguration:0.2889

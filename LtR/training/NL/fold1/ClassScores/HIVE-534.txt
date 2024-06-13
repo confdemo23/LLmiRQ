@@ -1,0 +1,4 @@
+BaseSemanticAnalyzer:0.4595
+CliDriver:0.1622
+HiveCli:0.1081
+ParseException:0.2973

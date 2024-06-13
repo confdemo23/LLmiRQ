@@ -1,0 +1,10 @@
+Exchange:0.0087
+HdfsComponent:0.0038
+HdfsConfiguration:0.0572
+HdfsFileType:0.0075
+HdfsInfo:0.0220
+HdfsInfoFactory:0.0075
+HdfsInputStream:0.0063
+Message:0.0087
+Processor:0.0014
+ScheduledPollConsumer:0.0038

@@ -1,0 +1,9 @@
+AbstractAuthenticationProcessingFilter:0.8780
+AbstractSecurityInterceptor:0.6098
+DefaultWebSecurityExpressionHandler:0.8049
+ExceptionTranslationFilter:0.5854
+FilterChainProxy:0.3415
+FilterSecurityInterceptor:0.5610
+HttpSessionSecurityContextRepository:0.8293
+SecurityContextHolder:0.4634
+SecurityContextPersistenceFilter:0.7317

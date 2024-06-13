@@ -1,0 +1,9 @@
+Associations:0.0296
+EmbeddedResourcesAssembler:0.0045
+EntityLookup:0.0045
+Java8PluginRegistry:0.0045
+LinkCollector:0.0146
+PersistentEntityResource:0.0347
+ProjectionResourceContent:0.0095
+ResourceMetadata:0.0045
+UriToEntityConverter:0.0045

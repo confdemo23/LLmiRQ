@@ -1,0 +1,2 @@
+AbstractMongoConfiguration:0.4889
+SimpleMongoDbFactory:0.3556

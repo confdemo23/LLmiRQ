@@ -1,0 +1,7 @@
+ExecMapper:0.1224
+GroupByOperator:0.2245
+KeyWrapperFactory:0.2653
+LazyDioInteger:0.2041
+LazyIntObjectInspector:0.3673
+LazyInteger:0.1429
+MapOperator:0.1429

@@ -1,0 +1,5 @@
+ExecMapper:0.1277
+MapOperator:0.1489
+ReduceSinkOperator:0.2979
+SelectOperator:0.2128
+TableScanOperator:0.2766

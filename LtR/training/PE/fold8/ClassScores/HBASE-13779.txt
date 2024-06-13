@@ -1,0 +1,5 @@
+Bytes:0.0435
+Get:0.0000
+HTable:0.0652
+Put:0.0000
+Result:0.0652

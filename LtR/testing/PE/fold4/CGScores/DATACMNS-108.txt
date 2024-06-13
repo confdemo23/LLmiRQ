@@ -1,0 +1,10 @@
+ClassUtils:0.0010
+Pair:0.0023
+QueryCollectingQueryCreationListener:0.0010
+QueryCreationListener:0.0023
+QueryExecutionResultHandler:0.0010
+ReactiveWrapperConverters:0.0023
+RepositoryInformation:0.0110
+RepositoryMetadata:0.0023
+RepositoryQuery:0.0035
+SpelAwareProxyProjectionFactory:0.0023

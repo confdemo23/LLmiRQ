@@ -1,0 +1,3 @@
+BeanDeploymentArchiveImpl:0.0394
+BeanDeploymentModule:0.0042
+WeldDeployment:0.0018

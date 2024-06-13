@@ -1,0 +1,8 @@
+ASTNode:0.1220
+CalcitePlanner:0.2927
+ExprNodeGenericFuncEvaluator:0.6341
+FilterOperator:0.2927
+GenericUDF:0.1951
+HiveConf:0.1463
+OpProcFactory:0.2683
+SemanticAnalyzer:0.3415

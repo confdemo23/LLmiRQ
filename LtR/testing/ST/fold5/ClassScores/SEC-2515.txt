@@ -1,0 +1,3 @@
+AuthenticationManager:0.3269
+ProviderManager:0.2115
+WebSecurityConfigurerAdapter:0.4615

@@ -1,0 +1,3 @@
+ServerService:0.1613
+StandaloneXml_4:0.1935
+XmlConfigurationPersister:0.3548

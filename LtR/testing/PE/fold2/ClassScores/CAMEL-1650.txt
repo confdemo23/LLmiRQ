@@ -1,0 +1,2 @@
+IdempotentConsumer:0.3333
+MemoryIdempotentRepository:0.5111

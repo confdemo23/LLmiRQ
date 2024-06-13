@@ -1,0 +1,7 @@
+DefaultCamelContext:0.0071
+Endpoint:0.0071
+EventComponent:0.0071
+SpringCamelContext:0.0346
+SpringTransactionPolicy:0.0071
+TransactionErrorHandlerBuilder:0.0071
+TypeConverter:0.0071

@@ -1,0 +1,10 @@
+OAuthCodec:0.0254
+OAuthConsumerParameter:0.1017
+OAuthConsumerSupport:0.0199
+OAuthConsumerToken:0.1017
+OAuthProviderParameter:0.0159
+OAuthSecurityContext:0.0083
+OAuthURLStreamHandlerFactory:0.0159
+ProtectedResourceDetails:0.2507
+ProtectedResourceDetailsService:0.0350
+StringSplitUtils:0.0159

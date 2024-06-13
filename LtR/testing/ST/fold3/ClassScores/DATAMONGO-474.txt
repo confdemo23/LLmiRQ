@@ -1,0 +1,2 @@
+MongoTemplate:0.1837
+SimpleMongoRepository:0.3469

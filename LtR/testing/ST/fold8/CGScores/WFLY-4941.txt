@@ -1,0 +1,10 @@
+Bean:0.0217
+BeanFactory:0.0106
+BeanGroupFactory:0.0106
+ChannelCommandDispatcher:0.0290
+CommandDispatcher:0.0075
+Configuration:0.0069
+InfinispanBeanManager:0.0143
+InfinispanBeanManagerConfiguration:0.0143
+Scheduler:0.0106
+SchedulerContext:0.0088

@@ -1,0 +1,10 @@
+AbstractAuthenticationProcessingFilter:0.0119
+AbstractRememberMeServices:0.0119
+AuthenticationException:0.0055
+AuthenticationManagerBuilder:0.0091
+CsrfToken:0.0119
+ExpressionInterceptUrlRegistry:0.0018
+FilterComparator:0.0087
+InMemoryUserDetailsManagerConfigurer:0.0018
+UserDetailsBuilder:0.0131
+UsernamePasswordAuthenticationFilter:0.0249

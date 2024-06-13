@@ -1,0 +1,2 @@
+Base64:0.0698
+BasicAuthenticationFilter:0.5116

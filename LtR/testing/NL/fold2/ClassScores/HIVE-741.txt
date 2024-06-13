@@ -1,0 +1,7 @@
+HiveInputFormat:0.3243
+HiveKey:0.1081
+HiveOutputFormat:0.3514
+JoinOperator:0.2432
+ReduceSinkOperator:0.4054
+SelectOperator:0.2973
+TableScanOperator:0.3784

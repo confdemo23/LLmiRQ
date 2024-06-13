@@ -1,0 +1,4 @@
+Partition:0.1200
+Row:0.0000
+Select:0.0600
+Table:0.0400

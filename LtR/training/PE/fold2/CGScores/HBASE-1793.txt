@@ -1,0 +1,10 @@
+AsyncRequestFuture:0.0252
+Builder:0.0608
+Bytes:0.0191
+ClusterConnection:0.0117
+ConnectionConfiguration:0.0117
+Get:0.0129
+RequestConverter:0.0117
+RowMutations:0.0104
+RpcControllerFactory:0.0141
+Scan:0.0117

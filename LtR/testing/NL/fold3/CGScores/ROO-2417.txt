@@ -1,0 +1,6 @@
+AutoPopulationUtils:0.0056
+DataType:0.0003
+FieldMetadata:0.0063
+ImportRegistrationResolver:0.0003
+JavaSymbolName:0.0302
+JavaType:0.0402

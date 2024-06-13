@@ -1,0 +1,10 @@
+BatchStatus:0.0213
+JobExecution:0.2510
+JobExplorer:0.0584
+JobInstance:0.0300
+JobLauncher:0.0239
+JobParametersIncrementer:0.0152
+JobRepository:0.0239
+ListableJobLocator:0.0584
+StepExecution:0.0447
+StepSynchronizationManager:0.0152

@@ -1,0 +1,10 @@
+Admin:0.1999
+Bytes:0.6012
+Connection:0.2589
+HColumnDescriptor:0.1560
+HTableDescriptor:0.1300
+Pair:0.0991
+Result:0.1032
+Table:0.2075
+TableName:0.1454
+User:0.1862

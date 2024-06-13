@@ -1,0 +1,2 @@
+RabbitAdmin:0.1667
+RabbitTemplate:0.2292

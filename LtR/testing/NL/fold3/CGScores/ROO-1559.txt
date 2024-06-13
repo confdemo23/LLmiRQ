@@ -1,0 +1,9 @@
+HandlerUtils:0.0037
+ManagedMessageRenderer:0.0096
+MetadataIdentificationUtils:0.0027
+MutableFile:0.0156
+NotifiableFileMonitorService:0.0276
+Pom:0.0076
+ProcessManager:0.0096
+UndoEvent:0.0037
+UndoManager:0.0096

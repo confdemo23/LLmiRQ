@@ -1,0 +1,10 @@
+AbstractConfiguration:0.0166
+Builder:0.0690
+Configuration:0.0338
+ConfigurationInterpolator:0.0672
+ImmutableNode:0.0191
+InterpolatorSpecification:0.0250
+ListDelimiterHandler:0.0178
+ReferenceNodeHandler:0.0256
+XMLDocumentHelper:0.0486
+XMLListReference:0.0223

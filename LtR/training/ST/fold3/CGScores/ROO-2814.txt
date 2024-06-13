@@ -1,0 +1,10 @@
+ClassOrInterfaceTypeDetails:0.1442
+FieldMetadata:0.1001
+MetadataDependencyRegistry:0.0755
+MetadataDependencyRegistryTracker:0.0715
+MetadataIdentificationUtils:0.2038
+MetadataLogger:0.2241
+MetadataProvider:0.0787
+PhysicalTypeIdentifier:0.1136
+PhysicalTypeMetadata:0.0715
+ServiceInstaceManager:0.0505

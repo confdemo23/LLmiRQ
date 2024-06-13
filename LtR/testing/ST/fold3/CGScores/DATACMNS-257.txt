@@ -1,0 +1,10 @@
+ClassTypeInformation:0.0236
+DefaultPersistentPropertyPath:0.0175
+InvalidPersistentPropertyPath:0.0113
+Pair:0.0175
+PersistentPropertyAccessorFactory:0.0051
+PersistentPropertyCreator:0.0051
+Property:0.0360
+PropertyPath:0.0113
+SimpleTypeHolder:0.0051
+TypeInformation:0.0175

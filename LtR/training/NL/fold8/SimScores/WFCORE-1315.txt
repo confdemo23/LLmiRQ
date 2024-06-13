@@ -1,0 +1,10 @@
+AbstractDiscoveryOptionAddHandler:0.3412
+AbstractDiscoveryOptionRemoveHandler:0.3658
+DiscoveryOptionAddHandler:0.3065
+DiscoveryOptionRemoveHandler:0.3236
+DiscoveryOptionTestCase:0.3122
+DiscoveryOptionsReadAttributeHandler:0.3691
+DiscoveryOptionsResourceDefinition:0.3075
+DiscoveryService:0.3659
+StaticDiscovery:0.2880
+StaticDiscoveryRemoveHandler:0.3067

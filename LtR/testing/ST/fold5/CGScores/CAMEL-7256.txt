@@ -1,0 +1,6 @@
+CxfHeaderHelper:0.0372
+Exchange:0.1573
+ExchangeHelper:0.0105
+ExchangePattern:0.0105
+HeaderFilterStrategy:0.0105
+Message:0.1973

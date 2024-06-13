@@ -1,0 +1,2 @@
+PersistentEntityToJsonSchemaConverter:0.0105
+RootResourceInformation:0.0105

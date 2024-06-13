@@ -1,0 +1,6 @@
+FileSinkOperator:0.3023
+HiveConf:0.1163
+HiveFileFormatUtils:0.3721
+HiveMetaStore:0.2326
+HiveOutputFormat:0.3023
+HiveStorageHandler:0.3488

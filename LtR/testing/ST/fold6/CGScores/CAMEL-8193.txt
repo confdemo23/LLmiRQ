@@ -1,0 +1,9 @@
+CamelContext:0.0006
+ExceptionHandler:0.0021
+Exchange:0.0104
+Message:0.0046
+NettyConfiguration:0.0021
+NettyConsumer:0.0046
+NettyHelper:0.0021
+TextLineDelimiter:0.0006
+TypeConverter:0.0006

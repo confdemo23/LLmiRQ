@@ -1,0 +1,4 @@
+AbstractEJBComponentRuntimeHandler:0.0017
+EJB3Extension:0.0017
+TimerImpl:0.0198
+TimerServiceImpl:0.0037

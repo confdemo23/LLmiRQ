@@ -1,0 +1,2 @@
+CompositeItemWriter:0.3556
+FlatFileItemWriter:0.3333

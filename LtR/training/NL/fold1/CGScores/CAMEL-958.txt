@@ -1,0 +1,10 @@
+AsyncCallback:0.0022
+AsyncProcessorHelper:0.0022
+CamelContext:0.0022
+Exchange:0.0104
+ExchangeHelper:0.0022
+ExecutorServiceManager:0.0022
+Expression:0.0022
+ObjectHelper:0.0186
+RecipientListProcessor:0.0104
+ServiceHelper:0.0145

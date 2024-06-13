@@ -1,0 +1,10 @@
+Client:0.0213
+ConfVars:0.0426
+FSPaths:0.0777
+FileChecker:0.1165
+FileSinkOperator:0.0376
+HiveConf:0.0927
+RecordWriter:0.0376
+ShimLoader:0.0194
+Table:0.2951
+Utils:0.0263

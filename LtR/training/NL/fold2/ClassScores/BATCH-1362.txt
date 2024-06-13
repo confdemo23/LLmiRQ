@@ -1,0 +1,8 @@
+ChunkContext:0.2439
+ChunkOrientedTasklet:0.4390
+CompositeItemWriter:0.4146
+FaultTolerantChunkProcessor:0.6098
+RepeatStatus:0.2439
+StepContribution:0.3415
+TaskExecutorRepeatTemplate:0.5854
+TaskletStep:0.2195

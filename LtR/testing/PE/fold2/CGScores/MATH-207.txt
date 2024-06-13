@@ -1,0 +1,8 @@
+Chromosome:0.0132
+ChromosomePair:0.0467
+CrossoverPolicy:0.0061
+MutationPolicy:0.0142
+Population:0.0549
+RandomGenerator:0.0142
+SelectionPolicy:0.0061
+StoppingCondition:0.0061

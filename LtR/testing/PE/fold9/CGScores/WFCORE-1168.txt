@@ -1,0 +1,4 @@
+ManagementResourceRegistration:0.0474
+ModelVersion:0.0439
+ResourceDefinition:0.0127
+SimpleOperationDefinitionBuilder:0.0474

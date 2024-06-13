@@ -1,0 +1,10 @@
+CamelLogger:0.0096
+Exchange:0.0642
+HttpPrincipal:0.0423
+NettyHttpBinding:0.0205
+NettyHttpConfiguration:0.0205
+NettyHttpConsumer:0.1734
+NettyHttpEndpoint:0.1079
+NettyHttpSecurityConfiguration:0.0860
+ObjectHelper:0.0642
+SecurityAuthenticator:0.0205

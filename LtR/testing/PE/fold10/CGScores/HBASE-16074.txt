@@ -1,0 +1,10 @@
+Admin:0.0323
+Bytes:0.2246
+Cell:0.0229
+Connection:0.0745
+ConnectionFactory:0.0417
+Counts:0.0276
+Result:0.0652
+ResultScanner:0.0229
+Scan:0.0511
+Table:0.0370

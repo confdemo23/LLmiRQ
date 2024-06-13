@@ -1,0 +1,2 @@
+CryptoDataFormat:0.4375
+CryptoOperation:0.4063

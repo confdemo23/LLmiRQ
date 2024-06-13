@@ -1,0 +1,7 @@
+ComponentConfiguration:0.0067
+EEModuleDescription:0.0758
+EJBComponentDescription:0.1526
+EJBViewDescription:0.0527
+EjbJndiBindingsDeploymentUnitProcessor:0.0143
+RemoteViewInjectionSource:0.0067
+ViewDescription:0.0220

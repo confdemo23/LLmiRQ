@@ -1,0 +1,8 @@
+GemfireMappingContext:0.4390
+GemfirePersistentEntity:0.4878
+GemfirePersistentProperty:0.5366
+GemfireRepositoryFactory:0.5122
+GemfireRepositoryQuery:0.4634
+GemfireTemplate:0.2927
+QueryString:0.1951
+SimpleGemfireRepository:0.4878

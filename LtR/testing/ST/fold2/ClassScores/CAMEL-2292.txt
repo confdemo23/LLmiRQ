@@ -1,0 +1,3 @@
+DefaultProducerTemplate:0.4318
+JmsProducer:0.1591
+ProducerCache:0.2045

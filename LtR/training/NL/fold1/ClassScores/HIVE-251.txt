@@ -1,0 +1,6 @@
+ErrorMsg:0.1351
+ExecDriver:0.1892
+HiveException:0.2703
+MapRedTask:0.1892
+ScriptOperator:0.2973
+Task:0.0270

@@ -1,0 +1,5 @@
+FetchTask:0.1395
+FilterOperator:0.2558
+HiveEndPoint:0.2093
+LimitOperator:0.2326
+SelectOperator:0.2558

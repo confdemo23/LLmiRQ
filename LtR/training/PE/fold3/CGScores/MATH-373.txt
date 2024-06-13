@@ -1,0 +1,6 @@
+DescriptiveStatistics:0.0012
+Frequency:0.0007
+GeometricMean:0.0007
+Percentile:0.0007
+UnivariateStatistic:0.0063
+Variance:0.0035

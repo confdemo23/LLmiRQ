@@ -1,0 +1,3 @@
+LockTrie:0.0092
+PartTrie:0.0196
+TableTrie:0.0144

@@ -1,0 +1,5 @@
+BaseSemanticAnalyzer:0.3953
+DDLSemanticAnalyzer:0.3721
+HiveDatabaseMetaData:0.3953
+HiveMetaStoreClient:0.3721
+HiveSQLException:0.3023

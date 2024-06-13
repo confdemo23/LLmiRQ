@@ -1,0 +1,10 @@
+ACIDSplitStrategy:0.0063
+ETLSplitStrategy:0.0150
+FooterCache:0.0326
+HadoopShims:0.0326
+HdfsFileStatusWithId:0.0677
+OffsetAndLength:0.0063
+OrcInputFormat:0.0326
+ShimLoader:0.0063
+SplitGenerator:0.0150
+SplitStrategyKind:0.0150

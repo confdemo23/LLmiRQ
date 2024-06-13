@@ -1,0 +1,3 @@
+CamelSpringBootInitializationException:0.7609
+FailedToStartRouteException:0.5217
+RouteBuilder:0.1957

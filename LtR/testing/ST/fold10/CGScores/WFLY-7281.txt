@@ -1,0 +1,10 @@
+ComponentRegistry:0.0068
+ImmutableSession:0.0070
+InfinispanSessionManager:0.0219
+InfinispanSessionManagerConfiguration:0.0144
+SecurityActions:0.0075
+ServletContainerService:0.0427
+Session:0.0174
+SessionCookieConfig:0.0211
+SessionFactory:0.0219
+UndertowSessionManager:0.0207

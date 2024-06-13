@@ -1,0 +1,9 @@
+CallRunner:0.1842
+CellUtil:0.1316
+HRegion:0.1053
+KeyValueHeap:0.2368
+RSRpcServices:0.2632
+RpcExecutor:0.2105
+RpcServer:0.1579
+StoreFileScanner:0.3421
+StoreScanner:0.2368

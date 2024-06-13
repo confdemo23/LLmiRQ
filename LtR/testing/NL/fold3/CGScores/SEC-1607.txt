@@ -1,0 +1,10 @@
+AbstractSecurityInterceptor:0.0585
+AccessDecisionManager:0.0246
+AuthenticationManager:0.0252
+AuthenticationManagerBuilder:0.0840
+HttpRequestResponseHolder:0.0402
+HttpSecurity:0.0721
+InterceptorStatusToken:0.0784
+SecurityContext:0.0604
+SecurityContextHolder:0.1103
+SecurityContextHolderStrategy:0.0256

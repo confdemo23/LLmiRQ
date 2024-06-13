@@ -1,0 +1,6 @@
+HBaseTestingUtility:0.3721
+SecureTestUtil:0.2558
+VisibilityClient:0.3023
+VisibilityController:0.3953
+VisibilityLabelService:0.4419
+VisibilityUtils:0.2791

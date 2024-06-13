@@ -1,0 +1,2 @@
+LevenbergMarquardtOptimizer:0.5217
+MultivariateVectorOptimizer:0.5217

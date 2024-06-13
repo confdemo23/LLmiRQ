@@ -1,0 +1,5 @@
+HFileReaderImpl:0.2500
+HRegion:0.0833
+KeyValueHeap:0.1875
+RSRpcServices:0.2083
+StoreFileScanner:0.2708

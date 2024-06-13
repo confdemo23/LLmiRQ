@@ -1,0 +1,10 @@
+Client:0.0027
+ColumnStatisticsObj:0.0324
+Hive:0.0050
+MetaStoreUtils:0.0091
+ObjectStore:0.0424
+QueryWrapper:0.0204
+ShimLoader:0.0063
+Table:0.0407
+Utils:0.0027
+_Fields:0.0036

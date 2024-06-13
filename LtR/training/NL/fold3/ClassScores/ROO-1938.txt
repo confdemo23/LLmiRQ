@@ -1,0 +1,4 @@
+AbstractShell:0.2439
+JLineShellComponent:0.3902
+Shell:0.0488
+SimpleParser:0.2195

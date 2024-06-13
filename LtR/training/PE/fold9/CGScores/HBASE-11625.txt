@@ -1,0 +1,10 @@
+BlockType:0.0162
+ByteArrayOutputStream:0.0581
+ByteBuff:0.1469
+Bytes:0.0246
+ChecksumType:0.0112
+FSDataInputStreamWrapper:0.0112
+HFileBlock:0.0229
+HFileContext:0.0682
+HFileContextBuilder:0.0263
+HFileDataBlockEncoder:0.0079

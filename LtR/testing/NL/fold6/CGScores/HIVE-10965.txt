@@ -1,0 +1,10 @@
+Batchable:0.0340
+FilterType:0.0160
+GetHelper:0.0145
+HMSHandler:0.0696
+HiveDelegationTokenManager:0.0305
+HiveMetaStore:0.0175
+HiveMetastoreCli:0.0305
+ObjectStore:0.2457
+QueryWrapper:0.1191
+Server:0.0305

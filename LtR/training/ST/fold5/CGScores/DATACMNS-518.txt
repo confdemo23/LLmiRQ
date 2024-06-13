@@ -1,0 +1,10 @@
+Alias:0.0015
+Association:0.0033
+AssociationHandler:0.0015
+Lazy:0.0104
+Parameter:0.0049
+PersistentPropertyAccessorFactory:0.0015
+PreferredConstructorDiscoverer:0.0015
+SimpleAssociationHandler:0.0015
+Streamable:0.0014
+TypeInformation:0.0050

@@ -1,0 +1,10 @@
+CamelContext:0.0072
+Exchange:0.0208
+JavaMailSender:0.0646
+MailConfiguration:0.0283
+MailConsumer:0.0094
+MailEndpoint:0.0057
+MailUtils:0.0072
+Message:0.0057
+ObjectHelper:0.0088
+ScheduledPollEndpoint:0.0057

@@ -1,0 +1,10 @@
+Association:0.0116
+Evil:0.0019
+Lazy:0.0022
+Optionals:0.0019
+PersistentEntity:0.0561
+PersistentProperty:0.0679
+PersistentPropertyAccessorFactory:0.0009
+PropertyAccessorClassGenerator:0.0019
+SimpleAssociationHandler:0.0009
+TypeInformation:0.0009

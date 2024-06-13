@@ -1,0 +1,7 @@
+ClientScanner:0.2703
+HBaseConfiguration:0.4054
+HConstants:0.1892
+ResultScanner:0.2703
+Scan:0.0270
+TableInputFormat:0.3514
+TableMapReduceUtil:0.4054

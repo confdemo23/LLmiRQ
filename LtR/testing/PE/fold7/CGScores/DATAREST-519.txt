@@ -1,0 +1,10 @@
+Java8PluginRegistry:0.0053
+MethodResourceMapping:0.0448
+PagingAndSortingTemplateVariables:0.0251
+ParameterMetadata:0.0053
+ProjectionDefinitionConfiguration:0.0119
+RepositoryRestConfiguration:0.0119
+ResourceMapping:0.0119
+ResourceMappings:0.0382
+ResourceMetadata:0.0185
+SearchResourceMappings:0.0185

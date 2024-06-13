@@ -1,0 +1,8 @@
+ASTSearcher:0.0025
+CalcitePlanner:0.0246
+CalcitePlannerAction:0.1921
+ExceptionHelper:0.0025
+HiveCalciteUtil:0.0028
+HiveSortLimit:0.0022
+InputRefsCollector:0.0028
+JoinLeafPredicateInfo:0.0170

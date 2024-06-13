@@ -1,0 +1,1 @@
+FqlResultMapper:0.0039

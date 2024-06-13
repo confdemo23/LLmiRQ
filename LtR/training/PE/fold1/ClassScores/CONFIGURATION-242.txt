@@ -1,0 +1,4 @@
+AbstractConfiguration:0.4000
+ConfigurationInterpolator:0.4889
+HierarchicalConfiguration:0.4889
+SubsetConfiguration:0.3556

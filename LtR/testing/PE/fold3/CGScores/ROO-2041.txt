@@ -1,0 +1,10 @@
+AnnotationMetadata:0.0369
+ClassOrInterfaceTypeDetails:0.0504
+DeclaredFieldAnnotationDetails:0.0338
+FieldMetadata:0.0326
+ItdTypeDetails:0.0338
+JavaSymbolName:0.0295
+JavaType:0.1358
+MemberDetails:0.0436
+MemberHoldingTypeDetails:0.0510
+MethodMetadataBuilder:0.0381

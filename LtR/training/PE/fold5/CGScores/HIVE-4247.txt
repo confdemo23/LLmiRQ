@@ -1,0 +1,2 @@
+HadoopShims:0.0214
+ShimLoader:0.0214

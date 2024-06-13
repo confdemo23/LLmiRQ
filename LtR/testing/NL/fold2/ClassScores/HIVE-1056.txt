@@ -1,0 +1,3 @@
+HiveDriver:0.1892
+LateralViewJoinOperator:0.5405
+SemanticAnalyzer:0.3514

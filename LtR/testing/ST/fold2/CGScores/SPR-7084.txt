@@ -1,0 +1,10 @@
+AbstractApplicationContext:0.0388
+Assert:0.0250
+BeanDefinitionRegistry:0.0135
+ClassUtils:0.0096
+DefaultListableBeanFactory:0.1029
+EncodedResource:0.0430
+ObjectUtils:0.0096
+Resource:0.0577
+ResourceLoader:0.0141
+StringUtils:0.0260

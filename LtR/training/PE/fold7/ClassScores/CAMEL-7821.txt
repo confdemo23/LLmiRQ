@@ -1,0 +1,3 @@
+BridgePropertyPlaceholderConfigurer:0.6400
+CamelContextFactoryBean:0.4000
+PropertiesParser:0.2600

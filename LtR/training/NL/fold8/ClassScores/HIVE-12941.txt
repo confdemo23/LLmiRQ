@@ -1,0 +1,5 @@
+GenericUDAFEvaluator:0.5625
+GenericUDAFMax:0.3750
+GenericUDAFMin:0.3750
+ObjectInspector:0.4063
+StructObjectInspector:0.5938

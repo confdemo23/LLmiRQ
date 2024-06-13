@@ -1,0 +1,9 @@
+HMSHandler:0.0121
+HadoopThriftAuthBridge:0.0007
+HiveDelegationTokenManager:0.0053
+HiveMetaStore:0.0030
+HiveMetastoreCli:0.0053
+Server:0.0053
+ShimLoader:0.0007
+StorageDescriptorKey:0.0018
+Utils:0.0007

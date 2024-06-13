@@ -1,0 +1,10 @@
+Client:0.0382
+CloseSession_args:0.0271
+FetchResults_args:0.0271
+GetColumns_args:0.0271
+GetCrossReference_args:0.0271
+GetDelegationToken_args:0.0271
+GetTypeInfo_args:0.0271
+RenewDelegationToken_args:0.0271
+TOpenSessionResp:0.0826
+_Fields:0.1650

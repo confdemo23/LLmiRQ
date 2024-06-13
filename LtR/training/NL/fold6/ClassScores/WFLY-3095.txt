@@ -1,0 +1,4 @@
+WeldBootstrapService:0.4615
+WeldComponentIntegrationProcessor:0.7949
+WeldDeploymentProcessor:0.5385
+WeldSubsystemAdd:0.3590

@@ -1,0 +1,10 @@
+AbstractConnectionFactory:0.0122
+ChannelCachingConnectionProxy:0.0501
+ChannelProxy:0.0125
+ConnectionFactoryUtils:0.0094
+Listener:0.0143
+Message:0.0254
+MessageProperties:0.0315
+PublisherCallbackChannelImpl:0.0143
+RabbitTemplate:0.0192
+RabbitUtils:0.0150

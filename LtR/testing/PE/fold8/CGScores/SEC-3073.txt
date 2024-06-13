@@ -1,0 +1,8 @@
+AbstractAuthorizeTag:0.0051
+ExpressionUtils:0.0030
+SecurityContext:0.0111
+SecurityContextHolder:0.0111
+SecurityExpressionHandler:0.0111
+SecurityWebApplicationContextUtils:0.0071
+TagLibConfig:0.0141
+WebInvocationPrivilegeEvaluator:0.0030

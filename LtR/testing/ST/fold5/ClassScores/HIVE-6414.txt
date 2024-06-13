@@ -1,0 +1,3 @@
+GenericUDAFMin:0.1923
+GroupByOperator:0.2115
+JavaShortObjectInspector:0.3846

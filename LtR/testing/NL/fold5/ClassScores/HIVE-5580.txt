@@ -1,0 +1,8 @@
+ExprNodeDesc:0.2093
+ExprNodeGenericFuncDesc:0.4651
+GenericUDFOPAnd:0.2791
+GenericUDFOPEqual:0.3256
+HiveConf:0.1163
+PredicateLeaf:0.2326
+SearchArgumentImpl:0.3488
+VectorizationContext:0.3953

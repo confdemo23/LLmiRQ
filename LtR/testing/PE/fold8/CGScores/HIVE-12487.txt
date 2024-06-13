@@ -1,0 +1,2 @@
+CliAdapter:0.0160
+MiniLlapCliConfig:0.0032

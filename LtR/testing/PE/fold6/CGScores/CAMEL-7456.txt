@@ -1,0 +1,10 @@
+AbstractCamelContextFactoryBean:0.0196
+BridgePropertyPlaceholderConfigurer:0.0300
+CamelContextHelper:0.0091
+FilePathResolver:0.0246
+ObjectHelper:0.0246
+PropertiesComponent:0.0719
+PropertiesLocation:0.0332
+RouteBuilder:0.0091
+SpringCamelContext:0.0300
+UriEndpointComponent:0.0159

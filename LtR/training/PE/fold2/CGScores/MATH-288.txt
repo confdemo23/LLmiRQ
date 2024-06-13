@@ -1,0 +1,5 @@
+MatrixUtils:0.0154
+Precision:0.0074
+RealVector:0.0234
+Relationship:0.0027
+SimplexTableau:0.0766

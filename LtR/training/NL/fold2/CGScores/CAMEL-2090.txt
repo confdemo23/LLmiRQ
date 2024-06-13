@@ -1,0 +1,10 @@
+CamelContext:0.0242
+DefaultEndpoint:0.0658
+Endpoint:0.0126
+EndpointHelper:0.0226
+EndpointMessageListener:0.0189
+Exchange:0.0299
+JmsConfiguration:1.0000
+JmsEndpoint:0.0581
+ObjectHelper:0.0382
+UnsafeUriCharactersEncoder:0.0123

@@ -1,0 +1,10 @@
+Assert:0.0342
+BeanWrapper:0.0226
+CachedIntrospectionResults:0.0375
+ConfigurablePropertyAccessor:0.0173
+GenericTypeAwarePropertyDescriptor:0.0226
+MutablePropertyValues:0.0541
+ObjectUtils:0.0199
+PropertyEditorRegistry:0.0242
+PropertyValue:0.0425
+TagWriter:0.0232

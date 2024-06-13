@@ -1,0 +1,9 @@
+AbstractApplicationContext:0.5000
+AbstractAutowireCapableBeanFactory:0.6818
+AbstractBeanFactory:0.3409
+CookieGenerator:0.2500
+CookieLocaleResolver:0.3636
+DefaultListableBeanFactory:0.5000
+DefaultSingletonBeanRegistry:0.5455
+FrameworkServlet:0.2727
+HttpServletBean:0.2500

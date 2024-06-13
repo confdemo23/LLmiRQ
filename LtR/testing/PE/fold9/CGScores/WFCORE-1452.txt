@@ -1,0 +1,10 @@
+AttributeDefinition:0.0306
+Factory:0.0052
+ImmutableManagementResourceRegistration:0.0179
+OperationContext:0.0737
+OrderedResourceCreator:0.0052
+PathAddress:0.0087
+Resource:0.0243
+RuntimeCapability:0.0165
+SimpleAttributeDefinition:0.0381
+SocketBindingService:0.0087

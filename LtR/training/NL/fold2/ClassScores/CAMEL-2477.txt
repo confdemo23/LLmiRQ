@@ -1,0 +1,7 @@
+CamelContext:0.2439
+DefaultHeaderFilterStrategy:0.6098
+Exchange:0.1463
+FreemarkerComponent:0.4146
+FreemarkerEndpoint:0.3902
+HeaderFilterStrategy:0.4390
+Message:0.1220

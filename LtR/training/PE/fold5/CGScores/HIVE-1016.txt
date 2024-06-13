@@ -1,0 +1,3 @@
+DeferredObject:0.0259
+GenericUDF:0.0077
+UDAF:0.0005

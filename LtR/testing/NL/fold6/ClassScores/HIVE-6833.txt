@@ -1,0 +1,6 @@
+FileSinkOperator:0.3636
+HiveConf:0.1212
+HiveFileFormatUtils:0.4545
+HiveOutputFormat:0.3636
+HiveQueryResultSet:0.4242
+SemanticAnalyzer:0.3636

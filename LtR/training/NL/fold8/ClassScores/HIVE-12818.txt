@@ -1,0 +1,7 @@
+HiveConf:0.1875
+HiveMetaStoreClient:0.5313
+HiveSchemaHelper:0.4375
+MetaStoreDirectSql:0.5000
+MetaStoreUtils:0.3750
+ObjectStore:0.2813
+TxnDbUtil:0.2188

@@ -1,0 +1,10 @@
+Client:0.0100
+ConfVars:0.0200
+Hive:0.0177
+HiveConf:0.0436
+MetaException:0.0448
+ObjectStore:0.1446
+QueryWrapper:0.0701
+ShimLoader:0.0100
+Table:0.1387
+Utils:0.0124

@@ -1,0 +1,10 @@
+BasePathAwareHandlerMapping:0.0539
+DefaultedPageable:0.0627
+PersistentEntityResource:0.0833
+PersistentEntityResourceAssembler:0.0990
+RepositoryRestConfiguration:0.4198
+RepositoryRestConfigurerDelegate:0.1103
+RepositoryRestHandlerAdapter:0.0539
+RepositoryRestHandlerMapping:0.0727
+ResourceMetadata:0.0664
+RootResourceInformation:0.4085

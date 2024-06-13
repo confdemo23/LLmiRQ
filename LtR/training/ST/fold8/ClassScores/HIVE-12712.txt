@@ -1,0 +1,1 @@
+HiveInputFormat:0.1935

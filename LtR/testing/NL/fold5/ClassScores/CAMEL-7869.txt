@@ -1,0 +1,6 @@
+JettyHttpComponent:0.3488
+JettyHttpEndpoint:0.3256
+JettyRestHttpBinding:0.3953
+RestComponent:0.2326
+RestConfiguration:0.3256
+RestEndpoint:0.2093

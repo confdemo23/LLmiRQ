@@ -1,0 +1,3 @@
+RabbitGatewaySupport:0.3953
+RabbitOperations:0.3023
+RabbitTemplate:0.2558

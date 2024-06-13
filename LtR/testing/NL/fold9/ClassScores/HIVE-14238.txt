@@ -1,0 +1,5 @@
+HiveAuthorizationProvider:0.7188
+HiveConf:0.1875
+HiveMetaStore:0.3438
+HiveStorageHandler:0.5000
+MetaStoreUtils:0.3750

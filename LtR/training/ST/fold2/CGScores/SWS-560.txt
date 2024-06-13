@@ -1,0 +1,9 @@
+DefaultStrategiesHelper:0.0124
+SaajUtils:0.0464
+SoapUtils:0.0115
+SoapVersion:0.0284
+TransportInputStream:0.0113
+TransportOutputStream:0.0031
+WebServiceMessageReceiverHandlerAdapter:0.0259
+WsdlDefinitionHandlerAdapter:0.0326
+XsdSchemaHandlerAdapter:0.0259

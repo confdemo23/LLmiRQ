@@ -1,0 +1,6 @@
+ExecDriver:0.0028
+HadoopShims:0.0099
+MapRedTask:0.0052
+ShimLoader:0.0099
+Task:0.0517
+_Fields:0.0000

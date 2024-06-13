@@ -1,0 +1,5 @@
+CamelContext:0.0029
+JavaMailSender:0.0377
+MailUtils:0.0029
+ObjectHelper:0.0064
+SSLContextParameters:0.0029

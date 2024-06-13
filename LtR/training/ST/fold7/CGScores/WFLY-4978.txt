@@ -1,0 +1,10 @@
+LiveOnlyDefinition:0.0020
+MessagingExtension:0.0022
+ReplicationColocatedDefinition:0.0020
+ReplicationMasterDefinition:0.0047
+ReplicationSlaveDefinition:0.0047
+Server:0.0011
+SharedStoreColocatedDefinition:0.0020
+SharedStoreMasterDefinition:0.0020
+SharedStoreSlaveDefinition:0.0020
+WebServerService:0.0004

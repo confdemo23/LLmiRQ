@@ -1,0 +1,5 @@
+ActiveDirectoryLdapAuthenticationProvider:0.7600
+AuthenticationManager:0.3600
+AuthenticationManagerBuilder:0.5000
+AuthenticationProvider:0.3800
+WebSecurityConfig:0.2800

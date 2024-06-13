@@ -1,0 +1,10 @@
+AbstractPollingMessageListenerContainer:0.0767
+Assert:0.0889
+AsyncMessageListenerInvoker:0.0610
+BackOff:0.0295
+BackOffExecution:0.0137
+CachingDestinationResolver:0.0137
+ClassUtils:0.0137
+Constants:0.0137
+JmsUtils:0.1082
+SchedulingTaskExecutor:0.0137

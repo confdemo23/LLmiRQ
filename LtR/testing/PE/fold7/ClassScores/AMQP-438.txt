@@ -1,0 +1,2 @@
+ConditionalRejectingErrorHandler:0.6304
+MessageConversionException:0.5000

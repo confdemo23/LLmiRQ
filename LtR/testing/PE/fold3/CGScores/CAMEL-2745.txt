@@ -1,0 +1,10 @@
+CamelContext:0.0076
+CollectionStringBuffer:0.0076
+Exchange:0.0076
+Expression:0.0117
+ExpressionDefinition:0.0117
+Language:0.0076
+ObjectHelper:0.0158
+Predicate:0.0117
+ResourceHelper:0.0076
+RouteContext:0.0076

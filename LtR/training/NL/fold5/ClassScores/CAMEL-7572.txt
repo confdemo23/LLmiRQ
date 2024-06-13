@@ -1,0 +1,6 @@
+ChoiceDefinition:0.3636
+DefaultModelJAXBContextFactory:0.7879
+ManagedCamelContext:0.4545
+ModelJAXBContextFactory:0.5758
+OtherwiseDefinition:0.4545
+RouteDefinition:0.3333

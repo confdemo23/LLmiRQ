@@ -1,0 +1,7 @@
+Criteria:0.0314
+CriteriaDefinition:0.0077
+Field:0.0009
+GeoCommand:0.0023
+Meta:0.0191
+NearQuery:0.0068
+Query:0.0150

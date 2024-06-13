@@ -1,0 +1,2 @@
+CorrelationTimeoutMap:0.3913
+TemporaryQueueReplyHandler:0.5000

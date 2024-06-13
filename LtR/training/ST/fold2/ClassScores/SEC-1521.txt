@@ -1,0 +1,3 @@
+FilterChainProxy:0.2449
+SecurityContextPersistenceFilter:0.5714
+SecurityContextRepository:0.4286

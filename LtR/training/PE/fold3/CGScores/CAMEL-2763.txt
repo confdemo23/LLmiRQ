@@ -1,0 +1,10 @@
+Attachment:0.0026
+CamelContext:0.0009
+Exchange:0.0134
+IOHelper:0.0015
+MailConfiguration:0.0095
+MailEndpoint:0.0095
+MailMessage:0.0009
+MailUtils:0.0015
+Message:0.0112
+ObjectHelper:0.0026

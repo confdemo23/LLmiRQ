@@ -1,0 +1,5 @@
+CamelContext:0.0027
+Exchange:0.0150
+Message:0.0119
+NamedQueryParser:0.0058
+TypeConverter:0.0027

@@ -1,0 +1,10 @@
+BeanDefinition:0.1571
+CollectionStringBuffer:0.2972
+ObjectHelper:0.2334
+PollEnrichDefinition:0.1145
+ProcessorDefinition:0.1424
+ProcessorDefinitionHelper:0.1315
+Route:0.1632
+RouteContext:0.2565
+RouteDefinition:0.1837
+RouteService:0.2850

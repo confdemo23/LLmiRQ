@@ -1,0 +1,4 @@
+ExecDriver:0.1667
+HashTableSinkOperator:0.4286
+MapredLocalTask:0.2857
+TableScanOperator:0.3333

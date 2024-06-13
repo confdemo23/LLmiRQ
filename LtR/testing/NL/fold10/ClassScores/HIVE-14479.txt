@@ -1,0 +1,8 @@
+AcidUtils:0.1622
+CommonJoinOperator:0.4054
+HiveConf:0.1351
+JoinOperator:0.2432
+MapJoinOperator:0.3243
+Optimizer:0.1622
+ReduceSinkOperator:0.4054
+SMBMapJoinOperator:0.4054

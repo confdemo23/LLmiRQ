@@ -1,0 +1,2 @@
+MailConfiguration:0.3043
+MailEndpoint:0.1957

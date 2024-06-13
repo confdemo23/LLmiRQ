@@ -1,0 +1,3 @@
+CamelContext:0.2432
+OnCompletionDefinition:0.5135
+OnExceptionDefinition:0.4865

@@ -1,0 +1,10 @@
+HiveMetastoreAuthenticationProvider:0.1073
+RetrySemantics:0.1883
+TestAuthzApiEmbedAuthorizerInEmbed:0.1237
+TestAuthzApiEmbedAuthorizerInRemote:0.1361
+TestHiveMetaStoreTimeout:0.1115
+TestHiveMetastoreCli:0.1127
+TestPrepPhase:0.1574
+TestReportingPhase:0.1890
+TestTestCheckPhase:0.1107
+UDFJson:0.1383

@@ -1,0 +1,8 @@
+AbstractAuthenticationFilterConfigurer:0.7292
+AbstractConfiguredSecurityBuilder:0.6250
+CustomConfigurer:0.2708
+CustomHttpSecurityConfigurerTests:0.6250
+FormLoginConfigurer:0.3333
+HttpSecurity:0.1875
+SecurityConfigurerAdapter:0.4583
+WebSecurityConfiguration:0.4375

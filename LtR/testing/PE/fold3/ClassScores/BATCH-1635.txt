@@ -1,0 +1,1 @@
+HibernateItemWriter:0.3721

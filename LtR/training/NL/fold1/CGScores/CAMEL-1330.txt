@@ -1,0 +1,10 @@
+CxfBinding:0.0189
+CxfEndpoint:0.1644
+CxfRsConsumer:0.0246
+CxfRsEndpoint:0.0324
+DataFormat:0.0397
+EndpointHelper:0.0161
+Exchange:0.1506
+InterceptorHolder:0.0636
+Message:0.0400
+ObjectHelper:0.0299

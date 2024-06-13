@@ -1,0 +1,2 @@
+FaultTolerantStepFactoryBean:0.5556
+ItemProcessor:0.2222

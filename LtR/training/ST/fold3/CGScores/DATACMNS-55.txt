@@ -1,0 +1,10 @@
+ClassTypeInformation:0.0810
+DefaultPersistentPropertyPath:0.0230
+InvalidPersistentPropertyPath:0.0143
+Lazy:0.0302
+Pair:0.0230
+PersistentPropertyCreator:0.0056
+Property:0.0493
+PropertyPath:0.0143
+Streamable:0.0278
+TypeInformation:0.0588

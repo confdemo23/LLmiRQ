@@ -1,0 +1,2 @@
+AsyncFutureInterceptorFactory:0.5556
+NotBusinessMethodInterceptor:0.5333

@@ -1,0 +1,10 @@
+AttributeDefinition:0.0602
+DeploymentUnit:0.0883
+DeploymentUnitPhaseService:0.0338
+HashUtil:0.0351
+ModelContentReference:0.0226
+ObjectListAttributeDefinition:0.0351
+OperationContext:0.0476
+PathAddress:0.0226
+Phase:0.0520
+SimpleAttributeDefinition:0.0727

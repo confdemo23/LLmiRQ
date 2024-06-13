@@ -1,0 +1,10 @@
+Admin:0.0422
+ClusterMetrics:0.1239
+ClusterStatus:0.0289
+Connection:0.0179
+HTableDescriptor:0.0179
+RegionInfo:0.0318
+RegionStdOutSink:0.0231
+Scan:0.0196
+Table:0.0231
+TableName:0.0162

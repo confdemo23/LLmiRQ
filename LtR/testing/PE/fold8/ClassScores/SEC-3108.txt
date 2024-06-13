@@ -1,0 +1,3 @@
+AbstractSecurityInterceptor:0.4800
+DigestAuthenticationFilter:0.4600
+SecurityContextHolder:0.3600

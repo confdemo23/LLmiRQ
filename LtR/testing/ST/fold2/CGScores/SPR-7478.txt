@@ -1,0 +1,10 @@
+AbstractMessageListenerContainer:0.0487
+AbstractPollingMessageListenerContainer:0.1359
+Assert:0.0689
+AsyncMessageListenerInvoker:0.0385
+ConnectionFactoryUtils:0.0362
+DefaultTransactionDefinition:0.0487
+JmsResourceHolder:0.0362
+JmsUtils:0.1549
+PlatformTransactionManager:0.0362
+TransactionSynchronizationManager:0.0487

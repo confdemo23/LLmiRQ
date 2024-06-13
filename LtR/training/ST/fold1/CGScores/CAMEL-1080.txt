@@ -1,0 +1,3 @@
+MockEndpoint:0.0035
+RouteDefinition:0.0083
+SimpleDataSet:0.0035

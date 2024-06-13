@@ -1,0 +1,10 @@
+Attribute:0.0417
+ChannelResourceDefinition:0.0269
+DefaultSubsystemDescribeHandler:0.0122
+JGroupsModel:0.0269
+JGroupsSubsystemResourceDefinition:0.0122
+ResourceDescriptor:0.0269
+SimpleResourceRegistration:0.0122
+StackResourceDefinition:0.0269
+SubsystemRegistration:0.0122
+XMLAttribute:0.0122

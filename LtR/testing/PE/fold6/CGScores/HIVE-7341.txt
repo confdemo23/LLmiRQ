@@ -1,0 +1,7 @@
+HCatClient:0.0032
+HCatFieldSchema:0.0578
+HCatPartition:0.0350
+HCatSchemaUtils:0.0269
+HCatTable:0.4879
+TableAttribute:0.0560
+Type:0.0155

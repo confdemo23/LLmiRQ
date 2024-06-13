@@ -1,0 +1,3 @@
+ClientAuthenticationHandler:0.0020
+OAuth2ProtectedResourceDetails:0.0020
+RequestEnhancer:0.0020

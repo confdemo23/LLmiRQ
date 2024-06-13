@@ -1,0 +1,7 @@
+CamelContext:0.0110
+IntrospectionSupport:0.0028
+MailConfiguration:0.0273
+MailConverters:0.0069
+MailEndpoint:0.0232
+ObjectHelper:0.0069
+TypeConverter:0.0028

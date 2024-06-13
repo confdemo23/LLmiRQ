@@ -1,0 +1,4 @@
+AbstractRepositoryRestController:0.7838
+PersistentEntityResourceAssembler:0.8108
+RepositoryEntityController:0.6216
+RepositoryRestMvcConfiguration:0.7297

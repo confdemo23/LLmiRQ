@@ -1,0 +1,5 @@
+AbstractMappingContext:0.3462
+AbstractPersistentProperty:0.4231
+ParameterizedTypeInformation:0.4615
+ReflectionUtils:0.2115
+TypeDiscoverer:0.1923

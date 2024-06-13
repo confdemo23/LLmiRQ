@@ -1,0 +1,10 @@
+BindInfo:0.0477
+BinderService:0.0667
+BindingType:0.0222
+ContextNames:0.0222
+ExternalContextBinderService:0.0159
+ManagedReference:0.0413
+MutableManagedReferenceFactory:0.0159
+NamespaceContextSelector:0.0079
+NamingContext:0.0413
+ParsedName:0.1025

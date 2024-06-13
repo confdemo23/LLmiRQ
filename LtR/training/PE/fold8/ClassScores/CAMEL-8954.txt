@@ -1,0 +1,3 @@
+Exchange:0.1087
+FileLockExclusiveReadLockStrategy:0.6522
+MarkerFileExclusiveReadLockStrategy:0.6957

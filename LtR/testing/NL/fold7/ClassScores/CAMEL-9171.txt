@@ -1,0 +1,4 @@
+CamelContext:0.2564
+XmppComponent:0.2821
+XmppConsumer:0.2564
+XmppEndpoint:0.2564

@@ -1,0 +1,7 @@
+GenericUDAFSum:0.3077
+HiveConf:0.1538
+HiveDecimal:0.2308
+HiveDecimalUtils:0.3590
+ObjectInspector:0.3333
+TypeCheckProcFactory:0.4615
+UnionOperator:0.2821

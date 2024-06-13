@@ -1,0 +1,6 @@
+DataType:0.0003
+FieldMetadata:0.0063
+ImportRegistrationResolver:0.0003
+JavaSymbolName:0.0395
+JavaType:0.0402
+MethodMetadata:0.0070

@@ -1,0 +1,8 @@
+AbstractContextSource:0.4865
+ContextSource:0.2703
+DefaultDirContextValidator:0.6216
+DirContextOperations:0.4595
+LdapContextSource:0.3784
+LdapTemplate:0.2432
+PagedResultsDirContextProcessor:0.7568
+SingleContextSource:0.4324

@@ -1,0 +1,9 @@
+ArrayUtils:0.0269
+BooleanUtils:0.0019
+CharUtils:0.0019
+ClassUtils:0.0019
+EqualsBuilder:0.0050
+HashCodeBuilder:0.0050
+MutableInt:0.0551
+NumberUtils:0.0113
+ToStringBuilder:0.0050

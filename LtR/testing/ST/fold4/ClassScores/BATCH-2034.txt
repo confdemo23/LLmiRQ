@@ -1,0 +1,8 @@
+FlowStep:0.1190
+JdbcJobExecutionDao:0.3810
+JobFlowExecutor:0.2857
+MessageChannelPartitionHandler:0.6429
+SimpleJobExplorer:0.3333
+SimpleJobRepository:0.3810
+StepExecutionRequestHandler:0.5714
+StepState:0.1429

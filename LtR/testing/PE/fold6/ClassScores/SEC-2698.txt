@@ -1,0 +1,4 @@
+EnableGlobalMethodSecurity:0.5111
+GlobalMethodSecurityBeanDefinitionParser:0.8222
+GlobalMethodSecurityConfiguration:0.6667
+MethodSecurityExpressionHandler:0.6222

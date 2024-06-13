@@ -1,0 +1,7 @@
+Attachment:0.0018
+AttachmentMap:0.0018
+CamelContext:0.0075
+EndpointHelper:0.0046
+Exchange:0.0075
+ObjectHelper:0.0131
+TypeConverter:0.0075

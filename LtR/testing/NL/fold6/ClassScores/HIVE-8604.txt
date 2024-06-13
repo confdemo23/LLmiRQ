@@ -1,0 +1,8 @@
+CommonJoinOperator:0.4242
+HiveConf:0.1212
+MapJoinOperator:0.3333
+MapJoinProcessor:0.3636
+Optimizer:0.1515
+ReduceSinkOperator:0.4242
+TezProcessor:0.2424
+TezTask:0.0909

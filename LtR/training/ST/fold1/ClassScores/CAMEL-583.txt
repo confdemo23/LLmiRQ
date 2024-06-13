@@ -1,0 +1,10 @@
+AsyncProcessorTypeConverter:0.5227
+ConvertBodyProcessor:0.3636
+DeadLetterChannel:0.2955
+DefaultTypeConverter:0.3636
+FallbackTypeConverter:0.3864
+FileConsumer:0.1818
+MessageSupport:0.2273
+MessageType:0.1591
+Pipeline:0.0909
+ScheduledPollConsumer:0.3864

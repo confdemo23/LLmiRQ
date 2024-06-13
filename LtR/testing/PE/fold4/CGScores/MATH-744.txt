@@ -1,0 +1,5 @@
+ArithmeticUtils:0.0043
+BigFraction:0.0026
+BigFractionField:0.0004
+FastMath:0.0066
+MathUtils:0.0015

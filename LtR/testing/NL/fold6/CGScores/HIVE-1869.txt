@@ -1,0 +1,10 @@
+ConfVars:0.0340
+HiveConf:0.0741
+HiveServer2:0.0475
+LogHelper:0.0400
+QTestUtil:0.0370
+ResourceMaps:0.0521
+ResourceType:0.0220
+SessionState:0.2202
+ShimLoader:0.0190
+Utils:0.0385

@@ -1,0 +1,10 @@
+ByteStringer:0.0497
+Bytes:0.0313
+Cell:0.0799
+CellScanner:0.0196
+ExtendedCellBuilder:0.0357
+Get:0.0719
+Put:0.0216
+Result:0.0417
+Scan:0.1141
+TimeRange:0.0337

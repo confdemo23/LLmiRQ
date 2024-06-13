@@ -1,0 +1,9 @@
+AmqpAdmin:0.1395
+AnonymousQueue:0.2558
+Binding:0.0930
+DirectExchange:0.2558
+MessageListenerContainer:0.4884
+Queue:0.0465
+RabbitAdmin:0.1860
+RabbitTemplate:0.2558
+SimpleMessageListenerContainer:0.6279

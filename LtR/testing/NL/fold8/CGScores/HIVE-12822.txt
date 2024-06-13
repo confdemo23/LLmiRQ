@@ -1,0 +1,10 @@
+Client:0.8495
+StorageDescriptor:0.4194
+_Fields:1.0000
+drop_partition_by_name_with_environment_context_args:0.2675
+exchange_partition_args:0.2842
+exchange_partitions_args:0.2842
+get_partition_with_auth_args:0.2842
+get_partitions_ps_with_auth_args:0.3178
+grant_role_args:0.3178
+isPartitionMarkedForEvent_result:0.3010

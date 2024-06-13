@@ -1,0 +1,9 @@
+DefaultEndpoint:0.0035
+EndpointHelper:0.0081
+Exchange:0.0058
+FacebookEndpointConfiguration:0.0173
+FacebookPropertiesHelper:0.0081
+IntrospectionSupport:0.0127
+Message:0.0058
+ObjectHelper:0.0035
+ReadingBuilder:0.0266

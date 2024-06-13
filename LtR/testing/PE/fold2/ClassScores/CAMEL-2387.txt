@@ -1,0 +1,2 @@
+Exchange:0.1111
+GenericFileConverter:0.3778

@@ -1,0 +1,3 @@
+HiveJoin:0.1351
+HiveRelCollation:0.3514
+TezEdgeProperty:0.3243

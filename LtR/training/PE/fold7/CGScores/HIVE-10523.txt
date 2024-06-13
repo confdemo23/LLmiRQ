@@ -1,0 +1,10 @@
+FileOutputFormatContainer:0.0216
+HCatFileUtil:0.0103
+HCatMapRedUtil:0.0499
+HCatOutputFormat:0.0329
+HCatTableInfo:0.0499
+HCatUtil:0.0443
+HarOutputCommitterPostProcessor:0.0329
+InternalUtil:0.0160
+OutputJobInfo:0.1857
+TaskCommitContextRegistry:0.0443

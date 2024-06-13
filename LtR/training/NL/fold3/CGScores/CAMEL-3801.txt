@@ -1,0 +1,10 @@
+CamelContext:0.0013
+CamelContextHelper:0.0013
+DefaultProducer:0.0046
+Exchange:0.0627
+IntrospectionSupport:0.0053
+Message:0.0591
+Registry:0.0013
+SqlConsumer:0.0264
+SqlEndpoint:0.0617
+SqlPrepareStatementStrategy:0.0155

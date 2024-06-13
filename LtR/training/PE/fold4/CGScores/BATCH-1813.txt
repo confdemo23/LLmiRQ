@@ -1,0 +1,3 @@
+DefaultPropertyEditorRegistrar:0.0021
+FieldSet:0.0021
+PropertyMatches:0.0047

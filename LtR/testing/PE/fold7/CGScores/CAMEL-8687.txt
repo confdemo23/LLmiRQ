@@ -1,0 +1,5 @@
+MONTHS:0.0222
+Rfc5424SyslogMessage:0.0363
+SyslogFacility:0.0081
+SyslogMessage:0.1021
+SyslogSeverity:0.0081

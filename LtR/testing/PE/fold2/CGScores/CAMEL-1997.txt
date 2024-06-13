@@ -1,0 +1,9 @@
+AbstractCamelContextFactoryBean:0.0213
+BridgePropertyPlaceholderConfigurer:0.0330
+CamelBeanPostProcessor:0.0097
+CamelContextHelper:0.0097
+ContextScanRouteBuilderFinder:0.0097
+PackageScanRouteBuilderFinder:0.0097
+PropertiesComponent:0.0798
+RouteBuilder:0.0097
+SpringCamelContext:0.0330

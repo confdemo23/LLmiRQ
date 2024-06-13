@@ -1,0 +1,2 @@
+RawStore:0.1163
+Table:0.0465

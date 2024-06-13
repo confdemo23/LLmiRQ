@@ -1,0 +1,4 @@
+BloomFilterBase:0.0118
+BloomFilterChunk:0.0032
+ByteBuff:0.0032
+Hash:0.0075

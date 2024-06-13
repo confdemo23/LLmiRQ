@@ -1,0 +1,1 @@
+CxfHeaderFilterStrategy:0.0080

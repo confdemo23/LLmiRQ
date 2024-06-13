@@ -1,0 +1,2 @@
+JndiRegistry:0.1778
+JpaComponent:0.1778

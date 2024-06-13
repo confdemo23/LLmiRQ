@@ -1,0 +1,2 @@
+CollectionBag:0.2000
+TreeBag:0.0800

@@ -1,0 +1,8 @@
+CommonJoinOperator:0.3846
+HiveConf:0.1282
+JoinOperator:0.2308
+MapJoinProcessor:0.3333
+PlanUtils:0.1538
+QBJoinTree:0.1795
+ReduceSinkOperator:0.3846
+SemanticAnalyzer:0.3333

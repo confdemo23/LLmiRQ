@@ -1,0 +1,8 @@
+CamelContext:0.1172
+ClassResolver:0.0251
+EndpointHelper:0.0119
+IntrospectionSupport:0.0448
+Registry:0.0119
+RestBindingMode:0.0119
+RestConfiguration:0.0580
+RouteContext:0.0053

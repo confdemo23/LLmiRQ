@@ -1,0 +1,6 @@
+DefaultProducer:0.0034
+Exchange:0.0316
+ExchangeHelper:0.0034
+Message:0.0739
+MyBatisEndpoint:0.0457
+ObjectHelper:0.0128

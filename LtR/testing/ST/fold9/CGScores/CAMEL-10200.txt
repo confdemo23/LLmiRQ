@@ -1,0 +1,10 @@
+Exchange:0.0698
+IdempotentRepository:0.0137
+JavaMailSender:0.0097
+MailConfiguration:0.1139
+MailEndpoint:0.1420
+MailMessage:0.0057
+MailUtils:0.0097
+Message:0.0257
+ObjectHelper:0.0057
+ScheduledBatchPollingConsumer:0.0097

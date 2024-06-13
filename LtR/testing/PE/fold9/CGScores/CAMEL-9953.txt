@@ -1,0 +1,9 @@
+DefaultProducer:0.0052
+ExceptionHandler:0.0020
+Exchange:0.0402
+Message:0.0402
+Processor:0.0020
+ScheduledPollConsumer:0.0052
+SshEndpoint:0.0052
+SshHelper:0.0052
+SshResult:0.0179

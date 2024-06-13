@@ -1,0 +1,3 @@
+DelegatingContext:0.3111
+LdapTemplate:0.2000
+PoolingContextSource:0.3778

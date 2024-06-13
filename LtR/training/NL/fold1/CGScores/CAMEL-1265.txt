@@ -1,0 +1,10 @@
+AfterPropertiesConfigured:0.0107
+CamelContext:0.0157
+CollectionStringBuffer:0.0107
+Expression:0.0170
+ExpressionDefinition:0.0170
+ObjectHelper:0.0372
+Predicate:0.0170
+RouteContext:0.0107
+SimpleLanguage:0.0113
+SimpleTokenizer:0.0113

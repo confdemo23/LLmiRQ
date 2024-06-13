@@ -1,0 +1,5 @@
+Endpoint:0.1351
+Exchange:0.1351
+Message:0.1081
+ProducerTemplate:0.3514
+RecipientList:0.2703

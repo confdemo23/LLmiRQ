@@ -1,0 +1,5 @@
+AuthorizationRequest:0.3953
+DefaultOAuth2RequestFactory:0.5581
+OAuth2AccessToken:0.3256
+OAuth2RequestFactory:0.3953
+TokenEndpoint:0.2326

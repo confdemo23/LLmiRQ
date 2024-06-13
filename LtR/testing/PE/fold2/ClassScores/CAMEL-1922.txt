@@ -1,0 +1,2 @@
+BeanEndpoint:0.2000
+BeanInfo:0.1111

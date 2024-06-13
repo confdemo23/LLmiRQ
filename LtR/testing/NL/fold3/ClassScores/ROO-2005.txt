@@ -1,0 +1,4 @@
+FieldCommands:0.2683
+JpaEntityMetadata:0.3659
+JpaOperationsImpl:0.3659
+RooJpaEntity:0.2439

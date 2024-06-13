@@ -1,0 +1,3 @@
+BigReal:0.0889
+FieldElement:0.2000
+FieldMatrix:0.1778

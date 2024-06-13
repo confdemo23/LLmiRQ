@@ -1,0 +1,10 @@
+BlockCacheKey:0.0032
+BlockCacheStub:0.1348
+CacheStats:0.0075
+FlushRequestListener:0.0032
+HBaseConfiguration:0.0669
+HeapMemoryManager:0.0584
+MemstoreFlusherStub:0.1518
+RegionServerAccountingStub:0.0372
+ServerName:0.0032
+TunerResult:0.0075

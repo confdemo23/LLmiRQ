@@ -1,0 +1,10 @@
+ExtraFieldUtils:0.0037
+GeneralPurposeBit:0.0079
+Zip64ExtendedInformationExtraField:0.0020
+ZipArchiveEntry:0.0580
+ZipEightByteInteger:0.0041
+ZipExtraField:0.0083
+ZipLong:0.0237
+ZipMethod:0.0074
+ZipShort:0.0068
+ZipUtil:0.0041

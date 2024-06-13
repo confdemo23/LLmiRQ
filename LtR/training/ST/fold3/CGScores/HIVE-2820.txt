@@ -1,0 +1,5 @@
+ExecDriver:0.0048
+HadoopShims:0.0087
+ShimLoader:0.0087
+TableScanOperator:0.0238
+Utils:0.0028

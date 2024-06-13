@@ -1,0 +1,2 @@
+MessageProperties:0.1727
+SimpleAmqpHeaderMapper:0.0069

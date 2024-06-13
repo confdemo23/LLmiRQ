@@ -1,0 +1,7 @@
+DDLTask:0.0976
+FileSinkOperator:0.3171
+HiveConf:0.1220
+HiveFileFormatUtils:0.3902
+HiveOutputFormatImpl:0.4146
+SemanticAnalyzer:0.3171
+Utilities:0.1463

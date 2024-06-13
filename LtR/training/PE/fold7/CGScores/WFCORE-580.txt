@@ -1,0 +1,10 @@
+FilteredData:0.0548
+ImmutableManagementResourceRegistration:0.1013
+ManagementResourceRegistration:0.1198
+OperationContext:0.1617
+OperationStepHandler:0.0129
+PathAddress:0.2736
+PathElement:0.1556
+Resource:0.0362
+SimpleAttributeDefinition:0.0501
+Util:0.0083

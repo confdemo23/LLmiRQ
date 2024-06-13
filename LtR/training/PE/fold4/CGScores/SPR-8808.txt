@@ -1,0 +1,5 @@
+AnnotatedBeanDefinitionReader:0.0146
+Assert:0.0071
+ClassPathBeanDefinitionScanner:0.0146
+DefaultListableBeanFactory:0.0034
+StringUtils:0.0071

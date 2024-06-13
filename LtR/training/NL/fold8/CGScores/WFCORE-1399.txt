@@ -1,0 +1,8 @@
+AttributeDefinition:0.0090
+Factory:0.0013
+ImmutableManagementResourceRegistration:0.0051
+OperationContext:0.0204
+OrderedResourceCreator:0.0013
+PathElement:0.0010
+Resource:0.0070
+RuntimeCapability:0.0032

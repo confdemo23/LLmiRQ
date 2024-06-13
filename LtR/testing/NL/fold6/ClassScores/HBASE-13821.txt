@@ -1,0 +1,6 @@
+BucketCache:0.2121
+CacheConfig:0.2121
+CombinedBlockCache:0.4242
+HBaseConfiguration:0.4242
+HFileBlock:0.1818
+HRegionServer:0.2727

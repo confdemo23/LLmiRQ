@@ -1,0 +1,4 @@
+AbstractStringBasedJpaQuery:0.5714
+JpaQueryExecution:0.3333
+ParameterBinder:0.2857
+StringQueryParameterBinder:0.5476

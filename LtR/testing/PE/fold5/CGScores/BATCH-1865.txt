@@ -1,0 +1,5 @@
+Chunk:0.0035
+ItemReader:0.0015
+MulticasterBatchListener:0.0073
+RepeatOperations:0.0015
+StepContribution:0.0015

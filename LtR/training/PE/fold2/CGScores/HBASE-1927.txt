@@ -1,0 +1,10 @@
+CellComparator:0.0092
+HStore:0.0338
+KeyValueHeap:0.0633
+KeyValueScanner:0.0854
+NextState:0.0412
+PrivateCellUtil:0.0092
+Scan:0.0486
+ScanInfo:0.0191
+ScanQueryMatcher:0.0608
+ScannerContext:0.0633

@@ -1,0 +1,3 @@
+LastModifiedHelper:0.0091
+XPathExpressionFactory:0.0091
+XsdSchema:0.0196

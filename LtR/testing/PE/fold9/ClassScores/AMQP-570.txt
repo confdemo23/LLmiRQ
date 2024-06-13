@@ -1,0 +1,2 @@
+AbstractMessageConverter:0.4565
+SimpleAmqpHeaderMapper:0.4130

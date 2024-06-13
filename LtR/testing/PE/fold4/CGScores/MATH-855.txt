@@ -1,0 +1,4 @@
+ConvergenceChecker:0.0005
+FastMath:0.0056
+Precision:0.0020
+UnivariatePointValuePair:0.0027

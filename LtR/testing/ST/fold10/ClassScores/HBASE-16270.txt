@@ -1,0 +1,6 @@
+DefaultMemStore:0.3158
+HRegion:0.1053
+HStore:0.0789
+RSRpcServices:0.2632
+RpcExecutor:0.2105
+RpcServer:0.1579

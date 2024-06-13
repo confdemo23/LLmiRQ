@@ -1,0 +1,10 @@
+FromDefinition:0.0035
+ModelCamelContext:0.0236
+ObjectHelper:0.0035
+PropertiesComponent:0.0055
+RestConfigurationDefinition:0.0035
+RestDefinition:0.0035
+RestsDefinition:0.0156
+RouteBuilder:0.0176
+RouteDefinition:0.0055
+RoutesDefinition:0.0739

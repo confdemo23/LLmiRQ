@@ -1,0 +1,10 @@
+Admin:0.0276
+Bytes:0.0698
+ColumnFamilyDescriptor:0.0136
+ColumnFamilyDescriptorBuilder:0.0171
+Connection:0.0241
+HFile:0.0136
+LoadQueueItem:0.0276
+Pair:0.0628
+Reader:0.0312
+Table:0.0417

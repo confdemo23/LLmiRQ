@@ -1,0 +1,10 @@
+BaseEnvironment:0.0077
+ClassLoaderBase:0.0118
+CoprocessorClassLoader:0.0141
+CoprocessorEnvironment:0.0342
+CoprocessorHost:0.0077
+KeyLocker:0.0053
+ObserverGetter:0.0077
+ObserverOperation:0.0386
+ObserverOperationWithResult:0.0077
+SortedList:0.0209

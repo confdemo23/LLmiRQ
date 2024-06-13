@@ -1,0 +1,3 @@
+LdapUtils:0.1189
+NameAwareAttribute:0.1189
+NameAwareAttributes:0.3435

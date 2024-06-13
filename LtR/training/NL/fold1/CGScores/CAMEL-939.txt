@@ -1,0 +1,10 @@
+Builder:0.0328
+CamelContext:0.0334
+Endpoint:0.0252
+Exchange:0.0397
+ManagedCamelContextMBean:0.0183
+Message:0.0365
+ModelCamelContext:0.1291
+ProcessorDefinition:0.0183
+ProducerTemplate:0.0183
+Route:0.0183

@@ -1,0 +1,2 @@
+Criteria:0.0069
+GeoCommand:0.0004

@@ -1,0 +1,2 @@
+JdbcPagingItemReader:0.3953
+OraclePagingQueryProvider:0.5116

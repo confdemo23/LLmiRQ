@@ -1,0 +1,3 @@
+CompositeConfiguration:0.4222
+ConfigurationConverter:0.4222
+PropertiesConfiguration:0.4444

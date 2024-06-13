@@ -1,0 +1,1 @@
+BucketingSortingReduceSinkOptimizer:0.6957

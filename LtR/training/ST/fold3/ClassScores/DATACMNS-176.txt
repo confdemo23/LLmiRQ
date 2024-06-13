@@ -1,0 +1,3 @@
+ClassTypeInformation:0.4048
+ParentTypeAwareTypeInformation:0.6429
+TypeDiscoverer:0.2619

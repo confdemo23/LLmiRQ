@@ -1,0 +1,7 @@
+ComponentRegistry:0.2766
+ExternalTagLibTestCase:0.3830
+JspTagTestCase:0.2128
+ReflectiveClassIntrospector:0.4894
+UndertowJSPInstanceManager:0.4681
+WebInjectionContainer:0.3617
+WildFlySecurityManager:0.3830

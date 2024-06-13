@@ -1,0 +1,7 @@
+BatchStatus:0.0066
+ExitStatus:0.0152
+Job:0.0412
+JobExecution:0.0412
+JobParametersValidator:0.0066
+JobRepository:0.0239
+StepExecution:0.0152

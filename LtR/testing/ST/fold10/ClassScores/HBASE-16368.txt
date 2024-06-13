@@ -1,0 +1,7 @@
+ClientScanner:0.2632
+HRegion:0.1053
+HTable:0.0789
+RSRpcServices:0.2632
+RpcRetryingCallerWithReadReplicas:0.7895
+ScannerCallableWithReplicas:0.6316
+TestPartialResultsFromClientSide:0.7632

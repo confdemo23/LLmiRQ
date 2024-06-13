@@ -1,0 +1,10 @@
+Bytes:0.0098
+Connection:0.0057
+ParsedLine:0.0219
+ProtobufUtil:0.0101
+Result:0.0057
+ResultScanner:0.0057
+Scan:0.0057
+Table:0.0057
+Tag:0.0088
+TsvParser:0.0219

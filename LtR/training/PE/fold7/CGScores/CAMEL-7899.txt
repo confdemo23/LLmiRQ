@@ -1,0 +1,10 @@
+CamelContext:0.0216
+ObjectHelper:0.0245
+OptionalIdentifiedDefinition:0.0075
+RestBindingDefinition:0.0443
+RestConfiguration:0.0245
+RestOperationParamDefinition:0.0443
+RestParamType:0.0046
+RouteDefinition:0.0386
+URISupport:0.0046
+VerbDefinition:0.1829

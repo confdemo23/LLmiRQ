@@ -1,0 +1,5 @@
+ExecMapper:0.1154
+OrcOutputFormat:0.2115
+StandardStructObjectInspector:0.4808
+VectorFileSinkOperator:0.3462
+VectorMapOperator:0.2500

@@ -1,0 +1,6 @@
+Exchange:0.1739
+Message:0.1739
+MockEndpoint:0.0464
+ProducerTemplate:0.0464
+RedisConfiguration:0.0214
+ServiceSupport:0.0100

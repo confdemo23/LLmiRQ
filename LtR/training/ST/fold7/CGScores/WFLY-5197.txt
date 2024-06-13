@@ -1,0 +1,8 @@
+ComponentConfiguration:0.0186
+ComponentDescription:0.0023
+ConcurrentContext:0.0023
+EJBComponentDescription:0.0077
+EJBViewDescription:0.0159
+SessionBeanComponentDescription:0.0023
+ViewConfiguration:0.0104
+ViewDescription:0.0077

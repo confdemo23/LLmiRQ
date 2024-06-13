@@ -1,0 +1,10 @@
+AsyncCallback:0.0061
+CamelContext:0.0129
+CamelJmsTemplate:0.0152
+Exchange:0.0197
+ExecutorServiceManager:0.0084
+JmsConfiguration:0.0107
+JmsEndpoint:0.0828
+Message:0.0242
+ObjectHelper:0.0084
+ReplyManager:0.0129

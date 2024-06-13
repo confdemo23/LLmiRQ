@@ -1,0 +1,10 @@
+Exchange:0.1212
+FileComponent:0.2727
+FileConsumer:0.2424
+FileEndpoint:0.2424
+FileLanguage:0.2424
+FileOperations:0.3030
+FilenameGenerator:0.3939
+GenericFileConsumer:0.4545
+GenericFileOperationFailedException:0.9394
+GenericFileProducer:0.4545

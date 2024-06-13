@@ -1,0 +1,9 @@
+BytesSource:0.0038
+CamelContext:0.0038
+Exchange:0.0135
+IOHelper:0.0111
+ObjectHelper:0.0135
+StaxConverter:0.0087
+StringSource:0.0014
+TypeConverter:0.0038
+XMLReaderPool:0.0014

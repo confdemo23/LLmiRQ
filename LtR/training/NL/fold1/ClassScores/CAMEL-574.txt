@@ -1,0 +1,3 @@
+CamelContext:0.2432
+MulticastProcessor:0.4054
+RouteBuilder:0.2432

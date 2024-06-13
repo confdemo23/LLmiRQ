@@ -1,0 +1,5 @@
+AccessDecisionManager:0.3750
+AffirmativeBased:0.2708
+Authentication:0.2292
+RoleVoter:0.1250
+SecurityContextHolder:0.3750

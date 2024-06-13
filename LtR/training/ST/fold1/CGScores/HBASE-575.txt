@@ -1,0 +1,10 @@
+AssignmentManager:0.0548
+ColumnFamilyDescriptor:0.0616
+MasterCoprocessorHost:0.1334
+MasterServices:0.0458
+MonitoredTask:0.0481
+ProcedureExecutor:0.0481
+ProcedurePrepareLatch:0.0436
+ServerManager:0.0391
+TableDescriptor:0.0481
+TableName:0.0346

@@ -1,0 +1,4 @@
+AbstractLdapAuthenticator:0.4889
+BCryptPasswordEncoder:0.4000
+PasswordComparisonAuthenticator:0.6222
+PasswordEncoder:0.2667

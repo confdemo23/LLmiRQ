@@ -1,0 +1,8 @@
+NameParser:0.0020
+NamespaceContextSelector:0.0021
+NamingContext:0.0118
+NamingStore:0.0076
+ObjectFactoryBuilder:0.0008
+ParsedName:0.0230
+RequireResolveException:0.0065
+WritableNamingStore:0.0054

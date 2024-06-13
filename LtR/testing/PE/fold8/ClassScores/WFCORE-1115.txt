@@ -1,0 +1,2 @@
+CompositeOperationTestCase:0.4600
+CoreResourceManagementTestCase:0.5400

@@ -1,0 +1,7 @@
+AfterInvocationProviderManager:0.0137
+AuthenticationConfiguration:0.0137
+AuthenticationManagerBuilder:0.0287
+DefaultMethodSecurityExpressionHandler:0.0437
+ExpressionBasedPreInvocationAdvice:0.0287
+MethodSecurityInterceptor:0.0737
+ObjectPostProcessor:0.0287

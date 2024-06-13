@@ -1,0 +1,10 @@
+AbstractItdMetadataProvider:0.5227
+AbstractMemberHoldingTypeDetailsBuilder:0.7955
+DataOnDemandMetadata:0.3636
+DataOnDemandMetadataProviderImpl:0.6364
+DefaultMetadataDependencyRegistry:0.6591
+DefaultMetadataService:0.4091
+DefaultProcessManager:0.3864
+IntegrationTestMetadataProviderImpl:0.7045
+ItdTypeDetailsBuilder:0.3864
+PollingFileMonitorService:0.4773

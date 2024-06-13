@@ -1,0 +1,10 @@
+ClassUtils:0.0263
+NullableWrapperToCompletableFutureConverter:0.0094
+NullableWrapperToJdk8OptionalConverter:0.0094
+NullableWrapperToScalaOptionConverter:0.0094
+ReactiveWrappers:0.0263
+RepositoryInformation:0.0489
+RepositoryQuery:0.0150
+SpelAwareProxyProjectionFactory:0.0094
+Streamable:0.0150
+WrapperType:0.0714

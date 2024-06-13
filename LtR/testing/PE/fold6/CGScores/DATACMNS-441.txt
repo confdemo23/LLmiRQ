@@ -1,0 +1,6 @@
+ClassTypeInformation:0.0086
+Lazy:0.0086
+Parameters:0.0036
+QueryExecutionConverters:0.0337
+RepositoryMetadata:0.0137
+TypeInformation:0.0187

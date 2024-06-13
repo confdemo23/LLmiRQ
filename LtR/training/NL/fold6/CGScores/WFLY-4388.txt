@@ -1,0 +1,8 @@
+BeanDeploymentArchiveImpl:0.1549
+BeanDeploymentModule:0.0095
+ModuleGroupSingletonProvider:0.0043
+Reflections:0.0191
+ServiceLoaders:0.0082
+WeldBootstrapService:0.0460
+WeldDeployment:0.0174
+WeldProvider:0.0043

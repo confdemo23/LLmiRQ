@@ -1,0 +1,5 @@
+FileSinkDesc:0.2195
+HiveFileFormatUtils:0.3902
+HiveOutputFormat:0.3171
+SemanticAnalyzer:0.3171
+Table:0.0488

@@ -1,0 +1,2 @@
+CamelContext:0.1957
+QuartzEndpoint:0.2391

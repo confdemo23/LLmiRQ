@@ -1,0 +1,4 @@
+CxfRsConsumer:0.2727
+CxfRsEndpoint:0.2727
+CxfRsInvoker:0.2424
+CxfRsProducer:0.2727

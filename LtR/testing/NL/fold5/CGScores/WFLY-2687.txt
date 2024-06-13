@@ -1,0 +1,10 @@
+AuthMethodParser:0.0089
+ComponentRegistry:0.0388
+JACCContextIdHandler:0.0189
+JSPConfig:0.0089
+ScisMetaData:0.0288
+SecurityContextAssociationHandler:0.0089
+ServletContainerService:0.2377
+ServletContextAttribute:0.0189
+SessionCookieConfig:0.1183
+SharedSessionManagerConfig:0.0189

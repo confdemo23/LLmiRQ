@@ -1,0 +1,7 @@
+IOHelper:0.0013
+IntrospectionSupport:0.0013
+ObjectHelper:0.0029
+QuartzEndpoint:0.0052
+QuartzHelper:0.0021
+ResourceHelper:0.0006
+UriEndpointComponent:0.0013

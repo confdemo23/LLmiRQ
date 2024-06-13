@@ -1,0 +1,7 @@
+CamelContext:0.3125
+DefaultClassResolver:0.5625
+ModelCamelContext:0.4688
+RestConfiguration:0.4688
+RestDefinition:0.3750
+RestSwaggerReader:0.4688
+RestSwaggerSupport:0.5000

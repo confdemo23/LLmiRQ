@@ -1,0 +1,8 @@
+BeanPropertyBindingResult:0.5946
+BeanWrapperImpl:0.3243
+BindTag:0.1081
+CustomCollectionEditor:0.5135
+DataBinder:0.1892
+FormTag:0.1081
+PropertyEditorRegistrar:0.5405
+WebDataBinder:0.2703

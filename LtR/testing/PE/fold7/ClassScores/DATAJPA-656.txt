@@ -1,0 +1,3 @@
+QueryUtils:0.1522
+SimpleJpaRepository:0.3478
+Specification:0.2174

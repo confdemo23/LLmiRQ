@@ -1,0 +1,6 @@
+ContinuousOutputModel:0.4000
+EmbeddedRungeKuttaIntegrator:0.5556
+EventState:0.1556
+FirstOrderIntegrator:0.3778
+GraggBulirschStoerIntegrator:0.5556
+HighamHall54Integrator:0.4222

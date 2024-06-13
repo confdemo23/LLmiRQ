@@ -1,0 +1,10 @@
+Client:0.0059
+HadoopShims:0.0040
+Hive:0.0102
+HiveServer2:0.0161
+LogHelper:0.0136
+ResourceMaps:0.0176
+ResourceType:0.0075
+SessionState:0.0739
+ShimLoader:0.0079
+Utils:0.0097

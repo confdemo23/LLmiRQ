@@ -1,0 +1,10 @@
+ChunkOrientedTasklet:0.3953
+FlatFileItemReader:0.3488
+JdbcBatchItemWriter:0.3721
+JobBuilder:0.1628
+JobBuilderFactory:0.3256
+JobRepository:0.2326
+SimpleJob:0.1395
+StepBuilder:0.1860
+StepBuilderFactory:0.3488
+TaskletStep:0.1860

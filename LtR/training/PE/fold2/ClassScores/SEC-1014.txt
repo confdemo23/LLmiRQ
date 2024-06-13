@@ -1,0 +1,5 @@
+AbstractLdapAuthenticator:0.5116
+LdapAuthenticationProvider:0.5349
+LdapAuthenticator:0.3256
+PasswordComparisonAuthenticator:0.6512
+UserDetailsContextMapper:0.4884

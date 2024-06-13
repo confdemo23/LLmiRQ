@@ -1,0 +1,10 @@
+CamelContext:0.0693
+Exchange:0.1364
+FileUtil:0.1597
+GenericFileEndpoint:0.1657
+GenericFileOperations:0.0639
+Message:0.1276
+ObjectHelper:0.0917
+SftpConfiguration:0.2715
+SftpEndpoint:0.1701
+StringHelper:0.0340

@@ -1,0 +1,4 @@
+HiveClient:0.0040
+HiveClientCallback:0.0040
+HiveClientFactory:0.0040
+HiveUtils:0.0100

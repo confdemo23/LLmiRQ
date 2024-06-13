@@ -1,0 +1,6 @@
+DateFormatUtils:0.2791
+DateUtils:0.1395
+DurationFormatUtils:0.3721
+FastDateFormat:0.2558
+StopWatch:0.1395
+StrTokenizer:0.2093

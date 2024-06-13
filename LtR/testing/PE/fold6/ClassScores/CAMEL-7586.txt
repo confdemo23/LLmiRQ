@@ -1,0 +1,1 @@
+ManagedCamelContextMBean:0.4667

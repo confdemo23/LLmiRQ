@@ -1,0 +1,2 @@
+JpaQueryLookupStrategy:0.3673
+PartTreeJpaQuery:0.2449

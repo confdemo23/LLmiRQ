@@ -1,0 +1,6 @@
+AxiomSoapBody:0.0061
+AxiomUtils:0.0142
+SaajUtils:0.0056
+SoapUtils:0.0290
+SoapVersion:0.0676
+TransportOutputStream:0.0381

@@ -1,0 +1,10 @@
+DomainCommandBuilder:0.2118
+DomainSlaveHostRegistrations:0.1554
+HostControllerEnvironment:0.1810
+LocalHostControllerInfoImpl:0.5443
+ManagementResourceRegistration:0.1189
+OperationContext:0.1215
+PathAddress:0.1276
+PathElement:0.1884
+ServerInventory:0.4106
+WildFlyManagedConfiguration:0.4097

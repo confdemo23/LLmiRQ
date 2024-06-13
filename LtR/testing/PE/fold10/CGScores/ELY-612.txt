@@ -1,0 +1,10 @@
+AbstractDigestMechanism:0.0149
+Arrays2:0.0072
+ByteIterator:0.0072
+ByteStringBuilder:0.0303
+CodePointIterator:0.0034
+CredentialCallback:0.0072
+Password:0.0072
+TransformationMapper:0.0072
+TransformationSpec:0.0072
+TwoWayPassword:0.0034

@@ -1,0 +1,8 @@
+BlueprintCamelContext:0.4390
+BlueprintComponentResolver:0.5610
+BlueprintPropertiesParser:0.5366
+CamelBlueprintHelper:0.4146
+CamelContextFactoryBean:0.4878
+DefaultCamelContext:0.3902
+OsgiServiceRegistry:0.3902
+SimpleRegistry:0.2683

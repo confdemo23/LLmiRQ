@@ -1,0 +1,10 @@
+BatchStatus:0.2162
+ExecutionContext:0.3514
+ExitStatus:0.1892
+JobExecution:0.2432
+JobExecutionException:0.4865
+JobInstance:0.2162
+JobParameter:0.2432
+JobParameters:0.2703
+JobRepository:0.2703
+StepExecution:0.2703

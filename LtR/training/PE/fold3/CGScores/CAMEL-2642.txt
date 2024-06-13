@@ -1,0 +1,7 @@
+CamelContext:0.0019
+CamelContextHelper:0.0008
+LRUCache:0.0070
+ObjectHelper:0.0184
+PropertiesComponent:0.0019
+StringHelper:0.0008
+TypeConverter:0.0019

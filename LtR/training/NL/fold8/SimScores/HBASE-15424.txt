@@ -1,0 +1,10 @@
+Replication:0.3477
+ReplicationHFileCleaner:0.3789
+ReplicationQueuesClientZKImpl:0.3855
+ReplicationQueuesZKImpl:0.4113
+ReplicationSourceManager:0.3057
+ReplicationSourceWALActionListener:0.3194
+ReplicationStateZKBase:0.3854
+ReplicationZKNodeCleaner:0.3516
+TableHFileArchiveTracker:0.3248
+TestReplicationSink:0.3133

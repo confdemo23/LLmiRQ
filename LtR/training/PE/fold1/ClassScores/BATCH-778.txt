@@ -1,0 +1,3 @@
+AbstractJobRepositoryFactoryBean:0.6444
+JobRepositoryFactoryBean:0.4667
+MapJobRepositoryFactoryBean:0.5333

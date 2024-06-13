@@ -1,0 +1,3 @@
+MetricsHBaseServer:0.3488
+MetricsHBaseServerSourceFactory:0.6512
+RSRpcServices:0.2326

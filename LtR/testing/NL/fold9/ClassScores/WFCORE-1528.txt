@@ -1,0 +1,5 @@
+DomainController:0.4375
+HostController:0.3750
+ManagementInterface:0.5313
+SecurityDomain:0.3750
+SecurityRealm:0.3438

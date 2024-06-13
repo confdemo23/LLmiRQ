@@ -1,0 +1,10 @@
+Builder:0.0038
+CliDriver:0.0180
+HiveQueryResultSet:0.0038
+LogHelper:0.0246
+ResourceMaps:0.0321
+ResourceType:0.0132
+SessionState:0.1380
+SessionStates:0.0057
+ShimLoader:0.0019
+Utils:0.0057

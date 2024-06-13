@@ -1,0 +1,6 @@
+FastMath:0.0578
+Field:0.0168
+MathUtils:0.0123
+PairDoubleInteger:0.0259
+Precision:0.0168
+UniformIntegerDistribution:0.0077

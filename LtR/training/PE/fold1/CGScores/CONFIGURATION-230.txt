@@ -1,0 +1,3 @@
+NodeHandler:0.0727
+QueryResult:0.0300
+XPathContextFactory:0.0086

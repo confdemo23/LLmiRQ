@@ -1,0 +1,8 @@
+FileUtils:0.1395
+HdfsUtils:0.1395
+Hive:0.0233
+HiveConf:0.1163
+HiveMetaStoreClient:0.3721
+MetaStoreUtils:0.2558
+SessionState:0.2093
+Warehouse:0.1395

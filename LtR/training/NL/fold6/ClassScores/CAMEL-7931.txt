@@ -1,0 +1,5 @@
+JcrComponent:0.2564
+JcrConstants:0.2564
+JcrEndpoint:0.2308
+JcrMessage:0.2051
+JcrProducer:0.2308

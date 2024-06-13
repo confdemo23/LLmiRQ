@@ -1,0 +1,10 @@
+JsonProcessingExceptionMapper:0.1151
+ManagementProperties:0.1006
+ManagementSocketBindingsCustomizer:0.1111
+MultiStartMojo:0.2347
+RunMojo:0.1384
+StopMojo:0.1871
+SwarmExecutor:0.1850
+SwarmProperties:0.0827
+UndertowProperties:0.0826
+UndertowSocketBindingsCustomizer:0.1090

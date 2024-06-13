@@ -1,0 +1,10 @@
+Exchange:0.3078
+FileEndpoint:0.3063
+FileUtil:0.1512
+GenericFile:0.2382
+GenericFileEndpoint:0.6567
+GenericFileOperations:0.1121
+IOHelper:0.0611
+IdempotentRepository:0.0931
+Message:0.2082
+ObjectHelper:0.1406

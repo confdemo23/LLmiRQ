@@ -1,0 +1,10 @@
+AbstractMappingContext:0.1405
+ChangeSetBackedTransactionSynchronization:0.2325
+ExampleMatcher:0.1114
+PersistableEntityInformationUnitTests:0.0423
+PropertyReferenceExceptionUnitTests:0.0571
+Repositories:0.0774
+RepositoryConfigurationDelegate:0.1898
+RepositoryConfigurationExtension:0.1215
+RepositoryConfigurationExtensionSupport:0.2996
+RepositoryConfigurationExtensionSupportUnitTests:0.2656

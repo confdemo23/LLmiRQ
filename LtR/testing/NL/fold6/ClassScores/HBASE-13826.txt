@@ -1,0 +1,8 @@
+AccessController:0.3636
+AccessDeniedException:0.5152
+CreateTableProcedure:0.4848
+HBaseAdmin:0.1818
+HTableDescriptor:0.3636
+NamespaceDescriptor:0.4545
+RpcServer:0.1515
+SecureBulkLoadManager:0.5152

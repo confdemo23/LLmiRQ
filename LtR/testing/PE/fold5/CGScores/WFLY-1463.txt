@@ -1,0 +1,10 @@
+BindInfo:0.0497
+CacheDeploymentListener:0.0173
+Configuration:0.0261
+ContextNames:0.0379
+EEModuleDescription:0.0821
+PersistenceProviderDeploymentHolder:0.0143
+PersistenceUnitMetadataHolder:0.0202
+PersistenceUnitServiceImpl:0.0497
+PhaseOnePersistenceUnitServiceImpl:0.0143
+WeldDeploymentMarker:0.0114

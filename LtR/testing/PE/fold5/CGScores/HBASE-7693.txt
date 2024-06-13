@@ -1,0 +1,10 @@
+Bytes:0.0098
+Connection:0.0057
+HRegionInfo:0.0057
+HRegionLocation:0.0118
+Pair:0.0301
+RegionLocator:0.0057
+RegionSizeCalculator:0.0037
+Scan:0.0077
+TableRecordReader:0.0037
+TableSplit:0.0362

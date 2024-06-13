@@ -1,0 +1,2 @@
+NamingStrategy:0.0035
+QueueBuilder:0.0015

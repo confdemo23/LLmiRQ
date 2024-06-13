@@ -1,0 +1,10 @@
+CapabilityId:0.0943
+CapabilityRegistration:0.0253
+CapabilityScope:0.0571
+Factory:0.0253
+OperationContext:0.0524
+PathAddress:0.0630
+ResourceDefinition:0.0342
+RuntimeCapability:0.0348
+RuntimeCapabilityRegistration:0.0571
+RuntimeRequirementRegistration:0.0996

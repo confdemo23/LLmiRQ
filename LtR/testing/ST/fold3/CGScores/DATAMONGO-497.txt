@@ -1,0 +1,7 @@
+DocumentAccessor:0.0580
+LazyLoadingProxy:0.0225
+MappingMongoConverter:0.0048
+MongoDbPropertyValueProvider:0.0048
+MongoPersistentEntity:0.0639
+MongoPersistentProperty:0.0698
+ObjectPath:0.0166

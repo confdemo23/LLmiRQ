@@ -1,0 +1,3 @@
+CamelContextFactoryBean:0.4348
+PropertiesComponent:0.3478
+PropertiesParser:0.2826

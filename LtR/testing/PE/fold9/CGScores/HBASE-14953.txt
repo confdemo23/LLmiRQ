@@ -1,0 +1,10 @@
+ConnectionFactory:0.0300
+Context:0.0716
+Entry:0.0716
+HBaseInterClusterReplicationEndpoint:0.0404
+MetricsSource:0.0393
+ReplicationEndpoint:0.0578
+ReplicationSinkManager:0.1028
+ReplicationSourceShipper:0.0529
+TableName:0.0404
+WALKeyImpl:0.0508

@@ -1,0 +1,6 @@
+AbstractAuthenticationProcessingFilter:0.7234
+AbstractUserDetailsAuthenticationProvider:0.7872
+BCryptPasswordEncoder:0.3617
+DaoAuthenticationProvider:0.4468
+ProviderManager:0.2340
+UsernamePasswordAuthenticationFilter:0.6809

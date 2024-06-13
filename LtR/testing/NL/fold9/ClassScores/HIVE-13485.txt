@@ -1,0 +1,8 @@
+HiveServer2:0.2813
+HiveSessionImpl:0.4063
+HiveSessionProxy:0.4375
+OperationLog:0.3125
+OperationManager:0.4375
+QueryState:0.2500
+SessionState:0.3125
+ThreadWithGarbageCleanup:0.6875

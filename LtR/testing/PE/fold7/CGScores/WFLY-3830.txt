@@ -1,0 +1,4 @@
+NameParser:0.0031
+NamespaceContextSelector:0.0075
+NamingContext:0.0338
+ParsedName:0.0821

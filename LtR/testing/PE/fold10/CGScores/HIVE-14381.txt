@@ -1,0 +1,7 @@
+MultiValueBoundaryScanner:0.0069
+Range:0.0142
+RankLimit:0.0179
+SingleValueBoundaryScanner:0.0069
+StreamingState:0.0327
+ValueBoundaryScanner:0.0142
+WindowingFunctionInfoHelper:0.0069

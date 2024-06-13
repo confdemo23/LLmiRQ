@@ -1,0 +1,10 @@
+BeanDefinition:0.1142
+CamelContext:0.0907
+ExpressionClause:0.0695
+LogDefinition:0.0472
+PollEnrichDefinition:0.0829
+ProcessorDefinition:0.0984
+ProcessorDefinitionHelper:0.0945
+RouteContext:0.1821
+RouteDefinition:0.0451
+WireTapDefinition:0.0606

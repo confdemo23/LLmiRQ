@@ -1,0 +1,10 @@
+ASTSearcher:0.0035
+CalcitePlanner:0.0339
+CalcitePlannerAction:0.2648
+ConfVars:0.0286
+EncoderDecoder:0.0043
+ExceptionHelper:0.0035
+GroupByOptimizerContext:0.0182
+HiveConf:0.0634
+Utils:0.0009
+VarType:0.0078

@@ -1,0 +1,5 @@
+Body:0.0256
+Exchange:0.1282
+SqlComponent:0.2308
+SqlEndpoint:0.2051
+SqlProducer:0.2051

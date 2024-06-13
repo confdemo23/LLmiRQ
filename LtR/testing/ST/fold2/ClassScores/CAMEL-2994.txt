@@ -1,0 +1,2 @@
+CXFWsdlOnlyTest:0.2500
+CxfClientCallback:0.2955

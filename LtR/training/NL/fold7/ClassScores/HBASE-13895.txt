@@ -1,0 +1,9 @@
+AbstractFSWAL:0.2564
+AssignmentManager:0.3590
+HMaster:0.1026
+HRegion:0.1026
+HRegionServer:0.2564
+RegionStateStore:0.3333
+RegionStates:0.2308
+SplitLogWorker:0.2821
+WALPlayer:0.1538

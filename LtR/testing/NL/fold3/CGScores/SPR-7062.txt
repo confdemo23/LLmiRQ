@@ -1,0 +1,10 @@
+Assert:0.0272
+CollectionFactory:0.0063
+ConfigurablePropertyAccessor:0.0106
+Errors:0.0276
+LocalValidatorFactoryBean:0.0073
+MutablePropertyValues:0.0409
+PropertyValue:0.0193
+SmartValidator:0.0027
+StringUtils:0.0076
+Validator:0.0126

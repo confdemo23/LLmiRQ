@@ -1,0 +1,5 @@
+BusinessViewAnnotationProcessor:0.0214
+ComponentDescription:0.0051
+EEModuleDescription:0.0024
+MetadataCompleteMarker:0.0024
+SessionBeanComponentDescription:0.0214

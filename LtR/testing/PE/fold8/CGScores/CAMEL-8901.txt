@@ -1,0 +1,6 @@
+CipherSuitesParameters:0.0026
+KeyManagersParameters:0.0099
+KeyStoreParameters:0.0208
+SSLContextParameters:0.0208
+SecureSocketProtocolsParameters:0.0026
+TrustManagersParameters:0.0063

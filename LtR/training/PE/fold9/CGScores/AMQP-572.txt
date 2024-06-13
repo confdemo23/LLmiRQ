@@ -1,0 +1,10 @@
+ConnectionFactoryUtils:0.0219
+Delivery:0.0159
+DirectReplyToMessageListenerContainer:0.0136
+Message:0.0487
+MessageProperties:0.0605
+PendingReply:0.0183
+RabbitResourceHolder:0.0558
+RabbitTemplate:0.0370
+RabbitUtils:0.0199
+ResourceFactory:0.0179

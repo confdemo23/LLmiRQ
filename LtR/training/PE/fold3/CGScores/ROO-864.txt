@@ -1,0 +1,2 @@
+JavaPackage:0.0009
+JavaSymbolName:0.0004

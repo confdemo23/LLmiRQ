@@ -1,0 +1,2 @@
+FlatFileItemReader:0.3111
+RecordSeparatorPolicy:0.3778

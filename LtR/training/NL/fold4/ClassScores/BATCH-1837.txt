@@ -1,0 +1,9 @@
+AbstractJob:0.1860
+BatchConfigurer:0.2791
+FlowJob:0.0930
+JobLauncherTestUtils:0.3953
+JobRepositoryTestUtils:0.4419
+JobScopeTestExecutionListener:0.6047
+SimpleJob:0.1395
+StepBuilderFactory:0.3488
+StepScopeTestExecutionListener:0.6279

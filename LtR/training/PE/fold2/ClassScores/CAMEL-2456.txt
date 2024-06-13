@@ -1,0 +1,3 @@
+JmsTemporaryQueueEndpoint:0.5116
+JmsTemporaryTopicEndpoint:0.5116
+ManagedResource:0.2791

@@ -1,0 +1,7 @@
+CachedCxfPayload:0.0075
+CachedOutputStream:0.0022
+CamelContext:0.0022
+CxfPayload:0.0075
+Exchange:0.0022
+StreamCache:0.0102
+TypeConverter:0.0022

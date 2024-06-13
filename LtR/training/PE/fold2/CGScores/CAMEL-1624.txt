@@ -1,0 +1,6 @@
+DefaultProducer:0.0174
+ObjectHelper:0.0041
+XmppBinding:0.0084
+XmppEndpoint:0.1037
+XmppGroupChatProducer:0.0037
+XmppPrivateChatProducer:0.0041

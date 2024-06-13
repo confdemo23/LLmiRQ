@@ -1,0 +1,3 @@
+LdapConnectionHandler:0.0236
+LdapEntry:0.0276
+SecurityActions:0.0035

@@ -1,0 +1,2 @@
+RaDeploymentActivator:0.0032
+TransactionIntegrationService:0.0209

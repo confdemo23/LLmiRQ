@@ -1,0 +1,4 @@
+Predicate:0.0020
+Streamable:0.0004
+Subject:0.0037
+Type:0.0004

@@ -1,0 +1,10 @@
+CTEClause:0.0045
+CalcitePlanner:0.0048
+CalcitePlannerAction:0.0378
+HadoopShims:0.0017
+HdfsEncryptionShim:0.0016
+SemanticAnalyzer:0.0125
+ShimLoader:0.0017
+SortBucketRSCtx:0.0075
+TypeInfoParser:0.0020
+TypeInfoUtils:0.0052

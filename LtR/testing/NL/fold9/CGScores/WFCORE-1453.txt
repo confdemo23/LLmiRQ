@@ -1,0 +1,10 @@
+ContentItem:0.0128
+ContentModification:0.0281
+ContentType:0.0099
+IdentityUpgrade:0.0118
+MiscContentItem:0.0109
+ModificationBuilderTarget:0.0109
+ModuleItem:0.0109
+Patch:0.0223
+PatchElement:0.0185
+PatchElementProvider:0.0109

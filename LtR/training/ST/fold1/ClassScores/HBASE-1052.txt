@@ -1,0 +1,4 @@
+HRegion:0.0682
+HRegionServer:0.2045
+HStore:0.0455
+HStoreFile:0.1364

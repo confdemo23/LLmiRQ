@@ -1,0 +1,10 @@
+Admin:0.0393
+Bytes:0.0204
+ChoreService:0.0239
+Cipher:0.0225
+ColumnFamilyDescriptorBuilder:0.0983
+HBaseConfiguration:0.0534
+IntegrationTestBase:0.0239
+IntegrationTestIngest:0.0709
+TableName:0.0499
+User:0.1292

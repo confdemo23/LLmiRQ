@@ -1,0 +1,4 @@
+Message:0.0089
+RedisConnection:0.0136
+RedisConnectionFactory:0.0042
+RedisMessageListenerContainer:0.0136

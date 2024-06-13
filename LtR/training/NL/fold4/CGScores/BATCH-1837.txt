@@ -1,0 +1,10 @@
+ExitStatus:0.0141
+ExtractorMethodCallback:0.0597
+HippyMethodInvoker:0.0799
+JobExecution:0.1145
+JobLauncherTestUtils:0.0470
+JobRepository:0.0216
+JobSynchronizationManager:0.0264
+MetaDataInstanceFactory:0.0192
+StepLocator:0.0237
+StepSynchronizationManager:0.0195

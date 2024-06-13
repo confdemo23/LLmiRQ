@@ -1,0 +1,10 @@
+AttributeDefinition:0.0256
+CapabilityId:0.0197
+CapabilityScope:0.0118
+ManagementResourceRegistration:0.0100
+NodeSubregistry:0.0447
+PathAddress:0.0292
+PathElement:0.0869
+ResourceDefinition:0.0135
+RuntimeCapabilityRegistration:0.0118
+RuntimeRequirementRegistration:0.0208

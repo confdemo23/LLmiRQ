@@ -1,0 +1,7 @@
+DDLTask:0.0833
+Hive:0.0208
+HiveMetaStore:0.2083
+HiveMetaStoreClient:0.3333
+MetaStoreUtils:0.2292
+ObjectStore:0.1667
+RetryingMetaStoreClient:0.4167

@@ -1,0 +1,10 @@
+AsyncCallback:0.0315
+CamelContext:0.0104
+Endpoint:0.0206
+EndpointUtilizationStatistics:0.0082
+Exchange:0.0972
+LRUCache:0.0147
+Processor:0.0260
+Producer:0.0126
+ServiceHelper:0.0377
+ServicePool:0.0147

@@ -1,0 +1,6 @@
+CentroidCluster:0.0117
+Cluster:0.0045
+Clusterable:0.0010
+MathUtils:0.0010
+RandomGenerator:0.0045
+Variance:0.0022

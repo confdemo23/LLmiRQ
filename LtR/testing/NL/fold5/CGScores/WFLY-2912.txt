@@ -1,0 +1,6 @@
+ConnectorServices:0.0099
+ConnectorXmlDescriptor:0.0429
+IronJacamarActivationResourceService:0.0209
+ResourceAdapterDeployment:0.0209
+WildFLyRaDeployer:0.0648
+WritableServiceBasedNamingStore:0.0429

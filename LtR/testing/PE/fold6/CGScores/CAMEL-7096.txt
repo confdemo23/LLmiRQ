@@ -1,0 +1,10 @@
+CamelContext:0.0150
+Exchange:0.0205
+IOHelper:0.0041
+Message:0.0041
+ObjectHelper:0.0205
+Ordered:0.0096
+StringHelper:0.0806
+ThrowingFunction:0.0096
+TypeConverter:0.0478
+WrappedFile:0.0096

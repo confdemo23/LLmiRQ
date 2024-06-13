@@ -1,0 +1,10 @@
+AbstractProjectOperations:0.4286
+DbreDatabaseListenerImpl:0.4082
+DbreModelServiceImpl:0.3265
+DefaultProcessManager:0.3469
+GAV:0.0000
+JLineShell:0.1224
+PollingFileMonitorService:0.4286
+PomFactoryImpl:0.2041
+PomManagementServiceImpl:0.4082
+ProcessManagerHostedExecutionStrategy:0.6735

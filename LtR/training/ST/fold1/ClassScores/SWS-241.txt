@@ -1,0 +1,8 @@
+AbstractEndpointMapping:0.4318
+AbstractMethodEndpointMapping:0.5682
+MessageDispatcher:0.2955
+MessageDispatcherServlet:0.4545
+PayloadRootAnnotationMethodEndpointMapping:0.8636
+PayloadRootUtils:0.2727
+WebServiceMessageReceiverHandlerAdapter:0.7955
+WebServiceMessageReceiverObjectSupport:0.7727

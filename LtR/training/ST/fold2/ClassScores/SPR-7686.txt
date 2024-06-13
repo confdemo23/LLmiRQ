@@ -1,0 +1,3 @@
+AutowiredAnnotationBeanPostProcessor:0.6531
+InjectionMetadata:0.2653
+SpringBeanAutowiringSupport:0.4694

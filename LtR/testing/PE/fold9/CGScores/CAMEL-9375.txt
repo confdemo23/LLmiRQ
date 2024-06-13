@@ -1,0 +1,9 @@
+CamelContext:0.0020
+CamelTestSupport:0.0061
+Exchange:0.0052
+ExpressionNode:0.0061
+Message:0.0020
+ProducerTemplate:0.0133
+RouteDefinition:0.0061
+SplitDefinition:0.0205
+TypeConverter:0.0020

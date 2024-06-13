@@ -1,0 +1,3 @@
+BaseOptimizer:0.2222
+LevenbergMarquardtOptimizer:0.5333
+SimplexOptimizer:0.2889

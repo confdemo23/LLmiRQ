@@ -1,0 +1,4 @@
+HandlerAdapter:0.3077
+MessageListenerAdapter:0.5128
+RabbitListenerAnnotationBeanPostProcessor:1.0000
+SimpleMessageListenerContainer:0.7179

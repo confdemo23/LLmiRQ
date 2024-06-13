@@ -1,0 +1,8 @@
+GroupByOperator:0.0169
+IProcessingMode:0.0521
+MapJoinOperator:0.0625
+MapOpCtx:0.0308
+MapOperator:0.0022
+RowDeserializePartitionContext:0.0195
+VectorDeserializePartitionContext:0.0122
+VectorPartitionContext:0.0195

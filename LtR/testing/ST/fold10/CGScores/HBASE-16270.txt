@@ -1,0 +1,10 @@
+Bytes:0.0293
+EnvironmentEdgeManager:0.0278
+HRegion:0.1511
+HRegionServer:0.0358
+HStore:0.0478
+MonitoredTask:0.0247
+ProtobufUtil:0.0358
+RegionCoprocessorHost:0.0322
+RegionInfo:0.0940
+ScannerContext:0.0247

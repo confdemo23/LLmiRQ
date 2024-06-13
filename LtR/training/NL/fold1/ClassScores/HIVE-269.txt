@@ -1,0 +1,3 @@
+FunctionTask:0.2432
+GenericUDFPower:0.3243
+UDFMath:0.1081

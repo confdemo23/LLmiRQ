@@ -1,0 +1,8 @@
+DDLSemanticAnalyzer:0.3902
+HiveInputFormat:0.2927
+HiveMetaStoreClient:0.3902
+HiveOutputFormat:0.3171
+HiveStorageHandler:0.3659
+MetaStoreUtils:0.2683
+SemanticAnalyzer:0.3171
+Table:0.0488

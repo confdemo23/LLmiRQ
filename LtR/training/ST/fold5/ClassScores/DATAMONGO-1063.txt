@@ -1,0 +1,2 @@
+QueryDslMongoRepository:0.4043
+SpringDataMongodbSerializer:0.4894

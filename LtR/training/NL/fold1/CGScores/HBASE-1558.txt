@@ -1,0 +1,10 @@
+Builder:0.0970
+Bytes:0.1915
+HRegion:0.2517
+HStore:0.1524
+MonitoredTask:0.1238
+MultiVersionConcurrencyControl:0.0687
+Mutation:0.1729
+RegionCoprocessorHost:0.0687
+RegionInfo:0.2715
+ScannerContext:0.0973

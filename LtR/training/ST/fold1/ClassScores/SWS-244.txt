@@ -1,0 +1,6 @@
+MessageDispatcher:0.2955
+MessageDispatcherServlet:0.4545
+SaajSoap11Header:0.2727
+SoapMessageDispatcher:0.3864
+WebServiceMessageReceiverHandlerAdapter:0.7955
+WebServiceMessageReceiverObjectSupport:0.7727

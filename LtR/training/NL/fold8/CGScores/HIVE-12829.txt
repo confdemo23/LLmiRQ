@@ -1,0 +1,10 @@
+Client:0.0195
+FetchResults_args:0.0137
+GetCrossReference_args:0.0137
+RenewDelegationToken_args:0.0137
+TExecuteStatementReq:0.0637
+TExecuteStatementResp:0.0323
+TGetOperationStatusReq:0.0319
+TGetOperationStatusResp:0.1554
+TOperationHandle:0.0328
+_Fields:0.0999

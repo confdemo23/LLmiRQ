@@ -1,0 +1,7 @@
+Database:0.1875
+HiveMetaStore:0.3438
+HiveMetaStoreClient:0.5313
+MetaStoreUtils:0.3750
+ObjectStore:0.2813
+TColumn:0.1563
+ThriftHiveMetastore:0.5313

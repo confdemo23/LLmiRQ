@@ -1,0 +1,5 @@
+ChiSquareTest:0.0391
+GTest:0.0346
+KolmogorovSmirnovTest:0.0437
+OneWayAnova:0.0117
+TTest:0.0894

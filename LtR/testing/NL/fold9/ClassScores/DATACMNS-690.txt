@@ -1,0 +1,4 @@
+RepositoryBeanDefinitionRegistrarSupport:1.0000
+RepositoryConfigurationDelegate:0.9063
+RepositoryConfigurationExtensionSupport:1.0000
+RepositoryConfigurationUtils:0.8125

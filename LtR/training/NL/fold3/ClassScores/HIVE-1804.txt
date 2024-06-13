@@ -1,0 +1,6 @@
+HiveConf:0.1220
+MapJoinDesc:0.1951
+MapJoinOperator:0.2927
+MapJoinProcessor:0.3171
+MapJoinTableContainer:0.4390
+MapredWork:0.1707

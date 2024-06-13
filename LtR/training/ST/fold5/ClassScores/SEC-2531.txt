@@ -1,0 +1,3 @@
+AuthenticationConfiguration:0.4894
+WebSecurityConfiguration:0.4255
+WebSecurityConfigurerAdapter:0.5106

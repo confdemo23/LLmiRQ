@@ -1,0 +1,3 @@
+ColognePhoneticTest:0.3333
+DoubleMetaphoneTest:0.3333
+SoundexTest:0.1556

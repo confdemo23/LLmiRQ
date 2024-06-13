@@ -1,0 +1,2 @@
+HBaseInterClusterReplicationEndpoint:0.7174
+ReplicationSinkManager:0.4130

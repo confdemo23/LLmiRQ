@@ -1,0 +1,10 @@
+AbstractMessageListenerContainer:0.6744
+AmqpTemplate:0.2093
+CachingConnectionFactory:0.4884
+DirectReplyToMessageListenerContainer:0.7907
+MessageProperties:0.3256
+Queue:0.0465
+RabbitAdmin:0.1860
+RabbitMessagingTemplate:0.4651
+RabbitTemplate:0.2558
+SimpleMessageListenerContainer:0.6279

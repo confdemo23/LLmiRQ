@@ -1,0 +1,10 @@
+Attribute:0.0229
+Builder:0.0064
+ControlledProcessStateService:0.0064
+DeploymentOperations:0.0088
+FileSystemDeploymentService:0.0184
+ManagementResourceRegistration:0.0229
+Notification:0.0127
+ScannerTask:0.0182
+SimpleAttributeDefinitionBuilder:0.0722
+Util:0.0182

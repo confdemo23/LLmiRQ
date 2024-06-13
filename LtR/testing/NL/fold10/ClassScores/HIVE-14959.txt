@@ -1,0 +1,5 @@
+CalcitePlanner:0.2973
+HiveConf:0.1351
+SemanticAnalyzer:0.3514
+WindowingComponentizer:0.5135
+WindowingSpec:0.2703

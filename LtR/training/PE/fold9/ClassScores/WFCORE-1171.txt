@@ -1,0 +1,1 @@
+HttpManagementResourceDefinition:0.6744

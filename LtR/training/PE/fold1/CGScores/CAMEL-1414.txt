@@ -1,0 +1,10 @@
+CamelContext:0.0264
+DataTypeAware:0.0051
+DefaultMessage:0.0437
+Exchange:0.0264
+JmsBinding:0.0081
+Message:0.1189
+ObjectHelper:0.0030
+SimpleUuidGenerator:0.0051
+TypeConverter:0.0264
+UuidGenerator:0.0051

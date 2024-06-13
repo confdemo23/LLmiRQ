@@ -1,0 +1,3 @@
+DoubleMetaphone:0.0025
+DoubleMetaphoneResult:0.2852
+StringUtils:0.0025

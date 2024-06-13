@@ -1,0 +1,8 @@
+ColumnPruner:0.3125
+ExprNodeDesc:0.3125
+ExprNodeGenericFuncDesc:0.6563
+FilterOperator:0.3750
+HiveConf:0.1875
+Optimizer:0.2188
+PredicatePushDown:0.4688
+SemanticAnalyzer:0.4375

@@ -1,0 +1,9 @@
+HiveAggregate:0.2564
+HiveCostModel:0.2564
+HiveJoin:0.1282
+HivePlannerContext:0.3846
+HiveRelBuilder:0.2821
+HiveRelFieldTrimmer:0.4103
+HiveRelNode:0.2051
+HiveRelOptUtil:0.2821
+HiveRulesRegistry:0.3590

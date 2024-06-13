@@ -1,0 +1,10 @@
+Criteria:0.0475
+DocumentCallback:0.0274
+MapReduceOptions:0.0574
+MongoConverter:0.0271
+MongoOperations:0.0274
+MongoPersistentEntity:0.0314
+MongoTemplate:0.0248
+NearQuery:0.0231
+Query:0.2182
+QueryMapper:0.0703

@@ -1,0 +1,6 @@
+DataStoreWriter:0.0313
+LifecycleObjectSupport:0.0119
+PartitionKeyResolver:0.0055
+PartitionResolver:0.0055
+PartitionStrategy:0.0119
+TextFileWriter:0.0920

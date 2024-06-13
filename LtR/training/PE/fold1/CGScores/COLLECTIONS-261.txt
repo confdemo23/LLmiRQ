@@ -1,0 +1,6 @@
+AbstractHashedMap:0.0955
+EmptyIterator:0.0102
+EmptyMapIterator:0.0020
+Flat3Map:0.0671
+FlatMapEntry:0.0061
+MapIterator:0.0102

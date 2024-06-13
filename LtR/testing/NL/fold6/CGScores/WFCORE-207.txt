@@ -1,0 +1,10 @@
+AbstractAttributeDefinitionBuilder:0.2643
+AttributeDefinition:0.1411
+Factory:0.0541
+ImmutableManagementResourceRegistration:0.1186
+OperationContext:0.4279
+PathAddress:0.0711
+Resource:0.0796
+ResourceDefinition:0.0581
+ResourceDescriptionResolver:0.0551
+RuntimeCapability:0.0576

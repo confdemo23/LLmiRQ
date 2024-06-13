@@ -1,0 +1,6 @@
+ColumnDescriptor:0.3514
+HTableDescriptor:0.3514
+TScan:0.0541
+ThriftServer:0.2432
+ThriftServerRunner:0.4054
+ThriftUtilities:0.3243

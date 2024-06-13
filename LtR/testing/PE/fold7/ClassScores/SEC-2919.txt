@@ -1,0 +1,2 @@
+DefaultLoginPageGeneratingFilter:0.6304
+DefaultSecurityFilterChain:0.5000

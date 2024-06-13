@@ -1,0 +1,10 @@
+CachedByteArrayOutputStream:0.0007
+CamelContext:0.0007
+Exchange:0.0007
+MockEndpoint:0.0010
+ModelCamelContext:0.0022
+RouteDefinition:0.0022
+SplitDefinition:0.0010
+StreamCachingStrategy:0.0068
+TempFileManager:0.0044
+XPathBuilder:0.0010

@@ -1,0 +1,7 @@
+AbstractSecurityInterceptor:0.5854
+ConcurrentSessionFilter:0.4878
+FilterChainProxy:0.3171
+HttpSessionSecurityContextRepository:0.8049
+SecurityContextCallableProcessingInterceptor:1.0000
+SecurityContextHolder:0.4390
+SecurityContextPersistenceFilter:0.7073

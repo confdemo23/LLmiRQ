@@ -1,0 +1,2 @@
+InfinispanModel:0.0094
+InfinispanSubsystemResourceDefinition:0.0094

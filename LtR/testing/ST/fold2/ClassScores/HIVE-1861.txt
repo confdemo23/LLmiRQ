@@ -1,0 +1,2 @@
+DynamicSerDe:0.1818
+HiveStatement:0.2045

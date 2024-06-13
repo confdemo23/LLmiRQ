@@ -1,0 +1,10 @@
+BatchListenerFactoryHelper:0.0513
+ExitStatus:0.0467
+JobExecution:0.0346
+JobInstance:0.0346
+JobRepository:0.0163
+RepeatException:0.0041
+SimpleStepBuilder:0.2434
+StepExecution:0.1748
+StepExecutionListener:0.0102
+StepSynchronizationManager:0.0102

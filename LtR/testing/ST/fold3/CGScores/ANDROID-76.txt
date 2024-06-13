@@ -1,0 +1,10 @@
+Assert:0.0315
+ClassUtils:0.0191
+ClientHttpRequest:0.0124
+ClientHttpResponse:0.0782
+HttpEntity:0.0124
+HttpHeaders:0.0538
+HttpMessageConverter:0.0124
+HttpStatus:0.0217
+MediaType:0.0200
+UriComponents:0.0214

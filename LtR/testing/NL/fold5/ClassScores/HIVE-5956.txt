@@ -1,0 +1,6 @@
+Hive:0.0233
+HiveConf:0.1163
+HiveDriver:0.1628
+HiveMetaStoreClient:0.3721
+HiveSQLException:0.3023
+ShowTblPropertiesDesc:0.4186

@@ -1,0 +1,10 @@
+CamelContext:0.0799
+Exchange:0.1901
+HttpCommonEndpoint:0.0469
+HttpConfiguration:0.0538
+HttpEndpoint:0.1827
+HttpHelper:0.1172
+HttpMessage:0.1458
+IOHelper:0.0677
+Message:0.2214
+ObjectHelper:0.1085

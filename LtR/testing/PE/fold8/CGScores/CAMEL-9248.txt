@@ -1,0 +1,10 @@
+AsyncCallback:0.0036
+AsyncProcessor:0.0083
+AsyncProcessorConverterHelper:0.0036
+Exchange:0.1059
+ExchangePattern:0.0083
+JmsEndpoint:0.0455
+JmsMessageHelper:0.0083
+Message:0.0083
+ObjectHelper:0.0036
+RuntimeCamelException:0.0036

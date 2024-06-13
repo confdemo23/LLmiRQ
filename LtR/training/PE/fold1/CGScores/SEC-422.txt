@@ -1,0 +1,7 @@
+Acl:0.0269
+AclCache:0.0269
+AclImpl:0.0655
+FieldUtils:0.0173
+MutableAcl:0.0173
+PermissionFactory:0.0076
+StubAclParent:0.0076

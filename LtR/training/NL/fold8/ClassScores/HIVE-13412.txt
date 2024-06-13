@@ -1,0 +1,7 @@
+BaseSemanticAnalyzer:0.4595
+CreateTableDesc:0.3243
+DDLSemanticAnalyzer:0.4324
+DelimitedInputWriter:0.4595
+HiveConf:0.1351
+HiveMetaStoreClient:0.4324
+Table:0.0541

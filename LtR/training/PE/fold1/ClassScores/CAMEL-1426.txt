@@ -1,0 +1,2 @@
+SpringCamelContext:0.3333
+SpringRouteBuilder:0.3333

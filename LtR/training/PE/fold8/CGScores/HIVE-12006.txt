@@ -1,0 +1,9 @@
+HCatContext:0.0046
+HCatFieldSchema:0.0017
+HCatInputFormat:0.0075
+HCatLoader:0.0104
+HCatSchema:0.0046
+HCatUtil:0.0133
+InputJobInfo:0.0017
+PigHCatUtil:0.0306
+SpecialCases:0.0017

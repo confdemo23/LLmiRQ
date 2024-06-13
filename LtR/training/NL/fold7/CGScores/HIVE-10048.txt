@@ -1,0 +1,10 @@
+AuthTypes:0.0563
+ConfVars:0.0200
+HadoopShims:0.0065
+HiveConf:0.0436
+HiveDelegationTokenManager:0.0297
+HiveServer2:0.0280
+Server:0.0297
+ServerOptionsProcessor:0.0053
+ShimLoader:0.0109
+VarType:0.0059

@@ -1,0 +1,7 @@
+Converter:0.0386
+HiveDecimal:0.0990
+HiveIOExceptionHandlerUtil:0.0023
+HiveInputFormat:0.0023
+HiveInputSplit:0.0271
+SerDeUtils:0.0007
+TypeCheckProcFactory:0.1162

@@ -1,0 +1,3 @@
+JcaSubsystemAdd:0.3333
+JcaSubsystemConfiguration:0.5897
+ResourceAdapterDeployment:0.5897

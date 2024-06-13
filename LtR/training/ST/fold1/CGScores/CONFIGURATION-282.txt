@@ -1,0 +1,10 @@
+AbstractConfiguration:0.0256
+Builder:0.0256
+Configuration:0.0526
+ConfigurationErrorEvent:0.0055
+ConfigurationInterpolator:0.0728
+ConfigurationLogger:0.0122
+ConfigurationUtils:0.0122
+ConversionHandler:0.0189
+ListDelimiterHandler:0.0122
+Synchronizer:0.0256

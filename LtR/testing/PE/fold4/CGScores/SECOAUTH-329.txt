@@ -1,0 +1,9 @@
+AuthorizationCodeServices:0.0009
+AuthorizationRequest:0.0291
+ImplicitGrantService:0.0009
+OAuth2AccessToken:0.0063
+OAuth2Exception:0.0063
+OAuth2RequestValidator:0.0009
+OAuth2Utils:0.0020
+RedirectResolver:0.0020
+UserApprovalHandler:0.0052

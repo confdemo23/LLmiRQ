@@ -1,0 +1,10 @@
+CompactionConfiguration:0.0157
+CompactionRequestImpl:0.0116
+CompactionWindow:0.0125
+HRegion:0.0471
+HStore:0.0287
+HStoreFile:0.0231
+RegionInfo:0.0273
+ServerName:0.0117
+StoreEngine:0.0152
+StoreFileManager:0.0126

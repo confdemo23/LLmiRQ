@@ -1,0 +1,10 @@
+BasicComponent:0.0018
+ComponentView:0.0049
+EJBComponent:0.0083
+EJBComponentCreateService:0.0323
+EJBSecurityMetaData:0.0060
+EJBSuspendHandlerService:0.0033
+JaccInterceptor:0.0007
+NamespaceContextSelector:0.0049
+ShutDownInterceptorFactory:0.0018
+TimerServiceImpl:0.0018

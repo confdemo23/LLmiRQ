@@ -1,0 +1,9 @@
+GenericUDAFAverage:0.3846
+GenericUDAFCount:0.3333
+GenericUDAFEvaluator:0.4359
+GenericUDAFMax:0.2821
+GenericUDAFMin:0.2821
+GenericUDAFSum:0.2821
+HiveDecimal:0.2051
+StatsAggregator:0.3077
+StatsUtils:0.1795

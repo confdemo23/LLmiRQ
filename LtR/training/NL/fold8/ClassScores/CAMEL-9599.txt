@@ -1,0 +1,7 @@
+CxfRsBinding:0.3125
+CxfRsComponent:0.3750
+CxfRsConsumer:0.3438
+CxfRsEndpoint:0.3438
+CxfRsInvoker:0.3125
+CxfRsProducer:0.3438
+DefaultCxfRsBinding:0.5313

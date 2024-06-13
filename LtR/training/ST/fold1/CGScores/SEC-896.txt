@@ -1,0 +1,4 @@
+Authentication:0.0042
+SecurityContext:0.0096
+SecurityContextHolder:0.0205
+TextEscapeUtils:0.0042

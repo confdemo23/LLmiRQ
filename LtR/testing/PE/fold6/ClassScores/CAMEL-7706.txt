@@ -1,0 +1,3 @@
+JGroupsConsumer:0.2667
+JGroupsEndpoint:0.2667
+JGroupsProducer:0.2667

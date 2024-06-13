@@ -1,0 +1,10 @@
+BlockIndexChunk:0.0303
+Bytes:0.0314
+EnvironmentEdgeManager:0.0191
+HRegion:0.0847
+HRegionServer:0.0256
+HStore:0.0499
+MonitoredTask:0.0247
+RegionInfo:0.0677
+RegionServerAccounting:0.0180
+ScannerContext:0.0191

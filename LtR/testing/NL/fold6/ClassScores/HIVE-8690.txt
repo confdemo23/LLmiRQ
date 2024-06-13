@@ -1,0 +1,7 @@
+AvroContainerInputFormat:0.6061
+AvroContainerOutputFormat:0.6364
+AvroDeserializer:0.3636
+AvroGenericRecordWritable:0.6364
+AvroSerDe:0.1515
+AvroSerdeUtils:0.3030
+AvroSerializer:0.3030

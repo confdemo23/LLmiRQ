@@ -1,0 +1,2 @@
+ParameterBinder:0.3243
+SimpleJpaQuery:0.2973

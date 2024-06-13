@@ -1,0 +1,8 @@
+ArrayFieldVector:0.0125
+Field:0.0125
+FieldMatrix:0.0059
+FieldVector:0.0813
+FieldVectorChangingVisitor:0.0191
+FieldVectorPreservingVisitor:0.0191
+MathArrays:0.0748
+MathUtils:0.0682

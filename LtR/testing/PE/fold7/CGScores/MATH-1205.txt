@@ -1,0 +1,7 @@
+AbstractStorelessUnivariateStatistic:0.0439
+FirstMoment:0.0038
+MathArrays:0.0326
+MathUtils:0.0238
+Mean:0.0013
+Precision:0.0213
+Sum:0.0025

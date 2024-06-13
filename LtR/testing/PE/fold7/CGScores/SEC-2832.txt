@@ -1,0 +1,10 @@
+AccessDeniedHandler:0.0050
+AuthenticationFailureHandler:0.0060
+AuthenticationTrustResolver:0.0060
+CsrfToken:0.0376
+CsrfTokenRepository:0.0407
+InvalidSessionStrategy:0.0060
+SecurityContext:0.0060
+SecurityContextHolder:0.0204
+SecurityContextRepository:0.0132
+SessionAuthenticationStrategy:0.0060

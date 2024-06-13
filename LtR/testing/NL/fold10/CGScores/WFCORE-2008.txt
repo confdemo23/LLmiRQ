@@ -1,0 +1,10 @@
+ContentItem:0.0476
+ContentPolicyBuilderImpl:0.0351
+Entry:0.0852
+OperationBuilder:0.0351
+Patch:0.0727
+PatchElement:0.0476
+PatchTool:0.0852
+PathAddress:0.1103
+TargetInfo:0.0727
+VerbosePatchInfo:0.0727

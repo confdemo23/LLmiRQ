@@ -1,0 +1,4 @@
+FileManager:0.2162
+MetadataService:0.3243
+PhysicalTypeIdentifier:0.5135
+PhysicalTypeMetadata:0.4595

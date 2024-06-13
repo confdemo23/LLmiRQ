@@ -1,0 +1,9 @@
+DelayDefinition:0.0398
+Exchange:0.3373
+ExpressionNode:0.0090
+Message:0.2655
+MockEndpoint:0.1013
+RouteDefinition:0.0398
+RuntimeCamelException:0.0192
+ThreadsDefinition:0.0090
+ValueBuilder:0.0295

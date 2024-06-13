@@ -1,0 +1,10 @@
+CamelContext:0.0247
+Exchange:0.0177
+ExpressionBuilder:0.0365
+IntrospectionSupport:0.0121
+LRUCache:0.0401
+LRUSoftCache:0.0256
+MethodInfo:0.0695
+ObjectHelper:0.1567
+PropertiesComponent:0.0106
+TypeConverter:0.0130

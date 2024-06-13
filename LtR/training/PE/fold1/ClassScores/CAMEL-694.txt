@@ -1,0 +1,2 @@
+CamelDestination:0.2889
+CamelTransportFactory:0.4000

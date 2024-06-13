@@ -1,0 +1,8 @@
+ColumnVector:0.3125
+VectorExpression:0.4375
+VectorMapOperator:0.4688
+VectorReduceSinkOperator:0.6875
+VectorizationContext:0.5625
+VectorizedExpressions:0.5938
+VectorizedRowBatch:0.5000
+VectorizedRowBatchCtx:0.5938

@@ -1,0 +1,10 @@
+Client:0.0100
+FileUtils:0.0068
+GetHelper:0.0085
+HadoopShims:0.0153
+HdfsUtils:0.0068
+ObjectStore:0.1446
+QueryWrapper:0.0701
+ShimLoader:0.0183
+TraditionalBinaryPrefix:0.0077
+Utils:0.0127

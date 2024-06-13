@@ -1,0 +1,3 @@
+SingletonDeploymentDescriptorTestCase:0.5484
+SingletonDeploymentJBossAllTestCase:0.5161
+SingletonDeploymentTestCase:0.3871

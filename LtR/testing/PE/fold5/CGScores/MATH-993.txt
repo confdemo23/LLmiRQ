@@ -1,0 +1,7 @@
+ConvergenceChecker:0.0016
+DecompositionSolver:0.0016
+ExceptionContext:0.0016
+LUDecomposition:0.0016
+QRDecomposition:0.0016
+RealMatrix:0.0037
+RealVector:0.0016

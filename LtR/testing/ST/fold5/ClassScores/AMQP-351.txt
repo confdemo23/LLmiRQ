@@ -1,0 +1,2 @@
+MessageListenerAdapter:0.3462
+SimpleMessageListenerContainer:0.5000

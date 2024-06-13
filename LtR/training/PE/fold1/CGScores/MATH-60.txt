@@ -1,0 +1,6 @@
+ArithmeticUtils:0.0549
+FastMath:0.0508
+Fraction:0.0264
+FractionField:0.0020
+FractionFormat:0.0081
+MathUtils:0.0081

@@ -1,0 +1,5 @@
+GenericUDAFResolver:0.4103
+PTFDeserializer:0.3077
+PTFOperator:0.2051
+WindowFunctionInfo:0.3846
+WindowingTableFunction:0.4872

@@ -1,0 +1,9 @@
+ASTSearcher:0.0063
+CalcitePlanner:0.0501
+CalcitePlannerAction:0.3835
+ExceptionHelper:0.0063
+HiveAggregate:0.0056
+HiveJoin:0.0376
+HiveProject:0.0113
+HiveSemiJoin:0.0276
+HiveTableScan:0.0056

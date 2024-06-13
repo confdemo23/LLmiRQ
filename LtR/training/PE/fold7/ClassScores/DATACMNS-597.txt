@@ -1,0 +1,2 @@
+BasicPersistentEntity:0.3600
+PersistentEntity:0.2600

@@ -1,0 +1,10 @@
+AbstractAuthenticationProcessingFilter:1.0000
+AuthenticationManager:0.5152
+AuthenticationManagerBuilder:0.7273
+AuthenticationProvider:0.5455
+DaoAuthenticationProvider:0.6364
+HttpSecurity:0.2424
+LoginUrlAuthenticationEntryPoint:0.8485
+SecurityContextHolder:0.5152
+UsernamePasswordAuthenticationFilter:0.9697
+WebSecurityConfigurerAdapter:0.7273

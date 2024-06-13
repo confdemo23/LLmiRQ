@@ -1,0 +1,2 @@
+CommonsXsdSchemaCollection:0.5111
+DefaultWsdl11Definition:0.4444

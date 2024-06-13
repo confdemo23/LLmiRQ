@@ -1,0 +1,2 @@
+Hive:0.0217
+SemanticException:0.3043

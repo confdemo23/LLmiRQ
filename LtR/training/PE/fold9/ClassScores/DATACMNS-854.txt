@@ -1,0 +1,3 @@
+CrudRepository:0.2558
+DefaultRepositoryInformation:0.5814
+PagingAndSortingRepository:0.5349

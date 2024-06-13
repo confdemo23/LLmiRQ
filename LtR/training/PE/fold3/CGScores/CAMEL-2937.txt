@@ -1,0 +1,8 @@
+CamelContext:0.0005
+DefaultProducer:0.0012
+Exchange:0.0041
+IOHelper:0.0005
+Message:0.0027
+ObjectHelper:0.0012
+StreamEndpoint:0.0070
+TypeConverter:0.0005

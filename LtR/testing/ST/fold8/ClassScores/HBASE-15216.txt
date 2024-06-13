@@ -1,0 +1,5 @@
+AuthUtil:0.1042
+Canary:0.0625
+SecurityUtil:0.1875
+User:0.0208
+UserProvider:0.1875

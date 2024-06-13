@@ -1,0 +1,2 @@
+Configuration:0.2000
+PropertiesConfiguration:0.4000

@@ -1,0 +1,3 @@
+SimpleFaultMessageResolver:0.6216
+SoapFaultMessageResolver:0.5676
+WebServiceTemplate:0.4054

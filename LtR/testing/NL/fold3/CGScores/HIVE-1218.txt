@@ -1,0 +1,9 @@
+Builder:0.0096
+Client:0.0103
+HadoopThriftAuthBridge:0.0040
+ShimLoader:0.0040
+SplitInfo:0.0096
+SplitInfos:0.0037
+Table:0.1554
+Utils:0.0103
+_Fields:0.0010

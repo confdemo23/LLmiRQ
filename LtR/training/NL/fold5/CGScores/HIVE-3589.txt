@@ -1,0 +1,9 @@
+BaseSemanticAnalyzer:0.0080
+Client:0.0170
+DDLSemanticAnalyzer:0.0360
+HadoopThriftAuthBridge:0.0075
+HiveDatabaseMetaData:0.0180
+HiveSQLException:0.0060
+QualifiedNameUtil:0.0455
+ShimLoader:0.0075
+Utils:0.0170

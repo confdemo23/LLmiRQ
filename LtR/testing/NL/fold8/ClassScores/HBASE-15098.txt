@@ -1,0 +1,8 @@
+ClusterSchema:0.2564
+HBaseConfiguration:0.3846
+HMaster:0.1026
+HRegionServer:0.2564
+MasterRpcServices:0.3590
+RegionNormalizer:0.3333
+RegionNormalizerChore:0.4615
+ZKWatcher:0.1538

@@ -1,0 +1,10 @@
+BoundedCollection:0.0057
+CardinalityHelper:0.0057
+CollectionUtils:0.0042
+IterableUtils:0.0164
+IteratorUtils:0.0118
+PermutationIterator:0.0026
+Predicate:0.0072
+SetOperationCardinalityHelper:0.0148
+Transformer:0.0026
+UnmodifiableCollection:0.0026

@@ -1,0 +1,2 @@
+MappingMongoConverter:0.3469
+MongoTemplate:0.1837

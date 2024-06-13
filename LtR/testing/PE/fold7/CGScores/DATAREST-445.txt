@@ -1,0 +1,5 @@
+CollectionResourceMapping:0.0316
+RepositoryDetectionStrategy:0.0097
+RepositoryRestResource:0.0645
+RestResource:0.0207
+SimpleResourceDescription:0.0207

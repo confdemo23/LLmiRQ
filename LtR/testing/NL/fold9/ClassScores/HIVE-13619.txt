@@ -1,0 +1,9 @@
+BucketMapJoinOptimizer:0.6250
+BucketizedHiveInputFormat:0.7188
+CommonJoinResolver:0.5000
+ExecDriver:0.2500
+HiveConf:0.1875
+MapJoinOperator:0.4063
+MapJoinProcessor:0.4375
+MapredLocalTask:0.4063
+QueryPlan:0.2188

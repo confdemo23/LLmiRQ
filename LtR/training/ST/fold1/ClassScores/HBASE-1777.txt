@@ -1,0 +1,4 @@
+HFile:0.0227
+HRegion:0.0682
+MemStoreFlusher:0.2500
+Store:0.0227

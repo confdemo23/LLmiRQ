@@ -1,0 +1,2 @@
+AbstractHibernateQueryProvider:0.6000
+HibernateItemReaderHelper:0.4889

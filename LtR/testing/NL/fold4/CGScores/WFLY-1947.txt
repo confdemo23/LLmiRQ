@@ -1,0 +1,5 @@
+Capability:0.0033
+DefaultNamespaceContextSelectorService:0.0152
+HttpRemoteNamingServerService:0.0092
+NamingContext:0.0033
+NamingService:0.0033

@@ -1,0 +1,2 @@
+CrudMethodMetadata:0.3333
+SimpleJpaRepository:0.3556

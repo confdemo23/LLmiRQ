@@ -1,0 +1,4 @@
+Database:0.1538
+FunctionRegistry:0.3590
+Hive:0.0513
+Metastore:0.1795

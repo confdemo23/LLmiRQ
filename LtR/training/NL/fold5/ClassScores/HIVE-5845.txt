@@ -1,0 +1,6 @@
+HiveConf:0.1212
+OrcOutputFormat:0.3333
+VectorFileSinkOperator:0.5455
+VectorizationContext:0.4848
+VectorizedRowBatch:0.4242
+VectorizedRowBatchCtx:0.5152

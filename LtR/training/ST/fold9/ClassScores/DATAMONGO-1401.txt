@@ -1,0 +1,4 @@
+GeoJsonPoint:0.2368
+MongoTemplate:0.2632
+QueryMapper:0.2105
+UpdateMapper:0.2368

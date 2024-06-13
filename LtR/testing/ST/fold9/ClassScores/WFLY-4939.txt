@@ -1,0 +1,5 @@
+AdditionalSetupInterceptor:0.3710
+EjbSuspendInterceptor:0.2903
+LoggingInterceptor:0.2419
+NamespaceContextInterceptor:0.3871
+ViewService:0.1290

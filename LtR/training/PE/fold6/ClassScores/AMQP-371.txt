@@ -1,0 +1,3 @@
+MessageBuilderSupport:0.3913
+MessageProperties:0.3043
+MessagePropertiesBuilder:0.4565

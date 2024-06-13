@@ -1,0 +1,8 @@
+AccessTokenRequest:0.0463
+AuthorizationCodeResourceDetails:0.0296
+OAuth2ProtectedResourceDetails:0.0035
+OAuth2RefreshToken:0.0017
+OAuth2Utils:0.0035
+RequestEnhancer:0.0017
+StateKeyGenerator:0.0017
+UserRedirectRequiredException:0.0035

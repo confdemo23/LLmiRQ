@@ -1,0 +1,10 @@
+BaseHierarchicalConfiguration:1.0000
+Configuration:0.2337
+DefaultConfigurationKey:0.0716
+DefinedKeysVisitor:0.0818
+ExpressionEngine:0.0818
+HierarchicalConfiguration:0.1748
+ImmutableHierarchicalConfiguration:0.1011
+NodeHandler:0.2139
+NodeModel:0.2307
+QueryResult:0.1321

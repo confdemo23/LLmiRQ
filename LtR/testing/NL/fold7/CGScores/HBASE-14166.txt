@@ -1,0 +1,10 @@
+Bytes:0.0030
+CompatibilitySingletonFactory:0.0135
+EnvironmentEdgeManager:0.0078
+HRegion:0.0911
+MemStoreSize:0.0078
+MetricsRegionSource:0.0369
+RegionInfo:0.0182
+Store:0.0807
+TableDescriptor:0.0182
+TableName:0.0182

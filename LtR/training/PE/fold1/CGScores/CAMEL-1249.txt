@@ -1,0 +1,10 @@
+CamelContext:0.0264
+IntrospectionSupport:0.0046
+JavaMailSender:0.0930
+MailConfiguration:0.0442
+MailConverters:0.0112
+MailEndpoint:0.0376
+MailUtils:0.0066
+ObjectHelper:0.0285
+SSLContextParameters:0.0066
+TypeConverter:0.0046

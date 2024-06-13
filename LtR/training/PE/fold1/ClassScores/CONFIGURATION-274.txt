@@ -1,0 +1,3 @@
+AbstractConfiguration:0.4000
+ConfigurationDecoder:0.3778
+PropertiesConfiguration:0.4444

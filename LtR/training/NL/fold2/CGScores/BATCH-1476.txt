@@ -1,0 +1,10 @@
+AbstractItemStreamItemReader:0.0375
+BatchRetryTemplate:0.0296
+ChunkContext:0.0352
+ChunkListener:0.0375
+ExecutionContext:0.1116
+FaultTolerantChunkProcessor:0.0614
+ReflectionUtils:0.0455
+SimpleStepBuilder:0.0535
+StepExecution:0.2019
+StepListenerFactoryBean:0.0455

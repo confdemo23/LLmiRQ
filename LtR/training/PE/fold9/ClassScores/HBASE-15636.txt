@@ -1,0 +1,3 @@
+HBaseAdmin:0.1628
+HBaseTestingUtility:0.3721
+TableName:0.1395

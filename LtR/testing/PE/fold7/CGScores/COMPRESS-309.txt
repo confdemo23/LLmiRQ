@@ -1,0 +1,5 @@
+BlockSort:0.0072
+CRC:0.0730
+CompressorOutputStream:0.0072
+Data:0.0069
+Rand:0.0150

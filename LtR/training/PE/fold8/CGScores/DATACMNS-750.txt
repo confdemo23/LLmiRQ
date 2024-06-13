@@ -1,0 +1,2 @@
+PropertyPath:0.0012
+Type:0.0035

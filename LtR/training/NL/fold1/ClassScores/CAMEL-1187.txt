@@ -1,0 +1,4 @@
+Mina2Configuration:0.4054
+MinaComponent:0.2703
+MinaConsumer:0.2432
+MinaProducer:0.2432

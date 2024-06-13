@@ -1,0 +1,2 @@
+BicubicSplineInterpolatingFunction:0.6739
+BicubicSplineInterpolator:0.4783

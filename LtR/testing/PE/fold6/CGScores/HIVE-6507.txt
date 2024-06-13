@@ -1,0 +1,5 @@
+CompressionStrategy:0.0018
+EncodingStrategy:0.0018
+Version:0.0018
+WriterOptions:0.0082
+WriterVersion:0.0050

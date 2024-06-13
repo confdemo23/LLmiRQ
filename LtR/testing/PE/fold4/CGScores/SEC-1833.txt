@@ -1,0 +1,6 @@
+AuthenticationTrustResolver:0.0017
+HttpRequestResponseHolder:0.0072
+HttpSessionSecurityContextRepository:0.0017
+SaveContextOnUpdateOrErrorResponseWrapper:0.0072
+SecurityContext:0.0054
+SecurityContextHolder:0.0035

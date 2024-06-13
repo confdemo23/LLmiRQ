@@ -1,0 +1,7 @@
+GenericUDAFEvaluator:0.4146
+GenericUDAFPercentileApprox:0.5854
+HiveConf:0.1220
+HiveDecimal:0.1951
+HiveDriver:0.1707
+HiveQueryResultSet:0.3659
+HiveStorageHandler:0.3659

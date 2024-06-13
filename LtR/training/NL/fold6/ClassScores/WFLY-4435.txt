@@ -1,0 +1,1 @@
+ManagementResourceRegistration:0.7179

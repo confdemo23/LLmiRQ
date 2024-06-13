@@ -1,0 +1,3 @@
+AbstractUntypedIteratorDecorator:0.0070
+ListOrderedMap:0.1938
+UnmodifiableList:0.0070

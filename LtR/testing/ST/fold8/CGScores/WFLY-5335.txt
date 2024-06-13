@@ -1,0 +1,5 @@
+AsynchronousServiceBuilder:0.0006
+CacheBuilder:0.0006
+InfinispanCacheRequirement:0.0006
+InfinispanRequirement:0.0006
+ValueDependency:0.0006

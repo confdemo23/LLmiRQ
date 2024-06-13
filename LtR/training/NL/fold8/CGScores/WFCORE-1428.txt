@@ -1,0 +1,10 @@
+LoggingExtension:0.0037
+LoggingOperations:0.0059
+ManagementModelNode:0.0124
+ManagementResourceRegistration:0.0103
+OperationContext:0.0124
+Parameters:0.0037
+PathManager:0.0059
+SimpleAttributeDefinition:0.0059
+SimpleAttributeDefinitionBuilder:0.0146
+SimpleOperationDefinitionBuilder:0.0059

@@ -1,0 +1,8 @@
+DefaultProducer:0.0092
+Exchange:0.0023
+Message:0.0058
+SmppBinding:0.0023
+SmppCommand:0.0023
+SmppConfiguration:0.0508
+SmppConnectionFactory:0.0023
+SmppEndpoint:0.0335

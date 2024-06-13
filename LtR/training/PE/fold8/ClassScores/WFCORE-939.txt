@@ -1,0 +1,4 @@
+DomainRootDefinition:0.3696
+LaunchTypeHandler:0.3043
+ProcessType:0.1739
+ServerEnvironment:0.3043

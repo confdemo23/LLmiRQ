@@ -1,0 +1,9 @@
+Delete:0.0811
+HConstants:0.1892
+HRegion:0.1081
+HTable:0.0811
+MemStore:0.1351
+Mutation:0.1351
+Store:0.0541
+TimeRange:0.1622
+WAL:0.0000

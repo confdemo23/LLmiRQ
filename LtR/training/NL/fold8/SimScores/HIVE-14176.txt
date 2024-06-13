@@ -1,0 +1,10 @@
+GenericUDAFRowNumber:0.2675
+HiveProjectMergeRule:0.2621
+HiveWindowingFixRule:0.2930
+ISupportStreamingModeForWindowing:0.3196
+PhysicalPlanResolver:0.3281
+SortMergeJoinResolver:0.2407
+SparkMergeFileRecordHandler:0.2131
+WindowFunctionInfo:0.2921
+WindowTableFunctionDef:0.2898
+WindowingComponentizer:0.3126

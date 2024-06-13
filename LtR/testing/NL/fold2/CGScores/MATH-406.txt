@@ -1,0 +1,10 @@
+BaseMultivariateOptimizer:0.0236
+ConvergenceChecker:0.0066
+FastMath:0.2532
+ModelFunction:0.0066
+MultivariateVectorFunction:0.0066
+ParametricUnivariateFunction:0.0101
+PointVectorValuePair:0.0236
+RealMatrix:0.0491
+Target:0.0066
+Weight:0.0066

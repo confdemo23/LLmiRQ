@@ -1,0 +1,7 @@
+ColumnVector:0.2093
+HiveInputFormat:0.2791
+OrcInputFormat:0.2558
+OrcSerde:0.1163
+PredicatePushDown:0.3256
+VectorizedOrcInputFormat:0.4884
+VectorizedRowBatch:0.3488

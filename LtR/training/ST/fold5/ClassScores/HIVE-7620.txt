@@ -1,0 +1,2 @@
+HiveMetaStore:0.1915
+MetaStoreUtils:0.2128

@@ -1,0 +1,10 @@
+CamelContext:0.0882
+FileUtil:0.0346
+HttpCommonEndpoint:0.0265
+HttpConfiguration:0.0391
+HttpEndpoint:0.0268
+IntrospectionSupport:0.0356
+JettyHttpEndpoint:0.3213
+ObjectHelper:0.1071
+RestConfiguration:0.1172
+URISupport:0.0290

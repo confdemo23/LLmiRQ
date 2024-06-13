@@ -1,0 +1,4 @@
+ColumnPruner:0.2564
+SelectOperator:0.3077
+SemanticAnalyzer:0.3590
+TableScanOperator:0.3846

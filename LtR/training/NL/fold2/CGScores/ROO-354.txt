@@ -1,0 +1,10 @@
+FileManager:0.0136
+FileMonitorService:0.0056
+FileUtils:0.0641
+HandlerUtils:0.0056
+MetadataDependencyRegistry:0.0056
+MetadataService:0.0056
+OSGiUtils:0.0056
+Pom:0.0854
+Shell:0.0056
+XmlUtils:0.0482

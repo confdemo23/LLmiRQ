@@ -1,0 +1,10 @@
+BlockIndexChunk:0.0303
+ByteBuff:0.0665
+Bytes:0.0379
+HFileBlock:0.0600
+HRegion:0.0815
+HRegionServer:0.0256
+HStore:0.0478
+MonitoredTask:0.0247
+Reader:0.0337
+RegionInfo:0.0677

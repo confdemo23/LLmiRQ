@@ -1,0 +1,9 @@
+AbstractNestablePropertyAccessor:0.0031
+Assert:0.0031
+BeanWrapperImpl:0.0031
+CachedIntrospectionResults:0.0326
+GenericTypeAwarePropertyDescriptor:0.0200
+ModelAndView:0.0073
+PropertyMatches:0.0115
+ResolvableType:0.0031
+TypeDescriptor:0.0031

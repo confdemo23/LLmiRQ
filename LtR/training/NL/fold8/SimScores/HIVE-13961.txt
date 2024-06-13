@@ -1,0 +1,10 @@
+AcidInputFormat:0.3630
+AcidUtils:0.3726
+CompactorMR:0.3217
+Initiator:0.3166
+OrcRawRecordMerger:0.2938
+OrcRecordUpdater:0.3224
+StreamingAssert:0.3123
+TestAcidTableSerializer:0.3892
+TestAcidUtils:0.3488
+TestOrcRecordUpdater:0.3062

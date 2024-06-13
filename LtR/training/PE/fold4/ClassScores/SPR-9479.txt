@@ -1,0 +1,2 @@
+Configuration:0.2000
+EnableTransactionManagement:0.5111

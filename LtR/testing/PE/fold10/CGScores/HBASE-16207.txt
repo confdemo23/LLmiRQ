@@ -1,0 +1,10 @@
+Bytes:0.1122
+Connection:0.0531
+HMaster:0.4380
+HTableDescriptor:0.0497
+MasterCoprocessorHost:0.0665
+ProtobufUtil:0.1196
+Table:0.0464
+TableName:0.1196
+User:0.3709
+UserPermission:0.0296

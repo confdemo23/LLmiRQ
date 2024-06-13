@@ -1,0 +1,7 @@
+Binding:0.1282
+ChannelAwareMessageListener:0.6410
+DirectExchange:0.3077
+Queue:0.0769
+RabbitAdmin:0.2308
+RabbitTemplate:0.3077
+SimpleMessageListenerContainer:0.7179

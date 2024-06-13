@@ -1,0 +1,7 @@
+AbstractEvaluation:0.0135
+ArrayRealVector:0.0026
+DecompositionSolver:0.0026
+FastMath:0.0099
+QRDecomposition:0.0026
+RealMatrix:0.0135
+RealVector:0.0026

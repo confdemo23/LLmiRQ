@@ -1,0 +1,10 @@
+ConnectSupport:0.0363
+ConnectionFactoryLocator:0.0213
+OAuth1ConnectionFactory:0.0119
+OAuth1Operations:0.0294
+OAuth2ConnectionFactory:0.0251
+OAuth2Parameters:0.0207
+ProviderSignInInterceptor:0.0213
+SessionStrategy:0.0326
+URIBuilder:0.1266
+UsersConnectionRepository:0.0138

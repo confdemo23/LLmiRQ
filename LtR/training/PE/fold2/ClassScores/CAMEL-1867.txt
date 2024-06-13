@@ -1,0 +1,3 @@
+DefaultJmsKeyFormatStrategy:0.5581
+JmsMessage:0.1628
+PassThroughJmsKeyFormatStrategy:0.6512

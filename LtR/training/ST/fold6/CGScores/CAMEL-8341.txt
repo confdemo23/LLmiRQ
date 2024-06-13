@@ -1,0 +1,5 @@
+EntryFilter:0.0038
+FeedEndpoint:0.0416
+ObjectHelper:0.0089
+Processor:0.0038
+RssUtils:0.0089

@@ -1,0 +1,3 @@
+ArtifactResolver:0.4375
+FractionList:0.3125
+FractionUsageAnalyzer:0.5938

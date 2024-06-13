@@ -1,0 +1,3 @@
+BasicAuthenticationFilter:0.4783
+NullRememberMeServices:0.4130
+RememberMeServices:0.3261

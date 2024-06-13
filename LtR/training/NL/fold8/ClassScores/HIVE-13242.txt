@@ -1,0 +1,6 @@
+ASTBuilder:0.2500
+HiveConf:0.1875
+PTFTranslator:0.3438
+ParseDriver:0.2813
+SemanticAnalyzer:0.4375
+WindowingSpec:0.3438

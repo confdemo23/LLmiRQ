@@ -1,0 +1,9 @@
+Acl:0.0170
+AclCache:0.0170
+AclImpl:0.0414
+FieldUtils:0.0109
+LookupStrategy:0.0032
+MutableAcl:0.0109
+ObjectIdentity:0.0077
+PermissionFactory:0.0048
+StubAclParent:0.0048

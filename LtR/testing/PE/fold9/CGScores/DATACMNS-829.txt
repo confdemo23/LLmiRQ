@@ -1,0 +1,3 @@
+ClassTypeInformation:0.0066
+ProjectionFactory:0.0066
+TypeInformation:0.0846

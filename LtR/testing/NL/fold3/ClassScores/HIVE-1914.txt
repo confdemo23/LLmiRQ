@@ -1,0 +1,6 @@
+HBaseScanRange:0.2927
+HBaseSerDe:0.1951
+HBaseStorageHandler:0.4146
+HiveHBaseTableInputFormat:0.5610
+HiveHBaseTableOutputFormat:0.5854
+TestHBaseCliDriver:0.3902

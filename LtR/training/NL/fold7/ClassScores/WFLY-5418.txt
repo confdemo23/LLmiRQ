@@ -1,0 +1,2 @@
+MessageDrivenComponent:0.4872
+WildFlySecurityManager:0.4872

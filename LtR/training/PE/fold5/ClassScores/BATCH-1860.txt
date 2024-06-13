@@ -1,0 +1,6 @@
+Db2PagingQueryProvider:0.4222
+DerbyPagingQueryProvider:0.4667
+JdbcPagingItemReader:0.3778
+SqlServerPagingQueryProvider:0.5556
+SqlWindowingPagingQueryProvider:0.6222
+SybasePagingQueryProvider:0.4889

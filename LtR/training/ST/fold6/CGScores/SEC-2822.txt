@@ -1,0 +1,10 @@
+AbstractConfiguredSecurityBuilder:0.0047
+AuthenticationManagerBuilder:0.0014
+BuildState:0.0136
+ExpressionInterceptUrlRegistry:0.0014
+HttpSecurity:0.0014
+InMemoryUserDetailsManagerConfigurer:0.0014
+ObjectPostProcessor:0.0059
+ProviderManager:0.0179
+SecurityConfigurer:0.0214
+UserDetailsBuilder:0.0146

@@ -1,0 +1,9 @@
+MailBinding:0.3223
+MailContentTypeTest:0.3057
+MailProducer:0.3193
+MimeMessageConsumeTest:0.3935
+MimeMultipartAlternativeTest:0.2951
+MimeMultipartAlternativeWithContentTypeTest:0.3071
+MimeMultipartDataFormat:0.3682
+MimeMultipartDataFormatAutoConfiguration:0.6331
+MimeMultipartDataFormatConfiguration:0.5234

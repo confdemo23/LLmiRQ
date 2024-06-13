@@ -1,0 +1,10 @@
+Criteria:0.0116
+CriteriaDefinition:0.0028
+GeoCommand:0.0008
+Meta:0.0070
+Modifier:0.0005
+Modifiers:0.0055
+Position:0.0005
+PushOperatorBuilder:0.0005
+SerializationUtils:0.0005
+Update:0.0095

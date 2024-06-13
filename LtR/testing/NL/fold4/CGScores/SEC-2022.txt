@@ -1,0 +1,10 @@
+Acl:0.0482
+AclAuthorizationStrategy:0.0135
+Authentication:0.0158
+ExpressionUtils:0.0224
+MethodSecurityExpressionOperations:0.0601
+MethodSecurityExpressionRoot:0.0601
+MutableAcl:0.0805
+ObjectIdentity:0.0366
+SecurityContext:0.0386
+SecurityContextHolder:0.0479

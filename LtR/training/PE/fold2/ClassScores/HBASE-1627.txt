@@ -1,0 +1,4 @@
+ClientScanner:0.2326
+HTable:0.0698
+TableInputFormatBase:0.3953
+UnknownScannerException:0.4651

@@ -1,0 +1,10 @@
+Exchange:0.1056
+FileUtil:0.1139
+GenericFile:0.0794
+GenericFileEndpoint:0.2936
+IdempotentRepository:0.0608
+Message:0.0538
+ObjectHelper:0.0864
+RemoteFileConfiguration:0.0668
+SftpConfiguration:0.2860
+SftpEndpoint:0.1790

@@ -1,0 +1,10 @@
+ClientDetails:0.0195
+ClientDetailsService:0.0264
+DefaultOAuth2AccessToken:0.0195
+ExpiringOAuth2RefreshToken:0.0195
+OAuth2AccessToken:0.0470
+OAuth2Authentication:0.0652
+OAuth2Request:0.0652
+TokenEnhancer:0.0058
+TokenRequest:0.0484
+TokenStore:0.1430

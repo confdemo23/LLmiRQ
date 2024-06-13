@@ -1,0 +1,1 @@
+UseLatestAggregationStrategy:0.5814

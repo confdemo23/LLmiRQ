@@ -1,0 +1,2 @@
+RabbitResourceHolder:0.3953
+RabbitTemplate:0.2558

@@ -1,0 +1,6 @@
+RooController:0.2727
+RooJavaBean:0.2121
+RooJpaEntity:0.2424
+RooService:0.1818
+RooServiceImpl:0.3030
+RooToString:0.2121

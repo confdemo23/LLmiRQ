@@ -1,0 +1,3 @@
+JpaSpecificationExecutor:0.4667
+QueryUtils:0.1556
+SimpleJpaRepository:0.3556

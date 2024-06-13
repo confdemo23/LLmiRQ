@@ -1,0 +1,9 @@
+BackendIdConverter:0.3488
+BasePathAwareHandlerMapping:0.5581
+PersistentEntityResourceAssembler:0.6977
+RepositoryEntityController:0.5349
+RepositoryPropertyReferenceController:0.7907
+RepositoryRestExceptionHandler:0.6279
+RepositoryRestHandlerMapping:0.5814
+RepositoryRestMvcConfiguration:0.6279
+RepositorySearchController:0.5349

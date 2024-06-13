@@ -1,0 +1,10 @@
+CamelContext:0.0012
+DefaultConsumer:0.0042
+Endpoint:0.0042
+ExceptionHandler:0.0073
+KafkaComponent:0.0042
+KafkaConfiguration:0.0592
+KafkaEndpoint:0.0745
+ObjectHelper:0.0012
+Processor:0.0012
+StateRepository:0.0042

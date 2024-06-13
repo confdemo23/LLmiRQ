@@ -1,0 +1,2 @@
+BytesColumnVector:0.0048
+VectorMapJoinGenerateResultOperator:0.0017

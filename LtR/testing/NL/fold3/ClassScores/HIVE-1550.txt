@@ -1,0 +1,9 @@
+ASTNode:0.1220
+BaseSemanticAnalyzer:0.4390
+DDLSemanticAnalyzer:0.4146
+DropTableDesc:0.2683
+Hive:0.0488
+HiveMetaStoreClient:0.4146
+HiveOperation:0.2683
+ObjectStore:0.2195
+SemanticAnalyzer:0.3415

@@ -1,0 +1,10 @@
+CamelContext:0.0182
+DefaultExchangeHolder:0.0245
+Exchange:0.1528
+ExchangeHelper:0.0044
+ExpressionBuilder:0.0044
+FlexibleAggregationStrategyInjector:0.0263
+Injector:0.0154
+Message:0.0645
+ObjectHelper:0.0044
+Predicate:0.0044

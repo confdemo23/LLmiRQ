@@ -1,0 +1,9 @@
+ExecuteStatementOperation:0.5946
+HiveDriver:0.1892
+HiveQueryResultSet:0.4054
+HiveServer2:0.2162
+HiveStatement:0.2703
+OperationManager:0.3514
+QueryState:0.1892
+SQLOperation:0.2432
+SessionState:0.2432

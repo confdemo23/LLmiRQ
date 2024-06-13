@@ -1,0 +1,10 @@
+AbstractConfiguredSecurityBuilder:0.0046
+AuthenticationManagerBuilder:0.0024
+ContextFactory:0.0073
+DaoAuthenticationConfigurer:0.0024
+FrameOptionsConfig:0.0024
+HeadersConfigurer:0.0059
+HttpSecurity:0.0024
+ProviderManager:0.0160
+SpringSecurityLdapTemplate:0.0073
+UsernamePasswordAuthenticationToken:0.0156

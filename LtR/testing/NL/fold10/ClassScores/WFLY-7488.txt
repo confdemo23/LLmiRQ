@@ -1,0 +1,7 @@
+CapabilityServiceBuilder:0.5676
+ChannelResourceDefinition:0.5946
+JChannelFactory:0.3243
+JGroupsSubsystemResourceDefinition:0.8378
+JGroupsSubsystemXMLReader:0.5946
+JGroupsSubsystemXMLWriter:0.5946
+SubsystemResourceDefinition:0.6486

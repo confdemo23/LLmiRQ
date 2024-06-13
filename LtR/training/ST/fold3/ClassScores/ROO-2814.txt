@@ -1,0 +1,5 @@
+AbstractItdMetadataProvider:0.5714
+DefaultFileManager:0.3571
+DefaultMetadataService:0.4524
+EqualsMetadataProviderImpl:0.5476
+MemberDetailsScannerImpl:0.5000

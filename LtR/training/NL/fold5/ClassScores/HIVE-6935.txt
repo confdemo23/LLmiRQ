@@ -1,0 +1,7 @@
+DDLSemanticAnalyzer:0.4545
+DropTableDesc:0.2727
+HiveCli:0.0909
+HiveConf:0.1212
+HiveMetaStoreClient:0.4545
+MetaDataFormatUtils:0.4545
+SessionState:0.2424

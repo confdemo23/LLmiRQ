@@ -1,0 +1,6 @@
+BannerProvider:0.0451
+CommandLine:0.0213
+HistoryFileNameProvider:0.0094
+PluginUtils:0.0332
+PromptProvider:0.0094
+SimpleParser:0.0213

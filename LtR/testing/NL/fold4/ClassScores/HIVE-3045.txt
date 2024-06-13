@@ -1,0 +1,8 @@
+ColumnPruner:0.2195
+ExprNodeEvaluator:0.3415
+FetchOperator:0.2439
+GenericUDTF:0.1951
+HiveInputFormat:0.2927
+HiveOutputFormat:0.3171
+ObjectInspector:0.2927
+PartitionPruner:0.2927

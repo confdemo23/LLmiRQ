@@ -1,0 +1,1 @@
+MongoPersistentEntityIndexResolver:0.5769

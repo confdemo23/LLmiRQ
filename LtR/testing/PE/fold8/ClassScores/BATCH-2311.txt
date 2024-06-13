@@ -1,0 +1,5 @@
+JobExecution:0.1800
+JobLauncher:0.1600
+SimpleJobLauncher:0.2800
+SimpleJobRepository:0.3200
+StepExecution:0.2000

@@ -1,0 +1,10 @@
+CamelContext:0.0234
+Exchange:0.0547
+HdfsComponent:0.0417
+HdfsConfiguration:0.2214
+HdfsEndpoint:0.0234
+HdfsFileType:0.0230
+HdfsInfo:0.0469
+HdfsOutputStream:0.0547
+IOHelper:0.0182
+Message:0.0443

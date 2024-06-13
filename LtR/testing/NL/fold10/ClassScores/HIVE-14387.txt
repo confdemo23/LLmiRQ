@@ -1,0 +1,8 @@
+BeeLine:0.1081
+CLIService:0.1892
+FetchTask:0.1622
+HiveConf:0.1351
+HiveQueryResultSet:0.4054
+HiveResultSetMetaData:0.4865
+HiveServer2:0.2162
+HiveStatement:0.2703

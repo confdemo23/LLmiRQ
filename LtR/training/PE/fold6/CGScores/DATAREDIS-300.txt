@@ -1,0 +1,10 @@
+RedisClusterConfiguration:0.0194
+RedisCommand:0.0175
+RedisConnection:0.2240
+RedisConnectionFactory:0.0113
+RedisConnectionHolder:0.0614
+RedisConnectionUtils:0.0313
+RedisNode:0.0332
+RedisSentinelConfiguration:0.0125
+RedisSerializer:0.0232
+SerializationUtils:0.0150

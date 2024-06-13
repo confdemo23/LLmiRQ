@@ -1,0 +1,2 @@
+FastMath:0.1000
+Gamma:0.0400

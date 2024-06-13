@@ -1,0 +1,2 @@
+AbstractOutboundConnectionResourceDefinition:0.8913
+GenericOutboundConnectionResourceDefinition:0.8696

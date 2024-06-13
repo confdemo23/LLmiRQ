@@ -1,0 +1,4 @@
+ConstantTransformer:0.0065
+FunctorUtils:0.0100
+Predicate:0.0013
+Transformer:0.0030

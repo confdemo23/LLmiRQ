@@ -1,0 +1,9 @@
+ASTNode:0.1220
+ColumnInfo:0.1951
+HiveSemanticAnalyzerHook:0.5366
+HiveTypeSystemImpl:0.3902
+ReduceSinkOperator:0.3902
+RowResolver:0.2195
+SemanticAnalyzer:0.3415
+TableScanOperator:0.3659
+TypeCheckProcFactory:0.4390

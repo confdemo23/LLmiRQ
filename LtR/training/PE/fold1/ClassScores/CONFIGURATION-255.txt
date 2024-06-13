@@ -1,0 +1,3 @@
+AbstractConfiguration:0.4000
+DatabaseConfiguration:0.4000
+PropertyConverter:0.3111

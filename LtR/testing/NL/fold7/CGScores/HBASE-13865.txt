@@ -1,0 +1,10 @@
+Bytes:0.2040
+HRegion:0.3468
+HStore:0.2101
+MemStoreSizing:0.0794
+MonitoredTask:0.1706
+MultiVersionConcurrencyControl:0.0946
+Mutation:0.1159
+RegionCoprocessorHost:0.0946
+RegionInfo:0.3741
+ScannerContext:0.1341

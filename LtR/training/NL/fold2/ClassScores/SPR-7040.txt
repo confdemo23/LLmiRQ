@@ -1,0 +1,9 @@
+BeanWrapperImpl:0.3171
+BindTag:0.1220
+CustomCollectionEditor:0.4878
+DataBinder:0.1951
+DirectFieldAccessor:0.4146
+FormTag:0.1220
+PropertyEditorRegistrySupport:0.6585
+SelectTag:0.1707
+WebDataBinder:0.2683

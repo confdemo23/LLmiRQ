@@ -1,0 +1,10 @@
+Bytes:0.1270
+Entry:0.0742
+HRegion:0.2392
+HStore:0.1432
+MonitoredTask:0.1261
+Mutation:0.0954
+RegionCoprocessorHost:0.0648
+RegionInfo:0.2545
+RegionServerServices:0.0669
+ScannerContext:0.0916

@@ -1,0 +1,8 @@
+AlterIndexDesc:0.3030
+AlterTableDesc:0.3030
+HiveAlterHandler:0.3636
+HiveIndexHandler:0.3636
+HiveMetaStore:0.2727
+Index:0.0303
+Partition:0.1515
+Table:0.0303

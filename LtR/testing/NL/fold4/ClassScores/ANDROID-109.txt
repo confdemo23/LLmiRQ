@@ -1,0 +1,5 @@
+HttpHeaders:0.1951
+HttpMessageConverter:0.4146
+MappingJackson2HttpMessageConverter:0.7805
+RestTemplate:0.2195
+StringHttpMessageConverter:0.5610

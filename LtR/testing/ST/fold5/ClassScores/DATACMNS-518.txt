@@ -1,0 +1,2 @@
+BasicPersistentEntity:0.3269
+PreferredConstructor:0.3077

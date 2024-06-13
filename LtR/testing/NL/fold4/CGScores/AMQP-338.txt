@@ -1,0 +1,10 @@
+AbstractMessageListenerContainer:0.0964
+AcknowledgeMode:0.0389
+BlockingQueueConsumer:0.2914
+ConnectionFactoryUtils:0.0650
+Delivery:0.0713
+Message:0.1215
+MessageProperties:0.1726
+RabbitTemplate:0.0713
+RabbitUtils:0.0743
+SimpleMessageListenerContainer:0.1162

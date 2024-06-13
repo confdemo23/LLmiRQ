@@ -1,0 +1,10 @@
+AccessControlEntryImpl:0.0981
+Acl:0.0823
+AclAuthorizationStrategy:0.0229
+AclCache:0.0269
+AclImpl:0.0691
+FieldUtils:0.0579
+MutableAcl:0.1494
+ObjectIdentity:0.0163
+Permission:0.0091
+Sid:0.0198

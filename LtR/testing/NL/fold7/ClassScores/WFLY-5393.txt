@@ -1,0 +1,2 @@
+TransactionSubsystemAdd:0.5385
+TransactionSubsystemRootResourceDefinition:1.0000

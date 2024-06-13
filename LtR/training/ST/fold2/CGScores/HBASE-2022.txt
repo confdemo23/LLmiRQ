@@ -1,0 +1,10 @@
+ChoreService:0.0318
+ExecutorService:0.0428
+FSUtils:0.0281
+HRegion:0.1708
+HRegionServer:0.0428
+HStore:0.0501
+InfoServer:0.0281
+ProtobufUtil:0.0391
+RegionInfo:0.0977
+ServerName:0.0538

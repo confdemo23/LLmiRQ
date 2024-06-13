@@ -1,0 +1,3 @@
+Essence:0.0000
+LdapUtils:0.0000
+Person:0.0009

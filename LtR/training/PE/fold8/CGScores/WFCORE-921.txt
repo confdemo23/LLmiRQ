@@ -1,0 +1,10 @@
+AttachmentKey:0.0121
+DomainKey:0.0055
+HostKey:0.0055
+InterfaceDefinition:0.0055
+OperationContext:0.0387
+PathAddress:0.4506
+PathElement:0.3244
+ServerIdentity:0.0321
+SimpleAttributeDefinition:0.0055
+Tools:0.0055

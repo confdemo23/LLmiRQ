@@ -1,0 +1,10 @@
+AbstractAuthenticationProcessingFilter:0.9459
+AuthenticationEntryPoint:0.5676
+AuthenticationManager:0.4865
+ExceptionTranslationFilter:0.6216
+HttpSecurity:0.2432
+OpenIDAuthenticationFilter:0.6216
+SecurityConfig:0.2973
+SecurityContextHolder:0.4865
+UsernamePasswordAuthenticationFilter:0.8919
+WebSecurityConfigurerAdapter:0.6757

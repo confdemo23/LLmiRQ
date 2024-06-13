@@ -1,0 +1,10 @@
+Binding:0.0627
+ChannelCachingConnectionProxy:0.1335
+ChannelProxy:0.0430
+ConnectionFactoryUtils:0.0392
+Delivery:0.0508
+Exchange:0.0498
+Message:0.0672
+MessageProperties:0.0984
+RabbitTemplate:0.0792
+RabbitUtils:0.0740

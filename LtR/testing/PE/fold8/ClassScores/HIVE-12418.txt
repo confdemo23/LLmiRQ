@@ -1,0 +1,2 @@
+HiveHBaseInputFormatUtil:0.4200
+HiveHBaseTableInputFormat:0.4400

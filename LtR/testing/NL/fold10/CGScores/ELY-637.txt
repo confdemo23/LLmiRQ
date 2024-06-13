@@ -1,0 +1,10 @@
+ElytronPermission:0.0351
+IdentityCredentials:0.0376
+PermissionMapper:0.0464
+PermissionVerifier:0.1216
+RealmInfo:0.0501
+RoleMapper:0.0689
+Roles:0.0363
+SecurityDomain:0.2682
+SecurityIdentity:0.0702
+ServerAuthenticationContext:0.0576

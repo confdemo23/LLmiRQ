@@ -1,0 +1,2 @@
+MapOperations:0.2000
+TransformerAttachmentGrabber:0.5000

@@ -1,0 +1,2 @@
+KafkaConsumer:0.2000
+KafkaProducer:0.2000

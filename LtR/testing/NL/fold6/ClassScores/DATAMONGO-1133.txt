@@ -1,0 +1,9 @@
+Aggregation:0.2121
+AggregationOperationContext:0.6970
+Field:0.0303
+MappingMongoConverter:0.5152
+MongoPersistentEntity:0.5152
+MongoPersistentProperty:0.5758
+MongoTemplate:0.2727
+ProjectionOperation:0.4545
+QueryMapper:0.2121

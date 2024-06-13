@@ -1,0 +1,3 @@
+AntPathRequestMatcher:0.4000
+CsrfConfigurer:0.2444
+LogoutConfigurer:0.2889

@@ -1,0 +1,5 @@
+FileUtils:0.0968
+Hadoop23Shims:0.1613
+Hive:0.0161
+HiveException:0.1613
+MoveTask:0.0806

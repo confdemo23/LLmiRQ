@@ -1,0 +1,10 @@
+AbstractJIRAProducer:0.3408
+CamelKafkaTest:0.3368
+ClosePullRequestProducerTest:0.3028
+JIRAComponent:0.4149
+JIRAComponentAutoConfiguration:0.3075
+JIRAComponentConfiguration:0.3331
+KafkaConsumerTest:0.3037
+MockJerseyJiraRestClientFactory:0.3244
+PullRequestCommentConsumerTest:0.3129
+PullRequestConsumerTest:0.3546

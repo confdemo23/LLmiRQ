@@ -1,0 +1,10 @@
+AbstractRememberMeServices:0.0229
+Authentication:0.0873
+Base64:0.0488
+PersistentRememberMeToken:0.1617
+PersistentTokenRepository:0.0608
+RememberMeServices:0.0229
+SecurityContext:0.0196
+SecurityContextHolder:0.0415
+SpringSecurityMessageSource:0.0189
+UserDetails:0.0528

@@ -1,0 +1,2 @@
+DefaultCamelContext:0.3721
+MyRoute:0.0930

@@ -1,0 +1,9 @@
+GenericUDAFResolver:0.4103
+GenericUDTF:0.2051
+GroupByOperator:0.3077
+HiveConf:0.1282
+HiveInputFormat:0.3077
+HiveOutputFormat:0.3333
+PartitionPruner:0.3077
+SelectOperator:0.2821
+TableScanOperator:0.3590

@@ -1,0 +1,10 @@
+AccessControlListTag:0.3953
+AclAuthorizationStrategyImpl:0.5814
+AclEntryVoter:0.2326
+AclImpl:0.0930
+AclPermissionEvaluator:0.4419
+AclService:0.1628
+DefaultMethodSecurityExpressionHandler:0.8140
+JdbcMutableAclService:0.4186
+MethodSecurityExpressionOperations:0.7209
+PermissionEvaluator:0.3721

@@ -1,0 +1,10 @@
+CacheProperties:0.0266
+ImmutableSession:0.0335
+ImmutableSessionAttributes:0.0266
+InfinispanSessionManager:0.1028
+InfinispanSessionManagerConfiguration:0.0682
+Locality:0.0196
+SchedulableSession:0.0196
+Scheduler:0.0196
+Session:0.0820
+SessionFactory:0.1028

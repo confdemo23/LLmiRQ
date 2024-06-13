@@ -1,0 +1,10 @@
+ColumnFamilyDescriptor:0.0257
+CompactionRequestImpl:0.0329
+HRegion:0.0305
+HRegionFileSystem:0.0208
+HStore:0.0572
+HStoreFile:0.0390
+MemStore:0.0220
+StoreEngine:0.0499
+StoreFileManager:0.0414
+StoreFileReader:0.0245

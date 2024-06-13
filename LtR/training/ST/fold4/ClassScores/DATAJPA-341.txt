@@ -1,0 +1,3 @@
+JpaQueryLookupStrategy:0.3462
+SimpleJpaQuery:0.1923
+StringQuery:0.1346

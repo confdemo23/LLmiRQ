@@ -1,0 +1,10 @@
+AsyncProcessor:0.0061
+CxfBinding:0.0128
+CxfConsumer:0.0093
+CxfEndpoint:0.0516
+CxfRsBinding:0.0064
+CxfRsConsumer:0.0256
+CxfRsEndpoint:0.0295
+Exchange:0.0975
+Message:0.0096
+Processor:0.0061

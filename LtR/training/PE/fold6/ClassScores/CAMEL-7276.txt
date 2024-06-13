@@ -1,0 +1,4 @@
+DefaultCamelContext:0.3478
+JmxSystemPropertyKeys:0.3913
+QuartzComponent:0.2609
+QuartzComponentCamelContextSchedulerIsolationTest:1.0000

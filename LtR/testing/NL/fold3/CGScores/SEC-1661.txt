@@ -1,0 +1,3 @@
+LdapUtils:0.0090
+SpringSecurityLdapTemplate:0.0143
+Utf8:0.0007

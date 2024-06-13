@@ -1,0 +1,4 @@
+JBossMessageDrivenBean31MetaData:0.6744
+JBossSessionBean31MetaData:0.5349
+MessageDrivenBean31MetaData:0.5581
+SessionBean31MetaData:0.4186

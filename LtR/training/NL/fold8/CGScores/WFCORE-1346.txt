@@ -1,0 +1,10 @@
+ExtensionRegistry:0.0096
+Factory:0.0131
+ManagementResourceRegistration:0.1195
+OperationContext:0.0189
+PathAddress:0.0097
+PathElement:0.0142
+ProcessType:0.0068
+ResourceDefinition:0.0098
+SubsystemInformationImpl:0.0053
+TransformerRegistry:0.0068

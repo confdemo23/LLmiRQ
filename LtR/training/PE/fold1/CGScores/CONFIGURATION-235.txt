@@ -1,0 +1,5 @@
+AbstractConfiguration:0.0838
+BaseConfiguration:0.0066
+Configuration:0.0752
+ConfigurationInterpolator:0.0076
+ConfigurationUtils:0.0066

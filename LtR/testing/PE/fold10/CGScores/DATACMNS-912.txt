@@ -1,0 +1,10 @@
+ClassTypeInformation:0.0079
+DefaultRepositoryInformation:0.0305
+FooRepositoryCustom:0.0367
+GenericsSaveRepositoryImpl:0.0057
+Optionals:0.0042
+RepositoryInformation:0.0987
+RepositoryMetadata:0.0417
+SimpleSaveRepositoryImpl:0.0057
+Streamable:0.0124
+TypeInformation:0.0246

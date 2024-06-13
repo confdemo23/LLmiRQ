@@ -1,0 +1,3 @@
+DomPoxMessage:0.2222
+DomPoxMessageFactory:0.3778
+PayloadTransformingInterceptor:0.6000

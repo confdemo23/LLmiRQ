@@ -1,0 +1,10 @@
+AttributeDefinition:0.0344
+AuditLogItem:0.0687
+Builder:0.0225
+JmxAccessAuditLogItem:0.0243
+ManagedAuditLogger:0.0699
+ModelControllerAuditLogItem:0.0243
+SimpleAttributeDefinition:0.0225
+SimpleAttributeDefinitionBuilder:0.1054
+SimpleOperationDefinitionBuilder:0.0344
+Util:0.0581

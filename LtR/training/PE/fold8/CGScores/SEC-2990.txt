@@ -1,0 +1,1 @@
+SpringSecurityCoreVersion:0.0058

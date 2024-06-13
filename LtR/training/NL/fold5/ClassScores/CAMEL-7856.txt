@@ -1,0 +1,6 @@
+CamelContext:0.2424
+CxfBinding:0.1818
+CxfEndpoint:0.2121
+CxfProducer:0.2121
+Exchange:0.1212
+HttpMessage:0.2121

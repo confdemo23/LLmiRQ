@@ -1,0 +1,3 @@
+ExprNodeColumnEvaluator:0.3878
+MapOperator:0.1429
+ReduceSinkOperator:0.2857

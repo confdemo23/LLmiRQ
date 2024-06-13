@@ -1,0 +1,10 @@
+AbstractSimplex:0.0496
+BaseAbstractMultivariateOptimizer:0.0059
+ConvergenceChecker:0.0182
+FastMath:0.3673
+Incrementor:0.0696
+MaxEval:0.0046
+MaxIter:0.0046
+PointValuePair:0.0132
+PointVectorValuePair:0.0355
+RealMatrix:0.0355

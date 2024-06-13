@@ -1,0 +1,2 @@
+AbstractConfiguration:0.4000
+DatabaseConfiguration:0.4000

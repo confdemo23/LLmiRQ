@@ -1,0 +1,9 @@
+CamelContext:0.2439
+ChoiceDefinition:0.3415
+DirectComponent:0.3171
+Exchange:0.1463
+MockEndpoint:0.2439
+ProcessorDefinition:0.4146
+RouteBuilder:0.2439
+WhenDefinition:0.2927
+XPathBuilder:0.2439

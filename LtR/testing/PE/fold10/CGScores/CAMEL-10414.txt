@@ -1,0 +1,10 @@
+CamelContext:0.0020
+Exchange:0.1101
+Message:0.1025
+MessageHelper:0.0020
+MongoDbComponent:0.0020
+MongoDbEndpoint:0.0548
+MongoDbOperation:0.0020
+ObjectHelper:0.0020
+Processor:0.0020
+TypeConverter:0.0020

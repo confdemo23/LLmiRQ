@@ -1,0 +1,3 @@
+Exchange:0.1351
+Processor:0.1622
+XPathBuilder:0.2432

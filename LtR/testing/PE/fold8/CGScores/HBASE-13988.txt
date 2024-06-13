@@ -1,0 +1,10 @@
+CompactSplit:0.0295
+EnvironmentEdgeManager:0.0342
+ExecutorService:0.0305
+HRegion:0.1952
+HRegionServer:0.1154
+HStore:0.0358
+ProtobufUtil:0.0279
+RegionInfo:0.0972
+RegionServerAccounting:0.0588
+ServerName:0.0414

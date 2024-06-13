@@ -1,0 +1,6 @@
+CommandCompleter:0.4375
+CommandContext:0.3750
+CommandLineCompleter:0.5625
+CommandRegistry:0.4063
+DefaultCallbackHandler:0.6250
+ParsedCommandLine:0.4688

@@ -1,0 +1,10 @@
+AsyncRequestFuture:0.0395
+Builder:0.0973
+Bytes:0.3401
+Cell:0.2547
+Get:0.0604
+KeyValue:0.0501
+Query:0.0266
+Result:0.0435
+Scan:0.0641
+Type:0.0309

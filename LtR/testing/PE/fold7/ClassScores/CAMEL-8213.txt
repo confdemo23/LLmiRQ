@@ -1,0 +1,1 @@
+UseOriginalAggregationStrategy:0.5870

@@ -1,0 +1,5 @@
+CamelBlueprintHelper:0.2742
+Main:0.0161
+MainSupport:0.1290
+RunMojo:0.0645
+ServiceSupport:0.1774

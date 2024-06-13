@@ -1,0 +1,9 @@
+AbstractMessageListenerContainer:0.6744
+AmqpTemplate:0.2093
+DirectMessageListenerContainer:0.6279
+MessageListenerAdapter:0.4419
+RabbitAdmin:0.1860
+RabbitListenerContainerFactory:0.6279
+RabbitListenerEndpointRegistry:0.6279
+RabbitTemplate:0.2558
+SimpleMessageListenerContainer:0.6279

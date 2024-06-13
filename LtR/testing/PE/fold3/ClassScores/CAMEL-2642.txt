@@ -1,0 +1,2 @@
+ExampleBean:0.1860
+IntrospectionSupport:0.3953

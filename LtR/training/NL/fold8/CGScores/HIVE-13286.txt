@@ -1,0 +1,3 @@
+HadoopShims:0.0007
+HiveDriver:0.0029
+ShimLoader:0.0007

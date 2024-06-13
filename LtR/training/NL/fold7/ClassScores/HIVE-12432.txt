@@ -1,0 +1,5 @@
+HiveSparkClientFactory:0.4872
+SparkCounter:0.2308
+SparkPlanGenerator:0.3846
+SparkTask:0.1538
+SparkWork:0.1538

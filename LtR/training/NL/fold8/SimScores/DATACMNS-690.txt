@@ -1,0 +1,10 @@
+AbstractMappingContextUnitTests:0.1117
+CdiRepositoryBean:0.1404
+CdiRepositoryExtensionSupport:0.1158
+FieldNamingStrategy:0.2272
+RepositoryConfigurationDelegate:0.2416
+RepositoryConfigurationExtensionSupport:0.1769
+RepositoryConfigurationExtensionSupportUnitTests:0.1935
+Revisions:0.2109
+RevisionsUnitTests:0.1471
+SpringDataWebConfiguration:0.1259

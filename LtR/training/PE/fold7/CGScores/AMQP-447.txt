@@ -1,0 +1,4 @@
+CompositeChannelListener:0.0091
+CompositeConnectionListener:0.0192
+ConnectionNameStrategy:0.0040
+RabbitExceptionTranslator:0.0040

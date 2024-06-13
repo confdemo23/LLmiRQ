@@ -1,0 +1,7 @@
+CrudMethods:0.1092
+DescribedFieldFilter:0.0123
+MethodParameters:0.0109
+Pageable:0.0232
+QueryExecutionConverters:0.0109
+ReflectionRepositoryInvoker:0.0109
+RepositoryMetadata:0.0232

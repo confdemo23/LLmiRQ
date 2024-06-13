@@ -1,0 +1,10 @@
+CTEClause:0.0063
+ConfVars:0.0057
+HMSHandler:0.0118
+HiveConf:0.0126
+HiveMetastoreCli:0.0050
+ObjectStore:0.0424
+QueryWrapper:0.0204
+SemanticAnalyzer:0.0175
+Server:0.0050
+SortBucketRSCtx:0.0105

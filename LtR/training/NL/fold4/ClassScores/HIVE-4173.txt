@@ -1,0 +1,7 @@
+ASTNode:0.0930
+FilterOperator:0.2558
+GenMapRedUtils:0.2558
+HiveSemanticAnalyzerHook:0.4884
+PlanUtils:0.1395
+QueryPlan:0.1395
+SemanticAnalyzer:0.3023

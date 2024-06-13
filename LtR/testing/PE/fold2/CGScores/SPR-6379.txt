@@ -1,0 +1,10 @@
+BeanDefinitionHolder:0.0158
+BeanDefinitionParserDelegate:0.2114
+BeanDefinitionReaderUtils:0.0158
+BeanDefinitionRegistry:0.0158
+Environment:0.0335
+Resource:0.0513
+ResourceUtils:0.0259
+StringUtils:0.1047
+XmlBeanDefinitionReader:0.0513
+XmlReaderContext:0.3892

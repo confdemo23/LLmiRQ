@@ -1,0 +1,7 @@
+CamelContext:0.0019
+CamelLogProcessor:0.0019
+CamelLogger:0.0019
+Registry:0.0000
+RouteDefinitionHelper:0.0000
+TraceInterceptorFactory:0.0000
+Tracer:0.0000

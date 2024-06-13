@@ -1,0 +1,2 @@
+AbstractMapBag:0.0075
+Bag:0.0110

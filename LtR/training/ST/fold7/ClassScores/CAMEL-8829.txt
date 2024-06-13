@@ -1,0 +1,4 @@
+CamelLogProcessor:0.2917
+DefaultExchangeFormatter:0.4375
+LogProducer:0.1667
+SedaConsumer:0.1875

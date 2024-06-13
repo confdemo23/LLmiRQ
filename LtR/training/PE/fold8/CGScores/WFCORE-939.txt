@@ -1,0 +1,10 @@
+Builder:0.0104
+DeploymentUploadBytesHandler:0.0104
+DeploymentUploadStreamAttachmentHandler:0.0104
+DeploymentUploadURLHandler:0.0104
+DomainDeploymentResourceDefinition:0.0104
+DomainResolver:0.0162
+HostControllerEnvironment:0.0162
+ManagementResourceRegistration:0.2530
+SimpleAttributeDefinitionBuilder:0.0682
+SimpleResourceDefinition:0.0162

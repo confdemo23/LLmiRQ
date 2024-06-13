@@ -1,0 +1,10 @@
+Admin:0.0127
+ColumnFamilyDescriptor:0.0043
+Connection:0.0054
+HTableDescriptor:0.0054
+RegionInfo:0.0096
+RegionStdOutSink:0.0069
+Scan:0.0059
+Table:0.0069
+TableName:0.0048
+User:0.0052

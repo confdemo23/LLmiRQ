@@ -1,0 +1,9 @@
+ApplicationYarnClient:0.0047
+ApplicationsReport:0.0166
+InstalledReportBuilder:0.0166
+OperationProperties:0.0285
+SpringApplicationTemplate:0.0107
+SpringYarnBootUtils:0.0464
+SpringYarnProperties:0.0047
+SubmittedReportBuilder:0.0345
+YarnClient:0.0166

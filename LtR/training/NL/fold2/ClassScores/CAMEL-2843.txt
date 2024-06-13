@@ -1,0 +1,6 @@
+DefaultExchange:0.3171
+DefaultHeaderFilterStrategy:0.6098
+ExchangeConverter:0.3659
+GroovyExpression:0.3415
+GroovyLanguage:0.2927
+HeaderFilterStrategy:0.4390

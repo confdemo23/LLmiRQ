@@ -1,0 +1,8 @@
+CamelContext:0.0110
+CastUtils:0.0028
+ClassResolver:0.0110
+DefaultEndpoint:0.0069
+Exchange:0.0028
+ExecutorServiceManager:0.0069
+KafkaConfiguration:0.0191
+Message:0.0191

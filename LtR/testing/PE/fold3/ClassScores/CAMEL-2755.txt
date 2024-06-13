@@ -1,0 +1,2 @@
+CamelContext:0.2093
+VmEndpoint:0.1628

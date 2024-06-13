@@ -1,0 +1,6 @@
+AbstractPersistentProperty:0.0097
+Lazy:0.0130
+Optionals:0.0063
+PersistentEntity:0.0097
+Property:0.0097
+Type:0.0029

@@ -1,0 +1,2 @@
+CamelSpringTestSupport:0.3673
+DefaultCamelContext:0.3061

@@ -1,0 +1,2 @@
+JdkSerializationRedisSerializer:0.6087
+RedisTemplate:0.2174

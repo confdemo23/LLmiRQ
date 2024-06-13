@@ -1,0 +1,3 @@
+AbstractStorelessUnivariateStatistic:0.7174
+AbstractUnivariateStatistic:0.5217
+Mean:0.0217

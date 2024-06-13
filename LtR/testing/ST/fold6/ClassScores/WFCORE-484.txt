@@ -1,0 +1,3 @@
+AbstractResourceRegistration:0.5106
+DelegatingManagementResourceRegistration:0.7660
+OperationContext:0.2553

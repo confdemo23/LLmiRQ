@@ -1,0 +1,5 @@
+ExecutionContextUserSupport:0.5333
+FlatFileItemWriter:0.3333
+ItemStreamSupport:0.3111
+MultiResourceItemWriter:0.4444
+StaxEventItemWriter:0.3556

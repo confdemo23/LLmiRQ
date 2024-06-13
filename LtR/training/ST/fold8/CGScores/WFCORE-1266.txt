@@ -1,0 +1,10 @@
+BootstrapListener:0.0137
+Configuration:0.0778
+CurrentServiceContainer:0.0137
+Factory:0.0137
+ProductConfig:0.0137
+RemoteFileRepositoryService:0.0057
+SelfContainedContentRepository:0.0057
+ServerEnvironment:0.0778
+ServerPathManagerService:0.0057
+ServiceModuleLoader:0.0057

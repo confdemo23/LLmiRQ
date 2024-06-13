@@ -1,0 +1,10 @@
+ASTNode:0.0542
+Client:0.0120
+ConfVars:0.0237
+DDLSemanticAnalyzer:0.0250
+Hive:0.0209
+HiveConf:0.0511
+QualifiedNameUtil:0.0316
+ShimLoader:0.0082
+Utils:0.0147
+VarType:0.0072

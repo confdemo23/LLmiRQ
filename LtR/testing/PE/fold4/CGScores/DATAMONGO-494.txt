@@ -1,0 +1,10 @@
+BsonUtils:0.0049
+Criteria:0.0035
+CriteriaDefinition:0.0008
+Field:0.0074
+Keyword:0.0066
+Meta:0.0021
+MetaMapping:0.0015
+MongoConverter:0.0026
+MongoPersistentEntity:0.0038
+MongoPersistentProperty:0.0072

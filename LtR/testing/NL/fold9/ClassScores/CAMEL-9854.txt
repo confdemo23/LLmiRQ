@@ -1,0 +1,5 @@
+CxfBinding:0.2500
+CxfConsumer:0.2813
+CxfEndpoint:0.2813
+CxfProducer:0.2813
+StreamCache:0.2813

@@ -1,0 +1,5 @@
+AuthorizationEndpoint:0.4390
+DefaultOAuth2RequestValidator:0.6341
+OAuth2AuthenticationEntryPoint:0.6585
+OAuth2Exception:0.2927
+OAuth2RequestFactory:0.4146

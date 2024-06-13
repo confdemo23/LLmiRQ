@@ -1,0 +1,10 @@
+CNCtxFactory:0.0308
+CNNameParser:0.0027
+CorbaORBService:0.0005
+CorbanameUrl:0.0005
+ExceptionMapper:0.0017
+IiopUrl:0.0005
+NameParser:0.0004
+NamespaceContextSelector:0.0013
+NamingContext:0.0065
+ParsedName:0.0161

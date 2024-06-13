@@ -1,0 +1,8 @@
+Client:0.0100
+ConfVars:0.0200
+EncoderDecoder:0.0035
+HadoopThriftAuthBridge:0.0044
+HiveConf:0.0436
+ShimLoader:0.0044
+Utils:0.0124
+VarType:0.0059

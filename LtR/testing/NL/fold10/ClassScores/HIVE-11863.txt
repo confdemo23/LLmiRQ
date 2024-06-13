@@ -1,0 +1,6 @@
+CliDriver:0.1622
+FSStatsAggregator:0.3784
+HiveConf:0.1351
+StatsCollectionContext:0.5135
+TezTask:0.1081
+UnionOperator:0.2703

@@ -1,0 +1,3 @@
+BindInfo:0.0204
+ContextListManagedReferenceFactory:0.0667
+Reflections:0.0435

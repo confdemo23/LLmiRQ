@@ -1,0 +1,2 @@
+CompensatingTransactionOperationExecutor:0.8605
+DefaultCompensatingTransactionOperationManager:1.0000

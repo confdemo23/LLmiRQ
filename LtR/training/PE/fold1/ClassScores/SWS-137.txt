@@ -1,0 +1,4 @@
+FaultAwareWebServiceConnection:0.6000
+WebServiceConnection:0.3778
+WebServiceMessage:0.3111
+WebServiceTemplate:0.3333

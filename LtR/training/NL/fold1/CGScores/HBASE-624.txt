@@ -1,0 +1,10 @@
+AssignmentManager:0.0737
+ColumnFamilyDescriptor:0.0598
+MasterCoprocessorHost:0.1304
+MasterServices:0.2031
+MonitoredTask:0.0507
+RegionInfo:0.0576
+ServerManager:0.0620
+ServerName:0.0961
+TableDescriptor:0.0466
+ZKUtil:0.0469

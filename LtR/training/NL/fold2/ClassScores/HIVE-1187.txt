@@ -1,0 +1,9 @@
+Database:0.1463
+FieldSchema:0.2195
+HiveConf:0.1463
+HiveMetaStoreClient:0.4146
+MetaStoreUtils:0.2927
+ObjectStore:0.2195
+SerDeInfo:0.1707
+StorageDescriptor:0.3659
+Table:0.0732

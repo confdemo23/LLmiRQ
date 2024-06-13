@@ -1,0 +1,8 @@
+CamelContext:0.2439
+DefaultErrorHandler:0.4146
+ExceptionHandler:0.3415
+Exchange:0.1463
+ExchangeHelper:0.2927
+Message:0.1220
+Processor:0.1707
+ProcessorDefinition:0.4146

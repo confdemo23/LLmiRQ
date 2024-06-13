@@ -1,0 +1,3 @@
+AuthenticationManager:0.3778
+AuthenticationManagerBuilder:0.5333
+ObjectPostProcessor:0.3333

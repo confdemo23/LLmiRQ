@@ -1,0 +1,2 @@
+LdapEncoder:0.0021
+SpringSecurityMessageSource:0.0021

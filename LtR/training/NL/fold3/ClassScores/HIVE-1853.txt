@@ -1,0 +1,5 @@
+Hive:0.0244
+HiveMetaStore:0.2439
+MetaStoreUtils:0.2683
+QueryPlan:0.1463
+Table:0.0488

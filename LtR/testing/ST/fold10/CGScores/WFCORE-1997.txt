@@ -1,0 +1,10 @@
+AuthorizationResponseImpl:0.0256
+AuthorizationResult:0.0281
+ImmutableManagementResourceRegistration:0.0239
+ManagementModelImpl:0.0502
+ManagementRequestContext:0.0294
+ModelControllerImpl:0.0367
+OperationContext:0.0240
+PathAddress:0.0667
+PathElement:0.0355
+Resource:0.0304

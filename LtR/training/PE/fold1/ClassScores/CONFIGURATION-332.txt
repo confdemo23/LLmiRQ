@@ -1,0 +1,2 @@
+DataConfiguration:0.3111
+PropertiesConfiguration:0.4444

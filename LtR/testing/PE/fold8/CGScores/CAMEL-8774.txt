@@ -1,0 +1,9 @@
+CamelContext:0.0083
+Exchange:0.0315
+HeaderFilterStrategy:0.0036
+HttpHelper:0.0129
+IOHelper:0.0036
+JettyContentExchange:0.0362
+Message:0.0129
+MessageHelper:0.0036
+TypeConverter:0.0083

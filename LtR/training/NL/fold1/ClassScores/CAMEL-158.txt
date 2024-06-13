@@ -1,0 +1,6 @@
+DefaultHttpBinding:0.4054
+Exchange:0.1351
+HttpConverter:0.2703
+HttpMessage:0.2162
+JettyContentExchange:0.4595
+JettyHttpComponent:0.4054

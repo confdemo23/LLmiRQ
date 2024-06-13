@@ -1,0 +1,4 @@
+CriteriaDefinition:0.0045
+Field:0.0003
+Meta:0.0070
+Query:0.0079

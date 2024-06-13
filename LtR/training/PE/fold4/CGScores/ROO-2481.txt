@@ -1,0 +1,10 @@
+DirectoryMonitoringRequest:0.0148
+FileEvent:0.0047
+FileUtils:0.0047
+HandlerUtils:0.0046
+ItdTypeDetailsProvidingMetadataItem:0.0045
+MemberDetailsDecorator:0.0094
+MetadataIdentificationUtils:0.0045
+MetadataProvider:0.0094
+MonitoringRequest:0.0072
+XmlUtils:0.0047

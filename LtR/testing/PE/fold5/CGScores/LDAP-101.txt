@@ -1,0 +1,10 @@
+CollectingNameClassPairCallbackHandler:0.0045
+ContextMapperCallbackHandler:0.0045
+DelegatingContext:0.0877
+DirContextOperations:0.0081
+DirContextPoolableObjectFactory:0.0098
+Filter:0.0069
+LdapQuery:0.0228
+LdapUtils:0.0240
+ObjectDirectoryMapper:0.0191
+PoolingContextSource:0.0057

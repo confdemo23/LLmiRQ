@@ -1,0 +1,10 @@
+EnvironmentEdgeManager:0.0430
+HRegion:0.2477
+HRegionServer:0.0975
+MetricsHBaseServerSource:0.0658
+ProtobufUtil:0.0844
+RegionCoprocessorHost:0.0430
+RegionInfo:0.0931
+RegionScanner:0.0409
+Result:0.0343
+RpcCallContext:0.0409

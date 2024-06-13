@@ -1,0 +1,4 @@
+LifecycleStrategy:0.3043
+Main:0.0217
+MainSupport:0.1739
+VetoCamelContextStartException:0.5870

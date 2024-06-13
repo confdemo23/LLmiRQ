@@ -1,0 +1,10 @@
+DisallowTransformHook:0.2495
+ExprNodeEvaluatorHead:0.2083
+ExprNodeEvaluatorRef:0.2127
+GenericUDTFInline:0.1898
+HivePointLookupOptimizerRule:0.2166
+ObjectCache:0.1718
+ObjectCacheFactory:0.1879
+Select:0.1945
+SubQueryDiagnostic:0.2973
+TableSample:0.1655

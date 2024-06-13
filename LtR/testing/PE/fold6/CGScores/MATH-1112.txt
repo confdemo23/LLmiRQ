@@ -1,0 +1,9 @@
+AbstractUnivariateStatistic:0.0077
+EstimationType:0.0077
+FastMath:0.0214
+KthSelector:0.0214
+MathArrays:0.0168
+MathUtils:0.0214
+MedianOf3PivotingStrategy:0.0032
+Percentile:0.0168
+Precision:0.0077

@@ -1,0 +1,10 @@
+AsyncCallback:0.0209
+Exchange:0.0253
+Message:0.0121
+ObjectHelper:0.0127
+Olingo2AppWrapper:0.0265
+Olingo2BatchChangeRequest:0.0277
+Olingo2BatchQueryRequest:0.0153
+Olingo2Configuration:0.0554
+Olingo2ResponseHandler:0.0277
+UriInfoWithType:0.0895

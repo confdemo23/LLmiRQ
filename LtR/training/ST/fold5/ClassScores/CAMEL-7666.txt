@@ -1,0 +1,6 @@
+CamelContext:0.1702
+CamelContextTest:0.2553
+DefaultCamelContext:0.3191
+EndpointMessageListener:0.4043
+ProducerCache:0.1915
+SpringCamelContext:0.2979

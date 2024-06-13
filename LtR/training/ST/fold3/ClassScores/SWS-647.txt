@@ -1,0 +1,2 @@
+CommonsXsdSchemaCollection:0.5476
+PayloadValidatingInterceptor:0.5952

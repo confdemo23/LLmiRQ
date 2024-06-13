@@ -1,0 +1,10 @@
+AbstractPropertyBindingResult:0.0047
+Assert:0.0082
+BindingResult:0.0096
+CachedIntrospectionResults:0.0118
+GenericTypeAwarePropertyDescriptor:0.0072
+MutablePropertyValues:0.0077
+ObjectUtils:0.0057
+PropertyEditorRegistry:0.0077
+PropertyValue:0.0067
+StringUtils:0.0047

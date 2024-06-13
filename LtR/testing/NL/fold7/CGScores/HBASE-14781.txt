@@ -1,0 +1,10 @@
+Admin:0.2969
+Bytes:1.0000
+Connection:0.4227
+HRegion:0.5052
+HStore:0.3911
+ModifyableColumnFamilyDescriptor:0.5213
+RegionInfo:0.4952
+RegionServerServices:0.2652
+Result:0.3056
+Table:0.2760

@@ -1,0 +1,3 @@
+AbstractEntityManager:0.4737
+TransactionScopedEntityManager:0.7105
+WeldDeploymentProcessor:0.5263

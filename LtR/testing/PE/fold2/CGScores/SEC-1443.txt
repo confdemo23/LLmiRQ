@@ -1,0 +1,4 @@
+Authentication:0.0036
+ConfigAttribute:0.0036
+GrantedAuthority:0.0036
+Jsr250SecurityConfig:0.0091

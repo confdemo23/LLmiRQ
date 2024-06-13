@@ -1,0 +1,2 @@
+MapReduceCounts:0.2857
+MapReduceResults:0.3095

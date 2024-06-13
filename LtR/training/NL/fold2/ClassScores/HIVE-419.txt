@@ -1,0 +1,5 @@
+HdfsUtils:0.1707
+Hive:0.0488
+HiveMetaStore:0.2683
+MetaStoreUtils:0.2927
+Table:0.0732

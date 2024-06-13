@@ -1,0 +1,2 @@
+OraclePagingQueryProvider:0.0024
+SqlPagingQueryUtils:0.0037

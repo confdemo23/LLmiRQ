@@ -1,0 +1,4 @@
+ColumnPruner:0.2432
+ColumnPrunerProcFactory:0.5405
+ExprWalkerProcFactory:0.4865
+SemanticAnalyzer:0.3514

@@ -1,0 +1,10 @@
+BucketEntry:0.0993
+Bytes:0.1278
+ColumnFamilyDescriptor:0.1158
+HFileScanner:0.0984
+HRegion:0.3187
+HStore:0.2548
+MonitoredTask:0.1181
+RegionInfo:0.2828
+ScannerContext:0.0916
+StoreFileReader:0.1228

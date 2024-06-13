@@ -1,0 +1,10 @@
+ClassOrInterfaceTypeDetails:0.0203
+JavaPackage:0.0090
+JavaSymbolName:0.0216
+JavaType:0.0458
+LastUsed:0.0428
+LogicalPath:0.0090
+PhysicalTypeIdentifier:0.0090
+Pom:0.0203
+ProjectOperations:0.0541
+TypeLocationService:0.0428

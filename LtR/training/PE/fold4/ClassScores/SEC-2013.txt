@@ -1,0 +1,4 @@
+AbstractAuthenticationProcessingFilter:0.7556
+SessionAuthenticationException:0.5778
+SimpleUrlAuthenticationFailureHandler:0.7333
+UsernamePasswordAuthenticationFilter:0.7111

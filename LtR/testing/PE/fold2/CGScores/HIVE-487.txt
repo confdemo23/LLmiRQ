@@ -1,0 +1,6 @@
+ExecDriver:0.0081
+HadoopShims:0.0132
+HiveIOExceptionHandlerUtil:0.0056
+HiveInputFormat:0.0056
+HiveInputSplit:0.0437
+ShimLoader:0.0132

@@ -1,0 +1,7 @@
+DDLSemanticAnalyzer:0.4545
+HiveAlterHandler:0.3636
+HiveConf:0.1212
+HiveMetaStoreClient:0.4545
+HiveStringUtils:0.3333
+MetaStoreUtils:0.3030
+SessionState:0.2424

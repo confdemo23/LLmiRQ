@@ -1,0 +1,10 @@
+Attribute:0.1542
+ColumnAttribute:0.0681
+ExecutorAttribute:0.0541
+InfinispanSchema:0.8809
+InfinispanSubsystemXMLReader:1.0000
+Operations:0.0541
+ScheduledThreadPoolResourceDefinition:0.0400
+ThreadPoolResourceDefinition:0.0681
+XMLAttribute:0.6286
+XMLElement:0.1942

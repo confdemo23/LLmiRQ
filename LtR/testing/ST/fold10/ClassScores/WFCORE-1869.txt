@@ -1,0 +1,3 @@
+AliasResourceRegistration:0.5789
+ConcreteResourceRegistration:0.6579
+ExtensionRegistry:0.3684

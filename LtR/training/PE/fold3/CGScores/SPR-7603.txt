@@ -1,0 +1,10 @@
+AbstractMessageListenerContainer:0.0079
+AbstractPollingMessageListenerContainer:0.0139
+ConnectionFactoryUtils:0.0058
+DefaultTransactionDefinition:0.0079
+JmsResourceHolder:0.0058
+JmsUtils:0.0038
+PlatformTransactionManager:0.0058
+SingleConnectionFactory:0.0018
+TransactionSynchronizationManager:0.0079
+TransactionSynchronizationUtils:0.0018

@@ -1,0 +1,10 @@
+Bytes:0.3255
+HRegion:0.6120
+HStore:0.2891
+MasterCoprocessorHost:0.1797
+MasterServices:0.4266
+MonitoredTask:0.2374
+RegionInfo:0.8385
+RegionStateNode:0.7943
+RegionStates:0.4379
+ServerName:0.1884

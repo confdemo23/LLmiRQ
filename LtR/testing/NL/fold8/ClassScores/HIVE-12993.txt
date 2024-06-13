@@ -1,0 +1,4 @@
+BeeLine:0.1026
+HiveConf:0.1282
+HiveConnection:0.2821
+HiveDriver:0.1795

@@ -1,0 +1,10 @@
+NonceFactory:0.0096
+OAuthCodec:0.0314
+OAuthConsumerParameter:0.1188
+OAuthConsumerToken:0.1188
+OAuthProviderParameter:0.0205
+OAuthURLStreamHandlerFactory:0.0205
+ProtectedResourceDetails:0.2499
+ProtectedResourceDetailsService:0.0423
+StringSplitUtils:0.0205
+UnsupportedSignatureMethodException:0.0096

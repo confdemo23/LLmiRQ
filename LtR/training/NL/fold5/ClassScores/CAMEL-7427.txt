@@ -1,0 +1,4 @@
+HttpMessage:0.2121
+NettyHttpBinding:0.3636
+NettyHttpComponent:0.4242
+NettyHttpConsumer:0.3939

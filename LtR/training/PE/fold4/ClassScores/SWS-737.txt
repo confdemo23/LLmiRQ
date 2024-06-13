@@ -1,0 +1,3 @@
+EndpointInterceptor:0.3333
+EndpointInterceptorAdapter:0.4889
+MessageContext:0.2222

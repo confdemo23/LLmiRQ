@@ -1,0 +1,10 @@
+ApplicationExceptionDetails:0.0056
+CurrentInvocationContext:0.0146
+EJBComponent:0.0740
+EJBComponentUnavailableException:0.0023
+EJBSuspendHandlerService:0.0080
+NamespaceContextSelector:0.0108
+SecurityContextInterceptor:0.0103
+SystemPropertySetup:0.0155
+Utils:0.1372
+WritableServiceBasedNamingStore:0.0108

@@ -1,0 +1,2 @@
+AggregationStrategies:0.3913
+AggregationStrategyBeanInfo:0.5217

@@ -1,0 +1,4 @@
+MongoConverter:0.0054
+MongoPersistentEntity:0.0012
+MongoPersistentProperty:0.0068
+QueryMapper:0.0012

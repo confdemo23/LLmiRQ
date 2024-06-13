@@ -1,0 +1,10 @@
+AbstractResourceRegistration:0.0371
+AttributeDefinition:0.0256
+ManagementResourceRegistration:0.0943
+NodeSubregistry:0.0447
+OperationEntry:0.0092
+PathAddress:0.0243
+PathElement:0.0952
+ProcessType:0.0066
+ResourceDefinition:0.0135
+TransformerRegistry:0.0048

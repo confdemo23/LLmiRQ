@@ -1,0 +1,7 @@
+CamelHttpTransportServlet:0.0129
+CamelServlet:0.0129
+DefaultHttpRegistry:0.0129
+HttpConsumer:0.0200
+HttpRegistry:0.0200
+ObjectConverter:0.0059
+ServletEndpoint:0.0129

@@ -1,0 +1,7 @@
+HadoopShims:0.0190
+HiveSQLException:0.0084
+KerberosNameShim:0.0084
+SQLOperation:0.0056
+ShimLoader:0.0190
+ThriftCLIServerContext:0.0197
+Utils:0.0126

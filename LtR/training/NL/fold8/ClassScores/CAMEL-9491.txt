@@ -1,0 +1,4 @@
+JdbcComponent:0.3438
+JdbcEndpoint:0.3125
+JdbcProducer:0.3125
+Route:0.0938

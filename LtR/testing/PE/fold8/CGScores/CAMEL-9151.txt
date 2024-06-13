@@ -1,0 +1,9 @@
+CamelContext:0.0172
+Exchange:0.0063
+MetricsRegistryService:0.0245
+MetricsStatistics:0.0063
+ObjectHelper:0.0063
+Route:0.0172
+RouteContext:0.0099
+RoutePolicySupport:0.0026
+ServiceHelper:0.0026

@@ -1,0 +1,6 @@
+AclAuthorizationStrategy:0.5676
+AclImpl:0.1081
+AclService:0.1892
+BasicLookupStrategy:0.4324
+JdbcMutableAclService:0.4865
+LookupStrategy:0.2973

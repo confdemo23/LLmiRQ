@@ -1,0 +1,10 @@
+Admin:0.1415
+Bytes:0.4489
+Connection:0.1525
+HColumnDescriptor:0.1196
+HRegion:0.0592
+HTableDescriptor:0.0976
+Result:0.0867
+Table:0.1196
+TableDescriptorBuilder:0.0537
+TableName:0.0702

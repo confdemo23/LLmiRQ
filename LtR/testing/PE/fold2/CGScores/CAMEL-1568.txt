@@ -1,0 +1,4 @@
+CamelContext:0.0036
+ClassResolver:0.0036
+Exchange:0.0036
+IOHelper:0.1712

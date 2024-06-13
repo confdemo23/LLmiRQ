@@ -1,0 +1,6 @@
+Attribute:0.0062
+CacheComponent:0.0430
+CacheConfigurationBuilder:0.0062
+Capability:0.0062
+ConfigurationBuilder:0.0062
+ValueDependency:0.0062

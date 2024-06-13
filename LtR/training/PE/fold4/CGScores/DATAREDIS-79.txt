@@ -1,0 +1,10 @@
+QueryUtils:0.0022
+RedisCallback:0.0036
+RedisConnection:0.0564
+RedisConnectionUtils:0.0102
+RedisSerializer:0.0075
+SerializationUtils:0.0049
+SessionCallback:0.0022
+SortQuery:0.0036
+TimeoutUtils:0.0036
+Tuple:0.0036

@@ -1,0 +1,2 @@
+Hex:0.1265
+StringUtils:0.0371

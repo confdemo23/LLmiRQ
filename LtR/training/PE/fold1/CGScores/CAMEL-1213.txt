@@ -1,0 +1,8 @@
+CamelContext:0.0091
+CamelTestSupport:0.0091
+Exchange:0.0315
+JmsMessage:0.0091
+Message:0.0203
+MockEndpoint:0.0091
+ProducerTemplate:0.0091
+RouteDefinition:0.0427

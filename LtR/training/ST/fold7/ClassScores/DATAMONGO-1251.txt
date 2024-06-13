@@ -1,0 +1,3 @@
+MongoTemplate:0.2083
+QueryMapper:0.1667
+UpdateMapper:0.1875

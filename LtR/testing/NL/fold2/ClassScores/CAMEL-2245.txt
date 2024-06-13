@@ -1,0 +1,7 @@
+AsyncCallback:0.2703
+CamelContext:0.2432
+DefaultErrorHandler:0.4324
+DefaultExchange:0.3243
+Exchange:0.1351
+ExchangeHelper:0.2973
+Route:0.0541

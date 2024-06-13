@@ -1,0 +1,4 @@
+PayloadLoggingInterceptor:0.4889
+PayloadRootQNameEndpointMapping:0.6222
+SoapEndpointInterceptor:0.4444
+SoapMessageDispatcher:0.4000

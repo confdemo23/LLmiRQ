@@ -1,0 +1,4 @@
+LinearConstraint:0.2889
+LinearObjectiveFunction:0.4444
+SimplexSolver:0.2222
+SimplexTableau:0.2444

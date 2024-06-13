@@ -1,0 +1,10 @@
+AbstractWriteAttributeHandler:0.3630
+DeploymentScannerExtension:0.3243
+DeploymentScannerRemove:0.3860
+DeploymentScannerSetupTask:0.3764
+DeploymentScannerSubsystemAdd:0.3534
+DeploymentScannerSubsystemDefinition:0.3911
+FileSystemDeploymentScanHandler:0.3791
+WriteDeploymentTimeoutAttributeHandler:0.3788
+WriteEnabledAttributeHandler:0.3855
+WriteRuntimeFailureCausesRollbackAttributeHandler:0.3035

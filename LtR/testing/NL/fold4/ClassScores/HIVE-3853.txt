@@ -1,0 +1,10 @@
+ExprNodeGenericFuncEvaluator:0.6098
+FunctionRegistry:0.3171
+GenericUDFUnixTimeStamp:0.4878
+HiveConf:0.1220
+ObjectInspector:0.2927
+Optimizer:0.1463
+PredicatePushDown:0.3415
+SemanticAnalyzer:0.3171
+TypeCheckProcFactory:0.4146
+UDF:0.0000

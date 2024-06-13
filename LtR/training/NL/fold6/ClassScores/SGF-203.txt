@@ -1,0 +1,6 @@
+ClientRegionFactoryBean:0.5385
+GemfireCache:0.2564
+GemfireOperations:0.3846
+GemfireRepository:0.3846
+GemfireTemplate:0.3333
+RegionFactoryBean:0.3846

@@ -1,0 +1,5 @@
+MavenOperations:0.2927
+Pom:0.0000
+PomManagementServiceImpl:0.5122
+ProjectOperations:0.3415
+XmlElementBuilder:0.3415

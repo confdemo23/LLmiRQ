@@ -1,0 +1,1 @@
+WeldApplicationFactory:0.4000

@@ -1,0 +1,10 @@
+AuthenticationException:0.0209
+AuthenticationManagerBuilder:0.0795
+ExpressionInterceptUrlRegistry:0.0194
+HttpSecurity:0.0689
+RedirectStrategy:0.0191
+RedirectUrlBuilder:0.1496
+RememberMeServices:0.0212
+SecurityContextHolder:0.0212
+UrlUtils:0.0380
+UserDetailsBuilder:0.0194

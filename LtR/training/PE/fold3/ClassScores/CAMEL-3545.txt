@@ -1,0 +1,5 @@
+BeanExpression:0.2973
+MethodCallExpression:0.4595
+ObjectHelper:0.2432
+RegistryBean:0.2432
+SimpleTest:0.1892

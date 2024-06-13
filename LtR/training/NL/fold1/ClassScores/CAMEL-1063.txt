@@ -1,0 +1,2 @@
+CamelContext:0.2432
+SqlComponent:0.2432

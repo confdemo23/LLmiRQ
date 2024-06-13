@@ -1,0 +1,6 @@
+CollectionUtils:0.0005
+CommandListener:0.0018
+ExecutionStrategy:0.0018
+HandlerUtils:0.0011
+Parser:0.0005
+Tailor:0.0005

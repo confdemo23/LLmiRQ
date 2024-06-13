@@ -1,0 +1,10 @@
+AuthenticationConfiguration:0.0114
+AuthenticationManager:0.0241
+AuthenticationManagerBuilder:0.1006
+AuthorizedUrl:0.0114
+CsrfConfigurer:0.0114
+ExpressionInterceptUrlRegistry:0.0241
+HttpSecurity:0.1006
+ObjectPostProcessor:0.0114
+UserDetailsService:0.0241
+WebSecurity:0.0241

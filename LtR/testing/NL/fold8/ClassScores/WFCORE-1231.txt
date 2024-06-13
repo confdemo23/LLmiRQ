@@ -1,0 +1,2 @@
+AbstractPatchingTestCase:0.5385
+PatchingTestUtil:0.3333

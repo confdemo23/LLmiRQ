@@ -1,0 +1,7 @@
+Authentication:0.0083
+GrantedAuthoritiesMapper:0.0019
+SpringSecurityMessageSource:0.0019
+UserCache:0.0040
+UserDetails:0.0125
+UserDetailsChecker:0.0062
+UsernamePasswordAuthenticationToken:0.0019

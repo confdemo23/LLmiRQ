@@ -1,0 +1,10 @@
+CamelContext:0.0276
+CamelJmsTemplate:0.0229
+Exchange:0.0298
+ExecutorServiceManager:0.0207
+JmsConfiguration:0.0160
+JmsEndpoint:0.1263
+Message:0.0367
+ObjectHelper:0.0204
+ReplyManager:0.0194
+SjmsEndpoint:0.0232

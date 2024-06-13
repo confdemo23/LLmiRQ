@@ -1,0 +1,10 @@
+AbstractJpaQuery:0.1404
+JpaParameter:0.0815
+JpaParameters:0.0077
+JpaQueryMethod:0.1088
+ParameterBinder:0.0154
+ParameterBinding:0.0154
+PersistenceProvider:0.0211
+QueryUtils:0.0456
+StoredProcedureJpaQuery:0.0211
+StringQuery:0.1096

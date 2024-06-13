@@ -1,0 +1,2 @@
+PagedResultsCookie:0.3333
+PagedResultsRequestControl:0.5111

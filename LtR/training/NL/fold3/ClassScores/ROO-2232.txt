@@ -1,0 +1,2 @@
+JpaEntityMetadataProvider:0.5366
+RooWebMvcConfiguration:0.4634

@@ -1,0 +1,4 @@
+CriteriaDefinition:0.0077
+Field:0.0009
+Meta:0.0191
+MongoPersistentProperty:0.0091

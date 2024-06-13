@@ -1,0 +1,10 @@
+ContainerRunnerImpl:0.3721
+Handler:0.0930
+LlapDaemon:0.1628
+LlapDaemonProtocolProtos:0.4884
+QueryFragmentInfo:0.3256
+QueryInfo:0.1395
+QueryTracker:0.2093
+Server:0.0698
+TaskExecutorService:0.3721
+Worker:0.0698

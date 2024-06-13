@@ -1,0 +1,3 @@
+CreateNamespaceProcedure:0.4375
+ProcedureExecutor:0.2917
+TableNamespaceManager:0.3750

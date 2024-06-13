@@ -1,0 +1,7 @@
+BeeLine:0.0015
+BeelineParser:0.0015
+Builder:0.0070
+ErrorMsg:0.0180
+HeuristicStats:0.0541
+HiveQueryResultSet:0.0070
+HiveSQLException:0.0060

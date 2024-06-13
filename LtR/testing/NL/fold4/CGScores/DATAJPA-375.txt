@@ -1,0 +1,10 @@
+CrudMethodMetadataPostProcessor:0.0106
+Jpa21Utils:0.0089
+JpaEntityInformationSupport:0.0102
+JpaParameters:0.0132
+JpaQueryCreator:0.0185
+JpaQueryMethod:0.1030
+ParameterBinder:0.0079
+ParameterMetadata:0.0172
+PersistenceProvider:0.0102
+QueryUtils:0.0086

@@ -1,0 +1,10 @@
+AbstractConnectionFactory:0.0072
+Binding:0.0140
+CacheMode:0.0023
+ChannelCachingConnectionProxy:0.0296
+ChannelProxy:0.0071
+Connection:0.0048
+Exchange:0.0112
+Queue:0.0083
+RabbitTemplate:0.0060
+RabbitUtils:0.0060

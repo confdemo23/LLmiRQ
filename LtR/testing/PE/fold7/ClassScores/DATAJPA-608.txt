@@ -1,0 +1,2 @@
+JpaPersistentEntityImpl:0.4348
+JpaPersistentProperty:0.3913

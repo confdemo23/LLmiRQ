@@ -1,0 +1,8 @@
+BufferedMutator:0.0123
+Bytes:0.0034
+Connection:0.0079
+ConnectionFactory:0.0034
+HBaseConfiguration:0.0034
+ImmutableBytesWritable:0.0079
+Put:0.0034
+TableName:0.0034

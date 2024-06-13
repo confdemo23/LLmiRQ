@@ -1,0 +1,10 @@
+BigFraction:0.0417
+BigFractionField:0.0030
+EnumeratedRealDistribution:0.0065
+FastMath:0.1015
+FieldMatrix:0.0065
+KolmogorovSmirnovTest:0.0065
+MathArrays:0.0206
+MatrixUtils:0.0030
+RealDistribution:0.0065
+RealMatrix:0.0065

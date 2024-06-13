@@ -1,0 +1,10 @@
+ConfVars:0.0057
+ETLSplitStrategy:0.0018
+FooterCache:0.0043
+HadoopShims:0.0090
+HdfsFileStatusWithId:0.0091
+HiveConf:0.0126
+OrcInputFormat:0.0043
+ShimLoader:0.0045
+SplitGenerator:0.0018
+SplitStrategyKind:0.0018

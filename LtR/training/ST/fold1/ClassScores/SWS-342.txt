@@ -1,0 +1,1 @@
+AbstractAnnotationMethodEndpointMapping:0.7955

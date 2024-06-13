@@ -1,0 +1,10 @@
+AggregationExprCheck:0.0079
+CTEClause:0.0214
+CliDriver:0.0166
+ConstantExprCheck:0.0079
+ExprNodeGenericFuncDesc:0.0312
+HdfsEncryptionShim:0.0079
+SemanticAnalyzer:0.0574
+SortBucketRSCtx:0.0349
+TypeCheckProcFactory:0.1002
+Utils:0.0068

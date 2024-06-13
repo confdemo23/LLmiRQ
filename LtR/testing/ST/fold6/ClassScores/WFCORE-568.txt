@@ -1,0 +1,2 @@
+DeploymentStructureDescriptorParser:0.6596
+JBossDeploymentStructureParser11:0.5957

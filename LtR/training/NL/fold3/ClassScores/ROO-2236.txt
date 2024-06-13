@@ -1,0 +1,5 @@
+DbreMetadataProvider:0.4146
+JpaEntityAnnotationValues:0.5366
+JpaEntityMetadata:0.3415
+MemberFindingUtils:0.3659
+PhysicalTypeMetadata:0.4146

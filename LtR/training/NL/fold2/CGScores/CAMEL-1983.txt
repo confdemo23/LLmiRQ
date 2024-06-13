@@ -1,0 +1,10 @@
+Attachment:0.0316
+CxfBinding:0.0196
+CxfEndpoint:0.2209
+CxfPayload:0.0199
+DataFormat:0.0867
+Exchange:0.3706
+HeaderFilterStrategy:0.0316
+Message:0.1677
+ObjectHelper:0.0551
+RAWDataFormatFeature:0.0159

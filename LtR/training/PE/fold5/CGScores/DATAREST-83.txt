@@ -1,0 +1,6 @@
+BasePathAwareHandlerMapping:0.0369
+BaseUri:0.0241
+JpaHelper:0.0114
+RepositoryCorsConfigurationAccessor:0.0114
+RepositoryRestConfiguration:0.0369
+ResourceMappings:0.0369

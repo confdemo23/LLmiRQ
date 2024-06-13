@@ -1,0 +1,4 @@
+DefaultManagementObjectStrategy:0.6512
+FilterDefinition:0.3023
+FilterProcessor:0.2791
+WhenDefinition:0.2558

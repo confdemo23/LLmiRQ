@@ -1,0 +1,2 @@
+DefaultRedirectStrategy:0.4348
+SimpleUrlAuthenticationSuccessHandler:0.7391

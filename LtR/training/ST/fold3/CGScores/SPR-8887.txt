@@ -1,0 +1,8 @@
+ArgumentConvertingMethodInvoker:0.0238
+Assert:0.0238
+BeanFactory:0.0238
+BeanWrapper:0.0020
+ClassUtils:0.0238
+MethodInvoker:0.0103
+MutablePropertyValues:0.0072
+PropertyAccessorFactory:0.0020

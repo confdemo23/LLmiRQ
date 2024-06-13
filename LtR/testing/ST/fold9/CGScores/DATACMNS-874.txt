@@ -1,0 +1,10 @@
+ClassUtils:0.0297
+NullableWrapperToCompletableFutureConverter:0.0137
+NullableWrapperToJdk8OptionalConverter:0.0137
+NullableWrapperToScalaOptionConverter:0.0137
+Pageable:0.0247
+Parameters:0.0969
+ReactiveWrappers:0.0297
+Sort:0.0157
+ToJavaConverter:0.0137
+WrapperType:0.1019

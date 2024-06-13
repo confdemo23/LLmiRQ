@@ -1,0 +1,6 @@
+AuthenticationMechanismWrapper:0.5532
+LdapCacheService:0.2553
+LdapGroupSearcherFactory:0.4255
+LdapSubjectSupplementalService:0.5532
+RealmIdentityManager:0.3404
+SecurityRealmService:0.3404

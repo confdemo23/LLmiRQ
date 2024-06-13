@@ -1,0 +1,2 @@
+HibernateCursorItemReader:0.5116
+HibernateItemReaderHelper:0.5116

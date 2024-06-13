@@ -1,0 +1,2 @@
+Chromosome:0.1628
+GeneticAlgorithm:0.3023

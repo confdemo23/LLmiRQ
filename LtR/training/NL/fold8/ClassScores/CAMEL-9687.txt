@@ -1,0 +1,3 @@
+RestConfigurationDefinition:0.7813
+RestDefinition:0.3750
+RestSwaggerSupport:0.5000

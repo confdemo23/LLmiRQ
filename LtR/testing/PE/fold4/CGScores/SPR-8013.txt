@@ -1,0 +1,10 @@
+CollectionUtils:0.0025
+ContentNegotiationManager:0.0025
+ContentNegotiationManagerFactoryBean:0.0025
+HttpHeaders:0.0011
+HttpMethod:0.0038
+PathResourceResolver:0.0025
+Resource:0.0038
+ResourceHttpMessageConverter:0.0025
+ServletServerHttpRequest:0.0011
+StringUtils:0.0025

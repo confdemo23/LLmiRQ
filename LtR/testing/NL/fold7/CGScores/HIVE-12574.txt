@@ -1,0 +1,10 @@
+MultiValueBoundaryScanner:0.0165
+PTFDeserializer:0.0104
+PTFInvocation:0.0690
+PTFOperator:0.0022
+Range:0.0356
+RankLimit:0.0451
+SingleValueBoundaryScanner:0.0165
+StreamingState:0.0833
+ValueBoundaryScanner:0.0356
+WindowingFunctionInfoHelper:0.0165

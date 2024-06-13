@@ -1,0 +1,10 @@
+DefaultProducer:0.0028
+Exchange:0.0030
+InfinispanConfiguration:0.0030
+InfinispanManager:0.0044
+InfinispanUtil:0.0030
+Message:0.0647
+MockEndpoint:0.0017
+ObjectHelper:0.0130
+Operation:0.0047
+RouteDefinition:0.0037

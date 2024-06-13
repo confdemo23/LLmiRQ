@@ -1,0 +1,3 @@
+ExecMapper:0.1667
+HiveException:0.2381
+MapOperator:0.1905

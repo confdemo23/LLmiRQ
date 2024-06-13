@@ -1,0 +1,2 @@
+WebServiceTemplate:0.3333
+WebServiceTransportException:0.5556

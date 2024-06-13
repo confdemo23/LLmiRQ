@@ -1,0 +1,3 @@
+CamelContext:0.2432
+EndpointConfiguration:0.4865
+URISupport:0.1892

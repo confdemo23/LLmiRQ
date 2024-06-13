@@ -1,0 +1,7 @@
+CalcitePlanner:0.2558
+ExprNodeGenericFuncEvaluator:0.5814
+GenericUDFCase:0.2558
+GenericUDFOPGreaterThan:0.4651
+HiveTypeSystemImpl:0.3488
+SemanticAnalyzer:0.3023
+TypeCheckProcFactory:0.3953

@@ -1,0 +1,10 @@
+AppConfig:0.0257
+ExecService:0.0063
+HCatUtil:0.0037
+HcatDelegator:0.0418
+JsonBuilder:0.4190
+Main:0.0040
+SecureProxySupport:0.0150
+TempletonUtils:0.1099
+UgiFactory:0.0157
+VersionDelegator:0.0057

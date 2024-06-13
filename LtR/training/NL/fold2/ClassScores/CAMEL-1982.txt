@@ -1,0 +1,2 @@
+Endpoint:0.1463
+JmsBinding:0.1951

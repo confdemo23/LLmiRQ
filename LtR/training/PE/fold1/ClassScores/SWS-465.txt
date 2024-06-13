@@ -1,0 +1,2 @@
+MessageAddressingProperties:0.5333
+SimpleActionEndpointMapping:0.5333

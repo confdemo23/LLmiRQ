@@ -1,0 +1,8 @@
+CachingConnectionFactory:0.0463
+ChannelProxy:0.0218
+Connection:0.1447
+ConnectionFactory:0.1447
+Message:0.0463
+MessageProperties:0.0463
+SimpleMessageListenerContainer:1.0000
+TestUtils:0.2184

@@ -1,0 +1,2 @@
+DefaultMethodEndpointAdapter:0.6757
+XomPayloadMethodProcessor:0.5946

@@ -1,0 +1,6 @@
+BeeLine:0.1081
+HiveConf:0.1351
+HiveConnection:0.2973
+HiveSQLException:0.3514
+JdbcUriParseException:0.4865
+Utils:0.0541

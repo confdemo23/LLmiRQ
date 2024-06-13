@@ -1,0 +1,6 @@
+HiveConf:0.1875
+HiveDriver:0.2500
+HiveException:0.3438
+HiveSQLException:0.4375
+HiveServer2:0.2813
+HiveUtils:0.2188

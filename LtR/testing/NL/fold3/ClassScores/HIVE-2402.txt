@@ -1,0 +1,9 @@
+BaseSemanticAnalyzer:0.4390
+ExprNodeEvaluator:0.3659
+ExprNodeGenericFuncEvaluator:0.6341
+GenericUDFBaseCompare:0.4634
+HiveException:0.2683
+HiveStringUtils:0.3171
+QueryPlan:0.1707
+SemanticAnalyzer:0.3415
+TypeCheckProcFactory:0.4390

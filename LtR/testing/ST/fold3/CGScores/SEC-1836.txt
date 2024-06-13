@@ -1,0 +1,10 @@
+AbstractSecurityInterceptor:0.0524
+AccessDecisionManager:0.0096
+FilterInvocation:0.0222
+Matcher:0.0107
+RequestMatcher:0.0115
+SecurityContext:0.0158
+SecurityContextHolder:0.0158
+SecurityExpressionHandler:0.0158
+SecurityWebApplicationContextUtils:0.0101
+TagLibConfig:0.0200

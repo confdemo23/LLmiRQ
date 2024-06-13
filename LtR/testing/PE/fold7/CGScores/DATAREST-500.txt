@@ -1,0 +1,8 @@
+ControllerUtils:0.0683
+HttpRequestMethodNotSupportedException:0.0335
+PersistentEntityResource:0.0335
+PersistentEntityResourceAssembler:0.0451
+PropertyAwareResourceMapping:0.0219
+ResourceMapping:0.0219
+ResourceMetadata:0.0219
+RootResourceInformation:0.0915

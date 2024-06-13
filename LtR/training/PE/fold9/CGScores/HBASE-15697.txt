@@ -1,0 +1,10 @@
+Bytes:1.0000
+Cell:0.2538
+CellUtil:0.0714
+Get:0.0677
+HRegion:0.9171
+HTableDescriptor:0.0585
+InternalScanner:0.1101
+Put:0.4767
+Result:0.1616
+Scan:0.1137

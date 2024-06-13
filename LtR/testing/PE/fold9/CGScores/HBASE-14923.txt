@@ -1,0 +1,10 @@
+Bytes:0.0578
+Connection:0.0185
+FSUtils:0.0234
+HBaseConfiguration:0.0185
+ReplicationPeerConfig:0.0136
+Result:0.0578
+ResultScanner:0.0234
+Scan:0.0872
+Table:0.0234
+TableMapReduceUtil:0.0136

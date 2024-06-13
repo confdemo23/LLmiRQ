@@ -1,0 +1,8 @@
+Array2DRowRealMatrix:0.0396
+DecompositionSolver:0.0123
+EigenDecomposition:0.0533
+FastMath:0.0669
+MathArrays:0.0259
+RandomGenerator:0.0123
+RealMatrix:0.0669
+RealVector:0.0123

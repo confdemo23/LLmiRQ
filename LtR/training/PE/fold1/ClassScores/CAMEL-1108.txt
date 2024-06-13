@@ -1,0 +1,2 @@
+AggregationStrategy:0.3556
+MulticastProcessor:0.3333

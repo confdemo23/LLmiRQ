@@ -1,0 +1,8 @@
+ColumnInfo:0.2500
+ConstantPropagateProcFactory:0.8125
+DynamicPartitionCtx:0.5313
+ExprNodeColumnDesc:0.5000
+ExprNodeConstantDesc:0.5625
+ExprNodeDesc:0.3125
+HiveConf:0.1875
+SortedDynPartitionOptimizer:0.7813

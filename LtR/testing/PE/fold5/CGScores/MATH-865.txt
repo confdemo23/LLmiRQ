@@ -1,0 +1,10 @@
+CMAESOptimizer:0.0081
+ConvergenceChecker:0.0024
+EigenDecomposition:0.0024
+FastMath:0.0380
+FitnessFunction:0.0067
+GoalType:0.0010
+MathArrays:0.0039
+RandomGenerator:0.0024
+RealMatrix:0.2017
+Sigma:0.0010

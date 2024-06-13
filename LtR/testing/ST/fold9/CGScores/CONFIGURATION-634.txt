@@ -1,0 +1,10 @@
+AbstractConfiguration:0.0271
+BaseConfiguration:0.0124
+CompositeConfiguration:0.0124
+Configuration:0.0859
+ConfigurationUtils:0.0124
+FileLocationStrategy:0.0030
+FileLocator:0.1220
+FileLocatorBuilder:0.0565
+FileLocatorUtils:0.0267
+FileUtils:0.0030

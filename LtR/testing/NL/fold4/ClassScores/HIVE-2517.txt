@@ -1,0 +1,9 @@
+ASTNode:0.0976
+ExprNodeColumnDesc:0.3659
+ExprNodeDesc:0.2195
+ExprNodeGenericFuncDesc:0.4878
+GroupByOperator:0.2927
+SemanticAnalyzer:0.3171
+StructObjectInspector:0.4390
+TypeCheckProcFactory:0.4146
+UnionObjectInspector:0.4146

@@ -1,0 +1,4 @@
+ReduceRecordSource:0.3947
+TezProcessor:0.2368
+VectorizedBatchUtil:0.4211
+VectorizedRowBatchCtx:0.4737

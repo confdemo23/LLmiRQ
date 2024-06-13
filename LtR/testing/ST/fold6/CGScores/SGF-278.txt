@@ -1,0 +1,5 @@
+ContinuousQueryDefinition:0.0193
+ContinuousQueryListener:0.0025
+DefaultableDelegatingPoolAdapter:0.0025
+DelegatingPoolAdapter:0.0025
+ParsingUtils:0.0154

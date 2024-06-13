@@ -1,0 +1,10 @@
+Batch:0.0094
+Batcher:0.0078
+CacheProperties:0.0135
+InfinispanSessionManager:0.0219
+InfinispanSessionManagerConfiguration:0.0144
+InfinispanSessionMetaData:0.0149
+Session:0.0174
+SessionAttributesFactory:0.0085
+SessionFactory:0.0219
+SessionMetaDataFactory:0.0144

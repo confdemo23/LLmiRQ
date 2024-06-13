@@ -1,0 +1,10 @@
+AbstractItemStreamItemWriter:0.0335
+ExecutionContext:0.0566
+FileUtils:0.0039
+FlatFileItemWriter:0.0039
+LineAggregator:0.0039
+MultiResourceItemWriter:0.0053
+OutputState:0.0546
+ResourceAwareItemWriterItemStream:0.0442
+ResourceSuffixCreator:0.0053
+TransactionAwareBufferedWriter:0.0141

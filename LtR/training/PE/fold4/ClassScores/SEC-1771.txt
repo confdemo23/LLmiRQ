@@ -1,0 +1,4 @@
+Authentication:0.2222
+ProviderManager:0.2444
+TokenBasedRememberMeServices:0.5333
+UserDetailsService:0.3111

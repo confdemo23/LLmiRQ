@@ -1,0 +1,10 @@
+Bytes:0.0653
+HRegion:0.1414
+HRegionServer:0.0358
+ProtobufUtil:0.0407
+RegionInfo:0.0900
+Result:0.2190
+ResultScanner:0.1305
+Scan:0.1506
+ScannerCallable:0.0448
+Table:0.0670

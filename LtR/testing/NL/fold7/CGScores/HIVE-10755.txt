@@ -1,0 +1,10 @@
+Client:0.0139
+ConfVars:0.0286
+FooterCache:0.0217
+HadoopShims:0.0217
+HdfsFileStatusWithId:0.0460
+HiveConf:0.0634
+OrcInputFormat:0.0217
+ShimLoader:0.0117
+TableScanOperator:0.0269
+Utils:0.0174

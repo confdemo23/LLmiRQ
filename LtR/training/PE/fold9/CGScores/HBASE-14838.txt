@@ -1,0 +1,10 @@
+AssignmentManager:0.0069
+MasterRpcServices:0.0069
+MasterServices:0.0106
+PlanType:0.0106
+RegionInfo:0.0106
+RegionStates:0.0069
+RequestConverter:0.0069
+ServerManager:0.0032
+Size:0.0032
+TableName:0.0032

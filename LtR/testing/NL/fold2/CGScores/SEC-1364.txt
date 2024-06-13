@@ -1,0 +1,10 @@
+AuthenticationManager:0.0157
+AuthenticationManagerBuilder:0.0800
+BuildState:0.0189
+DefaultLoginPageGeneratingFilter:0.0340
+ExpressionInterceptUrlRegistry:0.0157
+HttpSecurity:0.0687
+ObjectPostProcessor:0.0331
+SecurityConfigurer:0.0293
+UsernamePasswordAuthenticationFilter:0.0220
+WebSecurity:0.0157

@@ -1,0 +1,7 @@
+AuthorityUtils:0.2391
+DelegatingSecurityContextRunnable:0.6522
+DelegatingSecurityContextScheduledExecutorService:1.0000
+GrantedAuthority:0.2826
+SecurityContext:0.2609
+SecurityContextHolder:0.3913
+UsernamePasswordAuthenticationToken:0.6957

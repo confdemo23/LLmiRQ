@@ -1,0 +1,2 @@
+FastMath:0.0287
+Precision:0.0016

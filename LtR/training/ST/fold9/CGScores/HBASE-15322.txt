@@ -1,0 +1,10 @@
+Bytes:0.0800
+Cell:0.0398
+FSUtils:0.0216
+HRegion:0.0375
+MasterCoprocessorHost:0.0256
+ModifyableTableDescriptor:0.0651
+RegionInfo:0.0274
+ServerName:0.0173
+TableDescriptor:0.0187
+TableName:0.0185

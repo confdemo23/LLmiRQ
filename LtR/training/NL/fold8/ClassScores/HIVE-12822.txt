@@ -1,0 +1,8 @@
+FieldSchema:0.2813
+HiveMetaHookLoader:0.5000
+HiveMetaStoreClient:0.5313
+MetaStoreSchemaInfo:0.5313
+SerDeInfo:0.2188
+StorageDescriptor:0.4688
+TColumn:0.1563
+ThriftHiveMetastore:0.5313

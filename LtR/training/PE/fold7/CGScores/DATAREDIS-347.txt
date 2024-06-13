@@ -1,0 +1,5 @@
+RedisConnection:0.0202
+RedisScript:0.0160
+RedisSerializer:0.0117
+RedisTemplate:0.0202
+ReturnType:0.0032

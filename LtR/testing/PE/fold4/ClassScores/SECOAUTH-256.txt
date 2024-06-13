@@ -1,0 +1,4 @@
+AuthorizationEndpoint:0.4865
+AuthorizationRequest:0.4595
+DefaultAuthenticationKeyGenerator:0.8108
+OAuth2Utils:0.2162

@@ -1,0 +1,4 @@
+HiveEndPoint:0.3125
+HiveMetaStoreClient:0.5313
+StreamingConnection:0.5313
+TransactionBatch:0.4375

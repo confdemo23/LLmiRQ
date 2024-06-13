@@ -1,0 +1,10 @@
+Attachment:0.0030
+Exchange:0.0264
+IdempotentRepository:0.0025
+MailConfiguration:0.0327
+MailEndpoint:0.0365
+MailMessage:0.0024
+MailUtils:0.0031
+Message:0.0183
+ObjectHelper:0.0051
+ScheduledBatchPollingConsumer:0.0018

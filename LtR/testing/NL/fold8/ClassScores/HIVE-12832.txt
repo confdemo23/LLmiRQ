@@ -1,0 +1,5 @@
+HiveMetaStore:0.2564
+MetaDataFormatUtils:0.4103
+MetaStoreUtils:0.2821
+ObjectStore:0.2051
+RawStore:0.1282

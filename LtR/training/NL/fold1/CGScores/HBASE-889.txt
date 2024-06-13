@@ -1,0 +1,10 @@
+CellBuilder:0.1946
+CellUtil:0.1181
+ColumnDescriptor:0.2501
+Delete:0.0784
+Get:0.1219
+ModifyableTableDescriptor:0.3307
+Put:0.1106
+Scan:0.2220
+TScan:0.3672
+Table:0.1512

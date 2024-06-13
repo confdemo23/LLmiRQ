@@ -1,0 +1,5 @@
+KDCServerAnnotationProcessor:0.0078
+KerberosTestUtils:0.0078
+ManagedCreateLdapServer:0.0257
+ManagedCreateTransport:0.0078
+Utils:0.0794

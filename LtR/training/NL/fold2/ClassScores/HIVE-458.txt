@@ -1,0 +1,8 @@
+HadoopShims:0.2195
+HiveConf:0.1463
+HiveDriver:0.1951
+HiveException:0.2683
+HiveMetaStoreClient:0.4146
+HiveUtils:0.1707
+QueryState:0.1951
+SessionState:0.2439

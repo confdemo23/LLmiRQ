@@ -1,0 +1,3 @@
+AttributesMapper:0.2667
+ContextMapper:0.2000
+LdapTemplate:0.1778

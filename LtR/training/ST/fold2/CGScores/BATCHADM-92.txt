@@ -1,0 +1,6 @@
+BatchMBeanExporter:0.0141
+CumulativeHistory:0.0135
+JobExecutionMetricsFactory:0.0039
+JobService:0.0535
+StepExecutionHistory:0.0208
+StepExecutionMetricsFactory:0.0039

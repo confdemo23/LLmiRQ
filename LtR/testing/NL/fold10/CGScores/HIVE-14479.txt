@@ -1,0 +1,10 @@
+CommonJoinOperator:0.0426
+ConfVars:0.0426
+HadoopShims:0.0201
+HdfsFileStatusWithId:0.0201
+HiveConf:0.0927
+MapJoinOperator:0.0915
+MergeQueue:0.0426
+ParsedDelta:0.0482
+SMBMapJoinOperator:0.0201
+VarType:0.0125

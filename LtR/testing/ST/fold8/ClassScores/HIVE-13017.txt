@@ -1,0 +1,3 @@
+HiveSQLException:0.2708
+MapredLocalTask:0.2500
+SQLOperation:0.1875

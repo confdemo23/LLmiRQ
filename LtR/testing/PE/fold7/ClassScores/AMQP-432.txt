@@ -1,0 +1,1 @@
+MessagePropertiesConverter:0.5000

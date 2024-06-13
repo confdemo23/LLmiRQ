@@ -1,0 +1,3 @@
+DistributableSession:0.2742
+InfinispanSession:0.2258
+InfinispanSessionManager:0.3387

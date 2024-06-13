@@ -1,0 +1,10 @@
+Admin:0.1502
+Bytes:0.5858
+Connection:0.1583
+HColumnDescriptor:0.1196
+HTableDescriptor:0.1207
+MasterKeepAliveConnection:0.2357
+ProtobufUtil:0.1369
+RequestConverter:0.1750
+Table:0.1196
+TableName:0.1788

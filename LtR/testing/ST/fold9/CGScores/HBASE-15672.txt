@@ -1,0 +1,10 @@
+Bytes:1.0000
+Cell:1.0000
+CellScanner:1.0000
+ConnectionFactory:0.6398
+Delete:1.0000
+Put:1.0000
+Result:0.8724
+ResultScanner:0.6813
+Scan:1.0000
+Table:1.0000

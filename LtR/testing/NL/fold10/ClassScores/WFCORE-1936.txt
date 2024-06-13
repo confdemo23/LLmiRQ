@@ -1,0 +1,8 @@
+AbstractSocketBindingResourceDefinition:0.9730
+AttributeDefinition:0.4324
+ManagementModel:0.3243
+OperationContext:0.3514
+OutboundSocketBinding:0.4865
+ReloadRequiredWriteAttributeHandler:0.8649
+SocketBinding:0.2703
+SocketBindingGroupResourceDefinition:0.8919

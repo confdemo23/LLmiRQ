@@ -1,0 +1,10 @@
+AuthorizationRequest:0.0291
+BaseRequest:0.0050
+ClientDetails:0.0019
+OAuth2AccessToken:0.0063
+OAuth2Authentication:0.0049
+OAuth2Exception:0.0063
+OAuth2Request:0.0049
+OAuth2Utils:0.0037
+RedirectResolver:0.0020
+UserApprovalHandler:0.0052

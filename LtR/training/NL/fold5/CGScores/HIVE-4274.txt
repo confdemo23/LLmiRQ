@@ -1,0 +1,10 @@
+Client:0.0170
+HCatSchemaUtils:0.0160
+HCatTable:0.3403
+HadoopThriftAuthBridge:0.0075
+ShimLoader:0.0075
+Table:0.2357
+TableAttribute:0.0611
+Type:0.0165
+Utils:0.0170
+_Fields:0.0030

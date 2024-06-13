@@ -1,0 +1,10 @@
+AnnotationMetadataBuilder:0.0488
+ClassOrInterfaceTypeDetails:0.0529
+FieldMetadata:0.0312
+InvocableMemberBodyBuilder:0.1357
+ItdTypeDetailsBuilder:0.0617
+JavaType:0.0876
+MemberFindingUtils:0.0343
+MetadataIdentificationUtils:0.0157
+MethodMetadataBuilder:0.0416
+PhysicalTypeIdentifierNamingUtils:0.0498

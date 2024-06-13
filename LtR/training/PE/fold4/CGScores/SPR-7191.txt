@@ -1,0 +1,10 @@
+AopAutoProxyConfigurer:0.0033
+AopNamespaceUtils:0.0033
+BeanDefinition:0.0033
+BeanDefinitionRegistry:0.0106
+CompositeComponentDefinition:0.0106
+MutablePropertyValues:0.0179
+ParserContext:0.0325
+RootBeanDefinition:0.0472
+TxNamespaceHandler:0.0033
+XmlReaderContext:0.0069

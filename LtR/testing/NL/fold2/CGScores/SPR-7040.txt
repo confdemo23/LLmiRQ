@@ -1,0 +1,10 @@
+Assert:0.0249
+CachedIntrospectionResults:0.0359
+ClassUtils:0.0287
+CustomEditorHolder:0.0620
+MutablePropertyValues:0.0517
+PropertyAccessorUtils:0.0413
+PropertyEditorRegistry:0.0507
+PropertyMatches:0.0302
+PropertyValue:0.0406
+TagWriter:0.0535

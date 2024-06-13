@@ -1,0 +1,6 @@
+HBaseKeyFactory:0.2927
+HBaseSerDe:0.1707
+HBaseStorageHandler:0.3902
+HBaseValueFactory:0.3415
+HiveHBaseTableInputFormat:0.5366
+HiveHBaseTableOutputFormat:0.5610

@@ -1,0 +1,4 @@
+AbstractConfiguredSecurityBuilder:0.6170
+AuthenticationManagerBuilder:0.5106
+AutowiredWebSecurityConfigurersIgnoreParents:0.8511
+SecurityConfig:0.2128

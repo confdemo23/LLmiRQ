@@ -1,0 +1,2 @@
+Callback:0.1000
+StompEndpoint:0.2000

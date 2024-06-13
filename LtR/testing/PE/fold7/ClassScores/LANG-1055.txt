@@ -1,0 +1,2 @@
+StrLookup:0.1304
+StrSubstitutor:0.2391

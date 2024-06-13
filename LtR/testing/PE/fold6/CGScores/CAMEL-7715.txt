@@ -1,0 +1,10 @@
+AbstractMessageHandler:0.0314
+CamelContext:0.0205
+ConnectionResource:0.0205
+Exchange:0.0587
+ExecutorServiceManager:0.0205
+Message:0.0205
+MessageConsumerResources:0.0314
+MessageProducerResources:0.0587
+SjmsComponent:0.0259
+SjmsEndpoint:0.2663

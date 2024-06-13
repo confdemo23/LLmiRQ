@@ -1,0 +1,4 @@
+DirContextProcessor:0.3556
+LdapTemplate:0.2000
+NameClassPairCallbackHandler:0.5556
+SearchExecutor:0.2444

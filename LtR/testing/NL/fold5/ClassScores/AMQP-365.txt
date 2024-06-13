@@ -1,0 +1,5 @@
+Message:0.0930
+MessageListener:0.2791
+RabbitTemplate:0.2558
+SimpleMessageListenerContainer:0.6279
+TestListener:0.2093

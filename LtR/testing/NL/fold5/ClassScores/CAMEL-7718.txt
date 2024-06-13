@@ -1,0 +1,3 @@
+InfinispanComponent:0.3721
+InfinispanConstants:0.3721
+InfinispanEndpoint:0.3488

@@ -1,0 +1,5 @@
+AcidUtils:0.1250
+HiveIOExceptionHandlerChain:0.5000
+HiveIOExceptionHandlerUtil:0.4792
+HiveInputFormat:0.2500
+OrcInputFormat:0.2292

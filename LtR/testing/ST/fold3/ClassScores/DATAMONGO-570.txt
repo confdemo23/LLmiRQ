@@ -1,0 +1,4 @@
+AbstractMongoQuery:0.2857
+MappingMongoConverter:0.3469
+MongoTemplate:0.1837
+QueryMapper:0.1429

@@ -1,0 +1,6 @@
+FieldCommands:0.2683
+FileUtils:0.1707
+JavaType:0.1463
+JpaEntityAnnotationValues:0.5610
+JpaOperationsImpl:0.3659
+RooJpaEntity:0.2439

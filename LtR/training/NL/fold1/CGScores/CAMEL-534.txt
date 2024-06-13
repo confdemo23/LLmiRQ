@@ -1,0 +1,10 @@
+CamelContext:0.0265
+DefaultEndpoint:0.0019
+Exchange:0.0094
+ExecutorServiceManager:0.0265
+Message:0.0094
+MinaConfiguration:0.1650
+MinaEndpoint:0.1128
+MinaPayloadHelper:0.0019
+ObjectHelper:0.0324
+TextLineCodecFactory:0.0145

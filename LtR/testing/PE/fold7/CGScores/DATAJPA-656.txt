@@ -1,0 +1,8 @@
+Jpa21Utils:0.0047
+JpaEntityInformation:0.0047
+JpaEntityInformationSupport:0.0047
+JpaOrder:0.0019
+PersistenceProvider:0.0047
+QueryByExamplePredicateBuilder:0.0047
+QueryUtils:0.0047
+Specification:0.0047

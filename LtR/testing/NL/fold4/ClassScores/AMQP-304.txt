@@ -1,0 +1,8 @@
+AbstractConnectionFactory:0.5366
+CachingConnectionFactory:0.5122
+ConnectionFactoryUtils:0.4634
+RabbitAdmin:0.1951
+RabbitListenerTestHarness:0.5366
+RabbitTemplate:0.2683
+RabbitUtils:0.1951
+SimpleMessageListenerContainer:0.6585

@@ -1,0 +1,10 @@
+AttributeDefinition:0.0613
+AttributeParser:0.0276
+Builder:0.2269
+ObjectMapAttributeDefinition:0.0118
+ParseUtils:0.0164
+PathAddress:0.0175
+PathElement:0.0750
+PersistentResourceDefinition:0.0482
+PersistentResourceXMLDescription:0.0210
+SimpleAttributeDefinitionBuilder:0.3835

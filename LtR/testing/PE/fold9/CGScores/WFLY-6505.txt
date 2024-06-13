@@ -1,0 +1,8 @@
+CalendarBasedTimeout:0.1202
+DayOfMonth:0.0162
+DayOfWeek:0.0104
+Hour:0.0104
+Minute:0.0162
+Month:0.0104
+Second:0.0220
+Year:0.0046

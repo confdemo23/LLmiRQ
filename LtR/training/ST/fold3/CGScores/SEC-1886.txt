@@ -1,0 +1,9 @@
+AnonymousAuthenticationFilter:0.0183
+DefaultSecurityFilterChain:0.0397
+ExceptionTranslationFilter:0.0183
+FilterChainProxy:0.0397
+FilterInvocationSecurityMetadataSource:0.0075
+FilterSecurityInterceptor:0.0290
+LoginUrlAuthenticationEntryPoint:0.0075
+RequestMatcher:0.0183
+SecurityFilterChain:0.0183

@@ -1,0 +1,3 @@
+BlockingQueueConsumer:0.3617
+CachingConnectionFactory:0.4255
+SimpleMessageListenerContainer:0.5532

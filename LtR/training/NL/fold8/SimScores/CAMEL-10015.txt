@@ -1,0 +1,10 @@
+AbstractBraintreeTestSupport:0.5574
+AddOnGatewayIntegrationTest:0.5066
+BraintreeComponent:0.6798
+BraintreeComponentAutoConfiguration:0.5698
+BraintreeConstants:1.0000
+BraintreeConsumer:0.8864
+BraintreeEndpoint:0.6779
+BraintreeProducer:0.9115
+BraintreePropertiesHelper:0.8682
+CamelBraintreeTest:0.8259

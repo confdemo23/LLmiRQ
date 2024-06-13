@@ -1,0 +1,10 @@
+CamelContext:0.0383
+DefaultExchange:0.0153
+Exchange:0.5832
+ExchangeHelper:0.0077
+ExchangePattern:0.0236
+Message:0.1184
+MessageHelper:0.0071
+ObjectHelper:0.0418
+TypeConverter:0.0177
+UnitOfWork:0.0112

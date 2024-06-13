@@ -1,0 +1,3 @@
+HiveMetaStore:0.1731
+ObjectStore:0.1346
+ThriftHiveMetastore:0.2885

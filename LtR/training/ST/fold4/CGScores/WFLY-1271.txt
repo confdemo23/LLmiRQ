@@ -1,0 +1,7 @@
+Attribute:0.0955
+ColumnAttribute:0.1152
+InfinispanSchema:0.0169
+ScheduledThreadPoolResourceDefinition:0.0955
+ThreadPoolResourceDefinition:0.0955
+XMLAttribute:0.0562
+XMLElement:0.5084

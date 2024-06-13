@@ -1,0 +1,8 @@
+ChannelHolder:0.0066
+Connection:0.0018
+ConnectionFactory:0.0018
+ConnectionFactoryUtils:0.0018
+ConsumerChannelRegistry:0.0018
+RabbitResourceHolder:0.0309
+RabbitUtils:0.0063
+ResourceFactory:0.0108

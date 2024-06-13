@@ -1,0 +1,10 @@
+ByteBufferExtendedCell:0.2142
+Bytes:0.1988
+Cell:0.6903
+HRegion:0.3268
+HStore:0.3191
+KeyValueHeap:0.1440
+PrivateCellUtil:0.1550
+RegionInfo:0.3197
+Scan:0.1403
+ScannerContext:0.1991

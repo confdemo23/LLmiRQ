@@ -1,0 +1,4 @@
+Hive:0.0488
+HiveMetaStore:0.2683
+LoadSemanticAnalyzer:0.4390
+MoveTask:0.1463

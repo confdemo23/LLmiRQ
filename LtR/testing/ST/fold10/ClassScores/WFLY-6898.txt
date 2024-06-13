@@ -1,0 +1,2 @@
+CMTTxInterceptor:0.3421
+EjbRequestScopeActivationInterceptor:0.8684

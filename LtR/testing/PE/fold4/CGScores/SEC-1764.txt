@@ -1,0 +1,5 @@
+Base64:0.0007
+Hex:0.0007
+Md4:0.0017
+PasswordEncoderUtils:0.0007
+Utf8:0.0017

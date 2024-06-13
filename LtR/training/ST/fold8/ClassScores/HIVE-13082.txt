@@ -1,0 +1,5 @@
+CommonJoinOperator:0.2419
+MapJoinOperator:0.1935
+ObjectInspectorFactory:0.3065
+Operator:0.0806
+StandardStructObjectInspector:0.4194

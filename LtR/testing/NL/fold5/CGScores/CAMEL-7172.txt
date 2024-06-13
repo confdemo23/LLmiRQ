@@ -1,0 +1,10 @@
+AsyncCallback:0.0257
+ChannelHandlerFactories:0.0298
+DefaultConsumer:0.0213
+Exchange:0.0391
+Message:0.0525
+NettyComponent:0.0916
+NettyConfiguration:0.3056
+NettyEndpoint:0.0168
+ObjectHelper:0.0264
+ServiceHelper:0.0168

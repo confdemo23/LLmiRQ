@@ -1,0 +1,10 @@
+CTEClause:0.0238
+HiveConf:0.0475
+HiveLexerX:0.0337
+HiveServer2:0.0300
+LogHelper:0.0251
+ResourceMaps:0.0330
+SemanticAnalyzer:0.0660
+SessionState:0.1439
+SortBucketRSCtx:0.0396
+Utils:0.0294

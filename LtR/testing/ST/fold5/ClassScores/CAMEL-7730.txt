@@ -1,0 +1,3 @@
+InfinispanComponentTest:0.3654
+InfinispanOperation:0.2885
+InfinispanProducer:0.2692

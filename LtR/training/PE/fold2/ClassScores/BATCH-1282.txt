@@ -1,0 +1,3 @@
+JobParserJobFactoryBean:0.4651
+JobRegistry:0.1860
+JobRegistryBeanPostProcessor:0.5814

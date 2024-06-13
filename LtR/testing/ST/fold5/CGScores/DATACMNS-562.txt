@@ -1,0 +1,10 @@
+ClassTypeInformation:0.1180
+DefaultPersistentPropertyPath:0.0435
+Lazy:0.2205
+Pair:0.0632
+ParameterizedTypeInformation:0.0758
+ParentTypeAwareTypeInformation:0.0562
+Property:0.2360
+PropertyPath:0.0646
+Streamable:0.0520
+TypeInformation:0.3174

@@ -1,0 +1,10 @@
+Authentication:0.0036
+AuthenticationConfiguration:0.0021
+AuthenticationEventPublisher:0.0023
+AuthenticationManager:0.0059
+AuthenticationManagerBuilder:0.0193
+AuthenticationProvider:0.0036
+ExpressionInterceptUrlRegistry:0.0046
+HttpSecurity:0.0193
+UserDetailsService:0.0046
+WebSecurity:0.0046

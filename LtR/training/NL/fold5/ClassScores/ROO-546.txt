@@ -1,0 +1,4 @@
+FieldCommands:0.2727
+FieldMetadata:0.2727
+FileManager:0.2121
+JpaEntityMetadata:0.3939

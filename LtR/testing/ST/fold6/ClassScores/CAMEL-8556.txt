@@ -1,0 +1,2 @@
+AnnotationTypeConverterLoader:0.5319
+BaseTypeConverterRegistry:0.4468

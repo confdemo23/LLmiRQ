@@ -1,0 +1,2 @@
+User:0.0000
+UserRepositoryFinderTests:0.4667

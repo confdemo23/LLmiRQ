@@ -1,0 +1,3 @@
+DynamicPartitionCtx:0.2581
+HiveMetaStoreClient:0.2581
+SemanticAnalyzer:0.2097

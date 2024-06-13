@@ -1,0 +1,1 @@
+StaxEventItemWriter:0.2885

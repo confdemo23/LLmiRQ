@@ -1,0 +1,10 @@
+Converters:0.0307
+GeoLocation:0.0627
+LettuceConnection:0.0254
+LettuceConverters:0.8083
+LettuceResult:0.0254
+LettuceSubscription:0.0254
+Limit:0.2011
+Range:0.1852
+RedisCommand:0.0201
+RedisNode:0.0414

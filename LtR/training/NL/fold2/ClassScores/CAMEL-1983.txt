@@ -1,0 +1,6 @@
+CxfComponent:0.2439
+CxfConsumer:0.2195
+CxfEndpoint:0.2195
+CxfHeaderFilterStrategy:0.5122
+CxfProducer:0.2195
+DefaultCxfBinding:0.3659

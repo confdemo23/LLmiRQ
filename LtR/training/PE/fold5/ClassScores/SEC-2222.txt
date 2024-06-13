@@ -1,0 +1,2 @@
+EnableWebSecurity:0.3111
+WebSecurityConfigurerAdapter:0.5556

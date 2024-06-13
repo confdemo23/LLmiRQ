@@ -1,0 +1,3 @@
+MeanTest:0.1190
+TestUtils:0.1429
+UnivariateStatisticAbstractTest:0.6667

@@ -1,0 +1,3 @@
+AdviceWithRouteBuilder:0.4130
+ModelCamelContext:0.3043
+RouteDefinition:0.2609

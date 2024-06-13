@@ -1,0 +1,2 @@
+CliAdapter:0.0025
+CliConfig:0.0005

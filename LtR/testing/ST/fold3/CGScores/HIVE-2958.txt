@@ -1,0 +1,3 @@
+GroupByOperator:0.0115
+MapOpCtx:0.0205
+MapOperator:0.0020

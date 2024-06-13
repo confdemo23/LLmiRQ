@@ -1,0 +1,10 @@
+AbstractConfiguration:0.0854
+BaseConfiguration:0.0203
+Builder:0.0407
+CompositeConfiguration:0.0203
+Configuration:0.2175
+ConfigurationInterpolator:0.1153
+ConfigurationUtils:0.0417
+ConversionHandler:0.0300
+ListDelimiterHandler:0.0193
+Synchronizer:0.0407

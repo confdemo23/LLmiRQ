@@ -1,0 +1,2 @@
+CommonsXsdSchemaCollection:0.5000
+SaxUtils:0.0909

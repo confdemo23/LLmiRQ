@@ -1,0 +1,2 @@
+MinaConsumer:0.2564
+MinaEndpoint:0.2564

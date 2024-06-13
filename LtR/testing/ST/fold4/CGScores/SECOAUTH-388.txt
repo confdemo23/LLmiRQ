@@ -1,0 +1,10 @@
+AccessTokenProvider:0.0540
+AccessTokenRequest:0.0469
+AuthenticationScheme:0.0183
+ClientAuthenticationHandler:0.0064
+ClientCredentialsResourceDetails:0.0254
+ClientTokenServices:0.0254
+OAuth2AccessToken:0.0373
+OAuth2ClientContext:0.0254
+OAuth2ProtectedResourceDetails:0.0588
+UserRedirectRequiredException:0.0111

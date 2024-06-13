@@ -1,0 +1,3 @@
+HttpComponent:0.2683
+HttpEndpoint:0.2439
+HttpProducer:0.2439

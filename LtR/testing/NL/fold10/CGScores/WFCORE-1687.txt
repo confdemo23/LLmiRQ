@@ -1,0 +1,10 @@
+AttachedDependency:0.1115
+DeploymentUnit:0.5288
+DeploymentUtils:0.0909
+Factory:0.0695
+OperationContext:0.1654
+PathAddress:0.2525
+PathElement:0.2086
+Resource:0.4135
+ResourceDefinition:0.0727
+SimpleAttributeDefinition:0.1353

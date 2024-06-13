@@ -1,0 +1,9 @@
+BloomFilterIO:0.2703
+ColumnStatistics:0.3514
+ConvertAstToSearchArg:0.4865
+OrcFile:0.1081
+OrcInputFormat:0.2973
+OrcStruct:0.1622
+PredicateLeaf:0.2703
+SearchArgumentImpl:0.4054
+TypeDescription:0.3243

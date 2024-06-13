@@ -1,0 +1,3 @@
+HCatHadoopShims:0.0061
+HadoopShims:0.0061
+ShimLoader:0.0061

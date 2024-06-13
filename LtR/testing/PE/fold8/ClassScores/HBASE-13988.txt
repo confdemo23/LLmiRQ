@@ -1,0 +1,3 @@
+HRegionServer:0.2000
+LogRoller:0.1200
+MemStoreFlusher:0.2400

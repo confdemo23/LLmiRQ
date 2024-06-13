@@ -1,0 +1,3 @@
+ConditionalRejectingErrorHandler:0.0088
+FatalExceptionStrategy:0.0088
+ListenerExecutionFailedException:0.0088

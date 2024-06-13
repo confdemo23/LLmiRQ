@@ -1,0 +1,4 @@
+CamelTestSupport:0.3514
+JndiContext:0.2162
+JndiRegistry:0.2432
+JndiTest:0.1351

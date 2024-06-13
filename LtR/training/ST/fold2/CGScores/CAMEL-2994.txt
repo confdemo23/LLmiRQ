@@ -1,0 +1,5 @@
+AsyncCallback:0.0084
+CookieHandler:0.0084
+CxfBinding:0.0084
+CxfEndpoint:0.0372
+Exchange:0.0084

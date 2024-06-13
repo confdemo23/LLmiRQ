@@ -1,0 +1,7 @@
+AbstractSecurityInterceptor:0.5854
+HttpSecurity:0.2195
+MethodSecurityInterceptor:0.5366
+SecurityContextHolder:0.4390
+SecurityContextPersistenceFilter:0.7073
+SecurityFilterChain:0.3902
+WebSecurityConfigurerAdapter:0.6098

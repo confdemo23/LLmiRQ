@@ -1,0 +1,10 @@
+CTEClause:0.0233
+ConfVars:0.0208
+CreateTableDesc:0.0595
+DDLSemanticAnalyzer:0.0220
+HiveConf:0.0460
+MetaStoreUtils:0.0334
+QualifiedNameUtil:0.0280
+SemanticAnalyzer:0.0636
+SortBucketRSCtx:0.0384
+Utils:0.0176

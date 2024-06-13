@@ -1,0 +1,2 @@
+JpaMetamodelEntityInformation:0.4808
+SimpleJpaRepository:0.2885

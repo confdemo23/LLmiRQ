@@ -1,0 +1,10 @@
+GeneralPurposeBit:0.0109
+StreamCompressor:0.0248
+Zip64ExtendedInformationExtraField:0.0099
+ZipArchiveEntry:0.1558
+ZipEightByteInteger:0.0144
+ZipEncoding:0.0100
+ZipLong:0.0476
+ZipMethod:0.0097
+ZipShort:0.0109
+ZipUtil:0.0098

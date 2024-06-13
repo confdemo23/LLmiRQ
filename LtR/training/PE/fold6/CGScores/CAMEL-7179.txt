@@ -1,0 +1,10 @@
+CamelContext:0.0028
+ChainedCxfRsEndpointConfigurer:0.0069
+CxfRsEndpoint:0.0028
+CxfRsEndpointConfigurer:0.0069
+DefaultEndpoint:0.0028
+EndpointHelper:0.0028
+HeaderFilterStrategyAware:0.0028
+InterceptorHolder:0.0639
+ObjectHelper:0.0028
+SslCxfRsEndpointConfigurer:0.0028

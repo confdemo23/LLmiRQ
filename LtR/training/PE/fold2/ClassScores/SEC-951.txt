@@ -1,0 +1,5 @@
+AccessControlEntryImpl:0.4419
+Acl:0.0000
+AclImpl:0.0930
+BasicLookupStrategy:0.3721
+EhCacheBasedAclCache:0.3953

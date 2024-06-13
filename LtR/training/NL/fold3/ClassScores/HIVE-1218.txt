@@ -1,0 +1,4 @@
+CreateTableLikeDesc:0.3902
+HiveMetaStoreClient:0.3902
+Metastore:0.1463
+Table:0.0488

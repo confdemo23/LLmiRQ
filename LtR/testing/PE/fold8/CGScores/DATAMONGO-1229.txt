@@ -1,0 +1,5 @@
+Criteria:0.0127
+GeoSpatialIndexed:0.0024
+MongoPersistentProperty:0.0059
+MongoRegexCreator:0.0024
+Query:0.0024

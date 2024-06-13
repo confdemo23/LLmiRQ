@@ -1,0 +1,2 @@
+JndiViewOperation:0.2766
+Resource:0.0851

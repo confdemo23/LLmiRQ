@@ -1,0 +1,5 @@
+DateWritable:0.2093
+HiveQueryResultSet:0.3488
+HiveStringUtils:0.2791
+TimestampWritable:0.3256
+TypeCheckProcFactory:0.3953

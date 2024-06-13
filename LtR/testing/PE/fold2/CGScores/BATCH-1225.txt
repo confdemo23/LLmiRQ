@@ -1,0 +1,10 @@
+AbstractItemStreamItemWriter:0.0544
+ExecutionContext:0.1209
+FileUtils:0.0168
+FlatFileItemWriter:0.0071
+LineAggregator:0.0071
+OutputState:0.0986
+StaxUtils:0.0076
+StaxWriterCallback:0.0173
+TransactionAwareBufferedWriter:0.0544
+UnclosedElementCollectingEventWriter:0.0076

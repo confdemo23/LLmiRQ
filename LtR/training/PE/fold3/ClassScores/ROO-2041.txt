@@ -1,0 +1,3 @@
+DeclaredFieldAnnotationDetails:0.7297
+ItdTypeDetailsBuilder:0.4865
+MemberFindingUtils:0.4054

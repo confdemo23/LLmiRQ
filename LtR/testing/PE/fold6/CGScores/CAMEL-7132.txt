@@ -1,0 +1,10 @@
+CamelContext:0.0168
+CamelExchangeException:0.0023
+Exchange:0.0096
+IOHelper:0.0123
+IntrospectionSupport:0.0123
+ObjectHelper:0.0259
+QuartzEndpoint:0.0574
+QuartzHelper:0.0191
+ResourceHelper:0.0055
+UriEndpointComponent:0.0123

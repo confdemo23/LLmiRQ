@@ -1,0 +1,5 @@
+HiveConf:0.1463
+HiveMetaStore:0.2683
+HiveMetaStoreClient:0.4146
+HiveStringUtils:0.3171
+JDOConnectionURLHook:0.4390

@@ -1,0 +1,2 @@
+MessageDispatcherServlet:0.5526
+WsdlDefinitionHandlerAdapter:0.6579

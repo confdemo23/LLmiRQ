@@ -1,0 +1,10 @@
+AmqpTemplate:0.2195
+Binding:0.0976
+DirectMessageListenerContainer:0.6585
+MessageListenerAdapter:0.4634
+Queue:0.0488
+RabbitAdmin:0.1951
+RabbitConnectionFactoryBean:0.5854
+RabbitTemplate:0.2683
+SimpleMessageListenerContainer:0.6585
+TopicExchange:0.2439

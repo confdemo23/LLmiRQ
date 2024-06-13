@@ -1,0 +1,2 @@
+BracketFinder:0.1613
+NonLinearConjugateGradientOptimizer:0.5161

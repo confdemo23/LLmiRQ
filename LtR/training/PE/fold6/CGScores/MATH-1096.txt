@@ -1,0 +1,7 @@
+DiskGenerator:0.0107
+EnclosingBall:0.1595
+RandomGenerator:0.0404
+SphereGenerator:0.0047
+UnitSphereRandomVectorGenerator:0.0107
+Vector2D:0.0226
+WelzlEncloser:0.0464

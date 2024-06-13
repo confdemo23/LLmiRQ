@@ -1,0 +1,7 @@
+DynamicStubFactoryFactory:0.0020
+EJBComponent:0.0241
+EJBSecurityMetaData:0.0008
+EjbCorbaServant:0.0020
+InterfaceRepository:0.0082
+ReferenceFactory:0.0045
+ServantRegistry:0.0045

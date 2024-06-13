@@ -1,0 +1,3 @@
+CombinedConfiguration:0.4000
+SubnodeConfiguration:0.3778
+XMLConfiguration:0.2889

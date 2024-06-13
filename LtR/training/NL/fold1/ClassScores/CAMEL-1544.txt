@@ -1,0 +1,9 @@
+CamelContext:0.2432
+Consumer:0.1351
+ConsumerCache:0.2703
+DefaultCamelContext:0.4324
+DefaultEndpoint:0.3243
+DefaultRoute:0.2432
+Endpoint:0.1351
+Route:0.0541
+ServiceSupport:0.2973

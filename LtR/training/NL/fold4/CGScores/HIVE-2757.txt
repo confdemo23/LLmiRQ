@@ -1,0 +1,10 @@
+CombineFileInputFormatShim:0.0034
+ConfVars:0.0237
+EncoderDecoder:0.0045
+HdfsEncryptionShim:0.0034
+HiveConf:0.0511
+MiniSparkOnYARNCluster:0.0213
+SchedulerShim:0.0034
+ShimLoader:0.0034
+Utils:0.0062
+VarType:0.0072

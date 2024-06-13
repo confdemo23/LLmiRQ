@@ -1,0 +1,7 @@
+CamelContext:0.2093
+ConnectionFactoryResource:0.5116
+DefaultCamelContext:0.3721
+Exchange:0.1163
+Processor:0.1395
+RouteBuilder:0.2093
+SjmsComponent:0.2326

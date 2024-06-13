@@ -1,0 +1,10 @@
+AbstractJob:0.0224
+AbstractJobTests:0.0549
+BatchStatus:0.0091
+CompositeJobExecutionListener:0.0203
+ExitStatus:0.0203
+JobExecution:0.1021
+JobInterruptedException:0.0091
+JobRepository:0.0091
+JobSynchronizationManager:0.0091
+StepExecution:0.0117

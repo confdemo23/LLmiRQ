@@ -1,0 +1,10 @@
+ASTNode:0.0505
+CTEClause:0.0238
+DDLSemanticAnalyzer:0.0224
+Hive:0.0185
+ObjectStore:0.1607
+QualifiedNameUtil:0.0287
+QueryWrapper:0.0772
+SemanticAnalyzer:0.0660
+SortBucketRSCtx:0.0396
+Utils:0.0152

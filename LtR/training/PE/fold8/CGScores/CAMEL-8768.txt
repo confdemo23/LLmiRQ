@@ -1,0 +1,3 @@
+HdfsConfiguration:0.0312
+HdfsFileType:0.0081
+HdfsInfo:0.0266

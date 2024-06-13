@@ -1,0 +1,3 @@
+BloomFilter:0.2813
+HashTableLoader:0.4063
+ObjectCache:0.2813

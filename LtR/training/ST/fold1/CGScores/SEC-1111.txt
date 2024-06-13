@@ -1,0 +1,10 @@
+AbstractAuthenticationProcessingFilter:0.0192
+AbstractRememberMeServices:0.0192
+Authentication:0.0513
+CsrfToken:0.0192
+SpringSecurityMessageSource:0.0119
+UserCache:0.0250
+UserDetails:0.0776
+UserDetailsChecker:0.0382
+UsernamePasswordAuthenticationFilter:0.0398
+UsernamePasswordAuthenticationToken:0.0119

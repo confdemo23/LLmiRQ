@@ -1,0 +1,6 @@
+DefaultProducer:0.0016
+Expression:0.0039
+JpaEndpoint:0.0107
+QueryBuilder:0.0084
+QueryFactory:0.0016
+SimpleLanguage:0.0016

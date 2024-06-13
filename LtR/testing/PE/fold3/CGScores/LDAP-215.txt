@@ -1,0 +1,4 @@
+AttributeValueCallbackHandler:0.0012
+LdapUtils:0.0481
+NameAwareAttribute:0.0481
+NameAwareAttributes:0.1387

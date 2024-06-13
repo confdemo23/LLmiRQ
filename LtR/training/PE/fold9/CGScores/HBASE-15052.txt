@@ -1,0 +1,10 @@
+MetricsReplicationSourceSource:0.1367
+MetricsSource:0.0109
+ReplicationEndpoint:0.0337
+ReplicationPeers:0.0080
+ReplicationSource:0.0080
+ReplicationSourceManager:0.0052
+ReplicationSourceShipper:0.0308
+ReplicationThrottler:0.0166
+Server:0.0080
+Threads:0.0080

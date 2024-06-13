@@ -1,0 +1,8 @@
+Driver:0.0811
+Hive:0.0270
+HiveConf:0.1351
+HiveHistory:0.2162
+HiveMetaStoreClient:0.4324
+HookContext:0.2162
+QueryPlan:0.1622
+SessionState:0.2432

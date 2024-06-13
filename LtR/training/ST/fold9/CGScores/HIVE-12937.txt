@@ -1,0 +1,8 @@
+CleanerThread:0.0023
+GetDbHelper:0.0002
+GetHelper:0.0016
+GetStatHelper:0.0002
+HadoopShims:0.0002
+ObjectStore:0.0303
+QueryWrapper:0.0146
+ShimLoader:0.0002

@@ -1,0 +1,6 @@
+CamelContext:0.2432
+ModelCamelContext:0.3784
+Processor:0.1622
+RouteBuilder:0.2432
+SpringCamelContext:0.4054
+Tracer:0.0811

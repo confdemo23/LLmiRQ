@@ -1,0 +1,10 @@
+AnnotationMetadataBuilder:0.0983
+ClassOrInterfaceTypeDetails:0.0706
+FieldMetadata:0.2053
+Identifier:0.0759
+InvocableMemberBodyBuilder:0.2723
+JavaSymbolName:0.1498
+JavaType:0.1492
+JpaEntityAnnotationValues:0.1320
+MemberDetails:0.0911
+MemberHoldingTypeDetails:0.0805

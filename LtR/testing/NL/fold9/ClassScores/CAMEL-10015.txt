@@ -1,0 +1,4 @@
+ApiName:0.1563
+BraintreeComponent:0.5000
+BraintreeConfiguration:0.6250
+BraintreeEndpoint:0.4688

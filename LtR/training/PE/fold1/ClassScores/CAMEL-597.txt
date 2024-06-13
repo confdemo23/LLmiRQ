@@ -1,0 +1,1 @@
+JmsQueueEndpoint:0.2889

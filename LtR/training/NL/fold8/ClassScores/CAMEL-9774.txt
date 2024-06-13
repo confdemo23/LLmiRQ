@@ -1,0 +1,3 @@
+CachedCxfPayload:0.4375
+CxfPayload:0.2500
+Transformer:0.2813

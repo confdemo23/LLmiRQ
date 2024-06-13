@@ -1,0 +1,5 @@
+IrcComponent:0.2439
+IrcConfiguration:0.3415
+IrcConsumer:0.2195
+IrcEndpoint:0.2195
+IrcProducer:0.2195

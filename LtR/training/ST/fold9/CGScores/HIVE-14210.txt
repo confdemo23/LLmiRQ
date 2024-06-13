@@ -1,0 +1,3 @@
+ExecDriver:0.0008
+HadoopShims:0.0014
+ShimLoader:0.0014

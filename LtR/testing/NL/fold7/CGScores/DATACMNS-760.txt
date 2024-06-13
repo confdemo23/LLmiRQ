@@ -1,0 +1,8 @@
+ClassTypeInformation:0.0043
+OptionalValueBinding:0.0113
+Optionals:0.0252
+PathAndBinding:0.0599
+PathBinder:0.0043
+PathInformation:0.0321
+PropertyPathInformation:0.0043
+SingleValueBinding:0.0113

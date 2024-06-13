@@ -1,0 +1,10 @@
+AbstractOperationContext:0.0179
+CurrentOperationIdHolder:0.0112
+Factory:0.0112
+ManagementModelImpl:0.0196
+ManagementResourceRegistration:0.0129
+ModelControllerImpl:0.0079
+ModelControllerLock:0.0162
+PathAddress:0.0162
+PathElement:0.0162
+RunningModeControl:0.0096

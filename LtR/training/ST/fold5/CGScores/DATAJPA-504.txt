@@ -1,0 +1,2 @@
+CrudMethodMetadata:0.0015
+JpaEntityInformation:0.0015

@@ -1,0 +1,4 @@
+AbstractOperations:0.3571
+DefaultSetOperations:0.4048
+JdkSerializationRedisSerializer:0.6667
+RedisTemplate:0.2381

@@ -1,0 +1,5 @@
+AnnotationRepositoryConfigurationSource:0.6731
+RepositoryBeanDefinitionRegistrarSupport:0.6923
+RepositoryConfigurationDelegate:0.5192
+RepositoryConfigurationExtensionSupport:0.6731
+RepositoryConfigurationSourceSupport:0.6154

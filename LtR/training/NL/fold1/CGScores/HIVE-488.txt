@@ -1,0 +1,10 @@
+HMSHandler:0.0431
+Hive:0.0183
+HiveDelegationTokenManager:0.0186
+HiveMetaStore:0.0104
+HiveMetastoreCli:0.0186
+Partition:0.1569
+Server:0.0186
+StorageDescriptorKey:0.0063
+Table:0.1477
+_Fields:0.0069

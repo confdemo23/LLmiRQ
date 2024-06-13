@@ -1,0 +1,6 @@
+BeeLine:0.1563
+HiveConf:0.1875
+HiveConnection:0.3750
+HiveSQLException:0.4375
+SessionState:0.3125
+Utils:0.0938

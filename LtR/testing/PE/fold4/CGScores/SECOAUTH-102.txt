@@ -1,0 +1,6 @@
+ConsumerAuthentication:0.0049
+ConsumerCredentials:0.0015
+ExtraTrustConsumerDetails:0.0015
+OAuthAuthenticationHandler:0.0015
+OAuthProviderProcessingFilter:0.0015
+OAuthProviderToken:0.0015

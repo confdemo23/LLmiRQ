@@ -1,0 +1,4 @@
+AbstractSecurityInterceptor:0.5000
+AntPathRequestMatcher:0.3750
+DefaultFilterInvocationSecurityMetadataSource:0.8750
+FilterSecurityInterceptor:0.4583

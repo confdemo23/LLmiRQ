@@ -1,0 +1,10 @@
+AbstractApplicationContext:0.5854
+ApplicationContext:0.3902
+BeanDefinitionParserDelegate:0.6341
+BeanDefinitionRegistry:0.4878
+ClassPathResource:0.3659
+DefaultListableBeanFactory:0.5854
+FileSystemXmlApplicationContext:0.7073
+PathMatchingResourcePatternResolver:0.8049
+ResourcePatternResolver:0.5122
+XmlBeanDefinitionReader:0.5122

@@ -1,0 +1,4 @@
+Base64:0.0652
+KeyBasedPersistenceTokenService:0.6087
+Sha512DigestUtils:0.3043
+Utf8:0.0217

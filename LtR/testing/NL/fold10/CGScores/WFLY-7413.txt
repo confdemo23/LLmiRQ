@@ -1,0 +1,7 @@
+Attribute:0.0388
+Capability:0.0113
+ClusteringCacheRequirement:0.0113
+ModelNodes:0.0113
+SingletonPolicyBuilder:0.0251
+SingletonRequirement:0.0069
+ValueDependency:0.0526

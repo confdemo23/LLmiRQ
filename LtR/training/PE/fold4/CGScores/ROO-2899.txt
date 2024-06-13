@@ -1,0 +1,6 @@
+Dependency:0.0067
+DependencyScope:0.0016
+DependencyType:0.0037
+DomUtils:0.0037
+GAV:0.0026
+XmlUtils:0.0169

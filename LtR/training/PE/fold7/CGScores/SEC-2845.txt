@@ -1,0 +1,10 @@
+AbstractSecurityInterceptor:0.0208
+AccessDecisionManager:0.0154
+AfterInvocationManager:0.0154
+InterceptorStatusToken:0.0481
+MessageSecurityMetadataSourceRegistry:0.0281
+RunAsManager:0.0154
+SecurityContext:0.0505
+SecurityContextHolder:0.1015
+SecurityMetadataSource:0.0154
+WebSocketMessageSecurityMetadataSourceRegistry:0.0572

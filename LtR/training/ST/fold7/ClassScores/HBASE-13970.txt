@@ -1,0 +1,6 @@
+Compactor:0.1250
+DefaultCompactor:0.2708
+DefaultStoreEngine:0.3125
+HRegion:0.0833
+HStore:0.0625
+PressureAwareCompactionThroughputController:0.8333

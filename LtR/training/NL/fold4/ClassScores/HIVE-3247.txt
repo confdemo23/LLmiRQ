@@ -1,0 +1,5 @@
+CreateTableDesc:0.2791
+FileSinkOperator:0.3023
+HiveInputFormat:0.2791
+HiveOutputFormat:0.3023
+HiveStorageHandler:0.3488

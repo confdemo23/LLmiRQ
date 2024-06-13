@@ -1,0 +1,6 @@
+JmsConfiguration:0.3636
+JmsConsumer:0.2121
+SjmsComponent:0.2727
+SjmsConsumer:0.2424
+SjmsEndpoint:0.2424
+SjmsProducer:0.2424

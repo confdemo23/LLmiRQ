@@ -1,0 +1,4 @@
+ObjectListAttributeDefinition:0.5102
+ObjectTypeAttributeDefinition:0.5102
+PersistentResourceXMLDescription:0.5714
+PersistentResourceXMLParser:0.4694

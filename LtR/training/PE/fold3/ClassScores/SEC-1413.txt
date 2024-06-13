@@ -1,0 +1,2 @@
+AbstractRetryEntryPoint:0.5405
+RedirectStrategy:0.3514

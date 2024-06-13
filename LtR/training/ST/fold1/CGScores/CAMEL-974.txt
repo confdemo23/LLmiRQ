@@ -1,0 +1,10 @@
+CamelContext:0.0218
+Exchange:0.0564
+Expression:0.0218
+InterceptSendToEndpoint:0.0141
+Message:0.0410
+MockEndpoint:0.0420
+ObjectHelper:0.0218
+Processor:0.0064
+RouteDefinition:0.0083
+TypeConverter:0.0064

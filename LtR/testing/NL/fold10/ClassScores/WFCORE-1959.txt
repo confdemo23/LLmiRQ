@@ -1,0 +1,7 @@
+AbstractDeploymentHandler:0.5946
+DeploymentAddHandler:0.4595
+DeploymentResourceSupport:0.5946
+DeploymentUnitPhaseService:0.6216
+DomainDeploymentManager:0.5405
+ExplodedDeploymentAddContentHandler:0.8649
+ServerGroupDeploymentAddHandler:0.7568

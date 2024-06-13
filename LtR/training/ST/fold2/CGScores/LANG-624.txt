@@ -1,0 +1,10 @@
+JavaVersion:0.0051
+JsonToStringStyle:0.0464
+MultiLineToStringStyle:0.0135
+NoClassNameToStringStyle:0.0062
+ObjectUtils:0.0068
+ReflectionToStringBuilder:0.0158
+ShortPrefixToStringStyle:0.0062
+SimpleToStringStyle:0.0172
+ToStringBuilder:0.0284
+ToStringStyle:0.2581

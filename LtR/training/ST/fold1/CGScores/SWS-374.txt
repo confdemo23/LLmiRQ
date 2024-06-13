@@ -1,0 +1,2 @@
+SaxUtils:0.0154
+XmlValidatorFactory:0.0071

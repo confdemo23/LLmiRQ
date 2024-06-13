@@ -1,0 +1,3 @@
+BasicConfigurationBuilder:0.5789
+BeanHelper:0.1842
+XMLConfiguration:0.3421

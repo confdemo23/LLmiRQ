@@ -1,0 +1,6 @@
+DefaultHCatRecord:0.3939
+HCatFieldSchema:0.3333
+HCatRecordSerDe:0.3333
+HCatSchema:0.1818
+HCatUtil:0.1212
+PartitionDesc:0.2727

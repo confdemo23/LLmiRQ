@@ -1,0 +1,10 @@
+Binding:0.0895
+ConnectionFactoryUtils:0.0351
+Delivery:0.0304
+DirectReplyToMessageListenerContainer:0.0257
+Exchange:0.0712
+Message:0.0959
+MessageProperties:0.1193
+PendingReply:0.0351
+Queue:0.0528
+RabbitTemplate:0.1129

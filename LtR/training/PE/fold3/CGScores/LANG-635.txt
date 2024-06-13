@@ -1,0 +1,3 @@
+ArrayUtils:0.0006
+CompareToBuilder:0.0014
+ReflectionToStringBuilder:0.0006

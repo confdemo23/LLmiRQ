@@ -1,0 +1,6 @@
+CrudRepository:0.2558
+DefaultRepositoryInformation:0.5814
+DefaultRepositoryInformationUnitTests:0.7907
+DefaultRepositoryMetadata:0.5116
+RepositoryInformation:0.4186
+RepositoryMetadata:0.3488

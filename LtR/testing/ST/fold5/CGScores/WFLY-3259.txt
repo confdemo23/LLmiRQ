@@ -1,0 +1,10 @@
+ComponentConfiguration:0.3912
+ComponentDescription:0.2289
+ComponentIntegrator:0.0667
+EEModuleDescription:0.0435
+InterceptorDescription:0.0435
+Jsr299BindingsCreateInterceptor:0.0435
+StartupContext:0.0323
+UndertowDeploymentService:0.0323
+WeldBootstrapService:0.0758
+WeldClassIntrospector:0.0435

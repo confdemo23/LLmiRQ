@@ -1,0 +1,5 @@
+AbstractAddStepHandler:0.5135
+AbstractWriteAttributeHandler:0.7027
+AttributeDefinition:0.4324
+ManagementResourceRegistration:0.7297
+ModelControllerImpl:0.4324

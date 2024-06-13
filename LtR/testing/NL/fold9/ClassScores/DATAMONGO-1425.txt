@@ -1,0 +1,9 @@
+Criteria:0.1875
+MappingMongoConverter:0.5938
+MongoDataIntegrityViolationException:1.0000
+MongoOperations:0.4063
+MongoPersistentEntityIndexResolver:1.0000
+MongoQueryCreator:0.4688
+MongoTemplate:0.3438
+Query:0.0938
+QueryMapper:0.2813

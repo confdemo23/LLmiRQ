@@ -1,0 +1,2 @@
+GatewayReceiverFactoryBean:0.5349
+GatewaySenderFactoryBean:0.4884

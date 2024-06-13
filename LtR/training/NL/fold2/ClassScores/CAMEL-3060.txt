@@ -1,0 +1,7 @@
+Exchange:0.1463
+FileConsumer:0.2439
+FileEndpoint:0.2439
+GenericFileConsumer:0.4146
+GenericFileEndpoint:0.4146
+GenericFileOperations:0.4634
+StreamCachingStrategy:0.4634

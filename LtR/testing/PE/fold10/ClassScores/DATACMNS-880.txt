@@ -1,0 +1,4 @@
+PersistenceExceptionTranslationRepositoryProxyPostProcessor:1.0000
+RepositoryFactoryBeanSupport:0.5814
+TransactionalRepositoryFactoryBeanSupport:0.8837
+TransactionalRepositoryProxyPostProcessor:0.8837

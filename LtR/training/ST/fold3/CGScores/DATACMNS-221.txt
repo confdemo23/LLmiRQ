@@ -1,0 +1,8 @@
+ClassTypeInformation:0.0064
+Predicate:0.0064
+PropertyPath:0.0294
+PropertyReferenceException:0.0016
+Streamable:0.0000
+Subject:0.0127
+Type:0.0064
+TypeInformation:0.0461

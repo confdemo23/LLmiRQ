@@ -1,0 +1,5 @@
+DefaultEndpoint:0.0019
+EndpointHelper:0.0056
+FacebookEndpointConfiguration:0.0019
+FacebookPropertiesHelper:0.0056
+ObjectHelper:0.0019

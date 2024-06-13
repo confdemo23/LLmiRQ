@@ -1,0 +1,10 @@
+Admin:0.0265
+Bytes:0.0650
+CheckAndMutateBuilder:0.0226
+HRegion:0.0265
+MetricsRegionServer:0.0843
+MetricsRegionServerWrapper:0.0804
+Put:0.0419
+ResultScanner:0.0265
+Scan:0.0303
+Table:0.0843

@@ -1,0 +1,10 @@
+CodyWaite:0.0314
+CombinatoricsUtils:0.0159
+ExponentialDistribution:0.0246
+FastMath:0.1784
+FastMathCalc:0.0533
+FastMathLiteralArrays:0.0168
+Gamma:0.0073
+RandomGenerator:0.0246
+SaddlePointExpansion:0.0159
+Split:0.0168

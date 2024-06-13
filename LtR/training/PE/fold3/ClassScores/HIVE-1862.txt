@@ -1,0 +1,2 @@
+Hive:0.0270
+Metastore:0.1622

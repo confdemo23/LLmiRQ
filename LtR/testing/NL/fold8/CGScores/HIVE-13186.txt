@@ -1,0 +1,10 @@
+AlterTableDesc:0.0071
+AlterTableTypes:0.0029
+HMSHandler:0.0409
+HiveDelegationTokenManager:0.0180
+HiveMetaStore:0.0103
+HiveMetastoreCli:0.0180
+Server:0.0180
+ShimLoader:0.0053
+StorageDescriptorKey:0.0065
+Utils:0.0027

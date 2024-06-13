@@ -1,0 +1,8 @@
+HiveConf:0.1220
+HiveConnection:0.2683
+HiveDatabaseMetaData:0.4146
+HiveDriver:0.1707
+HiveMetaStoreClient:0.3902
+HivePreparedStatement:0.4390
+HiveQueryResultSet:0.3659
+HiveStatement:0.2439

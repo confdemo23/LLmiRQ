@@ -1,0 +1,10 @@
+CamelContext:0.0179
+CamelLogger:0.0341
+ExceptionHandler:0.0094
+Exchange:0.0921
+ExchangeFormatter:0.0101
+MaskingFormatter:0.0101
+Message:0.0461
+ObjectHelper:0.0094
+SedaEndpoint:0.0602
+StringHelper:0.0094

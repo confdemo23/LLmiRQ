@@ -1,0 +1,10 @@
+Lazy:0.0287
+QueryCreationListener:0.0124
+QueryExecutionConverters:0.0234
+ReactiveWrapperConverters:0.0124
+RepositoryFactorySupport:0.0934
+RepositoryInformation:0.0597
+RepositoryMetadata:0.0374
+RepositoryQuery:0.0191
+SpelAwareProxyProjectionFactory:0.0124
+TypeInformation:0.0197

@@ -1,0 +1,10 @@
+AbstractItemStreamItemReader:0.0198
+AbstractItemStreamItemWriter:0.0548
+ExecutionContext:0.1323
+FragmentEventReader:0.0161
+OutputState:0.0605
+RecordSeparatorPolicy:0.0151
+ResourceAwareItemReaderItemStream:0.0706
+ResourceAwareItemWriterItemStream:0.0488
+StaxUtils:0.0101
+TransactionAwareBufferedWriter:0.0331

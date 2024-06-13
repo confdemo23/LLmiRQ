@@ -1,0 +1,10 @@
+AbstractMessageListenerContainer:0.6744
+DirectMessageListenerContainer:0.6279
+MessageListenerAdapter:0.4419
+MethodRabbitListenerEndpoint:0.5814
+RabbitAdmin:0.1860
+RabbitListenerContainerFactory:0.6279
+RabbitListenerEndpoint:0.4419
+RabbitListenerEndpointRegistry:0.6279
+SimpleMessageListenerContainer:0.6279
+SimpleRabbitListenerEndpoint:0.5814

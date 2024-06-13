@@ -1,0 +1,2 @@
+GemfireDataSourcePostProcessor:0.5625
+ListRegionsOnServerFunction:0.5000

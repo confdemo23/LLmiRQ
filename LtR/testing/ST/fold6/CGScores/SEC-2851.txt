@@ -1,0 +1,7 @@
+AbstractRememberMeServices:0.0119
+AnnotationAwareOrderComparator:0.0018
+DefaultLoginPageGeneratingFilter:0.0014
+LogoutConfigurer:0.0014
+ObjectPostProcessor:0.0039
+RememberMeAuthenticationFilter:0.0014
+WebSecurity:0.0144

@@ -1,0 +1,4 @@
+BracketedUnivariateSolver:0.0185
+FastMath:0.0514
+UnivariateFunction:0.0645
+UnivariateSolver:0.0119

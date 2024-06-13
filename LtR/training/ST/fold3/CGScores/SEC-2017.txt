@@ -1,0 +1,5 @@
+ContextFactory:0.0131
+LdapEncoder:0.0072
+LdapUtils:0.0175
+SpringSecurityLdapTemplate:0.0131
+UsernamePasswordAuthenticationToken:0.0294

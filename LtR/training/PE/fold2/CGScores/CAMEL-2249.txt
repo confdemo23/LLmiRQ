@@ -1,0 +1,8 @@
+CamelJmsTemplate:0.0027
+EndpointMessageListener:0.0125
+JmsConfiguration:0.0027
+JmsEndpoint:0.0125
+JmsMessageHelper:0.0059
+MessageListenerContainerFactory:0.0027
+MessageSentCallback:0.0027
+ObjectHelper:0.0027

@@ -1,0 +1,2 @@
+AbstractLdapAuthenticator:0.5946
+LdapEncoder:0.2162

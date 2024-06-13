@@ -1,0 +1,10 @@
+AnonymousAuthenticationFilter:0.0141
+DefaultSecurityFilterChain:0.0293
+DummyRequest:0.0259
+ExceptionTranslationFilter:0.0141
+FilterChainProxy:0.0293
+FilterSecurityInterceptor:0.0217
+HttpFirewall:0.0124
+RequestMatcher:0.0141
+SecurityFilterChain:0.0231
+UrlUtils:0.0214

@@ -1,0 +1,4 @@
+EJB3Subsystem20Parser:0.0030
+EJB3Subsystem30Parser:0.0065
+EJB3SubsystemXMLAttribute:0.0206
+EJB3SubsystemXMLElement:0.0136

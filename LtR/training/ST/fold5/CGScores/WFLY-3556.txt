@@ -1,0 +1,10 @@
+Builder:0.0395
+CalendarTimer:0.0075
+CurrentSynchronizationCallback:0.0028
+EjbTimerXmlParser_1_0:0.0033
+ScheduleTimer:0.0123
+TimedObjectInvoker:0.0089
+TimerImpl:0.1332
+TimerServiceImpl:0.0591
+TimerServiceRegistry:0.0039
+TimerTask:0.0036

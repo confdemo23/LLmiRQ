@@ -1,0 +1,5 @@
+AbstractHashedMap:0.0331
+AbstractMapDecorator:0.0041
+HashEntry:0.0175
+MapIterator:0.0130
+MultiKey:0.0622

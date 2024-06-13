@@ -1,0 +1,7 @@
+HiveFileFormatUtils:0.3721
+HiveInputFormat:0.2791
+ObjectInspector:0.2791
+OrcInputFormat:0.2558
+OrcSerde:0.1163
+OrcSplit:0.1163
+OrcStruct:0.1395

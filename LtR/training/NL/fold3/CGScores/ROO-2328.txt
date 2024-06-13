@@ -1,0 +1,10 @@
+CollectionUtils:0.0083
+Dependency:0.0383
+DependencyScope:0.0040
+DependencyType:0.0145
+DomUtils:0.0106
+GAV:0.0112
+Path:0.0003
+Plugin:0.0073
+Property:0.0003
+XmlUtils:0.0535

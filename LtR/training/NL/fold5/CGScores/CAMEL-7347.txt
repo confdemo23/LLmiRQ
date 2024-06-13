@@ -1,0 +1,10 @@
+CamelContext:0.0701
+Exchange:0.2357
+HttpMessage:0.1692
+Message:0.2027
+NettyConfiguration:0.1191
+NettyConsumer:0.1011
+NettyHttpConfiguration:0.1111
+NettyHttpEndpoint:0.1416
+ObjectHelper:0.1126
+RestConfiguration:0.1872

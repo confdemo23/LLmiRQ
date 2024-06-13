@@ -1,0 +1,3 @@
+AggregationBuffer:0.0011
+AggregationType:0.0011
+State:0.0030

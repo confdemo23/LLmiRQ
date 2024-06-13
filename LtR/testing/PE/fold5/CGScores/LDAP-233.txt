@@ -1,0 +1,6 @@
+AttributeValidationPolicy:0.0006
+LdapAttributes:0.0037
+LdapEncoder:0.0024
+LdapUtils:0.0063
+SeparatorPolicy:0.0006
+Specification:0.0006

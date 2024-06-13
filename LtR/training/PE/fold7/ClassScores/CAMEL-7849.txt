@@ -1,0 +1,2 @@
+BridgePropertyPlaceholderConfigurer:0.6400
+JasyptPropertiesParser:0.3800

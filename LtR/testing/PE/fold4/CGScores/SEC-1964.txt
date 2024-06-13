@@ -1,0 +1,5 @@
+AbstractRememberMeServices:0.0037
+Authentication:0.0037
+Base64:0.0037
+PersistentRememberMeToken:0.0301
+PersistentTokenRepository:0.0096

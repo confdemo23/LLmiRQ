@@ -1,0 +1,4 @@
+AbstractPageRequest:0.0056
+PageRequest:0.0451
+PageableDefault:0.0451
+Sort:0.0310

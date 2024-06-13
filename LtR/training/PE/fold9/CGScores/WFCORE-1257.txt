@@ -1,0 +1,10 @@
+ImmutableManagementResourceRegistration:0.0300
+ObjectNameAddressUtil:0.0256
+OperationEntry:0.0126
+PathAddress:0.0343
+PathElement:0.0169
+ResourceAccessControl:0.0126
+ResourceAccessControlUtil:0.0343
+ResourceAndRegistration:0.0343
+RootResourceIterator:0.0126
+TypeConverters:0.0169

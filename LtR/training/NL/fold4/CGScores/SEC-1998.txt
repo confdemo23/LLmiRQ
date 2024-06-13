@@ -1,0 +1,10 @@
+AbstractSecurityInterceptor:0.0360
+AccessDecisionManager:0.0267
+HttpRequestResponseHolder:0.0922
+InterceptorStatusToken:0.0823
+SaveContextOnUpdateOrErrorResponseWrapper:0.0484
+SecurityContext:0.1087
+SecurityContextHolder:0.1986
+SecurityContextHolderStrategy:0.0278
+SecurityMetadataSource:0.0267
+UrlUtils:0.0312

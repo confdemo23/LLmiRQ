@@ -1,0 +1,5 @@
+EEModuleClassDescription:0.0237
+EEModuleDescription:0.0107
+EJBAnnotationPropertyReplacement:0.0107
+EJBResourceWrapper:0.2583
+InjectionTarget:0.0107

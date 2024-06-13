@@ -1,0 +1,10 @@
+Client:0.0099
+GetDbHelper:0.0010
+GetHelper:0.0083
+GetStatHelper:0.0010
+HadoopThriftAuthBridge:0.0036
+HiveDatabaseMetaData:0.0106
+ObjectStore:0.1607
+QueryWrapper:0.0772
+ShimLoader:0.0073
+Utils:0.0145

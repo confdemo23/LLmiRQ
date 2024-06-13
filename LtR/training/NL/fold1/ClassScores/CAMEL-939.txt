@@ -1,0 +1,9 @@
+CamelTestSupport:0.3514
+ConsumerTemplate:0.3514
+DefaultProducer:0.3243
+Exchange:0.1351
+ExchangeBuilder:0.3243
+ExchangePattern:0.3243
+PlatformHelper:0.2973
+ProducerTemplate:0.3514
+TestSupport:0.2162

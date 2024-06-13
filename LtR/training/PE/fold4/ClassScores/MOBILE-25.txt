@@ -1,0 +1,1 @@
+LiteDeviceResolver:0.3111

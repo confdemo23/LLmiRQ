@@ -1,0 +1,8 @@
+AuthenticationConfigBuilder:0.0439
+HttpConfigurationBuilder:0.0709
+MatcherType:0.0079
+OrderDecorator:0.0169
+PortMappingsBeanDefinitionParser:0.0079
+SecurityFilters:0.0529
+SpringSecurityCoreVersion:0.0056
+WebConfigUtils:0.0079

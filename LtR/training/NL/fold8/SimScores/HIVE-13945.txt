@@ -1,0 +1,10 @@
+FuncBRoundWithNumDigitsDecimalToDecimal:0.1102
+FuncRoundWithNumDigitsDecimalToDecimal:0.1136
+GenericUDFBRound:0.1290
+GenericUDFToDate:0.1100
+StreamPrinter:0.1058
+TestBeeLineHistory:0.1319
+TestGenericUDFRound:0.1089
+TestGroupFilter:0.1155
+TestJdbcWithMiniKdcSQLAuthBinary:0.1043
+WriteTextPartitioned:0.1301

@@ -1,0 +1,10 @@
+Exchange:0.3168
+FileUtil:0.1849
+GenericFile:0.0964
+GenericFileEndpoint:0.5660
+GenericFileOperations:0.0964
+IdempotentRepository:0.0799
+Message:0.1953
+ObjectHelper:0.0790
+RemoteFileConfiguration:0.0859
+RemoteFileEndpoint:0.0773

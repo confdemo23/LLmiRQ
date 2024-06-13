@@ -1,0 +1,9 @@
+AbstractMultipleLinearRegression:0.0104
+Array2DRowRealMatrix:0.0049
+DecompositionSolver:0.0104
+LUDecomposition:0.0049
+QRDecomposition:0.0215
+RealMatrix:0.0658
+RealVector:0.0160
+SecondMoment:0.0049
+StatUtils:0.0049

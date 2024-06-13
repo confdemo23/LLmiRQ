@@ -1,0 +1,10 @@
+Criteria:0.0475
+DocumentAccessor:0.0667
+DocumentCallback:0.0274
+LazyLoadingProxy:0.0251
+MapReduceOptions:0.0574
+Meta:0.0380
+MongoPersistentEntity:0.0993
+MongoPersistentProperty:0.0848
+Query:0.2347
+QueryMapper:0.0703

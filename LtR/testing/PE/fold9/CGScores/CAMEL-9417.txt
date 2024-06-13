@@ -1,0 +1,4 @@
+ElementNameStrategy:0.0055
+Exchange:0.0321
+Message:0.0188
+SoapJaxbDataFormat:0.0387

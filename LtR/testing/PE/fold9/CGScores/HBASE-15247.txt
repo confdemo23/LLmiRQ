@@ -1,0 +1,4 @@
+Bytes:0.0098
+CellComparator:0.0098
+InclusiveStopFilter:0.0153
+ParseFilter:0.0043

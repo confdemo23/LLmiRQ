@@ -1,0 +1,4 @@
+FriendsPrivacyType:0.0005
+PostType:0.0005
+PrivacyType:0.0005
+StatusType:0.0005

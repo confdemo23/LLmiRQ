@@ -1,0 +1,6 @@
+BindInfo:0.0040
+CommonDeploymentService:0.0040
+Credential:0.0018
+Injection:0.0040
+InstalledDriver:0.0347
+WildFlyXaMCF:0.0150

@@ -1,0 +1,3 @@
+JpaQueryMethod:0.2895
+JpaRepositoryFactoryBean:0.5526
+QueryUtils:0.1842

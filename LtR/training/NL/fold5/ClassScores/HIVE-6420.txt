@@ -1,0 +1,4 @@
+HiveConf:0.1212
+HiveMetaStore:0.2727
+HiveSchemaHelper:0.3636
+MetaStoreUtils:0.3030

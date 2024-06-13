@@ -1,0 +1,1 @@
+AvroGenericRecordReader:0.3878

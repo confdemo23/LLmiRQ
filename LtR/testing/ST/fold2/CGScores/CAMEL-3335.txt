@@ -1,0 +1,10 @@
+CamelContext:0.0022
+DeleteHandler:0.0058
+Exchange:0.0234
+JpaEndpoint:0.0375
+Message:0.0058
+ObjectHelper:0.0234
+Processor:0.0022
+QueryBuilder:0.0199
+ScheduledBatchPollingConsumer:0.0093
+TypeConverter:0.0022

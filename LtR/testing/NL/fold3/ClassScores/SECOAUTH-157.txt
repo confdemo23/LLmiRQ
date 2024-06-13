@@ -1,0 +1,5 @@
+DefaultOAuth2AccessToken:0.5366
+OAuth2AccessToken:0.3659
+OAuth2Authentication:0.4390
+OAuth2AuthenticationProcessingFilter:0.8293
+TokenEndpoint:0.2683

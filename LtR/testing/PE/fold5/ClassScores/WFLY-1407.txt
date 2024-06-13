@@ -1,0 +1,2 @@
+EjbMethodInterceptorTestCase:0.5333
+TopSecretInterceptor:0.3556

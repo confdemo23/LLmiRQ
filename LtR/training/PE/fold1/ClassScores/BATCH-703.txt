@@ -1,0 +1,2 @@
+JdbcJobInstanceDao:0.3333
+JdbcJobRepositoryTests:0.4222

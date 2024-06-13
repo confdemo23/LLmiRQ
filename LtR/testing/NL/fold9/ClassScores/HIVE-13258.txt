@@ -1,0 +1,4 @@
+LlapDaemonProtocolProtos:0.6875
+LlapIoImpl:0.2500
+LlapTaskSchedulerService:0.6875
+QueryFragmentInfo:0.4688

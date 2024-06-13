@@ -1,0 +1,10 @@
+ConfigurationEvent:0.0261
+EventType:0.0114
+FileLocatorBuilder:0.0089
+IOFactory:0.0055
+ListDelimiterHandler:0.0066
+PropertiesConfiguration:0.0226
+PropertiesConfigurationLayout:0.0225
+PropertiesReader:0.0379
+PropertiesWriter:0.0261
+PropertyLayoutData:0.0468

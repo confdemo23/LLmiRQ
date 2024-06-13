@@ -1,0 +1,3 @@
+CachedOutputStreamTest:0.4419
+ChoiceWithEndTest:0.3256
+GenericFileDeleteProcessStrategyTest:0.7674

@@ -1,0 +1,10 @@
+ClassOrInterfaceTypeDetails:0.1610
+Dependency:0.1889
+DomUtils:0.1607
+FileManager:0.3355
+MetadataLogger:0.1289
+Plugin:0.1677
+Pom:0.7095
+PomManagementService:0.1146
+Table:0.1542
+XmlUtils:0.5910

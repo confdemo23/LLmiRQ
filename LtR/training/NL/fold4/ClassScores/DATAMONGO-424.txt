@@ -1,0 +1,10 @@
+BasicQuery:0.1628
+DBRef:0.0465
+MappingMongoConverter:0.4186
+MongoConverter:0.2558
+MongoDataIntegrityViolationException:0.7674
+MongoDbFactory:0.2558
+MongoRepository:0.2791
+MongoTemplate:0.2326
+Query:0.0465
+SimpleMongoRepository:0.4186

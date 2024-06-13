@@ -1,0 +1,2 @@
+BindyCsvDataFormat:0.3261
+DataField:0.1304

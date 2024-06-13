@@ -1,0 +1,3 @@
+TestSecurityContextHolder:0.0152
+WithSecurityContext:0.0071
+WithSecurityContextFactory:0.0152

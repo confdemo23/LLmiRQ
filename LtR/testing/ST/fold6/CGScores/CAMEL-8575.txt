@@ -1,0 +1,10 @@
+CamelExecutionException:0.0093
+CreateSObjectResult:0.0267
+NoSuchSObjectException:0.0035
+RouteDefinition:0.0421
+SObjectBasicInfo:0.0035
+SSLContextParameters:0.0035
+SalesforceComponent:0.0132
+SalesforceException:0.0074
+SalesforceLoginConfig:0.0093
+SalesforceSession:0.0035

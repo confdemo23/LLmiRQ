@@ -1,0 +1,2 @@
+ManagedDatagramSocketBinding:0.5000
+SocketBindingManagerImpl:0.4200

@@ -1,0 +1,6 @@
+Lazy:0.0647
+PersistentEntity:0.0135
+Property:0.0574
+PropertyPath:0.0135
+SimpleTypeHolder:0.0062
+TypeInformation:0.0574

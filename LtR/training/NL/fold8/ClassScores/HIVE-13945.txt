@@ -1,0 +1,9 @@
+Decimal:0.1081
+Decimal128:0.1892
+DecimalColumnStatsData:0.5135
+DecimalTypeInfo:0.3243
+HiveDecimal:0.2162
+HiveDecimalObjectInspector:0.6216
+HiveDecimalUtils:0.3514
+HiveDecimalV1:0.2703
+HiveDecimalWritable:0.4324

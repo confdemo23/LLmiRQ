@@ -1,0 +1,4 @@
+Authentication:0.2973
+ProviderManager:0.3243
+TokenBasedRememberMeServices:0.6757
+UserDetailsService:0.4054

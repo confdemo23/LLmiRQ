@@ -1,0 +1,10 @@
+Database:0.1491
+FieldSchema:0.0927
+HiveConf:0.0482
+MetaStoreUtils:0.0349
+ObjectStore:0.1621
+QueryWrapper:0.0780
+SerDeInfo:0.0754
+StorageDescriptor:0.4719
+Table:0.1554
+_Fields:0.0309

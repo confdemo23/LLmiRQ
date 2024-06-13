@@ -1,0 +1,8 @@
+ErrorHandlerBuilder:0.0212
+ErrorHandlerBuilderRef:0.0123
+ErrorHandlerBuilderSupport:0.0123
+ModelCamelContext:0.0079
+ObjectHelper:0.0034
+Registry:0.0034
+RouteContext:0.0301
+RouteDefinition:0.0123

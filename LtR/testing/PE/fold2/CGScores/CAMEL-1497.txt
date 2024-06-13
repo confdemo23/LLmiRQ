@@ -1,0 +1,3 @@
+JmsEndpoint:0.0346
+ObjectHelper:0.0071
+PollingConsumerSupport:0.0071

@@ -1,0 +1,8 @@
+CalcitePlanner:0.3030
+HiveCalciteUtil:0.3333
+HiveFilter:0.1818
+HiveJoin:0.1212
+HivePlannerContext:0.4242
+HiveProject:0.2121
+HiveRelOptUtil:0.3030
+HiveSemiJoinRule:0.3636

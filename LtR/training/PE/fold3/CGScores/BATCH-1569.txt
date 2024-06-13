@@ -1,0 +1,5 @@
+AbstractItemStreamItemReader:0.0034
+ExecutionContext:0.0034
+MultiResourceItemReader:0.0010
+ResourceAware:0.0010
+ResourceAwareItemReaderItemStream:0.0117

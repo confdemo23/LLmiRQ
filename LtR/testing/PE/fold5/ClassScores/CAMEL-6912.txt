@@ -1,0 +1,5 @@
+CamelContext:0.1778
+DefaultCamelContext:0.3333
+ExchangeBuilder:0.2444
+ProducerTemplate:0.2667
+RouteBuilder:0.1778

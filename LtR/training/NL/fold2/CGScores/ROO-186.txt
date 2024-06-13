@@ -1,0 +1,10 @@
+ClassOrInterfaceTypeDetails:0.0628
+CliOption:0.2209
+Completion:0.0495
+Converter:0.0309
+JavaSymbolName:0.0262
+JavaType:0.0913
+MethodTarget:0.2926
+ProjectOperations:0.0482
+ShellContext:0.0302
+TypeLocationService:0.0256

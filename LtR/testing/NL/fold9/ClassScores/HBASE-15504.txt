@@ -1,0 +1,8 @@
+AssignmentManager:0.4688
+BalancerChore:0.3438
+BaseLoadBalancer:0.4375
+ClusterStatus:0.3438
+HMaster:0.1563
+RegionMover:0.2813
+RegionPlan:0.2500
+StochasticLoadBalancer:0.6250

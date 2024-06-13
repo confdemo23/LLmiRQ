@@ -1,0 +1,4 @@
+JBossWebMetaData:0.3171
+MetaDataElementParser:0.4390
+ReplicationConfig:0.3415
+WebMetaData:0.1951

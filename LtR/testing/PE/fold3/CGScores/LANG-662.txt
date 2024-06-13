@@ -1,0 +1,2 @@
+Fraction:1.0000
+Validate:0.0059

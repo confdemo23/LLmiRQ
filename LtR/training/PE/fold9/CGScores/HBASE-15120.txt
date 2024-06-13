@@ -1,0 +1,10 @@
+Admin:0.1355
+Bytes:0.1598
+HRegion:0.1598
+HRegionServer:0.0675
+HTableDescriptor:0.0432
+Put:0.0481
+RegionInfo:0.1161
+RegionStates:0.0529
+Table:0.0869
+TableName:0.0432

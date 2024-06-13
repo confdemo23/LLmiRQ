@@ -1,0 +1,4 @@
+HRegion:0.0240
+HStore:0.0156
+RegionSplitPolicy:0.0072
+TableDescriptor:0.0072

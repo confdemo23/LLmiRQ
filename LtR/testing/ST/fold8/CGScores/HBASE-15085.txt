@@ -1,0 +1,10 @@
+Bytes:0.0818
+Cell:0.0699
+HFileScanner:0.0798
+HRegion:0.0860
+HStore:0.0877
+KeyValueHeap:0.0380
+Pair:0.0432
+RegionInfo:0.0842
+ScannerContext:0.0525
+StoreFileReader:0.0432

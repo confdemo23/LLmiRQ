@@ -1,0 +1,4 @@
+ClassTypeInformation:0.0010
+PropertyPath:0.0023
+PropertyReferenceException:0.0004
+TypeInformation:0.0035

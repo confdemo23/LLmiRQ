@@ -1,0 +1,5 @@
+DeploymentUnit:0.2973
+DeploymentUnitProcessor:0.5405
+ModuleDependencyProcessor:0.5946
+ModuleSpecification:0.4324
+SubDeploymentMarker:0.4324

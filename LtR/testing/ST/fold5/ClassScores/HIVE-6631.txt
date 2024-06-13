@@ -1,0 +1,5 @@
+ExecMapper:0.1154
+ExprNodeFieldEvaluator:0.3462
+MapOperator:0.1346
+SelectOperator:0.1923
+TableScanOperator:0.2500

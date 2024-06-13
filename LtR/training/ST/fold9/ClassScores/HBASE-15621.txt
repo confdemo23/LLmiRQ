@@ -1,0 +1,5 @@
+BaseFileCleanerDelegate:0.5263
+SnapshotFileCache:0.3684
+SnapshotHFileCleaner:0.4474
+SnapshotManifest:0.3421
+SnapshotReferenceUtil:0.4737

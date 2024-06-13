@@ -1,0 +1,3 @@
+HiveConf:0.1220
+HiveMetaStore:0.2439
+HiveServer2:0.1951

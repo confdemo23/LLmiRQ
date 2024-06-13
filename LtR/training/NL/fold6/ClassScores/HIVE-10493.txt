@@ -1,0 +1,6 @@
+CalcitePlanner:0.3077
+HiveCalciteUtil:0.3333
+HiveMultiJoin:0.2821
+HiveRelBuilder:0.3077
+JoinOperator:0.2564
+MapJoinOperator:0.3333

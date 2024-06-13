@@ -1,0 +1,1 @@
+JpaQueryCreator:0.2444

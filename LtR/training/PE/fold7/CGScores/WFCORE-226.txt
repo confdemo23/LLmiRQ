@@ -1,0 +1,10 @@
+AbstractDeploymentUnitService:0.0036
+DeploymentStatus:0.0129
+ImmutableManagementResourceRegistration:0.0071
+OperationContext:0.0176
+PathAddress:0.0038
+Resource:0.0166
+ResourceEntry:0.0055
+ResourceFilter:0.0022
+Services:0.0036
+SimpleAttributeDefinition:0.0083

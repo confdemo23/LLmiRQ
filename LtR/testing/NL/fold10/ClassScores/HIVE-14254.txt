@@ -1,0 +1,5 @@
+CliDriver:0.1622
+Hive:0.0270
+HiveConf:0.1351
+HiveStringUtils:0.3243
+HiveVersionInfo:0.3243

@@ -1,0 +1,2 @@
+CSVFormat:0.1200
+QuoteMode:0.1200

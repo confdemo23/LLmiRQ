@@ -1,0 +1,3 @@
+ClassPathXmlApplicationContext:0.6279
+DefaultListableBeanFactory:0.5349
+XmlBeanDefinitionReader:0.4651

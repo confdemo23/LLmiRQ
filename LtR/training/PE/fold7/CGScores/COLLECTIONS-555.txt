@@ -1,0 +1,3 @@
+AbstractMapBag:0.0046
+TransformedCollection:0.0032
+Transformer:0.0075

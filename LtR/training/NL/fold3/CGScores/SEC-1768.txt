@@ -1,0 +1,10 @@
+AbstractSecurityInterceptor:0.0221
+DefaultMethodSecurityExpressionHandler:0.0300
+ExpressionBasedPreInvocationAdvice:0.0191
+ExpressionUtils:0.0224
+MethodSecurityExpressionOperations:0.0601
+MethodSecurityExpressionRoot:0.0601
+MethodSecurityInterceptor:0.0518
+MethodSecurityMetadataSource:0.0224
+ObjectPostProcessor:0.0191
+PreFilter:0.0231

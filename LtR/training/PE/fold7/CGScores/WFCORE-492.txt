@@ -1,0 +1,6 @@
+EscapedCharacter:0.0160
+ImmutableManagementResourceRegistration:0.0032
+ModelControllerMBeanHelper:0.0117
+PathAddress:0.0160
+PathElement:0.0117
+Resource:0.0032

@@ -1,0 +1,5 @@
+CommonJoinOperator:0.3659
+GroupByOperator:0.2927
+ReduceSinkOperator:0.3659
+SQLStdHiveAccessController:0.5610
+SemanticAnalyzer:0.3171

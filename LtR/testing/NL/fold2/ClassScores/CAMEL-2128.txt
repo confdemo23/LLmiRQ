@@ -1,0 +1,6 @@
+CxfConsumer:0.2162
+CxfEndpoint:0.2162
+CxfProducer:0.2162
+JmsMessage:0.1892
+SpringTransactionPolicy:0.5405
+TransactionErrorHandler:0.5405

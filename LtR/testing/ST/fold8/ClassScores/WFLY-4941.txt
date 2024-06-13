@@ -1,0 +1,2 @@
+ChannelCommandDispatcher:0.4375
+InfinispanBeanManager:0.3750

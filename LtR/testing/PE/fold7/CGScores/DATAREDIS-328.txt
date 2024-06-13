@@ -1,0 +1,5 @@
+RedisCacheManager:0.0041
+RedisCachePrefix:0.0041
+RedisConnection:0.0041
+RedisOperations:0.0147
+RedisSerializer:0.0094

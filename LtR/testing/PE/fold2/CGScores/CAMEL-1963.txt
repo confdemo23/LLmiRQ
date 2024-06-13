@@ -1,0 +1,4 @@
+CamelContext:0.0020
+IOHelper:0.0061
+Main:0.0000
+MainSupport:0.0020

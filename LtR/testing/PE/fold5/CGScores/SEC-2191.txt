@@ -1,0 +1,2 @@
+AbstractConfiguredSecurityBuilder:0.0024
+ProviderManager:0.0081

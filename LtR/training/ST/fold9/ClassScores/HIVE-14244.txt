@@ -1,0 +1,6 @@
+MapRecordSource:0.3158
+ReduceSinkOperator:0.3947
+TableScanOperator:0.3684
+TezProcessor:0.2368
+VectorMapOperator:0.3684
+VectorReduceSinkOperator:0.5526

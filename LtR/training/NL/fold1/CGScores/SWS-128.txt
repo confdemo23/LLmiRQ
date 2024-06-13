@@ -1,0 +1,10 @@
+EndpointInvocationChain:0.0047
+MessageContext:0.0180
+Soap11Header:0.0047
+Soap12Header:0.0113
+SoapBody:0.0047
+SoapEndpointInterceptor:0.0047
+SoapEndpointInvocationChain:0.0113
+SoapFault:0.0047
+SoapHeaderElement:0.0180
+SoapMessage:0.0180

@@ -1,0 +1,3 @@
+MailBinding:0.2105
+MailConsumer:0.2368
+MailMessage:0.2105

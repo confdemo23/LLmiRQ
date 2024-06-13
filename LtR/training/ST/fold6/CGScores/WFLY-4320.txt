@@ -1,0 +1,10 @@
+ActivationSecurityUtil:0.0021
+ConnectorServices:0.0127
+ConnectorXmlDescriptor:0.0056
+InactiveResourceAdapterDeployment:0.0228
+ModelNodeUtil:0.2025
+ModifiableResourceAdapter:0.0122
+RaDeploymentParsingProcessor:0.0016
+RaNativeProcessor:0.0016
+ResourceAdapterService:0.0052
+ResourceAdapterXmlDeploymentService:0.0381

@@ -1,0 +1,4 @@
+BatchStatus:0.1778
+FlatFileItemWriter:0.3333
+JobExecution:0.2000
+JobParameters:0.2222

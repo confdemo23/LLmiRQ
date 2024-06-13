@@ -1,0 +1,10 @@
+AbstractConnectionFactory:0.0281
+CacheMode:0.0087
+CachingConnectionFactory:0.0038
+ChannelCachingConnectionProxy:0.1154
+ChannelProxy:0.0232
+ConditionalExceptionLogger:0.0038
+Connection:0.0184
+ConnectionListener:0.0038
+DefaultChannelCloseLogger:0.0038
+RabbitUtils:0.0232

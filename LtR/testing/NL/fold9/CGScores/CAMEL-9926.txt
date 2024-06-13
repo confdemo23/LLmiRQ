@@ -1,0 +1,10 @@
+CamelContext:0.0027
+DefaultEndpoint:0.0041
+HttpEndpoint:0.0107
+ModelCamelContext:0.0209
+OperationName:0.0059
+SalesforceComponent:0.0041
+SalesforceEndpointConfig:0.0205
+SalesforceHttpClient:0.0126
+SalesforceLoginConfig:0.0159
+ServiceHelper:0.0077

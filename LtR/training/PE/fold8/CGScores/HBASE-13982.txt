@@ -1,0 +1,10 @@
+Admin:0.0118
+Base64:0.0014
+Bytes:0.0170
+Connection:0.0092
+ConnectionFactory:0.0040
+HBaseConfiguration:0.0014
+Table:0.0066
+TableDescriptor:0.0040
+TableMapReduceUtil:0.0066
+TableName:0.0092

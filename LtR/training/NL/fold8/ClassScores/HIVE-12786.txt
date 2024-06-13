@@ -1,0 +1,10 @@
+CalcitePlanner:0.3750
+FileSinkOperator:0.4375
+FilterOperator:0.3750
+GroupByOperator:0.4063
+HiveException:0.3438
+JoinOperator:0.3125
+Operator:0.1875
+SelectOperator:0.3750
+SemanticAnalyzer:0.4375
+TableScanOperator:0.4688

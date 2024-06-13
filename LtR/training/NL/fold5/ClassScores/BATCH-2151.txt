@@ -1,0 +1,10 @@
+BatchStatus:0.2121
+ChunkContext:0.2424
+FaultTolerantStepFactoryBean:0.7273
+ItemReader:0.1818
+JobExecution:0.2424
+JobRepository:0.2727
+JobRestartException:0.4545
+SimpleStepBuilder:0.3939
+SkipPolicy:0.1818
+StepExecution:0.2727

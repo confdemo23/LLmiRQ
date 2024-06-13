@@ -1,0 +1,1 @@
+ConsumerTemplate:0.2826

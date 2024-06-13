@@ -1,0 +1,10 @@
+HdfsCompressionCodec:0.0100
+HdfsConfiguration:0.0890
+HdfsInfo:0.0927
+HdfsInfoFactory:0.0401
+HdfsInputStream:0.0251
+HdfsOutputStream:0.0175
+HdfsWritableFactory:0.0063
+IOHelper:0.0063
+TypeConverter:0.0025
+WritableType:0.0251

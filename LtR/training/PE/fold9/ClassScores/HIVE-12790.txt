@@ -1,0 +1,5 @@
+Hive:0.0233
+HiveMetaStoreClient:0.3721
+HiveServer2:0.1860
+SessionState:0.2093
+TaskRunner:0.1628

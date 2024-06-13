@@ -1,0 +1,10 @@
+CamelContext:0.2247
+CollectionStringBuffer:0.4640
+EventHelper:0.1361
+JmsConfiguration:1.0000
+LifecycleStrategy:0.1386
+ObjectHelper:0.2277
+Route:0.5140
+RouteDefinition:0.3669
+RouteService:0.4449
+ServiceHelper:0.1742

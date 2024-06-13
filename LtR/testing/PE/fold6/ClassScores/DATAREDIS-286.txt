@@ -1,0 +1,1 @@
+RedisTemplate:0.2222

@@ -1,0 +1,6 @@
+AggregationBuffer:0.0008
+AggregationType:0.0008
+GroupByOperator:0.0024
+GroupIterator:0.0051
+NumDistinctValueEstimator:0.0011
+NumericStatsAgg:0.0210

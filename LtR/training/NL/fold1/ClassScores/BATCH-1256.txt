@@ -1,0 +1,10 @@
+ChunkListener:0.2703
+ChunkOrientedTasklet:0.4595
+CompositeItemWriter:0.4324
+FaultTolerantStepBuilder:0.5676
+ItemProcessor:0.2703
+ItemReader:0.1892
+ItemWriter:0.1892
+RepeatTemplate:0.2973
+SkipPolicy:0.1892
+StepExecutionListener:0.4865

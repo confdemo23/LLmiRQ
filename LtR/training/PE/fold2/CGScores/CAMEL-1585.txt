@@ -1,0 +1,10 @@
+CamelContext:0.0072
+DefaultProducer:0.0072
+Exchange:0.0539
+Expression:0.0111
+FileUtil:0.0188
+GenericFileConfiguration:0.0111
+GenericFileEndpoint:0.0889
+GenericFileOperations:0.0422
+Message:0.0422
+ObjectHelper:0.0072

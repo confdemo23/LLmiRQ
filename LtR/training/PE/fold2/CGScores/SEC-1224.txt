@@ -1,0 +1,10 @@
+Acl:0.0197
+AclCache:0.0197
+AclImpl:0.0266
+FieldUtils:0.0072
+GrantedAuthoritySid:0.0037
+JdbcAclService:0.0037
+MutableAcl:0.0588
+ObjectIdentity:0.0266
+PrincipalSid:0.0037
+SecurityContextHolder:0.0037

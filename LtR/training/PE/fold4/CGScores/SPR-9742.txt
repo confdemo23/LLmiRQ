@@ -1,0 +1,10 @@
+AnnotationUtils:0.0011
+Assert:0.0103
+ClassPathJaxb2TypeScanner:0.0011
+FileCopyUtils:0.0011
+MimeContainer:0.0072
+ObjectUtils:0.0087
+Resource:0.0011
+SaxResourceUtils:0.0011
+StaxUtils:0.0103
+StringUtils:0.0133

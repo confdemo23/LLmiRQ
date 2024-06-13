@@ -1,0 +1,4 @@
+AuthenticationManagerBuilder:0.5000
+HttpSecurity:0.1800
+OrRequestMatcher:0.2600
+RequestMatcher:0.2200

@@ -1,0 +1,7 @@
+ConcurrentSessionControlAuthenticationStrategy:0.0099
+DelegatingApplicationListener:0.0044
+HttpSessionSecurityContextRepository:0.0154
+SessionDestroyedEvent:0.0028
+SessionFixationProtectionStrategy:0.0044
+SessionInformation:0.0220
+SessionManagementFilter:0.0154

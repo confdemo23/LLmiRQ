@@ -1,0 +1,1 @@
+SimpleRegionNormalizer:0.4419

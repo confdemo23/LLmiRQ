@@ -1,0 +1,10 @@
+CTEClause:0.0242
+Client:0.0103
+ConfVars:0.0216
+DDLSemanticAnalyzer:0.0229
+HdfsEncryptionShim:0.0083
+HiveConf:0.0482
+QualifiedNameUtil:0.0292
+SemanticAnalyzer:0.0668
+SortBucketRSCtx:0.0402
+Utils:0.0183

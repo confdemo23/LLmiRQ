@@ -1,0 +1,10 @@
+Bytes:0.0648
+ClusterConnection:0.0514
+HBaseAdmin:0.0280
+MasterKeepAliveConnection:0.1369
+NonceGenerator:0.0397
+Pair:0.0380
+ProtobufUtil:0.0732
+RegionInfo:0.0347
+RequestConverter:0.1017
+TableName:0.0414

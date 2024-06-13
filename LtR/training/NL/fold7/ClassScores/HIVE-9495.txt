@@ -1,0 +1,7 @@
+ExecReducer:0.2051
+GroupByOperator:0.3077
+HashTableSinkOperator:0.4615
+MapJoinOperator:0.3077
+MapOperator:0.2051
+VectorGroupByOperator:0.4615
+VectorMapOperator:0.3590

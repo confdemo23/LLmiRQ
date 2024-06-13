@@ -1,0 +1,8 @@
+AccessDeniedException:0.4000
+AnonymousAuthenticationFilter:0.5778
+FilterSecurityInterceptor:0.4889
+SaveContextOnUpdateOrErrorResponseWrapper:0.8444
+SecurityContext:0.2667
+SecurityContextHolder:0.4000
+SecurityContextRepository:0.4889
+WebExpressionVoter:0.3333

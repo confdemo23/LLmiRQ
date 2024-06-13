@@ -1,0 +1,10 @@
+BeanDefinition:0.1604
+CamelContext:0.1195
+Exchange:0.1597
+ExpressionClause:0.1083
+Message:0.1003
+PollEnrichDefinition:0.1165
+ProcessorDefinition:0.1439
+ProcessorDefinitionHelper:0.1165
+RouteContext:0.1416
+RoutesDefinition:0.1439

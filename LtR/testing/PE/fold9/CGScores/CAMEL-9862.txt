@@ -1,0 +1,10 @@
+CamelContext:0.0185
+FileUtil:0.0234
+HostUtils:0.0087
+IntrospectionSupport:0.0038
+ObjectHelper:0.0234
+RestConfiguration:0.1020
+URISupport:0.0136
+UndertowConsumer:0.0332
+UndertowEndpoint:0.0578
+UndertowHost:0.0136

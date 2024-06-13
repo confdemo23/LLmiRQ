@@ -1,0 +1,10 @@
+Bytes:0.0587
+Cell:0.0312
+HRegionServer:0.0186
+ObserverContext:0.0190
+Put:0.0505
+RegionCoprocessorEnvironment:0.0260
+RegionServerThread:0.0210
+ResultScanner:0.0257
+Table:0.0849
+TableName:0.0647

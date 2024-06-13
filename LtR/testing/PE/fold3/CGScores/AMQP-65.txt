@@ -1,0 +1,8 @@
+Binding:0.0557
+CachingConnectionFactory:0.0016
+ChannelProxy:0.0039
+ConnectionFactory:0.0016
+Declarable:0.0016
+Exchange:0.0445
+Queue:0.0332
+RabbitTemplate:0.0242

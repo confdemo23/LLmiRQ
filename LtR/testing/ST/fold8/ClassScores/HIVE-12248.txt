@@ -1,0 +1,4 @@
+DBTokenStore:0.1875
+MDelegationToken:0.2708
+ObjectStore:0.1667
+RawStore:0.1042

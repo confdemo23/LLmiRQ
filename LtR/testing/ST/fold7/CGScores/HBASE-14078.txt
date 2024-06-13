@@ -1,0 +1,10 @@
+AssignmentManager:0.0752
+Bytes:0.0752
+HMaster:0.6292
+HRegion:0.4899
+HRegionServer:0.1805
+MasterCoprocessorHost:0.1767
+ProtobufUtil:0.3163
+RegionInfo:0.2629
+ServerName:0.0754
+TableDescriptor:0.0780

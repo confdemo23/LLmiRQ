@@ -1,0 +1,2 @@
+SiteSwitcherHandler:0.3333
+SiteSwitcherRequestFilter:0.4667

@@ -1,0 +1,8 @@
+DefaultGraphWalker:0.3182
+DefaultRuleDispatcher:0.3864
+ExplainSemanticAnalyzer:0.4318
+Generator:0.1136
+LineageCtx:0.1364
+OpProcFactory:0.2045
+PreOrderWalker:0.2273
+SemanticAnalyzer:0.2727

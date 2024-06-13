@@ -1,0 +1,7 @@
+HiveAuthzContext:0.3333
+HiveAuthzSessionContext:0.5128
+HiveConf:0.1282
+HiveMetaStore:0.2564
+HiveOperation:0.2564
+IMetaStoreClient:0.3333
+RawStore:0.1282

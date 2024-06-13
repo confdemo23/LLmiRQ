@@ -1,0 +1,5 @@
+GoalType:0.1351
+LinearConstraint:0.3514
+LinearObjectiveFunction:0.5405
+PointValuePair:0.2973
+SimplexSolver:0.2703

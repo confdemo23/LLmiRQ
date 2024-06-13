@@ -1,0 +1,6 @@
+ColumnStatsMerger:0.3939
+HiveMetaStore:0.2727
+HiveStatsUtils:0.3030
+MetaStoreDirectSql:0.4242
+ObjectStore:0.2121
+StatsSetupConst:0.3333

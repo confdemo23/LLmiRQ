@@ -1,0 +1,4 @@
+ScheduledAnnotationBeanPostProcessor:0.7674
+ScheduledTaskRegistrar:0.4419
+SimpleApplicationEventMulticaster:0.6977
+XmlWebApplicationContext:0.4884

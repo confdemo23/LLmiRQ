@@ -1,0 +1,7 @@
+AttributeDefinition:0.0221
+AttributeParser:0.0020
+ListAttributeDefinition:0.0020
+MapAttributeDefinition:0.0020
+OperationFailedException:0.0020
+ParameterValidator:0.0020
+ParseUtils:0.0020

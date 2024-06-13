@@ -1,0 +1,1 @@
+Base64TextInputFormat:0.4865

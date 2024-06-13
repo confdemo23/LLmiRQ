@@ -1,0 +1,2 @@
+BeanValidationCdiIntegrationTestCase:0.6154
+Reservation:0.1346

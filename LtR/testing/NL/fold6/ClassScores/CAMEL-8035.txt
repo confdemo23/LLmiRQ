@@ -1,0 +1,4 @@
+ContentType:0.2121
+CxfRsConsumer:0.2727
+Exchange:0.1212
+Message:0.0909

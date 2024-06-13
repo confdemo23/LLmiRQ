@@ -1,0 +1,7 @@
+AbstractSecurityInterceptor:0.5227
+AffirmativeBased:0.2727
+ExpressionBasedPreInvocationAdvice:0.6818
+ExpressionUtils:0.2500
+MethodSecurityEvaluationContext:0.6136
+MethodSecurityInterceptor:0.4773
+PreInvocationAuthorizationAdviceVoter:0.7500

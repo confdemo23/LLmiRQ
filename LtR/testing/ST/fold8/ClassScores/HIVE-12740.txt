@@ -1,0 +1,4 @@
+CombineHiveInputFormat:0.3958
+HiveInputFormat:0.2500
+TezTask:0.0833
+Utilities:0.1250

@@ -1,0 +1,2 @@
+OAuth2Template:0.2128
+PreemptiveBasicAuthClientHttpRequestInterceptor:0.9149

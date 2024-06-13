@@ -1,0 +1,1 @@
+HiveIgnoreKeyTextOutputFormat:0.6047

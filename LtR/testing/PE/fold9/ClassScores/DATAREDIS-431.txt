@@ -1,0 +1,3 @@
+RedisCache:0.1522
+RedisConnection:0.2609
+RedisTemplate:0.2174

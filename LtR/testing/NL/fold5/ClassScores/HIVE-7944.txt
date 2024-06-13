@@ -1,0 +1,5 @@
+ColumnStatsMerger:0.3256
+ColumnStatsUpdateTask:0.4186
+HiveMetaStoreClient:0.3721
+MetaStoreDirectSql:0.3488
+StatsAggregator:0.2791

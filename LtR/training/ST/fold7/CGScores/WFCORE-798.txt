@@ -1,0 +1,10 @@
+AccessControlXml:0.0048
+Attribute:0.1347
+Element:0.1005
+ExtensionHandler:0.0066
+ManagementXml:0.0101
+ManagementXmlDelegate:0.0136
+Namespace:0.0338
+SimpleAttributeDefinition:0.2769
+StringListAttributeDefinition:0.0083
+Util:0.0452

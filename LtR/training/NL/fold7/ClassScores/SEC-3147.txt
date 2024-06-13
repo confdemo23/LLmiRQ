@@ -1,0 +1,10 @@
+AbstractAuthenticationProcessingFilter:0.8974
+AuthenticationEntryPoint:0.5385
+AuthenticationFailureHandler:0.6410
+AuthenticationManager:0.4615
+HttpSecurity:0.2308
+LoginUrlAuthenticationEntryPoint:0.7436
+SecurityConfig:0.2821
+SimpleUrlAuthenticationFailureHandler:0.8718
+UsernamePasswordAuthenticationFilter:0.8462
+WebSecurityConfigurerAdapter:0.6410

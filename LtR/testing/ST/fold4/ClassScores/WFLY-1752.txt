@@ -1,0 +1,2 @@
+ManagedReferenceFactoryToResourceReferenceFactoryAdapter:1.0000
+WebServiceManagedReferenceFactory:0.7143

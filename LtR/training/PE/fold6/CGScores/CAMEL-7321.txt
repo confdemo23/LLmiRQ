@@ -1,0 +1,10 @@
+CamelContext:0.0022
+DefaultConsumer:0.0056
+Exchange:0.0034
+JcrConsumer:0.0056
+JcrConsumerThread:0.0175
+JcrEndpoint:0.0539
+JcrMessage:0.0034
+Message:0.0034
+ObjectHelper:0.0022
+RouteDefinition:0.0034

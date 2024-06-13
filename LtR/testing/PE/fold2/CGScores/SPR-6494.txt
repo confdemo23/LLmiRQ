@@ -1,0 +1,10 @@
+AbstractAutowireCapableBeanFactory:0.0772
+Assert:0.1326
+BeanDefinition:0.1037
+DependencyDescriptor:0.4207
+EncodedResource:0.0681
+ObjectUtils:0.0772
+OptionalDependencyFactory:0.0640
+Resource:0.0915
+RootBeanDefinition:0.1565
+StringUtils:0.0508

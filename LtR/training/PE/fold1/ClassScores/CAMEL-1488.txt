@@ -1,0 +1,3 @@
+Bean:0.0222
+BeanInfo:0.1111
+MethodInvocation:0.2889

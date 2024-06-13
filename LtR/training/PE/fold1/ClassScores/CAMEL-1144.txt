@@ -1,0 +1,3 @@
+Converter:0.1333
+MockEndpoint:0.2000
+RouteBuilder:0.2000

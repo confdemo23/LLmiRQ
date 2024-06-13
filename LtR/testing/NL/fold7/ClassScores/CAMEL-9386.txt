@@ -1,0 +1,3 @@
+GitComponent:0.2564
+GitEndpoint:0.2308
+GitProducer:0.2308

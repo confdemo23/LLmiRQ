@@ -1,0 +1,3 @@
+AutowireBeanFactoryObjectPostProcessor:0.6538
+WebSecurityConfiguration:0.3846
+WebSecurityConfigurerAdapter:0.4615

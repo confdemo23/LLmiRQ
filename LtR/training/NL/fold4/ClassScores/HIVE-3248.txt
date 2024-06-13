@@ -1,0 +1,8 @@
+ASTNode:0.0930
+BaseSemanticAnalyzer:0.3953
+Driver:0.0698
+HiveConf:0.1163
+ParseDriver:0.1860
+QTestUtil:0.1395
+QueryPlan:0.1395
+SemanticAnalyzer:0.3023

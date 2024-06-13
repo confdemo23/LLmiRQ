@@ -1,0 +1,6 @@
+ClassTypeInformation:0.0040
+Lazy:0.0070
+MappingContext:0.0021
+RepositoryFactorySupport:0.0291
+RepositoryMetadata:0.0046
+TypeInformation:0.0128

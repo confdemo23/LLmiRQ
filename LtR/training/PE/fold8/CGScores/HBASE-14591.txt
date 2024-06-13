@@ -1,0 +1,6 @@
+ConstantSizeRegionSplitPolicy:0.0101
+HRegion:0.0552
+HStore:0.0326
+RegionServerServices:0.0101
+StringUtils:0.0214
+TableDescriptor:0.0214

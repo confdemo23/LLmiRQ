@@ -1,0 +1,10 @@
+Admin:0.0048
+Bytes:0.0025
+Cipher:0.0027
+ColumnFamilyDescriptorBuilder:0.0122
+Encryption:0.0017
+HBaseConfiguration:0.0064
+IntegrationTestIngest:0.0088
+LoadTestTool:0.0017
+TableName:0.0061
+User:0.0161

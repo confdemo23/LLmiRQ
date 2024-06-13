@@ -1,0 +1,10 @@
+Entity:0.0093
+ExecutionContextDao:0.0374
+ExitStatus:0.0137
+Job:0.0162
+JobExecution:0.1243
+JobExecutionDao:0.0374
+JobInstanceDao:0.0182
+StepContribution:0.0174
+StepExecution:0.0954
+StepExecutionDao:0.0220

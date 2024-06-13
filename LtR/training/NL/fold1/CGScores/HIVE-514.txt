@@ -1,0 +1,10 @@
+Client:0.0101
+ConfVars:0.0208
+DDLSemanticAnalyzer:0.0220
+GetHelper:0.0085
+HiveConf:0.0460
+ObjectStore:0.1540
+QualifiedNameUtil:0.0280
+QueryWrapper:0.0743
+ShimLoader:0.0076
+Utils:0.0126

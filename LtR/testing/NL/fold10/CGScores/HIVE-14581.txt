@@ -1,0 +1,7 @@
+DeferredExprObject:0.0150
+ExprNodeGenericFuncEvaluator:0.0150
+FunctionRegistry:0.0175
+HiveCharWritable:0.0376
+HiveVarcharWritable:0.0094
+TraditionalBinaryPrefix:0.0163
+TypeCheckProcFactory:0.2231

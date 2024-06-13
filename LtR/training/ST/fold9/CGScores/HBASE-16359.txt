@@ -1,0 +1,10 @@
+EnvironmentEdgeManager:0.0157
+HRegion:0.0915
+HRegionServer:0.0358
+ProtobufUtil:0.0316
+RegionCoprocessorHost:0.0157
+RegionInfo:0.0342
+RegionScanner:0.0149
+RpcCall:0.0298
+RpcCallContext:0.0149
+RpcServerInterface:0.0143

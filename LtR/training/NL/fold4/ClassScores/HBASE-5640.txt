@@ -1,0 +1,7 @@
+HFileLink:0.1395
+HFileWriterImpl:0.2791
+HRegion:0.0930
+HRegionServer:0.2326
+HStore:0.0698
+LoadIncrementalHFiles:0.4186
+SecureBulkLoadManager:0.4186

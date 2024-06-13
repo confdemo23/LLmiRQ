@@ -1,0 +1,10 @@
+BatchStatus:0.0162
+ExitStatus:0.0162
+FaultTolerantStepBuilder:0.0912
+FaultTolerantStepFactoryBean:0.5454
+JobExecution:0.0162
+JobRepository:0.0330
+MapJobRepositoryFactoryBean:0.0246
+Step:0.1926
+StepExecution:0.5202
+TransactionAwareProxyFactory:0.0078

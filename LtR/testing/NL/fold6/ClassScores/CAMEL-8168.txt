@@ -1,0 +1,2 @@
+MinaConsumer:0.2424
+MinaEndpoint:0.2424

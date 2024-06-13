@@ -1,0 +1,4 @@
+AbstractConfiguration:0.4000
+BaseConfiguration:0.3111
+HierarchicalConfiguration:0.4889
+XMLConfiguration:0.2889

@@ -1,0 +1,6 @@
+AttributeSchema:0.0008
+ClassInfo:0.0008
+Flag:0.0325
+ObjectSchema:0.0020
+SchemaReader:0.0008
+SyntaxToJavaClass:0.0008

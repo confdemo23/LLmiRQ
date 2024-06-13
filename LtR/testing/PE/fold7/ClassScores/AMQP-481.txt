@@ -1,0 +1,2 @@
+RabbitListenerAnnotationBeanPostProcessor:0.8261
+RabbitListenerEndpointRegistrar:0.6087

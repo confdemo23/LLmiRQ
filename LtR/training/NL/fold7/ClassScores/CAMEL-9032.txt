@@ -1,0 +1,3 @@
+BeanComponent:0.2564
+BeanInfo:0.1282
+IntrospectionSupport:0.4359

@@ -1,0 +1,5 @@
+CompressionKind:0.2400
+ObjectInspector:0.2400
+ObjectInspectorFactory:0.3800
+OrcFile:0.0800
+Writer:0.0600

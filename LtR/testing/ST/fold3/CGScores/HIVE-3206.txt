@@ -1,0 +1,5 @@
+FileUtils:0.0065
+HadoopShims:0.0115
+HdfsUtils:0.0065
+ShimLoader:0.0090
+Utils:0.0014

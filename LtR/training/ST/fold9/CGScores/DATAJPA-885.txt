@@ -1,0 +1,4 @@
+Jpa21Utils:0.0006
+JpaEntityMetadata:0.0006
+JpaQueryExecution:0.0006
+JpaQueryMethod:0.0164

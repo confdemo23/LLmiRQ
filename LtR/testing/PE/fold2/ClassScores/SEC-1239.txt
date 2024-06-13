@@ -1,0 +1,2 @@
+JaasAuthenticationProvider:0.5111
+JaasNameCallbackHandler:0.4444

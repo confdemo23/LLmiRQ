@@ -1,0 +1,3 @@
+RepositoryConfiguration:0.6563
+RepositoryConfigurationDelegate:0.9063
+RepositoryConfigurationUtils:0.8125

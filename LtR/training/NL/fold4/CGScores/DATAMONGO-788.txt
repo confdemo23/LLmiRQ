@@ -1,0 +1,10 @@
+AggregationOperationContext:0.0460
+ExposedFields:0.0408
+Field:0.0772
+FieldReference:0.0460
+Fields:0.1553
+Log:0.0381
+MapReduceOptions:0.0614
+ProjectionOperation:0.2270
+Query:0.1996
+QueryMapper:0.0748

@@ -1,0 +1,5 @@
+CamelContext:0.2432
+ProcessorDefinition:0.4324
+RouteBuilder:0.2432
+RouteDefinition:0.3243
+SpringCamelContext:0.4054

@@ -1,0 +1,2 @@
+RedisAtomicInteger:0.3261
+RedisAtomicLong:0.2609

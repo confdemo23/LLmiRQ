@@ -1,0 +1,6 @@
+ConfVars:0.0340
+EncoderDecoder:0.0060
+HiveConf:0.0741
+HiveTableScan:0.0045
+Utils:0.0020
+VarType:0.0100

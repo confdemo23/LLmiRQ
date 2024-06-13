@@ -1,0 +1,4 @@
+ReduceRecordSource:0.2857
+TezProcessor:0.1633
+VectorGroupByOperator:0.3469
+VectorGroupKeyHelper:0.3265

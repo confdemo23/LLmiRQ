@@ -1,0 +1,7 @@
+AssertionClause:0.0015
+Exchange:0.0083
+JndiContext:0.0015
+Message:0.0083
+MockEndpoint:0.0151
+RouteDefinition:0.0032
+ValueBuilder:0.0015

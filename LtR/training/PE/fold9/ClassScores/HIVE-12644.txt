@@ -1,0 +1,1 @@
+HiveSortMergeRule:0.3256

@@ -1,0 +1,10 @@
+AbstractItemStreamItemWriter:0.0806
+ExecutionContext:0.1611
+ExecutionContextUserSupport:0.0141
+FileUtils:0.0155
+MultiResourceItemWriter:0.0091
+OutputState:0.0888
+ResourceAwareItemWriterItemStream:0.0719
+ResourceSuffixCreator:0.0091
+StaxWriterCallback:0.0159
+TransactionAwareBufferedWriter:0.0492

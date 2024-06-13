@@ -1,0 +1,10 @@
+AdditionalSetupInterceptor:0.4792
+ConcurrentContextInterceptor:0.5208
+JCAOrderedLastSynchronizationList:0.6250
+NamespaceContextInterceptor:0.5000
+SecurityContextAssociationHandler:0.6250
+SecurityContextInterceptor:0.4792
+ShutDownInterceptorFactory:0.4792
+StatefulSessionComponentInstance:0.6042
+StatefulSessionSynchronizationInterceptor:0.7917
+StatefulWithXPCFailoverTestCase:0.5833

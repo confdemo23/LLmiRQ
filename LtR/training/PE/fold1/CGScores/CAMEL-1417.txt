@@ -1,0 +1,7 @@
+CamelContext:0.0264
+DataTypeAware:0.0051
+Exchange:0.0264
+Message:0.0833
+SimpleUuidGenerator:0.0051
+TypeConverter:0.0264
+UuidGenerator:0.0051

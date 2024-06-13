@@ -1,0 +1,6 @@
+DefaultHttpBinding:0.4242
+HttpServerBootstrapFactory:0.6667
+NettyHttpConsumer:0.3939
+NettyHttpEndpoint:0.3939
+NettyHttpMessage:0.3636
+NettyHttpProducer:0.3939

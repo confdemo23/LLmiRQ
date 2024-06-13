@@ -1,0 +1,8 @@
+AbstractSecurityInterceptor:0.4423
+AffirmativeBased:0.2308
+ChannelSecurityInterceptor:0.4231
+DefaultMessageSecurityExpressionHandler:0.6731
+ExpressionBasedMessageSecurityMetadataSourceFactory:0.9038
+ExpressionUtils:0.2115
+MessageExpressionVoter:0.3462
+SecurityExpressionRoot:0.3462

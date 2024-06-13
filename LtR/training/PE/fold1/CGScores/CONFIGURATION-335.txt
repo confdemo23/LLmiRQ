@@ -1,0 +1,10 @@
+BaseHierarchicalConfiguration:0.1601
+Builder:0.3770
+Configuration:0.0833
+ConfigurationInterpolator:0.1809
+ImmutableNode:0.1499
+NodeHandler:0.1977
+NodeModel:0.0945
+QueryResult:0.1011
+ReferenceNodeHandler:0.1662
+XMLDocumentHelper:0.1199

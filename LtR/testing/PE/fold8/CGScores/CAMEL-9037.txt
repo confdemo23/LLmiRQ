@@ -1,0 +1,4 @@
+CamelContext:0.0127
+ExecutorServiceManager:0.0059
+JmsEndpoint:0.0471
+ServiceStatus:0.0059

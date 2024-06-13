@@ -1,0 +1,5 @@
+JdbcDriverManager:0.3415
+MavenOperations:0.2927
+PomManagementService:0.4146
+ProjectOperations:0.3415
+XmlElementBuilder:0.3415

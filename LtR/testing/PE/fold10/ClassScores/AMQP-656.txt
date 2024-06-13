@@ -1,0 +1,6 @@
+Argument:0.1163
+Exchange:0.1163
+Queue:0.0465
+QueueBinding:0.2093
+QueueBuilder:0.2093
+RabbitListener:0.2558

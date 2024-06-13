@@ -1,0 +1,10 @@
+Attribute:0.1331
+Builder:0.0906
+ExtensionContext:0.0631
+ExtensionParsingContext:0.0370
+FileSystemDeploymentService:0.0941
+ManagementResourceRegistration:0.1722
+Namespace:0.0370
+Notification:0.0340
+PathManager:0.0340
+SimpleAttributeDefinitionBuilder:0.4169

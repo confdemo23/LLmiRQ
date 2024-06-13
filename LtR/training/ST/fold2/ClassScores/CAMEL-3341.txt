@@ -1,0 +1,3 @@
+CamelProxyTest:0.2041
+JmsProducer:0.1429
+ProxyHelper:0.1429

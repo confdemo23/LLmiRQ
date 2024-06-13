@@ -1,0 +1,10 @@
+AbstractJpaQuery:0.0060
+Jpa21Utils:0.0060
+JpaEntityMetadata:0.0140
+JpaParameters:0.0220
+JpaQueryCreator:0.0300
+JpaQueryExecution:0.0060
+JpaQueryMethod:0.1582
+ParameterBinder:0.0140
+QueryPreparer:0.0140
+Temporal:0.0045

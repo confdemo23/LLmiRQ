@@ -1,0 +1,7 @@
+ExprNodeGenericFuncEvaluator:0.6757
+FilterOperator:0.2973
+VectorExpressionDescriptor:0.6216
+VectorFilterOperator:0.4595
+VectorUDFAdaptor:0.3514
+VectorizationContext:0.4595
+VectorizedRowBatch:0.4054

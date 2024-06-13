@@ -1,0 +1,2 @@
+JDBCStoreResourceDefinition:0.5854
+TransactionSubsystemAdd:0.4878

@@ -1,0 +1,10 @@
+DefaultEndpoint:0.0107
+Exchange:0.0039
+JmsComponent:0.0061
+JmsConfiguration:0.4005
+JmsConsumer:0.0039
+JmsEndpoint:0.0039
+JmsProviderMetadata:0.0039
+ObjectHelper:0.0039
+ReplyToType:0.0039
+UnsafeUriCharactersEncoder:0.0084

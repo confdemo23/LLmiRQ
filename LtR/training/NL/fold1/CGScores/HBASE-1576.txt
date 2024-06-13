@@ -1,0 +1,10 @@
+Bytes:0.1014
+Connection:0.0202
+ConnectionFactory:0.0252
+HBaseConfiguration:0.0816
+Result:0.0186
+Scan:0.1591
+ScanResultCache:0.0186
+ScannerCallableWithReplicas:0.0677
+TableName:0.0422
+UserProvider:0.0378

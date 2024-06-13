@@ -1,0 +1,2 @@
+DigestAuthenticationMechanism:0.5417
+JAASIdentityManagerImpl:0.4167

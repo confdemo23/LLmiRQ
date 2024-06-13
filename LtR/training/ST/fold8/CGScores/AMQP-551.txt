@@ -1,0 +1,5 @@
+Connection:0.0217
+ConnectionFactory:0.0217
+LocalizedQueueConnectionFactory:0.0097
+SimpleMessageListenerContainer:0.0458
+TestUtils:0.0097

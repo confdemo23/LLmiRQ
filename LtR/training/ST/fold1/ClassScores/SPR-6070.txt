@@ -1,0 +1,4 @@
+AbstractAutowireCapableBeanFactory:0.6818
+AbstractPropertyAccessor:0.4545
+BeanWrapperImpl:0.2500
+CookieGenerator:0.2500

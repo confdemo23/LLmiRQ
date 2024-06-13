@@ -1,0 +1,2 @@
+DaitchMokotoffSoundex:0.4186
+Rule:0.0233

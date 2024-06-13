@@ -1,0 +1,9 @@
+Driver:0.0606
+HiveConf:0.1212
+HiveMetaStoreClient:0.4545
+HiveServer2:0.2121
+LlapDaemon:0.1818
+OperationManager:0.3636
+QueryPlan:0.1515
+SessionManager:0.3030
+ThriftCLIService:0.3636

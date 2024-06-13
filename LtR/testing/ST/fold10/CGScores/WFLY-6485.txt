@@ -1,0 +1,10 @@
+AbstractEntityManager:0.0126
+BeanDeploymentModule:0.0096
+Configuration:0.0051
+JndiNamingDependencyProcessor:0.0024
+NonTxEmCloser:0.0033
+Reflections:0.0053
+ServiceLoaders:0.0024
+TransactionUtil:0.0163
+Utils:0.0024
+WeldBootstrapService:0.0067

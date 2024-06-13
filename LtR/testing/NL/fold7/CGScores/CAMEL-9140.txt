@@ -1,0 +1,10 @@
+EndpointHelper:0.0113
+Exchange:0.0460
+ExecutorServiceManager:0.0182
+FacebookEndpoint:0.0812
+FacebookEndpointConfiguration:0.0321
+FacebookMethodsTypeHelper:0.0182
+FacebookPropertiesHelper:0.0182
+IntrospectionSupport:0.0122
+Message:0.0321
+ObjectHelper:0.0113

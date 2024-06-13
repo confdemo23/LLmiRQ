@@ -1,0 +1,5 @@
+FetchInputFormatSplit:0.0107
+MapOpCtx:0.0234
+MapOperator:0.0013
+MergeQueue:0.0217
+SMBMapJoinOperator:0.0097

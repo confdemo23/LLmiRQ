@@ -1,0 +1,10 @@
+AliasFilter:0.0085
+Authentication:0.0038
+CipherSuitePredicate:0.5976
+CipherSuiteSelector:0.0996
+CodePointIterator:0.1682
+Digest:0.0038
+Encryption:0.0038
+Entry:0.0200
+LinkedProperties:0.0088
+MechanismDatabase:0.0548

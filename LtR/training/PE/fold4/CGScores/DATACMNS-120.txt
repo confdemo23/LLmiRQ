@@ -1,0 +1,7 @@
+ClassTypeInformation:0.0023
+Lazy:0.0077
+Param:0.0005
+Parameter:0.0057
+QueryExecutionConverters:0.0014
+Streamable:0.0016
+TypeInformation:0.0073

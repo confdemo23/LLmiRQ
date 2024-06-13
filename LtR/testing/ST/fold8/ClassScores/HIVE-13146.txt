@@ -1,0 +1,1 @@
+CompressionKind:0.2500

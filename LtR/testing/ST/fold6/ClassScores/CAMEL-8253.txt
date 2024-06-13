@@ -1,0 +1,2 @@
+CxfRsInvoker:0.1702
+DefaultCxfRsBinding:0.3191

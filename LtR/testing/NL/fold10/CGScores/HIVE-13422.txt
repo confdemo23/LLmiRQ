@@ -1,0 +1,7 @@
+Client:0.0213
+DecimalTypeInfo:0.0727
+HadoopThriftAuthBridge:0.0094
+HiveDecimal:0.1905
+ShimLoader:0.0094
+TableScanOperator:0.0401
+Utils:0.0213

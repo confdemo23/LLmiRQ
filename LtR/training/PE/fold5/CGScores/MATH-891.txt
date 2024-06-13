@@ -1,0 +1,7 @@
+FastMath:0.0114
+IntDoublePair:0.1006
+NaturalRanking:0.0168
+PearsonsCorrelation:0.0259
+RandomDataGenerator:0.0050
+RankingAlgorithm:0.0259
+RealMatrix:0.0988

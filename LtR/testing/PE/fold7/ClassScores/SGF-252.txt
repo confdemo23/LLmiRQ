@@ -1,0 +1,2 @@
+GuestUser:0.1304
+Region:0.0652

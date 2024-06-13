@@ -1,0 +1,9 @@
+HiveDecimal:0.2195
+HiveInputFormat:0.3171
+HiveOutputFormat:0.3415
+LazySimpleSerDe:0.3171
+ObjectInspectorConverters:0.5610
+PrimitiveObjectInspector:0.5366
+SerDeUtils:0.1951
+TypeCheckProcFactory:0.4390
+TypeInfoFactory:0.3171

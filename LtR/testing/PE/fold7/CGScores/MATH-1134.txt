@@ -1,0 +1,3 @@
+BicubicSplineFunction:0.0627
+BivariateFunction:0.0094
+MathArrays:0.0201

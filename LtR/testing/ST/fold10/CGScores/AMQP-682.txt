@@ -1,0 +1,10 @@
+AbstractConnectionFactory:0.0085
+AbstractMessageListenerContainer:0.0182
+AmqpIOException:0.0033
+ChannelCachingConnectionProxy:0.0353
+ChannelProxy:0.0070
+Connection:0.0074
+ConsumerChannelRegistry:0.0033
+MessageProperties:0.0033
+RabbitUtils:0.0238
+SimpleConsumer:0.0051

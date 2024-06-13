@@ -1,0 +1,6 @@
+DeploymentScannerDefinition:0.6410
+DeploymentScannerExtension:0.6154
+DeploymentScannerService:0.5641
+DeploymentUnit:0.3077
+DeploymentUnitProcessor:0.5385
+ModelController:0.3333

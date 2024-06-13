@@ -1,0 +1,10 @@
+AssignmentManager:0.0288
+ChoreService:0.0332
+ColumnFamilyDescriptor:0.0323
+ExecutorService:0.0327
+HRegion:0.1018
+HRegionServer:0.0315
+HStore:0.0300
+MasterCoprocessorHost:0.0698
+RegionInfo:0.0747
+ServerName:0.0492

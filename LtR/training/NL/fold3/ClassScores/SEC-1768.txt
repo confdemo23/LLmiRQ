@@ -1,0 +1,7 @@
+AbstractFallbackMethodSecurityMetadataSource:1.0000
+DefaultMethodSecurityExpressionHandler:0.8537
+DelegatingMethodSecurityMetadataSource:0.8537
+GlobalMethodSecurityConfiguration:0.7317
+MethodSecurityInterceptor:0.5366
+PrePostAnnotationSecurityMetadataSource:0.8780
+SecuredAnnotationSecurityMetadataSource:0.8780

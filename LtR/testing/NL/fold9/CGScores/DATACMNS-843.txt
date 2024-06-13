@@ -1,0 +1,5 @@
+RepositoryBeanDefinitionBuilder:0.0021
+RepositoryBeanNameGenerator:0.0021
+RepositoryConfiguration:0.0075
+RepositoryConfigurationExtension:0.0180
+RepositoryConfigurationSource:0.0018

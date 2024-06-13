@@ -1,0 +1,10 @@
+CamelContext:0.0396
+FileUtil:0.0396
+NettyComponent:0.0314
+NettyConfiguration:0.0970
+NettyHttpConfiguration:0.0314
+NettyHttpConsumer:0.0387
+NettyHttpEndpoint:0.1215
+NettyHttpSecurityConfiguration:0.0373
+ObjectHelper:0.0706
+RestConfiguration:0.1707

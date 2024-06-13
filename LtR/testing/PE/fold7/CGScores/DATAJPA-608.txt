@@ -1,0 +1,2 @@
+JpaPersistentProperty:0.0132
+ProxyIdAccessor:0.0132

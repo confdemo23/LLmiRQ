@@ -1,0 +1,10 @@
+Client:0.0027
+HadoopShims:0.0043
+HdfsFileStatusWithId:0.0025
+LogHelper:0.0067
+ParsedDelta:0.0064
+ResourceMaps:0.0088
+ResourceType:0.0036
+SessionState:0.0380
+ShimLoader:0.0037
+Utils:0.0037

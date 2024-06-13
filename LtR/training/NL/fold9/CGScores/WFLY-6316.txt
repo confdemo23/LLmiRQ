@@ -1,0 +1,10 @@
+AssociationService:0.0376
+DefaultCacheContainer:0.2343
+EJBClientContextService:0.0376
+EJBSuspendHandlerService:0.0276
+EJBUtilities:0.0551
+Pool:0.0288
+PoolConfig:0.0288
+SessionBeanComponent:0.0288
+SingletonDefaultRequirement:0.0276
+StatelessSessionComponentCreateService:0.0758

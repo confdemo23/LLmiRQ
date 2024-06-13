@@ -1,0 +1,10 @@
+CamelContext:0.0020
+CamelContextHelper:0.0031
+ExpressionBuilder:0.0020
+ExpressionSubElementDefinition:0.0041
+ExpressionToPredicateAdapter:0.0020
+ObjectHelper:0.0031
+RedeliveryPolicy:0.0031
+RedeliveryPolicyDefinition:0.0465
+RouteContext:0.0085
+RouteDefinition:0.0020

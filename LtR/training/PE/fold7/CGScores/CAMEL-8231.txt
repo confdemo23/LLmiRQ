@@ -1,0 +1,4 @@
+Exchange:0.0016
+Message:0.0016
+SSLContextParameters:0.0016
+StompConfiguration:0.0200

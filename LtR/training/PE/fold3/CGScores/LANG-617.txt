@@ -1,0 +1,6 @@
+CharSequenceTranslator:0.0147
+EntityArrays:0.0191
+JavaUnicodeEscaper:0.0024
+LookupTranslator:0.0007
+NumericEntityEscaper:0.0051
+StringUtils:0.0033

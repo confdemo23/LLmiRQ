@@ -1,0 +1,10 @@
+AsyncProcessor:0.0184
+AsyncProcessorAwaitManager:0.0257
+AwaitThread:0.0969
+CamelContext:0.0210
+DefaultExchangeFormatter:0.0418
+Exchange:0.1664
+MessageHistory:0.0197
+ServiceHelper:0.0197
+Statistics:0.0307
+StreamEndpoint:0.1099

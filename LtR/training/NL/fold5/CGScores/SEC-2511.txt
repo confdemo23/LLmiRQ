@@ -1,0 +1,10 @@
+AuthenticationConfiguration:0.0120
+AuthenticationManager:0.0260
+AuthenticationManagerBuilder:0.1101
+CsrfConfigurer:0.0120
+ExpressionInterceptUrlRegistry:0.0260
+HeaderWriterResponse:0.0160
+HttpSecurity:0.1101
+UserDetailsService:0.0260
+WebSecurity:0.0260
+XFrameOptionsMode:0.0480

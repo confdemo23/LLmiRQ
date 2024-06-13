@@ -1,0 +1,2 @@
+FacebookEndpoint:0.3023
+FacebookPropertiesHelper:0.4884

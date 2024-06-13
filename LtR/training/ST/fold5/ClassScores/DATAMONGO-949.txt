@@ -1,0 +1,4 @@
+MongoPersistentEntityIndexCreator:0.6170
+MongoPersistentEntityIndexResolver:0.6383
+MongoRepositoryFactory:0.3830
+MongoRepositoryFactoryBean:0.4681

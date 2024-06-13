@@ -1,0 +1,10 @@
+AbstractSecurityInterceptor:0.0383
+AccessDecisionManager:0.0072
+AccessDecisionVoter:0.0027
+AuthenticatedVoter:0.0031
+Authentication:0.0090
+AuthenticationTrustResolver:0.0178
+ConfigAttribute:0.0307
+FilterInvocation:0.0072
+GrantedAuthority:0.0012
+SecurityMetadataSource:0.0072

@@ -1,0 +1,10 @@
+Admin:0.0293
+ColumnFamilyDescriptor:0.0099
+Connection:0.0123
+HTableDescriptor:0.0123
+RegionInfo:0.0220
+RegionServerMonitor:0.0075
+RegionStdOutSink:0.0160
+Scan:0.0135
+Table:0.0160
+TableName:0.0111

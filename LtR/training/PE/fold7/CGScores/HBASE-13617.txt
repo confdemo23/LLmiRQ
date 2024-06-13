@@ -1,0 +1,10 @@
+HRegionLocation:0.0479
+HTableDescriptor:0.1857
+ObserverContext:0.0657
+Region:0.0479
+RegionCoprocessorEnvironment:0.0657
+RegionInfo:0.0390
+RegionLocations:0.0435
+Result:0.0523
+Table:0.1190
+TableDescriptor:0.0612

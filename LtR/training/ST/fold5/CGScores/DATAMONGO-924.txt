@@ -1,0 +1,10 @@
+AggregationOperationContext:0.0068
+CollectionOptions:0.0065
+DocumentCallback:0.0076
+ExposedFields:0.0140
+MapReduceOptions:0.0156
+Meta:0.0065
+MongoPersistentEntity:0.0065
+Query:0.0510
+QueryMapper:0.0190
+Update:0.0065

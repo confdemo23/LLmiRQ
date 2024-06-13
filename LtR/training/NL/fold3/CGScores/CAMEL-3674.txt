@@ -1,0 +1,10 @@
+CamelContext:0.0036
+FilePathResolver:0.0162
+IOConverter:0.0102
+ObjectConverter:0.0231
+ObjectHelper:0.0244
+PropertiesComponent:0.0139
+PropertiesLocation:0.0224
+PropertiesParser:0.0119
+PropertiesResolver:0.0036
+UriEndpointComponent:0.0099

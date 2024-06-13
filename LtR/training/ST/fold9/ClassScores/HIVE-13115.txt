@@ -1,0 +1,3 @@
+HiveMetaStore:0.2632
+MetaStoreDirectSql:0.3947
+ObjectStore:0.2105

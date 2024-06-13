@@ -1,0 +1,3 @@
+TilesView:0.1395
+TilesViewResolver:0.3256
+UrlBasedViewResolver:0.3953

@@ -1,0 +1,10 @@
+AdviceWithBuilder:0.0614
+Message:0.0269
+ModelCamelContext:0.1153
+ObjectHelper:0.0714
+ProcessorDefinition:0.0414
+ProducerTemplate:0.0213
+RestsDefinition:0.0288
+RouteBuilder:0.0326
+RoutesDefinition:0.1378
+WhenDefinition:0.0238

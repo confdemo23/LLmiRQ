@@ -1,0 +1,3 @@
+ComponentScan:0.2000
+Configuration:0.2000
+FilterType:0.1333

@@ -1,0 +1,10 @@
+AbstractHashedMap:0.0024
+AbstractLinkedMap:0.0011
+EmptyOrderedIterator:0.0024
+EmptyOrderedMapIterator:0.0007
+LinkEntry:0.0165
+LinkIterator:0.0068
+LinkedMap:0.0040
+UnmodifiableIterator:0.0003
+UnmodifiableList:0.0003
+UnmodifiableListIterator:0.0007

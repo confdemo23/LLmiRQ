@@ -1,0 +1,4 @@
+ExecMapper:0.1842
+GenericUDFMapValues:0.4211
+MapOperator:0.2105
+SelectOperator:0.2895

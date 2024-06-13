@@ -1,0 +1,5 @@
+AvroContainerInputFormat:0.5385
+AvroSerDe:0.1538
+FileUtils:0.1538
+HiveInputFormat:0.3077
+InputFormatChecker:0.3846

@@ -1,0 +1,10 @@
+CamelContext:0.0833
+CamelContextHelper:0.0569
+InputTypeDefinition:0.0401
+ManagedProcessorMBean:0.0511
+ManagementAgent:0.0706
+ManagementStrategy:0.0967
+ModelCamelContext:0.5850
+OutputTypeDefinition:0.0401
+ProducerTemplate:0.0511
+RouteContext:0.0864

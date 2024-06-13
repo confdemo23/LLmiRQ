@@ -1,0 +1,6 @@
+Configuration:0.0298
+JPAServiceNames:0.0093
+NonTxEmCloser:0.0195
+PersistenceUnitServiceImpl:0.0093
+SynchronizationTypeAccess:0.0093
+TransactionUtil:0.0916

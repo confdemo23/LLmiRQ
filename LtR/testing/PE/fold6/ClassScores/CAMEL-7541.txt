@@ -1,0 +1,2 @@
+RedisComponentSpringIntegrationTest:0.7111
+RedisIdempotentRepository:0.4889

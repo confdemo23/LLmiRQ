@@ -1,0 +1,10 @@
+AggregationRepository:0.1331
+AtomicExchange:0.0971
+CamelContext:0.2618
+Exchange:1.0000
+Message:0.0881
+ObjectHelper:0.1987
+ProcessorExchangePair:0.1331
+RecoverableAggregationRepository:0.1602
+StopWatch:0.1011
+ThreadPoolProfile:0.3318

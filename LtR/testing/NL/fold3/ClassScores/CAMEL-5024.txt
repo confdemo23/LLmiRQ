@@ -1,0 +1,7 @@
+AggregateProcessor:0.3902
+AsyncCallback:0.2683
+CamelContext:0.2439
+DefaultErrorHandler:0.4146
+ExceptionHandler:0.3415
+Exchange:0.1463
+Splitter:0.1463

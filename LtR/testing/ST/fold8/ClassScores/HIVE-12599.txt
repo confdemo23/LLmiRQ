@@ -1,0 +1,8 @@
+EncodedReaderImpl:0.2917
+HiveContextAwareRecordReader:0.5208
+LlapDataBuffer:0.2292
+LlapInputFormat:0.2500
+LowLevelCacheImpl:0.2917
+MapRecordSource:0.2500
+OrcEncodedDataReader:0.3542
+TezProcessor:0.1875

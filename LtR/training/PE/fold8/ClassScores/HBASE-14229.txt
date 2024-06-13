@@ -1,0 +1,4 @@
+Coprocessor:0.1739
+HRegion:0.0870
+InternalScanner:0.2609
+Store:0.0435

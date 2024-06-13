@@ -1,0 +1,10 @@
+AggregationExprCheck:0.0140
+CTEClause:0.0380
+ConfVars:0.0340
+ConstantExprCheck:0.0140
+GroupByOperator:0.0205
+HdfsEncryptionShim:0.0140
+HiveConf:0.0741
+SemanticAnalyzer:0.1021
+SortBucketRSCtx:0.0621
+VarType:0.0100

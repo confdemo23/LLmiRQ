@@ -1,0 +1,10 @@
+AccessChecker:0.1316
+AccessControlLists:0.0540
+AuthResult:0.1768
+MasterCoprocessorEnvironment:0.0410
+ObserverContext:0.1316
+Region:0.0507
+RegionCoprocessorEnvironment:0.0895
+RegionInfo:0.0475
+TableDescriptor:0.0701
+User:0.0540

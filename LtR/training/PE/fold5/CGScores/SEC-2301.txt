@@ -1,0 +1,10 @@
+AfterInvocationProviderManager:0.0137
+AnnotationAwareOrderComparator:0.0096
+AuthenticationConfiguration:0.0137
+AuthenticationManagerBuilder:0.0287
+DefaultMethodSecurityExpressionHandler:0.0437
+ExpressionBasedPreInvocationAdvice:0.0287
+MethodSecurityInterceptor:0.0737
+ObjectPostProcessor:0.0505
+WebSecurity:0.0751
+WebSecurityExpressionRoot:0.0624

@@ -1,0 +1,6 @@
+AbstractCamelEndpointFactoryBean:0.0140
+CamelContext:0.0028
+CamelContextResolverHelper:0.0140
+IOHelper:0.0084
+Main:0.0000
+MainSupport:0.0028

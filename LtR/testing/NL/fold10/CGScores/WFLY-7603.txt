@@ -1,0 +1,2 @@
+SingletonModel:0.0088
+SingletonResourceDefinition:0.0088

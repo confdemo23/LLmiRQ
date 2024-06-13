@@ -1,0 +1,10 @@
+AllPredicate:0.0051
+AnyPredicate:0.0051
+ExceptionPredicate:0.0023
+InvokerTransformer:0.0051
+NonePredicate:0.0051
+OnePredicate:0.0051
+Predicate:0.0068
+PredicateUtils:0.0051
+TransformerPredicate:0.0023
+UniquePredicate:0.0023

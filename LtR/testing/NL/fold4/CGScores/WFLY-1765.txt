@@ -1,0 +1,10 @@
+ArjunaRecoveryManagerService:0.0353
+ArjunaTransactionManagerService:0.0277
+Attribute:0.0686
+BinderService:0.0201
+CoreEnvironmentService:0.0277
+DeprecatedAttribute:0.0241
+InfinispanModel:0.0508
+JdbcStoreConfigBulder:0.0353
+TransactionRemoteHTTPService:0.0125
+UserTransactionBindingService:0.0201

@@ -1,0 +1,4 @@
+InitialContext:0.1923
+NamingContext:0.1731
+ServiceBasedNamingStore:0.3654
+WeldResourceInjectionServices:0.4808

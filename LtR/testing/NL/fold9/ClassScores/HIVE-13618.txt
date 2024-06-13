@@ -1,0 +1,9 @@
+HiveConf:0.1875
+HiveInputFormat:0.4063
+HiveMetaHookLoader:0.5000
+HiveMetaStoreClient:0.5313
+HiveStorageHandler:0.5000
+HiveStringUtils:0.4063
+MetaStoreUtils:0.3750
+ObjectStore:0.2813
+RawStore:0.1875

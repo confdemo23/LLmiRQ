@@ -1,0 +1,2 @@
+Precision:0.0018
+SimplexTableau:0.0193

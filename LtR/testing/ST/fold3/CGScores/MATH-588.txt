@@ -1,0 +1,10 @@
+ChiSquareTest:0.0217
+FastMath:0.0163
+GTest:0.0191
+IntegerDistribution:0.0076
+KolmogorovSmirnovTest:0.0242
+Mean:0.0101
+RealDistribution:0.0076
+TTest:0.0495
+UnivariateStatistic:0.0861
+WeightedEvaluation:0.0774

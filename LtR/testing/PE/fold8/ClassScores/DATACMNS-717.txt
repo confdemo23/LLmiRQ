@@ -1,0 +1,1 @@
+AnnotatedTypeScanner:0.3400

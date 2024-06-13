@@ -1,0 +1,8 @@
+ArrayRealVector:0.0098
+Gaussian:0.0043
+LearningFactorFunction:0.0043
+MapUtils:0.0043
+NeighbourhoodSizeFunction:0.0043
+Network:0.0043
+Neuron:0.0098
+RealVector:0.0098

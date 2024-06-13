@@ -1,0 +1,10 @@
+AttachmentKey:0.0061
+AttributeDefinition:0.0277
+ImmutableManagementResourceRegistration:0.0494
+OperationContext:0.1577
+PathAddress:0.0133
+Resource:0.0205
+ResourceEntry:0.0133
+RuntimeCapability:0.0205
+Tools:0.0061
+Util:0.0061

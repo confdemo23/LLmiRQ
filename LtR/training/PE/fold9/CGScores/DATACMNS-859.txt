@@ -1,0 +1,7 @@
+ChainingConverter:0.0121
+ParameterAccessor:0.0020
+ProjectionFactory:0.0020
+QueryMethod:0.0146
+ReactiveWrapperConverters:0.0045
+ReturnedType:0.0196
+Slice:0.0020

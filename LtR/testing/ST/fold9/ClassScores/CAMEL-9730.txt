@@ -1,0 +1,7 @@
+Activator:0.0968
+BaseTypeConverterRegistry:0.3548
+BlueprintCamelContext:0.2903
+CamelBlueprintTestSupport:0.3548
+DefaultCamelContext:0.2581
+FallbackTypeConverter:0.2903
+OsgiTypeConverter:0.2258

@@ -1,0 +1,2 @@
+DefaultPartitionStrategy:0.4200
+MessagePartitionStrategy:0.4200

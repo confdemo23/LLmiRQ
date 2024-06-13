@@ -1,0 +1,3 @@
+StreamComponent:0.3243
+StreamEndpoint:0.2973
+StreamProducer:0.2973

@@ -1,0 +1,10 @@
+CamelTestSupport:0.0132
+IOHelper:0.0107
+ManagedCamelContextMBean:0.0183
+ManagedRouteMBean:0.0132
+Message:0.0132
+MockEndpoint:0.0132
+ModelCamelContext:0.1291
+ProcessorDefinition:0.0183
+ProducerTemplate:0.0183
+Route:0.0183

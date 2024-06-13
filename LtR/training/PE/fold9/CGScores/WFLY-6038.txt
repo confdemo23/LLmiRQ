@@ -1,0 +1,7 @@
+ConnectionFactoryUpdateJndiHandler:0.0040
+ConnectorServices:0.0099
+ContextNames:0.0047
+MessagingExtension:0.0040
+MultipleManagedConnectionFactory2:0.0106
+ResourceAdapterActivator:0.0307
+ResourceAdapterDeployment:0.0099

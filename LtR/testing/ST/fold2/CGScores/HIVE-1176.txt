@@ -1,0 +1,10 @@
+Anonymous-342236b2-b4a0-40c4-b9a1-b2abeffe63fd:0.0000
+Anonymous-ad0870fe-287a-4428-bd80-660b667112ff:0.0000
+Client:0.0109
+HadoopFileStatus:0.0013
+HadoopThriftAuthBridge:0.0048
+HdfsEncryptionShim:0.0026
+HdfsUtils:0.0064
+Hive:0.0192
+ShimLoader:0.0074
+Utils:0.0109

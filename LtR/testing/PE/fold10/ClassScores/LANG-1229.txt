@@ -1,0 +1,2 @@
+EqualsBuilder:0.2326
+HashCodeBuilder:0.2791

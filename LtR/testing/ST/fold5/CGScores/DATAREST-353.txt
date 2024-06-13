@@ -1,0 +1,10 @@
+ControllerUtils:0.0520
+DefaultedPageable:0.0702
+ETag:0.0520
+HttpHeadersPreparer:0.0520
+PersistentEntityResource:0.0702
+PersistentEntityResourceAssembler:0.1110
+RepositoryRestConfiguration:0.0702
+ResourceMetadata:0.0744
+RootResourceInformation:0.4579
+SearchResourceMappings:0.0520

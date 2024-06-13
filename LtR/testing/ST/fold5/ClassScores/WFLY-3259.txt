@@ -1,0 +1,3 @@
+UndertowDeploymentService:0.4038
+WeldComponentIntegrationProcessor:0.5577
+WeldStartService:0.2308

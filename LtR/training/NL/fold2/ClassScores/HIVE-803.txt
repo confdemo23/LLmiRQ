@@ -1,0 +1,2 @@
+HiveMetaStoreClient:0.4146
+ThriftDeserializer:0.3902

@@ -1,0 +1,7 @@
+DefaultStrategiesHelper:0.0224
+LastModifiedHelper:0.0122
+WebServiceMessageReceiverHandlerAdapter:0.0467
+WsdlDefinition:0.0264
+WsdlDefinitionHandlerAdapter:0.0589
+XPathExpressionFactory:0.0264
+XsdSchemaHandlerAdapter:0.0467

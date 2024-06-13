@@ -1,0 +1,6 @@
+HttpSecurity:0.1957
+LogoutConfigurer:0.2826
+LogoutFilter:0.1957
+LogoutHandler:0.2174
+RememberMeConfigurer:0.3696
+RememberMeServices:0.3261

@@ -1,0 +1,5 @@
+ClassAndPackageDetector:0.0067
+FractionDescriptor:0.0004
+FractionList:0.0030
+FractionStability:0.0025
+PropertiesUtil:0.0004

@@ -1,0 +1,5 @@
+ContentSecurityPolicyHeaderWriter:0.6977
+HeaderWriter:0.2093
+HeaderWriterFilter:0.3488
+WebSecurityConfigurerAdapter:0.5814
+XFrameOptionsHeaderWriter:0.5116

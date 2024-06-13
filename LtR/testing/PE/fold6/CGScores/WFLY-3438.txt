@@ -1,0 +1,10 @@
+AssociationService:0.0214
+CancellationFlag:0.0132
+ComponentView:0.0423
+DeploymentRepository:0.0132
+DescriptorUtils:0.0059
+EjbDeploymentInformation:0.0496
+LocalEjbReceiver:0.0132
+ModuleDeployment:0.0059
+StartupCountdown:0.0205
+StatefulSessionComponent:0.0059

@@ -1,0 +1,10 @@
+DefaultEndpoint:0.0469
+EndpointHelper:0.0221
+EventDrivenPollingConsumer:0.0073
+ModelCamelContext:0.0449
+ObjectHelper:0.0251
+PropertiesComponent:0.0092
+RestsDefinition:0.0290
+RouteBuilder:0.0330
+RouteDefinition:0.0145
+RoutesDefinition:0.1439

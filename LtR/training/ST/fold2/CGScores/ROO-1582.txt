@@ -1,0 +1,10 @@
+AnsiEscapeCode:0.0186
+FileManager:0.0372
+FileMonitorService:0.0166
+JLineLogHandler:0.0186
+ParseResult:0.0301
+PathResolver:0.1295
+ProcessManager:0.0301
+ProjectOperations:0.0372
+UndoManager:0.0284
+XmlUtils:0.0867

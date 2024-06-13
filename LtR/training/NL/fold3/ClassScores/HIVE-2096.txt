@@ -1,0 +1,5 @@
+HiveConf:0.1220
+HiveInputFormat:0.2927
+InputFormatChecker:0.3659
+MapRedTask:0.1707
+Utilities:0.1463

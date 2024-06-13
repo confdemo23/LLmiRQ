@@ -1,0 +1,6 @@
+DefaultProducer:0.0032
+Exchange:0.0474
+GitEndpoint:0.1156
+Message:0.0437
+MessageHelper:0.0013
+ObjectHelper:0.0806

@@ -1,0 +1,10 @@
+AbstractDeleteEvent:0.0011
+AbstractMongoEventListener:0.0011
+AfterConvertEvent:0.0025
+AfterDeleteEvent:0.0011
+AfterLoadEvent:0.0025
+AfterSaveEvent:0.0025
+BeforeConvertEvent:0.0011
+BeforeDeleteEvent:0.0011
+BeforeSaveEvent:0.0025
+MongoMappingEvent:0.0011

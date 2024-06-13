@@ -1,0 +1,4 @@
+Direction:0.0114
+NullHandling:0.0041
+Order:0.0005
+Sort:0.0114

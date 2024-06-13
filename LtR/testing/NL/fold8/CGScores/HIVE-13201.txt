@@ -1,0 +1,10 @@
+CompactionRequest:0.2191
+ConfVars:0.0200
+HadoopShims:0.0156
+HiveConf:0.0436
+LockInfo:0.0253
+ObjectStore:0.1446
+ParsedDelta:0.0227
+QueryWrapper:0.0701
+SQLGenerator:0.0430
+ShimLoader:0.0133

@@ -1,0 +1,10 @@
+AnnotationMetaData:0.0349
+HttpMethodConstraintMetaData:0.0402
+JBossServletMetaData:0.0614
+JBossServletsMetaData:0.0136
+MultipartConfigMetaData:0.0561
+PropertyReplacer:0.0116
+RunAsMetaData:0.0189
+SecurityRoleMetaData:0.0136
+SecurityRolesMetaData:0.0083
+ServletSecurityMetaData:0.0455

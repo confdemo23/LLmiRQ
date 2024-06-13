@@ -1,0 +1,10 @@
+BaseHttpInterfaceAddStepHandler:0.0075
+HttpInterfaceCommonPolicy:0.0276
+HttpManagementResourceDefinition:0.0035
+HttpShutdownService:0.0116
+LocalHostControllerInfoImpl:0.0397
+NativeManagementServices:0.0075
+OperationContext:0.0357
+RemotingHttpUpgradeService:0.0035
+SimpleAttributeDefinition:0.0196
+UndertowHttpManagementService:0.0558

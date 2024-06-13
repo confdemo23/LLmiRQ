@@ -1,0 +1,3 @@
+Cat:0.0000
+NotBusinessMethodInterceptor:0.4898
+SessionBeanComponentDescription:0.5510

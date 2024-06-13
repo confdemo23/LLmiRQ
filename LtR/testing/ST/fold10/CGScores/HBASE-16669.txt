@@ -1,0 +1,10 @@
+Admin:0.0634
+Bytes:0.0492
+HColumnDescriptor:0.0064
+HRegionLocation:0.0169
+HTableDescriptor:0.0281
+Put:0.0064
+RegionInfo:0.0331
+RegionLocator:0.0082
+Table:0.0213
+TableName:0.0256

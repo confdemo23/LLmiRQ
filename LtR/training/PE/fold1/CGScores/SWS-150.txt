@@ -1,0 +1,4 @@
+TransportInputStream:0.0122
+TransportOutputStream:0.0264
+WebServiceMessage:0.0122
+WebServiceMessageFactory:0.0122

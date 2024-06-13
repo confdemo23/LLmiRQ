@@ -1,0 +1,8 @@
+BaseConfiguration:0.0036
+FileHandler:0.0083
+FileLocator:0.0083
+FileLocatorBuilder:0.0176
+FileLocatorUtils:0.0083
+ListDelimiterHandler:0.0129
+PropertiesConfiguration:0.0036
+PropertiesConfigurationLayout:0.0269

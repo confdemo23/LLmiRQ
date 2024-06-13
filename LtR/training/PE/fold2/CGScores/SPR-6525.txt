@@ -1,0 +1,10 @@
+EvaluationContext:0.0455
+Expression:0.2483
+ExpressionParser:0.2268
+SpelEvaluationException:0.0424
+SpelExpression:0.0516
+SpelExpressionParser:0.0117
+SpelParseException:0.0117
+StandardEvaluationContext:0.0424
+StandardTypeLocator:0.0025
+TestClass:0.0086

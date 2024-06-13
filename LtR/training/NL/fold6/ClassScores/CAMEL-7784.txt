@@ -1,0 +1,4 @@
+FeedComponent:0.2821
+FeedEntryPollingConsumer:0.5641
+RssDataFormat:0.2821
+RssEndpoint:0.2308

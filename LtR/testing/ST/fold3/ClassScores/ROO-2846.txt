@@ -1,0 +1,10 @@
+AbstractProjectOperations:0.4286
+DbreDatabaseListenerImpl:0.4082
+DbreModelServiceImpl:0.3265
+DefaultMetadataDependencyRegistry:0.5918
+DefaultProcessManager:0.3469
+MavenPathResolvingStrategy:0.4490
+MonitoringRequestCommand:0.4082
+PollingFileMonitorService:0.4286
+PomManagementServiceImpl:0.4082
+ProjectPathMonitoringInitializer:0.5714

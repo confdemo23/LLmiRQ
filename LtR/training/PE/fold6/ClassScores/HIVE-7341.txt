@@ -1,0 +1,5 @@
+HCatAddPartitionDesc:0.3696
+HCatClient:0.1522
+HCatCreateTableDesc:0.3478
+HCatPartition:0.2174
+HCatTable:0.1304

@@ -1,0 +1,8 @@
+BeeLine:0.0009
+BeelineParser:0.0009
+ConfVars:0.0200
+EncoderDecoder:0.0035
+HiveConf:0.0436
+HiveDriver:0.0106
+Utils:0.0053
+VarType:0.0059

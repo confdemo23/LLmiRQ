@@ -1,0 +1,4 @@
+BeeLine:0.0009
+BeelineParser:0.0009
+HiveCommand:0.0118
+HiveDatabaseMetaData:0.0106

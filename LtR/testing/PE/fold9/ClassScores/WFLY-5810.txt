@@ -1,0 +1,1 @@
+JndiPermission:0.2391

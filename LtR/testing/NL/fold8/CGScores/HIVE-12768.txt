@@ -1,0 +1,3 @@
+Decimal:0.0236
+HiveDecimalWritable:0.0324
+_Fields:0.0029

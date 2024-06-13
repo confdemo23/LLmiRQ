@@ -1,0 +1,5 @@
+BatchRequest:0.2308
+Olingo2AppImpl:0.2821
+Olingo2Component:0.3333
+Olingo2Endpoint:0.3077
+Olingo2Producer:0.3077

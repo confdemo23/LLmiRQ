@@ -1,0 +1,4 @@
+ComponentConfiguration:0.0305
+ComponentDescription:0.0035
+EEModuleDescription:0.0035
+SessionBeanComponentDescription:0.0251

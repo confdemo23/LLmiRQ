@@ -1,0 +1,10 @@
+ClientInterceptor:0.0218
+DefaultStrategiesHelper:0.0160
+MessageContext:0.1141
+MimeMessage:0.0192
+TransportContextHolder:0.0160
+TransportOutputStream:0.0192
+WebServiceConnection:0.0218
+WebServiceMessage:0.0430
+WebServiceMessageCallback:0.0218
+WebServiceTemplate:0.0218

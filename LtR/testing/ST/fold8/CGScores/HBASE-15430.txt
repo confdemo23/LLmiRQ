@@ -1,0 +1,10 @@
+ColumnFamilyDescriptor:0.0066
+ForeignExceptionSnare:0.0122
+MasterServices:0.0092
+MobUtils:0.0071
+ProtobufUtil:0.0162
+RegionInfo:0.0090
+RegionVisitor:0.0192
+SnapshotManifest:0.0068
+SnapshotManifestV1:0.0052
+TableName:0.0073

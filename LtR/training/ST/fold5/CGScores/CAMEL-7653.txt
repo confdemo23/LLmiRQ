@@ -1,0 +1,10 @@
+CamelContext:0.0086
+CollectionStringBuffer:0.0056
+Exchange:0.0176
+Expression:0.0026
+Message:0.0086
+NamedQueryParser:0.0086
+ObjectHelper:0.0026
+SimpleLanguage:0.0026
+StringQuoteHelper:0.0056
+TypeConverter:0.0086

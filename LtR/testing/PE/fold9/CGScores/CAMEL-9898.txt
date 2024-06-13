@@ -1,0 +1,10 @@
+CamelContext:0.0139
+Exchange:0.0705
+Expression:0.0026
+Message:0.0479
+ObjectHelper:0.0064
+Predicate:0.0026
+ResourceHelper:0.0064
+SimpleBuilder:0.2187
+SimpleLanguage:0.0064
+TypeConversionException:0.0038

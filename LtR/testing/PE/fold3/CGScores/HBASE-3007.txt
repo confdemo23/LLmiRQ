@@ -1,0 +1,10 @@
+Bytes:0.0117
+CellComparator:0.0004
+Compression:0.0004
+FSDataInputStreamWrapper:0.0055
+FixedFileTrailer:0.0035
+HFile:0.0004
+HFilePrettyPrinter:0.0004
+HFileWriterImpl:0.0004
+MetricsIO:0.0025
+ProtobufUtil:0.0014

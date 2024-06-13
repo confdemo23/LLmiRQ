@@ -1,0 +1,10 @@
+AbstractAttributeDefinitionBuilder:0.0456
+Attribute:0.0070
+AttributeMarshaller:0.0060
+AttributeTransformationDescriptionBuilder:0.0161
+Parameters:0.0077
+PathAddress:0.0118
+PathElement:0.0075
+ResourceDescriptionResolver:0.0093
+SimpleAttributeDefinition:0.0185
+Target:0.0077

@@ -1,0 +1,3 @@
+ExpressionEngine:0.2826
+HierarchicalConfiguration:0.4783
+XMLBeanDeclaration:0.3261

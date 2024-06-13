@@ -1,0 +1,6 @@
+DerivativeStructure:0.0099
+DifferentiableUnivariateFunction:0.0011
+FastMath:0.0058
+FunctionUtils:0.0011
+Logistic:0.0020
+Sigmoid:0.0003

@@ -1,0 +1,10 @@
+DataAdapter:0.0231
+Erf:0.0144
+FastMath:0.0529
+MathUtils:0.0711
+Precision:0.0381
+RandomDataGenerator:0.0231
+RealDistribution:0.0474
+SecondMoment:0.0185
+StorelessUnivariateStatistic:0.1560
+SummaryStatistics:0.1571

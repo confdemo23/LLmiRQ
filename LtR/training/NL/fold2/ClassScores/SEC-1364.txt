@@ -1,0 +1,5 @@
+AbstractConfiguredSecurityBuilder:0.7561
+FormLoginConfigurer:0.4146
+HttpSecurity:0.2439
+SecurityConfigurerAdapter:0.5610
+WebSecurityConfigurerAdapter:0.6341

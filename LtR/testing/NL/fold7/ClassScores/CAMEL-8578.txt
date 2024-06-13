@@ -1,0 +1,7 @@
+DefaultHttpBinding:0.4103
+HttpBinding:0.2308
+HttpClientConfigurer:0.4615
+HttpComponent:0.2821
+HttpEndpoint:0.2564
+HttpOperationFailedException:0.6667
+HttpProducer:0.2564

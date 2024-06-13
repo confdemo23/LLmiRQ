@@ -1,0 +1,4 @@
+MessageDispatcherServlet:0.4082
+SaajSoapMessage:0.2245
+SaajSoapMessageFactory:0.3673
+WebServiceMessageReceiverHandlerAdapter:0.7143

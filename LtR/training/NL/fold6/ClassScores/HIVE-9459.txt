@@ -1,0 +1,5 @@
+BaseSemanticAnalyzer:0.4615
+ExprNodeGenericFuncEvaluator:0.6667
+GenericUDFConcat:0.3590
+SemanticAnalyzer:0.3590
+TypeCheckProcFactory:0.4615

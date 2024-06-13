@@ -1,0 +1,10 @@
+Admin:0.3070
+Bytes:1.0000
+Connection:0.3308
+HColumnDescriptor:0.2594
+HRegionServer:0.3315
+LocalHBaseCluster:0.2682
+ModifyableColumnFamilyDescriptor:0.7243
+ModifyableTableDescriptor:0.4524
+Table:0.2594
+TableName:0.2575

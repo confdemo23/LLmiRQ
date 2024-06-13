@@ -1,0 +1,7 @@
+Exchange:0.0354
+Jt400DataQueueService:0.0129
+Jt400Endpoint:0.0354
+Message:0.0354
+Processor:0.0039
+ScheduledPollConsumer:0.0129
+SearchType:0.0039

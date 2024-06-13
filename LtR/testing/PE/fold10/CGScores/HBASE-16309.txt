@@ -1,0 +1,5 @@
+CompactionRequestImpl:0.0040
+EnvironmentEdgeManager:0.0040
+RatioBasedCompactionPolicy:0.0040
+ScanInfo:0.0131
+TimeRangeTracker:0.0040

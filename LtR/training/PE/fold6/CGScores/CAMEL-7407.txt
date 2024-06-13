@@ -1,0 +1,10 @@
+CastUtils:0.0107
+Exchange:0.0523
+GenericFile:0.0702
+GenericFileEndpoint:0.2666
+GenericFileFilter:0.0107
+GenericFileProcessStrategy:0.0166
+IdempotentRepository:0.0583
+Predicate:0.0107
+Processor:0.0107
+ScheduledBatchPollingConsumer:0.0107

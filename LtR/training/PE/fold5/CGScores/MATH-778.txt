@@ -1,0 +1,4 @@
+Dfp:0.1925
+DfpField:0.0888
+DfpMath:0.0328
+FastMath:0.0000

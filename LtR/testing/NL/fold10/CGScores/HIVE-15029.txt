@@ -1,0 +1,9 @@
+ConfVars:0.0426
+EncoderDecoder:0.0075
+ExprNodeDesc:0.0201
+ExprNodeDescEqualityWrapper:0.0050
+FilterOperator:0.0063
+HiveConf:0.0927
+RowResolver:0.0320
+Utils:0.0025
+VarType:0.0125

@@ -1,0 +1,9 @@
+CompositeChunkListener:0.0350
+CompositeItemProcessListener:0.0350
+CompositeItemReadListener:0.0350
+CompositeItemWriteListener:0.0350
+CompositeRetryProcessListener:0.0159
+CompositeRetryReadListener:0.0159
+CompositeRetryWriteListener:0.0159
+CompositeSkipListener:0.0350
+CompositeStepExecutionListener:0.0254

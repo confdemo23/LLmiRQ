@@ -1,0 +1,7 @@
+CamelContext:0.0117
+HttpClientConfigurer:0.0018
+HttpCommonEndpoint:0.0043
+HttpComponent:0.0043
+HttpHelper:0.0018
+IOHelper:0.0018
+ObjectHelper:0.0092

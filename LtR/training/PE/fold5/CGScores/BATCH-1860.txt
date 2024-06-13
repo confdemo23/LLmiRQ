@@ -1,0 +1,6 @@
+AbstractPagingItemReader:0.0259
+AbstractSqlPagingQueryProvider:0.0127
+ExecutionContext:0.0259
+PagingQueryProvider:0.0715
+SqlPagingQueryUtils:0.1716
+SqlWindowingPagingQueryProvider:0.0096

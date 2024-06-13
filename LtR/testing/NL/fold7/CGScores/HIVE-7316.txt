@@ -1,0 +1,8 @@
+FileUtils:0.0091
+HadoopShims:0.0169
+HdfsUtils:0.0091
+HiveIOExceptionHandlerUtil:0.0039
+HiveInputFormat:0.0039
+HiveInputSplit:0.0365
+ShimLoader:0.0130
+Utils:0.0013

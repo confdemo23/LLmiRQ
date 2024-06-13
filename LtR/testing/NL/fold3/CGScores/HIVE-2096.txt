@@ -1,0 +1,10 @@
+ConfVars:0.0216
+EncoderDecoder:0.0030
+HadoopShims:0.0043
+HiveConf:0.0482
+HiveIOExceptionHandlerUtil:0.0027
+HiveInputFormat:0.0027
+HiveInputSplit:0.0276
+MapRedTask:0.0076
+ShimLoader:0.0043
+VarType:0.0056

@@ -1,0 +1,10 @@
+AbstractAttributeDefinitionBuilder:0.1065
+AttributeDefinition:0.0441
+AttributeMarshaller:0.0245
+ImmutableManagementResourceRegistration:0.0123
+NillableOrExpressionParameterValidator:0.0105
+OperationContext:0.0614
+ParameterValidator:0.0156
+PathAddress:0.0146
+Resource:0.0168
+ResourceDescriptionResolver:0.0220

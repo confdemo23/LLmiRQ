@@ -1,0 +1,7 @@
+CentroidCluster:0.0192
+Clusterable:0.0030
+FastMath:0.0273
+MathArrays:0.0071
+MathUtils:0.0030
+MatrixUtils:0.0030
+RandomGenerator:0.0030

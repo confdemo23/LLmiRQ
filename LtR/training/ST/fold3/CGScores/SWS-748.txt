@@ -1,0 +1,10 @@
+EndpointAwareWebServiceConnection:0.0119
+MessageContext:0.0421
+SaajUtils:0.0640
+SoapUtils:0.0147
+SoapVersion:0.0385
+TransportContextHolder:0.0421
+TransportInputStream:0.0254
+TransportOutputStream:0.0250
+TransportUtils:0.0119
+WebServiceConnection:0.0421

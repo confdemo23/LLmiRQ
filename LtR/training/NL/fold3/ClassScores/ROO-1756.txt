@@ -1,0 +1,4 @@
+MavenOperations:0.2927
+PomManagementService:0.4146
+ProjectOperations:0.3415
+XmlRoundTripFileManager:0.4878

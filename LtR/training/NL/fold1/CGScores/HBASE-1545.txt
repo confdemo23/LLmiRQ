@@ -1,0 +1,10 @@
+Bytes:0.4006
+Cell:0.2646
+HRegion:0.2517
+HStore:0.1524
+MonitoredTask:0.1238
+RegionInfo:0.2715
+Scan:0.1298
+ScannerContext:0.0973
+TIncrement:0.1304
+TScan:0.1351

@@ -1,0 +1,10 @@
+AggregationExprCheck:0.0113
+BaseSemanticAnalyzer:0.0061
+CTEClause:0.0321
+ConstantExprCheck:0.0113
+DeferredExprObject:0.0095
+ExprNodeGenericFuncEvaluator:0.0095
+HdfsEncryptionShim:0.0113
+SemanticAnalyzer:0.0877
+SortBucketRSCtx:0.0530
+TypeCheckProcFactory:0.1536

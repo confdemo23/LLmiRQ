@@ -1,0 +1,8 @@
+DefaultCamelContext:0.4324
+Endpoint:0.1351
+Exchange:0.1351
+ExchangePattern:0.3243
+JmsComponent:0.2432
+Processor:0.1622
+Producer:0.1351
+RouteBuilder:0.2432

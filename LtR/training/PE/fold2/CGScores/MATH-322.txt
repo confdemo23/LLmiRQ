@@ -1,0 +1,10 @@
+AbstractStepInterpolator:0.0223
+AdaptiveStepsizeIntegrator:0.0109
+ContinuousOutputModel:0.0123
+EventHandler:0.0137
+ExpandableStatefulODE:0.1088
+FastMath:0.3116
+GraggBulirschStoerStepInterpolator:0.0109
+RungeKuttaStepInterpolator:0.0338
+StepInterpolator:0.1512
+UnivariateSolver:0.0137

@@ -1,0 +1,6 @@
+CamelContext:0.0051
+DefaultEndpoint:0.0178
+ExecutorServiceManager:0.0051
+TimerComponent:0.0112
+TimerConsumer:0.0478
+TimerEndpoint:0.0620

@@ -1,0 +1,2 @@
+AnnotationBasedPersistentProperty:0.7143
+MappingException:0.3095

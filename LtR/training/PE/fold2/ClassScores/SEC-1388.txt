@@ -1,0 +1,2 @@
+LoginUrlAuthenticationEntryPoint:0.6744
+UsernamePasswordAuthenticationFilter:0.7674

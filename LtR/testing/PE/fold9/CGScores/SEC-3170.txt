@@ -1,0 +1,10 @@
+AbstractRememberMeServices:0.0393
+AuthenticationManagerBuilder:0.0092
+DefaultLoginPageGeneratingFilter:0.0092
+FilterComparator:0.0127
+LogoutConfigurer:0.0092
+LogoutFilter:0.0035
+PermitAllSupport:0.0081
+RememberMeAuthenticationFilter:0.0046
+SecurityContextLogoutHandler:0.0081
+SimpleUrlLogoutSuccessHandler:0.0069

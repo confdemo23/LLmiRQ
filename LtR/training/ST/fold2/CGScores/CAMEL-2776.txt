@@ -1,0 +1,9 @@
+CipherPair:0.0101
+Exchange:0.0101
+FileInputStreamCache:0.0045
+FileUtil:0.0101
+IOHelper:0.0101
+ObjectHelper:0.0045
+StreamCachingStrategy:0.0158
+TempFileManager:0.0214
+UnitOfWork:0.0045

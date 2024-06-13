@@ -1,0 +1,1 @@
+DataConfiguration:0.3111

@@ -1,0 +1,6 @@
+Builder:0.0010
+HadoopShims:0.0008
+HiveQueryResultSet:0.0010
+KerberosNameShim:0.0008
+ShimLoader:0.0008
+ThriftCLIServerContext:0.0022

@@ -1,0 +1,3 @@
+JdbcComponent:0.2683
+JdbcEndpoint:0.2439
+JdbcProducer:0.2439

@@ -1,0 +1,10 @@
+Closure:0.0064
+CollectionUtils:0.0026
+EmptyIterator:0.0026
+EmptyListIterator:0.0026
+EmptyMapIterator:0.0026
+EmptyOrderedIterator:0.0026
+EmptyOrderedMapIterator:0.0026
+Predicate:0.0101
+Transformer:0.0026
+UnmodifiableMapIterator:0.0026

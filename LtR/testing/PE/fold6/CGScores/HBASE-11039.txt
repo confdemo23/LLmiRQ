@@ -1,0 +1,10 @@
+CellScanner:0.0715
+Get:0.0715
+ObserverContext:0.1170
+Pair:0.0624
+PrivateCellUtil:0.0806
+RegionCoprocessorEnvironment:0.0715
+TableName:0.0806
+User:0.0624
+VisibilityLabelService:0.0988
+VisibilityUtils:0.0897

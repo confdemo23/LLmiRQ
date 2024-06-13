@@ -1,0 +1,10 @@
+CamelContext:0.0029
+Exchange:0.0514
+FileEndpoint:0.1485
+FileUtil:0.0352
+IOConverter:0.0029
+IOHelper:0.0352
+Message:0.0474
+ObjectHelper:0.0352
+TypeConverter:0.0029
+WrappedFile:0.0029

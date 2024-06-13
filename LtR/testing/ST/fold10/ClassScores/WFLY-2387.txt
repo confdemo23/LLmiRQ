@@ -1,0 +1,4 @@
+Configuration:0.2632
+ModuleGroupSingletonProvider:0.6579
+PersistenceUnitServiceImpl:0.6053
+TwoPhaseBootstrapImpl:0.4737

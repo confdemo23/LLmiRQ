@@ -1,0 +1,10 @@
+AggregationOperationContext:0.0548
+ExposedField:0.0351
+ExposedFields:0.1124
+Field:0.0253
+FieldReference:0.0267
+Fields:0.0126
+Operation:0.0267
+ReplaceRootOperation:0.0204
+ReplaceRootOperationBuilder:0.0126
+SystemVariable:0.0302

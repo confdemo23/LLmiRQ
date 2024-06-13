@@ -1,0 +1,6 @@
+Exchange:0.1111
+ExchangePattern:0.2667
+InOut:0.0444
+MinaConsumer:0.2000
+MinaEndpoint:0.2000
+MinaProducer:0.2000

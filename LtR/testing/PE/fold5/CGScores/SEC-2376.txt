@@ -1,0 +1,9 @@
+AuthenticationFailureHandler:0.0019
+AuthenticationTrustResolver:0.0019
+CsrfToken:0.0022
+CsrfTokenRepository:0.0102
+InvalidSessionStrategy:0.0019
+SecurityContext:0.0019
+SecurityContextHolder:0.0066
+SecurityContextRepository:0.0043
+SessionAuthenticationStrategy:0.0019

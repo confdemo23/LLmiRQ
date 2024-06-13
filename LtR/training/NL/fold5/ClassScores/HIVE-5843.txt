@@ -1,0 +1,3 @@
+HiveConf:0.1212
+HiveMetaStoreClient:0.4545
+HiveTxnManager:0.3030

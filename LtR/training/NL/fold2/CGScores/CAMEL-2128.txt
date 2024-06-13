@@ -1,0 +1,10 @@
+CxfEndpoint:0.1730
+DataFormat:0.0415
+DefaultMessage:0.0276
+ErrorHandlerBuilder:0.0359
+ErrorHandlerBuilderRef:0.0206
+Exchange:0.2139
+Message:0.0611
+ObjectHelper:0.0531
+TransactionErrorHandlerBuilder:0.0359
+UnitOfWork:0.0206

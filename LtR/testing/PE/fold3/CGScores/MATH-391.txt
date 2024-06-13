@@ -1,0 +1,10 @@
+ArrayRealVector:0.0148
+Entry:0.0117
+FastMath:0.0363
+MatrixUtils:0.0055
+RealMatrix:0.0055
+RealVector:0.0731
+RealVectorChangingVisitor:0.0178
+RealVectorFormat:0.0055
+RealVectorPreservingVisitor:0.0178
+UnivariateFunction:0.0025

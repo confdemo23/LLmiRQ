@@ -1,0 +1,4 @@
+AlpsController:0.3030
+RepositoryController:0.4848
+RepositoryRestConfiguration:0.6970
+RepositoryRestHandlerMapping:0.7273

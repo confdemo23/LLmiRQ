@@ -1,0 +1,9 @@
+HiveContextAwareRecordReader:0.4032
+HiveException:0.1613
+HiveIOExceptionHandlerChain:0.3871
+HiveRecordReader:0.2097
+MapRecordProcessor:0.2419
+MapRecordSource:0.1935
+OrcEncodedDataReader:0.2742
+ReaderImpl:0.1129
+TezProcessor:0.1452

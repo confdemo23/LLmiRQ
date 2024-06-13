@@ -1,0 +1,10 @@
+CapabilityRegistry:0.0758
+ControlledProcessState:0.0602
+EmbeddedProcessFactory:0.0501
+Factory:0.0445
+ModelControllerImpl:0.2951
+ModelControllerServiceInitialization:0.0445
+Operation:0.0445
+OperationContext:0.0602
+PartialModelIndicator:0.0445
+ProcessType:0.0602

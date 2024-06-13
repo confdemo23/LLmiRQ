@@ -1,0 +1,10 @@
+BindyCsvFactory:0.1742
+CamelContext:0.0201
+ConverterUtils:0.0652
+CsvRecord:0.1103
+DataField:0.1949
+Exchange:0.0201
+Format:0.0351
+FormatFactory:0.0257
+ObjectHelper:0.1197
+TypeConverter:0.0201

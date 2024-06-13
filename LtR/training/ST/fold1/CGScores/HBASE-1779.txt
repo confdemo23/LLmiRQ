@@ -1,0 +1,10 @@
+DNS:0.0026
+HBaseConfiguration:0.0026
+InfoServer:0.0064
+JvmPauseMonitor:0.0064
+ParseFilter:0.0026
+QualityOfProtection:0.0026
+SaslUtil:0.0064
+SecurityUtil:0.0026
+ThriftMetrics:0.0026
+UserProvider:0.0180

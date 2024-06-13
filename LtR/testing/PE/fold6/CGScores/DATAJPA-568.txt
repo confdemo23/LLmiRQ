@@ -1,0 +1,2 @@
+JpaEntityInformationSupport:0.0250
+JpaMetamodelEntityInformation:0.0514

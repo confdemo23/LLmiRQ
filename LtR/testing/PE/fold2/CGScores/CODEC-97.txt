@@ -1,0 +1,4 @@
+Base64:1.0000
+Base64Test:0.0132
+Hex:0.0285
+StringUtils:0.3354

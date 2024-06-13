@@ -1,0 +1,7 @@
+IdentityCredentials:0.4324
+PermissionMapper:0.3514
+PrincipalDecoder:0.3514
+RoleDecoder:0.2162
+RoleMapper:0.1892
+SecurityDomain:0.2973
+SecurityIdentity:0.3514

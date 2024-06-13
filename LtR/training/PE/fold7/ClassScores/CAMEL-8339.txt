@@ -1,0 +1,2 @@
+MailConfiguration:0.2800
+MailEndpoint:0.1800

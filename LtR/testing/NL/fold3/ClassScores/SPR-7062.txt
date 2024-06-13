@@ -1,0 +1,5 @@
+BeanValidationPostProcessor:0.6098
+MethodValidationPostProcessor:0.6585
+ValidationUtils:0.3171
+Validator:0.1707
+WebDataBinder:0.2683

@@ -1,0 +1,10 @@
+Admin:0.0686
+CellBuilder:0.1340
+CellUtil:0.0983
+Delete:0.0568
+Get:0.0924
+Put:0.0805
+Scan:0.1578
+TScan:0.1102
+Table:0.1578
+ThriftUtilities:0.0686

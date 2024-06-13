@@ -1,0 +1,10 @@
+AsyncCallback:0.0072
+AsyncProcessor:0.0016
+AsyncProcessorHelper:0.0016
+CamelContext:0.0044
+DelegateAsyncProcessor:0.0044
+Exchange:0.0636
+ExecutorServiceManager:0.0016
+Expression:0.0016
+ObjectHelper:0.0044
+ShutdownStrategy:0.0016

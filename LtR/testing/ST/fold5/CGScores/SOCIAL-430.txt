@@ -1,0 +1,2 @@
+ClientHttpRequestFactorySelector:0.0070
+OAuth2Parameters:0.0070

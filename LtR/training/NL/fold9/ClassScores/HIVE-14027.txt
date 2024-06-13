@@ -1,0 +1,9 @@
+ExprNodeGenericFuncEvaluator:0.6757
+GenericUDFIsNull:0.3514
+JoinOperator:0.2432
+ObjectInspector:0.3243
+SemanticAnalyzer:0.3514
+VectorExpression:0.3514
+VectorMapJoinOperator:0.4865
+VectorReduceSinkOperator:0.5676
+VectorizedRowBatch:0.4054

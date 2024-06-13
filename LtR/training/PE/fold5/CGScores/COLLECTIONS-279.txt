@@ -1,0 +1,3 @@
+AbstractLinkedMap:0.0123
+HashEntry:0.0014
+LinkEntry:0.0014

@@ -1,0 +1,1 @@
+ClasspathScanningPersistenceUnitPostProcessor:0.9111

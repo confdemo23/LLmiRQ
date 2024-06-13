@@ -1,0 +1,10 @@
+AggregationExprCheck:0.0175
+CTEClause:0.0476
+ConstantExprCheck:0.0175
+DeferredExprObject:0.0150
+ExprNodeGenericFuncEvaluator:0.0150
+HdfsEncryptionShim:0.0175
+PlannerContext:0.0075
+SemanticAnalyzer:0.1278
+SortBucketRSCtx:0.0777
+VectorExpression:0.0576

@@ -1,0 +1,2 @@
+AbstractMapOperator:0.3721
+VectorMapOperator:0.3256

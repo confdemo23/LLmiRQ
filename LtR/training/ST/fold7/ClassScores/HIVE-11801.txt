@@ -1,0 +1,4 @@
+GetSchemasOperation:0.3333
+HiveMetaStoreClient:0.3333
+ThriftCLIService:0.2708
+ThriftHiveMetastore:0.3333

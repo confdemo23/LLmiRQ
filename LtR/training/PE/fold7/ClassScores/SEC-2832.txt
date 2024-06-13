@@ -1,0 +1,5 @@
+CsrfAuthenticationStrategy:0.4600
+CsrfFilter:0.1400
+CsrfRequestDataValueProcessor:0.5200
+CsrfToken:0.1200
+SessionManagementFilter:0.4000

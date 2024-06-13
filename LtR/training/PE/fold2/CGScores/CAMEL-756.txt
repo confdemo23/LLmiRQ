@@ -1,0 +1,10 @@
+AssertionClause:0.0074
+AvailablePortFinder:0.0020
+CamelContext:0.0047
+CamelTestSupport:0.0047
+ExpressionClause:0.0020
+JndiRegistry:0.0020
+MockEndpoint:0.0287
+ProducerTemplate:0.0127
+RouteDefinition:0.0287
+ValueBuilder:0.0074

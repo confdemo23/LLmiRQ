@@ -1,0 +1,9 @@
+AccessTokenRequiredException:0.0049
+OAuthConsumerSupport:0.0049
+OAuthConsumerToken:0.0102
+OAuthConsumerTokenServices:0.0102
+OAuthProviderParameter:0.0022
+OAuthRememberMeServices:0.0049
+OAuthSecurityContextHolder:0.0049
+OAuthSecurityContextImpl:0.0049
+ProtectedResourceDetails:0.0128

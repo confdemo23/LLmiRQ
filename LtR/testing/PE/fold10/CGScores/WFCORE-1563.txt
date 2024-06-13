@@ -1,0 +1,10 @@
+AccessRequirementBuilder:0.0147
+ArgumentWithListValue:0.0409
+ArgumentWithoutValue:0.1675
+Batch:0.0168
+BatchManager:0.0318
+CommandContext:0.1183
+DefaultOperationRequestBuilder:0.0437
+ModelControllerClient:0.0248
+RequirementSetBuilder:0.0430
+Util:0.0668

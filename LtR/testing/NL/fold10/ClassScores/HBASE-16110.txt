@@ -1,0 +1,7 @@
+AsyncFSWAL:0.1892
+AsyncProtobufLogWriter:0.5135
+FSHLog:0.0811
+HBaseConfiguration:0.4054
+HFileSystem:0.2162
+LogRoller:0.1622
+WALFactory:0.1892

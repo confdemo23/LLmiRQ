@@ -1,0 +1,2 @@
+StaxConverter:0.2632
+XMLStreamReaderInputStream:0.6053

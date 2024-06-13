@@ -1,0 +1,6 @@
+ApplicationExceptionDetails:0.0025
+EJBComponent:0.0179
+MethodIntfHelper:0.0011
+SecurityContextInterceptor:0.0042
+StatefulSessionComponent:0.0091
+StatefulSessionComponentInstance:0.0091

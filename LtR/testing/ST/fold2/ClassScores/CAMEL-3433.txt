@@ -1,0 +1,5 @@
+BinaryPredicateSupport:0.4091
+Expression:0.1364
+ExpressionBuilder:0.2955
+FilterProcessor:0.2500
+PredicateBuilder:0.2727

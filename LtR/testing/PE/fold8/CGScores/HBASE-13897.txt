@@ -1,0 +1,10 @@
+Bytes:0.0087
+Cell:0.0135
+Connection:0.0087
+Delete:0.0063
+Filter:0.0063
+ImmutableBytesWritable:0.0390
+KeyValue:0.0063
+PrivateCellUtil:0.0087
+Result:0.0051
+TableName:0.0063

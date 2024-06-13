@@ -1,0 +1,6 @@
+DelegationTokenSelector:0.6563
+HiveConf:0.1875
+LlapDaemon:0.2500
+LlapRegistryService:0.5313
+LlapServiceDriver:0.4688
+LlapTokenIdentifier:0.5313

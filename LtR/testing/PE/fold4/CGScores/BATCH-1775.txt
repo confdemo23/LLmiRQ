@@ -1,0 +1,6 @@
+BufferedReaderFactory:0.0007
+FieldSetMapper:0.0007
+LineCallbackHandler:0.0007
+LineMapper:0.0007
+LineTokenizer:0.0007
+RecordSeparatorPolicy:0.0026

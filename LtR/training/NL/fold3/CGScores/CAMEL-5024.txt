@@ -1,0 +1,10 @@
+AggregationRepository:0.0865
+CamelContext:0.0865
+DelegateAggregationStrategy:0.0330
+Exchange:0.3710
+ExecutorServiceManager:0.0330
+Message:0.0442
+ObjectHelper:0.0356
+RecoverableAggregationRepository:0.1043
+ServiceHelper:0.0271
+ServiceStatus:0.0211

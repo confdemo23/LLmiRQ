@@ -1,0 +1,2 @@
+CxfRsEndpoint:0.0087
+DefaultConsumer:0.0087

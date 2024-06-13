@@ -1,0 +1,8 @@
+HadoopShims:0.0006
+LogHelper:0.0069
+ResourceMaps:0.0090
+ResourceType:0.0038
+SessionState:0.0385
+SessionStates:0.0017
+ShimLoader:0.0006
+Utils:0.0006

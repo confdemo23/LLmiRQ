@@ -1,0 +1,10 @@
+Exchange:0.0085
+IdempotentRepository:0.0023
+MailConfiguration:0.0178
+MailEndpoint:0.0209
+MailMessage:0.0010
+MailUidGenerator:0.0010
+Message:0.0029
+ObjectHelper:0.0010
+ScheduledBatchPollingConsumer:0.0017
+SearchTermBuilder:0.0010

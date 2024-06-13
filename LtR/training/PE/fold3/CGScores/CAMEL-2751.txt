@@ -1,0 +1,8 @@
+CamelContext:0.0005
+DefaultEndpoint:0.0018
+ExecutorServiceManager:0.0005
+MockEndpoint:0.0039
+RouteDefinition:0.0006
+TimerComponent:0.0011
+TimerConsumer:0.0049
+TimerEndpoint:0.0063

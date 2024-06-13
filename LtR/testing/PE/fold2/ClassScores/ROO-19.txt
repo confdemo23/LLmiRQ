@@ -1,0 +1,3 @@
+AnnotatedJavaType:0.3111
+JavaType:0.1111
+MemberFindingUtils:0.3333

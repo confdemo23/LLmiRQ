@@ -1,0 +1,6 @@
+DefaultCamelContext:0.3061
+DefaultRoute:0.1633
+EventDrivenConsumerRoute:0.4082
+RemoteFileEndpoint:0.2857
+RouteService:0.1633
+ServiceSupport:0.2041

@@ -1,0 +1,2 @@
+SemanticAnalyzer:0.3333
+Table:0.0513

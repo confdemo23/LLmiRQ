@@ -1,0 +1,5 @@
+DefaultCamelContext:0.3721
+DefaultTypeConverter:0.3953
+DozerTypeConverterLoader:0.4884
+OsgiDefaultCamelContext:0.4651
+OsgiTypeConverter:0.3256

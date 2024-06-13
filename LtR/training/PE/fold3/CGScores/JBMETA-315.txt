@@ -1,0 +1,10 @@
+ContainerConfigurationsMetaData:0.0025
+EjbJarMetaData:0.0085
+InterceptorBindingMetaData:0.0072
+InterceptorsMetaData:0.0058
+JBossAssemblyDescriptorMetaData:0.0045
+JBossEnterpriseBeanMetaData:0.0052
+JBossEnterpriseBeansMetaData:0.0038
+JBossMetaData:0.0126
+RunAsMetaData:0.0018
+SecurityIdentityMetaData:0.0045

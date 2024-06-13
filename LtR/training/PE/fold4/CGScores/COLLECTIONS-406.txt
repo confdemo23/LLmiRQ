@@ -1,0 +1,10 @@
+AbstractMapBag:0.0010
+CollectionUtils:0.0014
+EditScript:0.0005
+HashBag:0.0005
+LazyList:0.0005
+LcsVisitor:0.0005
+Predicate:0.0005
+PredicatedList:0.0005
+SequencesComparator:0.0005
+UnmodifiableList:0.0005

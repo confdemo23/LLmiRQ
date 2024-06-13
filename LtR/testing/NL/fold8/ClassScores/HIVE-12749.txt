@@ -1,0 +1,5 @@
+ConstantPropagate:0.3590
+ConstantPropagateProcFactory:0.6410
+HiveConf:0.1282
+HiveDriver:0.1795
+HiveQueryResultSet:0.3846

@@ -1,0 +1,10 @@
+ClassOrInterfaceTypeDetails:0.0939
+FileManager:0.0333
+ItdTypeDetailsProvidingMetadataItem:0.0247
+MemberHoldingTypeDetails:0.0247
+MetadataDependencyRegistry:0.0160
+MetadataIdentificationUtils:0.0939
+MetadataService:0.0333
+PhysicalTypeIdentifier:0.0680
+PhysicalTypeMetadata:0.0507
+ServiceInstaceManager:0.0420

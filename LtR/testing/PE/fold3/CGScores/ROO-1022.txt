@@ -1,0 +1,10 @@
+ClassOrInterfaceTypeDetails:0.0602
+FileManager:0.0215
+ItdTypeDetailsProvidingMetadataItem:0.0160
+JavaType:0.0256
+MemberHoldingTypeDetails:0.0160
+MetadataIdentificationUtils:0.0602
+MetadataService:0.0215
+PhysicalTypeIdentifier:0.0436
+PhysicalTypeMetadata:0.0326
+ServiceInstaceManager:0.0270

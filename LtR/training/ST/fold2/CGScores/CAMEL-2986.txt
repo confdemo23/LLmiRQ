@@ -1,0 +1,10 @@
+AsyncCallback:0.0614
+CamelContext:0.1092
+Exchange:0.7076
+ExchangeHelper:0.0794
+HttpConsumer:0.1070
+Message:0.1616
+ObjectHelper:0.0490
+OnExceptionDefinition:0.1019
+RedeliveryPolicy:0.1722
+RouteContext:0.0647

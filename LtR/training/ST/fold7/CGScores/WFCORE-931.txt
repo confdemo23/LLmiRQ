@@ -1,0 +1,10 @@
+DomainSlaveHostRegistrations:0.0315
+HostControllerEnvironment:0.0290
+LocalHostControllerInfoImpl:0.1101
+ManagementResourceRegistration:0.0375
+ModelControllerClient:0.0272
+OperationContext:0.0227
+PathAddress:0.0400
+PathElement:0.0506
+ServerInventory:0.0831
+ThreadLocalContextSelector:0.0548

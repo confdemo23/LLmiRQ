@@ -1,0 +1,3 @@
+AbstractMongoConfiguration:0.4889
+BasicMongoPersistentEntity:0.4889
+MongoMappingContext:0.3333

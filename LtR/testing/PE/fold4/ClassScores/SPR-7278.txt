@@ -1,0 +1,6 @@
+AnnotationMethodHandlerAdapter:0.7297
+ContentNegotiatingViewResolver:0.7297
+ExceptionHandler:0.3514
+RequestBody:0.2162
+ResponseBody:0.2432
+SimpleMappingExceptionResolver:0.7297

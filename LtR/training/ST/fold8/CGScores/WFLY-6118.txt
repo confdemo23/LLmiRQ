@@ -1,0 +1,10 @@
+AssociationService:0.0190
+ClusteredSingletonServiceCreator:0.0030
+EJB3RemoteHTTPService:0.0137
+EJB3SubsystemDefaultCacheWriteHandler:0.0084
+EJB3SubsystemDefaultPoolWriteHandler:0.0137
+EJBClientContextService:0.0190
+EJBSuspendHandlerService:0.0137
+EJBUtilities:0.0244
+LocalTransportProvider:0.0084
+SingletonDefaultRequirement:0.0137

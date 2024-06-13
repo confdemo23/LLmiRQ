@@ -1,0 +1,3 @@
+AbstractConfiguration:0.4000
+ConfigurationUtils:0.3333
+PropertiesConfiguration:0.4444

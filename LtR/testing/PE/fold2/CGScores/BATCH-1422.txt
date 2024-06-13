@@ -1,0 +1,5 @@
+AbstractItemCountingItemStreamItemReader:0.0107
+AbstractItemStreamItemReader:0.0589
+ExecutionContext:0.1199
+HibernateItemReaderHelper:0.1250
+ItemCountAware:0.0183

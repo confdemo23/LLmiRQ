@@ -1,0 +1,4 @@
+MutableDouble:0.2174
+MutableFloat:0.1957
+MutableInt:0.1522
+MutableLong:0.1739

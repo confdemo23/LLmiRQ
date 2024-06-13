@@ -1,0 +1,5 @@
+AbstractWriteAttributeHandler:0.5319
+AttributeDefinition:0.3191
+ListAttributeDefinition:0.4043
+MapAttributeDefinition:0.3830
+WriteAttributeHandler:0.3617

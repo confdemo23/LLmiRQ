@@ -1,0 +1,6 @@
+JmsBinding:0.1892
+JmsComponent:0.2432
+JmsConsumer:0.2162
+JmsEndpoint:0.2162
+JmsMessage:0.1892
+JmsProducer:0.2162

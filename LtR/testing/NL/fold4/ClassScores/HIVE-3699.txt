@@ -1,0 +1,3 @@
+FileSinkOperator:0.3171
+SemanticAnalyzer:0.3171
+TaskFactory:0.1951

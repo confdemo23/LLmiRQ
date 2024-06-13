@@ -1,0 +1,8 @@
+HandlerUtils:0.0064
+MetadataDependencyRegistry:0.0083
+MetadataDependencyRegistryTracker:0.0276
+Pom:0.0180
+ProjectMetadata:0.0180
+ProjectOperations:0.0372
+Property:0.0372
+VersionInfo:0.0372

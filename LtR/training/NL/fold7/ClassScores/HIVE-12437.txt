@@ -1,0 +1,7 @@
+HiveInputFormat:0.3077
+HiveRecordReader:0.3333
+MapJoinOperator:0.3077
+SMBMapJoinOperator:0.3846
+TezProcessor:0.2308
+TezTask:0.1026
+Utils:0.0513

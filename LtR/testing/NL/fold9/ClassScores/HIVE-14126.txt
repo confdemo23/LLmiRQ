@@ -1,0 +1,6 @@
+HiveAuthorizerImpl:0.5000
+HiveMetaStoreClient:0.5313
+HiveOperation:0.3438
+HiveQueryResultSet:0.5000
+ObjectStore:0.2813
+PartitionExpressionProxy:0.6875

@@ -1,0 +1,10 @@
+AliasServiceBuilder:0.0007
+Attribute:0.0019
+BindInfo:0.0019
+BinderServiceBuilder:0.0031
+CacheBuilderProvider:0.0019
+CacheComponent:0.0019
+Capability:0.0031
+InfinispanBindingFactory:0.0043
+ModuleBuilder:0.0007
+XAResourceRecoveryBuilder:0.0019

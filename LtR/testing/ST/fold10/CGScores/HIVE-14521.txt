@@ -1,0 +1,7 @@
+CodahaleMetrics:0.0024
+CodahaleMetricsScope:0.0024
+HadoopShims:0.0005
+JsonFileReporter:0.0005
+SQLOperation:0.0003
+ShimLoader:0.0005
+Utils:0.0011

@@ -1,0 +1,3 @@
+AndFilter:0.1622
+EqualsFilter:0.2432
+OrFilter:0.1351

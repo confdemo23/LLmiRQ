@@ -1,0 +1,7 @@
+BufferedReaderFactory:0.0038
+ExecutionContext:0.0132
+FragmentEventReader:0.0161
+LineCallbackHandler:0.0038
+LineMapper:0.0038
+RecordSeparatorPolicy:0.0151
+StaxUtils:0.0041

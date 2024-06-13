@@ -1,0 +1,8 @@
+AbstractMongoConfiguration:0.7500
+BasicMongoPersistentEntity:0.7500
+MappingMongoConverter:0.5938
+MongoDataIntegrityViolationException:1.0000
+MongoMappingContext:0.5313
+MongoPersistentProperty:0.6563
+MongoTemplate:0.3438
+QueryMapper:0.2813

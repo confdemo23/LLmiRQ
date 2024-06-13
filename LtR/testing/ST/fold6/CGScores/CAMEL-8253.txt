@@ -1,0 +1,10 @@
+CxfHeaderHelper:0.0047
+CxfRsBinding:0.0018
+CxfRsConsumer:0.0070
+CxfRsEndpoint:0.0081
+Exchange:0.0312
+ExchangeHelper:0.0013
+ExchangePattern:0.0013
+HeaderFilterStrategy:0.0013
+Message:0.0257
+Processor:0.0007

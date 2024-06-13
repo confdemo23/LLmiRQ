@@ -1,0 +1,5 @@
+RedirectStrategy:0.0208
+RequestCache:0.0554
+SavedRequest:0.0208
+SavedRequestAwareAuthenticationSuccessHandler:0.0208
+SimpleUrlAuthenticationSuccessHandler:0.0437

@@ -1,0 +1,10 @@
+BaseSemanticAnalyzer:0.3636
+CliDriver:0.1136
+DefaultGraphWalker:0.3182
+DefaultRuleDispatcher:0.3864
+Driver:0.0455
+ExprNodeGenericFuncDesc:0.4318
+GenericUDFBridge:0.2727
+GenericUDFUtils:0.2500
+SemanticAnalyzer:0.2727
+TypeCheckProcFactory:0.3636

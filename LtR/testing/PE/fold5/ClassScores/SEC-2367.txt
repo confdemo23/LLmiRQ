@@ -1,0 +1,5 @@
+AccountStatusException:0.4000
+AuthenticationException:0.4222
+InternalAuthenticationServiceException:0.7556
+ProviderManager:0.2444
+UsernameNotFoundException:0.4667

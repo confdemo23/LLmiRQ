@@ -1,0 +1,2 @@
+CsrfAuthenticationStrategy:0.5111
+SessionManagementFilter:0.4444

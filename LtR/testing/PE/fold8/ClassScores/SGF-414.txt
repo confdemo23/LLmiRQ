@@ -1,0 +1,2 @@
+ClientCacheFactoryBean:0.3800
+PoolFactoryBean:0.2400

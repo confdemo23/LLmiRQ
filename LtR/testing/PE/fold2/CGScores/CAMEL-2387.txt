@@ -1,0 +1,7 @@
+CamelContext:0.0386
+Exchange:0.0386
+GenericFile:0.1606
+GenericFileBinding:0.0183
+IOConverter:0.0386
+TypeConverter:0.0589
+TypeConverterRegistry:0.0183

@@ -1,0 +1,2 @@
+LogFileResourceDefinition:0.5641
+ManagementModel:0.3077

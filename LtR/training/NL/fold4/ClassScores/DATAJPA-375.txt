@@ -1,0 +1,7 @@
+AbstractJpaQuery:0.3023
+JpaQueryCreator:0.2791
+JpaRepositoryFactory:0.3953
+JpaRepositoryFactoryBean:0.4884
+PartTreeJpaQuery:0.3023
+QueryUtils:0.1628
+SimpleJpaRepository:0.3721

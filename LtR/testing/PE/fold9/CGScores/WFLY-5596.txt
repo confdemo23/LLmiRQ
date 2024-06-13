@@ -1,0 +1,6 @@
+EJBComponent:0.0116
+MessageDrivenComponent:0.0433
+MessageDrivenComponentCreateService:0.0370
+MessageDrivenComponentInstance:0.0052
+Pool:0.0116
+PoolConfig:0.0116

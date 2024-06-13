@@ -1,0 +1,2 @@
+SingletonPolicy:0.3243
+SingletonPolicyBuilder:0.5135

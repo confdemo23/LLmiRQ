@@ -1,0 +1,2 @@
+GlobalOperationHandlers:0.4000
+ImmutableManagementResourceRegistration:0.7200

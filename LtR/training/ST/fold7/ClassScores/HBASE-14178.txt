@@ -1,0 +1,5 @@
+HRegion:0.0833
+HRegionServer:0.2083
+IdLock:0.0625
+KeyValueHeap:0.1875
+StoreScanner:0.1875

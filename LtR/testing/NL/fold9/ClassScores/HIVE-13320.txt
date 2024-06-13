@@ -1,0 +1,7 @@
+ExprNodeGenericFuncEvaluator:0.8125
+GenericUDF:0.2500
+HiveConf:0.1875
+HiveDecimalUtils:0.4375
+Optimizer:0.2188
+SemanticAnalyzer:0.4375
+TypeCheckProcFactory:0.5625

@@ -1,0 +1,7 @@
+Entity:0.0109
+ExecutionContextDao:0.0096
+JobExecution:0.0382
+JobExecutionDao:0.0205
+JobInstanceDao:0.0314
+StepExecution:0.1382
+StepExecutionDao:0.0096

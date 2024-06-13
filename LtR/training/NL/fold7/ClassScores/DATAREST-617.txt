@@ -1,0 +1,9 @@
+AbstractRepositoryRestController:0.7436
+BaseUri:0.1026
+PersistentEntityResourceAssembler:0.7692
+RepositoryEntityController:0.5897
+RepositoryPropertyReferenceController:0.8718
+RepositoryRestConfiguration:0.6154
+RepositoryRestHandlerMapping:0.6410
+RepositoryRestMvcConfiguration:0.6923
+RepositorySearchController:0.5897

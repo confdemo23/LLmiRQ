@@ -1,0 +1,8 @@
+HiveVectorAdaptorUsageMode:0.0106
+InConstantType:0.0047
+OutputColumnManager:0.0813
+RowDeserializePartitionContext:0.0138
+VectorDeserializePartitionContext:0.0088
+VectorExpression:0.0271
+VectorPartitionContext:0.0138
+VectorizationContext:0.0283

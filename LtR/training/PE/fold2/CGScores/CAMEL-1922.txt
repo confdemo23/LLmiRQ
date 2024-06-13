@@ -1,0 +1,10 @@
+BeanHelper:0.0043
+BeanProcessor:0.0043
+CamelContext:0.0092
+DefaultEndpoint:0.0043
+Exchange:0.0125
+ExpressionBuilder:0.0256
+IntrospectionSupport:0.0059
+Message:0.0059
+MethodInfo:0.0486
+ObjectHelper:0.0354

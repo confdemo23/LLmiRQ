@@ -1,0 +1,10 @@
+Exchange:0.0774
+FileUtil:0.0494
+GenericFile:0.2083
+GenericFileConfiguration:0.0191
+GenericFileEndpoint:0.0696
+GenericFileFilter:0.0191
+IOHelper:0.0370
+MarkerFileExclusiveReadLockStrategy:0.0274
+ObjectHelper:0.0090
+StopWatch:0.0286

@@ -1,0 +1,5 @@
+HttpUrlConnectionMessageSender:0.6000
+MessageContext:0.2444
+SaajSoapEnvelopeException:0.4889
+TransportInputStream:0.3778
+WebServiceTemplate:0.3333

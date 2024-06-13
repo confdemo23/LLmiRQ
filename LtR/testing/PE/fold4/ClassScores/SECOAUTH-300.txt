@@ -1,0 +1,2 @@
+OAuth2Authentication:0.4595
+OAuth2AuthenticationDetails:0.6486

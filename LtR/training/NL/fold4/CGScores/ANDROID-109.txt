@@ -1,0 +1,10 @@
+Assert:0.0542
+ClassUtils:0.0237
+ClientHttpRequest:0.0154
+ClientHttpResponse:0.0401
+FileCopyUtils:0.0168
+HttpEntity:0.0154
+HttpHeaders:0.0953
+HttpInputMessage:0.0288
+HttpOutputMessage:0.0497
+MediaType:0.0799

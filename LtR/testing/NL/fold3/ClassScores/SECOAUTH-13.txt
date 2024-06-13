@@ -1,0 +1,5 @@
+InMemoryNonceServices:0.4634
+InMemoryProviderTokenServices:0.6585
+OAuthConsumerTokenServices:0.5854
+OAuthNonceServices:0.3902
+OAuthProviderTokenServices:0.5854

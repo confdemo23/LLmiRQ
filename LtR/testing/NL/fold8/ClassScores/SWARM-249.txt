@@ -1,0 +1,2 @@
+ArtifactResolvingHelper:0.5128
+DependencyManager:0.3590

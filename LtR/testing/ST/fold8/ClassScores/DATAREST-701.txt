@@ -1,0 +1,3 @@
+DomainObjectReader:0.3125
+JsonPatchHandler:0.2708
+PersistentEntityResourceHandlerMethodArgumentResolver:1.0000

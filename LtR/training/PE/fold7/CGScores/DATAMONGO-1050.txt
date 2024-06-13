@@ -1,0 +1,2 @@
+Criteria:0.0245
+Query:0.0160

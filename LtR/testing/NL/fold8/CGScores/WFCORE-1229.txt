@@ -1,0 +1,10 @@
+ArgumentWithValue:0.1788
+AuthorizationResponseImpl:0.1225
+AuthorizationResult:0.1343
+Factory:0.0866
+ManagementModelImpl:0.1579
+ModelControllerImpl:0.2801
+PathAddress:0.1579
+PathElement:0.0866
+Resource:0.1284
+RuntimeRequirementRegistration:0.0990

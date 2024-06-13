@@ -1,0 +1,4 @@
+FacebookComponent:0.3846
+FacebookConfiguration:0.4872
+FacebookEndpoint:0.3590
+FacebookProducer:0.3590

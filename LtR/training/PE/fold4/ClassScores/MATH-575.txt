@@ -1,0 +1,2 @@
+AbstractListChromosome:0.4000
+InvalidRepresentationException:0.5778

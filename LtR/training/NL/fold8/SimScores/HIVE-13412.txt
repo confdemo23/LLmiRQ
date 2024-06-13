@@ -1,0 +1,10 @@
+CastDecimalToLong:0.1127
+DelimitedAccumuloRowIdFactory:0.1385
+HCatCreateTableDesc:0.1669
+TestDelimitedInputWriter:0.1449
+TestHiveDecimalWritable:0.1708
+TestPartitionNameWhitelistValidation:0.2554
+TestUDFHex:0.1355
+TestVectorOrcFile:0.1119
+UDFJson:0.1307
+UDFSign:0.1100

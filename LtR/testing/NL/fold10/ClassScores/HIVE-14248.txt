@@ -1,0 +1,5 @@
+HiveDriver:0.1892
+HiveInputFormat:0.3243
+HiveOutputFormat:0.3514
+HiveSemanticAnalyzerHook:0.5676
+SemanticAnalyzer:0.3514

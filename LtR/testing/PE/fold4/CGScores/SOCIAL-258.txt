@@ -1,0 +1,7 @@
+ConnectInterceptor:0.0024
+ConnectSupport:0.0033
+ConnectionFactory:0.0016
+ConnectionFactoryLocator:0.0051
+ConnectionRepository:0.0042
+DisconnectInterceptor:0.0024
+SessionStrategy:0.0077

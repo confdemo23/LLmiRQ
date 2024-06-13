@@ -1,0 +1,10 @@
+CollectionStringBuffer:0.6510
+Endpoint:0.1629
+EventHelper:0.1938
+Exchange:0.4874
+ManagementStrategy:0.1756
+ObjectHelper:0.2935
+Route:0.3574
+RouteDefinition:0.2240
+RouteService:0.6243
+ServiceHelper:0.2037

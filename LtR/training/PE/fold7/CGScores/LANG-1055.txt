@@ -1,0 +1,5 @@
+StrBuilder:0.1037
+StrLookup:0.0160
+StrMatcher:0.0386
+StrSubstitutor:0.0527
+StringUtils:0.0018

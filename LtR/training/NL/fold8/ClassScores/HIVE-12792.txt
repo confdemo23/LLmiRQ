@@ -1,0 +1,8 @@
+HiveAuthorizerImpl:0.5000
+HiveConf:0.1875
+HiveDriver:0.2500
+HiveMetaStoreClient:0.5313
+HiveOperation:0.3438
+OperationManager:0.4375
+QueryPlan:0.2188
+SessionState:0.3125

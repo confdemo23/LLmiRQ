@@ -1,0 +1,10 @@
+AggregationExprCheck:0.0140
+CTEClause:0.0380
+ConstantExprCheck:0.0140
+HdfsEncryptionShim:0.0140
+PlannerContext:0.0060
+SemanticAnalyzer:0.1021
+SortBucketRSCtx:0.0621
+Table:0.2357
+Utils:0.0060
+_Fields:0.0030

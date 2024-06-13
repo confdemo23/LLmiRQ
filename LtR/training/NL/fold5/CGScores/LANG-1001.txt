@@ -1,0 +1,10 @@
+FastDateFormat:0.0956
+FastDateParser:0.0305
+FastDatePrinter:0.1381
+FormatCache:0.1101
+StrBuilder:0.0581
+StrMatcher:0.1542
+StrTokenizer:0.1121
+StringUtils:0.1371
+Token:0.1502
+Validate:0.0215

@@ -1,0 +1,10 @@
+Client:0.0027
+ConfVars:0.0057
+DropPrivilegeExtractor:0.0252
+HadoopThriftAuthBridge:0.0010
+HiveAuthzSessionContext:0.0034
+HiveConf:0.0126
+HivePrivilegeObjectType:0.0010
+ShimLoader:0.0010
+Utils:0.0034
+VarType:0.0015

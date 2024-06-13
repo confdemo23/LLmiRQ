@@ -1,0 +1,10 @@
+Attribute:0.1579
+InfinispanModel:0.1378
+InvalidationCacheResourceDefinition:0.0376
+JGroupsTransportResourceDefinition:0.0376
+LocalCacheResourceDefinition:0.0376
+ManagementResourceRegistration:0.0777
+NoTransportResourceDefinition:0.0376
+Operations:0.1178
+ResourceDescriptor:0.0777
+SubsystemResourceDescriptionResolver:0.0576

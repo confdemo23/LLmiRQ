@@ -1,0 +1,4 @@
+AbstractConfiguration:0.4186
+ConfigurationInterpolator:0.5116
+PropertyConverter:0.3256
+XMLConfiguration:0.3023

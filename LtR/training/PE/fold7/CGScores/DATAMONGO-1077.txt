@@ -1,0 +1,10 @@
+AddToSetBuilder:0.0245
+Criteria:0.0160
+CustomConversions:0.0117
+MappingMongoConverter:0.0287
+Modifiers:0.0063
+MongoMappingContext:0.2749
+PushOperatorBuilder:0.0978
+Query:0.0075
+Update:0.5034
+UpdateMapper:0.2494

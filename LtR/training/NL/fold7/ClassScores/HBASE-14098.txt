@@ -1,0 +1,7 @@
+BlockCache:0.1795
+CacheConfig:0.2051
+CompactionRequest:0.3590
+Compactor:0.1538
+HRegion:0.1026
+HStore:0.0769
+StoreFileWriter:0.3077

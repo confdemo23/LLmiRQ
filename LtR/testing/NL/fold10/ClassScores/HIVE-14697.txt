@@ -1,0 +1,3 @@
+HiveConf:0.1351
+HiveServer2:0.2162
+HttpServer:0.1892

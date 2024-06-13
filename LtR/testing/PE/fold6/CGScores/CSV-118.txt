@@ -1,0 +1,4 @@
+CSVFormat:0.0970
+CSVPrinter:0.0027
+Predefined:0.0027
+QuoteMode:0.0027

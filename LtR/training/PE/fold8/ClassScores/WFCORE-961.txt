@@ -1,0 +1,2 @@
+CapabilityRegistration:0.4130
+CapabilityRegistryResourceDefinition:0.7174

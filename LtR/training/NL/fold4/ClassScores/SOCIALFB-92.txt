@@ -1,0 +1,6 @@
+FacebookTemplate:0.3023
+GraphApi:0.1163
+Page:0.0233
+PageOperations:0.2558
+ProfilePictureSource:0.3953
+UserOperations:0.2558

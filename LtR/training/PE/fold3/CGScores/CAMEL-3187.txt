@@ -1,0 +1,9 @@
+CamelContext:0.0019
+Endpoint:0.0019
+Exchange:0.0029
+Message:0.0008
+ObjectHelper:0.0008
+Producer:0.0019
+ServiceHelper:0.0019
+ServiceStatus:0.0008
+URISupport:0.0008

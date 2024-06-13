@@ -1,0 +1,5 @@
+DefaultStrategiesHelper:0.0092
+WebServiceMessage:0.0109
+WebServiceMessageReceiverHandlerAdapter:0.0191
+WsdlDefinitionHandlerAdapter:0.0240
+XsdSchemaHandlerAdapter:0.0191

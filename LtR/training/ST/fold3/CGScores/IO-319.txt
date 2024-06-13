@@ -1,0 +1,6 @@
+Charsets:0.0183
+FileFilterUtils:0.0147
+FileUtils:0.0004
+FilenameUtils:0.0040
+IOUtils:0.0969
+Java7Support:0.0040

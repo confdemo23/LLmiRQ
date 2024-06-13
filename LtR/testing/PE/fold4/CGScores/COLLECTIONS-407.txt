@@ -1,0 +1,3 @@
+CollectionUtils:0.0005
+UniquePredicate:0.0005
+UnmodifiableList:0.0005

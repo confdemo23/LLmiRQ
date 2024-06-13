@@ -1,0 +1,2 @@
+HttpSecurityBeanDefinitionParser:0.6364
+SecurityNamespaceHandler:0.4545

@@ -1,0 +1,8 @@
+Anonymous-d36f50c2-8457-4852-a78f-868da5c210a1:0.0003
+DatabaseProduct:0.0002
+HadoopShims:0.0002
+LockInfo:0.0051
+LockTypeComparator:0.0002
+OpertaionType:0.0008
+SQLGenerator:0.0089
+ShimLoader:0.0002

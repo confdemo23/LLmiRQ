@@ -1,0 +1,5 @@
+BeiderMorseEncoder:0.4103
+PhoneticEngine:0.3077
+Rule:0.0513
+StringEncoder:0.2821
+StringEncoderAbstractTest:0.5897

@@ -1,0 +1,10 @@
+CamelContext:0.0103
+Exchange:0.0245
+GenericFile:0.0075
+JsonPath:0.0245
+JsonPathAdapter:0.0046
+JsonStream:0.0018
+Language:0.0018
+Message:0.0103
+ObjectHelper:0.0018
+TypeConverter:0.0018

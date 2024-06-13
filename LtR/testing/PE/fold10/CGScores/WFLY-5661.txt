@@ -1,0 +1,10 @@
+AbstractDataSourceService:0.0663
+BindInfo:0.0101
+BinderService:0.0065
+ConnectionPropertiesService:0.0030
+ContextNames:0.0101
+DataSourceConfigService:0.0030
+DataSourceReferenceFactoryService:0.0030
+DataSourceStatisticsService:0.0065
+ModifiableDataSource:0.0065
+ModifiableXaDataSource:0.0101

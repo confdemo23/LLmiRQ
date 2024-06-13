@@ -1,0 +1,2 @@
+HiveMetaStore:0.2000
+RawStore:0.0889

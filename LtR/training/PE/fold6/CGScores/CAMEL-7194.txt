@@ -1,0 +1,10 @@
+ClientFactoryBeanCache:0.0232
+CxfEndpoint:0.0229
+CxfEndpointUtils:0.0288
+CxfRsBinding:0.0517
+CxfRsEndpoint:0.1291
+DataFormat:0.0263
+Exchange:0.1732
+InterceptorHolder:0.0639
+Message:0.1895
+ObjectHelper:0.0316

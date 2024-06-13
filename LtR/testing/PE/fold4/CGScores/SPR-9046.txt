@@ -1,0 +1,6 @@
+AnnotatedBeanDefinitionReader:0.0013
+AnnotationConfigContextLoaderUtils:0.0013
+ContextConfigurationAttributes:0.0043
+MergedContextConfiguration:0.0058
+ObjectUtils:0.0028
+StringUtils:0.0013

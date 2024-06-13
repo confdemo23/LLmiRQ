@@ -1,0 +1,10 @@
+Category:0.0280
+HCatContext:0.0130
+HCatFieldSchema:0.0931
+HCatSchema:0.0911
+HCatSchemaUtils:0.0220
+HCatUtil:0.0300
+PartInfo:0.0140
+ReaderWriter:0.0150
+StorerInfo:0.0220
+Type:0.0205

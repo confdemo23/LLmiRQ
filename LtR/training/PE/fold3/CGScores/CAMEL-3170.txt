@@ -1,0 +1,6 @@
+CamelContext:0.0026
+FtpConfiguration:0.0055
+FtpOperations:0.0004
+PlatformHelper:0.0004
+RemoteFileEndpoint:0.0009
+TypeConverter:0.0021

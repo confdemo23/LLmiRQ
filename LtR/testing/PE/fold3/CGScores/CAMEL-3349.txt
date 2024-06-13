@@ -1,0 +1,10 @@
+ChainedCxfRsEndpointConfigurer:0.0047
+CxfHeaderHelper:0.0111
+CxfRsEndpointConfigurer:0.0047
+Exchange:0.0461
+ExchangeHelper:0.0033
+ExchangePattern:0.0033
+HeaderFilterStrategy:0.0033
+InterceptorHolder:0.0420
+Message:0.0578
+ObjectHelper:0.0020

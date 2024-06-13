@@ -1,0 +1,2 @@
+TableDescriptor:0.2667
+ThriftServer:0.2000

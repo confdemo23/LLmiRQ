@@ -1,0 +1,10 @@
+AbstractConfiguration:0.0209
+Builder:0.0166
+Configuration:0.0338
+ConfigurationInterpolator:0.0467
+ConfigurationLogger:0.0209
+ConfigurationUtils:0.0080
+ConversionHandler:0.0123
+JdbcOperation:0.0295
+ListDelimiterHandler:0.0123
+Synchronizer:0.0166

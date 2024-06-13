@@ -1,0 +1,5 @@
+HiveConnection:0.2558
+HiveDatabaseMetaData:0.3953
+HivePreparedStatement:0.4186
+HiveStatement:0.2326
+TProtocolVersion:0.3023

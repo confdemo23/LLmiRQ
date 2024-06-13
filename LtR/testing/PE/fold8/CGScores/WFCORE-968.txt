@@ -1,0 +1,10 @@
+AttributeAccess:0.0287
+AuthorizationResult:0.0075
+ControllerResolver:0.0032
+EnhancedSyntaxSupport:0.0032
+ImmutableManagementResourceRegistration:0.0075
+OperationContext:0.0499
+OperationStepHandler:0.0075
+Resource:0.0075
+SimpleAttributeDefinition:0.0160
+SimpleOperationDefinitionBuilder:0.0075

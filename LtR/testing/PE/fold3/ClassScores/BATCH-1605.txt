@@ -1,0 +1,2 @@
+HippyMethodInvoker:0.3488
+PropertyExtractingDelegatingItemWriter:0.8140

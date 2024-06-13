@@ -1,0 +1,7 @@
+HiveAuthorizationProvider:0.5946
+HiveConf:0.1351
+HiveMetaStore:0.2703
+HiveStorageHandler:0.4054
+ObjectInspector:0.3243
+ObjectStore:0.2162
+SemanticAnalyzer:0.3514

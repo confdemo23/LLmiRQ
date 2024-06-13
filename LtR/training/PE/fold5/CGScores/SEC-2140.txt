@@ -1,0 +1,6 @@
+Acl:0.0241
+Authentication:0.0241
+SecurityContext:0.0369
+SecurityContextHolder:0.0496
+Sid:0.0114
+SidRetrievalStrategy:0.0114

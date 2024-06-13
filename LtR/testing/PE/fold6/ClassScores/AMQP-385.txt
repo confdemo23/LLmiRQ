@@ -1,0 +1,2 @@
+AmqpRejectAndDontRequeueException:0.6667
+ListenerExecutionFailedException:0.6444

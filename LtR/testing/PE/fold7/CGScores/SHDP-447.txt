@@ -1,0 +1,10 @@
+DataStoreWriter:0.0489
+LifecycleObjectSupport:0.0188
+OutputContext:0.0075
+PartitionKeyResolver:0.0088
+PartitionResolver:0.0088
+PartitionStrategy:0.0188
+StoreEventPublisher:0.0031
+StoreUtils:0.0031
+StreamsHolder:0.0163
+TextFileWriter:0.1429

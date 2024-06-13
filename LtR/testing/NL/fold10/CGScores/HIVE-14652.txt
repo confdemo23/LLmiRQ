@@ -1,0 +1,10 @@
+CTEClause:0.0476
+Client:0.0213
+ConfVars:0.0426
+HiveConf:0.0927
+MapJoinOperator:0.0915
+ObjectStore:0.3076
+QueryWrapper:0.1491
+SemanticAnalyzer:0.1278
+SortBucketRSCtx:0.0777
+Utils:0.0363

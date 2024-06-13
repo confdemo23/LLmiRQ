@@ -1,0 +1,7 @@
+DatabaseProduct:0.0010
+HadoopShims:0.0010
+LockInfo:0.0172
+LockTypeComparator:0.0010
+OpertaionType:0.0030
+SQLGenerator:0.0293
+ShimLoader:0.0010

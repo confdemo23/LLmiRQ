@@ -1,0 +1,5 @@
+JpaOrder:0.0002
+JpaParameters:0.0004
+QueryHints:0.0013
+QueryUtils:0.0004
+StoredProcedureAttributeSource:0.0004

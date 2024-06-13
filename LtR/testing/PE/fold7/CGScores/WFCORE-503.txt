@@ -1,0 +1,7 @@
+Factory:0.0013
+ImmutableManagementResourceRegistration:0.0113
+PathAddress:0.0063
+PathElement:0.0013
+Resource:0.0188
+ResourceEntry:0.0088
+ResourceFilter:0.0038

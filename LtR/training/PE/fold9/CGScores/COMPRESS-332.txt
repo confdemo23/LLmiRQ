@@ -1,0 +1,4 @@
+FramedSnappyDialect:0.0106
+IOUtils:0.0206
+PureJavaCrc32C:0.0161
+SnappyCompressorInputStream:0.0382

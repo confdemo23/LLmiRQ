@@ -1,0 +1,7 @@
+CamelContextFactoryBean:0.4167
+DefaultCamelContext:0.3333
+IntrospectionSupport:0.3542
+ProcessorDefinition:0.3333
+ProcessorDefinitionHelper:0.4583
+RouteDefinition:0.2500
+SpringCamelContext:0.3125

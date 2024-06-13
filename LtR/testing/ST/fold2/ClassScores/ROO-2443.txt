@@ -1,0 +1,5 @@
+DefaultFileManager:0.3182
+MavenCommands:0.2045
+MavenOperationsImpl:0.3409
+MavenProjectMetadataProvider:0.5455
+PollingFileMonitorService:0.4773

@@ -1,0 +1,4 @@
+DefaultIndexOperations:0.3673
+GeospatialIndex:0.2245
+IndexOperations:0.2245
+MongoTemplate:0.1837

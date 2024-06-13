@@ -1,0 +1,10 @@
+AsyncCallback:0.0111
+ConsumerCache:0.0063
+DefaultConsumer:0.0014
+Endpoint:0.0038
+EventDrivenPollingConsumer:0.0014
+Exchange:0.0693
+ExchangeHelper:0.0038
+Message:0.0305
+PollingConsumer:0.0111
+ServiceHelper:0.0063

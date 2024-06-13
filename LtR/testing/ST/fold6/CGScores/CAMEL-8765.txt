@@ -1,0 +1,10 @@
+DefaultConsumer:0.0052
+Endpoint:0.0070
+Exchange:0.0064
+IntrospectionSupport:0.0052
+JpaEndpoint:0.0103
+ObjectHelper:0.0119
+QueryBuilder:0.0054
+ScheduledPollConsumer:0.0291
+ScheduledPollConsumerScheduler:0.0107
+ServiceHelper:0.0125

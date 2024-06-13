@@ -1,0 +1,1 @@
+AbstractPartitionDataStoreWriter:0.6304

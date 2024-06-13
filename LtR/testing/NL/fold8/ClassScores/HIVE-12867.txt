@@ -1,0 +1,5 @@
+ErrorMsg:0.1282
+HiveConf:0.1282
+HiveException:0.2564
+SemanticAnalyzer:0.3333
+SemanticException:0.3590

@@ -1,0 +1,2 @@
+AbstractMemberHoldingTypeDetailsBuilder:0.7778
+AbstractMemberHoldingTypeDetailsBuilderTest:0.8667

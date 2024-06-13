@@ -1,0 +1,5 @@
+BindAuthenticator:0.3256
+DefaultLdapAuthoritiesPopulator:0.6512
+DefaultSpringSecurityContextSource:0.7209
+FilterBasedLdapUserSearch:0.5116
+LdapAuthenticationProvider:0.5349

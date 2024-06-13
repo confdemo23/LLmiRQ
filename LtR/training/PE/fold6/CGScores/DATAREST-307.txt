@@ -1,0 +1,3 @@
+RepositoryLinksResource:0.0050
+ResourceMappings:0.0050
+ResourceMetadata:0.0050

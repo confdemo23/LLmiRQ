@@ -1,0 +1,10 @@
+CompressorStreamFactory:0.0295
+CompressorStreamProvider:0.0618
+DeflateCompressorInputStream:0.0133
+FramedSnappyCompressorInputStream:0.0133
+GzipCompressorInputStream:0.0133
+IOUtils:0.0133
+LZMAUtils:0.0295
+Pack200CompressorInputStream:0.0133
+Sets:0.0295
+XZUtils:0.0295

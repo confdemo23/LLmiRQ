@@ -1,0 +1,6 @@
+CLIService:0.1277
+HiveSQLException:0.2553
+HiveSessionImpl:0.2340
+SQLOperation:0.1702
+TSetIpAddressProcessor:0.3830
+ThriftCLIService:0.2553

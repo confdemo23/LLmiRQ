@@ -1,0 +1,4 @@
+MockEndpoint:0.0325
+ModelCamelContext:0.0152
+ProducerTemplate:0.0325
+RouteDefinition:0.0152

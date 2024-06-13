@@ -1,0 +1,5 @@
+CalcitePlanner:0.2821
+HivePointLookupOptimizerRule:0.6410
+OpProcFactory:0.2564
+PTFTranslator:0.2564
+SemanticAnalyzer:0.3333

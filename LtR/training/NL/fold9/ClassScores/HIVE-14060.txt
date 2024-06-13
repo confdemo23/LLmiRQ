@@ -1,0 +1,3 @@
+HadoopShims:0.2162
+HiveInputFormat:0.3243
+SplitGrouper:0.2432

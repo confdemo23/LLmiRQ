@@ -1,0 +1,5 @@
+AbstractConfiguration:0.0168
+BaseConfiguration:0.0079
+CompositeConfiguration:0.0079
+Configuration:0.0523
+ConfigurationUtils:0.0079

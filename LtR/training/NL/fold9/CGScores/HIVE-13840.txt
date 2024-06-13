@@ -1,0 +1,10 @@
+ETLSplitStrategy:0.0150
+FooterCache:0.0326
+HadoopShims:0.0326
+HdfsFileStatusWithId:0.0677
+OrcInputFormat:0.0326
+SplitGenerator:0.0150
+SplitInfo:0.0063
+SplitStrategyKind:0.0150
+WriterOptions:0.0107
+WriterVersion:0.0063

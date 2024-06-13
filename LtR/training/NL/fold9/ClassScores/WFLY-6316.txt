@@ -1,0 +1,5 @@
+CacheFactory:0.2432
+DefaultCacheContainer:0.4865
+EJB3SubsystemAdd:0.3514
+EJBUtilities:0.2432
+StatelessSessionComponent:0.5946

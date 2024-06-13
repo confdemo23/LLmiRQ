@@ -1,0 +1,2 @@
+JdbcPagingItemReader:0.3953
+SqlPagingQueryProviderFactoryBean:0.6977

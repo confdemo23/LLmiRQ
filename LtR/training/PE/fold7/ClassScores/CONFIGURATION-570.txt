@@ -1,0 +1,4 @@
+AbstractConfiguration:0.3600
+MapConfiguration:0.2600
+PropertiesConfiguration:0.4000
+SystemConfiguration:0.3200

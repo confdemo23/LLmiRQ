@@ -1,0 +1,10 @@
+CTEClause:0.0224
+CalcitePlanner:0.0236
+CalcitePlannerAction:0.1803
+FSPaths:0.0365
+FileSinkOperator:0.0177
+Operator:0.0153
+RecordWriter:0.0177
+SemanticAnalyzer:0.0601
+SortBucketRSCtx:0.0365
+TableScanOperator:0.0189

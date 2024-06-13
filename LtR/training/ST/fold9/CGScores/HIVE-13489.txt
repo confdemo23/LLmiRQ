@@ -1,0 +1,3 @@
+ConnectionImpl:0.0003
+HCatUtil:0.0003
+HiveEndPoint:0.0011

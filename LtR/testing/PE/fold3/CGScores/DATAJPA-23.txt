@@ -1,0 +1,4 @@
+ParameterMetadata:0.0117
+ParameterMetadataProvider:0.0025
+PredicateBuilder:0.0025
+QueryUtils:0.0025

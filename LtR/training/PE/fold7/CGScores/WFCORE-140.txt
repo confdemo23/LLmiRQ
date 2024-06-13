@@ -1,0 +1,10 @@
+ExtensionRegistry:0.0016
+ExtensionXml:0.0042
+ImmutableManagementResourceRegistration:0.0071
+Namespace:0.0042
+PathAddress:0.0038
+Resource:0.0119
+ResourceEntry:0.0055
+ResourceFilter:0.0022
+StandaloneXml_5:0.0042
+StandaloneXml_Legacy:0.0016

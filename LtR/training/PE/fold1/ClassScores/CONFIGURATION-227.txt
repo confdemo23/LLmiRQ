@@ -1,0 +1,2 @@
+ConfigurationDynaBean:0.4000
+HierarchicalConfiguration:0.4889

@@ -1,0 +1,3 @@
+Olingo2AppImpl:0.3030
+Olingo2Component:0.3636
+Olingo2ResponseHandler:0.5455

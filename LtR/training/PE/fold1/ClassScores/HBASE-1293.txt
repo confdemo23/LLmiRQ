@@ -1,0 +1,2 @@
+Compression:0.1778
+HFile:0.0444

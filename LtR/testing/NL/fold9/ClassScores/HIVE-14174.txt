@@ -1,0 +1,7 @@
+DDLTask:0.1563
+FileSinkOperator:0.4375
+HiveConf:0.1875
+HiveMetaStoreClient:0.5313
+HiveStorageHandler:0.5000
+Table:0.0938
+Utilities:0.2188

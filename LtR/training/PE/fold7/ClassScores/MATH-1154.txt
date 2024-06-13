@@ -1,0 +1,3 @@
+BinomialTest:0.1800
+ChiSquareTest:0.2000
+RandomGenerator:0.2400

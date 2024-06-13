@@ -1,0 +1,2 @@
+BasicAuthenticationEntryPoint:0.5778
+HttpSecurity:0.2000

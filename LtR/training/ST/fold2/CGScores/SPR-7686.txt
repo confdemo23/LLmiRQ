@@ -1,0 +1,10 @@
+AnnotationAttributes:0.0191
+Assert:0.0343
+AutowiredAnnotationBeanPostProcessor:0.0293
+BridgeMethodResolver:0.0191
+ClassUtils:0.0369
+ConfigurableListableBeanFactory:0.1306
+DependencyDescriptor:0.0191
+InjectionMetadata:0.0597
+ReflectionUtils:0.0591
+RootBeanDefinition:0.0186

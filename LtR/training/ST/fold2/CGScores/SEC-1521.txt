@@ -1,0 +1,10 @@
+FilterChainValidator:0.0034
+FilterInvocation:0.0034
+FirewalledRequest:0.0079
+HttpFirewall:0.0124
+HttpRequestResponseHolder:0.0349
+SecurityContextHolder:0.0304
+SecurityContextRepository:0.0169
+SecurityFilterChain:0.0079
+UrlUtils:0.0124
+VirtualFilterChain:0.0034

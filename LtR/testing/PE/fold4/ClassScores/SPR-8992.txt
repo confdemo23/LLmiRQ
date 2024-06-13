@@ -1,0 +1,6 @@
+ActiveProfiles:0.2973
+Autowired:0.1622
+Bean:0.0270
+ContextConfiguration:0.4595
+ImportResource:0.2973
+SpringJUnit4ClassRunner:0.5405

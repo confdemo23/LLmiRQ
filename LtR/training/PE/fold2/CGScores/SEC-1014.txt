@@ -1,0 +1,9 @@
+Authentication:0.0121
+LdapAuthenticationProvider:0.0207
+LdapEncoder:0.0045
+PasswordEncoder:0.0248
+PasswordPolicyErrorStatus:0.0100
+PasswordPolicyException:0.0100
+SpringSecurityLdapTemplate:0.0121
+SpringSecurityMessageSource:0.0045
+Utf8:0.0057

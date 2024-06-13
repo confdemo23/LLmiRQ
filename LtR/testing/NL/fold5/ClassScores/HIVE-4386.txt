@@ -1,0 +1,9 @@
+GenericUDAFMax:0.2558
+GenericUDAFMin:0.2558
+GenericUDAFSum:0.2558
+GenericUDTFExplode:0.3488
+HiveInputFormat:0.2791
+MapRedTask:0.1628
+ObjectInspector:0.2791
+PartitionPruner:0.2791
+SemanticAnalyzer:0.3023

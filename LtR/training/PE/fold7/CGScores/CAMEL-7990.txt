@@ -1,0 +1,10 @@
+AsyncCallback:0.0172
+AsyncProcessor:0.0026
+AsyncProcessorHelper:0.0026
+CamelContext:0.0099
+Exchange:0.0208
+ExchangeIdempotentRepository:0.0063
+Expression:0.0026
+IdempotentRepository:0.0099
+ServiceHelper:0.0099
+Synchronization:0.0063

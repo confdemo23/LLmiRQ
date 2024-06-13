@@ -1,0 +1,10 @@
+BlockingServiceAndInterface:0.0040
+ByteBufferPool:0.0070
+HBaseRpcController:0.0025
+MetricsHBaseServer:0.0101
+MonitoredRPCHandler:0.0137
+RpcCall:0.0608
+RpcServerInterface:0.0196
+Server:0.0055
+TaskMonitor:0.0025
+UserProvider:0.0025

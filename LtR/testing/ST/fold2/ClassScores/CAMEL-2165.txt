@@ -1,0 +1,6 @@
+DefaultProducerTemplate:0.4318
+FtpOperations:0.2045
+GenericFileProducer:0.3409
+ProducerCache:0.2045
+RemoteFileProducer:0.3182
+SendProcessor:0.2045

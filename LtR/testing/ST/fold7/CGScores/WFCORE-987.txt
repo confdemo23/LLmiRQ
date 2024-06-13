@@ -1,0 +1,10 @@
+AuthorizationResponseImpl:0.0968
+AuthorizationResult:0.1062
+DeployerChainAddHandler:0.1081
+Factory:0.0893
+ImmutableManagementResourceRegistration:0.0938
+ManagementModelImpl:0.1898
+ModelControllerImpl:0.2505
+PathAddress:0.2291
+PathElement:0.2366
+Resource:0.2481

@@ -1,0 +1,4 @@
+CamelTestSupport:0.0066
+JavaMailSender:0.0152
+MockEndpoint:0.1103
+RouteDefinition:0.0066

@@ -1,0 +1,2 @@
+MongoEntityInformation:0.4222
+SimpleMongoRepository:0.4000

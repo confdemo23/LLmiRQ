@@ -1,0 +1,10 @@
+BatchStatus:0.0091
+CompositeJobExecutionListener:0.0203
+ExitStatus:0.0203
+JobExecution:0.0930
+JobInterruptedException:0.0091
+JobParametersValidator:0.0036
+JobRepository:0.0091
+JobSynchronizationManager:0.0091
+RepeatException:0.0036
+StepHandler:0.0036

@@ -1,0 +1,3 @@
+EjbRemoveUnitTestCase:0.4000
+WeldBootstrapService:0.3778
+WeldStartService:0.2889

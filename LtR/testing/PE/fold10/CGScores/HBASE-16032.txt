@@ -1,0 +1,10 @@
+Bytes:0.0628
+ColumnFamilyDescriptor:0.0486
+HRegion:0.1645
+HStore:0.1580
+KeyValueHeap:0.0729
+MonitoredTask:0.0673
+RegionInfo:0.1610
+Scan:0.0630
+ScanQueryMatcher:0.0497
+ScannerContext:0.1005

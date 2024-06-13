@@ -1,0 +1,8 @@
+Authentication:0.0064
+LdapAuthenticationProvider:0.0207
+LdapUtils:0.0064
+PasswordPolicyControl:0.0029
+PasswordPolicyControlExtractor:0.0029
+PasswordPolicyErrorStatus:0.0100
+PasswordPolicyException:0.0100
+SpringSecurityLdapTemplate:0.0350

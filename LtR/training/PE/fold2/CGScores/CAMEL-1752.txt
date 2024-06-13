@@ -1,0 +1,5 @@
+DefaultCamelContext:0.0031
+Endpoint:0.0031
+EventComponent:0.0031
+SpringCamelContext:0.0104
+TypeConverter:0.0031

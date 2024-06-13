@@ -1,0 +1,7 @@
+FileSinkDesc:0.2424
+Hive:0.0000
+HiveConf:0.1212
+HiveFileFormatUtils:0.4545
+HiveMetaStoreClient:0.4545
+LoadSemanticAnalyzer:0.4848
+Table:0.0303

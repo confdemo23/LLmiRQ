@@ -1,0 +1,10 @@
+CachedOutputStream:0.3571
+CryptoDataFormat:0.3095
+DataFormat:0.1667
+FileInputStreamCache:0.4048
+GzipDataFormat:0.2619
+MarshalProcessor:0.3095
+PGPDataFormat:0.2381
+SerializationDataFormat:0.4762
+XMLSecurityDataFormat:0.4286
+ZipDataFormat:0.2381

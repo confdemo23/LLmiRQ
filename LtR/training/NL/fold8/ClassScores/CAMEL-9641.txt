@@ -1,0 +1,8 @@
+CamelContext:0.3125
+Exchange:0.1875
+FileComponent:0.3438
+FileConsumer:0.3125
+FileEndpoint:0.3125
+FileLanguage:0.3125
+SimpleExpression:0.4375
+SimpleLanguage:0.3750

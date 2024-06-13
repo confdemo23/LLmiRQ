@@ -1,0 +1,6 @@
+HdfsConfiguration:0.3939
+HdfsConsumer:0.2424
+HdfsEndpoint:0.2424
+HdfsInfoFactory:0.3333
+HdfsInputStream:0.3333
+HdfsProducer:0.2424

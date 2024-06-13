@@ -1,0 +1,10 @@
+AnnotationAttributeValue:0.0070
+AnnotationMetadata:0.0070
+ClassOrInterfaceTypeDetails:0.0628
+FinderOperations:0.0070
+HandlerUtils:0.0086
+JavaPackage:0.0163
+JavaType:0.0488
+ProjectOperations:0.0302
+ShellContext:0.0302
+TypeLocationService:0.0256

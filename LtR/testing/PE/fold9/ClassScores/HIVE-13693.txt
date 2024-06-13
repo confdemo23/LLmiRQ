@@ -1,0 +1,5 @@
+File:0.0217
+Filter:0.0652
+Operator:0.1087
+Output:0.0652
+Select:0.0652

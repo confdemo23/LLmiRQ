@@ -1,0 +1,10 @@
+AttributeDefinition:0.0531
+Factory:0.0541
+ImmutableManagementResourceRegistration:0.0390
+OperationContext:0.1752
+OrderedResourceCreator:0.0090
+PathAddress:0.0300
+Resource:0.0420
+ResourceDefinition:0.0581
+RuntimeCapability:0.0200
+WildcardReadResourceDescriptionAddressHack:0.0060

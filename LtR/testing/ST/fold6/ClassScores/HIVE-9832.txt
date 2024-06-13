@@ -1,0 +1,4 @@
+MapJoinOperator:0.2340
+Operator:0.0851
+ReduceRecordProcessor:0.3617
+TezProcessor:0.1702

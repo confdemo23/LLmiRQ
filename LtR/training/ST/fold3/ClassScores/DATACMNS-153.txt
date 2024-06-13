@@ -1,0 +1,2 @@
+QuerydslPredicateExecutor:0.5238
+SimpleEntityPathResolver:0.5000

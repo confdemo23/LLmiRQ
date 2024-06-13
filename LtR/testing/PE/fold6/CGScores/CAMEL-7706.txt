@@ -1,0 +1,6 @@
+DefaultConsumer:0.0123
+DefaultEndpoint:0.0191
+DefaultProducer:0.0123
+Exchange:0.0601
+JGroupsEndpoint:0.0259
+Message:0.0601

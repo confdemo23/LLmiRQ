@@ -1,0 +1,10 @@
+DAGSummary:0.2784
+FSCountersSummary:0.4864
+LLAPioSummary:0.4786
+PostExecOrcRowGroupCountPrinter:0.4147
+PostExecTezSummaryPrinter:0.6120
+PrintSummary:0.5210
+QueryExecutionBreakdownSummary:0.3193
+QueryFragmentCounters:0.3207
+VectorMapJoinLeftSemiMultiKeyOperator:0.2806
+VectorMapJoinLeftSemiStringOperator:0.2969

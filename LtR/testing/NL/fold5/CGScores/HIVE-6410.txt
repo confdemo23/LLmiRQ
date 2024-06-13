@@ -1,0 +1,10 @@
+CTEClause:0.0264
+ConfVars:0.0237
+ConstantExprCheck:0.0099
+FileChecker:0.0641
+FileSinkDesc:0.0525
+HdfsEncryptionShim:0.0099
+HiveConf:0.0511
+SemanticAnalyzer:0.0703
+SortBucketRSCtx:0.0429
+TableScanOperator:0.0223

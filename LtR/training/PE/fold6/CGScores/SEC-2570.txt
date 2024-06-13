@@ -1,0 +1,10 @@
+CsrfFilter:0.0075
+DefaultLoginPageGeneratingFilter:0.0038
+DelegatingLogoutSuccessHandler:0.0038
+LogoutConfigurer:0.0081
+LogoutFilter:0.0038
+Matcher:0.0119
+PermitAllSupport:0.0088
+SecurityContextLogoutHandler:0.0088
+SessionManagementConfigurer:0.0075
+SimpleUrlLogoutSuccessHandler:0.0038

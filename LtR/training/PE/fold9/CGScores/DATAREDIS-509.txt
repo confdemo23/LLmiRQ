@@ -1,0 +1,9 @@
+Bucket:0.1085
+MappingRedisConverter:0.0065
+Part:0.0171
+PartialUpdate:0.0241
+PropertyUpdate:0.0910
+RedisData:0.1015
+RedisPersistentEntity:0.0628
+TimeToLiveAccessor:0.0065
+UpdateCommand:0.0030

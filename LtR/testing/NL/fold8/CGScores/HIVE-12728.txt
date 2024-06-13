@@ -1,0 +1,10 @@
+DDLSemanticAnalyzer:0.0212
+FooterCache:0.0153
+HMSHandler:0.0409
+HadoopShims:0.0153
+HdfsFileStatusWithId:0.0318
+HiveDelegationTokenManager:0.0180
+HiveMetastoreCli:0.0180
+QualifiedNameUtil:0.0268
+Server:0.0180
+Table:0.1387

@@ -1,0 +1,10 @@
+Base64DataFormatDSLDefaultsTest:0.5187
+CsvDataFormatCustomFactoryTest:0.2667
+CsvDataFormatResourceFactoryTest:0.2679
+CsvTestWithProperties:0.2715
+CsvUnmarshalPipeDelimiterTest:0.2614
+CsvUnmarshalTabDelimiterTest:0.2582
+CsvUnmarshalTwoCsvDataFormatConcurrentTest:0.2553
+SpringTest:0.2902
+StringDataFormat:0.2896
+StringDataFormatConfiguration:0.3164

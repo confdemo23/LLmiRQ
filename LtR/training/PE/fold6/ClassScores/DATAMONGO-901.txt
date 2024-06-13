@@ -1,0 +1,1 @@
+MongoRepositoryConfigurationExtension:0.7391

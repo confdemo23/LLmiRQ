@@ -1,0 +1,3 @@
+DataPolicyConverter:0.0086
+RegionFactoryBean:0.0187
+RegionShortcutWrapper:0.0086

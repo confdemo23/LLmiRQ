@@ -1,0 +1,6 @@
+GemfireOperations:0.3256
+GemfireRepository:0.3256
+GemfireRepositoryQuery:0.4419
+GemfireTemplate:0.2791
+Query:0.0465
+SimpleGemfireRepository:0.4651

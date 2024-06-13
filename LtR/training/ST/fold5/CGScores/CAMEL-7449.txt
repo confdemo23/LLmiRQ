@@ -1,0 +1,10 @@
+CamelContext:0.0058
+DefaultMessage:0.0075
+Exchange:0.0049
+ExchangeHelper:0.0049
+JmsConfiguration:0.0067
+JmsEndpoint:0.0225
+JmsMessageHelper:0.0084
+Message:0.0102
+ObjectHelper:0.0023
+TypeConverter:0.0058

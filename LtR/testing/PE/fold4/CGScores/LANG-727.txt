@@ -1,0 +1,10 @@
+MultiLineTestObject:0.0008
+ObjectCycle:0.0008
+Outer:0.0008
+ReflectionToStringBuilder:0.0116
+SelfInstanceTwoVarsReflectionTestFixture:0.0018
+SelfInstanceVarReflectionTestFixture:0.0008
+SimpleReflectionTestFixture:0.0008
+ToStringBuilder:0.5086
+ToStringBuilderTest:0.0607
+ToStringStyle:0.0008

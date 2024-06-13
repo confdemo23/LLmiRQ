@@ -1,0 +1,4 @@
+CamelContext:0.2432
+QuartzComponent:0.3243
+QuartzConsumer:0.2973
+QuartzEndpoint:0.2973

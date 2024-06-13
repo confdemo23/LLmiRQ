@@ -1,0 +1,8 @@
+AbstractMappingContext:0.4419
+BasicPersistentEntity:0.4186
+MappingException:0.3023
+PersistentEntity:0.3023
+PersistentProperty:0.3488
+PersistentPropertyAccessor:0.5349
+PropertyPath:0.2093
+SimpleTypeHolder:0.3023

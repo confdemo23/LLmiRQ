@@ -1,0 +1,5 @@
+ChannelProcessingFilter:0.4318
+FilterChainProxy:0.2727
+LogoutFilter:0.1818
+PersistentTokenBasedRememberMeServices:0.7727
+SecurityContextPersistenceFilter:0.6364

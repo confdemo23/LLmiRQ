@@ -1,0 +1,3 @@
+AbstractPartitionDataStoreWriter:0.6304
+PartitionTextFileWriter:0.4348
+PollingTaskSupport:0.3261

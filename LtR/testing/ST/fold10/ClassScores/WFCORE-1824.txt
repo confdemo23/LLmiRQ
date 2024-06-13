@@ -1,0 +1,6 @@
+AttributeParser:0.3158
+ObjectTypeAttributeDefinition:0.6842
+PersistentResourceXMLDescription:0.7632
+PropertiesAttributeDefinition:0.6842
+SimpleAttributeDefinitionBuilder:0.7632
+XmlConfigurationPersister:0.5789

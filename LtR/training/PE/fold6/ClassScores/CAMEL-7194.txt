@@ -1,0 +1,3 @@
+CxfEndpoint:0.1739
+CxfRsEndpoint:0.2174
+CxfRsProducer:0.2174

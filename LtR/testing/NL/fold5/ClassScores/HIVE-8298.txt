@@ -1,0 +1,8 @@
+AbstractSemanticAnalyzerHook:0.5814
+CommonJoinOperator:0.3488
+ExprNodeDesc:0.2093
+JoinCondDesc:0.2093
+MapJoinProcessor:0.3023
+OpProcFactory:0.2326
+ReduceSinkOperator:0.3488
+SemanticAnalyzer:0.3023

@@ -1,0 +1,10 @@
+ClientInterceptor:0.0035
+DefaultStrategiesHelper:0.0026
+FaultAwareWebServiceConnection:0.0017
+MarshallingUtils:0.0017
+MessageContext:0.0184
+TransportContextHolder:0.0026
+WebServiceConnection:0.0035
+WebServiceMessage:0.0044
+WebServiceMessageCallback:0.0035
+WebServiceTemplate:0.0035

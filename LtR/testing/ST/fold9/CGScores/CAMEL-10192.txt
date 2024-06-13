@@ -1,0 +1,10 @@
+BeanDefinition:0.1627
+CamelContext:0.4297
+CollectionStringBuffer:0.3087
+ObjectHelper:0.1814
+ProcessorDefinition:0.1534
+ProcessorDefinitionHelper:0.1420
+Route:0.2068
+RouteContext:0.2335
+RouteDefinition:0.2987
+RouteService:0.2960

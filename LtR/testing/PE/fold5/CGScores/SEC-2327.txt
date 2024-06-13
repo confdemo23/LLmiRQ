@@ -1,0 +1,5 @@
+Authentication:0.0041
+AuthenticationTrustResolver:0.0085
+AuthorityUtils:0.0018
+PermissionEvaluator:0.0041
+RoleHierarchy:0.0018

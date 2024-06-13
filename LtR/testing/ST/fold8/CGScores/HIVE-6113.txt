@@ -1,0 +1,10 @@
+HMSHandler:0.0121
+Hive:0.0052
+HiveDelegationTokenManager:0.0053
+HiveMetastoreCli:0.0053
+MetaStoreUtils:0.0094
+ObjectStore:0.0430
+QueryWrapper:0.0208
+Server:0.0053
+ShimLoader:0.0077
+Utils:0.0040

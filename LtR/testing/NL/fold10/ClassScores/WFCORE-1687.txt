@@ -1,0 +1,7 @@
+DeploymentAddHandler:0.4595
+DeploymentRemoveHandler:0.5405
+DeploymentResourceSupport:0.5946
+DeploymentUndeployHandler:0.5946
+DeploymentUnit:0.2973
+DeploymentUnitPhaseService:0.6216
+ManagementResourceRegistration:0.7297

@@ -1,0 +1,10 @@
+ConfVars:0.0211
+HadoopShims:0.0234
+Hive:0.0185
+HiveConf:0.0475
+LogHelper:0.0251
+MetaStoreUtils:0.0343
+ResourceMaps:0.0330
+SessionState:0.1439
+ShimLoader:0.0419
+Utils:0.0195

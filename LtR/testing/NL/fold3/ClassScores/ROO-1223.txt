@@ -1,0 +1,5 @@
+AnnotationMetadataBuilder:0.5610
+ConstructorMetadataBuilder:0.5854
+FieldMetadataBuilder:0.4390
+MemberDetailsScanner:0.4390
+RooJavaBean:0.2195

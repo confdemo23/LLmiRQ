@@ -1,0 +1,8 @@
+AbstractMapBag:0.0114
+CollectionMutator:0.0246
+CollectionUtils:0.0096
+CompositeSet:0.0041
+EmptyIterator:0.0127
+IteratorChain:0.0127
+SetMutator:0.0150
+UnmodifiableList:0.0127

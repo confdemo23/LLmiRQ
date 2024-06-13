@@ -1,0 +1,5 @@
+Filter:0.0444
+Operator:0.0889
+Output:0.0444
+Select:0.0444
+SemanticAnalyzer:0.2667

@@ -1,0 +1,10 @@
+AdditionalModuleSpecification:0.0058
+Attribute:0.0333
+DeployerChainAddHandler:0.0119
+DeploymentUnit:0.0483
+Element:0.0362
+ModuleDependency:0.0446
+ModuleSpecification:0.0273
+ModuleStructureSpec:0.0830
+ParseResult:0.0520
+ResourceRoot:0.0480

@@ -1,0 +1,7 @@
+ConvergenceChecker:0.0094
+FastMath:0.0137
+Incrementor:0.0194
+MaxCountExceededException:0.0020
+Preconditioner:0.0210
+UnivariateFunction:0.0254
+UnivariateSolver:0.0210

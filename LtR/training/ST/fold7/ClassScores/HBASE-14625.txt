@@ -1,0 +1,2 @@
+IntegrationTestBase:0.3333
+PolicyBasedChaosMonkey:0.3958

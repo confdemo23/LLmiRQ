@@ -1,0 +1,10 @@
+Bytes:0.0042
+DoNotRetryIOException:0.0012
+HBaseConfiguration:0.0012
+ProtobufUtil:0.0012
+Result:0.0134
+RpcRetryingCaller:0.0042
+RpcRetryingCallerFactory:0.0012
+Scan:0.0439
+ScanResultCache:0.0134
+ScannerCallableWithReplicas:0.0500

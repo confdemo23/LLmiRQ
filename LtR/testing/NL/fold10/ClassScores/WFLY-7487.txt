@@ -1,0 +1,3 @@
+CacheContainerResourceDefinition:0.7838
+CapabilityServiceBuilder:0.5676
+SingletonPolicy:0.3243

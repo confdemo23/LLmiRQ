@@ -1,0 +1,5 @@
+ObjectHelper:0.0456
+ParsingContext:0.0133
+PropertiesComponent:0.0456
+PropertiesFunction:0.0779
+Property:0.0941

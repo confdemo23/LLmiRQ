@@ -1,0 +1,9 @@
+ColumnMapping:0.3438
+HBaseKeyFactory:0.4063
+HBaseScanRange:0.3750
+HBaseSerDe:0.2500
+HBaseStorageHandler:0.5313
+HiveHBaseTableInputFormat:0.7188
+LazyHBaseRow:0.3125
+ObjectInspectorConverters:0.7188
+TimestampWritable:0.4688

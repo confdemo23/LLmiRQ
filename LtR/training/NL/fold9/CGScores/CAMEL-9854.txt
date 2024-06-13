@@ -1,0 +1,10 @@
+CxfBinding:0.0388
+CxfEndpoint:0.3283
+CxfEndpointConfigurer:0.0251
+CxfEndpointUtils:0.0251
+DataFormat:0.0802
+EndpointHelper:0.0251
+Exchange:0.2180
+Message:0.0733
+ObjectHelper:0.0526
+RAWDataFormatFeature:0.0320

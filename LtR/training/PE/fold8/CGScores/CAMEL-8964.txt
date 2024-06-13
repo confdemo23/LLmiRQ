@@ -1,0 +1,10 @@
+CamelContext:0.0092
+DefaultCamelContext:0.0404
+EventHelper:0.0127
+LifecycleStrategy:0.0196
+OnCompletionDefinition:0.0058
+Route:0.1167
+RouteContext:0.0439
+RouteDefinition:0.0196
+RoutePolicy:0.0162
+ServiceHelper:0.0370

@@ -1,0 +1,7 @@
+BootstrapLogger:0.0060
+ConfigurableManager:0.0039
+Customizer:0.0039
+DMRMarshaller:0.0017
+RuntimeDeployer:0.0017
+TempFileManager:0.0017
+UUIDFactory:0.0017

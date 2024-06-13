@@ -1,0 +1,2 @@
+BeanHandlerMethodTest:0.3913
+BeanInfo:0.1087

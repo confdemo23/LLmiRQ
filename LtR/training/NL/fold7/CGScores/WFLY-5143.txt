@@ -1,0 +1,10 @@
+Attribute:0.1479
+JGroupsSchema:0.2124
+JGroupsSubsystemXMLReader:0.3228
+Operations:0.0680
+ProtocolResourceDefinition:0.0430
+ProtocolType:0.0430
+SubsystemResourceDescriptionResolver:0.0383
+ThreadPoolResourceDefinition:0.0825
+XMLAttribute:0.1756
+XMLElement:0.1756

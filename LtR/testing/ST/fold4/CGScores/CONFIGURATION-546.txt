@@ -1,0 +1,6 @@
+BeanCreationContext:0.0302
+BeanDeclaration:0.0127
+BeanFactory:0.0048
+BeanHelper:0.2384
+PropertiesConfiguration:0.0135
+TestBeanFactory:0.0191

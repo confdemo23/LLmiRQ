@@ -1,0 +1,7 @@
+AbstractWriteAttributeHandler:0.7027
+AttributeDefinition:0.4324
+ConsoleHandlerResourceDefinition:0.7838
+LoggingSubsystemParser:0.5135
+OperationStepHandler:0.4595
+StringLengthValidator:0.4865
+SystemPropertyResourceDefinition:0.7838

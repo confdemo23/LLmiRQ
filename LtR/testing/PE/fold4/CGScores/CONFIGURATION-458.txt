@@ -1,0 +1,10 @@
+AbstractConfiguration:0.0041
+BaseHierarchicalConfiguration:0.0039
+Builder:0.0041
+Configuration:0.0085
+ConfigurationInterpolator:0.0117
+ConfigurationLogger:0.0020
+ConversionHandler:0.0031
+ListDelimiterHandler:0.0020
+Synchronizer:0.0041
+TrackedNodeModel:0.0029

@@ -1,0 +1,4 @@
+DbTxnManager:0.1957
+DummyTxnManager:0.2609
+Function:0.1087
+Select:0.0652

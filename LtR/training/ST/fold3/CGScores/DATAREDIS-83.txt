@@ -1,0 +1,10 @@
+RedisCallback:0.0123
+RedisConnection:0.3540
+RedisConnectionUtils:0.0381
+RedisSerializer:0.1136
+RedisTemplate:0.0528
+SerializationUtils:0.0584
+SortQuery:0.0123
+TimeoutUtils:0.0123
+Tuple:0.0338
+TypedTuple:0.0254

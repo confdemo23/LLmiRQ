@@ -1,0 +1,10 @@
+AbstractAttributeDefinitionBuilder:0.3308
+AttributeAccess:0.0896
+AttributeMarshaller:0.0451
+CapabilityReferenceRecorder:0.0332
+ManagementModelNode:0.0915
+NillableOrExpressionParameterValidator:0.0332
+OperationContext:0.1892
+ParameterValidator:0.0332
+ResourceDescriptionResolver:0.0689
+SimpleAttributeDefinition:0.0501

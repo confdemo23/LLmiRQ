@@ -1,0 +1,9 @@
+CorrelatedRandomVectorGenerator:0.0014
+Covariance:0.0014
+DescriptiveStatistics:0.0094
+GLSMultipleLinearRegression:0.0415
+MatrixUtils:0.0062
+OLSMultipleLinearRegression:0.0110
+RandomGenerator:0.0046
+RealMatrix:0.0142
+RealVector:0.0126

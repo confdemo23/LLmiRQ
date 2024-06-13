@@ -1,0 +1,4 @@
+AbstractMongoQuery:0.3000
+BasicMongoPersistentEntity:0.4600
+MongoEntityMetadata:0.3200
+MongoQueryMethod:0.2600

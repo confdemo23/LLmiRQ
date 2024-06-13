@@ -1,0 +1,2 @@
+AMQPConnectionDetails:0.0103
+JmsComponent:0.0027

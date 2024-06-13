@@ -1,0 +1,10 @@
+CamelContext:0.0274
+Exchange:0.0751
+ExchangeHelper:0.0215
+HMACAccumulator:0.0286
+IOHelper:0.0810
+Message:0.0350
+OutputStreamBuilder:0.0437
+StreamCachingStrategy:0.0564
+TempFileManager:0.0644
+XMLSecurityDataFormat:0.5642

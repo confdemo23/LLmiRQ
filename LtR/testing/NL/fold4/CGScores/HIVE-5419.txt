@@ -1,0 +1,10 @@
+AbstractCommandParser:0.0185
+Client:0.0099
+ConfVars:0.0211
+HiveConf:0.0475
+HiveMetaTool:0.0211
+MetaStoreUtils:0.0343
+ObjectStore:0.1607
+QueryWrapper:0.0772
+ShimLoader:0.0211
+Utils:0.0125

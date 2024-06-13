@@ -1,0 +1,7 @@
+AbstractJpaQuery:0.3514
+JpaQueryMethod:0.2973
+JpaSort:0.1081
+ParameterBinder:0.3243
+PartTreeJpaQuery:0.3514
+QueryUtils:0.1892
+SimpleJpaRepository:0.4324

@@ -1,0 +1,7 @@
+GenericUDF:0.1892
+GenericUDFTimestamp:0.4324
+GenericUDFToDate:0.3514
+PrimitiveObjectInspectorFactory:0.7568
+TypeCheckProcFactory:0.4595
+TypeInfoFactory:0.3243
+TypeInfoUtils:0.2703

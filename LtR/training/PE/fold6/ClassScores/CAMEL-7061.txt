@@ -1,0 +1,3 @@
+DefaultCxfBinding:0.3043
+DefaultCxfRsBinding:0.3478
+Exchange:0.1087

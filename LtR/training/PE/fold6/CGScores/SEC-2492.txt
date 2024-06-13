@@ -1,0 +1,5 @@
+DefaultWebSecurityExpressionHandler:0.0213
+ExpressionInterceptUrlRegistry:0.0213
+ExpressionUrlAuthorizationConfigurer:0.0664
+SecurityConfig:0.0100
+WebExpressionVoter:0.0100

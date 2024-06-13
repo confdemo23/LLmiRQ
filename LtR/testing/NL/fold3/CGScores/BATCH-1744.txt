@@ -1,0 +1,10 @@
+BatchRetryTemplate:0.0296
+ChunkListener:0.0375
+ExitStatus:0.0296
+FaultTolerantChunkProcessor:0.0614
+FaultTolerantChunkProvider:0.0296
+JobInstance:0.0216
+ReflectionUtils:0.0963
+SimpleStepBuilder:0.0608
+StepExecution:0.1133
+StepListenerFactoryBean:0.0681

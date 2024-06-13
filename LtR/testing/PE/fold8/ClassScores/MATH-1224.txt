@@ -1,0 +1,1 @@
+SpearmansCorrelation:0.3400

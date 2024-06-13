@@ -1,0 +1,10 @@
+Chunk:0.0176
+ChunkContext:0.0352
+ExecutionContext:0.0319
+FaultTolerantStepBuilder:0.1465
+JobRepository:0.0246
+RepeatContext:0.0209
+RepeatListener:0.0209
+RepeatStatus:0.0183
+RepeatSynchronizationManager:0.0209
+StepExecution:0.2019

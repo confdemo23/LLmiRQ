@@ -1,0 +1,2 @@
+CombineHiveInputFormat:0.4222
+HiveInputFormat:0.2667

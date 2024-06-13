@@ -1,0 +1,4 @@
+AdviceWithBuilder:0.0212
+AdviceWithTasks:0.0079
+ModelCamelContext:0.0123
+ObjectHelper:0.0346

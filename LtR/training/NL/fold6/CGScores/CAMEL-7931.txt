@@ -1,0 +1,8 @@
+CamelContext:0.0069
+DefaultEndpoint:0.0022
+Exchange:0.0213
+JcrEndpoint:0.0308
+Message:0.0664
+ObjectHelper:0.0304
+Registry:0.0022
+TypeConverter:0.0165

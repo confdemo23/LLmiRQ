@@ -1,0 +1,10 @@
+AutoTimer:0.0049
+Builder:0.0263
+CalendarTimer:0.0075
+EJBComponent:0.0049
+ScheduleTimer:0.0236
+TimedObjectInvoker:0.0156
+TimerImpl:0.1362
+TimerServiceImpl:0.0960
+TimerServiceRegistry:0.0075
+TimerServiceResource:0.0049

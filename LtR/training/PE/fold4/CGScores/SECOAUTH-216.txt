@@ -1,0 +1,7 @@
+AccessTokenProvider:0.0142
+AccessTokenRequest:0.0069
+ClientTokenServices:0.0069
+OAuth2AccessToken:0.0045
+OAuth2Exception:0.0020
+OAuth2ProtectedResourceDetails:0.0094
+UserRedirectRequiredException:0.0098

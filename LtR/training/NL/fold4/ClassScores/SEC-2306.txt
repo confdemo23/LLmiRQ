@@ -1,0 +1,9 @@
+AbstractAuthenticationProcessingFilter:0.8140
+ConcurrentSessionControlAuthenticationStrategy:1.0000
+ConcurrentSessionFilter:0.4651
+HttpSessionEventPublisher:0.5116
+HttpSessionSecurityContextRepository:0.7674
+RememberMeServices:0.3488
+SecurityContextPersistenceFilter:0.6744
+SessionFixationProtectionStrategy:0.6977
+SessionManagementConfigurer:0.5581

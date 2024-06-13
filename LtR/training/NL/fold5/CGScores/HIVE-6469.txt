@@ -1,0 +1,10 @@
+ConfVars:0.0340
+HMSHandler:0.0696
+HiveConf:0.0741
+HiveDelegationTokenManager:0.0305
+HiveMetaStore:0.0175
+HiveMetastoreCli:0.0305
+Server:0.0305
+ShimLoader:0.0090
+StorageDescriptorKey:0.0110
+VarType:0.0100

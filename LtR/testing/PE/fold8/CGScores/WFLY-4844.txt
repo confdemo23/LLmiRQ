@@ -1,0 +1,6 @@
+AccessTimeoutDetails:0.0681
+ApplicationExceptionDetails:0.0055
+ContainerManagedConcurrencyInterceptor:0.0067
+EJBComponent:0.0410
+LockableComponent:0.0297
+MethodIntfHelper:0.0022

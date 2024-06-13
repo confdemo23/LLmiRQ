@@ -1,0 +1,10 @@
+ChoreService:0.0163
+Connection:0.0539
+ConnectionInfo:0.0257
+EnvironmentEdgeManager:0.0257
+InfoServer:0.0125
+JvmPauseMonitor:0.0125
+KeyLocker:0.0163
+SaslUtil:0.0125
+TableName:0.0163
+UserProvider:0.0539

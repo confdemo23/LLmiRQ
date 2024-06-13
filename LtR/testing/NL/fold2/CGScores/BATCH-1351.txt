@@ -1,0 +1,10 @@
+BatchRetryTemplate:0.0283
+ChunkListener:0.0359
+CompositeItemStream:0.0154
+FaultTolerantChunkProcessor:0.0586
+FaultTolerantChunkProvider:0.0283
+ItemStream:0.0161
+ReflectionUtils:0.0917
+SimpleStepBuilder:0.0580
+StepExecution:0.0813
+StepListenerFactoryBean:0.0649

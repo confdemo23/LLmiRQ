@@ -1,0 +1,10 @@
+DefaultStrategiesHelper:0.0142
+EndpointInterceptor:0.0195
+EndpointInvocationChain:0.0850
+MessageContext:0.0715
+SaajUtils:0.0466
+SoapHeaderElement:0.0180
+SoapMessage:0.0180
+SoapVersion:0.0126
+TransportInputStream:0.0192
+WebServiceMessage:0.0211

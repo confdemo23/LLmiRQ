@@ -1,0 +1,5 @@
+Attribute:0.0901
+Element:0.1707
+Namespace:0.0210
+SecurityDomainContext:0.0300
+SecurityExtension:0.0460

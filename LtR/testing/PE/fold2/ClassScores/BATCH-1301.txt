@@ -1,0 +1,4 @@
+DefaultLineMapper:0.3111
+DelimitedLineTokenizer:0.4222
+FlatFileItemReader:0.3333
+FlatFileItemWriter:0.3333

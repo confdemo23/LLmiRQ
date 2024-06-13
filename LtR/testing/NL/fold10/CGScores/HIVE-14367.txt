@@ -1,0 +1,8 @@
+ConfVars:0.0426
+DeferredObject:0.0351
+EncoderDecoder:0.0075
+ExprNodeConstantDesc:0.0351
+GenericUDF:0.0100
+HiveConf:0.0927
+Utils:0.0025
+VarType:0.0125

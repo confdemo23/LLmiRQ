@@ -1,0 +1,3 @@
+BeeLine:0.0015
+BeelineParser:0.0015
+HiveCli:0.0015

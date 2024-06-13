@@ -1,0 +1,2 @@
+BarcodeDataFormat:0.2500
+MarshalProcessor:0.2308

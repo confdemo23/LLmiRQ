@@ -1,0 +1,10 @@
+BsonUtils:0.0214
+DocumentCallback:0.0195
+Field:0.0486
+Keyword:0.0291
+MapReduceOptions:0.0409
+MongoConverter:0.0320
+MongoPersistentEntity:0.0374
+MongoPersistentProperty:0.0348
+Query:0.1410
+QueryMapper:0.0641

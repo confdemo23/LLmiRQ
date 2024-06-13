@@ -1,0 +1,9 @@
+Driver:0.0732
+FileSinkOperator:0.3171
+HiveConf:0.1220
+HiveMetaStoreClient:0.3902
+HiveOutputFormat:0.3171
+HiveStorageHandler:0.3659
+QueryState:0.1707
+SemanticAnalyzer:0.3171
+TableScanOperator:0.3415

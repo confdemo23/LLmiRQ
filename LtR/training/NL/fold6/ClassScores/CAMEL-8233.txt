@@ -1,0 +1,7 @@
+AggregateProcessor:0.4103
+AsyncProcessor:0.3077
+CamelContext:0.2564
+DefaultExecutorServiceManager:0.6923
+Exchange:0.1538
+MulticastProcessor:0.4103
+Processor:0.1795

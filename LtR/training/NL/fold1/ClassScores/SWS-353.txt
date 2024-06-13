@@ -1,0 +1,5 @@
+DefaultWsdl11Definition:0.5405
+SimpleXsdSchema:0.3243
+Wsdl4jDefinition:0.3514
+WsdlDefinitionHandlerAdapter:0.6757
+XsdSchemaCollection:0.4324

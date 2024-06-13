@@ -1,0 +1,10 @@
+AttributeDefinition:0.0038
+HandbackHolder:0.0071
+OperationContext:0.1083
+PathAddress:0.0174
+ProcessEnvironmentSystemPropertyUpdater:0.0542
+ProcessType:0.0093
+Resource:0.0038
+SimpleAttributeDefinition:0.0329
+Tools:0.0044
+Util:0.0093

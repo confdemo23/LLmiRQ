@@ -1,0 +1,10 @@
+AuthenticationManager:0.0365
+AuthenticationManagerBuilder:0.1545
+BuildState:0.0435
+ExpressionInterceptUrlRegistry:0.0365
+HttpSecurity:0.1545
+ObjectPostProcessor:0.0737
+ProviderManager:0.0562
+SecurityConfigurer:0.0667
+UserDetailsService:0.0365
+WebSecurity:0.1545

@@ -1,0 +1,7 @@
+DefaultCamelContext:0.4545
+DefaultConsumer:0.3333
+DefaultRouteContext:0.4545
+JmsConsumer:0.2121
+JmsEndpoint:0.2121
+RouteService:0.2424
+SuspendableService:0.4242

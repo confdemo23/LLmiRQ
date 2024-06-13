@@ -1,0 +1,7 @@
+CamelContext:0.0038
+Exchange:0.0435
+ExchangeHelper:0.0038
+FreemarkerEndpoint:0.0337
+Message:0.0548
+ObjectHelper:0.0154
+ResourceHelper:0.0101

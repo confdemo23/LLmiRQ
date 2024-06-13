@@ -1,0 +1,1 @@
+JAASIdentityManagerImpl:0.4000

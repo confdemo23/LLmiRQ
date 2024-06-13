@@ -1,0 +1,4 @@
+NodeMapper:0.0018
+SimpleNamespaceContext:0.0008
+TransformerHelper:0.0008
+TraxUtils:0.0008

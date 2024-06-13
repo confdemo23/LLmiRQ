@@ -1,0 +1,2 @@
+HBaseStorageHandler:0.3200
+HiveHBaseTableInputFormat:0.4400

@@ -1,0 +1,9 @@
+AbstractMapBasedEndpointMapping:0.6136
+AbstractQNameEndpointMapping:0.5455
+MessageDispatcher:0.2955
+MessageDispatcherServlet:0.4545
+PayloadRootQNameEndpointMapping:0.6136
+PayloadRootUtils:0.2727
+SaajXmlReader:0.2045
+WebServiceMessageReceiverHandlerAdapter:0.7955
+WebServiceMessageReceiverObjectSupport:0.7727

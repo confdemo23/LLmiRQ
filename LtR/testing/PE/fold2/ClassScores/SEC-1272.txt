@@ -1,0 +1,2 @@
+DefaultAuthenticationEventPublisher:0.7111
+ProviderManager:0.2667

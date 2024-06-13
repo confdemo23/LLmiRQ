@@ -1,0 +1,9 @@
+ByteArrayComparable:0.0064
+Bytes:0.0203
+CellUtil:0.0029
+ColumnValueFilter:0.0272
+CompareFilter:0.0029
+CompareOperator:0.0133
+ParseFilter:0.0168
+PrivateCellUtil:0.0029
+ProtobufUtil:0.0064

@@ -1,0 +1,4 @@
+ApiAdapter:0.0069
+Connection:0.0014
+ConnectionData:0.0087
+ConnectionKey:0.0033

@@ -1,0 +1,4 @@
+ClassTypeInformation:0.0040
+Param:0.0010
+QueryExecutionConverters:0.0025
+TypeInformation:0.0055

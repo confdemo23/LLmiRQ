@@ -1,0 +1,2 @@
+ManagedBindingRegistry:0.0069
+ManagedDatagramSocketBinding:0.0020

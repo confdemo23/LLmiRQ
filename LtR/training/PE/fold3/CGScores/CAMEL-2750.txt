@@ -1,0 +1,10 @@
+BeanComponent:0.0006
+BeanHelper:0.0010
+CamelContext:0.0023
+Exchange:0.0031
+ExpressionBuilder:0.0064
+IntrospectionSupport:0.0014
+Message:0.0014
+MethodInfo:0.0122
+ObjectHelper:0.0089
+ParameterInfo:0.0006

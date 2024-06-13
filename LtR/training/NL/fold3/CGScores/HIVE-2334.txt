@@ -1,0 +1,10 @@
+CliDriver:0.0182
+ConfVars:0.0211
+EncoderDecoder:0.0026
+HiveCommand:0.0119
+HiveConf:0.0475
+HiveSQLException:0.0026
+Table:0.1541
+Utils:0.0000
+VarType:0.0053
+_Fields:0.0007

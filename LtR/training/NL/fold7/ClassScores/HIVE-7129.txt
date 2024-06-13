@@ -1,0 +1,2 @@
+HiveConf:0.1282
+HiveMetaStore:0.2564

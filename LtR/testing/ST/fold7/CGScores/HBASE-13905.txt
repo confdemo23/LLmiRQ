@@ -1,0 +1,10 @@
+Bytes:0.1057
+FSUtils:0.0747
+HRegion:0.2296
+HRegionFileSystem:0.1076
+HStore:0.1133
+MonitoredTask:0.0919
+Mutation:0.0623
+RegionCoprocessorHost:0.0508
+RegionInfo:0.2986
+ScannerContext:0.0721

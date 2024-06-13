@@ -1,0 +1,10 @@
+CommonJoinOperator:0.0200
+ConfVars:0.0200
+EncoderDecoder:0.0035
+HiveConf:0.0436
+Hook:0.0024
+MapJoinOperator:0.0430
+MapJoinProcessor:0.0130
+MapJoinWalkerCtx:0.0742
+SkewkeyTableCounter:0.0024
+VarType:0.0059

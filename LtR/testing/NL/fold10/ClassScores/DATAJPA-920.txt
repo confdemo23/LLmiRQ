@@ -1,0 +1,4 @@
+JpaRepository:0.2703
+PartTreeJpaQuery:0.3514
+QueryExtractor:0.2973
+SimpleJpaRepository:0.4324

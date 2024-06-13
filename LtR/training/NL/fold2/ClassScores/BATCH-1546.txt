@@ -1,0 +1,3 @@
+AbstractSqlPagingQueryProvider:0.6829
+OraclePagingQueryProvider:0.5610
+PagingQueryProvider:0.4146

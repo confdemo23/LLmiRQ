@@ -1,0 +1,1 @@
+HBaseInterClusterReplicationEndpoint:0.6875

@@ -1,0 +1,4 @@
+CamelContinuationServlet:0.4545
+DefaultChannel:0.2273
+InstrumentationProcessor:0.4545
+RedeliveryErrorHandler:0.4091

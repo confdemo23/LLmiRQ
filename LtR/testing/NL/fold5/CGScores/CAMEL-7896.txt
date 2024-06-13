@@ -1,0 +1,10 @@
+Exchange:0.0631
+Message:0.0281
+NettyConsumer:0.0340
+NettyEndpoint:0.0223
+NettyHttpBinding:0.0165
+NettyHttpConfiguration:0.0340
+NettyHttpHelper:0.0281
+NettyHttpSecurityConfiguration:0.0281
+NettyProducer:0.0165
+ObjectHelper:0.0281

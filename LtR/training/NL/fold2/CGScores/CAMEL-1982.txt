@@ -1,0 +1,10 @@
+CamelContext:0.0209
+Exchange:0.0176
+ExchangeHelper:0.0143
+JmsConfiguration:0.0242
+JmsEndpoint:0.0840
+JmsKeyFormatStrategy:0.0076
+JmsMessageHelper:0.0276
+Message:0.0143
+ObjectHelper:0.0043
+TypeConverter:0.0209

@@ -1,0 +1,10 @@
+AnnotationAttributeValue:0.0060
+AnnotationMetadata:0.0309
+AnnotationMetadataBuilder:0.0309
+CommentStructure:0.0043
+CustomDataBuilder:0.0130
+DefaultAnnotationMetadata:0.0060
+FieldDetails:0.0442
+FieldMetadata:0.0508
+InvocableMemberBodyBuilder:0.0063
+JavaSymbolName:0.0143

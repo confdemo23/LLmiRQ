@@ -1,0 +1,3 @@
+MongoPersistentEntity:0.4000
+MongoPersistentProperty:0.4444
+Query:0.0444

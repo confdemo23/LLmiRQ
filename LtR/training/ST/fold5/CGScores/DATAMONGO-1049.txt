@@ -1,0 +1,10 @@
+CompoundIndex:0.0176
+CompoundIndexDefinition:0.0116
+GeoSpatialIndexed:0.0235
+GeospatialIndex:0.0116
+Index:0.0176
+IndexDefinitionHolder:0.0228
+Indexed:0.0235
+MongoPersistentEntity:0.0561
+MongoPersistentProperty:0.0384
+TextIndexDefinitionBuilder:0.0119

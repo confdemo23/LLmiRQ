@@ -1,0 +1,10 @@
+ContainerRunnerImpl:0.3721
+LlapBaseInputFormat:0.3721
+LlapDaemon:0.1628
+LlapFixedRegistryImpl:0.4186
+LlapProtocolServerImpl:0.4419
+LlapTaskCommunicator:0.3953
+LlapTaskSchedulerService:0.4884
+MetricsUtils:0.2093
+TaskRunnerCallable:0.3488
+TestLlapDaemonProtocolServerImpl:0.6744

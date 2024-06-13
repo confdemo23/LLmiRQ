@@ -1,0 +1,10 @@
+BlockCache:0.0196
+CacheStats:0.1854
+CompactSplit:0.0196
+HDFSBlocksDistribution:0.0196
+HMobStore:0.0447
+HRegion:0.0548
+HRegionServer:0.0548
+MobFileCache:0.0296
+Store:0.0849
+WALProvider:0.0196

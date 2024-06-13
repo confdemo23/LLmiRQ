@@ -1,0 +1,5 @@
+Hook:0.0017
+RowDeserializePartitionContext:0.0147
+TableScanOperator:0.0204
+VectorDeserializePartitionContext:0.0090
+VectorPartitionContext:0.0147

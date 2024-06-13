@@ -1,0 +1,4 @@
+JpaParameter:0.0060
+JpaParameters:0.0006
+JpaQueryMethod:0.0012
+QueryUtils:0.0006

@@ -1,0 +1,6 @@
+DeploymentAddHandler:0.4848
+DeploymentResourceSupport:0.6364
+DeploymentUnit:0.3030
+DeploymentUnitPhaseService:0.6667
+DeploymentUnitProcessor:0.5758
+ManagementResourceRegistration:0.7879

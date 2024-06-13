@@ -1,0 +1,10 @@
+AuthMechanism:0.0067
+AuthorizingCallbackHandler:0.0102
+CacheEntry:0.0137
+CallbackHandlerService:0.0154
+LdapConnectionHandler:0.0176
+LdapEntry:0.0223
+LdapSearcherCache:0.0049
+RealmIdentityManager:0.0075
+SecurityRealm:0.0102
+SubjectUserInfo:0.0102

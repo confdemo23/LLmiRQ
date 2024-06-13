@@ -1,0 +1,2 @@
+DeclaredFieldAnnotationDetails:0.5306
+ItdTypeDetailsBuilder:0.3469

@@ -1,0 +1,10 @@
+ArrayRealVector:0.0478
+Complex:0.0724
+ExceptionContext:0.0100
+FastMath:0.3345
+MatrixUtils:0.0478
+Precision:0.1051
+RealMatrix:0.1297
+RealVector:0.0150
+SchurTransformer:0.0232
+TriDiagonalTransformer:0.0232

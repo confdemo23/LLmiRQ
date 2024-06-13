@@ -1,0 +1,6 @@
+Builder:0.0555
+Factory:0.0069
+PathAddress:0.0150
+PropertiesAttributeDefinition:0.0069
+ResourceBuilder:0.0474
+StringListAttributeDefinition:0.0150

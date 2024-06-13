@@ -1,0 +1,4 @@
+JedisConnectionFactory:0.4222
+RedisConnectionFactory:0.4222
+RedisConnectionUtils:0.3778
+RedisTemplate:0.2222

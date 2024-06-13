@@ -1,0 +1,6 @@
+CalcitePlanner:0.3750
+HivePlannerContext:0.5000
+HiveProject:0.2813
+HiveProjectMergeRule:0.5625
+HiveRelNode:0.2813
+HiveRexExecutorImpl:0.5313

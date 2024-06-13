@@ -1,0 +1,10 @@
+BsonUtils:0.0437
+Field:0.0965
+Keyword:0.0587
+MetaMapping:0.0137
+Modifier:0.0096
+MongoConverter:0.0346
+MongoPersistentEntity:0.0391
+MongoPersistentProperty:0.0637
+Query:0.0091
+QueryMapper:0.0259

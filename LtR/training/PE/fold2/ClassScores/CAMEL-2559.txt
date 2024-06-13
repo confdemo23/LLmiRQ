@@ -1,0 +1,2 @@
+HttpComponent:0.2326
+ProxyHttpClientConfigurer:0.5116

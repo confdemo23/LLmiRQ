@@ -1,0 +1,5 @@
+HiveAuthFactory:0.3077
+HiveConf:0.1282
+HiveServer2:0.2051
+TSetIpAddressProcessor:0.4872
+ThriftCLIServiceClient:0.4872

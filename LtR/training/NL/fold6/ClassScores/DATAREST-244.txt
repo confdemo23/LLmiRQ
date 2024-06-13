@@ -1,0 +1,4 @@
+JsonSchema:0.2051
+PersistentEntityToJsonSchemaConverter:0.8974
+RepositoryRestConfiguration:0.6410
+RepositorySchemaController:0.6154

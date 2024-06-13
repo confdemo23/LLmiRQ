@@ -1,0 +1,10 @@
+DefaultConsumer:0.0050
+Exchange:0.0415
+IrcChannel:0.0266
+IrcComponent:0.0123
+IrcConfiguration:0.2185
+IrcEndpoint:0.0711
+Message:0.0050
+ObjectHelper:0.0103
+Processor:0.0306
+UnsafeUriCharactersEncoder:0.0120

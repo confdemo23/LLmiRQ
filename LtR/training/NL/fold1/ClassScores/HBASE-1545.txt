@@ -1,0 +1,7 @@
+HRegion:0.1081
+HTable:0.0811
+KeyValue:0.1351
+TIncrement:0.1892
+ThriftServer:0.2432
+ThriftUtilities:0.3243
+TimestampsFilter:0.3514

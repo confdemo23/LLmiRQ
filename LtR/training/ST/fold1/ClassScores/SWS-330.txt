@@ -1,0 +1,3 @@
+AbstractWebServiceConnection:0.5455
+AxiomSoapMessageFactory:0.4318
+WebServiceTemplate:0.3182

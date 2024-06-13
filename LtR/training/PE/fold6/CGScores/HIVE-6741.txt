@@ -1,0 +1,8 @@
+AuthTypes:0.0598
+HadoopShims:0.0034
+HadoopThriftAuthBridge:0.0034
+HiveDelegationTokenManager:0.0316
+KerberosNameShim:0.0034
+SaslQOP:0.0009
+Server:0.0316
+ShimLoader:0.0081

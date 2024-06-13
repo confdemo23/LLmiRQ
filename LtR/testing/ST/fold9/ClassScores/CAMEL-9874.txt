@@ -1,0 +1,4 @@
+AttachmentHttpBinding:0.2903
+CamelContinuationServlet:0.3387
+DefaultHttpBinding:0.2419
+HttpMessage:0.1290

@@ -1,0 +1,10 @@
+AbstractMessageListenerContainer:0.0927
+AcknowledgeMode:0.0382
+AmqpIOException:0.0363
+BlockingQueueConsumer:0.2779
+ConnectionFactoryUtils:0.0279
+DeclarationException:0.0251
+Delivery:0.0382
+MessageProperties:0.0373
+RabbitUtils:0.0542
+SimpleMessageListenerContainer:0.1115

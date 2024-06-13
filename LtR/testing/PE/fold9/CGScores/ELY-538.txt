@@ -1,0 +1,3 @@
+AbstractPermissionCollection:0.0144
+ElytronPermission:0.0066
+StringMapping:0.0066

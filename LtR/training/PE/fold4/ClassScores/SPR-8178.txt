@@ -1,0 +1,6 @@
+AnnotationMethodHandlerAdapter:0.5778
+BindException:0.2000
+Errors:0.0444
+HandlerExceptionResolver:0.4444
+HandlerMethodInvoker:0.3556
+RequestMapping:0.2222

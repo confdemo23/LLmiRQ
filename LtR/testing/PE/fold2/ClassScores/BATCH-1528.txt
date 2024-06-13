@@ -1,0 +1,2 @@
+AbstractStepParser:0.3333
+CoreNamespacePostProcessor:0.5111

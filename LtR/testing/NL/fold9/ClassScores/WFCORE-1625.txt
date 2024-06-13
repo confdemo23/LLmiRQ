@@ -1,0 +1,8 @@
+AbstractOperationContext:0.6875
+DescriptionProvider:0.5313
+ManagementResourceRegistration:0.8750
+OperationDefinition:0.5313
+OperationEntry:0.3750
+OperationStepHandler:0.5625
+ResourceDefinition:0.5000
+ResourceDescriptionResolver:0.7813

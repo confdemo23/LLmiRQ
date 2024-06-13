@@ -1,0 +1,7 @@
+CommonJoinResolver:0.4054
+HiveConf:0.1351
+HiveJoin:0.1351
+HiveMultiJoin:0.2703
+HivePlannerContext:0.4054
+HiveRelBuilder:0.2973
+HiveRulesRegistry:0.3784

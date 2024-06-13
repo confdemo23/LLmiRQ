@@ -1,0 +1,5 @@
+PersistentEntityResource:0.6061
+PersistentEntityResourceAssembler:0.8788
+RepositoryEntityLinks:0.5152
+RepositoryRestHandlerMapping:0.7273
+RepositoryRestMvcConfiguration:0.7879

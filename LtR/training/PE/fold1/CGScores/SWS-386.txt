@@ -1,0 +1,7 @@
+InliningXsdSchemaTypesProvider:0.0564
+ProviderBasedWsdl4jDefinition:0.1032
+SoapProvider:0.0798
+SuffixBasedMessagesProvider:0.0330
+SuffixBasedPortTypesProvider:0.0681
+XsdSchema:0.0097
+XsdSchemaCollection:0.0213

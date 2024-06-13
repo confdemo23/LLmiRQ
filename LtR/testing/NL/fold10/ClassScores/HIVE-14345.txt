@@ -1,0 +1,5 @@
+BeeLine:0.1081
+HiveQueryResultSet:0.4054
+HiveServer2:0.2162
+HiveStatement:0.2703
+ThriftCLIService:0.3514

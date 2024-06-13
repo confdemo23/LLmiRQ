@@ -1,0 +1,7 @@
+ConfVars:0.0057
+EncoderDecoder:0.0008
+HiveAggregate:0.0005
+HiveConf:0.0126
+HiveUnion:0.0002
+Utils:0.0001
+VarType:0.0015

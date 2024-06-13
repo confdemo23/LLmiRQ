@@ -1,0 +1,2 @@
+MongoTemplate:0.2000
+SerializationUtils:0.3000

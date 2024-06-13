@@ -1,0 +1,10 @@
+AccessAuditContext:0.0206
+ControlledProcessState:0.0194
+ImmutableManagementResourceRegistration:0.0854
+ManagementModelImpl:0.0239
+OperationContext:0.0712
+PathAddress:0.1079
+PathElement:0.0793
+SimpleAttributeDefinition:0.0233
+SimpleAttributeDefinitionBuilder:0.0207
+SimpleOperationDefinitionBuilder:0.0207

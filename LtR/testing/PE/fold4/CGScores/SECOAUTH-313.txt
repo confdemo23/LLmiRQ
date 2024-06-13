@@ -1,0 +1,3 @@
+AuthorizationServerTokenServices:0.0008
+OAuth2Request:0.0050
+TokenRequest:0.0008

@@ -1,0 +1,10 @@
+CamelContext:0.0095
+CompositeHttpConfigurer:0.0095
+FileUtil:0.0042
+HttpCommonComponent:0.0069
+HttpConfiguration:0.0253
+HttpEndpoint:0.0174
+IntrospectionSupport:0.0121
+ObjectHelper:0.0253
+TypeConverter:0.0042
+URISupport:0.0042

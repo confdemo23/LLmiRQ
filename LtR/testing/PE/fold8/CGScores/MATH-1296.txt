@@ -1,0 +1,7 @@
+FastMath:0.0127
+GeometricMean:0.0042
+MathUtils:0.0127
+Percentile:0.0032
+ResizableDoubleArray:0.0584
+StorelessUnivariateStatistic:0.0200
+UnivariateStatistic:0.0542

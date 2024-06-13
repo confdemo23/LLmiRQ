@@ -1,0 +1,5 @@
+CodyWaite:0.0196
+FastMath:0.0196
+FastMathCalc:0.0335
+FastMathLiteralArrays:0.0104
+Split:0.0104

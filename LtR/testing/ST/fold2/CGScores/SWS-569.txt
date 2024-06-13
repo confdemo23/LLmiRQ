@@ -1,0 +1,5 @@
+SaajUtils:0.0529
+SoapUtils:0.0131
+SoapVersion:0.0324
+TransportInputStream:0.0128
+TransportOutputStream:0.0035

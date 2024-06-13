@@ -1,0 +1,3 @@
+CsvDataFormat:0.2683
+DefaultCamelContext:0.4146
+UnmarshalProcessor:0.3902

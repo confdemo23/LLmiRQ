@@ -1,0 +1,7 @@
+Driver:0.0811
+HiveConf:0.1351
+HiveException:0.2703
+HiveIOExceptionHandler:0.5135
+QueryPlan:0.1622
+ScriptOperator:0.2973
+Task:0.0270

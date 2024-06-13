@@ -1,0 +1,1 @@
+DomainObjectReader:0.3000

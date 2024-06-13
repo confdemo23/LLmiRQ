@@ -1,0 +1,9 @@
+DefaultStrategiesHelper:0.0048
+EndpointAdapter:0.0030
+EndpointExceptionResolver:0.0013
+EndpointInterceptor:0.0065
+EndpointInvocationChain:0.0255
+EndpointMapping:0.0013
+FaultAwareWebServiceMessage:0.0013
+MessageContext:0.0169
+WebServiceMessage:0.0013

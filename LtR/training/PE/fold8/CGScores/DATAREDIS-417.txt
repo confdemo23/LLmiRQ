@@ -1,0 +1,2 @@
+CursorState:0.0017
+ScanIteration:0.0075

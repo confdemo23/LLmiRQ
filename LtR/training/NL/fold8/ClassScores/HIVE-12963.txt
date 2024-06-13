@@ -1,0 +1,3 @@
+HiveConf:0.1351
+ReduceSinkOperator:0.4054
+SemanticAnalyzer:0.3514

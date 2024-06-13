@@ -1,0 +1,10 @@
+Address:0.0089
+ConnectionFactoryUtils:0.0183
+DefaultJackson2JavaTypeMapper:0.0089
+Delivery:0.0159
+DirectReplyToMessageListenerContainer:0.0136
+Message:0.0816
+MessageProperties:0.0839
+MessagePropertiesConverter:0.0089
+PendingReply:0.0183
+RabbitTemplate:0.0370

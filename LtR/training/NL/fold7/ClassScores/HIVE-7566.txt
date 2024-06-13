@@ -1,0 +1,6 @@
+HBaseSerDe:0.1795
+HBaseStorageHandler:0.4103
+HiveHBaseTableInputFormat:0.5641
+HiveHBaseTableOutputFormat:0.5897
+HiveMetaStoreClient:0.4103
+ObjectInspector:0.3077

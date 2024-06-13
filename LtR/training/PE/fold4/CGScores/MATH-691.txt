@@ -1,0 +1,10 @@
+CodyWaite:0.0069
+FastMath:0.0104
+FastMathCalc:0.0118
+FastMathLiteralArrays:0.0037
+MathUtils:0.0202
+Precision:0.0134
+SecondMoment:0.0098
+StorelessUnivariateStatistic:0.0549
+SummaryStatistics:0.0169
+Variance:0.0064

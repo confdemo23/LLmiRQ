@@ -1,0 +1,2 @@
+JdrReportCollector:0.5000
+JdrReportService:0.4375

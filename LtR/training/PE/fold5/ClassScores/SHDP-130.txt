@@ -1,0 +1,2 @@
+DistributedCacheFactoryBean:0.5333
+HdfsResourceLoader:0.3333

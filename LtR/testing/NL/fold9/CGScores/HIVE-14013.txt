@@ -1,0 +1,10 @@
+Client:0.0027
+FieldSchema:0.0243
+GetHelper:0.0023
+Hive:0.0050
+HiveDatabaseMetaData:0.0029
+MetaStoreUtils:0.0091
+ObjectStore:0.0424
+QueryWrapper:0.0204
+ShimLoader:0.0063
+Utils:0.0027

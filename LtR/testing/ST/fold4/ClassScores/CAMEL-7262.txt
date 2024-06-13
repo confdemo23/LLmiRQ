@@ -1,0 +1,3 @@
+BeanExpression:0.2619
+DefaultClassResolver:0.4048
+OsgiClassResolver:0.3333

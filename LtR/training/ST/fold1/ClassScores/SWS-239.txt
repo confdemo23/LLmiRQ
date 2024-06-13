@@ -1,0 +1,3 @@
+AxiomSoapMessage:0.2727
+MarshallingUtils:0.2727
+WebServiceTemplate:0.3182

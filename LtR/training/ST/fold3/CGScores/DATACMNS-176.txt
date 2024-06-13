@@ -1,0 +1,8 @@
+ClassTypeInformation:0.0461
+Lazy:0.0302
+Optionals:0.0024
+ParentTypeAwareTypeInformation:0.0087
+ReflectionUtils:0.0024
+Streamable:0.0191
+TypeDiscoverer:0.0858
+TypeInformation:0.0326

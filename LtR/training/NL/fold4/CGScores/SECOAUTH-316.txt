@@ -1,0 +1,10 @@
+AuthorizationRequest:0.0453
+BaseRequest:0.0333
+ClientDetails:0.0405
+ClientDetailsService:0.0175
+OAuth2Authentication:0.0034
+OAuth2Request:0.0034
+OAuth2RequestValidator:0.0034
+OAuth2Utils:0.0219
+SecurityContextAccessor:0.0175
+TokenRequest:0.0439

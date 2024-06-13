@@ -1,0 +1,2 @@
+Hive:0.0217
+SemanticAnalyzer:0.2826

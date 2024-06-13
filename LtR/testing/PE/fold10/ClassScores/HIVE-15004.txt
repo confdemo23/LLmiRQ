@@ -1,0 +1,3 @@
+MapredParquetInputFormat:0.4884
+MapredParquetOutputFormat:0.5116
+ParquetHiveSerDe:0.3023

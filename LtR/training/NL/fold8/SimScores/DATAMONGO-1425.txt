@@ -1,0 +1,10 @@
+ConditionalOperators:0.0639
+DefaultBulkOperations:0.1006
+GeoNearOperationUnitTests:0.0287
+GroupOperation:0.1078
+MapReduceTests:0.0922
+MongoPersistentEntityIndexCreatorIntegrationTests:0.0470
+MongoQueryCreator:0.0207
+QueryMapper:0.1960
+QueryMapperUnitTests:0.0390
+SerializationUtilsUnitTests:0.0220

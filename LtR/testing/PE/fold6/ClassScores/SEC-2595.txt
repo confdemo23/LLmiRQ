@@ -1,0 +1,4 @@
+AspectJMethodSecurityInterceptor:0.6444
+EnableGlobalMethodSecurity:0.5111
+GlobalMethodSecurityBeanDefinitionParser:0.8222
+SecurityConfig:0.2444

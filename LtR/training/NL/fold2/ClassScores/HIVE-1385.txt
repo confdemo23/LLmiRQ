@@ -1,0 +1,7 @@
+ExprNodeEvaluator:0.3659
+ExprNodeGenericFuncEvaluator:0.6341
+FunctionRegistry:0.3415
+GenericUDF:0.1951
+GenericUDFField:0.3171
+ObjectInspector:0.3171
+UDFMethodResolver:0.3659

@@ -1,0 +1,10 @@
+BeanDeploymentModule:0.0786
+ComponentConfiguration:0.2788
+ComponentDescription:0.1632
+ComponentIntegrator:0.0475
+InterceptorDescription:0.0310
+Reflections:0.0440
+ServiceLoaders:0.0375
+WeldBootstrapService:0.0556
+WeldClassIntrospector:0.0310
+WeldDeployment:0.0896

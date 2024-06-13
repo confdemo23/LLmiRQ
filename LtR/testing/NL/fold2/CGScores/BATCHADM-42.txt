@@ -1,0 +1,3 @@
+SearchableJobExecutionDao:0.0435
+SearchableJobInstanceDao:0.0435
+SearchableStepExecutionDao:0.0435

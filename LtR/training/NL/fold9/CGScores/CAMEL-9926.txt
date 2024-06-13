@@ -1,0 +1,10 @@
+CamelContext:0.0213
+DefaultEndpoint:0.0313
+HttpEndpoint:0.0789
+ModelCamelContext:0.1523
+OperationName:0.0445
+SalesforceComponent:0.0313
+SalesforceEndpointConfig:0.1497
+SalesforceHttpClient:0.0927
+SalesforceLoginConfig:0.1165
+ServiceHelper:0.0570

@@ -1,0 +1,5 @@
+HybridHashTableContainer:0.5385
+MapJoinOperator:0.3077
+Task:0.0256
+VectorMapJoinCommonOperator:0.6154
+VectorMapJoinOperator:0.4615

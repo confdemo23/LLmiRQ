@@ -1,0 +1,10 @@
+HadoopFileStatus:0.0006
+HcatDelegator:0.0257
+HdfsEncryptionShim:0.0014
+HdfsUtils:0.0038
+Hive:0.0119
+PigDelegator:0.0002
+ShimLoader:0.0018
+StatusDelegator:0.0014
+TempletonUtils:0.0038
+VersionDelegator:0.0038

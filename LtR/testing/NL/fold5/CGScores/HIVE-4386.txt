@@ -1,0 +1,10 @@
+AggregationExprCheck:0.0099
+CTEClause:0.0264
+ConstantExprCheck:0.0099
+GenericUDAFSumEvaluator:0.0182
+HdfsEncryptionShim:0.0099
+HiveInputSplit:0.0298
+MapRedTask:0.0093
+SemanticAnalyzer:0.0703
+SortBucketRSCtx:0.0429
+State:0.0134

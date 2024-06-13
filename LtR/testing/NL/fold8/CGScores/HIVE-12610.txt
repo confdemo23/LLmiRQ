@@ -1,0 +1,7 @@
+HashPartition:0.0412
+HybridHashTableContainer:0.0130
+MapJoinOperator:0.0430
+ReusableRowContainer:0.0554
+Task:0.0660
+VectorMapJoinCommonOperator:0.0068
+_Fields:0.0012

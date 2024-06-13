@@ -1,0 +1,6 @@
+Algorithm:0.0011
+BloomType:0.0011
+Bytes:0.0101
+ColumnFamilyDescriptorBuilder:0.0071
+DataBlockEncoding:0.0011
+ModifyableColumnFamilyDescriptor:0.1056

@@ -1,0 +1,10 @@
+HadoopShims:0.0027
+HiveServer2:0.0080
+LogFile:0.0046
+LogHelper:0.0067
+ResourceMaps:0.0088
+ResourceType:0.0036
+SessionState:0.0380
+SessionStates:0.0015
+ShimLoader:0.0027
+ThreadWithGarbageCleanup:0.0077

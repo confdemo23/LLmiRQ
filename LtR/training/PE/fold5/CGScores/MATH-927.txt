@@ -1,0 +1,5 @@
+FastMath:0.2836
+Gamma:0.0218
+RandomDataImpl:0.0096
+RandomGenerator:0.0592
+UnivariateSolverUtils:0.0096

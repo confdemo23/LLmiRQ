@@ -1,0 +1,4 @@
+Authentication:0.0016
+ConfigAttribute:0.0074
+GrantedAuthority:0.0289
+RoleVoter:0.0016

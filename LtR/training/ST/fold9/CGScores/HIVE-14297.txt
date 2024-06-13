@@ -1,0 +1,6 @@
+ConnectionImpl:0.0003
+HCatUtil:0.0003
+HiveEndPoint:0.0011
+KeyIndexBuilder:0.0006
+OrcOptions:0.0016
+RecIdStrippingObjectInspector:0.0006

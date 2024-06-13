@@ -1,0 +1,4 @@
+Authentication:0.2558
+ConfigAttribute:0.2791
+GrantedAuthority:0.3023
+Jsr250Voter:0.1860

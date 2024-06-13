@@ -1,0 +1,3 @@
+HiveClientFactory:0.3256
+HiveOperations:0.2558
+HiveTemplate:0.2093

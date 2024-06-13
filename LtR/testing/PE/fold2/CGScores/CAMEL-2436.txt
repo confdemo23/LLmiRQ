@@ -1,0 +1,10 @@
+AsyncCallback:0.0310
+BeanHolder:0.0574
+BeanInfo:0.0178
+BeanInvocation:0.0112
+CamelContext:0.0046
+Exchange:0.0706
+Message:0.0706
+MethodInvocation:0.0046
+Processor:0.0046
+ServiceHelper:0.0244

@@ -1,0 +1,10 @@
+Authentication:0.1440
+BCrypt:0.0709
+PasswordEncoder:0.0850
+RememberMeServices:0.0506
+SecurityContextHolder:0.0506
+SpringSecurityMessageSource:0.0632
+UserCache:0.0548
+UserDetails:0.1875
+UserDetailsChecker:0.0836
+UsernamePasswordAuthenticationToken:0.1215

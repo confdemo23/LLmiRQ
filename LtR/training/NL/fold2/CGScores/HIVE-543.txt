@@ -1,0 +1,10 @@
+ConfVars:0.0216
+EncoderDecoder:0.0030
+HadoopFileStatus:0.0003
+HdfsEncryptionShim:0.0017
+HdfsUtils:0.0056
+Hive:0.0189
+HiveConf:0.0482
+ShimLoader:0.0003
+Utils:0.0003
+VarType:0.0056

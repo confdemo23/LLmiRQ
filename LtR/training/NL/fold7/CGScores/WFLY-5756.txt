@@ -1,0 +1,10 @@
+CommonUnaryRequirement:0.0088
+DynamicLoadProviderDefinition:0.0088
+Element:0.0566
+FilterService:0.0088
+LoadMetricEnum:0.0118
+ModClusterConfigurationServiceBuilder:0.0118
+ModClusterExtension:0.0088
+ModClusterModel:0.0489
+ModClusterSSLResourceDefinition:0.0088
+ModClusterSchema:0.0071

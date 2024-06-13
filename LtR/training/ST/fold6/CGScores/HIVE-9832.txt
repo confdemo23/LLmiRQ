@@ -1,0 +1,5 @@
+DummyOperator:0.0000
+Hook:0.0009
+MapJoinOperator:0.0334
+Operator:0.0113
+OperatorFunc:0.0000

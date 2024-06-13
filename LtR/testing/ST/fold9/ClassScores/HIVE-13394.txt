@@ -1,0 +1,5 @@
+GenericUDAFComputeStats:0.3226
+GenericUDAFEvaluator:0.2742
+GroupByOperator:0.1935
+NumDistinctValueEstimator:0.3548
+ReduceRecordSource:0.2419

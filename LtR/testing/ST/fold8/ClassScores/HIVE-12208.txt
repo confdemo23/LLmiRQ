@@ -1,0 +1,2 @@
+VectorMapJoinInnerGenerateResultOperator:0.7708
+VectorMapJoinInnerLongOperator:0.5625

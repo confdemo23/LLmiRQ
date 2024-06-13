@@ -1,0 +1,9 @@
+AS7MetadataRepository:0.0019
+ActivationSecurityUtil:0.0020
+ConnectorXmlDescriptor:0.0044
+Credential:0.0111
+IronJacamarResource:0.0019
+IronJacamarXmlDescriptor:0.0091
+ResourceAdapterDeploymentService:0.0257
+Security:0.0133
+WorkManagerSecurity:0.0019

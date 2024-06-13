@@ -1,0 +1,6 @@
+LinearConstraintSet:0.3333
+LinearObjectiveFunction:0.4222
+NonNegativeConstraint:0.3778
+OptimizationData:0.2667
+PointValuePair:0.2222
+SimplexSolver:0.2000

@@ -1,0 +1,3 @@
+BeanDeploymentArchiveImpl:0.6364
+WeldDeployment:0.3030
+WeldStartService:0.3636

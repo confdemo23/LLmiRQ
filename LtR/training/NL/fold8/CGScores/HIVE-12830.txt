@@ -1,0 +1,10 @@
+Client:0.0195
+FetchResults_args:0.0137
+RenewDelegationToken_args:0.0137
+TCloseOperationReq:0.0150
+TExecuteStatementReq:0.0637
+TFetchResultsReq:0.0328
+TGetOperationStatusReq:0.0319
+TGetResultSetMetadataReq:0.0203
+TOperationHandle:0.0328
+_Fields:0.1023

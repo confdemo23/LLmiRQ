@@ -1,0 +1,10 @@
+CamelTestSupport:0.0179
+Exchange:0.0700
+FileUtil:0.0592
+GenericFileProducer:0.0108
+IOHelper:0.0134
+Message:0.0566
+ObjectHelper:0.0298
+RemoteFileConfiguration:0.0298
+RemoteFileEndpoint:0.0277
+RemoteFileOperations:0.0193

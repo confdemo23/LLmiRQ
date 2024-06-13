@@ -1,0 +1,10 @@
+AsyncCallback:0.0048
+AsyncProcessorConverterHelper:0.0160
+CamelContext:0.0353
+Exchange:0.0657
+Message:0.0231
+SchemaReader:0.1206
+TypeConverter:0.0292
+TypeConverterRegistry:0.0109
+ValidatorErrorHandler:0.0109
+XmlConverter:0.0109

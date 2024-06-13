@@ -1,0 +1,3 @@
+Factory:0.0253
+OperationTransaction:0.0032
+ResourceDefinition:0.0342

@@ -1,0 +1,10 @@
+CamelContext:0.1962
+ClassResolver:0.0324
+Exchange:0.6161
+Expression:0.2786
+Language:0.0324
+Message:0.2620
+MethodCallExpression:0.0467
+ObjectHelper:0.1587
+Predicate:0.0349
+TypeConverter:0.0360

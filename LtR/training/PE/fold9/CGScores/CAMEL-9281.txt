@@ -1,0 +1,10 @@
+CachedOutputStream:0.0028
+CamelContext:0.0028
+Exchange:0.0330
+HttpCommonEndpoint:0.0196
+IOConverter:0.0012
+IOHelper:0.0079
+Message:0.0196
+ObjectHelper:0.0129
+UnsafeUriCharactersEncoder:0.0045
+UrlRewrite:0.0012

@@ -1,0 +1,10 @@
+CamelServlet:0.0023
+Exchange:0.0172
+HttpBinding:0.0023
+HttpCommonComponent:0.0010
+HttpCommonEndpoint:0.0085
+HttpConsumer:0.0196
+JettyHttpComponent:0.0023
+JettyHttpEndpoint:0.0048
+Message:0.0035
+ObjectHelper:0.0010

@@ -1,0 +1,5 @@
+AuthenticationManagerBuilder:0.0050
+ExpressionInterceptUrlRegistry:0.0050
+HttpSecurity:0.0050
+InMemoryUserDetailsManagerConfigurer:0.0050
+UserDetailsBuilder:0.0305

@@ -1,0 +1,9 @@
+DefaultOAuth2AccessToken:0.0296
+OAuth2AccessToken:0.0455
+OAuth2Authentication:0.0020
+OAuth2Exception:0.0096
+OAuth2Request:0.0020
+OAuth2RequestValidator:0.0020
+OAuth2Utils:0.0020
+TokenExtractor:0.0096
+TokenRequest:0.0322

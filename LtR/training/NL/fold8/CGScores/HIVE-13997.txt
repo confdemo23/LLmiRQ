@@ -1,0 +1,10 @@
+ConfVars:0.0426
+FSPaths:0.0777
+FileSinkOperator:0.0376
+HadoopShims:0.0100
+HdfsUtils:0.0125
+Hive:0.0376
+HiveConf:0.0927
+RecordWriter:0.0376
+ShimLoader:0.0125
+VarType:0.0125

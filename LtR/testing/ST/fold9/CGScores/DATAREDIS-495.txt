@@ -1,0 +1,10 @@
+Bucket:0.2686
+ByteUtils:0.0511
+IndexWriter:0.0378
+PartialUpdate:0.0735
+PropertyUpdate:0.2335
+RedisConnection:0.2249
+RedisConverter:0.0979
+RedisData:0.3949
+RedisOperations:0.0778
+RedisPersistentEntity:0.1507

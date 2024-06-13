@@ -1,0 +1,7 @@
+CommonJoinOperator:0.0217
+DummyOperator:0.0003
+MapJoinOperator:0.0478
+MyField:0.0074
+ObjectInspectorOptions:0.0124
+Operator:0.0164
+OperatorFunc:0.0003

@@ -1,0 +1,3 @@
+HRegion:0.0682
+Store:0.0227
+StoreScanner:0.1818

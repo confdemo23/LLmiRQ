@@ -1,0 +1,3 @@
+ModClusterResource:0.0047
+ModClusterService:0.0047
+UndertowExtension:0.0047

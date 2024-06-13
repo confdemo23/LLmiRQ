@@ -1,0 +1,10 @@
+AsyncCallback:0.0343
+CamelContext:0.1440
+Endpoint:0.0394
+Exchange:0.1289
+ExchangePattern:0.0539
+JmsEndpoint:0.1292
+Message:0.0818
+ProducerCache:0.1167
+ServiceHelper:0.0574
+TypeConverter:0.0577

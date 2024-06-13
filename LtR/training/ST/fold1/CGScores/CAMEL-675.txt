@@ -1,0 +1,10 @@
+AsyncCallback:0.0160
+AsyncProcessor:0.0112
+AsyncProcessorHelper:0.0035
+DelegatePerformanceCounter:0.0064
+Exchange:0.0333
+FilterProcessor:0.0131
+InstrumentationProcessor:0.0064
+PerformanceCounter:0.0295
+ServiceHelper:0.0083
+StopWatch:0.0064

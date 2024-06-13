@@ -1,0 +1,6 @@
+CachedByteArrayOutputStream:0.0071
+CachedOutputStream:0.0071
+CamelContext:0.0071
+Exchange:0.0071
+StreamCachingStrategy:0.0437
+TempFileManager:0.0437

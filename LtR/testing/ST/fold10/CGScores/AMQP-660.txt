@@ -1,0 +1,10 @@
+AbstractMessageListenerContainer:0.0353
+DefaultExclusiveConsumerLogger:0.0016
+Message:0.0140
+MessageListener:0.0016
+MessageProperties:0.0188
+Queue:0.0095
+RabbitAccessor:0.0035
+RabbitAdmin:0.0035
+RabbitResourceHolder:0.0095
+RabbitUtils:0.0095

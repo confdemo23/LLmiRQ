@@ -1,0 +1,4 @@
+MappingMongoConverter:0.4634
+MongoDataIntegrityViolationException:0.8293
+MongoRepository:0.3171
+MongoTemplate:0.2683

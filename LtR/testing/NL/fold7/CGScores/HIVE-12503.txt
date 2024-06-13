@@ -1,0 +1,5 @@
+HiveAggregate:0.0030
+HiveJoin:0.0252
+HiveRelBuilder:0.0095
+HiveRelNode:0.0022
+JoinAlgorithm:0.0087

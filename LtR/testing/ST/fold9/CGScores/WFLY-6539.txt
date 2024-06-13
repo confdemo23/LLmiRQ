@@ -1,0 +1,2 @@
+SingletonDeploymentTestCase:0.0608
+TestHttpClientUtils:0.0067

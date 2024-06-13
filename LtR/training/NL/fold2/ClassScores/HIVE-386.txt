@@ -1,0 +1,4 @@
+DelimitedInputWriter:0.4390
+HiveEndPoint:0.2439
+StreamingConnection:0.4146
+StrictJsonWriter:0.3415

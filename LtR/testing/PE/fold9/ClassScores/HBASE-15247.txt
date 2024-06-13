@@ -1,0 +1,1 @@
+InclusiveStopFilter:0.3478

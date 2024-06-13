@@ -1,0 +1,4 @@
+DataType:0.0010
+ImportRegistrationResolver:0.0010
+JavaSymbolName:0.0141
+JavaType:0.0256

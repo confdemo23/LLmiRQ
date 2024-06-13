@@ -1,0 +1,2 @@
+DomainObjectReader:0.2857
+PersistentEntityResourceHandlerMethodArgumentResolver:1.0000

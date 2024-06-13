@@ -1,0 +1,7 @@
+ColumnStatistics:0.3333
+ExprNodeDesc:0.2308
+FilterOperator:0.2821
+GenericUDF:0.1795
+HiveConf:0.1282
+ObjectInspector:0.3077
+StatsAggregator:0.3077

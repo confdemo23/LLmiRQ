@@ -1,0 +1,10 @@
+CTEClause:0.0063
+ConfVars:0.0057
+ConstantExprCheck:0.0022
+DeferredObject:0.0046
+HdfsEncryptionShim:0.0022
+HiveConf:0.0126
+HiveDecimalUtils:0.0077
+SemanticAnalyzer:0.0175
+SortBucketRSCtx:0.0105
+TypeCheckProcFactory:0.0307

@@ -1,0 +1,2 @@
+MasterSnapshotVerifier:0.3065
+SnapshotManifest:0.2097

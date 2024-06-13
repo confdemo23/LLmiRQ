@@ -1,0 +1,3 @@
+AbstractConfiguration:0.3864
+BaseConfiguration:0.2955
+ConfigurationConverter:0.4091

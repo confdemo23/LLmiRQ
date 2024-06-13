@@ -1,0 +1,2 @@
+GlobalMethodSecurityConfiguration:0.6000
+MethodSecurityMetadataSourceAdvisor:0.6400

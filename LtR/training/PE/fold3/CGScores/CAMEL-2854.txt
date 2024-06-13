@@ -1,0 +1,6 @@
+AsyncCallback:0.0005
+AsyncProcessor:0.0005
+DirectConsumer:0.0012
+DirectEndpoint:0.0041
+Exchange:0.0005
+Processor:0.0005

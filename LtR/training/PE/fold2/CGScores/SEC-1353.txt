@@ -1,0 +1,7 @@
+AuthenticationFailureHandler:0.0041
+AuthenticationTrustResolver:0.0041
+InvalidSessionStrategy:0.0041
+SecurityContext:0.0041
+SecurityContextHolder:0.0135
+SecurityContextRepository:0.0088
+SessionAuthenticationStrategy:0.0041

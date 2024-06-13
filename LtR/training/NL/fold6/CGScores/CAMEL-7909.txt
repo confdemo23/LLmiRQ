@@ -1,0 +1,10 @@
+Exchange:0.2036
+HttpCommonEndpoint:0.0365
+HttpHelper:0.0599
+HttpMessage:0.1458
+IOHelper:0.0365
+Message:0.1749
+NettyConsumer:0.0868
+NettyHttpConfiguration:0.0642
+NettyServerBootstrapConfiguration:0.0425
+ObjectHelper:0.0577

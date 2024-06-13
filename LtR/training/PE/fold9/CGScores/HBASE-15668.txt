@@ -1,0 +1,10 @@
+Bytes:0.0020
+Connection:0.0045
+FsDelegationToken:0.0045
+LoadIncrementalHFiles:0.0095
+Pair:0.0045
+RegionLocator:0.0020
+Table:0.0020
+TableName:0.0070
+User:0.0020
+UserProvider:0.0045

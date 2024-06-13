@@ -1,0 +1,10 @@
+CompactorInputSplit:0.0030
+ETLSplitStrategy:0.0013
+FooterCache:0.0030
+HadoopShims:0.0044
+HdfsFileStatusWithId:0.0072
+OrcInputFormat:0.0030
+ShimLoader:0.0018
+SplitStrategyKind:0.0013
+StringableList:0.0050
+Table:0.0234

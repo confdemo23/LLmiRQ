@@ -1,0 +1,10 @@
+CamelContext:0.0651
+CamelLogger:0.0270
+Exchange:0.2057
+ExchangeCompletedEvent:0.0125
+InflightRepository:0.0270
+ManagementStrategy:0.0270
+ObjectHelper:0.0360
+Route:0.0721
+RoutePolicySupport:0.0270
+ThrottlingExceptionHalfOpenHandler:0.0130

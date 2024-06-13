@@ -1,0 +1,1 @@
+HBaseStorageHandler:0.3333

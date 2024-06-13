@@ -1,0 +1,3 @@
+CommonMergeJoinOperator:0.4167
+ReduceRecordProcessor:0.3750
+TezProcessor:0.1875

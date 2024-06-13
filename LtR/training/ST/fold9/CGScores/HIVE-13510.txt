@@ -1,0 +1,10 @@
+AggregationExprCheck:0.0016
+CTEClause:0.0045
+Client:0.0019
+ConstantExprCheck:0.0016
+HadoopThriftAuthBridge:0.0007
+HdfsEncryptionShim:0.0016
+SemanticAnalyzer:0.0125
+ShimLoader:0.0007
+SortBucketRSCtx:0.0075
+Utils:0.0029

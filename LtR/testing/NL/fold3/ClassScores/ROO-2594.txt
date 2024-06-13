@@ -1,0 +1,9 @@
+AnnotationMetadata:0.3902
+ClassOrInterfaceTypeDetails:0.6098
+FieldMetadata:0.2683
+JavaType:0.1463
+MemberFindingUtils:0.3902
+MetadataService:0.3171
+Module:0.0976
+PhysicalTypeCategory:0.4390
+PhysicalTypeMetadata:0.4390

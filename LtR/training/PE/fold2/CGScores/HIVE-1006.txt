@@ -1,0 +1,10 @@
+AvoidSplitCombination:0.0039
+CombineFileInputFormatShim:0.0354
+CombineFilter:0.0039
+CombineHiveInputSplit:0.0129
+HadoopShims:0.0129
+HiveIOExceptionHandlerUtil:0.0025
+HiveInputFormat:0.0025
+HiveInputSplit:0.0178
+InputSplitShim:0.0039
+ShimLoader:0.0129

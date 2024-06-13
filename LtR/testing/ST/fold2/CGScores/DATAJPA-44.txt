@@ -1,0 +1,10 @@
+CreateQueryLookupStrategy:0.0058
+DeclaredQueryLookupStrategy:0.0058
+JpaParameters:0.0141
+JpaQueryCreator:0.0192
+JpaQueryFactory:0.0199
+JpaQueryMethod:0.0282
+NamedQuery:0.0058
+ParameterBinder:0.0090
+PersistenceProvider:0.0058
+QueryPreparer:0.0090

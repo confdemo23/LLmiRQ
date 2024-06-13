@@ -1,0 +1,2 @@
+AmqpItemReader:0.2222
+AmqpItemWriter:0.2222

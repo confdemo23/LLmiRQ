@@ -1,0 +1,3 @@
+AbstractConfiguration:0.4634
+ConfigurationEvent:0.3902
+SubsetConfiguration:0.4146

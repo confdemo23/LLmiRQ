@@ -1,0 +1,10 @@
+CompactorInputSplit:0.0320
+ConfVars:0.0426
+FooterCache:0.0326
+HadoopShims:0.0689
+HdfsFileStatusWithId:0.0971
+HiveConf:0.0927
+OrcInputFormat:0.0326
+ParsedDelta:0.0482
+ShimLoader:0.0376
+StringableList:0.0526

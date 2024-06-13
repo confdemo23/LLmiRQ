@@ -1,0 +1,1 @@
+SwarmProperties:0.0050

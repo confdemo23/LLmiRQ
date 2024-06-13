@@ -1,0 +1,1 @@
+AbstractPersistentProperty:0.4889

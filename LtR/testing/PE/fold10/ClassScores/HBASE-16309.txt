@@ -1,0 +1,1 @@
+TestDefaultCompactSelection:0.5581

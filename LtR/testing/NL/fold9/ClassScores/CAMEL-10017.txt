@@ -1,0 +1,3 @@
+IronMQComponent:0.4063
+IronMQConfiguration:0.5313
+IronMQEndpoint:0.3750

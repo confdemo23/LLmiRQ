@@ -1,0 +1,8 @@
+AggregateProcessor:0.4103
+AggregationStrategy:0.4359
+AsyncProcessorAwaitManager:0.6154
+CamelContext:0.2564
+Exchange:0.1538
+ExchangeTimedOutException:0.5897
+MulticastProcessor:0.4103
+Processor:0.1795

@@ -1,0 +1,10 @@
+Bytes:0.0131
+Cell:0.0191
+CellComparator:0.0085
+CellScanner:0.0176
+ImmutableBytesWritable:0.0146
+Result:0.0070
+ResultHasher:0.0161
+ResultScanner:0.0070
+Table:0.0070
+TableHash:0.0085

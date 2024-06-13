@@ -1,0 +1,3 @@
+AbstractAttributeDefinitionBuilder:0.7209
+AttributeDefinition:0.3721
+CapabilityReferenceRecorder:0.5581

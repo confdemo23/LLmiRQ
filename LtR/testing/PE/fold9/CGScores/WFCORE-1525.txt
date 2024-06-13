@@ -1,0 +1,10 @@
+DeleteOp:0.0061
+Entry:0.0133
+Factory:0.0061
+Identity:0.0133
+InstallationManager:0.0133
+InstalledIdentity:0.0277
+InstalledImage:0.0061
+Iterator:0.0277
+Layer:0.0061
+OperationContext:0.0061

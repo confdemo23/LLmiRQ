@@ -1,0 +1,7 @@
+AnnotationModelLoader:0.5152
+BindyAbstractDataFormat:0.5758
+BindyAbstractFactory:0.4848
+BindyCsvDataFormat:0.4242
+BindyFixedLengthDataFormat:0.6667
+BindyKeyValuePairDataFormat:0.6970
+CsvRecord:0.1515

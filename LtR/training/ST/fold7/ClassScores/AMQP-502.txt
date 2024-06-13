@@ -1,0 +1,4 @@
+BlockingQueueConsumer:0.3750
+CachingConnectionFactory:0.4375
+RabbitAdmin:0.1667
+RabbitTemplate:0.2292

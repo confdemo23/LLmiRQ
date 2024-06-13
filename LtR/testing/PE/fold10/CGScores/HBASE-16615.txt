@@ -1,0 +1,10 @@
+Bytes:0.0276
+CellUtil:0.0089
+HRegion:0.0183
+HeartbeatHRegion:0.0276
+ResultScanner:0.0511
+ReversedKeyValueHeap:0.0042
+ReversedRegionScannerImpl:0.0042
+Scan:0.0792
+Table:0.0323
+Threads:0.0089

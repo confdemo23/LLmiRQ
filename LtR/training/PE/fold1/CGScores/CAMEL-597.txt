@@ -1,0 +1,2 @@
+JmsConfiguration:0.0061
+QueueBrowseStrategy:0.0061

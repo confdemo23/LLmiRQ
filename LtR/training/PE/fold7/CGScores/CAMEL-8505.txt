@@ -1,0 +1,6 @@
+Exchange:0.0208
+ExchangePattern:0.0026
+Message:0.0172
+SchematronEndpoint:0.0063
+SchematronProcessor:0.0026
+SchematronProcessorFactory:0.0026

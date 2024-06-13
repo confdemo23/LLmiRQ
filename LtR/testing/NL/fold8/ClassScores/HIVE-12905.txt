@@ -1,0 +1,9 @@
+CommonJoinOperator:0.3846
+HashTableSinkOperator:0.4615
+HiveConf:0.1282
+JoinOperator:0.2308
+MapJoinObjectSerDeContext:0.5641
+MapJoinOperator:0.3077
+MapJoinProcessor:0.3333
+MapJoinTableContainer:0.4615
+TezProcessor:0.2308

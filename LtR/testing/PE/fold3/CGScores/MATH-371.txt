@@ -1,0 +1,7 @@
+Beta:0.0020
+Covariance:0.0072
+FastMath:0.0295
+Gamma:0.0047
+RealMatrix:0.0772
+SimpleRegression:0.0072
+TDistribution:0.0033

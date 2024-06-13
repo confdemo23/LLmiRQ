@@ -1,0 +1,3 @@
+AbstractCacheConfiguration:0.0012
+MappingPdxSerializer:0.0012
+PropertiesBuilder:0.0157

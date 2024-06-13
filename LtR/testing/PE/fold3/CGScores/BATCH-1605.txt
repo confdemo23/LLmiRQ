@@ -1,0 +1,1 @@
+AbstractMethodInvokingDelegator:0.0072

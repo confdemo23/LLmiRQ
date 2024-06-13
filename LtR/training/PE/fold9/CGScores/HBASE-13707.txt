@@ -1,0 +1,7 @@
+Bytes:0.0087
+CellUtil:0.0069
+HBaseConfiguration:0.0013
+Result:0.0050
+Scan:0.0069
+TableInputFormat:0.0013
+TableMapReduceUtil:0.0013

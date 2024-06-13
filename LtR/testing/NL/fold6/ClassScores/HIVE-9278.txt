@@ -1,0 +1,10 @@
+ExprNodeColumnDesc:0.4242
+ExprNodeColumnEvaluator:0.5758
+ExprNodeColumnListDesc:0.5455
+ExprNodeConstantDesc:0.4848
+ExprNodeConstantEvaluator:0.6364
+ExprNodeDynamicValueDesc:0.6061
+ExprNodeDynamicValueEvaluator:0.7576
+ExprNodeEvaluatorFactory:0.6061
+ExprNodeFieldEvaluator:0.5455
+ExprNodeGenericFuncDesc:0.5758

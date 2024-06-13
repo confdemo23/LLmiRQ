@@ -1,0 +1,4 @@
+AbstractAuthenticationToken:0.0209
+LdapAuthenticationProvider:0.0207
+PasswordPolicyErrorStatus:0.0100
+PasswordPolicyException:0.0100

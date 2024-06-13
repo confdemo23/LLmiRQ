@@ -1,0 +1,1 @@
+AnnotationBasedPersistentProperty:0.6667

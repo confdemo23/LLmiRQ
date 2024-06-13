@@ -1,0 +1,4 @@
+PersistentEntity:0.2889
+Repositories:0.2000
+RepositoryFactoryInformation:0.5556
+RepositoryInformation:0.4000

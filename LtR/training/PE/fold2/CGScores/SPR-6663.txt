@@ -1,0 +1,10 @@
+Assert:0.0822
+BeanFactory:0.0289
+CollectionUtils:0.0174
+IntervalTask:0.0535
+Scheduled:0.0584
+ScheduledTaskRegistrar:0.1026
+StringUtils:0.0436
+StringValueResolver:0.0363
+TaskScheduler:0.0264
+XmlBeanDefinitionReader:0.0191

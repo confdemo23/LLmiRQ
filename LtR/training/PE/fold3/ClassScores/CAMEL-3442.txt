@@ -1,0 +1,1 @@
+OsgiPackageScanClassResolver:0.6757

@@ -1,0 +1,4 @@
+ConvergenceException:0.3556
+GaussNewtonOptimizer:0.3556
+LocalizedFormats:0.2667
+SingularMatrixException:0.4222

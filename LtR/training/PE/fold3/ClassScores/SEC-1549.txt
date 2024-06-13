@@ -1,0 +1,2 @@
+AclPermissionCacheOptimizer:0.6486
+BasicLookupStrategy:0.4324

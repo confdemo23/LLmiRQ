@@ -1,0 +1,10 @@
+Attachment:0.0154
+CamelContext:0.0142
+Exchange:0.1039
+JavaMailSender:0.0646
+MailConfiguration:0.0872
+MailConsumer:0.0094
+MailEndpoint:0.0646
+MailUtils:0.0176
+Message:0.0750
+ObjectHelper:0.0261

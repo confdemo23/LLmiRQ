@@ -1,0 +1,6 @@
+AnnotationMetadata:0.3659
+FieldMetadata:0.2439
+JavaType:0.1220
+MemberDetails:0.2439
+MemberDetailsScanner:0.4146
+ToStringAnnotationValues:0.5122

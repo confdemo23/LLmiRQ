@@ -1,0 +1,10 @@
+Bytes:0.0023
+Connection:0.0005
+CopyTable:0.0014
+HBaseConfiguration:0.0005
+HFileOutputFormat2:0.0014
+Import:0.0005
+Scan:0.0087
+TableInputFormat:0.0005
+TableMapReduceUtil:0.0023
+TableName:0.0014

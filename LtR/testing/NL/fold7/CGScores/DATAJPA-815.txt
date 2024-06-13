@@ -1,0 +1,5 @@
+JpaOrder:0.0017
+ParameterMetadata:0.0234
+ParameterMetadataProvider:0.0039
+PredicateBuilder:0.0039
+QueryUtils:0.0039

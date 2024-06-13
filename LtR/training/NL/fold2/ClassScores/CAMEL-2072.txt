@@ -1,0 +1,4 @@
+MailBinding:0.2195
+MailConfiguration:0.3659
+MailConsumer:0.2439
+MailEndpoint:0.2439

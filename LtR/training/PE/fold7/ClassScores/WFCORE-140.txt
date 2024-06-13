@@ -1,0 +1,2 @@
+Resource:0.1000
+StandaloneXml:0.2000

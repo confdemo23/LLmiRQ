@@ -1,0 +1,3 @@
+HBaseAdmin:0.1364
+HMaster:0.0682
+HRegionServer:0.2045

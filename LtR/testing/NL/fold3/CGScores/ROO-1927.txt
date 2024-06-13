@@ -1,0 +1,10 @@
+CollectionUtils:0.0086
+Dependency:0.0156
+FileManager:0.0136
+FileUtils:0.0624
+HandlerUtils:0.0056
+MetadataDependencyRegistry:0.0056
+OSGiUtils:0.0056
+Plugin:0.0076
+Pom:0.0854
+XmlUtils:0.0455

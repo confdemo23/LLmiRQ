@@ -1,0 +1,4 @@
+MapOpCtx:0.0513
+MapOperator:0.0049
+SelectOperator:0.0365
+TableScanOperator:0.0449

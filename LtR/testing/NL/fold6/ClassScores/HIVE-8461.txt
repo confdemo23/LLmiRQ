@@ -1,0 +1,4 @@
+DecimalColumnVector:0.4545
+VectorizedInputFormatInterface:0.7879
+VectorizedOrcInputFormat:0.6061
+VectorizedRowBatch:0.4242

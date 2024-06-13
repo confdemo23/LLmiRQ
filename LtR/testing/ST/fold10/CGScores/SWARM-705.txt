@@ -1,0 +1,10 @@
+ArtifactSpec:0.0018
+BuildTool:0.0030
+DeclaredDependencies:0.0015
+DependencyManager:0.0029
+FractionList:0.0020
+FractionUsageAnalyzer:0.0018
+MavenArtifactDescriptor:0.0018
+ResolvedDependencies:0.0063
+SimpleLogger:0.0057
+WildFlySwarmManifest:0.0024

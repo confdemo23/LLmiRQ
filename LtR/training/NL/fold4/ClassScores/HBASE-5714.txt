@@ -1,0 +1,6 @@
+HBaseAdmin:0.1628
+HBaseFsck:0.1395
+HRegionInfo:0.1860
+HTableDescriptor:0.3023
+Permission:0.1628
+User:0.0233

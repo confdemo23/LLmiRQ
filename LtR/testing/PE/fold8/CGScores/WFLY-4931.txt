@@ -1,0 +1,2 @@
+Configuration:0.0040
+PersistenceProviderResolverImpl:0.0091

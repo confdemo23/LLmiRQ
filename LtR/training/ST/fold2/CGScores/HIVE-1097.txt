@@ -1,0 +1,8 @@
+Counter:0.0068
+CounterStatusProcessor:0.0028
+ExecDriver:0.0045
+HadoopShims:0.0073
+PathFinder:0.0107
+ScriptOperator:0.0068
+ShimLoader:0.0073
+StreamProcessor:0.0068

@@ -1,0 +1,4 @@
+ConcurrentSessionFilter:0.5405
+LogoutFilter:0.2432
+SecurityContextLogoutHandler:0.6757
+TokenBasedRememberMeServices:0.6757

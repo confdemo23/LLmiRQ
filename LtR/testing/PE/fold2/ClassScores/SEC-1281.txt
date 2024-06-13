@@ -1,0 +1,2 @@
+PersistentTokenBasedRememberMeServices:0.7778
+RememberMeAuthenticationProvider:0.6444

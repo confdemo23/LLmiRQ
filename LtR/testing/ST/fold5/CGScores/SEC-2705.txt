@@ -1,0 +1,10 @@
+AbstractSecurityInterceptor:0.0730
+AccessDecisionManager:0.0541
+AfterInvocationManager:0.0541
+AuthenticationTrustResolver:0.0590
+InterceptorStatusToken:0.1678
+MessageSecurityExpressionRoot:0.0794
+RunAsManager:0.0541
+SecurityContext:0.1299
+SecurityContextHolder:0.1678
+SecurityMetadataSource:0.0541

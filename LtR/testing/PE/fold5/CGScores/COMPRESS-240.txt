@@ -1,0 +1,1 @@
+SimpleEncodingHolder:0.0013

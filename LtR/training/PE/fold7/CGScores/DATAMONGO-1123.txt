@@ -1,0 +1,2 @@
+NearQuery:0.0026
+Query:0.0063

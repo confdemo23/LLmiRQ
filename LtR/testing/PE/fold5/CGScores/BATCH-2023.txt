@@ -1,0 +1,7 @@
+BufferedReaderFactory:0.0014
+LineCallbackHandler:0.0014
+LineMapper:0.0014
+RecordSeparatorPolicy:0.0051
+StepContext:0.0051
+StepScope:0.0023
+StepSynchronizationManager:0.0005

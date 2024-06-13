@@ -1,0 +1,1 @@
+KafkaConfiguration:0.3000

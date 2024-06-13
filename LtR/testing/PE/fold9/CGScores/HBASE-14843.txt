@@ -1,0 +1,6 @@
+Procedure:0.1990
+ProcedureIterator:0.0959
+ProcedureStateSerializer:0.0110
+ProcedureStoreTracker:0.0292
+ProcedureWALFile:0.0292
+WALProcedureStore:1.0000

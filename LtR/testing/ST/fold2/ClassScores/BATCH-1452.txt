@@ -1,0 +1,2 @@
+FlatFileItemWriter:0.3182
+MultiResourceItemWriter:0.4318

@@ -1,0 +1,6 @@
+CreateTableLikeDesc:0.3902
+DDLSemanticAnalyzer:0.3902
+Hive:0.0244
+HiveMetaStoreClient:0.3902
+HiveStorageHandler:0.3659
+MetaStoreUtils:0.2683

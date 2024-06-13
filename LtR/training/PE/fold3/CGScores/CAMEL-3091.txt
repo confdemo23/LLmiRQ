@@ -1,0 +1,10 @@
+CamelContext:0.0005
+DefaultEndpoint:0.0005
+EndpointHelper:0.0012
+LoadBalancer:0.0012
+ObjectHelper:0.0027
+QuartzComponent:0.0049
+QuartzConsumer:0.0012
+QuartzEndpoint:0.0005
+QuartzHelper:0.0005
+Route:0.0012

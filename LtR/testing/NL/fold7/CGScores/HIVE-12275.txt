@@ -1,0 +1,10 @@
+CTEClause:0.0321
+ConfVars:0.0286
+ConstantExprCheck:0.0113
+HadoopShims:0.0191
+HdfsEncryptionShim:0.0113
+HiveConf:0.0634
+HiveDriver:0.0148
+SemanticAnalyzer:0.0877
+ShimLoader:0.0191
+SortBucketRSCtx:0.0530

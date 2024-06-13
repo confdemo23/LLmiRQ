@@ -1,0 +1,3 @@
+CsrfFilter:0.1400
+CsrfTokenRepository:0.3200
+HttpSessionCsrfTokenRepository:0.5400

@@ -1,0 +1,5 @@
+AbstractAuthenticationToken:0.0202
+GrantedAuthority:0.0018
+SecurityContext:0.0057
+SecurityContextHolder:0.0390
+SecurityContextHolderStrategy:0.0160

@@ -1,0 +1,7 @@
+FastDateParser:0.0146
+FastDatePrinter:0.0639
+FormatCache:0.0508
+ISO8601TimeZoneStrategy:0.0014
+Strategy:0.0080
+StrategyAndWidth:0.0014
+StrategyParser:0.0014

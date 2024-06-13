@@ -1,0 +1,10 @@
+CamelContext:0.0670
+Endpoint:0.0047
+LoadBalanceDefinition:0.0047
+LogEndpoint:0.0099
+ManagedEndpoint:0.0047
+ManagedProcessor:0.0099
+ManagedProducer:0.0047
+ManagementAware:0.0203
+Pipeline:0.0099
+SendProcessor:0.0099

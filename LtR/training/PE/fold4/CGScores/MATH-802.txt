@@ -1,0 +1,10 @@
+ArrayRealVector:0.0072
+Entry:0.0413
+FastMath:0.0364
+Iterator:0.1309
+OpenIntToDoubleHashMap:0.0670
+OpenMapRealVector:0.0566
+RealVector:0.1245
+RealVectorChangingVisitor:0.0148
+RealVectorPreservingVisitor:0.0148
+SparseRealVector:0.0082

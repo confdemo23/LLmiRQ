@@ -1,0 +1,9 @@
+AbstractIteratorDecorator:0.0042
+AbstractListIteratorDecorator:0.0095
+AbstractSerializableListDecorator:0.0331
+CollectionUtils:0.0018
+ListUtils:0.0016
+SetUniqueList:0.0016
+UniquePredicate:0.0018
+UnmodifiableList:0.0018
+UnmodifiableSet:0.0016

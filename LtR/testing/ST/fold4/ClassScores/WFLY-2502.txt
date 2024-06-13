@@ -1,0 +1,5 @@
+AbstractResourceAdapterDeploymentService:0.8810
+InitialContext:0.2619
+NamingContext:0.2381
+ResourceAdapterDeploymentService:0.6905
+WritableServiceBasedNamingStore:0.6667

@@ -1,0 +1,4 @@
+JpaQueryMethod:0.0063
+QueryHints:0.0015
+QueryUtils:0.0029
+StringQuery:0.0063

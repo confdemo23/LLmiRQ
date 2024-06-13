@@ -1,0 +1,8 @@
+BasePathAwareHandlerMapping:0.6154
+PersistentEntityResource:0.5385
+PersistentEntityResourceAssembler:0.7692
+PersistentEntityToJsonSchemaConverter:0.8718
+RepositoryEntityController:0.5897
+RepositoryRestConfiguration:0.6154
+RepositoryRestExceptionHandler:0.6923
+RepositoryRestMvcConfiguration:0.6923

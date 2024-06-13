@@ -1,0 +1,6 @@
+JpaOrder:0.0006
+LikeParameterBinding:0.0007
+ParameterBinding:0.0097
+ParameterBindingParser:0.0007
+ParameterBindingType:0.0052
+QueryUtils:0.0029

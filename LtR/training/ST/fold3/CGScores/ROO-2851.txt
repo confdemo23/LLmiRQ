@@ -1,0 +1,10 @@
+FileManager:0.0799
+LogicalPath:0.0842
+MavenOperations:0.0795
+PathResolvingStrategy:0.1319
+PhysicalPath:0.0588
+Pom:0.2690
+PomManagementService:0.1331
+ProcessManager:0.0409
+ProjectOperations:0.1553
+XmlUtils:0.0648

@@ -1,0 +1,10 @@
+ClientInterceptor:0.0218
+DefaultStrategiesHelper:0.0160
+MessageContext:0.1141
+SaajUtils:0.0481
+TransportContextHolder:0.0160
+TransportInputStream:0.0128
+WebServiceConnection:0.0218
+WebServiceMessage:0.0276
+WebServiceMessageCallback:0.0218
+WebServiceTemplate:0.0218

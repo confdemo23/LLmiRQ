@@ -1,0 +1,4 @@
+AbstractImportingAnnotationConfiguration:0.8043
+PartitionKeyResolver:0.3696
+PartitionResolver:0.3043
+PartitionStrategy:0.3043

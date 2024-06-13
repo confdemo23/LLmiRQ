@@ -1,0 +1,9 @@
+ColumnStatistics:0.3590
+OrcFile:0.1282
+OrcInputFormat:0.3077
+OrcStruct:0.1795
+PredicateLeaf:0.2821
+PredicatePushDown:0.3846
+TimestampColumnStatistics:0.5897
+VectorizedOrcInputFormat:0.5641
+VectorizedRowBatch:0.4103

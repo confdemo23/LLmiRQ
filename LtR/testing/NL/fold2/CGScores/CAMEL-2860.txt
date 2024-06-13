@@ -1,0 +1,10 @@
+CamelContext:0.0693
+Exchange:0.1616
+FileUtil:0.1578
+FtpConfiguration:0.0409
+GenericFileConfiguration:0.0353
+GenericFileEndpoint:0.1657
+GenericFileOperations:0.0639
+Message:0.1493
+ObjectHelper:0.1106
+RemoteFileConfiguration:0.0350

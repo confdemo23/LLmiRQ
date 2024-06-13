@@ -1,0 +1,10 @@
+CamelContextHelper:0.0334
+FromDefinition:0.0298
+InputTypeDefinition:0.0263
+MatchBy:0.0439
+ObjectHelper:0.0162
+OutputTypeDefinition:0.0263
+ProcessorDefinition:0.0695
+RouteContext:0.0580
+RouteDefinition:0.0334
+WhenDefinition:0.0169

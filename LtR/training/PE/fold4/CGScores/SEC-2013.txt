@@ -1,0 +1,10 @@
+AbstractAuthenticationProcessingFilter:0.0035
+AuthenticationException:0.0072
+AuthenticationFailureHandler:0.0035
+AuthenticationSuccessHandler:0.0035
+RememberMeServices:0.0073
+RequestMatcher:0.0035
+SecurityContext:0.0035
+SecurityContextHolder:0.0073
+SessionAuthenticationStrategy:0.0035
+SpringSecurityMessageSource:0.0035

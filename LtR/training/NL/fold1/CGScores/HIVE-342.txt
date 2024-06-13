@@ -1,0 +1,10 @@
+HadoopShims:0.0214
+HdfsEncryptionShim:0.0038
+HiveServer2:0.0293
+MiniClusterType:0.0180
+MiniDFSShim:0.0066
+MiniMrShim:0.0038
+QTestSetup:0.0094
+QTestUtil:0.0652
+ServerOptionsProcessor:0.0050
+ShimLoader:0.0072

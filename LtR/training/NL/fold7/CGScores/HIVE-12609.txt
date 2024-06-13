@@ -1,0 +1,10 @@
+Client:0.0100
+ConfVars:0.0200
+Converter:0.0356
+HadoopThriftAuthBridge:0.0085
+HiveConf:0.0436
+Hook:0.0312
+MetaStoreUtils:0.0318
+ShimLoader:0.0168
+Utils:0.0124
+VarType:0.0059

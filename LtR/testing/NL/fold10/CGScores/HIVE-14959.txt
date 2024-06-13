@@ -1,0 +1,10 @@
+BoundarySpec:0.1360
+CTEClause:0.0476
+CalcitePlanner:0.0501
+CalcitePlannerAction:0.3835
+HiveConf:0.0927
+SemanticAnalyzer:0.1278
+SortBucketRSCtx:0.0777
+WindowFrameSpec:0.0464
+WindowFunctionSpec:0.0545
+WindowSpec:0.1930

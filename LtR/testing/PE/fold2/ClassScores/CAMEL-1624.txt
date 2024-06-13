@@ -1,0 +1,3 @@
+Message:0.0889
+XmppGroupChatProducer:0.4000
+XmppPrivateChatProducer:0.4444

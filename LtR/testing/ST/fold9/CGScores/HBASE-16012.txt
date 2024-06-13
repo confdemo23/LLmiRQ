@@ -1,0 +1,10 @@
+ByteBuff:0.2917
+Bytes:0.1818
+HFileContext:0.1370
+HRegion:0.4788
+HStore:0.2837
+KeyValueHeap:0.1440
+MonitoredTask:0.1310
+RegionInfo:0.4049
+Scan:0.1383
+ScannerContext:0.1991

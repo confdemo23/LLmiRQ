@@ -1,0 +1,6 @@
+DBRef:0.0259
+DbRefProxyHandler:0.0168
+DbRefResolverCallback:0.0168
+MongoDbFactory:0.0350
+MongoPersistentEntity:0.0168
+MongoPersistentProperty:0.0259

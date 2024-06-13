@@ -1,0 +1,10 @@
+KeyValue:0.0012
+LazyMap:0.0012
+LazySortedMap:0.0012
+MapUtils:0.0004
+MultiValueMap:0.0020
+PredicatedMap:0.0004
+PredicatedSortedMap:0.0004
+Transformer:0.0028
+TransformerUtils:0.0012
+UnmodifiableSortedMap:0.0012

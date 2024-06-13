@@ -1,0 +1,10 @@
+AntPathMatcherGenericFileFilter:0.0105
+CamelContext:0.0259
+FileUtil:0.0297
+GenericFile:0.0143
+GenericFileConsumer:0.0105
+GenericFileEndpoint:0.0182
+Message:0.0143
+ObjectHelper:0.0259
+ServiceHelper:0.0143
+StringHelper:0.0182

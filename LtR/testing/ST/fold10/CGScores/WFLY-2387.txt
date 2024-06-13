@@ -1,0 +1,6 @@
+BeanManagerAfterDeploymentValidation:0.0012
+JPAServiceNames:0.0028
+PersistenceUnitRegistryImpl:0.0028
+PhaseOnePersistenceUnitServiceImpl:0.0060
+ProxyBeanManager:0.0044
+WritableServiceBasedNamingStore:0.0060

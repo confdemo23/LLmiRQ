@@ -1,0 +1,7 @@
+AutoProgressor:0.0051
+Counter:0.0122
+CounterStatusProcessor:0.0051
+PathFinder:0.0193
+ReporterTask:0.0051
+ScriptOperator:0.0122
+StreamProcessor:0.0122

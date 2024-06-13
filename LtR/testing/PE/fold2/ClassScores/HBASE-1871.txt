@@ -1,0 +1,4 @@
+ImmutableBytesWritable:0.4222
+TableMapReduceUtil:0.3333
+TableOutputFormat:0.3111
+TableReducer:0.2000

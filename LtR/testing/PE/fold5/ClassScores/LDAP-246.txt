@@ -1,0 +1,2 @@
+AttributeSchema:0.2444
+SchemaToJava:0.1778

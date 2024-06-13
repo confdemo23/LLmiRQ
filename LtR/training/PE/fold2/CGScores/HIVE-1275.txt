@@ -1,0 +1,2 @@
+CliAdapter:0.0141
+HBaseCliConfig:0.0031

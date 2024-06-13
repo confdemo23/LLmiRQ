@@ -1,0 +1,1 @@
+JndiNamingDependencyProcessor:0.4808

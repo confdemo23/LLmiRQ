@@ -1,0 +1,3 @@
+AbstractMappingContext:0.4524
+ClassTypeInformation:0.4048
+TypeDiscoverer:0.2619

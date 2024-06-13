@@ -1,0 +1,1 @@
+WhitelabelApprovalEndpoint:0.5000

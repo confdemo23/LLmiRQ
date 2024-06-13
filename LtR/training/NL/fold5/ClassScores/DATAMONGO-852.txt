@@ -1,0 +1,6 @@
+MongoMappingContext:0.4545
+MongoPersistentEntity:0.5152
+MongoPersistentProperty:0.5758
+MongoTemplate:0.2727
+Query:0.0303
+Update:0.0606

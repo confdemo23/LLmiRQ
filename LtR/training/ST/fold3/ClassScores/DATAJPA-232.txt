@@ -1,0 +1,2 @@
+JpaRepository:0.2381
+SimpleJpaRepository:0.3810

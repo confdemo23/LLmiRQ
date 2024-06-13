@@ -1,0 +1,9 @@
+AbstractRepositoryMetadata:0.0246
+RepositoryBeanDefinitionBuilder:0.0190
+RepositoryBeanNameGenerator:0.0190
+RepositoryComponentProvider:0.1236
+RepositoryConfiguration:0.0899
+RepositoryConfigurationDelegate:0.0253
+RepositoryConfigurationExtension:0.1278
+RepositoryConfigurationUtils:0.0253
+RepositoryMetadata:0.0520

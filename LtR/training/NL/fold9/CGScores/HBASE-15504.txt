@@ -1,0 +1,10 @@
+Cluster:0.2531
+ClusterMetrics:0.2726
+CostFunction:0.2180
+MasterCoprocessorHost:0.2607
+MasterServices:0.5470
+RegionInfo:0.4492
+RegionStateNode:0.6792
+RegionStates:0.6335
+ServerManager:0.2575
+ServerName:0.4618

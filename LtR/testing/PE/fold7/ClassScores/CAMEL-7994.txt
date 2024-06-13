@@ -1,0 +1,4 @@
+ConnectionFactoryResource:0.4783
+JmsProducer:0.1739
+Producer:0.1087
+SjmsComponent:0.2174

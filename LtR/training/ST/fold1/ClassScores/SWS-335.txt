@@ -1,0 +1,7 @@
+MessageDispatcher:0.2955
+MessageDispatcherServlet:0.4545
+PayloadLoggingInterceptor:0.4773
+PayloadValidatingInterceptor:0.5455
+SaajXmlReader:0.2045
+WebServiceMessageReceiverHandlerAdapter:0.7955
+WebServiceMessageReceiverObjectSupport:0.7727

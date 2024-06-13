@@ -1,0 +1,8 @@
+AbstractAuthenticationProcessingFilter:0.8780
+AbstractRememberMeServices:0.5854
+CookieClearingLogoutHandler:0.6098
+PersistentTokenBasedRememberMeServices:0.8780
+RememberMeServices:0.3902
+SecurityContextLogoutHandler:0.6341
+SimpleUrlLogoutSuccessHandler:0.6585
+TokenBasedRememberMeServices:0.6341

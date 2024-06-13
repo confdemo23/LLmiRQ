@@ -1,0 +1,10 @@
+Array2DRowRealMatrix:0.0643
+LinearConstraint:0.0643
+LinearObjectiveFunction:0.0378
+MatrixUtils:0.0214
+Precision:0.0280
+Preconditioner:0.0202
+RealMatrix:0.0643
+RealVector:0.0551
+SimplexTableau:0.1169
+UnivariateFunction:0.0202

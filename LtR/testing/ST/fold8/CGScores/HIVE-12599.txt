@@ -1,0 +1,7 @@
+ColumnReadContext:0.0025
+HiveContextAwareRecordReader:0.0610
+HiveIOExceptionHandlerUtil:0.0020
+Hook:0.0006
+ProcCacheChunk:0.0070
+StreamContext:0.0011
+UncompressedCacheChunk:0.0115

@@ -1,0 +1,2 @@
+AutomaticProjectUpgradeService:0.5306
+JdkDelegatingLogListener:0.4082

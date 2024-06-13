@@ -1,0 +1,10 @@
+Builder:0.0033
+Client:0.0099
+ConfVars:0.0211
+HadoopThriftAuthBridge:0.0036
+HiveConf:0.0475
+HiveDatabaseMetaData:0.0106
+HiveDriver:0.0106
+ShimLoader:0.0036
+Utils:0.0172
+VarType:0.0053

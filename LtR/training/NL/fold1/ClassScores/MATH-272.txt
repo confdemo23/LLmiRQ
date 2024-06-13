@@ -1,0 +1,6 @@
+AbstractLinearOptimizer:0.5405
+LinearObjectiveFunction:0.5405
+NonLinearConjugateGradientOptimizer:0.8649
+PivotSelectionRule:0.4054
+SimplexSolver:0.2703
+SimplexTableau:0.2973

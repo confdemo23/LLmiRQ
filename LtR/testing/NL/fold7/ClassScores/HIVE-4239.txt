@@ -1,0 +1,6 @@
+Driver:0.1026
+HiveConf:0.1538
+HiveLock:0.1538
+HiveLockManager:0.3333
+QueryPlan:0.1795
+SemanticAnalyzer:0.3590

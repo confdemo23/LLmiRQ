@@ -1,0 +1,10 @@
+AppMasterEventOperator:0.4872
+DagUtils:0.1282
+HiveConf:0.1282
+HiveInputFormat:0.3077
+HiveSplitGenerator:0.3846
+SessionState:0.2308
+Task:0.0256
+TezJobMonitor:0.2564
+TezProcessor:0.2308
+TezTask:0.1026

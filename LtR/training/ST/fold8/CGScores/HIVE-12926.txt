@@ -1,0 +1,10 @@
+CustomQueueAllowed:0.0047
+HadoopShims:0.0013
+HiveServer2:0.0307
+ServerOptionsExecutor:0.0013
+ServerOptionsProcessor:0.0050
+ServerOptionsProcessorResponse:0.0013
+ShimLoader:0.0013
+TezSessionPoolManager:0.0117
+TezSessionPoolSession:0.1310
+Utils:0.0084

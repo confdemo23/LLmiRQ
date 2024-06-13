@@ -1,0 +1,7 @@
+AbstractJobRepositoryFactoryBean:0.0102
+DataFieldMaxValueIncrementerFactory:0.0589
+DatabaseType:0.0346
+JdbcExecutionContextDao:0.0833
+JdbcJobExecutionDao:0.0711
+JdbcJobInstanceDao:0.0467
+JdbcStepExecutionDao:0.0711

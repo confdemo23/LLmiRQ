@@ -1,0 +1,9 @@
+AttributeDefinition:0.0046
+ControllerResolver:0.0095
+ImmutableManagementResourceRegistration:0.0046
+OperationContext:0.0243
+OperationDefinition:0.0095
+PathAddress:0.0046
+SimpleAttributeDefinition:0.0095
+SimpleAttributeDefinitionBuilder:0.0046
+SimpleOperationDefinitionBuilder:0.0445

@@ -1,0 +1,6 @@
+CamelContext:0.2439
+ExchangeConverter:0.3659
+JmsBinding:0.1951
+JmsConfiguration:0.3415
+JmsEndpoint:0.2195
+JmsProducer:0.2195

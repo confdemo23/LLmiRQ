@@ -1,0 +1,4 @@
+Hex:0.0118
+HmacAlgorithms:0.0092
+HmacUtils:0.0768
+StringUtils:0.0092

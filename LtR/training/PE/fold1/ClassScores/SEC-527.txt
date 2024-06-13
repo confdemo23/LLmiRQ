@@ -1,0 +1,7 @@
+AccessControlEntry:0.3333
+AclAuthorizationStrategy:0.4667
+AclImpl:0.0889
+AuditLogger:0.1778
+EhCacheBasedAclCache:0.3778
+ObjectIdentity:0.2444
+Sid:0.0000

@@ -1,0 +1,10 @@
+Client:0.0170
+ConfVars:0.0340
+HadoopShims:0.0115
+HiveConf:0.0741
+HiveServer2:0.0475
+LlapDaemon:0.0180
+ShimLoader:0.0210
+ThriftCLIServerContext:0.0140
+Utils:0.0325
+VarType:0.0100

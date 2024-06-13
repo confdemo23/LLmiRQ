@@ -1,0 +1,4 @@
+AggregationOperationContext:0.5854
+GroupOperation:0.2683
+MongoTemplate:0.2439
+ProjectionOperation:0.3902

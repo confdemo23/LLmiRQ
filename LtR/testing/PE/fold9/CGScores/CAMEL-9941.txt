@@ -1,0 +1,7 @@
+AbstractApiComponent:0.0081
+Endpoint:0.0035
+ObjectHelper:0.0081
+Olingo2App:0.0081
+Olingo2AppWrapper:0.0173
+Olingo2Configuration:0.0543
+SSLContextParameters:0.0035

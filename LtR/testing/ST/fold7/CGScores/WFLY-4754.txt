@@ -1,0 +1,10 @@
+ApplicableMethodInformation:0.0489
+Builder:0.0172
+ComponentConfiguration:0.0512
+ComponentDescription:0.0977
+EEModuleDescription:0.0122
+EJBComponentDescription:0.0996
+EJBMethodSecurityAttribute:0.0552
+EJBViewDescription:0.0298
+ViewConfiguration:0.0362
+ViewDescription:0.0571

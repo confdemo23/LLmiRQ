@@ -1,0 +1,8 @@
+CamelContext:0.2424
+Consume:0.0909
+ConsumerTemplate:0.3636
+DefaultCamelContext:0.4545
+Endpoint:0.1212
+Processor:0.1515
+ProducerTemplate:0.3636
+RouteBuilder:0.2424

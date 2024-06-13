@@ -1,0 +1,4 @@
+DefaultProducerTemplate:0.5405
+Exchange:0.1351
+ProducerCache:0.2703
+Synchronization:0.3243

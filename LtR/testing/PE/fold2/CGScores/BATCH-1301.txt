@@ -1,0 +1,10 @@
+AbstractItemStreamItemWriter:0.0254
+BufferedReaderFactory:0.0071
+ExecutionContext:0.0437
+FileUtils:0.0071
+FlatFileHeaderCallback:0.0071
+LineCallbackHandler:0.0071
+LineMapper:0.0071
+OutputState:0.0986
+RecordSeparatorPolicy:0.0254
+TransactionAwareBufferedWriter:0.0254

@@ -1,0 +1,6 @@
+DefaultProducer:0.0032
+Exchange:0.0327
+Message:0.0308
+SqlEndpoint:0.0161
+SqlHelper:0.0013
+SqlPrepareStatementStrategy:0.0087

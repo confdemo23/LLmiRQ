@@ -1,0 +1,3 @@
+InfinispanSessionManager:0.5676
+SessionManager:0.2973
+WildFlySecurityManager:0.5135

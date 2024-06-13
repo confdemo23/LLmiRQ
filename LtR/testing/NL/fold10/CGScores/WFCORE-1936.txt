@@ -1,0 +1,10 @@
+AbstractAttributeDefinitionBuilder:0.3308
+AttributeDefinition:0.0658
+Builder:0.3020
+ManagementModelNode:0.0915
+ManagementResourceRegistration:0.2588
+OutboundSocketBinding:0.0896
+Parameters:0.0952
+ResourceDescriptionResolver:0.0689
+SimpleAttributeDefinitionBuilder:0.7061
+SocketBindingManager:0.1366

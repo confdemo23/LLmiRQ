@@ -1,0 +1,2 @@
+HiveSessionImpl:0.2791
+ThriftCLIService:0.3023

@@ -1,0 +1,10 @@
+AsyncCallback:0.0056
+CamelContext:0.0056
+DefaultAsyncProducer:0.0056
+Exchange:0.0169
+Message:0.0056
+TypeConverter:0.0019
+URISupport:0.0019
+UndertowEndpoint:0.0169
+UndertowHelper:0.0094
+UndertowHttpBinding:0.0019

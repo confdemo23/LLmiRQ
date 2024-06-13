@@ -1,0 +1,3 @@
+AbstractRetryEntryPoint:0.4444
+DefaultRedirectStrategy:0.4444
+RetryWithHttpsEntryPoint:0.4667

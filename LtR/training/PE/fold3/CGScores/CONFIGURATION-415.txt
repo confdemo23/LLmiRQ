@@ -1,0 +1,7 @@
+BaseHierarchicalConfiguration:0.0017
+Configuration:0.0017
+ConfigurationErrorEvent:0.0007
+EventSource:0.0007
+HierarchicalConfiguration:0.0007
+ImmutableConfiguration:0.0054
+Synchronizer:0.0017

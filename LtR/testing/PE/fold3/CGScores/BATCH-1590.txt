@@ -1,0 +1,5 @@
+AbstractPagingItemReader:0.0117
+ExecutionContext:0.0117
+OraclePagingQueryProvider:0.0096
+PagingQueryProvider:0.0322
+SqlPagingQueryUtils:0.0148

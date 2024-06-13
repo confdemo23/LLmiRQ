@@ -1,0 +1,5 @@
+ClassTypeInformation:0.0051
+Lazy:0.0055
+PersistentEntity:0.0051
+PreferredConstructor:0.0172
+TypeInformation:0.0111

@@ -1,0 +1,8 @@
+AbstractIntegrator:0.0112
+AbstractStepInterpolator:0.0549
+AdaptiveStepsizeIntegrator:0.0264
+EquationsMapper:0.0112
+ExpandableStatefulODE:0.2673
+FastMath:1.0000
+GraggBulirschStoerStepInterpolator:0.0264
+RungeKuttaStepInterpolator:0.0833

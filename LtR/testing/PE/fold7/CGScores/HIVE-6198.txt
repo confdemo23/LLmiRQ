@@ -1,0 +1,3 @@
+HadoopShims:0.0050
+MapRedTask:0.0081
+ShimLoader:0.0050

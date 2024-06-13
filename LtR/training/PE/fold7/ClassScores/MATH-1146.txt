@@ -1,0 +1,2 @@
+Mean:0.0200
+SummaryStatistics:0.2800

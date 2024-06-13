@@ -1,0 +1,5 @@
+DefaultCamelContext:0.5313
+DefaultRouteContext:0.5313
+EventNotifierSupport:0.5625
+Route:0.0938
+RouteService:0.3125

@@ -1,0 +1,10 @@
+CamelContext:0.0093
+DefaultEndpoint:0.0144
+Exchange:0.2305
+Message:0.2305
+MongoDbComponent:0.0041
+MongoDbEndpoint:0.1279
+MongoDbOperation:0.0298
+MongoDbOutputType:0.0195
+ObjectHelper:0.0504
+UriEndpointComponent:0.0045

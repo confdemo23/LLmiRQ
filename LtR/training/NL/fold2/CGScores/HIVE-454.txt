@@ -1,0 +1,8 @@
+BaseSemanticAnalyzer:0.0043
+ConfVars:0.0216
+EncoderDecoder:0.0030
+HiveCli:0.0000
+HiveConf:0.0482
+TraditionalBinaryPrefix:0.0076
+Utils:0.0003
+VarType:0.0056

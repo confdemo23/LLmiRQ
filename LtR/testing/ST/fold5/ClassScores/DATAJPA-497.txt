@@ -1,0 +1,2 @@
+Querydsl:0.0769
+QuerydslJpaRepository:0.3269

@@ -1,0 +1,2 @@
+EJBClientReconnectionTestCase:0.5652
+RemoteOutboundConnectionReconnectTestCase:0.8261

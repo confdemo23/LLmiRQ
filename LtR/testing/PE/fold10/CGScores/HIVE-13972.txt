@@ -1,0 +1,5 @@
+CompactorInputSplit:0.0087
+HadoopShims:0.0032
+HdfsFileStatusWithId:0.0013
+ShimLoader:0.0032
+StringableList:0.0142

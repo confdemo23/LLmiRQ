@@ -1,0 +1,6 @@
+ASTNode:0.0909
+Column:0.0606
+CreateTableDesc:0.3333
+Partition:0.1515
+SemanticAnalyzer:0.3636
+Table:0.0303

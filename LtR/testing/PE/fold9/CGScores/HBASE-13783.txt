@@ -1,0 +1,10 @@
+Cell:0.0266
+CellComparator:0.0127
+HFileScanner:0.0913
+HStoreFile:0.0173
+PrivateCellUtil:0.0358
+Reader:0.0035
+Scan:0.0127
+ScanQueryMatcher:0.0035
+StoreFileReader:0.0820
+StoreFileScanner:0.0081

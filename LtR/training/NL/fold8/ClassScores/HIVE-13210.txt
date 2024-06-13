@@ -1,0 +1,5 @@
+HiveConf:0.1875
+HiveMetaStore:0.3438
+HiveMetaStoreClient:0.5313
+MetaStoreDirectSql:0.5000
+ObjectStore:0.2813

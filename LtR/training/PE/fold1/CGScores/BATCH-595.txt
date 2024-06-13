@@ -1,0 +1,4 @@
+AbstractJdbcBatchMetadataDao:0.0071
+JobExecution:0.0071
+JobInstance:0.0254
+JobKeyGenerator:0.0163

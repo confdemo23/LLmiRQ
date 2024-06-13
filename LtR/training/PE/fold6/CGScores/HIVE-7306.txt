@@ -1,0 +1,1 @@
+GenericUDAFAverage:0.0044

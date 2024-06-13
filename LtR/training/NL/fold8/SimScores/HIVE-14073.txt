@@ -1,0 +1,10 @@
+SQLStdConfOnlyAuthorizerFactory:0.2996
+SQLStdHiveAccessControllerForTest:0.2771
+SQLStdHiveAuthorizerFactory:0.2955
+SQLStdHiveAuthorizerFactoryForTest:0.2988
+SettableConfigUpdater:0.5621
+StaticPermanentFunctionChecker:0.2818
+TestBlockedUdf:0.2283
+TestCommandProcessorFactory:0.3913
+TestSQLStdHiveAccessControllerCLI:0.3216
+TestSQLStdHiveAccessControllerHS2:0.5136

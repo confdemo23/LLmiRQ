@@ -1,0 +1,10 @@
+Attachment:0.0155
+Exchange:0.1479
+IdempotentRepository:0.0132
+JavaMailSender:0.0630
+MailConfiguration:0.2056
+MailEndpoint:0.1937
+MailMessage:0.0125
+MailUtils:0.0218
+Message:0.0898
+ObjectHelper:0.0347

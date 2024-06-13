@@ -1,0 +1,10 @@
+AbstractItemStreamItemReader:0.0359
+Chunk:0.0863
+ChunkContext:0.0233
+ChunkIterator:0.0170
+ChunkProvider:0.0107
+ExecutionContext:0.0737
+ItemCountAware:0.0107
+ItemStream:0.0161
+MulticasterBatchListener:0.0422
+StepContribution:0.0157

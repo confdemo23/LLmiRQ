@@ -1,0 +1,9 @@
+FlushPolicy:0.2051
+HBaseTestingUtility:0.4103
+HColumnDescriptor:0.3590
+HRegion:0.1026
+HStore:0.0769
+IntegrationTestBigLinkedList:0.6410
+MemStore:0.1282
+RegionServerFlushTableProcedureManager:0.8974
+StoreFlusher:0.2308

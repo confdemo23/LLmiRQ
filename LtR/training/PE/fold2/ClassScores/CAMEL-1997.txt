@@ -1,0 +1,2 @@
+CamelContextFactoryBean:0.4651
+PackageScanDefinition:0.4186

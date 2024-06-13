@@ -1,0 +1,4 @@
+DefaultExchange:0.2609
+DefaultRuntimeEndpointRegistry:0.5870
+ExchangeCreatedEvent:0.3696
+MongoDbEndpoint:0.2609

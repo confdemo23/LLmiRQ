@@ -1,0 +1,2 @@
+HiveConf:0.1351
+HivePartitioner:0.3243

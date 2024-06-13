@@ -1,0 +1,3 @@
+GLSMultipleLinearRegression:0.6098
+OLSMultipleLinearRegression:0.6098
+RealMatrix:0.1951

@@ -1,0 +1,3 @@
+RedisOperations:0.0117
+RedisTemplate:0.0042
+ValueOperations:0.0070

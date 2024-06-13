@@ -1,0 +1,3 @@
+DefaultIndexOperations:0.3830
+IndexOperations:0.2340
+MongoTemplate:0.1915

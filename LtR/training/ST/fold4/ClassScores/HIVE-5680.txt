@@ -1,0 +1,5 @@
+FileSinkOperator:0.2308
+HBaseStorageHandler:0.2885
+HiveOutputFormatImpl:0.3077
+MapRedTask:0.1154
+Utilities:0.0962

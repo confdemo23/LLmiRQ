@@ -1,0 +1,2 @@
+CompositionType:0.0005
+Specification:0.0027

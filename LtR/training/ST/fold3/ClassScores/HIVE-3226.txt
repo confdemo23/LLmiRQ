@@ -1,0 +1,7 @@
+ColumnPruner:0.2143
+ExecReducer:0.1905
+ExprNodeColumnEvaluator:0.4762
+JoinOperator:0.2143
+ObjectInspectorUtils:0.4048
+SelectOperator:0.2619
+StandardStructObjectInspector:0.6190

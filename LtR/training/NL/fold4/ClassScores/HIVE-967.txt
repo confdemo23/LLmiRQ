@@ -1,0 +1,6 @@
+ASTNode:0.0930
+BaseSemanticAnalyzer:0.3953
+DDLSemanticAnalyzer:0.3721
+Hive:0.0233
+HiveConf:0.1163
+HiveMetaStoreClient:0.3721

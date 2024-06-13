@@ -1,0 +1,3 @@
+HRegion:0.0577
+Store:0.0192
+StoreFlusher:0.1538

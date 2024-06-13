@@ -1,0 +1,6 @@
+ASTSearcher:0.0004
+CalcitePlanner:0.0048
+CalcitePlannerAction:0.0378
+ExceptionHelper:0.0004
+HiveFilterJoinRule:0.0018
+HiveSQLException:0.0006

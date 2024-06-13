@@ -1,0 +1,6 @@
+Channel:0.0112
+Navigate:0.0112
+Service:0.0112
+ShutdownableService:0.0112
+StatefulService:0.0376
+SuspendableService:0.0244

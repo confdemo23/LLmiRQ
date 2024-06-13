@@ -1,0 +1,10 @@
+AbstractApiComponent:0.0099
+ObjectHelper:0.0099
+Olingo2App:0.0099
+Olingo2AppWrapper:0.0209
+Olingo2BatchChangeRequest:0.0326
+Olingo2BatchQueryRequest:0.0182
+Olingo2BatchRequest:0.0134
+Olingo2Configuration:0.0648
+Olingo2ResponseHandler:0.0326
+UriInfoWithType:0.1046

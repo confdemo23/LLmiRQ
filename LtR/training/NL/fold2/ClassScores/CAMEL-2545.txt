@@ -1,0 +1,4 @@
+ContentTypeResolver:0.4146
+MailConsumer:0.2439
+MailEndpoint:0.2439
+MailProducer:0.2439

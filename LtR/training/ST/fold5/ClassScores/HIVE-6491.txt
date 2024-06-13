@@ -1,0 +1,7 @@
+AbstractParquetMapInspector:0.4894
+DeepParquetHiveMapInspector:0.4894
+FetchTask:0.1064
+ObjectInspectorFactory:0.3830
+SelectOperator:0.2128
+StandardParquetHiveMapInspector:0.5745
+TableScanOperator:0.2766

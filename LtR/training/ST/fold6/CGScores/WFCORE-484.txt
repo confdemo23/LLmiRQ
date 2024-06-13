@@ -1,0 +1,10 @@
+AbstractResourceRegistration:0.1363
+AliasEntry:0.0244
+DescriptionProvider:0.0047
+ManagementResourceRegistration:0.4746
+NodeSubregistry:0.0836
+OperationEntry:0.0179
+OverrideDescriptionProvider:0.0113
+PathAddress:0.2086
+PathElement:0.0244
+RegistrationDelegateProvider:0.0169

@@ -1,0 +1,3 @@
+NaNStrategy:0.1778
+NaturalRanking:0.2444
+SpearmansCorrelation:0.3778

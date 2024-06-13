@@ -1,0 +1,8 @@
+AbstractConfiguration:0.0296
+BaseConfiguration:0.0113
+CompositeConfiguration:0.0113
+Configuration:0.0732
+ConfigurationLogger:0.0166
+ConfigurationUtils:0.0113
+JdbcOperation:0.0402
+ListDelimiterHandler:0.0048

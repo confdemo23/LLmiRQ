@@ -1,0 +1,10 @@
+CamelContext:0.0183
+CamelContextHelper:0.0180
+ExpressionSubElementDefinition:0.0246
+ObjectHelper:0.0180
+ProcessorDefinition:0.0324
+ProcessorDefinitionHelper:0.0120
+RedeliveryPolicy:0.0180
+RedeliveryPolicyDefinition:0.2825
+RouteContext:0.0787
+RouteDefinition:0.0183

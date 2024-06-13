@@ -1,0 +1,10 @@
+AbstractSecurityInterceptor:0.0226
+AuthenticationManagerBuilder:0.0143
+ChannelSecurityConfigurer:0.0017
+ExpressionInterceptUrlRegistry:0.0023
+ExpressionUrlAuthorizationConfigurer:0.0017
+FilterComparator:0.0136
+FilterInvocation:0.0807
+HttpSecurity:0.0023
+InMemoryUserDetailsManagerConfigurer:0.0023
+UserDetailsBuilder:0.0209

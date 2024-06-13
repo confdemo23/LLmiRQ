@@ -1,0 +1,1 @@
+JmsSenderConnection:0.3333

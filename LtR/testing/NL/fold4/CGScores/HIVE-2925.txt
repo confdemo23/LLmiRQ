@@ -1,0 +1,6 @@
+ConnectionImpl:0.0013
+FilterOperator:0.0020
+HCatUtil:0.0013
+HiveEndPoint:0.0053
+LimitOperator:0.0017
+SelectOperator:0.0158

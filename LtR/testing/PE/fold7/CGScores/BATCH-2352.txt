@@ -1,0 +1,2 @@
+FragmentEventReader:0.0166
+StaxUtils:0.0047

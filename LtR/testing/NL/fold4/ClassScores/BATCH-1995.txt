@@ -1,0 +1,5 @@
+BufferedReaderFactory:0.4390
+DefaultBufferedReaderFactory:0.6098
+DelimitedLineTokenizer:0.4634
+FlatFileItemReader:0.3659
+LineTokenizer:0.2439

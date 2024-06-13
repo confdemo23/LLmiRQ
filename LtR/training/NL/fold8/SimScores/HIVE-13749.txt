@@ -1,0 +1,10 @@
+GenericUDFMaskFirstN:0.1243
+LowLevelLrfuCachePolicy:0.1522
+MapJoinMemoryExhaustionHandler:0.2171
+MetaDataExportListener:0.1201
+PTFTopNHash:0.1608
+SparkRecordHandler:0.1201
+TestGenMapRedUtilsUsePartitionColumnsPositive:0.1216
+TestLowLevelLrfuCachePolicy:0.1118
+UDFSpace:0.1245
+Utils:0.1334

@@ -1,0 +1,10 @@
+Archive:0.0030
+CoderBase:0.0110
+Coders:0.0290
+CountingOutputStream:0.0541
+Folder:0.0430
+IOUtils:0.0080
+OutputStreamWrapper:0.0060
+SevenZArchiveEntry:0.5606
+SevenZMethod:0.0110
+SevenZMethodConfiguration:0.0380

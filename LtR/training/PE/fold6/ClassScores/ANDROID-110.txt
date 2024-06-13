@@ -1,0 +1,3 @@
+BufferingSimpleClientHttpRequestFactoryTests:0.8913
+SimpleBufferingHttpRequestFactoryTests:0.7609
+SimpleStreamingHttpRequestFactoryTests:0.7609

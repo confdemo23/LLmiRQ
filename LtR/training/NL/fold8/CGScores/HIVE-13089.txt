@@ -1,0 +1,8 @@
+AggregationBuffer:0.0011
+AggregationType:0.0011
+GenericUDAFAverage:0.0010
+GenericUDAFCountEvaluator:0.0022
+GenericUDAFSumEvaluator:0.0043
+HiveDecimal:0.0262
+State:0.0030
+StatsUtils:0.0003

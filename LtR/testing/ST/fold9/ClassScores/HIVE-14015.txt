@@ -1,0 +1,6 @@
+FetchOperator:0.1613
+HiveBaseFunctionResultList:0.3710
+HiveMapFunctionResultList:0.3548
+MapOperator:0.1290
+SMBMapJoinOperator:0.2419
+SparkMapRecordHandler:0.2903

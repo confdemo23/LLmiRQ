@@ -1,0 +1,10 @@
+Chunk:0.0732
+CompositeItemWriter:0.4146
+FaultTolerantStepBuilder:0.5366
+Job:0.0244
+SimpleStepBuilder:0.3659
+Step:0.0488
+StepBuilder:0.2195
+StepExecutionListener:0.4634
+Tasklet:0.1220
+TaskletStep:0.2195

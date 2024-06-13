@@ -1,0 +1,10 @@
+Attribute:0.0022
+BinderServiceBuilder:0.0022
+Capability:0.0053
+CapabilityServiceBuilder:0.0022
+GroupBuilderProvider:0.0022
+JGroupsBindingFactory:0.0048
+JGroupsRequirement:0.0074
+ResourceServiceHandler:0.0027
+WriteAttributeStepHandler:0.0058
+WriteAttributeStepHandlerDescriptor:0.0042

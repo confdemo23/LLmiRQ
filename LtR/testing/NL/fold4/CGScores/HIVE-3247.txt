@@ -1,0 +1,10 @@
+CreateTableDesc:0.0617
+FSPaths:0.0396
+FileSinkOperator:0.0185
+HadoopShims:0.0026
+HiveInputFormat:0.0023
+HiveInputSplit:0.0271
+RecordWriter:0.0185
+ShimLoader:0.0026
+StoragePolicyShim:0.0026
+StoragePolicyValue:0.0026

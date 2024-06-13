@@ -1,0 +1,2 @@
+BasicPersistentEntity:0.4737
+ClassGeneratingPropertyAccessorFactory:0.9211

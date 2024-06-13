@@ -1,0 +1,10 @@
+MethodResourceMapping:0.0063
+PersistentEntityResourceAssembler:0.0063
+RepositoryEntityLinks:0.0063
+RepositorySearchesResource:0.0150
+ResourceMappings:0.0063
+ResourceMetadata:0.0324
+ResourceMetadataHandlerMethodArgumentResolver:0.0150
+ResourceStatus:0.0150
+RootResourceInformation:0.0672
+SearchResourceMappings:0.0237

@@ -1,0 +1,10 @@
+GemfireAccessor:0.0041
+GemfireCacheUtils:0.0401
+GemfireCallback:0.0041
+GemfirePersistentEntity:0.0154
+GemfireTemplate:0.0453
+OqlKeyword:0.0141
+QueryString:0.0147
+Region:0.0230
+Regions:0.0072
+Wrapper:0.0147

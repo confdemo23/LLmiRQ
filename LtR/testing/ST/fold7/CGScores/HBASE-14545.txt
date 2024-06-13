@@ -1,0 +1,10 @@
+ClusterMetrics:0.0348
+HMaster:0.1297
+HRegion:0.0169
+HRegionServer:0.0963
+LocalHBaseCluster:0.0996
+MasterThread:0.0733
+RegionServerThread:0.0583
+ServerName:0.0362
+TableName:0.0169
+Threads:0.0160

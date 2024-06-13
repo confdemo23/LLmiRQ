@@ -1,0 +1,3 @@
+AbstractDeployment:0.3659
+BeanDeploymentArchiveImpl:0.5366
+WeldDeployment:0.2683

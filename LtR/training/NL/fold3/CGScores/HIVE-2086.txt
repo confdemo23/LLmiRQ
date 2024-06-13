@@ -1,0 +1,10 @@
+Client:0.0099
+DDLSemanticAnalyzer:0.0224
+HadoopThriftAuthBridge:0.0083
+HdfsEncryptionShim:0.0013
+HdfsUtils:0.0053
+Hive:0.0185
+MetaStoreUtils:0.0343
+QualifiedNameUtil:0.0287
+ShimLoader:0.0201
+Utils:0.0099

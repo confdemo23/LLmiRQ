@@ -1,0 +1,10 @@
+AttributesMapper:0.0092
+CollectingNameClassPairCallbackHandler:0.0092
+ContextMapper:0.0092
+ContextMapperCallbackHandler:0.0092
+ContextSource:0.0092
+DirContextOperations:0.0166
+Filter:0.0141
+LdapQuery:0.0461
+LdapUtils:0.0486
+ObjectDirectoryMapper:0.0387

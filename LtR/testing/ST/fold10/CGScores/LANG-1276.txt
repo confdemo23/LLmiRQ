@@ -1,0 +1,4 @@
+StrBuilder:0.0219
+StrMatcher:0.0020
+StrTokenizer:0.0014
+StringUtils:0.0008

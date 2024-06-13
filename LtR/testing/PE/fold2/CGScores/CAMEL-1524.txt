@@ -1,0 +1,4 @@
+IrcChannel:0.0142
+ObjectHelper:0.0061
+URISupport:0.0061
+UnsafeUriCharactersEncoder:0.0142

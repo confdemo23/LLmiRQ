@@ -1,0 +1,5 @@
+DefaultConsumer:0.0028
+IOHelper:0.0015
+SmppConfiguration:0.0286
+SmppConnectionFactory:0.0007
+SmppEndpoint:0.0081

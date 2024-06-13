@@ -1,0 +1,5 @@
+ActiveProfiles:0.2222
+AnnotationConfigContextLoader:0.5556
+Autowired:0.1111
+ImportResource:0.2222
+NoSuchBeanDefinitionException:0.5556

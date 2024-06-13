@@ -1,0 +1,10 @@
+Alias:0.0731
+ClassTypeInformation:0.0592
+DefaultPersistentPropertyPath:0.0230
+InvalidPersistentPropertyPath:0.0143
+MappingContext:0.0385
+Pair:0.0230
+PersistentEntity:0.0524
+Property:0.0493
+PropertyPath:0.0143
+TypeInformation:0.0783

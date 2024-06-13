@@ -1,0 +1,6 @@
+HBaseInterClusterReplicationEndpoint:0.8462
+HTable:0.0769
+ReplicationPeer:0.3077
+ReplicationSink:0.3077
+ReplicationSource:0.3590
+WALPlayer:0.1538

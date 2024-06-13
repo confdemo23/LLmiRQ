@@ -1,0 +1,10 @@
+AuthenticationException:0.0017
+FilterChainValidator:0.0006
+FilterInvocation:0.0006
+FirewalledRequest:0.0064
+HttpFirewall:0.0023
+RedirectStrategy:0.0017
+SecurityContextHolder:0.0006
+SecurityFilterChain:0.0014
+UrlUtils:0.0042
+VirtualFilterChain:0.0006

@@ -1,0 +1,5 @@
+HiveConf:0.1538
+HiveDriver:0.2051
+HiveMetaStoreClient:0.4359
+MetaDataFormatter:0.3846
+SessionState:0.2564

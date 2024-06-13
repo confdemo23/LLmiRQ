@@ -1,0 +1,10 @@
+ArgumentType:0.0464
+DeferredExprObject:0.0150
+Descriptor:0.0138
+ExprNodeGenericFuncEvaluator:0.0150
+HiveVectorAdaptorUsageMode:0.0226
+InConstantType:0.0100
+InputExpressionType:0.0138
+Mode:0.0138
+OutputColumnManager:0.1729
+VectorizationContext:0.0602

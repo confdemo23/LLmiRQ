@@ -1,0 +1,10 @@
+CompoundIndex:0.1253
+DocumentAccessor:0.1291
+GeoSpatialIndexed:0.1786
+Index:0.1253
+Indexed:0.1679
+MapReduceOptions:0.1115
+MongoPersistentEntity:0.5802
+MongoPersistentProperty:0.5514
+Query:0.3816
+QueryMapper:0.1360

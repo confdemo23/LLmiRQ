@@ -1,0 +1,3 @@
+CommonJoinOperator:0.2419
+ExecReducer:0.1290
+RowContainer:0.1452

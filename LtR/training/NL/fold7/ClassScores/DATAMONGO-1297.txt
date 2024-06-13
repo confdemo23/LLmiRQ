@@ -1,0 +1,10 @@
+AbstractMongoEventListener:0.5897
+BasicMongoPersistentEntity:0.5897
+IndexOperations:0.3077
+MappingMongoConverter:0.4615
+MongoDataIntegrityViolationException:0.8462
+MongoMappingContext:0.4103
+MongoPersistentEntity:0.4615
+MongoPersistentProperty:0.5128
+MongoTemplate:0.2564
+SimpleMongoRepository:0.4615

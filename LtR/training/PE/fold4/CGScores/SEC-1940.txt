@@ -1,0 +1,7 @@
+AbstractAuthenticationToken:0.0011
+Authentication:0.0042
+AuthenticationEventPublisher:0.0026
+AuthenticationManager:0.0011
+AuthenticationProvider:0.0042
+CredentialsContainer:0.0011
+SpringSecurityMessageSource:0.0011

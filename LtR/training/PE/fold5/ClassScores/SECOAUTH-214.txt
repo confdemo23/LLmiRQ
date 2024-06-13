@@ -1,0 +1,2 @@
+OAuthProviderBeanDefinitionParser:0.6667
+UserAuthorizationSuccessfulAuthenticationHandler:1.0000

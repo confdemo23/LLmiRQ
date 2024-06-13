@@ -1,0 +1,10 @@
+Exchange:0.0579
+HttpBinding:0.0111
+HttpCommonEndpoint:0.0230
+HttpConsumer:0.0368
+HttpHelper:0.0150
+HttpMessage:0.0208
+IOHelper:0.0066
+JettyContentExchange:0.0110
+JettyHttpEndpoint:0.0137
+Message:0.0306

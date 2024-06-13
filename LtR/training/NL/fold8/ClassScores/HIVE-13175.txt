@@ -1,0 +1,9 @@
+Hive:0.0625
+HiveConf:0.1875
+HiveMetaStoreClient:0.5313
+HiveStorageHandler:0.5000
+MetaException:0.3438
+ObjectStore:0.2813
+Table:0.0938
+TransactionalValidationListener:0.9063
+TxnUtils:0.1875

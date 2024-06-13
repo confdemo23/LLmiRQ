@@ -1,0 +1,2 @@
+ContinuedFraction:0.0000
+FastMath:0.0172

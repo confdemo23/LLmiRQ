@@ -1,0 +1,10 @@
+Database:0.1331
+HMSHandler:0.0409
+HiveDelegationTokenManager:0.0180
+HiveMetaStore:0.0103
+HiveMetastoreCli:0.0180
+Server:0.0180
+ShimLoader:0.0027
+StorageDescriptorKey:0.0065
+Utils:0.0027
+_Fields:0.0035

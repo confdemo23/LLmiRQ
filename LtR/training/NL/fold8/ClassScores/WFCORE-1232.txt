@@ -1,0 +1,5 @@
+AbstractPatchingTestCase:0.6875
+PatchBuilder:0.3125
+PatchMerger:0.2813
+PatchTool:0.2188
+PatchingTestUtil:0.4375

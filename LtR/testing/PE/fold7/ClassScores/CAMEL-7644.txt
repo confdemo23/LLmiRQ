@@ -1,0 +1,4 @@
+Container:0.1304
+DefaultCamelContext:0.3478
+RouteBuilder:0.1957
+SimpleRouteBuilder:0.3261

@@ -1,0 +1,10 @@
+AuthorizationResponseImpl:0.1797
+AuthorizationResult:0.1970
+Factory:0.1463
+ImmutableManagementResourceRegistration:0.2014
+ManagementModelImpl:0.3307
+ModelControllerImpl:0.2470
+OperationContext:0.3685
+PathAddress:0.3468
+PathElement:0.2014
+Resource:0.2457

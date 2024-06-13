@@ -1,0 +1,5 @@
+AbstractSecurityInterceptor:0.0945
+AccessDecisionManager:0.0173
+Authentication:0.0173
+FilterInvocation:0.0173
+SecurityMetadataSource:0.0173

@@ -1,0 +1,5 @@
+AbstractAuthorizeTag:0.3265
+AntPathRequestMatcher:0.3469
+DefaultFilterInvocationSecurityMetadataSource:0.8367
+DefaultWebInvocationPrivilegeEvaluator:0.6939
+JspAuthorizeTag:0.2245

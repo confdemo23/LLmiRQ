@@ -1,0 +1,9 @@
+Admin:0.0020
+ChoreService:0.0051
+Connection:0.0172
+ConnectionFactory:0.0020
+ConnectionInfo:0.0081
+EnvironmentEdgeManager:0.0081
+KeyLocker:0.0051
+TableName:0.0051
+UserProvider:0.0051

@@ -1,0 +1,8 @@
+AccessController:0.3023
+HBaseAdmin:0.1628
+HMaster:0.0930
+HTableDescriptor:0.3023
+MasterCoprocessorHost:0.4186
+Permission:0.1628
+TablePermission:0.2791
+UserPermission:0.2558

@@ -1,0 +1,6 @@
+ASN1:0.0069
+ASN1Decoder:0.0082
+Arrays2:0.0002
+ByteStringBuilder:0.0069
+DEREncoder:0.1322
+X509CertificateExtension:0.0179

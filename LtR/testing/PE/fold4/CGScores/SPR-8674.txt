@@ -1,0 +1,8 @@
+BeanUtils:0.0020
+ClassUtils:0.0107
+CollectionFactory:0.0041
+ConversionService:0.0041
+NumberUtils:0.0009
+PropertyEditorRegistrySupport:0.0063
+StringUtils:0.0031
+TypeDescriptor:0.0139

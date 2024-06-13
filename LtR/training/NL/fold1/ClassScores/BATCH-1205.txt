@@ -1,0 +1,10 @@
+AbstractItemCountingItemStreamItemReader:1.0000
+ChunkContext:0.2432
+ChunkOrientedTasklet:0.4595
+CompositeItemWriter:0.4324
+ItemProcessor:0.2703
+ItemReader:0.1892
+ItemWriter:0.1892
+RepeatStatus:0.2432
+SimpleChunkProcessor:0.4595
+StepContribution:0.3514

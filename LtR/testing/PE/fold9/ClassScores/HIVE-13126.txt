@@ -1,0 +1,1 @@
+MapJoinOperator:0.2609

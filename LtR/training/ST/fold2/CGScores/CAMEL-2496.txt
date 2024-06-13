@@ -1,0 +1,10 @@
+AtomicExchange:0.0546
+CamelContext:0.1098
+Exchange:0.6102
+ExchangeHelper:0.0304
+IOHelper:0.0321
+Message:0.2288
+ObjectHelper:0.0802
+ProcessorExchangePair:0.0749
+SedaEndpoint:0.0732
+TypeConverter:0.0557

@@ -1,0 +1,8 @@
+AttributeBinding:0.0027
+ManagementResourceRegistration:0.0154
+OperationBinding:0.0027
+Parameters:0.0186
+PathElement:0.0059
+ResourceBuilderRoot:0.0027
+SimpleResourceDefinition:0.0090
+StandardResourceDescriptionResolver:0.0059

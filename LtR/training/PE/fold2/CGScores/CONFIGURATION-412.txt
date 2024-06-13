@@ -1,0 +1,10 @@
+BaseConfiguration:0.0041
+ConfigurationLogger:0.0123
+FileHandler:0.0088
+FileLocator:0.0088
+FileLocatorBuilder:0.0182
+FileLocatorUtils:0.0088
+JdbcOperation:0.0295
+ListDelimiterHandler:0.0178
+PropertiesConfiguration:0.0041
+PropertiesConfigurationLayout:0.0277

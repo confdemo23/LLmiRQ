@@ -1,0 +1,10 @@
+Admin:0.1631
+Bytes:0.7288
+Connection:0.1720
+HRegion:0.3175
+HStore:0.1704
+MasterKeepAliveConnection:0.2564
+ProtobufUtil:0.1836
+RegionInfo:0.3915
+RequestConverter:0.2091
+TableName:0.1679

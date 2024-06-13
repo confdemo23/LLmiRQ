@@ -1,0 +1,2 @@
+Operator:0.1000
+UDFToDouble:0.1600

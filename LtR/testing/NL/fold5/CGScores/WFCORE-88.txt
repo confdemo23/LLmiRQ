@@ -1,0 +1,10 @@
+AttachmentKey:0.0247
+DeploymentUnit:0.0847
+Factory:0.0700
+ImmutableManagementResourceRegistration:0.0247
+OperationTransaction:0.0041
+PathAddress:0.0933
+PathElement:0.0761
+Resource:0.1876
+ResourceDefinition:0.0401
+ResourceEntry:0.0161

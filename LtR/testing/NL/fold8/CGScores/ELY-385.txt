@@ -1,0 +1,8 @@
+Authentication:0.0038
+Digest:0.0038
+Encryption:0.0038
+Entry:0.0088
+KeyAgreement:0.0038
+LinkedProperties:0.0088
+Protocol:0.0038
+SecurityLevel:0.0038

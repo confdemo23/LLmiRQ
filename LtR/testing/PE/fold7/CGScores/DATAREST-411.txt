@@ -1,0 +1,2 @@
+EntityLookupConfiguration:0.0157
+ResourceMappingConfiguration:0.0664

@@ -1,0 +1,1 @@
+EjbResourceInjectionAnnotationProcessor:0.7500

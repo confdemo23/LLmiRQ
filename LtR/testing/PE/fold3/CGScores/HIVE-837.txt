@@ -1,0 +1,10 @@
+Anonymous-342236b2-b4a0-40c4-b9a1-b2abeffe63fd:0.0002
+Anonymous-ad0870fe-287a-4428-bd80-660b667112ff:0.0002
+Exec:0.0658
+HadoopFileStatus:0.0010
+HdfsEncryptionShim:0.0018
+HdfsUtils:0.0043
+Hive:0.0125
+Query:0.0018
+ShimLoader:0.0010
+Var:0.0055

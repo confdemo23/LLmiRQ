@@ -1,0 +1,10 @@
+ColumnFamilyDescriptor:0.0056
+DNS:0.0041
+HBaseConfiguration:0.0041
+InfoServer:0.0102
+JvmPauseMonitor:0.0102
+ParseFilter:0.0041
+SaslUtil:0.0102
+TableDescriptor:0.0437
+TableName:0.0056
+UserProvider:0.0285

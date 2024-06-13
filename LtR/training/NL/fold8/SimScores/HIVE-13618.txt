@@ -1,0 +1,10 @@
+GenericUDFRTrim:0.2123
+GenericUDFTrim:0.2717
+HiveChar:0.1290
+HiveCharWritable:0.1207
+HiveSchemaHelper:0.3414
+MetaDataPrettyFormatUtils:0.1791
+MetaStoreDirectSql:0.1383
+TestSchemaTool:0.2644
+UDFSpace:0.4434
+Warehouse:0.1226

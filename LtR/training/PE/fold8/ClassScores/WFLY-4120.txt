@@ -1,0 +1,1 @@
+WSHandlerChainAnnotationProcessor:0.6522

@@ -1,0 +1,3 @@
+CxfRsEndpoint:0.2326
+DefaultCxfRsBinding:0.3721
+HeaderFilterStrategyAware:0.5116

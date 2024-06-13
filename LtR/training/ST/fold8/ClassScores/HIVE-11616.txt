@@ -1,0 +1,6 @@
+DBTokenStore:0.1452
+DelegationTokenSecretManager:0.4032
+DelegationTokenStore:0.2742
+HadoopThriftAuthBridge:0.3065
+ObjectStore:0.1290
+TokenStoreDelegationTokenSecretManager:0.5645

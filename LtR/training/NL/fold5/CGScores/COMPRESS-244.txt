@@ -1,0 +1,7 @@
+Archive:0.0030
+CoderBase:0.0030
+Coders:0.0130
+Folder:0.0430
+IOUtils:0.0080
+SevenZArchiveEntry:0.1682
+SevenZMethod:0.0030

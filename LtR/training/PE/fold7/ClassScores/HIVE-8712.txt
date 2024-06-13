@@ -1,0 +1,2 @@
+InvalidTableException:0.3600
+SemanticException:0.2800

@@ -1,0 +1,10 @@
+AttachedDependency:0.1115
+AttributeDefinition:0.1015
+ContentRepository:0.1516
+DeploymentUnit:0.5288
+ModelContentReference:0.1078
+OperationContext:0.2763
+PathAddress:0.3553
+PathElement:0.2701
+Resource:0.5514
+SimpleAttributeDefinition:0.3183

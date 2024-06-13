@@ -1,0 +1,7 @@
+AcidUtils:0.1622
+BucketizedHiveInputFormat:0.5946
+CompactorMR:0.2162
+HiveConf:0.1351
+HiveMetaStoreClient:0.4324
+OrcFileMergeOperator:0.4595
+OrcInputFormat:0.2973

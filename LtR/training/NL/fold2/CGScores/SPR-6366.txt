@@ -1,0 +1,10 @@
+AbstractBeanDefinition:0.2561
+Assert:0.1558
+BeanDefinition:0.1226
+ConfigurableListableBeanFactory:0.5762
+DependencyDescriptor:0.2740
+DocumentDefaultsDefinition:0.2767
+ParseState:0.1186
+Resource:0.1518
+StringUtils:0.4324
+XmlReaderContext:0.1372

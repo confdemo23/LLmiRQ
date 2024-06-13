@@ -1,0 +1,6 @@
+DeferredExprObject:0.0095
+DeferredObject:0.0234
+ExprNodeGenericFuncEvaluator:0.0095
+FunctionRegistry:0.0113
+GenericUDF:0.0061
+TypeCheckProcFactory:0.1536

@@ -1,0 +1,10 @@
+CollectionOptions:0.0214
+Criteria:0.0272
+DocumentCallback:0.0251
+MapReduceOptions:0.0514
+Meta:0.0344
+MongoPersistentEntity:0.0214
+NearQuery:0.0214
+Query:0.1678
+QueryMapper:0.0627
+Update:0.0214

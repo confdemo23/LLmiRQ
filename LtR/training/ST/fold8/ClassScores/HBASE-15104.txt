@@ -1,0 +1,7 @@
+CompressionTest:0.1935
+HRegion:0.0645
+HRegionServer:0.1613
+IntegrationTestAcidGuarantees:0.4194
+OpenRegionHandler:0.2258
+RSRpcServices:0.1613
+RpcExecutor:0.1290

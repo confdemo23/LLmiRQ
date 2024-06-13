@@ -1,0 +1,5 @@
+CamelContext:0.2093
+CxfEndpoint:0.1860
+DefaultCamelContext:0.3721
+InflightRepository:0.3488
+RouteBuilder:0.2093

@@ -1,0 +1,2 @@
+FlatFileItemWriter:0.4054
+TransactionAwareBufferedWriter:0.7297

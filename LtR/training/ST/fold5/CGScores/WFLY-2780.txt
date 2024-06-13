@@ -1,0 +1,2 @@
+ComponentSupport:0.0032
+InjectionTargets:0.0014

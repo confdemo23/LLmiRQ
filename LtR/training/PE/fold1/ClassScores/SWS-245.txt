@@ -1,0 +1,2 @@
+HttpUrlConnection:0.3111
+WebServiceTemplate:0.3333

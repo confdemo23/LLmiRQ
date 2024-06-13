@@ -1,0 +1,4 @@
+ClassUtils:0.1224
+QueryMethod:0.1429
+RepositoryFactoryBeanSupport:0.4898
+RepositoryFactorySupport:0.4082

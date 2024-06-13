@@ -1,0 +1,6 @@
+DummyOperator:0.0008
+Exec:0.0538
+Operator:0.0089
+OperatorFunc:0.0008
+Query:0.0015
+Var:0.0045

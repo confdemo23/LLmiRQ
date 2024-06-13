@@ -1,0 +1,5 @@
+JobExplorerFactoryBean:0.0287
+JobRepositoryFactoryBean:0.0387
+MapJobExplorerFactoryBean:0.0187
+MapJobRepositoryFactoryBean:0.0187
+SimpleJobLauncher:0.0187

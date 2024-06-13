@@ -1,0 +1,4 @@
+AbstractSecurityExpressionHandler:0.6444
+DefaultWebSecurityExpressionHandler:0.6889
+GlobalMethodSecurityConfiguration:0.6444
+WebSecurityConfiguration:0.4444

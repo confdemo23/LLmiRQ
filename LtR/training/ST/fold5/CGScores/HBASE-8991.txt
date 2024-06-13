@@ -1,0 +1,7 @@
+ClusterMetrics:0.0123
+HMaster:0.0249
+HRegionServer:0.0012
+MasterThread:0.0123
+MetaTableLocator:0.0028
+RegionState:0.0060
+ServerName:0.0075

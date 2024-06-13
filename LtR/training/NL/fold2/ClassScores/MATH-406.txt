@@ -1,0 +1,4 @@
+AbstractCurveFitter:0.4146
+LevenbergMarquardtOptimizer:0.6098
+MultivariateVectorOptimizer:0.6098
+WeightedObservedPoints:0.4878

@@ -1,0 +1,2 @@
+AuditingEntityListener:0.3673
+NamespaceUserRepositoryTests:0.4898

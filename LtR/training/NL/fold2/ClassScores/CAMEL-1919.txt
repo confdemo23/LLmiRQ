@@ -1,0 +1,4 @@
+CamelContext:0.2439
+RouteBuilder:0.2439
+RoutesBuilder:0.2683
+SpringCamelContext:0.3902

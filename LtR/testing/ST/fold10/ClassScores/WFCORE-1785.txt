@@ -1,0 +1,3 @@
+CapabilityRegistry:0.3947
+ConcreteResourceRegistration:0.6579
+ExtensionAddHandler:0.4211

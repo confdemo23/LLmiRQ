@@ -1,0 +1,10 @@
+ClassOrInterfaceTypeDetails:0.0825
+DirectoryMonitoringRequest:0.0411
+JavaType:0.0349
+MetadataIdentificationUtils:0.2342
+MetadataLogger:0.2899
+MetadataNotificationListener:0.0422
+MetadataService:0.0478
+PhysicalTypeIdentifier:0.0597
+PhysicalTypeMetadata:0.0445
+ServiceInstaceManager:0.0369

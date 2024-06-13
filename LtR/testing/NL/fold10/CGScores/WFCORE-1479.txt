@@ -1,0 +1,6 @@
+AttachmentKey:0.0094
+DeploymentPhaseContext:0.0132
+DeploymentUnit:0.0915
+ModuleDependency:0.0689
+ModuleSpecification:0.0288
+ResourceRoot:0.0213

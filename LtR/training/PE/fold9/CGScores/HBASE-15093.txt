@@ -1,0 +1,4 @@
+CompatibilitySingletonFactory:0.0039
+EnvironmentEdgeManager:0.0017
+MetricsReplicationSourceFactory:0.0039
+MetricsReplicationSourceSource:0.1367

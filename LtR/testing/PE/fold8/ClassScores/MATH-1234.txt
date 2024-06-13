@@ -1,0 +1,3 @@
+EmpiricalDistribution:0.3600
+NormalDistribution:0.3000
+SummaryStatistics:0.2800

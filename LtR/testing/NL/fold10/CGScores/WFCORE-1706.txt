@@ -1,0 +1,10 @@
+AttachedDependency:0.1115
+AttributeDefinition:0.2180
+ContentRepository:0.1103
+DeploymentUnit:0.4630
+OperationContext:0.1178
+PathAddress:0.1266
+Phase:0.1009
+ScannerTask:0.1328
+SimpleAttributeDefinition:0.3534
+Util:0.1328

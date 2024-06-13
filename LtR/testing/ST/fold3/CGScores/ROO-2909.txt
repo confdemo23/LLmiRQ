@@ -1,0 +1,10 @@
+ClassOrInterfaceTypeDetails:0.1610
+Database:0.1058
+Dependency:0.1889
+DomUtils:0.1607
+FileManager:0.3355
+JavaType:0.1002
+Plugin:0.1677
+Pom:0.6290
+Table:0.1542
+XmlUtils:0.6575

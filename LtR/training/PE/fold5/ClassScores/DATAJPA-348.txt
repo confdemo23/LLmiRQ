@@ -1,0 +1,1 @@
+JpaMetamodelEntityInformation:0.5778

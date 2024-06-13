@@ -1,0 +1,1 @@
+XsdSchemaHandlerAdapter:0.4222

@@ -1,0 +1,5 @@
+BeanComponent:0.2727
+BeanEndpoint:0.2424
+BeanHolder:0.1818
+BeanInfo:0.1212
+BeanProcessor:0.2727

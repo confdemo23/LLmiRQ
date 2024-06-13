@@ -1,0 +1,10 @@
+Encoder:0.0355
+Lang:0.0120
+LanguageSet:0.0240
+Phoneme:0.0541
+PhonemeBuilder:0.0470
+PhoneticEngine:0.1421
+Rule:0.0400
+RulesApplication:0.0470
+StringEncoder:0.0480
+StringEncoderAbstractTest:0.0981

@@ -1,0 +1,3 @@
+FaultTolerantStepFactoryBean:0.5556
+FaultTolerantStepFactoryBeanRollbackTests:0.8444
+MapJobRepositoryFactoryBean:0.5333

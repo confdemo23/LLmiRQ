@@ -1,0 +1,7 @@
+BitwiseOperator:0.0001
+Modifier:0.0001
+Modifiers:0.0017
+Position:0.0001
+PushOperatorBuilder:0.0001
+SerializationUtils:0.0001
+Update:0.0029

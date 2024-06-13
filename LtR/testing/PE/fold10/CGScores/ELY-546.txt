@@ -1,0 +1,10 @@
+AnonymousPrincipal:0.0018
+Builder:0.0042
+ElytronPermission:0.0042
+NameRewriter:0.0065
+PermissionVerifier:0.0018
+RealmBuilder:0.0042
+RealmInfo:0.0136
+RoleMapper:0.0042
+SecurityIdentity:0.0136
+SupportLevel:0.0042

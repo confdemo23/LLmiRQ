@@ -1,0 +1,3 @@
+HintCommands:0.2439
+JLineShellComponent:0.4146
+Shell:0.0732

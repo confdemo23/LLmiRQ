@@ -1,0 +1,3 @@
+ManagedDatagramSocketBinding:0.5208
+ManagedSocketFactory:0.3542
+SocketBindingManagerImpl:0.4375

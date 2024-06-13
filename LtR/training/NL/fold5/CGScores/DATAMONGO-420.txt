@@ -1,0 +1,10 @@
+DocumentAccessor:0.1031
+Field:0.0721
+Keyword:0.0641
+MapReduceOptions:0.0891
+Meta:0.1797
+MongoConverter:0.0581
+MongoPersistentEntity:0.1912
+MongoPersistentProperty:0.2137
+Query:0.3488
+QueryMapper:0.1086

@@ -1,0 +1,3 @@
+DateTieredCompactionPolicy:0.6053
+HRegionServer:0.2632
+HStore:0.0789

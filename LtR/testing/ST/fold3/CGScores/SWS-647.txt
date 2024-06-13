@@ -1,0 +1,3 @@
+SaxUtils:0.0135
+WebServiceMessage:0.0146
+XmlValidatorFactory:0.0062

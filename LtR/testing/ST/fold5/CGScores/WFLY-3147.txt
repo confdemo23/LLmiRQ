@@ -1,0 +1,3 @@
+DeploymentTypeMarker:0.0211
+PropertyReplacingBeansXmlParser:0.0091
+WeldDeploymentMarker:0.0091

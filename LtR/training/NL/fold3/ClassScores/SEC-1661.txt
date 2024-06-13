@@ -1,0 +1,3 @@
+DefaultSpringSecurityContextSource:0.7561
+FilterBasedLdapUserSearch:0.5366
+LdapUtils:0.1463

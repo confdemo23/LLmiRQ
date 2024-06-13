@@ -1,0 +1,4 @@
+CompositeConfiguration:0.5000
+ConfigurationException:0.5000
+FileLocatorUtils:0.3421
+HomeDirectoryLocationStrategy:0.6842

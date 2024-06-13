@@ -1,0 +1,3 @@
+CamelContext:0.1800
+Main:0.0200
+MainSupport:0.1600

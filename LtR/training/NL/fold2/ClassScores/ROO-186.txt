@@ -1,0 +1,6 @@
+CommandMarker:0.2683
+FinderCommands:0.2927
+HintOperationsImpl:0.3902
+JavaType:0.1463
+MethodTarget:0.2439
+SimpleParser:0.2439

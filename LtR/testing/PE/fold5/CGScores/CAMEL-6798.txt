@@ -1,0 +1,7 @@
+CamelContext:0.0069
+ClassResolver:0.0008
+ExecutorServiceManager:0.0020
+JpaEndpoint:0.0033
+ObjectHelper:0.0008
+Registry:0.0033
+UriEndpointComponent:0.0020

@@ -1,0 +1,10 @@
+CustomData:0.0501
+FieldMetadata:0.2896
+JavaSymbolName:0.2299
+JavaType:0.2319
+JspMetadata:0.0470
+MetadataDependencyRegistryTracker:0.0459
+MetadataIdentificationUtils:0.0645
+MetadataLogger:0.1599
+XmlElementBuilder:0.3811
+XmlUtils:0.0994

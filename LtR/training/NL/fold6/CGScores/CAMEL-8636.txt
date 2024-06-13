@@ -1,0 +1,10 @@
+CamelContext:0.0200
+ClassResolver:0.0143
+ExceptionHandler:0.0143
+ExecutorServiceManager:0.0143
+KafkaConfiguration:0.1385
+KafkaEndpoint:0.1385
+KeyManagersParameters:0.0208
+KeyStoreParameters:0.0443
+Message:0.0313
+SSLContextParameters:0.0443

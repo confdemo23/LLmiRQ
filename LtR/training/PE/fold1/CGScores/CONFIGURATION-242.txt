@@ -1,0 +1,10 @@
+AbstractConfiguration:0.1179
+Builder:0.0407
+Configuration:0.1606
+ConfigurationInterpolator:0.1758
+ConversionHandler:0.0300
+DefaultLookups:0.0361
+InterpolatorSpecification:0.0615
+ListDelimiterHandler:0.0193
+Lookup:0.0234
+Synchronizer:0.0407

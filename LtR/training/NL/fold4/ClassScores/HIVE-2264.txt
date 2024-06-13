@@ -1,0 +1,10 @@
+DDLTask:0.0930
+Driver:0.0698
+HiveConf:0.1163
+HiveMetaStoreClient:0.3721
+HiveServer2:0.1860
+OperationManager:0.3023
+ParseDriver:0.1860
+QueryState:0.1628
+SemanticAnalyzer:0.3023
+SessionState:0.2093

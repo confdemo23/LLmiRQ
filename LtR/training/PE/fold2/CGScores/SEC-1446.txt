@@ -1,0 +1,8 @@
+Authentication:0.0096
+AuthenticationEntryPoint:0.0045
+AuthenticationManager:0.0045
+Base64:0.0045
+RememberMeServices:0.0096
+SecurityContext:0.0096
+SecurityContextHolder:0.0148
+UsernamePasswordAuthenticationToken:0.0045

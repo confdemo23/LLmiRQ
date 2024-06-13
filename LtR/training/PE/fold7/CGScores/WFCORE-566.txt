@@ -1,0 +1,6 @@
+AttributeDefinition:0.1006
+AttributeMarshaller:0.0105
+AttributeParser:0.0028
+DefaultAttributeMarshaller:0.0095
+ObjectListAttributeDefinition:0.0028
+ObjectTypeAttributeDefinition:0.0143

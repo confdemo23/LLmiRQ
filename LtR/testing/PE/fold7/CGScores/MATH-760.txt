@@ -1,0 +1,9 @@
+DescriptiveStatistics:0.0044
+FastMath:0.0175
+ListUnivariateImpl:0.0044
+MathIllegalArgumentException:0.0044
+MathUtils:0.0119
+NumberTransformer:0.0044
+Percentile:0.0053
+ResizableDoubleArray:0.0909
+UnivariateStatistic:0.0899

@@ -1,0 +1,10 @@
+CancelNonProgressingOperationHandler:0.4711
+Cancellable:0.2774
+ConfigurationChangesTestCase:0.3148
+FindNonProgressingOpUnitTestCase:0.4101
+FindNonProgressingOperationHandler:0.3609
+LegacyConfigurationChangesTestCase:0.3217
+ManagementControllerResourceDefinition:0.3762
+OperationCancellationTestCase:0.3556
+OperationMessageHandler:0.2939
+ProcessTypeHandler:0.2695

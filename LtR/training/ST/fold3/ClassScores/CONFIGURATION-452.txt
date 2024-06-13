@@ -1,0 +1,3 @@
+HierarchicalConfiguration:0.5238
+XMLConfiguration:0.3095
+XPathExpressionEngine:0.4286

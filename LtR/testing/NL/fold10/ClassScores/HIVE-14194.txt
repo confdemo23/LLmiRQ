@@ -1,0 +1,6 @@
+BaseSemanticAnalyzer:0.4595
+ExprNodeDesc:0.2432
+ExprNodeGenericFuncDesc:0.5405
+HiveConf:0.1351
+QueryPlan:0.1622
+SemanticAnalyzer:0.3514

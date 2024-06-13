@@ -1,0 +1,10 @@
+BeanRowMapper:0.0024
+CamelContext:0.0059
+CamelContextHelper:0.0027
+DefaultProducer:0.0024
+Exchange:0.0801
+IntrospectionSupport:0.0097
+JdbcEndpoint:0.0666
+JdbcPrepareStatementStrategy:0.0094
+Message:0.0766
+ResultSetIterator:0.0342

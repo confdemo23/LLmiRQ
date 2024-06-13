@@ -1,0 +1,10 @@
+ASTBuilder:0.0290
+BoundarySpec:0.0186
+CTEClause:0.0063
+HiveConf:0.0126
+HiveLexerX:0.0090
+PTFTranslator:0.0096
+SemanticAnalyzer:0.0175
+SortBucketRSCtx:0.0105
+WindowFunctionSpec:0.0073
+WindowSpec:0.0265

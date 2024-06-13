@@ -1,0 +1,10 @@
+Client:0.0170
+ConfVars:0.0340
+HiveConf:0.0741
+HiveDriver:0.0180
+LogHelper:0.0400
+ResourceMaps:0.0521
+ResourceType:0.0220
+SessionState:0.2202
+ShimLoader:0.0135
+Utils:0.0270

@@ -1,0 +1,10 @@
+Admin:0.0040
+Connection:0.0040
+HBaseConfiguration:0.0087
+HMaster:0.0352
+LocalHBaseCluster:0.0248
+MasterThread:0.0092
+MiniZooKeeperCluster:0.0196
+UserProvider:0.0136
+ZKUtil:0.0040
+ZNodeClearer:0.0040

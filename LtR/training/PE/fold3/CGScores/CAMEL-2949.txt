@@ -1,0 +1,10 @@
+CamelContext:0.0026
+Exchange:0.0147
+HeaderFilterStrategy:0.0035
+HttpCommonEndpoint:0.0044
+HttpHelper:0.0072
+HttpMessage:0.0175
+IOHelper:0.0044
+Message:0.0165
+ObjectHelper:0.0026
+TypeConverter:0.0026

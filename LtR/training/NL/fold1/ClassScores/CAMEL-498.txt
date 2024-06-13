@@ -1,0 +1,9 @@
+FileChangedExclusiveReadLockStrategy:0.8919
+FileConsumer:0.2432
+FileEndpoint:0.2432
+GenericFileConsumer:0.4324
+GenericFileEndpoint:0.4324
+GenericFileExclusiveReadLockStrategy:0.8919
+GenericFileOperations:0.4865
+GenericFileProcessStrategy:0.6216
+GenericFileProducer:0.4324

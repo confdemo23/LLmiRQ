@@ -1,0 +1,2 @@
+AbstractConfigurationPersister:0.5625
+TestParser:0.1458

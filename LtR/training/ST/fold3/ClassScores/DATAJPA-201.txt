@@ -1,0 +1,2 @@
+AbstractJpaQuery:0.3095
+JpaQueryExecution:0.3333

@@ -1,0 +1,10 @@
+HadoopShims:0.0031
+HdfsEncryptionShim:0.0007
+LlapItUtils:0.0003
+MiniClusterType:0.0031
+MiniDFSShim:0.0012
+MiniMrShim:0.0007
+QTestSetup:0.0017
+QTestUtil:0.0068
+ShimLoader:0.0007
+SuiteAddTestFunctor:0.0003

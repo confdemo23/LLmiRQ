@@ -1,0 +1,3 @@
+MavenOperations:0.3171
+PomManagementService:0.4390
+XmlUtils:0.1463

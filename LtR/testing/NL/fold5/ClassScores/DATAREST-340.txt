@@ -1,0 +1,7 @@
+AbstractRepositoryRestController:0.6744
+Jackson2DatatypeHelper:0.4419
+PersistentEntityResourceAssembler:0.6977
+PropertyAwareResourceMapping:0.5814
+RepositoryEntityController:0.5349
+RepositoryRestMvcConfiguration:0.6279
+ResourceMappings:0.3023

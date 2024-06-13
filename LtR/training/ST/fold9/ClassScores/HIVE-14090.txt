@@ -1,0 +1,6 @@
+HadoopThriftAuthBridge:0.5000
+HiveMetaStore:0.2632
+ObjectStore:0.2105
+RawStoreProxy:0.2632
+RetryingHMSHandler:0.3947
+ThriftHiveMetastore:0.4211

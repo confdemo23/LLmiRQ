@@ -1,0 +1,7 @@
+CombinatoricsUtils:0.0107
+ExponentialDistribution:0.0166
+FastMath:0.0999
+Gamma:0.0047
+NormalDistribution:0.0047
+RandomGenerator:0.0166
+SaddlePointExpansion:0.0107

@@ -1,0 +1,9 @@
+CamelContext:0.2432
+DefaultErrorHandler:0.4324
+ErrorHandlerBuilder:0.4324
+Exchange:0.1351
+OnExceptionDefinition:0.4865
+Pipeline:0.1351
+Processor:0.1622
+ProcessorDefinition:0.4324
+RouteBuilder:0.2432

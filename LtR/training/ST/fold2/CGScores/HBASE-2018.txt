@@ -1,0 +1,10 @@
+Builder:0.0873
+Bytes:0.1373
+HRegion:0.3268
+HRegionServer:0.1171
+HStore:0.1368
+MonitoredTask:0.1112
+Mutation:0.0757
+RegionInfo:0.2812
+RegionServerAccounting:0.0827
+ScannerContext:0.0875

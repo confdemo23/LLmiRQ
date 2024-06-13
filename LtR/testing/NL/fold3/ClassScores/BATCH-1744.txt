@@ -1,0 +1,9 @@
+AbstractStep:0.2439
+BatchConfigurer:0.3171
+FaultTolerantStepBuilder:0.5366
+JobBuilderFactory:0.3659
+JobRepository:0.2683
+SimpleStepBuilder:0.3659
+SkipPolicy:0.1951
+Step:0.0488
+StepBuilder:0.2195

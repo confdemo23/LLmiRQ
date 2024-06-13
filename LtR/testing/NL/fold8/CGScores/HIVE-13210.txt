@@ -1,0 +1,10 @@
+Batchable:0.0200
+ConfVars:0.0200
+HMSHandler:0.0409
+HiveConf:0.0436
+HiveDelegationTokenManager:0.0180
+HiveMetastoreCli:0.0180
+ObjectStore:0.1446
+QueryWrapper:0.0701
+Server:0.0180
+Utils:0.0162

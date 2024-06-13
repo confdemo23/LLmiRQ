@@ -1,0 +1,2 @@
+ExecReducer:0.1591
+GroupByOperator:0.2500

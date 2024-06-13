@@ -1,0 +1,10 @@
+AmbiguousMethodCallException:0.0117
+BeanInfo:0.0303
+CamelContext:0.0087
+Exchange:0.0119
+ExpressionBuilder:0.0249
+IntrospectionSupport:0.0055
+Message:0.0055
+MethodInfo:0.0475
+MethodInvocation:0.0160
+ObjectHelper:0.0346

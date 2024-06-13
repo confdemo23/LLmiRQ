@@ -1,0 +1,10 @@
+CompositeCompletionPolicy:0.0025
+ItemStream:0.0111
+ItemWriter:0.0033
+JsrBatchletStepBuilder:0.0055
+JsrFaultTolerantStepBuilder:0.0025
+JsrPartitionStepBuilder:0.0117
+JsrSimpleStepBuilder:0.0055
+SimpleStepBuilder:0.0117
+Step:0.0025
+StepParserStepFactoryBean:0.0332

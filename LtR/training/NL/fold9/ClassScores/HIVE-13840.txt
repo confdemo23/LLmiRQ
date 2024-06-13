@@ -1,0 +1,3 @@
+OrcFile:0.1081
+OrcInputFormat:0.2973
+OrcSplit:0.1351

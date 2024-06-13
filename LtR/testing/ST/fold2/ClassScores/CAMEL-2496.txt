@@ -1,0 +1,10 @@
+DeadLetterChannel:0.2955
+FileInputStreamCache:0.3636
+InstrumentationProcessor:0.4545
+MessageHelper:0.2045
+MulticastProcessor:0.3182
+SedaConsumer:0.1818
+Splitter:0.0909
+StreamCacheConverter:0.3636
+StreamCachingInterceptor:0.4545
+XPathBuilder:0.1818

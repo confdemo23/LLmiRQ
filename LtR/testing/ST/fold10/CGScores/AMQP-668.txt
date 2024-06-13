@@ -1,0 +1,10 @@
+BrokerRunning:0.0056
+BrokerTestUtils:0.0087
+CachingConnectionFactory:0.0269
+MessageListenerContainerLifecycleIntegrationTests:0.0056
+PojoListener:0.0148
+Queue:0.0269
+RabbitTemplate:0.0391
+SimpleMessageListenerContainer:0.1181
+TestUtils:0.0117
+TransactionMode:0.0178

@@ -1,0 +1,9 @@
+CamelContext:0.2432
+DataFormat:0.1892
+DefaultCamelContext:0.4324
+DirectEndpoint:0.2973
+FileEndpoint:0.2432
+LogEndpoint:0.2162
+Main:0.0270
+ProcessorDefinition:0.4324
+RouteBuilder:0.2432

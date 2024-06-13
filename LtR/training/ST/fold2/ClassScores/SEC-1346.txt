@@ -1,0 +1,10 @@
+AbstractAuthenticationProcessingFilter:0.6939
+AnonymousAuthenticationFilter:0.5102
+ExceptionTranslationFilter:0.4490
+FilterChainProxy:0.2449
+HttpSessionRequestCache:0.3878
+LogoutFilter:0.1633
+RequestCacheAwareFilter:0.3878
+SecurityContextHolderAwareRequestFilter:0.7143
+SecurityContextPersistenceFilter:0.5714
+SessionManagementFilter:0.3878

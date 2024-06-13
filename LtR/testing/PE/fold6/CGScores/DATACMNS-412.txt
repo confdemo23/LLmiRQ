@@ -1,0 +1,10 @@
+Pair:0.0205
+QueryCollectingQueryCreationListener:0.0096
+QueryCreationListener:0.0205
+QueryExecutionResultHandler:0.0096
+ReactiveWrapperConverters:0.0205
+RepositoryInformation:0.0970
+RepositoryMetadata:0.0205
+RepositoryQuery:0.0314
+SpelAwareProxyProjectionFactory:0.0205
+Streamable:0.0191

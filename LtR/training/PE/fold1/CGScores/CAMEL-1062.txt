@@ -1,0 +1,4 @@
+Exchange:0.0203
+Message:0.0203
+MockEndpoint:0.0315
+RouteDefinition:0.0203

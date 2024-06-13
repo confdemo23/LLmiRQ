@@ -1,0 +1,10 @@
+BatchStatus:0.1032
+ExecutionContextDao:0.1545
+ExitStatus:0.0927
+JobExecution:0.9642
+JobExecutionDao:0.1784
+JobExplorerFactoryBean:0.0604
+JobInstanceDao:0.1355
+StepExecution:0.5400
+StepExecutionDao:0.1011
+StepExecutionRequest:0.0962

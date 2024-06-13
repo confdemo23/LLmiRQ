@@ -1,0 +1,2 @@
+Exchange:0.1000
+ZipFileDataFormat:0.2800

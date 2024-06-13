@@ -1,0 +1,1 @@
+HdfsFileStatusWithId:0.0001

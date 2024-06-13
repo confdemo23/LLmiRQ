@@ -1,0 +1,10 @@
+CreateTableDesc:0.0624
+HMSHandler:0.0452
+HdfsUtils:0.0056
+Hive:0.0189
+HiveDelegationTokenManager:0.0193
+HiveMetaStore:0.0106
+HiveMetastoreCli:0.0193
+Partition:0.1651
+Server:0.0193
+StorageDescriptorKey:0.0063

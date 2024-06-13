@@ -1,0 +1,1 @@
+HibernateQueryProvider:0.0361

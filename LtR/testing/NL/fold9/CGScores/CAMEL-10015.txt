@@ -1,0 +1,4 @@
+AbstractApiComponent:0.0025
+BraintreeConfiguration:0.0072
+BraintreePropertiesHelper:0.0009
+ObjectHelper:0.0185

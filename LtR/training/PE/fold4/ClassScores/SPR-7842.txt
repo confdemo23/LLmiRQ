@@ -1,0 +1,4 @@
+BeanWrapperImpl:0.2444
+DataBinder:0.1333
+ServletRequestDataBinder:0.4444
+WebRequestDataBinder:0.3556

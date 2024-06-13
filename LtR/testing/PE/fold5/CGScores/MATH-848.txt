@@ -1,0 +1,10 @@
+AnyMatrix:0.0264
+ArrayRealVector:0.0106
+Complex:0.0161
+DecompositionSolver:0.0097
+FastMath:0.1220
+FieldMatrix:0.0052
+MatrixUtils:0.0138
+Precision:0.0250
+RealMatrix:0.1068
+RealVector:0.0189

@@ -1,0 +1,3 @@
+SnmpComponent:0.2683
+SnmpEndpoint:0.2439
+SnmpTrapConsumer:0.3415

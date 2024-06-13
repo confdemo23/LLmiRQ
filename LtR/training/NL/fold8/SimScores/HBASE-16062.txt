@@ -1,0 +1,10 @@
+AbstractTestProtobufLog:0.2090
+TestMiniClusterLoadParallel:0.2126
+TestProtobufLog:0.1769
+TestRpcClientLeaks:0.2630
+TestScanEarlyTermination:0.3404
+TestSecureAsyncWALReplay:0.2265
+TestSecureWAL:0.1917
+TestSecureWALReplay:0.2428
+TestWALReplayBoundedLogWriterCreation:0.4366
+TestWALSplitBoundedLogWriterCreation:0.3818

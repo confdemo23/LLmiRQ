@@ -1,0 +1,6 @@
+BeanComponent:0.2683
+BeanEndpoint:0.2439
+BeanInfo:0.1463
+BeanProcessor:0.2683
+MethodInvocation:0.3415
+MethodNotFoundException:0.5122

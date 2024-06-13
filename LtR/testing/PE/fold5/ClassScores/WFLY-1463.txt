@@ -1,0 +1,3 @@
+BeanManager:0.1556
+PersistenceBeginInstallProcessor:0.6222
+PersistenceUnitServiceHandler:0.5556

@@ -1,0 +1,10 @@
+Builder:0.0709
+FileLocator:0.0124
+ImmutableNode:0.0259
+InMemoryNodeModel:0.0079
+ListDelimiterHandler:0.0124
+NodeHandler:0.0448
+QueryResult:0.0166
+ReferenceNodeHandler:0.0349
+XMLDocumentHelper:0.0664
+XMLListReference:0.0304

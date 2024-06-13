@@ -1,0 +1,10 @@
+ASTNode:0.0786
+AggregationExprCheck:0.0140
+CTEClause:0.0380
+ConstantExprCheck:0.0140
+CreateTableDesc:0.0956
+HdfsEncryptionShim:0.0140
+Partition:0.2503
+SemanticAnalyzer:0.1021
+SortBucketRSCtx:0.0621
+Table:0.2357

@@ -1,0 +1,3 @@
+BasicMongoPersistentEntity:0.5349
+MappingMongoConverter:0.4186
+MongoMappingContext:0.3721

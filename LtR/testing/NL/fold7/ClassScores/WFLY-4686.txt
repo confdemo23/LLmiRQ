@@ -1,0 +1,3 @@
+ActiveMQServerResource:0.5128
+JMSQueueService:0.3333
+MessagingSubsystemRootResourceDefinition:0.9744

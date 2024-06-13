@@ -1,0 +1,2 @@
+MyRepository:0.1875
+RepositoryFactorySupport:0.4375

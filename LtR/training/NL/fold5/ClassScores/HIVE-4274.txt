@@ -1,0 +1,5 @@
+HCatClient:0.1818
+HCatCreateTableDesc:0.4545
+HCatTable:0.1515
+HiveMetaStoreClient:0.4545
+Table:0.0303

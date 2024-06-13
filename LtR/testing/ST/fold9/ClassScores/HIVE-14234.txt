@@ -1,0 +1,2 @@
+TestHiveMetaStorePartitionSpecs:0.4516
+TestObjectStore:0.1935

@@ -1,0 +1,3 @@
+KafkaEndpoint:0.2000
+KafkaProducer:0.2000
+Predicate:0.1200

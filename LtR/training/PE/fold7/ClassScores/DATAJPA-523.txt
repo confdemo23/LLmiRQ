@@ -1,0 +1,2 @@
+JpaSpecificationExecutor:0.4200
+Specifications:0.2200

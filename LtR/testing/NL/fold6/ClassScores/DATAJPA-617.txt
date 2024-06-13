@@ -1,0 +1,3 @@
+JpaRepository:0.2727
+NamedQuery:0.1818
+Query:0.0303

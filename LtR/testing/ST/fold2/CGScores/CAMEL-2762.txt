@@ -1,0 +1,10 @@
+CamelLogProcessor:0.0192
+DelegateAsyncProcessor:0.0398
+Exchange:0.1331
+Message:0.0189
+MessageHelper:0.0256
+ProcessorDefinitionHelper:0.0311
+RouteNode:0.0564
+TracedRouteNodes:0.1472
+Tracer:0.0757
+UnitOfWork:0.0157

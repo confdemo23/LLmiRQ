@@ -1,0 +1,1 @@
+DefaultPackageScanClassResolver:0.0012

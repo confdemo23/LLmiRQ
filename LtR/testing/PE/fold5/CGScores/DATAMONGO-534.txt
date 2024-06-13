@@ -1,0 +1,8 @@
+AntPath:0.0024
+Criteria:0.0069
+CriteriaDefinition:0.0016
+Field:0.0001
+GeoCommand:0.0004
+GridFsTemplate:0.0010
+Meta:0.0042
+Query:0.0053

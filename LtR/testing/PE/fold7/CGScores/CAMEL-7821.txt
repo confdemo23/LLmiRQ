@@ -1,0 +1,10 @@
+AbstractCamelContextFactoryBean:0.0132
+AugmentedPropertyNameAwarePropertiesParser:0.0097
+BridgePropertyPlaceholderConfigurer:0.0204
+CamelContextHelper:0.0060
+PropertiesComponent:0.0492
+PropertiesLocation:0.0207
+PropertiesParser:0.0865
+PropertiesResolver:0.0097
+RouteBuilder:0.0060
+SpringCamelContext:0.0204

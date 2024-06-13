@@ -1,0 +1,4 @@
+AffirmativeBased:0.2889
+AuthenticatedVoter:0.3333
+DefaultWebInvocationPrivilegeEvaluator:0.7778
+RoleVoter:0.1333

@@ -1,0 +1,10 @@
+AggregationExprCheck:0.0099
+CTEClause:0.0264
+ConstantExprCheck:0.0099
+FSPaths:0.0429
+FileSinkOperator:0.0209
+HdfsEncryptionShim:0.0099
+RecordWriter:0.0209
+SemanticAnalyzer:0.0703
+SortBucketRSCtx:0.0429
+StoragePolicyValue:0.0045

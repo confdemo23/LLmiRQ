@@ -1,0 +1,6 @@
+BasicQuery:0.0052
+ConvertingParameterAccessor:0.0052
+ExpressionEvaluatingParameterBinder:0.0135
+MongoQueryMethod:0.0302
+ParameterBindingParser:0.0135
+Query:0.0385

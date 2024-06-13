@@ -1,0 +1,5 @@
+BasicMongoPersistentEntity:0.0042
+DBRef:0.0042
+Document:0.0095
+MongoCollectionUtils:0.0042
+MongoPersistentProperty:0.1146

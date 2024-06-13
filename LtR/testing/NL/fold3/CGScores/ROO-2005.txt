@@ -1,0 +1,10 @@
+ApplicationConfigService:0.1671
+ClassOrInterfaceTypeDetails:0.1342
+FieldCreatorProvider:0.3042
+FieldMetadata:0.2109
+InvocableMemberBodyBuilder:0.2743
+JavaSymbolName:0.1375
+JavaType:0.2484
+JdbcDatabase:0.1219
+JpaEntityAnnotationValues:0.1332
+ProjectOperations:0.1378

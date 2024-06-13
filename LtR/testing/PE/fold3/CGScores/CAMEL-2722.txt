@@ -1,0 +1,10 @@
+CamelContext:0.0369
+CamelContextHelper:0.0301
+InputTypeDefinition:0.0240
+ManagedProcessorMBean:0.0240
+ModelCamelContext:0.0762
+OutputTypeDefinition:0.0240
+Route:0.0387
+RouteContext:0.0639
+RouteDefinition:0.0356
+ServiceStatus:0.0252

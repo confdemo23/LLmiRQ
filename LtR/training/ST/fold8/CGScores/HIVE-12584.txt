@@ -1,0 +1,6 @@
+DirectKeyValueWriter:0.0063
+HashPartition:0.0458
+HybridHashTableContainer:0.0137
+KeyValueHelper:0.0063
+MapJoinOperator:0.0478
+ReusableRowContainer:0.1226

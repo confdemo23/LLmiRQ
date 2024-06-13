@@ -1,0 +1,5 @@
+Builder:1.0000
+Node:0.1146
+OperationRequestAddress:0.0625
+PathAddress:0.0022
+PathElement:0.1024

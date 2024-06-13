@@ -1,0 +1,5 @@
+JavaMailSender:0.2927
+MailConfiguration:0.3659
+MailConsumer:0.2439
+MailEndpoint:0.2439
+MailProducer:0.2439

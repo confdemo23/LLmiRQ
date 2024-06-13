@@ -1,0 +1,7 @@
+BatchStatus:0.0045
+Entity:0.0098
+ExitStatus:0.0074
+JobExecution:0.0467
+JobInstance:0.0018
+StepContribution:0.0180
+StepExecution:0.0123

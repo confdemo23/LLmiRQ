@@ -1,0 +1,6 @@
+ExpressionUtils:0.0077
+SecurityContext:0.0259
+SecurityContextHolder:0.0259
+SecurityExpressionHandler:0.0259
+SecurityWebApplicationContextUtils:0.0168
+WebInvocationPrivilegeEvaluator:0.0077

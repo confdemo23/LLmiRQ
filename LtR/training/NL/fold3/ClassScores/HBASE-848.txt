@@ -1,0 +1,8 @@
+Cell:0.0244
+Delete:0.0732
+Get:0.0000
+HTable:0.0732
+KeyValue:0.1220
+Result:0.0732
+Scan:0.0244
+TimeRange:0.1463

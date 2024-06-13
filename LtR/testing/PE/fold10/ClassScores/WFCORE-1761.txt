@@ -1,0 +1,1 @@
+NativeManagementResourceDefinition:0.7209

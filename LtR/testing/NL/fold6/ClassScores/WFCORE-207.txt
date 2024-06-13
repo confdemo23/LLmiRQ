@@ -1,0 +1,10 @@
+AbstractAddStepHandler:0.5455
+AbstractRemoveStepHandler:0.6364
+AbstractWriteAttributeHandler:0.7576
+AttributeDefinition:0.4545
+ManagementResourceRegistration:0.7879
+ModelController:0.3333
+OperationDefinition:0.4545
+OperationStepHandler:0.4848
+ResourceDefinition:0.4242
+UndefineAttributeHandler:0.6061

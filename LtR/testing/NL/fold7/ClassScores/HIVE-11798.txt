@@ -1,0 +1,4 @@
+BeeLine:0.1282
+BeeLineOpts:0.2308
+HiveCommand:0.2308
+HiveDatabaseMetaData:0.4615

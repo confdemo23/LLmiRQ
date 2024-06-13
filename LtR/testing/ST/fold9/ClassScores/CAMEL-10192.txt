@@ -1,0 +1,6 @@
+CamelContextHelper:0.2419
+DefaultCamelContext:0.2581
+DefaultRouteContext:0.2581
+ProcessorDefinition:0.2581
+RouteDefinition:0.1935
+SendDefinition:0.1774

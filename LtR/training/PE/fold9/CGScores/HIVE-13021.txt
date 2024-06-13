@@ -1,0 +1,2 @@
+AggregationBuffer:0.0028
+AggregationType:0.0028

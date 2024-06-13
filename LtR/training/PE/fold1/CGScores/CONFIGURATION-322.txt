@@ -1,0 +1,5 @@
+AbstractConfiguration:0.0061
+Configuration:0.1687
+ConfigurationUtils:0.0061
+ListDelimiterHandler:0.0061
+MapConfiguration:0.0061

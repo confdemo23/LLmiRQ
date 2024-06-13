@@ -1,0 +1,1 @@
+LazyHBaseRow:0.2000

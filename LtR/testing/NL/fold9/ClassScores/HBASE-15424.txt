@@ -1,0 +1,6 @@
+HFile:0.0938
+HFileArchiver:0.3438
+HRegion:0.1563
+HRegionServer:0.3438
+Replication:0.2813
+WAL:0.0313

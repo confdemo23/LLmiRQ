@@ -1,0 +1,10 @@
+ASTNode:0.0488
+CTEClause:0.0233
+ColumnInfo:0.0643
+ConstantExprCheck:0.0082
+HdfsEncryptionShim:0.0082
+RowResolver:0.0154
+SemanticAnalyzer:0.0636
+SortBucketRSCtx:0.0384
+TableScanOperator:0.0195
+TypeCheckProcFactory:0.1115

@@ -1,0 +1,6 @@
+FtpComponent:0.2432
+FtpEndpoint:0.2162
+FtpOperations:0.2703
+GenericFileEndpoint:0.4324
+GenericFileProducer:0.4324
+RemoteFileConfiguration:0.5405

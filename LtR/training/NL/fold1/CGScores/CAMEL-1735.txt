@@ -1,0 +1,10 @@
+CastUtils:0.0164
+FallbackConverter:0.0164
+FallbackTypeConverter:0.0375
+IOHelper:0.0164
+LRUSoftCache:0.0454
+ObjectHelper:0.1068
+PackageScanClassResolver:0.0255
+Statistics:0.1241
+TypeConverter:0.0690
+TypeMapping:0.0690

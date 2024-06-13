@@ -1,0 +1,3 @@
+ConfigurationPersister:0.6250
+DomainController:0.4375
+DomainModelControllerService:0.8125

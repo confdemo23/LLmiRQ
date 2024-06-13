@@ -1,0 +1,2 @@
+InjectionTarget:0.2667
+WeldApplicationFactory:0.4222

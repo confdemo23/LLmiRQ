@@ -1,0 +1,4 @@
+EmbeddedCommands:0.2449
+EmbeddedOperationsImpl:0.3673
+VideoEmbeddedProvider:0.3469
+XmlUtils:0.0816

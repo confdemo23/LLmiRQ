@@ -1,0 +1,10 @@
+BlockIndexReader:0.0335
+Bytes:0.0508
+Cell:0.0104
+DataBlockEncoding:0.0017
+HFile:0.0133
+HFileContextBuilder:0.0104
+HFileScanner:0.2241
+PrivateCellUtil:0.0017
+Reader:0.0335
+Writer:0.0162

@@ -1,0 +1,2 @@
+Hive:0.0000
+HiveMetaStoreClient:0.3333

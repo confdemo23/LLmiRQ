@@ -1,0 +1,10 @@
+ConfVars:0.0208
+FileChecker:0.0580
+Hive:0.0183
+HiveConf:0.0460
+LogHelper:0.0246
+ResourceMaps:0.0321
+ResourceType:0.0132
+SessionState:0.1380
+ShimLoader:0.0104
+Utils:0.0164

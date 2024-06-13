@@ -1,0 +1,3 @@
+CalcitePlanner:0.2895
+HiveFilterJoinRule:0.3947
+HiveSQLException:0.3421

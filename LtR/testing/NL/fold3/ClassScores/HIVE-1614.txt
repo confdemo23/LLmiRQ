@@ -1,0 +1,8 @@
+GenericUDTFJSONTuple:0.4390
+HiveConf:0.1463
+HiveException:0.2683
+JsonParser:0.1951
+LazySimpleSerDe:0.3171
+ObjectInspector:0.3171
+PrimitiveObjectInspector:0.5366
+StructObjectInspector:0.4634

@@ -1,0 +1,6 @@
+Authentication:0.0113
+AuthenticationTrustResolver:0.0236
+AuthorityUtils:0.0051
+GrantedAuthority:0.0267
+PermissionEvaluator:0.0113
+RoleHierarchy:0.0051

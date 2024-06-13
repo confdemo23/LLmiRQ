@@ -1,0 +1,8 @@
+ExpressionBuilder:0.0023
+ObjectHelper:0.0070
+PredicateToExpressionAdapter:0.0023
+SimpleBackwardsCompatibleParser:0.0070
+SimpleExpressionParser:0.0023
+SimpleLanguage:0.0116
+SimplePredicateParser:0.0023
+SimpleTokenizer:0.0116

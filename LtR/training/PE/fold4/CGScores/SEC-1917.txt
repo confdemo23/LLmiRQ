@@ -1,0 +1,10 @@
+Authentication:0.0042
+AuthenticationConfigBuilder:0.0159
+AuthenticationException:0.0067
+AuthenticationProvider:0.0042
+HttpConfigurationBuilder:0.0256
+MatcherType:0.0028
+OrderDecorator:0.0061
+PortMappingsBeanDefinitionParser:0.0028
+SecurityFilters:0.0191
+WebConfigUtils:0.0028

@@ -1,0 +1,3 @@
+HadoopShims:0.2121
+HdfsUtils:0.1515
+HiveConf:0.1212

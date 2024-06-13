@@ -1,0 +1,10 @@
+ListOIDClosure:0.0021
+SingleOIDClosure:0.0047
+VectorExpressionWriterBytes:0.0199
+VectorExpressionWriterDecimal:0.0047
+VectorExpressionWriterDouble:0.0097
+VectorExpressionWriterFactory:0.0021
+VectorExpressionWriterIntervalDayTime:0.0047
+VectorExpressionWriterLong:0.0403
+VectorExpressionWriterSetter:0.0021
+VectorExpressionWriterTimestamp:0.0047

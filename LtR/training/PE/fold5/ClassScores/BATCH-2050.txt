@@ -1,0 +1,3 @@
+AbstractItemCountingItemStreamItemReader:0.8222
+FlatFileItemWriter:0.3333
+StepScope:0.1333

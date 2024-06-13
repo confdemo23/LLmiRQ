@@ -1,0 +1,10 @@
+BaseHierarchicalConfiguration:0.0495
+Builder:0.1250
+ConfigData:0.1432
+Configuration:0.1042
+ConfigurationInterpolator:0.0977
+ConfigurationLogger:0.0703
+ImmutableConfiguration:0.0443
+ListDelimiterHandler:0.0456
+PropertiesConfigurationLayout:0.0573
+Synchronizer:0.0495

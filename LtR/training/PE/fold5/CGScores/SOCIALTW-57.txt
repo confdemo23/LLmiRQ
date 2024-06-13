@@ -1,0 +1,1 @@
+ClientAuthorizedTwitterTemplate:0.0055

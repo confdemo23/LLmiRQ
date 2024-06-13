@@ -1,0 +1,10 @@
+AbstractMessageListenerContainer:0.0260
+AmqpIOException:0.0102
+AsyncMessageProcessingConsumer:0.0049
+BlockingQueueConsumer:0.0760
+ConsumerChannelRegistry:0.0049
+ListenerExecutionFailedException:0.0023
+Message:0.0068
+MessageProperties:0.0088
+RabbitUtils:0.0023
+SimpleMessageListenerContainer:0.0312

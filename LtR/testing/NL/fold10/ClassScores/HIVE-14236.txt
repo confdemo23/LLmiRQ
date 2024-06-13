@@ -1,0 +1,7 @@
+ColumnStatsTask:0.3243
+HiveConf:0.1351
+Optimizer:0.1622
+ParseContext:0.2432
+StatsWork:0.1622
+TableScanOperator:0.3784
+TezTask:0.1081

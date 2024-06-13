@@ -1,0 +1,6 @@
+CamelContext:0.2195
+Consumer:0.1220
+DefaultEndpoint:0.2927
+EndpointConfiguration:0.4390
+RefComponent:0.2195
+RouteBuilder:0.2195

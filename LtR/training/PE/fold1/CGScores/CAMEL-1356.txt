@@ -1,0 +1,9 @@
+AsyncCallback:0.0102
+AsyncProcessor:0.0041
+AsyncProcessorConverterHelper:0.0102
+AsyncProcessorHelper:0.0041
+CamelContext:0.0041
+Exchange:0.0955
+ExchangeHelper:0.0224
+ServiceHelper:0.0102
+TypeConverter:0.0041

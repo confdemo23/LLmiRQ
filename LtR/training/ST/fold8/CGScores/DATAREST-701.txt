@@ -1,0 +1,10 @@
+Associations:0.0097
+BackendIdHandlerMethodArgumentResolver:0.0154
+Builder:0.0331
+DomainObjectReader:0.0084
+IncomingRequest:0.0722
+JsonPatchHandler:0.0331
+MappedProperties:0.0337
+PersistentEntityResource:0.0154
+RootResourceInformation:0.0862
+RootResourceInformationHandlerMethodArgumentResolver:0.0154

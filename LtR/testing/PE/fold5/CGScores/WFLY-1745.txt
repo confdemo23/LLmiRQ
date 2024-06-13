@@ -1,0 +1,5 @@
+BeanDeploymentArchiveImpl:0.0016
+ModuleGroupSingletonProvider:0.0053
+WeldBootstrapService:0.0110
+WeldDeployment:0.0191
+WeldProvider:0.0053

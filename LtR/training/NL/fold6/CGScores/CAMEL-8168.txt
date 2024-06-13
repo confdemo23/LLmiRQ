@@ -1,0 +1,10 @@
+CamelContext:0.0078
+CamelLogger:0.0026
+DefaultConsumer:0.0130
+Exchange:0.0547
+Message:0.0286
+MinaConfiguration:0.0599
+MinaEndpoint:0.0807
+MinaPayloadHelper:0.0130
+ObjectHelper:0.0391
+Processor:0.0026

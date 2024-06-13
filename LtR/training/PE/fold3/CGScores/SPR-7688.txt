@@ -1,0 +1,5 @@
+InjectedElement:0.0024
+MutablePropertyValues:0.0016
+PropertyValues:0.0007
+ReflectionUtils:0.0016
+RootBeanDefinition:0.0016

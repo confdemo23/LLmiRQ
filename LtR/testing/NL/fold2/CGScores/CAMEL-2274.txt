@@ -1,0 +1,10 @@
+BeanInject:0.0346
+CamelContextAware:0.0164
+CamelPostProcessorHelper:0.1351
+DefaultEndpoint:0.0072
+Endpoint:0.0050
+EndpointInject:0.0712
+ObjectHelper:0.0438
+Produce:0.0803
+PropertyInject:0.0529
+ReflectionHelper:0.0438

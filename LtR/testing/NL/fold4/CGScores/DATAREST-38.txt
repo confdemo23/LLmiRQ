@@ -1,0 +1,10 @@
+BasePathAwareHandlerMapping:0.0548
+MethodResourceMapping:0.0545
+PersistentEntityResourceAssembler:0.0594
+RepositoryRestConfiguration:0.2614
+RepositoryRestConfigurerDelegate:0.0568
+ResourceMappingConfiguration:0.0686
+ResourceMappings:0.0752
+ResourceMetadata:0.0716
+RootResourceInformation:0.2825
+SearchResourceMappings:0.0696

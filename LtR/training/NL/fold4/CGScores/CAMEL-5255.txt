@@ -1,0 +1,8 @@
+DefaultConsumer:0.0099
+DefaultPollingEndpoint:0.0113
+ExceptionHandler:0.0099
+Exchange:0.0072
+Processor:0.0045
+SnmpConverters:0.0065
+SnmpEndpoint:0.0703
+SnmpMessage:0.0065

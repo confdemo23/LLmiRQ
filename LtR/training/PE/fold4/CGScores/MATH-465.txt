@@ -1,0 +1,6 @@
+AbstractRealMatrix:0.0016
+Array2DRowRealMatrix:0.0138
+MathUtils:0.0016
+MatrixUtils:0.0220
+RealMatrixChangingVisitor:0.0240
+RealMatrixPreservingVisitor:0.0240

@@ -1,0 +1,6 @@
+AbstractConfiguredSecurityBuilder:0.0041
+AuthenticationException:0.0118
+AuthenticationManagerBuilder:0.0150
+ChannelSecurityConfigurer:0.0041
+ExpressionUrlAuthorizationConfigurer:0.0041
+FilterComparator:0.0205

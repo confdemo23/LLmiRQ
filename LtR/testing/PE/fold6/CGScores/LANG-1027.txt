@@ -1,0 +1,3 @@
+JavaVersion:0.0086
+NumberUtils:0.0086
+StringUtils:0.0036

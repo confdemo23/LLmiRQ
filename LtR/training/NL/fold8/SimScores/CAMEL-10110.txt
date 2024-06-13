@@ -1,0 +1,9 @@
+BindySimpleCsvContainingMultiQuoteCharEscapeFalseTest:0.2647
+BindySimpleCsvContainingMultiQuoteCharEscapeTrueTest:0.2650
+CsvDataFormat:0.2793
+CsvDataFormatConfiguration:0.2490
+CsvDataFormatTest:0.2748
+CsvMarshaller:0.3248
+NoopStringEscape:0.2674
+RouteInfo:0.2644
+TryProcessorOnWhenTest:0.2812

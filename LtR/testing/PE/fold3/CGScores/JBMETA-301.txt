@@ -1,0 +1,8 @@
+AsyncMethodsMetaData:0.0100
+ConcurrentMethodsMetaData:0.0100
+JBossMessageDrivenBeanMetaData:0.0125
+JBossSessionBean31MetaData:0.2178
+JBossSessionBeanMetaData:0.0154
+MergeUtil:0.0232
+MessageDrivenBean31MetaData:0.0059
+SessionBean31MetaData:0.0846

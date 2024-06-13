@@ -1,0 +1,3 @@
+AntPathRequestMatcher:0.0327
+ConfigAttribute:0.0157
+SecurityExpressionHandler:0.0157

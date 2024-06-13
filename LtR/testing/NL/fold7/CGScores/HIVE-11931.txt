@@ -1,0 +1,10 @@
+CTEClause:0.0321
+CommonJoinOperator:0.0286
+ConfVars:0.0286
+HdfsEncryptionShim:0.0113
+HiveConf:0.0634
+MapJoinProcessor:0.0182
+MapJoinWalkerCtx:0.1085
+QBJoinTree:0.0885
+SemanticAnalyzer:0.0877
+SortBucketRSCtx:0.0530

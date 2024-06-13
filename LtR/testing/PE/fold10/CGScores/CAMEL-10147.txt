@@ -1,0 +1,10 @@
+CamelContext:0.0256
+CamelExecutionException:0.0069
+Exchange:0.0387
+Message:0.0844
+MessageHistory:0.0104
+ObjectHelper:0.0060
+RouteDefinition:0.0142
+StreamCache:0.0060
+StringHelper:0.0060
+TypeConverter:0.0126

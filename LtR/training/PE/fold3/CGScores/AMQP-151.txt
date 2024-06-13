@@ -1,0 +1,6 @@
+AbstractConnectionFactory:0.0022
+Connection:0.0057
+ConnectionListener:0.0010
+RabbitUtils:0.0010
+SharedConnectionProxy:0.0010
+SingleConnectionFactory:0.0010

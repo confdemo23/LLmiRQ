@@ -1,0 +1,2 @@
+DefaultMethodSecurityExpressionHandler:0.7778
+PermissionEvaluator:0.3556

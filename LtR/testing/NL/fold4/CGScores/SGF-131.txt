@@ -1,0 +1,6 @@
+GemfireAccessor:0.0023
+GemfireCacheUtils:0.0370
+GemfireCallback:0.0023
+GemfireTemplate:0.0419
+QueryString:0.0125
+Wrapper:0.0125

@@ -1,0 +1,3 @@
+ContextFactory:0.0116
+SpringSecurityLdapTemplate:0.0116
+UsernamePasswordAuthenticationToken:0.0244

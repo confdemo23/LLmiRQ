@@ -1,0 +1,2 @@
+AvroSerDe:0.1200
+TypeInfo:0.1000

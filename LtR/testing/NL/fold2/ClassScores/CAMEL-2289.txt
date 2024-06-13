@@ -1,0 +1,5 @@
+BindyAbstractDataFormat:0.5405
+BindyCsvDataFormat:0.4054
+BindyFactory:0.2432
+BindyKeyValuePairDataFormat:0.6486
+CsvRecord:0.1622

@@ -1,0 +1,4 @@
+ExecReducer:0.1667
+FileSinkOperator:0.2708
+HBaseRowSerializer:0.3125
+HBaseSerDe:0.1458

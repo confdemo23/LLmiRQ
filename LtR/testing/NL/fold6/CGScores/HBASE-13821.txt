@@ -1,0 +1,10 @@
+BlockCache:0.1426
+BucketCacheStats:0.1356
+BucketEntry:0.1687
+ByteArrayOutputStream:0.1732
+ByteBuff:0.4384
+CacheStats:0.6647
+HFileContext:0.2032
+HRegion:0.3038
+LruBlockCache:0.1476
+RegionInfo:0.1737

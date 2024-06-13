@@ -1,0 +1,10 @@
+Admin:0.1142
+Bytes:0.4774
+Connection:0.1231
+HColumnDescriptor:0.1024
+HRegion:0.2578
+HRegionFileSystem:0.0992
+HStore:0.1266
+HTableDescriptor:0.1029
+RegionInfo:0.3261
+Table:0.0963

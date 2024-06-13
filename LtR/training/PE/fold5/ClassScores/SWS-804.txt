@@ -1,0 +1,2 @@
+InvalidXmlException:0.3556
+WebServiceMessageReceiverHandlerAdapter:0.8000

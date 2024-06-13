@@ -1,0 +1,8 @@
+ColumnStatisticsObj:0.4324
+Hive:0.0270
+HiveMetaStoreClient:0.4324
+HiveStatsUtils:0.2973
+MetaStoreUtils:0.2973
+ObjectStore:0.2162
+StatsSetupConst:0.3243
+Table:0.0541

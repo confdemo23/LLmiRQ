@@ -1,0 +1,10 @@
+Batch:0.0324
+CacheProperties:0.0297
+ImmutableSession:0.0378
+ImmutableSessionAttributes:0.0297
+InfinispanSessionManager:0.1179
+InfinispanSessionManagerConfiguration:0.0778
+Scheduler:0.0217
+Session:0.0939
+SessionFactory:0.1179
+UndertowSessionManager:0.1113

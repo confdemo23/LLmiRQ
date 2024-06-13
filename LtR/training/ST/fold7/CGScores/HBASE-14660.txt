@@ -1,0 +1,10 @@
+ByteBuff:0.0706
+Bytes:0.0405
+HFileBlock:0.0746
+HRegion:0.2003
+HRegionServer:0.0509
+HStore:0.0440
+ProtobufUtil:0.0496
+Reader:0.0455
+RegionCoprocessorHost:0.0420
+RegionInfo:0.1248

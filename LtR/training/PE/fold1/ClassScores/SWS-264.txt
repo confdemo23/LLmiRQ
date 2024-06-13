@@ -1,0 +1,3 @@
+JaxenXPathExpressionFactory:0.5333
+Jaxp13XPathExpressionFactory:0.5556
+XPathExpressionFactory:0.4222

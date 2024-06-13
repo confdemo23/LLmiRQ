@@ -1,0 +1,10 @@
+CamelContext:0.0545
+Exchange:0.1491
+FileUtil:0.1079
+GenericFile:0.1823
+GenericFileConfiguration:0.0478
+GenericFileEndpoint:0.4663
+GenericFileOperations:0.0734
+IdempotentRepository:0.0608
+Message:0.1066
+ObjectHelper:0.0947

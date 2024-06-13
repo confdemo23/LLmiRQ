@@ -1,0 +1,7 @@
+ExecReducer:0.2813
+FileSinkOperator:0.4375
+HadoopShims:0.2813
+HiveConf:0.1875
+HiveFileFormatUtils:0.5313
+MapRedTask:0.2500
+Utilities:0.2188

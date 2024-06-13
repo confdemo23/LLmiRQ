@@ -1,0 +1,8 @@
+Jpa21Utils:0.0044
+JpaEntityInformation:0.0044
+JpaEntityInformationSupport:0.0274
+JpaMetamodelEntityInformation:0.0429
+PersistenceProvider:0.0044
+QueryByExamplePredicateBuilder:0.0044
+QueryUtils:0.0044
+Specification:0.0044

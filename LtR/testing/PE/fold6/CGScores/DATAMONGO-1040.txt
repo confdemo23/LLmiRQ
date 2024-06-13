@@ -1,0 +1,9 @@
+CriteriaDefinition:0.0077
+Field:0.0009
+Meta:0.0191
+MongoEntityMetadata:0.0068
+MongoOperations:0.0068
+MongoParameterAccessor:0.0232
+MongoQueryExecution:0.0068
+MongoQueryMethod:0.1051
+Query:0.0068

@@ -1,0 +1,6 @@
+AbstractAuthenticationProcessingFilter:0.0119
+AbstractRememberMeServices:0.0119
+AuthenticationException:0.0055
+CsrfToken:0.0119
+RequestMatcher:0.0042
+UsernamePasswordAuthenticationFilter:0.0249

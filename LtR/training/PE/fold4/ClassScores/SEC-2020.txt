@@ -1,0 +1,2 @@
+HttpSecurityBeanDefinitionParser:0.6222
+ProviderManager:0.2444

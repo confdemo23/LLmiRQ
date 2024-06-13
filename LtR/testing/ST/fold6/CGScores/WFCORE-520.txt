@@ -1,0 +1,10 @@
+AuthorizationResponseImpl:0.0365
+AuthorizationResult:0.0442
+ImmutableManagementResourceRegistration:0.0360
+MBeanServerAuditLogRecordFormatter:0.0755
+MBeanServerPlugin:0.1218
+ManagementModelImpl:0.0470
+ModelControllerImpl:0.0418
+ModelControllerMBeanHelper:0.0716
+PathAddress:0.0653
+Resource:0.0383

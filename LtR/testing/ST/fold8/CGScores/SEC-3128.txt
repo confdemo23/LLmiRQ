@@ -1,0 +1,6 @@
+AccessDecisionVoter:0.0010
+Authentication:0.0004
+ConfigAttribute:0.0019
+GrantedAuthority:0.0004
+RoleVoter:0.0004
+SecurityContextHolderStrategy:0.0069

@@ -1,0 +1,10 @@
+ClassOrInterfaceTypeDetails:0.0117
+ConstructorMetadata:0.0204
+DeclaredMethodAnnotationDetails:0.0074
+FieldMetadata:0.0172
+ImportRegistrationResolver:0.0096
+ItdSourceFileComposer:0.0367
+ItdTypeDetails:0.0183
+JavaSymbolName:0.0117
+JavaType:0.0454
+MethodMetadata:0.0291

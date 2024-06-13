@@ -1,0 +1,1 @@
+SimplexTableau:0.0088

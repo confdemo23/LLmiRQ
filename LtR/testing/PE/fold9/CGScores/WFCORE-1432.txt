@@ -1,0 +1,10 @@
+AttributeDefinition:0.2022
+AttributeMarshaller:0.0173
+AttributeParser:0.0913
+Element:0.0358
+ParseUtils:0.0543
+PathAddress:0.0173
+PathElement:0.1282
+PersistentResourceDefinition:0.0173
+PersistentResourceXMLDescription:0.0358
+ResourceDefinition:0.0081

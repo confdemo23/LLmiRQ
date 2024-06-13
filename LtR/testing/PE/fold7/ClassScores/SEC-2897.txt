@@ -1,0 +1,2 @@
+ActiveDirectoryLdapAuthenticationProvider:0.8261
+SpringSecurityLdapTemplate:0.5000

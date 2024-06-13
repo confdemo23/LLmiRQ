@@ -1,0 +1,2 @@
+BatchStatus:0.1778
+Step:0.0222

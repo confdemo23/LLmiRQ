@@ -1,0 +1,1 @@
+TestEmbeddedThriftBinaryCLIService:0.6200

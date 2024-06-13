@@ -1,0 +1,10 @@
+CamelContext:0.0042
+Endpoint:0.0042
+EndpointHelper:0.0121
+EventPredicate:0.0410
+EventPredicateHolder:0.0253
+Exchange:0.0358
+ExchangeSentEvent:0.0069
+MockEndpoint:0.0174
+ObjectHelper:0.0200
+Predicate:0.0174

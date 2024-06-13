@@ -1,0 +1,3 @@
+EntryFilter:0.0010
+FeedEndpoint:0.0010
+Processor:0.0010

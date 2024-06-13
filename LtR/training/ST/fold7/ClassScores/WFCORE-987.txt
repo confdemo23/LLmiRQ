@@ -1,0 +1,9 @@
+AbstractControllerService:0.4583
+AbstractModelResource:0.3750
+AbstractOperationContext:0.4375
+ModelControllerImpl:0.3333
+OperationContextImpl:0.3542
+PathElement:0.1667
+PlaceholderResource:0.3333
+Resource:0.1042
+ServerService:0.2083

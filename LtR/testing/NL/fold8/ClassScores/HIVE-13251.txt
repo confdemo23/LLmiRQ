@@ -1,0 +1,4 @@
+AvroDeserializer:0.3333
+AvroSerDe:0.1538
+AvroSerializer:0.2821
+HiveDecimal:0.2051

@@ -1,0 +1,10 @@
+AbstractConnectionFactory:0.0123
+AbstractMessageListenerContainer:0.0260
+AcknowledgeMode:0.0107
+BlockingQueueConsumer:0.0778
+ChannelCachingConnectionProxy:0.0502
+ChannelProxy:0.0120
+Delivery:0.0107
+MessageProperties:0.0104
+RabbitUtils:0.0257
+SimpleMessageListenerContainer:0.0312

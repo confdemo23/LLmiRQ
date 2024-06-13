@@ -1,0 +1,4 @@
+AbstractJpaQuery:0.2449
+CrudMethodMetadataPostProcessor:0.5510
+JpaQueryExecution:0.2653
+PersistenceProvider:0.3061

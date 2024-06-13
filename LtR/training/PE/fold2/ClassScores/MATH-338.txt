@@ -1,0 +1,4 @@
+AdaptiveStepsizeIntegrator:0.5349
+DormandPrince853Integrator:0.5349
+EmbeddedRungeKuttaIntegrator:0.5814
+GraggBulirschStoerIntegrator:0.5814

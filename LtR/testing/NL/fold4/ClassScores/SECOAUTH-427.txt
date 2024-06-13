@@ -1,0 +1,6 @@
+BaseClientDetails:0.3415
+ClientDetailsService:0.4146
+DefaultOAuth2RequestFactory:0.5854
+DefaultRedirectResolver:0.4878
+OAuth2RequestFactory:0.4146
+RedirectResolver:0.3171

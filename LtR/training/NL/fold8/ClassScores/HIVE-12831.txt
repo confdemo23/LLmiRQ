@@ -1,0 +1,8 @@
+Database:0.1875
+HiveConf:0.1875
+HiveMetaStoreClient:0.5313
+MetaStoreEventListener:0.6250
+MetaStoreUtils:0.3750
+ObjectStore:0.2813
+Table:0.0938
+ThriftHiveMetastore:0.5313

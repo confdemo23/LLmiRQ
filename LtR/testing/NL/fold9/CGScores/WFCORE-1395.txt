@@ -1,0 +1,10 @@
+Builder:0.0187
+DelegatingConfigurableAuthorizer:0.0090
+Factory:0.0104
+ImmutableManagementResourceRegistration:0.0146
+ManagementResourceRegistration:0.0504
+OperationContext:0.0472
+PathElement:0.0236
+Resource:0.0156
+ResourceDefinition:0.0098
+SimpleAttributeDefinitionBuilder:0.0090

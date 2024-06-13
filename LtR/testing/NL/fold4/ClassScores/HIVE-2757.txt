@@ -1,0 +1,3 @@
+Hadoop23Shims:0.2439
+HadoopShims:0.1951
+HiveConf:0.1220

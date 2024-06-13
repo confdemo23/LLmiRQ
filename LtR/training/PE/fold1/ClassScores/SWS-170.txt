@@ -1,0 +1,4 @@
+AxiomSoapMessageFactory:0.4444
+PayloadRootAnnotationMethodEndpointMapping:0.8667
+PayloadRootUtils:0.2889
+QNameUtils:0.1556

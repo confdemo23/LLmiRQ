@@ -1,0 +1,1 @@
+BasicMongoPersistentEntity:0.4600

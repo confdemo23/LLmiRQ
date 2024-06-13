@@ -1,0 +1,5 @@
+HBaseAdmin:0.1892
+HTable:0.0811
+Put:0.0000
+ResultScanner:0.2703
+Scan:0.0270

@@ -1,0 +1,6 @@
+AffirmativeBased:0.2449
+DefaultFilterChainValidator:0.4694
+ExpressionUtils:0.2245
+FilterChainProxy:0.2449
+FilterInvocation:0.2449
+WebExpressionVoter:0.2857

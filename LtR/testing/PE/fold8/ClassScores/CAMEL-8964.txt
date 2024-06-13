@@ -1,0 +1,3 @@
+CamelContext:0.1800
+Route:0.0400
+RouteService:0.1800

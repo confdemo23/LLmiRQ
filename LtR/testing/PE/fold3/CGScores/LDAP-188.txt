@@ -1,0 +1,8 @@
+DefaultDnParserFactory:0.0029
+DistinguishedName:0.0516
+DnParser:0.0029
+LdapRdn:0.0447
+LdapUtils:0.0516
+ListComparator:0.0029
+NameAwareAttribute:0.0481
+NameAwareAttributes:0.1387

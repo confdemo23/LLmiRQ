@@ -1,0 +1,7 @@
+CamelContext:0.0050
+Exchange:0.0342
+ExchangeHelper:0.0050
+Message:0.0488
+ResourceHelper:0.0130
+StringTemplateEndpoint:0.0053
+TypeConverter:0.0050

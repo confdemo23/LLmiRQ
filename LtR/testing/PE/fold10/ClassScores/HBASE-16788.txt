@@ -1,0 +1,5 @@
+CompactedHFilesDischargeHandler:0.6512
+DefaultStoreFileManager:0.4651
+HFileArchiver:0.2326
+HRegionFileSystem:0.3256
+HStore:0.0698

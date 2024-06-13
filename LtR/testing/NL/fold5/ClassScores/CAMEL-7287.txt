@@ -1,0 +1,6 @@
+JmsConfiguration:0.3023
+JmsConsumer:0.1860
+SjmsComponent:0.2326
+SjmsConsumer:0.2093
+SjmsEndpoint:0.2093
+SjmsProducer:0.2093

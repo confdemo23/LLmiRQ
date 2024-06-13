@@ -1,0 +1,4 @@
+AcidOutputFormat:0.2600
+HiveConf:0.1000
+OrcOutputFormat:0.2400
+OrcRecordUpdater:0.2600

@@ -1,0 +1,9 @@
+ChunkListener:0.2703
+ExecutionContext:0.3514
+ExecutionContextPromotionListener:0.8108
+FlatFileItemWriter:0.4054
+ItemProcessor:0.2703
+ItemReader:0.1892
+ItemWriter:0.1892
+JobBuilderFactory:0.3784
+StepBuilderFactory:0.4054

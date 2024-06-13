@@ -1,0 +1,10 @@
+AbstractApplicationContext:0.0615
+AbstractBeanDefinition:0.0285
+AnnotationConfigUtils:0.0437
+Assert:0.0600
+BeanDefinition:0.1047
+BeanDefinitionReaderUtils:0.0132
+BeanDefinitionRegistry:0.0589
+DefaultListableBeanFactory:0.1631
+EnvironmentCapable:0.0132
+ScopeMetadata:0.0132

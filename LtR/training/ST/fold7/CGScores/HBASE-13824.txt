@@ -1,0 +1,10 @@
+AssignmentManager:0.0149
+ColumnFamilyDescriptor:0.0182
+FSUtils:0.0220
+HMaster:0.0200
+MasterCoprocessorHost:0.0364
+MasterThread:0.0154
+ProcedureExecutor:0.0131
+RegionInfo:0.0138
+RegionServerThread:0.0211
+TableDescriptor:0.0145

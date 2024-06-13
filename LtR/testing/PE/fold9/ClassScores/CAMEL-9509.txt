@@ -1,0 +1,10 @@
+CometdProducer:0.2391
+DefaultChannel:0.2391
+DefaultComponent:0.2826
+DefaultComponentResolver:0.4565
+DefaultErrorHandler:0.3478
+DefaultExecutorServiceManager:0.5652
+DefaultManagementAgent:0.4130
+JmsQueueEndpoint:0.2826
+RecipientList:0.2174
+SpringCamelContext:0.3261

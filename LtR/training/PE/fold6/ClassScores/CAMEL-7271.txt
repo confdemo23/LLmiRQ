@@ -1,0 +1,5 @@
+AggregationStrategy:0.3478
+DefaultExchange:0.2609
+ExchangeHelper:0.2391
+GroupedExchangeAggregationStrategy:0.6739
+MulticastProcessor:0.3261

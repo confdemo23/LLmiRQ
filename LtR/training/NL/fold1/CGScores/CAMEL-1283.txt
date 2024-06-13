@@ -1,0 +1,10 @@
+CamelContext:0.0340
+CollectionStringBuffer:0.0195
+Exchange:0.1247
+Message:0.0891
+NamedQueryParser:0.0302
+SqlConsumer:0.0258
+SqlEndpoint:0.0595
+SqlPrepareStatementStrategy:0.0154
+StringQuoteHelper:0.0195
+TypeConverter:0.0302

@@ -1,0 +1,2 @@
+FilterList:0.1556
+ValueFilter:0.1778

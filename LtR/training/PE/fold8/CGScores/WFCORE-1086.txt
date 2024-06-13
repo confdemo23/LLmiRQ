@@ -1,0 +1,10 @@
+AbstractResourceRegistration:0.1493
+AccessConstraintUtilizationRegistry:0.0274
+AtomicMapFieldUpdater:0.0422
+AttributeDefinition:0.1202
+ManagementResourceRegistration:0.0474
+NodeSubregistry:0.2091
+PathAddress:0.0971
+PathElement:0.3995
+RegistrySearchControl:0.3628
+ResourceDefinition:0.1285

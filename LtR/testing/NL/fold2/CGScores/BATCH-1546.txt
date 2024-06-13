@@ -1,0 +1,3 @@
+JdbcParameterUtils:0.0076
+OraclePagingQueryProvider:0.0139
+SqlPagingQueryUtils:0.0217

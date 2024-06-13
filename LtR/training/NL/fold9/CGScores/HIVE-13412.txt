@@ -1,0 +1,10 @@
+BaseSemanticAnalyzer:0.0100
+Client:0.0213
+ConfVars:0.0426
+CreateTableDesc:0.1197
+DDLSemanticAnalyzer:0.0451
+HiveConf:0.0927
+QualifiedNameUtil:0.0570
+Table:0.2951
+Utils:0.0263
+VarType:0.0125

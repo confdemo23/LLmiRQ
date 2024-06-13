@@ -1,0 +1,4 @@
+BindyFixedLengthDataFormat:0.5610
+BindyKeyValuePairDataFormat:0.5854
+DataField:0.1463
+FixedLengthRecord:0.3415

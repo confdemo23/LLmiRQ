@@ -1,0 +1,3 @@
+CMTTxInterceptor:0.2553
+SecurityContextInterceptor:0.4681
+StatefulComponentInstanceInterceptor:0.6809

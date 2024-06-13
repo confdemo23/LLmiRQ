@@ -1,0 +1,5 @@
+ReconnectSyslogServerTestCase:0.6842
+Rfc5424SyslogEvent:0.3947
+TCPSyslogServer:0.3158
+TCPSyslogSocketHandler:0.5000
+UDPSyslogServer:0.3158

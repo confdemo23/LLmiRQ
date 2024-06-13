@@ -1,0 +1,7 @@
+BlueprintCamelContext:0.0074
+BundleContextUtils:0.0043
+DefaultCamelContext:0.0021
+ManagementStrategy:0.0009
+OsgiCamelContextHelper:0.0055
+OsgiCamelContextPublisher:0.0009
+OsgiFactoryFinderResolver:0.0021

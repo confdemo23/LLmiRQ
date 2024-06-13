@@ -1,0 +1,10 @@
+DefaultConsumer:0.0116
+EndpointHelper:0.0070
+IOHelper:0.0076
+IntrospectionSupport:0.0076
+LoadBalancer:0.0070
+ObjectHelper:0.0362
+QuartzComponent:0.0302
+QuartzEndpoint:0.0465
+QuartzHelper:0.0173
+UriEndpointComponent:0.0076

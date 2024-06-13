@@ -1,0 +1,10 @@
+CamelContext:0.0150
+Exchange:0.0677
+FileUtil:0.0754
+FtpConfiguration:0.0389
+IOHelper:0.0180
+Message:0.0563
+ObjectHelper:0.0333
+RemoteFileConfiguration:0.0333
+StopWatch:0.0103
+TypeConverter:0.0118

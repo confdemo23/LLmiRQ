@@ -1,0 +1,4 @@
+BeeLine:0.0015
+BeelineParser:0.0015
+HiveDriver:0.0180
+Utils:0.0050

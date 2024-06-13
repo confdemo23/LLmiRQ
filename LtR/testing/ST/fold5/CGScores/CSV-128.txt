@@ -1,0 +1,8 @@
+Anonymous-02190d79-14fc-45c1-9e3e-faa1287d4a15:0.0035
+Anonymous-06fc1e4e-fb88-4e00-b611-dd87b87310ee:0.0035
+Assertions:0.0541
+CSVFormat:0.0414
+CSVParser:0.0667
+CSVRecord:0.0035
+Lexer:0.0288
+Token:0.0035

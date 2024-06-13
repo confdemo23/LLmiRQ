@@ -1,0 +1,8 @@
+ColumnPruner:0.2432
+ExprNodeDesc:0.2432
+ExprNodeGenericFuncDesc:0.5405
+FilterOperator:0.2973
+OpProcFactory:0.2703
+Optimizer:0.1622
+PartitionPruner:0.3243
+SemanticAnalyzer:0.3514

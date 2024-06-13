@@ -1,0 +1,10 @@
+BigFraction:0.0499
+EnumeratedRealDistribution:0.0075
+Erf:0.0099
+FastMath:0.1403
+FieldMatrix:0.0075
+KolmogorovSmirnovTest:0.0075
+MathArrays:0.0245
+RandomGenerator:0.0069
+RealDistribution:0.0075
+RealMatrix:0.0075

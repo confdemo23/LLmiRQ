@@ -1,0 +1,7 @@
+AbstractJpaQuery:0.0032
+JpaEntityMetadata:0.0032
+JpaParameters:0.0159
+JpaQueryCreator:0.0222
+JpaQueryMethod:0.0159
+ParameterBinder:0.0095
+QueryPreparer:0.0095

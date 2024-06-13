@@ -1,0 +1,10 @@
+CliDriver:0.0370
+ConfVars:0.0426
+EncoderDecoder:0.0075
+HdfsEncryptionShim:0.0050
+HdfsUtils:0.0125
+Hive:0.0376
+HiveConf:0.0927
+HiveVersionInfo:0.0351
+TraditionalBinaryPrefix:0.0163
+VarType:0.0125

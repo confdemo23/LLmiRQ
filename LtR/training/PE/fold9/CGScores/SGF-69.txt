@@ -1,0 +1,4 @@
+DataPolicyConverter:0.0034
+GemfireUtils:0.0034
+Interest:0.0303
+RegionLookupFactoryBean:0.0034

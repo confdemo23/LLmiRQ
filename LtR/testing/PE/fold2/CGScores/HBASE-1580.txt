@@ -1,0 +1,10 @@
+CollectionUtils:0.0163
+HStore:0.0833
+KeyValueHeap:0.1565
+KeyValueScanner:0.0589
+NextState:0.0894
+PrivateCellUtil:0.0224
+Scan:0.1199
+ScanInfo:0.0467
+ScanQueryMatcher:0.1504
+ScannerContext:0.1443

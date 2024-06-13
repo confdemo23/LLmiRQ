@@ -1,0 +1,2 @@
+BasicLookupStrategy:0.3409
+JdbcAclService:0.2273

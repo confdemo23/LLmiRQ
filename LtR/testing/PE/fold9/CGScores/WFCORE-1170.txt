@@ -1,0 +1,7 @@
+AbstractOutboundConnectionResourceDefinition:0.0237
+Builder:0.0243
+ManagementResourceRegistration:0.0237
+Parameters:0.0370
+PathElement:0.0113
+RemotingExtension:0.0113
+SimpleAttributeDefinitionBuilder:0.0485

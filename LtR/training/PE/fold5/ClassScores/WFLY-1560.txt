@@ -1,0 +1,5 @@
+InflowFlatTestCase:0.3333
+MultipleAdminObject2Impl:0.4667
+MultipleConnectionFactory2Impl:0.6000
+PartialObjectActivationJarTestCase:0.6889
+TwoModulesOfDifferentTypeTestCase:0.6667

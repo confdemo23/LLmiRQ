@@ -1,0 +1,10 @@
+CustomData:0.0574
+FieldMetadata:0.3188
+FileManager:0.0508
+JavaSymbolName:0.1584
+JavaType:0.2508
+MemberFindingUtils:0.0436
+PhysicalTypeIdentifierNamingUtils:0.0356
+XmlElementBuilder:0.4931
+XmlRoundTripUtils:0.0719
+XmlUtils:0.1069

@@ -1,0 +1,2 @@
+CamelContext:0.2432
+RouteDefinition:0.3243

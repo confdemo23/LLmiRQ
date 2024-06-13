@@ -1,0 +1,3 @@
+JndiViewManagedReferenceFactory:0.0021
+JndiViewOperation:0.0021
+NamingContext:0.0021

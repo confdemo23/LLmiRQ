@@ -1,0 +1,4 @@
+DefaultSqlPrepareStatementStrategy:0.7209
+SqlComponent:0.2093
+SqlEndpoint:0.1860
+SqlProducer:0.1860

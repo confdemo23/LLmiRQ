@@ -1,0 +1,10 @@
+ConnectionFactoryUtils:0.0244
+Delivery:0.0211
+DirectReplyToMessageListenerContainer:0.0179
+Listener:0.0376
+Message:0.0672
+MessageProperties:0.0836
+PendingConfirm:0.0211
+PendingReply:0.0244
+PublisherCallbackChannelImpl:0.0376
+RabbitTemplate:0.0508

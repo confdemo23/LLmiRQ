@@ -1,0 +1,2 @@
+HBaseInterClusterReplicationEndpoint:0.6600
+ReplicationSource:0.2800

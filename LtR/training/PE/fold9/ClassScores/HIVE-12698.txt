@@ -1,0 +1,5 @@
+AuthorizationUtils:0.3488
+HiveAuthorizer:0.2558
+PrincipalDesc:0.2326
+PrivilegeDesc:0.2326
+PrivilegeObjectDesc:0.3721

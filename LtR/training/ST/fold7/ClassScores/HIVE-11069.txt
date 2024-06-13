@@ -1,0 +1,6 @@
+ColumnStatsTask:0.2500
+ExecDriver:0.1458
+MapRedTask:0.1458
+Task:0.0208
+TaskRunner:0.1458
+Utilities:0.1250

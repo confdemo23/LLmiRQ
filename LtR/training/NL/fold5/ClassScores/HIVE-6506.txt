@@ -1,0 +1,6 @@
+HiveConf:0.1212
+HiveMetaStoreClient:0.4545
+OrcInputFormat:0.3030
+OrcOutputFormat:0.3333
+OrcSerde:0.1212
+Table:0.0303

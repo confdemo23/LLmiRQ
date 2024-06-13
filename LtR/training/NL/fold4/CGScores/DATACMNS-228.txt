@@ -1,0 +1,10 @@
+Association:0.0134
+ClassTypeInformation:0.0374
+DefaultPersistentPropertyPath:0.0216
+InvalidPersistentPropertyPath:0.0141
+Lazy:0.0134
+Pair:0.0216
+PersistentPropertyAccessorFactory:0.0137
+Property:0.0442
+PropertyPath:0.0305
+TypeInformation:0.0535

@@ -1,0 +1,6 @@
+ExprNodeDesc:0.3125
+FilterOperator:0.3750
+GenericUDFIn:0.3125
+HiveConf:0.1875
+RowResolver:0.2813
+SemanticAnalyzer:0.4375

@@ -1,0 +1,10 @@
+DefaultConsumer:0.0189
+Endpoint:0.0256
+FeedEndpoint:0.0580
+IntrospectionSupport:0.0189
+ObjectHelper:0.0337
+PollingConsumerPollStrategy:0.0189
+RssUtils:0.0135
+ScheduledPollConsumer:0.1064
+ScheduledPollConsumerScheduler:0.0391
+ServiceHelper:0.0458

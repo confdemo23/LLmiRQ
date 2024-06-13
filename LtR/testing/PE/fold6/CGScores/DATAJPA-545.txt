@@ -1,0 +1,5 @@
+LikeParameterBinding:0.0036
+ParameterBinding:0.0437
+ParameterBindingParser:0.0036
+ParameterBindingType:0.0237
+QueryUtils:0.0137

@@ -1,0 +1,5 @@
+HiddenHttpMethodFilter:0.4000
+MultipartFilter:0.2444
+MultipartRequest:0.2667
+ServletRequestDataBinder:0.4444
+ServletRequestParameterPropertyValues:0.7333

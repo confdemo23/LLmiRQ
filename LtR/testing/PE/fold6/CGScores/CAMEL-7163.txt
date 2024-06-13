@@ -1,0 +1,10 @@
+CamelContext:0.0259
+CamelLogger:0.1830
+Debugger:0.0533
+Exchange:0.2717
+LoggingLevel:0.0123
+Message:0.1352
+MessageHelper:0.0123
+NodeBreakpoint:0.0396
+ProcessorDefinition:0.0191
+SuspendedExchange:0.2854

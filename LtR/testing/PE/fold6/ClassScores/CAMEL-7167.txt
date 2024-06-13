@@ -1,0 +1,2 @@
+AbstractListAggregationStrategy:0.6222
+ListAggregationStrategy:0.4444

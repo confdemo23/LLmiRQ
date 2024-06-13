@@ -1,0 +1,6 @@
+HiveConf:0.1282
+QueryPlan:0.1538
+TezCompiler:0.2051
+TezJobMonitor:0.2564
+TezSessionState:0.3077
+TezTask:0.1026

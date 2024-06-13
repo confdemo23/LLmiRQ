@@ -1,0 +1,5 @@
+NormalizedRandomGenerator:0.0137
+RandomGenerator:0.0097
+RandomGeneratorFactory:0.0071
+RealMatrix:0.0610
+RectangularCholeskyDecomposition:0.0610

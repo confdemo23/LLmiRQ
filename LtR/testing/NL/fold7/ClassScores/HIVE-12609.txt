@@ -1,0 +1,6 @@
+HiveConf:0.1538
+HiveMetaStoreClient:0.4359
+KryoSerializer:0.3077
+MetaStoreUtils:0.3077
+ObjectInspectorConverters:0.5897
+SerializationUtilities:0.5128

@@ -1,0 +1,3 @@
+HBaseCluster:0.1875
+MiniHBaseCluster:0.2708
+TestMasterFailover:0.3125

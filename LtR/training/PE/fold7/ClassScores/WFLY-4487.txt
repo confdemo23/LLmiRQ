@@ -1,0 +1,2 @@
+MyInterceptor:0.2000
+Resource:0.1000

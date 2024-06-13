@@ -1,0 +1,10 @@
+CamelContext:0.0058
+Consumer:0.0090
+Exchange:0.0279
+ExecutorServiceManager:0.0058
+MailConfiguration:0.0380
+MailEndpoint:0.0349
+Message:0.0046
+ObjectHelper:0.0181
+QuartzEndpoint:0.0085
+SchedulerEndpoint:0.0083

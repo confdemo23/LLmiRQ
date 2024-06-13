@@ -1,0 +1,2 @@
+LdapServerBeanDefinitionParserTests:0.7619
+LdapUtils:0.1429

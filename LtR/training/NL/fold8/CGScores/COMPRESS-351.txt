@@ -1,0 +1,10 @@
+Entry:0.0940
+GeneralPurposeBit:0.1128
+IOUtils:0.0896
+ZipArchiveEntry:0.7726
+ZipEightByteInteger:0.0721
+ZipExtraField:0.1009
+ZipLong:0.3308
+ZipMethod:0.0940
+ZipShort:0.1303
+ZipUtil:0.0677

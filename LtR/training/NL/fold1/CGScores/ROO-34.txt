@@ -1,0 +1,4 @@
+ClassOrInterfaceTypeDetails:0.0120
+MetadataIdentificationUtils:0.0050
+PhysicalTypeIdentifier:0.0120
+PhysicalTypeIdentifierNamingUtils:0.0258

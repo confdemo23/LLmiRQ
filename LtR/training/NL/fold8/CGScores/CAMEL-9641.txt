@@ -1,0 +1,10 @@
+FileEndpoint:0.0079
+FileUtil:0.0068
+GenericFile:0.0213
+GenericFileConfiguration:0.0026
+GenericFileEndpoint:0.0015
+Message:0.0015
+ObjectHelper:0.0137
+SimpleBackwardsCompatibleParser:0.0018
+SimpleLanguage:0.0030
+SimpleTokenizer:0.0030

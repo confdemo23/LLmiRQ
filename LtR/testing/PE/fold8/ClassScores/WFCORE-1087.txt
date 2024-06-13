@@ -1,0 +1,3 @@
+ConcreteResourceRegistration:0.5000
+ManagementResourceRegistration:0.5400
+NodeSubregistry:0.2400

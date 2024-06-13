@@ -1,0 +1,10 @@
+AndFilter:0.0365
+AttributeMetaData:0.7247
+BinaryLogicalFilter:0.0169
+CaseIgnoreString:0.1152
+ConverterManager:0.1348
+DnAttribute:0.0562
+LdapDataEntry:0.1348
+LdapNameBuilder:0.0562
+LdapUtils:0.0365
+ObjectMetaData:0.2331

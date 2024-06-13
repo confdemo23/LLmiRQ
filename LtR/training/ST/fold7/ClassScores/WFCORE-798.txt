@@ -1,0 +1,4 @@
+ManagementXml_Legacy:0.3542
+ParseUtils:0.1458
+StandaloneXml_Legacy:0.3542
+XmlConfigurationPersister:0.4583

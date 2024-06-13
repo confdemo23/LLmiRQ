@@ -1,0 +1,5 @@
+SoapFault:0.1622
+SoapFaultDetail:0.3243
+SoapMessage:0.2162
+SoapMessageDispatcher:0.4865
+WebServiceMessageReceiverHandlerAdapter:0.9730

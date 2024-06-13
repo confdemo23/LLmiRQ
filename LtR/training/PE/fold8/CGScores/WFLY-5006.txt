@@ -1,0 +1,8 @@
+CreatedEntityManagers:0.0084
+ExtendedEntityManager:0.0179
+ExtendedPersistenceDeepInheritance:0.0179
+ExtendedPersistenceInheritance:0.0179
+ExtendedPersistenceShallowInheritance:0.0179
+JPADeploymentSettings:0.0084
+JPAService:0.0084
+PersistenceUnitServiceImpl:0.0084

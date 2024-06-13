@@ -1,0 +1,1 @@
+ArrayFieldVector:0.3514

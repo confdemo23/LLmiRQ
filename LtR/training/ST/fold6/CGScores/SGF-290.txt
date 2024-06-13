@@ -1,0 +1,3 @@
+GemfireQueryMethod:0.0834
+GemfireTemplate:0.0136
+QueryString:0.0757

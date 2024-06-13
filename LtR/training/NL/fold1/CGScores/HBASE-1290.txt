@@ -1,0 +1,10 @@
+Bytes:0.3228
+ClusterConnection:0.1436
+HRegion:0.4441
+HStore:0.2098
+MasterKeepAliveConnection:0.2564
+MonitoredTask:0.1723
+ProtobufUtil:0.2535
+RegionInfo:0.5515
+RequestConverter:0.2132
+TableName:0.1452

@@ -1,0 +1,4 @@
+SnmpComponent:0.2326
+SnmpEndpoint:0.2093
+SnmpMessage:0.1860
+SnmpTrapConsumer:0.3023

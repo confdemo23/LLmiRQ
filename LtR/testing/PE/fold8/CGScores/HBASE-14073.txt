@@ -1,0 +1,10 @@
+Admin:0.0141
+Bytes:0.1445
+CheckAndMutateBuilder:0.0263
+Get:0.0808
+Put:0.0627
+RemoteHTable:0.1384
+Response:0.0263
+Result:0.1536
+ResultScanner:0.0293
+Table:0.0111

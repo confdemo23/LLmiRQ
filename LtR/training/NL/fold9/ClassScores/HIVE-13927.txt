@@ -1,0 +1,7 @@
+FileUtils:0.1622
+Hive:0.0270
+HiveConf:0.1351
+HiveDriver:0.1892
+HiveMetaStoreClient:0.4324
+HiveQueryResultSet:0.4054
+JavaUtils:0.1622

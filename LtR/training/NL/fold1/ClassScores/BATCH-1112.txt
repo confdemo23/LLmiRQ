@@ -1,0 +1,8 @@
+BatchConfigurer:0.3243
+ExecutionContext:0.3514
+Job:0.0000
+JobBuilderFactory:0.3784
+JobLauncher:0.2162
+JobRepository:0.2703
+Step:0.0270
+StepBuilderFactory:0.4054

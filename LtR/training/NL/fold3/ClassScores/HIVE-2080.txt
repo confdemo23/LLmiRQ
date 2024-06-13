@@ -1,0 +1,5 @@
+AbstractSerDe:0.2439
+BaseSemanticAnalyzer:0.4146
+ObjectInspector:0.2927
+SerDe:0.0488
+VariableSubstitution:0.4146

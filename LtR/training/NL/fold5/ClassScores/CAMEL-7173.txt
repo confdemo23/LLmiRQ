@@ -1,0 +1,6 @@
+CamelContext:0.2424
+DefaultCamelContext:0.4545
+MainSupport:0.2121
+ManagedCamelContext:0.4545
+ManagedService:0.3030
+ManagementStrategy:0.4242

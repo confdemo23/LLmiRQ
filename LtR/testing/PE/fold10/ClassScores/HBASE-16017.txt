@@ -1,0 +1,1 @@
+TableOutputFormat:0.3256

@@ -1,0 +1,2 @@
+GemfireTemplate:0.3158
+SimpleGemfireRepository:0.5263

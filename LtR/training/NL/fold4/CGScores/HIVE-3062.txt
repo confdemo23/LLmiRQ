@@ -1,0 +1,10 @@
+CTEClause:0.0264
+ConfVars:0.0237
+FSPaths:0.0429
+FileSinkOperator:0.0209
+HiveConf:0.0511
+RecordWriter:0.0209
+SemanticAnalyzer:0.0703
+SortBucketRSCtx:0.0429
+TableScanOperator:0.0223
+Utils:0.0243

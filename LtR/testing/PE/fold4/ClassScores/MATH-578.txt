@@ -1,0 +1,1 @@
+DescriptiveStatistics:0.4865

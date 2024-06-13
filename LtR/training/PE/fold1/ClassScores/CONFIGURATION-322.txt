@@ -1,0 +1,3 @@
+ConfigurationDynaBean:0.4000
+JNDIConfiguration:0.3111
+MapConfiguration:0.2889

@@ -1,0 +1,10 @@
+BSPTree:0.0412
+BoundaryAttribute:0.0101
+ConnectableSegment:0.0701
+Edge:0.0279
+FastMath:0.0168
+Line:0.0323
+Segment:0.0412
+SubHyperplane:0.0079
+Vector2D:0.0101
+Vertex:0.0301

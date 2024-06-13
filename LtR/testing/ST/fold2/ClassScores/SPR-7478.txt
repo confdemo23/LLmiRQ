@@ -1,0 +1,3 @@
+AbstractMessageListenerContainer:0.6364
+AbstractPollingMessageListenerContainer:0.7955
+DefaultMessageListenerContainer:0.6136

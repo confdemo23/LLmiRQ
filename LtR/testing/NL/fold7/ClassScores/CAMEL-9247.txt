@@ -1,0 +1,5 @@
+RestApiEndpoint:0.3333
+RestConfigurationDefinition:0.6410
+RestDefinition:0.3077
+RestSwaggerReader:0.3846
+RestSwaggerSupport:0.4103

@@ -1,0 +1,3 @@
+CMTTxInterceptor:0.2600
+ContainerManagedConcurrencyInterceptor:0.7000
+EJBReadWriteLock:0.2600

@@ -1,0 +1,4 @@
+BatchConsumer:0.2821
+KafkaConfiguration:0.4103
+KafkaConsumer:0.2821
+KafkaEndpoint:0.2821

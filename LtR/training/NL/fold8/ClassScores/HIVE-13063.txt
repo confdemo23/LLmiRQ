@@ -1,0 +1,7 @@
+FunctionRegistry:0.4375
+GenericUDF:0.2500
+HiveStringUtils:0.4063
+ObjectInspector:0.4063
+ObjectInspectorFactory:0.6250
+ObjectInspectorUtils:0.5625
+PrimitiveObjectInspector:0.6875

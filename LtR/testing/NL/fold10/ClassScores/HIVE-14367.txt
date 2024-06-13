@@ -1,0 +1,5 @@
+ConstantObjectInspector:0.5405
+ExprNodeConstantDesc:0.4595
+ExprNodeEvaluator:0.3784
+GenericUDF:0.1892
+HiveConf:0.1351

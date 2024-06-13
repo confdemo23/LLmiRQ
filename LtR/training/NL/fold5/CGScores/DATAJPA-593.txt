@@ -1,0 +1,10 @@
+CrudMethodMetadataPostProcessor:0.0180
+Jpa21Utils:0.0075
+JpaEntityInformation:0.0075
+JpaEntityInformationSupport:0.0175
+JpaQueryLookupStrategy:0.0080
+PersistenceProvider:0.0175
+QueryByExamplePredicateBuilder:0.0075
+QueryUtils:0.0075
+SimpleJpaRepository:0.0080
+Specification:0.0075

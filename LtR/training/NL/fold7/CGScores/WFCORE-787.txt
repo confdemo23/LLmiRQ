@@ -1,0 +1,10 @@
+Capability:0.0094
+CapabilityId:0.0943
+CapabilityRegistration:0.0253
+CapabilityScope:0.0571
+ManagementModelNode:0.0430
+PathAddress:0.0571
+PathElement:0.0094
+RuntimeCapability:0.0306
+RuntimeCapabilityRegistration:0.0571
+RuntimeRequirementRegistration:0.0996

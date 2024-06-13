@@ -1,0 +1,4 @@
+CommonJoinOperator:0.2857
+CommonMergeJoinOperator:0.3878
+MapJoinOperator:0.2245
+ReduceRecordSource:0.2857

@@ -1,0 +1,4 @@
+CxfPayload:0.1154
+DefaultCxfBinding:0.2500
+DomConverter:0.1538
+NodeListWrapper:0.2115

@@ -1,0 +1,10 @@
+ColumnInfo:0.0176
+ConfVars:0.0057
+EncoderDecoder:0.0008
+ExprNodeColumnDesc:0.0025
+ExprNodeConstantDesc:0.0046
+ExprNodeDesc:0.0025
+ExprNodeDescEqualityWrapper:0.0004
+HiveConf:0.0126
+Utils:0.0001
+VarType:0.0015

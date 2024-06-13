@@ -1,0 +1,10 @@
+FileUtils:0.1778
+PTest:0.1714
+PrepPhase:0.2548
+ProxyLocalFileSystem:0.2163
+TestCheckPhase:0.3138
+TestNewIntegerEncoding:0.1865
+TestTestCheckPhase:0.3422
+TestTestConfiguration:0.1653
+VerifyNumReducersHook:0.1618
+VerifyOutputTableLocationSchemeIsFileHook:0.2587

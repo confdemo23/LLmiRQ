@@ -1,0 +1,5 @@
+AbstractConfiguredSecurityBuilder:0.5577
+AuthenticationManager:0.3269
+AuthenticationManagerBuilder:0.4615
+WebSecurityConfiguration:0.3846
+WebSecurityConfigurerAdapter:0.4615

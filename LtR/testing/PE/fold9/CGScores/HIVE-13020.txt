@@ -1,0 +1,10 @@
+Builder:0.0092
+HadoopShims:0.0032
+HdfsEncryptionShim:0.0023
+HdfsUtils:0.0058
+Hive:0.0173
+HiveServer2:0.0274
+ServerOptionsProcessor:0.0052
+ShimLoader:0.0043
+SplitInfo:0.0092
+SplitInfos:0.0040

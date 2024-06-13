@@ -1,0 +1,2 @@
+BZip2CompressorInputStream:0.5000
+BZip2CompressorOutputStream:0.5217

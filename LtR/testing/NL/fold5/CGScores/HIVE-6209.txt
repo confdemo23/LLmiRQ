@@ -1,0 +1,10 @@
+Client:0.0120
+ConfVars:0.0237
+FileChecker:0.0641
+FileSinkDesc:0.0525
+Hive:0.0209
+HiveConf:0.0511
+ShimLoader:0.0082
+Table:0.1619
+Utils:0.0147
+VarType:0.0072

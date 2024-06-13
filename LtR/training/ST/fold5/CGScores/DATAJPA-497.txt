@@ -1,0 +1,3 @@
+CrudMethodMetadata:0.0015
+JpaEntityInformation:0.0015
+PersistenceProvider:0.0004

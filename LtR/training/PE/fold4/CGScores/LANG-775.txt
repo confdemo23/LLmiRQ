@@ -1,0 +1,9 @@
+ArrayUtils:0.0005
+ClassUtils:0.0014
+FieldUtils:0.0009
+ObjectUtils:0.0023
+TypeUtils:0.2250
+TypeUtilsTest:0.0009
+Typed:0.0022
+Validate:0.0197
+WildcardTypeBuilder:0.0213

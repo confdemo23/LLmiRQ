@@ -1,0 +1,2 @@
+UsernamePasswordAuthenticationFilter:0.0068
+UsernamePasswordAuthenticationToken:0.0068

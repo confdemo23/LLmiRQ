@@ -1,0 +1,8 @@
+DynamicPartitionCtx:0.3902
+FileSinkOperator:0.3171
+FileUtils:0.1463
+HiveConf:0.1220
+HiveFileFormatUtils:0.3902
+HiveOutputFormatImpl:0.4146
+HiveStorageHandler:0.3659
+Utilities:0.1463

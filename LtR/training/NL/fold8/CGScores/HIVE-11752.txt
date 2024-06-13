@@ -1,0 +1,10 @@
+ASTNode:0.0134
+CTEClause:0.0063
+CalcitePlanner:0.0067
+CalcitePlannerAction:0.0529
+ConfVars:0.0057
+ConstantExprCheck:0.0022
+HdfsEncryptionShim:0.0022
+HiveConf:0.0126
+SemanticAnalyzer:0.0175
+SortBucketRSCtx:0.0105

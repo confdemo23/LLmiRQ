@@ -1,0 +1,1 @@
+CachingConnectionFactory:0.4884

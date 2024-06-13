@@ -1,0 +1,10 @@
+AsyncCallback:0.0051
+AsyncProcessorHelper:0.0051
+BatchSender:0.0193
+CamelContext:0.0051
+ExceptionHandler:0.0264
+Exchange:0.0478
+Expression:0.0051
+ObjectHelper:0.0264
+Processor:0.0051
+ServiceHelper:0.0122

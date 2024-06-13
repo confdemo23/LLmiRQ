@@ -1,0 +1,1 @@
+HiveHFileOutputFormat:0.4737

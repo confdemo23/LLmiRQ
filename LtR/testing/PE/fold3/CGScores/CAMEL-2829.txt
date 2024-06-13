@@ -1,0 +1,10 @@
+Exchange:0.0473
+FileUtil:0.0527
+FtpEndpoint:0.0074
+FtpOperations:0.0051
+FtpsConfiguration:0.0080
+IOHelper:0.0176
+Message:0.0393
+ObjectHelper:0.0291
+RemoteFileConfiguration:0.0234
+StopWatch:0.0074

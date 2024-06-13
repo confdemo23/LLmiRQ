@@ -1,0 +1,6 @@
+BicubicSplineFunction:0.0915
+BivariateFunction:0.0141
+MathArrays:0.0523
+PolynomialSplineFunction:0.0214
+SplineInterpolator:0.0214
+UnivariateFunction:0.0214

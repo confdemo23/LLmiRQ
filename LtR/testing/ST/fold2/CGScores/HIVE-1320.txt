@@ -1,0 +1,10 @@
+AggregationExprCheck:0.0090
+CTEClause:0.0244
+ConstantExprCheck:0.0090
+DefaultPPD:0.0071
+HdfsEncryptionShim:0.0090
+PlannerContext:0.0038
+ScriptPPD:0.0029
+SemanticAnalyzer:0.0654
+SortBucketRSCtx:0.0398
+Utils:0.0038

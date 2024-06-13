@@ -1,0 +1,1 @@
+StepSynchronizationManager:0.5000

@@ -1,0 +1,10 @@
+AtomicExchange:0.0605
+Exchange:0.3553
+ModelCamelContext:0.0435
+ObjectHelper:0.0340
+PipelineHelper:0.0265
+ProcessorExchangePair:0.0831
+Producer:0.0265
+RestsDefinition:0.0283
+RouteBuilder:0.0321
+RoutesDefinition:0.1380

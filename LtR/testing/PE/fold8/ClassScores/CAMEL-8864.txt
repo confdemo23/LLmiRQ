@@ -1,0 +1,2 @@
+FlexibleAggregationStrategy:0.4800
+JdbcCamelCodec:0.2200

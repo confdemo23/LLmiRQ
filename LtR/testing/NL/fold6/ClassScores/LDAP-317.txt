@@ -1,0 +1,3 @@
+ContextSource:0.2727
+LdapContextSource:0.3939
+LdapTemplate:0.2424

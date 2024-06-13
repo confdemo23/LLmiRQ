@@ -1,0 +1,2 @@
+AnnotationDrivenBeanDefinitionParser:0.8919
+HttpMessageConverter:0.4595

@@ -1,0 +1,10 @@
+Assert:0.0338
+DataAccessUtils:0.0092
+DataSourceUtils:0.0313
+JdbcUtils:0.0313
+NativeJdbcExtractor:0.0289
+ParameterDisposer:0.0191
+ResultSetExtractor:0.0068
+ResultSetSupportingSqlParameter:0.0215
+SQLExceptionTranslator:0.0092
+SqlOutParameter:0.0191

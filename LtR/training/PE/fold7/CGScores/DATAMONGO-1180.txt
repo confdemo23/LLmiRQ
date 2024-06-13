@@ -1,0 +1,9 @@
+BasicQuery:0.0026
+ConvertingParameterAccessor:0.0026
+Field:0.0026
+MongoConverter:0.0026
+MongoOperations:0.0026
+MongoQueryCreator:0.0063
+MongoQueryMethod:0.0099
+PartTreeMongoQuery:0.0026
+Query:0.0172

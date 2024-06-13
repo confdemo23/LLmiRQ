@@ -1,0 +1,2 @@
+SiteSwitcherHandler:0.0100
+SiteSwitcherMode:0.0100

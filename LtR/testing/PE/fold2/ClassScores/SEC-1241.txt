@@ -1,0 +1,4 @@
+RequestCacheAwareFilter:0.4444
+SavedRequest:0.2000
+SavedRequestAwareAuthenticationSuccessHandler:0.9333
+SimpleUrlAuthenticationSuccessHandler:0.7556

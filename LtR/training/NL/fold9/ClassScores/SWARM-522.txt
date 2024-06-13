@@ -1,0 +1,4 @@
+ArtifactResolvingHelper:0.5405
+DependencyResolution:0.4595
+MultiStartMojo:0.2973
+SwarmExecutor:0.2703

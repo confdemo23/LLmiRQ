@@ -1,0 +1,5 @@
+AuthorizationRequest:0.4146
+ClientDetailsService:0.4146
+DefaultTokenServices:0.4146
+OAuth2AccessToken:0.3415
+OAuth2ClientContext:0.3902

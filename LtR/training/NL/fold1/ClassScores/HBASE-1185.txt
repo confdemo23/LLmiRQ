@@ -1,0 +1,8 @@
+ClientScanner:0.2703
+HBaseAdmin:0.1892
+HMaster:0.1081
+HRegionServer:0.2703
+HTable:0.0811
+MetricsMaster:0.2703
+MetricsRegionServer:0.4324
+Scan:0.0270

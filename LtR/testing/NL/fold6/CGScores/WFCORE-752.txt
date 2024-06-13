@@ -1,0 +1,10 @@
+AttachmentKey:0.0380
+AttributeDefinition:0.0480
+ContentRepository:0.0380
+DeploymentUnit:0.1782
+HashUtil:0.0280
+OperationContext:0.0821
+PathAddress:0.0621
+ResourceRoot:0.0581
+SimpleAttributeDefinition:0.0691
+TempFileProviderService:0.0380

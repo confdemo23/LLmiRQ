@@ -1,0 +1,4 @@
+BaseSemanticAnalyzer:0.4390
+HiveCli:0.1220
+HiveConf:0.1463
+HiveStringUtils:0.3171

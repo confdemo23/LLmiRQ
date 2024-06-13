@@ -1,0 +1,9 @@
+ColumnBuffer:0.0063
+HadoopShims:0.0025
+HiveDriver:0.0113
+KeyBuffer:0.0119
+LazyDecompressionCallbackImpl:0.0006
+Reader:0.0006
+ShimLoader:0.0025
+ValueBuffer:0.0081
+Writer:0.0006

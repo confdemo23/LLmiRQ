@@ -1,0 +1,10 @@
+CamelBlueprintHelper:0.0177
+CamelContext:0.0408
+CastUtils:0.0070
+IOHelper:0.0277
+MainListener:0.0160
+ManagementStrategy:0.0124
+ObjectHelper:0.0244
+Option:0.0050
+RunMojo:0.0117
+ServiceHelper:0.0050

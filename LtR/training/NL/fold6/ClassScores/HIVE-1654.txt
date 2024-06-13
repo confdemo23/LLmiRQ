@@ -1,0 +1,3 @@
+Column:0.1026
+SemanticAnalyzer:0.3590
+Table:0.0769

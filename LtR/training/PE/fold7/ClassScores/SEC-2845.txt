@@ -1,0 +1,4 @@
+AbstractSecurityInterceptor:0.4800
+AbstractSecurityWebSocketMessageBrokerConfigurer:0.9000
+AuthenticationCredentialsNotFoundException:0.7800
+SecurityContextChannelInterceptor:0.6000

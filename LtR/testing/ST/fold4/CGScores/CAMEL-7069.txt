@@ -1,0 +1,10 @@
+Attachment:0.0373
+CxfPayload:0.0103
+DataFormat:0.0509
+DefaultCxfBinding:0.0171
+Exchange:0.2940
+ExchangeHelper:0.0036
+ExchangePattern:0.0036
+HeaderFilterStrategy:0.0373
+Message:0.1522
+ObjectHelper:0.0528

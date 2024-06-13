@@ -1,0 +1,10 @@
+AsyncCallback:0.0213
+BeanHolder:0.0391
+CamelContext:0.0199
+Exchange:0.0700
+ExpressionBuilder:0.0429
+LRUSoftCache:0.0302
+Message:0.0590
+MethodInfo:0.0857
+ObjectHelper:0.0593
+ServiceHelper:0.0168

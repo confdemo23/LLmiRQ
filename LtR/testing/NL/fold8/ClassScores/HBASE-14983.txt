@@ -1,0 +1,5 @@
+BlockCache:0.1795
+BlockType:0.1538
+CacheStats:0.1795
+HFileBlock:0.1795
+HFileBlockIndex:0.3077

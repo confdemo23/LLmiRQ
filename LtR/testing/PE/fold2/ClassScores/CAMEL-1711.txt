@@ -1,0 +1,3 @@
+DefaultCamelContext:0.3556
+ServiceSupport:0.2444
+SpringCamelContext:0.3333

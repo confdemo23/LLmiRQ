@@ -1,0 +1,6 @@
+DefaultMemStore:0.1935
+FlushTableSubprocedure:0.3065
+HRegion:0.0645
+ImmutableSegment:0.2097
+TestVisibilityLabelsWithDeletes:0.4516
+TimeRange:0.0968

@@ -1,0 +1,10 @@
+AbstractControllerService:0.0194
+Attribute:0.0478
+Configuration:0.0585
+DeployerChainAddHandler:0.1540
+Element:0.0628
+PathElement:0.0281
+Resource:0.0324
+ServerEnvironment:0.0324
+SimpleAttributeDefinition:0.0979
+Util:0.0277

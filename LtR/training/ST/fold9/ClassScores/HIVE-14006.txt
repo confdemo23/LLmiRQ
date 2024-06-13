@@ -1,0 +1,3 @@
+ExecMapper:0.1842
+MapOperator:0.2105
+UnionOperator:0.2632

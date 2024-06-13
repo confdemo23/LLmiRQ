@@ -1,0 +1,8 @@
+FileUtils:0.1795
+HiveException:0.2821
+HiveMetaStoreClient:0.4359
+HiveStringUtils:0.3333
+MetaDataFormatter:0.3846
+ObjectStore:0.2308
+PartitionPruner:0.3333
+StatsTask:0.1795

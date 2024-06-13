@@ -1,0 +1,10 @@
+AsyncProcessor:0.0213
+Exchange:0.2668
+ExchangePattern:0.0213
+JmsEndpoint:0.1148
+Message:0.0213
+ModelCamelContext:0.0711
+ObjectHelper:0.0218
+RestsDefinition:0.0467
+RouteBuilder:0.0528
+RoutesDefinition:0.2236

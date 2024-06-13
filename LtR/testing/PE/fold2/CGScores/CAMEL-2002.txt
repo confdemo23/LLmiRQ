@@ -1,0 +1,10 @@
+CamelContext:0.0224
+DefaultHttpRegistry:0.0142
+HttpBinding:0.0224
+HttpCommonComponent:0.0061
+HttpRegistry:0.0142
+ObjectHelper:0.0142
+RestConfiguration:0.0955
+ServletConsumer:0.0142
+ServletEndpoint:0.1687
+URISupport:0.0142

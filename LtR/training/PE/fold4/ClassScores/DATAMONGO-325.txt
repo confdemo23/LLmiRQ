@@ -1,0 +1,3 @@
+MapReduceOptions:0.2667
+MapReduceResults:0.2667
+MongoTemplate:0.2000

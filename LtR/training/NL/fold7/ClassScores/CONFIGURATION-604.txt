@@ -1,0 +1,4 @@
+AbstractConfiguration:0.4615
+CombinedConfiguration:0.4615
+ConfigurationUtils:0.3846
+PropertiesConfiguration:0.5128

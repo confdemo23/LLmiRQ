@@ -1,0 +1,10 @@
+Bytes:0.0265
+ColumnFamilyDescriptor:0.0216
+CompactionRequestImpl:0.0276
+HRegion:0.0256
+HStore:0.0477
+HStoreFile:0.0327
+ModifyableColumnFamilyDescriptor:0.2017
+StoreEngine:0.0417
+StoreFileManager:0.0347
+StoreFileReader:0.0206

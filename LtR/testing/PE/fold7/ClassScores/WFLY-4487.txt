@@ -1,0 +1,2 @@
+MyInterceptor:0.2174
+Resource:0.1087

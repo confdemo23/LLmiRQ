@@ -1,0 +1,10 @@
+GsonDataFormat:0.2970
+ProducerClasspathTest:0.3042
+SpringSqlEndpointLikeTest:0.2953
+SqlConsumerFromClasspathTest:0.3669
+SqlProducerInExpressionTest:0.3461
+SqlProducerInMultiExpressionTest:0.3145
+SqlProducerInQueryEndpointTest:0.3022
+SqlProducerInSimpleExpressionTest:0.3374
+SqlProducerWhereIssueClasspathTest:0.3247
+SqlStoredConstants:0.3195

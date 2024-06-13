@@ -1,0 +1,2 @@
+SessionManagementConfigurer:0.4800
+SessionRegistryImpl:0.3200

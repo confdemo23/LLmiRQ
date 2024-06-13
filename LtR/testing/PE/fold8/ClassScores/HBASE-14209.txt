@@ -1,0 +1,2 @@
+HBaseTestingUtility:0.3200
+Waiter:0.0600

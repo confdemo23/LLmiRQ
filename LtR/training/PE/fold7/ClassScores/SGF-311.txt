@@ -1,0 +1,1 @@
+ClientRegionFactoryBean:0.4000

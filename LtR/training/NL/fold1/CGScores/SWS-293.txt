@@ -1,0 +1,10 @@
+ClientInterceptor:0.0208
+DefaultStrategiesHelper:0.0312
+EndpointInvocationChain:0.0784
+MessageContext:0.2104
+SoapMessage:0.0359
+SoapVersion:0.0312
+WebServiceMessage:0.0494
+WebServiceMessageCallback:0.0208
+WebServiceTemplate:0.0208
+Wss4jHandler:0.1720

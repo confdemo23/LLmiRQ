@@ -1,0 +1,9 @@
+AccessControl:0.0200
+DomainClient:0.6995
+DomainLifecycleUtil:0.1902
+DomainTestSupport:0.0164
+OperationDefinition:0.0354
+PathAddress:0.1886
+PathElement:0.0532
+ServiceActivatorDeploymentUtil:0.0172
+Util:0.1461

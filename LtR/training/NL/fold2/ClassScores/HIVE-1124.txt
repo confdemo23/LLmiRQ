@@ -1,0 +1,2 @@
+HiveSemanticAnalyzerHook:0.5366
+SemanticAnalyzer:0.3415

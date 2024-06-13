@@ -1,0 +1,4 @@
+GenericToStringSerializer:0.5116
+RedisCallback:0.2326
+RedisTemplate:0.2326
+StringRedisSerializer:0.4186

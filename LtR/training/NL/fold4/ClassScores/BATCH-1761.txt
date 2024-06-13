@@ -1,0 +1,9 @@
+BatchRetryTemplate:0.3488
+ChunkListener:0.2326
+ChunkOrientedTasklet:0.3953
+FaultTolerantChunkProcessor:0.5581
+ItemProcessor:0.2326
+ItemWriter:0.1628
+RepeatContext:0.2326
+SimpleChunkProcessor:0.3953
+StepExecutionListener:0.4186

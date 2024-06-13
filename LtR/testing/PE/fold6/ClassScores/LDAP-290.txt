@@ -1,0 +1,3 @@
+AuthenticatedLdapEntryContextCallback:0.7556
+AuthenticationErrorCallback:0.5333
+LdapTemplate:0.2000

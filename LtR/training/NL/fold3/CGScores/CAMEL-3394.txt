@@ -1,0 +1,10 @@
+AtomicException:0.0271
+AtomicExchange:0.0627
+CamelContext:0.0568
+Exchange:1.0000
+Message:0.1492
+ObjectHelper:0.0594
+PipelineHelper:0.0271
+ProcessorExchangePair:0.0865
+Producer:0.0271
+UnitOfWork:0.0290

@@ -1,0 +1,10 @@
+Capability:0.0063
+CapabilityId:0.0645
+CapabilityRegistration:0.0172
+CapabilityScope:0.0390
+ImmutableManagementResourceRegistration:0.0063
+PathAddress:0.0390
+PathElement:0.0063
+RuntimeCapability:0.0208
+RuntimeCapabilityRegistration:0.0390
+RuntimeRequirementRegistration:0.0681

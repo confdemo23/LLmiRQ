@@ -1,0 +1,5 @@
+PersonRepository:0.2097
+QuerydslAwareRootResourceInformationHandlerMethodArgumentResolver:1.0000
+RepositorySearchController:0.3710
+RootResourceInformationHandlerMethodArgumentResolver:0.7903
+UriToEntityConverter:0.2742

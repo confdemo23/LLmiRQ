@@ -1,0 +1,5 @@
+Counter:0.0079
+CounterStatusProcessor:0.0024
+PathFinder:0.0135
+ScriptOperator:0.0079
+StreamProcessor:0.0079

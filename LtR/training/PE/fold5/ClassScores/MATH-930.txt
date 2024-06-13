@@ -1,0 +1,7 @@
+LinearConstraint:0.2889
+LinearConstraintSet:0.3556
+LinearObjectiveFunction:0.4444
+MaxIter:0.0889
+NonNegativeConstraint:0.4000
+PointValuePair:0.2444
+SimplexSolver:0.2222

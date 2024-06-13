@@ -1,0 +1,10 @@
+BasePathAwareHandlerMapping:0.0851
+Java8PluginRegistry:0.0536
+MethodResourceMapping:0.0716
+PagingAndSortingTemplateVariables:0.0400
+ProjectionDefinitionConfiguration:0.0340
+RepositoryRestConfiguration:0.3463
+RepositoryRestConfigurerDelegate:0.0881
+RepositoryRestHandlerAdapter:0.0430
+RepositoryRestHandlerMapping:0.0581
+ResourceMappings:0.1031

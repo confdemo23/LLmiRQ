@@ -1,0 +1,10 @@
+CamelContext:0.0326
+ManagedPerformanceCounter:0.0175
+ManagedProcessorMBean:0.0363
+ManagementAgent:0.0251
+ManagementStrategy:0.0251
+ModelCamelContext:0.0927
+Route:0.0589
+RouteContext:0.0175
+RouteDefinition:0.0213
+ServiceStatus:0.0288

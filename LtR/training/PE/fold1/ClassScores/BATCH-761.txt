@@ -1,0 +1,2 @@
+NoStartEndDocumentStreamWriter:0.6000
+StaxEventItemWriter:0.3556

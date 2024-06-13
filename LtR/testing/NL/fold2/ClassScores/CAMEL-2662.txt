@@ -1,0 +1,9 @@
+Exchange:0.1351
+GenericFileConsumer:0.4324
+GenericFileOperationFailedException:0.8649
+GenericFileProcessStrategy:0.6216
+PollingConsumerPollStrategy:0.6486
+RemoteFileConfiguration:0.5405
+RemoteFileEndpoint:0.4054
+SftpConsumer:0.2432
+SftpOperations:0.2973

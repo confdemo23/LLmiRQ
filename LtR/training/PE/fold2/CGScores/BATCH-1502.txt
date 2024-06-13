@@ -1,0 +1,2 @@
+AbstractPagingItemReader:0.0148
+HibernateItemReaderHelper:0.0404

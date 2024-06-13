@@ -1,0 +1,4 @@
+CapabilityRegistry:0.4103
+CapabilityServiceSupport:0.5641
+ManagementModel:0.3333
+OperationStepHandler:0.4615

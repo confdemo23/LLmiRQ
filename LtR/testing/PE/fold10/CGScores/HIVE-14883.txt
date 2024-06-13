@@ -1,0 +1,10 @@
+AggregationExprCheck:0.0049
+CTEClause:0.0129
+ConstantExprCheck:0.0049
+HadoopShims:0.0055
+HdfsEncryptionShim:0.0049
+HdfsFileStatusWithId:0.0055
+ParsedDelta:0.0131
+PlannerContext:0.0022
+SemanticAnalyzer:0.0343
+SortBucketRSCtx:0.0209

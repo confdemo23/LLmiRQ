@@ -1,0 +1,7 @@
+ColumnVector:0.2432
+LlapInputFormat:0.3243
+LlapRecordReader:0.3514
+OrcInputFormat:0.2973
+VectorDeserializeRow:0.4595
+VectorizedRowBatch:0.4054
+VectorizedRowBatchCtx:0.4865

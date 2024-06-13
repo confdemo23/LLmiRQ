@@ -1,0 +1,10 @@
+ArjunaRecoveryManagerService:0.0353
+ArjunaTransactionManagerService:0.0277
+BinderService:0.0201
+CoreEnvironmentService:0.0277
+JBossContextXATerminatorService:0.0125
+JdbcStoreConfigBulder:0.0353
+LocalTransactionContextService:0.0125
+RemotingTransactionServiceService:0.0125
+TransactionRemoteHTTPService:0.0125
+UserTransactionBindingService:0.0201

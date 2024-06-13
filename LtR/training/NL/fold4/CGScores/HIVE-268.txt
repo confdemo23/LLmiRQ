@@ -1,0 +1,10 @@
+AggregationExprCheck:0.0099
+CTEClause:0.0264
+ConstantExprCheck:0.0099
+FileChecker:0.0641
+FileSinkDesc:0.0525
+HdfsEncryptionShim:0.0099
+PlannerContext:0.0045
+SemanticAnalyzer:0.0703
+SortBucketRSCtx:0.0429
+Table:0.1619

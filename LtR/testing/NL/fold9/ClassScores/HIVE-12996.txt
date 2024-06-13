@@ -1,0 +1,8 @@
+AcidUtils:0.2188
+HiveLock:0.1875
+HiveLockManager:0.4063
+HiveMetaStoreClient:0.5313
+HiveTxnManager:0.3750
+IMetaStoreClient:0.4375
+SessionState:0.3125
+TxnDbUtil:0.2188

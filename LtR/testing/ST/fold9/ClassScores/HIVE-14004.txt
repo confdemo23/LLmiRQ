@@ -1,0 +1,4 @@
+CompactorMR:0.1290
+OrcInputFormat:0.1774
+SchemaEvolution:0.1935
+TestTxnCommands2:0.2097

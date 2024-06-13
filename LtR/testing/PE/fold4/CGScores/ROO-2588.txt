@@ -1,0 +1,10 @@
+AbstractIdentifiableAnnotatedJavaStructureBuilder:0.0007
+AnnotatedJavaType:0.0007
+CustomData:0.0017
+FieldMetadata:0.0007
+IdentifiableAnnotatedJavaStructure:0.0017
+JavaSymbolName:0.0026
+MemberDetails:0.0110
+MemberHoldingTypeDetails:0.0128
+MemberHoldingTypeDetailsMetadataItem:0.0017
+MethodMetadata:0.0035

@@ -1,0 +1,2 @@
+BeanDeploymentArchiveImpl:0.5897
+WeldDeployment:0.3077

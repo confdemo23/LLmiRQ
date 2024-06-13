@@ -1,0 +1,4 @@
+ApplicationEnvironment:0.0149
+BootstrapLogger:0.0072
+MavenResolvers:0.0034
+TempFileManager:0.0034

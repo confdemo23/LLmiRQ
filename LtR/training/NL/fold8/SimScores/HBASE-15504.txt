@@ -1,0 +1,10 @@
+BalancerTestBase2:0.3680
+ForceBalancerAction:0.1909
+MetricsStochasticBalancer:0.2265
+MetricsStochasticBalancerSource:0.2513
+SimpleLoadBalancer:0.2043
+StochasticLoadBalancer:0.2247
+TestRegionMove:0.1926
+TestStochasticLoadBalancer:0.2866
+TestStochasticLoadBalancerBalanceCluster:0.1938
+TestStochasticLoadBalancerRegionReplica:0.2853

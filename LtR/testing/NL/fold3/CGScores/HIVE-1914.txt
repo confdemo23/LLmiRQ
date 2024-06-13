@@ -1,0 +1,5 @@
+CliAdapter:0.0216
+FilterDesc:0.0070
+HBaseCliConfig:0.0037
+HadoopShims:0.0292
+ShimLoader:0.0292

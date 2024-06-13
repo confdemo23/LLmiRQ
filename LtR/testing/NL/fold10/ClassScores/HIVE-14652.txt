@@ -1,0 +1,9 @@
+ExprNodeDesc:0.2432
+ExprNodeGenericFuncEvaluator:0.6757
+FilterOperator:0.2973
+HiveConf:0.1351
+HiveMetaStoreClient:0.4324
+MapJoinOperator:0.3243
+ObjectStore:0.2162
+PartitionPruner:0.3243
+SemanticAnalyzer:0.3514

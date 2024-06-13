@@ -1,0 +1,6 @@
+AbstractItdMetadataProvider:0.4694
+DefaultMetadataDependencyRegistry:0.5918
+DefaultMetadataService:0.3673
+DefaultProcessManager:0.3469
+JavaType:0.0816
+PollingFileMonitorService:0.4286

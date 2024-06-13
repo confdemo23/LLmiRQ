@@ -1,0 +1,6 @@
+CompressionStrategy:0.0009
+EncodingStrategy:0.0009
+ObjectInspectorOptions:0.0116
+Version:0.0009
+WriterOptions:0.0049
+WriterVersion:0.0029

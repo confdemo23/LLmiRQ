@@ -1,0 +1,5 @@
+CloseSuppressingInvocationHandler:0.7895
+DefaultStringRedisConnection:0.6579
+JedisConnection:0.3158
+RedisCallback:0.2632
+RedisConnection:0.3158

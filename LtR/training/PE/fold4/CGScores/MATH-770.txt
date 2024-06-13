@@ -1,0 +1,10 @@
+Array2DRowRealMatrix:0.0128
+ExceptionContext:0.0102
+FastMath:0.0197
+IterationManager:0.0337
+IterativeLinearSolver:0.0118
+IterativeLinearSolverEvent:0.0067
+PreconditionedIterativeLinearSolver:0.0077
+RealLinearOperator:0.0178
+RealVector:0.1023
+State:0.0069

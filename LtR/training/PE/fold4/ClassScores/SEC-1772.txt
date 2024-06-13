@@ -1,0 +1,1 @@
+SimpleUrlLogoutSuccessHandler:0.5556

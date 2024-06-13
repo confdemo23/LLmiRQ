@@ -1,0 +1,4 @@
+FeedEntryPollingConsumer:0.4545
+RssEntryPollingConsumer:0.4318
+RssUtils:0.0909
+ScheduledPollConsumer:0.3864

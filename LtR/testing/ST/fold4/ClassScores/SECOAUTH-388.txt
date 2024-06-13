@@ -1,0 +1,6 @@
+AccessTokenProviderChain:0.5000
+AuthenticationScheme:0.4048
+ClientCredentialsAccessTokenProvider:0.7857
+OAuth2AccessTokenSupport:0.5000
+OAuth2RestTemplate:0.3571
+ResourceOwnerPasswordResourceDetails:0.7857

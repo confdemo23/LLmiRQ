@@ -1,0 +1,10 @@
+ChainedTransformer:0.0132
+ConstantTransformer:0.0132
+EqualPredicate:0.0059
+ExceptionTransformer:0.0059
+FactoryTransformer:0.0059
+IfTransformer:0.0132
+InstantiateTransformer:0.0132
+InvokerTransformer:0.0132
+PredicateTransformer:0.0059
+SwitchTransformer:0.0278

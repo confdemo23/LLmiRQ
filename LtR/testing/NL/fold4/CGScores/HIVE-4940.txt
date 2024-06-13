@@ -1,0 +1,10 @@
+AggregationBuffer:0.0040
+AggregationType:0.0040
+Builder:0.0033
+ConfVars:0.0211
+GenericUDAFPercentileApproxEvaluator:0.0152
+HiveConf:0.0475
+HiveDecimal:0.0990
+HiveDriver:0.0106
+HiveQueryResultSet:0.0033
+VarType:0.0053

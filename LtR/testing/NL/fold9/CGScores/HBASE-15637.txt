@@ -1,0 +1,10 @@
+DNS:0.0004
+HBaseConfiguration:0.0004
+InfoServer:0.0015
+JvmPauseMonitor:0.0015
+ParseFilter:0.0004
+SaslUtil:0.0015
+Strings:0.0004
+ThriftHBaseServiceHandler:0.0004
+ThriftMetrics:0.0020
+UserProvider:0.0046

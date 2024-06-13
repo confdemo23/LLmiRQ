@@ -1,0 +1,4 @@
+MailConfiguration:0.3784
+MailConsumer:0.2432
+MailEndpoint:0.2432
+MailProducer:0.2432

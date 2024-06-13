@@ -1,0 +1,10 @@
+Bytes:0.0933
+ColumnFamilyDescriptor:0.0733
+CompactionRequestImpl:0.0695
+HRegion:0.2239
+HStore:0.2143
+HStoreFile:0.0665
+MonitoredTask:0.0933
+RegionInfo:0.2267
+RegionServerServices:0.0651
+ScannerContext:0.0742

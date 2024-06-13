@@ -1,0 +1,3 @@
+BlueprintCamelContext:0.4872
+NamespaceHandler:0.3590
+SpringCamelContext:0.4103

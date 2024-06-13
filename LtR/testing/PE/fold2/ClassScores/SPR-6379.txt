@@ -1,0 +1,2 @@
+DefaultBeanDefinitionDocumentReader:0.7111
+ResourcePatternUtils:0.3778

@@ -1,0 +1,7 @@
+AccessControlEntryImpl:0.0009
+Acl:0.0009
+AclAuthorizationStrategy:0.0023
+AclImpl:0.0002
+ObjectIdentity:0.0005
+PermissionGrantingStrategy:0.0002
+Sid:0.0009

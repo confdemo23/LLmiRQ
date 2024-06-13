@@ -1,0 +1,3 @@
+JsonLateObjectEvaluator:0.4651
+JsonPatchPatchConverter:0.4651
+PatchException:0.2558

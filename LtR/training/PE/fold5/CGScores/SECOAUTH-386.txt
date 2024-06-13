@@ -1,0 +1,10 @@
+ConsumerAuthentication:0.0910
+ConsumerCredentials:0.0514
+ConsumerDetailsService:0.0118
+OAuthConsumerParameter:0.1306
+OAuthNonceServices:0.0118
+OAuthProcessingFilterEntryPoint:0.0382
+OAuthProviderSupport:0.0250
+OAuthProviderToken:0.0118
+OAuthSignatureMethod:0.0250
+OAuthSignatureMethodFactory:0.0118

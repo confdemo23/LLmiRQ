@@ -1,0 +1,3 @@
+HRegion:0.0682
+HStore:0.0455
+StoreFileScanner:0.2727

@@ -1,0 +1,10 @@
+AuthenticationTrustResolver:0.0068
+HttpRequestResponseHolder:0.0289
+HttpSessionSecurityContextRepository:0.0068
+LogoutHandler:0.0018
+RequestMatcher:0.0018
+SaveContextOnUpdateOrErrorResponseWrapper:0.0289
+SecurityContext:0.0240
+SecurityContextHolder:0.0166
+SimpleUrlLogoutSuccessHandler:0.0018
+UrlUtils:0.0018

@@ -1,0 +1,8 @@
+BlockCache:0.1795
+BlockCacheUtil:0.2821
+CacheConfig:0.2051
+CacheStats:0.1795
+HBaseConfiguration:0.3846
+HFileBlock:0.1795
+HFileReaderImpl:0.3077
+LruBlockCache:0.2564

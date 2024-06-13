@@ -1,0 +1,7 @@
+AbstractAuthenticationToken:0.0464
+BCrypt:0.0464
+DaoAuthenticationProvider:0.0100
+PasswordEncoder:0.0555
+SaltSource:0.0100
+UserDetails:0.0100
+UsernamePasswordAuthenticationToken:0.0442

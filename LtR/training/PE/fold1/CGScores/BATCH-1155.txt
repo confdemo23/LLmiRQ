@@ -1,0 +1,2 @@
+FieldSetMapper:0.0066
+LineTokenizer:0.0066

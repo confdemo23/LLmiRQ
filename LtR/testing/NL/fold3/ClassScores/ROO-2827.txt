@@ -1,0 +1,4 @@
+HintCommands:0.2439
+JpaOperations:0.2683
+ProjectOperations:0.3659
+Shell:0.0732

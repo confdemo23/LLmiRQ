@@ -1,0 +1,8 @@
+BundleDelegatingClassLoader:0.6486
+CamelContext:0.2432
+DefaultTypeConverter:0.4595
+FallbackTypeConverter:0.4865
+OsgiCamelContextHelper:0.5135
+OsgiClassResolver:0.3784
+OsgiDefaultCamelContext:0.5405
+OsgiServiceRegistry:0.4324

@@ -1,0 +1,7 @@
+AnnotationAttributeValue:0.0305
+AnnotationMetadata:0.0072
+ArrayAttributeValue:0.0033
+AutoPopulate:0.0072
+ClassAttributeValue:0.0033
+EnumAttributeValue:0.0033
+StringAttributeValue:0.0033

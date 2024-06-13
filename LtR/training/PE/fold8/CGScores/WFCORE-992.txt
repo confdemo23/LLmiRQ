@@ -1,0 +1,3 @@
+ManagedServer:0.0040
+TransactionalProtocolClient:0.0040
+TransactionalProtocolHandlers:0.0092

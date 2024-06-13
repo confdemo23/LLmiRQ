@@ -1,0 +1,2 @@
+AppClientWrapper:0.3095
+SimpleApplicationClientTestCase:0.6667

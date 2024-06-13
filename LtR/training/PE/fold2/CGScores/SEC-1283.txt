@@ -1,0 +1,4 @@
+AuthorityUtils:0.0049
+FormLoginBeanDefinitionParser:0.0547
+LogoutBeanDefinitionParser:0.0104
+RememberMeBeanDefinitionParser:0.0104

@@ -1,0 +1,10 @@
+Client:0.0199
+CloseOperation_args:0.0141
+CloseSession_args:0.0141
+ExecuteStatement_args:0.0141
+FetchResults_args:0.0141
+GetCrossReference_args:0.0141
+GetFunctions_args:0.0141
+GetInfo_args:0.0141
+RenewDelegationToken_args:0.0141
+_Fields:0.0807

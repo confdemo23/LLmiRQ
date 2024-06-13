@@ -1,0 +1,9 @@
+Driver:0.0811
+FileUtils:0.1622
+Hive:0.0270
+HiveAuthorizationProviderBase:0.7027
+HiveConf:0.1351
+HiveMetaStore:0.2703
+HiveUtils:0.1622
+MetaStoreUtils:0.2973
+SessionState:0.2432

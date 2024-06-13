@@ -1,0 +1,10 @@
+BasePathAwareHandlerMapping:0.1065
+BaseUri:0.0326
+DomainClassResolver:0.0163
+Java8PluginRegistry:0.0539
+MetadataConfiguration:0.0351
+RepositoryRestConfiguration:0.4073
+RepositoryRestConfigurerDelegate:0.1103
+RepositoryRestHandlerAdapter:0.0539
+RepositoryRestHandlerMapping:0.0727
+ResourceMappings:0.0501

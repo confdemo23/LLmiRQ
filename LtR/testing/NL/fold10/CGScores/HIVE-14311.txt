@@ -1,0 +1,10 @@
+ConfVars:0.0426
+HiveConf:0.0927
+LockTrie:0.0201
+LogHelper:0.0501
+PartTrie:0.0426
+ResourceMaps:0.0652
+ResourceType:0.0276
+SessionState:0.2757
+SessionStates:0.0125
+TableTrie:0.0313

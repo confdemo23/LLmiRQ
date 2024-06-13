@@ -1,0 +1,2 @@
+CxfPayload:0.1628
+CxfPayloadConverter:0.3721

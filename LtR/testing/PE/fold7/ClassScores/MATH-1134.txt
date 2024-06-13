@@ -1,0 +1,2 @@
+BicubicSplineInterpolatingFunction:0.6739
+BivariateFunction:0.3043

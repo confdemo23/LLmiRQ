@@ -1,0 +1,3 @@
+CapabilityReferenceRecorder:0.0188
+ListAttributeDefinition:0.0188
+PrimitiveListAttributeDefinition:0.0088

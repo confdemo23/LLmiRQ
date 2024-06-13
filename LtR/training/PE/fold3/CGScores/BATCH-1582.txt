@@ -1,0 +1,9 @@
+BatchStatus:0.0013
+ExecutionContext:0.0040
+ExitStatus:0.0028
+JobExecution:0.0026
+JobRepository:0.0040
+PartitionNameProvider:0.0012
+Partitioner:0.0026
+Step:0.0040
+StepExecution:0.0674

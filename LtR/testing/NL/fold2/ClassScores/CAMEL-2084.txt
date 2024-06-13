@@ -1,0 +1,4 @@
+ConsumerTemplate:0.3514
+HttpComponent:0.2703
+HttpEndpoint:0.2432
+HttpPollingConsumer:0.4324

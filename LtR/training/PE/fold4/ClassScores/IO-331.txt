@@ -1,0 +1,2 @@
+BOMInputStream:0.2222
+ByteOrderMark:0.2000

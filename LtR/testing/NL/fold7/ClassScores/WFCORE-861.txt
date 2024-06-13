@@ -1,0 +1,3 @@
+ProductInfo:0.2308
+StandaloneServer:0.3590
+Version:0.1282

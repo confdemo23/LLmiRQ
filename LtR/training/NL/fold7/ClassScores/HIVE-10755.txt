@@ -1,0 +1,7 @@
+ColumnPruner:0.2308
+HiveConf:0.1282
+HiveMetaStoreClient:0.4103
+JoinOperator:0.2308
+OrcInputFormat:0.2821
+TableScanOperator:0.3590
+VectorizedRowBatch:0.3846

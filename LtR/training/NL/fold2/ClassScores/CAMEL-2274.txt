@@ -1,0 +1,4 @@
+CamelInvocationHandler:0.4878
+DefaultCamelBeanPostProcessor:0.6585
+MethodInvocation:0.3415
+ProxyHelper:0.2195

@@ -1,0 +1,3 @@
+JdbcExecutionContextDao:0.3654
+SimpleJobRepository:0.2885
+TaskletStep:0.1346

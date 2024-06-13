@@ -1,0 +1,9 @@
+CamelContext:0.0056
+CsvDataFormat:0.0056
+CsvMarshaller:0.0138
+CsvUnmarshaller:0.0138
+Exchange:0.0056
+ExchangeHelper:0.0056
+IOHelper:0.0138
+ObjectHelper:0.0056
+TypeConverter:0.0056

@@ -1,0 +1,5 @@
+PermissionMapper:0.3514
+RoleMapper:0.1892
+SecurityDomain:0.2973
+SecurityIdentity:0.3514
+SimplePermissionMapper:0.5135

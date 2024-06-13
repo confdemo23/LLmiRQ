@@ -1,0 +1,10 @@
+AuthorizedAddress:0.0208
+BootErrorCollector:0.0052
+Builder:0.0677
+ControllerResolver:0.0052
+OperationContext:0.0356
+OperationEntry:0.0208
+PathAddress:0.0052
+ServiceVerificationHelper:0.0208
+SimpleAttributeDefinitionBuilder:0.0521
+SimpleOperationDefinitionBuilder:0.0208

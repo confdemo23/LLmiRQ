@@ -1,0 +1,10 @@
+AbstractAuthenticationProcessingFilter:0.0189
+AuthenticationManagerBuilder:0.0887
+ExpressionInterceptUrlRegistry:0.0209
+HttpSecurity:0.0767
+RememberMeServices:0.0229
+SecurityContext:0.0276
+SecurityContextHolder:0.0402
+SecurityContextHolderStrategy:0.0256
+ThrowableAnalyzer:0.0409
+UserDetailsBuilder:0.0209

@@ -1,0 +1,8 @@
+TCLIService:0.2051
+TCloseOperationReq:0.3846
+TExecuteStatementReq:0.4359
+TFetchResultsReq:0.3333
+TGetOperationStatusReq:0.4872
+TGetResultSetMetadataReq:0.5385
+TOperationHandle:0.3333
+TSessionHandle:0.2821

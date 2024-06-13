@@ -1,0 +1,10 @@
+AttributeDefinition:0.0821
+ContentRepository:0.1322
+DeploymentOperations:0.0652
+DeploymentUnit:0.1122
+ModelContentReference:0.0883
+OperationContext:0.1792
+PathAddress:0.1003
+ScannerTask:0.1328
+SimpleAttributeDefinition:0.1823
+Util:0.1328

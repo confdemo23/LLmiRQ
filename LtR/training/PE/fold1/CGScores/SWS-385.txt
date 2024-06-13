@@ -1,0 +1,5 @@
+AddressingVersion:0.0315
+MessageContext:0.0315
+SmartEndpointInterceptor:0.0147
+SoapHeader:0.0147
+SoapMessage:0.0147

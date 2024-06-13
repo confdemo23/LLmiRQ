@@ -1,0 +1,2 @@
+PersistentTokenBasedRememberMeServices:0.8140
+RememberMeAuthenticationException:0.6977

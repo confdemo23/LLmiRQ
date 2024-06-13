@@ -1,0 +1,7 @@
+MapOperator:0.1429
+MapRedTask:0.1224
+ObjectInspectorFactory:0.3673
+Operator:0.0816
+ReduceSinkOperator:0.2857
+StandardStructObjectInspector:0.5102
+TableScanOperator:0.2653

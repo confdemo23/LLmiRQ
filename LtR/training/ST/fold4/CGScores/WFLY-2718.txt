@@ -1,0 +1,6 @@
+ConnectorServices:0.0463
+ConnectorXmlDescriptor:0.0218
+ModifiableResourceAdapter:0.0218
+ResourceAdapterDeployment:0.0463
+WildFlyRaXmlDeployer:0.1201
+WritableServiceBasedNamingStore:0.0463

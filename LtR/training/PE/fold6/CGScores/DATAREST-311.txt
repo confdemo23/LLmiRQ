@@ -1,0 +1,10 @@
+DefaultedPageable:0.0069
+MethodResourceMapping:0.0069
+PersistentEntityResourceAssembler:0.0069
+RepositoryEntityLinks:0.0069
+RepositorySearchesResource:0.0150
+ResourceMappings:0.0069
+ResourceMetadata:0.0150
+ResourceStatus:0.0150
+RootResourceInformation:0.0639
+SearchResourceMappings:0.0232

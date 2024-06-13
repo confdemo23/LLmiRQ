@@ -1,0 +1,9 @@
+AbstractItemStreamItemWriter:0.0026
+ExecutionContext:0.0044
+FileUtils:0.0007
+FlatFileFooterCallback:0.0007
+FlatFileHeaderCallback:0.0007
+FlatFileItemWriter:0.0007
+LineAggregator:0.0007
+OutputState:0.0100
+TransactionAwareBufferedWriter:0.0026

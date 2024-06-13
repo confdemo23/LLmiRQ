@@ -1,0 +1,2 @@
+BindAuthenticator:0.2889
+LdapAuthenticationProvider:0.4889

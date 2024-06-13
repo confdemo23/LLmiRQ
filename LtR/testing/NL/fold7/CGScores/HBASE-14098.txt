@@ -1,0 +1,10 @@
+Bytes:0.2253
+ColumnFamilyDescriptor:0.1745
+HRegion:0.4145
+HRegionFileSystem:0.1267
+HStore:0.3898
+HStoreFile:0.1237
+MonitoredTask:0.1732
+RegionCoprocessorHost:0.1207
+RegionInfo:0.4197
+ScannerContext:0.1380

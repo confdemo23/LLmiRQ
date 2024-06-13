@@ -1,0 +1,10 @@
+AbstractItemStreamItemWriter:0.0254
+ExecutionContext:0.0437
+FileUtils:0.0071
+FlatFileFooterCallback:0.0071
+FlatFileItemWriter:0.0071
+ItemSqlParameterSourceProvider:0.0076
+JdbcParameterUtils:0.0076
+LineAggregator:0.0071
+OutputState:0.0986
+TransactionAwareBufferedWriter:0.0254

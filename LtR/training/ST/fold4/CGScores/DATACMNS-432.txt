@@ -1,0 +1,8 @@
+EntityInformation:0.0112
+Repositories:0.1096
+RepositoryFactoryInformation:0.0478
+RepositoryInformation:0.0281
+RepositoryInvoker:0.0112
+RepositoryInvokerFactory:0.0112
+ToEntityConverter:0.0253
+ToIdConverter:0.0253

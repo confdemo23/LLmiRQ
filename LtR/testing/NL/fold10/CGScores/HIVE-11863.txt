@@ -1,0 +1,9 @@
+CliDriver:0.0370
+ConfVars:0.0426
+EncoderDecoder:0.0075
+FSStatsAggregator:0.0081
+HiveConf:0.0927
+TezTask:0.0019
+UnionOperator:0.0056
+Utils:0.0025
+VarType:0.0125

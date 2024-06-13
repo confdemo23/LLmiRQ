@@ -1,0 +1,4 @@
+DefaultTokenServices:0.4848
+ImplicitTokenGranter:0.4848
+OAuth2AccessToken:0.3939
+TokenEndpoint:0.2727

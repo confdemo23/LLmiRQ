@@ -1,0 +1,3 @@
+CamelTestSupport:0.3023
+DefaultErrorHandler:0.3721
+RouteBuilder:0.2093

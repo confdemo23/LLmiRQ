@@ -1,0 +1,5 @@
+EntryFilter:0.0100
+Exchange:0.0090
+FeedEndpoint:0.0100
+Message:0.0090
+Processor:0.0100

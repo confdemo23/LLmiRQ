@@ -1,0 +1,10 @@
+Exchange:0.0208
+IntrospectionSupport:0.0036
+JpaComponent:0.0091
+JpaConsumer:0.0595
+JpaPollingConsumer:0.0315
+JpaProducer:0.0315
+Message:0.0325
+NoSuchPropertyException:0.0213
+ObjectHelper:0.0036
+ScheduledPollEndpoint:0.0091

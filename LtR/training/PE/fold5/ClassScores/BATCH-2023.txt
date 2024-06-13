@@ -1,0 +1,3 @@
+FlatFileItemReader:0.3333
+ItemReader:0.1556
+StepScope:0.1333

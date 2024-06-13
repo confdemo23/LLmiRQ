@@ -1,0 +1,3 @@
+MongoPersistentEntityIndexCreator:0.6170
+MongoPersistentEntityIndexResolver:0.6383
+MongoTemplate:0.1915

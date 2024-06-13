@@ -1,0 +1,7 @@
+BaseSemanticAnalyzer:0.4146
+DDLSemanticAnalyzer:0.3902
+HiveConf:0.1220
+HiveIndexHandler:0.3171
+HiveMetaStoreClient:0.3902
+HiveStringUtils:0.2927
+SemanticAnalyzer:0.3171

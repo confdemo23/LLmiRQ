@@ -1,0 +1,10 @@
+BloomType:0.0043
+Bytes:0.0193
+ColumnFamilyDescriptor:0.0082
+DataBlockEncoding:0.0043
+ImmutableBytesWritable:0.0043
+RegionLocator:0.0043
+TableDescriptor:0.0075
+TableInfo:0.0043
+TableMapReduceUtil:0.0082
+TableName:0.0090

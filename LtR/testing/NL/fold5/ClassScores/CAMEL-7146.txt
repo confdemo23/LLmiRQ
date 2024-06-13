@@ -1,0 +1,7 @@
+AggregateProcessor:0.3488
+AggregationRepository:0.4186
+AggregationStrategy:0.3721
+CamelContext:0.2093
+DefaultExchange:0.2791
+Exchange:0.1163
+MemoryAggregationRepository:0.5581

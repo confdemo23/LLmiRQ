@@ -1,0 +1,10 @@
+AtomicExchange:0.0608
+CamelContext:0.0692
+DefaultExchange:0.0727
+Exchange:1.0000
+ExchangeHelper:0.0351
+Message:0.2522
+ObjectHelper:0.0670
+ProcessorExchangePair:0.0833
+Producer:0.0269
+UnitOfWork:0.0523

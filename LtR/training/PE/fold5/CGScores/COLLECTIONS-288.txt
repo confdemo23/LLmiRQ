@@ -1,0 +1,10 @@
+CollectionUtils:0.0068
+DefaultEquator:0.0027
+EditScript:0.0027
+FixedSizeList:0.0027
+HashBag:0.0027
+LazyList:0.0027
+LcsVisitor:0.0027
+PredicatedList:0.0027
+TransformedList:0.0027
+UnmodifiableList:0.0027

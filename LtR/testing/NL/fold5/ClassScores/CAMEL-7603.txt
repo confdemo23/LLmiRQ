@@ -1,0 +1,7 @@
+CxfBinding:0.1628
+CxfRsConsumer:0.2326
+CxfRsEndpoint:0.2326
+CxfRsProducer:0.2326
+DefaultCxfRsBinding:0.3721
+Exchange:0.1163
+Message:0.0930

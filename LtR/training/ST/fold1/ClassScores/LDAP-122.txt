@@ -1,0 +1,2 @@
+AbstractCompensatingTransactionManagerDelegate:0.9545
+ContextSourceTransactionManager:0.6136

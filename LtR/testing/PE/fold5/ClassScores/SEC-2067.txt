@@ -1,0 +1,2 @@
+HttpSessionSecurityContextRepository:0.7111
+SaveContextOnUpdateOrErrorResponseWrapper:0.8222

@@ -1,0 +1,10 @@
+AsyncCallback:0.0011
+AsyncProcessorHelper:0.0011
+CamelContext:0.0025
+CamelContextAware:0.0011
+DataFormat:0.0011
+Exchange:0.0053
+Message:0.0039
+ObjectHelper:0.0011
+OutputStreamBuilder:0.0025
+ServiceHelper:0.0011

@@ -1,0 +1,4 @@
+Field:0.0222
+Indexed:0.0667
+MongoPersistentEntityIndexCreator:0.6444
+User:0.0000

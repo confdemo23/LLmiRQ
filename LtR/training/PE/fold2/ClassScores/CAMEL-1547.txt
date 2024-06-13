@@ -1,0 +1,4 @@
+CamelContext:0.2093
+Delayer:0.0930
+InterceptStrategy:0.3256
+StreamCaching:0.2326

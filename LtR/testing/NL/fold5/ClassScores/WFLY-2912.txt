@@ -1,0 +1,1 @@
+ResourceAdapterDeploymentService:0.6744

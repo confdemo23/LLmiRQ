@@ -1,0 +1,3 @@
+PersistentResourceXMLDescription:0.6042
+PersistentResourceXMLParser:0.5000
+PersistentResourceXMLParserTestCase:0.6667

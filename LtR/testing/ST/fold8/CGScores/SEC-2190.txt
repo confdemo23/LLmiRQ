@@ -1,0 +1,10 @@
+AbstractAuthorizeTag:0.0022
+FirewalledRequest:0.0024
+HttpFirewall:0.0038
+SecurityContext:0.0048
+SecurityContextHolder:0.0062
+SecurityExpressionHandler:0.0048
+SecurityFilterChain:0.0024
+SecurityWebApplicationContextUtils:0.0031
+TagLibConfig:0.0061
+UrlUtils:0.0038

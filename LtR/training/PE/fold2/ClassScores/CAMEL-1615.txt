@@ -1,0 +1,2 @@
+CamelExchangeException:0.4419
+Exchange:0.1163

@@ -1,0 +1,10 @@
+CompactorInputSplit:0.0030
+HadoopShims:0.0009
+HcatDelegator:0.0078
+HdfsFileStatusWithId:0.0002
+RpcConfiguration:0.0011
+ShimLoader:0.0013
+StatusDelegator:0.0003
+StringableList:0.0050
+TempletonUtils:0.0011
+VersionDelegator:0.0011

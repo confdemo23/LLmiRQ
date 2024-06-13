@@ -1,0 +1,4 @@
+BCryptPasswordEncoder:0.4000
+DaoAuthenticationProvider:0.4889
+PasswordEncoder:0.2667
+UsernamePasswordAuthenticationToken:0.7111

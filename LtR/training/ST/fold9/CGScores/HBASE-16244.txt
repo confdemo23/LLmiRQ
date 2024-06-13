@@ -1,0 +1,10 @@
+Connection:0.0028
+HMaster:0.0192
+HRegionServer:0.0043
+JVMClusterUtil:0.0038
+LocalHBaseCluster:0.0083
+MasterThread:0.0130
+MiniZooKeeperCluster:0.0040
+RegionServerThread:0.0159
+ServerName:0.0032
+Threads:0.0051

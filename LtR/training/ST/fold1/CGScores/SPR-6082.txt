@@ -1,0 +1,10 @@
+Assert:0.2046
+BeanDefinition:0.1638
+BeanFactoryUtils:0.1456
+BeanWrapper:0.2106
+ClassUtils:0.1735
+ConfigurableListableBeanFactory:0.5572
+DependencyDescriptor:0.2655
+ObjectUtils:0.1145
+RootBeanDefinition:1.0000
+StringUtils:0.1270

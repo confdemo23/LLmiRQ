@@ -1,0 +1,1 @@
+UsernamePasswordAuthenticationFilter:0.7333

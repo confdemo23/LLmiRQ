@@ -1,0 +1,10 @@
+Bytes:0.0467
+CheckAndMutateBuilder:0.0381
+Get:0.0596
+Put:0.0682
+ResultScanner:0.0424
+Scan:0.1715
+Status:0.0424
+Table:0.0854
+TestOptions:0.0639
+YammerHistogramUtils:0.0338

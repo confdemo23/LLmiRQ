@@ -1,0 +1,10 @@
+Admin:0.2174
+Bytes:0.8841
+Connection:0.2283
+HRegion:0.7973
+HRegionServer:0.3116
+HStore:0.3537
+MonitoredTask:0.2374
+RegionInfo:0.6432
+TableDescriptor:0.3225
+TableName:0.2183

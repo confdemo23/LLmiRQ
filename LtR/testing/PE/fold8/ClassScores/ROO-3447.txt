@@ -1,0 +1,3 @@
+CommentStructure:0.2600
+JavadocComment:0.2200
+MethodMetadataBuilder:0.3600

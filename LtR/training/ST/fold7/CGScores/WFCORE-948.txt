@@ -1,0 +1,10 @@
+AuthorizationResult:0.0127
+GlobalOperationHandlers:0.0101
+ImmutableManagementResourceRegistration:0.0706
+OperationContext:0.0627
+PathAddress:0.0680
+PathElement:0.0548
+ResourceAuthorization:0.0101
+SimpleAttributeDefinition:0.0233
+SimpleAttributeDefinitionBuilder:0.0206
+SimpleOperationDefinitionBuilder:0.0206

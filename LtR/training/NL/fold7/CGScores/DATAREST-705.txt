@@ -1,0 +1,10 @@
+JacksonMetadata:0.0424
+JsonSchemaProperty:0.1187
+JsonSchemaPropertyRegistrar:0.0969
+MessageResolver:0.0533
+MetadataConfiguration:0.0492
+RepositoryRestConfiguration:0.2866
+RepositoryRestConfigurerDelegate:0.0518
+ResourceMappingConfiguration:0.0624
+ResourceMetadata:0.0436
+RootResourceInformation:0.1826

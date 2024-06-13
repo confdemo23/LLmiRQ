@@ -1,0 +1,1 @@
+IndexMaintenancePolicyType:0.0020

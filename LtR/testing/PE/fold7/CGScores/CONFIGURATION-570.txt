@@ -1,0 +1,10 @@
+AbstractConfiguration:0.0301
+Builder:0.0251
+Configuration:0.0633
+ConfigurationInterpolator:0.0711
+ConversionHandler:0.0185
+FileHandler:0.0310
+FileLocatorBuilder:0.0276
+ListDelimiterHandler:0.0385
+PropertiesConfigurationLayout:0.0420
+Synchronizer:0.0251

@@ -1,0 +1,2 @@
+MongoTemplate:0.2083
+NearQuery:0.1250

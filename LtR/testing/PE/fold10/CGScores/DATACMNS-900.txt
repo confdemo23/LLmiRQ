@@ -1,0 +1,7 @@
+ExampleMatcher:0.0054
+GenericPropertyMatcher:0.0253
+MatchMode:0.0042
+MatcherConfigurer:0.0018
+PropertySpecifier:0.0136
+PropertySpecifiers:0.0112
+PropertyValueTransformer:0.0018

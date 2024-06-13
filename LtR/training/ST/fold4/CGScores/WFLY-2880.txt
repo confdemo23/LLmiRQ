@@ -1,0 +1,10 @@
+AbstractDataSourceService:0.5169
+BindInfo:0.1067
+BinderService:0.0702
+ContextNames:0.1067
+DataSourceReferenceFactoryService:0.0337
+DataSourceStatisticsService:0.0702
+ModifiableXaDataSource:0.0414
+Util:0.0407
+XMLDataSourceRuntimeHandler:0.0407
+XMLXaDataSourceRuntimeHandler:0.0407

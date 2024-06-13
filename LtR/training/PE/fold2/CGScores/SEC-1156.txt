@@ -1,0 +1,10 @@
+Authentication:0.0129
+AuthenticationManager:0.0039
+AuthorityUtils:0.0039
+GrantedAuthority:0.0129
+JdbcDaoImpl:0.0039
+SecurityContext:0.0084
+SecurityContextHolder:0.0084
+UserCache:0.0219
+UserDetails:0.0309
+UsernamePasswordAuthenticationToken:0.0039

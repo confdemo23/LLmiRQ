@@ -1,0 +1,4 @@
+GenericUDAFCountEvaluator:0.0082
+PTFDeserializer:0.0077
+PTFInvocation:0.0474
+PTFOperator:0.0021

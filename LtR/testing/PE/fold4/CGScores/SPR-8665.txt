@@ -1,0 +1,6 @@
+CollectionFactory:0.0011
+ConfigurablePropertyAccessor:0.0018
+DataBinder:0.0005
+MultipartFile:0.0005
+MutablePropertyValues:0.0065
+PropertyValue:0.0032

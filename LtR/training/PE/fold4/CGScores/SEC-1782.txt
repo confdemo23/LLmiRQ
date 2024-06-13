@@ -1,0 +1,6 @@
+Authentication:0.0030
+LdapAuthenticationProvider:0.0102
+PasswordPolicyControl:0.0013
+PasswordPolicyControlExtractor:0.0013
+PasswordPolicyErrorStatus:0.0049
+PasswordPolicyException:0.0049

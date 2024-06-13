@@ -1,0 +1,5 @@
+FastDateParser:0.0050
+ISO8601TimeZoneStrategy:0.0050
+Strategy:0.0178
+StrategyAndWidth:0.0050
+StrategyParser:0.0050

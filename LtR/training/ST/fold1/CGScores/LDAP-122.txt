@@ -1,0 +1,4 @@
+CompensatingTransactionHolderSupport:0.0430
+CompensatingTransactionObject:0.0971
+CompensatingTransactionOperationManager:0.0282
+ContextSourceTransactionManagerDelegate:0.0882

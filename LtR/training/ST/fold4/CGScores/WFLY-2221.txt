@@ -1,0 +1,10 @@
+BindInfo:0.2346
+BinderService:0.1615
+BindingConfiguration:0.3076
+ComponentConfiguration:0.1250
+ComponentDescription:0.0702
+ContextNames:0.0702
+EEModuleClassDescription:0.1067
+EEModuleConfiguration:0.2528
+InjectionSource:0.0337
+InterceptorDescription:0.0337

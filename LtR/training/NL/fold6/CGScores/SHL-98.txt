@@ -1,0 +1,10 @@
+BannerProvider:0.0304
+CliCommand:0.0495
+CliOption:0.2474
+CommandLine:0.0139
+Completion:0.0286
+Converter:0.0286
+MethodTarget:0.1589
+PluginUtils:0.0221
+SimpleParser:0.0139
+Tokenizer:0.0495

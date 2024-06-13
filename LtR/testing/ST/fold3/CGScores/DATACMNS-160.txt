@@ -1,0 +1,10 @@
+Pair:0.0124
+PropertyPath:0.0124
+QueryCreationListener:0.0124
+ReactiveWrapperConverters:0.0124
+RepositoryInformation:0.0597
+RepositoryMetadata:0.0124
+RepositoryQuery:0.0191
+SpelAwareProxyProjectionFactory:0.0124
+Subject:0.0101
+TypeInformation:0.0191

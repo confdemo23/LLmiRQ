@@ -1,0 +1,10 @@
+AbstractSecurityInterceptor:0.0578
+FilterInvocation:0.0851
+HttpRequestResponseHolder:0.0871
+InterceptorStatusToken:0.0776
+SaveContextOnUpdateOrErrorResponseWrapper:0.0449
+SecurityContext:0.1251
+SecurityContextHolder:0.1805
+SecurityContextHolderStrategy:0.0251
+ThrowableAnalyzer:0.0403
+WebSecurityExpressionRoot:0.0436

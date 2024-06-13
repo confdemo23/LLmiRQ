@@ -1,0 +1,10 @@
+ByteBufferExtendedCell:0.1080
+ByteBufferUtils:0.0571
+Bytes:0.0415
+Cell:0.3101
+HStore:0.0487
+KeyValueHeap:0.0518
+PrivateCellUtil:0.0415
+Scan:0.0397
+ScanQueryMatcher:0.0497
+ScannerContext:0.0492

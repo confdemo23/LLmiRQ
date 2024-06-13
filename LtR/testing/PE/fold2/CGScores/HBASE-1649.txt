@@ -1,0 +1,6 @@
+CompareFilter:0.0147
+CompareOperator:0.0036
+FilterList:0.0285
+FilterListBase:0.0894
+Operator:0.0132
+ProtobufUtil:0.0137

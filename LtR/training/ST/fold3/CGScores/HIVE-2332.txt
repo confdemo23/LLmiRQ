@@ -1,0 +1,10 @@
+HadoopShims:0.0048
+MapOpCtx:0.0274
+MapOperator:0.0012
+MapRedTask:0.0087
+MyField:0.0083
+ObjectInspectorOptions:0.0143
+Operator:0.0191
+OperatorFunc:0.0000
+ShimLoader:0.0048
+TableScanOperator:0.0238

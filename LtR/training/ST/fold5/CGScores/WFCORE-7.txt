@@ -1,0 +1,10 @@
+AbstractAttributeDefinitionBuilder:0.0542
+AttributeAccess:0.0125
+AttributeDefinition:0.0227
+AttributeMarshaller:0.0122
+NillableOrExpressionParameterValidator:0.0184
+OperationContext:0.0276
+ParameterValidator:0.0066
+PathAddress:0.0064
+ResourceDescriptionResolver:0.0097
+SimpleAttributeDefinition:0.0090

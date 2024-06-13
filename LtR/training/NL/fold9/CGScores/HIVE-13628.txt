@@ -1,0 +1,10 @@
+Client:0.0213
+ConfVars:0.0426
+FunctionRegistry:0.0175
+HadoopThriftAuthBridge:0.0094
+HiveConf:0.0927
+HiveServer2:0.0595
+ServerOptionsProcessor:0.0113
+ShimLoader:0.0163
+Utils:0.0332
+VarType:0.0125

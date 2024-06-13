@@ -1,0 +1,10 @@
+AccessControlEntryImpl:0.0062
+Acl:0.0281
+AclAuthorizationStrategy:0.0158
+AclCache:0.0134
+GrantedAuthoritySid:0.0062
+JdbcAclService:0.0062
+MutableAcl:0.0854
+ObjectIdentity:0.0398
+PrincipalSid:0.0062
+Sid:0.0062

@@ -1,0 +1,1 @@
+RepositoryCollectionResourceMapping:0.6400

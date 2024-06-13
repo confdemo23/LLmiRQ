@@ -1,0 +1,2 @@
+ExchangeHelper:0.0039
+XmppBinding:0.0039

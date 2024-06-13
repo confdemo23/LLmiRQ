@@ -1,0 +1,10 @@
+AbstractSecurityInterceptor:0.0054
+AccessDecisionManager:0.0040
+AfterInvocationManager:0.0040
+Authentication:0.0053
+InterceptorStatusToken:0.0124
+RunAsManager:0.0040
+SecurityContext:0.0158
+SecurityContextHolder:0.0227
+SecurityContextHolderStrategy:0.0041
+SecurityMetadataSource:0.0040

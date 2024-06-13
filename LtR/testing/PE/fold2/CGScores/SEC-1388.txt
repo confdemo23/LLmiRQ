@@ -1,0 +1,7 @@
+PortMapper:0.0305
+PortResolver:0.0305
+RedirectStrategy:0.0142
+RedirectUrlBuilder:0.2581
+UrlUtils:0.0467
+UsernamePasswordAuthenticationFilter:0.0163
+UsernamePasswordAuthenticationToken:0.0163

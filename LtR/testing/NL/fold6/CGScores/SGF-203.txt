@@ -1,0 +1,10 @@
+ArrayUtils:0.0235
+DataPolicyConverter:0.0265
+GemfireAccessor:0.0055
+GemfireCacheUtils:0.0581
+GemfireCallback:0.0055
+GemfireTemplate:0.0656
+GemfireUtils:0.0095
+Interest:0.0901
+RegionLookupFactoryBean:0.0180
+RegionShortcutWrapper:0.0235

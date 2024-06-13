@@ -1,0 +1,5 @@
+BeeLine:0.1081
+BeeLineOpts:0.2162
+HiveCli:0.1081
+HiveQueryResultSet:0.4054
+TableOutputFormat:0.3784

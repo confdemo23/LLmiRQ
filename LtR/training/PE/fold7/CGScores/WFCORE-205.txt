@@ -1,0 +1,7 @@
+ContentRepository:0.0283
+HashUtil:0.0049
+ManagedContent:0.0107
+ManagedDMRContentResource:0.0049
+PathAddress:0.0576
+PathElement:0.0517
+Resource:0.0107

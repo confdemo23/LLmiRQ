@@ -1,0 +1,6 @@
+CamelContinuationServlet:0.5526
+CamelServlet:0.2368
+DefaultHttpBinding:0.3947
+DefaultJettyHttpBinding:0.5263
+JettyHttpComponent9:0.4211
+JettyHttpEndpoint9:0.3947

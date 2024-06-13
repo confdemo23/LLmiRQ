@@ -1,0 +1,7 @@
+FileUtils:0.2188
+HdfsUtils:0.2188
+HiveConf:0.1875
+OrcFile:0.1563
+OrcInputFormat:0.3750
+OrcSplit:0.1875
+StripeInformation:0.4688

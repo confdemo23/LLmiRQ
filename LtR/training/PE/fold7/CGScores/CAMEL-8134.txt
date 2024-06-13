@@ -1,0 +1,10 @@
+CachedOutputStream:0.0075
+CamelContext:0.0075
+CookieHandler:0.0063
+Exchange:0.0342
+HttpEndpoint:0.0669
+HttpHelper:0.0232
+IOHelper:0.0111
+Message:0.0378
+StreamCachingStrategy:0.0172
+TempFileManager:0.0172

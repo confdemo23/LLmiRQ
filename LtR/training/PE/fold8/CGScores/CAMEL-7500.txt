@@ -1,0 +1,10 @@
+AsyncCallback:0.0445
+CamelContext:0.0208
+Exchange:0.0982
+ExchangeHelper:0.0162
+Message:0.0179
+NettyConfiguration:0.4809
+NettyEndpoint:0.0182
+NettyHelper:0.0217
+NettyProducer:0.1875
+SSLEngineFactory:0.0150

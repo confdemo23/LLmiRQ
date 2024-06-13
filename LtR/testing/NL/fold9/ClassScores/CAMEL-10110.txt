@@ -1,0 +1,4 @@
+BindyCsvDataFormat:0.5000
+BindyCsvFactory:0.4063
+CsvDataFormat:0.3438
+CsvRecord:0.2188

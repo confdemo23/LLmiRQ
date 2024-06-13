@@ -1,0 +1,2 @@
+AbstractUserDetailsAuthenticationProvider:0.8222
+UserDAO:0.0667

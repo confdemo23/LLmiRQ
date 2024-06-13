@@ -1,0 +1,5 @@
+CamelContext:0.2424
+DefaultErrorHandler:0.4545
+OnExceptionDefinition:0.5152
+RouteContext:0.2424
+RouteDefinition:0.3333

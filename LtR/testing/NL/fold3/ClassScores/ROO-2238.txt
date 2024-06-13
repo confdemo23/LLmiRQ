@@ -1,0 +1,6 @@
+FileUtils:0.1707
+JLineShellComponent:0.4146
+MetadataService:0.3171
+ProjectOperations:0.3659
+ReflectionUtils:0.3171
+SimpleParser:0.2439

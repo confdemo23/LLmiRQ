@@ -1,0 +1,5 @@
+AbstractConfiguration:0.3469
+CombinedConfiguration:0.3469
+DefaultConfigurationKey:0.3878
+DefaultExpressionEngine:0.3878
+HierarchicalConfiguration:0.4286

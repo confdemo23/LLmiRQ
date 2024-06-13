@@ -1,0 +1,2 @@
+CapabilityScope:0.2791
+HostCapabilityScope:0.3721

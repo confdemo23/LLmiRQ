@@ -1,0 +1,5 @@
+DefaultConsumer:0.3243
+DefaultEndpoint:0.3243
+JmsComponent:0.2432
+JmsConfiguration:0.3514
+JmsEndpoint:0.2162

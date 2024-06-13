@@ -1,0 +1,2 @@
+MultipleClientRemoteJndiTestCase:0.6444
+NestedRemoteContextTestCase:0.5333

@@ -1,0 +1,10 @@
+Bytes:0.1523
+ClusterConnection:0.1276
+HRegion:0.1946
+MasterCoprocessorHost:0.1334
+MasterKeepAliveConnection:0.2616
+ProtobufUtil:0.1879
+RegionInfo:0.2100
+RequestConverter:0.1985
+ServerName:0.1032
+TableName:0.1189

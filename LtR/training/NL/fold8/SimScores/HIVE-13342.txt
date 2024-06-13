@@ -1,0 +1,10 @@
+LlapAwareSplit:0.3079
+LlapDecider:0.3932
+LlapManagementProtocolPB:0.2830
+LlapOutputFormat:0.3224
+LlapProtocolBlockingPB:0.2720
+LlapRowInputFormat:0.3095
+LlapTokenSelector:0.2624
+LlapWrappableInputFormatInterface:0.2721
+LogHelpers:0.3005
+TestLlapInputSplit:0.2677

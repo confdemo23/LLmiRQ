@@ -1,0 +1,3 @@
+AbstractModuleDeploymentTestCaseSetup:0.7333
+GlobalModulesTestCase:0.3778
+WeldModuleDeploymentTestCase:0.5333

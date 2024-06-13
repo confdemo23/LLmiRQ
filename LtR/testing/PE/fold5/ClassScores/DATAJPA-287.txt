@@ -1,0 +1,2 @@
+SimpleJpaRepository:0.3333
+Specification:0.2000

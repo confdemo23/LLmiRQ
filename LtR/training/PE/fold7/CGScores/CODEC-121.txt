@@ -1,0 +1,3 @@
+QuotedPrintableCodec:0.0192
+StringUtils:0.0152
+Utils:0.0152

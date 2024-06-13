@@ -1,0 +1,5 @@
+Message:0.0358
+SmppConfiguration:0.0069
+SmppSplitter:0.0016
+SmppSplittingPolicy:0.0016
+SmppUtils:0.0095

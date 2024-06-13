@@ -1,0 +1,10 @@
+Jpa21Utils:0.0094
+JpaEntityInformation:0.0094
+JpaEntityInformationSupport:0.0094
+JpaParameters:0.0276
+JpaQueryCreator:0.0376
+JpaQueryMethod:0.0276
+ParameterBinder:0.0175
+PersistenceProvider:0.0094
+QueryPreparer:0.0175
+Specification:0.0094

@@ -1,0 +1,10 @@
+Client:0.0213
+ConfVars:0.0426
+FileUtils:0.0144
+HadoopShims:0.0282
+HdfsUtils:0.0294
+Hive:0.0376
+HiveConf:0.0927
+HiveDriver:0.0226
+ShimLoader:0.0370
+Utils:0.0320

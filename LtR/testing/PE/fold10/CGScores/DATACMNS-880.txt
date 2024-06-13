@@ -1,0 +1,7 @@
+CustomAnnotationTransactionAttributeSource:0.0132
+Lazy:0.0136
+MappingContext:0.0042
+RepositoryFactoryBeanSupport:0.0064
+RepositoryFactorySupport:0.0695
+RepositoryInformation:0.0064
+RepositoryMetadata:0.0089

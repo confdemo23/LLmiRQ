@@ -1,0 +1,10 @@
+ApplicationConfigService:0.1671
+ClassOrInterfaceTypeDetails:0.0664
+FieldCreatorProvider:0.3042
+JavaType:0.1441
+JdbcDatabase:0.1219
+LastUsed:0.1099
+Pom:0.0654
+ProjectOperations:0.1378
+TypeLocationService:0.0817
+XmlUtils:0.0654

@@ -1,0 +1,4 @@
+ArtifactAsset:0.2632
+BuildTool:0.1579
+PackageMojo:0.2105
+WebInfLibFilteringArchiveAsset:0.7105

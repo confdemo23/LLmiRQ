@@ -1,0 +1,10 @@
+Bytes:0.0194
+CellUtil:0.0095
+Connection:0.0022
+ConnectionFactory:0.0049
+RegionLocator:0.0022
+Result:0.0050
+Scan:0.0363
+TableInputFormatBase:0.0049
+TableMapReduceUtil:0.0040
+TableName:0.0075

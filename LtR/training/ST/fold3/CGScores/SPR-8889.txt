@@ -1,0 +1,3 @@
+BeanWrapper:0.0020
+MutablePropertyValues:0.0072
+PropertyAccessorFactory:0.0020

@@ -1,0 +1,9 @@
+ConnectSupport:0.0118
+ConnectionFactory:0.0020
+ConnectionFactoryLocator:0.0069
+ConnectionRepository:0.0020
+ProviderSignInInterceptor:0.0069
+SessionStrategy:0.0020
+SignInAdapter:0.0020
+URIBuilder:0.0411
+UsersConnectionRepository:0.0045

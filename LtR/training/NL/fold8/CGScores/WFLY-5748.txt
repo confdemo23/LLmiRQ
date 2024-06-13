@@ -1,0 +1,10 @@
+ConfigValidator:0.0008
+CorbaNamingService:0.0036
+CorbaORBService:0.0036
+CorbaPOAService:0.0036
+ElytronSASClientInterceptor:0.0008
+IIOPInitializer:0.0063
+IIOPSubsystemAdd:0.0050
+InitialContext:0.0063
+LegacySSLSocketFactory:0.0008
+SSLSocketFactory:0.0022

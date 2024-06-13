@@ -1,0 +1,4 @@
+Builder:0.0041
+HBaseConfiguration:0.0041
+HttpServer:0.0056
+KeyStoreTestUtil:0.0095

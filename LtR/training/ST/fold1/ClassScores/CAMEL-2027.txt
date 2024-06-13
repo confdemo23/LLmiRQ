@@ -1,0 +1,9 @@
+ApplicationContextRegistry:0.5000
+BeanDefinition:0.2273
+BeanInfo:0.0909
+BeanJavaConfigTest:0.3182
+BeanProcessor:0.2045
+DefaultCamelContext:0.3409
+ProcessorDefinition:0.3409
+RouteDefinition:0.2500
+SpringCamelContext:0.3182

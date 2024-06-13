@@ -1,0 +1,10 @@
+CollectionStringBuffer:0.2972
+CxfEndpoint:0.0763
+DefaultRouteStartupOrder:0.0718
+EndpointRegistry:0.0718
+ManagementStrategy:0.0821
+ModelCamelContext:0.1321
+ObjectHelper:0.1513
+Route:0.1837
+RouteDefinition:0.1074
+RouteService:0.2850

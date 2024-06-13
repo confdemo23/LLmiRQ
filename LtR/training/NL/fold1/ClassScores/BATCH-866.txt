@@ -1,0 +1,8 @@
+BeanWrapperFieldExtractor:0.5946
+FieldSetMapper:0.2973
+FlatFileItemReader:0.4054
+FlatFileItemWriter:0.4054
+MultiResourceItemReader:0.5405
+MultiResourceItemWriter:0.5405
+StaxEventItemReader:0.4324
+StaxEventItemWriter:0.4324

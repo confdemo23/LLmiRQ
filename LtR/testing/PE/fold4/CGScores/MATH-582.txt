@@ -1,0 +1,10 @@
+AbstractUnivariateStatistic:0.0008
+DescriptiveStatistics:0.0012
+FastMath:0.0024
+KthSelector:0.0024
+MathArrays:0.0019
+MathUtils:0.0024
+Percentile:0.0028
+Precision:0.0008
+UnivariateStatistic:0.0063
+Variance:0.0035

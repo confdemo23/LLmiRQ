@@ -1,0 +1,10 @@
+Assert:0.1789
+BeanDefinition:0.1383
+ClassPathBeanDefinitionScanner:0.0517
+ClassUtils:0.0828
+DependencyDescriptor:0.2602
+PathMatcher:0.0753
+Resource:0.0998
+RootBeanDefinition:0.0964
+StringUtils:0.0920
+VfsPatternUtils:0.0532

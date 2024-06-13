@@ -1,0 +1,2 @@
+JndiRegistry:0.2000
+JpaComponent:0.2000

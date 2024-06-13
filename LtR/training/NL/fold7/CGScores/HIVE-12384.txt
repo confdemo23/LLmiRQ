@@ -1,0 +1,10 @@
+ConfVars:0.0200
+EncoderDecoder:0.0035
+GenericUDAFSumEvaluator:0.0153
+HiveConf:0.0436
+HiveDecimal:0.0895
+HiveDecimalUtils:0.0271
+TypeCheckProcFactory:0.1049
+UnionOperator:0.0027
+Utils:0.0012
+VarType:0.0059

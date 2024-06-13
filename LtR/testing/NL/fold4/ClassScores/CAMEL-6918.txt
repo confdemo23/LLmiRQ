@@ -1,0 +1,10 @@
+AsyncCallback:0.2439
+CamelContext:0.2195
+DeadLetterChannel:0.3415
+DefaultErrorHandler:0.3902
+ErrorHandler:0.2195
+Processor:0.1463
+RedeliveryPolicy:0.3171
+SedaConsumer:0.2195
+SedaEndpoint:0.2195
+SedaProducer:0.2195

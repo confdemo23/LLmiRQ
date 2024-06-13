@@ -1,0 +1,9 @@
+CamelContext:0.2439
+DefaultCamelContext:0.4146
+ErrorHandlerBuilder:0.4146
+ExceptionPolicyStrategy:0.5122
+ModelCamelContext:0.3659
+OnExceptionDefinition:0.4634
+RouteBuilder:0.2439
+RouteContext:0.2439
+RouteDefinition:0.3171

@@ -1,0 +1,3 @@
+Acl:0.0000
+JdbcMutableAclService:0.4000
+ObjectIdentity:0.2444

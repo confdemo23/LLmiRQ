@@ -1,0 +1,5 @@
+DomainModelControllerService:0.5000
+DomainServerProtocol:0.3400
+ProxyController:0.2400
+ServerInventoryImpl:0.3200
+ServerToHostProtocolHandler:0.4800

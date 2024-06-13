@@ -1,0 +1,6 @@
+AbstractConfiguration:0.0012
+Configuration:0.0035
+ConfigurationUtils:0.0012
+FileHandler:0.0054
+ListDelimiterHandler:0.0012
+MapConfiguration:0.0012

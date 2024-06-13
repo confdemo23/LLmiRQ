@@ -1,0 +1,7 @@
+CamelContext:0.3125
+DefaultScheduledPollConsumerScheduler:1.0000
+MailConsumer:0.3125
+MailEndpoint:0.3125
+QuartzComponent:0.4063
+SchedulerConsumer:0.4688
+UriEndpointComponent:0.5625

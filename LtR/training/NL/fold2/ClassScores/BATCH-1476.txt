@@ -1,0 +1,10 @@
+AbstractItemCountingItemStreamItemReader:0.9268
+ChunkOrientedTasklet:0.4390
+CompositeItemWriter:0.4146
+FaultTolerantStepBuilder:0.5366
+ItemWriteListener:0.3659
+SimpleStepExecutionSplitter:0.6098
+SkipListener:0.2439
+SkipPolicy:0.1951
+StepExecutionListenerSupport:0.6341
+TaskletStep:0.2195

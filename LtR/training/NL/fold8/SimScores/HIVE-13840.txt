@@ -1,0 +1,10 @@
+OrcFileFormatProxy:0.3494
+OrcFileStripeMergeInputFormat:0.3489
+OrcNewInputFormat:0.3811
+OrcNewSplit:0.3981
+OrcSplit:0.2723
+OrcTail:0.2354
+TestReaderImpl:0.2355
+TestStringDictionary:0.2779
+VectorizedOrcInputFormat:0.3055
+Writer:0.3172

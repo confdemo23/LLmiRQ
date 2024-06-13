@@ -1,0 +1,10 @@
+Authentication:0.0085
+LogoutHandler:0.0016
+SecurityContext:0.0031
+SecurityContextHolder:0.0045
+SecurityContextLogoutHandler:0.0012
+SessionInformation:0.0022
+SessionRegistry:0.0022
+UrlUtils:0.0028
+UserDetails:0.0070
+Utf8:0.0012

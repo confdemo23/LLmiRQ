@@ -1,0 +1,7 @@
+BackendIdHandlerMethodArgumentResolver:0.0106
+Builder:0.0230
+IncomingRequest:0.0355
+JsonPatchHandler:0.0230
+PersistentEntityResource:0.0106
+RootResourceInformation:0.0604
+RootResourceInformationHandlerMethodArgumentResolver:0.0106

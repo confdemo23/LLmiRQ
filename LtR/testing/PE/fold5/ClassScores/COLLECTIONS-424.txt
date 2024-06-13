@@ -1,0 +1,3 @@
+CompositeCollection:0.3333
+CompositeSet:0.1778
+TreeBag:0.0667

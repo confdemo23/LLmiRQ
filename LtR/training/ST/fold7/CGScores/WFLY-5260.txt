@@ -1,0 +1,5 @@
+ContextNames:0.0021
+EEDefaultResourceJndiNames:0.0301
+EEModuleDescription:0.0097
+ResourceInjectionResolver:0.0021
+ResourceInjectionUtilities:0.0047

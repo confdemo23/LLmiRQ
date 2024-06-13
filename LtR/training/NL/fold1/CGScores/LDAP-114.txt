@@ -1,0 +1,10 @@
+AuthenticationSource:0.0246
+CollectingNameClassPairCallbackHandler:0.0132
+ContextMapper:0.0132
+ContextMapperCallbackHandler:0.0132
+ContextSource:0.0252
+DirContextOperations:0.0246
+Filter:0.0208
+LdapQuery:0.0699
+LdapUtils:0.1194
+ObjectDirectoryMapper:0.0586

@@ -1,0 +1,8 @@
+ASTNode:0.1220
+BaseSemanticAnalyzer:0.4390
+DDLTask:0.1220
+HiveMetaStoreClient:0.4146
+HiveSemanticAnalyzerHook:0.5366
+HiveStringUtils:0.3171
+SemanticAnalyzer:0.3415
+ShowTablesDesc:0.2927

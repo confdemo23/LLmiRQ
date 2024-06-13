@@ -1,0 +1,5 @@
+CoprocessorRpcChannel:0.5152
+HBaseAdmin:0.1818
+HBaseConfiguration:0.4242
+HConstants:0.1818
+HTable:0.0606

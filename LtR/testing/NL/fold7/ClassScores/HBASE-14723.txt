@@ -1,0 +1,9 @@
+Admin:0.0769
+ConstantSizeRegionSplitPolicy:0.6923
+HBaseTestingUtility:0.4359
+HMaster:0.1282
+HRegion:0.1282
+HRegionServer:0.2821
+MiniHBaseCluster:0.3590
+RegionSplitPolicy:0.3846
+TableDescriptor:0.3333

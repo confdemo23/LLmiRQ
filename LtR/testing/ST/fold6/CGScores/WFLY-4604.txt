@@ -1,0 +1,10 @@
+ComponentConfiguration:0.0101
+ComponentDescription:0.0026
+ComponentInstance:0.0026
+ComponentRegistry:0.0033
+DefaultCredentials:0.0035
+ManagedReference:0.0052
+ManagedReferenceFactory:0.0015
+ModuleUtils:0.0016
+SecurityDomainContext:0.0074
+WebInjectionContainer:0.0088

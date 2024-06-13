@@ -1,0 +1,5 @@
+AbstractItemStreamItemWriter:0.0034
+ExecutionContext:0.0057
+MultiResourceItemWriter:0.0010
+ResourceAwareItemWriterItemStream:0.0081
+ResourceSuffixCreator:0.0010

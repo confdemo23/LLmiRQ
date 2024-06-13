@@ -1,0 +1,8 @@
+ColumnPruner:0.2195
+ExprNodeEvaluator:0.3415
+FilterOperator:0.2683
+Hive:0.0244
+HiveMetaStoreClient:0.3902
+ObjectStore:0.1951
+PartitionPruner:0.2927
+SemanticAnalyzer:0.3171

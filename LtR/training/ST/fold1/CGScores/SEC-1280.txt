@@ -1,0 +1,10 @@
+AbstractRememberMeServices:0.0231
+Authentication:0.0231
+Base64:0.0231
+FilterInvocation:0.0186
+HttpRequestResponseHolder:0.0398
+PersistentRememberMeToken:0.1571
+PersistentTokenRepository:0.0596
+SecurityContextHolder:0.0385
+SecurityContextRepository:0.0192
+UrlUtils:0.0180

@@ -1,0 +1,2 @@
+Counter:0.0976
+HiveConf:0.1220

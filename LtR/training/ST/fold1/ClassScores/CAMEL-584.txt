@@ -1,0 +1,2 @@
+BeanWithPropertiesAndHeadersAndBodyInjectionTest:1.0000
+MyBean:0.0455

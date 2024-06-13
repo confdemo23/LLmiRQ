@@ -1,0 +1,1 @@
+DefaultCxfRsBinding:0.2885

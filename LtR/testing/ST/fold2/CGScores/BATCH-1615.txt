@@ -1,0 +1,7 @@
+AbstractItemStreamItemReader:0.0208
+ExecutionContext:0.0208
+FragmentEventReader:0.0170
+MultiResourceItemReader:0.0061
+ResourceAware:0.0061
+ResourceAwareItemReaderItemStream:0.0725
+StaxUtils:0.0048

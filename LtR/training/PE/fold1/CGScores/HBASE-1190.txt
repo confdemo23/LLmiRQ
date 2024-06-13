@@ -1,0 +1,10 @@
+AsyncRequestFuture:0.0620
+Builder:0.1504
+Bytes:0.0976
+HRegionInfo:0.0437
+HRegionLocation:0.0742
+Pair:0.1596
+RegionLocator:0.0315
+RpcControllerFactory:0.0346
+Scan:0.0691
+TableSplit:0.1809

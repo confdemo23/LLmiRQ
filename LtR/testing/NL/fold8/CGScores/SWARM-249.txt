@@ -1,0 +1,6 @@
+ArtifactResolver:0.0339
+ArtifactSpec:0.0239
+DeclaredDependencies:0.0339
+ModuleAnalyzer:0.0038
+ProjectAsset:0.0038
+WildFlySwarmManifest:0.0239

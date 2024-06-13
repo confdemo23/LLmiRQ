@@ -1,0 +1,3 @@
+ClassPathBeanDefinitionScanner:0.6000
+GenericApplicationContext:0.4889
+Service:0.0889

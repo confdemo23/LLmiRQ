@@ -1,0 +1,2 @@
+AbstractFileNamingStrategy:0.0147
+RollingFileNamingStrategy:0.0674

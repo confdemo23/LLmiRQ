@@ -1,0 +1,8 @@
+IndexDefinitionHolder:0.0134
+IndexOperations:0.0032
+IndexOperationsProvider:0.0032
+IndexResolver:0.0015
+MongoDbErrorCodes:0.0015
+MongoMappingContext:0.0032
+MongoPersistentEntity:0.0049
+UncategorizedMongoDbException:0.0049

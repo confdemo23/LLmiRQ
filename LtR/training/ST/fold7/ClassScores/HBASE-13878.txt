@@ -1,0 +1,2 @@
+HBaseTestingUtility:0.3333
+HFileOutputFormat2:0.3125

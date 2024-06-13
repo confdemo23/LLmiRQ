@@ -1,0 +1,6 @@
+BaseHFileCleanerDelegate:0.0055
+BaseLogCleanerDelegate:0.0110
+EnvironmentEdgeManager:0.0049
+ReplicationFactory:0.0116
+ReplicationHFileCleaner:0.0188
+ReplicationLogCleaner:0.0170

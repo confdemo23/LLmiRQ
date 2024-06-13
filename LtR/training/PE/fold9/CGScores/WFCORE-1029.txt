@@ -1,0 +1,4 @@
+ManagedBinding:0.0196
+ManagedBindingRegistry:0.0196
+ManagedMulticastSocketBinding:0.0156
+WrapperBinding:0.0075

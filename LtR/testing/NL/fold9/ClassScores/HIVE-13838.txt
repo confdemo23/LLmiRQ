@@ -1,0 +1,10 @@
+AcidUtils:0.2188
+Hive:0.0625
+HiveConf:0.1875
+HiveMetaStore:0.3438
+HiveStatsUtils:0.3750
+IMetaStoreClient:0.4375
+ObjectStore:0.2813
+StatsSetupConst:0.4063
+Table:0.0938
+TxnUtils:0.1875

@@ -1,0 +1,2 @@
+SoapFault:0.0110
+SoapFaultDefinition:0.0072

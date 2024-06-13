@@ -1,0 +1,10 @@
+ConfVars:0.0426
+ExecDriver:0.0100
+HadoopShims:0.0163
+HiveConf:0.0927
+MapJoinOperator:0.0915
+MapJoinProcessor:0.0276
+MapJoinWalkerCtx:0.1579
+ShimLoader:0.0163
+Utils:0.0119
+VarType:0.0125

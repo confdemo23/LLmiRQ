@@ -1,0 +1,6 @@
+ClientHttpRequest:0.0387
+ClientHttpRequestFactory:0.0187
+ClientHttpResponse:0.1188
+FileCopyUtils:0.0387
+HttpHeaders:0.0387
+SimpleClientHttpRequestFactory:0.0159

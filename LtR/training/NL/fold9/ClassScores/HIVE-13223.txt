@@ -1,0 +1,8 @@
+HiveConf:0.1351
+HiveSparkClientFactory:0.5135
+RemoteHiveSparkClient:0.4865
+SparkClientUtilities:0.4595
+SparkPlanGenerator:0.4054
+SparkSessionManager:0.4324
+SparkTask:0.1622
+TezJobMonitor:0.2703

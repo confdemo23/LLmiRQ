@@ -1,0 +1,9 @@
+DataAdapter:0.0251
+Erf:0.0157
+FastMath:0.0467
+MathUtils:0.0185
+RandomDataGenerator:0.0251
+RandomDataImpl:0.0053
+RandomGenerator:0.0044
+RealDistribution:0.0514
+SummaryStatistics:0.1172

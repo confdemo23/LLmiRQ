@@ -1,0 +1,6 @@
+GenericUDAFEvaluator:0.4390
+GenericUDAFResolver:0.4146
+HiveConf:0.1463
+HiveIndexHandler:0.3415
+IndexMetadataChangeTask:0.5122
+SemanticAnalyzer:0.3415

@@ -1,0 +1,4 @@
+AbstractPartitionDataStoreWriter:0.5800
+CodecInfo:0.1200
+PartitionTextFileWriter:0.4000
+TextFileWriter:0.2200

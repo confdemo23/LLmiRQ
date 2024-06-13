@@ -1,0 +1,3 @@
+CliAdapter:0.0218
+HBaseCliConfig:0.0045
+HBaseTestSetup:0.0032

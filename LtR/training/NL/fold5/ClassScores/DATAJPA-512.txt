@@ -1,0 +1,3 @@
+AbstractJpaQuery:0.3636
+JpaParameters:0.2727
+PartTreeJpaQuery:0.3636

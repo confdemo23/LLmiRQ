@@ -1,0 +1,1 @@
+JpaPersistableEntityInformation:0.6512

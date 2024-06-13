@@ -1,0 +1,8 @@
+HiveIOExceptionHandlerUtil:0.0032
+HiveInputFormat:0.0032
+HiveInputSplit:0.0253
+Hook:0.0024
+MapJoinOperator:0.0430
+MergeQueue:0.0200
+SMBMapJoinOperator:0.0094
+TezTask:0.0009

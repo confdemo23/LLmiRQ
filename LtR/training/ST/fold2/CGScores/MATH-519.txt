@@ -1,0 +1,10 @@
+ConvergenceChecker:0.0065
+DerivativeStructure:0.0056
+FastMath:0.2415
+FunctionUtils:0.0011
+Gaussian:0.0034
+ParameterGuesser:0.0028
+Parametric:0.0068
+PointVectorValuePair:0.0217
+RealMatrix:0.0217
+WeightedObservedPoint:0.0934

@@ -1,0 +1,5 @@
+AS7MetadataRepository:0.0022
+Credential:0.0128
+IronJacamarResource:0.0022
+Security:0.0155
+WorkManagerSecurity:0.0022

@@ -1,0 +1,3 @@
+FilterListIterator:0.3488
+GrowthList:0.1628
+PredicateUtils:0.2558

@@ -1,0 +1,10 @@
+AnnotationBeanNameGenerator:0.6486
+AnnotationConfigApplicationContext:0.8378
+ApplicationContext:0.4054
+BeanDefinitionRegistry:0.5135
+ClassPathBeanDefinitionScanner:0.7297
+ClassPathScanningCandidateComponentProvider:1.0000
+ContextLoaderListener:0.4865
+DefaultListableBeanFactory:0.6216
+PathMatchingResourcePatternResolver:0.8649
+XmlWebApplicationContext:0.5676

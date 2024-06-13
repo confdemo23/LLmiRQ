@@ -1,0 +1,5 @@
+Hive:0.0488
+HiveAlterHandler:0.3415
+HiveConf:0.1463
+HiveMetaStore:0.2683
+Table:0.0732

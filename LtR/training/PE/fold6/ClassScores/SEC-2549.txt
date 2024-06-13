@@ -1,0 +1,1 @@
+AuthenticationConfiguration:0.5217

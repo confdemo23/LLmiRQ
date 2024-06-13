@@ -1,0 +1,10 @@
+EEDefaultResourceJndiNames:0.0302
+EEModuleDescription:0.0098
+ManagedReference:0.0037
+ManagedReferenceFactory:0.0037
+NamingContext:0.0118
+NamingStore:0.0076
+ParsedName:0.0230
+RequireResolveException:0.0065
+ResourceInjectionUtilities:0.0047
+WritableNamingStore:0.0054

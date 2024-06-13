@@ -1,0 +1,5 @@
+Client:0.0120
+HadoopThriftAuthBridge:0.0055
+HiveSQLException:0.0045
+ShimLoader:0.0055
+Utils:0.0120

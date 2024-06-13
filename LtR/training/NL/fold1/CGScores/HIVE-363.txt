@@ -1,0 +1,4 @@
+AggregationBuffer:0.0044
+AggregationType:0.0044
+CommonJoinOperator:0.0208
+GroupByOperator:0.0123

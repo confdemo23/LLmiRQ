@@ -1,0 +1,3 @@
+HiveConf:0.1212
+HiveMetaStore:0.2727
+Warehouse:0.1515

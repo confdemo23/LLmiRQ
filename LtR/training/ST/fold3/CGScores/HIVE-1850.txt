@@ -1,0 +1,5 @@
+HadoopThriftAuthBridge:0.0024
+MetaStoreUtils:0.0413
+ShimLoader:0.0135
+Table:0.1855
+_Fields:0.0008

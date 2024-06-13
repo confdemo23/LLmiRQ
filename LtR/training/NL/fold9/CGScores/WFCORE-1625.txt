@@ -1,0 +1,10 @@
+AccessAuditContext:0.0877
+ControlledProcessState:0.1028
+Factory:0.0539
+Notification:0.0727
+OperationDefinition:0.0777
+PathAddress:0.1447
+PathElement:0.0539
+ResourceDefinition:0.0727
+Stage:0.0877
+Step:0.1328

@@ -1,0 +1,2 @@
+CamelEndpointFactoryBean:0.3846
+Main:0.0000

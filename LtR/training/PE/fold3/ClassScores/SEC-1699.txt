@@ -1,0 +1,5 @@
+AccessDecisionManager:0.4865
+AffirmativeBased:0.3514
+DefaultFilterChainValidator:0.6486
+FilterInvocation:0.3514
+WebExpressionVoter:0.4054

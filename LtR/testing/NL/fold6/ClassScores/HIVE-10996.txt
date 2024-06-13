@@ -1,0 +1,7 @@
+ColumnPruner:0.2424
+GroupByOperator:0.3333
+HiveConf:0.1212
+JoinOperator:0.2424
+QB:0.0000
+ReduceSinkOperator:0.4242
+SemanticAnalyzer:0.3636

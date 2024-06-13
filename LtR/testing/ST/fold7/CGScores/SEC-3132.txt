@@ -1,0 +1,10 @@
+BuildState:0.0136
+DefaultLoginPageGeneratingFilter:0.0249
+FilterChainProxy:0.0291
+HttpSecurity:0.0287
+LogoutConfigurer:0.0160
+ObjectPostProcessor:0.0289
+SavedRequestAwareAuthenticationSuccessHandler:0.0160
+SecurityConfigurer:0.0214
+UsernamePasswordAuthenticationFilter:0.0160
+WebSecurity:0.0376

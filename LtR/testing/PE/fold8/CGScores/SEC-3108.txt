@@ -1,0 +1,10 @@
+AbstractSecurityInterceptor:0.0208
+AccessDecisionManager:0.0154
+AfterInvocationManager:0.0154
+DigestAuthUtils:0.0200
+DigestData:0.0673
+InterceptorStatusToken:0.0481
+SecurityContext:0.0477
+SecurityContextHolder:0.0639
+SecurityContextHolderStrategy:0.0160
+UserDetails:0.0253

@@ -1,0 +1,2 @@
+AbstractItdMetadataProvider:0.5581
+JavaType:0.1163

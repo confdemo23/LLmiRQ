@@ -1,0 +1,2 @@
+AbstractItemCountingItemStreamItemReader:0.8222
+HibernateCursorItemReader:0.4889

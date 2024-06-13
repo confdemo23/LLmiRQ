@@ -1,0 +1,10 @@
+AbstractOperationContext:0.5526
+DefaultPermissionFactory:0.5526
+DelegatingConfigurableAuthorizer:0.7632
+GlobalOperationHandlers:0.5263
+ManagementPermissionAuthorizer:0.7105
+ModelControllerClientOperationHandler:0.8947
+ModelControllerImpl:0.4211
+OperationContextImpl:0.4474
+RunAsRoleMapper:0.3158
+StandardRoleMapper:0.3947

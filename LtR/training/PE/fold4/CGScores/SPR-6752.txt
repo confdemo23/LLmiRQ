@@ -1,0 +1,10 @@
+Assert:0.0161
+ClassUtils:0.0069
+ClientHttpRequest:0.0057
+ClientHttpResponse:0.0094
+HttpHeaders:0.0191
+HttpMethod:0.0065
+MediaType:0.0123
+RequestEntity:0.0057
+Series:0.0057
+StringUtils:0.0052

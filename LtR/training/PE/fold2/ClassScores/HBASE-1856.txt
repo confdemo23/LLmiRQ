@@ -1,0 +1,2 @@
+Result:0.0698
+TableReducer:0.2093

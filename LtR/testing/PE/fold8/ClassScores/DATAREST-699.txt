@@ -1,0 +1,1 @@
+RepositoryMethodResourceMapping:0.5600

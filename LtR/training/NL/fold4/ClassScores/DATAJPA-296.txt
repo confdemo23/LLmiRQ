@@ -1,0 +1,4 @@
+JpaRepository:0.2326
+JpaSort:0.0930
+QueryUtils:0.1628
+SimpleJpaRepository:0.3721

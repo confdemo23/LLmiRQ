@@ -1,0 +1,7 @@
+AbstractShell:0.2381
+DefaultProcessManager:0.4286
+DelegatePathResolver:0.4048
+MavenCommands:0.2381
+MavenOperationsImpl:0.3810
+MavenPathResolvingStrategy:0.5476
+ProcessManagerHostedExecutionStrategy:0.8095

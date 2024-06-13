@@ -1,0 +1,2 @@
+DomainClassConverter:0.3077
+Repositories:0.1538

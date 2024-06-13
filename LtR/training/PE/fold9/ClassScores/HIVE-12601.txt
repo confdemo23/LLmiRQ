@@ -1,0 +1,2 @@
+Hive:0.0233
+Partition:0.1395

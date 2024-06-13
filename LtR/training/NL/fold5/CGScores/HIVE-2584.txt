@@ -1,0 +1,10 @@
+ConfVars:0.0340
+DDLSemanticAnalyzer:0.0360
+HiveConf:0.0741
+LogHelper:0.0400
+MetaStoreUtils:0.0541
+QualifiedNameUtil:0.0455
+ResourceMaps:0.0521
+SessionState:0.2202
+ShimLoader:0.0345
+Utils:0.0270

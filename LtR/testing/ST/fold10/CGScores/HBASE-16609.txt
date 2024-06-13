@@ -1,0 +1,10 @@
+ByteBufferExtendedCell:0.0406
+Bytes:0.0359
+Cell:0.1267
+HRegion:0.1429
+HRegionServer:0.0358
+HStore:0.0414
+ProtobufUtil:0.0355
+RegionInfo:0.0881
+RpcCall:0.0306
+ScannerContext:0.0441

@@ -1,0 +1,1 @@
+JMXPropertyEditorsTestCase:0.5000

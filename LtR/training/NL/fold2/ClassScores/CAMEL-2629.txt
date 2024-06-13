@@ -1,0 +1,5 @@
+AggregateProcessor:0.3902
+AggregationStrategy:0.4146
+BatchConsumer:0.2683
+Exchange:0.1463
+ExchangeCompletedEvent:0.4878

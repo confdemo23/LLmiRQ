@@ -1,0 +1,10 @@
+AbstractExchange:0.0388
+Argument:0.0388
+Exchange:0.2305
+MessageListenerContainer:0.0678
+MethodRabbitListenerEndpoint:0.1620
+Queue:0.1757
+QueueBinding:0.1073
+RabbitListener:0.1757
+RabbitListenerEndpoint:0.0478
+RabbitListenerEndpointRegistrar:0.0936

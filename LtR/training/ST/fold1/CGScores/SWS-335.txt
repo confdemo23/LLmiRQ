@@ -1,0 +1,10 @@
+DefaultStrategiesHelper:0.0305
+EndpointInterceptor:0.0205
+EndpointInvocationChain:0.0805
+MessageContext:0.0898
+TransportContextHolder:0.0353
+WebServiceConnection:0.0353
+WebServiceMessage:0.0301
+WebServiceMessageReceiverHandlerAdapter:0.0295
+WsdlDefinitionHandlerAdapter:0.0372
+XsdSchemaHandlerAdapter:0.0295

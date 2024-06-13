@@ -1,0 +1,3 @@
+AuthorityUtils:0.2273
+RoleHierarchyImpl:0.2955
+SecurityExpressionRoot:0.4091

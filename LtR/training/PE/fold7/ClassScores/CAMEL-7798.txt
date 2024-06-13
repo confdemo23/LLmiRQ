@@ -1,0 +1,2 @@
+Component:0.1200
+ExchangeFormatter:0.2800

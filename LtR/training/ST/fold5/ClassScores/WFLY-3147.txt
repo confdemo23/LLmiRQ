@@ -1,0 +1,2 @@
+BeansXmlProcessor:0.2766
+PropertyReplacingBeansXmlHandler:0.5957

@@ -1,0 +1,3 @@
+ConverterRegistration:0.0137
+GeoConverters:0.0023
+MongoConverters:0.0023

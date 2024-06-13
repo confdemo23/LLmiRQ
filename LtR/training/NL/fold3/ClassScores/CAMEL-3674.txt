@@ -1,0 +1,5 @@
+BlueprintPropertiesParser:0.5366
+CamelContext:0.2195
+PropertiesComponent:0.3902
+Registry:0.1220
+TypeConverter:0.2439

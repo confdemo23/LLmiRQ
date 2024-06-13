@@ -1,0 +1,5 @@
+BlockingQueueConsumer:0.4186
+ChannelAwareMessageListener:0.5581
+MessageListenerAdapter:0.4419
+RabbitTemplate:0.2558
+SimpleMessageListenerContainer:0.6279

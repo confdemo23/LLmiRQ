@@ -1,0 +1,10 @@
+DefaultStrategiesHelper:0.0239
+EndpointAdapter:0.0152
+EndpointInterceptor:0.0325
+EndpointInvocationChain:0.1275
+EndpointMapping:0.0066
+MessageContext:0.1138
+XmlValidator:0.0274
+XmlValidatorFactory:0.0127
+XsdSchema:0.0127
+XsdSchemaCollection:0.0127

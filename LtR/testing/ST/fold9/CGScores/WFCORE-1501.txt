@@ -1,0 +1,10 @@
+CapabilityRegistry:0.0394
+Configuration:0.0585
+ConfigurationFile:0.0805
+DeployerChainAddHandler:0.1540
+Factory:0.0401
+FilePersistenceUtils:0.0601
+InteractionPolicy:0.0829
+ModelControllerImpl:0.1564
+Resource:0.0324
+ServerEnvironment:0.0324

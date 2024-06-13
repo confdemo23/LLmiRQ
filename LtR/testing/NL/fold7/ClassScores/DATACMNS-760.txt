@@ -1,0 +1,5 @@
+QuerydslBinderCustomizer:0.5641
+QuerydslBindings:0.3590
+QuerydslPredicateExecutor:0.5897
+QuerydslUtils:0.2821
+SimpleEntityPathResolver:0.5641

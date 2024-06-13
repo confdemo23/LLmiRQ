@@ -1,0 +1,10 @@
+CamelContext:0.0939
+Exchange:0.0839
+ObjectHelper:0.0655
+OperationResult:0.0772
+StopWatch:0.0364
+ThreadPoolProfile:0.2205
+TimeUtils:0.0267
+URISupport:0.0267
+ZooKeeperConfiguration:0.1226
+ZooKeeperEndpoint:0.0545

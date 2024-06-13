@@ -1,0 +1,8 @@
+HFileScanner:0.1452
+HRegion:0.0645
+HStore:0.0484
+HalfStoreFileReader:0.2581
+KeyValueUtil:0.1452
+LoadIncrementalHFiles:0.2903
+StoreFileScanner:0.2097
+StoreScanner:0.1452

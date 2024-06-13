@@ -1,0 +1,4 @@
+AbstractSimplex:0.0183
+BaseAbstractMultivariateOptimizer:0.0022
+ConvergenceChecker:0.0022
+PointValuePair:0.0049

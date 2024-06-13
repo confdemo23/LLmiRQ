@@ -1,0 +1,2 @@
+MongoExceptionTranslator:0.4200
+MongoTemplate:0.2000

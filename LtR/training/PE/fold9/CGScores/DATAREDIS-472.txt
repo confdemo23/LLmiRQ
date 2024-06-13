@@ -1,0 +1,10 @@
+Converters:0.0146
+Expiration:0.0221
+GeoLocation:0.0095
+JedisConnection:0.0095
+JedisConverters:0.3688
+KeyBoundCursor:0.0070
+Limit:0.0950
+Range:0.0824
+RedisNode:0.0196
+Tuple:0.0095

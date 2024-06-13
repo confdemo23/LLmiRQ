@@ -1,0 +1,5 @@
+ExprNodeEvaluator:0.3590
+GenericUDF:0.1795
+HiveDecimal:0.2051
+HiveQueryResultSet:0.3846
+SemanticAnalyzer:0.3333

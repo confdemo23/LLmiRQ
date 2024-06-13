@@ -1,0 +1,6 @@
+AbstractWebServiceConnection:0.5952
+SaajSoapMessage:0.2857
+SaajSoapMessageFactory:0.4524
+SaajUtils:0.1429
+WebServiceMessageReceiverHandlerAdapter:0.8571
+WebServiceMessageReceiverObjectSupport:0.8333

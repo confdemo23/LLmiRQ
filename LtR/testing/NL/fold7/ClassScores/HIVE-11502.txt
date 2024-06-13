@@ -1,0 +1,9 @@
+CommonJoinOperator:0.4103
+ExecReducer:0.2308
+GroupByOperator:0.3333
+HashTableSinkOperator:0.4872
+HiveConf:0.1538
+MapOperator:0.2308
+ObjectInspector:0.3333
+ReduceSinkOperator:0.4103
+VectorGroupByOperator:0.4872

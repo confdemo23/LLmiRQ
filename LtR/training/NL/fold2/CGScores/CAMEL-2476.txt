@@ -1,0 +1,8 @@
+CamelContext:0.0083
+Exchange:0.0455
+ExchangeHelper:0.0030
+IOHelper:0.0030
+Message:0.0561
+ObjectHelper:0.0083
+ResourceHelper:0.0143
+VelocityEndpoint:0.0199

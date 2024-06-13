@@ -1,0 +1,3 @@
+DummyOperator:0.0020
+Operator:0.0264
+OperatorFunc:0.0020

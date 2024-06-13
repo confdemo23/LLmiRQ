@@ -1,0 +1,4 @@
+CDIBean:0.0612
+CdiBean:0.0612
+TransactionSynchronizationRegistryInjectionTestCase:0.9592
+WeldResourceInjectionServices:0.5102

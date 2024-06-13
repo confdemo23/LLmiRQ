@@ -1,0 +1,5 @@
+HMaster:0.0612
+JVMClusterUtil:0.2041
+LocalHBaseCluster:0.2653
+MasterFileSystem:0.2449
+TestGenerateDelegationToken:0.4694

@@ -1,0 +1,10 @@
+HelpCommands:0.0204
+Main:0.0269
+MathUtils:0.0687
+NamedProvider:0.0269
+ParseResult:0.0642
+SimpleExecutionStrategy:0.0359
+SimpleParser:0.0755
+TableRendererTest:0.0195
+Tokenizer:0.2296
+TokenizerTests:0.0632

@@ -1,0 +1,10 @@
+ClientInterceptor:0.0218
+DefaultStrategiesHelper:0.0160
+FaultAwareWebServiceConnection:0.0103
+JmsTransportUtils:0.0231
+MessageContext:0.1141
+TransportContextHolder:0.0160
+WebServiceConnection:0.0218
+WebServiceMessage:0.0276
+WebServiceMessageCallback:0.0218
+WebServiceTemplate:0.0218

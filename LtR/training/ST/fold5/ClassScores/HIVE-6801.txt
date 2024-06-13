@@ -1,0 +1,9 @@
+BeeLine:0.0638
+Commands:0.0851
+DatabaseConnection:0.2979
+HiveConnection:0.2128
+HiveDriver:0.1277
+HttpAuthUtils:0.1915
+HttpKerberosRequestInterceptor:0.5532
+ReflectiveCommandHandler:0.4255
+TCLIService:0.1489

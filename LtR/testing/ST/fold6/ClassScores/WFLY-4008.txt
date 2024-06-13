@@ -1,0 +1,3 @@
+InitialContext:0.2128
+NamingContext:0.1915
+WeldContextSetup:0.2553

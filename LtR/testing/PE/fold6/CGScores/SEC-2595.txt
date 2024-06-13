@@ -1,0 +1,8 @@
+AspectJCallback:0.0132
+AuthenticationManager:0.0168
+AuthenticationManagerBuilder:0.0050
+ExpressionInterceptUrlRegistry:0.0050
+HttpSecurity:0.0050
+InMemoryUserDetailsManagerConfigurer:0.0050
+MethodSecurityInterceptor:0.0569
+UserDetailsBuilder:0.0305

@@ -1,0 +1,10 @@
+AbstractMessageListenerContainer:0.2994
+BlockingQueueConsumer:0.2973
+ChannelCachingConnectionProxy:0.1965
+DirectMessageListenerContainer:0.1132
+Message:0.1643
+MessageProperties:0.1883
+Queue:0.1104
+RabbitTemplate:0.1173
+RabbitUtils:0.1245
+SimpleMessageListenerContainer:0.1224

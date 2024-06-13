@@ -1,0 +1,7 @@
+FSPaths:0.0477
+FileSinkOperator:0.0222
+HadoopShims:0.0032
+RecordWriter:0.0222
+ShimLoader:0.0032
+StoragePolicyShim:0.0032
+StoragePolicyValue:0.0032

@@ -1,0 +1,10 @@
+AggregationExprCheck:0.0175
+CTEClause:0.0476
+ConstantExprCheck:0.0175
+HdfsEncryptionShim:0.0175
+HiveDriver:0.0226
+HiveInputSplit:0.0539
+PlannerContext:0.0075
+SemanticAnalyzer:0.1278
+SortBucketRSCtx:0.0777
+Utils:0.0075

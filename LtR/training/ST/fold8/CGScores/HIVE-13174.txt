@@ -1,0 +1,5 @@
+MapWorkValidationNodeProcessor:0.0010
+MapWorkVectorizationNodeProcessor:0.0010
+ReduceWorkValidationNodeProcessor:0.0010
+ReduceWorkVectorizationNodeProcessor:0.0043
+VectorTaskColumnInfo:0.0511

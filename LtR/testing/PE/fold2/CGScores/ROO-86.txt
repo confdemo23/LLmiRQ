@@ -1,0 +1,2 @@
+FieldMetadata:0.0112
+JavaSymbolName:0.0112

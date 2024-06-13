@@ -1,0 +1,10 @@
+GroupByAge:0.3318
+HivePairFlatMapFunction:0.1751
+MapReduceCompiler:0.1781
+ReadRC:0.2438
+ReadWrite:0.2183
+SamplingOptimizer:0.1701
+SimpleRead:0.2428
+TestHCatMultiOutputFormat:0.1944
+WriteRC:0.2406
+WriteTextPartitioned:0.3240

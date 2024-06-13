@@ -1,0 +1,3 @@
+HBaseRowSerializer:0.3125
+HBaseSerDe:0.1458
+LazyUtils:0.1250

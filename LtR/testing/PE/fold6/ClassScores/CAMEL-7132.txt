@@ -1,0 +1,2 @@
+CamelJob:0.1111
+QuartzComponent:0.2667

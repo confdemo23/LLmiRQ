@@ -1,0 +1,6 @@
+BeeLine:0.0909
+ErrorMsg:0.1212
+HiveQueryResultSet:0.4242
+HiveSQLException:0.3636
+HiveStatement:0.2727
+TaskLogProcessor:0.3636

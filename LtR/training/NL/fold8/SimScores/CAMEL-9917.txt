@@ -1,0 +1,10 @@
+AsyncEndpointEventNotifierSendingTest:0.2343
+DefaultCamelContextStopFailureTest:0.2333
+EventConsumer:0.2329
+EventNotifierEventsTest:0.2661
+EventNotifierServiceStoppingFailedEventTest:0.4050
+MultipleEventNotifierEventsTest:0.2781
+MyEventNotifier:0.2576
+MyLoggingSentEventNotifer:0.2668
+MySentEventNotifier:0.2468
+Orders:0.2600

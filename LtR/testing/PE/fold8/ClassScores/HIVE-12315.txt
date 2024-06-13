@@ -1,0 +1,1 @@
+DoubleColumnVector:0.3000

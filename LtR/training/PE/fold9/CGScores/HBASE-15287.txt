@@ -1,0 +1,10 @@
+ByteArrayComparator:0.0003
+Bytes:0.0095
+CellComparator:0.0003
+CollectionUtils:0.0012
+Comparer:0.0037
+HBaseConfiguration:0.0012
+KeyOnlyKeyValue:0.0003
+TableMapReduceUtil:0.0012
+UnsafeAccess:0.0095
+UnsafeAvailChecker:0.0003

@@ -1,0 +1,2 @@
+Fraction:0.1351
+FractionTest:0.2432

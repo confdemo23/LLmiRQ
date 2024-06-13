@@ -1,0 +1,10 @@
+ClusteredSingleSignOnTestCase:0.6047
+CoarseSessionExpirationTestCase:0.6512
+CoarseSessionPassivationTestCase:0.6744
+FineSessionExpirationTestCase:0.6047
+FineSessionPassivationTestCase:0.6279
+InvalidateConversationTestCase:0.6279
+ReplicationForNegotiationAuthenticatorTestCase:1.0000
+ServiceProviderRegistrationTestCase:0.7442
+SharedSessionFailoverTestCase:0.6047
+StatefulWithXPCFailoverTestCase:0.6512

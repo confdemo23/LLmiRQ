@@ -1,0 +1,7 @@
+AbstractMemberHoldingTypeDetailsBuilder:0.0783
+ClassOrInterfaceTypeDetailsBuilder:0.0036
+ConstructorMetadataBuilder:0.0159
+FieldMetadataBuilder:0.0119
+InitializerMetadataBuilder:0.0119
+MemberHoldingTypeDetails:0.0273
+MethodMetadataBuilder:0.0075

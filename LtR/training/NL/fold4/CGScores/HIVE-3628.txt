@@ -1,0 +1,10 @@
+AggregationBuffer:0.0058
+AggregationType:0.0058
+Context:0.0014
+DeferredObject:0.0195
+Exec:0.0062
+GenericUDF:0.0058
+HadoopShims:0.0038
+ShimLoader:0.0038
+UDF:0.0000
+Var:0.0000

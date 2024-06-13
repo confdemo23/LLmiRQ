@@ -1,0 +1,10 @@
+AbstractCommandParser:0.0177
+Batchable:0.0200
+Client:0.0100
+ConfVars:0.0200
+HiveConf:0.0436
+MetaStoreUtils:0.0318
+ObjectStore:0.1446
+QueryWrapper:0.0701
+ShimLoader:0.0227
+Utils:0.0124

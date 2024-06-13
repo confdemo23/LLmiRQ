@@ -1,0 +1,10 @@
+AbstractSecurityInterceptor:0.0328
+AnonymousAuthenticationToken:0.0118
+AuthorityUtils:0.0118
+FilterInvocation:0.1124
+OnCommittedResponseWrapper:0.0733
+SecurityContext:0.0514
+SecurityContextHolder:0.0701
+SecurityContextHolderStrategy:0.0369
+SecurityExpressionHandler:0.0068
+WebExpressionConfigAttribute:0.0150

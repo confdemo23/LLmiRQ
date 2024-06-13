@@ -1,0 +1,4 @@
+CLIModelControllerClient:0.6875
+DeploymentOperations:0.5625
+DeploymentPlanBuilder:0.5938
+ServerGroupDeploymentPlan:0.7188

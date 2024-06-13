@@ -1,0 +1,10 @@
+DefaultStringRedisConnection:0.0135
+Expiration:0.0079
+GeoLocation:0.0102
+JedisConverters:0.1363
+Limit:0.0349
+ListConverter:0.0153
+Range:0.0320
+RedisConnection:0.5674
+RedisSerializer:0.0117
+SetConverter:0.0362

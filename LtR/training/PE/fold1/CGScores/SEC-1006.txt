@@ -1,0 +1,7 @@
+Authentication:0.0102
+PermissionEvaluator:0.0081
+RoleHierarchy:0.0102
+SecurityContext:0.0081
+SecurityContextHolder:0.0081
+SecurityWebApplicationContextUtils:0.0081
+TagLibConfig:0.0183

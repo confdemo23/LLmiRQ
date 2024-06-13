@@ -1,0 +1,3 @@
+AbstractResourceInjectionServices:0.5577
+Component:0.0962
+ComponentInjector:0.2500

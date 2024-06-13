@@ -1,0 +1,4 @@
+BatchToRowReader:0.3421
+BytesColumnVector:0.3684
+LongColumnVector:0.3421
+VectorMapOperator:0.3684

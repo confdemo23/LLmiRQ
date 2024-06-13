@@ -1,0 +1,3 @@
+AbstractResourceAdapterDeploymentService:0.8605
+ResourceAdapterDeploymentService:0.6744
+ResourceAdaptersSubSystemAdd:0.5814

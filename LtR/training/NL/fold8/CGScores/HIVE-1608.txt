@@ -1,0 +1,10 @@
+ConfVars:0.0057
+FSPaths:0.0105
+FileChecker:0.0159
+FileSinkOperator:0.0050
+HadoopShims:0.0025
+HiveConf:0.0126
+MapRedTask:0.0020
+RecordWriter:0.0050
+ShimLoader:0.0025
+VarType:0.0015

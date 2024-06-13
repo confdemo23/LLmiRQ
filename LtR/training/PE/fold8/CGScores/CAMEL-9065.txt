@@ -1,0 +1,10 @@
+CamelContext:0.0422
+DefaultExchange:0.0508
+Endpoint:0.0378
+EndpointUtilizationStatistics:0.0595
+Exchange:0.0696
+ManagementStrategy:0.0248
+Message:0.1072
+ObjectHelper:0.0552
+Route:0.0335
+UnitOfWork:0.0292

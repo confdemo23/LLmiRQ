@@ -1,0 +1,4 @@
+ColumnPruner:0.2432
+ExprNodeGenericFuncEvaluator:0.6757
+Optimizer:0.1622
+SemanticAnalyzer:0.3514

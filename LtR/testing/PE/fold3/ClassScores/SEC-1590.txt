@@ -1,0 +1,2 @@
+GrantedAuthoritiesContainer:0.5581
+WebAuthenticationDetails:0.4884

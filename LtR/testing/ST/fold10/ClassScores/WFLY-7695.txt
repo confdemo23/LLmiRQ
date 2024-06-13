@@ -1,0 +1,4 @@
+DistributableSessionManager:0.6316
+InfinispanSessionFactory:0.5526
+InfinispanSessionManager:0.5526
+InfinispanSessionMetaDataFactory:0.7632

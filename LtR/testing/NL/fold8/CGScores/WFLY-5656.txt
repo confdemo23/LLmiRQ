@@ -1,0 +1,7 @@
+ComponentDescription:0.0080
+DeploymentTypeMarker:0.0180
+EjbJarDescription:0.0080
+JBossDescriptorPropertyReplacement:0.0088
+MetadataCompleteMarker:0.0080
+SimpleSet:0.0080
+WarMetaData:0.0189

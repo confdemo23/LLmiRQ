@@ -1,0 +1,10 @@
+ETLSplitStrategy:0.0071
+FooterCache:0.0153
+HadoopShims:0.0153
+HdfsFileStatusWithId:0.0318
+HiveVectorAdaptorUsageMode:0.0106
+IProcessingMode:0.0359
+OrcInputFormat:0.0153
+OutputColumnManager:0.0813
+VectorExpression:0.0271
+VectorizationContext:0.0283

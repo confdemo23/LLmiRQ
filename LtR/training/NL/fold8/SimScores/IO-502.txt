@@ -1,0 +1,10 @@
+BoundedInputStream:0.1772
+BrokenInputStreamTest:0.0917
+BrokenOutputStreamTest:0.0383
+CopyUtilsTest:0.1464
+FileBasedTestCase:0.0312
+FileUtils:0.0458
+IOUtilsCopyTestCase:0.1429
+ProxyInputStream:0.0594
+ProxyReader:0.0525
+TeeInputStream:0.0420

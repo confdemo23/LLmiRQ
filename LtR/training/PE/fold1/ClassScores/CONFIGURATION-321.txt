@@ -1,0 +1,2 @@
+AbstractHierarchicalConfiguration:0.6667
+TestHierarchicalConfiguration:0.5778

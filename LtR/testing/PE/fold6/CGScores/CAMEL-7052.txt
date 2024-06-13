@@ -1,0 +1,4 @@
+IOHelper:0.0605
+PGPPassphraseAccessor:0.0141
+PGPSecretKeyAndPrivateKeyAndUserId:0.0064
+ResourceHelper:0.0064

@@ -1,0 +1,7 @@
+CometDReplayExtension:0.0007
+SalesforceComponent:0.0152
+SalesforceConsumer:0.0018
+SalesforceEndpoint:0.0040
+SalesforceEndpointConfig:0.0141
+SalesforceHttpClient:0.0018
+SalesforceSession:0.0040

@@ -1,0 +1,10 @@
+Client:0.0213
+HadoopThriftAuthBridge:0.0182
+Hive:0.0376
+LogHelper:0.0501
+MetaStoreUtils:0.0677
+ResourceMaps:0.0652
+ResourceType:0.0276
+SessionState:0.2757
+ShimLoader:0.0482
+Utils:0.0288

@@ -1,0 +1,2 @@
+EnableGlobalMethodSecurity:0.4600
+WebSecurityConfigurerAdapter:0.5000

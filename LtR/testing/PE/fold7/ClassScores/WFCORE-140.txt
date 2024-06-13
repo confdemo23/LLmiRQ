@@ -1,0 +1,2 @@
+Resource:0.1087
+StandaloneXml:0.2174

@@ -1,0 +1,4 @@
+Base64:0.0269
+Hex:0.0282
+Sha512DigestUtils:0.0269
+Utf8:0.0551

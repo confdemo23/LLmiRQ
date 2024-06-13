@@ -1,0 +1,10 @@
+Bytes:0.2249
+Connection:0.0317
+Delete:0.0147
+Get:0.0772
+Increment:0.0261
+PerClientRandomNonceGenerator:0.0147
+Put:0.0601
+RegionServerThread:0.0204
+Result:0.0488
+Table:0.2419

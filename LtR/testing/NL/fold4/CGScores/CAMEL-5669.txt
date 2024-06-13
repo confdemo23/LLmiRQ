@@ -1,0 +1,8 @@
+DefaultProducer:0.0053
+Exchange:0.0528
+Message:0.0845
+MessageFilter:0.0053
+SSLContextParameters:0.0053
+SpringWebserviceConfiguration:0.1479
+SpringWebserviceEndpoint:0.0528
+XmlConverter:0.0053

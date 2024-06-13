@@ -1,0 +1,10 @@
+ASTNode:0.0505
+CTEClause:0.0238
+ConfVars:0.0211
+HadoopShims:0.0182
+HiveConf:0.0475
+HiveLexerX:0.0337
+MiniClusterType:0.0182
+QTestUtil:0.0419
+SemanticAnalyzer:0.0660
+SortBucketRSCtx:0.0396

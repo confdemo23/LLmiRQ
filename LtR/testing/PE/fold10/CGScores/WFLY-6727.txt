@@ -1,0 +1,3 @@
+Attribute:0.1332
+TransactionExtension:0.0065
+TxStatsHandler:0.0065

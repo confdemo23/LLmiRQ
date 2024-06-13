@@ -1,0 +1,9 @@
+AbstractWriteAttributeHandler:0.7576
+ListAttributeDefinition:0.5758
+ManagementResourceRegistration:0.7879
+ModelController:0.3333
+OperationContext:0.3636
+OperationStepHandler:0.4848
+PathAddress:0.2121
+Resource:0.1212
+ResourceDefinition:0.4242

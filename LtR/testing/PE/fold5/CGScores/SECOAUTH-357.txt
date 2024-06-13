@@ -1,0 +1,5 @@
+OAuth2Authentication:0.0009
+OAuth2Request:0.0009
+OAuth2RequestValidator:0.0009
+OAuth2Utils:0.0009
+TokenRequest:0.0102

@@ -1,0 +1,4 @@
+AvroContainerInputFormat:0.4444
+AvroContainerOutputFormat:0.4667
+AvroSerDe:0.1111
+HiveIgnoreKeyTextOutputFormat:0.5556

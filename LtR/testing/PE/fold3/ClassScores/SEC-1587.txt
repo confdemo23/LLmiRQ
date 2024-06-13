@@ -1,0 +1,3 @@
+HttpSessionSecurityContextRepository:0.7674
+LogoutFilter:0.2093
+SecurityContext:0.2791

@@ -1,0 +1,10 @@
+CamelContext:0.0211
+ClassResolver:0.0013
+HangupInterceptor:0.0013
+IOHelper:0.0022
+MainListener:0.0087
+MainSupport:0.0027
+ManagementObjectStrategy:0.0013
+ManagementStrategy:0.0069
+Option:0.0032
+ServiceHelper:0.0032

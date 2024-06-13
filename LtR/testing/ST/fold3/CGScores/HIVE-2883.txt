@@ -1,0 +1,4 @@
+Client:0.0096
+HadoopThriftAuthBridge:0.0042
+ShimLoader:0.0042
+Utils:0.0096

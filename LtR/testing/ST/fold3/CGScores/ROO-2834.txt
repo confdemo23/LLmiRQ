@@ -1,0 +1,10 @@
+EmbeddedOperations:0.0394
+EmbeddedProvider:0.0113
+HandlerUtils:0.0051
+ProjectOperations:0.0113
+StaticFieldConverter:0.0349
+VideoProvider:0.0388
+VideoStreamProvider:0.0034
+XmlElementBuilder:0.0225
+XmlRoundTripUtils:0.0048
+XmlUtils:0.0189

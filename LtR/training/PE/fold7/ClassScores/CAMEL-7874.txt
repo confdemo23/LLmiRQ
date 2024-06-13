@@ -1,0 +1,1 @@
+DataFormat:0.1400

@@ -1,0 +1,10 @@
+BasePathAwareHandlerMapping:0.0396
+DomainClassResolver:0.0123
+Java8PluginRegistry:0.0396
+MetadataConfiguration:0.0259
+ProjectionDefinitionConfiguration:0.0123
+RepositoryCorsRegistry:0.0123
+RepositoryRestConfiguration:0.2581
+RepositoryRestConfigurerDelegate:0.0806
+RepositoryRestHandlerAdapter:0.0396
+RepositoryRestHandlerMapping:0.0533

@@ -1,0 +1,5 @@
+BeanManager:0.1860
+CDIInterceptor:0.2558
+CdiInterceptor:0.2558
+EJBInterceptor:0.2558
+EjbInterceptor:0.2558

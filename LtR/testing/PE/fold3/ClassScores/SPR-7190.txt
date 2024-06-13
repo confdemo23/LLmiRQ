@@ -1,0 +1,4 @@
+AnnotationDrivenBeanDefinitionParser:0.7674
+AnnotationMethodHandlerAdapter:0.6279
+AnnotationMethodHandlerExceptionResolver:0.8605
+Jaxb2RootElementHttpMessageConverter:0.7674

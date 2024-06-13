@@ -1,0 +1,10 @@
+AbstractMessageListenerContainer:0.1481
+Binding:0.1356
+BlockingQueueConsumer:0.4334
+ConnectionFactoryUtils:0.0691
+Exchange:0.1081
+Message:0.1752
+MessageProperties:0.2102
+Queue:0.0806
+RabbitTemplate:0.1707
+SimpleMessageListenerContainer:0.1782

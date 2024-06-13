@@ -1,0 +1,10 @@
+AbstractPropertyBindingResult:0.0024
+Assert:0.0034
+BindingResult:0.0013
+ConfigurablePropertyAccessor:0.0028
+MutablePropertyValues:0.0086
+ObjectUtils:0.0029
+PropertyAccessorUtils:0.0024
+PropertyEditorRegistry:0.0039
+PropertyValue:0.0068
+StringUtils:0.0013

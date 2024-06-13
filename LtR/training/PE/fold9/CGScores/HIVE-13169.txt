@@ -1,0 +1,7 @@
+HadoopShims:0.0013
+HiveServer2:0.0161
+ServerOptionsExecutor:0.0013
+ServerOptionsProcessor:0.0032
+ServerOptionsProcessorResponse:0.0013
+ShimLoader:0.0013
+Utils:0.0013

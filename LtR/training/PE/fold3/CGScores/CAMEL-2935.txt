@@ -1,0 +1,10 @@
+CamelContext:0.0198
+Endpoint:0.0064
+Exchange:0.0157
+ExchangePattern:0.0081
+LRUCache:0.0045
+Message:0.0069
+ProducerCache:0.0188
+ServiceHelper:0.0075
+ServicePool:0.0045
+TypeConverter:0.0093

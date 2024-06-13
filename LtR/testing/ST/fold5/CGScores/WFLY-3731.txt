@@ -1,0 +1,8 @@
+AccessTimeoutDetails:0.1124
+ApplicationExceptionDetails:0.0197
+EJBComponent:0.1433
+MethodIntfHelper:0.0084
+OwnableReentrantLock:0.0548
+StatefulSessionComponent:0.1987
+StatefulSessionComponentInstance:0.6882
+StatefulTransactionMarker:0.0548

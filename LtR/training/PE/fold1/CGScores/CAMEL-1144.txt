@@ -1,0 +1,10 @@
+CamelContext:0.0346
+Exchange:0.0894
+Expression:0.0346
+Message:0.0650
+MockEndpoint:0.0589
+ModelCamelContext:0.0711
+ObjectHelper:0.0467
+RestsDefinition:0.0467
+RouteBuilder:0.0528
+RoutesDefinition:0.2236

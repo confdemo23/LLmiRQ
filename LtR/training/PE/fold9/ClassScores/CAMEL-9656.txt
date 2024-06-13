@@ -1,0 +1,2 @@
+BeanInfo:0.1163
+Endpoint:0.1163

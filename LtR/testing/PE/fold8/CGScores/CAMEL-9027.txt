@@ -1,0 +1,9 @@
+ConnectionFactoryResource:0.0111
+DefaultEndpoint:0.0063
+DestinationNameParser:0.0038
+EndpointHelper:0.0038
+Exchange:0.0014
+ExchangePattern:0.0014
+ObjectHelper:0.0014
+SjmsComponent:0.0184
+SjmsEndpoint:0.0014

@@ -1,0 +1,1 @@
+BeanProcessor:0.2326

@@ -1,0 +1,3 @@
+AbstractNamedPermission:0.0099
+AbstractPermission:0.0047
+StringEnumeration:0.0255
